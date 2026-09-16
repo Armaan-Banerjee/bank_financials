@@ -179,6 +179,22 @@ STATEMENTS_SOURCES = (
     "separately from Profit after tax from discontinued operations; FY2024-FY2025 relabel this split as "
     "Loss after tax from continuing operations / Discontinued operation. Each year's own line items are "
     "used unchanged, blank cells where a line genuinely doesn't apply that year.\n"
+    "FY2017 PRESENTATION AND CORRECTION (2026-09-16): the 2017 Consolidated Statement of Financial Position "
+    "(printed p.35) reports in whole pounds; figures are shown here in GBP'000, and the FY2017 column's own "
+    "internal rounding leaves 1 in Total equity and liabilities (153,065 + 127,462 = 280,527 vs the printed "
+    "280,526). Caption mapping: the 2017 statement predates IFRS 9, so 'Investment securities' 72,095,108 is "
+    "carried on the 'Financial assets held at FVTOCI' row and the 'Available-for-sale reserve' (393,988) on "
+    "the 'Fair value through other comprehensive income reserve' row; 'Financing arrangements' 85,903,292 is "
+    "carried on 'Financing and advances at amortised cost'; and 'Financial liabilities measured at amortised "
+    "cost' 150,077 combines the two disclosed lines 'Due to financial institutions' 76,742,889 and 'Due to "
+    "customers' 73,334,272, matching the single combined caption Gatehouse's own later statements use.\n"
+    "Two FY2017 lines were being dropped entirely and have been added: 'Due from financial institutions' "
+    "77,251,048, which this ladder had no row for at all (later years do not present bank placements as a "
+    "separate asset line), and the derivative financial instruments LIABILITY of 506,336. Without them the "
+    "delivered FY2017 column did not add up - assets summed to 203,275 against a printed Total assets of "
+    "280,526, and liabilities to 152,558 against a printed Total liabilities of 153,065. With them both "
+    "sections tie. The 'Due from financial institutions' row is FY2017-only by design and is blank, not "
+    "zero, for every other year.\n"
     + ENTITY_NOTE
 )
 
@@ -189,6 +205,7 @@ bw.add_balance_sheet_sheet(
         ("SECTION", "Assets", {}),
         ("DATA", "Cash and balances with banks",
          {"FY2025": 24599, "FY2024": 27823, "FY2023": 24596, "FY2022": 22845, "FY2021": 41598}),
+        ("DATA", "Due from financial institutions (FY2017 presentation only - see source note)", {}),
         ("DATA", "Financing and advances at amortised cost",
          {"FY2025": 1264559, "FY2024": 1315936, "FY2023": 1357803, "FY2022": 1227896, "FY2021": 901111}),
         ("DATA", "Derivative financial instruments (asset)",
@@ -793,6 +810,11 @@ bw.add_overview_sheet(
 _FY2017 = {
     "Balance Sheet": {
         "Cash and balances with banks": 11900,
+        # Added 2026-09-16. The 2017 statement reports "Due from financial
+        # institutions" 77,251,048 as its own asset line; it had no row in this
+        # ladder and was being dropped, leaving the delivered FY2017 asset
+        # column 77,251 short of its own printed Total assets of 280,526.
+        "Due from financial institutions (FY2017 presentation only - see source note)": 77251,
         "Financing and advances at amortised cost": 85903,
         "Financial assets held at FVTOCI": 72095,
         "Financial assets held at FVTIS": 0,
@@ -803,6 +825,10 @@ _FY2017 = {
         "Other assets": 4627,
         "Total assets": 280526,
         "Financial liabilities measured at amortised cost": 150077,
+        # Added 2026-09-16: the 2017 statement reports a derivative LIABILITY of
+        # 506,336, previously omitted, which is why the FY2017 liability lines
+        # summed to 152,558 against a printed Total liabilities of 153,065.
+        "Derivative financial instruments (liability)": 506,
         "Other liabilities": 2481,
         "Total liabilities": 153065,
         "Share capital": 150049,

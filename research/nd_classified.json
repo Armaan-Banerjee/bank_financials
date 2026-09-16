@@ -1,0 +1,4055 @@
+[
+ {
+  "script": "build_afin_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_aib_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_aib_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_aib_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_aib_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_aib_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2019",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2020",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2021",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alpha_bank_london.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_alrayan.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_alrayan.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_alrayan.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_alrayan.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_alrayan.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_arab_bank_europe.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_arab_bank_europe.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Capital",
+   "MREL Ratio",
+   "Tier 1 Capital",
+   "Tier 1 Ratio",
+   "Total Capital",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_atom_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_africa_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_beirut_uk.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_beirut_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_beirut_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_beirut_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_beirut_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_ceylon_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_of_china_uk.py",
+  "year": "FY2014",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_china_uk.py",
+  "year": "FY2015",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_china_uk.py",
+  "year": "FY2016",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_china_uk.py",
+  "year": "FY2017",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_china_uk.py",
+  "year": "FY2018",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_ireland.py",
+  "year": "FY2018",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_ireland.py",
+  "year": "FY2019",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_ireland.py",
+  "year": "FY2020",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_ireland.py",
+  "year": "FY2025",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_bank_of_scotland.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_of_scotland.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_of_scotland.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_of_scotland.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_of_scotland.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_saderat.py",
+  "year": "FY2019",
+  "class": "needs_human_read",
+  "metrics": [
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_saderat.py",
+  "year": "FY2020",
+  "class": "needs_human_read",
+  "metrics": [
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_saderat.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_saderat.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_saderat.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_bank_sepah_international.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_sepah_international.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_bank_sepah_international.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2014",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2015",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "LCR",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2016",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2017",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2022",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2023",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2024",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_blme.py",
+  "year": "FY2025",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_british_arab_commercial_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_c_hoare.py",
+  "year": "FY2026",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cambridge_and_counties.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cambridge_and_counties.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cambridge_and_counties.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_castle_trust.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_castle_trust.py",
+  "year": "FY2022",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_castle_trust.py",
+  "year": "FY2023",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_castle_trust.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_castle_trust.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cater_allen.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_cater_allen.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_cater_allen.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_cater_allen.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_charity_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_charity_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_charity_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_charity_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_charity_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_citibank_uk.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_citibank_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_citibank_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_citibank_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_clearbank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_close_brothers.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_international.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2016",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2017",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2018",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2019",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2020",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?",
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_credit_suisse_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_crown_agents_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_crown_agents_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_crown_agents_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_crown_agents_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cynergy_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cynergy_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cynergy_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_cynergy_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_df_capital.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_df_capital.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_df_capital.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_df_capital.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_efg_private_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_efg_private_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_efg_private_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_efg_private_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2006",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2007",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2008",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2009",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2010",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2011",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2012",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fce_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fcmb_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fcmb_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fcmb_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fcmb_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_fcmb_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_gatehouse.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_gatehouse.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_gatehouse.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_gatehouse.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_gatehouse.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ghana_international_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ghana_international_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ghana_international_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ghana_international_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ghana_international_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_griffin_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_griffin_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_griffin_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_guaranty_trust_bank_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_guaranty_trust_bank_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_guaranty_trust_bank_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampden_co.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hampshire_trust_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_havin_bank.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Tier 1 Ratio",
+   "Total Capital Ratio",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_havin_bank.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Tier 1 Ratio",
+   "Total Capital Ratio",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_havin_bank.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Tier 1 Ratio",
+   "Total Capital Ratio",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_havin_bank.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Tier 1 Ratio",
+   "Total Capital Ratio",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_havin_bank.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Tier 1 Ratio",
+   "Total Capital Ratio",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_bank_plc.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_innovation_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_innovation_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_innovation_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_innovation_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_hsbc_uk_bank_plc.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_london.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icbc_standard_bank.py",
+  "year": "FY2015",
+  "class": "fully_structural",
+  "metrics": [
+   "LCR"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2008",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2009",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2010",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2011",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2012",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_icici_bank_uk.py",
+  "year": "FY2026",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ifast_global_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ifast_global_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ifast_global_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_ifast_global_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_investec_bank.py",
+  "year": "FY2019",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_investec_bank.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_europe.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_europe.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_europe.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_europe.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_europe.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_securities.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_securities.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_jp_morgan_securities.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_kingdom_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_kroo_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_kroo_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_kroo_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_kroo_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_lloyds_bank_corporate_markets.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_melli_bank.py",
+  "year": "FY2021",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_melli_bank.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_melli_bank.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_melli_bank.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_melli_bank.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_monzo.py",
+  "year": "FY2018",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Ratio",
+   "Tier 1 Ratio"
+  ]
+ },
+ {
+  "script": "build_monzo.py",
+  "year": "FY2019",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_monzo.py",
+  "year": "FY2020",
+  "class": "unlabelled_only",
+  "metrics": [
+   "?"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_morgan_stanley_bank_international.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_egypt_uk.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_kuwait_international.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_kuwait_international.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_kuwait_international.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_kuwait_international.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_bank_of_kuwait_international.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2012",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_national_westminster_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_nomura_bank_international.py",
+  "year": "FY2026",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "Leverage Ratio",
+   "MREL Ratio",
+   "NSFR",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2015",
+  "class": "fully_structural",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2016",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2017",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2018",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2019",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2020",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oaknorth.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_oxbury.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "CET1 Capital",
+   "LCR",
+   "Leverage Ratio",
+   "Tier 1 Capital",
+   "Total Capital",
+   "Total RWAs"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2015",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2016",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2017",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2018",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2019",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2020",
+  "class": "structural_plus_MREL",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2024",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_persia_international_bank.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "MREL Ratio",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rathbones.py",
+  "year": "FY2021",
+  "class": "unlabelled_only",
+  "metrics": [
+   "(whole sheets)"
+  ]
+ },
+ {
+  "script": "build_rathbones.py",
+  "year": "FY2022",
+  "class": "unlabelled_only",
+  "metrics": [
+   "(whole sheets)"
+  ]
+ },
+ {
+  "script": "build_rathbones.py",
+  "year": "FY2023",
+  "class": "unlabelled_only",
+  "metrics": [
+   "(whole sheets)"
+  ]
+ },
+ {
+  "script": "build_rathbones.py",
+  "year": "FY2024",
+  "class": "unlabelled_only",
+  "metrics": [
+   "(whole sheets)"
+  ]
+ },
+ {
+  "script": "build_rathbones.py",
+  "year": "FY2025",
+  "class": "unlabelled_only",
+  "metrics": [
+   "(whole sheets)"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2014",
+  "class": "fully_structural",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2015",
+  "class": "fully_structural",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2016",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2017",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2018",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2019",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2020",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbc_europe.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_rbs.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_rbs.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_rbs.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_rbs.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_rbs.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_secure_trust.py",
+  "year": "FY2019",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_secure_trust.py",
+  "year": "FY2020",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_secure_trust.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR",
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_smbc.py",
+  "year": "FY2026",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_standard_chartered_bank.py",
+  "year": "FY2021",
+  "class": "needs_human_read",
+  "metrics": [
+   "LCR"
+  ]
+ },
+ {
+  "script": "build_tandem.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_tandem.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_tandem.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_tandem.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_tandem.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_td_bank_europe.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_td_bank_europe.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_td_bank_europe.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_td_bank_europe.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_triodos.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_triodos.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_triodos.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_triodos.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_triodos.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_turkish_bank.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_turkish_bank.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_turkish_bank.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_turkish_bank.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_turkish_bank.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_uba_uk.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_uba_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_uba_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_uba_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2008",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2009",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2010",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2011",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2012",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2013",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2014",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2021",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_union_bancaire_privee_uk.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2016",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2017",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2018",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2019",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2020",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2021",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2022",
+  "class": "needs_human_read",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2023",
+  "class": "needs_human_read",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_united_national.py",
+  "year": "FY2025",
+  "class": "needs_human_read",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_unity_trust.py",
+  "year": "FY2018",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_unity_trust.py",
+  "year": "FY2019",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_unity_trust.py",
+  "year": "FY2020",
+  "class": "fully_structural",
+  "metrics": [
+   "NSFR"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2015",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2016",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2017",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2018",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2019",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2020",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2022",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2023",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2024",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ },
+ {
+  "script": "build_weatherbys.py",
+  "year": "FY2025",
+  "class": "MREL_only",
+  "metrics": [
+   "MREL Ratio"
+  ]
+ }
+]

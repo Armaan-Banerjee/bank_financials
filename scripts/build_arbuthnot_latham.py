@@ -7,6 +7,9 @@ YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2017"]  # most rec
 CH2025_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzUyMzkzMjQ5NmFkaXF6a2N4/document?format=pdf&download=0"
 CH2023_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzQyMzk5NjI0NGFkaXF6a2N4/document?format=pdf&download=0"
 CH2021_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzM0MTEwODM3MmFkaXF6a2N4/document?format=pdf&download=0"
+CH2017_URL = "https://find-and-update.company-information.service.gov.uk/company/00819519/filing-history/MzIwNzQ3NTM0M2FkaXF6a2N4/document?format=pdf&download=0"
+# The LSE-listed PARENT's report. Retained deliberately as a provenance record
+# of a rejected source, NOT as a figure source - see FY2017_BASIS_NOTE.
 AR2017_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Report_and_Accounts_Final_2017.pdf"
 
 P3_H1_2026_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG-Pillar-3-Disclosures-2026-Interim.pdf"
@@ -102,6 +105,36 @@ STATEMENT_SOURCES_HEAD = (
     f"FY2023 & FY2022: accounts made up to 31 December 2023, same statements, pp.37-40 - {CH2023_URL}\n"
     f"FY2021 (& FY2020 comparative, not used): accounts made up to 31 December 2021, same statements, "
     f"pp.43-46 - {CH2021_URL}\n"
+    f"FY2017 (& FY2016 comparative, not used): Group of companies' accounts made up to 31 December 2017 "
+    f"(filed 15 June 2018), Consolidated Statement of Comprehensive Income printed p.22 (PDF p.25) and "
+    f"Consolidated Statement of Financial Position printed p.23 (PDF p.26) - {CH2017_URL}\n"
+)
+
+FY2017_BASIS_NOTE = (
+    "FY2017 basis note (corrected 2026-09-16): the FY2017 column is taken from Arbuthnot Latham & Co., "
+    "Limited's OWN statutory consolidated accounts filed at Companies House, the same basis as every other "
+    "year in this workbook. It previously carried figures lifted from the LSE-listed parent's Arbuthnot "
+    f"Banking Group PLC Report & Accounts 2017 ({AR2017_URL}), which is a different reporting entity. Three "
+    "bases appear in that parent report and must not be blended:\n"
+    "  (1) ABG Group consolidated (that report's Summarised Balance Sheet, PDF p.15): Total assets "
+    "1,853,232; Operating income 54,616; Profit before tax 6,971. This is the PARENT - wrong entity.\n"
+    "  (2) ABG's 'Arbuthnot Latham' segmental summary (PDF p.16): Total assets 1,783,675; Operating income "
+    "54,925; Profit before tax 10,959. Right entity, but that report states the segmental analysis is "
+    "presented BEFORE consolidation adjustments for intergroup operating activities and recharges - so it "
+    "is not the statutory consolidated basis either.\n"
+    "  (3) The Bank's own statutory consolidated accounts (used here): Total assets 1,783,675; Operating "
+    "income 54,925; Profit before tax 9,477; Loans and advances to customers 1,060,769.\n"
+    "Total assets and Operating income coincide between (2) and (3); Profit before tax and Loans and "
+    "advances to customers do not. The four figures previously shown (1,049,269 / 1,853,232 / 54,616 / "
+    "6,971) were all from basis (1) or (2) and have been replaced by basis (3). Both alternative readings "
+    "are recorded here rather than reconciled away.\n"
+    "The FY2017 Cash Flow Statement column is left blank: the Bank's 2017 consolidated statement of cash "
+    "flows (printed p.27, PDF p.30) exists and was read, but its investing section carries lines this "
+    "sheet has no rows for (purchase of investment property; disposal of Tarn Crag (Holding) Limited; "
+    "purchase of, and cash acquired with, Renaissance Asset Finance Limited), so a partial column would "
+    "not reconcile to its own stated net investing outflow of (128,755). Blank, not zero.\n"
+    "The 2017 Companies House filing is a scanned document with no text layer; figures were read visually "
+    "from the pages rendered at 300 dpi, not taken from OCR output.\n"
 )
 
 # ---------------------------------------------------------------
@@ -109,37 +142,37 @@ STATEMENT_SOURCES_HEAD = (
 # ---------------------------------------------------------------
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2025": 437548, "FY2024": 911887, "FY2023": 826559, "FY2022": 732728, "FY2021": 814692}),
-    ("DATA", "Loans and advances to banks", {"FY2025": 117491, "FY2024": 66964, "FY2023": 79374, "FY2022": 115781, "FY2021": 73430}),
-    ("DATA", "Debt securities at amortised cost", {"FY2025": 2033158, "FY2024": 1199847, "FY2023": 942437, "FY2022": 439753, "FY2021": 301052}),
-    ("DATA", "Assets classified as held for sale", {"FY2023": 3281, "FY2022": 3279, "FY2021": 3136}),
-    ("DATA", "Derivative financial instruments", {"FY2025": 1398, "FY2024": 2970, "FY2023": 4214, "FY2022": 6322, "FY2021": 1753}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 437548, "FY2024": 911887, "FY2023": 826559, "FY2022": 732728, "FY2021": 814692, "FY2017": 313101}),
+    ("DATA", "Loans and advances to banks", {"FY2025": 117491, "FY2024": 66964, "FY2023": 79374, "FY2022": 115781, "FY2021": 73430, "FY2017": 70665}),
+    ("DATA", "Debt securities at amortised cost", {"FY2025": 2033158, "FY2024": 1199847, "FY2023": 942437, "FY2022": 439753, "FY2021": 301052, "FY2017": 227019}),
+    ("DATA", "Assets classified as held for sale", {"FY2023": 3281, "FY2022": 3279, "FY2021": 3136, "FY2017": 2915}),
+    ("DATA", "Derivative financial instruments", {"FY2025": 1398, "FY2024": 2970, "FY2023": 4214, "FY2022": 6322, "FY2021": 1753, "FY2017": 2551}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461, "FY2017": 1060769}),
     ("DATA", "Current tax assets", {"FY2025": 7010, "FY2024": 1287, "FY2023": 2347}),
-    ("DATA", "Other assets", {"FY2025": 50176, "FY2024": 51623, "FY2023": 57092, "FY2022": 52110, "FY2021": 110065}),
-    ("DATA", "Financial investments", {"FY2025": 2061, "FY2024": 4947, "FY2023": 3942, "FY2022": 3404, "FY2021": 3169}),
-    ("DATA", "Deferred tax asset", {"FY2022": 1902, "FY2021": 2040}),
-    ("DATA", "Intangible assets", {"FY2025": 37179, "FY2024": 34299, "FY2023": 33320, "FY2022": 36281, "FY2021": 33595}),
-    ("DATA", "Property, plant and equipment", {"FY2025": 310375, "FY2024": 313147, "FY2023": 274176, "FY2022": 175144, "FY2021": 125753}),
+    ("DATA", "Other assets", {"FY2025": 50176, "FY2024": 51623, "FY2023": 57092, "FY2022": 52110, "FY2021": 110065, "FY2017": 20589}),
+    ("DATA", "Financial investments", {"FY2025": 2061, "FY2024": 4947, "FY2023": 3942, "FY2022": 3404, "FY2021": 3169, "FY2017": 2207}),
+    ("DATA", "Deferred tax asset", {"FY2022": 1902, "FY2021": 2040, "FY2017": 886}),
+    ("DATA", "Intangible assets", {"FY2025": 37179, "FY2024": 34299, "FY2023": 33320, "FY2022": 36281, "FY2021": 33595, "FY2017": 19728}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 310375, "FY2024": 313147, "FY2023": 274176, "FY2022": 175144, "FY2021": 125753, "FY2017": 3806}),
     ("DATA", "Right-of-use assets", {"FY2025": 44502, "FY2024": 47511, "FY2023": 52816, "FY2022": 7714, "FY2021": 15675}),
-    ("DATA", "Investment property", {"FY2025": 5250, "FY2024": 5250, "FY2023": 5950, "FY2022": 6550, "FY2021": 6550}),
-    ("TOTAL", "Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
+    ("DATA", "Investment property", {"FY2025": 5250, "FY2024": 5250, "FY2023": 5950, "FY2022": 6550, "FY2021": 6550, "FY2017": 59439}),
+    ("TOTAL", "Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371, "FY2017": 1783675}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Deposits from banks", {"FY2025": 1389, "FY2024": 192911, "FY2023": 193410, "FY2022": 236027, "FY2021": 240333}),
-    ("DATA", "Derivative financial instruments", {"FY2023": 1032, "FY2022": 135, "FY2021": 171}),
-    ("DATA", "Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949}),
-    ("DATA", "Current tax liability", {"FY2022": 870, "FY2021": 652}),
-    ("DATA", "Other liabilities", {"FY2025": 39960, "FY2024": 34750, "FY2023": 38117, "FY2022": 24189, "FY2021": 19598}),
+    ("DATA", "Deposits from banks", {"FY2025": 1389, "FY2024": 192911, "FY2023": 193410, "FY2022": 236027, "FY2021": 240333, "FY2017": 195097}),
+    ("DATA", "Derivative financial instruments", {"FY2023": 1032, "FY2022": 135, "FY2021": 171, "FY2017": 931}),
+    ("DATA", "Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949, "FY2017": 1439804}),
+    ("DATA", "Current tax liability", {"FY2022": 870, "FY2021": 652, "FY2017": 553}),
+    ("DATA", "Other liabilities", {"FY2025": 39960, "FY2024": 34750, "FY2023": 38117, "FY2022": 24189, "FY2021": 19598, "FY2017": 14353}),
     ("DATA", "Lease liabilities", {"FY2025": 58266, "FY2024": 54829, "FY2023": 53761, "FY2022": 7873, "FY2021": 21277}),
     ("DATA", "Deferred tax liability", {"FY2025": 10743, "FY2024": 6186, "FY2023": 5430}),
     ("DATA", "Debt securities in issue", {"FY2025": 38781, "FY2024": 38103, "FY2023": 38129, "FY2022": 24437, "FY2021": 24367}),
-    ("TOTAL", "Total liabilities", {"FY2025": 4724253, "FY2024": 4460185, "FY2023": 4090078, "FY2022": 3406009, "FY2021": 3163347}),
+    ("TOTAL", "Total liabilities", {"FY2025": 4724253, "FY2024": 4460185, "FY2023": 4090078, "FY2022": 3406009, "FY2021": 3163347, "FY2017": 1650738}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Share capital", {"FY2025": 15000, "FY2024": 15000, "FY2023": 15000, "FY2022": 15000, "FY2021": 15000}),
-    ("DATA", "Retained earnings", {"FY2025": 115767, "FY2024": 105372, "FY2023": 91832, "FY2022": 59957, "FY2021": 47533}),
-    ("DATA", "Other reserves (capital contribution + fair value reserve)", {"FY2025": 151680, "FY2024": 153401, "FY2023": 152854, "FY2022": 147580, "FY2021": 147491}),
-    ("TOTAL", "Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024}),
-    ("TOTAL", "Total liabilities and equity", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
+    ("DATA", "Share capital", {"FY2025": 15000, "FY2024": 15000, "FY2023": 15000, "FY2022": 15000, "FY2021": 15000, "FY2017": 15000}),
+    ("DATA", "Retained earnings", {"FY2025": 115767, "FY2024": 105372, "FY2023": 91832, "FY2022": 59957, "FY2021": 47533, "FY2017": 33575}),
+    ("DATA", "Other reserves (capital contribution + fair value reserve)", {"FY2025": 151680, "FY2024": 153401, "FY2023": 152854, "FY2022": 147580, "FY2021": 147491, "FY2017": 84362}),
+    ("TOTAL", "Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024, "FY2017": 132937}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371, "FY2017": 1783675}),
 ]
 
 BALANCE_SHEET_SOURCES = (
@@ -154,6 +187,16 @@ BALANCE_SHEET_SOURCES = (
     "data. 'Other reserves' is shown here as a single combined line (capital contribution reserve + fair value "
     "reserve) to match each year's own Statement of Financial Position; see the Statement of Changes in Equity "
     "sheet for the two components separately.\n"
+    "FY2017 presentation: the 2017 statements predate IFRS 9 and IFRS 16, so three captions differ. 'Debt "
+    "securities at amortised cost' is captioned 'Debt securities held-to-maturity' (the IAS 39 category, also "
+    "measured at amortised cost); 'Assets classified as held for sale' is captioned 'Current assets held for "
+    "sale'; and FY2017 'Other reserves' 84,362 is the capital contribution reserve plus the IAS 39 available-"
+    "for-sale reserve rather than an IFRS 9 fair value reserve. 'Right-of-use assets', 'Lease liabilities', "
+    "'Deferred tax liability', 'Current tax assets' and 'Debt securities in issue' have no FY2017 equivalent "
+    "and are blank, not zero. The 2017 statement also carries an 'Interests in associates' line, nil at "
+    "31 December 2017 (900 at 31 December 2016); no row is added for a nil. The FY2017 column ties exactly - "
+    "the twelve asset lines sum to 1,783,675, the five liability lines to 1,650,738, equity to 132,937.\n"
+    + FY2017_BASIS_NOTE
     + ENTITY_NOTE
 )
 
@@ -172,31 +215,31 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 income_statement_rows = [
     ("SECTION", "Operating income from banking activities", {}),
-    ("DATA", "Interest income", {"FY2025": 247248, "FY2024": 263435, "FY2023": 231836, "FY2022": 120013, "FY2021": 77102}),
-    ("DATA", "Interest expense", {"FY2025": -129126, "FY2024": -137562, "FY2023": -90515, "FY2022": -17781, "FY2021": -10384}),
-    ("TOTAL", "Net interest income", {"FY2025": 118122, "FY2024": 125873, "FY2023": 141321, "FY2022": 102232, "FY2021": 66718}),
-    ("DATA", "Fee and commission income", {"FY2025": 31689, "FY2024": 29142, "FY2023": 23170, "FY2022": 21586, "FY2021": 18472}),
-    ("DATA", "Fee and commission expense", {"FY2025": -1444, "FY2024": -1029, "FY2023": -768, "FY2022": -537, "FY2021": -349}),
-    ("TOTAL", "Net fee and commission income", {"FY2025": 30245, "FY2024": 28113, "FY2023": 22402, "FY2022": 21049, "FY2021": 18123}),
-    ("TOTAL", "Operating income from banking activities", {"FY2025": 148367, "FY2024": 153986, "FY2023": 163723, "FY2022": 123281, "FY2021": 84841}),
+    ("DATA", "Interest income", {"FY2025": 247248, "FY2024": 263435, "FY2023": 231836, "FY2022": 120013, "FY2021": 77102, "FY2017": 47601}),
+    ("DATA", "Interest expense", {"FY2025": -129126, "FY2024": -137562, "FY2023": -90515, "FY2022": -17781, "FY2021": -10384, "FY2017": -6199}),
+    ("TOTAL", "Net interest income", {"FY2025": 118122, "FY2024": 125873, "FY2023": 141321, "FY2022": 102232, "FY2021": 66718, "FY2017": 41402}),
+    ("DATA", "Fee and commission income", {"FY2025": 31689, "FY2024": 29142, "FY2023": 23170, "FY2022": 21586, "FY2021": 18472, "FY2017": 13805}),
+    ("DATA", "Fee and commission expense", {"FY2025": -1444, "FY2024": -1029, "FY2023": -768, "FY2022": -537, "FY2021": -349, "FY2017": -282}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 30245, "FY2024": 28113, "FY2023": 22402, "FY2022": 21049, "FY2021": 18123, "FY2017": 13523}),
+    ("TOTAL", "Operating income from banking activities", {"FY2025": 148367, "FY2024": 153986, "FY2023": 163723, "FY2022": 123281, "FY2021": 84841, "FY2017": 54925}),
     ("SECTION", "Income from leasing activities", {}),
     ("DATA", "Revenue", {"FY2025": 118569, "FY2024": 110832, "FY2023": 100952, "FY2022": 99367, "FY2021": 74500}),
     ("DATA", "Cost of goods sold", {"FY2025": -97466, "FY2024": -85301, "FY2023": -81074, "FY2022": -82109, "FY2021": -68027}),
     ("TOTAL", "Gross profit from leasing activities", {"FY2025": 21103, "FY2024": 25531, "FY2023": 19878, "FY2022": 17258, "FY2021": 6473}),
-    ("TOTAL", "Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314}),
-    ("DATA", "Impairment loss on financial assets", {"FY2025": -2501, "FY2024": -6275, "FY2023": -3191, "FY2022": -5503, "FY2021": -3196}),
-    ("DATA", "Other income", {"FY2025": 5536, "FY2024": 2560, "FY2023": 3361, "FY2022": 2467, "FY2021": 4402}),
+    ("TOTAL", "Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314, "FY2017": 54925}),
+    ("DATA", "Impairment loss on financial assets", {"FY2025": -2501, "FY2024": -6275, "FY2023": -3191, "FY2022": -5503, "FY2021": -3196, "FY2017": -394}),
+    ("DATA", "Other income", {"FY2025": 5536, "FY2024": 2560, "FY2023": 3361, "FY2022": 2467, "FY2021": 4402, "FY2017": 3870}),
     ("DATA", "Profit from bargain purchase", {"FY2021": 8626}),
     ("DATA", "Loss on sale of commercial property held as inventory", {"FY2022": -4590}),
-    ("DATA", "Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512}),
-    ("TOTAL", "Profit/(loss) before tax", {"FY2025": 24184, "FY2024": 35090, "FY2023": 47116, "FY2022": 20009, "FY2021": 4634}),
-    ("DATA", "Income tax (expense)/credit", {"FY2025": -2119, "FY2024": -5339, "FY2023": -8433, "FY2022": -2146, "FY2021": 2157}),
-    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791}),
+    ("DATA", "Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512, "FY2017": -48924}),
+    ("TOTAL", "Profit/(loss) before tax", {"FY2025": 24184, "FY2024": 35090, "FY2023": 47116, "FY2022": 20009, "FY2021": 4634, "FY2017": 9477}),
+    ("DATA", "Income tax (expense)/credit", {"FY2025": -2119, "FY2024": -5339, "FY2023": -8433, "FY2022": -2146, "FY2021": 2157, "FY2017": -540}),
+    ("TOTAL", "Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791, "FY2017": 8937}),
     ("SECTION", "Other comprehensive income", {}),
-    ("DATA", "Movement in fair value reserve", {"FY2025": -59, "FY2024": 778, "FY2023": 412, "FY2022": 628, "FY2021": 763}),
-    ("DATA", "Tax on other comprehensive income", {"FY2025": 15, "FY2024": -182, "FY2023": -91, "FY2022": -128, "FY2021": -124}),
-    ("TOTAL", "Other comprehensive income for the period, net of tax", {"FY2025": -44, "FY2024": 596, "FY2023": 321, "FY2022": 499, "FY2021": 639}),
-    ("TOTAL", "Total comprehensive income for the period", {"FY2025": 22021, "FY2024": 30347, "FY2023": 39004, "FY2022": 18363, "FY2021": 7430}),
+    ("DATA", "Movement in fair value reserve", {"FY2025": -59, "FY2024": 778, "FY2023": 412, "FY2022": 628, "FY2021": 763, "FY2017": 128}),
+    ("DATA", "Tax on other comprehensive income", {"FY2025": 15, "FY2024": -182, "FY2023": -91, "FY2022": -128, "FY2021": -124, "FY2017": -26}),
+    ("TOTAL", "Other comprehensive income for the period, net of tax", {"FY2025": -44, "FY2024": 596, "FY2023": 321, "FY2022": 499, "FY2021": 639, "FY2017": 102}),
+    ("TOTAL", "Total comprehensive income for the period", {"FY2025": 22021, "FY2024": 30347, "FY2023": 39004, "FY2022": 18363, "FY2021": 7430, "FY2017": 9039}),
 ]
 
 INCOME_STATEMENT_SOURCES = (
@@ -207,6 +250,13 @@ INCOME_STATEMENT_SOURCES = (
     "'Sale of financial assets carried at FVOCI' (a reclassification between Retained earnings and the Fair "
     "value reserve, disclosed in the equity statement) is not shown here - it nets to zero on total comprehensive "
     "income and is a transfer within equity rather than a P&L income/expense item.\n"
+    "FY2017 presentation: the leasing business was acquired in FY2021, so the 'Income from leasing activities' "
+    "section is blank for FY2017 and the 2017 statement's single 'Operating income' line of 54,925 is shown on "
+    "both the banking-activities row and the group-total row - the same disclosed figure, not a derivation. "
+    "'Movement in fair value reserve' 128 is captioned 'Available-for-sale reserve' in 2017 (IAS 39, pre-IFRS 9). "
+    "The FY2017 column ties exactly: 41,402 + 13,523 = 54,925; 54,925 - 394 + 3,870 - 48,924 = 9,477; "
+    "9,477 - 540 = 8,937; 8,937 + 102 = 9,039.\n"
+    + FY2017_BASIS_NOTE
     + ENTITY_NOTE
 )
 
@@ -547,16 +597,16 @@ metric(
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371}),
-        ("Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461}),
-        ("Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949}),
-        ("Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024}),
+        ("Total assets", {"FY2025": 5006700, "FY2024": 4733958, "FY2023": 4349764, "FY2022": 3628546, "FY2021": 3373371, "FY2017": 1783675}),
+        ("Loans and advances to customers", {"FY2025": 1960552, "FY2024": 2094226, "FY2023": 2064256, "FY2022": 2047578, "FY2021": 1882461, "FY2017": 1060769}),
+        ("Deposits from customers", {"FY2025": 4575114, "FY2024": 4133406, "FY2023": 3760199, "FY2022": 3112478, "FY2021": 2856949, "FY2017": 1439804}),
+        ("Total equity", {"FY2025": 282447, "FY2024": 273773, "FY2023": 259686, "FY2022": 222537, "FY2021": 210024, "FY2017": 132937}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314}),
-        ("Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512}),
-        ("Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791}),
+        ("Total group operating income", {"FY2025": 169470, "FY2024": 179517, "FY2023": 183601, "FY2022": 140539, "FY2021": 91314, "FY2017": 54925}),
+        ("Operating expenses", {"FY2025": -148321, "FY2024": -140712, "FY2023": -136655, "FY2022": -112904, "FY2021": -96512, "FY2017": -48924}),
+        ("Profit/(loss) for the year", {"FY2025": 22065, "FY2024": 29751, "FY2023": 38683, "FY2022": 17863, "FY2021": 6791, "FY2017": 8937}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
@@ -588,20 +638,14 @@ bw.add_overview_sheet(
          "sheet for the small scope difference between the two. FY2025 Pillar 3 is not yet published.",
 )
 
-# FY2017 headline extension from Arbuthnot Banking Group Report & Accounts
-# 2017 (official source, pp.9-15), £'000. Historical Pillar 3 metrics were
-# not published in this report and remain blank.
-_fy17 = {
-    "Balance Sheet": {"Loans and advances to customers": 1049269, "Total assets": 1853232},
-    "Profit & Loss": {"Operating income from banking activities": 54616, "Profit before tax": 6971},
-    "Cash Flow Statement": {},
-}
-for _sheet, _values in _fy17.items():
-    _ws = bw.wb[_sheet]
-    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
-    _col = 1 + YEARS.index("FY2017") + 1
-    for _label, _value in _values.items():
-        if _label in _labels:
-            _ws.cell(_labels[_label], _col, _value)
+# FY2017 is carried in the balance_sheet_rows / income_statement_rows dicts
+# above, like every other year, so it flows through STATEMENT_SOURCES_HEAD and
+# is cited. It was previously bolted on here by writing straight into
+# bw.wb[...] after the sheets were built, which bypassed the citation plumbing
+# and hid an entity-basis error (parent ABG PLC figures in a Bank-basis
+# workbook) - see FY2017_BASIS_NOTE. Do not reintroduce that pattern: as well
+# as skipping the citation, its label lookup collapsed duplicate row captions
+# (this balance sheet has two 'Derivative financial instruments' rows) onto the
+# last match, so a value could land in the wrong section silently.
 
 bw.save("/Users/armaan/code/katalysis/banks/ARBUTHNOT LATHAM FINANCIALS.xlsx")

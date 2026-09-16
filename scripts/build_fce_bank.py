@@ -34,16 +34,16 @@ AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company
 # the same URL was used instead wherever the two differ in byte size). All are genuine,
 # text-native (not scanned) PDFs - confirmed via pdftotext extraction, unlike the 5
 # Companies House filings (FY2021-2025) which are scanned/image-only.
-AR2020_URL = "https://web.archive.org/web/20220615085358/https://www.fcebank.com/pdf/investor_center/2020_Annual_Report.pdf"
-AR2019_URL = "https://web.archive.org/web/20220615085141/https://www.fcebank.com/pdf/investor_center/2019_Annual_Report.pdf"
-AR2018_URL = "https://web.archive.org/web/20220615085110/https://www.fcebank.com/pdf/investor_center/2018_Annual_Report.pdf"
-AR2017_URL = "https://web.archive.org/web/20220615085008/https://www.fcebank.com/pdf/investor_center/2017_Annual_Report.pdf"
-AR2016_URL = "https://web.archive.org/web/20220615085027/https://www.fcebank.com/pdf/investor_center/2016_annual_report.pdf"
-AR2015_URL = "https://web.archive.org/web/20220615085018/https://www.fcebank.com/pdf/investor_center/2015_annual_report.pdf"
-AR2014_URL = "https://web.archive.org/web/20220615085021/https://www.fcebank.com/pdf/investor_center/2014_annual_accts.pdf"
+AR2020_URL = "https://web.archive.org/web/20220615085358id_/https://www.fcebank.com/pdf/investor_center/2020_Annual_Report.pdf"
+AR2019_URL = "https://web.archive.org/web/20220615085141id_/https://www.fcebank.com/pdf/investor_center/2019_Annual_Report.pdf"
+AR2018_URL = "https://web.archive.org/web/20220615085110id_/https://www.fcebank.com/pdf/investor_center/2018_Annual_Report.pdf"
+AR2017_URL = "https://web.archive.org/web/20220615085008id_/https://www.fcebank.com/pdf/investor_center/2017_Annual_Report.pdf"
+AR2016_URL = "https://web.archive.org/web/20220615085027id_/https://www.fcebank.com/pdf/investor_center/2016_annual_report.pdf"
+AR2015_URL = "https://web.archive.org/web/20220615085018id_/https://www.fcebank.com/pdf/investor_center/2015_annual_report.pdf"
+AR2014_URL = "https://web.archive.org/web/20220615085021id_/https://www.fcebank.com/pdf/investor_center/2014_annual_accts.pdf"
 # FY2014's own standalone Pillar 3 document (FY2015-2020's Pillar 3 disclosures are a
 # chapter *within* each year's own Annual Report instead - see P3_SOURCES_NOTE below).
-P3_2014_URL = "https://web.archive.org/web/20211015234304/https://www.fcebank.com/pdf/investor_center/2014_Pillar_3_Disclosure.pdf"
+P3_2014_URL = "https://web.archive.org/web/20211015234304id_/https://www.fcebank.com/pdf/investor_center/2014_Pillar_3_Disclosure.pdf"
 
 # FY2022-FY2025 standalone "Annual Pillar 3 Report"s. Earlier passes concluded FCE stopped
 # publishing Pillar 3 after the FY2021 Annual Report's chapter was dropped; that was wrong.
@@ -67,14 +67,14 @@ P3_2025_URL = "https://www.fcebank.com/pdf/investor_center/2025/FCE%20Bank%20PLC
 # on its first crawl date; a later, complete 2022-06-15/2022-06-20 re-crawl of the same URL was
 # used instead in every case (confirmed via CDX API length comparison before downloading - see
 # STATEMENTS_ENTITY_NOTE for the resulting cash-flow discontinuities this uncovered).
-AR2013_OLD_URL = "https://web.archive.org/web/20220615085139/https://www.fcebank.com/pdf/investor_center/2013_annual_accts.pdf"
-AR2012_OLD_URL = "https://web.archive.org/web/20220620211159/https://www.fcebank.com/pdf/investor_center/2012_annual_report_account.pdf"
-AR2011_OLD_URL = "https://web.archive.org/web/20220615085005/https://www.fcebank.com/pdf/investor_center/2011_Annual_FCEReport.pdf"
-AR2010_OLD_URL = "https://web.archive.org/web/20220615085039/https://www.fcebank.com/pdf/investor_center/2010_Annual_FCEReport.pdf"
-AR2009_OLD_URL = "https://web.archive.org/web/20220615085056/https://www.fcebank.com/pdf/investor_center/2009_Annual_FCEReport.pdf"
-AR2008_OLD_URL = "https://web.archive.org/web/20220615085100/https://www.fcebank.com/pdf/investor_center/2008_Annual_FCEReport.pdf"
-AR2007_OLD_URL = "https://web.archive.org/web/20220615085155/https://www.fcebank.com/pdf/investor_center/2007_Annual_FCEReport.pdf"
-AR2006_OLD_URL = "https://web.archive.org/web/20220615085046/https://www.fcebank.com/pdf/investor_center/2006_Annual_FCEReport.pdf"
+AR2013_OLD_URL = "https://web.archive.org/web/20220615085139id_/https://www.fcebank.com/pdf/investor_center/2013_annual_accts.pdf"
+AR2012_OLD_URL = "https://web.archive.org/web/20220620211159id_/https://www.fcebank.com/pdf/investor_center/2012_annual_report_account.pdf"
+AR2011_OLD_URL = "https://web.archive.org/web/20220615085005id_/https://www.fcebank.com/pdf/investor_center/2011_Annual_FCEReport.pdf"
+AR2010_OLD_URL = "https://web.archive.org/web/20220615085039id_/https://www.fcebank.com/pdf/investor_center/2010_Annual_FCEReport.pdf"
+AR2009_OLD_URL = "https://web.archive.org/web/20220615085056id_/https://www.fcebank.com/pdf/investor_center/2009_Annual_FCEReport.pdf"
+AR2008_OLD_URL = "https://web.archive.org/web/20220615085100id_/https://www.fcebank.com/pdf/investor_center/2008_Annual_FCEReport.pdf"
+AR2007_OLD_URL = "https://web.archive.org/web/20220615085155id_/https://www.fcebank.com/pdf/investor_center/2007_Annual_FCEReport.pdf"
+AR2006_OLD_URL = "https://web.archive.org/web/20220615085046id_/https://www.fcebank.com/pdf/investor_center/2006_Annual_FCEReport.pdf"
 
 ENTITY_NOTE = (
     "FCE Bank Plc (company 00772784) is the UK-regulated captive auto-finance bank for Ford "

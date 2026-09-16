@@ -14,22 +14,25 @@ YEAR_LABEL = {
 }
 
 AR25_URL = "https://chetwoodbank.co.uk/documents/chetwood-bank-annual-report.pdf"
-AR24_URL = "http://web.archive.org/web/20240920030034/https://chetwood.co/static/97d26e488d5277699e5b9a9983db4d5b/AnnualReport.pdf"
-AR22_URL = "http://web.archive.org/web/20230131231341/https://chetwood.co/static/7fbc3d1ed9c0913dca3435f640a5a570/AnnualReport.pdf"
-AR21_URL = "http://web.archive.org/web/20210830132929/https://chetwood.co/static/3d0ade6e892213e246ca03dc1d84b417/AnnualReport.pdf"
+AR24_URL = "http://web.archive.org/web/20240920030034id_/https://chetwood.co/static/97d26e488d5277699e5b9a9983db4d5b/AnnualReport.pdf"
+AR22_URL = "http://web.archive.org/web/20230131231341id_/https://chetwood.co/static/7fbc3d1ed9c0913dca3435f640a5a570/AnnualReport.pdf"
+AR21_URL = "http://web.archive.org/web/20210830132929id_/https://chetwood.co/static/3d0ade6e892213e246ca03dc1d84b417/AnnualReport.pdf"
 AR20_URL = "https://find-and-update.company-information.service.gov.uk/company/09964966/filing-history/MzI3NDIxOTQ2OWFkaXF6a2N4/document?format=pdf&download=0"
 AR19_URL = "https://find-and-update.company-information.service.gov.uk/company/09964966/filing-history/MzI0MTExMzg0OGFkaXF6a2N4/document?format=pdf&download=0"
 
 P3_25_URL = "https://chetwoodbank.co.uk/documents/chetwood-bank-pillar-three-disclosures.pdf"
-P3_23_URL = "http://web.archive.org/web/20240315022245/https://chetwood.co/static/330c40d433df90b83d3b3e5c673e21cc/Pillar3Disclosures.pdf"
-P3_22_URL = "http://web.archive.org/web/20230131235943/https://chetwood.co/static/815e2dd174c4655ddf55a93ca1029ce3/Pillar3Disclosures.pdf"
-P3_21_URL = "http://web.archive.org/web/20211128171331/https://chetwood.co/static/221a3946677e4d8c49c5525d22f9b534/Pillar3Disclosures.pdf"
+P3_23_URL = "http://web.archive.org/web/20240315022245id_/https://chetwood.co/static/330c40d433df90b83d3b3e5c673e21cc/Pillar3Disclosures.pdf"
+P3_22_URL = "http://web.archive.org/web/20230131235943id_/https://chetwood.co/static/815e2dd174c4655ddf55a93ca1029ce3/Pillar3Disclosures.pdf"
+P3_21_URL = "http://web.archive.org/web/20211128171331id_/https://chetwood.co/static/221a3946677e4d8c49c5525d22f9b534/Pillar3Disclosures.pdf"
 # Located 2026-09-15 via a Wayback CDX scan of the whole chetwood.co domain. This
-# is a genuine 8-page "Pillar 3 Disclosures, June 2020 / as at 31st March 2020"
-# PDF (767KB, real text layer) that earlier sessions missed - it predates the
+# is a genuine 23-page "Pillar 3 Disclosures, June 2020 / as at 31st March 2020"
+# PDF (767,512 bytes, real text layer) that earlier sessions missed - the page
+# count was recorded as 8 in error and corrected 2026-09-16 after a full
+# download of the id_ capture (pdfinfo: 23 pages, last printed page 22, which
+# is what the "p.18" citations below rely on) - it predates the
 # "as at 31 March 2021" edition previously believed to be Chetwood's earliest,
 # and it populates the FY2020 column on every Pillar 3 sheet below.
-P3_20_URL = "http://web.archive.org/web/20200929085826/https://chetwood.co/static/ea27728be3ae831ddb0ef7888e332546/Pillar3Disclosures.pdf"
+P3_20_URL = "http://web.archive.org/web/20200929085826id_/https://chetwood.co/static/ea27728be3ae831ddb0ef7888e332546/Pillar3Disclosures.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Chetwood Financial Limited (trading as Chetwood Bank) is the entity on the PRA register - no "
@@ -150,7 +153,7 @@ def p3_sources(extra_note=""):
         f"full for regulatory-capital content - see the CET1 Ratio sheet for the one FY2024 figure they do "
         f"yield, and the FY2024 gap note on each sheet for what they do not.\n"
         f"OUT-OF-SCOPE LEAD (not acted on here): that CDX scan also turned up an un-cited Pillar 3 snapshot at "
-        f"http://web.archive.org/web/20200929085826/https://chetwood.co/static/"
+        f"http://web.archive.org/web/20200929085826id_/https://chetwood.co/static/"
         f"ea27728be3ae831ddb0ef7888e332546/Pillar3Disclosures.pdf, captured Sept 2020 - i.e. predating the "
         f"'as at 31 March 2021' edition this workbook currently treats as Chetwood's earliest. It was not "
         f"opened or transcribed in this pass (the FY2019/FY2020 columns are an exterior, not interior, gap and "
@@ -168,7 +171,7 @@ def p3_sources(extra_note=""):
         f"and Section 5.2 (Liquidity ratios, p.18) - {P3_20_URL}\n"
         f"CORRECTION (2026-09-15): earlier versions of this workbook stated that 'no Pillar 3 disclosure was ever "
         f"published' for FY2019/FY2020 and that the 'as at 31 March 2021' edition was Chetwood's earliest. That "
-        f"was wrong for FY2020. A Wayback CDX scan of the whole chetwood.co domain surfaced an 8-page 'Pillar 3 "
+        f"was wrong for FY2020. A Wayback CDX scan of the whole chetwood.co domain surfaced a 23-page 'Pillar 3 "
         f"Disclosures June 2020' PDF at an un-cited static path (captured 29 Sept 2020, real text layer, 767KB - "
         f"not a soft 404), carrying a full FY2020 capital/leverage/liquidity set. Every FY2020 Pillar 3 figure in "
         f"this workbook comes from that document. It pre-dates the formal KM1 template (like the FY2021 edition), "

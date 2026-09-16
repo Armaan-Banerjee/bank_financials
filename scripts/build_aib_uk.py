@@ -14,6 +14,34 @@ AR2025_URL = "https://www.aib.ie/content/dam/frontdoor/investorrelations/docs/re
 AR2024_URL = "https://www.aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2024/aib-group-uk-plc-annual-financial-report-2024.pdf"
 AR2023_URL = "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2023/aib-group-uk-plc-annual-financial-report-2023.pdf"
 AR2022_URL = "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2022/AIB-Group-UK-p.l.c-Annual-Financial-Report-2022.pdf"
+# FY2021 Annual Financial Report - see ACCESS_ROUTE_NOTE below. NOT on aib.ie and NOT
+# reachable on the bank's own aibgb.co.uk (HTTP 403); Companies House serves it.
+AR2021_URL = ("https://find-and-update.company-information.service.gov.uk/company/NI018800/filing-history/"
+              "MzMzMjQ0MDUyOWFkaXF6a2N4/document?format=pdf&download=0")
+
+ACCESS_ROUTE_NOTE = (
+    "ACCESS ROUTE NOTE (FY2021 - CORRECTS AN EARLIER 'COULD NOT BE FETCHED' CLAIM, 2026-09-16): an earlier pass of "
+    "this script recorded that the standalone FY2021 Annual Financial Report 'could not be fetched' because the only "
+    "URL found for it (on the bank's own aibgb.co.uk) returned HTTP 403, and fell back on the FY2022 edition's FY2021 "
+    "comparative column for every FY2021 figure. That claim is WRONG and is corrected here: the document IS publicly "
+    "available, via COMPANIES HOUSE rather than either of AIB's own websites. Working route - Companies House filing "
+    "history for company NI018800, filing filed 11 March 2022, document id 'MzMzMjQ0MDUyOWFkaXF6a2N4':\n"
+    f"  {AR2021_URL}\n"
+    "Verified on retrieval: %PDF magic bytes, 9,246,343 bytes, 168 pages, cover reads 'AIB Group (UK) p.l.c. Annual "
+    "Financial Report for the year ended 31 December 2021, Company number: NI018800'; signed by Robert Mulhall "
+    "(Managing Director) and Janet McConkey (CFO) on 2 March 2022. Do NOT retry aibgb.co.uk for this document - it "
+    "403s, and aib.ie's investor-relations document tree only goes back to the FY2022 edition. Use Companies House.\n"
+    "TRANSCRIPTION METHOD: unlike AIB UK's FY2022-FY2025 PDFs (which are text-native), the Companies House FY2021 "
+    "filing is a SCANNED image with no text layer (pdftotext -layout returns 168 bytes for 168 pages). Figures were "
+    "obtained by rendering each page (pdftoppm -png -r 200 -gray) and OCR'ing (tesseract --psm 6), then VISUALLY "
+    "verifying every digit used here against the rendered page image. That visual check mattered: OCR misread the "
+    "Criticised watch total on printed p.118 as 187 (the Stage 2 column) when the Total column reads 242, and "
+    "flattened several two-block table rows. No figure below rests on unverified OCR.\n"
+    "OTHER 403-DRIVEN FALLBACKS IN THIS SCRIPT: none. FY2021 was the only year sourced via a 403 fallback - "
+    "FY2022-FY2025 each have a working aib.ie-hosted PDF of that year's own Annual Financial Report, already cited "
+    "below. The remaining next-year-comparative citations in this script (e.g. FY2024 balance-sheet figures read "
+    "from the FY2025 report) are deliberate cross-checks against a document that WAS fetched, not access failures."
+)
 
 ENTITY_NOTE = (
     "ENTITY NOTE: 'AIB Group (UK) p.l.c.' (FRN 122088, Companies House NI018800, registered in Northern Ireland) is "
@@ -43,12 +71,26 @@ CASH_FLOW_SOURCES = (
     "figures):\n"
     f"FY2023: FY2023 Annual Financial Report, p.73 (Statement of Cash Flows) - {AR2023_URL}\n"
     f"FY2022: FY2022 Annual Financial Report, p.71 (Statement of Cash Flows) - {AR2022_URL}\n"
-    f"FY2021: sourced from the FY2022 Annual Financial Report's own FY2021 comparative column, p.71 (a standalone "
-    f"FY2021 Annual Financial Report PDF could not be fetched - aibgb.co.uk returned HTTP 403 on the only URL "
-    f"found for it, and no working aib.ie-hosted equivalent was located) - {AR2022_URL}\n"
+    f"FY2021: FY2021 Annual Financial Report, printed p.70 (Statement of cash flows, 'AIB UK Group' column), "
+    f"retrieved from Companies House - {AR2021_URL}\n"
     "FY2022 figures were independently cross-checked against their appearance as the FY2023 report's own FY2022 "
     "comparative column and matched exactly.\n\n"
-    + ENTITY_NOTE + "\n\n" + CASH_FLOW_EXEMPTION_NOTE
+    "FY2021 VALIDATION GATE (2026-09-16) - PRIMARY vs. THE FY2022 COMPARATIVE COLUMN PREVIOUSLY RELIED ON: every "
+    "FY2021 cash-flow figure in this sheet was re-read from the FY2021 report's OWN statement of cash flows and "
+    "REPRODUCES the FY2022 edition's FY2021 comparative column EXACTLY - profit before taxation 89, non-cash items "
+    "27, 116, (73), 679, (32), 109, 2, (50), 637, 753, taxation paid (3), 750, additions to PP&E (7), additions to "
+    "intangibles (4), (11), repayment of secondary non-preferential debt (45), repayment of lease liabilities (3), "
+    "(48), change in cash 691, opening 4,662, closing 5,353. This is a meaningful confirmation, not a formality: "
+    "the figures were previously one edition removed from their source and are now primary-sourced.\n"
+    "ONE PRESENTATIONAL DIFFERENCE, documented rather than merged: the FY2021 report shows a separate 'Net decrease "
+    "in items in course of collection' line of £1m and a NIL 'Net decrease in other assets' line, whereas the FY2022 "
+    "edition carries a single 'Change in other assets' of £1m for FY2021 (i.e. it folded items in course of "
+    "collection into other assets, matching the same folding it applied on the balance sheet - see the Balance Sheet "
+    "sheet's note). Both presentations are shown below on separate labelled rows; no figure was overwritten. The "
+    "FY2021 report also prints a 'Dividends received from subsidiary undertakings' line that is NIL on the AIB UK "
+    "Group (consolidated) basis used here (£3m on the AIB UK solo basis, which this workbook does not use for "
+    "FY2021-FY2023).\n\n"
+    + ENTITY_NOTE + "\n\n" + CASH_FLOW_EXEMPTION_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
 )
 
 
@@ -61,13 +103,36 @@ def p3_sources(extra=""):
         f"FY2024: FY2024 Annual Financial Report, p.11 - {AR2024_URL}\n"
         f"FY2023: FY2023 Annual Financial Report, p.17-18 - {AR2023_URL}\n"
         f"FY2022: FY2022 Annual Financial Report, p.19-20 - {AR2022_URL}\n"
-        f"FY2021: sourced from the FY2022 Annual Financial Report's own FY2021 comparative figures, p.19-20 (see "
-        f"cash flow source note on why a standalone FY2021 report wasn't used) - {AR2022_URL}\n"
+        f"FY2021: FY2021 Annual Financial Report, printed p.20-21 ('Capital management and liquidity'), retrieved "
+        f"from Companies House - {AR2021_URL}\n"
         "Figures shown are on a TRANSITIONAL basis (AIB UK's own headline reported ratio each year) - fully loaded "
         "(post-IFRS 9 transitional relief) figures are also disclosed but not used here, consistent with how this "
-        "project treats IFRS 9 transitional relief for other banks.\n"
+        "project treats IFRS 9 transitional relief for other banks. For FY2021 the primary states both: CET1 "
+        "£1,508m transitional / £1,442m fully loaded, capital ratio 22.81% transitional / 22.01% fully loaded, RWA "
+        "£6,611m transitional / £6,554m fully loaded (FY2021 Annual Financial Report, p.20).\n"
+        "FY2021 VALIDATION GATE (2026-09-16): the FY2021 figures here were previously taken from the FY2022 "
+        "edition's comparatives. They have now been re-read from the FY2021 Annual Financial Report itself and "
+        "AGREE with what was already in the workbook - CET1 £1,508m (the FY2022 report's own capital-movement table "
+        "opens at the identical 'CET1 at 31 December 2021 1,508 / 1,442'), Total RWA £6,611m (likewise the FY2022 "
+        "RWA table's opening line, 6,611 / 6,554) and LCR 169% (the FY2022 report's 'LCR was 176% (2021: 169%)' "
+        "reproduces the FY2021 report's own 'As at 31 December 2021 AIB UK Group's LCR was 169% (2020: 178%)'). No "
+        "capital or liquidity figure required correction; the citations are upgraded from the following year's "
+        "comparative column to the primary document.\n"
+        "WHAT THE FY2021 PRIMARY DOES *NOT* CONTAIN (checked by full-text search of the OCR'd 168-page filing, so "
+        "these absences are evidenced rather than assumed, and should not be re-chased): no leverage ratio anywhere; "
+        "no NSFR and no mention of stable funding (the NSFR became a binding UK requirement only from 1 January "
+        "2022, per the FY2022 report's own 'Net Stable Funding Ratio' note, so FY2021's 156% exists only as a "
+        "retrospectively-supplied comparative in the FY2022 report); no 'Total capital' or 'Tier 1 capital' figure "
+        "of any kind - the FY2021 capital table discloses CET1 only, the word 'total capital' appearing solely in "
+        "the recital of the 8% CRR minimum; and no absolute category-level RWA split (the FY2021 report gives only a "
+        "FY2020-to-FY2021 movement, the mirror image of the FY2022 report's own presentation - see RWA Breakdown).\n"
+        "ADDITIONAL FY2021 DETAIL FROM THE PRIMARY: AIB UK Group's agreed Pillar 1 + Pillar 2a requirement for 2021 "
+        "was 9.95% of RWA (FY2021 Annual Financial Report, p.20; corroborated by the FY2022 report, which states "
+        "9.86% 'for 2022, a reduction from 9.95% in 2021'). Loan to deposit ratio 62% at 31 December 2021 (2020: "
+        "69%); customer balances were 79% of total liabilities and shareholders' equity (2020: 82%). The FY2021 "
+        "CET1 ratio of 22.8% includes COVID-19 relief add-backs; excluding them it is 22.0% (p.3 footnote).\n"
         + (extra + "\n" if extra else "")
-        + "\n" + ENTITY_NOTE
+        + "\n" + ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
     )
 
 
@@ -103,8 +168,36 @@ BALANCE_SHEET_SOURCES = (
     f"FY2023: FY2023 Annual Financial Report, p.70 ('AIB UK Group' column) - {AR2023_URL}\n"
     f"FY2022: FY2023 Annual Financial Report, p.70 (FY2022 comparative, 'AIB UK Group' column; matches FY2022 "
     f"Annual Financial Report's own p.70 statement) - {AR2023_URL}\n"
-    f"FY2021: FY2022 Annual Financial Report, p.70 (FY2021 comparative, 'AIB UK Group' column) - {AR2022_URL}\n\n"
-    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE
+    f"FY2021 (as presented in the FY2022 edition - the column used for the main rows above): FY2022 Annual "
+    f"Financial Report, p.70 (FY2021 comparative, 'AIB UK Group' column) - {AR2022_URL}\n"
+    f"FY2021 (as originally reported - the separately labelled memorandum rows at the foot of this sheet): FY2021 "
+    f"Annual Financial Report, printed p.68 (Statement of financial position, 'AIB UK Group' column), retrieved "
+    f"from Companies House - {AR2021_URL}\n\n"
+    "FY2021 VALIDATION GATE (2026-09-16) - PRIMARY vs. THE FY2022 COMPARATIVE COLUMN: the FY2021 Annual Financial "
+    "Report was retrieved from Companies House (see ACCESS ROUTE NOTE) and its own statement of financial position "
+    "re-read. Every FY2021 figure on this sheet REPRODUCES, including all three totals - cash and balances at "
+    "central banks 5,306, derivative financial instruments 91 (asset) / 128 (liability), loans and advances to "
+    "banks 637, loans and advances to customers 6,198, investment securities 40, investments in group undertakings "
+    "nil on the Group basis, intangibles 21, PP&E 31, current taxation 28, deferred tax assets 148, prepayments and "
+    "accrued income 10, retirement benefit assets 161, TOTAL ASSETS 12,688; deposits by banks 434, customer "
+    "accounts 10,088, lease liabilities 17, deferred tax liabilities 13, other liabilities 174, accruals and "
+    "deferred income 8, provisions 34, TOTAL LIABILITIES 10,896; share capital 2,384, TOTAL SHAREHOLDERS' EQUITY "
+    "1,792, TOTAL LIABILITIES AND EQUITY 12,688. Nothing required correction.\n"
+    "TWO PRESENTATIONAL DIFFERENCES, recorded on separate labelled rows rather than merged (the FY2022 edition "
+    "aggregates where the FY2021 edition split, and every total is unaffected):\n"
+    "  (1) The FY2021 report prints 'Items in course of collection' as its own asset line at £3m and 'Other assets' "
+    "at £14m; the FY2022 edition drops the separate line and shows 'Other assets' at £17m for FY2021 (= 14 + 3). "
+    "The main row above carries £17m, so that FY2021 is on the same footing as FY2022-FY2025; the £14m/£3m split is "
+    "in the memorandum rows. The same folding shows up on the Cash Flow Statement sheet - see its note.\n"
+    "  (2) The FY2021 report splits shareholders' equity into 'Reserves' (22) and 'Retained earnings' (570); the "
+    "FY2022 edition presents a single 'Reserves' line of (592) for FY2021 (= -22 + -570). Main row carries (592); "
+    "the split is in the memorandum rows. Note the FY2021 report's £(570) retained-earnings figure ties exactly to "
+    "the 'Revenue reserves' closing balance on the Statement of Changes in Equity sheet.\n"
+    "Also newly evidenced from the primary: 'Secondary non-preferential debt' - a line the FY2022 edition omits "
+    "entirely for FY2021 - stood at NIL at 31 December 2021 (£45m at 31 December 2020), the £45m having been repaid "
+    "during the year. That is an explicit disclosed nil, not an unknown, and it is what makes Total Capital = CET1 "
+    "for FY2021 (see the Tier 1 Capital and Total Capital sheets).\n\n"
+    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
     + "\n\nCORRECTION (HD-066 correctness audit): 'Investment securities' FY2024 (£54m) was previously missing "
       "entirely from this sheet - confirmed via the FY2024 Annual Financial Report's own p.52 Statement of "
       "financial position and the FY2025 Annual Financial Report's own p.33 FY2024 comparative column (both agree: "
@@ -160,15 +253,21 @@ balance_sheet_rows = [
     ("DATA", "Other equity interests (AT1)", {"FY2025": 110, "FY2024": 110, "FY2023": 110}),
     ("TOTAL", "Total equity", {"FY2025": 2061, "FY2024": 1893, "FY2023": 1853, "FY2022": 1654, "FY2021": 1792}),
     ("TOTAL", "Total liabilities and equity", {"FY2025": 10304, "FY2024": 9820, "FY2023": 9969, "FY2022": 10875, "FY2021": 12688}),
+    ("SECTION", "Memorandum — FY2021 as originally reported (see validation-gate note below)", {}),
+    ("DATA", "Items in course of collection (FY2021 as originally reported; folded into 'Other assets' by the FY2022 edition)", {"FY2021": 3}),
+    ("DATA", "Other assets, excluding items in course of collection (FY2021 as originally reported)", {"FY2021": 14}),
+    ("DATA", "Reserves, excluding retained earnings (FY2021 as originally reported)", {"FY2021": -22}),
+    ("DATA", "Retained earnings (FY2021 as originally reported; combined into 'Reserves' by the FY2022 edition)", {"FY2021": -570}),
+    ("DATA", "Secondary non-preferential debt (FY2021 as originally reported — explicitly nil, repaid in the year)", {"FY2021": 0}),
 ]
 
 bw.add_balance_sheet_sheet(
     title="AIB Group (UK) p.l.c. — Statement of Financial Position",
-    subtitle="£m. See source note at bottom for the Group (FY2021-FY2023) vs solo (FY2024-FY2025) entity-basis switch.",
+    subtitle="£m. Main rows: FY2022-edition basis for FY2021. See the memorandum rows and source note for the FY2021 presentational splits, plus the Group (FY2021-FY2023) vs solo (FY2024-FY2025) entity-basis switch.",
     rows=balance_sheet_rows,
     sources_text=BALANCE_SHEET_SOURCES,
-    first_col_width=64,
-    source_height=210,
+    first_col_width=88,
+    source_height=940,
     unit_suffix=" (£m)",
 )
 
@@ -185,8 +284,39 @@ INCOME_STATEMENT_SOURCES = (
     f"report) - {AR2023_URL}\n"
     f"FY2022: FY2023 Annual Financial Report, p.68 (FY2022 comparative, 'AIB UK Group' column; matches FY2022 "
     f"Annual Financial Report's own p.68 statement) - {AR2023_URL}\n"
-    f"FY2021: FY2022 Annual Financial Report, p.68 (FY2021 comparative, 'AIB UK Group' column) - {AR2022_URL}\n\n"
-    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE
+    f"FY2021 (as presented in the FY2022 edition - the column used for the main rows above, for consistency of "
+    f"presentation with FY2022 onward): FY2022 Annual Financial Report, p.68 (FY2021 comparative, 'AIB UK Group' "
+    f"column) - {AR2022_URL}\n"
+    f"FY2021 (as originally reported - the separately labelled memorandum rows at the foot of this sheet): FY2021 "
+    f"Annual Financial Report, printed p.66 (Consolidated income statement), retrieved from Companies House - "
+    f"{AR2021_URL}\n\n"
+    "FY2021 VALIDATION GATE (2026-09-16) - PRIMARY vs. THE FY2022 COMPARATIVE COLUMN, DIVERGENCE FOUND, NOTHING "
+    "OVERWRITTEN: the FY2021 Annual Financial Report was retrieved from Companies House (see ACCESS ROUTE NOTE) and "
+    "its own income statement re-read. Most of the column reproduces exactly - interest income 218, interest "
+    "expense (20), net interest income 198, fee and commission income 45 and expense (4), net trading and other "
+    "financial income 7, net gain on other financial assets at FVTPL 6, net loss on derecognition (8), operating "
+    "expenses (141), impairment and amortisation of intangibles (8), impairment and depreciation of PP&E (11), "
+    "total operating expenses (160), net credit impairment writeback 8, profit before taxation 89, income tax "
+    "credit 81, and profit for the year 170. But SIX lines do NOT reproduce, because the FY2022 edition "
+    "RECLASSIFIED a £3m loss on disposal of property that the FY2021 edition had reported BELOW operating profit:\n"
+    "  Other operating income:                     FY2021 edition NIL   -> FY2022 edition (3)\n"
+    "  Other income / Total other income:          FY2021 edition 46    -> FY2022 edition 43\n"
+    "  Total operating income:                     FY2021 edition 244   -> FY2022 edition 241\n"
+    "  Operating profit before impairment losses:  FY2021 edition 84    -> FY2022 edition 81\n"
+    "  Operating profit before taxation:           FY2021 edition 92    -> line no longer presented\n"
+    "  Loss on disposal of property:               FY2021 edition (3)   -> line no longer presented\n"
+    "This is a genuine restatement BETWEEN EDITIONS, not a transcription error in either direction: both documents "
+    "have been read and both were confirmed to print what is shown above (the FY2022 report's FY2021 comparative "
+    "column literally reads 'Other operating income/(expense) ... (3)', 'Other income ... 43', 'Total operating "
+    "income ... 241', 'Operating profit before impairment losses ... 81' with no disposal line beneath it). Profit "
+    "before taxation (89) and profit for the year (170) are IDENTICAL on both bases - the reclassification moves "
+    "£3m across the operating-profit subtotal without changing the bottom line. Per this project's validation gate, "
+    "the two presentations are recorded on separate labelled rows and neither was overwritten: the main rows keep "
+    "the FY2022-edition basis so that the FY2021 column is comparable with FY2022-FY2025 alongside it, and the "
+    "'(as originally reported...)' memorandum rows at the foot of the sheet carry the FY2021 edition's own "
+    "presentation. Anyone comparing this workbook against the FY2021 Annual Financial Report directly should read "
+    "the memorandum rows.\n\n"
+    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
     + "\n\nDISCREPANCY FLAGGED: the FY2024 Annual Financial Report's own FY2023 comparative column (p.50) shows "
       "Profit for the year £275m / Total operating income £449m - these are the 'AIB UK' SOLO figures, not the "
       "£269m/£443m 'AIB UK Group' consolidated figures FY2023's own report used (matching the same Group-vs-solo "
@@ -221,15 +351,24 @@ income_statement_rows = [
     ("TOTAL", "Profit before taxation", {"FY2025": 249, "FY2024": 239, "FY2023": 337, "FY2022": 138, "FY2021": 89}),
     ("DATA", "Income tax charge/(credit)", {"FY2025": -12, "FY2024": -51, "FY2023": -68, "FY2022": -23, "FY2021": 81}),
     ("TOTAL", "Profit for the year", {"FY2025": 237, "FY2024": 188, "FY2023": 269, "FY2022": 115, "FY2021": 170}),
+    ("SECTION", "Memorandum — FY2021 as originally reported (see validation-gate note below)", {}),
+    ("DATA", "Other operating income (FY2021 as originally reported)", {"FY2021": 0}),
+    ("DATA", "Other income (FY2021 as originally reported)", {"FY2021": 46}),
+    ("DATA", "Total operating income (FY2021 as originally reported)", {"FY2021": 244}),
+    ("DATA", "Operating profit before impairment losses and provisions (FY2021 as originally reported)", {"FY2021": 84}),
+    ("DATA", "Operating profit before taxation (FY2021 as originally reported)", {"FY2021": 92}),
+    ("DATA", "Loss on disposal of property, shown below operating profit (FY2021 as originally reported)", {"FY2021": -3}),
+    ("DATA", "Profit before taxation (FY2021 as originally reported — unchanged by the reclassification)", {"FY2021": 89}),
+    ("DATA", "Profit for the year (FY2021 as originally reported — unchanged by the reclassification)", {"FY2021": 170}),
 ]
 
 bw.add_income_statement_sheet(
     title="AIB Group (UK) p.l.c. — Income Statement",
-    subtitle="£m. See source note at bottom for the Group (FY2021-FY2023) vs solo (FY2024-FY2025) entity-basis switch and a flagged discrepancy.",
+    subtitle="£m. Main rows: FY2022-edition basis for FY2021. See the memorandum rows and source note for the FY2021 inter-edition reclassification, plus the Group (FY2021-FY2023) vs solo (FY2024-FY2025) entity-basis switch.",
     rows=income_statement_rows,
     sources_text=INCOME_STATEMENT_SOURCES,
-    first_col_width=64,
-    source_height=260,
+    first_col_width=76,
+    source_height=900,
     unit_suffix=" (£m)",
 )
 
@@ -239,16 +378,34 @@ bw.add_income_statement_sheet(
 EQUITY_CHANGES_SOURCES = (
     "Sources - Statement of changes in equity, £m ('AIB UK Group' consolidated column FY2021-FY2023, solo/Company "
     "column FY2024-FY2025):\n"
-    f"FY2021 movements + 1 Jan 2021 opening balance: FY2022 Annual Financial Report, p.71 (FY2021 comparative) - {AR2022_URL}\n"
+    f"FY2021 movements + 1 Jan 2021 opening balance: FY2021 Annual Financial Report, printed p.69 ('AIB UK Group' "
+    f"block), retrieved from Companies House - {AR2021_URL}\n"
+    f"  (previously cited to the FY2022 Annual Financial Report's FY2021 comparative block, p.71 - {AR2022_URL} - "
+    f"which reproduces the primary line for line; see the validation-gate note below)\n"
     f"FY2022 movements: FY2022 Annual Financial Report, p.71 - {AR2022_URL}\n"
     f"FY2023 movements: FY2023 Annual Financial Report, p.71 ('AIB UK Group' block) - {AR2023_URL}\n"
     f"FY2024 movements + 1 Jan 2024 opening balance: FY2025 Annual Financial Report, p.35 (FY2024 statement) - {AR2025_URL}\n"
     f"FY2025 movements: FY2025 Annual Financial Report, p.34 - {AR2025_URL}\n\n"
-    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE
+    + "FY2021 VALIDATION GATE (2026-09-16): the FY2021 rows here were previously read off the FY2022 edition's "
+      "FY2021 comparative block. The FY2021 Annual Financial Report has now been retrieved from Companies House "
+      "(see ACCESS ROUTE NOTE) and its own 'AIB UK Group' roll-forward re-read: it REPRODUCES every figure exactly "
+      "- At 1 January 2021 share capital 2,384 / other reserves 2 / cash flow hedging reserve 33 / retained "
+      "earnings (745) / total equity 1,674; profit for the year 170; other comprehensive income net of tax (57) on "
+      "the hedging reserve and 5 on retained earnings, total (52); total comprehensive income (57) / 175 / 118; At "
+      "31 December 2021 2,384 / 2 / (24) / (570) / 1,792. This is a clean confirmation with no divergence, and the "
+      "citation is upgraded from the following year's comparative block to the primary document. (The FY2021 report "
+      "labels the last movement column 'Retained earnings' where FY2022 onward calls it 'Revenue reserves' - the "
+      "same column, renamed, and (570) ties to the FY2021 balance sheet's own retained-earnings line.)\n\n"
+    + ENTITY_NOTE + "\n\n" + STATEMENT_ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
     + "\n\nJUDGEMENT CALL: FY2021-FY2022 reports disclose only a single combined 'Other reserves' column (not split "
       "into Capital redemption / Revaluation reserves as FY2023 onward does) - since AIB UK's Capital redemption "
       "reserve was only created by the November 2023 share buyback, the FY2021-FY2022 'Other reserves' figures are "
-      "mapped to the 'Revaluation reserves' column here (Capital redemption reserves left blank for those years)."
+      "mapped to the 'Revaluation reserves' column here (Capital redemption reserves left blank for those years). "
+      "CONFIRMED 2026-09-16 against the FY2021 primary, which settles this rather than leaving it a judgement: the "
+      "FY2021 Annual Financial Report's note 35 (printed p.144) breaks out the combined 'Other reserves' column and "
+      "names its sole component in terms - 'Revaluation reserves at beginning and end of year ... AIB UK Group "
+      "2021: 2, 2020: 2' - so the £2m mapped into the Revaluation reserves column above IS a revaluation reserve, "
+      "not an unclassified residual."
 )
 
 EQUITY_HEADERS = ["Share capital", "Capital redemption reserves", "Revaluation reserves",
@@ -296,7 +453,7 @@ bw.add_equity_changes_sheet(
     rows=equity_changes_rows,
     sources_text=EQUITY_CHANGES_SOURCES,
     first_col_width=58,
-    source_height=230,
+    source_height=680,
 )
 
 # ---------------------------------------------------------------
@@ -337,15 +494,19 @@ rows = [
     ("TOTAL", "Change in cash and cash equivalents", {"FY2023": -800, "FY2022": -1296, "FY2021": 691}),
     ("DATA", "Opening cash and cash equivalents", {"FY2023": 4057, "FY2022": 5353, "FY2021": 4662}),
     ("TOTAL", "Closing cash and cash equivalents", {"FY2023": 3257, "FY2022": 4057, "FY2021": 5353}),
+    ("SECTION", "Memorandum — FY2021 as originally reported (see validation-gate note below)", {}),
+    ("DATA", "Net decrease in items in course of collection (FY2021 as originally reported; folded into 'Change in other assets' by the FY2022 edition)", {"FY2021": 1}),
+    ("DATA", "Net decrease in other assets, excluding items in course of collection (FY2021 as originally reported)", {"FY2021": 0}),
+    ("DATA", "Dividends received from subsidiary undertakings (FY2021 as originally reported — nil on the AIB UK Group basis used here)", {"FY2021": 0}),
 ]
 
 bw.add_cash_flow_sheet(
     title="AIB Group (UK) p.l.c. — Statement of Cash Flows",
-    subtitle="AIB UK Group (consolidated) basis, £m. FY2024-FY2025 blank - see source note at bottom (FRS 101 cash-flow exemption).",
+    subtitle="AIB UK Group (consolidated) basis, £m. FY2024-FY2025 blank - see source note at bottom (FRS 101 cash-flow exemption). FY2021 is now primary-sourced; see the memorandum rows.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
-    first_col_width=78,
-    source_height=280,
+    first_col_width=96,
+    source_height=600,
     unit_suffix=" (£m)",
 )
 
@@ -357,8 +518,23 @@ ASSET_QUALITY_SOURCES = (
     f"FY2025 and FY2024: FY2025 Annual Financial Report, p.73 (Note 20(f), 'Credit profile of the loan portfolio') "
     f"and p.79 (Note 20(h), ECL allowance movements) - {AR2025_URL}\n"
     f"FY2023 and FY2022: FY2023 Annual Financial Report, p.120 (Note 21(f)) - {AR2023_URL}\n"
-    f"FY2021: FY2022 Annual Financial Report, p.120 (Note 21(f), FY2021 comparative) - {AR2022_URL}\n\n"
-    + ENTITY_NOTE
+    f"FY2021: FY2021 Annual Financial Report, printed p.118 ('Credit profile of the loan portfolio', the internal "
+    f"credit grading profile by ECL staging at 31 December 2021), retrieved from Companies House - {AR2021_URL}\n"
+    f"  (previously cited to the FY2022 Annual Financial Report's FY2021 comparative, p.120 - {AR2022_URL})\n\n"
+    "FY2021 VALIDATION GATE (2026-09-16): re-read from the FY2021 primary, every FY2021 figure on this sheet "
+    "REPRODUCES - Total strong/satisfactory 5,210 (Stage 1 4,736 / Stage 2 474 / Stage 3 nil), Criticised watch "
+    "242, Criticised recovery 435, Total criticised 677 (Stage 1 55 / Stage 2 622), Non-performing 512, Gross "
+    "carrying amount 6,399 (Stage 1 4,791 / Stage 2 1,096 / Stage 3 512), ECL allowance (201) (Stage 1 (28) / "
+    "Stage 2 (80) / Stage 3 (93)), carrying amount 6,198. OCR CAUTION FOR ANY FUTURE PASS: on this scanned page "
+    "tesseract read the Criticised watch row as 187 - that is the Stage 2 cell; the Total column reads 242, "
+    "confirmed visually against the rendered page image (and 242 + 435 = 677, the printed Total criticised). "
+    "Do not transcribe 187 into the Criticised watch row.\n"
+    "The FY2021 primary also CONFIRMS the Strong/Satisfactory finding already recorded below: its own credit "
+    "profile table shows a single combined 'Total strong/satisfactory' line with no Strong vs. Satisfactory split "
+    "for either 2021 or 2020. So the blank FY2021 Strong and Satisfactory cells are now evidenced against the "
+    "FY2021 report itself, not merely inferred from the FY2022 report's presentation - AIB UK had genuinely not "
+    "begun publishing that split. Those two cells should not be re-chased.\n\n"
+    + ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
     + "\n\nPRESENTATION NOTE: AIB UK does not disclose loans and advances to customers by product (e.g. mortgages "
       "vs. term loans vs. overdrafts) at a group total level - only a credit-quality/stage breakdown and a "
       "sector-concentration breakdown (not reproduced here as a distinct line item set). 'Non-performing' = Stage 3 "
@@ -409,7 +585,7 @@ bw.add_asset_quality_sheet(
     rows=asset_quality_rows,
     sources_text=ASSET_QUALITY_SOURCES,
     first_col_width=62,
-    source_height=220,
+    source_height=760,
     unit_suffix=" (£m)",
 )
 
@@ -418,7 +594,7 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"{unit}" if unit else "", rows_data, sources_text,
-                         note=note, first_col_width=52, source_height=190)
+                         note=note, first_col_width=52, source_height=860, note_height=320)
 
 
 metric(
@@ -430,8 +606,15 @@ metric(
 metric(
     "CET1 Ratio", "% of RWA",
     [("CET1 ratio, transitional", {"FY2025": "26.8%", "FY2024": "27.7%", "FY2023": "21.44%", "FY2022": "24.11%", "FY2021": "22.81%"})],
-    p3_sources("FY2021's CET1 ratio (22.81%) is CALCULATED (CET1 ÷ RWA) - the FY2022 report only states the ratio "
-               "increased from an unstated FY2021 base, it never gives the FY2021 % directly."),
+    p3_sources("PROVENANCE UPGRADE (2026-09-16): FY2021's 22.81% was previously flagged in this script as CALCULATED "
+               "(CET1 / RWA), because the FY2022 Annual Financial Report never states the FY2021 percentage - that "
+               "remains true of the FY2022 report (it says only 'Transitional CET1 of 24.11% increased in the year', "
+               "and its highlights page carries the 2022 ratio alone). But the FY2021 Annual Financial Report states "
+               "it DIRECTLY: 'Capital ratio at 31 December 2021 ... 22.81% [transitional] / 22.01% [fully loaded]' "
+               "(p.20), with the narrative on p.21 repeating 'Transitional CET1 of 22.81%' and 'a fully loaded "
+               "capital ratio of 22.01%', and the highlights page (p.3) showing 22.8%. The derived figure happened "
+               "to be right, but it is no longer derived: this row is now transcribed from the primary throughout, "
+               "and the CALCULATED caveat is withdrawn."),
 )
 
 metric(
@@ -441,20 +624,34 @@ metric(
     note="Tier 1 Capital = CET1 Capital for FY2021-FY2022 (no Additional Tier 1 instruments outstanding yet). AIB "
          "UK issued £110m of AT1 as part of a November 2023 capital restructure; Tier 1 Capital from FY2023 onward "
          "is CALCULATED as CET1 + AT1 (£110m every year FY2023-FY2025) - AIB UK's own disclosures give CET1 and "
-         "Total Capital explicitly but never break out a separate 'Tier 1' capital or ratio line.",
+         "Total Capital explicitly but never break out a separate 'Tier 1' capital or ratio line. The FY2021 = CET1 "
+         "equivalence is now confirmed against the FY2021 Annual Financial Report itself (Companies House copy, "
+         "2026-09-16): its statement of financial position at 31 December 2021 shows shareholders' equity as share "
+         "capital, reserves and retained earnings only, with no 'other equity interests'/AT1 line and no "
+         "subordinated liabilities (the only such instrument, £45m of secondary non-preferential debt, stood at nil "
+         "at 31 December 2021 having been repaid during the year - see the FY2021 cash flow's 'Repayment of "
+         "secondary non-preferential debt (45)').",
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio (calculated: Tier 1 Capital ÷ RWA)", {"FY2025": "28.64%", "FY2024": "29.66%", "FY2023": "23.11%", "FY2022": "24.11%", "FY2021": "22.81%"})],
     p3_sources("Entirely CALCULATED (Tier 1 Capital ÷ Total RWA) - AIB UK does not disclose a Tier 1 ratio as a "
-               "distinct line anywhere in its Annual Financial Reports."),
+               "distinct line anywhere in its Annual Financial Reports. Re-confirmed for FY2021 on 2026-09-16 "
+               "against the FY2021 Annual Financial Report itself (Companies House copy, full-text searched): its "
+               "capital section discloses CET1 and the CET1/capital ratio only, with no Tier 1 capital and no "
+               "Tier 1 ratio line - so FY2021 stays calculated too."),
 )
 
 metric(
     "Total Capital", "£m",
     [("Total capital", {"FY2025": 1865, "FY2024": 1783, "FY2023": 1657, "FY2022": 1531, "FY2021": 1508})],
-    p3_sources(),
+    p3_sources("FY2021's £1,508m is Total Capital = CET1, not a separately disclosed 'Total capital' figure: the "
+               "FY2021 Annual Financial Report (read directly from the Companies House copy, 2026-09-16) never "
+               "states a Total Capital amount - its capital table runs to 'CET1 at 31 December 2021 1,508' and "
+               "stops - and the same report's balance sheet confirms there was no AT1 and no Tier 2 outstanding at "
+               "that date (see the Tier 1 Capital sheet's note), so the two are equal by construction rather than "
+               "by back-solving."),
 )
 
 metric(
@@ -479,10 +676,16 @@ RWA_BREAKDOWN_SOURCES = (
     f"discloses only the FY2021-to-FY2022 category-level RWA movement/waterfall, not FY2022's own absolute "
     f"category split, so the next year's report is used instead; the resulting FY2022 Total (£6,352m) still ties "
     f"to the Total RWAs sheet) - {AR2023_URL}\n"
-    f"FY2021: not available at category level in any of the four fetched Annual Financial Reports - only the "
-    f"aggregate Total RWA (£6,611m, per the Total RWAs sheet) and the FY2021-to-FY2022 movement are disclosed "
-    f"(FY2022 Annual Financial Report, p.19) - {AR2022_URL}\n\n"
-    + ENTITY_NOTE
+    f"FY2021: not available at category level - and, as of 2026-09-16, this is now an EVIDENCED absence rather than "
+    f"an assumed one. The FY2021 Annual Financial Report itself was retrieved from Companies House and read "
+    f"directly (see ACCESS ROUTE NOTE), and its RWA table on printed p.20 has exactly the same movement shape as "
+    f"every other year's: it opens 'At 31 December 2020 7,353 [transitional] / 7,266 [fully loaded]', shows the "
+    f"year's movements by category (Credit risk (734)/(704), Operational risk (8)/(8)) and closes 'At 31 December "
+    f"2021 6,611 / 6,554'. That yields FY2021's absolute TOTAL RWA, which is already on the Total RWAs sheet and "
+    f"in the Total row below, but no absolute FY2021 credit-risk/operational-risk/CVA split - a movement is not a "
+    f"split and must not be back-solved from one. So the FY2021 category cells stay blank across all five now-read "
+    f"Annual Financial Reports (FY2021's own, plus FY2022-FY2025) - {AR2021_URL}\n\n"
+    + ENTITY_NOTE + "\n\n" + ACCESS_ROUTE_NOTE
 )
 
 rwa_breakdown_rows = [
@@ -498,7 +701,7 @@ bw.add_rwa_breakdown_sheet(
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=52,
-    source_height=210,
+    source_height=600,
     unit_suffix=" (£m)",
 )
 
@@ -512,6 +715,13 @@ metric(
          "Policy Statement 21/21). No FY2022-FY2025 year-end leverage ratio figure appears anywhere in any of the "
          "five Annual Financial Reports - AIB UK's 'Capital management and liquidity' section covers CET1/Total "
          "Capital/RWA/LCR/NSFR every year but never a leverage ratio outside that single FY2021 mention.\n"
+         "IMPORTANT PROVENANCE POINT (2026-09-16): the FY2021 figure is NOT in the FY2021 Annual Financial Report. "
+         "That report was retrieved from Companies House and read directly (see ACCESS ROUTE NOTE), and the word "
+         "'leverage' appears in it only in unrelated credit-risk prose ('leverage lending portfolio', 'highly "
+         "leveraged exposures') - there is no leverage ratio figure, no leverage exposure measure, and no glossary "
+         "entry for it. So this row's sole source remains the FY2022 Annual Financial Report's backward-looking "
+         "narrative sentence, even now that the FY2021 primary is in hand. Recorded explicitly so a future pass "
+         "does not re-open the FY2021 report expecting to find it.\n"
          "The FY2022 break is STRUCTURAL, not an unsourced document. PS21/21 (October 2021, effective "
          "1 January 2022) set the scope of the UK leverage ratio requirement at firms with UK retail deposits "
          ">= GBP 50bn or non-UK assets >= GBP 10bn (PS21/21 paras 1.6, 2.4 and 5.8). AIB Group (UK) p.l.c. is far "
@@ -527,26 +737,69 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (LCR)", {"FY2025": "216%", "FY2024": "282%", "FY2023": "216%", "FY2022": "176%", "FY2021": "169%"})],
-    p3_sources(),
+    p3_sources("BASIS: every year on this row is a POINT-IN-TIME year-end LCR taken from the Annual Financial "
+               "Report's own liquidity narrative - not a 12-month average. FY2021's wording, read directly from the "
+               "primary on 2026-09-16, is explicit about that: 'As at 31 December 2021 AIB UK Group's LCR was 169% "
+               "(2020: 178%)' (FY2021 Annual Financial Report, p.21). AIB UK publishes no Pillar 3 KM1 table, so "
+               "there is no 12-month-average series to confuse this with, and none should be merged into this row "
+               "if one later surfaces."),
 )
 
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (NSFR)", {"FY2025": "157%", "FY2024": "172%", "FY2023": "139%", "FY2022": "145%", "FY2021": "156%"})],
-    p3_sources(),
+    p3_sources("FY2021 SOURCING (2026-09-16): FY2021's 156% is the one metric on this workbook's Pillar 3 sheets "
+               "that could NOT be upgraded to the FY2021 primary, and the reason is structural rather than an "
+               "access problem. The FY2021 Annual Financial Report (Companies House copy, full-text searched) "
+               "contains no NSFR figure and no mention of stable funding at all - its liquidity section covers the "
+               "LCR only. The FY2022 report explains why: 'Following the UK implementation of CRR II / CRD V, the "
+               "NSFR became a binding requirement under UK law from 1 January 2022', and it is that report which "
+               "first supplies a FY2021 comparative ('NSFR was 145% (2021: 156%)'). FY2021's 156% is therefore a "
+               "retrospectively-disclosed comparative by construction, correctly cited to the FY2022 report, and "
+               "re-opening the FY2021 report for it would be wasted effort."),
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["MREL Ratio"],
+# Equivalent to bw.add_not_disclosed_metric_sheets(["MREL Ratio"], ...) - spelled out as a
+# direct add_metric_sheet call purely so the note cell can be given a taller note_height,
+# which add_not_disclosed_metric_sheets does not forward. Row content is identical.
+bw.add_metric_sheet(
+    "MREL Ratio",
+    None,
+    [("MREL Ratio", {y: "Not publicly disclosed" for y in YEARS})],
     p3_sources(),
-    per_note={
-        "MREL Ratio": "MREL is not mentioned anywhere in any of AIB Group (UK) p.l.c.'s five Annual Financial "
-                      "Reports (FY2021-FY2025) - searched directly, no hits. AIB UK's own capital section discusses "
-                      "only the CRR minimum capital requirement (8% Total Capital / 4.5% Tier 1) plus its "
-                      "PRA-set Pillar 1 and Pillar 2a add-on, with no separate resolution/MREL requirement "
-                      "disclosed - consistent with AIB UK not being its own resolution entity under the Bank of "
-                      "England's MREL framework (resolution planning likely sits at the wider AIB Group level).",
-    },
+    first_col_width=52,
+    source_height=860,
+    note_height=320,
+    note=(
+        "No MREL RATIO is disclosed for any year: AIB UK's own capital section discusses only the CRR "
+                      "minimum capital requirement (8% Total Capital / 4.5% Tier 1) plus its PRA-set Pillar 1 and "
+                      "Pillar 2a add-on, and never states an MREL requirement as a percentage of RWA or of leverage "
+                      "exposure, nor an MREL resource amount. This row therefore stays 'Not publicly disclosed' - "
+                      "nothing here may be derived from the capital figures on the other sheets.\n"
+                      "CORRECTION (2026-09-16): an earlier pass of this script recorded that 'MREL is not mentioned "
+                      "anywhere in any of AIB Group (UK) p.l.c.'s five Annual Financial Reports (FY2021-FY2025)'. "
+                      "That was written without the FY2021 report, which had not then been fetched, and it is WRONG "
+                      "for FY2021. The FY2021 Annual Financial Report (Companies House copy - see ACCESS ROUTE "
+                      "NOTE) mentions MREL twice: in the glossary ('MREL - Minimum Requirement for Eligible "
+                      "Liabilities', p.165) and, substantively, in note 34 'Secondary non-preferential debt' "
+                      "(printed p.144), which states: 'On 31 December 2020, AIB plc issued a GBP45m secondary "
+                      "non-preferential loan to AIB UK FOR THE PURPOSES OF MEETING AIB UK MREL REQUIREMENTS. The "
+                      "loan bore interest on the outstanding nominal amount at a rate of SONIA plus a margin of "
+                      "130bps, payable half-yearly in arrears.' and 'AIB UK exercised the option to repay the "
+                      "secondary non-preferential debt on 31 December 2021.' The note shows the instrument at "
+                      "GBP45m at 31 December 2020 and NIL at 31 December 2021.\n"
+                      "WHAT THAT DOES AND DOES NOT ESTABLISH: it establishes that AIB UK had an MREL requirement of "
+                      "its own during FY2020-FY2021, met with internal (downstreamed) MREL from the Irish parent, "
+                      "and that the instrument was repaid at the very end of FY2021 - which is consistent with, and "
+                      "dates, the disappearance of the requirement from AIB UK's disclosures thereafter. It does "
+                      "NOT give a ratio, a requirement level, or an eligible-liabilities total for any year, so no "
+                      "cell on this sheet can be filled. The 'no hits' finding remains true for the FY2022 report "
+                      "(re-verified 2026-09-16 by full-text search of the FY2022 PDF: zero occurrences of 'MREL' or "
+                      "'eligible liabilities') and, per the earlier pass, for FY2023-FY2025. Note the ordering: "
+                      "AIB UK stopped disclosing a leverage ratio from 1 January 2022 and repaid its MREL "
+                      "instrument on 31 December 2021 - two independent disclosures thinning out at the same "
+                      "moment, both consistent with the PS21/21 scope change described on the Leverage Ratio sheet."
+    ),
 )
 
 # ---------------------------------------------------------------
@@ -588,7 +841,18 @@ bw.add_overview_sheet(
         ("LCR", {"FY2025": "216%", "FY2024": "282%", "FY2023": "216%", "FY2022": "176%", "FY2021": "169%"}),
         ("NSFR", {"FY2025": "157%", "FY2024": "172%", "FY2023": "139%", "FY2022": "145%", "FY2021": "156%"}),
     ],
-    note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
+    note="FY2021 SOURCING (2026-09-16): FY2021 no longer depends on the FY2022 edition's comparative column. The "
+         "FY2021 Annual Financial Report was retrieved from COMPANIES HOUSE (company NI018800 - it is not on "
+         "aib.ie, and the bank's own aibgb.co.uk returns HTTP 403; see the ACCESS ROUTE NOTE carried on every "
+         "detail sheet) and read directly. Every FY2021 figure ON THIS OVERVIEW reproduces from the primary "
+         "unchanged EXCEPT 'Total operating income' (£241m here, the FY2022-edition basis; the FY2021 edition "
+         "reported £244m before a £3m loss on disposal of property was reclassified into operating income by the "
+         "next edition - profit for the year is £170m on both bases). That divergence is documented on separate "
+         "labelled memorandum rows on the Profit & Loss sheet; this Overview is a COPY of the detail sheets and "
+         "deliberately carries only the FY2022-edition basis so the FY2021 column stays comparable with "
+         "FY2022-FY2025 beside it. Read the Profit & Loss sheet before quoting FY2021 income figures against the "
+         "FY2021 Annual Financial Report itself.\n"
+         "Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. Cash flow is blank for FY2024-FY2025 (FRS 101 exemption took "
          "effect from FY2024 - see Cash Flow Statement sheet note); Leverage Ratio is populated for FY2021 only "
          "(never disclosed again in later years). Balance Sheet/P&L/Equity blocks are Group basis FY2021-FY2023 and "

@@ -22,6 +22,16 @@ AR23_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annua
 AR25_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2025.pdf"
 AR26_SGHL_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Group-Annual-Report-2026.pdf"
 AR20_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-21.pdf"
+# BLOCKED, WITH NO ARCHIVED FALLBACK - an unresolved state, explicitly NOT a negative
+# (checked 2026-09-16). starlingbank.com refuses this project's automated fetcher: this URL
+# returns HTTP 403 with a ~49KB text/html bot-protection page rather than a PDF. A 403 is an
+# UNKNOWN - it records that the host declined to serve US, NOT that the document has been
+# withdrawn, and a human browser or a different network may well retrieve it normally. No
+# substitute could be offered either: a Wayback CDX query on this exact URL was run on
+# 2026-09-16 and returned successfully with an EMPTY result set, so the absence of an ARCHIVE
+# is enumerated rather than assumed - but that says nothing about the document itself, which
+# remains unexamined rather than absent. Left cited at the publisher's live URL deliberately,
+# since there is nothing verified to replace it with. Do not downgrade this to "dead".
 AR19_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-18.pdf"
 AR18_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2017-18.pdf"
 AR17_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2016-17.pdf"
@@ -126,7 +136,34 @@ STATEMENTS_SOURCES = (
     f"FY2021: Starling Bank Limited Annual Report and Consolidated Financial Statements, period ended 31 March "
     f"2021, p.62-68 (Consolidated Statement of Comprehensive Income / Financial Position / Changes in Equity) - "
     f"{AR21_URL}. Independently cross-checked against Annual Report 2023's FY2021 comparative opening equity "
-    f"balance, which agrees exactly.\n\n" + ENTITY_NOTE + "\n\n"
+    f"balance, which agrees exactly.\n"
+    f"FY2018 (& FY2017): Starling Bank Limited Annual Report and Consolidated Financial Statements for the year "
+    f"ended 30 November 2018, printed p.45 / PDF p.25, 'Consolidated Statement of Financial Position as at "
+    f"30 November 2018' - {AR18_URL}. That table prints four columns (Group 2018, Group 2017, Company 2018, "
+    f"Company 2017); the GROUP columns are used, as everywhere else in this workbook.\n"
+    f"FY2017 independently cross-checked against its own original report: Starling Bank Limited Annual Report "
+    f"2017 (year ended 30 November 2017), printed p.42 / PDF p.44, Consolidated Statement of Financial Position "
+    f"- {AR17_URL}. Every FY2017 figure agrees exactly between the two editions (Loans and Advances to Banks "
+    f"37,544; Total Assets 53,277; Total Liabilities 20,559; Share Premium 47,846; Total Equity 32,718) - no "
+    f"restatement.\n"
+    f"CORRECTION (2026-09-16): FY2018 'Loans and advances to banks' previously read 37,544. That is the FY2017 "
+    f"COMPARATIVE from the same table, mis-read one column across; the FY2018 Group figure is 187,008. The "
+    f"error was self-evident from the column's own arithmetic - 187,008 + 18,039 + 8,698 + 7,087 + 616 + 13,221 "
+    f"= 234,669, the printed Total Assets, whereas 37,544 left the column 149,464 short of its own stated total. "
+    f"Every other FY2018 and FY2017 cell was re-checked against the printed table and is correct. The FY2018 "
+    f"column was also completed at the same time: it previously carried a single 'Other assets' of 20,924 that "
+    f"silently absorbed Property, Plant and Equipment (616) and Intangible Assets (13,221), while the adjacent "
+    f"FY2017 column showed those two lines separately - the two columns now use identical treatment, and the "
+    f"FY2018 equity components (Share Capital 5, Share Premium 67,784, Other Reserves 319, Cumulative Retained "
+    f"Earnings (40,109)) and liability components (Provisions 202, Other Liabilities 3,614, Accruals and "
+    f"Deferred Income 531) are transcribed rather than left blank.\n"
+    f"FY2018/FY2017 caption mapping: 'Investment Securities' is carried on the 'Total debt securities' row (no "
+    f"issuer-type breakdown is disclosed for these years, so the four sub-lines stay blank); 'Accruals and "
+    f"Deferred Income' is carried on the 'Deferred income' row; and 'Other assets' combines the report's 'Other "
+    f"Assets' and 'Accrued Interest and Prepayments' lines (FY2018: 5,464 + 1,623 = 7,087; FY2017: 2,236 + 96 = "
+    f"2,332) because no separate accrued-interest row exists in this ladder. Both columns tie exactly: assets "
+    f"to Total Assets, liabilities to Total Liabilities, and equity components to Total Equity.\n\n"
+    + ENTITY_NOTE + "\n\n"
     "PRESENTATION NOTE (Balance Sheet): FY2024-FY2026 report a separate 'Cash and balances at central banks' line "
     "distinct from 'Loans and advances to banks'; FY2021-FY2023 report a single combined 'Loans and Advances to "
     "Banks' line that includes cash and cash equivalents (per that year's own footnote) - both are shown as "
@@ -218,15 +255,21 @@ balance_sheet_rows = [
 # use a materially different line presentation, so only exact line matches
 # are carried into the extended ladder.
 _OLD_BS = {
-    "FY2018": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
+    "FY2018": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 187008,
                "Total debt securities": 18039, "Loans and advances to customers": 8698,
-               "Other assets": 20924, "Total assets": 234669, "Customer deposits": 202323,
-               "Total liabilities": 206670, "Total equity": 27999, "Total liabilities and equity": 234669},
+               "Property, plant and equipment and right of use assets": 616,
+               "Intangible assets": 13221, "Other assets": 7087, "Total assets": 234669,
+               "Customer deposits": 202323, "Provisions": 202, "Other liabilities": 3614,
+               "Deferred income": 531, "Total liabilities": 206670, "Share capital": 5,
+               "Share premium": 67784, "Other reserves (own shares held/share awards/sundry/FX - see source note)": 319,
+               "Retained earnings / (Accumulated losses)": -40109, "Total equity": 27999,
+               "Total liabilities and equity": 234669},
     "FY2017": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 37544,
                "Total debt securities": 3014, "Loans and advances to customers": 804,
                "Property, plant and equipment and right of use assets": 253,
                "Intangible assets": 9330, "Other assets": 2332, "Total assets": 53277,
-               "Customer deposits": 18083, "Total liabilities": 20559, "Share capital": 5,
+               "Customer deposits": 18083, "Provisions": 183, "Other liabilities": 808,
+               "Deferred income": 1485, "Total liabilities": 20559, "Share capital": 5,
                "Share premium": 47846, "Other reserves (own shares held/share awards/sundry/FX - see source note)": -94,
                "Retained earnings / (Accumulated losses)": -15039, "Total equity": 32718,
                "Total liabilities and equity": 53277},
@@ -634,10 +677,10 @@ metric(
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
-        ("Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846}),
-        ("Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581}),
-        ("Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831}),
+        ("Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834, "FY2018": 234669, "FY2017": 53277}),
+        ("Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846, "FY2018": 8698, "FY2017": 804}),
+        ("Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581, "FY2018": 202323, "FY2017": 18083}),
+        ("Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831, "FY2018": 27999, "FY2017": 32718}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[

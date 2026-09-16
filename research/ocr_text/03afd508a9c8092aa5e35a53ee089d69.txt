@@ -1,0 +1,2972 @@
+Docusign Envelope (0: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+a=
+—2MelliBank
+
+Melli Bank plc
+Annual Report and Accounts
+Year Ended 31 December 2025
+
+Registration number: 04152338
+
+Registered Office:
+98a Kensington High Street
+London
+W8 4SG
+
+Mn ill
+
+09/06/2026 #122
+COMPANIES HOUSE
+4
+
+TUESDAY
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF3CC9EA4E
+
+(= MelliBank Annual Report and Accounts 2025
+Contents
+Page
+Board & Management 3
+Strategic Report 4
+Directors’ Report 11
+Directors’ Responsibilities Statement 13
+Independent Auditor’s Report to the Member of Melli Bank plc 14
+Profit and Loss Account 22
+Statement of Comprehensive Income 23
+Balance Sheet 24
+Statement of Changes in Equity 25
+Statement of Cash Flows 26
+Notes | 27
+
+Page 2 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+[C= MelliBank
+
+Annual Report and Accounts 2025
+
+Board & Management
+Board of Directors
+
+Mr A. Najarzadeh
+Non—executive Chairman
+
+Mtr D. Rezaei
+Deputy Chairman & Chief Executive Officer
+
+Mr M. Jarvis
+Non-executive Director
+
+Offices
+
+London
+98a Kensington High Street
+
+London W8 4SG
+United Kingdom
+
+E-mail: info@mellibank.com
+
+Hong Kong Branch
+
+Room 2202
+
+22/F Harbour Centre, 25 Harbour Road
+Wanchai, Hong Kong
+
+Tel: +(852) 3761 4402
+
+E-mail: info@hk.mellibank.com
+
+Tehran Representative Office
+4th Floor, 20 West Nahid Street,
+Africa Boulevard,
+
+Tehran, 1967757451, Iran
+
+Tel: +98 21 26 20 13 85
+
+E-mail: info@ir.mellibank.com
+
+Independent Auditor
+MHA Audit Services LLP
+2 London Wall Place
+London
+
+EC2Y 5AU
+
+Executive Management
+
+Mr Abdi Zand
+Corporate Affairs and Company Secretary
+
+H-mail: a.zand@mellibank.com
+
+Mr Praveen Kola
+Finance
+
+E-mail: P.kola@mellibank.com
+
+Mr James McCall
+Chief Risk Officer
+
+E-mail: j.mecall@mellibank.com
+
+Ms Sarah Gilboy
+Chief Human Resources Officer
+
+E-mail: $.Gilboy@mellibank.com
+
+Mr Kevin Willoughby
+Compliance
+
+E-mail: K, Willoughby@mellibank.com
+
+Mr Jason Black
+IT
+
+E-mail: J.Black@mellibank.com
+
+Ms Maame Biama
+
+Legal
+E-mail: m.asante@mellibank.com
+
+Page 3 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+[——2'MelliBank Annual Report and Accounts 2025
+
+Strategic Report
+
+Chief Executive Officer’s Statement
+
+In my previous statement, I reflected on the Bank’s return to sustainable profitability. While 2025 began with
+positive momentum, the evolving global political landscape required an immediate and fundamental shift in our
+strategic priorities. Our focus moved decisively from revenue expansion to strengthening our operational
+framework and ensuring full regulatory compliance.
+
+The financial results for the year reflect the deliberate and necessary actions taken in response to this environment.
+We undertook a significant restructuring of our cost base to better align the size and structure of the organisation
+with our current mandates. These decisions including a realignment of staffing levels resulted in elevated one-off
+costs during the period. However, they represent essential steps to safeguard the Bank’s long-term solvency and
+enhance operational efficiency.
+
+Despite the impact of these measures, alongside a challenging geopolitical backdrop, I am pleased to report that
+the Bank has achieved its fourth consecutive year of profitability. This outcome underscores the underlying
+resilience of our business model.
+
+It is also important to highlight the strength of our financial position, which remains a key pillar of the Bank’s
+stability. In particular, our Liquidity Coverage Ratio (LCR), Net Stable Funding Ratio (NSFR), and Capital
+Adequacy Ratio (CAR) continue to demonstrate robust levels, ensuring that we maintain sufficient high-quality
+liquid assets and a stable funding base.
+
+As we move into 2026, our commitment to strong governance and regulatory compliance remains unwavering.
+We will continue to work closely with our regulators to navigate the complexities of the current sanctions
+environment. I am confident that the decisive and at times difficult, actions taken during the year have positioned
+the Bank to maintain its status as a going concern and to continue serving its mandates with integrity, discipline,
+and stability.
+
+I would like to place on record my sincere gratitude to the CEO of Bank Melli Iran for his valued cooperation and
+support in his capacity as Chairman of our Board. I also extend my thanks to my fellow Board members particularly
+our independent Non-Executive Directors for their guidance and oversight. Finally, I would like to recognise the
+dedication and professionalism of my colleagues across the Bank, who have embraced a more focused and active
+business strategy, as well as the governance and operational changes we are implementing together. Building on
+the achievements of 2022, 2023, and 2024, and the momentum we have established, we look ahead with confidence
+to continuing our progress and success in the year to come.
+
+TT.
+
+Davoo ammad Rezaei
+Chief Executive Officer
+
+Page 4 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+g
+(—=='MelliBank Annual Report and Accounts 2025
+
+Principal Activities
+
+Melli Bank Ple (“the Bank” or “the Company”) is a commercial bank incorporated and registered in England and
+Wales under the Companies Act 2006 and domiciled in the United Kingdom. The Bank is authorised by the
+Prudential Regulation Authority (“PRA”) and regulated by the Financial Conduct Authority (“FCA”) and the PRA
+under the Financial Services and Markets Act 2000. The Bank is headquartered in London. It has one branch in
+Hong Kong and a representative office in Tehran. The Hong Kong Branch 1s regulated by Hong Kong Monetary
+Authority (““HKMA”). The principal activity of the Bank is the provision of retail and commercial banking services.
+Following the imposition of UK and EU sanctions in September 2025, the Bank’s operations have been
+significantly curtailed. Activities are currently restricted to the orderly management of existing assets and habilities
+within a controlled, non-trading environment. The Bank’s registered address is 98a Kensington High Street,
+London, W8 48G.
+
+Business Review
+
+Iran remains the Bank’s niche market, and its business model continues to be based on the provision of banking
+services to parties involved in trade between Iran and other countries. However, the 2025 financial year was defined
+by a significant shift in the Bank’s operating environment. Following the imposition of UK and EU sanctions in
+September 2025, which added to existing US sanctions, the Bank’s ability to execute its traditional trade related
+model was severely restricted. Despite these challenges, the Bank maintained a governance structure focused on
+navigating these operational and regulatory complexities. In 2025, the Bank generated total net income of
+€12,286,000 representing a slight decrease of 3.75% compared to the 2024 total of €12,765,000. This resilience in
+top-line revenue was largely driven by a 71% increase in fees and commission receivable, totalling €2,317,000 which
+offset the decline in interest income from commercial loans and Letter of Credit discounting.
+
+Total staff costs increased by 17% to €8,002,000 (2024: €6,826,000), however this increase was primarily
+attributable to the one-off costs associated with the redundancy program initiated in December 2025. Other
+administrative expenses rose by 54% to €3,437,000 (2024: €2,239,000). This increase was predominantly driven by
+the write-off of historical balances that were deemed unrecoverable. Additionally, the Bank recorded foreign
+exchange losses of €638,000 (2024: gain of €255,000).
+
+The Bank recorded no impairment charges in 2025, compared to an impairment of €1,203,000 in 2024. After
+accounting for depreciation and amortisation charges, which increased to €666,000 (2024: €365,000) and nil
+taxation (2024: nil), the Bank reported a net profit for the year of €181,000 (2024: net profit of €2,356,000).
+
+Going Concern
+
+1. Assessment Basis and Period of Review
+
+The Bank has performed a comprehensive review of the Bank’s ability to continue as a going concern for a period
+of at least 12 months from the date of approval of these financial statements. This assessment accounts for the
+impact of the Bank’s designation as a sanctioned entity on 29 September 2025 and the subsequent shift in the
+Bank’s operational and regulatory environment.
+
+2. Material Uncertainties
+
+The Bank has identified a material uncertainty that may cast significant doubt upon the Bank’s ability to continue
+as a going concern. This uncertainty relates to the ongoing sanctions regime and the legal "freeze" imposed on the
+Bank’s ability to settle certain liabilities. The Bank’s ability to maintain operations 1s currently dependent on General
+and Specific Licenses granted by the Office of Financial Sanctions Implementation (OFSI). While the Bank has
+successfully secured licenses to settle staff costs, IT infrastructure, and regulatory fees, these are subject to periodic
+renewal (next due in October 2026). While legal counsel has advised there is a reasonable expectation of renewal,
+the discretionary nature of these government authorisations represents a condition beyond the Bank's direct
+control.
+
+Page 5 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-852 1-8279-FB9F3CCSEA4E
+
+a
+
+= M el l i Ba n kK Annual Report and Accounts 2025
+
+3. Operational Funding and Licensing
+
+The Bank’s ability to meet its overheads and operational liabilities is supported by a General Licence issued by the
+Office of Financial Sanctions Implementation (OFSI), valid until October 2026, as well as various Specific
+Licences. These licences cover the following payments, amongst others:
+
+¢ Staff salaries, associated taxes, and pension obligations.
+e = Critical IT infrastructure.
+
+e Accountancy fees.
+
+« Regulatory reporting service providers cost.
+
+The Bank maintains sufficient resources to meet its ongoing operational requixements. As of 31 December 2025,
+these include a physical cash balance of €3.6 million and correspondent bank balances of €26.9 million, which are
+available to meet the Bank's basic needs.
+
+Based on formal legal advice, the Bank has a reasonable expectation that the General Licences will be renewed.
+There is no evidence to suggest that the authorities would withhold the permissions necessary for the Bank to
+maintain its basic operational existence. .
+
+4. Solvency and Management of Deposit Liabilities
+
+A substantial proportion of the Bank’s total deposits originates from its shareholders. As of 31 December 2025,
+the Bank holds €95.1 million in deposits from banks and €2.9 million in customer accounts.
+
+At the date of this report, the Bank does not hold a specific licence to permit the repayment of these deposits as
+they fall due. While this represents a significant operational restriction, the Bank believe the going concern basis
+remains appropriate based on the following:
+
+« Legal Restriction vs. Financial Ability: The inability to repay is a direct consequence of the legal
+"freeze" imposed by sanctions, rather than a lack of financial resources.
+
+e¢ =©Liquidity Coverage: The Bank’s liquidity position remains strong, with a Liquidity Coverage. Ratio (LCR)
+of 679%, ensuring the Bank is well-positioned to meet its legal obligations.
+
+« Capital Buffer: With a Total Capital Ratio of 56% and Shareholders’ Equity of €258.8 million, the Bank
+remains exceptionally solvent and capable of absorbing operational costs.
+
+5. Operational Resilience and Branch Oversight
+
+Following the designation, the Hong Kong branch experienced the staff departure due to operational delays in
+obtaining the necessary OFSI licences required to facilitate salary payments. To mitigate this risk:
+
+e Centralised Management:
+The London office has successfully absorbed critical branch functions to ensure continuity of oversight.
+¢ Regulatory Liaison:
+The London office continues to work closely with the HKMA, which is assisting the Bank through this
+transition.
+e =©Recruitment:
+A process to restaff the Hong Kong branch is underway and expected to be completed in mid- 2026.
+
+Page 6 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF 3CC9EA4E
+
+al
+BUTS
+(cs Mell I Ban kK Annual Report and Accounts 2025
+
+6. Restructuring and Profitability
+
+The Bank initiated a restructuring and redundancy programme in late 2025 to align its cost base with its restricted
+
+_ business model. A provision for these costs has been fully recognised in the €11.4 million administrative expenses
+for 2025. Despite these one-off costs, the Bank remained profitable in 2025 and is projected to maintain a stable,
+albeit reduced, financial performance throughout the going concern period.
+
+7. Conclusion
+
+The Bank acknowledge the inherent complexities of operating under a sanction’s regime and the material
+uncertainties created by requirement for periodic licence renewals and current restrictions on deposit repayments.
+However, given the Bank’s substantial capital surplus, its high liquidity position relative to its liabilities, and the
+established licensing framework for operational costs, the Bank has a reasonable expectation that the Bank has
+adequate resources to continue in operational existence for the foreseeable future. Accordingly, the Bank continues
+to adopt the going concern basis in preparing these financial statements.
+
+Section 172 (1) statement for the year to 31 December 2025
+
+The Directors of the Bank consider that they have acted, both individually and collectively, in a way that they
+consider, in good faith, would be most likely to promote the success of the Bank for the benefit of its members as
+a whole. In doing so, the Directors have had regard to the matters set out in Section 172(1) of the Companies Act
+2006, as applicable to the Bank's restricted operations.
+
+1. Strategy and the Duty to Promote Success
+During the 2025 financial year, the Board’s primary duty was exercised against a backdrop of significant geopolitical
+and operational challenges following the imposition of sanctions by UK and EU on the Bank in September 2025.
+
+While the Bank is a wholly owned subsidiary of Bank Melli Iran, the Directors have acted independently and in
+good faith to navigate the legal complexities arising from these sanctions. The Board’s strategic focus shifted during
+the final quarter of the year from business growth to capital preservation, strict regulatory compliance, and
+protecting the remaining assets of the Bank.
+
+2. Stakeholder Engagement and Impact of Principal Decisions
+
+The Board identifies its key stakeholders as its shareholder, employees, regulators PRA, FCA, HK MA), Office of
+Financial Sanctions Implementation (OFSI), and critical third-party suppliers. The following reflects how the
+Board had regard to these interests during the year:
+
+Regulators and Legal Compliance: Decisions made following September 2025 were heavily weighted toward
+maintaining the integrity of the UK financial system. The Board prioritised transparent cooperation with the PRA,
+the FCA, the HMA and appointed a specialist legal firm to manage all license applications with the OFSI.
+
+Employees and the Redundancy Program: The Board recognises that 2025 was a period of considerable
+uncertainty for staff. The Board ensured that General Licenses were utilised to prioritise essential staff payroll and
+support. In December 2025, the Directors made the difficult principled decision to commence a redundancy
+program. The Board weighed the immediate impact on employees against the long-term necessity of aligning the
+Bank’s cost base with its restricted operating environment.
+
+Suppliers and Operational Continuity: To maintain operational integrity, the Board has worked closely with
+legal a firm to secure the necessary permissions to meet its liabilities. As of the date of this report, we have
+successfully secured several Specific Licences from OFSI in addition to the existing General Licence. These
+permissions facilitate the settlement of critical obligations, including staff payroll, essential IT, accountancy, and
+regulatory services. The Bank’s legal team remains actively engaged with OFSI to obtain further Specific Licences,
+ensuring the Bank maintains professional standards and full compliance with its broader third-party supplier
+obligations.
+
+Page 7 of 54
+
+Docusign Envelope ID: OD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+al
+a Oo
+[==!MelliBank
+
+Annual Report and Accounts 2025
+
+Shareholder and Capital Management: The Board acknowledges the shareholder’s continued support in
+maintaining a high capital base. However, in light of the 2025 events, the capital strategy has prvoted toward
+liquidity management.
+
+3. Maintaining High Standards of Business Conduct
+
+The Board remains committed to high standards of business conduct. Despite the restricted nature of its current
+operations, the Board continues to monitor the impact of its decisions on the community and the environment,
+ensuring that the Bank’s restricted activities are conducted with professional integrity and in full alignment with
+UK statutory obligations.
+
+Risk Management
+
+Risk is an inherent component of the Bank’s activities. The ability to effectively identify, assess, measure, respond,
+monitor and report on risk throughout the Bank’s activities 1s critical to the achievement of the Bank’s objectives.
+
+The Bank’s Risk Management Framework Policy formalises the Bank’s sisk management framework and
+establishes the process for the management of risks faced by the Bank.
+
+The Bank conducts its risk management and oversight through various committees which ultimately report to the
+Board of Directors.
+
+Board of Directors
+
+|
+
+Executive Audit Risk Remuneration
+Committee Committee Committee Committee
+Business Banking Credit “ Asset &
+Development Operations Committee Liability
+Committee Committee Committee
+
+Audit Committee
+
+The Audit Committee provides independent oversight of the activities of the management and plays a significant
+role in ensuring that the controls as implemented by the management are effective. It assists the Board in the
+appointment of the external auditors and the review of their findings.
+
+Risk Committee
+
+The Risk Committee, in liaison with the executive risk management team, provides oversight of the arrangements
+for the management of risk. It assesses the Bank’s capability to identify and manage new risk types and oversees,
+and advises the Board on the current risk exposures and future nsk strategy including the strategy for capital and
+liquidity management. Its advice to the Board includes advice on risk appetite and the risk management framework.
+
+Page 8 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+GU!
+
+oupo . .
+= Mel i | Ban k Annual Report and Accounts 2025
+
+Remuneration Committee
+
+The Remuneration Committee is responsible for ensuring that the Executive Directors of the Bank are provided
+with appropriate remuneration and incentives to encourage enhanced performance in a fair and responsible
+manner.
+
+Executive Committee
+The Executive Committee is the senior executive committee and 1s responsible for supporting the Board in setting
+objectives, business and operational strategies, and policies. '
+
+Credit Committee
+
+The Credit Committee is an executive committee which reviews and approves / declines proposed credit
+applications up to an agreed threshold. If the proposal exceeds its delegated authority, and if supportive, the Credit
+Committee recommends to the Executive Committee that the proposal is sent to the Board for approval.
+
+Asset and Liability Committee
+
+The Assets and Liabilities Committee is an executive committee which provides oversight of asset and liability
+management risks and ensures that such risks remain within the risk appetites set by the Board.
+
+Business Development Committee
+
+The Business Development Committee is an executive committee which reviews business opportunities and selects
+those to be taken forward, taking into account all relevant issues such as liquidity and funding.
+
+Banking Operations Committee
+
+The Banking Operations Committee is an executive committee which ensures commercial lending and discounting
+deals are processed in an efficient and timely manner and enjoy the support of all operational departments within
+the Banking Operations line.
+
+There is also a Hong Kong Branch Management Committee which is responsible for the following branch matters:
+review and recommend changes to policies, procedures, strategies, budgets, resources and the review of the
+performance of the Branch. It is also responsible for the risk management of the Branch.
+
+Principal risks and uncertainties
+
+The principal risks facing the business are credit, concentration, liquidity and operational risks. Following its recent
+designation, the Bank recognises a heightened exposure to legal and compliance risks. In response, the Bank’s
+internal control framework has been enhanced in these areas.
+
+Information on these principal risks including commentary on the potential impact of the sanctions, is provided
+in note 22 along with further details of the Bank’s risk management objectives and details of the Bank’s indicative
+exposure to risk.
+
+Key Performance Indicators (KPI)
+
+The Bank continues to monitor its capital and liquidity ratios as its primary KPI. Adequate capital and liquidity
+remains fundamental to the Bank’s stability, particularly following the re-imposition of UK sanctions in late
+September 2025.
+
+While the Bank had been successfully rebuilding its resources and upgrading systems for a return to normal
+
+. operations evidenced by the sustained profitability in 2022, 2023 and the significant revenue growth in 2024, the
+current geopolitical and regulatory environment has necessitated a shift in focus toward capital preservation and
+strict compliance. Despite the operational constraints introduced in Q4 2025, the Bank’s income generation
+capability remained robust for the majority of the year, with total net income reaching €12.3 million.
+
+Page 9 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+an
+
+= Mel | i Ban k Annual Report and Accounts 2025
+
+iam
+
+Capital and Liquidity Position
+
+In 2025, the Bank’s Total Capital Ratio increased to 56%. This remains significantly above regulatory requirements
+and is driven by a very strong capital base consisting entirely of Common Equity Tier 1 (CET1) capital. The
+incréase in the ratio is attributable to a further reduction in the Total Risk Exposure amount, reflecting a cautious
+and de-risked balance sheet approach in light of the new sanctions regime.
+
+The Bank’s liquidity position remains strong, with a Liquidity Coverage Ratio (LCR) of 679%, ensuring the Bank
+is well-positioned to meet its obligations and maintain stability during this period of restricted operations.
+
+2025 2024
+Shareholders’ Equity (€m) 259 259
+Eligible Capital (€m) (a) 259 258
+Total Assets (Em) (b) 363 375
+Total Risk Exposure Amount (€m) (c) 458 466
+Total Capital Ratio (a/c) 56% 55%
+Equity to Assets Ratio (a/b) 71% 69%
+Liquidity Coverage Ratio (LCR) 679% 697%
+Total Net Income (€’000) 12,286 12,765
+
+Approved by the Board of Directors and signed on behalf of the Board by:
+
+Chief Executive Officer
+
+Page 10 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+ar o
+
+= Mel i i Ban kK Annual Report and Accounts 2025
+
+Directors’ Report
+
+The directors of Melli Bank plc, company registration number: 04152338, present their annual report and the
+audited financial statements for the year ended 31 December 2025.
+
+The business review and future developments are presented in the Strategic Report.
+
+Proposed dividend
+The directors do not propose payment of a dividend in respect of the year ended 31 December 2025 (2024: nil).
+
+Directors and directors’ interest
+Directors who held office during the year were as follows:
+
+« = Chairman: ; Mr A. Najarzadeh
+
+e Deputy Chairman and Chief Executive Officer: Mr D. Rezaei
+
+¢ Non-Executive Director: Mr A. Gachpazzadeh (Resigned 19-Mar-2025)
+¢ Non-Executive Director: Mx K. McLeod
+
+¢ Non-Executive Director: Mt T. Rouchdy (Left 5-Apr-2025)
+
+° Non-Executive Director: Mr J. Thompson (Resigned 31-Jan-2025)
+
+¢ Non-Executive Director: Mr M. Jarvis (Appointed 6-Jun-2025)
+
+Directors’ indemnities
+The Company did not take up a directors’ indemnity insurance policy in 2025.
+Financial risk management
+Disclosures in relation to financial risk management, objectives and policies and exposure to concentration risk,
+credit risk, and liquidity risk including the specific impact of the UK and EU sanctions imposed on 29 September
+2025 have been included in note 22 to the financial statements.
+Basel III - Pillar 3 Disclosure
+The Pillar 3 disclosure is available on request.
+Going concern
+
+_ The financial statements have been prepared on a going concern basis.
+The Directors have performed a robust assessment of the impact of the Bank’s designation as a sanctioned entity
+by the UK and EU on 29 September 2025. While this designation initially constrained operations, the Bank has
+successfully secured a General Licence from the OFSI to settle staff costs, critical IT infrastructure, and
+regulatory fees. Legal counsel has advised that there is a reasonable expectation that these licences will be renewed
+
+upon their expiry-in October 2026.
+
+Further detailed information and the full going concern analysis are provided in the Strategic Report.
+
+Page 11 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+== Mell i Ban k Annual Report and Accounts 2025
+
+Future developments
+
+The review of future development is included in the Business Review. Following the sanctions designation, the
+Bank’s strategy has shifted toward capital preservation and operational stability. This includes the planned closure
+of the Representative Office in Tehran during 2026 and the e restafling of the Hong Kong branch following a
+period of temporary London-based management. . ;
+
+The Board is closely monitoring the ongoing geopolitical conflict in the Persian Gulf. Whilst the Bank continues
+to assess the evolving situation, risk control structures remain active. Iran has been the Bank’s niche market
+since inception and as a result it has an expert understanding of the Iranian market. Further, strict standards in
+maintaining a high-quality asset base have led to the adoption of a conservative approach, even in Iranian
+business, and the Bank’s products (including bank placements) have been offered to a select class of high-quality
+and reputable customers known to the Bank.
+
+Aside from these developments, there are no other significant events affecting Melli Bank plc that have arisen
+between 31 December 2025 and the date of signing this report which require additional disclosure beyond those
+already provided in the notes to the accounts
+
+Overseas branches
+
+Melli Bank plc has a branch in Hong Kong. The branch was authorised by the Hong Kong Monetary Authority
+(HKMA) in 2005 and started operations on 3 April 2006.
+
+On 29 September 2025, the Bank was designated under UK and EU sanctions, in addition to existing US
+sanctions. While delays in obtaining OFSI licences led to staff departure in the Hong Kong branch in January
+2026, the Bank remains in close communication with the HKMA. Recruitment is currently underway for
+replacements to join in mid-2026, with critical functions currently managed from the London head office.
+
+Statement of disclosure of information to auditors
+
+The directors confirm that:
+e So far as each director is aware, there is no relevant audit information of which the Company’s auditor
+is unaware; and
+e The directors have taken all the steps that they ought to have taken as directors in order to make
+themselves aware of any relevant audit information and to establish that the auditors are aware of that
+information.
+
+Appointment of Auditors
+
+The Bank's auditor, MHA, previously traded through the legal entity MacIntyre Hudson LLP. In response to
+regulatory changes, MacIntyre Hudson LLP ceased to hold audit registration, and the engagement has
+transitioned to MHA Audit Services LLP. Accordingly, MHA Audit Services LLP will be proposed for
+reappointment in accordance with Section 485 of the Companies Act 2006.
+
+The Directors’ Report was approved by the Board of Directors and signed on their behalf by: |
+Davood Refaei
+
+Deputy Chairman and Chief Executive Officer
+28 April 2026
+
+Page 12 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CC9SEA4E
+
+— M el l i Ba n kK Annual Report and Accounts 2025
+
+Directors’ Responsibilities Statement
+
+The directors are responsible for preparing the Strategic Report, the Directors’ Report and the financial
+statements in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the
+directors have elected to prepare the financial statements in accordance with United Kingdom Generally
+Accepted Accounting Practice (United Kingdom Accounting Standards and applicable laws, including FRS 102
+‘The Financial Reporting Standard applicable in the UK and Republic of Ireland’).
+
+Under company law the directors must not approve the financial statements unless they are satisfied that they
+give a true and faix view of the state of affairs and profit or loss of the Company for that period. In preparing
+these financial statements, the directors are required to:
+
+" select suitable accounting policies and then apply them consistently;
+
+"make judgements and accounting estimates that are reasonable and prudent;
+
+“state whether applicable UK Accounting Standards have been followed, subject to any material departures
+disclosed and explained in the financial statements;
+
+* prepare the financial statements on a going concern basis unless it is inappropriate to presume that the
+Company will continue in business.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+Company’s transactions and disclose with reasonable accuracy at any time the financial position of the Company
+and enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the Company and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+The directors are responsible for the maintenance and integrity of the corporate and financial information
+included on the Company’s website. Legislation in the United Kingdom governing the preparation and
+dissemination of financial statements may differ from legislation in other jurisdictions.
+
+The Directors’ Responsibilities Statement was approved by Board of Directors and signed on their
+behalf by:
+
+—TT
+
+Dav ezaei
+Deputy Chairman and Chief Executive Officer
+28 April 2026
+
+Page 13 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF3CC9EA4E
+
+— Mel I i Ban kK Annual Report and Accounts 2025
+
+Independent auditor’s report to the members
+of Melli Bank plc
+
+For the purpose of this report, the terms “we” and “our” denote MHA in relation to UK legal, professional and
+regulatory responsibilities and reporting obligations to the members of Melli Bank plc. For the purposes of the
+table on pages 16 to 17 that sets out the key audit matters and how our audit addressed the key audit matters,
+the terms “we” and “our” refer to MHA. The “Bank” is defined as Melli Bank plc. The relevant legislation
+governing the Bank is the United Kingdom Companies Act 2006 (“Companies Act 2006’).
+
+Opinion
+We have audited the financial statements of Melli Bank plc for the year ended 31 December 2025. The financial
+statements that we have audited comprise:
+
+e the Profit and Loss Account
+
+e the Statement of Comprehensive Income
+
+e the Balance Sheet
+
+e the Statement of Changes in Equity
+
+e the Statement of Cash Flows, and
+
+e Notes 1 to 27 of the financial statements, including material accounting policies.
+
+The financial reporting framework that has been applied in the preparation of the Bank's financial statements
+is applicable law and United Kingdom Accounting Standards, including Financial Reporting Standard 102 The
+Financial Reporting Standard applicable in the UK and Republic of Ireland (United Kingdom Generally Accepted
+Accounting Practice).
+
+in our opinion the financial statements:
+e give a true and fair view of the state of the Bank's affairs as at 31 December 2025 and of the Bank's
+profit for the year then ended;
+e have been properly prepared in accordance with UK Generally Accepted Accounting Practice; and
+e have been prepared in accordance with the requirements of the Companies Act 2006.
+
+Our opinion is consistent with our reporting to the Audit Committee.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and
+applicable law. Our responsibilities under those standards are further described in the Auditor Responsibilities
+for the Audit of the Financial Statements section of our report. We are independent of the Bank in accordance
+with the ethical requirements that are relevant to our audit of the financial statements in the UK, including the
+FRC’s Ethical Standard as applied to public interest entities, and we have fulfilled our ethical responsibilities in
+accordance with those requirements. We believe that the audit evidence we have obtained is sufficient and
+appropriate to provide a basis for our opinion.
+
+Material Uncertainty Related to Going Concern
+We draw attention to Note 1 in the financial statements, which describes the impact of UK government
+sanctions imposed on the Bank on 29 September 2025.
+
+Page 14 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+= M el I i Ba n k . Annual Report and Accounts 2025
+
+As set out in that note, the Bank's operations are currently significantly restricted and are limited to those
+activities permitted under licences issued by the Office of Financial Sanctions Implementation (“OFSI’). The
+Bank is not undertaking its traditional banking activities, including originating new lending or trade finance
+business, and is operating in a licence-dependent environment.
+
+The Bank's ability to continue in operational existence is dependent on:
+e the continued availability and renewal of General and Specific Licences issued by OFSI;
+e =the ability to obtain additional licences where required to meet its obligations; and
+e the ongoing cooperation of counterparties and correspondent banks in operating within the
+sanctions framework.
+
+In addition, certain liabilities, including deposits, are subject to legal restrictions on repayment due to the
+sanctions regime, and the Bank's ability to settle these liabilities is dependent on obtaining the necessary
+regulatory permissions.
+
+These conditions, together with the other matters set out in Note 1, indicate the existence of a material
+uncertainty that may cast significant doubt on the Bank’s ability to continue as a going concern.
+
+Our opinion is not modified in respect of this matter.
+
+In auditing the financial statements, we have concluded that the Directors’ use of the going concern basis of
+accounting in the preparation of the financial statements is appropriate.
+
+Our evaluation of the Directors’ assessment of the Bank's ability to continue to adopt the going concern basis
+of accounting included:
+
+e Considering the impact of macroeconomic and geopolitical risks on the Bank's operations, in
+particular the implications of UK government sanctions and the resulting operational restrictions;
+
+e Assessing the Bank’s liquidity position throughout the year and post year end, including review of
+regulatory submissions such as the Internal Capital Adequacy Assessment Process (ICAAP) and
+Internal Liquidity Adequacy Assessment Pracess (ILAAP);
+
+e Engaging directly with the Bank's regulators to obtain an independent perspective on the Bank's
+current position and using the outcomes of these discussions to corroborate management's
+assessment, |
+
+« Reviewing the Bank's strategic plan and forecasts, including comparison of forecasts to historical
+performance, evaluation of key assumptions, sensitivity analysis, and assessment of projected cash
+flows and liquidity;
+
+e Reviewing post year end information, including Board minutes, management accounts and
+developments relating to the Bank's activities and operating model; and
+Challenging management's going concern assessment, including evaluating the consistency of
+assumptions applied and the reasonableness of estimates in the context of the Bank's restricted
+operating environment.
+
+Our responsibilities and the responsibilities of the directors with respect to going concern are described in the
+relevant sections of this report.
+
+Page 15 of 54
+
+Docusign Envelope ID: DD9F578E-201D-8521-8279-F BSF3CCSEA4E
+
+ed
+
+= Mel i i Ba n k Annual Report and Accounts 2025
+
+Overview of our audit approach
+
+Scope
+
+Our audit was scoped by obtaining an understanding of the Bank and its
+environment, including the Bank’s system of internal control, and assessing the
+risks of material misstatement in the financial statements. We also addressed
+the risk of management override of internal controls, including assessing whether
+there was evidence of bias by the directors that may have represented a risk of
+material misstatement.
+
+Materiality
+
+2025 2024
+
+Bank
+
+€2.59m €2.59m 1% of net assets (2024: 1 % of net
+assets)
+
+Key audit matters
+
+Recurring
+
+Key Audit Matters
+
+Key Audit Matters are those matters that, in our professional judgement, were of most significance in our audit
+of the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) that we identified. These matters included those matters which
+had the greatest effect on: the overall audit strategy; the allocation of resources in the audit; and directing the
+efforts of the engagement team. These matters were addressed in the context of our audit of the financial
+statements as a whole, and in forming our opinion thereon, and we do-not provide a separate opinion on these
+
+maiters.
+
+Valuation of loans and advances to customers
+
+Going concern — Due to the presence of a material uncertainty, this constitute
+a Key Audit Matter in accordance with the requirements of ISA (UK) 701,
+however, also in compliance with that standard and ISA (UK) 570, the issues
+in this regard and the procedures undertaken are detailed within the Material
+Uncertainty Relating to Going Concern section of this report.
+
+Valuation of loans and advances to customers
+
+Financial Statement Elements FY25 FY24
+
+Loans at amortised cost (gross €23,372k; impairment €20,055k) €3,317k net loan /€3,709k net loan
+
+(Note 9)
+
+exposure exposure
+
+Key audit
+matter description
+
+The valuation of loans and advances to customers is a key area of focus,
+as the assessment of impairment involves a significant degree of
+management judgement and estimation. The impairment allowance is
+determined based on management's assessment of losses incurred at the
+balance sheet date, requiring judgement in identifying objective evidence
+of impairment and estimating the timing and amount of future cash flows
+and recoverability of exposures.
+
+The Bank's accounting policy on impairment of financial assets carried at
+amortised cost is set out in note 1(b), and related disclosures are included
+in notes 9 and 11 to the financial statements.
+
+How the scope of our audit Our audit procedures focused on the valuation of loans and advances to
+responded to the key audit customers, in particular the appropriateness of the impairment allowance
+
+matter
+
+recognised at the balance sheet date. Our work included, but was not
+limited to: .
+
+Page 16 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+a
+
+[—='MelliBank
+
+Annual Report and Accounts 2025
+
+Obtaining an understanding of the Bank’s impairment
+methodology and evaluating whether it is consistent with the
+requirements of FRS 102, including the identification of objective
+evidence of impairment and the recognition of losses incurred at
+the balance sheet date;
+Performing a walkthrough of the impairment assessment process
+- to understand how management identifies indicators of
+impairment and determines the level of provisions;
+Testing the accuracy of the loan population used in the
+impairment assessment by agreeing balances to the general
+ledger and supporting records;
+Assessing whether objective evidence of impairment had been
+appropriately identified by reviewing loan files, repayment history,
+correspondence with counterparties and other available evidence;
+Challenging management's assessment of recoverability for
+individually significant exposures, including consideration of the
+timing and amount of expected future cash flows;
+Independently recalculating impairment provisions for a sample
+of loans, including verifying the mathematical accuracy of
+calculations and consistency with the Bank's stated policy;
+Evaluating the appropriateness of key assumptions used by
+management, including those relating to recoverability, by
+reference to supporting documentation and, where available,
+external evidence; and
+Considering whether any indicators existed that provisions were
+understated, including the impact of the sanctions environment
+on the Bank's ability to realise cash flows.
+
+Key observations Based on the audit procedures performed, we did not identify any material
+
+communicated to the Bank’s misstatements in the valuation of loans and advances to customers and
+
+Audit Committee found management's impairment assessment to be reasonable in the
+context of the requirements of FRS 102.
+
+Our application of materiality
+
+Our definition of materiality considers the value of error or omission on the financial statements that,
+individually or in aggregate, would change or influence the economic decision of a reasonably knowledgeable
+user of those financial statements. Misstatements below these levels will not necessarily be evaluated as
+immaterial as we also take account of the nature of identified misstatements, and the particular circumstances
+of their occurrence, when evaluating their effect on the financial statements as a whole. Materiality is used in
+planning the scope of our work, executing that work and evaluating the results.
+
+Overall Materiality €2.59m (2024: €2.59m)
+
+Basis of determining overall | We determined materiality based on 1% (2024: 1%) of the Bank's net assets.
+
+materiality
+We have considered the primary users of the financial statements to be
+shareholders, customers of the Bank and the UK regulators (FCA and PRA).
+This was deemed to be the appropriate benchmark for the calculation of
+materiality as this is a key area of the financial statements with which the users
+of the financial statements are principally concerned.
+
+Performance materiality €1,813k (2024: €1,813k)
+
+Page 17 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+La
+
+a
+
+a]
+[—=\MelliBank
+
+Annual Report and Accounts 2025
+
+Basis of determining overall
+performance materiality
+
+We set performance materiality based on 70% (2024: 70%) of overall
+materiality.
+
+Performance materiality is the application of materiality at the individual
+account or balance level, set at an amount to reduce, to an appropriately low
+level, the probability that the aggregate of uncorrected and undetected
+misstatements exceeds materiality for the financial statements as a whole.
+
+The determination of performance materiality reflects our assessment of the
+risk of undetected errors existing, the nature of the systems and controls and
+the level of misstatements arising in previous audits.
+
+Error reporting threshold
+
+We agreed to report any corrected or uncorrected adjustments exceeding
+€129k (2024: €129k) to the Audit Committee as well as differences below this
+
+threshold that in our view warranted reporting on qualitative grounds.
+
+The control environment
+We evaluated the design and implementation of those internal controls of the Bank which are relevant to our
+audit, such as those relating to the financial reporting cycle.
+
+We deployed our internal IT audit specialists to obtain an understanding of the general IT environment.
+
+Climate-related risks
+
+In planning our audit and gaining an understanding of the Bank, we considered the potential impact of climate-
+related risks on the business and its financial statements. We obtained management's climate-related risk
+assessment, along with relevant documentation relating to management's assessment to understand their
+process for identifying and assessing those risks.
+
+Our climate risk audit team did not identify a risk of material misstatements regarding climate matters in the
+current year.
+
+Reporting on other information
+
+The other information comprises the information included in ‘the annual report other than the financial
+statements and our auditor's report thereon. The directors are responsible for the other information contained
+within the annual report. Our opinion on the financial statements does not cover the other information and,
+except to the extent otherwise explicitly stated in our report, we do not express any form of assurance
+conclusion thereon. Our responsibility is to read the other information and, in doing so, consider whether the
+other information is materially inconsistent with the financial statements or our knowledge obtained in the
+course of the audit, or otherwise appears to be materially misstated. If we identify such material
+inconsistencies or apparent material misstatements, we are required to determine whether this gives rise to a
+material misstatement in the financial statements themselves. If, based on the work we have performed, we
+conclude that there is a material misstaternent of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+Strategic report and directors report
+in our opinion, based on the work undertaken in the course of the audit:
+
+e the information given in the strategic report and the directors’ report for the financial year for which
+the financial statements are prepared is consistent with the financial statements; and
+
+Page 18 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+i o
+
+i Mel | i Ba n k Annual Report and Accounts 2025
+
+e the strategic report and the directors’ report have been prepared in accordance with applicable jegal
+requirements.
+
+In the light of the knowledge and understanding of the Bank and its environment obtained in the course of the
+audit, we have not identified material misstatements in the strategic report or the directors’ report.
+
+Matters on which we are required to report by exception
+We have nothing to report in respect of the following matters in relation to which the Companies Act 2006
+requires us to report to you if, in our opinion:
+
+*® adequate accounting records have not been kept, or returns adequate for our audit have not been
+received by branches not visited by us; or
+
+e the financial statements are not in agreement with the accounting records and returns; or
+
+e certain disclosures of directors’ remuneration specified by law are not made; or
+
+« we have not received all the information and explanations we require for our audit.
+
+Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the
+preparation of the financial statements and for being satisfied that they give a true and fair view, and for such
+internal control as the directors determine is necessary to enable the preparation of financial statements that
+are free from material misstatement, whether due to fraud ar error.
+
+In preparing the financial statements, the directors are responsible for assessing the Bank's ability to continue
+as a going concern, disclosing, as applicable, matters related to going concern and using the going concern
+basis of accounting unless the directors either intend to liquidate the Bank or to cease operations, or have no
+realistic alternative but to do so..
+
+Auditor responsibilities for the audit of the financial statements
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstaternent when it exists.
+
+Misstatements can arise from fraud or error and are considered material if, individually or in aggregate, they
+could reasonably be expected to influence the economic decisions of users taken on the basis of these
+financial statements.
+
+A further description of our responsibilities for the audit of financial statements is located on the FRC’s website
+at: www. fre.org.uk/auditorsresponsibilities . This description forms part of our auditor's report.
+
+Extent to which the audit was considered capable of detecting irregularities, including fraud
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design
+procedures in line with our responsibilities, outlined above, to detect material misstatements in respect of
+irregularities, including fraud.
+
+These audit procedures were designed to provide reasonable assurance that the financial statements were
+free from fraud or error. The risk of not detecting a material misstatement due to fraud is higher than the risk
+of not detecting one resulting from error and detecting irregularities that result from fraud is inherently more
+
+_ difficult than detecting those that result from error, as fraud may involve collusion, deliberate concealment,
+forgery or intentional misrepresentations. Also, the further removed non-compliance with laws and regulations
+is fram events and transactions reflected in the financial staternents, the less likely we would become aware
+of it.
+
+Page 19 of 54
+
+Docusign Envelope !D: DD9F578E-2D1D-8521-8279-FB9F3CC9EA4E
+
+fn]
+
+Oo Oo
+— M el I i Ba n k Annual Report and Accounts 2025
+
+Identifying and assessing potential risks arising from irregularities, including fraud
+The extent of the procedures undertaken to identify and assess the risks of material misstatement in respect
+of irregularities, including fraud, included the following:
+
+We considered the nature of the industry and sector, including sanctions imposed and the effects of
+these, the control environment, business performance including whether remuneration policies are
+affected by the achievement of targets and the Bank's own risk assessment that irregularities might
+occur as a result of fraud or error. From our sector experience and through discussion with
+management, we abtained an understanding of the legal and requlatory frameworks applicable to the
+Bank focusing on laws and regulations such as accounting standards and the regulatory and
+supervisory requirements of the Prudential Regulation Authority (PRA) and the Financial Conduct
+Authority (FCA).
+We enquired of management and the heads of Compliance and Risk concerning the Bank's policies
+and procedures relating to:
+- — identifying, evaluating and complying with the laws and regulations and whether they were
+aware of any instances of non-compliance;
+- — identifying and mitigating business risk from potential credit limit breaches of customers;
+- detecting and responding to the risks of fraud and whether they had any knowledge of actual
+or suspected fraud; and
+-  theinternal controls established to mitigate risks related to fraud or non-compliance with laws
+and regulations.
+
+We assessed the susceptibility of the Bank's financial statements to material misstatement, including
+how fraud might occur by evaluating management's incentives and opportunities for manipulation of
+the financial statements. This included utilising the spectrum of inherent risk and an evaluation of the
+risk of management override of controls. We determined that the principal risks were related to the
+posting of fictitious journals to improve the profit or balance sheet position and management bias in
+accounting estimates and going concern.
+
+Audit response to risks identified
+In respect of the above procedures:
+
+we corroborated the results of our enquiries through our review of the minutes of the Bank’s board
+meetings, inspection of the compliance breaches register, inspection of legal and regulatory
+correspondence and correspondences from the regulators PRA and the FCA;
+
+audit procedures performed by the engagement team in connection with the risks identified included:
+
+- reviewing financial statement disclosures and testing to supporting documentation to assess
+compliance with applicable laws and regulations expected to have a direct impact on the
+financial statements;
+
+- discussion within the audit engagement team as to how and where fraud might occur;
+
+- reviewing the Bank’s regulatory correspondence to assess ongoing compliance with the
+conditions of authorisation and to identify any matters that may give rise to financial
+statement or disclosure risk;
+
+- we performed a review of all journal entries posted during the year to identify any unusual or
+potentially inappropriate items and sampled such entries to understand the legitimacy and
+purpose of the journal entries;
+
+- enquiry of management around actual and potential litigation and claims;
+
+- challenging the assumptions and judgements made by management in its significant
+accounting estimates, in particular those relating to the impairments as reported in the key
+audit matter section of our report; and
+
+-  abtaining confirmations from third parties to confirm existence of a sample of bank and loan
+balances.
+
+Page 20 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CC9EA4E
+
+ain
+
+— Mel | i Ban k Annual Report and Accounts 2025
+
+e the Bank operates in a highly regulated banking industry. As such, the Senior Statutory Auditor
+considered the experience and expertise of the engagement team to ensure that the team had the
+appropriate competence and capabilities; and
+
+e we communicated relevant laws and regulations and potential fraud risks to all engagement team
+members and remained alert to any indications of fraud or non-compliance with laws and regulations
+throughout the audit.
+
+Other requirements
+
+We were appointed by the Directors on 15 September 2019 for the year ended 31 December 2019. The period
+of total uninterrupted engagement including previous renewals and reappointments of the firm is 7 years
+initially under the legal entity Macintyre Hudson LLP and subsequently under MHA Audit Services LLP.
+
+We did not provide any non-audit services which are prohibited by the FRC’s Ethical Standard to the Bank, and
+we remain independent of the Bank in conducting our audit.
+
+Use of our report
+
+This report is made solely to the Bank’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the Bank’s members
+those matters we are required to state to them in an auditor's report and for no other purpose. To the fullest
+extent permitted by law, we do not accept or assume responsibility to anyone other than the Bank and the
+Bank's members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Andrew Moyser, FCA, FCCA (Senior Statutory Auditor)
+for and on behalf of MHA, Statutory Auditor
+
+London, United Kingdom
+
+29 April 2026
+
+MHA is the trading name of MHA Audit Services LLP, a limited liability partnership in England and Wales
+(registered number 0C455542)
+
+Page 21 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+Mel I i Ban kK Annual Report and Accounts 2025
+
+‘PROFIT AND LOSS ACCOUNT FOR THE YEAR ENDED
+
+31 DECEMBER 2025
+
+2025 2024
+
+Note € ‘000 € '000
+
+Interest receivable and similar income 2 11,658 13,344
+Interest expense (994) (2,016)
+Net interest income 10,664 11,328
+Fees and commission receivable 3 2,317 1,356
+Fees and commission payable (57) (174)
+Foreign exchange (losses)/ gains 4 (638) 255
+Total net income 12,286 12,765
+Administrative expenses 5 (11,439) (9,065)
+Depreciation and amortisation 12,13 (666) (365)
+Other charges- net benefit pension obligation 24 - 224
+Impairment on loans and advances 11 - (1,203)
+Profit before taxation 181 2,356
+Tax recoverable on loss 6 - -
+Profit for the financial year . 184 2,356
+
+The result for the year is derived entirely from continuing activities. The notes on pages 27 to 54 form part.
+of these financial statements.
+
+Page 22 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+a)
+gufo .
+| cs Mell | Ban k Annual Report and Accounts 2025
+STATEMENT OF COMPREHENSIVE INCOME
+FOR THE YEAR ENDED 31 DECEMBER 2025
+2025 2024
+€'000 + €'000
+Profit for the financial year 181 =. 2,356
+Other comprehensive income
+Remeasurements of net defined benefit pension obligations 21 - (224)
+Other comprehensive loss for the year - (224)
+Total comprehensive income for the year 181 2,132
+
+The notes on pages 27 to 54 form part of these financial statements.
+
+Page 23 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF3CCSEA4E
+
+=|
+
+ouyjo
+
+[—=MelliBank Annual Report and Accounts 2025
+
+BALANCE SHEET
+AT 31 DECEMBER 2025
+2025 2024
+Note € '000 € ‘000
+
+Assets
+Cash and cash equivalents 8b 30,504 52,378
+Other financial balances 8c 71,070 -
+Loans and advances to banks 8a 248,695 304,655
+Loans and advances to customers 9 3,317 3,709
+Investments 10 - -
+Tangible assets 12 3,392 3,364
+Intangible assets 13 109 529
+Other assets 15 2,545 4,473
+Prepayments and accrued income 3,243 6,433
+Total Assets 362,875 375,541
+Liabilities
+Derivative liabilities 17 104 -
+Deposits by banks , 16 95,095 108,461
+Customer accounts 16 2,973 3,248
+Other liabilities 16 1,184 1,238
+Accruals and deferred income 16 4,674 3,930
+Total Liabilities 104,030 116,877
+Shareholder's funds ;
+Called up share capital 18 264,412 264,412
+Accumulated Losses 6,567) (5,748)
+Total Equity 258,845 258,664
+Total Equity and Liabilities "362,875 375,541
+
+The Financial Statements were approved by Board of Directors and authorised for issue on 28 April
+2026 and signed on theit behalf by:
+
+—TT
+
+Davo
+
+aei
+d Chief Executive Officer
+
+Page 24 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+= Me I I i Ba n k Annual Report and Accounts 2025
+
+STATEMENT OF CHANGE IN EQUITY
+FOR THE YEAR ENDED 31 DECEMBER 2025
+
+Called-up share — Retained.
+. . Total
+
+capital eatnings
+€ '000 € '000 * €'000
+At 1 January 2024 264,412 (7,880) 256,532
+Profit for the financial year - 2,356 2,356
+Other Comprehensive Loss for the year - (224) (224)
+Total comprehensive profit for the year - 2,132 2,132
+At 31 December 2024 264,412 (5,748) 258,664
+Profit for the financial year - 181 181
+Other Comprehensive Loss for the year - - -
+Total comprehensive profit for the year - 181 181
+At 31 December 2025 264,422 (5,567) 258,845
+
+Page 25 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-852 1-8279-F BSF3CC9EA4E
+
+au —!
+
+a 0
+i Mel | i Ban k Annual Report and Accounts 2025,
+
+STATEMENT OF CASH FLOWS
+FOR THE YEAR ENDED 31 DECEMBER 2025
+
+Note 2025 2024
+€:000 €7000
+
+Cash flows from operating activities
+
+Profit before tax , 181 2,356
+Depreciation / Amortisation charge 12,13 666 365
+Remeasurements of net defined benefit pension obligations - (224)
+Net charge for impairment loss/(writeback) - 1,203
+
+Cash flows from operating profits before changes in operating
+assets and liabilities 847 3,700
+
+Changes in operating assets and liabilities
+
+-net (increase)/ decrease in loans and advances to banks 8a 55,960 (1 0,582)
+-net (increase)/ decrease in loans and advances to customers 9 391 3,363
+-net (increase)/ decrease in other assets and prepayment and accrued
+
+income (8,025) (9,655)
+-net (increase)/ decrease in deposits from banks 16 (13,366) 17,049
+-net (increase)/ decrease in deposits from other deposits 16 (275) (572)
+-net (increase)/ decrease in accruals and deferred income 16 2,525 2,519
+-net (increase)/ decrease in other liabilities 16 (53) 733
+Other financial balances 8c (71,070) -
+Interest received* 13,247 9,106
+Interest paid* (1,781) (1,908)
+
+Net cash ftom opetating activities (21,600) 13,753
+
+Cash flows from investing activities
+
+Purchase of property, plant and equipment 12 (183) (36)
+Purchase of Intangible assets 13 (91) (628)
+Net cash from investing activities (274) (664)
+Net increase in cash and cash equivalents (21,874) 13,089
+Cash and cash equivalents at the beginning of the period 8b 52,378 39,289
+Cash and cash equivalents at the end of the period 30,504 52,378
+
+*Certain prior-year compaxatives have been reclassified to conform to the current year's presentation regarding
+the disclosure of interest received and paid within operating activities.
+
+Page 26 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CC9EA4E
+
+a!
+geo
+— Mel i i Ban k Annual Report and Accounts 2025
+
+Notes
+(Forming part of the financial statements)
+
+Principal activities
+
+Melli Bank Ple (“the Bank” or “the Company”) is a commercial bank incorporated and registered in England
+and Wales under the Companies Act 2006 and domiciled in the United Kingdom. The Bank is authorised by the
+Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation
+Authority under the Financial Services and Markets Act 2000. The principal activity of the Company is the
+provision of retail and commercial banking services. Following the imposition of UK and EU sanctions in
+September 2025, the Bank’s operations have been significantly curtailed. Activities are currently restricted to the
+orderly management of existing assets and liabilities within a controlled, non-trading environment. The Bank’s
+registered address is 98a Kensington High Street, London, W8 4SG.
+
+1. Summary of material accounting policies
+
+The following accounting policies have been applied consistently in dealing with items which are considered
+material in relation to the financial statements, except where noted.
+
+Basis of preparation
+
+These financial statements have been prepared in accordance with applicable United Kingdom accounting
+standards, including Financial Reporting Standard 102 - 'The Financial Reporting Standard applicable in the
+United Kingdom and Republic of Ireland’ (FRS 102), and with the Companies Act 2006. The financial statements
+have been prepared on the historical cost basis. The functional and reporting currency of the Bank is the Euro.
+The figures have been reported in thousands of Euros, unless stated otherwise.
+
+In respect of financial instruments, the Bank has applied the provisions of FRS 102 chapters 11 and 12 in full.
+
+The Company has one class of business and all other services provided are ancillary to this. Business is conducted
+from the United Kingdom and from a branch in Hong Kong. ‘
+
+@ Going Concern
+
+The financial statements have been prepared on a going concern basis.
+
+The Directors have performed a robust assessment of the impact of the Bank’s designation as a sanctioned entity
+by the UK and EU on 29 September 2025. This assessment identified a material uncertainty that may cast
+significant doubt upon the Bank’s ability to continue as a going concern, relating to the ongoing sanctions regime
+and the legal "freeze" imposed on the-Bank’s ability to settle certain liabilities.
+
+The Bank’s ability to maintain operations is dependent on General and Specific Licenses granted by the Office
+of Financial Sanctions Implementation (OFSI). While the Bank has successfully secured licenses to settle staff
+costs, critical IT infrastructure, and regulatory fees, these are subject to periodic renewal (next due in October
+2026). While legal counsel has advised there is a reasonable expectation of renewal, the discretionary nature of
+these government authorizations represents a condition beyond the Bank's direct control.
+
+The Directors acknowledge that, as of the date of this report, a specific licence is not held to permit the repayment
+of certain bank and customer deposits (totalling €98.0 million) due to the legal "freeze" imposed by sanctions.
+However, the Bank remains exceptionally solvent with a Total Capital Ratio of 56% and a Liquidity Coverage
+Ratio (LCR) of 679%. The inability to settle these specific liabilities is a matter of legal restriction rather than
+financial capability.
+
+Page 27 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+Sing
+
+a
+— Mel | i Ban k Annual Report and Accounts 2025
+
+Based on these assessments, the Directors have a reasonable expectation that the Bank has adequate resources
+to continue in operational existence for the foreseeable future. Accordingly, they continue to adopt the going
+concern basis in preparing these financial statements. Further detailed information regarding the material
+uncertainties and the Directors' mitigating plans is provided in the Strategic Report under the heading of Going
+Concern.
+
+(i) Cash flow statement
+
+The cash flow statement shows the changes in cash and cash equivalents arising during the year from operating
+activities and investing activities.
+
+(ili) Related party transactions
+
+As the Bank is a wholly owned subsidiary of Bank Melli Iran, the Bank has taken advantage of the exemption
+contained in section 33.1A and 33.7 of FRS 102 and (i) not disclosed transactions or balances with wholly owned
+subsidiaries which form part of Bank Melli Iran and (iit) not disclosed transactions with key management
+personnel of the entity or its parent (see note 25).
+
+(iv) Functional and presentation currency
+
+The financial statements are prepared and presented in Euro, which ts the functional currency of the Bank as it
+represents the currency of the primary economic environment in which the Bank operates. A significant
+proportion of the Bank’s assets and revenues are transacted in Euro. All amounts in the financial statements have
+been rounded to the nearest €1,000 except when otherwise indicated.
+
+Accounting Policies
+
+The following accounting policies have been applied consistently in dealing with items which are considered
+material in relation to the financial statements.
+
+a) faterest receivable and payable
+
+Interest receivable and payable for all interest-bearing financial instruments measured at amortised cost are
+recognised in the income statement using the effective interest rate method. The effective interest rate is a method
+of calculating the amortised cost of a financial asset or financial liability and of allocating the interest receivable
+or payable over the relevant period using estimated future cash flows.
+
+The effective interest rate is the rate that exactly discounts estimated future cash receipts and payments through
+the expected life of a financial instrument or, where appropriate, a shorter period, to the net carrying amount of
+the financial asset or financial liability. When calculating the effective interest rate, the calculation includes all
+amounts paid or received by the Bank that are an integral part of the effective interest rate of a financial
+instrument, including transaction costs and all other premiums or discounts.
+
+When loans, securities or deposits are impaired, the Bank reduces the carrying amount to its recoverable amount,
+being the estimated future cash flow discounted at the original effective interest rate of the instrument.
+
+b) Fees and commissions - income and expenses
+
+Fees and commissions are recognised in the profit and loss account when the service has been rendered. For
+the current reporting period, fee income primarily represents revenue earned on trade finance transactions prior
+to the imposition of sanctions on 29 September 2025. Incidental annual charges on deposit accounts are
+recognized as earned.
+
+Fees and commissions payable include handling fees relating to trade finance transactions, and bank charges paid.
+
+Page 28 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+{——='MelliBank Annual Report and Accounts 2025
+
+c) Financial Assets
+Loans and advances
+
+Loans and advances are basic financial instruments satisfying the conditions set out in FRS 102 sections 11 &
+12. Loans and advances are initially recognised at fair value. They are subsequently stated at amortised cost after
+deduction of amounts which are calculated as impairment provisions. Where loans have been acquired at a
+premium or discount, these premiums and discounts are amortised through profit or loss from the date of
+acquisition to the date of maturity using the effective interest method.
+
+Debtors
+
+Shoxt term debtors are measured at transaction price, less any impairment.
+
+Imepairment of financial assets
+
+Impairment provisions are made where there is objective evidence of impairment as a result of one or more
+events that occurred after the initial recognition of the asset and that loss event (or events) has an impact on the
+estimated future cash flows from the asset that can be reliably estimated. Losses expected as a result of potential
+future events will not be recognised. Evidence of impairment is considered on both individual and portfolio
+bases.
+
+Objective evidence that financial assets ate impaired can include significant financial difficulty of the borrower
+or issuer, default or delinquency by a borrower, restructuring of a loan or advance, restructuring of a loan or
+advance by the Company on terms that the Bank would not otherwise consider, indications that a borrower or
+issuer will enter bankruptcy, the disappearance of an active market for a security, or other observable data relating
+to a group of assets such as adverse changes in the payment status of borrowers or issuers, or economic
+conditions that correlate with defaults in the group. In addition, for an investment in an equity security, a
+significant or prolonged decline in its fair value below its cost is objective evidence of impairment. If there is
+objective evidence that an impairment loss on loans and advances has been incurred, the amount of loss ts
+measured as the difference between the assets’ carrying amount and the present value of the future cash flows
+(excluding future credit losses that have not been incurred). The carrying amount of the assets shall be reduced
+either directly or through the use of an allowance account. The amount of the loss shall be recognised in profit
+or loss.
+
+Derivatives
+A derivative is a financial instrument or other contract with all three of the following characteristics:
+- Its value changes in response to the change in foreign exchange rate, specific interest rate, financial
+instrument price, commodity price, index of prices or rates, credit rating or credit index, or other variable,
+provided that, in the case of a non-financial variable, it is not specific to a party to the contract (Le. the
+
+‘underlying assets’).
+
+- It requires no initial net investment or an initial net investment that is smaller than would be required
+for other types of contracts expected to have a similar response to changes in market factors.
+
+-  Itis settled at a future date.
+Derivatives, including forward foreign exchange contracts, are recorded at fair value and carried as assets when
+
+their fair value is positive and as liabilities when their fair value is negative. The fair value of such derivatives is
+disclosed separately in the financial statements. Changes in fair value of derivatives are reflected in profit or loss.
+
+Page 29 of 54
+
+Docusign Envelope ID: DD9F578E-2D1 D-8521-8279-FB9F3CC9EA4E
+
+Oo
+ia Mell i Ba n k Annual Report and Accounts 2025
+
+d) Fixed assets
+
+Fixed assets are stated at cost less accumulated depreciation and impairment. Cost includes expenditure that are
+’ ‘directly attributable to the acquisition of the asset.
+
+Depreciation is provided to write off the cost less the estimated residual value of tangible fixed assets by equal
+instalments over their estimated useful economic lives as follows. Single items which cost EUR 1,100 or less are
+expensed in the year and not depreciated. The useful economic life of the fixed assets is expected as follows:
+
+Leasehold building - over the remaining period of the lease
+Leasehold improvements - over the remaining useful life
+
+Freehold building - over the remaining useful life of the building
+Fixtures, fittings and equipment - 20% per annum
+
+Motor vehicles - 20% per annum
+
+Freehold land is not depreciated.
+
+e) Intangible assets
+
+Intangible assets are measured at cost less accumulated amortisation and impairment. Software development
+costs are recognised as an intangible asset when all of the following cxiteria are demonstrated:
+
+- The technical feasibility of completing the software so that it will be available for use or sale.
+- The intention to complete the software and use or sell it.
+
+- The ability to use the software or to sell it.
+
+- How the software will generate probable future economic benefits.
+
+- The availability of adequate technical, financial and other resources to complete the development and to use or
+sell the software.
+
+- The ability to measure reliably the expenditure attributable to the software during its development.
+
+Amortisation is charged so as to allocate the cost of intangibles less their residual values over their estimated
+useful lives, using the straight-line method. The intangible assets are amortised over the following useful
+economic lives:
+
+Software - Up to 5 years
+
+_ If there is an indication that there has been a significant change in amortisation rate or residual value of an asset,
+the amortisation of that asset is revised prospectively to reflect the new expectations.
+
+f) Impairment of non-financial assets
+
+At each reporting date, fixed assets are reviewed to determine whether there is any indication that those assets
+have suffered an impairment loss. If there is an indication of possible impairment, the recoverable amount of
+any affected asset is estimated and compared with its carrying amount. If estumated recoverable amount is lower,
+the carrying amount is reduced to its estimated recoverable amount, and an impairment loss is recognised
+immediately in profit or loss. The estimated recoverable amount is the higher of fair value less cost to sell and
+value in use.
+
+g) Financial liabilities
+Basic financial habilities, including trade and other payables, are initially recognised at transaction price, unless
+the arrangement constitutes a financing transaction, where the debt instrument is measured at present value of
+
+the future receipt discounted at market rate of interest. They are subsequently measured at amortised cost using
+the effective interest rate method as set in FRS 102 - 11.14.
+
+Page 30 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+a
+
+[a MelliBank Annual Report and Accounts 2025
+
+‘In accordance with FRS 102, financial instruments issued by the Company which include a contractual obligation
+to either deliver cash or another financial asset to another entity, or to exchange financial assets or financial
+liabilities with another entity under conditions that are potentially unfavourable to the Company, are classified as
+financial liabilities. Otherwise, they are classified as equity.
+
+h) Foreign currencies
+
+Monetary assets and liabilities denominated in foreign currencies are translated using the rate of exchange ruling
+at the close of business each day and the gains or losses on translations are included in the Profit and Loss
+Account. Non-monetary items that are measured at historical cost in a foreign currency are translated at the
+exchange rate at the date of the transaction. The functional and reporting currency of the Bank is the Euro. The
+Bank uses average exchange rates to translate income and expenses accrued during the year reported in the Profit
+and Loss Account. The Bank uses year end exchange rates to translate items reported in the Balance Sheet. The
+Euro exchange rates at the year-end against US Dollar and Sterling were €1= US$1.1734 (2024: €1= US$1.0367)
+and €1=£0.8737 (2024: €1=£0. 8269). The average of month end Euro exchange rates ruling at the Balance Sheet
+date against US Dollar and Sterling were €1=US$1.1317 (2024: €1=US$1.0798) and €1=£0.8568 (2024: €1=£0.
+8447).
+
+i) Taxation
+
+Current tax is the amount of income tax payable in respect of the taxable profit for the year or prior years. Tax
+is calculated on the basis of tax rates and laws that have been enacted or substantively enacted by the period end.
+Current tax liabilities are recognised without discounting.
+
+The charge for taxation is based on the profit for the year and takes into account taxation deferred because of
+timing differences between the treatment of certain items for taxation and accounting purposes. Deferred tax is
+recognised, without discounting, in respect of all timing differences between the treatment of certain items for
+taxation and accounting purposes which have arisen but not reversed at the Balance Sheet date. Deferred tax is
+charged or credited to profit or loss, except when it relates to items charged or credited directly to equity, in
+which case the deferred tax is also dealt with in equity. The notional deferred tax on the actuarial loss under FRS
+102 is recognised in Other Comprehensive Income.
+
+Deferred tax is calculated using tax rates and laws that have been enacted or substantively enacted that are
+expected to apply when the timing difference reverses. The carrying amount of deferred tax assets is reviewed at
+each Balance Sheet date and reduced to the extent that it is no longer probable that sufficient taxable profits will
+be available to allow all or part of the asset to be recovered. The Bank does not currently recognise deferred tax
+(see note 14 for additional information).
+
+Management periodically evaluates the position taken in the tax return with respect to situations in which
+applicable tax regulation is subject to interpretation. It establishes provisions, where appropriate, on the basis of
+amounts expected to be paid to the tax authorities.
+
+j) Pensions and other post-retirement benefits
+@ Defined contribution pension plan
+
+The Company operates a defined contribution pension scheme. The assets of the scheme are held separately
+from those of the Company in an independently administered fund. The amounts charged to profit or loss
+represent the contributions payable to the scheme in respect of the accounting period.
+
+(i) Defined benefit pension plan
+
+The Company also operates a defined benefit pension scheme based on final pensionable pay. This scheme was
+closed to future accrual from 31 July 2004 and replaced by the defined contribution scheme. The assets are held
+in a specific trust separately from those of the Company, and managed by an independent trustee. A formal
+valuation is conducted periodically by a qualified actuary. The defined benefit pension scheme liabilities are
+measured using the projected unit credit method and discounted at the current rate of return on a high-quality
+
+Page 31 of 54
+
+Docusign Envelope ID: OD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+= M e I I i Ba n k Annual Report and Accounts 2025
+
+corporate bond of equivalent term and currency to the liability. The pension scheme assets are measured at fair
+value. The pension scheme surplus, to the extent it is considered recoverable, or deficit, when payable, is
+recognised in full and presented on the face of the Balance Sheet. Remeasurement of the pension 1s included in
+other comprehensive income. See note 21 for further information.
+
+k) Provisions and contingent Iabilities
+
+A provision is recognised in the Balance Sheet when the Company has a present legal or constructive obligation
+as a result of a past event, and it is probable that an outflow of economic benefits will be required to settle the
+obligation. Provisions are measured at the directors’ best estimate of the expenditure required to settle the
+obligation at the Balance Sheet date and are discounted to present value at an appropriate rate if the effect of the
+time value of money is deemed material.
+
+Contingent liabilities are not recognised, except those acquired in a business combination. Contingent liabilities
+arise as a result of past events when (i) it is not probable that there will be an outflow of resources or that the
+amount cannot be reliably measuxed at the reporting date or (ii) when the existence will be confirmed by the
+occurrence or non-occurrence of uncertain future events not wholly within the Bank’s control. Contingent
+liabilities are disclosed in the financial statements unless the probability of an outflow of resource 1s remote.
+
+1) Operating lease rentals
+
+Leases that do not transfer all the risks and rewards of the ownership are classified as operating leases. Payments
+under operating leases are charged to profit or loss on a straight-line basis over the period of the lease and include
+any rent-free period.
+
+m) Cash and cash equivalents
+
+Cash and cash equivalents include cash on hand, unrestricted balances held with central banks and highly liquid
+financial assets with original maturities of three months or less from the date of inception, which are subject to
+insignificant risk of changes in their fair value, and are used by the Bank in the management of its short-term
+commitments.
+
+n) Share Capital
+
+Shares are classified as equity when there is no contractual obligation to transfer cash or other financial assets.
+Incremental costs directly attributable to the issue of equity instruments are shown in equity as a deduction from
+
+proceeds net of tax.
+
+0) Other financial balances
+
+Other financial balances compzise balances held with correspondent banks that do not meet the criteria for cash
+and cash equivalents due to external restrictions. While the Bank retains full legal ownership of these assets and
+expects to recover their carrying value in full, these balances are not considered readily available for the settlement
+of short-term commitments.
+
+p) Significant judgments and estimates
+Judgements
+
+In the process of applying the Bank’s accounting policies, management has made the following judgments, apart
+from those involving estimations, which have the most significant effect on the amounts recognized in the
+financial statements:
+
+Page 32 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+[c=3) Mel l i Ban kK Annual Report and Accounts 2025
+
+(i) Going Concern and Impact of Sanctions
+
+The Bank was designated as a sanctioned entity by the UK and EU on 29 September 2025. Management
+has exercised significant judgment in adopting the going concern basis of accounting, specifically: _
+
+e Licensing Expectations: Management has judged that there is a reasonable expectation that
+the General Licences issued by OFSI (expiring in October 2026) will be renewed. This judgment
+is based on legal counsel and the necessity of these licences to maintain the Bank’s operational
+infrastructure and regulatory compliance.
+
+(ii) Functional Currency
+
+Management has assessed the Bank’s functional currency in accordance with the hierarchy established
+in FRS 102. It has been judged that the Euro (EUR) remains the currency of the primary economic
+environment in which the Bank operates based on the following:
+
+« Revenue Influence: Approximately 92% of the Bank’s total revenue in 2025 was derived from
+Euro-denominated transactions, reflecting the Bank's core strategy in the Eurozone-Iran trade
+corridor.
+
+« Balance Sheet Composition: As of 31 December 2025, approximately 95% of the Bank’s
+assets and liabilities were denominated in Euro.
+
+e Funding and Capital: The Bank’s capital and its primary source of long-term funding (the
+deposit base) remain predominantly denominated in Euro.
+
+(iii) Classification of Financial Balances
+
+The Bank has exercised significant judgment in determining the classification of bank balances following
+the imposition of sanctions on 29 September 2025. In accordance with FRS 102 Section 7, management
+has assessed which balances meet the definition of ‘Cash and Cash Equivalents’ based on their functional
+availability to meet short-tesm commitments.
+
+Cash and Cash Equivalents
+
+Management has judged that the physical cash balance of €3.6 million and correspondent bank balances
+of €26.9m satisfy the criteria for Cash and Cash Equivalents. This judgment is based on the legal opinion
+and the operational evidence that the corresponding balances are accessible under the General and
+Specific Licence from OFSI. Management’s judgment is supported by the fact that these accounts have
+been utilized to process operational payments.
+
+Other Financial Balances
+
+Management has determined that the balance of €71.07million should be classified as 'Other Financial
+Balances.’ While the Bank retains full legal ownership and expects to recover the value of these assets in
+full, their immediate availability is subject to uncertainty in the absence of licences.
+
+Management believes this bifurcated classification provides a transparent view of the Bank’s immediate
+liquidity versus its total asset position, ensuring the financial statements accurately reflect the economic
+reality of the current regulatory environment.
+
+Page 33 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-852 1-8279-F BSF3CC9EA4E
+
+(= Mel i i Ban kK Annual Report and Accounts 2025
+
+Estimates
+
+In the process of applying the Bank’s accounting policies, management has made the following estimates that
+have a significant risk of causing a material adjustment to the carrying amounts of assets and liabilities within the
+next financial year:
+
+(i) Impairment of loans and debt securities
+
+The Bank reviews its loan portfolio to assess impairment at least on an annual basis. As of 31 December 2025,
+the Gross Loans and Advances to customers total €23.37 million, against which an impairment provision of
+€20.05 million is held, resulting in a Net Carrying Amount of €3.32 million.
+
+« Nature of Uncertainty: While a significant portion of the loan book is past due and provided for,
+management has exercised significant judgment regarding the recoverable amounts of specific exposures
+that remain on the balance sheet totalling €3.097 million (Loan 1 and Loan 2 (see note 9)). The
+uncertainty relates to the timing of cash inflows and the operational ability to navigate sanction-related
+payment restrictions.
+
+« Key Source of Estimation Uncertainty: Loan 1 (€1.64m): A portion of this balance (€437k) is past
+due. Management has estimated this remains fully recoverable on the basis that the default 1s a technical
+result of sanction-related collection restrictions rather than borrower credit failure. Management has
+estimated that these amount remains fully recoverable once licence payment channels are established.
+
+Loan 2 (€1.457m): Management has judged the balance to be fully recoverable based on the favourable
+court culing and the requirement for funds to be lodged with the court to the Bank’s order. The primary
+estimation uncertainty relates to the timing of the lodgement of the funds with the court and the receipt
+of appropriate licences for the release of the funds to the Bank. While management is confident in the
+eventual recovery, there is a risk that the carrying amount may require adjustment in the next financial
+year should the regulatory process significantly extend the anticipated timeframe for the release of these
+funds.
+
+(ii) Defined benefit pension scheme
+
+The most recent actuarial valuation performed as of 31 December 2024 of the defined benefit pension scheme
+indicated a net pension asset of €5.36 million.
+
+Under FRS 102, pension assets and liabilities are typically re-measured at each reporting date. However, due
+to the impact of sanctions and the subsequent resignation of the Bank's specialist actuarial service provider,
+the Bank was unable to obtain a formal updated disclosure note for the period ended 31 December 2025.
+
+In the absence of a current-year actuarial report, management has exercised judgment to determine the most
+reliable estimate for the scheme's position. Management has concluded that the 31 December 2024 valuation
+remains the most objective and verifiable basis for the 2025 financial statements. The principal assumptons
+used for the pension scheme valuation are outlined in note 21.
+
+Gii) Deferred tax
+
+The carrying amount of the deferred tax asset is based on management’s best estimate of the probability of
+sufficient taxable profits being available to allow all or part of the asset to be recovered. On account of the
+uncertainty relating to future profits, deferred tax has not been recognised on the balance sheet. For more
+details refer to note 14.
+
+Page 34 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+bel
+
+oud .
+= Mel I i Ban k Annual Report and Accounts 2025
+
+a. (iv) Depreciation and amottisation
+
+Property, Plant and Equipment (PPE).
+
+The Bank’s PPE are reviewed annually, taking into account the useful lives of these assets based on current
+usage, condition, and technological advancements. Any changes in these estimates could lead to adjustments
+in. future depreciation charges. They are depreciated over their useful lives using the straight-line method.
+For the year ended 31 December 2025, the Bank recognised a total depreciation charge of €155,000. For
+further details, refer to Note 12.
+
+Intanpible Assets:
+The Bank has intangible assets, comprising entirely of software. The costs of these assets are amortised using
+
+the straight-line method over their estimated useful lives based on expected economic benefits. Management
+
+' xeviews annually the useful lives and residual values of these assets to ensure their appropriateness. Any
+changes in the estimated useful lives will be reflected in the relevant financial statements. For the year ended
+31 December 2025 the Bank recognised total amortisation expense relating to intangible assets of €511,000.
+For further details refer to Note 13.
+
+2. Interest income
+
+2025 2024
+
+€°000 €000
+
+Loans and advances to customers 58 327
+Loans and advances to banks 11,600 13,017
+11,658 13,344
+
+Interest income is recognised in profit or loss using the effective interest rate method. The effective interest rate
+is the rate that exactly discounts the estimated future cash receipts through expected life of the financial
+instrument to the carrying amount of the financial asset. The Bank has a presence in the UK and Hong Kong.
+However, its main source of income is derived from the Iranian market.
+
+3. Fees and commissions receivable
+
+2025 2024
+€000 €000
+Miscellaneous Commissions - 8
+Account maintenance 14 13
+LC Discounting 2,303 1,335
+2,317 1,356
+4. Foreign exchange (losses) / gains
+2025 2024
+€000 €000
+Foreign exchange revaluation (losses)/gains (534) 526
+Unrealised (losses) on derivative instruments (104) (271)
+(638) 255
+
+Page 35 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CC9EA4E
+
+|
+ouyo
+[=='MelliBank
+
+5. Administrative expenses
+
+Annual Report and Accounts 2025
+
+2025 2024
+€'000 €'000
+Staff costs - Salaries and wages 5,694 5,827
+Redundancy cost 1,258 -
+Social security costs 625 552
+Other pension costs 425 447
+8,002 6,826
+
+Auditors’ remuneration ;
+Fees payable to the Bank's auditor (MHA) 134 152
+Fees payable to other auditors 14 39
+Lease rentals in respect of leasehold premises 130 134
+Legal and professional fees 1,013 645
+Business Rates 204 202
+Building and liability insurance 23 23
+Building repairs and maintenance 175 125
+Other administration expenses 1,744 919
+11,439 9,065
+
+Employee Information
+
+2025 2024
+Banking operations 9 10
+Banking others 32 34
+Administration 2 2
+43 46
+
+The average number of employees in the Bank, excluding non-executive directors, during the year was 43 (2024:
+46). Other administrative expenses for 2025 totaled €1.74m. This comprised of historical balance write-off of
+€859k, IT expenditure of €304k, compliance costs of €153k, and other expenses totaling €428k.
+
+In response to the increased operational risks following the sanctions posed on 29 September 2025, the Bank
+has entered into a Liability Limitation Agreement with its statutory auditors. This agreement limits the auditor’s
+total aggregate liability to the Bank in respect of any negligence, default, or breach of duty occurring in connection
+with the statutory audit.
+
+6. Taxation
+a) Analysis of charge for the year
+2025 2024"
+€000 = €°000
+Current taxation:
+UK corporation tax at 25.00% (2024: 25.00%) on taxable income for the year - -
+
+UK corporation tax adjustment in relation to prior year - -
+
+Total current tax (note 6b) - -
+
+. Page 36 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CCSEA4E
+
+[ = Mel I i Ban k Annual Report and Accounts 2025
+
+Deferred taxation (note 14):
+
+Adjustment in respect of prior years - -
+
+Origination and reversal of timing differences - -
+
+Tax on profit/ (loss) - -
+
+b) Factors affecting the tax charge
+The tax assessed for the year is higher than the standard rate of corporate tax in UK of 25.00% (2024: 25.00%).
+
+The difference is explained below: .
+2025 2024
+
+Total comprehensive profit (loss) for the year 181 25132
+
+Total comprehensive profit multiplied by UK standard rate of corporation tax of 45 533
+25.00% (2024: 25.00%)
+
+Effects of:
+Expenses not deductible for tax purposes 23 11
+Impairment provision not allowed - 301
+Increase in tax rates - 7
+Tax impact in respect of unrecognised deferred tax asset — current year (68) (1,124)
+Tax impact in respect of unrecognised deferred tax asset — prior year - 279
+Tax losses ; ; - -
+
+Tax on loss (note 6a) - -
+
+7. Remuneration and interests of directors
+
+2025 2024
+Aggregate remuneration including benefits 863 793
+Pension contributions 42 41
+Directors’ emoluments 905 834
+Highest paid director's emoluments:
+Salary and bonus 491 436
+Benefits:
+Axising from rented accommodation 43 44
+Arising from use of company car 29 27
+Arising from membership of medical scheme 10 29
+573 536
+Pension contributions 42 41
+615 _ 577
+
+Page 37 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+— Mel I i Ba n k Annual Report and Accounts 2025
+
+There were no directors at 31 December 2025 (2024: NIL) who were members of the Bank’s pension scheme
+which provided benefits based on final pensionable pay. The scheme closed and benefits were frozen on 31
+
+July 2004.
+8a. Loans and advances — banks
+
+2025 2024
+€000 €7000
+
+Maturity:
+3 months or less 36,316 89,006
+1 year or less but over 3 months 43,101 215,649
+5 year or less but over 1 year 132,764 -
+Past Due : 36,514 -
+
+248,695 304,655
+
+Impairment provision - -
+
+248,695 304,655
+
+Loans and advances ~ banks comprise
+
+Loans and advances to money market 20,000 45,000
+counterparties
+Loans and advances to other banks 228,695 259,655
+
+248,695 304,655
+
+Of the above amount 78.00% (2024: 74.00%) represents exposure to Iranian banks other than Group
+undertakings. ;
+
+Due from Group undertakings 34,996 19,524
+
+The Bank does not consider the loans and advances to banks to be impaired. Please refer to note 22 for the
+Bank’s assessment of credit risk.
+
+8b. Cash at bank and in hand
+
+2025 2024
+
+€000 €'000
+
+Cash 3,613 3,815
+Group - 17,530
+Other banks 26,891 31,033
+30,504 52,378
+
+Cash and cash equivalents include cash on hand; unrestricted balances held with central banks and highly liquid
+financial assets.
+
+Page 38 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+7
+
+QO
+3} Mel i i Ban k . Annual Report and Accounts 2025 ,
+
+8c. Other financial balances
+
+2025 2024
+
+€'000 £000
+
+Group 18,011 -
+Other banks . 53,059 -
+71,070 -
+
+Other financial balances comprise balances held with correspondent banks that do not meet the criteria for cash
+and cash equivalents due to external restrictions.
+
+9. Loans and advances ~ customers
+
+2025 2024
+
+£'000 €2000
+
+Repayable on demand or at short notice - -
+Remaining maturity:
+
+3 months or less 5 4
+
+1 year or less but over 3 months 824 829
+
+5 years or less but over 1 year 379 1,203
+
+Over 5 years - -
+
+Past due 22,164 23,410
+
+23,372 25,446
+
+Impairment provisions (note 11) (20,055) (21,737)
+
+3,317 3,709
+
+Of the above amount 50% (2024: 45%) are exposures to Iranian corporate and government owned entities.
+
+Past due
+more Past due Past due
+Past due
+than3 morethan6 more than
+not Past due
+
+. months months but one yeat
+Past due analysis Current more mote than Total
+
+but not not more but not
+
+than 3 5 years
+months more than lyear more than
+than 6 months 5 yeats
+months
+
+31-Dec-25 €000 €7000 €000 €000 €000 €000 €000
+Loan 1 1,203 437 - - - - 1,640
+Loan 2 . - - - - - 1,457 1,457
+Loan 3 - - - - - 215 215
+Loan 4 - - - - - - -
+Loan 5 5 - - - - - 5
+Loan 6 - - - - - - -
+Loan 7 - - - - - - -
+Total 1,208 437 - - - 1,672 3,317
+
+Page 39 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF3CC9EA4E
+
+Sine
+
+ie | ;
+[== Mel l i Ban k Annual Report and Accounts 2025
+Past due
+more Past due
+Past due than3 more than 6 min ane Past due
+Past due analysis Current* more months — months but one year but more Total
+than 3 but not not more not more than 5
+ah mote than 1-year than 5 - years
+mronins than 6 months yeats
+months
+31-Dec-24 £7000 £7000 €7000 €000 €7000 €7000 €000
+Loan 1 2,027 - - - - - 2,027
+Loan 2 - - - - - 1,458 1,458
+Loan 3 - - - - - 215 215
+Loan 4 - - - - - - -
+Loan 5 9 - - - - - 9
+Loan 6 - - - - - - -
+Loan 7 - - , - - - - -
+Total 2,036 - - - - 1,673 3,709
+
+*The current information is included for completeness.
+
+Loan 2 is partially impaired and is inchided in the impairment provision (note 11). At 31 December 2025, the net
+indebtedness was €1.46m (2024: €1.46m). This represents 49% of the loans and advances to customers portfolio
+at year end 2025 (2024: 39%). The net indebtedness is recoverable from a group company under a legally
+enforceable guarantee. The Bank’s management have assessed the guarantor group company’s financial position
+and axe confident the repayment of the net indebtedness would be achieved under a Board approved recovery
+plan.
+
+Loan 3 is over 5 years past due but not impaired. This is on account of the security the Bank holds, which are
+either (a) ixevocable guarantees from guarantors who the Bank deems to be of high quality or (b) reputable
+ownership, strong financial condition and commitment to repay. Loan 5 is staff loans.
+
+Loans 4, 6 and 7 are over 5 years past due and considered fully impaired. A 100% impairment provision has been
+set against these loans and are included in the impairment provisions figure (note 11).
+
+All loans and advances to customers have been classified as basic financial instruments and reported at amortised
+cost under the provisions of FRS 102. At 31 December 2024, the effective interest rate earned on loans and
+advances to customers was 1.65% (2024: 5.46%). All financial instruments are measured at amortised cost under
+the provisions of FRS 102.
+
+Page 40 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CCSEA4E
+
+— Mel I i Ban k : Annual Report and Accounts 2025
+
+10. Debt Securities
+
+2025 2025 2024 2024
+At amortised cost
+Fully Original Fully Original
+Impaired Cost Impaired Cost
+; Cost* Cost*
+Investment securities — listed €000 €000 €000 €000
+Financial corporations
+Securities due one year or over. - 21 - 758
+- 21 - 758
+*For impairment provisions see note 11.
+Reconciliation of (unimpaired) book
+cost of debt securities
+2024 2024
+Cost €000 €000
+At start of year 758 683
+Security matured (649) -
+Exchange rate impact (88) 75
+Book cost at end of year before impairment 21 758
+
+At 31 December 2025 the effective interest rate earned on debt securities was 0% (2024: 0%).
+
+11. Impairment provisions
+
+2025 2024
+€000 €000
+Provision charge (release) in the year - 1,203
+Exchange rate movements (2,419) 1,166
+Impairment loss provision at start of year 22,495 20,126
+Impairment loss provision at yeat end 20,076 22,495
+
+The provision at year end 2025 of €20,076,000 is made up of €20,055,000 in respect of impaixed loans and
+advances to customers (note 9) and €21,000 against debt securities (note 10). The exchange rate movements .
+mainly relate to impaired and fully provided loans denominated in Kuwaiti Dinars and US Dollars.
+
+Page 41 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CCS9EA4E
+
+i Mel i i Ban k : Annual Report and Accounts 2025
+
+cl
+
+D2. Tangible fixed assets
+
+Fixtures,
+- Freehold Freehold Leasehold Leasehold Fittings Motor Total
+Building Land Building Improvements and Vehicle a
+; Equipment
+€000 €000 €000 €000 €000 €000 £7000
+Cost
+At 814 336 2,955 1,329 954 37 6,425
+31/12/2024 . > ;
+Additions ; - - - 44 139 183
+Disposals ; - - - - - -
+At 814 336 2,955 1,329 998 176 6,608
+31/12/2025 , > ;
+Depreciation
+At
+31/12/2024 278 - 690 1,226 830 37 3,061
+Disposals ; - - - - - -
+Charge 17 - 73 10 46 9 155
+At .
+31/12/2025 295 - 763 1,236 876 46 3,216
+Net book
+value at
+31/12/2025 519 336 2,192 93 122 130 3,392
+31/12/2024 536 336 2,265 103 124 - 3,364
+13. Intangible fixed assets
+IT- Intangibles Total
+€000 €7000
+Cost
+At 31/12/2024 2,330 2,330
+Additions 91 91
+Disposals - -
+At 31/12/2025 2,421 2,421
+Depreciation
+At 31/12/2024 1,801 . 1,801
+Disposals - -
+Charge Sil 511
+At 31/12/2025 2,312 2,312
+Net book value at
+31/12/2025 109 109
+
+31/12/2024 529 529
+
+Page 42 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+ST o
+
+= Mel I i Ban k Annual Report and Accounts 2025
+
+14. Deferred tax
+
+2025 2024
+
+£000 £000
+Bonus and holiday pay accruals 54 42
+Tax losses (142) (891)
+Accelerated capital allowances (14) 2
+Recoverable costs 2 2
+Pension accrued 32 -
+Deferred tax asset not recognised — current year 68 1,124
+Deferred tax asset not recognised — prior year adjustment - (279)
+
+Deferred tax movement - -
+
+The deferred tax asset comprises the following amounts based on a rate of 25% (2024 - 25%)
+
+2025 2024
+
+€000 €000
+Decelerated capital allowance 70 84
+Bonus and holiday pay accruals 196 142
+Tax losses . 4,492 4,634
+Recognition of fair value of investments 1 1
+Recoverable costs 15 13
+Pension accrued 32 -
+Deferred tax asset not recognised (4,806) (4,874)
+
+At 31 December 2025, the gross value of tax losses was €17,968k (2024: €18,532k) and other timing differences
+€1,255k (2024: €959k)
+
+15. Other Debtors
+
+2025 2024
+
+€°000 €000
+
+” Accrued tax - 704
+Payment service providers 1,513 1,749
+Other debtors 1,032 2,020
+2,545 4,473
+
+The Other Debtors balance comprises recoverable bank residence costs of €430k (2024: €431k), Work in
+Progress assets of €221k (2024: €261k), and input VAT of €128k (2024: €130k). The remaining balance of €253k
+(2024: €1,198k) relates to various debtors.
+
+Page 43 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF 3CC9EA4E
+
+e—
+oUfo
+= Mel I i Ban k Annual Report and Accounts 2025
+
+16. Liabilities - Maturity analysis
+
+More than More than
+six
+Not more months More
+Maturity analysis — than three but not months than five Une ated Total
+months more than une years ‘
+six more than
+months one year
+31-Dec-25
+€7000 €000 €7000 €7000 €7000 €7000
+Liabilities:
+Deposits by banks 85,095 10,000 - - - 95,095
+Customer accounts 2,973 - - - - 2,973
+Other liabilities 1,184 - - - - 1,184
+Accruals and deferred income 4,674 - - - - 4,674
+Total financial liabilities 93,926 10,000 ~ - - 103,926
+
+The table above presents the contractual maturity of the bank and the customer deposit liabilities. However, as
+of 31 December 2025, the Bank’s ability to settle these obligations is governed by the UK and EU sanctions
+regimes following the Bank's designation on 29 September 2025. Although €88 million of bank and customer
+deposits are contractually due within 3 months (including overnight and notice accounts), the Bank does not
+currently hold a specific licence from the Office OFSI to permit the repayment of these funds. A significant
+majority of the Bank deposits relate to Iranian financial institutions that are themselves subject to restrictive
+measures. Consequently, these balances are legally restricted and will remain on the Bank’s balance sheet until
+the relevant regulatory authorisations are obtained.
+
+More Mote
+than :
+Not than six
+more three month More
+months ones than Undated
+than but not Total
+but not five Items
+three more
+more years
+months . than one
+than six ear
+months y
+31-Dec-24
+€2000 €000 €7000 €7000 €7000 €7000
+Liabilities:
+Deposits by banks 81,461 27,000 - - - 108,461
+Customer accounts 3,248 - - - - 3,248
+Other liabilities 1,238 i - - - 1,238
+Accruals and deferred income 3,930 - - - - 3,930
+Total financial liabilities . 89,877 27,000 - - - 116,877
+
+At 31 December 2025 the effective interest rate paid on deposits by banks was 0.95% (2024: 1.97%).
+
+Page 44 of 54
+
+Dacusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+|
+
+oUno
+[c= Mel i | Ban k Annual Report and Accounts 2025
+
+17. Derivative Liabilities
+
+2025 2024
+
+€000 €000
+
+Fair value liability - Forward FX contract 104 -
+104 -
+
+The derivative financial instrument consists of a forward foreign exchange (FFX) contract with a notional
+amount of €15,618,000 against AED 67,752,000. FFX contracts are held at fair value. The movement in fair
+value is as a result of the exchange rate fluctuation in relation to the functional currency (Euro) within the year.
+
+This instrument serves as an economic hedge against foreign currency denominated assets held on the balance
+
+sheet. However, due to current sanctions, the contract is subject to settlement restrictions, and any balance will
+be frozen upon maturity until an appropriate licence is obtained to settle the contract.
+
+18. Authorised and called up shate capital
+
+2025 2024
+Authorised €000 €000
+50,000 Ordinary shares of £1 each 68 68
+225,000,000 Ordinary shares of $1 each 153,061 153,061
+300,000,000 Ordinary shares of €1 each 300,000 300,000
+
+453,129 453,129
+
+Allotted, called up and fully paid
+
+50,000 Ordinary shares of £1 each 68 68
+
+264,343,895 Ordinary shares of €1 each 264,344 264,344
+264,412 264,412
+
+The Bank is a public company limited by shares. All the issued shares are ordinary shares (“shares”) which
+
+carry equal rights, including the sight to receive dividends, vote at general meetings, and to a share of the
+
+surplus assets of the company on winding up. The shares are subject to certain restrictions as set out in the
+
+Articles of Association, including: ;
+
+- Pre-emption rights, whereby existing shareholders have the right of first refusal on the issue or transfer
+of shares.
+
+- Transfer restrictions, which require director approval before a share transfer can be registered, except in
+limited permitted cases.
+
+There was no movement in the number of shares during the year. The shares are wholly owned by Bank
+
+Melli Iran (the Bank’s parent).
+
+Page 45 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF3CC9EA4E
+
+=
+
+o
+[a Mell i Ba n k Annual Report and Accounts 2025
+
+19. Operating lease Commitments
+
+‘As at 31 December 2025 the Bank had the following non-cancellable operating lease commitments:
+
+2025 2024
+
+€'000 €'000
+
+Within one year 133 150
+Between one and five years 249 -
+382 150
+
+The operating leases are in respect of office premises of the Hong Kong Branch. The Lease of office premises
+was signed and started in November 2025.
+
+20. Contingent liabilities and undrawn commitments
+
+There were no contingent liabilities and undrawn commitments outstanding at 31 December 2025 (2024: €Nil).
+
+21. Pension scheme
+
+The Company sponsors The Pension and Life Assurance Scheme of Melli Bank Plc, a funded defined benefit
+pension scheme in the UK. The scheme is set up on a tax relieved basis as a separate trust independent of the
+Company and is supervised by an independent trustee. The Trustee is responsible for ensuring that the correct
+benefits are paid, that the Scheme is appropriately funded and that Scheme assets are appropriately invested.
+
+Information about the characteristics of the Scheme
+
+The Scheme provides pensions in retirement and death benefits to members. Pension benefits are linked to a
+membet’s final salary and their length of service.
+
+The Scheme ts not contracted out of the State Earnings-Related Pension Scheme. With effect from 31 July
+2004 benefit accrual ceased and members then in active service became deferred pensioners.
+
+The Scheme is a registered scheme under UK legislation and is subject to the scheme funding requirements.
+
+The Scheme was established from 1 August 1969 under trust and is governed by the Scheme’s trust deed and
+nules dated 31 July 2001 and subsequent amendments.
+
+The Tnustees are responsible for the operation and the governance of the Scheme, including making decisions
+regarding the Scheme’s funding and investment strategy in conjunction with the company.
+
+Information about the risks of the Scheme to the Company
+
+The Scheme exposes the Company to actuarial risks such as; market (investment) risk, interest rate risk,
+inflation risk, currency risk and longevity risk. “|
+
+The Scheme does not expose the Company to any unusual Scheme-specific or Company-specific risks.
+
+Page 46 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+Oo
+cs Mel l i Ban k Annual Report and Accounts 2025
+
+Information about the valuation of the defined benefit obligation at the accounting date
+
+The Company pays the balance of the cost as determined by regular actuarial valuations. The Trustee is required
+to use ptudent assumptions to value the habilities and costs of the Scheme whereas the accounting assumptions
+must be best estimates. Best estimate means a broadly 50/50 chance of reality being better/worse than
+expectations. The most recent formal actuarial valuation of the Scheme was as at 31 July 2021.
+
+The liabilities at the reporting date have been calculated by updating the results of the actuarial valuation of the
+Scheme as at 31 July 2021 for the assumptions as detailed in these disclosures. Allowance has been made for
+the passage of time, benefits paid out of the Scheme, inflationary experience, expected deaths and changes in
+actuaxial assumptions over the period from 31 July 2021 to 31 December 2025.
+
+Such an approach is normal for the purposes of accounting disclosures. It is not expected that these projections
+will be materially different from a summation of individual calculations at the accounting date, although there
+may be some discrepancy between the actual liabilities for the Scheme at the accounting date and those included
+in the disclosures.
+
+Information about the most recent actuarial valuation and expected future cashflows to and from the
+Scheme
+
+The valuation as at 31 July 2021 revealed a funding surplus of £620,000. Therefore, no further contributions
+are currently due from the Company.
+
+In addition, the Company will meet the cost of administrative expenses for the Scheme.
+
+The liabilities of the Scheme are based on the current value of expected benefit payment cashflows to members
+approximately over the next 50 plus years. The average duration of the liabilities is approximately 7 years.
+
+The Scheme’s investment strategy
+
+The Scheme’s investment strategy is to invest entirely in insurance contracts. This is done through a with-
+profits policy. The underlying asset split of the policy at the last reported date (30 September 2024) was
+approximately 39% equities; 29% fixed-interest bonds; 14% property and 18% cash and alternatives. The policy
+enables the Trustee to benefit from smoothed returns and avoid full exposure to the volatility of markets, which
+is important given the Scheme’s small size. This distribution is intended to reflect the liability profile of the
+Scheme.
+
+The Scherne does not hold any ordinary shares issued or property occupied by the Company.
+
+31/12/2025 31/12/2024
+
+Other Comprehensive Income reconciliation to plan: €000 €000
+Charge/ (credit) recorded in other comprehensive income - 542
+Foreign exchange
+
+Surplus derecognition/ plan movements - (766)
+Pension remeasurement - (224)
+
+Page 47 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-FB9F3CC9EA4E
+
+“1
+
+O
+= Mel I i Ban k Annual Report and Accounts 2025
+
+The amounts recognised in comprehensive income are:
+31/12/2025 = 31/12/2024
+
+€'000 €'000
+Service cost:
+Net interest expense / (credit) - (224)
+Charge/ (credit) recognised in comprehensive income - (224)
+Remeasurements of the net hability:
+Return on scheme assets (excluding amount included in net interest expense) - 398
+Actuarial (gains) /losses - (940)
+Charge/(credit) recorded in other comprehensive income - (542)
+Total defined benefit cost/ (credit) - (766)
+The principal actuarial assumptions used were: 31-12-25 31-12-24
+Liability discount rate 5.35% 5.35%
+Inflation assumption - RPI 3.25% 3.25%
+Inflation assumption - CPI 2.25% 2.25%
+Rate of increase in salaries 0.00% 0.00%
+Revaluation of deferred pensions 2.25% 2.25%
+Increases for pensions in payment:
+Benefits accrued pre 97 3% pension increase 3.00% 3.00%
+Benefits accrued post 97 RPI (3,5) pension increase 3.70% 3.70%
+Proportion of employees opting for early retirement 0.00% 0.00%
+Proportion of employees commuting pension for cash 50.00% 50.00%
+Expected age at death of current pensioner at age 65:
+Male aged 65 at year end: 85.9 85.9
+Female aged 65 at year end: 88.2 88.2
+Expected age at death of future pensioner at age 65:
+Male aged 45 at year end: 86.9 86.9
+Female aged 45 at year end: 89.4 89.4
+
+Page 48 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+finy
+
+sl Mell i Ban kK ‘ Annual Report and Accounts 2025
+
+Reconciliation of scheme assets and liabilities Assets Liabilities . Total
+
+€7000 €000 — €:000
+At the start of period 15,583 (10,215) 5,368
+Benefits paid - - -
+
+Interest income / (expense) - - -
+Return on assets (excluding amount included in net interest expense) - - -
+
+Actuarial gains /(losses) - - .
+
+At end of period 15,583 (10,215) 5,368
+
+The differences between the above opening balances and the previous year’s closing balances are due to the
+exchange rate differential on conversion from GBP to EUR for reporting purposes.
+
+The return on plan assets was: 31-12-25 31-12-24
+
+€'000 €'000
+
+Interest income - 751
+
+Return on plan assets (excluding amount included in net interest expense) - (398)
+
+Total return on plan assets - 353
+The major categories of scheme assets are as follows: 31/12/2025 31/12/2024
+€'000 £000
+UK Equities 1,153 1,218
+Overseas Equities 2,871 3,033
+Corporates (fixed interest) , 2,963 3,131
+Property 1,399 1,478
+Other-Private Eq + Alternatives _ 1,708 1,804
+Annuities 5,261 5,559
+Cash 228 242
+Total return on plan assets 15,583 16,465
+
+22. Management of financial risks and uncertainties
+Regulatory Status and Governance
+
+Melli Bank Ple is a UK-incorporated entity, authorised by the Prudential Regulation Authority (PRA) and
+regulated by both the Financial Conduct Authority (FCA) and the PRA. It operates as a wholly owned
+subsidiary of Melli Bank Iran and maintains a branch in Hong Kong, regulated by the Hong Kong Monetary
+Authority (HKMA). The Bank adheres to all applicable UK accounting standards and statutory disclosure
+requirements.
+
+Page 49 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+al
+
+Oo
+is Mel l i Ban k Annual Report and Accounts 2025
+
+Sanctions and Operational Impact
+
+On 29 September 2025, the Bank was subject to sanctions imposed by the UK Government, with concurrent
+restrictive measures announced by the European Union. These actions followed the 28 August 2025 decision
+by the UK, France, and Germany to trigger the UN "snapback" mechanism, re-imposing sanctions on Iran
+originally lifted under the 2015 Joint Comprehensive Plan of Action JCPOA).
+
+Current Operational Status
+
+The imposed sanctions prohibit the Bank from engaging in new business activities. All existing transactions
+and operational movements now require specific licensing from the Office of Financial Sanctions
+Implementation (OFSI) and, where applicable, other relevant authorities. While the Bank’s nsk management
+and control frameworks remain in force, the sanctions regime restricts the Bank’s ability to proactively mitigate
+certain risks.
+
+Primary Risks and Sanction-Related Constraints
+
+The Bank has identified the following impacts on its risk profile resulting from the current regulatory
+environment:
+: Credit and Concentration Risk:
+
+Iran is the Bank’s niche market where its extensive experience helps it navigate the specific credit risks.
+The Bank’s credit risk predominately arises from its inter-bank placements and deposits, and from its
+trade finance activities; commercial lending representing a significantly smaller portion of total exposure.
+In order to maintain a high-quality asset base, the Bank’s products (including bank placements) have
+generally been offered to a select class of high-quality and reputable customer known to the Bank. To
+assess risk, the Bank carefully combines a judgemental approach with a critical analysis approach. With
+over 40 years’ experience in the Iranian market, the Bank’s lending book has demonstrated long-term
+reliability across the Iranian banking and commercial sectors
+
+More More More
+
+than than six than
+Not more three months oneyeat More
+Maturity analysis than months butnot butnot than Undated Total
+thtee but not mote mote five Ttems
+months mote than than years
+than six one five
+months yeat years
+31-Dec-25
+€7000 €7000 €°000 €7000 =€’000 €'0 €°000
+Assets:
+Loans and advances banks 36,317 43,100 - 132,764 - 36,514 248,695
+Cash at bank 30,504 - - - - - 30,504
+Other financial balances 71,070 - - - - - 71,070
+Loans and advances customers 5 412 412 380 - 2,108 3,317
+Other assets 2,545 - - - ~ - 2,545
+repayments and accrued 3,243 ; - - ; . 3.243
+Total financial assets 143,684 43,512 412 133,144 - 38,622 359,374
+
+Page 50 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F BSF 3CCSEA4SE
+
+au
+oO
+
+G
+[==!MelliBank
+
+Annual Report and Accounts 2025
+
+Liabilities:
+
+Deposits by banks 85,095 10,000 - - - © 95,095
+Customer accounts 2,973 - - - - 2,973
+Other liabilities 1,184 - - - - 1,184
+Accruals and deferred income 4,674 - - - - 4,674
+Derivative liability - 104 0 - - 104
+Total financial liabilities 93,926 10,104 - - - 104,030
+
+The balances presented in the maturity analysis above are reported based on their contractual maturity dates.
+However, it should be noted that the settlement of these balances is subject to the conditions of the licences
+obtained from OFSI. While the Cash at Bank balance is currently covered by an active OFSI licence for the
+settlement of basic needs and operational expenses, the timing of the recovery or settlement of other financial
+balances may be influenced by the ongoing regulatory and sanctions environment, regardless of their
+
+contractual maturity.
+
+More
+More
+“han Oe
+Not more three monthe year Mote
+Maturity analysis nae months but not put han Une ated Total
+months f more mor ars
+° more than ore ye
+than six ne than
+months ° five
+year years
+31-Dec-24
+€7000 €000 €°000 €7000 €000 €7000 €000
+Assets:
+Loans and advances banks 89,006 195,649 20,000 - - - 304,655
+Cash at bank 52,378 - - - - - 52,378
+Loans and advances customers 4 414 415 1,203 - 1,673 3,709
+Other assets 4,473 - - - - - 4,473
+Prepayments and accrued 6,433 ; ; . ; - 6,433
+income
+Total financial assets 152,294 196,063 20,415 1,203 - 1,673 371,648
+Liabilities:
+Deposits by banks 81,461 27,000 - - - - 108,461
+Customer accounts 3,248 - - - - - 3,248
+Other liabilities 1,238 - - - - - 1,238
+Accruals and deferred income 3,930 - - - - - 3,930
+Total financial liabilities 89,877 27,000 - - - -
+
+116,877
+
+*Tangible and intangible fixed assets are not included in the maturity analysis tables.
+
+Page 51 of 54
+
+Docusign Envelope !D: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+ae
+
+im
+
+= Mel l i Ban k Annual Report and Accounts 2025
+2025 2024
+€000 £000
+Tran 259,948 274,198
+Turkey 45,150 50,541
+United Kingdom 19,212 22,513
+Germany 35,884 24,809
+Other 2,681 3,480
+362,875 375,541
+
+Sanctions limit the Bank’s ability to transfer or place funds, reducing the options available to diversify or
+mitigate exposure to specific counterparts. Similarly, the sanctions limit the Bank’s ability to actively manage
+and diversity its geographic concentration risk. Despite the sanctions and challenging geo-political environment,
+the Bank has not identified a requirement for further provisions. The Bank distinguishes sanctions driven
+payment delays from underlying credit issues and remains confident in the recoverability of its assets.
+
+Liquidity Risk: Management:
+
+The Bank continues to monitor the Liquidity Coverage Ration and Net Stable Funding Ratio. It has
+strong underlying liquidity however liquidity management is constrained by the requirement for licences
+for every transaction. This creates potential operational delays in meeting obligations or moving funds.
+The Bank’s robust CET1 capital position provides a substantial buffer that ensures continued solvency.
+Furthermore, the CET1 capital provides the bulk of the Bank’s funding ensuring that the Bank is not
+dependent on external funding sources.
+
+Market and Foreign Exchange Risk:
+
+The sanctions limit the ability of the Bank to close out foreign exchange positions, as such actions are
+classified as new transactions under the sanctions definitions. Market risk remains limited to foreign
+exchange position risk and Interest Rate Risk in the Banking Book (IRRBB); the Bank does not maintain
+a trading book. To mitigate the impact of potential foreign exchange volatility on any unhedged positions
+the Bank maintains a robust CET 1 capital position which provides a substantial capital buffer to absorb
+any resulting valuation losses without compromising the Banks’s overall solvency. Regarding IRRBB,
+the Bank maintains no fixed rate exposure within its long-term maturity buckets. Furthermore, CET 1
+is the primary funding source which inherently limits exposure to interest rate shocks.
+
+Operational and Strategic Risk:
+
+Normal operations are constrained by legal and regulatory restrictions. In response, the Bank’s primary
+strategic focus has transitioned from commercial expansion to preservation of the existing asset base
+and ensuring absolute compliance with the sanctions regime and all other regulatory requirements. To
+mitigate disruption to the restricted operations, the Bank maintains comprehensive disaster recovery
+protocols, including a fully functional back up site with necessary IT systems and communication
+capabilities. However, the ability to maintain operations currently ultimately depends on the renewal of
+licences. Whilst legal counsel has advised that there is a reasonable expectation of renewal, the
+discretionary nature of these government authorisations represents an external dependency outside the
+Bank’s direct control.
+
+Page 52 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+aul
+guyo
+[c= MelliBank Annual Report and Accounts 2025
+
+Risk Management Framework
+
+Despite operational limitations, the Bank maintains a robust control environment. The Bank’s compact
+structure ensures senior management is directly involved in daily oversight, maintaining short and effective
+communication channels to address emerging threats.
+
+. Policy & Oversight: The Risk Management Framework Policy formalises the Bank’s approach
+to risk identification and mitigation. Whist the Risk Appetite Statement defines the level of risk
+the Bank is prepared to accept to achieve its strategic objectives, These are supported by a
+formal committee structure that reviews all activities in parallel with routine operational
+
+controls.
+
+. Credit Risk Management: Credit integrity is maintained through the Credit Risk and Large
+Exposure Policy Statement.
+
+. Liquidity Risk Management: The Liquidity Risk Management Policy ensures the Bank maintains
+
+sufficient financial resources to meet its obligations. The framework dictates the minimum
+liquidity buffers to support stable operations.
+
+. Institutional Limits: Inter-bank and country limits are reviewed annually by the Board, guided
+by external credit ratings and institutional net worth. Compliance with these limits is monitored
+daily.
+
+Credit Quality and Impairment
+Financial instruments are recorded on the Balance Sheet at carrying amounts that represent the maximum
+exposure to credit risk. Provisions are recognised when objective evidence suggests a loss event has impacted
+
+estimated future cash flows. As of 31 December 2025, the Bank has specific provisions on four accounts
+totalling €22,495,000, reflecting defaults or adverse changes in market conditions.
+
+23. Foreign currency risk
+
+2025 2024
+Total assets of the Company by currency are as follows: €m €m
+Denominated in:
+Euro 330 360
+Sterling 7 6
+Other 26 10
+363 376
+2025 2024
+Total liabilities of the Company by currency are as follows: em €m
+Denominated in:
+US Dollars 2 3
+Euro 87 100
+Sterling 7 6
+Other 8 8
+104 117
+
+Page 53 of 54
+
+Docusign Envelope ID: DD9F578E-2D1D-8521-8279-F B9F3CC9EA4E
+
+a
+
+[a Mell i Ban k Annual Report and Accounts 2025
+
+A 10% appreciation in value of Sterling against the Euro would decrease profitability by €0.86m (2024: €0.66m).
+The effect on equity capital would be a reduction of 0.33% (2024: 0.26%).
+
+24. Other charges -
+
+Other charges and income include nil interest income (2024: interest income of €224,000) relating to the
+Bank’s closed defined benefit (DB) pension scheme.
+
+25. Related party disclosure
+As at 31 December 2025 there were no loans to officers of the Company (2024: €Nil).
+
+A loan with a net value of €1,457,000 at 31 December 2025 is guaranteed by a subsidiary of Bank Melli Iran
+(the Bank’s parent).
+
+There were no other related party transactions requiring disclosure under FRS 102.
+
+26. Ultimate parent undertaking
+
+' The Bank is a wholly owned subsidiary of Bank Melli Iran (the parent). The patent is incorporated in Iran,
+having its registered address at Ferdowsi Avenue, Tehran, Iran. The ultimate 100% owner of Bank Melli Iran
+is the government of the Islamic Republic of Iran.
+
+The Company’s results are consolidated in the accounts of Bank Melli Iran. The consolidated accounts of this
+company are available to the public and may be obtained from the company’s head office at Bank Melli Iran,
+Head Office, Ferdowsi Avenue, Tehran, Iran.
+
+27. Post Balance Sheet Events
+
+Since the balance sheet date, the Bank has continued to monitor the evolving geopolitical situation in the
+Persian Gulf and the Islamic Republic of Iran. These developments represent a non-adjusting post-balance
+sheet event.
+
+While these events have increased the complexity of the environment in which the Bank operates, the directors
+have assessed the potential impact on the Bank's operations and solvency. The Bank continues to maintain
+robust liquidity and capital positions. Management remains in close communication with the regulators to
+ensure continued compliance with all applicable sanctions and regulatory requirements. There have been no
+other material events since 31 December 2025 that would require adjustment to, or disclosure in, these financial
+statements.
+
+Page 54 of 54
+

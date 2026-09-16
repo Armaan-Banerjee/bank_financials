@@ -97,12 +97,47 @@ def statement_sources(page, doc_label, url, note_extra=""):
         + ENTITY_NOTE + (" " + note_extra if note_extra else "")
     )
 
+# itau.com.br is BLOCKED, NOT DEAD - an important distinction, and the reason the
+# live publisher URL stays the primary citation on every sheet below. Re-tested
+# 2026-09-16: all three URLs return HTTP 403 with a short text/html body (~438-458
+# bytes), i.e. a Cloudflare/WAF bot challenge refusing an automated client. A 403
+# is an UNKNOWN - it tells us the host declined to serve US, not that the document
+# has been withdrawn; a human browser may well still retrieve it. So these are NOT
+# treated as dead and are NOT replaced. The Wayback snapshot is recorded ALONGSIDE
+# each live URL purely as a LABELLED FALLBACK for when the host refuses.
+#
+# Fallbacks upgraded 2026-09-16 from the bare .../web/<timestamp>/ viewer form to
+# the "id_" form (.../web/<timestamp>id_/<original>), which is a contract to return
+# the original archived bytes rather than the Wayback viewer page, and from http://
+# to https://. Each was fetched and verified on 2026-09-16: begins "%PDF", page
+# count as stated, correct entity ("Itau BBA International plc") and year on the
+# cover, and the final page renders (so none is a truncated capture).
 PILLAR3_2021_URL = "https://www.itau.com.br/content/dam/ibba/en/Pillar-3-2021.pdf"
-PILLAR3_2021_WAYBACK = "http://web.archive.org/web/20230502062443/https://www.itau.com.br/content/dam/ibba/en/Pillar-3-2021.pdf"
+# Verified 2026-09-16: 1,803,996 bytes, 54pp, cover "Itau BBA International plc / 2021 Pillar 3 Disclosures".
+PILLAR3_2021_WAYBACK = "https://web.archive.org/web/20230502062443id_/" + PILLAR3_2021_URL
 PILLAR3_2022_URL = "https://www.itau.com.br/media/dam/m/58b090bc84eddb94/original/Pillar-3-2022.pdf"
-PILLAR3_2022_WAYBACK = "http://web.archive.org/web/20230502054346/https://www.itau.com.br/media/dam/m/58b090bc84eddb94/original/Pillar-3-2022.pdf"
+# Verified 2026-09-16: 1,036,900 bytes, 67pp, cover "2022 Pillar 3 Disclosures / Itau BBA International plc".
+PILLAR3_2022_WAYBACK = "https://web.archive.org/web/20230502054346id_/" + PILLAR3_2022_URL
 PILLAR3_2023_URL = "https://www.itau.com.br/media/dam/m/11e1e216dd5df1fd/original/Pillar-3-2023.pdf"
-PILLAR3_2023_WAYBACK = "http://web.archive.org/web/20240812211731/https://www.itau.com.br/media/dam/m/11e1e216dd5df1fd/original/Pillar-3-2023.pdf"
+# Verified 2026-09-16: 1,144,738 bytes, 62pp, cover "Market Discipline - 2023 Pillar III / Itau BBA International plc".
+PILLAR3_2023_WAYBACK = "https://web.archive.org/web/20240812211731id_/" + PILLAR3_2023_URL
+
+BLOCKED_HOST_NOTE = (
+    "BLOCKED SOURCE HOST - NOT A DEAD LINK (recorded 2026-09-16). The three standalone Pillar 3 documents "
+    "cited on this sheet are hosted on itau.com.br, which refuses automated clients: re-tested 2026-09-16, "
+    "each URL returns HTTP 403 with a short (~438-458 byte) text/html body, a Cloudflare/WAF bot challenge. "
+    "A 403 is explicitly an UNKNOWN state, NOT evidence of removal - it records that the host declined to "
+    "serve this project's automated fetcher, and the documents may well still be retrievable by a human "
+    "browser or from a different network. For that reason the publisher's own live URL remains the PRIMARY "
+    "citation for every figure on this sheet and has deliberately NOT been replaced. The Wayback Machine "
+    "snapshot shown next to it is a LABELLED FALLBACK, provided only so the figure stays verifiable when the "
+    "host refuses the reader as it refused this session. Fallbacks are given in the 'id_' form "
+    "(https://web.archive.org/web/<timestamp>id_/<original URL>), which returns the original archived bytes "
+    "rather than the Wayback viewer page, and each was fetched and verified on 2026-09-16: FY2021 1,803,996 "
+    "bytes / 54pp; FY2022 1,036,900 bytes / 67pp; FY2023 1,144,738 bytes / 62pp. All three begin '%PDF', all "
+    "three name 'Itau BBA International plc' and their stated year on the cover, and in all three the final "
+    "page still renders, confirming none is a truncated capture. No figure was changed."
+)
 
 def pillar3_disclosure_sources(note_extra=""):
     return (
@@ -122,7 +157,8 @@ def pillar3_disclosure_sources(note_extra=""):
         "All figures are Group/consolidated (IBBAInt Group) basis, matching this workbook's other Pillar 3 sheets. "
         "FY2024/FY2025 are blank — no standalone Pillar 3 Disclosures document for either year was found on "
         "itau.com.br or in the Wayback Machine this session (only quarterly credit fact sheets and the Annual "
-        "Reports were found, and the Annual Report itself does not break out these figures for any year)." +
+        "Reports were found, and the Annual Report itself does not break out these figures for any year).\n\n" +
+        BLOCKED_HOST_NOTE +
         (" " + note_extra if note_extra else "")
     )
 

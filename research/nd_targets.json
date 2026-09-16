@@ -1,0 +1,3237 @@
+{
+ "build_afin_bank.py": {
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_2024_URL"
+  }
+ },
+ "build_aib_uk.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_alpha_bank_london.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR19_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR20_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR21_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR22_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR24_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR25_URL"
+  }
+ },
+ "build_alrayan.py": {
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_arab_bank_europe.py": {
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "CET1 Capital",
+    "MREL Ratio",
+    "Tier 1 Capital",
+    "Tier 1 Ratio",
+    "Total Capital",
+    "Total RWAs"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_atom_bank.py": {
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR16_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR17_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR18_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR19_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR20_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR21_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR23_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR24_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR25_URL"
+  }
+ },
+ "build_bank_of_africa_uk.py": {
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_bank_of_beirut_uk.py": {
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_bank_of_ceylon_uk.py": {
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH2025_URL"
+  }
+ },
+ "build_bank_of_china_uk.py": {
+  "FY2014": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2018_URL"
+  }
+ },
+ "build_bank_of_ireland.py": {
+  "FY2018": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_bank_of_scotland.py": {
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_bank_saderat.py": {
+  "FY2019": {
+   "metrics": [
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_bank_sepah_international.py": {
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_blme.py": {
+  "FY2014": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "FS2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "LCR",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "FS2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "FS2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "FS2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "FS2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "FS2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "FS2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "FS2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "FS2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "FS2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "FS2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "FS2025_URL"
+  }
+ },
+ "build_british_arab_commercial_bank.py": {
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  }
+ },
+ "build_c_hoare.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  },
+  "FY2026": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2026_URL"
+  }
+ },
+ "build_cambridge_and_counties.py": {
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_castle_trust.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_FY2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "CH_FY2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "CH_FY2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_FY2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_FY2025_URL"
+  }
+ },
+ "build_cater_allen.py": {
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_charity_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_CH_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_CH_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_citibank_uk.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_2020_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "FS_2024_URL"
+  }
+ },
+ "build_clearbank.py": {
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_close_brothers.py": {
+  "FY2021": {
+   "metrics": [
+    "LCR"
+   ],
+   "doc": "AR2021_URL"
+  }
+ },
+ "build_credit_suisse_international.py": {
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_credit_suisse_uk.py": {
+  "FY2016": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "?",
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_crown_agents_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_cynergy_bank.py": {
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_CH_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_df_capital.py": {
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_efg_private_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_fce_bank.py": {
+  "FY2006": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2006_OLD_URL"
+  },
+  "FY2007": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2007_OLD_URL"
+  },
+  "FY2008": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2008_OLD_URL"
+  },
+  "FY2009": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2009_OLD_URL"
+  },
+  "FY2010": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2010_OLD_URL"
+  },
+  "FY2011": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2011_OLD_URL"
+  },
+  "FY2012": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2012_OLD_URL"
+  },
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2013_OLD_URL"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_AMENDED_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_fcmb_uk.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_gatehouse.py": {
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_ghana_international_bank.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_2020_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_griffin_bank.py": {
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_guaranty_trust_bank_uk.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_hampden_co.py": {
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_hampshire_trust_bank.py": {
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_CH_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_CH_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_CH_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_CH_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_CH_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_havin_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "CET1 Ratio",
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Tier 1 Ratio",
+    "Total Capital Ratio",
+    "Total RWAs"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "CET1 Ratio",
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Tier 1 Ratio",
+    "Total Capital Ratio",
+    "Total RWAs"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "CET1 Ratio",
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Tier 1 Ratio",
+    "Total Capital Ratio",
+    "Total RWAs"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "CET1 Ratio",
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Tier 1 Ratio",
+    "Total Capital Ratio",
+    "Total RWAs"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "CET1 Ratio",
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Tier 1 Ratio",
+    "Total Capital Ratio",
+    "Total RWAs"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_hsbc_bank_plc.py": {
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_hsbc_innovation_bank.py": {
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_DOC_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_DOC_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_DOC_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_hsbc_uk_bank_plc.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_icbc_london.py": {
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR14_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR15_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR16_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR17_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR18_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR19_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR20_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR21_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR22_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR23_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR24_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR25_URL"
+  }
+ },
+ "build_icbc_standard_bank.py": {
+  "FY2015": {
+   "metrics": [
+    "LCR"
+   ],
+   "doc": "AR15_URL"
+  }
+ },
+ "build_icici_bank_uk.py": {
+  "FY2008": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2008_URL"
+  },
+  "FY2009": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2009_URL"
+  },
+  "FY2010": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2010_URL"
+  },
+  "FY2011": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2011_URL"
+  },
+  "FY2012": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2012_URL"
+  },
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2013_URL"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  },
+  "FY2026": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2026_URL"
+  }
+ },
+ "build_ifast_global_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR21_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR23_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR24_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR25_URL"
+  }
+ },
+ "build_investec_bank.py": {
+  "FY2019": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR19_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR21_URL"
+  }
+ },
+ "build_jp_morgan_europe.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_jp_morgan_securities.py": {
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_kingdom_bank.py": {
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_kroo_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_lloyds_bank.py": {
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_lloyds_bank_corporate_markets.py": {
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_melli_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_monzo.py": {
+  "FY2018": {
+   "metrics": [
+    "CET1 Ratio",
+    "Tier 1 Ratio"
+   ],
+   "doc": "CH_FY2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "CH_FY2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "?"
+   ],
+   "doc": "AR20_URL"
+  }
+ },
+ "build_morgan_stanley_bank_international.py": {
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_national_bank_of_egypt_uk.py": {
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR"
+  }
+ },
+ "build_national_bank_of_kuwait_international.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_national_westminster_bank.py": {
+  "FY2012": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "NWB_CH_AR"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_nomura_bank_international.py": {
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR21_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR22_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR23_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR24_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR25_URL"
+  },
+  "FY2026": {
+   "metrics": [
+    "LCR",
+    "Leverage Ratio",
+    "MREL Ratio",
+    "NSFR",
+    "Total RWAs"
+   ],
+   "doc": "AR26_URL"
+  }
+ },
+ "build_oaknorth.py": {
+  "FY2015": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2016": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2017": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2018": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_oxbury.py": {
+  "FY2021": {
+   "metrics": [
+    "CET1 Capital",
+    "LCR",
+    "Leverage Ratio",
+    "Tier 1 Capital",
+    "Total Capital",
+    "Total RWAs"
+   ],
+   "doc": "AR2021_URL"
+  }
+ },
+ "build_persia_international_bank.py": {
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio",
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_rathbones.py": {
+  "FY2021": {
+   "metrics": [
+    "(whole sheets)"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "(whole sheets)"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "(whole sheets)"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "(whole sheets)"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "(whole sheets)"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_rbc_europe.py": {
+  "FY2014": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URL"
+  }
+ },
+ "build_rbs.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_secure_trust.py": {
+  "FY2019": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2021": {
+   "metrics": [
+    "LCR",
+    "NSFR"
+   ],
+   "doc": "AR_URLS"
+  }
+ },
+ "build_smbc.py": {
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2013_URL"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  },
+  "FY2026": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2026_URL"
+  }
+ },
+ "build_standard_chartered_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "LCR"
+   ],
+   "doc": "REPORTS"
+  }
+ },
+ "build_tandem.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_td_bank_europe.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URL"
+  }
+ },
+ "build_triodos.py": {
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_turkish_bank.py": {
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_uba_uk.py": {
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_union_bancaire_privee_uk.py": {
+  "FY2008": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2008_URL"
+  },
+  "FY2009": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2009_URL"
+  },
+  "FY2010": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2010_URL"
+  },
+  "FY2011": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2011_URL"
+  },
+  "FY2012": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2012_URL"
+  },
+  "FY2013": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2013_URL"
+  },
+  "FY2014": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2014_URL"
+  },
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2015_URL"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR2024_URL"
+  }
+ },
+ "build_united_national.py": {
+  "FY2016": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2016_URL"
+  },
+  "FY2017": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2017_URL"
+  },
+  "FY2018": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2020_URL"
+  },
+  "FY2021": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2021_URL"
+  },
+  "FY2022": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2022_URL"
+  },
+  "FY2023": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2023_URL"
+  },
+  "FY2025": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "AR2025_URL"
+  }
+ },
+ "build_unity_trust.py": {
+  "FY2018": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "CH_2018_URL"
+  },
+  "FY2019": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "CH_2019_URL"
+  },
+  "FY2020": {
+   "metrics": [
+    "NSFR"
+   ],
+   "doc": "CH_2020_URL"
+  }
+ },
+ "build_weatherbys.py": {
+  "FY2015": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2016": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2017": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2018": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2019": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2020": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "CH_AR_URLS"
+  },
+  "FY2022": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2023": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2024": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  },
+  "FY2025": {
+   "metrics": [
+    "MREL Ratio"
+   ],
+   "doc": "AR_URLS"
+  }
+ }
+}

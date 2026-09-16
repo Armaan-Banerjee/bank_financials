@@ -210,6 +210,15 @@ came from a search-engine summary and was not seen on a fetched page.
   - (2014–2018 same pattern; 2019 Pillar-3-Disclosure-FY19-FINAL.pdf; 2020 2.-JHB-Pillar-III.pdf;
     2021 Hodge-Pillar-3-Document-2020_2021.pdf; 2022 Hodge-pillar-3-19.06.23.pdf;
     2023 Hodge-pillar-3-11.03.24.pdf — all under /wp-content/uploads/2024/07/)
+  - **METHOD NOTE (2026-09-16):** "2014–2018 same pattern" above was an INFERENCE from the 2010–2013
+    filenames, written into a list that otherwise read as verified. It happened to be right, but it
+    should not have been stated that way.
+  - **VERIFIED 2026-09-16** after katalysis-36 reported this directory as a catch-all soft-404 serving
+    text/html. It is not, from this client. All seven tested return `200 application/pdf`, `%PDF`, with
+    DISTINCT md5s and sizes — 2010 299,440 B / 27 pp "as at 31 October 2010"; 2014 351,821 B / 23 pp
+    "as at 31 October 2014"; 2016 774,618 B / 34 pp; 2018 876,285 B / 37 pp (2011/2012/2013 also
+    application/pdf, distinct md5s). Identical bodies are the soft-404 tell and they are absent here.
+    Two clients disagree about this host; do not repoint citations until that is resolved.
   - ENUMERATED NEGATIVE: FY2009, and also **FY2024 and FY2025** (ARs for those years
     are listed but no Pillar 3).
 - **Clydesdale Bank PLC:** SOURCED NEGATIVE (parent basis) for FY2009–FY2013. The NAB
@@ -667,6 +676,171 @@ negatives carry the date they were established.
 - **Lesson:** web.archive.org throttled me when stage 3 and ad-hoc CDX queries ran concurrently, and the connections timed out.
   An earlier lr_fix version would have recorded those failures as "no capture". It was killed and patched.
 
+### Batch 7 — update ~21:55 by system clock (PARTIAL 2a SENT ~22:00)
+- **Sent in 2a:**
+  - ABE: 3 id_ URLs, using Pillar3.pdf at the CITED timestamp 20240714131343 (35pp, intact).
+  - FirstBank 6 (incl. 2020 20231206074745id_ 36pp, Dec-2022 20240219211830id_ 39pp, Dec-2023 20240527034030id_ 33pp, Dec-2024-1 20251203042809id_ 39pp).
+  - UTB 20250913035253id_ (13pp); TSB 2015 20221214093332id_ (37pp).
+  - Itaú and PNB 2017/2019 fallbacks.
+  - No exact-URL capture: PNB 2015, 2016 and storage; Starling 2019; QIB 4.
+  - The AIB CH reversal, the negatives that hold, Hodge info and the Melli CH statements.
+- **Still owed in 2b:**
+  - The 80 id_ conversions (lr_res_stage5.jsonl).
+  - Stage-3 rows still pending: FCE 2008, Vanquis 2017, SMBC ×2, UBL 2018. FCE 2016/2010/2006 are already OK in id_ form.
+  - ABE domain CDX and the md5 of 20240714 vs 20250505 (lr_res_stage6.jsonl).
+  - Melli Wayback results.
+- **Background jobs:** stage5.sh (task bclpvsv9r), then stage6.sh (task bn90w0ght), which waits for stage 5.
+- **~22:05: ALL 8 remaining stage-3 priority rows now have a working id_ form** (lr_res_stage5.jsonl), at the same timestamp as cited:
+  - FCE 2016 AR 167pp, 2010 AR 129pp, 2006 AR 100pp, 2008 AR 140pp
+  - Vanquis pfg_pillar_3_report-2017 28pp (20220703024108id_)
+  - SMBC pillar3-31-03-15 39pp (20240527065243id_), smbce-pillar3-2020 60pp (20240527071545id_)
+  - UBL pillar-iii-disclosure-2018 63pp (20250804031750id_)
+  - So no stage-3 citation is left without a working form. Those 8 had only been failing on archive connection timeouts.
+- **More live negative re-checks (~22:10). All HOLD:**
+  - Turkish Bank FY2025: /reports/ newest is "Pillar 3 Disclosure 2024" (the 2026/02 PILLAR-3-DISCLOSURE.pdf). The WP media search for "pillar" returns only that one item.
+  - UBI UK FY2026: /disclosures/financial-reports lists Pillar 3 editions 31-03-2015 through Final_Pillar_3_Disclosure-31-03-2025 and nothing for 2026. My href filter found no 2026 accounts PDF path either, although the script says the page lists "Financial Accounts 31-03-2026".
+  - Griffin: griffin.com/legal and /regulatory-information are 404. The cms.griffin.com Strapi upload API returns 502, so it can't be used. The script's negative stands on its own evidence, and this check was inconclusive.
+- **Stage 5 slowed at row 10 (~22:10):**
+  - Row 10 is Zenith 2014, 20160826052010id_. No curl of mine is running, so the verifier is in its backoff and the archive is throttling again. Leave it alone; don't add archive load.
+  - A curl from ANOTHER session (relative path eab_pillar3.pdf, a different UA) was fetching the ABE Pillar3.pdf capture at the same time. That is probably the peer acting on partial 2a. Archive throttling is shared across sessions, so slow rows now are not evidence of absence.
+  - UBI UK: the script cites only the unionbankofindiauk.co.uk index page, with no PDFs, so there is nothing to link-rot-check.
+### Batch 7 — stages 5/6 COMPLETE (~22:05–22:20)
+- **id_ verification: 84 rows, 81 OK_PDF, 3 TRUNCATED_1MiB.**
+  - **DO NOT convert these three to id_** — the id_ capture is truncated at exactly 1,048,576 bytes, while the cited bare/viewer form still works:
+    - build_bank_of_africa_uk.py 20220519120942 BMCE___Pillar_III_VF___31122017.pdf
+    - build_gulf_international_bank_uk.py 20220518000354 2020-GIBUK-Pillar-3_Final.pdf
+    - build_gulf_international_bank_uk.py 20230329132856 2021-GIBUK-Pillar-3_Final.pdf
+  - Stage 7 is looking for untruncated alternative captures for those three.
+  - The 2 credit_suisse year-only `/web/2024id_/` rows BOTH resolve fine: 2021 edition 85pp, 2022 edition 71pp, covers "Credit Suisse International / Basel III / <year> Pillar 3".
+- **ABE Pillar3.pdf edition question RESOLVED.** The cited capture 20240714131343id_ and the newest 20250505164839id_ have the SAME md5 (f79e76794db045a963b40fde1da8ebea), 35pp, 3,074,106 bytes. Same document, so there was no edition risk after all — but the CDX digest list does show TWO distinct versions at that URL: 20240713003435 (1,036,749 WARC bytes, a different digest) and 20240714131343. Keep citing 20240714131343.
+- **ABE older Pillar 3 editions EXIST in the archive**, at a different path from the one the script probed (`/files/PDFs/`, not `/downloads/`). All 200 application/pdf:
+  - 2012 `3.4 - EAB 2012 Pillar Three.pdf` 20161108212856; 2013 20161108212844; 2014 (CRDIV) 20161108192950; 2015 20161108212906
+  - 2016 `Pillar 3/EAB 2016 Pillar 3 - CRDIV_FINAL.pdf` 20220707074618; 2017 20210918014857; 2018 `Pillar 3/Pillar III Disclosure 2018.pdf` 20210918014555
+  - 2019 20210918015853; 2020 20210918020429; plus 2009 and a v13 from 2010
+  - The workbook covers FY2021–FY2024, so these are out of range today, but they matter for any year extension. arabbankeurope.com has NO archived Pillar 3 captures at all.
+- **Melli — what it ever published (both verified id_, entity confirmed "Registered number 4152338"):**
+  - FY2014: https://web.archive.org/web/20170407223115id_/http://mellibank.com/PDFs/Melli%20Bank%20P3%20Disclosures%20as%20at%2031%20December%202014%20FINAL.pdf (16pp, "As at 31st December 2014")
+  - FY2016: https://web.archive.org/web/20190405190315id_/http://mellibank.com/File/DownloadReportFiles?filename=Melli%20Bank%20-%20Pillar%203%20%20Disclosures%202016%20-%20Final.pdf (23pp, "As at 31st December 2016")
+  - Also archived on the old domain: mellibank.co.uk 20160221234533 (the same FY2014 document, 159,723 bytes).
+  - The mellibank.com CDX from 2019 shows ARs 2002–2008 and 2016 plus compliance PDFs, and NO Pillar 3 later than the FY2016 edition. Captures from May 2026 exist for compliance files, so the domain was still being crawled — the absence of a FY2023 edition is not simply "nothing was captured". Stage 7 checks the /reports page listings.
+- **Stage 6 covers — all 13 replacements confirm entity and period:** FirstBank "FBN Bank (UK) Limited"/"FirstBank UK Limited" Pillar 3 as at 31 Dec 2019/2020/2021/2022/2023/2024; UTB "UTB Partners Plc ... as at 31 December 2024"; TSB "TSB Banking Group plc Significant Subsidiary Disclosures"; PNB "Philippine National Bank (Europe) Plc"; ABE AR "31 December 2024".
+
+### Batch 7 — stage 7 results + PARTIAL 2b SENT (~01:00)
+- **PARTIAL 2b sent:** the full per-script id_ conversion list (81 OK), the 3 do-not-convert rows, the ABE md5 resolution, the ABE 2012–2020 finds, and the Melli answer.
+- **BOA UK is solved LIVE, not by archive** (better than converting):
+  - FY2017 → https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BMCE___Pillar_III_VF___31122017.pdf (32pp, "2017 PILLAR III DISCLOSURES", reg 5321714)
+  - FY2015 → https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BMCE___Pillar_3_disclosures____2015.pdf (5pp, "BMCE BANK INTERNATIONAL plc ... FOR THE YEAR 2015")
+  - The site moved these from /assets/<n>/ to /pdfs/finances/. The Wayback path /assets/0/BMCE___Pillar_3_disclosures____2017.pdf is a 404 capture, so /assets/239/ was the only archived 2017 copy.
+- **GIB UK 2020/2021: only ONE 200 capture exists for each** (20220518000354 and 20230329132856), so there is no alternative timestamp to switch to. gibam.com now 404s on the 2020, 2021 AND 2022 asset paths and has no disclosures index page, so live is not an option either.
+  - Stage 8 is testing whether the CITED bare form plays back complete, or is truncated like the id_ form. If the bare form is complete, leave those two citations exactly as they are.
+- **Melli /reports page captures run 2017 → 17 May 2026** (17 captures). Stage 9 reads the 2026, 2025, 2023 and 2021 listings to test the FY2023 "on the website" statement.
+  - The mellibank.com DownloadReportFiles CDX lists ARs 2002–2008 and 2016 plus the FY2016 Pillar 3 — and NO Pillar 3 after FY2016.
+
+### Batch 7 — PRIORITY: GIB UK has no working form (~01:10, sent to peer)
+- **build_gulf_international_bank_uk.py FY2020 and FY2021 Pillar 3 are UNUSABLE in every form.**
+  - bare (cited), if_ AND id_ all return exactly 1,048,576 bytes with no pdfinfo page count. md5 edfe2438dbff06fdc617e6a38efb6059 (2020) and 32d6206989581714144f61ffc6982ab5 (2021), identical across the three forms, so the CAPTURE is truncated, not the playback.
+  - Only ONE 200 capture exists per URL (20220518000354, 20230329132856); every other capture of those paths is a 404.
+  - Live: gibam.com 404s on the 2020, 2021 and 2022 asset paths, no disclosures index page; gibuk.com does not resolve; gib.com is 403 to BOTH curl and WebFetch = BLOCKED, not a negative.
+  - Stage 10 sweeps gib.com/gibam.com for a differently-named copy.
+  - **Lesson:** a %PDF magic-byte check cannot see a truncation 1 MiB into the file. Only the full download plus a pdfinfo page count catches it. That is why stages 5/6/8 downloaded in full.
+- **Melli /reports page, ALL captures (Sept 2021, Apr 2023, Jun 2023, Jun 2025, Feb 2026, May 2026):**
+  - "Financial Statements and Pillar 3 Disclosures are available on request."
+  - So the site said "on request" throughout, and the FY2023 AR's "available on the Bank's website" is NOT corroborated by any capture. No Pillar 3 later than FY2016 is archived on the domain, and captures continue into May 2026, so this is not a crawl gap.
+  - Melli's only public Pillar 3 documents remain FY2014 and FY2016 (both verified id_, sent in 2b).
+
+- **Stage 10 (archive sweep for a usable GIB UK copy) — NOTHING FOUND, and a trap to avoid:**
+  - gibam.com holds exactly three GIBUK Pillar 3 assets ever: 2020-GIBUK-Pillar-3_Final.pdf, 2021-GIBUK-Pillar-3_Final.pdf (both the truncated captures) and 2022-GIBUK-Pillar-3-disclosures_VF.pdf (fine, 33pp). No differently-named GIB UK edition exists on the domain.
+  - gib.com has MANY Pillar 3 PDFs, but they are all OTHER ENTITIES: Gulf International Bank B.S.C. (the Bahrain parent), the KSA entity (/ksa/) and the Abu Dhabi branch. **ENTITY-BASIS RULE: none of these may be substituted for GIB UK's own disclosure.** Flagged to the peer so they are not mistaken for candidates.
+  - So GIB UK FY2020/FY2021 currently have NO retrievable Pillar 3 source in any form.
+
+### Batch 7 — GIB UK: the "unrecoverable" verdict below is WITHDRAWN (corrected 2026-09-16, see SUPERSEDED note)
+- **Every route tried and exhausted for FY2020/FY2021:**
+  - Wayback: one 200 capture each; bare/if_/id_ all return the same 1,048,576 truncated bytes (md5-identical per year).
+  - **PDF repair fails:** qpdf "can't find startxref" (the truncation removed the xref table at the file's end); Ghostscript rebuilt only a 2,431-byte single BLANK page from both. No page content survives, not even page 1.
+  - Live gibam.com: 404 on 2020/2021/2022 asset paths; /regulatory-information, /literature-library, /important-information all 404.
+  - **NEW HOST (does not help):** documents moved to CDN gib-am.files.svdcdn.com. The live Policies and Governance page (gibam.com/insights/policies-and-governance) lists only the 2024 Pillar 3. The CDN has 2023 + 2024 only; ~10 permutations for 2020/2021/2022 404; a Wayback sweep of the CDN host returns only those two files.
+  - Memento aggregator, Common Crawl CC-MAIN-2023-50, archive.today: nothing. Web search: 2022/2023/2024 only.
+  - gib.com responds 200 to browser headers (the earlier 403 was a WRONG PATH, so gib.com is reachable, not blocked). All its Pillar 3 PDFs are GIB B.S.C. (Bahrain parent), /ksa/ or the Abu Dhabi branch — **ENTITY-BASIS RULE: never substitutable.** Flagged to the peer because they look like hits.
+  - Route left for the PEER (a read, not retrieval): the FY2022 edition is retrievable (20240223164517id_, 33pp) and FY2023 is live on the CDN; if FY2022 carries a FY2021 comparative, FY2021 is sourceable. FY2020 has no such route.
+- **Defect class bounded (answering the peer's question):** of the 84 archive citations verified by FULL download + page count, exactly 3 failed — BOA UK 2017, GIB UK 2020, GIB UK 2021 — and BOA was rescued live.
+- **SUPERSEDED 2026-09-16 — the unretrievable set is EMPTY.** All three truncated captures were recovered
+  in full by `gs -o fixed.pdf -sDEVICE=pdfwrite <truncated>`: GIB UK FY2020 → 795,035 B / 38 pp, GIB UK
+  FY2021 → 697,523 B / 30 pp, BOA UK 2017 → 981,636 B / 32 pp (cover "Company Registration N°5321714",
+  the UK entity). Reproduced byte-for-byte against katalysis-36's independent run.
+  **Why the earlier verdict was wrong:** my gs invocation carried `-dPDFSTOPONERROR=false`, which on
+  gs 10.07.1 causes "Unrecoverable error, exit code 1" and a 2,423-byte blank page. Run bare it rebuilds
+  all 38. The flag added to make gs MORE tolerant is what made it fail, so the "evidence" of
+  unrecoverability was produced by my own command line, not by the document. Truncation removes the xref
+  INDEX at the file's end; the page objects before it are intact, and gs rebuilds by scanning objects.
+  Treat any 1 MiB capture as recoverable until a bare repair actually fails.
+  - **Stated limit:** the ~1,035 LIVE citations were header-checked (first 2 KB) only, which proves a PDF is served, not that it is COMPLETE. Offered the peer a bounded full-download sweep of those 1,035 if they want that closed.
+- **"Posted to the website" class (peer ask 3):** confirmed instances are Melli FY2017–FY2019 ("have been posted", only FY2016 survives) and Hampden FY2016/FY2017 (script note already records the AR wording). A repo grep only finds cases someone already quoted, so I offered (a) derive the candidate list from the repo (free) and (b) fetch+grep those ARs (bounded sweep).
+
+### Ask 3 — "posted to the website" sweep (peer-requested, started ~01:45)
+- **(a) DONE, and my first answer was wrong.** The grep heuristic said 17 scripts; an AST parse of all 145 says **78 scripts / 487 bank-years**.
+  - Method: parse each script's YEARS, every `{year: "Not publicly disclosed"}` dict, every `add_not_disclosed_metric_sheets` call (whole sheets × all years), and every year-specific AR/CH constant. A bank-year qualifies when BOTH hold for the same year.
+  - Machine-readable: `scratchpad/nd_targets.json` (script → year → {metrics, doc constant}).
+  - Biggest: FCE 20yrs (FY2006–FY2025), ICICI 19, UBP 17, NatWest 14, SMBC 14, BACB 13, BLME/ICBC/Morgan Stanley 12.
+  - The first list's top entries all survive, so nothing dispatched on it was wasted — the parse just found ~60 more scripts and pins the YEARS rather than the bank.
+- **(b) scope widened on the peer's instruction, and they are right:** the "Not publicly disclosed" filter finds where WE failed, not where the BANK asserted publication. The Melli shape (cells filled from the AR, so nothing looks missing) is invisible to it by construction. So (b) sweeps EVERY cited AR.
+  - `ar_extract.py` → **948 distinct documents** across 140 scripts (467 Companies House, 481 other hosts). List: `scratchpad/ar_fetch_list.json`.
+  - `ar_grep.py` fetches, pdftotext's, and records a Pillar 3 mention within ~300 chars of an assertion, BOTH directions:
+    - PUBLISHED = "posted to / published on / available on the … website" → a document existed and was public
+    - ON_REQUEST = "available/provided on request" → the bank asserts NON-publication (an answer, not a gap)
+  - Verdicts kept distinct so a failure never reads as silence: ASSERTION / NO_ASSERTION / SCANNED_NO_TEXT / NOT_PDF / ERROR.
+  - **SCANNED_NO_TEXT matters:** most CH filings are image-only = "not yet read", NOT "no assertion". Melli's whole AR set was this shape and needed OCR.
+  - Per the peer's Melli point: where both the AR and the archived disclosures page can be checked, report any CONFLICT as the finding rather than picking a side.
+- Order: Zenith, BLME, CAF Bank, Turkish Bank, Metro → rest of the original 17 → everything else. Then the 1,035-row live full-download sweep (third).
+
+- **LBCM 2021 interim negative HOLDS (~22:15):**
+  - Eight 2021 Q1/HY/Q3 permutations 404. They cover the 2022+ folder patterns q1/, q2/, q3/ and half-year/, plus flat 2021/ with "pillar3" and "pillar-3".
+  - Control: 2021/2021-lbcm-fy-pillar3.pdf serves %PDF (556KB).
+- **Access Bank UK WP media API:** curl gets a Cloudflare 403 challenge and WebFetch gets a 403 too, so it is BLOCKED on both clients. Inconclusive; the negative still rests on the script's CDX evidence.
+- **Melli live site (~22:15):** mellibank.com and www.mellibank.com resolve (62.232.194.164), but TCP connections time out on ports 80 and 443. www.mellibank.co.uk times out too. The site is effectively offline, which fits the Sept 2025 sanctions designation, so Wayback is the only route for any FY2023 website edition.
+- **Wayback fallback results so far** (lr_fix_out2.jsonl). Each is a verified id_ capture: %PDF, page count, and not 1 MiB-truncated.
+  - eabplc AR2022 `202304_EABAnnualReport_v7_144ppi.pdf` → 20240714135652id_ (98pp). This is the same timestamp the script already cites.
+  - eabplc AR2024 `202502_EABAnnualReport_v3.pdf` → 20250805183352id_ (100pp). Same timestamp as cited.
+  - eabplc `Pillar3.pdf`:
+    - lr_fix chose the NEWEST capture, 20250505164839 (35pp). **Do not send that one.**
+    - The script cites 20240714131343 (the FY2022 edition). An undated filename can hold different editions at different captures (the Metro trap).
+    - Stage 5 verifies the 20240714131343id_ capture and lists its CDX digest history.
+  - Itaú 2021/2022/2023 (BLOCKED live): id_ captures 20230502062443 (54pp), 20230502054346 (67pp) and 20240812211731 (62pp). These are fallbacks only; the live URLs stay cited.
+  - FirstBank `FBNUK-Pillar-3-Dec-19-FINAL-Published_v3.pdf` → 20200918094410id_ (27pp). `FBNUK-Pillar-3-Disclosures_-2021.pdf` → 20240718195901id_ (39pp).
+- **Stage-3 retry** (lr_res_stage3b.jsonl): 19 of the 27 are now OK. 8 still hit archive connection timeouts:
+  - FCE 2016 AR, 2010 AR, 2006 AR, 2008 AR
+  - Vanquis pfg 2017
+  - SMBC pillar3-31-03-15 and smbce-pillar3-2020
+  - UBL if_ 2018
+  - Their id_ forms are first in the stage-5 queue (lr_stage5.json → lr_res_stage5.jsonl, lr_idverify.py, sequential with backoff).
+- **Negative re-checks on live hosts** (no archive), 2026-09-15 ~22:30. Every negative below HOLDS:
+  - BOA UK: finances.html newest is Pillar3-Disclosures-2024; three 2025 permutations 404 (2024 control 206 PDF).
+  - Saderat: Basel_Disclosures.htm newest is 2023; 2024/2025 permutations 404 (2023 control PDF).
+  - Nomura NEH 310325/310326: 404 under both public/ and login/ (310324 control PDF).
+  - FidBank 2025: three permutations 404 (2024 control PDF).
+  - UBP UK: the P3 page lists SGKH 31 Dec 2022/2023/2024 only.
+  - Weatherbys: the annual-reporting page newest P3 is 2024. A 2026/06 upload exists, but it is the gender pay gap report, not a P3. The WP REST route is absent.
+  - Arbuthnot FY2025 annual P3: five permutations 404.
+  - Hodge FY2024/FY2025: the WP media API (terms pillar, pillar-3, disclosure, hodge) shows no P3 upload after 2024-07. Note that /regulatory-disclosures/ is now a plain **404**, where it used to be a 403.
+  - Access Bank UK: the WP media API gets a Cloudflare 403 challenge, so this could not be re-checked (the negative rests on the existing CDX evidence).
+- **REVERSAL, access-type:** AIB Group (UK) p.l.c. FY2021 Annual Financial Report.
+  - The script says it "could not be fetched" (aibgb.co.uk 403) and uses the FY2022 AR's comparatives.
+  - It IS on Companies House: NI018800, filed 11 Mar 2022, "Group of companies' accounts made up to 31 December 2021".
+    https://find-and-update.company-information.service.gov.uk/company/NI018800/filing-history/MzMzMjQ0MDUyOWFkaXF6a2N4/document?format=pdf&download=0
+    %PDF, 168pp, scanned. OCR cover: "AIB Group (UK) p.l.c. Annual Financial Report for the year ended 31 December 2021, Company number: NI018800".
+  - aib.ie /annualreport/2021/ permutations all 404.
+- **Hodge (info):** live copies of every old Pillar 3 are at `hodgebank.co.uk/wp-content/uploads/2024/07/`. These could replace the Wayback citations, but the Wayback id_ citations are already fine.
+  - jhb-pillar3-2012 ("as at 31 October 2012", 21pp), -2013 (23pp), -2014 (23pp), -2015 (23pp), -2016 (34pp), -2017 (34pp), -2018 (37pp), Pillar-3-Disclosure-FY19-FINAL (36pp).
+  - FY2012/FY2013 Pillar 3s exist live, although the script's P3 sheets start at FY2014/FY2016 (Basel II years).
+- **Melli (Companies House, all 13 ARs FY2013–FY2025 OCR'd; statement in the Directors' report):**
+  - FY2013: "will be posted to the Bank's website, www.mellibank.com after the agreement of the capital planning buffer with the PRA".
+  - FY2014 and FY2015: "will be posted to the Bank's website".
+  - FY2016–FY2019: "have been posted to the Bank's website, www.mellibank.com".
+  - FY2020, FY2021 and FY2022: "available on request from the Bank".
+  - **FY2023: "The Pillar 3 disclosure is available on the Bank's website (www.mellibank.com)".**
+  - FY2024 and FY2025: "available on request". FY2025 also records the 29 Sept 2025 sanctions designation.
+  - Accounts doc ids: FY2013 MzEwMzI2NjE3MmFkaXF6a2N4, FY2017 MzIwODMyMzYxMGFkaXF6a2N4, FY2018 MzIzNzg1NzI1MmFkaXF6a2N4, FY2019 MzI2ODMyMjYyMWFkaXF6a2N4, FY2020 MzMwNjA2MDkzMGFkaXF6a2N4 (others listed earlier).
+  - Stage 5 runs a mellibank.com CDX from 2019 to test the FY2023 website claim, and verifies the FY2014/FY2016 P3 captures.
+
 ### Recent-year re-checks (2026-09-15)
 - UBL UK: annual-reports page still has no 2025 Pillar 3. PRA register: no SDDT row.
 - Castle Trust Capital PLC: PRA Rule 3.1 start 06/01/2026 → covers FY2026 (y/e 30 Sep 2026), not FY2025.
@@ -736,3 +910,434 @@ negatives carry the date they were established.
   CDX sweep found no captures, so those years are unrecoverable. The NBK file named
   "Pillar III Disclosures 2023.pdf" is NBK France SA (EUR), not NBK International.
   Havin's decoded index lists Pillar 3 only to 2019 (the rest are "available upon request").
+
+## Ask 3(b) — "what the BANK says about Pillar 3 publication" (2026-09-16)
+
+Method: fetch every cited Annual Report / CH filing, extract text, and record assertions where the SAME
+SENTENCE mentions Pillar 3 and asserts either publication or availability-on-request. Both directions are
+findings. Sentence-scoped after a ±320-char window produced false positives by stitching table cells.
+
+**Verdicts:** ASSERTION / NO_ASSERTION / SCANNED_NO_TEXT / NOT_PDF.
+`SCANNED_NO_TEXT` means NOT YET READ. It must never be counted as "the bank said nothing" — Melli's
+Pillar 3 statement sat in a scanned AR, and that case is why this sweep exists.
+
+### A BUG IN MY OWN EXTRACTOR (found 2026-09-16, before reporting it as a repo defect)
+`ar_extract.py`'s `str_of()` resolved string literals but returned `""` for an `ast.Name` and silently
+dropped f-string `FormattedValue` nodes. Two consequences:
+- It **invented 17 addresses** present in no build script — `.../company//filing-history/...` (empty
+  company number) and `.../web/<ts>id_/` with no target. These fetched as NOT_PDF and looked exactly like
+  a defect class of malformed citations in the repo. **They are not.** The scripts are correct:
+  `build_marks_and_spencer_financial_services.py` uses `f".../company/{COMPANY_NO}/..."` with
+  `COMPANY_NO = "01772585"`; `build_arab_bank_europe.py` uses `"...id_/" + ORIG_AR2022_URL`.
+- It **missed 196 real documents** — mostly CH filing-history URLs whose company number is a variable.
+  Corrected extraction (`ar_extract2.py`): **1,127 URLs, not 948**. The first pass therefore covered ~83%
+  of the corpus; a second pass covers the remainder.
+Fixed by building a module-level symbol table and resolving Names/FormattedValues against it.
+**This is the same error shape as the gs verdict: reporting an artifact of my own tooling as a property
+of the source.** Verified against the scripts before sending this time.
+
+### Not defects, checked and cleared
+- `sbiuk.statebank` — resolves (103.68.221.40), serves a 920,392-byte `%PDF`. `.statebank` is a real gTLD.
+- SBI annual report — a 13.4 MB PDF that outran my timeout; alive.
+- Lloyds `CH_URL` (`/company/00002065`) — a legitimate CH landing page used inside a citation string.
+- Shawbrook's CH entries are URL + prose in one string; a citation format, not a broken address.
+
+### Truncation rule REFINED
+Exactly 1,048,576 bytes is a **signature, not proof**. Julian Hodge's FY2018 AR capture is exactly 1 MiB
+and fully intact — 86 pages, last page carrying real text ending naturally on "38 Ultimate parent
+undertaking". The decisive test is **whether the LAST page carries text**, since truncation removes the
+END of a file. Page 1 proves nothing. Guard against linearized PDFs: their page-count hint table sits at
+the file's START, so a truncated one can still report a full page count.
+
+### hodgebank.co.uk is PATH-DEPENDENT
+A nonexistent filename under `/wp-content/uploads/2024/07/` returns an honest 548-byte 404, but
+`/wp-content/uploads/2020/02/FINAL-Julian-Hodge-Bank-Limited-FY18.pdf` returns 200 `text/html` at 108,306
+bytes. A negative control proves the behaviour of the directory it was run in and nothing about any other
+path on that host. That FY2018 AR is genuinely gone live, so citing the Wayback `id_` capture is correct.
+
+### Interim results (868 of 1,127 documents)
+PUBLISHED 61 · ON_REQUEST 1 · NO_ASSERTION 244 · SCANNED_NO_TEXT 270 · NOT_PDF 47.
+Representative verbatim hits:
+- C. Hoare & Co, FY2019-FY2023 (five consecutive years): "A fuller description of the bank's principal
+  risks can be found in the bank's Pillar 3 disclosures, which is unaudited, and is available on the
+  bank's website:"
+- BNY Mellon FY2023/FY2025: "The Pillar 3 disclosures for the Company are published on BNY's website at
+  https://www.bny.com/corporate/global/en/investor-relations/regulatory-filings.html."
+- Arbuthnot Latham FY2017: "Our Pillar III disclosures for the year ended 31 December 2017 are published
+  as a separate document on the Group website under Investor Relations."
+Reporting via `ar_report.py`, which filters v1 artifacts and prints the unread denominator per bank.
+
+### Ask 3(b) COMPLETE — 1,127 documents (2026-09-16)
+`SCANNED_NO_TEXT 577 · NO_ASSERTION 391 · NOT_PDF 70 · ASSERTION 89`
+(103 PUBLISHED sentences, 4 ON_REQUEST, across 30 banks). Report: `ar_report_final.txt`.
+
+**THE OCR SHAPE I REPORTED EARLIER WAS WRONG AND IS CORRECTED HERE.** From the partial 250-document
+pass I said 79 unread, "concentrated", "six banks entirely unread", and framed the decision as
+"OCR six banks' CH filings". At full coverage it is **577 of 1,127 unread (51%)**, with **101 banks
+holding at least one unread document and 50 banks ENTIRELY unread**. The earlier framing was drawn
+from a partial pass running at 83% corpus coverage and should not be used.
+
+**The sweep is blind to the case it exists to detect.** `melli_bank` is 5/5 entirely unread. Melli is
+the bank whose Pillar 3 statement sat in a scanned Directors' report and started this line of work.
+So is `gulf_international_bank_uk` (5/5) and `bank_of_africa_uk` (10/10). This is the
+`nd_targets_README.md` caveat — "it cannot see the case that matters most" — confirmed on live data.
+
+#### GROUP-LEVEL ASSERTIONS — a contamination risk, not a lead (24 across 10 banks)
+An assertion naming a GROUP/parent document cannot source a UK-subsidiary workbook. Flagged banks:
+arbuthnot_latham, clearbank, hsbc_bank_plc, hsbc_uk_bank_plc, onesavings, secure_trust (9 hits
+FY2017-FY2023), shawbrook, vanquis. Verbatim examples:
+- Secure Trust FY2017: "Pillar 3 disclosures for the Group for the year ended 31 December 2017 are
+  published as a separate document on the Group's website."
+- OneSavings FY2019/FY2022: "The Group's Pillar 3 disclosures can be found on the Group's website."
+- Shawbrook FY2021: "Additional disclosures can be found in the Shawbrook Group plc Pillar 3
+  Disclosures, which is available on the website detailed above."
+
+#### VANQUIS — ~~a STRUCTURAL finding that moves the coverage denominator~~ **DISPROVEN 2026-09-16**
+FY2021 AR, verbatim: "As a result, with effect from 31 December 2020 the Company's individual
+disclosures have been aggregated into the consolidated Group Pillar 3 disclosures, which can be found
+on the Group's corporate website (www.providentfinancial.com)."
+~~Vanquis Bank's OWN Pillar 3 therefore ceased to exist from 31 Dec 2020, so FY2021+ cells are
+"Not applicable" rather than "Not publicly disclosed".~~
+**THAT READING WAS WRONG.** The sentence sits under the **Remuneration Committee** heading and its
+subject is the CRD V **Remuneration Code** disclosure statement, not the capital Pillar 3. The two
+preceding sentences settle it: *"Until 31 December 2019, the Company was required **as part of the
+code** to publish an annual disclosure statement on an individual basis… Following the application of
+the CRD V Remuneration Code on the Group on a consolidated basis, the contents of the remuneration
+disclosure are required to reflect the policy and aggregated remuneration on a consolidated Group
+basis."*
+Corroborated independently by katalysis-36: Wayback CDX on vanquis.co.uk shows **every** "individual"
+Pillar III document the Bank self-published (2010, 2011, 2012, 2016, 2017, 2018) is a Remuneration
+Code disclosure and never a capital one — so there was no capital disclosure to cease and no
+FY2020/FY2021 boundary. Every Provident/VBG edition FY2014–FY2025 was read end to end: none contains a
+Vanquis Bank Limited solo capital section. Zero cells re-marked; `build_vanquis.py` contains zero
+"Not publicly disclosed" cells, so the instructed re-marking had no target.
+**WHY I GOT IT WRONG — the limit of sentence-scoping.** Sentence-scoped matching was the right fix for
+the ±320-char window that stitched table cells into false positives, but it introduced the opposite
+failure: *a sentence that is unambiguous alone can be about something else entirely in its paragraph.*
+Fixed in `ar_context.py`, which keeps matching sentence-scoped but captures the previous sentence, the
+next sentence and the containing heading. Had that existed, the Remuneration Committee heading would
+have made this self-evident.
+
+#### SELF-CATCH: the Shawbrook Pillar 3 URLs I supplied in batch 7 are GROUP-basis
+`shawbrook-pillar-3-disclosures-2025.pdf` cover: "Shawbrook Group plc Company No: 07240248", section 2
+"Disclosures for Shawbrook Group plc (the 'Group')" — 120 mentions of "Shawbrook Group plc" against 3
+of "Shawbrook Bank Limited". FY2021: 72 vs 37. FY2019: 46 vs 6.
+The workbook's own AR citations are Companies House **00388466 = Shawbrook Bank Limited**; the Pillar 3
+documents are **07240248 = Shawbrook Group plc**. Different entities.
+NOT overclaimed: the FY2021 edition mentions the Bank 37 times and may carry a Bank-only section, so
+the live question is whether each transcribed figure came from a solo table or the Group consolidated
+one. But on their face these are Group-basis documents cited in a Bank-basis workbook — the same defect
+being fixed in Arbuthnot Latham, in files I supplied. Flagged to katalysis-36; repo edits are theirs.
+
+### Live full-download sweep — LAUNCHED 2026-09-16
+Target rebuilt with the FIXED resolver (`all_urls.py`), because the old extractor's dropped `ast.Name`
+and f-string `FormattedValue` nodes would have biased this list the same way they biased 3(b):
+**2,207 distinct cited URLs across 145 scripts — 2,020 live, 187 archive, 1,191 live PDFs** once
+Companies House is excluded (those 667 were covered by 3(b)). The figure we had both been using was
+1,035, so the live target set is ~15% larger, same root cause.
+
+**`lr_idverify.py` truncation logic REWRITTEN and validated on known answers before use.**
+The old line was `TRUNCATED_1MiB if len(data) == 1048576` — the rule disproved earlier today. It now
+applies the last-page test and only reaches for bare `gs` when the tools actually fail:
+| document | verdict | detail |
+|---|---|---|
+| GIB FY2020 truncated capture | `RECOVERED_BY_GS` | rebuilt to 38 pp / 795,035 B, tail 2,699 chars |
+| Hodge FY2018, exactly 1,048,576 B | `OK_PDF_1MiB_INTACT` | 86 pp, tail 933 chars |
+| Hodge 2016, ordinary live PDF | `OK_PDF` | 34 pp |
+The middle row is the regression test: the OLD rule would have condemned that intact 86-page document.
+A truncated *linearized* PDF reports a full page count but returns an empty tail, so it lands as
+`TAIL_EMPTY_CHECK` rather than passing silently as OK_PDF.
+
+### Shawbrook — RESOLVED IN THE PEER'S FAVOUR (my flag was a hint, not evidence)
+katalysis-36's agent had already examined all seven FY2014–FY2020 editions. Every figure comes from
+**"Appendix 1: Disclosures for Shawbrook Bank Limited"** — the Article 13 CRR reduced disclosure of the
+Bank itself, the significant-subsidiary exception this project recognises. Appendix 1 is present in the
+2014–2018 and 2020 editions; FY2019 lacks it, which is exactly why the script already sources FY2019
+from the 2020 edition.
+**THE PROOF IS A DIVERGENCE, NOT AN ASSERTION:** the 2018 edition prints Group leverage 9.2% (2017:
+9.4%) against Bank 9.2% (2017: **9.5%**), and the workbook carries **9.5%**. In the one year the two
+bases disagree, the workbook demonstrably follows the Bank's. That is stronger than any mention count.
+STILL OPEN, and it is the INVERSE error: my 120-vs-3 count was on the FY2025 edition, FY2021 was
+72-vs-37, so the Appendix 1 practice may have LAPSED after FY2021 — in which case FY2021+ figures would
+be Group-basis. Not that the old editions were misread, but that the old practice was assumed to
+continue. Peer has dispatched on it.
+
+### Method worth reusing: THE DIVERGENCE TEST
+Where two candidate bases exist (Group vs Bank, parent vs UK subsidiary), do not argue from cover pages
+or mention counts. **Find a year in which the two bases print DIFFERENT numbers, then check which one
+the sheet followed.** It converts an unanswerable "which document did this come from" into a decisive
+one-cell comparison.
+
+### Caveat carried from the peer, worth keeping visible
+A correct citation proves nothing about the figures. Gatehouse's FY2017 column had dropped a
+"Due from financial institutions" line worth 27.5% of total assets while being fully and correctly
+cited. Everything in this file verifies whether the SOURCE is right; that is a different audit from
+whether the figure was read off it correctly, and the two should not be reported as one.
+
+### C. Hoare & Co — RESOLVED (2026-09-16). 31 MARCH year-end.
+Index: https://www.hoaresbank.co.uk/financial-reports (also lists ARs back to 2008).
+LIVE, all verified 200 `application/pdf` + `%PDF` + page count + cover:
+  /files/2021-10/CHC_2021_Pillar_3_Disclosures.pdf   42 pp
+  /files/2022-07/2022_Pillar_3_Disclosures_0.pdf     29 pp   "Year ended 31 March 2022"
+  /files/2023-07/Pillar_3_Disclosure_2023.pdf        28 pp
+  /files/2024-06/Pillar_3_Disclosure_2024.pdf        24 pp
+  /files/2025-07/Pillar_3_Disclosure_2025.pdf        17 pp
+RECOVERED FROM ARCHIVE (older editions live under a DIFFERENT path, `/sites/default/files/styles/`):
+  FY2019 — 957,075 B, 54 pp, "Year ended 31 March 2019", md5 659284c2947bfc979b9cf1f3f2b9efed, tail 1,546 chars
+    https://web.archive.org/web/20190923044126id_/https://www.hoaresbank.co.uk/sites/default/files/styles/2019%20Pillar%203%20Disclosures.pdf
+  2018  — 791,429 B, 53 pp, "Year ended 31 March 2018", md5 a8593688d6d14fcafd0b1d1a54cc2f1f, tail 751 chars
+    https://web.archive.org/web/20210506235636id_/https://www.hoaresbank.co.uk/sites/default/files/styles/2018%20Pillar%203%20Disclosures.pdf
+Entity basis clean: covers and running heads read "C. Hoare & Co." throughout, no group wording.
+**FY2020 is GENUINELY ABSENT** — no capture at any timestamp under any path family, live site 404s.
+Asserted in the AR, unretrievable by any route. Recorded as ABSENT, not BLOCKED: CDX answered 200
+throughout, so this is a real negative rather than the Archive being unavailable.
+Dated published-then-removed example: the 2018 file is 200 at 20210506235636 and 404 at 20240627025610.
+**Year mapping deliberately NOT done here** — the period is printed on each cover; which column it
+belongs in is a repo decision (katalysis-36's side).
+METHOD NOTE: my first probes permuted filenames under `/files/` and returned eight identical 404s. The
+documents were under `/sites/default/files/styles/`. I never questioned the DIRECTORY — the same error
+as Hodge's untested fifth directory, committed two hours after writing that lesson down.
+
+### RETRACTION — CDX `length` is NOT the file size
+I suggested the Hoare 2022/2023 URLs might hold multiple editions because captures showed different CDX
+lengths. **That inference was unsound and is withdrawn.** CDX `length` is the WARC record length
+(compressed): CDX reported 749,337 for the 2019 file whose actual size is 957,075 bytes. Differing
+lengths prove nothing about differing content. Use `collapse=digest` (computed on content) and confirm
+by fetching `id_` bytes and comparing md5. The live 2022/2023 URLs remain verified-live; only the
+multiple-editions suspicion is withdrawn.
+
+## LIVE FULL-DOWNLOAD SWEEP — COMPLETE (2026-09-16), 1,191 URLs
+Method: full download + `pdfinfo` + **last-page test** on every URL. Report: `live_report_final.txt`.
+
+| verdict | n |
+|---|---|
+| OK_PDF | 1,039 (+5 recovered, see TLS) |
+| no text on last page (image back-cover / scanned) | 95 |
+| honest 404/410 | 27 (only 7 actionable) |
+| blocked 403 / unreachable | 17 — UNKNOWN, never "dead" |
+| soft-404 catch-alls | 8 |
+
+### ZERO TRUNCATIONS — the question the sweep was commissioned to answer
+**Not one row at exactly 1,048,576 bytes in 1,191 live URLs.** The 1 MiB defect is purely a Wayback
+CAPTURE artifact, not a live-web phenomenon. Established by checking every row's byte count, not by
+observing an empty section. The 95 empty-tail files run 176 KB – 24.8 MB: image back-covers, not
+truncation.
+
+### The soft-404 published-then-removed detector: an honest NEGATIVE
+Zero leads. All 8 soft-404s were demoted by the body-identity guard — eabplc.com ×4 (identical
+95,415 B bodies) and qib-uk.com ×4 (identical **247 B** bodies at status **200** — the F5 WAF page).
+Without the guard these would have been reported as 8 published-then-removed leads, all false.
+
+### Link rot: ALL 27 of 27 are DOCUMENTED dead originals. THERE IS NO NEW LINK ROT IN THE CORPUS.
+**Corrected 2026-09-16 (katalysis-36 caught this; my first report said "20 documented, 7 genuinely new").**
+Every one of the 27 honest 404s is a deliberately-retained provenance record with a live or archived
+replacement already cited alongside it. The citation estate has **zero** undocumented breakage — a
+stronger statement than the one I originally sent.
+
+**Why I got it wrong three times in a row, each time by widening a regex instead of opening the file.**
+A dead-marker can sit in at least three places, and I only ever checked one at a time:
+1. **On the constant** — `P3_2019_DEAD`, `P3_FY2020_DEAD_URL`, `P3_2021_OLD_URL`. My filter caught these.
+2. **On the CONTAINER** — Shawbrook's seven live at `build_shawbrook.py:24-28` (`P3`) with the seven dead
+   at `:34-41` in a dict named **`P3_DEAD`**, under "Dead originals, retained for provenance - do NOT
+   delete", plus a `LINK_PROVENANCE` block rendering each substitution into the workbook. The entries are
+   plain literals; the marker is on the dict. I reported them as unmarked.
+3. **In a FILE-HEADER COMMENT far from the literal** — FirstBank ×6 named `ORIG_P3_<year>_URL`
+   (`build_firstbank_uk.py:62-67`), documented by a comment at **lines 26-30** ("ALL SIX ... are DEAD ...
+   preserved below as ORIG_P3_*"), each paired with a Wayback `P3_<year>_URL` and a `P3_DEAD_URL_NOTE`
+   written into the workbook. My container-aware rerun STILL missed these: "ORIG" was not in my marker
+   vocabulary and my comment scan looked only 4 lines back.
+
+**The lesson is not a better regex.** Marker vocabulary, marker location and marker distance are all
+unbounded; each fix found the previous shape and missed the next. katalysis-36 caught instance 2 by
+opening the file before editing — the only reason any of tonight's ten instances were caught.
+
+### A defect in my own verifier, caught before reporting
+Six rows returned `ARCHIVE_UNAVAILABLE`. All six were TLS failures (curl rc=60/35), not link rot.
+Retried with `-k`: **banksepah.co.uk ×5 are ALL ALIVE** (200 `application/pdf`, 31–32 pp, Pillar 3 at
+31 March 2021–2025); persiabank.co.uk remains unreachable and is recorded BLOCKED, not dead.
+Five live documents would have been reported unavailable. **The fix was already in my own notes**
+("an expired TLS certificate is not link rot, retry with -k, e.g. banksepah.co.uk") and the verifier
+simply never passed the flag. Recording a lesson is not the same as wiring it into the tool.
+
+### Ask 3(b) context re-analysis (katalysis-36's suggestion)
+Re-ran all 107 assertions capturing previous sentence, next sentence and containing heading, from
+cache — no re-fetch. **17 of 103 PUBLISHED flagged as review items, NOT verdicts:**
+- Genuinely off-topic: Vanquis FY2021 (disproven) + FCE Bank FY2018/19/20 ("Pillar 3 disclosures
+  **regarding remuneration**").
+- False flags: Crown Agents ×4 ("PRA Pillar 3 **Capital Adequacy** disclosure requirements… including
+  remuneration"), OakNorth FY2020 ("**including** disclosures on remuneration policy"), Charity Bank
+  (flagged on the *next* heading "Climate risk"), Co-op FY2014 (flagged on "Task Force"/EDTF).
+- Ambiguous: Hampshire Trust ×3, Zopa FY2023 — remuneration-framed but each still asserts publication.
+**86 of 103 carry no off-topic context**, so the PUBLISHED set is sounder than Vanquis implied.
+**NEW CATEGORY:** FCE Bank FY2018/FY2019 — "This **chapter** contains the remaining Pillar 3
+disclosures required by Part Eight of the CRR". FCE embeds its capital Pillar 3 INSIDE the annual
+report. Neither "published separately" nor "not disclosed"; a hunt for a standalone FCE PDF would fail
+forever while the disclosures sit in a document already held.
+
+## SHAWBROOK — RESOLVED (2026-09-16). The documents were never gone; the filenames were.
+The seven dead citations have **live replacements on shawbrook.co.uk**. No Wayback copy, no Companies
+House fallback, no recovery of any kind is required. `build_shawbrook.py` cites **two filename families**
+and already cites the live one for every affected year — the dead family is a redundant alias.
+
+| FY | dead (cited, 404) | LIVE replacement `/media/…` | bytes | pp | md5 |
+|---|---|---|---|---|---|
+| 2014 | qsxpg41l/shawbrook-pillar-3-disclosures-2014.pdf | `cc5dq5j0/pillar-3-2014.pdf` | 2,077,440 | 48 | e2f9d46c…4b35 |
+| 2015 | wdvhqxsn/…-2015.pdf | `4galhsik/pillar-3-2015.pdf` | 757,619 | 42 | 46546a4d…0ded |
+| 2016 | 1lhngswy/…-2016.pdf | `koignkmo/pillar-3-2016.pdf` | 2,897,173 | 57 | 97892dec…9b03 |
+| 2017 | 3lifgtxe/…-2017.pdf | `3wefl2tu/pillar-3-2017.pdf` | 5,384,148 | 55 | 19e94882…6a1c |
+| 2018 | kfnfg0oe/…-2018.pdf | `vypjeoat/pillar-3-2018.pdf` | 1,500,212 | 50 | 3bdffb59…0c6 |
+| 2019 | 2azlz2vz/…-2019.pdf | `yhdl0kcs/pillar-3-2019.pdf` | 4,059,311 | 44 | 0b1615e7…1bea |
+| 2020 | xexpjjkq/…-2020.pdf | `zlibpqlt/pillar-3-2020.pdf` | 3,052,414 | 61 | ef44fc79…ab86 |
+
+All seven: status 200, `application/pdf`, `%PDF` magic, and md5 **identical to the copies I had already
+verified page-by-page**. Of the 26 Shawbrook URLs the script cites, exactly **7 are dead and 19 live**;
+the seven sit in one contiguous dict at **`scripts/build_shawbrook.py:35-41`**. No cell or citation
+changed here — mapping and counts only.
+
+**Caveat:** CDX shows `yhdl0kcs/pillar-3-2019.pdf` has served **two distinct digests** (AFAXAWHT…,
+HIRIVCFH…). Pin that citation to md5 `0b1615e7c61eee2da3ee0f3bb2a1beea`, not to the URL alone.
+
+### Appendix 1 is in ALL SEVEN editions — the "FY2019 lacks it" note is withdrawn
+Every edition FY2014–FY2020 carries "Appendix 1: Disclosures for Shawbrook Bank Limited / In accordance
+with Article 13 of the CRR … the significant subsidiary of the Group", each naming **PRA FRN 204574
+exactly once**. FY2019 has it **nine times**, including a leverage ratio common disclosure.
+
+**The divergence test re-confirmed from the complete 2018 file** — two distinct entity blocks:
+Group T1 640.4 / exposure 6,986.6 → 9.2% (2017: **9.4%**); Bank T1 639.4 / exposure 6,987.0 → 9.2%
+(2017: **9.5%**). AT1 differs (124.0 vs 125.0), so these are genuinely two entities. Workbook carries
+**9.5% = Bank basis**. FY2019 is *not* a divergence year (8.6% on both bases); Bank T1 719.4 vs Group
+721.2 (2019), Bank 788.8 vs Group 790.3 (2020).
+
+### Three matcher artifacts nearly cost real documents — the night's recurring class, again
+1. `Appendix 1: 0` on the 2016 file: it prints "APPENDIX 1 **:**" (space before colon) and its text layer
+   is **line-fragmented**, so `appendix\s*1` matches the whole text but NEVER line-by-line. Two of my own
+   Python runs disagreed with each other — the tell. **Normalise whitespace before counting anything.**
+2. The 2015 appendix is "SHAWBROOK BANK **LTD**"; searching "Limited" under-reports it. (BNYMIL again.)
+3. **"This edition lacks the appendix" and "my copy is truncated" look identical** — an appendix sits at
+   the END (2019 lists it at p.31 of 44) and a 1 MiB cut removes exactly that. Almost certainly what
+   produced the FY2019 claim. Apply the last-page test before concluding a practice lapsed.
+
+**My own correction:** I described 2014/2016/2018 as "truncated, partially recovered by gs". The live site
+serves all three **complete**; the truncation was purely a Wayback capture artifact. Tool reach reported as
+a property of the world — ninth instance tonight.
+
+## FCE-CLASS HUNT — an honest NEGATIVE (2026-09-16). Detector: `scratchpad/fce_pattern.py`
+katalysis-36 asked whether other banks embed their capital Pillar 3 INSIDE another document, as FCE does.
+Such a bank is invisible to a filename hunt and looks identical to one that never disclosed.
+
+**The discriminator that worked: "Part Eight of the CRR"** — that IS the capital Pillar 3 requirement,
+whereas remuneration flows from CRD/the Remuneration Code and climate from TCFD. All 18 candidates it
+returned are genuinely about the capital disclosure; **zero remuneration false positives.** Worth reusing.
+FCE carries BOTH a remuneration Pillar 3 mention and an embedded capital chapter, so filtering remuneration
+documents out wholesale would have discarded the document that defined the class.
+
+| corpus | n |
+|---|---|
+| searchable (text layer) | **482** |
+| **scanned, no text — NEVER SEARCHED** | **653 (58%)** |
+| no cached file | 9 |
+| candidates | 18, across 2 banks |
+
+- **FCE Bank** — 6 docs FY2015–FY2020, 3 with explicit embedded phrasing ("This chapter contains the
+  remaining Pillar 3 disclosures required by Part Eight of the CRR"), all carrying CET1/leverage/RWA/LCR/
+  own-funds tables. The known case, confirmed.
+- **Clydesdale — NOT the class, lead closed.** 12 docs, **zero** embedded phrasing, 10 of 12 explicitly
+  reference a separate Pillar 3, and `build_clydesdale.py` cites standalone Pillar 3 reports through
+  `cb-2026-pillar-3-report.pdf` with **zero open gaps**. Its Part Eight mentions are routine
+  cross-references. (FY2025/FY2026 appeared to lack the separate-Pillar-3 reference; that was my phrasing
+  regex missing it, not a change in practice — a fourth matcher artifact, caught before it became a claim.)
+
+**RESULT: zero new instances of the FCE class among the 482 searchable documents.** That is NOT the same
+claim as "no other bank does this". **653 documents were never searched** because they have no text layer,
+and the OCR job over them remains the user's call. The detector is re-runnable against them if that job
+ever happens. Stating this as "no other bank embeds its Pillar 3" would be instance eleven.
+
+**Reproducing the detector** — `scratchpad/fce_pattern.py` is in a SESSION-SCOPED scratchpad and will not
+survive this session; it was not among the artifacts I was asked to write into `research/`, so I have not
+copied it here. It is three regexes over `pdftotext -layout` output, whitespace-normalised first:
+```python
+PART8    = r"Part\s+(Eight|8|VIII)\b[^.]{0,60}\bCRR\b|\bCRR\b[^.]{0,40}Part\s+(Eight|8|VIII)\b"   # the discriminator
+EMBEDDED = r"(this|the)\s+(chapter|section|report|document|annual\s+report)\s+(contains|sets?\s+out|includes?)[^.]{0,90}?Pillar\s*3"
+SEPARATE = r"Pillar\s*3[^.]{0,90}?(web\s?site|www\.|separate\s+document|published\s+separately)"   # demotes a hit
+```
+Report PART8 and EMBEDDED separately, probe each candidate for CET1/leverage/RWA/LCR/own-funds tables, and
+treat `SEPARATE` as demoting — a bank with a standalone Pillar 3 is not this class whatever it cross-references.
+Say it to me if you want it as a `research/` artifact and I will add it.
+
+## READER-SIDE URL AUDIT — verified independently (2026-09-16). 52 → 37 → **one real rot**
+katalysis-36's reframing is right and is the structural lesson of the night: **"is this citation broken for
+a reader?" is a property of `banks/*.xlsx`, not of `scripts/*.py`.** My 1,191-URL sweep was source-side, so
+any URL built by concatenation or f-string that only materialises in a rendered cell was invisible to it.
+They asked me to check their extraction rather than trust it. Doing so reduced the gap.
+
+**My independent extraction: 145 workbooks, 20k+ occurrences, 2,033 distinct reader URLs** (their 2,034
+included the bare `https://` fragment they flagged). **Reader-only = 37, not 52.**
+
+| the 52 | n | outcome |
+|---|---|---|
+| genuine reader-only URLs | **37** | tested — see below |
+| **extractor truncation artifacts** | **12** | ALL LIVE once reconstructed |
+| templates, never citations | 3 | `<YEAR>`, `<timestamp>`, `<the` |
+
+**THE TRUNCATION CAUSE — both our regexes shared it.** Excluding `)` and `,` from the URL character class
+cuts any citation containing them. Testing the cut forms returns 404s that are artifacts, not rot:
+- SMBC ×7 `...Annual-Report-and-Financial-Statements-2023-(SMBC-BI` → all **200 `application/pdf`**
+- Union Bank of India ×3 `..._(Final`, `..._(2020-21`, `..._(2020` → all **200 `application/pdf`**
+- TSB FY2014 — true URL ends **`TSB-Pillar-3-2014,0.pdf`** (a COMMA) → **200, 1,078,676 B**
+**Fix:** match to whitespace, then trim trailing punctuation and only UNBALANCED closing parens.
+
+**The 37 real reader-only URLs, all liveness-tested:** Companies House filing-history ×13 live PDFs;
+Secure Trust ×9 live PDFs; web.archive ×4 live; Hoare 2022/2024 live; Reliance ×2, Jordan, UBI-2026 live.
+`habibbank.com`, `gtbankuk.com`, `monument.co` return live **HTML index pages** — legitimate non-PDF
+citations, not failures. Two 404s are **already documented with live fallbacks cited alongside**: TSB
+FY2015 (cited to `web/20221214093332id_/`, 200 PDF) and Hoare FY2019 (cited to `web/20190923044126id_/`,
+200 PDF, 957,075 B) — the Hoare workbook even records its own negative control in prose.
+
+### The single genuine rot in the entire reader-facing estate
+`vanquis.co.uk/media/1394744/crr-2018-remuneration-code-pillar-iii-disclosure-final-min.pdf`
+**301 → `https://www.vanquis.com/` (homepage).** curl -L reported 403; that was the WAF masking a redirect,
+and a second client (WebFetch) exposed it — the two-client rule earning its place again.
+**Replacement verified:** `https://web.archive.org/web/20190923204636id_/<original>` → 200
+`application/pdf`, 53,960 B, md5 `450a3447b5ba97766fa9525791eb0d9e`, **2 pp**, cover "Vanquis Bank Limited /
+Capital Requirements Regulation (CRR) Pillar III & 2018 Remuneration Code Disclosure", last page carries
+text (last-page test passes). The cover independently corroborates the earlier finding: Vanquis's
+self-published "Pillar III" is a **Remuneration Code** document, never a capital one.
+
+**FIXED by katalysis-36 (2026-09-16), verified in the rendered workbook, not just the script.** House
+convention applied to `scripts/build_vanquis.py`: `ORIG_P3_REMUN_2018_URL` retains the dead original,
+`P3_REMUN_2018_URL` is the Wayback `id_` form, and `P3_REMUN_2018_DEAD_NOTE` RENDERS into the workbook.
+Both citing cells in `banks/VANQUIS FINANCIALS.xlsx` now carry the live archived URL, the named original and
+the dead-marker. Their own catch en route is the lesson repeating: the note was defined but never
+referenced, so the first rebuild produced a working link with **no record that the original had died** —
+found by checking the rendered output rather than the source. Same principle that opened this thread,
+turned on their own edit.
+
+**CITATION ESTATE CLOSED: one genuine rot in 2,033 reader-facing URLs, now fixed.** The other 36
+reader-only URLs are verified live or documented-with-fallback.
+
+### CORRECTION to my own live sweep — persiabank is NOT unreachable
+I recorded persiabank as BLOCKED/unreachable. **It is alive over `http://`**: 200 `application/pdf`,
+1,382,251 B, byte-size matching its archived `id_` copy exactly. `https://` fails on the TLS handshake
+(`curl_rc=35`). I classified the PROTOCOL as the HOST — the same family as the banksepah `-k` catch, and
+the second TLS-shaped false negative of the night. Five archived persiabank captures are also live PDFs.
+
+**A bug in my own sweep, found while checking this:** the loop reused `/tmp/v.bin` without truncating it,
+so a failed fetch reported the PREVIOUS URL's byte count (persiabank https showed "81,222 bytes" having
+downloaded nothing). `rm -f` the target before every fetch — better, a fresh `mktemp` path per URL, which
+cannot race or be skipped on an early `continue`. A verifier that reports stale bytes on failure
+manufactures evidence.
+
+### `build_onesavings.py:14` `AR_2022_URL` — verified, and NO ACTION IS CORRECT
+katalysis-36 flagged this unreferenced constant and deliberately declined to wire it. That call is right on
+two independent grounds, both now established rather than assumed:
+1. **It is the wrong entity.** The URL is live (200 `application/pdf`, 6,488,702 B, **260 pp**) but its cover
+   reads "Annual Report and Accounts 2022 / **OSB Group** is a leading specialist mortgage lender" —
+   `osbg-ara-2022.pdf` is the GROUP report. Every other AR citation in that script names **OneSavings Bank
+   plc**, and Companies House **07312896 is ONESAVINGS BANK PLC** (confirmed from the register, not inferred).
+   Wiring it would have crossed the entity boundary — the Arbuthnot FY2017 class.
+2. **There is no hole to fill.** FY2022 is already sourced at `:43-44` from the entity's FY2023 accounts,
+   "p.89 (**Company column**; FY2022 comparative)" — the Company column, not the Group one, which is the
+   entity-basis rule applied correctly.
+Note the script's Pillar 3 sheets separately and openly declare "OSB Group plc consolidated Pillar 3 basis",
+the known **declared group basis** class — so group sourcing there is a labelled scoping decision, not
+contamination. Leave the constant flagged and unreferenced; removing it is an editorial call for the user.

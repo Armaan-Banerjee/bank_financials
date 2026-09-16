@@ -43,7 +43,18 @@ def annual_sources(kind):
     lines = [f"{y}: Lloyds Bank plc {label}, p.{pages[y]} — {urls[y]}" for y in YEARS if y in pages and y in urls]
     if kind == "annual":
         lines.append(f"FY2018: Lloyds Bank plc Annual Report and Accounts 2018, p.23 (Balance sheets) — {AR_URLS['FY2018']}")
-        lines.append(f"FY2017: Lloyds Bank plc Annual Report and Accounts 2017, pp.21-27 — {AR2017_URL}")
+        lines.append(
+            f"FY2017: Lloyds Bank plc Annual Report and Accounts 2017 — Consolidated income statement, printed "
+            f"p.21 (PDF p.23), and Consolidated balance sheet, printed p.23 — {AR2017_URL}. The GROUP columns "
+            f"are used, as for every other year: this is Lloyds Bank plc's own consolidated report, not Lloyds "
+            f"Banking Group plc's (whose FY2017 total assets were £812.1bn against Lloyds Bank plc Group's "
+            f"£823,030m), and not the Company-only columns on the same pages (total assets £576,953m). "
+            f"Re-verified against the primary document 2026-09-16. FY2017 is the only year in this workbook "
+            f"with discontinued operations: 'Profit before tax' 5,035 is the report's own 'Profit before tax – "
+            f"continuing operations' line, consistent with every other year, and the £796m profit after tax "
+            f"from discontinued operations is carried on its own separate row rather than blended in. Balance "
+            f"Sheet FY2017 shows the three headline lines only (cash at central banks, loans and advances to "
+            f"customers, total assets); the remaining FY2017 balance sheet lines are blank, not zero.")
     else:
         lines.append("FY2018: no standalone Pillar 3 disclosure located (full Pillar 3 reporting for Lloyds Bank plc began with the FY2019 year-end, following 1 January 2019 ring-fencing implementation); regulatory metrics left blank.")
         lines.append("FY2017: no historical Pillar 3 disclosure located; regulatory metrics left blank.")
@@ -122,12 +133,12 @@ cash_rows = [
 # ---------------------------------------------------------------
 bs_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2025": 37720, "FY2024": 42396, "FY2023": 57909, "FY2022": 72005, "FY2021": 54279, "FY2020": 49888, "FY2019": 38880, "FY2018": 40213}),
+    ("DATA", "Cash and balances at central banks", {"FY2025": 37720, "FY2024": 42396, "FY2023": 57909, "FY2022": 72005, "FY2021": 54279, "FY2020": 49888, "FY2019": 38880, "FY2018": 40213, "FY2017": 58521}),
     ("DATA", "Items in the course of collection from banks", {"FY2021": 147, "FY2020": 300, "FY2019": 292, "FY2018": 645}),
     ("DATA", "Financial assets at fair value through profit or loss", {"FY2025": 2279, "FY2024": 2321, "FY2023": 1862, "FY2022": 1371, "FY2021": 1798, "FY2020": 1674, "FY2019": 2284, "FY2018": 23256}),
     ("DATA", "Derivative financial instruments", {"FY2025": 3260, "FY2024": 4235, "FY2023": 3165, "FY2022": 3857, "FY2021": 5511, "FY2020": 8341, "FY2019": 8494, "FY2018": 11293}),
     ("DATA", "Loans and advances to banks", {"FY2025": 5836, "FY2024": 6433, "FY2023": 8810, "FY2022": 8363, "FY2021": 4478, "FY2020": 5950, "FY2019": 4852, "FY2018": 3692}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 461504, "FY2024": 441907, "FY2023": 433124, "FY2022": 435627, "FY2021": 430829, "FY2020": 480141, "FY2019": 474470, "FY2018": 464044}),
+    ("DATA", "Loans and advances to customers", {"FY2025": 461504, "FY2024": 441907, "FY2023": 433124, "FY2022": 435627, "FY2021": 430829, "FY2020": 480141, "FY2019": 474470, "FY2018": 464044, "FY2017": 465555}),
     ("DATA", "Reverse repurchase agreements", {"FY2025": 43962, "FY2024": 44143, "FY2023": 32751, "FY2022": 39259, "FY2021": 49708}),
     ("DATA", "Debt securities (at amortised cost)", {"FY2025": 11983, "FY2024": 11854, "FY2023": 12546, "FY2022": 7331, "FY2021": 4562, "FY2020": 5137, "FY2019": 5325, "FY2018": 5095}),
     ("DATA", "Due from fellow Lloyds Banking Group undertakings", {"FY2025": 1182, "FY2024": 560, "FY2023": 840, "FY2022": 816, "FY2021": 739, "FY2020": 738, "FY2019": 1854, "FY2018": 1878}),
@@ -138,7 +149,7 @@ bs_rows = [
     ("DATA", "Deferred tax assets", {"FY2025": 3917, "FY2024": 4785, "FY2023": 4636, "FY2022": 5857, "FY2021": 4048, "FY2020": 3468, "FY2019": 3366, "FY2018": 3216}),
     ("DATA", "Retirement benefit assets", {"FY2025": 2695, "FY2024": 3028, "FY2023": 3624, "FY2022": 3823, "FY2021": 4531, "FY2020": 1714, "FY2019": 681, "FY2018": 1267}),
     ("DATA", "Other assets", {"FY2025": 13785, "FY2024": 13065, "FY2023": 11938, "FY2022": 10122, "FY2021": 9599, "FY2020": 1892, "FY2019": 2527, "FY2018": 2207}),
-    ("TOTAL", "Total assets", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486}),
+    ("TOTAL", "Total assets", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486, "FY2017": 823030}),
     ("SECTION", "Liabilities", {}),
     ("DATA", "Deposits from banks", {"FY2025": 3085, "FY2024": 3144, "FY2023": 3557, "FY2022": 4658, "FY2021": 3363, "FY2020": 24997, "FY2019": 23593, "FY2018": 26263}),
     ("DATA", "Customer deposits", {"FY2025": 465207, "FY2024": 451794, "FY2023": 441953, "FY2022": 446172, "FY2021": 449373, "FY2020": 434569, "FY2019": 396839, "FY2018": 391251}),
@@ -166,7 +177,7 @@ bs_rows = [
     ("TOTAL", "Total equity excluding non-controlling interests", {"FY2025": 41909, "FY2024": 39667, "FY2023": 40373, "FY2022": 38977, "FY2021": 40678, "FY2020": 41040, "FY2019": 38838, "FY2018": 40280}),
     ("DATA", "Non-controlling interests", {"FY2025": 71, "FY2024": 80, "FY2023": 58, "FY2022": 82, "FY2021": 94, "FY2020": 78, "FY2019": 61, "FY2018": 73}),
     ("TOTAL", "Total equity", {"FY2025": 41980, "FY2024": 39747, "FY2023": 40431, "FY2022": 39059, "FY2021": 40772, "FY2020": 41118, "FY2019": 38899, "FY2018": 40353}),
-    ("TOTAL", "Total liabilities and equity", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486}),
+    ("TOTAL", "Total liabilities and equity", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486, "FY2017": 823030}),
 ]
 
 bw.add_balance_sheet_sheet(
@@ -193,22 +204,22 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 pl_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest income", {"FY2025": 28208, "FY2024": 28386, "FY2023": 25300, "FY2022": 16562, "FY2021": 12920, "FY2020": 13866, "FY2019": 16098, "FY2018": 16216}),
-    ("DATA", "Interest expense", {"FY2025": -14845, "FY2024": -15794, "FY2023": -11591, "FY2022": -3457, "FY2021": -1884, "FY2020": -3096, "FY2019": -3878, "FY2018": -3462}),
-    ("TOTAL", "Net interest income", {"FY2025": 13363, "FY2024": 12592, "FY2023": 13709, "FY2022": 13105, "FY2021": 11036, "FY2020": 10770, "FY2019": 12220, "FY2018": 12754}),
-    ("DATA", "Fee and commission income", {"FY2025": 2515, "FY2024": 2416, "FY2023": 2456, "FY2022": 2352, "FY2021": 2195, "FY2020": 1924, "FY2019": 2363, "FY2018": 2497}),
-    ("DATA", "Fee and commission expense", {"FY2025": -1254, "FY2024": -1478, "FY2023": -1104, "FY2022": -1101, "FY2021": -942, "FY2020": -909, "FY2019": -1027, "FY2018": -1228}),
-    ("TOTAL", "Net fee and commission income", {"FY2025": 1261, "FY2024": 938, "FY2023": 1352, "FY2022": 1251, "FY2021": 1253, "FY2020": 1015, "FY2019": 1336, "FY2018": 1269}),
-    ("DATA", "Net trading income", {"FY2025": 523, "FY2024": 597, "FY2023": 384, "FY2022": 180, "FY2021": 385, "FY2020": 750, "FY2019": 360, "FY2018": 408}),
-    ("DATA", "Other operating income", {"FY2025": 3282, "FY2024": 2944, "FY2023": 2922, "FY2022": 2209, "FY2021": 1999, "FY2020": 2050, "FY2019": 2692, "FY2018": 2543}),
-    ("TOTAL", "Other income", {"FY2025": 5066, "FY2024": 4479, "FY2023": 4658, "FY2022": 3640, "FY2021": 3637, "FY2020": 3815, "FY2019": 4388, "FY2018": 4220}),
-    ("TOTAL", "Total income", {"FY2025": 18429, "FY2024": 17071, "FY2023": 18367, "FY2022": 16745, "FY2021": 14673, "FY2020": 14585, "FY2019": 16608, "FY2018": 16974}),
-    ("DATA", "Operating expenses", {"FY2025": -12165, "FY2024": -11927, "FY2023": -10968, "FY2022": -9199, "FY2021": -10206, "FY2020": -9196, "FY2019": -11772, "FY2018": -11119}),
-    ("DATA", "Impairment (charge)/credit", {"FY2025": -792, "FY2024": -456, "FY2023": -343, "FY2022": -1452, "FY2021": 1318, "FY2020": -4060, "FY2019": -1362, "FY2018": -926}),
-    ("TOTAL", "Profit before tax", {"FY2025": 5472, "FY2024": 4688, "FY2023": 7056, "FY2022": 6094, "FY2021": 5785, "FY2020": 1329, "FY2019": 3474, "FY2018": 4929}),
-    ("DATA", "Tax expense", {"FY2025": -1616, "FY2024": -1202, "FY2023": -1849, "FY2022": -1300, "FY2021": -583, "FY2020": 137, "FY2019": -1241, "FY2018": -1497}),
-    ("DATA", "Profit after tax from discontinued operations", {"FY2018": 1314}),
-    ("TOTAL", "Profit for the year", {"FY2025": 3856, "FY2024": 3486, "FY2023": 5207, "FY2022": 4794, "FY2021": 5202, "FY2020": 1466, "FY2019": 2233, "FY2018": 4746}),
+    ("DATA", "Interest income", {"FY2025": 28208, "FY2024": 28386, "FY2023": 25300, "FY2022": 16562, "FY2021": 12920, "FY2020": 13866, "FY2019": 16098, "FY2018": 16216, "FY2017": 15853}),
+    ("DATA", "Interest expense", {"FY2025": -14845, "FY2024": -15794, "FY2023": -11591, "FY2022": -3457, "FY2021": -1884, "FY2020": -3096, "FY2019": -3878, "FY2018": -3462, "FY2017": -3489}),
+    ("TOTAL", "Net interest income", {"FY2025": 13363, "FY2024": 12592, "FY2023": 13709, "FY2022": 13105, "FY2021": 11036, "FY2020": 10770, "FY2019": 12220, "FY2018": 12754, "FY2017": 12364}),
+    ("DATA", "Fee and commission income", {"FY2025": 2515, "FY2024": 2416, "FY2023": 2456, "FY2022": 2352, "FY2021": 2195, "FY2020": 1924, "FY2019": 2363, "FY2018": 2497, "FY2017": 2786}),
+    ("DATA", "Fee and commission expense", {"FY2025": -1254, "FY2024": -1478, "FY2023": -1104, "FY2022": -1101, "FY2021": -942, "FY2020": -909, "FY2019": -1027, "FY2018": -1228, "FY2017": -1024}),
+    ("TOTAL", "Net fee and commission income", {"FY2025": 1261, "FY2024": 938, "FY2023": 1352, "FY2022": 1251, "FY2021": 1253, "FY2020": 1015, "FY2019": 1336, "FY2018": 1269, "FY2017": 1762}),
+    ("DATA", "Net trading income", {"FY2025": 523, "FY2024": 597, "FY2023": 384, "FY2022": 180, "FY2021": 385, "FY2020": 750, "FY2019": 360, "FY2018": 408, "FY2017": 773}),
+    ("DATA", "Other operating income", {"FY2025": 3282, "FY2024": 2944, "FY2023": 2922, "FY2022": 2209, "FY2021": 1999, "FY2020": 2050, "FY2019": 2692, "FY2018": 2543, "FY2017": 2453}),
+    ("TOTAL", "Other income", {"FY2025": 5066, "FY2024": 4479, "FY2023": 4658, "FY2022": 3640, "FY2021": 3637, "FY2020": 3815, "FY2019": 4388, "FY2018": 4220, "FY2017": 4988}),
+    ("TOTAL", "Total income", {"FY2025": 18429, "FY2024": 17071, "FY2023": 18367, "FY2022": 16745, "FY2021": 14673, "FY2020": 14585, "FY2019": 16608, "FY2018": 16974, "FY2017": 17352}),
+    ("DATA", "Operating expenses", {"FY2025": -12165, "FY2024": -11927, "FY2023": -10968, "FY2022": -9199, "FY2021": -10206, "FY2020": -9196, "FY2019": -11772, "FY2018": -11119, "FY2017": -11630}),
+    ("DATA", "Impairment (charge)/credit", {"FY2025": -792, "FY2024": -456, "FY2023": -343, "FY2022": -1452, "FY2021": 1318, "FY2020": -4060, "FY2019": -1362, "FY2018": -926, "FY2017": -687}),
+    ("TOTAL", "Profit before tax", {"FY2025": 5472, "FY2024": 4688, "FY2023": 7056, "FY2022": 6094, "FY2021": 5785, "FY2020": 1329, "FY2019": 3474, "FY2018": 4929, "FY2017": 5035}),
+    ("DATA", "Tax expense", {"FY2025": -1616, "FY2024": -1202, "FY2023": -1849, "FY2022": -1300, "FY2021": -583, "FY2020": 137, "FY2019": -1241, "FY2018": -1497, "FY2017": -1602}),
+    ("DATA", "Profit after tax from discontinued operations", {"FY2018": 1314, "FY2017": 796}),
+    ("TOTAL", "Profit for the year", {"FY2025": 3856, "FY2024": 3486, "FY2023": 5207, "FY2022": 4794, "FY2021": 5202, "FY2020": 1466, "FY2019": 2233, "FY2018": 4746, "FY2017": 4229}),
     ("SECTION", "Other comprehensive income, net of tax (per-component figures shown net of tax throughout, matching "
                "the Statement of Changes in Equity - see that sheet for the same figures presented as a roll-forward)", {}),
     ("DATA", "Post-retirement defined benefit scheme remeasurements", {"FY2025": -385, "FY2024": -564, "FY2023": -1205, "FY2022": -2152, "FY2021": 1062, "FY2020": 113, "FY2019": -1117, "FY2018": 120}),
@@ -556,16 +567,16 @@ bw.add_wide_interim_sheet(
 )
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486}),
-        ("Loans and advances to customers", {"FY2025": 461504, "FY2024": 441907, "FY2023": 433124, "FY2022": 435627, "FY2021": 430829, "FY2020": 480141, "FY2019": 474470, "FY2018": 464044}),
+        ("Total assets", {"FY2025": 631335, "FY2024": 611213, "FY2023": 605405, "FY2022": 616928, "FY2021": 602849, "FY2020": 599939, "FY2019": 581368, "FY2018": 593486, "FY2017": 823030}),
+        ("Loans and advances to customers", {"FY2025": 461504, "FY2024": 441907, "FY2023": 433124, "FY2022": 435627, "FY2021": 430829, "FY2020": 480141, "FY2019": 474470, "FY2018": 464044, "FY2017": 465555}),
         ("Customer deposits", {"FY2025": 465207, "FY2024": 451794, "FY2023": 441953, "FY2022": 446172, "FY2021": 449373, "FY2020": 434569, "FY2019": 396839, "FY2018": 391251}),
         ("Total equity", {"FY2025": 41980, "FY2024": 39747, "FY2023": 40431, "FY2022": 39059, "FY2021": 40772, "FY2020": 41118, "FY2019": 38899, "FY2018": 40353}),
     ],
     balance_sheet_unit="£m",
     income_statement_totals=[
-        ("Total income", {"FY2025": 18429, "FY2024": 17071, "FY2023": 18367, "FY2022": 16745, "FY2021": 14673, "FY2020": 14585, "FY2019": 16608, "FY2018": 16974}),
-        ("Operating expenses", {"FY2025": -12165, "FY2024": -11927, "FY2023": -10968, "FY2022": -9199, "FY2021": -10206, "FY2020": -9196, "FY2019": -11772, "FY2018": -11119}),
-        ("Profit for the year", {"FY2025": 3856, "FY2024": 3486, "FY2023": 5207, "FY2022": 4794, "FY2021": 5202, "FY2020": 1466, "FY2019": 2233, "FY2018": 4746}),
+        ("Total income", {"FY2025": 18429, "FY2024": 17071, "FY2023": 18367, "FY2022": 16745, "FY2021": 14673, "FY2020": 14585, "FY2019": 16608, "FY2018": 16974, "FY2017": 17352}),
+        ("Operating expenses", {"FY2025": -12165, "FY2024": -11927, "FY2023": -10968, "FY2022": -9199, "FY2021": -10206, "FY2020": -9196, "FY2019": -11772, "FY2018": -11119, "FY2017": -11630}),
+        ("Profit for the year", {"FY2025": 3856, "FY2024": 3486, "FY2023": 5207, "FY2022": 4794, "FY2021": 5202, "FY2020": 1466, "FY2019": 2233, "FY2018": 4746, "FY2017": 4229}),
     ],
     income_statement_unit="£m",
     equity_changes_totals=[
@@ -584,21 +595,16 @@ bw.add_overview_sheet(
     ratios=[("CET1 Ratio", dict(ANNUAL["CET1 Ratio"])), ("Tier 1 Ratio", dict(ANNUAL["Tier 1 Ratio"])), ("Total Capital Ratio", dict(ANNUAL["Total Capital Ratio"])), ("Leverage Ratio", dict(ANNUAL["Leverage Ratio"])), ("LCR", dict(ANNUAL["LCR"]))],
     note="Annual figures are consolidated Lloyds Bank plc Group metrics; interim observations are on the Interim Pillar 3 sheet. FY2018 Pillar 3 ratios are blank (no standalone Pillar 3 disclosure; full reporting began FY2019).")
 
-# FY2017 extension from Lloyds Bank plc Annual Report 2017 (official report,
-# pp.21-27), £m. The report predates the current Pillar 3 series; absent
-# historical regulatory metrics remain blank.
-_fy17 = {
-    "Balance Sheet": {"Cash and balances at central banks": 58521,
-                      "Loans and advances to customers": 465555,
-                      "Total assets": 823030},
-    "Profit & Loss": {"Total income": 17352, "Profit before tax": 5035},
-}
-for _sheet, _values in _fy17.items():
-    _ws = bw.wb[_sheet]
-    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
-    _col = 1 + YEARS.index("FY2017") + 1
-    for _label, _value in _values.items():
-        if _label in _labels:
-            _ws.cell(_labels[_label], _col, _value)
+# FY2017 now lives in the balance_sheet / pl_rows / Overview dicts above, like
+# every other year, so it flows through the normal citation plumbing. It was
+# previously bolted on here by writing straight into bw.wb[...] after the
+# sheets were built - a pattern that skips the citation helper and, in two
+# other scripts in this corpus, concealed a wrong figure for exactly that
+# reason. Its label lookup also collapsed duplicate row captions onto the last
+# match, so a value could silently land in the wrong section. Do not
+# reintroduce it. All FY2017 figures below were re-verified 2026-09-16 against
+# the Lloyds Bank plc Annual Report 2017 and were correct as they stood; the
+# P&L column was completed at the same time and now ties
+# (17,352 - 11,630 - 687 = 5,035; 5,035 - 1,602 = 3,433; 3,433 + 796 = 4,229).
 
 bw.save("/Users/armaan/code/katalysis/banks/LLOYDS BANK FINANCIALS.xlsx")

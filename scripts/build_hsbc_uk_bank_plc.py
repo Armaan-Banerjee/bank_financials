@@ -19,8 +19,8 @@ P32022_URL = "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2022/annu
 P32021_URL = "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2021/annual/pdfs/hsbc-uk-bank-plc/220222-pillar-3-disclosures-at-31-december-2021.pdf"
 # FY2020 and FY2019 Pillar 3 documents are no longer live on hsbc.com; sourced via Wayback Machine snapshots
 # of the original hsbc.com URLs (same filename pattern as the live AR/Pillar 3 pairs above).
-P32020_URL = "https://web.archive.org/web/20240527084156/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2020/annual/pdfs/hsbc-uk-bank-plc/210223-pillar-3-disclosures-at-31-december-2020.pdf"
-P32019_URL = "https://web.archive.org/web/20221014171921/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2019/annual/pdfs/hsbc-uk-bank-plc/200218-pillar-3-disclosures-31-december-2019.pdf"
+P32020_URL = "https://web.archive.org/web/20240527084156id_/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2020/annual/pdfs/hsbc-uk-bank-plc/210223-pillar-3-disclosures-at-31-december-2020.pdf"
+P32019_URL = "https://web.archive.org/web/20221014171921id_/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2019/annual/pdfs/hsbc-uk-bank-plc/200218-pillar-3-disclosures-31-december-2019.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: HSBC UK Bank plc (Companies House 09928412, FRN 765112) is the ring-fenced retail/SME "

@@ -105,12 +105,12 @@ P3_URLS = {
     # an earlier session's "not locatable" conclusion had missed.
     "FY2022": "https://web.archive.org/web/2024id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2022.pdf",
     "FY2021": "https://web.archive.org/web/2024id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2021.pdf",
-    "FY2020": "https://web.archive.org/web/20210627075334if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2020.pdf",
-    "FY2019": "https://web.archive.org/web/20210627075339if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2019.pdf",
-    "FY2018": "https://web.archive.org/web/20210627075317if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2018.pdf",
-    "FY2017": "https://web.archive.org/web/20210627075328if_/https://www.credit-suisse.com/media/assets/about-us/docs/investor-relations/financial-regulatory-disclosures/regulatory-disclosures/regulatory-disclosures-subsidiaries/csi-pillar-3-disclosures-2017.pdf",
-    "FY2016": "https://web.archive.org/web/20170629113020if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2016.pdf",
-    "FY2015": "https://web.archive.org/web/20210627075342if_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2015.pdf",
+    "FY2020": "https://web.archive.org/web/20210627075334id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2020.pdf",
+    "FY2019": "https://web.archive.org/web/20210627075339id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2019.pdf",
+    "FY2018": "https://web.archive.org/web/20210627075317id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2018.pdf",
+    "FY2017": "https://web.archive.org/web/20210627075328id_/https://www.credit-suisse.com/media/assets/about-us/docs/investor-relations/financial-regulatory-disclosures/regulatory-disclosures/regulatory-disclosures-subsidiaries/csi-pillar-3-disclosures-2017.pdf",
+    "FY2016": "https://web.archive.org/web/20170629113020id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2016.pdf",
+    "FY2015": "https://web.archive.org/web/20210627075342id_/https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/csi-pillar-3-disclosures-2015.pdf",
 }
 
 ENTITY_NOTE = (

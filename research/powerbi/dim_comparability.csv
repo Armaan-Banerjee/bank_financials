@@ -1,4 +1,4 @@
 comparability_id,reporting_basis,basis_note
 unknown,unknown,Not applicable — this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.
 entity,entity,"£'000, converted from USD - see source note at bottom for FX methodology and rates used. Bank (entity-level) basis throughout."
-consolidated_group,consolidated_group,"AIB UK Group (consolidated) basis, £m. FY2024-FY2025 blank - see source note at bottom (FRS 101 cash-flow exemption)."
+consolidated_group,consolidated_group,"AIB UK Group (consolidated) basis, £m. FY2024-FY2025 blank - see source note at bottom (FRS 101 cash-flow exemption). FY2021 is now primary-sourced; see the memorandum rows."

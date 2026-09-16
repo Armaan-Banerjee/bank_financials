@@ -30,19 +30,34 @@ FX_AVG = {
 }
 
 
+# UNIT CONTRACT (fixed 2026-09-16, research/RESUME_fx_scale_sweep.md).
+# EVERY source dict in this script holds US$'000 - that is the unit GIB UK's
+# Annual Reports and Pillar 3 disclosures print. The three helpers below divide
+# by the FX rate AND by 1000, so their OUTPUT IS £ MILLIONS, not £'000. Every
+# sheet was previously labelled "£'000", which understated the Bank by 1000x to
+# any reader and to scripts/insights/ (extract_metrics.py parses the unit label
+# and in040/in041/build_deliverable.py scale by it, so GIB UK was entering every
+# cross-bank absolute comparison as an £11.6m bank rather than an £11.6bn one).
+# The FIGURES were right; the LABELS were wrong, so the labels were corrected to
+# "£m" - matching Goldman Sachs International Bank, Credit Suisse International
+# and SMBC, the three converted workbooks of comparable size. No figure changed.
+# If you ever want true £'000 output here, drop the "/ 1000" AND relabel - do
+# not do one without the other.
+
+
 def flow(usd):
-    """Flow (cash flow statement line item) figures, £'000, at that year's average rate."""
+    """Flow (cash flow statement line item) figures: US$'000 in, £m out, at that year's average rate."""
     return {y: round(v / FX_AVG[y] / 1000, 1) for y, v in usd.items() if y in FX_AVG}
 
 
 def stock(usd):
-    """Point-in-time (balance/capital) figures, £'000, at that year's period-end spot rate."""
+    """Point-in-time (balance/capital) figures: US$'000 in, £m out, at that year's period-end spot rate."""
     return {y: round(v / FX_SPOT[y] / 1000, 1) for y, v in usd.items() if y in FX_SPOT}
 
 
 def opening_cash(usd):
-    """Opening cash balance, £'000 - uses the PRIOR year's period-end spot rate (it's the
-    same balance as that prior year's closing figure, so must convert identically)."""
+    """Opening cash balance, US$'000 in, £m out - uses the PRIOR year's period-end spot rate (it's
+    the same balance as that prior year's closing figure, so must convert identically)."""
     return {y: round(v / FX_SPOT[PREV_YEAR[y]] / 1000, 1) for y, v in usd.items() if PREV_YEAR.get(y) in FX_SPOT}
 
 
@@ -62,39 +77,28 @@ AR2020_URL = f"{CH_BASE}/MzMxMzAyNDY0OGFkaXF6a2N4/document?format=pdf&download=0
 
 P3_2024_URL = "https://gib-am.files.svdcdn.com/production/documents/2024-GIBUK-Pillar-3-disclosures-Board-approved.pdf"
 P3_2023_URL = "https://gib-am.files.svdcdn.com/production/documents/Fund-sustainability-related-documents/2023-GIBUK-Pillar-3-disclosures.pdf"
-P3_2022_URL = "https://web.archive.org/web/20240223164517/https://gibam.com/assets/2022-GIBUK-Pillar-3-disclosures_VF.pdf"
+P3_2022_URL = "https://web.archive.org/web/20240223164517id_/https://gibam.com/assets/2022-GIBUK-Pillar-3-disclosures_VF.pdf"
 # Note: the 20230927145657 snapshot originally cited here is truncated by the
 # Wayback Machine's own crawler at 1,048,576 bytes (confirmed: it fails to
 # open as a valid PDF at all) - the 20240223164517 snapshot above is a full,
 # valid capture of the same document and was used for this workbook's RWA
 # Breakdown sheet.
-P3_2021_URL = "https://web.archive.org/web/20230329132856/https://gibam.com/assets/2021-GIBUK-Pillar-3_Final.pdf"
-# HD-062 (2026-09-06): found via a Wayback CDX domain scan of gibam.com/assets/*
-# (the naive "2020-GIBUK-Pillar-3_Final.pdf" direct URL is not itself archived
-# stand-alone at gibam.com any more) - this snapshot is a full, valid capture
-# confirmed by rendering all 38 pages as images (the PDF's own text layer is
-# present but its custom font's cmap renders numbers/table text as mangled
-# unicode glyphs when copy-pasted, so every figure below was read visually
-# from the rendered page image, not machine-extracted).
-P3_2020_URL = "https://web.archive.org/web/20220518000354/https://gibam.com/assets/2020-GIBUK-Pillar-3_Final.pdf"
-# HD-062 (2026-09-06) IMPORTANT DATA-QUALITY NOTE: the only surviving Wayback
-# capture of this document (there is no other successful, non-404 snapshot in
-# the CDX index for this URL) is itself truncated by the Wayback Machine's own
-# playback service at exactly 1,048,576 bytes (2^20) - confirmed by direct
-# re-download (byte-for-byte identical across the plain/if_/id_ URL variants,
-# always ending mid-stream with no %%EOF) - the SAME failure mode already
-# documented above for the FY2022 snapshot, just previously unconfirmed for
-# this one. A prior (killed) session's claim that this snapshot was "a full,
-# valid capture ... confirmed by rendering all 38 pages" was NOT correct and
-# has been corrected here. The truncated file was repaired with `qpdf
-# --qdf --replace-input` (rebuilds the cross-reference table from the
-# recoverable object stream, discarding only the unrecoverable tail past the
-# 1MB cutoff), after which `pdftotext -layout` extracted clean, legible text
-# for capital resources/adequacy, leverage, and liquidity (LCR) - contrary to
-# the prior session's claim of a mangled custom-font cmap, the text layer for
-# most of the document is fine; only one small section (the capital-buffer
-# summary table under 4.6, not used for any figure in this workbook) renders
-# as garbled non-Latin glyphs, isolated to that one table.
+# FY2020 and FY2021 Pillar 3 editions: each survives as exactly ONE Wayback
+# capture, and both captures are truncated at exactly 1,048,576 bytes. The
+# truncation destroys the PDF cross-reference table only; the page objects are
+# intact and both documents are fully recoverable. The complete account -
+# the recovery recipe, what was verified, and the entity-basis trap - is in
+# P3_CAPTURE_NOTE below, which is written onto every Pillar 3 metric sheet.
+#
+# Both are cited in the `id_` playback form: that is the form the recovery
+# recipe uses and the form actually downloaded and read. This REVERSES the
+# earlier "do not convert these two to id_" decision recorded in
+# research/RESUME_linkrot_2b.md, which rested on the belief that the files were
+# dead and that id_ would only make a damaged file look authoritative. They are
+# not dead; id_ returns the raw archived bytes with no playback wrapper, which
+# is exactly what the Ghostscript rebuild needs.
+P3_2021_URL = "https://web.archive.org/web/20230329132856id_/https://gibam.com/assets/2021-GIBUK-Pillar-3_Final.pdf"
+P3_2020_URL = "https://web.archive.org/web/20220518000354id_/https://gibam.com/assets/2020-GIBUK-Pillar-3_Final.pdf"
 ENTITY_NOTE = (
     "ENTITY NOTE: Gulf International Bank (UK) Limited (\"GIB UK\", FRN 124772, company 01223938) is a wholly "
     "owned subsidiary of Gulf International Bank B.S.C. (Bahrain, sovereign-backed by several Gulf Cooperation "
@@ -134,11 +138,18 @@ ENTITY_NOTE = (
     "fields, see the LCR sheet's own basis note for the two ratio variants disclosed). It genuinely has NO NSFR "
     "or MREL section anywhere in its own table of contents or body text (only a passing mention of the upcoming "
     "regulatory 'binding NSFR measure of 100%' requirement, not GIB UK's own NSFR ratio) - confirmed by reading "
-    "the full document, not assumed from a missing keyword - so those two metric sheets are genuinely blank for "
-    "FY2020 specifically, distinct from later years where a value exists (FY2021 onward). It also predates the "
+    "the full document, not assumed from a missing keyword. It also predates the "
     "UK OV1 RWA-breakdown template used from FY2021 onward: no separate counterparty-credit-risk (CCR) or CVA "
-    "line is disclosed for FY2020, so the RWA Breakdown sheet's CCR/CVA rows are genuinely blank that year - see "
-    "that sheet's own source note for how the credit/market/operational RWA figures were derived instead."
+    "line is disclosed for FY2020 in that document.\n"
+    "UPDATED 2026-09-16 - THE ABOVE DESCRIBES THE FY2020 DOCUMENT ONLY, AND IS NO LONGER THE WHOLE STORY FOR THE "
+    "FY2020 COLUMN. The FY2021 Pillar 3 edition was recovered on this date (see the CAPTURE NOTE on any Pillar 3 "
+    "metric sheet) and carries a full prior-year 2020 comparative column on the CRR/CRD V basis. That column "
+    "supplies, for FY2020, an NSFR (and its available/required stable funding components) and a CVA risk RWA - "
+    "neither of which the FY2020 document itself discloses - so the NSFR sheet's FY2020 cells are NO LONGER blank "
+    "and the RWA Breakdown sheet now carries a labelled FY2020 block on that restated basis. It also disagrees "
+    "with the FY2020 document on capital, capital ratio and leverage; every such disagreement is recorded on its "
+    "own separate labelled row rather than being reconciled or overwritten. MREL remains genuinely absent for "
+    "FY2020 on both documents' evidence."
 )
 
 FX_NOTE = (
@@ -157,8 +168,12 @@ FX_NOTE = (
     "line, computed programmatically so it can never drift out of sync with the rates above, so that opening + "
     "all flows + this line = closing exactly in £ terms - this line is purely an artefact of £ translation and "
     "has no bearing on the Bank's underlying USD results. This conversion was not explicitly requested for this "
-    "bank - applied for consistency with the rest of the series; flag if £'000 rather than the Bank's native "
-    "US$'000 presentation is not what's wanted here."
+    "bank - applied for consistency with the rest of the series; flag if £m rather than the Bank's native "
+    "US$'000 presentation is not what's wanted here. UNIT: every monetary figure in this workbook is in £ "
+    "MILLIONS (£m). The Bank's own sources print US$'000, and the conversion divides by the FX rate and then "
+    "by 1,000. Until 2026-09-16 these sheets were mislabelled \"£'000\" while carrying £m values - a 1000x "
+    "labelling error that made an £11.6bn bank read as an £11.6m one. The labels were corrected; NO FIGURE WAS "
+    "CHANGED, and every disclosed ratio is unaffected because a ratio is scale-invariant."
 )
 
 CASH_FLOW_SOURCES = (
@@ -191,6 +206,135 @@ CASH_FLOW_SOURCES = (
 )
 
 
+# ---------------------------------------------------------------
+# ONE reconciled account of the FY2020/FY2021 capture problem, replacing two
+# earlier notes that contradicted each other on the single most important word.
+# One (P3_COMPARATIVE_NOTE) called the two editions "unretrievable" and
+# concluded FY2020 was permanently unsourceable; the other
+# (P3_CAPTURE_INTEGRITY_NOTE) said truncated-but-recoverable and gave a working
+# recipe. The second is correct; the first is withdrawn. Verified independently
+# a third time on 2026-09-16 - both documents were recovered, and the FY2021
+# edition turned out to carry a full prior-year 2020 comparative column, which
+# is what makes FY2020 sourceable at all.
+#
+# Written onto every Pillar 3 metric sheet so the basis is visible on the sheet
+# rather than buried in this file.
+# ---------------------------------------------------------------
+P3_CAPTURE_NOTE = (
+    "CAPTURE NOTE, FY2020 AND FY2021 - TRUNCATED AS SERVED, BUT RECOVERABLE. READ THIS BEFORE CONCLUDING "
+    "ANYTHING FROM A FAILED DOWNLOAD (settled 2026-09-16; supersedes and withdraws two earlier notes on these "
+    "sheets, one of which described these editions as 'unretrievable' and FY2020 as permanently unsourceable - "
+    "that conclusion was wrong).\n"
+    "THE DAMAGE. Each year's Pillar 3 edition survives as exactly ONE Wayback capture "
+    f"(FY2020: {P3_2020_URL}; FY2021: {P3_2021_URL}), and both are truncated by the Wayback Machine's own 1 MiB "
+    "per-capture limit at exactly 1,048,576 bytes (md5 edfe2438dbff06fdc617e6a38efb6059 for FY2020, "
+    "32d6206989581714144f61ffc6982ab5 for FY2021 - identical across the bare, if_ and id_ playback forms, so the "
+    "truncation is in the capture itself, not in playback). What the cut removes is the PDF CROSS-REFERENCE "
+    "TABLE, which sits at the END of the file. That breaks every tool that trusts the index - pdfinfo reports "
+    "'Invalid XRef entry 0' and 'Couldn't find trailer dictionary', qpdf reports 'can't find startxref' - so the "
+    "files look dead. They are not. The page objects themselves are intact.\n"
+    "THE RECOVERY RECIPE (recorded here so nobody has to rediscover it). Ghostscript rebuilds by scanning objects "
+    "rather than reading the index:\n"
+    "    curl -sSL -A \"<browser user-agent>\" -o raw.pdf \"<the id_ URL above>\"\n"
+    "    gs -o fixed.pdf -sDEVICE=pdfwrite raw.pdf\n"
+    "FY2020: 1,048,576 B -> 795,035 B, 38 pages. FY2021: 1,048,576 B -> 697,523 B, 30 pages. Ghostscript prints "
+    "'no startxref token found' and 'xref table was repaired' and completes; those warnings are expected. qpdf is "
+    "the less reliable route - it reconstructs but does not reproduce the full page count. Reproduced "
+    "independently by three separate passes, byte-for-byte identical each time.\n"
+    "NOTHING WAS LOST IN THE REBUILD - checked against each document's own table of contents and page numbering, "
+    "not assumed. FY2020: roman front matter i/ii/iii on PDF pages 1-3, then printed page N = PDF page N through "
+    "38; the TOC's last entry is '10.6 Material Risk Takers ... 38' and PDF page 38 is printed page 38, carrying "
+    "section 10.5's remuneration table and 10.6 in full and ending on the document's own closing paragraph. "
+    "FY2021: printed page N = PDF page N+1; the TOC's last entry is '6.6 Material Risk Takers ... 28' = PDF page "
+    "29, and PDF page 30 = printed page 29 completes section 6.6. Every page in both documents yields extractable "
+    "text; there are no empty pages and no table straddles the damaged region, because the damaged region carries "
+    "no content. Covers read 'GULF INTERNATIONAL BANK (UK) LTD / Basel II Pillar 3 Disclosures / 31 December "
+    "2020' and 'GULF INTERNATIONAL BANK (UK) LTD / Pillar 3 disclosures / 31 December 2021'.\n"
+    "ONE LEGIBILITY DEFECT, NOT CAUSED BY THE TRUNCATION: on FY2020 printed p.16 the caption under section 4.5 "
+    "and the two buffer sub-headings in section 4.6 render as garbled non-Latin glyphs (a broken font cmap in the "
+    "original document). The capital-adequacy table above that caption, and section 4.6's buffer figures, are in "
+    "plain legible text. No figure in this workbook is taken from the garbled text.\n"
+    "INDEPENDENT CORROBORATION THAT THE RECOVERY IS FAITHFUL, not a plausible reconstruction: the recovered "
+    "FY2021 edition gives FY2021 CET1 of $371,866k, and the FY2022 edition's T-4 comparative column - an "
+    "unrelated, fully intact document - gives exactly $371,866k. The recovered FY2021 edition also prints FY2021 "
+    "leverage of 3.52% on a total exposure measure of $10,573,209k, confirming the as-reported rows on the "
+    "Leverage Ratio sheet. Every FY2020 figure previously carried on these sheets (leverage 4.61%, Total Capital "
+    "ratio 26.48%, Total RWAs $1,482m, capital base $393m, LCR 290%) was re-read from the recovered FY2020 "
+    "edition and confirmed unchanged.\n"
+    "WHY THIS STILL MATTERS FOR A READER: anyone who simply opens either URL in a browser or feeds it to a PDF "
+    "tool will get a broken file. That is expected and is NOT evidence that these figures are unsourced. Do not "
+    "blank a cell, do not mark a year unsourceable, and do not substitute another entity's document on the "
+    "strength of a failed download - run the recipe above first.\n"
+    "EXHAUSTED SEARCH FOR A CLEAN (UNTRUNCATED) COPY. The Wayback CDX index holds exactly ONE 200 capture per URL "
+    "(the two above); every other capture of those paths is a 404. Live gibam.com 404s on the 2020, 2021 AND 2022 "
+    "asset paths, /regulatory-information, /literature-library and /important-information all 404, and the site "
+    "has no disclosures index page. GIB UK's documents moved to the CDN gib-am.files.svdcdn.com, which holds the "
+    "2023 and 2024 editions ONLY - about ten filename permutations for 2020/2021/2022 all 404, and a Wayback "
+    "sweep of the CDN host returns only those same two files. The Memento aggregator, Common Crawl (2023-50 "
+    "index) and archive.today hold no capture of either URL. So the truncated captures are the only copies that "
+    "exist, and the recipe above is the only way in.\n"
+    "ENTITY-BASIS TRAP - READ BEFORE 'FIXING' THIS. gib.com is REACHABLE (it answers 200 to browser-shaped "
+    "request headers; an earlier 403 came from a wrong path and is withdrawn - it is NOT a blocked host), and it "
+    "hosts MANY Pillar 3 PDFs. Every one of them belongs to Gulf International Bank B.S.C. (the Bahrain parent), "
+    "to the KSA entity under /ksa/, or to the Abu Dhabi branch. NONE is Gulf International Bank (UK) Limited's "
+    "own disclosure. They were found, examined and REJECTED on entity basis: under this project's entity-scope "
+    "rule no parent-, KSA- or branch-level figure may be substituted into this entity-level workbook. A search "
+    "for 'Gulf International Bank Pillar 3' surfaces them immediately and they look superficially like the "
+    "missing documents - they are not. Never substitute them.\n"
+)
+
+# ---------------------------------------------------------------
+# What each surviving edition's prior-year comparative column supplies, and
+# where those columns DISAGREE with the year's own edition. Every disagreement
+# is recorded on its own labelled row on the relevant sheet; none is reconciled
+# and none overwrites the other.
+# ---------------------------------------------------------------
+P3_COMPARATIVE_NOTE = (
+    "COMPARATIVE-COLUMN BASIS (verified 2026-09-16). All four surviving editions were downloaded and read in "
+    "full, and each was verified as the UK entity's own disclosure before any figure was read. The FY2022 edition "
+    "is 1,137,898 bytes / 33 pages and the FY2023 edition 530,545 bytes / 33 pages (both intact as served); the "
+    "FY2020 and FY2021 editions are the recovered 38-page and 30-page rebuilds described in the CAPTURE NOTE "
+    "above. None is the Bahraini parent's, the KSA entity's or the Abu Dhabi branch's disclosure.\n"
+    "Each edition reaches back exactly ONE year:\n"
+    "  * FY2021 edition -> a full 2020 comparative column, on the CRR/CRD V basis. This is the column that makes "
+    "FY2020 sourceable beyond its own Basel II-era edition, and it DISAGREES with that edition on capital, "
+    "capital ratio and leverage while supplying two things the FY2020 edition does not disclose at all (an NSFR "
+    "and a CVA risk RWA). Detail: printed p.6 'Key ratios', 2020 column - CET1 = Tier 1 = Total capital "
+    "$378,549k, RWEA $1,482,468k, all three ratios 26.04%, leverage exposure $10,426,834k, leverage ratio 3.63%. "
+    "Printed p.23, sections 4.1/4.2 own-funds reconciliation, 2020 column - Total equity $392,596k less pension "
+    "asset net of deferred tax $13,932k less intangibles $0 less prudent valuation adjustment $115k = CET1 "
+    "$378,549k (ties exactly, and the $392,596k ties to this workbook's own Balance Sheet Total equity for "
+    "FY2020). Printed pp.24-25, section 5.2 Pillar 1 capital requirements, 2020 column - credit and counterparty "
+    "risk RWA $1,206,179k, market risk $142,838k, operational risk $128,538k, CVA risk $4,913k, total "
+    "$1,482,468k (the four components sum to the total EXACTLY). Printed p.7 quarterly liquidity table, 2020 row "
+    "- Q4 2020 average LCR 291.28% on an average liquid assets buffer of $6,237,113k and average net flows of "
+    "$2,141,287k (itself average outflows $3,085,596k less average inflows $944,309k, which ties exactly), and "
+    "NSFR 103.23% on available stable funding $10,463,760k and required stable funding $10,136,594k (ties "
+    "exactly).\n"
+    "  * FY2022 edition, T-4 = 31-Dec-21. Its KM1 (p.6) independently confirms, figure-for-figure, the FY2021 "
+    "CET1/Tier 1/Total capital ($371,866k), Total RWEA ($1,932,234k), all three capital ratios (19.22%), HQLA "
+    "($6,737,809k) and LCR (480.13%); its OV1 (pp.26-27) likewise confirms all six FY2021 RWA-breakdown lines. It "
+    "ALSO supplies one figure the FY2021 edition does not print in that form - FY2021 'Total net cash outflows "
+    "(adjusted value)' of $1,403,343k (KM1 row 16) - and one figure on a DIFFERENT BASIS, the FY2021 leverage "
+    "restatement recorded on the Leverage Ratio sheet. Its KM1 NSFR rows (18/19/20) are BLANK in the T-4 column, "
+    "so the FY2021 NSFR figures rest on the FY2021 edition alone - now re-read and confirmed from the recovered "
+    "copy.\n"
+    "  * FY2023 edition, T-4 = 31-Dec-22. Its KM1 (p.6) and OV1 (pp.26-27) agree with every FY2022 figure already "
+    "on these sheets - no restatement of any FY2022 figure between the two editions.\n"
+    "NO FIGURE ANYWHERE ON THESE SHEETS IS BACK-SOLVED, DERIVED OR INFERRED. Every value is printed in a named "
+    "document at a named page. Where two documents print different values for the same year, BOTH are carried on "
+    "separate labelled rows and neither is reconciled away.\n"
+    "ONE SOURCE-SIDE INCONSISTENCY, FLAGGED NOT FIXED: in the FY2021 edition's p.6 key-ratios table the printed "
+    "2020 capital ratio of 26.04% does not reproduce from that same column's own capital and RWA figures "
+    "($378,549k / $1,482,468k = 25.53%). The same table's 2021 column is very slightly off in the same direction "
+    "($371,866k / $1,932,234k = 19.25% against a printed 19.22%, a figure the FY2022 edition independently "
+    "reprints as 19.22%). Both ratios are recorded exactly as printed. The leverage ratios in that table DO tie "
+    "exactly on both bases ($378,549k / $10,426,834k = 3.63%; $371,866k / $10,573,209k = 3.52%), as does the "
+    "FY2020 edition's own 26.48% ($393m / $1,482m = 26.5%), so the discrepancy is confined to that one ratio "
+    "block in that one document."
+)
+
+
 def p3_sources():
     return (
         "Sources - Gulf International Bank (UK) Limited Pillar 3 Disclosures (UK KM1 - Key Metrics table), "
@@ -198,23 +342,29 @@ def p3_sources():
         "ratios are unconverted):\n"
         f"FY2024: Pillar 3 Disclosures as at 31 December 2024 (Board-approved), p.6 (UK KM1) - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures as at 31 December 2023, p.6 (UK KM1) - {P3_2023_URL}\n"
-        f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own T-4/prior-year comparative column (p.6 above), "
-        "which matches the FY2022 Pillar 3 Disclosures document exactly where both are legible - "
+        f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own T-4/prior-year comparative column (p.6 above) - "
         f"{P3_2022_URL}\n"
-        f"FY2021: Pillar 3 Disclosures as at 31 December 2021, p.6 (Key ratios summary) and p.7 (Liquidity, "
-        f"Q4 2021 quarter-end figures) - {P3_2021_URL}\n"
-        f"FY2020: 'Basel II Pillar 3 Disclosures as at 31 December 2020', p.15 (section 4.5 'Capital adequacy' - "
-        f"Total RWAs/Capital base/Tier 1 capital/Tier 1 ratio/Total Capital ratio table) and p.34 (section 7 "
-        f"'Leverage' - reconciliation table) - {P3_2020_URL}. This is the only surviving (non-404) Wayback "
-        f"capture of this document and is itself truncated by the Wayback Machine's own playback service at "
-        f"exactly 1,048,576 bytes; it was repaired with `qpdf --qdf --replace-input` (rebuilds the cross-"
-        f"reference table from the recoverable object streams) before reading - see the Cash Flow sheet's "
-        f"ENTITY NOTE for the full data-quality account of this repair.\n"
-        "FY2025: genuinely not published. Re-verified 2026-09-15 against GIB AM's own live document library, a "
+        f"FY2021: Pillar 3 Disclosures as at 31 December 2021, printed p.6 (section 1.2 'Key ratios' - capital, "
+        f"RWEA, capital ratios, leverage) and printed p.7 (section 1.2 quarterly liquidity table - LCR and NSFR "
+        f"by quarter; FY2021 uses the Q4 column). Its 2020 comparative column is additionally the source for the "
+        f"restated-basis FY2020 rows across these sheets - printed p.6 (key ratios), printed p.23 (sections "
+        f"4.1/4.2 own funds), printed pp.24-25 (section 5.2 Pillar 1 capital requirements) and printed p.7 (2020 "
+        f"quarterly liquidity block). Read from the recovered rebuild described in the CAPTURE NOTE below - "
+        f"{P3_2021_URL}\n"
+        f"FY2020: 'Basel II Pillar 3 Disclosures as at 31 December 2020', printed p.16 (the section 4.5 'Capital "
+        f"adequacy' table - Total RWAs / Capital base / Tier 1 capital / Tier 1 ratio / Total Capital ratio; note "
+        f"section 4.5's heading is on p.15 but the table itself is overleaf on p.16), printed p.13 (section 3.1 "
+        f"'Capital base' - the $393m Tier 1 / nil Tier 2 table), printed p.35 (the section 7 'Leverage' "
+        f"reconciliation table; section 7's heading is on p.34 and the table is overleaf on p.35) and printed "
+        f"p.27 (section 5.3 'Liquidity and Funding Risk' - the LCR table). Read from the recovered rebuild "
+        f"described in the CAPTURE NOTE below - {P3_2020_URL}\n"
+        + P3_CAPTURE_NOTE
+        + "FY2025: genuinely not published. Re-verified 2026-09-15 against GIB AM's own live document library, a "
         "Wayback CDX domain scan, and direct URL probes following this entity's own naming convention - all three "
         "come back with FY2024 as the newest Pillar 3 edition. See the FY2025 STATUS block in the Cash Flow "
         "Statement sheet's ENTITY NOTE for the full evidence. Every Pillar 3 metric below is left blank for "
-        "FY2025; nothing is substituted from the Bahraini parent's group disclosures."
+        "FY2025; nothing is substituted from the Bahraini parent's group disclosures.\n\n"
+        + P3_COMPARATIVE_NOTE
     )
 
 
@@ -276,12 +426,12 @@ balance_sheet_rows = [
 
 bw.add_balance_sheet_sheet(
     title="Gulf International Bank (UK) Limited — Statement of Financial Position",
-    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
+    subtitle="£m, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
     rows=balance_sheet_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=70,
-    source_height=340,
-    unit_suffix=" (£'000, conv. from USD)",
+    source_height=409,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 # ---------------------------------------------------------------
@@ -318,12 +468,12 @@ income_statement_rows = [
 
 bw.add_income_statement_sheet(
     title="Gulf International Bank (UK) Limited — Statement of Income",
-    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
+    subtitle="£m, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
     rows=income_statement_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=76,
-    source_height=340,
-    unit_suffix=" (£'000, conv. from USD)",
+    source_height=409,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 # ---------------------------------------------------------------
@@ -454,12 +604,12 @@ EQUITY_SOURCES = (
 
 bw.add_equity_changes_sheet(
     title="Gulf International Bank (UK) Limited — Statement of Changes in Equity",
-    subtitle="£'000, converted from USD - chronological, oldest to newest. See source note for FX methodology.",
+    subtitle="£m, converted from USD - chronological, oldest to newest. See source note for FX methodology.",
     headers=EQUITY_HEADERS,
     rows=equity_changes_rows,
     sources_text=EQUITY_SOURCES,
     first_col_width=56,
-    source_height=340,
+    source_height=409,
 )
 
 # ---------------------------------------------------------------
@@ -526,12 +676,12 @@ for kind, label, usd in rows_usd:
 
 bw.add_cash_flow_sheet(
     title="Gulf International Bank (UK) Limited — Statement of Cash Flow",
-    subtitle="£'000, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
+    subtitle="£m, converted from USD - see source note at bottom for FX methodology and rates used. FY2025 blank (no FY2025 Annual Report filed yet).",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=78,
-    source_height=340,
-    unit_suffix=" (£'000, conv. from USD)",
+    source_height=409,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 # ---------------------------------------------------------------
@@ -602,35 +752,117 @@ ASSET_QUALITY_SOURCES = (
 
 bw.add_asset_quality_sheet(
     title="Gulf International Bank (UK) Limited — Asset Quality",
-    subtitle="£'000, converted from USD - see source note. GIB UK does not lend to customers; credit risk sits in Placements with banks and Debt securities at amortised cost.",
+    subtitle="£m, converted from USD - see source note. GIB UK does not lend to customers; credit risk sits in Placements with banks and Debt securities at amortised cost.",
     rows=asset_quality_rows,
     sources_text=ASSET_QUALITY_SOURCES,
     first_col_width=68,
-    source_height=340,
-    unit_suffix=" (£'000, conv. from USD)",
+    source_height=409,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=140)
+    # source_height: 140 -> 320 earlier on 2026-09-16 (the citation gained the
+    # comparative-column basis block), then -> 409 later the same day, when the
+    # capture/recovery account and the FY2020 two-bases blocks took it past
+    # 12,000 characters. 409 points is Excel's MAXIMUM row height, so the cell
+    # still cannot show the whole citation at once - a reader may need to widen
+    # the row or read it in the formula bar. The text is complete in the cell;
+    # only the default display is short.
+    # note_height: 60 -> 200 for the same reason (the longest per-sheet note,
+    # Leverage Ratio's, is now ~4,000 characters).
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52,
+                        source_height=409, note_height=200)
 
 
 CAPITAL_USD = {"FY2024": 435465, "FY2023": 411658, "FY2022": 368416, "FY2021": 371866, "FY2020": 393000}
 RWA_USD = {"FY2024": 1963743, "FY2023": 1809984, "FY2022": 1557567, "FY2021": 1932234, "FY2020": 1482000}
 CAPITAL_RATIO = {"FY2024": "22.18%", "FY2023": "22.74%", "FY2022": "23.65%", "FY2021": "19.22%", "FY2020": "26.48%"}
 
-metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", stock(CAPITAL_USD))], p3_sources(),
-       note="GIB UK's regulatory capital consists entirely of CET1 (fully paid-up ordinary shares, capital contribution, and audited retained earnings/reserves) - no AT1 or Tier 2 instruments in any year. FY2020's Basel II-era Pillar 3 document calls this figure 'Total regulatory capital' (comprising Share Capital $250m + Retained Earnings $143m = $393m, Tier 1 only, no Tier 2) rather than 'CET1' by name, but is the same underlying capital base.")
-metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CAPITAL_RATIO)], p3_sources())
-metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital", stock(CAPITAL_USD))], p3_sources(),
-       note="Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.")
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", CAPITAL_RATIO)], p3_sources())
-metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", stock(CAPITAL_USD))], p3_sources(),
-       note="Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.")
-metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CAPITAL_RATIO)], p3_sources())
-metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", stock(RWA_USD))], p3_sources())
+# ---------------------------------------------------------------
+# FY2020 ON TWO BASES (found 2026-09-16 when the FY2021 edition was recovered).
+# The dicts above are each year's OWN edition as reported. For FY2020 that is
+# the Basel II-era FY2020 edition: capital base $393,000k (Share Capital $250m
+# + Retained Earnings $143m, reported to the regulator, no CRR deductions),
+# Total RWAs $1,482,000k ($1,482m as printed in $ millions), Tier 1 and Total
+# Capital ratio both 26.48%.
+#
+# The FY2021 edition's own 2020 comparative column restates all three onto the
+# CRR/CRD V basis: CET1 $378,549k (after deducting the pension asset net of
+# deferred tax, intangibles and the prudent valuation adjustment - see the
+# COMPARATIVE-COLUMN BASIS note), RWEA $1,482,468k (the same total to $'000
+# precision rather than $ millions), and a ratio of 26.04%.
+#
+# These are DIFFERENT DEFINITIONS, not a correction of an error, so both are
+# carried on separate labelled rows. Neither is reconciled and neither
+# overwrites the other. The dicts below hold only the FY2020 restated values.
+# ---------------------------------------------------------------
+CAPITAL_USD_FY2020_RESTATED = {"FY2020": 378549}
+RWA_USD_FY2020_RESTATED = {"FY2020": 1482468}
+CAPITAL_RATIO_FY2020_RESTATED = {"FY2020": "26.04%"}
+
+RESTATED_LABEL = "(FY2020 as restated in the FY2021 edition's own 2020 comparative column, CRR basis)"
+
+FY2020_BASIS_NOTE = (
+    "\n\nFY2020 IS CARRIED ON TWO BASES (added 2026-09-16, both kept, deliberately NOT reconciled). The first row "
+    "above is the FY2020 Pillar 3 edition's own as-reported figure, on the Basel II-era basis that document uses. "
+    "The second row is the FY2021 Pillar 3 edition's own 2020 comparative column, which restates FY2020 onto the "
+    "CRR/CRD V basis that applies from FY2021 onward. The difference in the capital figure is definitional: the "
+    "FY2020 edition reports a capital base of $393,000k (Share Capital $250m plus Retained Earnings $143m, as "
+    "reported to the regulator, with no regulatory deductions applied), whereas the FY2021 edition arrives at "
+    "$378,549k by starting from Total equity of $392,596k - which ties exactly to this workbook's own Balance "
+    "Sheet for FY2020 - and deducting the defined benefit pension asset net of deferred tax ($13,932k), "
+    "intangibles ($0) and the prudent valuation adjustment ($115k), per CRR Article 36(1). Neither figure is "
+    "wrong; they answer different questions. A trend read across FY2020-FY2024 should use the restated row, "
+    "because FY2021 onward is on the CRR basis. Note also that the FY2021 edition prints the 2020 RWA total to "
+    "$'000 precision ($1,482,468k) where the FY2020 edition prints $ millions ($1,482m) - the same underlying "
+    "total, carried at both precisions rather than one silently replacing the other."
+)
+
+metric("CET1 Capital", "£m (conv. from USD)",
+       [
+           ("Common Equity Tier 1 (CET1) capital", stock(CAPITAL_USD)),
+           (f"CET1 capital after CRR regulatory adjustments {RESTATED_LABEL}", stock(CAPITAL_USD_FY2020_RESTATED)),
+       ], p3_sources(),
+       note="GIB UK's regulatory capital consists entirely of CET1 (fully paid-up ordinary shares, capital contribution, and audited retained earnings/reserves) - no AT1 or Tier 2 instruments in any year. FY2020's Basel II-era Pillar 3 document calls this figure 'Total regulatory capital' (comprising Share Capital $250m + Retained Earnings $143m = $393m, Tier 1 only, no Tier 2) rather than 'CET1' by name; the word 'CET1' does not appear anywhere in that document." + FY2020_BASIS_NOTE)
+metric("CET1 Ratio", "% of RWA",
+       [
+           ("Common Equity Tier 1 (CET1) ratio", CAPITAL_RATIO),
+           (f"CET1 ratio {RESTATED_LABEL}", CAPITAL_RATIO_FY2020_RESTATED),
+       ], p3_sources(),
+       note="FY2020's own edition prints no ratio called 'CET1 ratio' - it prints a Tier 1 ratio and a Total Capital ratio, both 26.48%, and that figure is used on all three ratio sheets for FY2020. The FY2021 edition's 2020 comparative column does name a CET1 ratio, 26.04%." + FY2020_BASIS_NOTE)
+metric("Tier 1 Capital", "£m (conv. from USD)",
+       [
+           ("Tier 1 capital", stock(CAPITAL_USD)),
+           (f"Tier 1 capital after CRR regulatory adjustments {RESTATED_LABEL}", stock(CAPITAL_USD_FY2020_RESTATED)),
+       ], p3_sources(),
+       note="Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments." + FY2020_BASIS_NOTE)
+metric("Tier 1 Ratio", "% of RWA",
+       [
+           ("Tier 1 ratio", CAPITAL_RATIO),
+           (f"Tier 1 ratio {RESTATED_LABEL}", CAPITAL_RATIO_FY2020_RESTATED),
+       ], p3_sources(), note=FY2020_BASIS_NOTE.strip())
+metric("Total Capital", "£m (conv. from USD)",
+       [
+           ("Total capital", stock(CAPITAL_USD)),
+           (f"Total capital after CRR regulatory adjustments {RESTATED_LABEL}", stock(CAPITAL_USD_FY2020_RESTATED)),
+       ], p3_sources(),
+       note="Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments." + FY2020_BASIS_NOTE)
+metric("Total Capital Ratio", "% of RWA",
+       [
+           ("Total capital ratio", CAPITAL_RATIO),
+           (f"Total capital ratio {RESTATED_LABEL}", CAPITAL_RATIO_FY2020_RESTATED),
+       ], p3_sources(), note=FY2020_BASIS_NOTE.strip())
+metric("Total RWAs", "£m (conv. from USD)",
+       [
+           ("Total risk-weighted exposure amount", stock(RWA_USD)),
+           (f"Total risk-weighted exposure amount {RESTATED_LABEL}", stock(RWA_USD_FY2020_RESTATED)),
+       ], p3_sources(),
+       note="FY2020's own edition prints its RWA total in $ millions ($1,482m); the FY2021 edition's 2020 "
+            "comparative column prints the same total to $'000 ($1,482,468k), and it is that finer figure to "
+            "which the FY2020 RWA Breakdown components sum exactly. Both are shown." + FY2020_BASIS_NOTE)
 
 # ---------------------------------------------------------------
 # RWA Breakdown (UK OV1) - fully disclosed all 4 later years. FY2024/FY2023 from
@@ -653,10 +885,21 @@ metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure 
 # requirement into an RWA figure, per its own section 4.2 methodology
 # description). Summing the three derived FY2020 components (1,206.0 +
 # 143.75 + 128.75 = 1,478.5) falls short of the document's own separately
-# reported Total RWAs of $1,482m by $3.5m (~0.24%) - not traceable to a
-# specific line (each component was independently re-checked against the
-# source image/text); flagged rather than forced to reconcile, per this
-# project's convention for unexplained source-side gaps.
+# reported Total RWAs of $1,482m by $3.5m (~0.24%).
+#
+# THAT GAP IS NOW EXPLAINED AND CLOSED (2026-09-16). It was the missing CVA
+# charge. The recovered FY2021 edition's section 5.2 table carries a full 2020
+# comparative column on the CRR basis, and it states all four components
+# directly, to $'000: credit and counterparty risk 1,206,179; market risk
+# 142,838; operational risk 128,538 (stated, not derived); CVA risk 4,913.
+# Those four sum to 1,482,468 EXACTLY, which is that table's own total and the
+# $'000-precision version of the FY2020 edition's $1,482m. So the shortfall was
+# the FY2020 edition simply not breaking out a CVA charge, plus $-million
+# rounding - not a mis-cast line.
+#
+# Both presentations are kept. The original rows below are the FY2020 edition's
+# own Basel II-era figures; a clearly labelled block at the end carries the
+# FY2021 edition's restated 2020 column. Neither is reconciled away.
 # ---------------------------------------------------------------
 rwa_breakdown_rows_usd = [
     ("SECTION", "Credit risk", {}),
@@ -670,6 +913,16 @@ rwa_breakdown_rows_usd = [
     ("SECTION", "Operational risk", {}),
     ("DATA", "Operational risk - standardised approach", {"FY2024": 198710, "FY2023": 149224, "FY2022": 85961, "FY2021": 96890, "FY2020": 128750}),
     ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1963743, "FY2023": 1809984, "FY2022": 1557567, "FY2021": 1932234, "FY2020": 1482000}),
+    # FY2020 on the CRR basis, as stated in the FY2021 edition's own 2020
+    # comparative column (printed pp.24-25, section 5.2). Every figure below is
+    # printed in that table - none is derived. Kept alongside, not instead of,
+    # the FY2020 edition's own figures above.
+    ("SECTION", "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2)", {}),
+    ("DATA", "Credit and counterparty risk, combined as the FY2021 edition presents it (FY2020 restated)", {"FY2020": 1206179}),
+    ("DATA", "CVA risk (FY2020 restated) - not broken out at all in the FY2020 edition", {"FY2020": 4913}),
+    ("DATA", "Market risk (FY2020 restated)", {"FY2020": 142838}),
+    ("DATA", "Operational risk (FY2020 restated) - stated directly, not derived", {"FY2020": 128538}),
+    ("TOTAL", "Total risk-weighted exposure amount (FY2020 restated) - the four rows above sum to this exactly", {"FY2020": 1482468}),
 ]
 rwa_breakdown_rows = [
     (kind, label, {} if kind == "SECTION" else stock(usd))
@@ -685,89 +938,210 @@ RWA_BREAKDOWN_SOURCES = (
     f"OV1) - {P3_2024_URL}\n"
     f"FY2022/FY2021: Pillar 3 Disclosures as at 31 December 2022, pp.26-27 (section 6.2, UK OV1) - FY2021 is "
     f"that document's own T-4/prior-year comparative column - {P3_2022_URL}\n"
-    f"FY2020: 'Basel II Pillar 3 Disclosures as at 31 December 2020', pp.13-15 (sections 4.1 Credit risk RWA "
-    f"table, 4.2 Market risk RWA table, 4.3 Operational risk capital requirement) - {P3_2020_URL}. FY2020 "
-    "predates the UK OV1 template and has no CCR/CVA breakout - the Operational risk RWA is derived (capital "
-    "requirement x 12.5) rather than stated directly; the 3 derived FY2020 components sum to $3.5m (~0.24%) "
-    "short of the document's own separately reported Total RWAs, an unexplained source-side gap flagged rather "
-    "than forced to reconcile.\n\n"
+    f"FY2020 (first block, the FY2020 edition's own Basel II-era figures): 'Basel II Pillar 3 Disclosures as at "
+    f"31 December 2020', printed p.14 (section 4.1 credit risk RWA table, total 1,206; section 4.2 market risk "
+    f"RWA table, total 143.75) and printed p.15 (section 4.3 operational risk - capital requirement of $10.3m "
+    f"only) - {P3_2020_URL}. That edition predates the UK OV1 template and breaks out no CCR or CVA charge; its "
+    "operational risk RWA is DERIVED here as capital requirement x 12.5, the same multiplier the document itself "
+    "applies to market risk in its own section 4.2.\n"
+    f"FY2020 (second block, restated): Pillar 3 Disclosures as at 31 December 2021, printed pp.24-25 (section 5.2 "
+    f"'Pillar 1 capital requirements'), 2020 comparative column - {P3_2021_URL}. Every figure in that block is "
+    "STATED in that table, including the operational risk RWA (so it is no longer derived) and a CVA risk RWA of "
+    "$4,913k that the FY2020 edition does not disclose at all.\n"
+    "THE PREVIOUSLY FLAGGED $3.5m FY2020 GAP IS NOW EXPLAINED AND CLOSED (2026-09-16). The three derivable "
+    "FY2020-edition components sum to $1,478.5m against that edition's own separately reported Total RWAs of "
+    "$1,482m. The restated block shows why: the missing piece is the CVA charge ($4,913k), which the Basel II-era "
+    "edition does not break out, and the residual is $-million rounding. On the restated basis the four "
+    "components sum to $1,482,468k exactly, with no gap. This is no longer an unexplained source-side "
+    "discrepancy.\n\n"
     + ENTITY_NOTE
 )
 
 bw.add_rwa_breakdown_sheet(
     title="Gulf International Bank (UK) Limited — RWA Breakdown",
-    subtitle="£'000, converted from USD - see source note. UK OV1 template.",
+    subtitle="£m, converted from USD - see source note. UK OV1 template.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=68,
-    source_height=280,
-    unit_suffix=" (£'000, conv. from USD)",
+    source_height=409,
+    unit_suffix=" (£m, conv. from USD)",
 )
 
 metric(
-    "Leverage Ratio", "£'000 / % (conv. from USD)",
+    "Leverage Ratio", "£m (conv. from USD) / %",
     [
         ("Total exposure measure", stock({
             "FY2024": 8682283, "FY2023": 7795728, "FY2022": 5136739, "FY2021": 10573209, "FY2020": 8524000,
         })),
         ("Leverage ratio (%)", {"FY2024": "5.02%", "FY2023": "5.28%", "FY2022": "7.17%", "FY2021": "3.52%", "FY2020": "4.61%"}),
+        # RESTATEMENT, NOT A CORRECTION - see note. The FY2022 edition restates
+        # FY2021 onto the excluding-central-bank-claims basis that took effect
+        # 1 Jan 2022. Recorded on its own labelled rows alongside FY2021's
+        # original as-reported figures above; the two are NOT reconciled and
+        # neither overwrites the other.
+        ("Total exposure measure excl. claims on central banks (FY2021 as restated in the FY2022 edition)", stock({
+            "FY2021": 5268295,
+        })),
+        ("Leverage ratio excl. claims on central banks (%) (FY2021 as restated in the FY2022 edition)", {"FY2021": "7.06%"}),
+        # Additional-disclosure row printed only in the FY2023 edition (KM1 14b);
+        # the FY2022 edition leaves it blank, so it exists for FY2023 alone.
+        ("Leverage ratio incl. claims on central banks (%) (additional disclosure, KM1 row 14b)", {"FY2023": "1.92%"}),
+        # SAME PATTERN ONE YEAR EARLIER, found 2026-09-16 when the FY2021 edition
+        # was recovered: its 2020 comparative column restates FY2020's leverage
+        # on the CRR basis. Own labelled rows; the FY2020 edition's own 8,524 /
+        # 4.61% above is untouched. Neither is reconciled to the other.
+        ("Total exposure measure (FY2020 as restated in the FY2021 edition's own 2020 comparative column)", stock({
+            "FY2020": 10426834,
+        })),
+        ("Leverage ratio (%) (FY2020 as restated in the FY2021 edition's own 2020 comparative column)", {"FY2020": "3.63%"}),
     ],
     p3_sources(),
     note="Basis change: FY2022 onward reports 'Total exposure measure EXCLUDING claims on central banks' (the "
          "Bank's own FY2021 report states it was 'not, currently, in scope of the UK Leverage Framework' that "
-         "introduced this exclusion, effective 1 January 2022); FY2021/FY2020's figures are the single "
-         "(unqualified) leverage ratio/exposure measure as originally reported those years, likely on an "
+         "introduced this exclusion, effective 1 January 2022); FY2021/FY2020's figures on the first two rows are "
+         "the single (unqualified) leverage ratio/exposure measure as originally reported those years, on an "
          "including-central-bank-claims basis. Each year's own as-reported figure is used rather than forcing a "
          "common basis. FY2020's own document reconciles this exposure measure directly from Total Assets per "
          "the Financial Statements ($10,463m) less securities-financing-transaction credit risk mitigation "
-         "($1,928m) plus derivative add-ons ($25m) and other adjustments (-$35m) = $8,524m.",
+         "($1,928m) plus derivative add-ons ($25m) and other adjustments (-$35m) = $8,524m.\n\n"
+         "FY2021 RESTATEMENT BETWEEN EDITIONS (found 2026-09-16, both figures kept, deliberately NOT reconciled). "
+         "FY2021's leverage is printed on two different bases by two different documents, and rows 3-4 above "
+         "record the second one: (a) the FY2021 Pillar 3 edition, as originally reported, gives a total exposure "
+         "measure of $10,573,209k and a ratio of 3.52% - rows 1-2 above; (b) the FY2022 Pillar 3 edition's own "
+         "T-4/prior-year (31-Dec-21) comparative column, KM1 rows 13-14, restates the same year EXCLUDING claims "
+         "on central banks at $5,268,295k and 7.06% - rows 3-4 above, sourced from the FOLLOWING year's edition "
+         "rather than the FY2021 edition itself. Neither is miscast: both tie internally against the same FY2021 "
+         "CET1 of $371,866k ($371,866k / $10,573,209k = 3.52%; $371,866k / $5,268,295k = 7.06%), and the "
+         "difference between the two exposure measures ($5,304,914k) is of the same order as FY2021 cash and cash "
+         "equivalents ($5,599,337k), consistent with central bank claims being the item removed. This is the "
+         "FY2022 edition presenting FY2021 on the new UK Leverage Framework basis for comparability with its own "
+         "current year, as its section 6.6 describes; it is a restatement of basis, not a correction of a figure, "
+         "so both are shown rather than one being chosen. Consequence for reading the trend: rows 1-2 are NOT a "
+         "like-for-like series across FY2020-FY2024 (FY2020/FY2021 include central bank claims, FY2022 onward "
+         "exclude them); for a like-for-like excluding-central-banks comparison use row 3-4's FY2021 against "
+         "FY2022-FY2024, and for a like-for-like including-central-banks comparison FY2023's 1.92% on row 5 is "
+         "the only later year for which the Bank publishes that basis.\n\n"
+         "FY2020 RESTATEMENT BETWEEN EDITIONS (found 2026-09-16 on recovery of the FY2021 edition; the same "
+         "two-bases pattern as FY2021, one year earlier; both figures kept, deliberately NOT reconciled). Rows 6-7 "
+         "above record it. (a) The FY2020 edition, as originally reported, gives a total exposure measure of "
+         "$8,524m and a ratio of 4.61% - rows 1-2 above - reconciled in its own section 7 table from Total Assets "
+         "of $10,463m less SFT credit risk mitigation of $1,928m plus derivative add-ons of $25m and other "
+         "adjustments of -$35m. (b) The FY2021 edition's own 2020 comparative column (printed p.6, key ratios) "
+         "gives $10,426,834k and 3.63% - rows 6-7 above. Neither is miscast: the FY2020 edition's 4.61% ties "
+         "against its own Tier 1 of $393m ($393m / $8,524m = 4.61%), and the FY2021 edition's 3.63% ties against "
+         "its own restated FY2020 CET1 of $378,549k ($378,549k / $10,426,834k = 3.63%). The difference between "
+         "the two exposure measures ($1,902,834k) is of the same order as the FY2020 edition's own SFT credit "
+         "risk mitigation adjustment of $1,928m, consistent with the CRR basis not applying that netting - but "
+         "that is an observation, not a reconciliation, and no figure here is derived from it. Consequence for "
+         "reading the trend: rows 1-2 mix three bases across FY2020-FY2024 (FY2020 Basel II-era, FY2021 CRR "
+         "including central bank claims, FY2022 onward CRR excluding them). Any leverage comparison should be "
+         "made from this sheet, choosing rows on a single basis, rather than from the Overview sheet's single "
+         "headline row.",
 )
 
 metric(
-    "LCR", "£'000 / % (conv. from USD)",
+    "LCR", "£m (conv. from USD) / %",
     [
         ("Total high-quality liquid assets (HQLA / average liquid assets buffer)", stock({
             "FY2024": 8650825, "FY2023": 15980246, "FY2022": 9198733, "FY2021": 6737809, "FY2020": 5860000,
         })),
         ("Total net cash outflows, adjusted value", stock({
-            "FY2024": 3021360, "FY2023": 5579776, "FY2022": 2597379, "FY2020": 2019000,
+            "FY2024": 3021360, "FY2023": 5579776, "FY2022": 2597379, "FY2021": 1403343, "FY2020": 2019000,
         })),
         ("Liquidity Coverage Ratio (%)", {"FY2024": "286.32%", "FY2023": "286.40%", "FY2022": "354.15%", "FY2021": "480.13%", "FY2020": "290%"}),
+        # FY2020 ON THE OTHER BASIS. Rows 1-3 carry FY2020 as the FY2020 edition
+        # reports it: a point-in-time LCR "as at 31 December 2020". The FY2021
+        # edition's quarterly table additionally gives FY2020 on the QUARTERLY-
+        # AVERAGE basis - which is the basis FY2021's own figures on rows 1-3
+        # use. Kept on separate rows: a point-in-time LCR and an average LCR are
+        # not the same measure and must never be merged.
+        ("Average liquid assets buffer, Q4 2020 (quarterly-average basis, FY2021 edition)", stock({
+            "FY2020": 6237113,
+        })),
+        ("Average net flows, Q4 2020 (quarterly-average basis, FY2021 edition)", stock({
+            "FY2020": 2141287,
+        })),
+        ("Average liquidity coverage ratio, Q4 2020 (%) (quarterly-average basis, FY2021 edition)", {"FY2020": "291.28%"}),
     ],
     p3_sources(),
     note="Methodology differs for FY2021: that year's Pillar 3 report discloses LCR as a quarterly (not annual) "
          "average - Q4 2021 is used here as the closest analogue to later years' 12-month-average KM1 figure. "
-         "FY2021's own 'Average net flows' figure is not directly comparable to later years' 'Total net cash "
-         "outflows (adjusted value)' definition, so that cell is left blank for FY2021 rather than approximated; "
-         "the ratio and HQLA-equivalent buffer are shown as reported. FY2020's document uses its own pre-KM1 "
+         "FY2021 NET CASH OUTFLOWS, RE-SOURCED 2026-09-16: this cell was previously blank because the FY2021 "
+         "edition's own 'Average net flows' caption is not the later KM1 'Total net cash outflows (adjusted "
+         "value)' definition and was not approximated. It is now filled with $1,403,343k taken from the FY2022 "
+         "Pillar 3 Disclosures' own T-4/prior-year (31-Dec-21) comparative column, KM1 row 16 - i.e. from the "
+         "FOLLOWING year's edition, not the FY2021 edition itself - where the Bank restates FY2021 onto the exact "
+         "KM1 definition used for FY2022 onward, making it directly comparable. Two cross-checks passed: (a) that "
+         "same column's HQLA ($6,737,809k) and LCR (480.13%) are identical to the figures already transcribed here "
+         "from the FY2021 edition, so the two documents are on the same basis rather than two different ones; and "
+         "(b) $6,737,809k / $1,403,343k = 480.13%, exactly reproducing the printed ratio. The FY2022 edition also "
+         "prints the gross components for FY2021 ($2,006,717k cash outflows and $603,374k cash inflows, total "
+         "weighted value, KM1 rows UK 16a/16b); these are not rows on this sheet for any other year and were not "
+         "added for FY2021 alone. THE HESITATION BEHIND THAT NOTE IS NOW RESOLVED (2026-09-16): when the FY2021 "
+         "edition was recovered and its own quarterly liquidity table read directly, its Q4 2021 'Average net "
+         "flows' turned out to be $1,403,343k - numerically IDENTICAL to the FY2022 edition's KM1 row 16 figure "
+         "above - and its Q4 2021 average outflows and inflows ($2,006,717k and $603,374k) are likewise identical "
+         "to that edition's KM1 rows UK 16a/16b. So the two differently-captioned figures are the same number "
+         "reported twice, and the FY2021 figure on this row is now corroborated by the FY2021 edition itself, not "
+         "only by the following year's. FY2020's document uses its own pre-KM1 "
          "terms 'Liquidity Buffer' (used here as the HQLA-equivalent figure) and 'Total Net cash outflows'; its "
          "own headline LCR of 290% is 'excluding PRA Scalar' (its own footnote), with a lower 153% figure "
          "disclosed as the alternative including a 5% PRA Scalar add-on - the as-reported headline (excl. PRA "
          "Scalar) figure is used here for consistency with how later years' single as-reported ratio is shown, "
-         "but the alternative basis is flagged since it is not a like-for-like methodology across all years.",
+         "but the alternative basis is flagged since it is not a like-for-like methodology across all years.\n\n"
+         "FY2020 IS ALSO CARRIED ON A SECOND, AVERAGING BASIS (rows 4-6 above, added 2026-09-16 on recovery of "
+         "the FY2021 edition). This matters because the two are NOT the same measure and must not be merged. The "
+         "FY2020 edition's own table (its section 5.3) is explicitly 'LCR as reported to the regulator AS AT 31 "
+         "December 2020' - a point-in-time ratio - and that is what rows 1-3 carry for FY2020. The FY2021 "
+         "edition's quarterly liquidity table (printed p.7) additionally reports FY2020 by quarter on an "
+         "AVERAGING basis, and its Q4 2020 column gives an average liquidity coverage ratio of 291.28% on an "
+         "average liquid assets buffer of $6,237,113k and average net flows of $2,141,287k. Two cross-checks "
+         "passed: $6,237,113k / $2,141,287k = 291.28%, exactly reproducing the printed ratio; and that column's "
+         "average net flows equal its own average outflows ($3,085,596k) less average inflows ($944,309k) "
+         "exactly. This averaging basis is the SAME basis as the FY2021 figures already on rows 1-3 (which are "
+         "that edition's Q4 2021 column), so rows 4-6 are what make FY2020 and FY2021 comparable to each other. "
+         "Rows 1-3's FY2020 column is not comparable with its own FY2021 column, and neither FY2020 basis is "
+         "identical to the 12-month-average KM1 figure used from FY2022 onward. Nothing was averaged, blended or "
+         "back-solved here - every figure is printed in one of the two documents.",
 )
 
 metric(
-    "NSFR", "£'000 / % (conv. from USD)",
+    "NSFR", "£m (conv. from USD) / %",
     [
+        # FY2020 FILLED 2026-09-16 (was blank). Source is NOT the FY2020 edition,
+        # which discloses no NSFR at all, but the FY2021 edition's quarterly
+        # liquidity table (printed p.7), whose 2020 block gives Q4 2020 directly.
+        # Same Q4 quarterly basis as the FY2021 figures alongside, so these go in
+        # the existing rows rather than on separate ones.
         ("Total available stable funding", stock({
-            "FY2024": 5139351, "FY2023": 4607371, "FY2022": 4297495, "FY2021": 10511066,
+            "FY2024": 5139351, "FY2023": 4607371, "FY2022": 4297495, "FY2021": 10511066, "FY2020": 10463760,
         })),
         ("Total required stable funding", stock({
-            "FY2024": 2225713, "FY2023": 1822687, "FY2022": 1031978, "FY2021": 9455958,
+            "FY2024": 2225713, "FY2023": 1822687, "FY2022": 1031978, "FY2021": 9455958, "FY2020": 10136594,
         })),
-        ("Net Stable Funding Ratio (%)", {"FY2024": "230.91%", "FY2023": "252.78%", "FY2022": "416.49%", "FY2021": "111.16%"}),
+        ("Net Stable Funding Ratio (%)", {"FY2024": "230.91%", "FY2023": "252.78%", "FY2022": "416.49%", "FY2021": "111.16%", "FY2020": "103.23%"}),
     ],
     p3_sources(),
     note="FY2021 is that year's Q4 (year-end) quarterly figure, as originally disclosed in quarterly form; "
-         "FY2022 onward is each year's single annual KM1 figure. FY2020 is genuinely blank: that year's Basel "
-         "II-era Pillar 3 document only mentions the upcoming regulatory 'binding NSFR measure of 100%' "
-         "requirement (not yet in force that year) in its CRD V/CRR II preview section - it discloses no NSFR "
-         "ratio, available stable funding, or required stable funding figure of its own anywhere in the document "
-         "- confirmed by reading the full document, not assumed from a missing keyword.",
+         "FY2022 onward is each year's single annual KM1 figure.\n\n"
+         "FY2020 FILLED 2026-09-16 - THIS SHEET'S FY2020 COLUMN WAS PREVIOUSLY BLANK AND THE REASON GIVEN FOR "
+         "THAT IS NOW SUPERSEDED. The old reason was correct as far as it went: the FY2020 Basel II-era Pillar 3 "
+         "document genuinely discloses no NSFR ratio and no available/required stable funding figure of its own "
+         "anywhere - its only mention of the concept is the upcoming regulatory 'binding NSFR measure of 100%' in "
+         "its CRD V/CRR II preview section, which is not GIB UK's own ratio (re-confirmed by full-text search of "
+         "the recovered document: 'NSFR' and 'stable funding' occur exactly once between them, in that preview). "
+         "But the FY2021 edition, recovered on this date, carries a quarterly liquidity table (printed p.7) that "
+         "reports BOTH 2021 and 2020 by quarter, and its Q4 2020 column states an NSFR of 103.23% on available "
+         "stable funding of $10,463,760k and required stable funding of $10,136,594k. Those are the figures now "
+         "in the FY2020 column. They are on the SAME Q4 quarterly basis as the FY2021 figures alongside them - "
+         "which is why they occupy the same rows rather than separate labelled ones - and they are directly "
+         "comparable with FY2021 but not strictly with the single annual KM1 figures from FY2022 onward. Cross-"
+         "check passed: $10,463,760k / $10,136,594k = 103.23%, exactly reproducing the printed ratio. Nothing was "
+         "derived: the ratio and both components are each printed in that table. FY2025 remains blank (no FY2025 "
+         "edition published).",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(),
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), source_height=409,
     per_note={"MREL Ratio": "No separate MREL ratio or instruments disclosed in any year, including FY2020 (its "
                              "Basel II-era Pillar 3 document has no MREL section or mention at all - a different, "
                              "and more basic, non-disclosure than later years' explained non-disclosure below). "
@@ -809,24 +1183,27 @@ equity_changes_totals_usd = {
 bw.add_overview_sheet(
     cash_flow_totals=[(label, flow(vals)) for label, vals in cf_totals_usd.items()]
                       + [("Cash and cash equivalents at end of year", stock(cf_close_usd))],
-    cash_flow_unit="£'000",
+    cash_flow_unit="£m (conv. from USD)",
     balance_sheet_totals=[(label, stock(vals)) for label, vals in balance_sheet_totals_usd.items()],
-    balance_sheet_unit="£'000",
+    balance_sheet_unit="£m (conv. from USD)",
     income_statement_totals=[(label, flow(vals)) for label, vals in income_statement_totals_usd.items()],
-    income_statement_unit="£'000",
+    income_statement_unit="£m (conv. from USD)",
     equity_changes_totals=[
         ("Opening equity", opening_cash(equity_changes_totals_usd["Opening equity"])),
         ("Total comprehensive income/(loss) for the year", flow(equity_changes_totals_usd["Total comprehensive income/(loss) for the year"])),
         ("Closing equity", stock(equity_changes_totals_usd["Closing equity"])),
     ],
-    equity_changes_unit="£'000",
+    equity_changes_unit="£m (conv. from USD)",
     ratios=[
         ("CET1 Ratio", CAPITAL_RATIO),
         ("Tier 1 Ratio", CAPITAL_RATIO),
         ("Total Capital Ratio", CAPITAL_RATIO),
         ("Leverage Ratio", {"FY2024": "5.02%", "FY2023": "5.28%", "FY2022": "7.17%", "FY2021": "3.52%", "FY2020": "4.61%"}),
         ("LCR", {"FY2024": "286.32%", "FY2023": "286.40%", "FY2022": "354.15%", "FY2021": "480.13%", "FY2020": "290%"}),
-        ("NSFR", {"FY2024": "230.91%", "FY2023": "252.78%", "FY2022": "416.49%", "FY2021": "111.16%"}),
+        # FY2020 added 2026-09-16 to match the NSFR detail sheet, which is no
+        # longer blank for that year. Overview is a COPY and does not inherit
+        # detail-sheet changes, so it has to be updated alongside.
+        ("NSFR", {"FY2024": "230.91%", "FY2023": "252.78%", "FY2022": "416.49%", "FY2021": "111.16%", "FY2020": "103.23%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation. All £ figures are converted from the Bank's native USD reporting (see Cash Flow Statement "
@@ -835,7 +1212,37 @@ bw.add_overview_sheet(
          "Pillar 3 Disclosure published yet). FY2020's equity roll-forward row alone does not sum to the cent "
          "(Opening $394,183k + Total comprehensive income/(loss) -$1,730k = $392,453k, $143k short of the actual "
          "$392,596k closing balance) because of a one-off $143k retained-earnings reclassification adjustment "
-         "disclosed that year (see the Statement of Changes in Equity sheet's own source note) - not an error.",
+         "disclosed that year (see the Statement of Changes in Equity sheet's own source note) - not an error.\n\n"
+         "LEVERAGE RATIO - READ WITH CARE: the single Leverage Ratio row above is each year's own as-reported "
+         "headline and is NOT a like-for-like series. FY2020 and FY2021 include claims on central banks in the "
+         "exposure measure; FY2022 onward exclude them, following the UK Leverage Framework change effective "
+         "1 January 2022. The FY2022 Pillar 3 edition's own prior-year comparative column additionally restates "
+         "FY2021 onto the excluding-central-banks basis at 7.06% (vs the 3.52% shown above), and the FY2023 "
+         "edition additionally publishes FY2023 on the including-central-banks basis at 1.92% (vs the 5.28% "
+         "shown above). Both alternative-basis figures are recorded in full on the Leverage Ratio detail sheet, "
+         "which is where any leverage comparison across years should be made from; they are omitted here only "
+         "because this sheet carries one row per metric. As of 2026-09-16 there is a THIRD basis in play: the "
+         "FY2021 Pillar 3 edition's own 2020 comparative column restates FY2020's leverage at 3.63% on an "
+         "exposure measure of $10,426,834k (vs the 4.61% and $8,524m shown above, which are the FY2020 edition's "
+         "own Basel II-era figures). So the single row above mixes three bases, not two. It is also recorded in "
+         "full on the Leverage Ratio detail sheet.\n\n"
+         "FY2020 CAPITAL AND CAPITAL RATIOS - READ WITH CARE (added 2026-09-16). The CET1/Tier 1/Total Capital "
+         "Ratio rows above show 26.48% for FY2020, which is the FY2020 Pillar 3 edition's own as-reported figure "
+         "on its Basel II-era basis, against a capital base of $393m and Total RWAs of $1,482m. The FY2021 "
+         "edition's own 2020 comparative column restates the same year onto the CRR/CRD V basis at 26.04%, on "
+         "CET1 of $378,549k (Total equity of $392,596k less the pension asset net of deferred tax, intangibles "
+         "and the prudent valuation adjustment) and RWEA of $1,482,468k. Both are recorded on separate labelled "
+         "rows on each capital and capital-ratio detail sheet; neither has been reconciled to the other or "
+         "allowed to overwrite the other, and only the as-reported one is shown here because this sheet carries "
+         "one row per metric. For a like-for-like trend across FY2020-FY2024, use the restated FY2020 row on the "
+         "detail sheets, since FY2021 onward is already on the CRR basis.\n\n"
+         "NSFR FY2020 (added 2026-09-16): this row was previously blank for FY2020 and is now 103.23%. The FY2020 "
+         "Pillar 3 edition discloses no NSFR at all; the figure comes from the FY2021 edition's quarterly "
+         "liquidity table, Q4 2020 column, which is the same quarterly basis as the FY2021 figure beside it. See "
+         "the NSFR detail sheet. The FY2020 LCR of 290% above remains the FY2020 edition's own point-in-time "
+         "ratio as at 31 December 2020; the LCR detail sheet additionally carries FY2020 on the quarterly-"
+         "averaging basis (291.28%), which is the basis the FY2021 figure above uses. A point-in-time LCR and an "
+         "average LCR are different measures and are deliberately not merged.",
 )
 
 # ---------------------------------------------------------------

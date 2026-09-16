@@ -67,10 +67,11 @@ BASEL2_NOTE = (
     + ", ".join(f"{y} {BASEL2_CREDIT_RISK_PILLAR1_REQUIREMENT[y]:.2f}" for y in
                 ("FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008"))
     + ". They are recorded here for traceability and are deliberately NOT converted to an RWA "
-    "figure: the FY2014-FY2020 'capital requirement / 8%' conversion used elsewhere in this "
-    "workbook starts from a printed TOTAL Pillar 1 requirement covering all three risk types, "
-    "which these documents do not provide, so the same conversion here would silently understate "
-    "RWA by the missing operational-risk and market-risk components. No key-metric cell is "
+    "figure. Two independent reasons: this workbook does not compute figures at all (as of "
+    "2026-09-16 the FY2014-FY2016 Total RWAs, which had been derived that way, were withdrawn - "
+    "see the Total RWAs sheet's note); and even if it did, these documents disclose no "
+    "operational-risk and no market-risk capital requirement, so a credit-risk-only conversion "
+    "would silently understate RWA by the two missing components. No key-metric cell is "
     "therefore filled for FY2008-FY2013, and none can be from Pillar 3. Documents (dated from "
     "each cover page, NOT from the filename - "
     "`basel2_disclosures_March31_11.pdf` is the year ended March 31, 2012, not 2011): "
@@ -306,6 +307,93 @@ STATEMENTS_SOURCES = (
 )
 
 
+# The Bank's Basel Disclosures index page, from which every Pillar 3 URL above is linked.
+P3_INDEX_URL = "https://www.icicibank.co.uk/personal/basel-disclosures"
+
+# SEPARATE, NON-PDF disclosures linked from the same index page: one HTML page per year titled
+# "Composition of Regulatory Capital as at March 31, YYYY", in USD'000. They are a genuinely
+# independent second source for the capital figures and were fetched and read on 2026-09-16.
+# They contain CAPITAL ONLY - no RWA, no risk-weighted exposure, no capital ratio - so they
+# cannot supply the FY2014-FY2016 total RWA. Recorded because the project's rule is that a URL
+# is never deleted and a checked source is never left unrecorded.
+CAPITAL_RESOURCES_URLS = {
+    "FY2019": "https://www.icicibank.co.uk/personal/basel-capital-resource-popup-march2019",
+    "FY2018": "https://www.icicibank.co.uk/personal/basel-capital-resource-popup-march2018",
+    "FY2017": "https://www.icicibank.co.uk/personal/basel-capital-resource-popup-march2017",
+    "FY2016": "https://www.icicibank.co.uk/personal/basel-capital-resource-popup-march2016",
+    "FY2015": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup_march2015",
+    "FY2014": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup_march2014",
+    "FY2013": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup_march2013",
+    "FY2012": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup_march2012",
+    "FY2011": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup_march2011",
+    "FY2010": "https://www.icicibank.co.uk/personal/basel_capital_resource_popup",
+}
+
+CAPITAL_RESOURCES_NOTE = (
+    "SECOND, NON-PDF SOURCE CHECKED (2026-09-16) - 'Composition of Regulatory Capital' web "
+    "disclosures. The same Basel Disclosures index also links ten HTML pages (not PDFs, so they "
+    "are easily missed when enumerating the index's PDF links), each titled 'Disclosure: "
+    "Composition of Regulatory Capital as at March 31, YYYY' and presented in USD'000. All ten "
+    "were fetched on 2026-09-16 (HTTP 200, text/html) and read. They corroborate this workbook's "
+    "capital figures from an independent source: FY2014 Total Tier one capital after deductions "
+    "495,095 + 89,759 + 50,000 - 11,061 = 623,794 (workbook 623.8) and Tier one plus tier two "
+    "after deductions 814,419 (workbook 814.4); FY2015 538,819 (538.8) and 707,047 (707.0); "
+    "FY2016 537,633 (537.6) and 684,316 (684.3). They contain NO risk-weighted assets, NO "
+    "risk-weighted exposure amount and NO capital ratio of any kind, so they do not and cannot "
+    "supply the FY2014-FY2016 total RWA. Note the difference in vintage terminology: these pages "
+    "use the pre-CRD IV 'Core Tier one / Upper tier two / Lower tier two' captions even for "
+    "FY2014-FY2016, whereas the corresponding Pillar 3 editions use CRD IV captions for the same "
+    "amounts; no figure has been mapped across that caption difference beyond the totals above, "
+    "which are identical either way. URLs: "
+    + "; ".join(f"{y} - {CAPITAL_RESOURCES_URLS[y]}" for y in
+                ("FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014",
+                 "FY2013", "FY2012", "FY2011", "FY2010"))
+    + "."
+)
+
+SERIES_VERIFICATION_NOTE = (
+    "FULL-SERIES VERIFICATION (2026-09-16). The Bank's Basel Disclosures index "
+    f"({P3_INDEX_URL}) was re-enumerated in full: it carries 27 PDF links, of which 19 are the "
+    "Pillar 3 editions cited above (the other 8 are four Remuneration Policy Disclosures, plus "
+    "REP020, a Climate Change statement, an Anti Money Laundering questionnaire and a LIBOR "
+    "transition FAQ - none of which contains a key metric). All 27 were re-fetched and returned "
+    "HTTP 200 with Content-Type application/pdf, %PDF magic bytes and a real pdfinfo page count "
+    "- no 401/403/429/503 and no soft-404 - and the 19 Pillar 3 editions matched their "
+    "previously-held copies byte-for-byte on size. Page counts, oldest to newest: 10, 10, 10, "
+    "10, 10, 10, 21, 22, 26, 44, 43, 46, 57, 59, 65, 69, 63, 64, 64. Every URL cited above is "
+    "therefore a LIVE, verified link; no archive or fallback URL is needed for any of them, and "
+    "none has been removed.\n"
+    "EVERY EDITION IS DATED FROM ITS OWN COVER PAGE, NOT FROM ITS FILENAME AND NOT FROM THE "
+    "INDEX LABEL, because for this Bank the three disagree. Two confirmed disagreements: "
+    "(1) `basel2_disclosures_March31_11.pdf` - the FILENAME IS WRONG. Its cover reads 'Basel II "
+    "- Pillar 3 disclosures for the year ended March 31, 2012', and the index label agrees "
+    "('for 2011- 2012'); only the filename says 2011. The genuine FY2011 edition is the "
+    "separate file `basel2_disclosures_FY10_11.pdf`, whose cover reads 'year ended 31 March "
+    "2011'. This workbook maps them accordingly. "
+    "(2) `disclosures2013-14.pdf` - the INDEX LABEL IS WRONG ON REGIME. The index calls it "
+    "'Basel II Pillar 3 Disclosures for 2013-2014', but the document's own cover and every "
+    "page's running head read 'Basel III - Pillar 3 Disclosures / 31 March 2014', and its "
+    "section 2 describes implementing CRD IV from January 1, 2014. The period (year ended 31 "
+    "March 2014) is right; the regime label is not. FY2014 is this Bank's FIRST CRD IV year and "
+    "is treated as such throughout this workbook - it is NOT grouped with the Basel II years. "
+    "Every other edition's filename, index label and cover agree with one another.\n"
+    "ENTITY RE-CONFIRMED ON ALL 19: each opens \"ICICI Bank UK PLC ('the Bank') ... a wholly "
+    "owned subsidiary of ICICI Bank Limited\" and states the disclosures are prepared for ICICI "
+    "Bank UK PLC, expressly distinguishing itself from the parent's own consolidated "
+    "disclosures. No ICICI Bank Limited (parent) figure enters any sheet. One hosting-path "
+    "artefact worth recording so it is not mistaken for a parent-entity document: the FY2024 "
+    "edition is served from an `/content/dam/icicibank/india/managed-assets/...` path, but the "
+    "document itself is the UK entity's, verified on its own cover and Overview section.\n"
+    "PRINTED-TOTAL SANITY CHECK ON EVERY DISCLOSED RWA. For each of FY2017-FY2026, that year's "
+    "own CET1 and total capital divided by that year's own printed total RWA reproduce that "
+    "year's own printed CET1 and total capital ratios, confirming the printed total is a genuine "
+    "total and not a credit-risk subtotal mislabelled as one. The single departure is FY2024 "
+    "(311.3 / 1,546.2 = 20.13% against a printed 20.14%), which is rounding in the "
+    "one-decimal-place capital figure, not a basis difference. For FY2021-FY2026 the printed "
+    "total additionally equals the exact sum of its own printed UK OV1 components."
+)
+
+
 def p3_sources():
     lines = [
         "Sources - ICICI Bank UK Plc's own Basel Pillar 3 disclosures (standalone Bank basis, USD "
@@ -344,6 +432,8 @@ def p3_sources():
         "restatement in either direction. The upgrade additionally supplies FY2021's leverage "
         "and LCR figures, which the FY2022 KM1 had left blank - see those sheets' own basis notes."
     )
+    lines.append(SERIES_VERIFICATION_NOTE)
+    lines.append(CAPITAL_RESOURCES_NOTE)
     lines.append(BASEL2_NOTE)
     lines.append(ENTITY_NOTE)
     return "\n".join(lines)
@@ -648,25 +738,62 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2026": "1
 metric(
     "Total RWAs",
     "USD million",
-    [("Total risk-weighted exposure amount (FY2014-FY2016 are derived, not printed - see note)", {"FY2026": 1923.3, "FY2025": 1649.7, "FY2024": 1546.2, "FY2023": 1371.5, "FY2022": 1646.7, "FY2021": 2075.1, "FY2020": 2941.4, "FY2019": 3424.3, "FY2018": 3498.9, "FY2017": 3356.0, "FY2016": 4093.8, "FY2015": 3685.0, "FY2014": 3737.5})],
+    [("Total risk-weighted exposure amount (FY2014-FY2016 blank - not disclosed in any edition, see note)", {"FY2026": 1923.3, "FY2025": 1649.7, "FY2024": 1546.2, "FY2023": 1371.5, "FY2022": 1646.7, "FY2021": 2075.1, "FY2020": 2941.4, "FY2019": 3424.3, "FY2018": 3498.9, "FY2017": 3356.0})],
     note=(
         "FY2017-FY2026 are each year's own directly-printed total: UK KM1 row 4 'Total "
         "risk-weighted exposure amount' from FY2022 onward, and the transitional own funds "
         "template's row 60 'Total risk-weighted assets' for FY2017-FY2021. FY2021's figure was "
         "re-sourced on 2026-09-15 from the FY2021 edition's own row 60 and reproduces the value "
-        "previously carried from the FY2022 comparative exactly.\n"
-        "FY2014-FY2016 ARE DERIVED, NOT DISCLOSED. Those three editions print no total RWA "
-        "figure anywhere. The values shown are that year's own printed 'Total Capital Resource "
-        "requirement under Pillar 1' (FY2014 299.0, FY2015 294.8, FY2016 327.5 USD million) "
-        "divided by the CRR Article 92 fixed 8% Pillar 1 minimum - the same mechanical unit "
-        "conversion documented on the RWA Breakdown sheet, applied to a printed TOTAL covering "
-        "credit, market and operational risk. CORRECTION 2026-09-15: this row previously "
-        "described the method as 'implied from Total capital / Total capital ratio'. That "
-        "description was wrong - the figures do not reproduce that way (814.4 / 21.8% = 3,735.8, "
-        "not 3,737.5) and this workbook does not back-solve RWA from a capital ratio. The "
-        "description has been corrected to the method actually used. The values themselves are "
-        "unchanged and remain derived rather than transcribed; they are flagged as such here "
-        "rather than silently presented as disclosed figures."
+        "previously carried from the FY2022 comparative exactly. Each of those ten printed "
+        "totals was cross-checked on 2026-09-16 and is a genuine TOTAL, not a credit-risk "
+        "subtotal mislabelled as one: that year's own CET1 and total capital divided by it "
+        "reproduce that year's own printed CET1 and total capital ratios in every case (the only "
+        "departure anywhere is FY2024, 311.3 / 1,546.2 = 20.13% against a printed 20.14%, i.e. "
+        "rounding in the one-decimal capital figure), and for FY2021-FY2026, where the UK OV1 "
+        "template is used, the printed total equals the sum of its own printed credit / "
+        "counterparty-credit / securitisation / market / operational risk components exactly.\n"
+        "FY2014-FY2016 ARE BLANK BECAUSE NO TOTAL RWA IS DISCLOSED - not because none was "
+        "looked for. WITHDRAWN 2026-09-16: these three cells previously carried 3,737.5 / "
+        "3,685.0 / 4,093.8, which were DERIVED as that year's own printed 'Total Capital "
+        "Resource requirement under Pillar 1' divided by the CRR Article 92 fixed 8% Pillar 1 "
+        "minimum. This project transcribes figures from documents and does not compute them, so "
+        "the derived values have been withdrawn rather than left standing. The FY2014, FY2015 "
+        "and FY2016 editions (each cover-dated and read in full on 2026-09-16 - see "
+        "research/RESUME_icici_p3_series.md) contain exactly four capital tables - section 3.1 "
+        "'Capital ratios', 3.2 'Available capital', 3.3 'Composition of Tier 1 capital', 3.4 "
+        "'Composition of Tier 2 capital' - plus section 4's 'Pillar 1 capital requirement for "
+        "various risk types'. None of them is an RWA table, and a full-text search of all three "
+        "for 'risk-weighted' / 'RWA' / 'risk weighted' / 'exposure amount' returns only narrative "
+        "prose and the per-credit-quality-step 'Risk weight' columns of the credit-risk exposure "
+        "tables. No total. The phrase 'Total risk exposure amount (RWAs)' first appears in this "
+        "Bank's FY2017 edition (Annexure III countercyclical-buffer Table 2) and row 60 'Total "
+        "risk-weighted assets' likewise first appears in FY2017; the FY2017 edition is "
+        "single-column and carries no prior-year comparative, so no later edition supplies "
+        "FY2014-FY2016 either. The Bank's separately-published 'Composition of Regulatory "
+        "Capital as at March 31, 2014/2015/2016' web disclosures (linked from the same Basel "
+        "Disclosures index, fetched and read 2026-09-16 - see the source note) were also checked "
+        "and contain capital only, no RWA and no ratio.\n"
+        "WHAT THOSE EDITIONS DO PRINT, recorded here for traceability and deliberately NOT "
+        "converted into an RWA figure on any sheet - section 4, 'The following table summarises "
+        "the Bank's Pillar 1 capital requirement for various risk types', USD million: "
+        + "; ".join(
+            f"{y} - Credit Risk {c}, Market Risk {m}, Operational Risk {o}, "
+            f"Total Capital Resource requirement under Pillar 1 {t}"
+            for y, (c, m, o, t) in (
+                ("FY2014", (282.3, 2.9, 13.8, 299.0)),
+                ("FY2015", (281.8, 0.0, 13.0, 294.8)),
+                ("FY2016", (313.5, 0.0, 14.0, 327.5)),
+            )
+        )
+        + ". For completeness: the withdrawn values were arithmetically correct for what they "
+        "were - 299.0 / 8% = 3,737.5, 294.8 / 8% = 3,685.0, 327.5 / 8% = 4,093.75 - and they "
+        "reproduce those years' own printed capital ratios to the rounding (FY2014 814.4 / "
+        "3,737.5 = 21.79% against a printed 21.8%; FY2015 707.0 / 3,685.0 = 19.19% against 19.2%; "
+        "FY2016 684.3 / 4,093.8 = 16.72% against 16.7%). They are withdrawn because they were "
+        "computed, not because they were wrong. An earlier note (corrected 2026-09-15) had "
+        "additionally misdescribed the method as 'implied from Total capital / Total capital "
+        "ratio' - a back-solve this workbook never performed; that description is gone along with "
+        "the values."
     ),
 )
 
@@ -678,7 +805,7 @@ RWA_ROWS = [
     ("DATA", "Position, foreign exchange and commodities risk (Market risk)", {"FY2026": 0, "FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0, "FY2019": 0, "FY2018": 0, "FY2017": 0, "FY2016": 0, "FY2015": 0, "FY2014": 36.3}),
     ("DATA", "Operational risk", {"FY2026": 160.0, "FY2025": 146.4, "FY2024": 127.5, "FY2023": 115.9, "FY2022": 123.5, "FY2021": 142.4, "FY2020": 152.5, "FY2019": 152.5, "FY2018": 153.8, "FY2017": 170.0, "FY2016": 175.0, "FY2015": 162.5, "FY2014": 172.5}),
     ("DATA", "Amounts below thresholds for deduction (subject to 250% risk weight)", {"FY2026": 5.7, "FY2025": 4.6, "FY2024": 15.0, "FY2023": 17.6, "FY2022": 22.0, "FY2021": 21.8}),
-    ("TOTAL", "Total RWA", {"FY2026": 1923.3, "FY2025": 1649.7, "FY2024": 1546.2, "FY2023": 1371.5, "FY2022": 1646.7, "FY2021": 2075.1, "FY2020": 2941.4, "FY2019": 3424.3, "FY2018": 3498.9, "FY2017": 3356.0, "FY2016": 4093.8, "FY2015": 3685.0, "FY2014": 3737.5}),
+    ("TOTAL", "Total RWA (FY2014-FY2016 blank - no total RWA is disclosed in those editions, see subtitle)", {"FY2026": 1923.3, "FY2025": 1649.7, "FY2024": 1546.2, "FY2023": 1371.5, "FY2022": 1646.7, "FY2021": 2075.1, "FY2020": 2941.4, "FY2019": 3424.3, "FY2018": 3498.9, "FY2017": 3356.0}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -696,8 +823,24 @@ bw.add_rwa_breakdown_sheet(
         "that year's own directly-disclosed 'Total risk-weighted assets' COREP figure, which does not "
         "sum exactly to the derived Credit/Market/Operational rows above it (gaps of under 0.6 USD "
         "million, i.e. rounding in the underlying capital-requirement figures) - shown explicitly rather "
-        "than force-reconciled. For FY2014-FY2016, where no COREP total is disclosed at all, the Total "
-        "RWA row is the same capital-requirement-derived total as used on the Total RWAs metric sheet. "
+        "than force-reconciled. "
+        "FY2014-FY2016 HAVE NO TOTAL RWA ROW AT ALL (blank), CHANGED 2026-09-16. Those three cells "
+        "previously carried 3,737.5 / 3,685.0 / 4,093.8, derived as that year's own printed 'Total "
+        "Capital Resource requirement under Pillar 1' (FY2014 299.0, FY2015 294.8, FY2016 327.5 USD "
+        "million) divided by 8%. All three editions were re-read in full on 2026-09-16 and disclose no "
+        "total RWA anywhere, and no later edition carries a FY2014-FY2016 comparative, so the derived "
+        "values have been withdrawn rather than left standing - this project transcribes figures, it "
+        "does not compute them. See the Total RWAs sheet's own note for the full evidence and for the "
+        "printed capital-requirement figures those editions DO give, which are preserved there. "
+        "Note that the FY2014-FY2016 Credit/Market/Operational rows above are retained: they are the "
+        "same documented mechanical (capital requirement / 8%) unit conversion applied uniformly across "
+        "FY2014-FY2020 on this sheet, each anchored to a specific printed per-risk-type figure, and are "
+        "captioned as such - unlike the Total row, they are not presented as a headline disclosed metric "
+        "anywhere else in the workbook. For FY2021-FY2026, where this Bank uses the UK OV1 template "
+        "directly, the printed Total RWA was verified on 2026-09-16 to equal the sum of its own printed "
+        "credit / counterparty-credit / securitisation / market / operational risk components exactly; "
+        "the 'Amounts below thresholds for deduction' row is a memo line already included within Credit "
+        "risk and is not added again. "
         "See source note at bottom."
     ),
     rows=RWA_ROWS,
@@ -749,7 +892,14 @@ metric(
         "left blank rather than estimated; FY2008-FY2013's Basel II disclosures predate the "
         "leverage ratio concept entirely. Note also that the Bank states it is not itself in "
         "scope of the PRA's 3.25% minimum UK leverage requirement (that applies to LREQ firms "
-        "with retail deposits of GBP 50bn or more) but manages to that level as a PRA expectation."
+        "with retail deposits of GBP 50bn or more) but manages to that level as a PRA expectation.\n"
+        "FY2014-FY2016 RE-VERIFIED AS AN ENUMERATED ABSENCE (2026-09-16): the FY2014, FY2015 and "
+        "FY2016 editions were re-read in full and full-text searched for 'leverage'. The word "
+        "does not appear at all in the FY2014, FY2015 or FY2016 edition - there is no leverage "
+        "section, no LRSum/LRCom table and no ratio. This Bank's first leverage disclosure is "
+        "the FY2017 edition's section 10, which opens 'At March 31, 2017, the Bank's leverage "
+        "ratio was 13.97%'. The three blanks are therefore a confirmed absence, not an "
+        "unsearched gap, and should not be re-chased."
     ),
 )
 
@@ -791,7 +941,16 @@ metric(
         "edition is used, per this workbook's standing convention. The Bank has maintained an LCR "
         "since October 1, 2015 per its own disclosures, but published no numeric LCR before "
         "FY2018, so FY2014-FY2017 are blank rather than estimated; FY2008-FY2013's Basel II "
-        "disclosures predate the LCR entirely."
+        "disclosures predate the LCR entirely.\n"
+        "FY2014-FY2017 RE-VERIFIED AS AN ENUMERATED ABSENCE (2026-09-16): all four editions were "
+        "re-read in full and full-text searched for 'LCR' and 'liquidity coverage'. FY2014 and "
+        "FY2015 contain neither term at all. FY2016 and FY2017 each contain exactly one mention, "
+        "in identical prose in their liquidity-risk sections - 'Additionally, from October 1, "
+        "2015 the Bank maintains Liquidity Coverage Ratio (LCR) as stipulated by the PRA' - with "
+        "NO number attached, in the narrative or anywhere else in either document. So the "
+        "requirement demonstrably applied to this Bank from October 2015 while the ratio itself "
+        "went unpublished until FY2018; the blanks are a confirmed absence of a figure, not an "
+        "absence of the requirement, and not an unsearched gap."
     ),
 )
 
@@ -844,7 +1003,7 @@ metric(
         "The point-in-time row was added 2026-09-15."
     ),
 )
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": "No MREL ratio appears in the official ICICI Bank UK Basel disclosures reviewed for FY2014–FY2026; no figure has been inferred."})
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": "No MREL ratio appears in the official ICICI Bank UK Basel disclosures; no figure has been inferred. ENUMERATED ABSENCE, NOT AN UNSEARCHED GAP (2026-09-16): all 19 Pillar 3 editions the Bank has ever published - FY2008 through FY2026, every one of them downloaded and full-text searched - were searched for 'MREL', 'minimum requirement for own funds and eligible liabilities' and 'loss-absorbing capacity'. There is exactly one hit across the entire 19-document series, and it is not an MREL disclosure: the FY2017 edition's leverage-risk narrative uses the phrase 'loss absorbing capacity in times of a stress' in describing why leverage risk is managed. No MREL requirement, ratio, or eligible-liabilities figure is disclosed in any year. This is consistent with the Bank's size and resolution strategy - the Bank states it is not in scope of the PRA's LREQ leverage regime either - but the point here is only that the documents contain no figure to transcribe."})
 
 bw.add_overview_sheet(
     cash_flow_totals=[],

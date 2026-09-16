@@ -674,9 +674,10 @@ LIQ_PAGE = {"FY2025": "48", "FY2024": "49-50", "FY2023": "45-46", "FY2022": "45-
 # Report, the same pages as the capital table; FY2018-FY2020 in an earlier "Capital"/liquidity summary chart page.
 
 
-def metric(name, unit, rows_data, page, note=None):
+def metric(name, unit, rows_data, page, note=None, first_col_width=44, source_height=140):
     bw.add_metric_sheet(name, f"Consolidated Group basis, {unit}" if unit else "Consolidated Group basis",
-                         rows_data, p3_sources(page), note=note, first_col_width=44, source_height=140)
+                         rows_data, p3_sources(page), note=note, first_col_width=first_col_width,
+                         source_height=source_height)
 
 
 metric(
@@ -782,11 +783,41 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
-        ("Total leverage ratio exposures", {"FY2025": 19437, "FY2024": 17664, "FY2023": 16678, "FY2022": 16948, "FY2021": 22879, "FY2020": 26708, "FY2019": 27317, "FY2018": 27377, "FY2017": 27260, "FY2016": 26985, "FY2015": 29915, "FY2014": 34417}),
-        ("Leverage ratio (fully loaded)", {"FY2025": "9.0%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "9.1%", "FY2021": "7.2%", "FY2020": "6.3%", "FY2019": "6.8%", "FY2018": "6.7%", "FY2017": "6.6%", "FY2016": "6.9%", "FY2015": "6.4%", "FY2014": "3.6%"}),
+        ("Total leverage ratio exposures - FY2022-onward basis, net of central bank balances (see note)",
+         {"FY2025": 19437, "FY2024": 17664, "FY2023": 16678, "FY2022": 16948}),
+        ("Leverage ratio (fully loaded) - FY2022-onward basis, net of central bank balances (see note)",
+         {"FY2025": "9.0%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "9.1%"}),
+        ("Total leverage ratio exposures - pre-2022 basis, total balance sheet assets plus off-balance-sheet "
+         "exposures, central bank balances included (FY2014-FY2021, as originally reported)",
+         {"FY2021": 22879, "FY2020": 26708, "FY2019": 27317, "FY2018": 27377, "FY2017": 27260, "FY2016": 26985, "FY2015": 29915, "FY2014": 34417}),
+        ("Leverage ratio (fully loaded) - pre-2022 basis, central bank balances included (FY2014-FY2021, "
+         "as originally reported)",
+         {"FY2021": "7.2%", "FY2020": "6.3%", "FY2019": "6.8%", "FY2018": "6.7%", "FY2017": "6.6%", "FY2016": "6.9%", "FY2015": "6.4%", "FY2014": "3.6%"}),
     ],
     CAP_PAGE,
-    note="FY2014's leverage exposure figure is calculated (Tier 1 capital / leverage ratio) rather than directly "
+    first_col_width=86,
+    source_height=330,
+    note="THE FY2021 AND FY2022 ROWS ARE NOT A LIKE-FOR-LIKE SERIES. The 7.2% -> 9.1% step across that boundary is "
+         "mostly a change of denominator, not a change in the Group, and it happens while Tier 1 capital was "
+         "FALLING (£1,647m fully loaded at 31 Dec 2021 to £1,544m at 31 Dec 2022). EVIDENCE, all from the Group's "
+         "own Annual Reports: the exposure measure fell 26% (22,879 -> 16,948) while total assets fell only 17% "
+         "(22,705 -> 18,871). Comparing the two directly - FY2021 exposure EXCEEDS total assets by £174m, which is "
+         "what the Group's own stated definition requires ('tier 1 capital divided by total balance sheet assets "
+         "and off balance sheet exposures', a definition printed unchanged in the FY2021, FY2022 and FY2023 "
+         "reports); but FY2022 exposure is £1,923m BELOW total assets and FY2023 exposure is £2,154m below, which "
+         "that definition cannot produce, since off-balance-sheet exposures cannot be negative. Subtracting the "
+         "Group's own 'Cash and balance with central banks' line instead reconciles both years to within the same "
+         "small positive adjustment seen in FY2021: FY2022 18,871 - 2,239 = 16,632 vs 16,948 reported (+316); "
+         "FY2023 18,832 - 2,213 = 16,619 vs 16,678 reported (+59). The UK Leverage Ratio Framework excluded "
+         "claims on central banks from the total exposure measure with effect from 1 January 2022, which fits the "
+         "timing exactly. CAVEAT, stated because it matters: the Group does NOT say any of this. Its reports "
+         "repeat the same unchanged definition and give no basis-change narrative, no exposure-measure "
+         "reconciliation table and no 'including claims on central banks' variant, and it has published no "
+         "standalone Pillar 3 document since FY2020. So the BREAK is demonstrated from the Group's own figures, "
+         "while the central-bank exclusion is the strongly-indicated but not Group-stated cause. Nothing is "
+         "restated or back-solved here: every figure is as each year's own report printed it, and no "
+         "excluding-basis figure exists for FY2021 or earlier because the Group never published one. "
+         "FY2014's leverage exposure figure is calculated (Tier 1 capital / leverage ratio) rather than directly "
          "sourced - that year's own Annual Report discloses the fully-loaded leverage ratio (3.6%) and Tier 1 "
          "capital (£1,239m) but not a leverage-exposure reconciliation table (first introduced in the FY2015 "
          "report); all other years' exposure figures are directly disclosed.",
@@ -860,7 +891,7 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "19.6%", "FY2024": "19.9%", "FY2023": "17.8%", "FY2022": "18.2%", "FY2021": "17.2%", "FY2020": "12.9%", "FY2019": "14.2%", "FY2018": "14.5%", "FY2017": "14.7%", "FY2016": "15.5%", "FY2015": "16.3%", "FY2014": "12.7%"}),
         ("Tier 1 Ratio", {"FY2025": "21.4%", "FY2024": "21.9%", "FY2023": "19.7%", "FY2022": "20.1%", "FY2021": "19.0%", "FY2020": "15.7%", "FY2019": "16.9%", "FY2018": "17.5%", "FY2017": "17.7%", "FY2016": "18.4%", "FY2015": "19.3%", "FY2014": "12.7%"}),
         ("Total Capital Ratio", {"FY2025": "23.7%", "FY2024": "24.3%", "FY2023": "22.1%", "FY2022": "22.5%", "FY2021": "21.2%", "FY2020": "18.3%", "FY2019": "19.5%", "FY2018": "20.2%", "FY2017": "20.5%", "FY2016": "21.8%", "FY2015": "22.7%", "FY2014": "22.5%"}),
-        ("Leverage Ratio", {"FY2025": "9.0%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "9.1%", "FY2021": "7.2%", "FY2020": "6.3%", "FY2019": "6.8%", "FY2018": "6.7%", "FY2017": "6.6%", "FY2016": "6.9%", "FY2015": "6.4%", "FY2014": "3.6%"}),
+        ("Leverage Ratio (BASIS BREAK at FY2021/FY2022 - see note; not a like-for-like series)", {"FY2025": "9.0%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "9.1%", "FY2021": "7.2%", "FY2020": "6.3%", "FY2019": "6.8%", "FY2018": "6.7%", "FY2017": "6.6%", "FY2016": "6.9%", "FY2015": "6.4%", "FY2014": "3.6%"}),
         ("LCR", {"FY2025": "161%", "FY2024": "154%", "FY2023": "168%", "FY2022": "178%", "FY2021": "268%", "FY2020": "142%", "FY2019": "147%", "FY2018": "158%", "FY2017": "127%", "FY2016": "115%", "FY2015": "194%"}),
         ("NSFR", {"FY2025": "135%", "FY2024": "130%", "FY2023": "135%", "FY2022": "135%", "FY2021": "139%", "FY2020": "133%", "FY2019": "133%", "FY2018": "134%", "FY2017": "130%", "FY2016": "130%", "FY2015": "145%"}),
     ],
@@ -868,7 +899,17 @@ bw.add_overview_sheet(
          "citation for the underlying document/page. Tier 1 Ratio and part of the Total Capital Ratio series are "
          "calculated (capital / RWA), not directly quoted - see the Ratio Basis Note on the Cash Flow Statement "
          "sheet. No standalone Pillar 3 document has been published for this entity since FY2020; all figures here "
-         "come from the Annual Report's Risk Management Report instead.",
+         "come from the Annual Report's Risk Management Report instead.\n\n"
+         "LEVERAGE RATIO - DO NOT READ THE FY2021 -> FY2022 STEP (7.2% -> 9.1%) AS A REAL IMPROVEMENT. This sheet "
+         "is a copy and its chart would otherwise draw a false trend. The leverage exposure measure fell 26% while "
+         "total assets fell 17%, and from FY2022 the reported exposure measure is BELOW total balance sheet assets "
+         "(£16,948m vs £18,871m in FY2022; £16,678m vs £18,832m in FY2023), which the Group's own unchanged stated "
+         "definition - tier 1 capital over total balance sheet assets and off balance sheet exposures - cannot "
+         "produce. Subtracting the Group's own central bank balances reconciles both years. The UK Leverage Ratio "
+         "Framework excluded claims on central banks from the exposure measure from 1 January 2022. Tier 1 capital "
+         "FELL over the same step (£1,647m to £1,544m fully loaded). The Group does not state the basis change, so "
+         "the break is proven from its own figures while the cause is strongly indicated rather than confirmed - "
+         "see the Leverage Ratio sheet, which splits the two bases onto separate rows.",
 )
 
 # ---------------------------------------------------------------

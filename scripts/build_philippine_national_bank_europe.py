@@ -15,12 +15,28 @@ P3_2024_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/
 # pnb-website S3 bucket). Only three historical snapshots survived: FY2017, FY2019, and a FY2023
 # snapshot captured under the live/current filename in Aug 2024 (before it was overwritten by the
 # FY2024 document at the same URL).
-P3_2017_URL = ("https://web.archive.org/web/20240712011133/"
-               "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2017.pdf")
-P3_2019_URL = ("https://web.archive.org/web/20200922133733/"
-               "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2019.pdf")
-P3_2023_URL = ("https://web.archive.org/web/20240807151122/"
-               "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures.pdf")
+# Snapshots upgraded 2026-09-16 from the bare .../web/<timestamp>/ viewer form to the "id_" form
+# (.../web/<timestamp>id_/<original>), which is a contract to return the original archived bytes
+# rather than the Wayback viewer page. Each was re-fetched and verified on 2026-09-16: begins
+# "%PDF", page count as stated, and the cover names the entity and the reporting year.
+ORIG_P3_2017_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2017.pdf"
+ORIG_P3_2019_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2019.pdf"
+ORIG_P3_2023_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures.pdf"
+# Verified 2026-09-16: 766,945 bytes, 13pp, cover "Philippine National Bank (Europe) Plc / Pillar 3
+# Disclosures / 31 December 2017" (issued April 2018).
+P3_2017_URL = "https://web.archive.org/web/20240712011133id_/" + ORIG_P3_2017_URL
+# Verified 2026-09-16: 454,728 bytes, 13pp, cover "... / 31 December 2019" (issued May 2020).
+# Timestamp changed from 20200922133733 to 20240711230833. This is SAFE, not a change of edition:
+# the Wayback CDX index gives both captures the identical content digest
+# VKQ52WNFALNSEOZOMIKKAWQ44KFF5FV5, i.e. they are byte-identical copies of the same document.
+P3_2019_URL = "https://web.archive.org/web/20240711230833id_/" + ORIG_P3_2019_URL
+# Verified 2026-09-16: 441,290 bytes, 12pp, cover "... / 31 December 2023" (issued April 2024).
+# NOTE this snapshot's underlying filename is UNDATED (Pillar3_Disclosures.pdf) and that same URL
+# was later overwritten with the FY2024 document, so the capture timestamp is load-bearing and the
+# confirmed year is recorded here explicitly.
+P3_2023_URL = "https://web.archive.org/web/20240807151122id_/" + ORIG_P3_2023_URL
+# FY2016 and FY2015: BLOCKED with NO fallback - see BLOCKED_HOST_NOTE. These remain the live
+# publisher URLs because no archived copy exists to offer instead.
 P3_2016_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2016.pdf"
 P3_2015_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2015.pdf"
 # FY2021/FY2020 recovered 2026-09-15: live on the pnb-website S3 bucket at the same predictable
@@ -29,6 +45,35 @@ P3_2015_URL = "https://www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclos
 # years that ARE present - so a 403 there is not evidence of absence.
 P3_2021_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures_for_2021.pdf"
 P3_2020_URL = "https://pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/Pillar3_Disclosures_for_2020.pdf"
+
+BLOCKED_HOST_NOTE = (
+    "BLOCKED SOURCE HOST - NOT DEAD LINKS (recorded 2026-09-16). The www.pnb.com.ph host refuses this "
+    "project's automated fetcher: re-tested 2026-09-16, its Pillar 3 paths return HTTP 403 with a short "
+    "(~463 byte) text/html body. A 403 is explicitly an UNKNOWN state, NOT evidence that a document has "
+    "been withdrawn - it records only that the host declined to serve US, and the file may still be "
+    "retrievable by a human browser or from another network. This distinction has already caused one "
+    "documented error in this workbook (see the note above: the long-standing 'genuinely unobtainable' "
+    "claim for FY2020/FY2021 rested on 403s from this same host, and both documents turned out to be "
+    "live on the S3 bucket all along). Accordingly no 403 is recorded here as an absence.\n"
+    "WHERE A LABELLED FALLBACK EXISTS: FY2017 and FY2019 are cited above via Wayback Machine snapshots in "
+    "the 'id_' form (https://web.archive.org/web/<timestamp>id_/<original URL>), which returns the original "
+    "archived bytes rather than the Wayback viewer page. Both were fetched and verified 2026-09-16: FY2017 "
+    "766,945 bytes / 13pp, FY2019 454,728 bytes / 13pp, each beginning '%PDF' and each cover reading "
+    "'Philippine National Bank (Europe) Plc / Pillar 3 Disclosures' with its stated year. The FY2019 "
+    "snapshot timestamp was moved from 20200922133733 to 20240711230833; the CDX index gives both captures "
+    "the identical content digest VKQ52WNFALNSEOZOMIKKAWQ44KFF5FV5, so they are byte-identical and this is "
+    "not a change of edition.\n"
+    "WHERE NO FALLBACK EXISTS - AN UNRESOLVED STATE, EXPLICITLY NOT A NEGATIVE. Three documents are blocked "
+    "by the 403 AND have no archived copy to offer instead: the FY2016 disclosure "
+    "(" + P3_2016_URL + "), the FY2015 disclosure (" + P3_2015_URL + "), and the FY2025 disclosure on the "
+    "newer asset-library path (" + P3_2025_URL + "). A Wayback CDX query was run against each of those three "
+    "exact URLs on 2026-09-16 and each returned successfully with an EMPTY result set, so the absence of an "
+    "ARCHIVE is enumerated rather than assumed. But that says nothing about whether the DOCUMENT exists: the "
+    "live host still refuses us, so its contents remain unknown. These three are therefore recorded as "
+    "BLOCKED WITH NO FALLBACK - an open, unresolved state to be retried from a different network or by a "
+    "human browser - and must NOT be read as a finding that the disclosures were never published or do not "
+    "exist. No figure was changed."
+)
 
 CH_PROFILE_URL = "https://find-and-update.company-information.service.gov.uk/company/02939223"
 CH_ACCOUNTS_URL = CH_PROFILE_URL + "/filing-history?category=accounts"
@@ -151,7 +196,7 @@ P3_SOURCES = (
     "sourced above still exists, its 31 December 2025 year-end falling after the modification, which is a "
     "reminder that the exemption permits a firm to stop disclosing but does not force it to. This is the SDDT "
     "DISCLOSURE exemption, in force now - not the separate SDDT CAPITAL regime beginning 1 January 2027.\n"
-    + ENTITY_NOTE + "\n\n" + HD022_NOTE
+    + ENTITY_NOTE + "\n\n" + HD022_NOTE + "\n\n" + BLOCKED_HOST_NOTE
 )
 
 EXEMPTION_NOTE = (

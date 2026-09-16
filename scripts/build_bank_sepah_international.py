@@ -57,10 +57,12 @@ def p3_sources():
         "'Tier 1 capital to total risk-weighted assets' every year). No leverage ratio, LCR, NSFR or MREL figure "
         "appears in the Annual Report itself - those are disclosed instead in the Bank's own Pillar 3 Disclosures "
         "documents, published separately at www.banksepah.co.uk/information. That site's TLS certificate has "
-        "expired (browsers refuse the connection outright); the documents were successfully retrieved on "
-        "2026-09-04 via curl with the -k/--insecure flag (bypassing certificate validation) and a spoofed Chrome "
-        "user-agent - see the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. "
+        "EXPIRED, so browsers refuse the connection outright and a default command-line fetch fails with no "
+        "HTTP status at all - this is a certificate-date problem, NOT a dead link, and the documents are "
+        "retrieved perfectly well with certificate validation bypassed (see the expired-certificate note "
+        "below). See the Leverage Ratio / LCR / NSFR sheets' own citations for the exact PDFs and pages used. "
         "No MREL figure was found in either source (see that sheet's own note).\n" + FX_NOTE
+        + "\n\n" + P3_FETCH_NOTE
     )
 
 
@@ -76,7 +78,31 @@ P3_FETCH_NOTE = (
     "documents were successfully retrieved on 2026-09-04 via curl with the -k/--insecure flag (bypassing "
     "certificate validation) and a spoofed Chrome user-agent - the PDFs are genuine, digitally-produced (not "
     "scanned) Pillar 3 reports bearing the Bank's own branding, each headed 'BANK SEPAH INTERNATIONAL plc / "
-    "PILLAR 3 DISCLOSURES' and dated for its own year-end."
+    "PILLAR 3 DISCLOSURES' and dated for its own year-end.\n\n"
+    + "EXPIRED CERTIFICATE - NOT A DEAD LINK. READ THIS BEFORE 'FIXING' ANY banksepah.co.uk URL.\n"
+    "A browser opening any of the five Pillar 3 URLs below will show a full-page security warning, and a "
+    "default command-line fetch will fail outright with no HTTP status at all (curl reports exit 60 / "
+    "'SSL certificate problem: certificate has expired', and prints status 000 - NOT a 404). That failure is "
+    "a certificate-date problem on the Bank's server. It is NOT link rot, the files are NOT missing, and NO "
+    "URL here needs re-pointing. Do not delete, replace or Wayback-substitute these URLs on the strength of a "
+    "certificate warning.\n"
+    "CERTIFICATE AS INSPECTED 16 September 2026 (openssl s_client + x509): subject CN=banksepah.co.uk; issuer "
+    "'ZeroSSL RSA Domain Secure Site CA' (C=AT, O=ZeroSSL); notBefore 25 Jun 2025, notAfter 25 Jun 2026 - i.e. "
+    "expired 83 days before this check. Subject Alternative Names are DNS:banksepah.co.uk and "
+    "DNS:www.banksepah.co.uk, so the hostname actually matches and EXPIRY IS THE ONLY DEFECT: the certificate "
+    "is the right certificate for the right host, merely out of date. There is no hostname mismatch, no "
+    "self-signed certificate and no untrusted root, so the documents are genuinely being served by the Bank's "
+    "own domain and can be trusted as primary sources.\n"
+    "HOW TO RE-FETCH: add curl's -k/--insecure flag (or the equivalent certificate-validation bypass). "
+    "RE-VERIFIED 16 September 2026 - all five Pillar 3 URLs returned HTTP 200 with %PDF magic bytes (checked "
+    "as magic bytes, not merely a 200 status), at these sizes and page counts: 31 March 2025, 619,903 bytes, "
+    "31 pages; 31 March 2024, 929,132 bytes, 31 pages; 31 March 2023, 613,571 bytes, 32 pages; 31 March 2022, "
+    "654,861 bytes, 32 pages; 31 March 2021, 644,221 bytes, 32 pages. Covers re-read and all are headed 'BANK "
+    "SEPAH INTERNATIONAL plc / PILLAR 3 DISCLOSURES'. The three Companies House filing-history URLs used "
+    "elsewhere in this workbook are on a different host, are unaffected, and were re-checked the same day "
+    "(HTTP 200, %PDF).\n"
+    "If the Bank renews the certificate, plain HTTPS will simply start working again and nothing in this "
+    "script needs to change."
 )
 
 
@@ -465,7 +491,7 @@ bw.add_asset_quality_sheet(
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=52, source_height=170)
+    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=52, source_height=560)
 
 
 # Total capital resources (EUR m), = CET1 = Tier 1 = Total Capital (no AT1/Tier 2 disclosed)
@@ -524,7 +550,7 @@ bw.add_rwa_breakdown_sheet(
                  "own Table 4 classification and sums to Total Risk Exposure (minor GBP conversion rounding may "
                  "leave a 0.1m difference).",
     first_col_width=54,
-    source_height=200,
+    source_height=620,
 )
 
 # Leverage Ratio / LCR / NSFR: found in the Bank's own Pillar 3 Disclosures documents (published at
@@ -539,11 +565,11 @@ LIQ_LEV_NOTE = ("Sourced from the Bank's own Pillar 3 Disclosures documents (Tab
                 "the TLS-certificate workaround used to fetch them.")
 
 bw.add_metric_sheet("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], liquidity_leverage_sources(),
-                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=210)
+                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=500)
 bw.add_metric_sheet("LCR", "%", [("Liquidity Coverage Ratio", LCR_RATIO)], liquidity_leverage_sources(),
-                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=210)
+                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=500)
 bw.add_metric_sheet("NSFR", "%", [("Net Stable Funding Ratio", NSFR_RATIO)], liquidity_leverage_sources(),
-                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=210)
+                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=500)
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],

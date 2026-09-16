@@ -15,14 +15,41 @@ from bank_workbook import BankWorkbook
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020"]
 YEAR_LABEL = {y: y for y in YEARS}
 
+# The FY2024 Pillar 3 URL is DEAD (see P3_DEAD_URL_NOTE below); it is preserved
+# here and replaced by a Wayback snapshot in the P3 dict. Every other year's URL
+# was re-checked 2026-09-16 and is still LIVE (HTTP 200, Content-Type
+# application/pdf) - they are deliberately left pointing at the publisher.
+ORIG_P3_2024 = "https://www.utbank.co.uk/wp-content/uploads/2025/03/UTB-Partners-Pillar-3-Disclosure-2024.pdf"
+
 P3 = {
     "FY2025": "https://www.utbank.co.uk/wp-content/uploads/2026/03/UTB-Partners-Pillar-3-Disclosure-2025.pdf",
-    "FY2024": "https://www.utbank.co.uk/wp-content/uploads/2025/03/UTB-Partners-Pillar-3-Disclosure-2024.pdf",
+    # DEAD original replaced by Wayback "id_" snapshot; verified 2026-09-16,
+    # 215,127 bytes, 13pp, cover reads "UTB Partners Plc / Pillar 3 disclosures /
+    # as at 31 December 2024".
+    "FY2024": "https://web.archive.org/web/20250913035253id_/" + ORIG_P3_2024,
     "FY2023": "https://www.utbank.co.uk/wp-content/uploads/2024/03/UTB-Partners-Pillar-3-Disclosure-2023.pdf",
     "FY2022": "https://www.utbank.co.uk/wp-content/uploads/2023/03/UTB-Partners-Pillar-3-Disclosure-2022-.pdf",
     "FY2021": "https://rebrand-dev.utbank.co.uk/wp-content/uploads/2022/03/UTB-Partners-Pillar-3-Disclosure-2021-FINAL1-.pdf",
     "FY2020": "https://www.utbank.co.uk/wp-content/uploads/2021/05/UTB_Pillar3_Disclosure_2020.pdf",
 }
+
+P3_DEAD_URL_NOTE = (
+    "DEAD SOURCE URL REGISTER (recorded 2026-09-16, nothing deleted). The FY2024 Pillar 3 disclosure was"
+    " published at " + ORIG_P3_2024 + " and that URL is now DEAD: re-fetched 2026-09-16 it returns HTTP 404"
+    " with Content-Type text/html, not a PDF. It is kept on the record here rather than deleted so the"
+    " provenance of the FY2024 figures stays readable now the publisher no longer serves the file. The"
+    " working replacement, cited on every sheet that uses FY2024, is the Wayback Machine snapshot"
+    " https://web.archive.org/web/20250913035253id_/" + ORIG_P3_2024 + " - given in the 'id_' form, which"
+    " returns the original archived bytes rather than the Wayback viewer page. Verified on fetch: begins"
+    " '%PDF', 215,127 bytes, 13pp, and its cover reads 'UTB Partners Plc / Pillar 3 disclosures / as at 31"
+    " December 2024', confirming the reporting year from the document itself rather than from its filename."
+    " SCOPE OF THE OUTAGE, CHECKED NOT ASSUMED: all six Pillar 3 URLs in this workbook were re-tested on"
+    " 2026-09-16 and FY2024 is the ONLY dead one. FY2025, FY2023, FY2022, FY2021 and FY2020 all still return"
+    " HTTP 200 with Content-Type application/pdf from the publisher and are therefore still cited live, not"
+    " repointed - an archived copy is not substituted for a document the publisher still serves. The FY2025"
+    " edition is already sourced in this workbook (utbank.co.uk/wp-content/uploads/2026/03/, live, 216,894"
+    " bytes), so there is no missing recent edition to add. No figure was changed by this URL repair."
+)
 ACCOUNTS_2024 = "https://www.utbank.co.uk/wp-content/uploads/2025/03/UTB-Report-and-Accounts-2024.pdf"
 CH = "https://find-and-update.company-information.service.gov.uk/company/00549690/filing-history"
 
@@ -72,7 +99,10 @@ def sources():
         "Sources - consolidated UTB Partners Plc basis except FY2020 (solo UTB Limited basis - see note"
         " below), £'000 unless stated:\n"
         "FY2025: UTB Partners Pillar 3 Disclosure 2025, Table KM1, pp.6-7 - " + P3["FY2025"] + "\n"
-        "FY2024: UTB Partners Pillar 3 Disclosure 2024, Table KM1, pp.6-7 - " + P3["FY2024"] + "\n"
+        "FY2024: UTB Partners Pillar 3 Disclosure 2024, Table KM1, pp.6-7 - " + P3["FY2024"]
+        + " (the Bank's own published URL, " + ORIG_P3_2024 + ", is DEAD as at 2026-09-16 and returns HTTP"
+        " 404; the Wayback 'id_' snapshot cited here is the working replacement - see the dead source URL"
+        " register below)\n"
         "FY2023: UTB Partners Pillar 3 Disclosure 2023, Appendix 1 Table KM1, pp.44-45 - " + P3["FY2023"] + "\n"
         "FY2022: UTB Partners Pillar 3 Disclosure 2022, Appendix 1 Table KM1, p.43 - " + P3["FY2022"] + "\n"
         "FY2021: UTB Partners Pillar 3 Disclosure 2022 comparative column and 2021 disclosure, Appendix 1 /"
@@ -82,7 +112,7 @@ def sources():
         + P3["FY2020"] + "\n"
         "Accounts cross-check: United Trust Bank Report and Accounts 2024, pp.47-50 - " + ACCOUNTS_2024 + "\n"
         "Companies House entity and filing history (company 00549690) - " + CH + "\n\n"
-        + ENTITY_NOTE + "\n\n" + FY2020_BASIS_NOTE
+        + ENTITY_NOTE + "\n\n" + FY2020_BASIS_NOTE + "\n\n" + P3_DEAD_URL_NOTE
     )
 
 

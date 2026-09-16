@@ -1,0 +1,3732 @@
+Belmont Green Finance Limited
+Annual report and financial statements for
+the year ended 31 December 2019
+
+Company Registration No. 09837692 .
+
+i il 1
+
+2/2020 #138
+. COMPANIES HOUSE
+
+Page | 1 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Belmont Green Finance Limited.
+Annual report and consolidated financial statements
+for the year ended 31 December 2019
+
+Contents Page
+Business overview 3
+Chairman’s statement 4
+Strategic review 5
+Corporate governance 9
+Risk management 14
+Directors’ report 21
+Directors’ responsibilities statement 23
+Independent auditor’s report 24
+
+Financial statements 32
+
+Page | 2 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Business Overview
+
+Belmont Green Finance Limited (“BGFL”) and its subsidiaries (“the Group”) is focused on providing specialist mortgage
+lending to selected customer segments who are typically underserved by the larger UK retail banks and building
+societies. Our customers will typically have some element of complexity in their personal circumstances and we deploy
+an efficient combination of modern technology and expert human underwriting to ensure we deliver the best possible
+customer outcome.
+
+All of our lending is secured against high quality residential properties, with every one of our customers receiving
+regulated advice from an independent mortgage intermediary before selecting one of our purpose built product
+solutions.
+
+Whether we are serving owner-occupiers or Buy to Let (“BTL”) landlords, all of our mortgage solutions are designed to
+be straightforward and offer real value to those borrowers who may otherwise find it difficult to secure the loans they
+need.
+
+BGFL has established the award winning Vida Homeloans as a strong and recognisable brand in the specialist mortgage
+sector and by the end of 2019 had completed £1.8bn of new lending, helping almost 10,000 borrowers achieve their
+ambition of home ownership.
+
+Key Per formance Indicators
+
+Gross new lending
+
+Page | 3
+
+The political landscape surrounding Brexit led to a cautious
+
+£
+1,000 a 1), and pragmatic approach to lending in 2019, limiting
+750 or exposure to the significant economic uncertainty. Gross
+so is new lending of £557m in 2019 was therefore held £226m
+. lower than in 2018. 66% of gross new lending was in the
+2018 2019 BTL segment and 34% in owner-occupied.
+Net loan book
+—m The net loan book grew by £407m (34%). 2019 was the first
+P11] a eeemeaeememeny 1°10 "he . . : :
+1500 —1, . _ year in which redemptions were experienced at a
+1000 — -_ significant level, as 2-year fixed rate products from 2017
+500 i lending reached the end of their fixed rate period.
+. _— Redemptions in 2019 totalled £132m.
+
+2018 2019
+
+Net interest margin
+
+Reported margins fell by 1.99% after adjustments to
+accounting assumptions were made to reflect a more
+
+3.00% = ——s718% conservative approach to expected loan lives and the
+2.00% amortisation periods for warehouse funding costs.
+1.00% ——— 7995 Underlying mortgage product margins were maintained as
+0.00% —_—— BGFL’s lower growth appetite meant that Vida did not need
+2018 2019 to compete aggressively on price.
+
+cm Loss before tax The reported loss increased by £26.1m compared to 2018.
+
+0.0 7: — The benefits of loan book growth, achieved with stable
+100 OD — pricing of new lending and low loan losses, were offset by
+$20.00 — the adjustments to expected loan lives referred to above
+30.0 ae and an increase of £6.5m in admin expenses, with the
+40.0 2018 “5019 banking licence application being the main driver.
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Chairman’s Statement
+
+It is my pleasure to introduce Belmont Green’s Annual Report and Accounts for the year ended 31 December 2019.
+For the second year running, at a macro level, the year was characterised by continued uncertainty in markets and
+only at the very end did the fog start to lift following the emphatic result of the General Election and the prospect of
+some kind of resolution to the Brexit issue. Whilst overall, the housing market remained flat measured by transaction
+volumes and prices, the specialist lending sector again increased its share of the pie as the shift from mainstream
+lending towards the provision of more bespoke product continued. Given the changing demographic of the borrowing
+public, we see no reason why the shift towards specialist lending becoming the new norm will not be continued in the
+years ahead,
+
+It was clear from early in the year that much of what we saw in 2018 would be repeated. Many of our competitors
+continued to chase volume at the expense of margin and possibly credit quality and we took an early decision not to
+follow suit. Our lending remained firmly within our risk and credit appetite and at margins that made sense.
+
+Given that it was clear that the market dynamic was unlikely to be conducive to writing an increased volume of
+business, the Board took the decision to reset the business in preparation for the time when more balanced market
+conditions prevail. These steps included the rationalisation of our warehouse capacity, and reviewing and revising our
+expected loan lives assumptions and their impact on effective interest rate (EIR) calculations, all of which inevitably
+had a negative effect on bottom line profitability.
+
+More positively, we also took the decision to strengthen the Board and Executive by hiring a new CEO and CRO and
+adding two vastly experienced NEDs. The incumbent Executive team had done a great job in getting the business up
+and running and establishing it as a significant player in the specialist lending market and it is appropriate at this point
+that | should record my thanks to David Tweedy and his team for the work they did and to wish them well for the
+future.
+
+However, the Board recognised that a new approach and skill set was required to take us forward in the next stage of
+our development and Anthony Mooney, an experienced retail banker and lender, was hired to lead this next chapter.
+We strengthened our Board effectiveness considerably by the appointment of Carol Sergeant as Senior Independent
+Director and Chair of the Board Risk Committee and Robin Churchouse as Chair of the Board Audit Committee and
+these two individuals have already had a positive influence on the way the business operates and responds to the
+many challenges that the market throws up.
+
+We have been getting to grips with the impacts of the prolonged pandemic caused by the Coronavirus and how this
+has manifested itself on global markets and the supply of both capital and liquidity. An early decision was taken to
+temporarily cease new lending, whilst our other preparations have proven sound. Like all businesses we continue to
+adapt to ever changing circumstances and the Board believes that we are well placed to respond appropriately in any
+given scenario. Market turmoil and uncertainty are fast becoming the new norm but | believe that the quality of the
+management team we now have in place sees us well placed to respond to these challenges and to be ready to
+capitalise on new opportunities when they arise.
+
+Steve Haggerty
+
+Chairman
+
+Page | 4 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Strategic Review
+
+Mortgage Market
+
+2019 saw a continuation of trends seen in the previous year with political and economic uncertainty driven by Brexit
+providing the backdrop to the mortgage market. According to UK Finance, gross mortgage lending in the UK was
+£267.6bn in 2019, a decrease of 0.4% compared to £268.7bn in 2018, with remortgage activity forming a significant
+portion of this lending at 38%. House price growth was limited at 2.2%, with growth in the South East being 1.2%’.
+
+The mortgage market has continued to be very competitive. Overall margins within mortgage markets fell during
+2019 as excess liquidity held by larger financial institutions was used to lend in, principally mainstream prime,
+retail mortgage markets.
+
+The specialist lending segment of the market has remained strong as demand has continued from customers not well
+served by the mainstream. Government-backed initiatives have continued to stimulate demand from first time buyers
+seeking to get on to the property ladder, driving £60.0bn of lending in 20197. Gross lending in the BTL mortgage market,
+which is principally serviced by specialist lenders, increased to £41.2bn, 1.7% up on 2018’s total.
+
+Within the specialist residential lending sector, Vida offers mortgages to first-time buyers, the self-employed and those
+with complex credit histories. Vida launched its Help to Buy product in April 2019 and this was received well in the
+market. In the BTL segment, portfolio landlords, non-portfolio landlords, limited companies and expats investing in the
+UK are Vida’s main target customers. In 2019, of Vida’s total lending of £557m, £408m or 73% was in the BTL segment.
+
+Vida has expanded its distribution, which included the launch of lending in Scotland in late 2018, and has approximately
+13,000 registered brokers. Its latest broker survey for Q4 2019 gave a +28 Net Promoter Score.
+
+Financial Results
+
+BGFL continued its growth in 2019 with its new lending delivering strong underlying asset margins, whilst being
+conservative in terms of credit risk appetite. Given the uncertainties in the economy, the Board took the decision to
+constrain growth. As a result, new lending of £557m for the year was £226m lower than £783m of new lending in 2018.
+
+The Board re-assessed and re-set some of the core accounting assumptions of its business model, partially to reflect
+changing borrower behaviours and market dynamics, and this led to material adjustments to margins in the year.
+These adjustments will not be repeated going forwards and, having been made, give the business a solid base from
+which it can grow financially.
+
+The statutory loss before tax for 2019 was £35.3m (2018: £9.2m). The underlying loss before tax, after excluding
+exceptional items, was £33.9m (2018: £9.2m). The adjustments to core accounting assumptions have not been treated
+as exceptional items and have had no impact on the cash position of the business.
+
+Income Statement
+
+Net Interest Income
+
+Net interest income fell by £14.9m to £2.6m from £17.5m in 2018. Whilst underlying loan margins were
+maintained and the average loan book grew 72% year-on-year, the one-off adjustments already noted were
+responsible for the reduction in net interest income.
+
+The most significant adjustment resulted from adopting a more conservative approach to the expected lives of loans
+to customers. A reduction in those lives involved a lower run rate for interest income during the year compared to
+2018. It also involved a charge of £7.7m for revenue brought to account in prior years.
+
+BGFL successfully completed its fourth securitisation, Tower Bridge Funding No. 4 PLC (TBF4), in July 2019. The
+securitisation, at £500m, was equal in size to the previous deal in September 2018, and had a pre-funding component
+
+1 HM Land Registry
+2 UK Finance
+
+Page | 5 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+of £125m. It was BGFL’s first vertically structured securitisation. Due to its size and structure, spreads were higher than
+‘any of its previous deals.
+
+BGFL had access to four warehouse facilities during 2019. In order to provide sufficient liquidity in the uncertain
+economic environment, up until TBF4 it carried a significant headroom above its short-term requirements. This
+carried a cost in commitment fees payable to the warehouse providers. Following the completion of TBF 4,
+warehouse commitments were lowered, which included reducing the number of facilities to three.
+
+As a result of starting the banking licence application process and potentially diversifying its funding sources, the
+Board re-assessed and reduced the amortisation periods for costs associated with setting up the warehouse
+facilities. This resulted in an additional charge of £3.0m to interest expense. Closing one of the warehouses earlier
+than anticipated involved a write-off of a further £1.6m of previously deferred costs.
+
+In 2019, some issues were identified with previous lending (refer to “Major Developments and Initiatives” below).
+As a consequence, a provision was made against income for a reduction in the effective interest rate for a cohort
+of 115 loans. This provision amounted to £0.8m.
+
+The adjustments referred to above have resulted in impacts on margins but going forward these remain at an attractive
+level. When combined with the Board’s prudent risk appetite and resulting low expected credit losses, this means that
+risk adjusted margins look healthy. A move into retail funding in the medium term would further enhance the
+sustainability of this margin. This means that going forward lending volumes will be the key driver of profitability as
+discussed later.
+
+Fair Value Movements
+
+Fair value movements reflect the notional impact of changes in underlying interest rates on the value of assets
+and financial instruments. As BGFL intends holding these assets and financial instruments to maturity these
+movements will unwind positively or negatively in future years and therefore are not viewed as part of the core
+performance of the business. In 2019 a loss of £3.9m was recorded from fair value movements compared to a
+loss of £0.5m in 2018.
+
+Administrative Expenses
+
+Administrative expenses increased to £31.6m in 2019 from £25.1m in 2018. As part of BGFL commencing its banking
+licence application process, it started to build its banking capability during 2019. This involved recruiting experienced
+staff and starting the projects to implement new systems. This drove a significant part of the increase in the cost base,
+which, in 2019, did not lead to a benefit in income.
+
+Aside from the banking licence activity, there was no significant increase in staff levels. The costs of outsourced loan
+servicing increased as the loan book grew.
+
+Looking forward:
+e cost control is key and further measures were taken in late 2019/early 2020 to enhance cost management;
+
+e onthe asset side of the business the build has largely been completed and the business has now established
+its cost base. Provided that lending volumes hit the right levels, profitability will follow and will increase
+proportionally; and
+
+« onthe savings side, the build has been commenced, with any future increase in costs being matched, from a
+profitability perspective, by lower funding costs.
+
+Page | 6 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Impairment Provisions
+
+The charge for impairment increased to £2.4m in 2019 from £1.1m in 2018. Arrears levels remained low with only
+35 loans three or more months in arrears at 31 December 2019 out of a total loan book of 8,500 loans. The
+macroeconomic assumptions used as inputs in the calculations of expected credit losses were revised and due to
+the less favourable economic outlook increased the provision for impairment by £0.6m. Two further adjustments
+were made to the loss model calculations - one for lending into later life cases (refer to “Major Developments and
+Initiatives” below (£0.8m)) and one for a suspected fraud case (£0.6m).
+
+Core Operating Profit
+
+The Board monitors BGFL’s performance on both a statutory profit basis, as determined by accounting standards, and
+a core operating profit basis. Core operating profit measures underlying performance by excluding items, both positive
+and negative, such as significant timing differences that reverse over time, e.g. fair value adjustments, or significant
+items of a one-off nature.
+
+The statutory loss before tax for 2019 was £35.3m (2018 - £9.2m) whilst the core operating loss was £13.3m (2018 -
+£17.8m).
+
+2018 2019
+£m £m
+Statutory loss before tax (9.2) (35.3)
+Adjustments
+Re-allacation of revenue adjustments to make
+financial periods comparable
+- expected loan lives (6.4) 77
+- warehouse facility amortisation periods (2.6) 5.0
+Fair value volatility 0.5 3.9
+Provision for lending into later life - 1.5
+Exceptional item - management restructure - 1.4
+Banking licence one-off costs - 2.5
+Core operating loss (17.8) (13.3)
+
+Balance Sheet
+
+Net loans to customers grew by 34% in 2019 to £1,600m (2018: £1,198m) primarily due to an increase in BTL
+lending. BTL loans made up 73% of the loan book at 31 December 2019.
+
+As noted earlier, BGFL’s forward-looking margins and expenses mean that the key driver for future profitability will be
+lending volumes. The segments that Vida focuses on, including portfolio landlords, specialist BTL properties, first-time
+buyers and borrowers with complex credit histories, are forecast to grow in the medium term. In terms of distribution,
+Vida is well-placed with an established brand and reputation in the intermediary channels where these segments are
+largely served. BGFL’s market share of the specialist lending market will remain relatively modest even as it grows.
+
+Wholesale funding totalled £1,618m at the end of 2019 (2018: £1,200m), of which £1,396m related to
+securitisation funding (2018: £1,026m). Total share capital, 99.3% provided by BGFL’s private equity investor, Pine
+Brook, stood at £168m (2018: £130m).
+
+Page | 7 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Major Developments and Initiatives
+
+In 2019, some issues were identified with a previous tranche of lending to a small proportion of borrowers whose
+loans ran beyond their retirement age. Management has worked internally and with the FCA to review all affected
+and potentially affected cases to ensure, in the first instance, that no customer harm results. The Board is satisfied
+that our current lending policies and procedures mean that no repeat issues will arise, and in the meantime, to ensure
+no customer suffers financial disadvantage, a total provision of £1.5m has been made. This provision was set against
+interest income, £0.7m, and also increased the impairment provision, £0.8m.
+
+BGFL commenced the process of applying for a banking licence to enable it to accept retail deposits. A project team
+was established and staff recruited to build a new Treasury capability and an enhanced risk management framework.
+Much of the systems work on the Treasury side has been completed, and the risk management framework has been
+significantly enhanced. The lending issue referred to above has impacted on the licence process, which is being delayed
+whilst we resolve the issue to the FCA’s satisfaction.
+
+Risk Management Developments
+
+In preparation for the banking licence application, the Risk Management Framework was extensively revamped during
+2019 to strengthen controls and to bring it up to “banking standard”. A comprehensive suite of policies has been
+developed, covering the range of risks faced by BGFL to ensure that it operates in alignment with its vision and business
+strategy and within its approved risk appetite. The policies set out the enterprise-wide risk management of BGFL’s
+activities, its employees and 3rd party servicer firms operating on BGFL’s behalf. Risk governance has been restructured
+with the establishment of an Executive Risk Committee, which has oversight of all risk types throughout the business.
+Risk MI has been redeveloped to report comprehensive key risk indicators against all risk types.
+
+In preparation for the banking application, draft ICAAP and [LAAP documents have been prepared, prospective risk
+appetites for banking liquidity, funding and capital have been agreed and training has been completed for both Board
+members and senior management.
+
+Section 172 Statement
+
+Section 172 of the Companies Act 2006 requires a director of a company to act in the way he or she considers, in good
+faith, would be most likely to promote the success of the company for the benefit of its members as a whole. In doing
+so, he or she must have regard, amongst other matters, to:
+
+e =the likely consequences of any decision in the long term;
+e the interests of the company’s employees;
+
+e the need to foster the company’s business relationships with suppliers, customers and others;
+
+e the impact of the company’s operations on the community and the environment;
+
+e =the desirability of the company maintaining a reputation for high standards of business conduct; and
+e the need to act fairly as between members of the company.
+
+The Board considers the factors set out above in discharging its duties under section 172. The Board also has regard to
+other factors that it considers relevant to the decisions it makes and recognises that some decisions will not necessarily
+result in a positive outcome for all the Group’s stakeholders. Engaging the Group’s stakeholders is key to the way the
+Group runs its business and is an important consideration for the Board when making decisions.
+
+The framework within which the Board operates and makes its decisions is set out under “BGFL Board” and “Board
+Culture” in the Corporate Governance section on pages 9 to 11. The Board considers the Group’s key stakeholders to
+be its customers, staff, key outsourced suppliers, its shareholders and its regulator, the Financial Conduct Authority.
+Further information on how the directors have regard to these key relationships can be found in the Directors’ Report.
+
+Page | 8 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Corporate Governance
+
+The Board of Directors of BGFL is responsible for the governance of the Group, setting strategic goals, providing the
+leadership to put them into effect, supervising the management of the business and reporting to shareholders on their
+conclusions. Embedding good corporate governance practice is fundamental! to the Group in creating and building an
+internal structure supporting the governance and decision making across the business and in creating internal and
+external stakeholder value. The BGFL Board ensures that the Group has sufficient resources to meet its objectives and
+to comply with all legal, regulatory and contractual requirements.
+
+Committee Structure
+
+The Board recognises that an appropriate governance framework and the implementation of effective management
+practices are integral to ensuring the proper functioning of BGFL. The governance framework is based on the principles
+of UK best practice, for example, the Corporate Governance Code, the Walker Report and as expressed by the UK
+Regulatory Authorities from time to time through direct interaction with them in respect of such matters. The
+effectiveness of the governance structure is subject to periodic reviews at least annually.
+
+The Group’s governance structure consists of the Board of Directors of BGFL, a BGFL Executive Committee with defined
+roles and responsibilities and other committees of BGFL with roles and responsibilities delegated by the Board of BGFL
+or by the Executive Committee. This structure helps ensure there is effective oversight of the activities undertaken by
+the business.
+
+Board
+Commi - Board Risk . Nominations &
+
+Executive
+Committee
+
+Change
+Committee
+
+Assets & Liability Executive Risk
+
+‘Committee (ALCo)
+
+Product
+
+Committee Committee
+
+Page | 9 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+BGFL Board
+
+BGFL’s Board consists of high calibre individuals with deep and extensive financial services knowledge. The Board is
+chaired by an independent Chair. Meetings are held monthly (except for August and December), or more frequently if
+required. Please see below for more details on the Board’s composition.
+
+Board
+
+Carol Sergeant Robin Churchouse
+INED INED
+
+Peter Williams Alan Newton
+INED INED
+
+Steve Haggerty
+Chairman
+
+Risk Committee Chair §f Audit Committee Chair
+
+Stephen Roughton-
+
+Chief Executive | eee . . Smith
+NED NED Officer ‘Chief Financial Officer Chief Risk Officer
+
+Anthony Mooney
+
+Oliver Goldstein Ethan Wang David Basra
+
+The Board decided in late 2018 that there was a need to recruit a number of more experienced banking NEDs, as well
+as to make some changes to the membership and operation of BGFL’s key Board committees in preparation for its
+application for a banking licence. This process is now complete having seen the recruitment and appointment of Robin
+Churchouse as Chair of the Board Audit Committee and of Carol Sergeant as Chair of the Board Risk Committee and
+Senior Independent Director.
+
+BGFL ensures that INEDs remain independent through oversight from the Chairman and audits of the Board culture
+and Board effectiveness.
+
+In line with the UK Corporate Governance Code, specific matters are reserved for decision by BGFL’s Board and are
+documented in a formal schedule. The matters reserved for the Board include:
+
+* setting BGFL’s strategy, goals and objectives and ensuring their proper implementation;
+« reviewing and approving the corporate plan, including overall annual budgets and financial targets;
+
+* developing, reviewing and monitoring of the application of BGFL’s Culture and Values and the compliance
+manual applicable to employees and Directors;
+
+* reviewing and monitoring of training and continuous development of Directors and Executives;
+* appointing the Chair, CEO, CFO and CRO and delegating appropriate powers and authorities to them;
+
+*® approving the Chief Executive’s or the Remuneration & Nominations Committee’s recommendations of
+individuals named as SMFs as defined in accordance with FCA regulations;
+
+e the oversight and review of BGFL’s policies and practices on corporate governance;
+
+® approving and monitoring policies and practices to ensure that BGFL’s customers receive good customer
+outcomes;
+
+* receiving reports from the CEO on BGFL’s performance and material updates from the Executive level
+Committees, day-to-day decisions taken between regular Board meetings and the effectiveness of BGFL’s
+systems and controls;
+
+Page | 10 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+® approving, overseeing and reviewing the Group’s Risk Management Framework and key elements thereof,
+including risk appetite statements across BGFL, to include, but not limited to, credit, market, financial,
+operational, regulatory, legal and conduct risk;
+
+® approving credit and expenditure limits to be delegated to individual Executives or Committees;
+
+* approving the Terms of Reference of the Board level Committees and Executive Committee which reports to
+it;
+
+*® approving recommendations and reports from any of the Board sub-committees, including recommendations
+from the Board Audit Committee on the appointment and terms of appointment of BGFL’s auditors;
+
+* appointing and removing Directors and the Company Secretary (in consultation with the shareholders);
+* approving the Annual Accounts;
+* approving the IT strategy;
+
+e authorising the remuneration of the CEO and Executive Directors with no Director taking any part in discussions
+to determine his or her own remuneration;
+
+© approving any litigation (inward or outward) that has been referred by the Executive Committee or the CEO;
+and
+
+*® reviewing BGFL’s compliance with relevant corporate governance codes as the Board considers appropriate
+from time to time and the disclosures on corporate governance made in the annual report and accounts.
+
+Board Culture
+
+The Board of BGFL recognises that its culture is a pre-requisite to good corporate governance. A key output from the
+working relationship between the Board Chairman and the CEO is clarity about the definition and measurement of the
+Board culture. The Board commitment to a culture of good corporate governance is evidenced in Board and sub-
+committee minutes where discipline and challenge are highlighted.
+
+Given Pine Brook’s majority shareholding, the Board is careful to form its own views of the challenges, risks and issues
+that the business faces, ensuring that strategy and decisions are in the best interests of customers, employees,
+regulators and other key stakeholders. The Board works consciously to ensure that the shareholder does not have
+undue influence. All Committee Chairs are independent and have site visits and conversations with Executives, and in
+some cases intermediaries and suppliers, to understand other perspectives in detail.
+
+As part of developing a healthy Board culture, the Directors rely on the independence of Internal Audit, currently
+provided by PwC on an outsourced basis. Board Audit Committee ensures that the Internal Audit Function is effective
+and delivers independent and competent challenge to the business.
+
+The Chairman and CEO are mindful of the need for the Executive and Board to maintain mutual respect and trust.
+Management shares information openly, recognising that if all have the same information then challenge can be made
+coherently with spirited debate becoming the norm. Respect and trust do not lead to ‘endless affability’ or absence
+of disagreement but creates bonds that allow different viewpoints and challenging questions as evidenced in Board
+minutes.
+
+Board performance reviews are recognised as a valuable tool and the Board completed an effectiveness review in 2019
+with an independent Board assessor. The review included an evaluation of the understanding and development of
+strategy, Board composition, Board access to information, and levels of openness, challenge and energy. Board
+members are also being asked to consider the use of their own skills, their knowledge of the company and the
+mortgage industry to develop their general level of contribution.
+
+Page | 11 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Remuneration & Nominations Committee (“RemNom”)
+
+RemNom is chaired by an INED. Committee membership consists of all Non-Executive Directors and in attendance the
+CEO and the Director of Human Resources and Facilities. Meetings are held quarterly, or more frequently if required.
+RemNom has the primary aim of ensuring good governance over the appointment, promotion and remuneration of
+Directors, senior executives and managers of BGFL.
+
+RemNom’s key responsibilities are set out below.
+Remuneration
+
+¢ Setting remuneration and reward structures (pay and bonus) for the Executives and submit these to the Board,
+as well as ensuring their proper implementation.
+
+e Setting the measures and criteria by which the Board and Executives are to be assessed.
+« Assessing the performance of Board members and Executives.
+¢ Aligning rewards to both performance and promoting effective risk management.
+
+e Reviewing major changes to BGFL’s benefits and incentive plans.
+
+Nomination
+
+e Identifying, attracting and nominating highly qualified individuals to serve as Directors and Board level
+positions of BGFL.
+
+e Establishing a succession plan for Board members and Executives.
+
+e Promoting diversity in the composition of the Board and ensuring that any gender, or other under-
+representation is addressed.
+
+e Reviewing the structure, size, composition and performance of the Board at least annually.
+
+e Administering the process of nominating and approving key senior appointments.
+Board Risk Committee (“BRC”)
+
+The BRC is chaired by an INED. Committee membership consists of all Non-Executive Directors and in attendance the
+CRO, CEO and CFO. Meetings are held bi-monthly, or more frequently if required.
+
+The BRC’s primary objective is to oversee and monitor operational, regulatory and conduct risks across the business.
+The key responsibilities are:
+
+© advising the Board on the overall risk appetite and policies for BGFL and assisting the Board in providing
+oversight of the risk management framework, governance structure and Three Lines of Defence model;
+
+* determining the effectiveness of BGFL’s Risk Management Framework (“RMF”), regularly reviewing:
+
+o the nature and extent of risks facing the company (strategic, credit, financial, prudential, operational,
+compliance, legal and regulatory, including conduct);
+
+o the risk profile, understanding future changes and threats, and agreeing on areas of highest priority and
+mitigation for BGFL;
+
+o risks which may arise from regulatory, economic or political changes and proactively managing them;
+
+© the likelihood and impact should the identified risks materialise and the effectiveness of the control
+environment;
+
+oO BGFL's ability to manage and reduce incidents and mitigate the impact on the business of the risks that do
+materialize;
+
+othe interaction with and outputs from the FCA, /PRA and External Agencies;
+
+Page | 12 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+o the adequacy of internal systems and controls in respect of Anti-Money Laundering and/ Fraud through
+the review of the annual MLRO report; and
+
+o the effectiveness of BGFL’s systems of internal control, as they relate to operational, financial, credit,
+regulatory and conduct risk, compliance, and financial crime prevention;
+
+reviewing, at least annually, all limits, policies and appetite statements;
+
+reviewing the change management processes involving business practices and products to ensure that
+operational, regulatory and conduct risk, and applicable controls are given sufficient consideration;
+
+monitoring the training and development requirements for the Committee, senior management, audit,
+operational, regulatory and conduct risk to ensure the requisite skills are available to monitor and control Risk
+exposure in accordance with the responsibilities of the Committee;
+
+monitoring and reviewing the integrity of control reports, management information, the Committee and Board
+reporting;
+
+reviewing the Company’s whistleblowing policy and fraud detection procedures and ensure that arrangements
+are in place so that colleagues can raise concerns in confidence about matters of possible impropriety
+regarding financial control and reporting or any other matters;
+
+reviewing, challenging and making recommendations for Board approval of BGFL’s ICAAP and ILAAP in
+preparation for the banking application; and
+
+reviewing BGFL’s compliance with agreed asset and liability policies, limits and exposures.
+
+Board Audit Committee (“BAC”)
+
+The BAC is chaired by an INED. Committee membership consists of all Non-Executive Directors and in attendance the
+
+CRO, CE
+
+O, CFO, Director of Finance and Internal Auditor. Meetings are held bi-monthly, or more frequently if required.
+
+The BAC’s primary objectives are to be satisfied with the financial stability of the business, to ensure the robustness of
+the company's financial control systems and to guarantee the integrity of any published documents and statements
+
+relating
+
+to financial performance and judgment, including the annual-report and accounts.
+
+The BAC focuses on providing Third Line oversight of BGFL’s compliance arrangements and control environment and
+monitors inspection reports submitted by the Internal Auditors and External Auditors.
+
+The BAC’s key responsibilities are:
+
+Page | 13
+
+providing independent review and oversight of BGFL’s financial reporting processes, internal controls and
+independent auditors;
+
+assisting the Board in overseeing the integrity of BGFL’s financial statements, financial reports and other
+financial information, recommending approval of the Annual Accounts to the Board;
+
+oversight of BGFL’s compliance with legal and regulatory requirements and relevant accounting standards;
+
+providing oversight of the qualifications and performance of the internal and external auditors, including the
+annual plan, charter and appointment of the Head of Internal Audit;
+
+reviewing internal audit and external audit reports, reviewing control failures that have been identified, and
+providing oversight of mitigating actions;
+
+developing and implementing a policy on the supply of non-audit services by the External Auditor;
+reviewing the adequacy and security of BGFL’s arrangements in relation to whistleblowing;
+reviewing BGFL’s policy for detecting fraud; and
+
+reviewing BGFL’s systems and controls for the prevention of bribery and receiving reports in relation to non-
+compliance.
+
+Belmont Green Finance Limited — 2019 Annual! Report and Accounts
+Risk Management
+Overview
+
+Risk taking is an inherent part of BGFL’s business but must be managed and controlled to ensure good outcomes for
+customers, alignment with BGFL’s strategic objectives, and BGFL’s long term financial security and sustainability. This
+is achieved through BGFL’s Risk Management Framework, which takes a top-down approach to risk identification and
+management within BGFL’s Risk Governance Structure using a Three Lines of Defence model.
+
+BGFL’s Risk Management Framework and Three Lines of Defence model are explained in this section.
+
+Risk Management Framework
+
+Risk Governance Structure Three Lines of Defence
+
+H
+(— The Board (— \
+Business
+Vision
+"hoard | Board” «Bard -
++ Audit Risk  Reniuneration & Risk Types
+
+Nosninations ;
+
+Committee Committee
+Committee 7
+
+tle
+
+&
+Risk Appetite
+
+NI
+2
+a us
+I | d
+- 3 ia
+o pe)
+2
+—= / Stress Tests & Scenarios \— = >
+ExCo oO a
+2 Be}
+o ov
+/ Policies \ a >
+3 c
+a 2
+3 ot
+
+ee iat “ celta
+
+Executive
+foo TE
+' Customer Credit
+
+Sub Sub
+
+Product
+& Change
+
+f
+. H ALCO Risk
+Committee Committees }
+
+Operations
+Sub
+
+r
+
+{genes committee comet
+
+Processes, Controls & Procedures
+
+Manageiment Information & Reporting
+
+¢
+
+t
+
+$
+
+Regulatory & Legal Requirements
+
+Ne
+
+sjuawmyedaq yoddns 9 ssauisng :aury ,sT
+
+yy
+
+Risk Management Framework
+
+BGFL’s Risk Management Framework can be visualised as a pyramid with a top-down approach being taken to the
+identification and management of risks to which BGFL is, or may potentially be, exposed. It provides robust policies,
+controls, processes, procedures and reporting for effective risk management, delivered through appropriate risk
+escalation and governance in a Three Lines of Defence model.
+
+The Board is responsible for setting BGFL’s Vision and risk appetite, together with approval of a business plan (including
+financial forecasts) which is consistent with that Vision and risk appetite. The business plan takes into account a wide
+range of exogenous factors such as macroeconomics, market conditions and competition, internal operational
+constraints/efficiencies and outsourcing. It is then the responsibility of the Executive Committee to execute against
+that business plan in line with the Vision, risk appetite, and BGFL’s Values and Behaviours. As part of the FCA’s Senior
+Managers and Certification Regime (SMCR) the management responsibilities map details accountability for risk at the
+Board and Executive Committee.
+
+A key part of the Risk Management Framework is its alignment with these Values and Behaviours and appreciation by
+employees that they are all responsible for risk management and ensuring good customer outcomes. This is achieved
+through an extensive programme of regular training for the Board and all employees, led by the HR Department,
+working closely with the Risk Function.
+
+Page | 14 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+The Risk Management Framework was reviewed and strengthened during 2019, led by the new CRO, in anticipation
+of BGFL becoming a bank.
+
+BGFL’s Vision
+
+The starting point for BGFL’s top-down Risk Management Framework is its customer centred Vision which has been
+approved by the Board:
+
+To be a successful, sustainable and responsible lending business by understanding, respecting and responding to
+the needs of all our customers and stakeholders.
+
+The execution of the Vision and achievement of the financial targets whilst remaining within approved risk appetite is
+the responsibility of ExCo, with enterprise-wide management of the resulting risks being controlled by BGFL’s Risk
+Management Framework. BGFL achieves its Vision by:
+
+e providing products to customers which meet their specific needs and provide competition in the marketplace
+using an efficient operating model, enabling BGFL to grow and generate a fair and sustainable profit;
+
+« having sufficient capital and liquidity at all times, supported by a sound control environment; and
+
+*® ensuring that BGFL’s activities and culture are consistent with the fundamental requirements of a positive
+customer experience in a manner that is compliant with regulations and the law.
+
+Three Lines of Defence
+
+BGFL has implemented a Three Lines of Defence model to ensure clear separation of risk management responsibilities
+between operational management which owns, manages and controls risks in BGFL (the “First Line”); oversight, testing
+and challenge of those operations and controls, together with Compliance oversight (the “Second Line”); and
+independent assurance of the first two lines (the “Third Line”). This provides consistent, coherent and complete
+coverage of all the risks to which BGFL is, or potentially could be, exposed. All three lines of defence are tasked with
+supporting and developing a culture of risk awareness education throughout BGFL to create desired outcomes for BGFL
+and its customers.
+
+First Line of Defence — Business and support functions
+
+The First Line of Defence comprises BGFL’s business and support units (and their individual staff) who are responsible
+for day-to-day identification, mitigation, management and monitoring of all risks arising within their functions. In
+addition, the First Line of Defence is responsible for developing and communicating appropriate policies, processes,
+controls and procedures for managing risks in accordance with the Risk Management Framework and BGFL’s approved
+risk appetite. To assist operational management in these tasks BGFL has developed RACI (Responsible, Accountable,
+Consulted and Informed) charts to clarify and define roles across BGFL, identifying the accountable individual who is
+ultimately answerable for the activity or decision, and the individual(s) who are accountable for completing the task.
+
+Risks, Internal Risk Events (whether a loss was incurred or not) and Near Misses are included in management
+information reporting and escalated, where necessary, through the Risk Governance Structure. The First Line of
+Defence works with the Risk Function to implement remedial actions to investigate Internal Risk Events and Near
+Misses and stop them happening again. They also work together to identify, assess and mitigate risks on proposed new
+products, with approval being obtained through the Risk Governance Structure.
+
+Second Line of Defence ~ Risk Department
+BGFL’s Second Line of Defence is provided by the Risk Function whose primary responsibilities are as follows:
+
+*® monitoring the effectiveness of the Risk Management Framework, Risk Governance Structure and Three Lines
+of Defence model, reporting findings/recommendations to the Executive Risk Committee and the Board Risk
+Committee, as required;
+
+® monitoring and reporting BGFL’s exposures against approved risk appetite via the KRIs for each Risk Type;
+
+Page | 15 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+e working with the First Line of Defence to identify, assess, manage and control all of BGFL’s risks;
+e reporting risk exposures to the Executive Risk Committee and Board Risk Committee;
+
+e providing risk management advice and support to all departments within BGFL, particularly to the owners of
+BGFL’s policies, processes, controls and procedures;
+
+*® working with the HR Department regarding risk management training for the Board and all employees;
+® ensuring awareness of existing and new regulations; and
+e assessment and thematic reviews of the First Line of Defence’s performance and effectiveness.
+
+The Risk Function is headed by the CRO, who is a member of the Board and ExCo, attends Board Risk Committee and
+Board Audit Committee and chairs the Executive Risk Committee and Credit Sub-committee. The CRO is approved by
+the FCA (SMF3 ~ Executive Director; SMF16 ~ Compliance Oversight; and SMF17 — Money Laundering Reporting
+Officer).
+
+In anticipation of BGFL becoming a bank, staffing levels in the Risk Function have been reviewed to ensure it will have
+sufficient resources, both in terms of number and calibre/experience of employees, to provide effective oversight. As
+a result of this review, a Director of Prudential Risk joined BGFL in June 2019.
+
+Third Line of Defence — Internal Audit
+
+BGFL’s Third Line of Defence is its Internal Audit Function, outsourced to PwC, which provides the Board with
+independent assurance regarding the suitability, operation and effectiveness of BGFL’s Risk Management Framework,
+its Risk Governance Structure and the First and Second Lines of the Three Lines of Defence model. The Internal Auditor
+attends of the Board Audit Committee and reports directly to the Committee’s chairman. Internal Audit’s annual audit
+plan is approved by the Committee and completed audit work is reported to the Committee.
+
+Principal Risks
+
+Based on the Risk Management Framework and Vision set out above, BGFL identified the types of risk (“Risk Types”)
+to which it is exposed. BGFL’s definition of each Risk Type together with its risk appetite, as approved by the Board, is
+set out below. A key driver for the Board when setting risk appetite is alignment with BGFL’s strategic objectives. Risk
+appetite was reviewed and reconfirmed by the Board in 2019.
+
+Risk-taking is an inherent part of BGFL’s business in order to achieve its strategic objectives, but it must be adequately
+compensated for taking those risks in order for the business model to be sustainable. Where BGFL is not being
+compensated risks should be avoided, or where this is not practical, minimised or mitigated, e.g. through the use of
+insurance. Given BGFL’s strategy and business model as a specialist mortgage lender, the only risk category in which
+BGFL is explicitly compensated for taking risk is credit risk. Other risks should only be taken to the extent that they are
+necessary so that BGFL can take credit risk and thereby achieve its strategic objectives.
+
+The range of risks faced by BGFL and its appetite for these risks is reviewed annually, or more frequently if required,
+by the Executive Risk Committee led by the CRO, with any recommended changes being reviewed at ExCo before being
+presented to Board Risk Committee for review, challenge and final approval.
+
+Business Risk
+
+¢ BGFL definition: The risk that BGFL does not achieve its strategic objectives or business plan, including financial
+forecasts.
+
+* The responsibility of the Executive Committee on behalf of the Board is to execute the business plan according
+to strategic objectives and within approved risk appetite. The extent, if any, to which the Executive Committee
+fails in this responsibility is tracked using appropriate KRls and reported to the Board for discussion. For
+example, this may be due to other risks types, e.g., credit or operational losses, or exogenous risks such as
+macroeconomics or market changes.
+
+Page | 16 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+As at 31 December 2019, BGFL was outside its risk appetite, as the Lending into Retirement issues noted above
+had led to delays in the strategically important banking application.
+
+Conduct Risk
+
+BGFL definition: The risk of customer detriment or poor outcomes through unsuitable products, poor service
+or process failures.
+
+BGFL has no appetite for offering products or services to its customers which are unsuited to their needs, or
+which may result in poor customer outcomes or cause customer detriment. Whilst BGFL recognises that minor
+operational or service issues may occur which could affect customers, these must not result in poor customer
+outcomes or detriment for those customers.
+
+In the event that failings occur, this risk is further managed through our commitment to ensure that no
+customer harm results — we will manage issues to ensure that our customers are treated fairly and absorb any
+impact.
+
+As at 31 December 2019, BGFL was outside its risk appetite, as systemic failings had been identified in previous
+Lending into Retirement business. All efforts are being made to ensure a good customer outcome for all
+affected customers. BGFL is in close dialogue with the FCA and currently awaiting FCA agreement to the
+proposed remediation plan. The Board is satisfied that no repeat issues will arise.
+
+Capital Risk
+
+BGFL definition: The risk that BGFL has insufficient capital to cover stressed conditions, regulatory
+requirements or growth plans.
+
+BGFL has no appetite for breaching internal limits or regulatory capital requirements.
+
+As at 31 December 2019, BGFL was well within its risk appetite, with capital levels significantly exceeding
+regulatory capital requirements.
+
+Liquidity Risk
+
+e
+
+BGFL definition: The risk that BGFL is not able to meet its obligations as they fall due, or can only do so at
+excessive cost.
+
+BGFL has no appetite for not meeting its obligations as they fall due including under a severe but plausible
+stress lasting three months. It is accepted that BGFL will include reliance on future planned equity injections
+after 30 days.
+
+As at 31 December 2019, BGFL was well within its risk appetite, with liquidity levels exceeding requirements.
+
+Funding Risk
+
+BGFL definition: The risk arising from BGFL not having access to stable funding markets and a range of funding
+sources.
+
+BGFL will ensure it maintains funding capacity that is adequate to meet 120% of requirements, including
+mortgage completions, wholesale debt calls and operating expenses, for at least three months. It is accepted
+that BGFL will include reliance on future planned equity injections after 30 days.
+
+As at 31 December 2019, BGFL was well within its risk appetite, with funding capacity at 146% of requirements.
+
+Credit Risk
+
+BGFL definition: The risk of loss arising from default on mortgage lending, or from the default of a wholesale
+money market counterparty.
+
+BGFL has very limited appetite for wholesale credit risk. Surplus funds must be invested in UK government
+securities or deposited with banks rated at least P-1/A-1 by at least one of S&P, Moody’s or Fitch.
+
+BGFL has appetite for credit risk arising from its mortgage lending, but it must be adequately compensated for
+taking this credit risk, i.e., on a risk-adjusted basis and through the economic cycle. Therefore, BGFL has
+
+Page | 17 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Market
+
+developed a series of severe but plausible stress tests and scenarios to assess its through-the-cycle mortgage
+lending credit losses and resulting impact on its capital, liquidity and profitability. BGFL’s mortgage lending
+credit risk appetite is then set using KRIs based on the results of these stress tests and scenarios.
+
+As at 31 December 2019, BGFL was approaching its risk appetite, with 2 out of 53 credit key risk indicators
+above their trigger levels — OWner-Occupied Original LTV > 80% and Owner-Occupied Arrears.
+
+Risk
+
+BGFL definition: The financial impact from movements in market prices or interest rates on the value of assets
+and liabilities.
+
+Given the nature of its strategic objectives and business model, the only market risk to which BGFL is exposed
+is interest rate risk. BGFL only has appetite for residual exposures after vanilla hedges with derivative
+counterparties rated BBB or higher by at least one of S&P, Moody’s or Fitch.
+
+As at 31 December 2019, BGFL was temporarily outside its risk appetite as the introduction of new hedging
+arrangements caused interest rate gaps to be higher than board agreed limits. These returned to within limits
+in January 2020.
+
+Concentration Risk
+
+Operati
+
+Page | 18
+
+BGFL definition: The increased risk of loss because of the size of a single exposure or correlated exposures.
+
+BGFL has very limited appetite for individual name concentration risk. Its business model means that inherently
+it already has very low levels of concentration risk, because it only offers mortgages — it does not offer
+commercial mortgages.
+
+This low level of inherent concentration risk is further restricted by capping the sizes of individual mortgages
+and portfolio lending and geographical concentrations.
+
+BGFL has an inherent level of sector concentration risk because its lending is focussed on UK specialist
+residential and buy-to-let mortgage lending and its funding is currently solely sources from wholesale markets.
+This inherent risk is accepted as a strategic choice for the business. Concentration to specific lines of business
+is managed through caps on specific product types.
+
+As at 31 December 2019, BGFL was within its risk appetite, with exposures below trigger levels for all key risk
+indicators.
+
+onal Risk
+
+BGFL definition: The risk of loss resulting from inadequacy or a failure in internal processes, people and
+systems, or from external events. BGFL has identified a number of specific risks to which it is exposed given
+the nature of its business and which are broadly aligned to the Basel Il operational risk categories:
+
+o failure by a material outsourced third-party partner to meet expected standards;
+© business disruption and system failures;
+
+© business continuity/disaster;
+
+© poor quality of management information (system and reporting);
+
+o failure to maintain appropriate, or breach of, internal policies and procedures;
+
+o failure to manage conflicts of interest;
+
+o inadequate staffing levels;
+
+o failure to appropriately monitor the activities of material third-party partners leading to poor outcomes
+for customers not being addressed;
+
+o IT and data security breach — loss/misuse of client information;
+o IT and data security breach — loss/misuse of commercially sensitive information;
+o IT and data security breach — loss/misuse of employee data;
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+o fraud — internal;
+o fraud — external; and
+© people and premises.
+
+BGFL has no appetite for systemic operational losses. Whilst it has very limited appetite for one-off operational
+losses, BGFL recognises that they are an inherent risk of operating its business, but must be minimised through
+policies, controls, processes, procedures ({including reporting/escalation/prompt action) and insurance
+arrangements.
+
+BGFL has robust systems and controls in place to manage operational risks, including periodic testing of its
+Business Continuity Plan, alternative site arrangements, daily system back-ups to alternative site network
+servers, and regular staff training.
+
+As at 31 December 2019, BGFL was within its risk appetite, with no systemic operational losses and the value
+of one-off operational losses well below trigger levels.
+
+Legal and Regulatory Risk
+
+BGFL definition: The risk of losses or reputational damage arising from legal, regulatory or financial crime
+compliance failures, or that regulatory and legislative changes significantly impact BGFL’s business model.
+
+BGFL has a no appetite for breaking any law, including tax law, or for losses from regulatory breaches or
+financial crime.
+
+BGFL has no appetite for systemic or material regulatory breaches but accepts that infrequent minor
+regulatory breaches and risk events may occur. These must be rectified without delay, ensuring no detriment
+for customers; and policies/controls/processes/procedures reviewed, and improvements made to avoid any
+repetition.
+
+As at 31 December 2019, BGFL was outside its risk appetite, as systemic breaches of regulation had been
+identified with previous Lending into Retirement business and appropriate remediation has not yet been
+agreed with the FCA.
+
+COVID-19
+
+The COVID-19 pandemic, and the global and domestic response to it, has emerged as a new material risk since the year
+end. It has had an impact across several risk categories and required a range of responses.
+
+Page | 19
+
+Operational Risk — has increased, requiring significant changes to operational processes both within BGFL and
+within its material outsourced providers and other suppliers. Business Continuity Plans have been invoked to
+manage the operational impacts, including moving to all staff working from home.
+
+Funding and Liquidity Risk - with the closure of the primary funding markets, BGFL has triggered its Contingency
+Funding Plan and heightened its monitoring of current and projected funding and liquidity. An early decision
+was taken to temporarily cease new lending and to reassess the existing mortgage offer pipeline.
+
+Credit Risk — The Board expects the economic impact from the virus and the resulting lockdown to lead to a
+reduction in house prices and, after the temporary payment holiday programme ends, an increase in arrears.
+This increased credit risk is being managed through enhanced pre-arrears and arrears management, with
+bespoke communications that ensure customers receive fair treatment.
+
+Regulatory and Conduct Risk — has increased as a result of both the stressed situation and the introduction of
+new regulatory requirements at very short notice. These heightened risks are being closely monitored and
+managed.
+
+Legal Risk — changes to the processing of the customer pipeline have increased legal risk, managed through
+seeking external advice where appropriate and through close liaison with the rest of the mortgage industry.
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+People and Culture
+
+People remain at the heart of Belmont Green’s business and a significant amount of focus has been dedicated to the
+development of our culture, values and employee engagement during 2019. As evidence of the progress made, BGFL’s
+annual employee engagement survey saw an increase in the overall engagement score from 73% to 88%.
+
+Page | 20 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Directors’ Report
+
+The directors of Belmont Green Finance Limited (the “Company”) present their annual report, together with the
+audited financial statements and Auditor's Report, for the year ended 31 December 2019. The Belmont Green Finance
+Limited group of companies (the “Group”) has been established to lend in and service the UK mortgage market via the
+intermediary channel under the brand name of Vida Homeloans (“Vida”). Belmont Green Finance Limited is authorised
+to provide mortgage finance and administer mortgages. The directors do not expect any significant change to the
+activities of the Group.
+
+Information Presented in Other Sections
+
+Information relating to a review of the business, future developments, results and dividends, people, corporate
+governance and principal risks and uncertainties are described in the Strategic Report. The Group uses financial
+instruments to manage certain types of risk, including liquidity and interest rate risk. Further information about
+derivative financial instruments can be found in note 8 to the financial statements.
+
+Going Concern
+
+The financial statements have been prepared on a going concern basis. In evaluating the appropriateness of this basis,
+the directors are satisfied that the Group has the resources to continue in business for the foreseeable future, covering
+a period of at least 12 months from the date of approval of the financial statements. In making this assessment, the
+directors have considered a range of information relating to present and future, internal and external conditions and,
+in particular, the potential impact of the COVID-19 pandemic upon the Group and its operations, markets, liquidity,
+capital and profitability. The review has pulled from both internal and external data; and has utilised a range of existing
+and new internal analyses. All of these factors have been considered in the light of the COVID-19 pandemic and are
+set out in Note 2(b) to the financial statements.
+
+Engaging with Stakeholders
+
+BGFL has a number of key stakeholders with whom it actively engages and understanding the needs of each is
+important for the Board in setting strategy and in decision-making.
+
+‘Customers
+
+BGFL’s customers are at the centre of its business. BGFL’s Sales team maintains frequent contact with intermediaries,
+gaining an insight into the needs of both the intermediary and the end customer. Regular customer feedback is
+provided via internal product and customer forums to improve the service provided to customers. A quarterly broker
+survey has been undertaken to gain a better understanding of how well BGFL is meeting the needs of customers.
+
+Staff
+
+The Board receives regular updates from senior management on various measures relating to staff. In addition, bi-
+annual staff surveys give the Board and management vital feedback on staff engagement.
+
+Suppliers
+
+BGFL has identified its key suppliers, principally relating to mortgage servicing and technology services. Management
+is responsible for the day-to-day success of the supplier relationships, with the Board maintaining oversight and being
+responsible for the ensuring that those relationships add strategic value to the business.
+
+Shareholders
+
+As the Group’s majority shareholder, with 99.3% of preferred and A shares held at 31 December 2019, the Board has
+a strong relationship with Pine Brook. As part of being represented on the Board, Pine Brook receives regular updates
+on performance and strategy.
+
+Regulator
+
+BGFL has maintained regular contact with the FCA, its regulator, in particular with regard to the previous small tranche
+of loans that extended beyond the borrower’s retirement age. The Board has received regular updates of the
+interaction with the FCA.
+
+Page | 21 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Community and the Environment
+
+BGFL staff have raised funds for local charities through a variety of events and activities and have participated in
+volunteering days in the local community.
+
+The Board recognises the importance of climate change and has commenced an analysis of the potential future impact
+on its lending.
+
+Directors
+
+The directors of the Company are set out below. All directors served throughout the period and to the date of this
+report unless otherwise stated.
+
+David Basra
+
+Robin Churchouse (appointed 25 April 2019)
+Oliver Goldstein (appointed 25 April 2019)
+Steve Haggerty
+
+Nick Krenteras (resigned 31 December 2019)
+Anthony Mooney (appointed 22 May 2020)
+Alan Newton
+
+Stephen Roughton-Smith (appointed 25 April 2019)
+Carol Sergeant (appointed 26 September 2019)
+David Tweedy (resigned 31 January 2020)
+Ethan Wang
+
+Dr Peter Williams
+
+Auditor
+
+The directors who held office at the date of approval of this directors’ report confirm that:
+
+e as far as each of the directors is aware, there is no relevant audit information of which the company’s auditor
+is unaware; and
+
+e each director has taken all the steps that they ought to have taken as a director to make themselves aware of
+any relevant audit information and to establish that the company’s auditor is aware of that information.
+
+This statement is given and should be interpreted in accordance with the provisions of s418 of the Companies Act
+2006.
+
+A resolution for the re-appointment of Deloitte LLP as auditor of the company is to be proposed at the forthcoming
+Annual General Meeting.
+
+Page | 22 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Directors’ Responsibilities Statement
+
+The directors of Belmont Green Finance Limited are responsible for preparing the Annual Report and the financial
+statements in accordance with applicable laws and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the
+directors have elected to prepare the financial statements in accordance with International Financial Reporting
+Standards (IFRSs) as adopted by the European Union. Under company law, the directors must not approve the financial
+statements unless they are satisfied that they give a true and fair view of the state of affairs of the company and of the
+profit or loss of the company for that period. In preparing these financial statements, International Accounting
+Standard 1 requires that directors:
+
+¢ properly select and apply accounting policies;
+
+* present information, including accounting policies, in a manner that provides relevant, reliable, comparable
+and understandable information;
+
+¢ provide additional disclosures when compliance with the specific requirements in IFRSs are insufficient to
+enable users to understand the impact of particular transactions, other events and conditions on the entity's
+financial position and financial performance; and
+
+e make an assessment of the company's ability to continue as a going concern.
+
+The directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company’s transactions and disclose with reasonable accuracy at any time the financial position of the company and
+enable them to ensure that the financial statements comply with the Companies Act 2006. They are also responsible
+for safeguarding the assets of the company and hence for taking reasonable steps for the prevention and detection of
+fraud and other irregularities.
+
+Approved by the Board of Directors and signed on behalf of the Board
+
+Anthony Mooney
+Director
+
+18 June 2020
+Company registration: 09837692
+
+Page | 23 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+INDEPENDENT AUDITOR’S REPORT TO THE MEMBERS OF
+BELMONT GREEN FINANCE LIMITED
+
+Report on the audit of the financial statements
+
+i: Opinion
+
+the financial statements of Belmont Green Finance Limited (the ‘parent company’) and its subsidiaries (the
+‘group’) give a true and fair view of the state of the group’s and of the parent company’s affairs as at 31
+December 2019 and. of the group 's loss for the year then ended;
+
+We have audited the financial statements which comprise:
+
+e the consolidated income statement;
+
+« the consolidated statement of comprehensive income;
+
+e the consolidated and parent company statements of financial position;
+
+e the consolidated and parent company statements of changes in equity;
+
+e the consolidated and parent company cash flow statements;
+
+e the related group notes 1 to 27; and
+
+e the related parent company notes 28 to 38.
+The financial reporting framework that has been applied in their preparation is applicable law and IFRSs as
+adopted by the European Union and, as regards the parent company financial statements, as applied in accordance
+with the provisions of the Companies Act 2006.
+
+2. Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs (UK)) and applicable
+law. Our responsibilities under those standards are further described in the auditor's responsibilities for the audit of
+the financial statements section of our report.
+
+We are independent of the group and parent company in accordance with the ethical requirements that are
+relevant to our audit of the financial statements in the UK, including the Financial Reporting Council’s (the ‘FRC’s’)
+Ethical Standard, and we have fulfilled our other ethical responsibilities in accordance with these requirements. We
+believe that the audit evidence we have obtained is sufficient and appropriate to provide a basis for our opinion.
+
+3. Summary of our audit approach
+
+Key audit matters The key audit matters that we identified in the current year were:
+
+e Expected Credit Losses on Loans to Customers
+
+e Effective Interest Rate Income Recognition
+
+e Valuation of Derivatives and Related Hedge Accounting
+e Going Concern
+
+Materiality The materiality that we used for the group financial statements was £1m which
+was determined on the basis of 1% of shareholder’s equity.
+
+Scoping Our group audit scope involved performing full audits on the parent company
+and trading subsidiaries which accounted for more than 99% of the group’s net
+assets and 99% of the group’s profit before tax. These audits were performed
+
+Page | 24 Beimont Green Finance Limited — 2019 Annual Report and Accounts
+
+directly by the group audit team and executed to each of the individual entity
+materialities which were lower than the group materiality.
+
+4. Conclusions relating to going concern
+
+We are required by ISAs (UK) to report in respect of the following matters We have nothing to report in
+
+where:
+
+e the directors’ use of the going concern basis of accounting in preparation
+of the financial statements is not appropriate; or
+
+e the directors have not disclosed in the financial statements any identified
+material uncertainties that may cast significant doubt about the group’s
+or parent company’s ability to continue to adopt the going concern basis
+of accounting for a period of at least twelve months from the date when
+the financial statements are authorised for issue.
+
+respect of these matters.
+
+5. Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit of
+the financial statements of the current period and include the most significant assessed risks of material
+misstatement (whether or not due to fraud) that we identified. These matters included those which had the
+greatest effect on: the overall audit strategy, the allocation of resources in the audit; and directing the efforts of
+
+the engagement team.
+
+These matters were addressed in the context of our audit of the financial statements as a whole, and in forming
+our opinion thereon, and we do not provide a separate opinion on these matters.
+
+5.1. Expected Credit Losses on Loans to Customers
+
+Key audit matter
+description
+
+The Group provides loans to customers as disclosed in note 10 and recognises
+expected credit losses on these loans to customers in accordance with IFRS 9.
+
+ECL provisions as at 31 December 2019 were £4.1m (2018: £1.7m) against total
+loans to customers of £1,604m (2018: £1,193m). The Income Statement charge
+for the year was £2.4m (2018: £1.1m). Management included a post model
+overlay of £0.8m (2018: nil) in relation to loans where there a significant
+increase in credit risk arises as a result of customers potentially entering
+retirement or later life without appropriate repayment vehicles.
+
+As detailed in note 2 on page 42, ‘Significant accounting judgements, estimates
+and assumptions’, determining ECL estimates is complex and highly judgmental
+because it involves a high degree of estimation uncertainty. Due to the
+considerable judgement required to estimate the ECL and given estimates, by
+their nature, give rise to a higher risk of material misstatement due to error or
+fraud, we have identified the determination of the ECL provision as a key audit
+matter.
+
+IFRS 9 requires management to estimate the credit losses that the group is
+expected to incur as a result of defaults under different scenarios covering
+prescribed future periods. These ECLs impact the carrying amount of the group’s
+portfolio of financial assets, recognised at amortised cost.
+
+Estimating these expected losses requires judgement and estimation on
+assumptions relating to customer default rates, likelihood of repossession, future
+property values, forced sale discounts and indicators of significant increases in
+credit risk. These assumptions are informed using historical behaviour and
+experience as well as credit bureau data. They are also affected by
+management's consideration of the future economic environment including the
+potential effect of the withdrawal of the United Kingdom from the European
+Union. The Group have applied this key accounting estimate through its selection
+
+Page | 25
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+of economic scenarios and weighting allocations as described on page 42.
+
+There is a risk of fraud inherent in estimating the required loan loss provision
+given the material impact and sensitivity of these judgements on the final figure
+and therefore profit for the year. The provision is highly sensitive to the
+expectation of future house prices and has been materially affected by the
+expectation of the future economic environment such as the COVID-19 pandemic
+as detailed in note 27 within the financial statements.
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We obtained an understanding of management’s processes for and key controls
+over the Group’s loan loss provision balances by performing a walkthrough.
+
+We engaged credit risk specialists to assess the compliance of the modelling
+approach with the requirements of the standard and to determine whether the
+documented modelled approach was implemented in practice. We recalculated
+certain elements of the expected credit loss calculation.
+
+We tested the accuracy of the loss given default, probabilities of default and
+possession given default parameters applied, comparing the recent historical
+performance against model forecasts. In addition, we made an assessment of the
+collateral valuation techniques used by management to estimate an appropriate
+provision balance.
+
+We assessed the completeness of the Stage 2 population and the completeness
+of post model adjustments by looking for qualitative evidence of a significant
+increase in credit risk.
+
+We assessed whether the model was appropriately capturing the higher credit
+risk of highly-indebted customers by checking whether such accounts had been
+identified as having a significant increase in credit risk, as well as assessing the
+valuation of associated provisions.
+
+We challenged management’s consideration of the future economic environment
+by reviewing management's approach as well as comparing modelled
+assumptions to publicly available data and comparable peer data.
+
+We tested the key assumptions used in the post model overlay and considered
+alternative assumptions and contradictory evidence.
+
+We reconciled the loan book to the general ledger and substantively tested a
+sample of loans to assess whether the data used in the provision calculation was
+complete and accurate.
+
+We assessed the impact of COVID-19 on the expected credit losses and reviewed
+the related post balance sheet subsequent event disclosure.
+
+Key observations
+
+Based on the evidence obtained, we found that whilst the weighted average
+house price index assumption was more optimistic than the peer group, overall
+the assumptions underpinning all the impairment models were determined and
+applied appropriately and the recognised provision was reasonably stated.
+
+We consider that the post model adjustment was reasonable.
+
+5.2. Effective Interest Rate Income Recognition
+
+Key audit matter
+description
+
+The Group uses an Effective Interest Rate (EIR) model to adjust the recognition
+of fees, commissions and early redemption charges integral to its mortgage
+balances in fine with IFRS 9 - Financial Instruments. The loans and advances to
+customers of £1,604m (2018: £1,193m) presented in the balance sheet includes
+
+Page | 26
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+an EIR adjustment of £6.4m (2018: £13m), which is released to the income
+statement in line with the run off profile of the relevant account balances. During
+the year, Management reduced the average life assumption, resulting in a debit
+to the income statement of £7.7m.
+
+We identified a key audit matter in relation to the expected lives used to
+determine the payment profiles of the mortgages. The Group’s associated
+judgements, estimates and assumptions, are detailed on pages 42 and 43.
+
+We identified the effective interest rate adjustment as a potential fraud risk as
+there is an opportunity and incentive for management to manipulate the amount
+of interest income reported at period-end.
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We understood Management’s EIR adjustments process by undertaking a walk-
+through to identify the data flows and input sensitivities.
+
+We engaged our credit modelling experts to test the appropriateness of the
+expected lives and benchmarked management's assumptions against an
+appropriate peer group.
+
+We tested the mechanical accuracy of the related models, by independently
+recalculating the effective interest rate adjustment from supporting data for a
+sample of mortgage products.
+
+We also tested the accuracy and completeness of mortgage balance.
+
+Key observations
+
+We determined that the EIR models used and the assumptions management
+have made are appropriate and that net interest income for the period is not
+materially misstated.
+
+Key audit matter
+description
+
+_5.3. Valuation of Derivatives and Related Hed¢
+
+e Accounting
+
+Management have transacted balance guarantee swaps (“BGSs") in order to
+economically hedge the fixed interest rate position arising from the mortgage
+portfolio. There are five macro portfolio fair value hedge accounting
+arrangements with the BGSs designated as the hedging instrument and the
+underlying mortgage portfolio being the hedged item in each case.
+
+Effectiveness testing is performed periodically to ensure the hedges remain
+effective, and the associated hedge adjustments reflecting the movement in fair
+value due to the hedged interest rate risk are posted to the ledger.
+
+The valuation of these derivatives is inherently complex and given the increasing
+size of the notional of the swaps over time the valuations are also volatile,
+meaning that the hedge accounting is also complex. We have identified two
+components as giving rise to increased risks of material misstatement with
+respect to the appropriateness of the inputs and assumptions used in calculating
+the hedge accounting adjustments, and the application of hedge accounting
+given the strict documentation requirements and difficulties associated in
+determining hedge inception and termination adjustments and the profile over
+which these should be amortised.
+
+The Group’s policy for derivatives and hedge accounting is documented on page
+41,
+
+How the scope of our
+audit responded to
+the key audit matter
+
+We engaged an internal complex valuations specialist to perform an independent
+valuation for each of the BGSs. This recalculated valuation has been compared to
+
+Page | 27
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+management's valuation to assess whether management's estimate is within a
+reasonable threshold.
+
+We involved a hedge accounting specialist to review and challenge the
+assumptions and methodologies for each of the hedge relationships, as well as
+validating the input data and the amortisation methodology used by the group.
+
+Key observations Based on our testing we found that management have determined a reasonable
+estimate for calculating the hedge adjustment postings made, and the valuation
+of derivatives are reasonable.
+
+5.4. Going Concern
+
+Key audit matter COVID-19 is expected to have a significant impact on the current and future
+
+description economy. The group is funded through equity from the Private Equity house,
+warehouse facilities and securitisations. The group requires continued equity
+from support from the Private Equity house to fund operating losses, The
+warehouse facilities include covenants relating to levels of loans in arrears whilst
+in the securitisation SPVs an event of default can occur if certain loan notes are
+not serviced.
+
+The potential impact of payment holidays and reduced redemption levels on cash
+inflows and the potential for higher arrears levels increase the risk of default
+events occurring in the securitisation SPVs and/or the risk that loans need to be
+repurchased from the warehouses using equity funding. The requirement for
+equity funding is dependent on the Private Equity house having the intent and
+ability to continue to provide that funding. All of this impacts the ability of the
+entity to continue as a going concern.
+
+The financial statements have been prepared on a going concern basis, and
+management have disclosed their assessment of the ability of the business to
+continue as a going concern in note 2(b) on pages 36 and 37.
+
+How the scope of our In order to assess the ability of the business to continue as a going concern we
+audit responded to performed the following steps:
+the key audit matter
+
+* Obtained management’s cash flow forecasts and assessed the
+appropriateness of key assumptions contained within them;
+
+* Assessed the impact of the payment holidays and arrears levels in
+management's base case and downside forecasts on the securitisation
+vehicles and warehouse entities;
+
+« Assessed the ability to obtain further funding through the warehouse
+facilities;
+
+« Assessed the impact of COVID-19 on asset valuations and legal and
+contractual obligations;
+
+* Assessed the intent and ability of the Private Equity house to continue to
+provide the capital required under management’s forecasts during this
+tougher economic period, taking into account documentary evidence and
+enquiries of both Management and the Private Equity house; and
+
+« reviewed the disclosures within the financial statements to assess
+whether they were appropriate.
+
+Key observations Based on our procedures performed and the information present at the date of
+this report, we conclude that the preparation of the financial statements on a
+going concern basis and the related disclosures are appropriate.
+
+Page | 28 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+6.Our application of materiality
+
+6.1. Materiality
+We define materiality as the magnitude of misstatement in the financial statements that makes it probable that the
+economic decisions of a reasonably knowledgeable person would be changed or influenced. We use materiality
+both in planning the scope of our audit work and in evaluating the results of our work.
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole as
+follows:
+
+a
+Group financial statements Parent company financial statements
+‘Materiality £1m £0.99m
+Basis for 1% of shareholder’s equity Parent company materiality equates to 0.9% of
+determining net assets, which is capped at 99% of group
+materiality materiality.
+
+Rationale for the The shareholder's equity balance reflects both the preferred shares in the business and the losses to
+
+benchmark date. This balance best reflect the requirements of the users of the financia! statements (the
+
+applied shareholders) and is also less volatile than other balance sheet metrics. Therefore we have deemed
+shareholder’s equity to be the most reasonable metric to use to determine materiality.
+
+Group materiality
+£1m
+Shareholder's
+equity £98m Component
+7 = materiality range
+
+=» Shareholder's £0.6m to £0.99m
+equity
+
+ae Audit Committee
+= Group materiality Botting threshold
+
+£0.05m
+
+6.2. Performance materiality
+We set performance materiality at a level lower than materiality to reduce the probability that, in aggregate,
+uncorrected and undetected misstatements exceed the materiality for the financial statements as a whole. Group
+performance materiality was set at 70% of group materiality for the 2019. In determining performance materiality,
+we considered our assessment of the control environment and the level of audit adjustments identified in the prior
+period.
+
+6.3. Error reporting threshold
+We agreed with the Audit Committee that we would report to the Committee all audit differences in excess of
+£50,000, as well as differences below that threshold that, in our view, warranted reporting on qualitative grounds.
+We also report to the Audit Committee on disclosure matters that we identified when assessing the overall
+presentation of the financial statements.
+
+Page | 29 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+7.An overview of the scope of our audit
+
+7.1. Identification and scoping of components
+All trading entities in the group are within our audit scope and have been audited to a local materiality for the
+purpose of individual entity reporting resulting in an audit of more than 99% of the group’s net assets and 99% of
+the group’s profit before tax. These audits were performed directly by the group audit team and executed at levels
+of materiality applicable to each individual entity which were lower than group materiality and range from £0.6m
+to £0.99m. We have performed testing over the consolidation of group entities.
+
+8. Other information
+
+The directors are responsible for the other information. The other information comprises the information included
+in the annual report, other than the financial statements and our auditor’s report thereon.
+
+Our opinion on the financial statements does not cover the other information and, except to the extent otherwise
+explicitly stated in our report, we do not express any form of assurance conclusion thereon.
+
+In connection with our audit of the financial statements, our responsibility is to read the other information and, in
+doing so, consider whether the other information is materially inconsistent with the financial statements or our
+knowledge obtained in the audit or otherwise appears to be materially misstated.
+
+If we identify such material inconsistencies or apparent material misstatements, we are required to determine
+whether there is a material misstatement in the financial statements or a material misstatement of the other
+information. If, based on the work we have performed, we conclude that there is a material misstatement of this
+other information, we are required to report that fact.
+
+— —
+
+We have nothing to report in respect of these matters. |
+
+poets ween eee on ---!
+
+9.Responsibilities of directors
+
+As explained more fully in the directors’ responsibilities statement, the directors are responsible for the preparation
+of the financial statements and for being satisfied that they give a true and fair view, and for such internal control
+as the directors determine is necessary to enable the preparation of financial statements that are free from
+material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the directors are responsible for assessing the group’s and parent company’s
+ability to continue as a going concern, disclosing as applicable, matters related to going concern and using the
+going concern basis of accounting unless the directors either intend to liquidate the group or parent company or to
+cease operations, or have no realistic alternative but to do so.
+
+10. Auditor’s responsibilities for the audit of the ‘financial
+statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free from
+material misstatement, whether due to fraud or error, and to issue an auditor’s report that includes our opinion.
+Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in accordance
+with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise from fraud or
+error and are considered material if, individually or in the aggregate, they could reasonably be expected to
+influence the economic decisions of users taken on the basis of these financial statements.
+
+A further description of our responsibilities for the audit of the financial statements is located on the FRC’s website
+at: www.frc.org.uk/auditorsresponsibilities. This description forms part of our auditor’s report.
+
+Page | 30 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Report on other legal and regulatory requirements
+
+11. Opinions on other matters prescribed by the Companies Act
+2006
+
+In our opinion, based on the work rk undertaken in the course of the audit:
+
+© the information given in the strategic report and the directors’ report for the financial year for which. the .
+financial statements are prepared is consistent with the financial statements; and :
+* the strategic report and the directors’ report have been. prepared in. accordance w with applicable légal
+requirements.
+In the light of the knowledge and understanding of the group and parent company and their environment’ obtained
+in the course of the audit, we: ‘have not identified any material misstatements in; the strategic report or the
+_directors’ report. : - 8
+
+tae BAR renal ae ee ee
+
+12. Matters on which we are required to report by exception
+
+12.1. Adequacy of explanations received and accounting records
+Under the Companies Act 2006 we are required to report to you if, in our opinion:
+
+e we have not received all the information and explanations we require for our audit; or
+
+« adequate accounting records have not been kept by the parent company, or returns adequate for our audit
+have not been received from branches not visited by us; or
+
+* the parent company, financial statements are not in agreement. with the accounting records and returns.
+
+12.2. Directors’ remuneration
+Under the Companies Act 2006 we are also required to report if in our opinion certain disclosures of directors’
+remuneration have not been made.
+
+see teteees . : Veep no ;
+WhidichPran anda sah ame adi tad ,
+
+[ we have nothing to report in respect. of this matter,
+
+13. Use of our report
+
+This report is made solely to the company’s members, as a body, in accordance with Chapter 3 of Part 16 of the
+Companies Act 2006. Our audit work has been undertaken so that we might state to the company’s members
+those matters we are required to state to them in an auditor’s report and for no other purpose. To the fullest
+extent permitted by law, we do not accept or assume responsibility to anyone other than the company and the
+company’s members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+Peter Birch (Senior statutory auditor)
+
+For and on behalf of Deloitte LLP
+Statutory Auditor
+Leeds
+
+224 June 2020
+
+Page | 31 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+
+Consolidated Statement of Comprehensive Income
+
+Year ended 31 December 2019
+
+2019 2018
+
+Notes £'000 £'000
+
+Interest income and similar income 3 49,649 42,042
+Interest expense and similar charges 4 (47,030) (24,573)
+Net interest income 2,619 17,469
+Portfolio fair value adjustments 5 (3,900) (473)
+Total income (1,281) 16,996
+Administrative expenses 6 (31,642) (25,132)
+Operating loss (32,923) (8,136)
+Impairment losses 10 (2,402) (1,105)
+Loss before taxation (35,325) (9,241)
+Loss before taxation and exceptional item (33,948) (9,241)
+Exceptional item 6 (1,377) -
+Tax credit for the period 7 4,161 222
+Loss after taxation (31,164) (9,019)
+Other comprehensive income - -
+Total comprehensive loss for the year (31,164) (9,019)
+
+Page | 32
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+
+Consolidated Statement of Financial Position
+As at 31 December 2019
+
+2019 2018
+
+Notes £'000 £'000
+Assets
+Cash and cash equivalents 104,505 81,158
+Loans to customers 10, 11 1,599,800 1,197,842
+Derivative financial instruments 8 473 2,634
+Financial assets with fair value through profit or loss 9 7,344 -
+Other receivables 12 10,979 15,054
+Deferred taxation 13 10,245 6,002
+Property, plant and equipment 14 5,334 1,249
+Intangible assets 15 317 261
+Total assets 1,738,997 1,304,201
+Liabilities
+Deposits from banks . 14,190 -
+Debt securities in issue 16 1,603,961 1,200,270
+Derivative financial instruments 8 10,892 1,587
+Financial liabilities with fair value through profit or loss 9 - 223
+Other liabilities 17 12,277 11,870
+Corporation tax 7 11 9
+Total liabilities 1,641,331 1,213,959
+Shareholders’ Equity
+Share capital 18 168,312 129,642
+Retained losses (70,646) (39,400)
+Total shareholders’ equity 97,666 90,242
+Total liabilities and equity 1,738,997 1,304,201
+
+Following the adoption of IFRS 16, the Group has presented right-of-use assets that do not meet the definition of
+investment property within ‘property, plant and equipment’ and the lease liabilities within ‘other liabilities’ in the
+statement of financial position.
+
+The notes on pages 36 to 68 form part of these financial statements.
+
+The financial statements were approved by the Board of Directors on 18 June 2020 and signed on behalf of the Board.
+
+Anthony Mooney
+Company registration: 09837692
+
+Page | 33 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Consolidated Statement of Changes in Equity
+For the year ended 31 December 2019
+
+At 31 December 2018
+
+Adjustment on initial application of IFRS 16
+At 1 January 2019
+
+Share issuance
+
+Loss for the year
+
+At 31 December 2019
+
+At 1 January 2018
+Share issuance
+
+Loss for the year
+
+At 31 December 2018
+
+ohare Reta ined Total
+capital earnings
+£'000 £'000 £'000
+129,642 (39,400) 90,242
+- (162) (162)
+129,642 (39,562) 90,080
+38,670 - 38,670
+- (31,084) (31,084)
+168,312 (70,646) 97,666
+84,860 (29,851) 55,009
+44,782 - 44,782
+- (9,019) (9,019)
+129,642 (39,400) 90,242
+
+The Group initially applied IFRS 16 Leases from 1 January 2019. The Group applied the modified retrospective
+approach, under which the cumulative effect of initial application is recognised in retained earnings at 1 January 2019.
+Accordingly, the comparative information presented for 2018 is not restated.
+
+Page | 34 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Consolidated Statement of Cash Flows
+For the year ended 31 December 2019
+
+Net cash utilised in operating activities
+
+Net cash utilised in investing activities
+
+Net cash generated by financing activities
+
+Net increase in cash and cash equivalents
+
+Cash and cash equivalents at the beginning of the year
+
+Cash and cash equivalents at the end of the year
+
+Page | 35
+
+Note
+
+21
+22
+23
+
+2019 2018
+
+£'000 £'000
+(428,354) (778,812)
+(4,849) (1,319)
+456,550 815,816
+23,347 35,685
+81,158 45,475
+104,505 81,160
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Notes to the Consolidated Financial Statements
+
+1. General information
+
+Belmont Green Finance Limited (the “Company”) is incorporated and domiciled in the United Kingdom and registered
+in England and Wales under the Companies Act 2006 with company number 09837692. The company’s registered
+address is 1 Bridge Street, Staines-Upon-Thames, Surrey, United Kingdom, TW18 4TW.
+
+2. Accounting policies
+(a) Basis of preparation
+
+The consolidated financial statements have been prepared in accordance with International Financial Reporting
+Standards (IFRSs) as adopted by the European Union (EU). The financial statements have been prepared under the
+historic cost basis.
+
+(b) Going concern
+
+The financial statements have been prepared on a going concern basis, the directors having made an assessment that
+this is appropriate. This assessment has been based upon a thorough review of a wide range of information relating
+to present and future, internal and external conditions and, in particular, the potential impact of the COVID-19
+pandemic upon the Group and its operations, markets, liquidity, capital and profitability. The review has considered
+both internal and external data and has utilised a range of existing and new internal analyses. It has considered the
+financial and operational impacts of the pandemic against a range of potentia! recovery scenarios. More specifically,
+but not exhaustively, the directors have considered the matters set out below.
+
+e External, and, in particular, regulatory commentaries and guidance, including:
+
+o explicit guidance from the PRA on the application of IFRS9 and financial reporting, treatment of
+payment holidays and the treatment of customers during the pandemic;
+
+o the Bank of England’s economic forecasts, including a comparison with BGFL’s “U-shaped recovery”
+forecasts and being satisfied that BGFL’s forecasts are more prudent, and not more aggressive, than
+the Bank of England’s; and
+
+o the economic forecasts of our third-party economic adviser when compared to other available
+forecasts, including the UK Treasury’s comparison of independent forecasts.
+
+* Having considered the scenarios provided by the Group’s third-party economic adviser, and other external
+data, the Board and management have adopted a more pessimistic macroeconomic scenario than that of the
+adviser and that of the Bank of England, in particular assuming a longer, U-shaped recovery than the sharper
+V-shaped recovery used in Bank of England modelling.
+
+e The Group’s funding and liquidity resources covering the 12 months from the approval of these financial
+statements. These have been considered in the light of current conditions within wholesale funding markets.
+where securitisations are not considered possible and, for the assessment of going concern only, these
+conditions have been assumed to persist for the whole 12-month period. As a direct response to current
+market conditions, the directors took the decision to withdraw Vida’s loan products from the market to ensure
+that the existing offer pipeline could be funded via existing warehouse capacity under a range of pipeline
+conversion assumptions. Vida will resume lending when wholesale funding markets re-open, the timing of
+which is currently uncertain.
+
+e A review of the structural protection and forecast cashflows of the Group’s securitisation and warehouse
+structures. These forecasts considered the potential impact of payment holidays and future arrears rates on
+the cashflows within the structures, on the funding position within those structure and the impact upon the
+operating cash position of the Group.
+
+Page | 36 Belmont Green Finance Limited — 2019 Annual! Report and Accounts
+The Group’s forecast profitability over the 12-month period from approval of the financial statements, both
+on a core (stressed) basis and on a more extreme stressed case. Whilst future revenues will be lower than
+previously forecast due to the withdrawal of products, the average loan book and, hence, revenue are forecast
+to be higher than in 2019. The directors have also taken direct action to reduce the Group’s cost base to
+improve the profitability and cashflows of the Group over the forthcoming 12 months.
+
+The profitability forecasts have included increased ECL charges arising from management adopting its own
+more pessimistic view of the macroeconomic environment. A range of arrears levels has been estimated at
+the end of customer payment holidays, which have been assumed to last up to 6 months and to apply to a
+third of all customers. These assumptions have allowed for probabilities of customers transitioning to a default
+state within 6 months of the end of the payment holiday period to be estimated, reflecting a one-time shift in
+default levels and a further increase in ECL charges. These projections have been undertaken on the core
+(stressed) basis and on the more extreme stressed case.
+
+All of the above considerations have been used to estimate the potential impact on capital contributions from
+Pine Brook, the Group’s private equity investor. Pine Brook remains committed to its long term investment in
+the Group.
+
+The operational resilience of the Group’s critical functions, including its outsourced customer servicing
+operations, its ability to handle increased levels of customer arrears and its IT systems.
+
+An assessment of the Group’s supplier base, considering any potential points of failure and focusing on
+suppliers that could experience financial stress.
+
+The regulatory and legal environment and any potential conduct risks that could arise.
+
+Any potential valuation concerns in respect of the Group’s assets as set out in the Consolidated and Company
+Statements of Financial Position.
+
+(c) Basis of consolidation
+
+The con
+
+solidated financial statements incorporate the financial statements of the Company, its subsidiaries and other
+
+structured entities which are controlled by the Company (jointly referred to as the Group) made up to 31 December
+each year.
+
+Control
+e
+e
+
+is achieved when the Company:
+has power over an entity;
+is exposed, or has rights, to variable returns from its involvement with the entity; and
+
+can use its power to affect returns.
+
+If facts and circumstances indicate that there are changes to one or more of the three elements of control listed above,
+the Company re-assesses whether it still controls the entity.
+
+Entities
+
+which are controlled by the Company are fully consolidated from the date on which control is transferred to
+
+the Group and are de-consolidated from the date that control ceases. Upon consolidation intercompany transactions
+and balances are eliminated. Accounting policies are applied consistently across the Group.
+
+(d) Operating segments
+
+The Group is outside the scope of IFRS 8, Operating Segments, and accordingly does not disclose segment information
+in these financial statements.
+
+Page | 37
+
+Belmont Green Finance Limited - 2019 Annual Report and Accounts
+(e) Interest income and expense
+
+Interest income and expense are recognised in the statement of comprehensive income for all financial instruments
+measured at amortised cost using the effective interest rate (“EIR”) method under IFRS 9 (Financial Instruments:
+recognition and measurement). The EIR is the rate which exactly discounts the expected future cash flows, over the
+expected life of the financial asset or liability to the gross carrying amount of a financial asset or to the amortised cost
+of a financial liability In calculating the EIR the Group estimates the cash flows considering all contractual terms but
+not future credit losses. Origination fees received and paid on loans to customers are amortised over the expected life
+of those assets using the EIR method.
+
+Fee income is included in interest income and similar income and fee expense in interest expense and similar charges.
+Fees that are an integral part of the effective interest rate of a financial instrument are recognised using the EIR
+method. Fees that are not considered integral to the effective interest rate are generally recognised on an accruals
+basis when the service has been provided.
+
+(f) Taxation
+
+Tax on the profit or loss for the period comprises current tax and deferred tax. Tax is recognised in the income
+statement except to the extent that it relates to items recognised directly in equity, in which case it is recognised in
+other comprehensive income.
+
+Current tax is the expected tax payable on the taxable profit for the year. Taxable profit differs from profit as reported
+in the consolidated income statement because it excludes items of income and expense that are taxable or deductible
+in future years and it further excludes items of income and expense that are never taxable or deductible. The Group's
+liability for current tax is calculated using tax rates that have been enacted or substantively enacted at the balance
+sheet date.
+
+Deferred tax is the tax expected to be payable or recoverable on differences between the carrying amounts of the
+assets and liabilities in the financial statements and the corresponding amounts used for taxation purposes and is
+accounted for using the balance sheet liability method. Deferred tax liabilities are generally recognised for all taxable
+temporary differences. Deferred tax assets are recognised to the extent that it is probable that taxable profits will be
+available against which deductible temporary differences can be utilised.
+
+Deferred tax is calculated at the tax rates that are expected to apply in the year when the liability is settled or the asset
+is realised based on tax laws and rates that have been enacted or substantively enacted at the balance sheet date.
+
+Deferred tax assets and liabilities are offset when there is a legally enforceable right to set off current tax assets against
+current tax liabilities and the Group intends to settle its current tax assets and liabilities on a net basis.
+
+(g} Cash and cash equivalents
+
+Cash in the statement of financial position comprises cash at banks with a maturity of three months or less, which is
+subject to an insignificant risk of change in value.
+
+(h) Property, plant and equipment
+
+Property, plant and equipment are shown at cost less accumulated depreciation. Depreciation is provided at rates
+calculated to write-off the cost, less estimated residual value, of each asset on a straight-line basis over its estimated
+useful life as follows:
+
+Leasehold improvements and furniture 5 years
+Computer equipment 3 years
+
+All items of property, plant and equipment are reviewed for indications of impairment annually and if they are
+considered to be impaired are written down to their recoverable amounts. The cost of repairs and renewals is charged
+to profit or loss in the period in which the expenditure is incurred.
+
+Page | 38 Belmont Green Finance Limited - 2019 Annual Report and Accounts
+(i) Intangible assets
+
+Purchased software and costs directly associated with the development of computer software are capitalised as
+intangible assets where the software is a unique and identifiable asset controlled by the Group and will generate future
+economic benefits.
+
+Software is amortised on a straight-line basis over its estimated useful life, which is generally 3 years. Intangible assets
+are reviewed for impairment on an annual basis.
+
+(k) Financial assets and liabilities
+
+On initial recognition, financial assets and liabilities are classified as measured at amortised cost, fair value through
+other comprehensive income or fair value through profit or loss, depending on the Group’s business model for
+managing the financial assets and whether cash flows represent solely payments of principal and interest.
+
+The Group initially recognises loans and advances to customers and debt securities in issue when the Group becomes
+a party to the contractual provisions of the instrument. Other financial assets and liabilities are recognised on trade
+date, being the date, the Group is committed to purchase or sell an asset.
+
+Financial instruments measured at amortised cost
+
+Financial assets (predominantly mortgage loans to customers) that are held to collect contractual cash flows where
+the cash flows represent solely payments of principal and interest are measured at amortised cost. A basic lending
+arrangement results in contractual cash flows that are solely payments of principal and interest on the principal
+amount outstanding.
+
+Financial assets are initially recognised at fair value plus transaction costs that are directly attributable to that asset.
+Subsequently, they are measured at amortised cost using the EIR method, less impairment losses.
+
+Borrowings (predominately debt securities in issue) are recognised initially at fair value, being their issue proceeds net
+of transaction costs incurred. These instruments are subsequently stated at amortised cost using the EIR method.
+
+Financial instruments measured at fair value through profit or loss
+
+Financial assets are classified at fair value through profit or loss where they do not meet the criteria to be measured
+at amortised cost or fair value through comprehensive income or where they are designated at fair value through
+profit or loss to reduce an accounting mismatch. All derivatives are carried at fair value through profit or loss.
+
+Financial liabilities measured at fair value through profit or loss are recognised in the balance sheet at their fair value.
+
+Derecognition
+
+Financial assets are derecognised when the contractual right to receive cash flows from those assets has expired or
+when the Group has transferred its contractual right to receive cash flows from the asset and either substantially all
+the risks and rewards of ownership have been transferred or the Group has neither retained nor transferred
+substantially all of the risks and rewards, but has transferred control.
+
+(I) impairment of financial assets
+
+The Group assesses on a forward-looking basis the expected credit losses {ECLs) associated with its financial assets
+that are not measured at fair value through profit or loss.
+
+For loans to customers, accounts are assigned to one of three stages which are intended to reflect the deterioration
+in credit quality:
+
+*® Stage 1 comprises loans that have shown no significant deterioration in credit quality since origination. They
+are low risk loans and carry an impairment provision equivalent to the ECL from those default events that are
+projected within 12 months of the reporting date (12-month ECL).
+
+Page | 39 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+e Stage 2 comprises loans that have shown significant deterioration in credit quality since origination. These are
+loans that are more than 1 month past due or where there has been a significant relative increase in the
+lifetime probability of default (PD) compared to that at initial recognition, and where the PD for loans is derived
+based on the customer’s credit quality, including analysis of behaviour score showing an increase in risk. These
+loans carry an impairment provision equivalent to the ECL over the contractual lifetime of the loan (lifetime
+ECL).
+
+e Stage 3 comprises loans where there is objective evidence that the loan is credit impaired. The objective
+evidence that is used to determine whether a loan is impaired is whether it is more than 3 months past due,
+has been renegotiated for credit risk reasons or otherwise considered to be in default, including possession.
+These loans also carry an impairment provision equivalent to the lifetime ECL, but with the PD set to 100%.
+
+ECLs are calculated at individual loan level, with the calculations having 3 main components: PD, loss given default
+(LGD) and exposure at default (EAD). The LGD represents losses expected on default, given the probability of a loan
+moving from default to possession, the estimated recovery in the event of possession, costs incurred in the possession
+and sale of security and discounting of recoveries to present value based on the time to sale. The EAD represents the
+expected balance at the time of default, using the contractual amortisation of the loan equivalent to the account
+balance at default with 3 months of non-payment and the associated accrued interest.
+
+As the Group has limited internal data available to it given that the business was only launched in late 2016, its
+statistical models use external data combined with expert judgement to assess the inputs into the ECL calculations.
+
+IFRS 9 requires the estimates of PD and LGD to take into consideration the effects of variations in forward looking
+macroeconomic variables, which include house prices, unemployment and interest rates. The Group integrates
+probability-weighted macroeconomic forecasts into individual ECL calculations. The Group does not have an in-house
+economics function and sources economic forecasts from an appropriately qualified third party. The Group considers
+up to four macroeconomic forecast scenarios — base, upside, downside and stress.
+
+Loans are written off, either partially or in full, when there is no realistic prospect of recovery. Where loans are secured,
+this is after receipt of any proceeds from the realisation of security.
+
+(m) Fair value measurements
+
+Fair value is the price that would be received to sell an asset or paid to transfer a liability in an orderly transaction
+between market participants at the measurement date. It is measured at a specific date and may be significantly
+different from the amount which will be paid or received on maturity or settlement date.
+
+Wherever possible, fair values have been calculated using unadjusted quoted market prices in active markets for
+identical instruments held by the Group. Where quoted market prices are not available, fair values have been
+determined using valuation techniques which, to the extent possible, use market observable inputs, but in some cases
+use non-observable inputs. Valuation techniques used include discounted cash flow analysis and pricing models and,
+where appropriate, comparison to instruments with characteristics similar to those of the instruments held by the
+Group.
+
+Assets and liabilities carried at fair value or for which fair values are disclosed have been classified into three levels
+according to the quality and reliability of information used to determine the fair values.
+
+Level 1
+
+Level 1 fair value measurements are those derived from unadjusted quoted prices in active markets market for
+identical assets or liabilities. The Group does not hold any financial instruments falling within level 1 of the hierarchy.
+
+Level 2
+
+Level 2 valuations are those where quoted market prices are not available, for example where the instrument is traded
+in a market that is not considered to be active or valuation techniques are used to determine fair value and where
+these valuation techniques use inputs that are based significantly on observable market data.
+
+Page | 40 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Level 3
+
+Level 3 valuations are those where at least one input which could have a significant effect on the instruments’ valuation
+is not based on observable market data. Such instruments would include the Group loans to customers as their
+valuation uses unobservable inputs on collectability rates and redemption profiles.
+
+The Group values loans to customers and debt securities in issue using level 3 valuation techniques. Loans to
+customers fair value is measured using modelled receipts of interest and principal which are discounted at market
+rates. The fair value of issued debt securities is calculated using modelled payments of interest and principal
+discounted at market rates for similar instrument.
+
+The fair values of derivative financial instruments, interest rate swaps, are calculated by discounting cash flows using
+appropriate but unobservable market data. As such these instruments fall within level 3 of the hierarchy.
+
+(n) Derivative financial instruments and hedge accounting
+
+As permitted by iFRS 9, the Group continues to apply the requirements of IAS 39 to its hedging relationships. All
+derivatives are recognised at their fair value. Derivatives are carried on the balance sheet as assets when their fair
+value is positive and as liabilities when their fair value is negative. Please refer to 2. Accounting policies (m) Fair value
+measurement for detail of valuation techniques and significant inputs to valuation models.
+
+Hedge accounting allows one financial instrument, generally a derivative such as a swap, to be designated as a hedge
+of another financial instrument such as a loan or a portfolio of such instruments. At the inception of the hedge
+relationship, formal documentation .is drawn up specifying the hedging strategy, the hedged item, the hedging
+instrument and the methodology that will be used to measure the effectiveness of the hedge relationship in offsetting
+changes in the fair value or cash flows of the hedged risk. The effectiveness of the hedging relationship is tested both
+at inception and throughout its life and if at any point it is concluded that it is no longer highly effective in achieving
+its documented objective, hedge accounting is discontinued.
+
+Fair value hedges
+
+Changes in the fair value of derivatives that are designated and qualify as fair value hedges are recorded in the income
+statement, together with the change in the fair value of the hedged asset or liability that are attributable to the hedged
+risk. If the hedge no longer meets the criteria for hedge accounting, changes in the fair value of the hedge item
+attributable to the hedged risk are no longer recognised in the income statement. The cumulative adjustment that
+has been made to the carrying amount of the hedged item is amortised to the income statement using the effective
+interest method over the period to maturity.
+
+(0) Provisions
+
+Provisions are recognised when the Group has a present obligation as a result of a past event, which is reliably
+measurable and when it is probable that the Group will be required to settle that obligation. Provisions are measured
+at the directors' best estimate of the expenditure required to settle the obligation at the reporting date.
+
+(p) Employee benefits — defined contribution scheme
+
+During the period the Group operated a defined contribution pension. The assets of the scheme are held separately
+from those of the company in an independently administered fund. The amount charged to the statement of
+comprehensive income represents the contribution payable to the scheme in respect of the accounting period.
+
+(q) Warehouse and securitisation structures
+
+The Group assesses whether it controls special purpose vehicles and the requirement to consolidate them under the
+criteria of IFRS 10. The criteria include the power to direct relevant activities, exposure or rights to variable returns
+and the ability to use its power to affect the amount of these returns.
+
+At 31 December 2019, the Group used four warehouse structures (Belmont Green Funding 1 Ltd, Belmont Green
+Funding 3 Ltd, Belmont Green Funding 4 Ltd and Belmont Green Funding 5 Ltd) and four securitisation structures
+(Tower Bridge Funding No. 1 PLC, Tower Bridge Funding No. 2 PLC, Tower Bridge Funding No. 3 PLC and Tower Bridge
+Funding No. 4 PLC). The Group has retained the risks and rewards of ownership in respect of the loans transferred to
+these special purpose vehicles and they, therefore, fail the derecognition criteria and are included in the Group’s
+financial statements.
+
+Page | 41 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Whilst the special purpose vehicles have been consolidated as 100% subsidiaries, the mortgage loans included within
+the deal structures are ring-fenced, with the cash flows being used to repay liabilities in line with the priority of
+payments set out in the relevant deal documentation. For all structures, with the exception of Tower Bridge Funding
+No. 4 PLC, the senior debt is held externally with the junior debt and residual certificates retained by the Group. Tower
+Bridge Funding No. 4 PLC was structured with vertical risk retention with 95% of all notes being held externally and the
+Group holding 5% of all notes and the residual certificates. The Group statement of financial position shows externally
+held notes as debt securities in issue.
+
+(r) Exceptional item
+
+Exceptional items are items that are unusual because of their size or nature and which the directors consider should
+be disclosed separately to enable a full understanding of the Group’s underlying results.
+
+(s) Significant accounting judgements, estimates and assumptions
+
+The preparation of financial statements in conformity with IFRSs requires the use of certain critical accounting
+estimates. It also requires management to exercise its judgement in applying the Group's accounting policies. The key
+areas involving a higher degree of judgement or complexity, or areas where assumptions and estimates are significant
+to the consolidated financial statements are set out below.
+
+Impairment
+
+In calculating impairment provisions, IFRS 9 requires management to make judgements and estimates. The significant
+judgements and estimates are set out below.
+
+e The calculation of PDs and LGDs requires the use of forward-looking estimates of macroeconomic conditions.
+The ECL calculations are, therefore, sensitive to both the assumed forecast macroeconomic variables and the
+probability weightings assigned to the forecast scenarios. The ECLs calculated utilise economic forecasts that
+were considered to be appropriate at 31 December 2019. The following table illustrates the ECLs calculated
+using 100% weighting to each scenario compared to the ECL calculated using the weighting approved by the
+Group’s Audit Committee (60% base, 10% upside, 20% downside, 10% stress).
+
+ECL (100%
+weighting) ECL
+“-£'000° ~~ Weighting. ~ £’000--
+
+Scenario ~
+
+Base 3,481 60% 2,089
+Upside 3,085 10% 308
+Downside 5,141 20% 1,028
+Stress 6,746 10% 675
+
+4,100
+
+The impact of applying multiple economic scenarios gives rise to a probability weighted provision of £4,100k,
+17.8% more than the provision of £3,481k calculated using the base scenario.
+
+® The threshold applied to determine whether a significant increase in credit risk has occurred to transfer a loan
+from stage 1 to stage 2. To determine whether the risk of default has increased significantly since initial
+recognition, the Group has adopted a quantitative approach, using observed data, and the presumption that
+an account that is more than 1 month past due has experienced a significant increase in credit risk. A cure
+period of 6 months is required for an account to return from Stage 3 to other stages.
+
+Effective interest rate
+
+A number of estimates are made when calculating the EIR for loans to customers. The critical estimates in the EIR
+calculation are the expected life of a loan and the assumed reversionary rate at the end of the fixed rate period.
+
+Bringing forward future reversionary rate income and spreading upfront fees received and paid creates assets and
+liabilities in the statement of financial position. These estimates are monitored to ensure their ongoing
+appropriateness.
+
+Page | 42 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+During 2019, BGFL’s first cohort of 2-year fixed rate loans reached the end of their fixed rate periods, providing the
+Group with internal data on the redemption profiles of its loans. A re-assessment of the expected lives of loans was
+made using both internal and external data. This re-assessment led to significant reduction in the expected lives of
+loans. Revenue that had previously been brought to account was reversed and this totalled £7,710k.
+
+The Board is satisfied that the revised expected loan lives are appropriate and continues to monitor these estimates
+as more internal data becomes available.
+
+Costs of warehouse facilities
+
+BGFL established four warehouse facilities to provide short term funding for originated loans prior to transferring them
+to securitisation vehicles. The fees incurred in setting up and making amendments to these facilities were deferred
+and amortised over what was estimated to be the expected period of time that these facilities would be available to
+the business. From inception, BGFL’s only source of funding was from wholesale markets and its business model
+assumed that this would continue.
+
+The commencement of the banking licence application process, which, if successful, would mean access to alternative
+sources of funding, led to the Group reducing the expected lives of the warehouse facilities. The amortisation periods
+for warehouse fees was reduced from 5 years to 1 or 2 years dependent upon the nature of the costs (see Note 4 for
+further detail).
+
+At 31 December 2019, unamortised deferred fees of £6,767k (2018: £12,314k} were included in other receivables in
+the statement of financial position (see Note 12).
+
+Lending into later life
+
+In 2019, some issues were identified with a previous tranche of lending to a small proportion of borrowers whose
+loans ran beyond their retirement age. BGFL has sought to ensure that no customer harm results and consequently
+will take action that could involve a lower EIR from this cohort of loans. This action would be treated as an act of
+forbearance and so places each of these loans at stage 3 for ECL calculation purposes. At 31 December 2019 a total
+provision of £1,546k was made against these loans.
+
+As there is a possibility that some of this cohort of loans will redeem before action is taken by BGFL, it is a matter of
+judgement as to whether the Group will incur a reduction in income to the extent of the provision. Given that this
+matter has yet to be fully resolved with the FCA, the Board is satisfied that the provision at 31 December 2019 is
+appropriate.
+
+Deferred tax asset recognition
+
+The deferred tax asset in the statement of financial position at 31 December 2019 has been recognised on the basis
+that the directors believe it is probable that sufficient future taxable profits will be generated against which they can
+be utilised. The directors have reviewed the forecast future profit performance of the Group, including the underlying
+assumptions of that forecast, in arriving at this conclusion.
+
+(t) Changes in significant accounting policies
+
+The Group adopted IFRS 16: Leases effective from 1 January 2019. The Group elected to apply the modified
+retrospective approach, under which the cumulative effect of initial application has been recognised in retained
+earnings at 1 January 2019. Accordingly, the comparative information presented for 2018 has not been restated. The
+details of the changes in accounting policies are disclosed below.
+
+The Group previously classified leases as operating leases based on its assessment of whether the lease transferred
+significantly all of the risks and rewards incidental to ownership of the underlying asset to the Group. Under IFRS 16,
+the Group recognises right-of-use assets and lease liabilities for most of these leases.
+
+Page | 43 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+The Group used a number of practical expedients when applying IFRS 16 to leases previously classified as operating
+leases under IAS 17. In particular, the Group:
+
+e did not recognise right-of-use assets and liabilities for leases for which the lease term ends within 12 months
+of the date of initial application;
+
+e did not recognise right-of-use assets and liabilities for leases of low value assets;
+
+e excluded initial direct costs from the measurement of the right-of-use asset at the date of initial application.
+
+3. Interest receivable and similar income
+
+2019 2018
+£'000 £'000
+At amortised cost:
+Interest income on loans to customers 56,972 45,975
+At fair value through profit or loss:
+Net expense on financial instruments (7,323) (3,933)
+49,649 42,042
+
+As described in Note 1(s) Effective interest rate, the expected lives of loans to customers were re-assessed during
+the year. This led to a downwards adjustment to interest income in 2019 of £7,710k (2018: Nil) representing interest
+previously brought to account on an effective interest rate basis.
+
+4, Interest expense and similar charges
+
+2019 2018
+£'000 £'000
+Interest expense and other charges 47,030 24,573
+
+As described in note 1(s) Costs of warehouse facilities, the amortisation periods for costs incurred in setting up
+warehouse facilities was re-assessed during 2019. This led to an increased charge to interest expense in the year with
+the total charge being £9,239k (2018: £3,015k).
+
+5. Portfolio fair value adjustments
+
+2019 2018
+
+£'000 £'000
+Net loss on derivatives , (11,466) (251)
+Net gain/(loss) in fair value of hedged item sets held in fair value hedges 7,566 (222)
+(3,900) (473)
+
+Page | 44 Belmont Green Finance Limited —- 2019 Annual Report and Accounts
+6. Administrative expenses
+
+Staff costs
+
+Auditor’s remuneration:
+Audit of the company and consolidated financial statements
+Audit of the company's subsidiaries
+Other non-audit services not covered above
+
+Audit related assurance services
+
+Lease commitment under IFRS 16
+
+Operating lease rentals
+
+Other administrative costs
+
+Total
+
+Included in staff costs is an exceptional item of £1,377k (2018: Nil) relating to a management restructure.
+
+Staff costs
+
+The aggregate remuneration of staff excluding executive directors comprised:
+
+Wages and salaries
+Social security costs
+Pension costs
+
+Total
+
+The average number of employees including executive directors was 177.
+
+Directors’ remuneration comprised:
+
+Emoluments
+Company contribution to defined contribution scheme
+
+2019 2018
+£°000 £'000
+15,892 13,271
+97 84
+130 66
+114 248
+465 331
+1,051 -
+- 1,566
+13,893 9,566
+31,642 25,132
+2019 2018
+£'000 £'000
+13,485 11,279
+1,672 1,421
+735 571
+15,892 13,271
+2019 2018
+£'000 £'000
+1,152 726 ©
+23 38
+1,175 764
+
+There was one director in the company’s defined contribution pension scheme (2018: one) during the year. The
+
+total amount payable to the highest paid director in respect of emoluments was £490k (2018: £401k).
+
+Page | 45 Belmont Green Finance Limited ~ 2019 Annual Report and Accounts
+7. Taxation
+
+2019 2018
+£'000 £'000
+Analysis of tax charge for the year
+Deferred tax - current year 4,241 222
+Tax (charge) /credit 4,241 222
+Factors affecting the tax charge for the year
+Loss on ordinary activities before taxation (35,325) (9,241)
+IFRS16 adoption for Leases 162 -
+(35,163) (9,241)
+Tax at UK corporation tax rate of 19% (2018:19%) 6,681 1,756
+Factors affecting charge
+Adjustments in respect of prior year (468) 177
+Non-deductible expenses (1,395) (994)
+Effect of tax rate change (554) (717)
+Exempt amounts (23) (12)
+Tax (charge)/credit on loss on ordinary activities 4,241 222
+8. Derivative financial instruments ~
+The fair values and notional amounts of derivative instruments are set out in the following table:
+2019 2018
+Instrument type Notional Fairvalue Fair value Notional Fair value _—‘Fair value
+amount assets liabilities amount assets liabilities
+£7000 £’000 £’000 £’000 £7000 £’000
+Interest rate - not in hedging
+relationship 358,081 - 1,462 481,085 2,634 -
+Interest rate - fair value
+hedges 1,149,472 473 9,430 626,835 - 1,587
+Total recognised derivative
+assets/liabilities 1,507,553 473 10,892 1,107,920 2,634 1,587
+
+As at 31 December 2019, the total notional amount of derivative instruments is £1,507.6m, of which £1,149.5m is
+designated in fair value hedge accounting relationships, where the hedged item notional amount is £1,149.3m, thus
+
+maintaining a hedge ratio of 1:1.
+
+The carrying amount of the Group’s hedging instruments are as follows:
+
+£’000
+
+Contract/notional
+amount
+31 December 2019 £’000
+Fair value hedges
+Interest rate swaps 1,149,472
+
+Page | 46
+
+Assets
+
+Liabilities
+
+Changes in fair
+
+value used for
+calculating hedge
+ineffectiveness
+
+£000
+
+473
+
+9,430
+
+£’000
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Contract/notional Assets Liabilities Changes in fair
+
+amount value used for
+calculating hedge
+
+ineffectiveness
+
+31 December 2018 £’000 £000 £’000 £’000
+
+Fair value hedges
+
+Interest rate swaps 626,835 - 1,587 -
+
+The carrying amount of the Group’s hedged items are as follows:
+
+Carrying amount of the Accumulated amount of Changes in fair
+hedged item fair value adjustment on value of hedged
+the hedged item item for
+ineffectiveness
+assessment
+Assets Liabilities Assets Liabilities
+31 December 2019 £’000 £’000 £'000 £7000 £’000
+Fair value hedges
+Interest rate
+Fixed rate mortgages? 1,149,305 9,161 1,817 -
+31 December 2018
+Fair value hedges
+Interest rate
+Fixed rate mortgages? 626,835 1,708 1,931 -
+
+1 Included within Loans and advances to customers
+
+The hedged item represents the portfolio of mortgages in fixed rate mortgages line item, and in accordance with IAS 39:AG123 the change in fair value of the
+hedged item is presented as Fair value adjustments for hedged risk line iter within assets.
+
+The Group holds derivatives to manage and hedge the Group's risk arising from markets. The Group has entered into
+interest rate swaps to reduce the risk of loss from movements in interest rates. The Group manages this exposure by
+hedging 100% of its fixed rate mortgage loan exposure through balance guaranteed swaps to match its floating rate
+funding It has established hedge accounting relationships for interest rate risk using fair value hedges.
+
+Hedge ineffectiveness arises during the management of interest rate risk due to residual unhedged risk. Sources of
+ineffectiveness, which the Group may decide to not fully mitigate, can include basis differences, timing differences and
+notional amount differences. The effectiveness of accounting hedge relationships is assessed between the hedging
+derivatives and the documented hedged item, which can differ from the underlying economically hedged item.
+
+Derivative instruments are classified as level 3 financial instruments in the fair value hierarchy.
+
+IBOR Reform
+
+In September 2019, the IASB issued interest Rate Benchmark Reform — Amendments to IFRS 9, IAS 39 and IFRS 7. These
+amendments modify specific hedge accounting requirements to allow hedge accounting to continue for affected
+hedges during the period of uncertainty before the hedged items or hedging instruments affected by the current
+interest rate benchmarks are amended as a result of the on-going interest rate benchmark reforms.
+
+The amendments are relevant to the Group given that it applies hedge accounting to its benchmark interest rate
+exposures.
+
+Page | 47 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+The application of the amendments impacts the Group’s accounting in the following ways:
+
+¢ The Group has fixed rate advances in the form of retail mortgage lending to customers which it includes in a
+portfolio fair value hedge of the GBP LIBOR risk component of those advances. The benchmark interest rate
+component was separately identifiable at the time of the initial designation, and as noted above, the
+amendments permit continuation of hedge accounting even if in the future the hedged benchmark rate, GBP
+LIBOR, may no longer be separately identifiable.
+
+e The Group will not discontinue hedge accounting should the retrospective assessment of hedge effectiveness
+fall outside the 80-125 per cent range and the hedging relationship is subject to interest rate benchmark
+reforms. For those hedging relationships that are not subject to the interest rate benchmark reforms the entity
+continues to cease hedge accounting if retrospective effectiveness is outside the 80-125 per cent range.
+
+The Group has chosen to early apply the amendments to IFRS9/IAS 39 for the reporting period ended 31 December
+2019, which are mandatory for annual reporting periods beginning on or after 1 January 2020. Adopting these
+amendments allows the Group to continue hedge accounting during the period of uncertainty arising from interest
+rate benchmark reforms.
+
+Uncertainty arising from IBOR reform
+
+At 31 December 2019 had remaining hedging exposures to GBP LIBOR impacted by the reform with a notional amount
+of £1,013.5m, of which £704.9m is designated in fair value hedge accounting relationships. The following table sets
+out the maturity profile and average interest rate of the hedging instruments used in the Group’s hedging strategies:
+
+Maturity
+Uptol 1-3 3-12 Over 5
+month months months 1-5 years years Total
+31 December 2019 £m £m £m fm fm fm
+Derivatives
+Interest rate
+Notional 40 46 156 735 37 1,013
+Average fixed interest rate 1.235% 1.278% 1.344% 1.312% 0.809% -
+Uptol 1-3 3- Over 5
+month months 12months 1-5 years years Total
+31 December 2018 £m £m £m £m £m £m
+Derivatives
+Interest rate
+Notional 2 18 162 927 - 1,108
+Average fixed interest rate 0.754% 0.760% 0.902% 1.444% - -
+
+Page | 48 Belmont Green Finance Limited ~ 2019 Annual Report and Accounts
+9. Financial assets and liabilities at fair value through profit or loss
+
+The amounts relating to portfolios designated as hedged items in fair value hedge relationships to manage the Group’s
+
+exposure to interest rate risk were as follows:
+
+Loans and advances to customers
+
+10. Loans to customers
+
+BTL loans
+Owner-occupied loans
+Second charge loans
+
+EIR adjustments
+Provision for impairment losses
+
+Movements in loans to customers
+
+At beginning of period
+
+Loans originated
+
+Effective interest rate adjustments
+Interest charged on loans
+Redemptions and repayments
+Charge for impairment losses
+
+11. Expected credit losses
+
+2019
+
+Assets
+£'000
+
+9,161
+
+2018
+
+Liabilities Assets Liabilities
+£'000 £'000 £'000
+1,817 1,708 1,931
+2019 2018
+£'000 £'000
+1,173,351 847,370
+428,658 342,435
+2,258 2,714
+1,604,267 1,192,519
+(367) 7,021
+(4,100) (1,698)
+1,599,800 1,197,842
+2019 2018
+£'000 £'000
+1,197,842 428,754
+556,616 783,097
+(7,388) 7,676
+401 134
+(145,269) (20,185)
+(2,402) (1,634)
+1,599,800 1,197,842
+
+The following tables show the movement in credit exposures by IFRS 9 stage and the corresponding movement in
+
+impairment provisions by IFRS 9 stage.
+
+Movement in loans to customers by stage - 2019
+
+Gross balance at 1 January 2019
+
+Transfers between stages
+
+To stage 1
+
+To stage 2
+
+To stage 3
+
+Originations
+
+Changes to carrying value
+
+Loans to customers derecognised during the
+period
+
+Gross balance at 31 December 2019
+
+Page | 49
+
+Stage 1 Stage 2 Stage 3 Total
+£'000 £'000 £'000 £'000
+1,080,265 109,901 2,354 1,192,519
+52,846 (52,455) (391) -
+(129,151) 129,741 (590) -
+(2,305) (2,793) 5,098 -
+478,716 62,350 1,536 542,602
+31,826 (55,257) 22,614 (817)
+(121,755) (8,282) - (130,037)
+1,390,442 183,205 30,621 1,604,267
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Movement in loans to customers by stage - 2018
+
+Gross balance at 1 January 2018
+Transfers between stages
+
+To stage 1
+
+To stage 2
+
+To stage 3
+
+Originations
+
+Changes to carrying value
+
+Loans to customers derecognised during the period
+
+Gross balance at 31 December 2018
+
+Stage 1 Stage 2 Stage 3 Total
+£'000 £'000 £'000 £'000
+390,065 39,408 - 429,473
+21,033 (21,033) - -
+(21,547) 21,547 - -
+(498) (430) 928 -
+703,994 72,527 1,429 777,949
+(4,032) (411) (3) (4,446)
+(8,750) (1,707) - (10,457)
+1,080,265 109,901 2,354 1,192,519
+
+~ In addition, the mortgage offer pipeline of £119,382k at 31 December 2019 (2018: £106,822k) was classified at stage
+
+1.
+
+Movement in expected credit losses by stage -
+2019
+
+Impairment provision at 1 January 2019
+Transfers between stages
+Transfers to stage 1
+Transfers to stage 2
+Transfers to stage 3
+Originations
+Repayments and redemptions
+Changes to carrying value
+Pipeline
+Impairment provision at 31 December 2019
+
+Movement in expected credit losses by stage -
+2018
+
+impairment provision at 1 January 2019
+Transfers between stages
+Transfers to stage 1
+Transfers to stage 2
+Transfers to stage 3
+Originations
+Pipeline
+Impairment provision at 31 December 2019
+
+Arrears performance
+
+Stage 1 Stage 2 Stage 3 Total
+£'000 £'000 £'000 £'000
+525 984 189 1,698
+471 (431) (40) -
+(93) 146 (53) -
+
+(2) (70) 72 -
+
+328 587 708 1,623
+{45) (55) - (100)
+(553) 383 1,023 853
+26 - - 26
+
+657 1,544 1,899 4,100
+Stage 1 Stage 2 Stage 3 Total
+£'000 £'000 £°000 £'000
+225 369 - 594
+(74) 41 47 14
+(17) (59) 27 (49)
+
+(1) (6) - (7)
+
+368 639 115 1,122
+
+24 - - 24
+
+525 984 189 1,698
+
+The Group’s mortgage book has experienced relatively low arrears and limited defaults. At the end of December 2019
+loans more than 1 month in arrears represented 1.57% of the portfolio balances (2018: 0.91%). This can be broken
+down to 3.01% of the Owner-occupied book (2018: 1.90%) and 1.04% of the BTL book (2018: 0.51%). Those loans more
+
+than 3 months in arrears represented 0.44% of the total portfolio balances (2018: 0.11%}.
+
+1 Owner-occupied loan had been repossessed at the end of December 2019 (2018: Nil) and 5 BTL loans had a Law of
+
+Property Act receiver in place (2018: Nil).
+
+Page | 50
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+The following tables provide an analysis of loans in arrears:
+
+Ageing in arrears but not impaired mortgage loans
+
+O-1month
+1-2 months
+2-3 months
+
+Ageing in arrears and impaired mortgage loans
+
+> 3 months
+
+Movement in collective provision for impairment losses
+
+At beginning of period
+Adjustment on adoption of IFRS 9
+Charge for the period
+
+At end of period
+
+12. Other receivables
+
+Deferred deal costs
+Prepayments
+Other receivables
+
+13. Deferred tax asset
+
+At 1 January
+
+Prior year effect
+
+Credit to income statement
+Effect of change in tax rate
+Asset at 31 December
+
+Page | 51
+
+2019 2018
+£'000 £'000
+16,006 7,384
+13,260 8,275
+4,813 1,272
+34,078 16,932
+2019 2018
+£'000 £'000
+7,076 1,364
+2019 2018
+£'000 £'000
+1,698 -
+- 594
+2,402 1,105
+4,100 1,699
+2019 2018
+£'000 £'000
+6,767 12,314
+1,568 1,125
+2,644 1,615
+10,979 15,054
+2019 2018
+£'000 £'000
+6,002 5,776
+(468) 177
+5,265 766
+(554) (717)
+10,245 6,002
+
+Belmont Green Finance Limited - 2019 Annual Report and Accounts
+14. Property, plant and equipment
+
+Land and Leasehold Computer
+
+2019 Buildings Improvem’ts Equipment Total
+
+£'000 £'000 £'000 £'000
+Cost
+At 1 January 2019 - 1,315 451 1,766
+Recognition of right-of-use asset on asset on
+initial application of IFRS 16 4,811 - - 4,811
+Additions - 459 213 672
+At 31 December 2019 4,811 1,774 664 7,249
+Depreciation/amortisation
+At 1 January 2019 - 292 225 517
+Charge for the year 946 274 178 1,398
+At 31 December 2019 946 566 403 1,915
+Net book value
+At 31 December 2019 3,865 1,208 261 5,334
+
+Leasehold Computer
+2018 Improvem’ts Equipment Total
+£'000 £000 £'000
+
+Cost
+At 1 January 2018 137 310 447
+Additions 1,178 141 1,319
+At 31 December 2018 1,315 451 1,766
+Depreciation/amortisation
+At 1 January 2018 48 98 146
+Charge for the year 244 127 371
+At 31 December 2018 29 225 517
+Net book value
+At 31 December 2018 1,023 226 1,249
+
+Following the adoption of IFRS 16, property, plant and equipment includes right-of-use assets of £3,865k related to
+leased properties that do not meet the definition of investment property (Note 19).
+
+Page | 52 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+15. Intangible assets
+
+2019 2018
+£'000 £'000
+Cost
+At the beginning of the year 1,005 1,005
+Additions 311 -
+At the end of the year 1,316 1,005
+Depreciation/amortisation
+At the beginning of the year 744 409
+Charge for the year 255 335
+At the end of the year 999 744
+Net book value
+At the end of the year 317 261
+
+Intangible assets comprise computer software, which consists of purchased software and other external costs
+directly associated with the development of software. The amortisation charge for the period is included in “Other
+administrative costs” as disclosed in Note 6.
+
+16. Debt securities in issue
+
+2019 2018
+
+£'000 £'000
+Loan Note Class A 1,127,491 846,929
+Loan Note Class B 84,587 58,700
+Loan Note Class C 67,025 46,600
+Loan Note Class D 42,487 29,900
+Loan Note Class E 28,300 20,700
+Loan Note Class F 6,650 -
+Loan Note Class G 9,793 -
+Loan Note Class X 22,870 22,838
+Loan Note Class Z 7,130 -
+Warehouse funding 207,628 174,603
+1,603,961 1,200,270
+
+Debt securities in issue are secured on mortgage loans through the Group’s special purpose vehicles. These notes are
+redeemable in part from time to time, such redemptions being limited to the net capital received from mortgage
+customers in respect of underlying assets. Within the Tower Bridge Funding No. 1 PLC, Tower Bridge Funding No. 2
+PLC, Tower Bridge Funding No. 3 PLC and Tower Bridge Funding No. 4 PLC structures are nil (2018: £1,936k), £2,172k
+(2018: £6,789k), £9,083k (2018: £14,114k) and £11,875k (2018: nil) of Class X notes respectively that are redeemable
+from the interest payments received from mortgage customers rather than capital repayments. There is no obligation’
+on the Group to make good any shortfall. Further disclosure in relation to the underlying assets is contained in Note
+10.
+
+Page | 53 : Belmont Green Finance Limited — 2019 Annual Report and Accounts
+17. Other liabilities
+
+2019 2018
+
+£'000 £'000
+Accruals & payabies 6,915 5,768
+Provisions 254 -
+Lease liability 4,436 -
+Other liabilities 672 6,102
+12,277 11,870
+
+Provisions predominantly include a dilapidations provision related to the anticipated costs of restoring leased assets
+to their original condition. Management expects that the provision will be utilised at the end of the lease terms, the
+longest of which is due to end in 2024.
+
+18. Share capital
+
+2019 2018
+£'000 £'000
+Issued, allotted and fully paid 168,312,560 (2018: 129,641,465) ordinary shares of £1 168,313 129,641
+
+Subsequent to year end, the Company has raised further share capital totalling £25,350,000 through the issue of £1
+ordinary shares as follows: 8 January 2020, £5,400,000; 5 February 2020 £7,800,000; 4 March 2020, £5,200,000; 8
+April 2020, £4,950,000; and 11 June, £2,000,000.
+
+19. Leases
+
+The Group has entered into leases for office buildings. The lease contracts contain a wide range of terms and
+conditions, including extension options. These options are exercisable only by the Group and not by the respective
+Lessor.
+
+Information about leases for which the Group is a lessee is presented below. The weighted average incremental
+borrowing rate applied to lease liabilities on 1 January 2019 was 3%. Right-of-use assets related to leased properties
+that do not meet the definition of investment property are presented as property, plant and equipment.
+
+2019
+£'000
+At 1 January under IFRS 16 4,311
+Amortisation (946)
+At 31 December 3,865
+
+20. Risk management and financial instruments
+
+Financial instruments form the majority of the Group’s assets and liabilities. The Group manages risk on a consolidated
+basis and risk disclosures are provided on this basis. The principal financial risks to which the Group is exposed are
+credit, liquidity and market risks.
+
+Credit risk
+
+Credit risk is the risk that unexpected lasses may arise as a result of the Group’s borrowers or market counterparties
+failing to meet their obligations to repay. The classes of financial instruments to which the Group is most exposed are
+loans to customers and cash with other financial institutions. The maximum credit risk exposure equals the total
+carrying amount of these categories plus off-balance sheet undrawn mortgage facilities.
+
+Page | 54 Belmont Green Finance Limited - 2019 Annual Report and Accounts
+Credit risk — loans to customers
+
+Credit risk associated with mortgage lending is largely driven by the housing market and level of unemployment. A
+recession and/or high interest rates could cause pressure within the market, resulting in rising levels of arrears and
+
+repossessions.
+
+All loan applications are assessed with reference to the Group’s lending policy. Changes to the policy are approved by
+the Board Risk Committee (BRC), with mandates set for the approval of loan applications. BRC regularly monitors
+lending activity, taking appropriate actions to adjust lending criteria in order to control risk and manage exposure.
+
+The following table provides a breakdown of loans to customers by indexed loan-to-value:
+
+2019
+Owner- Second
+BTL occupied charge Total
+£'000 £'000 £'000 £'000 %
+
+0% - 50% 54,158 75,157 477 129,791 8.1
+50% - 60% 93,845 56,408 274 150,527 9.4
+60% - 70% 291,020 81,669 673 373,361 23.3
+70% - 80% 632,625 103,910 833 737,368 46.0
+80% - 90% 101,704 100,757 - 202,461 12.6
+> 90% - 10,759 - 10,759 0.7
+Total loans to customers 1,173,351 428,659 2,258 1,604,267 100.0
+
+2018
+
+Owner- Second
+
+BTL occupied charge Total
+£'000 £'000 £'000 £'000 %
+
+0% - 50% 41,749 58,598 699 101,046 8.5
+50% - 60% 73,801 44,060 479 118,340 3.9
+60% - 70% 242,909 68,802 901 312,612 26.2
+70% - 80% 430,081 90,888 590 521,559 43.7
+80% - 90% 56,546 76,617 45 133,208 11.2
+> 90% 2,284 3,471 - 5,755 0.5
+Total loans to customers 847,370 342,436 2,714 1,192,520 100.0
+
+Page | 55
+
+Belmont Green Finance Limited ~ 2019 Annual Report and Accounts
+An analysis of loans to customers by region at 31 December is as follows:
+
+2019 2018
+£°000 % £'000 %
+East Midlands 63,021 3.9 46,053 3.9
+East of England 204,173 12.7 156,469 13.1
+London 699,342 43.6 530,526 44.5
+North East 22,463 1.4 16,260 1.4
+North West 87,291 5.4 63,440 5.3
+Scotland 16,127 1.0 280 0.0
+South East 248,801 15.5 184,868 15.5
+South West 93,148 5.8 73,292 6.1
+Wales 35,670 2.2 25,445 2.1
+West Midlands 78,870 4.9 56,967 4.8
+Yorkshire and the Humber 55,363 3.5 38,920 3.3
+Total loans to customers 1,604,267 100.0 1,192,520 100.0
+
+The following table shows as at year end, all gross loans to customers categorised by IFRS 9 stage together with the
+
+impairment provision held against each loan category.
+
+Gross loans Impairment provision
+2019 2018 2019 2018
+£'000 £’000 £'000 £’000
+Stage 1
+Low risk 1,402,944 1,074,758 651 542
+High risk 8,712 5,506 10 7
+Stage 2
+Low risk 143,095 91,577 864 622
+High risk 41,862 18,324 686 344
+Stage 3
+Impaired 7,654 2,354 1,889 183
+Total loans to customers 1,604,267 1,192,519 4,100 1,698
+
+Credit risk — cash at financial institutions
+
+The Group holds cash at financial institutions as part of its management of liquidity. The table below provides a
+breakdown of cash held at financial institutions by rating of those institutions.
+
+At 31 December 2019
+At A- AA- BB+ Total
+£'000 £'000 £'000 £'000
+Cash and cash equivalents 9,301 15,518 79,624 62 104,505
+At 31 December 2018
+At AA Total
+£°000 £'000 £'000
+32,274 48,884 81,158
+
+Cash and cash equivalents
+
+Page | 56
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Liquidity risk
+
+The table below shows the timing of cash outflows payable up to a period of 10 years on an undiscounted basis for
+finance debt, trade and other payables and accruals. These will differ from carrying value as they include future interest
+payments. The floating rate interest is estimated using the prevailing rate at the balance sheet date.
+
+Trade and Accruals Finance Interest on
+other payables debt finance debt
+31 December 2019 £'000 £'000 £'000 £'000
+Within one year 629 4,648 392,081 31,009
+1 to 2 years 860,155 20,105
+2 to 3 years 365,912 9,087
+3 to 4 years 190
+4to 5 years
+5 to 10 years 723
+Over 10 years
+1,542 4,648 1,618,149 60,202
+
+The table below shows the timing of contractual cash outflows for derivative financial instruments entered into for the
+purpose of managing interest rate risk, whether or not hedge accounting is applied. The amounts reflect the gross
+settlement amount where the pay leg of a derivative will be settled separately from the receive leg. The swaps are
+with high investment-grade counterparties and therefore the settlement-day risk expousre is considered to be
+negligible. For further information on derivative financial instruments, see Note 8.
+
+2019 2018
+
+Cash outflows for derivative finanical instrument at 31 December £'000 £'000
+Up to 1 month 7 42
+1-3 months 2,082 1,285
+3-12 months 5,739 4,047
+1-5 years 15,340 © 13,241
+Over 5 years 3 19
+23,170 18,633
+
+Interest rate risk
+
+To provide a broad indication of the Group’s exposure to interest rate movements, the notional impact of 0.50%
+change in UK interest rates on the equity of the Group at 31 December 2019, and the notional annualised impact of
+such a change on the operating profit of the Group, based on the year end balance sheet have been calculated.
+
+Assuming all relevant interest rates move by the same amount in parallel and that all repricing takes place at the
+balance sheet date, a 0.50% decrease in UK interest rates would increase the Group’s loss before taxation by £4,095k
+and its equity by the same amount at 31 December 2019. A decrease in the interest rate would have an opposite effect.
+
+It should also be noted that the changes in carrying value of derivative financial instruments designated as fair value
+hedges from movements in interest rates have an immaterial effect on the Group income statement and equity due
+to compensating adjustments in the carrying value of the debt.
+
+Page | 57 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+21. Net cash flow from operating activities
+
+Group
+
+Loss for the period
+
+IFRS 16 initial application adjustment
+IFRS 9 transition adjustment for loan impairments
+
+Non-cash items
+
+Taxation credit for the period
+
+Depreciation of property, plant and equipment
+Amortisation of intangible assets
+
+Movement in fair value hedge
+
+Changes in operating assets and liabilities
+Increase in loans to customers
+
+Decrease/ (Increase) in receivables
+Increase in accruals & payables
+
+Net cash utilised in operating activities
+
+22. Net cash flow from investing activities
+
+Purchase of property, plant and equipment
+Expenditure on software development
+Net cash utilised in investing activities
+
+23. Net cash flow from financing activities
+
+Proceeds from note issuance
+Proceeds from shares issued
+Net cash generated by financing activities
+
+24. Investments
+
+Investment in subsidiary undertakings
+
+Page | 58
+
+2019 2018
+£'000 £'000
+(31,084) (9,019)
+(162) .
+- (530)
+(31,246) (9,549)
+(4,241) (222)
+452 371
+255 335
+3,900 473
+(30,880) (8,592)
+(401,958) (769,088)
+4,075 (6,205)
+409 5,073
+(428,354) (778,812)
+2019 2018
+£'000 £'000
+4,538 1,319
+311 -
+4,849 1,319
+2019 2018
+£'000 £'000
+417,879 771,034
+38,671 44,782
+456,550 815,816
+2019 2018
+£'000 £'000
+9,000 9,000
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+25. Related parties
+
+The Company has the following subsidiaries and other related parties, all of which are incorporated in Great Britain
+and are registered in England and Wales and operate throughout the United Kingdom (apart from the Pine Brook
+entities, which are incorporated in the Cayman Islands):
+
+Shares and
+Voting Principal
+Rights Activities
+Subsidiaries
+Belmont Green Funding 2 Limited 100% Dormant
+
+Other related parties
+
+Pine Brook PD (Cayman) Intermediate, LP
+Pine Brook Capital Partners Il (Cayman) AV, LP
+Belmont Green Ltd
+
+Belmont Green Funding 1 Limited
+
+Belmont Green Funding 1 Holdings Limited
+Belmont Green Funding 3 Limited
+
+Belmont Green Funding 3 Holdings Limited
+Belmont Green Funding 4 Limited
+
+Belmont Green Funding 4 Holdings Limited
+Belmont Green Funding 5 Limited
+
+Tower Bridge Funding No.1 PLC
+
+Tower Bridge Funding No.1 Holdings Limited
+Tower Bridge Funding No.2 PLC
+
+Tower Bridge Funding No.2 Holdings Limited
+Tower Bridge Funding No.3 PLC
+
+Tower Bridge Funding No.3 Holdings Limited
+Tower Bridge Funding No.4 PLC
+
+Tower Bridge Funding No.4 Holdings Limited
+
+investment Fund
+Investment Fund
+Mortgage Finance
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Non-trading
+Mortgage Finance
+Non-trading
+
+The Group’s immediate parent undertaking is Belmont Green limited which is incorporated in England. The financial
+statements for Belmont Green Limited can be obtained from its registered office at 1 Bridge Street, Staines-Upon-
+Thames, Surrey, United Kingdom, TW18 4TW. The smallest Group into which the company is consolidated is Belmont
+Green Finance Limited and the largest Group is Belmont Green Ltd.
+
+* The share capital of the warehouses and securitisation vehicles is not owned by the Group, but the vehicles are
+included in the consolidated financial statements as they are controlled by the Group. Please refer to note 2(c) for
+
+more information.
+
+Page | 59 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+26. Analysis of changes in net debt
+
+Non-cash movements
+
+Cashflows
+arising Operating Fair
+As at 31 from and value Interest As at 31
+December financing investing gains/ income/ December
+2018 activities cashflows (losses) (charge) Other 2019
+£'000 £'000 £'000 £'000 £'000 £'000 £'000
+Deposits from
+banks - 14,190 - - - - 14,190
+Debt securities
+in Issue 1,200,270 403,689 - - - - 1,603,959
+Derivative
+financial
+instruments 1,587 - - 9,305 - - 10,892
+1,201,857 417,879 - 9,305 - - 1,629,041
+
+27. Events after balance sheet date
+
+Subsequent to year end, the COVID-19 pandemic has caused significant social and economic disruption. The Group has
+sought to support both its customers and staff since the onset of the pandemic. As a direct result of the pandemic, the
+Group is expected to be impacted in the year ahead by the contraction in available funding from the wholesale funding
+markets, leading to a reduction in lending, together with increased ECLs from higher levels of loan arrears and defaults.
+
+Whilst the overall financial impact of the COVID-19 pandemic cannot be reliably estimated at this time, the directors
+have considered its impact on the carrying values of assets and liabilities in the Consolidated and Company Statements
+of Financial Position. The directors have assessed that the key sensitivity is in relation to ECLs on loans to customers.
+
+ECLs
+
+The estimate of ECLs at 31 December 2019 was based on the reasonable and supportable information available at that
+date. The Group has sourced revised economic forecast scenarios from its third-party economic adviser, reflecting
+economic developments since the reporting date. Given the higher level of uncertainty in those forecasts, a range of
+weightings, more broadly spread across the scenarios than those used at 31 December 2019, were considered. The
+downside economic forecast was adjusted by the directors to give an extended, u-shaped recovery phase and has also
+been used to assess the sensitivity of ECLs.
+
+Calculated ECLs are most sensitive to forecast movements in the House Price Index (HPI) and unemployment. By way
+of comparison, these are the weighted average annual HPI movements and unemployment rates at their forecast
+trough/peak resulting from the economic downturn:
+
+Forecast at 34 Revised
+
+December 2019 Forecast
+
+HPI (annual movement) (Q3 2020) -0.7% -10.1%
+Unemployment (Q2 & Q3 2020) 4.2% 10.4%
+
+Had the revised forecast economic scenarios been used to calculate ECLs at 31 December 2019 then the impairment
+provision would have increased from £4.1m to £6.9m.
+
+Page | 60 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Deferred tax
+
+The deferred tax balance of £10.2m at 31 December 2019, disclosed in note 13, principally comprises tax losses that
+are being carried forward to be relieved against future taxable profits of the Group. On the basis of plans and forecasts
+approved by the Board prior to the onset of the COVID-19 pandemic, the deferred tax asset was assessed as being fully
+recoverable within a 5-year time horizon.
+
+The impact of the COVID-19 pandemic on the economy and wholesale funding markets means that the planned growth
+of BGFL’s business and its profitability have been delayed and the timing of the re-opening of wholesale funding
+markets, in particular, is not certain. The directors have used an assumption that the growth of the business has been
+delayed by one year compared to the plans previously approved by the Board to re-assess the recoverability of the
+deferred tax asset. In this circumstance, the deferred tax asset would be written down by £1.3m to £8.9m.
+
+Page | 61 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Company Statement of Financial Position ©
+
+As at 31 December 2019
+
+Assets
+
+Cash and cash equivalents
+Loans to customers
+
+Other receivables
+
+Deferred taxation
+
+Investment in subsidiaries
+Property, plant and equipment
+Intangible assets
+
+Total assets
+
+Liabilities —
+Deemed loan due to Group undertakings
+Other liabilities
+
+Total liabilities
+
+Shareholders’ Equity
+Share capital
+Retained loss
+
+Total shareholders’ equity
+
+Total liabilities and equity
+
+Page | 62
+
+Restated Restated
+
+2019 2018 2017
+
+Notes £'000 £'000 £'000
+4,079 5,680 8,069
+
+28 1,599,800 1,197,862 428,626
+29 21,901 25,813 6,765
+30 10,283 6,007 5,775
+31 9,000 9,000 9,000
+5,334 1,249 301
+
+317 261 596
+
+1,650,714 1,245,872 459,132
+
+32 1,484,952 1,108,999 385,748
+33 50,689 36,696 16,538
+1,535,641 1,145,695 402,286
+
+168,313 129,641 84,860
+
+(53,240) (29,464) (28,014)
+
+115,073 100,177 56,846
+
+1,650,714 1,245,872 459,132
+
+Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Company Statement of Changes in Equity
+For the year ended 31 December 2019
+
+Balance as at 31 December 2018
+
+Adjustment on initial application of
+
+IFRS 16
+
+Balance as at 1 January 2019
+
+Share issuance
+Loss for the year
+At 31 December 2019
+
+At 1 January 2018
+
+Share issuance
+
+Loss for the year
+
+2018 adjustment
+
+Loss for the year - restated
+At 31 December 2018
+
+At 1 January 2017
+
+Share issuance
+
+Loss for the year
+
+2017 adjustment
+
+Loss for the year - restated
+As at 31 December 2017
+
+Page | 63
+
+Called up Retained
+share capital earnings Total
+£'000 £'000 £'000
+
+129,642 (29,464) 100,177
+
+- (162) (162)
+
+129,641 (29,547) 100,015
+38,671 - 38,671
+
+- (23,693) (23,693)
+
+168,313 (53,240) 114,993
+
+Restated 2018
+
+84,860 (28,014) 56,846
+44,782 - 44,782
+
+- (3,907) (1,140)
+
+. 2,456 (311)
+
+- (1,451) (1,451)
+
+129,642 (29,464) 100,177
+
+Restated 2017
+
+25,373 (13,606) 11,767
+59,487 - 59,487
+
+- (14,829) (14,829)
+
+- A421 421
+
+- (14,408) (14,408)
+
+84,860 (28,014) 56,846
+
+Belmont Green Finance Limited - 2019 Annual Report and Accounts
+
+Company Statement of Cashflows
+For the year ended 31 December 2019
+
+2019 2018
+
+Note £'000 £'000
+Net cash utilised in operating activities 34 (423,882) (763,195)
+Net cash utilised in investing activities 35 (4,848) (1,319)
+Net cash generated by financing activities 36 427,129 762,125
+Net increase in cash and cash equivalents (1,601) (2,389)
+Cash and cash equivalents at the beginning of the year 5,680 8,069
+Cash and cash equivalents at the end of the year 4,079 5,680
+
+Page | 64 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+Notes to the Company Financial Statements
+28. Basis of preparation, significant accounting policies and critical judgements and estimates
+
+(a) Accounting basis
+
+The separate financial statements of Belmont Green Finance Limited (“the Company”) are prepared and presented in
+accordance with International Financial Reporting Standards as issued by the International Accounting Standards
+Board and as adopted by the European Union. The significant accounting policies are the same as set out in note 2 of
+the consolidated financial statements except as noted below.
+
+(b) Income statement
+
+Under section 408 of the Companies Act 2006 the company is exempt from the requirement to present its own income
+statement.
+
+(c) Securitisation vehicles
+
+The sale of the beneficial ownership of the loans to customers to the special purpose vehicles (“SPVs”) fails the
+derecognition criteria and, hence, these loans remain on the statement of the financial position of the company. In
+accordance with IFRS 9, the Company recognises the securitised assets as loans and receivables and consequently also
+shows a deemed loan liability to the SPVs where the Company still holds an interest in the loans. An equivalent deemed
+loan asset is recognised on the SPV’s statement of financial position. The deemed loans are repaid as and when
+principal repayments are made by customers against their loans. The Company substantially retains the risks and
+rewards of ownership and continues to bear the credit risk of these mortgage assets.
+
+(d) Prior year adjustments
+
+(i) The 2018 and 2017 accounts were restated to reflect the reassessment of loans to customers originated by BGFL
+with subsequent contractual cashflows transferred to the SPVs. These SPVs are used by the Group for funding and
+securitising assets. The loans were previously derecognised by the Company, however, following a thorough analysis
+and in accordance with IFRS9, it has been established that BGFL retains substantial risks and rewards. The company
+neither retains nor transfers substantially all risks and rewards but has a contractual right to repurchase the mortgages
+at a later date and therefore records a continuing involvement in the mortgages equal to the amount that may be
+repurchased. The proceeds received are recorded as a liability.
+
+The following is the complete impact on this reassessment on the 2018 and 2017 comparative balances:
+
+Restated Restated
+
+2018 2018 2017 2017
+
+£'000 £'000 £°000 £'000
+Loans to customers 450 1,197,862 - 428,626
+Other receivables 110,246 25,813 51,707 6,765
+Deferred taxation 6,087 6,007 n/a n/a
+Deemed loans due to Group undertakings - 1,108,999 - 385,748
+Other liabilities 35,673 36,696 19,023 16,538
+Retained loss (32,341) (29,464) (28,435) (28,014)
+
+ii) To reflect adjustments to intercompany positions based on revised valuations of derivatives settled and transacted
+by the warehouse and securitisation entities in the Group, Other receivables and Other liabilities have both been
+additionally decreased by £7,849k for the 2018 comparatives. The amount of this adjustment at 1 January 2018 was a
+£1,523k decrease to both balances.
+
+Page | 65 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+29. Loans to customers
+
+A detailed breakdown of the loans to customers can be found in Note 10 of the consolidated accounts. As at 31
+December 2019, loans to customers included £1,601k (2018: £1,189k) which were part of secured funding
+arrangements, resulting in beneficial interest in these loans being transferred to the SPVs.
+
+30. Other receivables
+
+Restated Restated
+
+2019 2018 2017
+
+£'000 £'000 £'000
+
+Amounts owed by related parties 18,869 17,271 4,389
+Deferred deal costs 705 7,145 1,336
+Prepayments and Other receivables 2,327 1,397 1,040
+21,901 25,813 6,765
+
+Please refer to the restatement note in 28 (d) on page 60 for further information on the restatement.
+
+31. Deferred Tax
+
+2019 2018
+£'000 £'000
+At 1 January 6,007 5,776
+Prior year effect (468) 177
+Credit to income statement 5,298 772
+Effect of change in tax rate (554) (717)
+Asset at 31 December 10,283 6,007
+32. Investment in subsidiaries
+2019 2018
+£'000 £'000
+Investment in subsidiary undertakings 9,000 9,000
+33. Deemed loan due to Group undertakings
+2019 2018 2017
+£'000 £'000 £'000
+Deemed loan due to Belmont Green Funding 1 Limited 42,017 (5,661) 67,876
+Deemed loan due to Belmont Green Funding 3 Limited 322 54,144 100,182
+Deemed loan due to Belmont Green Funding 4 Limited 80,030 42,769 -
+Deemed loan due to Belmont Green Funding 5 Limited 72,117 51,929 -
+Deemed loan due to Tower Bridge Funding No.1 PLC 125,588 210,959 217,690
+Deemed loan due to Tower Bridge Funding No.2 PLC 243,789 284,836 ~
+Deemed loan due to Tower Bridge Funding No.3 PLC 454,064 470,022 -
+Deemed loan due to Tower Bridge Funding No.4 PLC 467,025 - -
+1,484,952 1,108,999 385,748
+
+Interest payable on deemed loan is equivalent to the interest receivable on the underlying mortgages.
+
+Page | 66 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+34. Other liabilities
+
+Restated Restated
+Other liabilities 2019 2018 2017
+£'000 £'000 £'000
+Amounts owed to related parties 29,444 15,761 9,157
+Accruals & Payables 3,829 3,611 2,904
+Lease liability 4,436 - -
+Deferred Income 12,717 17,090 3,783
+Provisions 254 - -
+Other liabilities 9 234 695
+50,689 36,696 16,538
+Please refer to the restatement note in 28 (d) on page 60 for further information on the restatement.
+35. Net cashflow from operating activities
+2019 2018
+£ 000 £000
+Loss for the period (25,711) (1,371)
+IFRS 16 initial application adjustment (162)
+_ IFRS 9 transition adjustment for loan impairments
+Non-cash items
+Taxation credit for the period (2,179) (311)
+Depreciation of property, plant and equipment 452 371
+Amortisation of intangible assets 256 335
+Movement in fair value hedge 0 0
+(27,344) (976)
+Changes in operating assets and liabilities
+Increase in loans to customers (401,937) (769,237)
+Decrease/ (Increase) in receivables 5,090 (6,536)
+Increase in accruals & payables 309 13,554
+Net cash utilised in operating activities (423,882) (763,195)
+36. Net cashflow from investing activities
+2019 2018
+£000 £000
+Purchase of property, plant and equipment 4,537 1,319
+Expenditure on software development 311 0
+Net cash utilised in investing activities 4,848 1,319
+37. Net cash flow from financing activities
+2019 2018
+£000 £ 000
+Repayment of deemed loans due to Group undertakings 392,814 723,148
+Loan to/from subsidiaries (4,356) (5,804)
+Proceeds from shares issued 38,671 44,782
+Net cash generated by financing activities 427,129 762,126
+
+Page | 67 Belmont Green Finance Limited — 2019 Annual Report and Accounts
+38. Related parties
+
+All of the Company’s related parties can be found in note 25 of the consolidated accounts. Deemed loan undertakings
+due from related parties are disclosed in note 31. All are incorporated in Great Britain and are registered in England
+and Wales and operate throughout the United Kingdom, with the exception of Pine Brook Capital Partners II (Cayman)
+AV, LP which is incorporated and registered in the Cayman Islands.
+
+Page | 68 . Belmont Green Finance Limited — 2019 Annual Report and Accounts

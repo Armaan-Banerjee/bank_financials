@@ -626,46 +626,78 @@ metric(
         ("Total exposure measure excluding claims on central banks", {"FY2025": 6449, "FY2024": 6276, "FY2023": 5888, "FY2022": 7602}),
         ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "16.92%", "FY2024": "15.22%", "FY2023": "14.15%", "FY2022": "9.64%"}),
         ("Leverage ratio (as reported, basis not specified) (%)", {"FY2021": "6.1%", "FY2020": "6.6%", "FY2019": "5.9%", "FY2018": "4.8%", "FY2017": "4.5%", "FY2016": "5.9%"}),
-        ("Total Basel III leverage ratio exposure measure (£m, pre-2022 basis, not excluding central bank claims)", {"FY2020": 11315, "FY2019": 10703, "FY2018": 12907, "FY2017": 9975, "FY2016": 6925}),
+        ("Total Basel III leverage ratio exposure measure (£m, pre-2022 basis, not excluding central bank claims)", {"FY2021": 12381, "FY2020": 11315, "FY2019": 10703, "FY2018": 12907, "FY2017": 9975, "FY2016": 6925}),
     ],
     p3_sources(KM1_PAGE),
-    note="The FY2021 Pillar 3 Disclosure's 'Key metrics' page discloses only a single Leverage ratio figure without "
-         "specifying an excluding/including-central-bank-claims split (that split, and the exposure-measure £m "
-         "figure, first appear in the FY2022 report's KM1 template) - shown on its own row rather than assumed "
-         "comparable to the 'excluding' basis used FY2022 onward. FY2016-FY2020 (added for HD-025) are on the same "
-         "pre-2022 basis as FY2021 - single ratio, no excl./incl.-central-bank-claims split - with their own total "
-         "exposure measure shown on a separate row rather than conflated with the FY2022+ 'excluding central bank "
-         "claims' figure. The Company is not subject to a binding leverage ratio requirement in any year shown "
-         "(does not meet the LREQ firm thresholds under the PRA Rulebook).",
+    note="The FY2021 Pillar 3 Disclosure's Leverage ratio figure carries no excluding/including-central-bank-claims "
+         "split (that split first appears in the FY2022 report's KM1 template) - shown on its own row rather than "
+         "assumed comparable to the 'excluding' basis used FY2022 onward. FY2016-FY2020 (added for HD-025) are on "
+         "the same pre-2022 basis as FY2021, with their own total exposure measure shown on a separate row rather "
+         "than conflated with the FY2022+ 'excluding central bank claims' figure. The Company is not subject to a "
+         "binding leverage ratio requirement in any year shown (does not meet the LREQ firm thresholds under the "
+         "PRA Rulebook).\n"
+         "FY2021 EXPOSURE MEASURE FILLED 2026-09-16: this cell was previously blank on the basis that the FY2021 "
+         "report gave only a headline ratio. It does not - its Table 1 (KM1 - Key metrics) prints 'Total leverage "
+         "ratio exposure measure (£m) 12,381' in the Solo column, and its Table 29 (LR1) and Table 30 (LR2) give "
+         "the full reconciliation behind it. The earlier blank came from reading only the first page of a KM1 "
+         "table that continues onto the following page. Basis confirmed as the pre-2022 one directly from LR2, "
+         "whose on-balance-sheet line is the Company's full £12,439m balance sheet with no central-bank-claims "
+         "exclusion row; 761/12,381 = 6.1%, reproducing the printed ratio.",
+)
+
+LIQUIDITY_BASIS_NOTE = (
+    "LIQUIDITY BASIS BREAK AT 1 JANUARY 2022 - THE TWO BASES ARE ON SEPARATE ROWS AND MUST NOT BE MERGED "
+    "OR CHARTED AS ONE SERIES (split 2026-09-16). FY2022 onward are AVERAGES; FY2021 and earlier are "
+    "POINT-IN-TIME figures at 31 December. The Company says so itself, in terms: the FY2022 report's KM1 "
+    "footnote 4 reads 'Comparatives are not provided for LCR and NSFR following a change in the "
+    "instructions from those reportable at 31 December 2021. As of the disclosure date the ratios are "
+    "presented on an average basis in accordance with Article 447(f)(g) CRR II', and the FY2024 and FY2025 "
+    "reports state the periods explicitly - 'Liquidity ratios are presented on a 12-month average basis for "
+    "LCR and a 4-quarter average basis for NSFR'. The FY2016-FY2021 reports carry no averaging language "
+    "anywhere and head their KM1 columns with the balance-sheet dates ('31-Dec-21', '31-Dec-20'), i.e. "
+    "point-in-time. The step between FY2021 and FY2022 on these sheets is therefore partly definitional."
 )
 
 metric(
     "LCR", "£m / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value (average)", {"FY2025": 5184, "FY2024": 6021, "FY2023": 6887, "FY2022": 8876, "FY2020": 8863, "FY2019": 8018, "FY2018": 9590, "FY2017": 7509, "FY2016": 4840}),
-        ("Total net cash outflows, adjusted value", {"FY2025": 1669, "FY2024": 2532, "FY2023": 3305, "FY2022": 4801, "FY2020": 5147, "FY2019": 4080, "FY2018": 4040, "FY2017": 2556, "FY2016": 1451}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "317.37%", "FY2024": "240.33%", "FY2023": "211.60%", "FY2022": "185.66%", "FY2021": "173%", "FY2020": "172%", "FY2019": "197%", "FY2018": "238%", "FY2017": "294%", "FY2016": "334%"}),
+        ("Liquidity Coverage Ratio (%) - 12-month average basis (FY2022 onward)", {"FY2025": "317.37%", "FY2024": "240.33%", "FY2023": "211.60%", "FY2022": "185.66%"}),
+        ("Total high-quality liquid assets (HQLA), weighted value, 12-month average (£m)", {"FY2025": 5184, "FY2024": 6021, "FY2023": 6887, "FY2022": 8876}),
+        ("Total net cash outflows, adjusted value, 12-month average (£m)", {"FY2025": 1669, "FY2024": 2532, "FY2023": 3305, "FY2022": 4801}),
+        ("Liquidity Coverage Ratio (%) - point-in-time at 31 December (FY2021 and earlier)", {"FY2021": "173%", "FY2020": "172%", "FY2019": "197%", "FY2018": "238%", "FY2017": "294%", "FY2016": "334%"}),
+        ("Total high-quality liquid assets (HQLA), point-in-time at 31 December (£m)", {"FY2021": 9057, "FY2020": 8863, "FY2019": 8018, "FY2018": 9590, "FY2017": 7509, "FY2016": 4840}),
+        ("Total net cash outflows, point-in-time at 31 December (£m)", {"FY2021": 5238, "FY2020": 5147, "FY2019": 4080, "FY2018": 4040, "FY2017": 2556, "FY2016": 1451}),
     ],
     p3_sources(KM1_PAGE),
-    note="LCR is presented on a 12-month average basis (4-quarter average for FY2022, per that report's own note). "
-         "FY2021's Pillar 3 report discloses only the headline ratio (173%, Solo basis) on its 'Key metrics' chart "
-         "page, with no HQLA/outflow/inflow £m breakdown available that year and no FY2021 comparative shown in the "
-         "FY2022 report (which explicitly states comparatives were not provided for LCR/NSFR due to a change in "
-         "reporting instructions) - left blank rather than guessed. FY2016-FY2020 (added for HD-025) each carry a "
-         "full HQLA/NCO/ratio breakdown from their own year's KM1 table.",
+    note=LIQUIDITY_BASIS_NOTE + "\n"
+         "FY2021 HQLA AND NET CASH OUTFLOW FILLED 2026-09-16. These two cells were previously blank, recorded "
+         "here as 'no HQLA/outflow/inflow £m breakdown available that year'. That was wrong: the FY2021 report's "
+         "Table 1 (KM1 - Key metrics) prints 'Total High Quality Liquid Assets (£m) 9,057' and 'Total Net Cash "
+         "Outflow (£m) 5,238' in the Solo column. The earlier blank came from reading only the first page of a "
+         "KM1 table that continues onto the following page - the capital block sits on p.11 and the leverage and "
+         "liquidity blocks on p.12. 9,057/5,238 = 172.9%, reproducing the printed 173% exactly. The FY2022 "
+         "report genuinely does not restate FY2021 onto the new average basis (its own footnote, quoted above, "
+         "says so), so no average-basis FY2021 figure exists and none has been inferred.",
 )
 
 metric(
     "NSFR", "£m / %",
     [
-        ("Total available stable funding", {"FY2025": 2561, "FY2024": 2474, "FY2023": 2386, "FY2022": 3210, "FY2020": 3158, "FY2019": 2994, "FY2018": 4533, "FY2017": 3577, "FY2016": 2314}),
-        ("Total required stable funding", {"FY2025": 672, "FY2024": 675, "FY2023": 650, "FY2022": 680, "FY2020": 579, "FY2019": 606, "FY2018": 617, "FY2017": 468, "FY2016": 151}),
-        ("NSFR ratio (%)", {"FY2025": "381.21%", "FY2024": "366.64%", "FY2023": "368.06%", "FY2022": "472.37%", "FY2021": "446%", "FY2020": "545%", "FY2019": "494%", "FY2018": "735%", "FY2017": "765%", "FY2016": "1534%"}),
+        ("NSFR ratio (%) - 4-quarter average basis (FY2022 onward)", {"FY2025": "381.21%", "FY2024": "366.64%", "FY2023": "368.06%", "FY2022": "472.37%"}),
+        ("Total available stable funding, 4-quarter average (£m)", {"FY2025": 2561, "FY2024": 2474, "FY2023": 2386, "FY2022": 3210}),
+        ("Total required stable funding, 4-quarter average (£m)", {"FY2025": 672, "FY2024": 675, "FY2023": 650, "FY2022": 680}),
+        ("NSFR ratio (%) - point-in-time at 31 December (FY2021 and earlier)", {"FY2021": "446%", "FY2020": "545%", "FY2019": "494%", "FY2018": "735%", "FY2017": "765%", "FY2016": "1534%"}),
+        ("Total available stable funding, point-in-time at 31 December (£m)", {"FY2021": 3257, "FY2020": 3158, "FY2019": 2994, "FY2018": 4533, "FY2017": 3577, "FY2016": 2314}),
+        ("Total required stable funding, point-in-time at 31 December (£m)", {"FY2021": 730, "FY2020": 579, "FY2019": 606, "FY2018": 617, "FY2017": 468, "FY2016": 151}),
     ],
     p3_sources(KM1_PAGE),
-    note="NSFR is presented on a 4-quarter average basis. FY2021's Pillar 3 report discloses only the headline "
-         "ratio (446%, Solo basis) with no £m breakdown, and no FY2021 comparative appears in the FY2022 report "
-         "(same reporting-instruction change noted on the LCR sheet). The FY2025 Pillar 3 Disclosure's FY2024 "
+    note=LIQUIDITY_BASIS_NOTE + "\n"
+         "FY2021 AVAILABLE AND REQUIRED STABLE FUNDING FILLED 2026-09-16, from the same previously-unread "
+         "continuation page of the FY2021 KM1 table as the LCR figures: 'Total Available Stable Funding (£m) "
+         "3,257' and 'Total Required Stable Funding (£m) 730' in the Solo column. 3,257/730 = 446.2%, "
+         "reproducing the printed 446%. Note the FY2021 report's own footnote that 'A minimum 100% NSFR ratio "
+         "became binding on the Company as at 1 January 2022' - the pre-2022 NSFR figures are disclosed but were "
+         "not yet a binding requirement. The FY2025 Pillar 3 Disclosure's FY2024 "
          "comparative column also restates NSFR (ASF 2,474->2,481, RSF 675->664, ratio 366.64%->373.99%) versus "
          "the FY2024 report's own originally-reported figures - the FY2024 column above uses that year's own report "
          "as originally published, consistent with this project's convention. FY2016-FY2020 (added for HD-025) each "
@@ -679,7 +711,15 @@ metric(
     [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
     p3_sources(KM1_PAGE),
     note="No MREL figure (numeric or qualitative) appears anywhere in any of the 10 Pillar 3 Disclosures or the "
-         "available Financial Statements for this entity - no reason is stated.",
+         "available Financial Statements for this entity - no reason is stated.\n"
+         "SEARCH SCOPE, stated so the negative can be trusted for what it is (re-run 2026-09-16): every one of "
+         "the 10 Pillar 3 Disclosures was searched for both 'MREL' and the spelled-out 'minimum requirement for "
+         "own funds', with nil hits in all 10. For FY2018-FY2025 the documents are text-native and that nil is a "
+         "reliable negative. FY2016 and FY2017 are SCANNED documents whose embedded text layer is poor-quality "
+         "OCR (the FY2016 file yields only 5 clean occurrences of the Company's own name across 74 pages), so "
+         "for those 2 years a nil string-match is weak evidence and the entry should be read as 'not located' "
+         "rather than 'confirmed absent'. It remains the expected answer either way: this is a non-resolution-"
+         "entity custody bank, and MREL disclosure would not ordinarily apply to it.",
 )
 
 # ---------------------------------------------------------------
@@ -713,13 +753,23 @@ bw.add_overview_sheet(
         ("Tier 1 Ratio", {"FY2025": "104.22%", "FY2024": "85.41%", "FY2023": "79.26%", "FY2022": "73.35%", "FY2021": "90.8%", "FY2020": "79.3%", "FY2019": "66.3%", "FY2018": "51.0%", "FY2017": "50.8%", "FY2016": "53.9%"}),
         ("Total Capital Ratio", {"FY2025": "104.22%", "FY2024": "85.41%", "FY2023": "79.26%", "FY2022": "73.35%", "FY2021": "90.8%", "FY2020": "79.3%", "FY2019": "73.7%", "FY2018": "57.2%", "FY2017": "59.3%", "FY2016": "63.7%"}),
         ("Leverage Ratio (excl. central bank claims)", {"FY2025": "16.92%", "FY2024": "15.22%", "FY2023": "14.15%", "FY2022": "9.64%"}),
-        ("LCR", {"FY2025": "317.37%", "FY2024": "240.33%", "FY2023": "211.60%", "FY2022": "185.66%", "FY2021": "173%", "FY2020": "172%", "FY2019": "197%", "FY2018": "238%", "FY2017": "294%", "FY2016": "334%"}),
-        ("NSFR", {"FY2025": "381.21%", "FY2024": "366.64%", "FY2023": "368.06%", "FY2022": "472.37%", "FY2021": "446%", "FY2020": "545%", "FY2019": "494%", "FY2018": "735%", "FY2017": "765%", "FY2016": "1534%"}),
+        ("LCR (12-month average basis, FY2022 onward)", {"FY2025": "317.37%", "FY2024": "240.33%", "FY2023": "211.60%", "FY2022": "185.66%"}),
+        ("LCR (point-in-time at 31 December, FY2021 and earlier)", {"FY2021": "173%", "FY2020": "172%", "FY2019": "197%", "FY2018": "238%", "FY2017": "294%", "FY2016": "334%"}),
+        ("NSFR (4-quarter average basis, FY2022 onward)", {"FY2025": "381.21%", "FY2024": "366.64%", "FY2023": "368.06%", "FY2022": "472.37%"}),
+        ("NSFR (point-in-time at 31 December, FY2021 and earlier)", {"FY2021": "446%", "FY2020": "545%", "FY2019": "494%", "FY2018": "735%", "FY2017": "765%", "FY2016": "1534%"}),
     ],
     note="No cash flow summary or chart is shown here: The Bank of New York Mellon (International) Limited takes "
          "the FRS 101 cash-flow-statement exemption every year (see the Cash Flow Statement sheet). Balance Sheet, "
          "Profit & Loss, Statement of Changes in Equity and Pillar 3 Key Metrics are all fully populated below. See "
-         "each sheet's own source citation for the underlying document/page.",
+         "each sheet's own source citation for the underlying document/page.\n"
+         "TWO SEPARATE BASIS BREAKS ARE VISIBLE ABOVE AND NEITHER IS A TREND. (1) Leverage ratio: the UK removed "
+         "claims on central banks from the exposure measure from 1 January 2022, so the FY2022-FY2025 'excl. "
+         "central bank claims' row and the FY2016-FY2021 row are different measures of different things. (2) LCR "
+         "and NSFR: from FY2022 the Company reports them as averages (12-month for LCR, 4-quarter for NSFR) under "
+         "Article 447(f)(g) CRR II, where FY2021 and earlier are point-in-time figures at 31 December; the FY2022 "
+         "report states outright that it provides no LCR/NSFR comparatives because the instructions changed. Each "
+         "is kept on its own labelled row rather than merged, so the FY2021-to-FY2022 step should not be read as "
+         "a movement in the underlying position.",
 )
 
 # ---------------------------------------------------------------

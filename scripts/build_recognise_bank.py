@@ -11,7 +11,7 @@ AR23_URL = "https://recognisebank.co.uk/wp-content/uploads/2023/10/230821-Recogn
 AR22_URL = "https://recognisebank.co.uk/wp-content/uploads/2023/10/2022-Annual-Report-Recognise-Bank-Limited.pdf"
 P3_26_URL = "https://recognisebank.co.uk/wp-content/uploads/Pillar-3-disclosure-March-2026-RBL-v1.1-To-BAC-updated_-1-1.pdf"
 P3_24_URL = "https://recognisebank.co.uk/wp-content/uploads/Pillar-3-disclosure-March-2024-RBL.pdf"
-P3_23_URL = "http://web.archive.org/web/20231210004904/https://www.recognisebank.co.uk/wp-content/uploads/2023/10/Pillar-3-disclosures-March-2023-RBL.pdf"
+P3_23_URL = "http://web.archive.org/web/20231210004904id_/https://www.recognisebank.co.uk/wp-content/uploads/2023/10/Pillar-3-disclosures-March-2023-RBL.pdf"
 
 # Historical years FY2018-FY2021: sourced from Companies House filing history for
 # Recognise Bank Limited (co. no. 10603119; filed under its earlier names Echo

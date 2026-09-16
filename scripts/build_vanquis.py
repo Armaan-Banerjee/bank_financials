@@ -14,6 +14,35 @@ AR2021_URL = "https://www.vanquis.com/wp-content/uploads/2025/05/Vanquis_Bank_Lt
 AR2023_URL = "https://find-and-update.company-information.service.gov.uk/company/02558509/filing-history/MzQxNzkzNTkxNWFkaXF6a2N4/document?format=pdf&download=0"
 AR2025_URL = "https://www.vanquis.com/wp-content/uploads/2026/03/VBL-stats-2025-FINAL-Fully-Signed.pdf"
 
+# The 2018 Remuneration Code disclosure, cited in the entity-basis trap note
+# below as the specimen proving that every "Pillar III" document Vanquis Bank
+# ever self-published is a remuneration disclosure and never a capital one.
+#
+# DEAD as at 2026-09-16, and dead in a way that a status check alone misses.
+# The original URL returns 301 to https://www.vanquis.com/ (the homepage), i.e.
+# a content-destroying redirect rather than a relocation - so `curl -L` reports
+# whatever the homepage returns, which here was 403 because the WAF fronts it.
+# Neither 301 nor 403 is "missing document"; the second client (WebFetch)
+# exposed it. Verified from here: the archived id_ form below returns
+# 200 application/pdf, 53,960 bytes, md5 450a3447b5ba97766fa9525791eb0d9e,
+# 2 pages, cover "Vanquis Bank Limited / Capital Requirements Regulation (CRR)
+# Pillar III & 2018 Remuneration Code Disclosure", and the LAST page carries
+# text (~1.4k chars), so the capture is complete and not 1 MiB-truncated.
+ORIG_P3_REMUN_2018_URL = (
+    "https://www.vanquis.co.uk/media/1394744/"
+    "crr-2018-remuneration-code-pillar-iii-disclosure-final-min.pdf"
+)
+P3_REMUN_2018_URL = (
+    "https://web.archive.org/web/20190923204636id_/" + ORIG_P3_REMUN_2018_URL
+)
+P3_REMUN_2018_DEAD_NOTE = (
+    "DEAD SOURCE URL (recorded 2026-09-16, nothing deleted): the originally "
+    "published address of that 2018 disclosure was " + ORIG_P3_REMUN_2018_URL +
+    ", which now 301-redirects to the vanquis.com homepage rather than serving "
+    "the document; the Wayback Machine snapshot cited above is the only working "
+    "form and returns the original bytes."
+)
+
 # HD-050 (2026-09-05): Companies House filing-history PDFs (scanned images,
 # OCR'd via tesseract - no text layer) for the FY2014-FY2020 extension,
 # capped at FY2014 project-wide even though this bank's own archive goes
@@ -36,12 +65,12 @@ P3_2025_URL = "https://www.vanquis.com/wp-content/uploads/2026/02/DEC25_VANQ_Pil
 # Group plc in 2021 - same continuous listed entity) Pillar 3 Disclosures,
 # FY2014-FY2020 - primary site (providentfinancial.com) now redirects to
 # vanquis.com with these documents unreachable live; cited via Wayback.
-P3_2014_URL = "https://web.archive.org/web/20220703025345/https://www.providentfinancial.com/application/files/9516/1437/2735/2015-pillar-iii-disclosures-april-2015.pdf"
-P3_2015_URL = "https://web.archive.org/web/20220703055435/https://www.providentfinancial.com/application/files/2416/1454/4505/pf-plc-2016-pillar-3-disclosures.pdf"
-P3_2017_URL = "https://web.archive.org/web/20220703024108/https://www.providentfinancial.com/application/files/7916/1454/6790/pfg_pillar_3_report-2017.pdf"
-P3_2018_URL = "https://web.archive.org/web/20220703030203/https://www.providentfinancial.com/application/files/4516/1454/6864/22746_pfg_pillar_3_report_2018-2.pdf"
-P3_2019_URL = "https://web.archive.org/web/20220703022837/https://www.providentfinancial.com/application/files/6516/1415/8644/provident-financial-plc-pillar-3-disclosures-2019.pdf"
-P3_2020_URL = "https://web.archive.org/web/20220703030607/https://www.providentfinancial.com/application/files/3716/2049/4304/Provident_Financial_plc_Pillar_3_Disclosures_2020.pdf"
+P3_2014_URL = "https://web.archive.org/web/20220703025345id_/https://www.providentfinancial.com/application/files/9516/1437/2735/2015-pillar-iii-disclosures-april-2015.pdf"
+P3_2015_URL = "https://web.archive.org/web/20220703055435id_/https://www.providentfinancial.com/application/files/2416/1454/4505/pf-plc-2016-pillar-3-disclosures.pdf"
+P3_2017_URL = "https://web.archive.org/web/20220703024108id_/https://www.providentfinancial.com/application/files/7916/1454/6790/pfg_pillar_3_report-2017.pdf"
+P3_2018_URL = "https://web.archive.org/web/20220703030203id_/https://www.providentfinancial.com/application/files/4516/1454/6864/22746_pfg_pillar_3_report_2018-2.pdf"
+P3_2019_URL = "https://web.archive.org/web/20220703022837id_/https://www.providentfinancial.com/application/files/6516/1415/8644/provident-financial-plc-pillar-3-disclosures-2019.pdf"
+P3_2020_URL = "https://web.archive.org/web/20220703030607id_/https://www.providentfinancial.com/application/files/3716/2049/4304/Provident_Financial_plc_Pillar_3_Disclosures_2020.pdf"
 # HD-074 (2026-09-07): Companies House filing-history PDFs (scanned images, OCR'd via tesseract - no text
 # layer, same as the HD-050 FY2014-FY2020 batch) for the further FY2010-FY2013 extension, down to this
 # entity's real statutory floor (HD-004: FY2010). FY2013/FY2012 own report also includes each year's own
@@ -97,7 +126,38 @@ ENTITY_NOTE = (
     "principal trading entities were Vanquis Bank Limited (the Bank) and Moneybarn No.1 Limited (a non-bank vehicle "
     "finance lender) - so every Pillar 3 sheet in this workbook is on a basis that includes Moneybarn as well as the "
     "Bank, and is NOT directly comparable to the Bank-only Cash Flow Statement sheet. This is a structural limitation "
-    "of what Vanquis publicly discloses, not a choice made in compiling this workbook."
+    "of what Vanquis publicly discloses, not a choice made in compiling this workbook.\n"
+    "NO FY2020/FY2021 BOUNDARY - A TRAP RECORDED SO IT IS NOT RE-INTRODUCED (entity-basis sweep, 2026-09-16). The "
+    "Vanquis Bank Limited Annual Report and Financial Statements 2021 contains the sentence 'As a result, with "
+    "effect from 31 December 2020 the Company's individual disclosures have been aggregated into the consolidated "
+    "Group Pillar 3 disclosures, which can be found on the Group's corporate website (www.providentfinancial.com)' "
+    f"({AR2021_URL}). Read in isolation that looks like proof that a Vanquis-Bank-level Pillar 3 existed up to "
+    "FY2020 and then ceased. IT IS NOT. The sentence sits inside the Remuneration Committee paragraph and its "
+    "subject is the CRD V REMUNERATION CODE annual disclosure statement, not the capital Pillar 3 - the two "
+    "preceding sentences read 'Until 31 December 2019, the Company was required as part of the code to publish an "
+    "annual disclosure statement on an individual basis, versions of which up to and including the 31 December 2019 "
+    "disclosures can be found on the Company's website (www.vanquis.co.uk). Following the application of the CRD V "
+    "Remuneration Code on the Group on a consolidated basis, the contents of the remuneration disclosure are "
+    "required to reflect the policy and aggregated remuneration on a consolidated Group basis.' Corroboration: every "
+    "'individual' Pillar III document the Bank ever self-published on vanquis.co.uk is a Remuneration Code "
+    "disclosure (2010, 2011, 2012, 2016, 2017 and 2018 editions survive in the Wayback Machine, e.g. "
+    f"{P3_REMUN_2018_URL}) - never "
+    "a capital/RWA/leverage Pillar 3 - that 2018 edition's cover reads 'Vanquis Bank Limited / Capital "
+    "Requirements Regulation (CRR) Pillar III & 2018 Remuneration Code Disclosure' and both its pages are wholly "
+    f"about the Remuneration Committee. {P3_REMUN_2018_DEAD_NOTE} "
+    "The same 2021 Annual Report gives the real position in its financial and "
+    "capital risk management section: 'the Group, consistent with other regulated financial institutions, is "
+    "required to make annual Pillar 3 disclosures... The Group's full Pillar 3 disclosures can be found on the "
+    "Group's website.' Every Provident Financial plc / Vanquis Banking Group plc Pillar 3 edition cited by this "
+    "workbook (FY2014 through FY2025) was read end to end for this check and NONE contains a Vanquis Bank Limited "
+    "solo or sub-consolidated capital section; e.g. the FY2017 edition's section 4.5 heads its capital table 'The "
+    "CET1 and total capital ratios, as at 31 December, for the group are as follows', and the FY2021 edition's "
+    "Table 1 and Appendix 1 Table 22 are both Group. The only entity-named figures in these documents are "
+    "SEGMENTAL rows (e.g. the FY2021 edition's 'Vanquis Bank 1,091.5 / 836.6 / 66.9' exposure line), which are "
+    "presented before consolidation adjustments and are not the Bank's statutory or regulatory figures either - "
+    "they are not used here. CONCLUSION: the Pillar 3 sheets are uniformly Group-basis across ALL of FY2014-FY2025. "
+    "Do not carve FY2021 onward out as 'not applicable' while leaving FY2014-FY2020 populated; there is no "
+    "disclosure event at that boundary."
 )
 
 HISTORICAL_NOTE = (

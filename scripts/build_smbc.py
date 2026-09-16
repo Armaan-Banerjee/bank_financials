@@ -13,7 +13,7 @@ Y_CORE = YEARS[:YEARS.index('FY2014') + 1]  # HD-072/075/079: FY2014-floor defau
 # in Equity/Cash Flow Statement) - Pillar 3/Asset Quality/RWA Breakdown remain capped at FY2014, see those
 # sheets' dicts below which deliberately have no FY2013 entries.
 
-AR2021_URL = "https://web.archive.org/web/20240612221125/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbcbi-annual-report-2021.pdf"
+AR2021_URL = "https://web.archive.org/web/20240612221125id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbcbi-annual-report-2021.pdf"
 AR2022_URL = "https://www.smbcgroup.com/emea/getmedia/efb562ee-627d-41c9-823a-b157f879892f/Annual-Report-and-Financial-Statements-2022-(SMBC-BI).pdf"
 AR2023_URL = "https://www.smbcgroup.com/emea/getmedia/1784eaa0-0924-4cd7-a4e4-1613b6cb015f/Annual-Report-and-Financial-Statements-2023-(SMBC-BI).pdf"
 AR2024_URL = "https://www.smbcgroup.com/emea/getmedia/1c52fee7-2c0d-4378-b571-bd45d5f6ea9f/PDF-Annual-report-(SMBC-BI).pdf"
@@ -37,7 +37,7 @@ AR2014_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2013_URL = "https://find-and-update.company-information.service.gov.uk/company/04684034/filing-history/MzA4MDk2MzYzM2FkaXF6a2N4/document?format=pdf&download=0"
 
 P3_2021_URL = "https://www.smbcgroup.com/emea/getmedia/c956424b-468e-4f29-9650-a4c792a720c3/Pillar-3-Interim-Disclosure-March-2021-(SMBC-BI).pdf"
-P3_2022_URL = "https://web.archive.org/web/20240712094621/https://www.smbcgroup.com/emea/images/SMBC/media/Notices-Reporting/Corporate%20Disclosures/smbcbi-pillar3-2022.pdf"
+P3_2022_URL = "https://web.archive.org/web/20240712094621id_/https://www.smbcgroup.com/emea/images/SMBC/media/Notices-Reporting/Corporate%20Disclosures/smbcbi-pillar3-2022.pdf"
 P3_2023_URL = "https://www.smbcgroup.com/emea/getmedia/352315cf-7a34-42d7-9cb1-3082d16539f3/Pillar-3-Interim-Disclosure-March-2023-(SMBC-BI).pdf"
 P3_2024_URL = "https://www.smbcgroup.com/emea/getmedia/7690b9ee-bae2-4fc1-bba5-0422a250f84c/Pillar-3-Interim-Disclosure-March-2024-(SMBC-BI).pdf"
 P3_2026_URL = "https://www.smbcgroup.com/emea/getmedia/0af76b74-dc6f-4e12-abb8-e87fa2855a03/SMBC_Bank_3-Pillar-Disclosures_260707_Master-v2.pdf"
@@ -45,13 +45,13 @@ P3_2025_URL = "https://www.smbcgroup.com/emea/getmedia/2418d0a0-de22-497a-9a9a-4
 
 # FY2014-FY2020 Pillar 3 disclosures: no longer hosted live on smbcgroup.com -
 # retrieved via the Wayback Machine from smbcgroup.com's own disclosures archive.
-P3_2020_URL = "https://web.archive.org/web/20240527071545/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-2020.pdf"
-P3_2019_URL = "https://web.archive.org/web/20240527071944/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-2019.pdf"
-P3_2018_URL = "https://web.archive.org/web/20240527071821/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-20180331.pdf"
-P3_2017_URL = "https://web.archive.org/web/20230330205458/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3disclosures310317.pdf"
-P3_2016_URL = "https://web.archive.org/web/20240527070848/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3disclosures310316.pdf"
-P3_2015_URL = "https://web.archive.org/web/20240527065243/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3-31-03-15.pdf"
-P3_2014_URL = "https://web.archive.org/web/20240701160935/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3-31mar14.pdf"
+P3_2020_URL = "https://web.archive.org/web/20240527071545id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-2020.pdf"
+P3_2019_URL = "https://web.archive.org/web/20240527071944id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-2019.pdf"
+P3_2018_URL = "https://web.archive.org/web/20240527071821id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/smbce-pillar3-20180331.pdf"
+P3_2017_URL = "https://web.archive.org/web/20230330205458id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3disclosures310317.pdf"
+P3_2016_URL = "https://web.archive.org/web/20240527070848id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3disclosures310316.pdf"
+P3_2015_URL = "https://web.archive.org/web/20240527065243id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3-31-03-15.pdf"
+P3_2014_URL = "https://web.archive.org/web/20240701160935id_/https://www.smbcgroup.com/emea/images/SMBC/media/SMBC/pdf/disclosures/pillar3-31mar14.pdf"
 
 # ---------------------------------------------------------------
 # FX conversion: GBP-per-1-USD is NOT what these are - these are GBP/USD

@@ -185,8 +185,8 @@ P3_2021_URL = f"{BASE}/2228/31dec21-pillar-3.pdf"
 # Pillar 3 page only lists FY2021 onward) but recovered from the Internet Archive
 # Wayback Machine, where the original /uploads/ URLs (the Bank's pre-2018 site
 # structure) were captured intact.
-P3_2014_URL = "http://web.archive.org/web/20160826052010/http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2014.pdf"
-P3_2015_URL = "http://web.archive.org/web/20161128044735/http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2015.pdf"
+P3_2014_URL = "http://web.archive.org/web/20160826052010id_/http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2014.pdf"
+P3_2015_URL = "http://web.archive.org/web/20161128044735id_/http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2015.pdf"
 # 2026-09-15 historical recovery: two further editions, from the Bank's even older
 # /documents/ and /docs/ site structures. Both cite the full timestamped capture,
 # since the filenames alone no longer resolve anywhere.
@@ -1625,18 +1625,24 @@ bw.add_overview_sheet(
     equity_changes_unit="£'000",
     ratios=[
         ("CET1 Ratio", {"FY2025": "23.40%", "FY2024": "25.64%", "FY2023": "28.95%", "FY2022": "25.84%", "FY2021": "20.78%",
-            "FY2015": "20.38%", "FY2014": "22.32%"}),
+            "FY2020": "28.29%", "FY2015": "20.38%", "FY2014": "22.32%"}),
         ("Tier 1 Ratio", {"FY2025": "23.40%", "FY2024": "25.64%", "FY2023": "28.95%", "FY2022": "25.84%", "FY2021": "20.78%",
-            "FY2015": "20.38%", "FY2014": "22.32%"}),
+            "FY2020": "28.29%", "FY2015": "20.38%", "FY2014": "22.32%"}),
         ("Total Capital Ratio", {"FY2025": "23.40%", "FY2024": "25.64%", "FY2023": "28.95%", "FY2022": "25.84%", "FY2021": "20.78%",
-            "FY2015": "20.38%", "FY2014": "22.32%"}),
-        ("Leverage Ratio", {"FY2025": "12.08%", "FY2024": "11.25%", "FY2023": "9.76%", "FY2022": "7.32%", "FY2021": "8.36%"}),
+            "FY2020": "28.29%", "FY2015": "20.38%", "FY2014": "22.32%"}),
+        ("Leverage Ratio", {"FY2025": "12.08%", "FY2024": "11.25%", "FY2023": "9.76%", "FY2022": "7.32%", "FY2021": "8.36%",
+            "FY2020": "10.68%"}),
         ("LCR", {"FY2025": "270.19%", "FY2024": "330.42%", "FY2023": "310%", "FY2022": "343%"}),
         ("NSFR", {"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%"}),
     ],
-    note="FY2021 LCR (276%) is deliberately omitted from this at-a-glance row: it is a point-in-time year-end "
-         "figure, whereas FY2022 onward are 12-month simple averages, and the two are not comparable on a single "
-         "trend line. Both bases are shown, on separate rows, on the LCR sheet itself. "
+    note="FY2020 LCR (435%) and FY2021 LCR (276%) are deliberately omitted from this at-a-glance row: both are "
+         "point-in-time year-end figures, whereas FY2022 onward are 12-month simple averages, and the two bases "
+         "are not comparable on a single trend line. Both bases are shown, on separate rows, on the LCR sheet "
+         "itself. The FY2020 capital ratios (28.29%) and leverage ratio (10.68%) ARE shown above: those are "
+         "single-basis metrics with no such split, and they were missing from this Overview only because the "
+         "pass that recovered FY2020 from the FY2021 report's comparative column populated the detail sheets "
+         "without copying the values up here. Corrected 2026-09-15; the figures are a straight duplication of "
+         "the CET1/Tier 1/Total Capital Ratio and Leverage Ratio sheets, nothing recomputed. "
          "Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation. All £ figures are converted from the Bank's native USD reporting (see Cash Flow Statement "
          "sheet's FX conversion note) - this conversion was not explicitly requested for this bank but applied for "

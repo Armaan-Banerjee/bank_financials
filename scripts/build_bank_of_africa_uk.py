@@ -43,8 +43,25 @@ BOA_FINANCES_URL = "https://www.bankofafricaunitedkingdom.co.uk/finances.html"
 # genuine archive gap, confirmed by HD-002's deep dive and re-confirmed here
 # with a fresh CDX search before treating it as unobtainable; left blank on
 # every Pillar 3 sheet for those 3 years rather than guessed.
-P3_2015_URL = "https://web.archive.org/web/20220519121800/https://www.bankofafricaunitedkingdom.co.uk/assets/0/BMCE___Pillar_3_disclosures____2015.pdf"
-P3_2017_URL = "https://web.archive.org/web/20220519120942/https://www.bankofafricaunitedkingdom.co.uk/assets/239/BMCE___Pillar_III_VF___31122017.pdf"
+# 2026-09-16 UPDATE: both of these are LIVE again on the bank's own site. They
+# were not deleted, they moved - from /assets/<n>/ to /pdfs/finances/, the same
+# directory the FY2022-FY2024 editions above sit in. Both live URLs were fetched
+# in full and confirmed: FY2017 = 1,164,813 bytes / 32pp, cover "2017 PILLAR III
+# DISCLOSURES"; FY2015 = 430,862 bytes / 5pp, cover "BMCE BANK INTERNATIONAL plc
+# PILLAR 3 DISCLOSURES FOR THE YEAR 2015" - both "Company Registration N°5321714
+# (England and Wales)", i.e. the UK entity, not the Moroccan parent. The primary
+# citation is therefore the live URL; the Wayback captures are kept below as the
+# archival fallback and are NOT deleted.
+#
+# The FY2017 Wayback capture must not be promoted back to primary: it is
+# TRUNCATED at exactly 1,048,576 bytes (the Wayback per-capture 1 MiB limit)
+# against the live file's 1,164,813 - re-checked 2026-09-16 in all three
+# playback forms (bare, if_ and id_), all three return the identical 1 MiB
+# truncated body. The tail of the document is missing.
+P3_2015_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BMCE___Pillar_3_disclosures____2015.pdf"
+P3_2017_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BMCE___Pillar_III_VF___31122017.pdf"
+P3_2015_WAYBACK = "https://web.archive.org/web/20220519121800id_/https://www.bankofafricaunitedkingdom.co.uk/assets/0/BMCE___Pillar_3_disclosures____2015.pdf"
+P3_2017_WAYBACK = "https://web.archive.org/web/20220519120942/https://www.bankofafricaunitedkingdom.co.uk/assets/239/BMCE___Pillar_III_VF___31122017.pdf"
 
 ENTITY_NOTE = (
     "Entity: BANK OF AFRICA United Kingdom Plc (FRN 454750, company 05321714, formerly "
@@ -144,6 +161,16 @@ def p3_sources(extra=""):
         f"FY2016: Pillar III Disclosures 2017, p.13 (Own Funds/Solvency ratio table, FY2016 comparative column) - {P3_2017_URL}\n"
         f"FY2015: Pillar 3 Disclosures 2015, p.2 (Ratios table) - {P3_2015_URL}\n"
         f"FY2014: Pillar 3 Disclosures 2015, p.2 (Ratios table, FY2014 comparative column; also independently cross-checked against the FY2014 Annual Report's own Part III Pillar 3 Disclosures, p.64) - {P3_2015_URL}\n"
+        f"SOURCE-URL NOTE (2026-09-16): the FY2015 and FY2017 editions were previously cited "
+        f"via the Wayback Machine because they were no longer linked from the bank's site. They "
+        f"are live again at the /pdfs/finances/ path above (moved from /assets/<n>/, not "
+        f"withdrawn), re-fetched and re-read 2026-09-16 - FY2017 1,164,813 bytes/32pp, FY2015 "
+        f"430,862 bytes/5pp, both bearing Company Registration N°5321714, the UK entity. The live "
+        f"URLs are now cited in preference. Archival fallbacks, retained deliberately: FY2015 - "
+        f"{P3_2015_WAYBACK}; FY2017 - {P3_2017_WAYBACK}. The FY2017 Wayback capture is TRUNCATED "
+        f"at exactly 1,048,576 bytes (the Wayback 1 MiB per-capture limit) in every playback form "
+        f"- bare, if_ and id_ alike - so it is recorded as provenance only and must not be "
+        f"promoted back to the primary citation; use the live URL.\n"
         f"FY2018-FY2020: no standalone Pillar 3 document found anywhere in the Wayback Machine "
         "archive of either bankofafricaunitedkingdom.co.uk or its earlier bmcebankint.com "
         "domain (re-confirmed via a fresh CDX search during the HD-017 extension, consistent "

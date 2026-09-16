@@ -34,6 +34,22 @@ AR = {"FY2025": CH+"/MzUyNzI4MTM5OGFkaXF6a2N4/document?format=pdf&download=0", "
       "FY2016": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/qib-uk-annual-report-2016-eng-.pdf",
       "FY2015": "https://www.qib-uk.com/-/media/project/uk/files/finance-reports/qib-uk-annual-report-2015.pdf",
       "FY2014": CH+"/MzEyMDQzMzk0OWFkaXF6a2N4/document?format=pdf&download=0"}
+# BLOCKED, WITH NO ARCHIVED FALLBACK - an unresolved state, explicitly NOT a negative
+# (checked 2026-09-16). The four qib-uk.com Annual Report URLs above for FY2017-FY2020 are
+# refused by the host's WAF. NOTE THE TRAP: they return HTTP **200**, not an error code, but
+# the body is a 247-byte text/html page reading "Request Rejected - The requested URL was
+# rejected. Please consult with your administrator. Your support ID is: ..." - an F5-style
+# WAF rejection wearing a success status. A status-code check alone would mis-read these as
+# working; only the Content-Type and body reveal the block, which is why a PDF must always be
+# confirmed by its %PDF magic bytes rather than by HTTP 200.
+# This is a BLOCK, i.e. an UNKNOWN: it records that the host declined to serve THIS fetcher,
+# NOT that the documents were withdrawn - a human browser or another network may retrieve them
+# normally. No substitute can be offered either: a Wayback CDX query was run against each of
+# the four exact URLs on 2026-09-16 and every one returned successfully with an EMPTY result
+# set, so the absence of an ARCHIVE is enumerated rather than assumed, while the documents
+# themselves remain unexamined rather than absent. They are left cited at the publisher's live
+# URLs deliberately, there being nothing verified to replace them with. Do not downgrade these
+# to "dead", and do not record them as evidence that QIB (UK) failed to publish.
 # P3 declarations for FY2014-FY2018 are an appendix bundled inside that year's own Annual Report
 # (same PDF as AR[y], "Appendix: QIB (UK) Pillar 3 Declaration"). QIB (UK) stopped including the
 # Pillar 3 appendix in the AR from FY2019 onward and began publishing a standalone Pillar 3

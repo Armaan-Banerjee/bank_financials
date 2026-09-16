@@ -83,4 +83,108 @@ NOT changed (verified, deliberately):
 
 ## 3. CONSISTENCY / RATIO-REPRODUCTION RESULTS
 
-(filled in after rebuild — see section 4)
+Rebuilt with `python3 scripts/build_zenith.py`. **18 sheets**, correct order. All values
+below are read back out of the rebuilt `.xlsx`, not recomputed from the script.
+
+### 3a. CET1 vs Balance Sheet Total equity, and CET1 ratio reproduction
+
+| Year | CET1 (£'000) | Total equity (£'000) | CET1/equity | Total RWAs (£'000) | CET1/RWA | printed CET1 ratio | reproduces |
+|---|---|---|---|---|---|---|---|
+| FY2025 | 320,773.3 | (no AR yet) | - | 1,370,696 | 23.40% | 23.40% | YES |
+| FY2024 | 302,297.2 | 305,356.2 | 99.0% | 1,179,185 | 25.64% | 25.64% | YES |
+| FY2023 | 265,540.4 | 263,918.8 | 100.6% | 917,285.6 | 28.95% | 28.95% | YES |
+| FY2022 | 240,324.9 | 237,583.7 | 101.2% | 930,103.3 | 25.84% | 25.84% | YES |
+| FY2021 | 207,889.9 | 202,894.4 | 102.5% | 1,000,519.9 | 20.78% | 20.78% | YES |
+| FY2020 | 205,416.1 | 201,722.6 | 101.8% | 725,993 | 28.29% | 28.29% | YES |
+| FY2015 | 127,190.1 | 128,565.1 | 98.9% | 623,962.5 | 20.38% | 20.38% | YES |
+| FY2014 | 109,432.3 | 118,654.9 | 92.2% | 490,357.5 | 22.32% | 22.32% | YES |
+
+CET1 is now 92%-103% of Total equity in every year — same order of magnitude, as it must be
+for a bank whose entire capital base is CET1. Before the fix this column read 0.099%. The
+few years above 100% are the Bank's own regulatory adjustments ADDING to book equity
+(FY2020 is spelled out in its source: CET1 before adjustments 275,574 + adjustments 5,045 =
+280,619); the 92% in FY2014 is the gap between the memo Tier 1 ($185,197k, which equals book
+equity) and the Regulatory Available Capital actually used ($170,802k). Both pre-existing
+and already documented in the script.
+
+Total RWAs exceeds CET1 by the inverse of the CET1 ratio in every year by construction,
+e.g. FY2024 1,179,185 / 302,297.2 = 3.90x = 1/0.2564.
+
+### 3b. Every printed ratio still reproduces — old scale vs new scale
+
+Computed both ways from the same dicts. Ratios are scale-invariant, so nothing could break,
+and nothing did:
+
+| Metric | Years | Max |new - old| | Still reproduces printed? |
+|---|---|---|---|
+| CET1 / Total RWAs -> CET1/Tier 1/Total Capital ratio | 8 | 0.009 pp | yes, all 8 |
+| HQLA / net cash outflows -> LCR | 6 | 0.061 pp | yes (see caveat) |
+| ASF / RSF -> NSFR | 4 | 0.007 pp | yes, all 4 |
+| CET1 / leverage exposure | 6 | 0.002 pp | n/a, see caveat |
+
+The sub-0.07pp movements are 1-decimal-place rounding only, and they move TOWARD the true
+USD-basis ratio: the £ figures are now 1000x larger before being rounded to 1dp, so the
+stored precision is strictly better than before.
+
+RWA Breakdown components sum to that sheet's own Total, and to the Total RWAs sheet, in all
+8 populated years (residuals <= 0.8 £'000, from per-row 1dp rounding, already documented in
+the sheet's note).
+
+Tier 1 Capital == CET1 Capital == Total Capital in every year (the Bank has no AT1/Tier 2) —
+verified cell by cell after the fix.
+
+### 3c. Two ratios that do NOT reproduce — both pre-existing, both unaffected by this fix
+Stated explicitly so neither is mistaken for fix damage. Both were identical before the fix
+(see 3b: scale-invariant).
+
+1. **Leverage ratio.** CET1/exposure gives 12.66% for FY2024 against a printed 11.25% (same
+   pattern every year). The script's existing note already explains it: the Bank uses its own
+   tier-1-for-leverage measurement, and the printed figure is carried as disclosed. Nothing
+   is derived. Untouched.
+2. **LCR FY2022.** 1,014,739.2 / 309,847.1 = 327.50% against a printed 343%. This is a
+   source-side inconsistency in FY2022's own report and reproduces identically in raw USD
+   (1,227,530 / 374,822 = 327.5%). The script's LCR note already records the FY2022
+   own-report vs FY2023-restated-comparative divergence. Untouched. FY2023 (310.47% vs a
+   printed "310%"), FY2020 and FY2021 all reproduce to their printed precision.
+
+### 3d. Overview sheet
+The Overview carries **no Pillar 3 absolute amount at all** — only statement totals (raw USD,
+via the untouched `stock()`/`flow()`) and ratio strings. So the scale fix required no
+rescaling there, and Balance Sheet Total equity still reads 305,356.2 on both the Overview
+and the Balance Sheet sheet.
+
+One genuine internal contradiction WAS found and fixed while checking it: FY2020's capital
+ratios (28.29%) and leverage ratio (10.68%) were on the detail sheets but missing from the
+Overview — left behind by the earlier pass that recovered FY2020 from the FY2021 report's
+comparative column. Added as a straight duplication of the detail-sheet cells; nothing
+recomputed. Verified after rebuild: every populated Overview ratio cell now equals its
+detail-sheet source exactly, across all six ratio rows.
+
+**The LCR two-basis split was preserved.** FY2020 (435%) and FY2021 (276%) are point-in-time
+and remain OFF the Overview's LCR trend row, which carries only the 12-month averages; the
+Overview note was extended from FY2021-only to cover both years and to say why the FY2020
+capital/leverage figures ARE shown while its LCR is not.
+
+### 3e. Deliberately NOT changed
+- FY2014/FY2015 Total RWAs derived as Pillar 1 requirement / 8% — still populated, still
+  flagged in the script. Not withdrawn (user's call), not propagated.
+- FY2011's "Solvency Ratio against Pillar 1 203%" — still off the ratio sheets; it is a
+  capital-COVER multiple, not a CRR ratio.
+- The LCR 12-month-average vs point-in-time row split — intact on the LCR sheet.
+- Asset Quality's `stock()` call — correct as is, its dict is raw USD from the Annual Reports.
+- No transcribed source literal was altered. The only numeric literals touched are the two
+  FY2011 cells, restored FROM a deliberate stopgap TO the figures the source prints.
+
+## 4. NOTE ON GIT STATE
+This agent ran no git command that writes. Another process in this repo committed at
+21:47 and 21:50 ("cleanup", 21e02b1 / 36917eb) while this work was in progress, sweeping the
+`stock_k()` change, the FY2011 rescale and the rebuilt workbook into HEAD. `git diff` against
+HEAD therefore shows only the later Overview edit; the full change is visible as
+`git diff 21e02b1 -- scripts/build_zenith.py`. Everything described above is on disk and in
+the rebuilt workbook.
+
+## 5. NOT RUN, per instruction
+`refresh_all.py` was NOT run and the test suite was NOT run, so `research/insights.db`,
+`bank_metrics.csv` and the downstream deliverables still hold the OLD 1000x-understated
+Zenith Pillar 3 figures. **A refresh is required before those outputs are trusted for
+Zenith.** Nothing was committed by this agent and no other session was messaged.

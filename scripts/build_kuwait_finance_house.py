@@ -72,8 +72,11 @@ def p3_sources(page_2025, extra=""):
         f"FY2022/FY2021: Annual Report 2022, p.72 - {AR2022_URL}\n\n"
         "Total RWAs are NOT separately disclosed anywhere in the source (Note 33/Capital Adequacy "
         "explicitly defers to the Pillar 3 appendix, which gives ratios and Own Funds only, no RWA "
-        "figure) - calculated here as Own Funds / Total Capital ratio for each year, flagged as "
-        "calculated rather than directly quoted." + extra
+        "figure), so the Total RWAs sheet reads 'Not publicly disclosed'. A back-solved series "
+        "(Own Funds / Total Capital ratio) previously stood there and was WITHDRAWN 2026-09-16 - "
+        "see that sheet's own note for the withdrawal record. What the bank does disclose by risk "
+        "category is on the RWA Breakdown sheet, derived from the appendix's own published Pillar 1 "
+        "minimum capital requirements." + extra
     )
 
 
@@ -527,7 +530,15 @@ def metric(name, unit, rows_data, note=None):
 CET1_CAPITAL = {"FY2025": 325.3, "FY2024": 316.7, "FY2023": 323.2, "FY2022": 304.5, "FY2021": 319.0}
 TIER1_CAPITAL = CET1_CAPITAL  # no AT1 disclosed any year
 TOTAL_CAPITAL = {"FY2025": 325.3, "FY2024": 316.7, "FY2023": 323.2, "FY2022": 304.5, "FY2021": 319.8}
-TOTAL_RWA_CALC = {"FY2025": 1618.4, "FY2024": 1649.3, "FY2023": 1666.0, "FY2022": 1530.2, "FY2021": 1421.3}
+# WITHDRAWN 2026-09-16 on the user's decision. Each value was Own Funds DIVIDED
+# BY that year's Total Capital ratio - a back-solve from a ROUNDED percentage,
+# which is the pattern this project does not present as disclosure. Retained
+# unused as the record of what was removed; do NOT re-wire into the sheet.
+# NOTE this is NOT the same as the RWA Breakdown sheet further below, which
+# multiplies the Pillar 3 appendix's OWN DISCLOSED per-category Pillar 1 capital
+# requirements by 12.5 (the 8% constant). That is a unit conversion of published
+# components, not a back-solve from a rounded ratio, and it stands.
+TOTAL_RWA_CALC_WITHDRAWN = {"FY2025": 1618.4, "FY2024": 1649.3, "FY2023": 1666.0, "FY2022": 1530.2, "FY2021": 1421.3}  # noqa: F841
 CET1_RATIO = {"FY2025": "20.1%", "FY2024": "19.2%", "FY2023": "19.4%", "FY2022": "19.9%", "FY2021": "22.4%"}
 TOTAL_CAPITAL_RATIO = {"FY2025": "20.1%", "FY2024": "19.2%", "FY2023": "19.4%", "FY2022": "19.9%", "FY2021": "22.5%"}
 LEVERAGE_RATIO = {"FY2025": "14.2%", "FY2024": "13.7%", "FY2023": "11.9%", "FY2022": "12.3%", "FY2021": "10.5%"}
@@ -537,9 +548,24 @@ NSFR = {"FY2025": "139.0%", "FY2024": "119.4%", "FY2023": "133.0%", "FY2022": "1
 NO_AT1_NOTE = ("No Additional Tier 1 instruments disclosed any year - Tier 1 capital equals CET1 "
                "capital throughout. A small Tier 2 balance ($799k) exists only in FY2021 (see Total "
                "Capital), fully amortised/repaid by FY2022 onward.")
-RWA_NOTE = ("Total RWAs are NOT directly disclosed in the source - calculated as Own Funds / Total "
-            "Capital ratio for each year (see sheet-level source note). Treat as an approximation "
-            "consistent with the source's own rounded percentages, not a directly-quoted figure.")
+RWA_NOTE = (
+    "NOT PUBLICLY DISCLOSED. Kuwait Finance House Plc does not publish a total risk-weighted "
+    "exposure amount. The Pillar 3 appendix gives ratios and Own Funds only.\n\n"
+    "WITHDRAWAL RECORD (2026-09-16). This sheet previously carried FY2025 1,618.4; FY2024 1,649.3; "
+    "FY2023 1,666.0; FY2022 1,530.2; FY2021 1,421.3 (USD m), each back-solved as Own Funds divided "
+    "by that year's Total Capital ratio. They were withdrawn on the project owner's decision: the "
+    "ratio is published rounded to one decimal place, so the quotient carries a materially wider "
+    "band than its four significant figures imply, and a computed value in a disclosure column "
+    "reads as a disclosure. The arithmetic is preserved in this build script as "
+    "TOTAL_RWA_CALC_WITHDRAWN so the removal stays auditable.\n\n"
+    "SEE THE RWA BREAKDOWN SHEET FOR WHAT THE BANK DOES DISCLOSE. That sheet is NOT affected by "
+    "this withdrawal and is a different calculation: the Pillar 3 appendix publishes the minimum "
+    "Pillar 1 CAPITAL REQUIREMENT by risk category every year, and those disclosed components are "
+    "multiplied by 12.5 (the inverse of the fixed 8% own-funds requirement) to state them as "
+    "RWA-equivalents. That is a unit conversion of published figures against a regulatory constant, "
+    "not a back-solve from a rounded ratio. As a cross-check, the two approaches agreed to within "
+    "0.15% in every year before this withdrawal (e.g. FY2025 1,618.4 against 1,617.7), which is why "
+    "the breakdown's totals remain sound while the division above does not.")
 
 metric("CET1 Capital", "USD m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)])
 metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)])
@@ -547,7 +573,8 @@ metric("Tier 1 Capital", "USD m", [("Tier 1 capital", TIER1_CAPITAL)], note=NO_A
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], note=NO_AT1_NOTE)
 metric("Total Capital", "USD m", [("Total capital / Own Funds", TOTAL_CAPITAL)])
 metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)])
-metric("Total RWAs", "USD m", [("Total risk-weighted exposure amount (calculated)", TOTAL_RWA_CALC)],
+metric("Total RWAs", "USD m",
+       [("Total risk-weighted exposure amount", {y: "Not publicly disclosed" for y in YEARS})],
        note=RWA_NOTE)
 
 # ---------------------------------------------------------------

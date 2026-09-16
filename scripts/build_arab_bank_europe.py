@@ -10,23 +10,81 @@ from bank_workbook import BankWorkbook
 # finally found - see ENTITY_NOTE); ratios are never converted.
 YEARS = ["FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
 
-AR2022_URL = (
-    "https://web.archive.org/web/20240714135652/"
-    "https://www.eabplc.com/downloads/202304_EABAnnualReport_v7_144ppi.pdf"
-)
-AR2024_URL = (
-    "https://web.archive.org/web/20250805183352/"
-    "https://www.eabplc.com/downloads/202502_EABAnnualReport_v3.pdf"
-)
+# --- Source URLs -------------------------------------------------------------
+# All three documents were published on eabplc.com, which is now DEAD: as at
+# 2026-09-15 every https://www.eabplc.com/downloads/... path 301-redirects to the
+# arabbankeurope.com homepage and serves no PDF. The dead original URLs are
+# preserved below (ORIG_* constants) so the provenance chain stays readable; the
+# citations point at Wayback Machine snapshots, which are the only working form.
+#
+# Repointed 2026-09-15 to the Wayback "id_" form (.../web/<timestamp>id_/<original>)
+# rather than the bare .../web/<timestamp>/ form. The bare form returns the Wayback
+# *viewer*, whose behaviour the Internet Archive can change at any time; "id_" is a
+# contract to return the original archived bytes. Every snapshot below was re-fetched
+# on 2026-09-15 in id_ form and verified to begin "%PDF" with the page count stated.
+ORIG_AR2022_URL = "https://www.eabplc.com/downloads/202304_EABAnnualReport_v7_144ppi.pdf"
+ORIG_AR2024_URL = "https://www.eabplc.com/downloads/202502_EABAnnualReport_v3.pdf"
+ORIG_PILLAR3_2022_URL = "https://www.eabplc.com/downloads/Pillar3.pdf"
+
+# Verified 2026-09-15: 1,951,936 bytes, 98pp.
+AR2022_URL = "https://web.archive.org/web/20240714135652id_/" + ORIG_AR2022_URL
+# Verified 2026-09-15: 14,927,337 bytes, 100pp.
+AR2024_URL = "https://web.archive.org/web/20250805183352id_/" + ORIG_AR2024_URL
+
 # Recovered 2026-09-07 (HD-081 item 4 re-check): the generic Pillar3.pdf that was
 # previously found archived but truncated/corrupted on every retry now downloads
 # intact. EAB Group's own standalone Pillar 3 disclosure as at 31 Dec 2022 (with a
 # 31 Dec 2021 comparative) - covers FY2021/FY2022 only, on both an "EAB Group"
 # (consolidated) and "EAB plc" (entity-only) basis; this workbook uses the EAB plc
 # entity-only column throughout, consistent with every other sheet.
-PILLAR3_2022_URL = (
-    "https://web.archive.org/web/20240714131343/"
-    "https://www.eabplc.com/downloads/Pillar3.pdf"
+#
+# UNDATED FILENAME - EDITION PINNED DELIBERATELY. "Pillar3.pdf" carries no year, so
+# the same URL can hold different editions at different capture times (the trap that
+# caught Metro Bank, where FY2013 and FY2014 shared one URL and differed only by
+# capture). Timestamp 20240714131343 is pinned, and the financial year it actually
+# covers was confirmed by opening the file on 2026-09-15 rather than inferred:
+#   - page 1, verbatim: "This document comprises EAB Group's ("the Group") Pillar 3
+#     disclosures as at 31 DEC 2022";
+#   - internal PDF Title metadata: "Microsoft Word - Draft Pillar
+#     3_EAB_consolidated_DEC22_Board approved_final_for publication".
+#   => CONFIRMED FY2022 edition (as at 31 December 2022, FY2021 comparative).
+# Verified 2026-09-15: 3,074,106 bytes, 35pp (not the 1 MiB truncation failure mode).
+# The Wayback CDX index lists three captures of this URL. 20240714131343 and
+# 20250505164839 share the IDENTICAL content digest MJ7ZTRM4IN3H5WCITTWXRFZGO2EVRAJL
+# (both 2,537,938 compressed), i.e. they are byte-identical copies of this same
+# FY2022 edition - so the newer capture is not a different edition. The earlier
+# capture 20240713003435 has a DIFFERENT digest (IFQXMT5CEFV2KAUTJGNEQ6POP6YM5DB2,
+# 1,036,749) and is very likely the truncated/corrupt copy earlier sessions hit; do
+# not use it.
+PILLAR3_2022_URL = "https://web.archive.org/web/20240714131343id_/" + ORIG_PILLAR3_2022_URL
+
+# Dead-link register for this bank, quoted into the entity note below.
+DEAD_URL_NOTE = (
+    "DEAD SOURCE URL REGISTER (recorded 2026-09-15, nothing deleted): the three documents this "
+    "workbook is built from were published at "
+    f"{ORIG_AR2022_URL}, {ORIG_AR2024_URL} and {ORIG_PILLAR3_2022_URL}. All three of those original "
+    "URLs are DEAD as at 2026-09-15 - eabplc.com has migrated wholesale to arabbankeurope.com and "
+    "301-redirects every old /downloads/ path to that site's homepage, serving HTML rather than a PDF. "
+    "They are kept on the record here because a citation's provenance chain must stay readable even "
+    "once the host is gone. The working replacement for each is the Wayback Machine snapshot cited "
+    "throughout this workbook, given in the 'id_' form (https://web.archive.org/web/<timestamp>id_/"
+    "<original URL>), which returns the original archived bytes rather than the Wayback viewer page. "
+    "Each snapshot was re-fetched and verified on 2026-09-15: FY2022 Annual Report 1,951,936 bytes / "
+    "98pp; FY2024 Annual Report 14,927,337 bytes / 100pp; standalone Pillar3.pdf 3,074,106 bytes / 35pp. "
+    "The standalone Pillar3.pdf has an UNDATED filename, so its capture timestamp (20240714131343) is "
+    "pinned and the financial year it covers was confirmed by opening the file - page 1 states "
+    "\"EAB Group's ... Pillar 3 disclosures as at 31 DEC 2022\" and the PDF's own Title metadata reads "
+    "\"Draft Pillar 3_EAB_consolidated_DEC22_Board approved_final_for publication\": it is the FY2022 "
+    "edition with a FY2021 comparative, recorded explicitly so the same URL can never later be mistaken "
+    "for a different edition. The only other capture of that URL with intact content (20250505164839) "
+    "carries the identical Wayback content digest (MJ7ZTRM4IN3H5WCITTWXRFZGO2EVRAJL), i.e. it is the "
+    "same file, not a later edition. "
+    "NO ARCHIVED COPY EXISTS for the FY2023 and FY2024 standalone Pillar 3 disclosures: a Wayback CDX "
+    "query on https://www.eabplc.com/downloads/Pillar3EAB_PLC_2024.pdf and on .../Pillar3EABplc2023.pdf "
+    "returned successfully with an EMPTY result set on 2026-09-15, and a domain-wide CDX scan of "
+    "eabplc.com returned a full result set containing no 2023 or 2024 Pillar 3 file. This is an "
+    "enumerated real absence, established by a query that worked - not a fetch failure or a throttled "
+    "request."
 )
 
 # ---------------------------------------------------------------
@@ -93,7 +151,9 @@ ENTITY_NOTE = (
     "arabbankeurope.com with a blanket 301 redirect to that site's homepage for every old eabplc.com URL "
     "(including PDF paths that Google's index still shows as live, e.g. Pillar3EABplc2023.pdf and "
     "Pillar3EAB_PLC_2024.pdf - both 301 to the new homepage, not obtainable, and neither is in the Wayback "
-    "Machine), so most sourcing still relies on Wayback Machine snapshots. The FY2022 Annual Report (giving "
+    "Machine: re-confirmed 2026-09-16 by a Wayback CDX query on each exact URL, both of which returned "
+    "successfully with an EMPTY result set, which is an enumerated absence rather than a failed fetch), so most "
+    "sourcing still relies on Wayback Machine snapshots. The FY2022 Annual Report (giving "
     "FY2021+FY2022) and the FY2024 Annual Report (giving FY2023+FY2024) remain the two Annual Reports used "
     "throughout this workbook. The FY2021 and FY2023 standalone Annual Reports were still not obtainable on "
     "re-check. The FY2025 Annual Report, previously unobtainable, WAS found on re-check (2026-09-07) live at "
@@ -102,8 +162,10 @@ ENTITY_NOTE = (
     "statement transcription across every ST- sheet, out of scope for this correctness re-check - flagged for a "
     "future year-extension ticket). The generic 'Pillar3.pdf' previously found archived but truncated/corrupted "
     "on every retry attempted was RE-CHECKED 2026-09-07 and now downloads intact from its Wayback snapshot "
-    "(https://web.archive.org/web/20240714131343/https://www.eabplc.com/downloads/Pillar3.pdf, 35pp, EAB Group's "
-    "own standalone Pillar 3 disclosure as at 31 Dec 2022 with a 31 Dec 2021 comparative) - it gives full "
+    f"({PILLAR3_2022_URL}, 3,074,106 bytes, 35pp, EAB Group's "
+    "own standalone Pillar 3 disclosure as at 31 Dec 2022 with a 31 Dec 2021 comparative; the capture timestamp "
+    "is pinned and that financial year was confirmed from the document's own page 1 and PDF Title metadata - see "
+    "the dead-URL register below) - it gives full "
     "entity-level (\"EAB plc**\", i.e. Arab Bank Europe Plc solo, not the wider EAB Group) capital/RWA/leverage/"
     "LCR/NSFR amounts for FY2021 and FY2022, previously all marked 'Not publicly disclosed'; see the individual "
     "Pillar 3 metric sheets and the RWA Breakdown sheet for the recovered figures and their citation. No "
@@ -125,7 +187,8 @@ ENTITY_NOTE = (
     "event during FY2023, but this does not come close to explaining the full €379,777k gap; the FY2025 Annual "
     "Report found on re-check (see above) only carries FY2024/FY2025 comparatives, one year too late to shed any "
     "light on FY2023, and contains no restatement note referencing FY2023 or FY2022 - left unbridged and flagged "
-    "rather than silently forced to reconcile."
+    "rather than silently forced to reconcile.\n\n"
+    + DEAD_URL_NOTE
 )
 
 CASH_FLOW_SOURCES = (
@@ -254,6 +317,20 @@ SDDT_NOTE = (
     "(1,546 unique captures) filtered for 'pillar' returns 12 Pillar 3 documents: a continuous annual series "
     "for 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 and 2020, and then a single 2024-07 "
     "capture of the FY2022 edition cited on these sheets. There is NO FY2021, NO FY2023 and NO FY2024 capture. "
+    "PATH RECORDED 2026-09-16 so a future year extension does not have to rediscover it: that 2009-2020 series "
+    "is NOT under /downloads/ (the path every earlier probe tried, and the path the FY2022 edition uses) but "
+    "under https://www.eabplc.com/files/PDFs/ and https://www.eabplc.com/files/PDFs/Pillar%203/ - which is "
+    "precisely why filename permutation under /downloads/ kept missing it. Confirmed archived 200 "
+    "application/pdf, with capture timestamps: 'EAB 2020 Pillar 3.pdf' 20210918020429; 'EAB 2019 Pillar 3.pdf' "
+    "20210918015853; 'Pillar III Disclosure 2018.pdf' 20210918014555 and 'EAB 2017 Pillar 3 - FINALv2.pdf' "
+    "20210918014857, both under /files/PDFs/Pillar%203/; 'EAB 2016 Pillar 3 - CRDIV_FINAL.pdf' 20220707074618 "
+    "(also /files/PDFs/Pillar%203/); 'EAB 2015 Pillar 3 - CRDIV.pdf' 20161108212906; 'EAB 2014 Pillar 3 - "
+    "CRDIV Final Draft.pdf' 20161108192950; 'EAB 2013 Pillar Three - Final Draft.pdf' 20161108212844; "
+    "'3.4 - EAB 2012 Pillar Three.pdf' 20161108212856; plus a 2009/2010 pair under /pdfs/ and "
+    "/english/pdfs/. So the correct characterisation is that this bank published a standalone Pillar 3 for "
+    "roughly nine years and then, after the FY2022 edition, stopped - NOT that it rarely or never published "
+    "one. None of these documents is transcribed here: all of them predate this workbook's FY2021-FY2024 "
+    "window, and recording the path is deliberately wording-only, not a year extension. "
     "(c) A CDX scan of the successor domain arabbankeurope.com returns 20 captures and no PDFs at all. FY2021's "
     "absence costs nothing beyond leverage/NSFR (see those sheets - the FY2022 edition's own comparative column "
     "supplies FY2021 capital, RWA and LCR, and flags leverage/NSFR 'n/a' as structural)."

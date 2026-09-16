@@ -11,7 +11,25 @@ YEAR_LABEL = {y: y for y in YEARS}
 AR_2025_URL = "https://find-and-update.company-information.service.gov.uk/company/07312896/filing-history/MzUyMDIyOTcwM2FkaXF6a2N4/document?download=0&format=pdf"
 AR_2024_URL = "https://find-and-update.company-information.service.gov.uk/company/07312896/filing-history/MzQ2NTMxODAwN2FkaXF6a2N4/document?download=0&format=pdf"
 AR_2023_URL = "https://find-and-update.company-information.service.gov.uk/company/07312896/filing-history/MzQxOTAwNzg1NWFkaXF6a2N4/document?download=0&format=pdf"
-AR_2022_URL = "https://www.onesavingsbank.com/media/w3ffou5b/osbg-ara-2022.pdf"
+# DELIBERATELY UNREFERENCED - DO NOT WIRE THIS INTO A CITATION (checked 2026-09-16).
+# It is retained only so that a future reader who finds it is told why it is not used.
+# Two independent reasons, either sufficient:
+#   1. WRONG ENTITY. "osbg-ara-2022.pdf" is the OSB GROUP PLC Annual Report and
+#      Accounts 2022 (live, 200 application/pdf, 6,488,702 B, 260 pp; cover "A trusted
+#      partner / Annual Report and Accounts 2022", and the group describes itself as
+#      "a leading specialist mortgage lender"). Every other AR_* constant in this file
+#      is a Companies House filing for company 07312896 = ONESAVINGS BANK PLC, i.e. the
+#      entity's own statutory accounts. Citing the group ARA in that series would cross
+#      the entity boundary - the Arbuthnot FY2017 class: right year, wrong basis.
+#   2. THERE IS NO GAP TO FILL. FY2022 is already sourced below from the entity's own
+#      FY2023 accounts, p.89, COMPANY column (the FY2022 comparative). So this constant
+#      is redundant as well as wrong-basis.
+# Note the genuine subtlety that makes the trap plausible: this script's PILLAR 3 sheets
+# are openly declared on an "OSB Group plc consolidated Pillar 3 basis". Group sourcing
+# THERE is a labelled scoping decision, not contamination - so the two bases legitimately
+# coexist in one file, and a group-level annual report sitting unused looks like an
+# oversight rather than a boundary. It is the boundary.
+AR_2022_URL = "https://www.onesavingsbank.com/media/w3ffou5b/osbg-ara-2022.pdf"  # noqa: F841
 AR_2021_URL = "https://www.onesavingsbank.com/media/5n1lklrr/onesavings-bank-plc-2021-accounts.pdf"
 AR_2019_URL = "https://www.osb.co.uk/media/utofi4fl/11-osb-2019-annual-report-and-accounts.pdf"
 
@@ -501,7 +519,93 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "£m / %", [("Total exposure measure excluding claims on central banks", {"FY2025": 28956.3, "FY2024": 27322.9, "FY2023": 27438.8, "FY2022": 24725.4}), ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "7.4%", "FY2024": "7.7%", "FY2023": "7.5%", "FY2022": "8.4%", "FY2021": "7.9%"})], "FY2021 uses the pre-UK-KM1 disclosure's Group leverage ratio and does not provide a comparable exposure-measure amount; the 2022 report notes a like-for-like FY2021 exposure measure of £21,742.2m and ratio of 8.9%, but the workbook preserves the FY2021 as-reported 7.9% ratio rather than mixing bases.")
-metric("LCR", "£m / %", [("Total high-quality liquid assets (HQLA), weighted value average", {"FY2025": 3181.5, "FY2024": 3351.8, "FY2023": 3078.0, "FY2022": 2907.1}), ("Total net cash outflows (adjusted value)", {"FY2025": 1898.6, "FY2024": 1794.3, "FY2023": 1565.6, "FY2022": 1491.5}), ("Liquidity Coverage Ratio (%)", {"FY2025": "169.5%", "FY2024": "188.0%", "FY2023": "197.1%", "FY2022": "197.0%", "FY2021": "195.5%"})], "FY2021's pre-UK-KM1 disclosure provides only the Group LCR percentage in Table 4; HQLA and adjusted net-outflow amounts are not disclosed on a directly comparable annual basis. FY2022 onward uses the 12-month average template (the 2022 disclosure restates prior LCR methodology).")
+# ---------------------------------------------------------------
+# LCR - the ONE Pillar 3 sheet that carries a genuine entity-level
+# (OneSavings Bank plc solo) figure alongside the OSB Group rows, so it gets
+# its own sources string rather than the shared p3_sources().
+#
+# TWO DIFFERENT MEASURES, TWO SEPARATE ROWS. The Group rows are the UK KM1
+# template's 12-MONTH AVERAGE LCR. The solo row is a POINT-IN-TIME LCR at
+# 31 December, stated in narrative text (not a template) inside the same
+# documents. They must never be merged, averaged, reconciled or read as a
+# restatement of one another. Proof they are different measures, from a
+# single page of the primary: the FY2022 disclosure p.9 prints the Group's
+# 12-month-average LCR of 197.0% in UK KM1 row 17 and, in the "Liquidity
+# Ratio" narrative immediately below it, "the Group LCR was 185%" as at
+# 31 December 2022 - same group, same date, 197.0 vs 185.
+#
+# The solo row is entity-level data for the workbook's own entity
+# (OneSavings Bank plc, FRN 530504) and is therefore added rather than
+# withheld; it does not change, replace or re-label any Group figure.
+# FY2023/FY2024/FY2025 are blank because those editions state no OSB-solo
+# LCR at all - only a Group 12-month average. No value is carried across.
+# ---------------------------------------------------------------
+LCR_SOURCES = (
+    "Sources — OSB Group plc consolidated Pillar 3 basis (UK KM1, 12-month average LCR):\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, p.7 (UK KM1; liquidity templates pp.31 and 34) — {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 31 December 2024, p.9 (UK KM1; liquidity templates pp.49 and 52) — {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 31 December 2023, p.9 (UK KM1; liquidity templates pp.46 and 49) — {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 31 December 2022, pp.8-9 (UK KM1, row 17) — {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosures for year ended 31 December 2021, p.8 (Table 4: Key metrics, "
+    f"'Liquidity coverage ratio' row) — {P3_2021_URL}\n\n"
+    "Sources — OneSavings Bank plc SOLO (entity-level) point-in-time LCR, stated in NARRATIVE text in the "
+    "same documents (there is no solo LCR template; each figure is transcribed verbatim as printed, including "
+    "FY2022's whole-number '229%'):\n"
+    f"FY2022 (229%): Pillar 3 Disclosures 31 December 2022, p.9, 'Liquidity Ratio' narrative directly beneath "
+    f"the UK KM1 table — \"As at 31 December 2022, OSB had a Liquidity Coverage Ratio (LCR) of 229% and CCFSL "
+    f"148% (31 December 2021: 240% and 158%, respectively) and the Group LCR was 185% (31 December 2021: "
+    f"196%)\" — {P3_2022_URL}\n"
+    f"FY2021 (240.1%): Pillar 3 Disclosures for year ended 31 December 2021, p.8, narrative directly beneath "
+    f"Table 4 in section 1.6 Key regulatory metrics — \"The liquidity for both OSB and CCFSL remains strong. "
+    f"OSB has a Liquidity Coverage Ratio (LCR) of 240.1% (2020: 254.1%) and CCFSL 157.9% (2020: 146.0%)\" — "
+    f"{P3_2021_URL}\n"
+    f"FY2020 (254.1%): Pillar 3 Disclosures for year ended 31 December 2020, p.7, narrative directly beneath "
+    f"Table 1: Key metrics — \"The liquidity for both OSB and CCFSL remains strong. OSB solo has a Liquidity "
+    f"Coverage Ratio (LCR) of 254.1% and CCFSL 146.0%\"; repeated p.62 in section 9 Liquidity beneath Table 37 "
+    f"as \"OSB solo has a Liquidity Coverage Ratio (LCR) of 254.1% (Dec 19: 199.4%) and CCFSL 146.0% (Dec 19: "
+    f"145%)\" — {P3_2020_URL}\n"
+    f"FY2019 (199.4%): Pillar 3 Disclosures for year ended 31 December 2019, p.8, narrative in section 1 "
+    f"beneath Table 1: Key metrics — \"The liquidity for both OSB and CCFSG Banks remains strong. OSB solo has "
+    f"a Liquidity Coverage Ratio ('LCR') of 199.4% and CCFSG Bank 143.9%\"; repeated p.60 in section 9 "
+    f"Liquidity beneath Table 50, which adds \"Both OSB and CCFS' LCR at 199.4% and 143.9% respectively remain "
+    f"well above risk appetite and regulatory minimums\" — {P3_2019_URL}\n"
+    "The FY2020 edition independently confirms FY2019's 199.4% and the FY2021 edition independently confirms "
+    "FY2020's 254.1%, each as its own prior-year comparative.\n"
+    "FY2023, FY2024 and FY2025: no OSB-solo LCR is stated anywhere in those editions (each gives only 'The "
+    "Group had a 12-month average Liquidity Coverage Ratio (LCR) of 197.1%/188.0%/169.5%'), so those cells are "
+    "left blank rather than carried forward.\n\n" + ENTITY_NOTE
+)
+
+bw.add_metric_sheet(
+    "LCR",
+    "OSB Group consolidated basis, £m / % — EXCEPT the final row, which is OneSavings Bank plc solo "
+    "(entity level). See the note below: the Group rows are 12-month averages, the solo row is point-in-time.",
+    [
+        ("Total high-quality liquid assets (HQLA), weighted value average", {"FY2025": 3181.5, "FY2024": 3351.8, "FY2023": 3078.0, "FY2022": 2907.1}),
+        ("Total net cash outflows (adjusted value)", {"FY2025": 1898.6, "FY2024": 1794.3, "FY2023": 1565.6, "FY2022": 1491.5}),
+        # Existing Group row - label and every value left exactly as they were.
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "169.5%", "FY2024": "188.0%", "FY2023": "197.1%", "FY2022": "197.0%", "FY2021": "195.5%"}),
+        ("Liquidity Coverage Ratio (%) — OneSavings Bank plc SOLO (entity level), POINT-IN-TIME at 31 December", {"FY2022": "229%", "FY2021": "240.1%", "FY2020": "254.1%", "FY2019": "199.4%"}),
+    ],
+    LCR_SOURCES,
+    note=(
+        "THE LAST TWO ROWS ARE DIFFERENT MEASURES AND MUST NEVER BE MERGED, AVERAGED, RECONCILED OR TREATED AS "
+        "A RESTATEMENT OF EACH OTHER. Row 3 is the OSB Group consolidated 12-month average LCR from the UK KM1 "
+        "template. Row 4 is OneSavings Bank plc's own solo (entity-level) LCR at the 31 December balance sheet "
+        "date, stated only in narrative text in the same Pillar 3 documents - there is no solo LCR template. "
+        "That the two are incommensurable is proved on a single page of the primary: the FY2022 disclosure p.9 "
+        "shows the Group's 12-month average LCR as 197.0% in UK KM1 while its 'Liquidity Ratio' narrative on "
+        "the same page gives the Group's point-in-time LCR as 185% at 31 December 2022. The solo row is the "
+        "only genuinely entity-level Pillar 3 data OSB publishes for OneSavings Bank plc; it is added, not "
+        "substituted, and no Group figure was changed. FY2023-FY2025 carry no solo figure because those "
+        "editions state none. FY2021's pre-UK-KM1 disclosure provides only the Group LCR percentage in Table 4; "
+        "HQLA and adjusted net-outflow amounts are not disclosed on a directly comparable annual basis. FY2022 "
+        "onward uses the 12-month average template (the 2022 disclosure restates prior LCR methodology)."
+    ),
+    first_col_width=78,
+    source_height=460,
+    note_height=150,
+)
 metric("NSFR", "£m / %", [("Total available stable funding", {"FY2025": 26596.3, "FY2024": 27138.8, "FY2023": 26087.0}), ("Total required stable funding", {"FY2025": 18911.8, "FY2024": 20051.6, "FY2023": 19638.6}), ("NSFR ratio (%)", {"FY2025": "140.6%", "FY2024": "135.4%", "FY2023": "132.8%"})], "FY2022's Pillar 3 report states that NSFR disclosures were not due until 1 January 2023; FY2021 likewise has no NSFR disclosure. The FY2023 table does not provide a 31 Dec 2022 comparative, so those cells remain blank.")
 metric("MREL Ratio", None, [("MREL resources as a percentage of total risk-weighted assets", {"FY2025": "24.7%", "FY2024": "25.6%"})], "Numeric MREL ratio is disclosed in UK KM2 for FY2025 and FY2024 only. FY2023's Pillar 3 report discusses the 18% requirement but does not provide a year-end MREL-resource ratio; FY2022 and FY2021 do not provide a comparable numeric MREL ratio. Those years are left blank rather than inferred.")
 
@@ -539,9 +643,11 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2025": "19.1%", "FY2024": "19.7%", "FY2023": "19.5%", "FY2022": "19.7%", "FY2021": "21.2%"}),
         ("Leverage Ratio", {"FY2025": "7.4%", "FY2024": "7.7%", "FY2023": "7.5%", "FY2022": "8.4%", "FY2021": "7.9%"}),
         ("LCR", {"FY2025": "169.5%", "FY2024": "188.0%", "FY2023": "197.1%", "FY2022": "197.0%", "FY2021": "195.5%"}),
+        # Separate row, never merged with the one above - see the LCR sheet's note.
+        ("LCR — OSB SOLO (entity level), POINT-IN-TIME", {"FY2022": "229%", "FY2021": "240.1%", "FY2020": "254.1%", "FY2019": "199.4%"}),
         ("NSFR", {"FY2025": "140.6%", "FY2024": "135.4%", "FY2023": "132.8%"}),
     ],
-    note="Cash flows are OneSavings Bank plc Company-only; Pillar 3 metrics are OSB Group consolidated. See the basis note on each sheet.",
+    note="Cash flows are OneSavings Bank plc Company-only; Pillar 3 metrics are OSB Group consolidated. See the basis note on each sheet. The two LCR rows are DIFFERENT MEASURES and must never be merged or reconciled: 'LCR' is the OSB Group consolidated 12-month average from UK KM1; 'LCR — OSB SOLO' is OneSavings Bank plc's own point-in-time LCR at 31 December, stated in narrative text in the same Pillar 3 documents (FY2023-FY2025: no solo figure is disclosed, so those cells are blank).",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ONESAVINGS FINANCIALS.xlsx")

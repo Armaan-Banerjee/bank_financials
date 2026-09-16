@@ -65,6 +65,14 @@ from openpyxl.chart.layout import Layout, ManualLayout
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 
+# The bank's own UK KM1 "Key metrics" template. Kept OUT of
+# PILLAR3_SHEET_NAMES for the same reason "RWA Breakdown" is: that list names
+# the 11 single-metric sheets, whereas this is a published disclosure template
+# reproduced whole. It sits immediately before those 11 sheets - sheet order
+# follows call order in the build script, so call add_km1_sheet() before the
+# first add_metric_sheet().
+KM1_SHEET_NAME = "KM1 Key Metrics"
+
 PILLAR3_SHEET_NAMES = [
     "CET1 Capital",
     "CET1 Ratio",
@@ -459,6 +467,64 @@ class BankWorkbook:
         add_cash_flow_sheet - see that docstring for `rows`. Placed with the
         other Pillar 3 sheets (see PILLAR3_SHEET_NAMES), not with the other
         3 statement sheets, since it's itself a Pillar 3 disclosure.
+        years: optional per-sheet override - see _add_statement_sheet."""
+        return self._add_statement_sheet(
+            title,
+            subtitle,
+            rows,
+            sources_text,
+            sheet_name,
+            first_col_width,
+            source_height,
+            unit_suffix,
+            years=years,
+        )
+
+    def add_km1_sheet(
+        self,
+        title,
+        subtitle,
+        rows,
+        sources_text,
+        sheet_name=KM1_SHEET_NAME,
+        first_col_width=72,
+        source_height=150,
+        unit_suffix="",
+        years=None,
+    ):
+        """The bank's own UK KM1 "Key metrics" template, metrics as rows and
+        years as columns, placed immediately BEFORE the 11 individual Pillar 3
+        metric sheets so a reader meets the published summary first and the
+        single-metric sheets afterwards.
+
+        Same (kind, label, values) row shape as add_cash_flow_sheet - see that
+        docstring - but with two deliberate differences:
+
+        `unit_suffix` DEFAULTS TO EMPTY, because KM1 is the one sheet that
+        mixes units down a single column: amount rows are £'000 while ratio
+        and buffer rows are percentages. Carry the unit on each row instead,
+        either in the label (the template's own convention, e.g. "Total
+        exposure measure (£'000)") or by writing ratio values as strings
+        ("14.5%"), which _add_statement_sheet passes through unchanged.
+
+        TRANSCRIBE THE TEMPLATE AS THE BANK PRINTED IT. KM1 is a prescribed
+        template (CRR Article 447 / PRA Disclosure Rules), so fidelity means
+        keeping the bank's own row order, its row labels, AND the template's
+        row numbers as printed ("UK 7a", "8", "UK 9a", ...) - they are how a
+        reader cross-refers to the source document. Keep rows the bank prints
+        as blank, "-" or "N/A" rather than dropping them: an omitted row is
+        indistinguishable from a row we failed to find. Use SECTION rows for
+        the template's own headings ("Additional own funds requirements",
+        "Combined buffer requirement", "Leverage ratio", "Liquidity Coverage
+        Ratio", "Net Stable Funding Ratio").
+
+        Do NOT reorder rows into this project's preferred sequence, do not
+        merge the two sides of a basis break into one row (the 1 Jan 2022
+        leverage change and the LCR average-vs-point-in-time split both
+        surface here as separate template rows), and do not compute a row the
+        bank left blank - a derived figure in a disclosure template reads as
+        a disclosure.
+
         years: optional per-sheet override - see _add_statement_sheet."""
         return self._add_statement_sheet(
             title,

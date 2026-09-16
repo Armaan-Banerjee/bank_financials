@@ -56,7 +56,7 @@ P3_2019_URL = f"{P3_HOST}/Hampden-Co-plc-2019-Pillar-3-Disclosures-FINAL.pdf"
 # snapshot instead. It carries a full UK KM1-format Own Funds/Leverage Ratio appendix with an
 # FY2019 comparative column (more precise than the FY2019 document's own rounded whole-percent
 # figures), used below where noted.
-P3_2020_URL = "https://web.archive.org/web/20220518033330/https://hampdenandco.com/content/hampden/content/Hampden-Co-Pillar-3-disclosures-2020-for-Web.pdf"
+P3_2020_URL = "https://web.archive.org/web/20220518033330id_/https://hampdenandco.com/content/hampden/content/Hampden-Co-Pillar-3-disclosures-2020-for-Web.pdf"
 
 ENTITY_NOTE = (
     "Hampden & Co Plc (Companies House SC386922, FRN 606934) is a small Edinburgh-based private/relationship "

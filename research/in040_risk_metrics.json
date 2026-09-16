@@ -114,6 +114,7 @@
         "2025": "Income - Profit/(loss) for the year"
       },
       "119278": {
+        "2017": "Income - Profit for the year",
         "2018": "Income - Profit for the year",
         "2019": "Income - Profit for the year",
         "2020": "Income - Profit for the year",
@@ -222,6 +223,7 @@
         "2024": "Income - Profit/(loss) for the year"
       },
       "143336": {
+        "2017": "Income from leasing activities - Profit/(loss) for the year",
         "2021": "Income from leasing activities - Profit/(loss) for the year",
         "2022": "Income from leasing activities - Profit/(loss) for the year",
         "2023": "Income from leasing activities - Profit/(loss) for the year",
@@ -995,6 +997,7 @@
         "2025": 7.2
       },
       "119278": {
+        "2017": 4229.0,
         "2018": 4746.0,
         "2019": 2233.0,
         "2020": 1466.0,
@@ -1103,6 +1106,7 @@
         "2024": 18.8
       },
       "143336": {
+        "2017": 8937.0,
         "2021": 6791.0,
         "2022": 17863.0,
         "2023": 38683.0,
@@ -1308,17 +1312,17 @@
         "2025": 646.5
       },
       "208020": {
-        "2015": 662.5,
-        "2016": -673.9,
-        "2017": -1961.9,
-        "2018": -6286.4,
-        "2019": -6617.9,
-        "2020": -7250.3,
-        "2021": -601.7,
-        "2022": 1306.7,
-        "2023": 941.9,
-        "2024": -4511.0,
-        "2025": -20582.8
+        "2015": 405.0,
+        "2016": -368.0,
+        "2017": -1384.3,
+        "2018": -4898.1,
+        "2019": -5151.7,
+        "2020": -5681.2,
+        "2021": -479.3,
+        "2022": 949.7,
+        "2023": 684.6,
+        "2024": -3359.7,
+        "2025": -14488.7
       },
       "216772": {
         "2019": 26981.0,
@@ -1774,7 +1778,7 @@
       "116316": 184.98,
       "119250": 407.37,
       "119256": 294.91,
-      "119278": 98.0,
+      "119278": 91.71,
       "121873": 717.37,
       "121878": 161.53,
       "121882": 115.46,
@@ -1806,7 +1810,7 @@
       "204570": 56.42,
       "207381": 205.75,
       "208019": 130.34,
-      "208020": 236.22,
+      "208020": 237.89,
       "216772": 55.33,
       "219523": 82.3,
       "221156": 205.7,
@@ -1949,6 +1953,7 @@
         "2025": -46.67
       },
       "119278": {
+        "2018": 12.23,
         "2019": -52.95,
         "2020": -34.35,
         "2021": 254.84,
@@ -2229,16 +2234,16 @@
         "2025": 256.39
       },
       "208020": {
-        "2016": -201.72,
-        "2017": -191.13,
-        "2018": -220.42,
-        "2019": -5.27,
-        "2020": -9.56,
-        "2021": 91.7,
-        "2022": 317.17,
-        "2023": -27.92,
-        "2024": -578.93,
-        "2025": -356.28
+        "2016": -190.86,
+        "2017": -276.17,
+        "2018": -253.83,
+        "2019": -5.18,
+        "2020": -10.28,
+        "2021": 91.56,
+        "2022": 298.14,
+        "2023": -27.91,
+        "2024": -590.75,
+        "2025": -331.25
       },
       "216772": {
         "2020": -39.03,
@@ -2645,9 +2650,9 @@
   },
   "leverage": {
     "coverage": {
-      "banks_with_both": 100,
+      "banks_with_both": 101,
       "banks_with_equity_to_assets": 111,
-      "banks_with_reported_leverage_ratio": 131
+      "banks_with_reported_leverage_ratio": 132
     },
     "equity_to_assets_pct": {
       "1004742": {
@@ -2887,6 +2892,7 @@
         "2025": 12.34
       },
       "143336": {
+        "2017": 7.45,
         "2021": 6.23,
         "2022": 6.13,
         "2023": 5.97,
@@ -3923,8 +3929,9 @@
         "2021": 11.26
       },
       "122093": {
+        "2019": 7.55,
         "2020": 7.18,
-        "2021": 6.32,
+        "2021": 8.72,
         "2022": 6.61,
         "2023": 6.96,
         "2024": 7.61,
@@ -4161,8 +4168,8 @@
         "2019": 11.2,
         "2020": 9.6,
         "2021": 8.3,
-        "2022": 10.9,
-        "2023": 10.5
+        "2022": 9.6,
+        "2023": 9.6
       },
       "204451": {
         "2020": 4.62,
@@ -4202,6 +4209,8 @@
         "2025": 12.93
       },
       "204471": {
+        "2019": 20.06,
+        "2020": 17.14,
         "2021": 15.2,
         "2022": 23.86,
         "2023": 25.88,
@@ -4244,6 +4253,9 @@
         "2023": 35.4
       },
       "204520": {
+        "2014": 9.17,
+        "2015": 12.86,
+        "2017": 9.9,
         "2021": 12.47,
         "2022": 11.65,
         "2023": 12.1,
@@ -4253,7 +4265,7 @@
       "204537": {
         "2019": 6.12,
         "2020": 5.45,
-        "2021": 4.5,
+        "2021": 4.45,
         "2022": 7.6,
         "2023": 11.5,
         "2024": 10.8,
@@ -4261,6 +4273,10 @@
         "2026": 13.3
       },
       "204550": {
+        "2017": 12.3,
+        "2018": 10.4,
+        "2019": 9.8,
+        "2020": 10.4,
         "2021": 10.3,
         "2022": 10.7,
         "2023": 9.7,
@@ -4327,6 +4343,9 @@
         "2023": 7.5,
         "2024": 8.1,
         "2025": 7.5
+      },
+      "207380": {
+        "2016": 75.0
       },
       "207381": {
         "2016": 14.4,
@@ -4399,6 +4418,7 @@
         "2018": 11.7,
         "2019": 10.7,
         "2020": 11.8,
+        "2021": 15.7,
         "2022": 14.05,
         "2023": 15.43,
         "2024": 14.92,
@@ -4510,7 +4530,7 @@
       "466611": {
         "2021": 5.04,
         "2022": 4.38,
-        "2023": 8.3,
+        "2023": 8.29,
         "2024": 8.02,
         "2025": 9.11
       },
@@ -4618,7 +4638,8 @@
         "2019": 6.3,
         "2020": 6.1,
         "2021": 5.46,
-        "2022": 7.4
+        "2022": 7.4,
+        "2023": 6.96
       },
       "575225": {
         "2014": 10.5,
@@ -4670,6 +4691,7 @@
         "2023": 8.36
       },
       "627671": {
+        "2016": 9.6,
         "2017": 9.92,
         "2018": 10.11,
         "2019": 9.49,
@@ -4677,7 +4699,8 @@
         "2021": 8.63,
         "2022": 8.74,
         "2023": 8.81,
-        "2024": 10.18
+        "2024": 10.18,
+        "2025": 9.26
       },
       "629564": {
         "2015": 87.1,
@@ -4736,6 +4759,7 @@
         "2026": 8.91
       },
       "730427": {
+        "2019": 15.5,
         "2020": 8.1,
         "2021": 29.3,
         "2022": 25.7,
@@ -4861,8 +4885,8 @@
         "2021": 15.0,
         "2022": 12.17,
         "2023": 10.69,
-        "2024": 12.7,
-        "2025": 9.2
+        "2024": 12.66,
+        "2025": 9.4
       },
       "848291": {
         "2020": 23.6,
@@ -4899,8 +4923,10 @@
         "2024": 21.2
       },
       "954876": {
+        "2023": 182.3,
         "2024": 21.0,
-        "2025": 20.4
+        "2025": 19.5,
+        "2026": 19.2
       },
       "956138": {
         "2022": 91.05,
@@ -18717,68 +18743,68 @@
       "208020": {
         "2019": {
           "FY2019/FY2020: IFRS 9 stage-level loan exposure (own reports' Credit risk / Risk management note) - gross exposure - loans and advances to customers": {
-            "stage_3": 5222.1
+            "stage_3": 3862.3
           },
           "FY2019/FY2020: IFRS 9 stage-level loan exposure (own reports' Credit risk / Risk management note) - gross exposure - loans and advances to customers (FY2020's own table does not separately break out Stage 3 gross exposure - see note above)": {
-            "stage_1": 18731.4
+            "stage_1": 13853.7
           },
           "FY2019/FY2020: IFRS 9 stage-level loan exposure (own reports' Credit risk / Risk management note) - impairment allowance": {
-            "stage_1": 2623.3,
-            "stage_3": 5222.1
+            "stage_1": 1940.2,
+            "stage_3": 3862.3
           }
         },
         "2020": {
           "FY2019/FY2020: IFRS 9 stage-level loan exposure (own reports' Credit risk / Risk management note) - gross exposure - loans and advances to customers (FY2020's own table does not separately break out Stage 3 gross exposure - see note above)": {
-            "stage_1": 50795.5
+            "stage_1": 40235.1
           },
           "FY2019/FY2020: IFRS 9 stage-level loan exposure (own reports' Credit risk / Risk management note) - impairment allowance": {
-            "stage_1": 7039.3,
-            "stage_3": 5142.7
+            "stage_1": 5575.9,
+            "stage_3": 4073.5
           }
         },
         "2021": {
           "IFRS 9 stage split of the annual impairment charge/(reversal) (Note 12)": {
-            "stage_1": 5612.3,
+            "stage_1": 4470.5,
             "stage_2": 0.0,
-            "stage_3": 4588.2
+            "stage_3": 3654.8
           }
         },
         "2022": {
           "IFRS 9 stage split of the annual impairment charge/(reversal) (Note 12)": {
-            "stage_1": 6422.3,
+            "stage_1": 4667.4,
             "stage_2": 0.0,
-            "stage_3": 4388.3
+            "stage_3": 3189.2
           }
         },
         "2023": {
           "IFRS 9 stage split of the annual impairment charge/(reversal) (Note 12)": {
-            "stage_1": 3110.9,
+            "stage_1": 2260.8,
             "stage_2": 0.0,
-            "stage_3": 4722.6
+            "stage_3": 3432.2
           }
         },
         "2024": {
           "IFRS 9 stage split of the annual impairment charge/(reversal) (Note 12)": {
-            "stage_1": 852.8,
-            "stage_2": 2419.5,
-            "stage_3": 362.7
+            "stage_1": 635.2,
+            "stage_2": 1801.9,
+            "stage_3": 270.1
           }
         },
         "2025": {
           "FY2025-only: IFRS 9 stage-level loan exposure (Credit loss exposure table, Note 25) - no equivalent balance-level stage table found in FY2021-FY2024's reports - gross exposure - loans and advances to customers": {
-            "stage_1": 58.7,
-            "stage_2": 34350.9,
-            "stage_3": 27125.7
+            "stage_1": 40.9,
+            "stage_2": 23950.3,
+            "stage_3": 18912.8
           },
           "FY2025-only: IFRS 9 stage-level loan exposure (Credit loss exposure table, Note 25) - no equivalent balance-level stage table found in FY2021-FY2024's reports - impairment allowance": {
-            "stage_1": 6.0,
-            "stage_2": 10038.3,
-            "stage_3": 17673.1
+            "stage_1": 4.2,
+            "stage_2": 6999.0,
+            "stage_3": 12322.1
           },
           "IFRS 9 stage split of the annual impairment charge/(reversal) (Note 12)": {
-            "stage_1": 7.2,
-            "stage_2": 7500.6,
-            "stage_3": 12419.5
+            "stage_1": 5.0,
+            "stage_2": 5279.8,
+            "stage_3": 8742.4
           }
         }
       },
@@ -23113,11 +23139,11 @@
   },
   "rwa_density": {
     "coverage": {
-      "bank_years_with_category_breakdown": 833,
-      "bank_years_with_rwa_to_assets": 869,
-      "bank_years_with_total_rwa": 892,
+      "bank_years_with_category_breakdown": 860,
+      "bank_years_with_rwa_to_assets": 892,
+      "bank_years_with_total_rwa": 916,
       "implausible_rwa_category_sum_skipped": 6,
-      "implausible_rwa_to_assets_skipped": 13
+      "implausible_rwa_to_assets_skipped": 7
     },
     "rwa_category_composition": {
       "1004742:2024": [
@@ -25559,6 +25585,68 @@
           "value": 0.0
         }
       ],
+      "122093:2019": [
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Institutions",
+          "pct_of_total_rwa": 7.54,
+          "value": 124623.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Corporates",
+          "pct_of_total_rwa": 5.23,
+          "value": 86579.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Retail",
+          "pct_of_total_rwa": 1.43,
+          "value": 23677.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Secured by mortgages on immovable property",
+          "pct_of_total_rwa": 46.68,
+          "value": 772077.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Exposures in default",
+          "pct_of_total_rwa": 2.89,
+          "value": 47866.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Items associated with particularly high risk",
+          "pct_of_total_rwa": 11.38,
+          "value": 188138.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Covered bonds",
+          "pct_of_total_rwa": 2.51,
+          "value": 41581.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Claims on institutions/corporates with short-term credit assessment",
+          "pct_of_total_rwa": 3.99,
+          "value": 65941.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.3,
+          "value": 5003.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Other items",
+          "pct_of_total_rwa": 6.19,
+          "value": 102375.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Total market risk (FX PRR)",
+          "pct_of_total_rwa": 0.09,
+          "value": 1443.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Total operational risk",
+          "pct_of_total_rwa": 11.77,
+          "value": 194608.0
+        }
+      ],
       "122093:2020": [
         {
           "label": "RWA by exposure class, \u00a3'000 - Institutions",
@@ -25604,6 +25692,11 @@
           "label": "RWA by exposure class, \u00a3'000 - Claims in the form of Collective Investment Undertakings (CIU)",
           "pct_of_total_rwa": 0.0,
           "value": 0.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.33,
+          "value": 5928.0
         },
         {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
@@ -25673,6 +25766,11 @@
           "value": 129997.0
         },
         {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.6,
+          "value": 10583.0
+        },
+        {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
           "pct_of_total_rwa": 5.17,
           "value": 91239.0
@@ -25738,6 +25836,11 @@
           "label": "RWA by exposure class, \u00a3'000 - Claims in the form of Collective Investment Undertakings (CIU)",
           "pct_of_total_rwa": 9.06,
           "value": 165017.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
         },
         {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
@@ -25807,6 +25910,11 @@
           "value": 146236.0
         },
         {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
           "pct_of_total_rwa": 4.82,
           "value": 96342.0
@@ -25869,6 +25977,11 @@
           "value": 148636.0
         },
         {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
           "pct_of_total_rwa": 5.52,
           "value": 115345.0
@@ -25929,6 +26042,11 @@
           "label": "RWA by exposure class, \u00a3'000 - Claims in the form of Collective Investment Undertakings (CIU)",
           "pct_of_total_rwa": 7.75,
           "value": 177450.0
+        },
+        {
+          "label": "RWA by exposure class, \u00a3'000 - Equity exposures",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
         },
         {
           "label": "RWA by exposure class, \u00a3'000 - Other items",
@@ -27296,6 +27414,31 @@
           "label": "Operational risk - Operational risk - standardised approach",
           "pct_of_total_rwa": 8.68,
           "value": 94.2
+        },
+        {
+          "label": "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2) - Credit and counterparty risk, combined as the FY2021 edition presents it (FY2020 restated)",
+          "pct_of_total_rwa": 81.39,
+          "value": 882.9
+        },
+        {
+          "label": "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2) - CVA risk (FY2020 restated) - not broken out at all in the FY2020 edition",
+          "pct_of_total_rwa": 0.33,
+          "value": 3.6
+        },
+        {
+          "label": "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2) - Market risk (FY2020 restated)",
+          "pct_of_total_rwa": 9.64,
+          "value": 104.6
+        },
+        {
+          "label": "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2) - Operational risk (FY2020 restated) - stated directly, not derived",
+          "pct_of_total_rwa": 8.67,
+          "value": 94.1
+        },
+        {
+          "label": "FY2020 restated - FY2021 edition's own 2020 comparative column (CRR basis, section 5.2) - Total risk-weighted exposure amount (FY2020 restated) - the four rows above sum to this exactly",
+          "pct_of_total_rwa": 100.04,
+          "value": 1085.2
         }
       ],
       "124772:2021": [
@@ -31414,6 +31557,100 @@
           "value": 49.0
         }
       ],
+      "204471:2019": [
+        {
+          "label": "Credit risk RWA by exposure class - Central Gov/Central Banks",
+          "pct_of_total_rwa": 10.26,
+          "value": 33795.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Corporates",
+          "pct_of_total_rwa": 44.97,
+          "value": 148056.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Institutions",
+          "pct_of_total_rwa": 18.22,
+          "value": 60002.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Other Items",
+          "pct_of_total_rwa": 1.05,
+          "value": 3452.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Public Sector Entities",
+          "pct_of_total_rwa": 10.51,
+          "value": 34593.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Retail",
+          "pct_of_total_rwa": 0.07,
+          "value": 234.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Multilateral Development Banks",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Exposures in Default (a separate class in the FY2019 table only)",
+          "pct_of_total_rwa": 0.43,
+          "value": 1421.0
+        },
+        {
+          "label": "Other risk types (RWA calculated as Capital Requirement / 8% - see source note) - Operational risk (Basic Indicator Approach)",
+          "pct_of_total_rwa": 14.16,
+          "value": 46638.0
+        },
+        {
+          "label": "Other risk types (RWA calculated as Capital Requirement / 8% - see source note) - Market risk",
+          "pct_of_total_rwa": 0.32,
+          "value": 1062.0
+        }
+      ],
+      "204471:2020": [
+        {
+          "label": "Credit risk RWA by exposure class - Central Gov/Central Banks",
+          "pct_of_total_rwa": 5.87,
+          "value": 21860.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Corporates",
+          "pct_of_total_rwa": 40.58,
+          "value": 151082.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Institutions",
+          "pct_of_total_rwa": 26.76,
+          "value": 99623.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Other Items",
+          "pct_of_total_rwa": 2.57,
+          "value": 9577.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Public Sector Entities",
+          "pct_of_total_rwa": 11.68,
+          "value": 43483.0
+        },
+        {
+          "label": "Credit risk RWA by exposure class - Retail",
+          "pct_of_total_rwa": 0.05,
+          "value": 184.0
+        },
+        {
+          "label": "Other risk types (RWA calculated as Capital Requirement / 8% - see source note) - Operational risk (Basic Indicator Approach)",
+          "pct_of_total_rwa": 12.31,
+          "value": 45812.0
+        },
+        {
+          "label": "Other risk types (RWA calculated as Capital Requirement / 8% - see source note) - Market risk",
+          "pct_of_total_rwa": 0.18,
+          "value": 675.0
+        }
+      ],
       "204471:2021": [
         {
           "label": "Credit risk RWA by exposure class - Central Gov/Central Banks",
@@ -32320,102 +32557,308 @@
           "value": 1168.0
         }
       ],
+      "204520:2009": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 562792.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 45023.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.48,
+          "value": 2700.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.03,
+          "value": 180.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 8.51,
+          "value": 47903.0
+        }
+      ],
+      "204520:2010": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 480466.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 38437.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.55,
+          "value": 2656.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.2,
+          "value": 957.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 8.75,
+          "value": 42050.0
+        }
+      ],
+      "204520:2012": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 275431.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 22034.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.86,
+          "value": 2364.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.17,
+          "value": 472.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 9.03,
+          "value": 24870.0
+        }
+      ],
+      "204520:2013": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 324189.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 25935.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.75,
+          "value": 2440.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.03,
+          "value": 99.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 8.78,
+          "value": 28474.0
+        }
+      ],
+      "204520:2014": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 487653.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 39012.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.5,
+          "value": 2424.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - market risk (no separate line disclosed FY2013/FY2012/FY2010/FY2009)",
+          "pct_of_total_rwa": 0.01,
+          "value": 41.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.0,
+          "value": 20.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 8.51,
+          "value": 41497.0
+        }
+      ],
+      "204520:2015": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 469969.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - credit risk (standardised)",
+          "pct_of_total_rwa": 8.0,
+          "value": 37598.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - operational risk (basic indicator)",
+          "pct_of_total_rwa": 0.51,
+          "value": 2418.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - market risk (no separate line disclosed FY2013/FY2012/FY2010/FY2009)",
+          "pct_of_total_rwa": 0.0,
+          "value": 9.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Capital requirement - counterparty risk (FY2013/FY2012 line combines counterparty risk capital with foreign exchange PRR: FY2013 43 + 56; FY2012 210 + 262)",
+          "pct_of_total_rwa": 0.01,
+          "value": 26.0
+        },
+        {
+          "label": "Pillar 1 capital requirement by risk type, Basel II editions FY2015-FY2009 (\u00a3000 of CAPITAL, not RWA - deliberately NOT multiplied by 12.5, see note) - Total Pillar 1 capital requirement as printed ('TOTAL PILLAR 1 CAPITAL' / 'TOTAL CAPITAL ALLOCATIONS')",
+          "pct_of_total_rwa": 8.52,
+          "value": 40051.0
+        }
+      ],
+      "204520:2017": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 757515.0
+        }
+      ],
       "204520:2021": [
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Credit risk (excluding CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 100.0,
           "value": 779375.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Market risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Market risk",
           "pct_of_total_rwa": 0.27,
           "value": 2138.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Operational risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Operational risk",
           "pct_of_total_rwa": 4.02,
           "value": 31350.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - does not tie to the row above for FY2021-FY2023, see note)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
           "pct_of_total_rwa": 100.0,
           "value": 779381.0
         }
       ],
       "204520:2022": [
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Credit risk (excluding CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 100.0,
           "value": 906138.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Market risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Market risk",
           "pct_of_total_rwa": 0.12,
           "value": 1125.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Operational risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Operational risk",
           "pct_of_total_rwa": 3.63,
           "value": 32900.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - does not tie to the row above for FY2021-FY2023, see note)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
           "pct_of_total_rwa": 100.0,
           "value": 906134.0
         }
       ],
       "204520:2023": [
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Credit risk (excluding CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 101.22,
           "value": 973878.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Counterparty credit risk (CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Counterparty credit risk (CCR)",
           "pct_of_total_rwa": 2.43,
           "value": 23332.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Market risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Market risk",
           "pct_of_total_rwa": 0.0,
           "value": 0.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Operational risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Operational risk",
           "pct_of_total_rwa": 4.5,
           "value": 43333.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - does not tie to the row above for FY2021-FY2023, see note)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
           "pct_of_total_rwa": 100.0,
           "value": 962119.0
         }
       ],
       "204520:2024": [
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Credit risk (excluding CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 94.39,
           "value": 988313.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Counterparty credit risk (CCR)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Counterparty credit risk (CCR)",
           "pct_of_total_rwa": 1.19,
           "value": 12424.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Market risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Market risk",
           "pct_of_total_rwa": 0.0,
           "value": 0.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - Operational risk",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Operational risk",
           "pct_of_total_rwa": 4.42,
           "value": 46325.0
         },
         {
-          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2024-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - does not tie to the row above for FY2021-FY2023, see note)",
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
           "pct_of_total_rwa": 100.0,
           "value": 1047061.0
+        }
+      ],
+      "204520:2025": [
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 95.05,
+          "value": 1198794.0
+        },
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 1.25,
+          "value": 15766.0
+        },
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Market risk",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - Operational risk",
+          "pct_of_total_rwa": 3.7,
+          "value": 46614.0
+        },
+        {
+          "label": "Risk-weighted exposure amounts by category (own OV1 template, FY2025-FY2023; derived from the Pillar 1 capital-requirement table x12.5, FY2022-FY2021 - see note. FY2017 category split deliberately left blank - see note) - For comparison: this bank's own separately-disclosed Total RWA (Total RWAs sheet - ties exactly for FY2025 and FY2024; does NOT tie for FY2023-FY2021, see note. FY2015-FY2009 are credit-risk RWA only - see note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 1261174.0
         }
       ],
       "204532:2016": [
@@ -32646,6 +33089,74 @@
           "label": "Standardised approach to credit risk - exposure and risk-weighted exposure - Particularly high risk items (development loans)",
           "pct_of_total_rwa": 3.99,
           "value": 3321000.0
+        }
+      ],
+      "204550:2017": [
+        {
+          "label": "Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 88.42,
+          "value": 1278.6
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 11.58,
+          "value": 167.5
+        }
+      ],
+      "204550:2018": [
+        {
+          "label": "Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 90.62,
+          "value": 1653.5
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 9.38,
+          "value": 171.1
+        }
+      ],
+      "204550:2019": [
+        {
+          "label": "Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 89.94,
+          "value": 1905.0
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.08,
+          "value": 1.7
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 9.98,
+          "value": 211.4
+        }
+      ],
+      "204550:2020": [
+        {
+          "label": "Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 87.84,
+          "value": 1758.1
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.13,
+          "value": 2.6
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 12.03,
+          "value": 240.8
         }
       ],
       "204550:2021": [
@@ -34451,9 +34962,24 @@
       ],
       "208020:2015": [
         {
-          "label": "Total Pillar 1 risk-weighted assets",
+          "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 100.0,
           "value": 221221.0
+        },
+        {
+          "label": "Market risk",
+          "pct_of_total_rwa": 1.87,
+          "value": 4128.0
+        },
+        {
+          "label": "Operational risk",
+          "pct_of_total_rwa": 5.2,
+          "value": 11501.0
+        },
+        {
+          "label": "FY2015 ONLY - arithmetic sum of the three FY2015 rows above (NOT a disclosed figure; shown here so the gap against the Total RWAs sheet's credit-only 221,221 is visible, and deliberately NOT carried onto the Total RWAs sheet - see note)",
+          "pct_of_total_rwa": 107.06,
+          "value": 236850.0
         }
       ],
       "208020:2016": [
@@ -34477,85 +35003,85 @@
         {
           "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 94.88,
-          "value": 283689.8
+          "value": 208598.9
         },
         {
           "label": "Market risk",
           "pct_of_total_rwa": 1.41,
-          "value": 4202.9
+          "value": 3090.4
         },
         {
           "label": "Operational risk",
           "pct_of_total_rwa": 3.71,
-          "value": 11095.0
+          "value": 8158.3
         }
       ],
       "208020:2018": [
         {
           "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 94.61,
-          "value": 240826.3
+          "value": 184382.6
         },
         {
           "label": "Market risk",
           "pct_of_total_rwa": 1.81,
-          "value": 4606.9
+          "value": 3527.1
         },
         {
           "label": "Operational risk",
           "pct_of_total_rwa": 3.58,
-          "value": 9105.1
+          "value": 6971.1
         }
       ],
       "208020:2019": [
         {
           "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 92.0,
-          "value": 197100.0
+          "value": 145775.2
         },
         {
           "label": "Market risk",
           "pct_of_total_rwa": 3.68,
-          "value": 7873.3
+          "value": 5823.1
         },
         {
           "label": "Operational risk",
           "pct_of_total_rwa": 4.32,
-          "value": 9264.0
+          "value": 6851.6
         }
       ],
       "208020:2020": [
         {
           "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 93.4,
-          "value": 295401.1
+          "value": 233987.2
         },
         {
           "label": "Market risk",
           "pct_of_total_rwa": 2.61,
-          "value": 8264.0
+          "value": 6545.9
         },
         {
           "label": "Operational risk",
           "pct_of_total_rwa": 3.98,
-          "value": 12597.8
+          "value": 9978.7
         }
       ],
       "208020:2021": [
         {
           "label": "Credit and counterparty credit risk",
           "pct_of_total_rwa": 93.65,
-          "value": 350224.0
+          "value": 254527.5
         },
         {
           "label": "Market risk",
           "pct_of_total_rwa": 4.81,
-          "value": 17971.8
+          "value": 13061.2
         },
         {
           "label": "Operational risk",
           "pct_of_total_rwa": 1.55,
-          "value": 5791.2
+          "value": 4208.8
         }
       ],
       "216772:2019": [
@@ -35207,57 +35733,6 @@
           "label": "Operational risk",
           "pct_of_total_rwa": 12.46,
           "value": 84197.3
-        }
-      ],
-      "223268:2014": [
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 94.42,
-          "value": 3528.8
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Position, foreign exchange and commodities risk (Market risk)",
-          "pct_of_total_rwa": 0.97,
-          "value": 36.3
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Operational risk",
-          "pct_of_total_rwa": 4.62,
-          "value": 172.5
-        }
-      ],
-      "223268:2015": [
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 95.59,
-          "value": 3522.5
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Position, foreign exchange and commodities risk (Market risk)",
-          "pct_of_total_rwa": 0.0,
-          "value": 0.0
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Operational risk",
-          "pct_of_total_rwa": 4.41,
-          "value": 162.5
-        }
-      ],
-      "223268:2016": [
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 95.73,
-          "value": 3918.8
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Position, foreign exchange and commodities risk (Market risk)",
-          "pct_of_total_rwa": 0.0,
-          "value": 0.0
-        },
-        {
-          "label": "UK OV1: Overview of risk weighted exposure amounts - Operational risk",
-          "pct_of_total_rwa": 4.27,
-          "value": 175.0
         }
       ],
       "223268:2017": [
@@ -35951,6 +36426,150 @@
           "value": 106648.0
         }
       ],
+      "400972:2020": [
+        {
+          "label": "Template UK OV1 - Overview of risk weighted exposure amounts - Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 89.54,
+          "value": 35487.0
+        },
+        {
+          "label": "Template UK OV1 - Overview of risk weighted exposure amounts - Operational risk",
+          "pct_of_total_rwa": 10.46,
+          "value": 4145.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures to central governments or central banks (Bank of England Reserve Account)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Retail exposures (unsecured loans)",
+          "pct_of_total_rwa": 1.66,
+          "value": 657.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures secured by mortgages on immovable property (non-residential loans performing)",
+          "pct_of_total_rwa": 65.79,
+          "value": 26073.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures secured by mortgages on immovable property (residential loans performing)",
+          "pct_of_total_rwa": 9.93,
+          "value": 3937.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures in default (non-residential loans)",
+          "pct_of_total_rwa": 0.67,
+          "value": 266.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures in default (residential loans)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures in default (unsecured loans)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Exposures to institutions",
+          "pct_of_total_rwa": 7.13,
+          "value": 2827.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Other items (fixed and other assets)",
+          "pct_of_total_rwa": 4.36,
+          "value": 1728.0
+        },
+        {
+          "label": "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, differently-structured analysis - see source note) - Credit Risk - risk weighted exposure amounts",
+          "pct_of_total_rwa": 89.54,
+          "value": 35488.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Credit risk - capital resources required",
+          "pct_of_total_rwa": 7.16,
+          "value": 2839.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Operational risk - capital resources required",
+          "pct_of_total_rwa": 0.84,
+          "value": 332.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Pillar 1 capital resources required",
+          "pct_of_total_rwa": 8.0,
+          "value": 3171.0
+        }
+      ],
+      "400972:2021": [
+        {
+          "label": "Template UK OV1 - Overview of risk weighted exposure amounts - Credit risk (excluding CCR)",
+          "pct_of_total_rwa": 89.79,
+          "value": 36472.0
+        },
+        {
+          "label": "Template UK OV1 - Overview of risk weighted exposure amounts - Operational risk",
+          "pct_of_total_rwa": 10.21,
+          "value": 4145.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Central governments or central banks",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Institutions",
+          "pct_of_total_rwa": 4.22,
+          "value": 1715.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Retail",
+          "pct_of_total_rwa": 0.13,
+          "value": 53.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Secured by mortgages on immovable property",
+          "pct_of_total_rwa": 82.41,
+          "value": 33472.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Exposures in default",
+          "pct_of_total_rwa": 0.16,
+          "value": 67.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Claims on institutions and corporates with a short-term credit assessment",
+          "pct_of_total_rwa": 1.09,
+          "value": 444.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - Other items",
+          "pct_of_total_rwa": 1.78,
+          "value": 721.0
+        },
+        {
+          "label": "Credit risk by standardised exposure class (FY2021 edition's own analysis) - SA exposure classes excluding securitisation positions",
+          "pct_of_total_rwa": 89.79,
+          "value": 36472.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Credit risk - capital resources required",
+          "pct_of_total_rwa": 7.18,
+          "value": 2917.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Operational risk - capital resources required",
+          "pct_of_total_rwa": 0.82,
+          "value": 332.0
+        },
+        {
+          "label": "Own funds requirement (8% of the risk weighted exposure amounts above) - Pillar 1 capital resources required",
+          "pct_of_total_rwa": 8.0,
+          "value": 3249.0
+        }
+      ],
       "446951:2021": [
         {
           "label": "Credit risk (excluding counterparty credit risk)",
@@ -36018,42 +36637,42 @@
       "451720:2014": [
         {
           "label": "Credit Risk (excluding CCR)",
-          "pct_of_total_rwa": 92.78,
-          "value": 455.0
+          "pct_of_total_rwa": 92.79,
+          "value": 455023.1
         },
         {
           "label": "Market Risk (FX and commodities)",
-          "pct_of_total_rwa": 0.2,
-          "value": 1.0
+          "pct_of_total_rwa": 0.21,
+          "value": 1033.4
         },
         {
           "label": "Operational Risk",
-          "pct_of_total_rwa": 6.99,
-          "value": 34.3
+          "pct_of_total_rwa": 7.0,
+          "value": 34301.6
         }
       ],
       "451720:2015": [
         {
           "label": "Credit Risk (excluding CCR)",
-          "pct_of_total_rwa": 92.95,
-          "value": 580.0
+          "pct_of_total_rwa": 92.96,
+          "value": 580049.3
         },
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 0.61,
-          "value": 3.8
+          "value": 3804.6
         },
         {
           "label": "Operational Risk",
           "pct_of_total_rwa": 6.43,
-          "value": 40.1
+          "value": 40109.3
         }
       ],
       "451720:2020": [
         {
           "label": "Credit Risk (excluding CCR)",
           "pct_of_total_rwa": 89.63,
-          "value": 650.7
+          "value": 650689.6
         },
         {
           "label": "Settlement Risk",
@@ -36063,19 +36682,19 @@
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 0.7,
-          "value": 5.1
+          "value": 5091.1
         },
         {
           "label": "Operational Risk",
           "pct_of_total_rwa": 9.31,
-          "value": 67.6
+          "value": 67564.6
         }
       ],
       "451720:2021": [
         {
           "label": "Credit Risk (excluding CCR)",
           "pct_of_total_rwa": 91.85,
-          "value": 919.0
+          "value": 919004.5
         },
         {
           "label": "Settlement Risk",
@@ -36085,24 +36704,24 @@
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 0.55,
-          "value": 5.5
+          "value": 5535.8
         },
         {
           "label": "Operational Risk",
-          "pct_of_total_rwa": 7.27,
-          "value": 72.7
+          "pct_of_total_rwa": 7.26,
+          "value": 72651.4
         }
       ],
       "451720:2022": [
         {
           "label": "Credit Risk (excluding CCR)",
           "pct_of_total_rwa": 83.54,
-          "value": 777.0
+          "value": 776986.9
         },
         {
           "label": "Counterparty Credit Risk (CCR)",
           "pct_of_total_rwa": 7.05,
-          "value": 65.6
+          "value": 65573.3
         },
         {
           "label": "Settlement Risk",
@@ -36112,24 +36731,24 @@
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 1.0,
-          "value": 9.3
+          "value": 9299.8
         },
         {
           "label": "Operational Risk",
           "pct_of_total_rwa": 8.41,
-          "value": 78.2
+          "value": 78243.4
         }
       ],
       "451720:2023": [
         {
           "label": "Credit Risk (excluding CCR)",
           "pct_of_total_rwa": 85.9,
-          "value": 788.0
+          "value": 787991.7
         },
         {
           "label": "Counterparty Credit Risk (CCR)",
           "pct_of_total_rwa": 4.63,
-          "value": 42.5
+          "value": 42496.1
         },
         {
           "label": "Settlement Risk",
@@ -36139,56 +36758,24 @@
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 0.33,
-          "value": 3.0
+          "value": 3038.8
         },
         {
           "label": "Operational Risk",
-          "pct_of_total_rwa": 9.14,
-          "value": 83.8
+          "pct_of_total_rwa": 9.13,
+          "value": 83758.2
         }
       ],
       "451720:2024": [
         {
           "label": "Credit Risk (excluding CCR)",
           "pct_of_total_rwa": 81.69,
-          "value": 963.3
+          "value": 963260.1
         },
         {
           "label": "Counterparty Credit Risk (CCR)",
           "pct_of_total_rwa": 6.65,
-          "value": 78.4
-        },
-        {
-          "label": "Settlement Risk",
-          "pct_of_total_rwa": 0.0,
-          "value": 0.0
-        },
-        {
-          "label": "Market Risk (FX and commodities)",
-          "pct_of_total_rwa": 0.29,
-          "value": 3.4
-        },
-        {
-          "label": "Operational Risk",
-          "pct_of_total_rwa": 11.38,
-          "value": 134.2
-        },
-        {
-          "label": "Memo: amounts below thresholds for deduction (already included within Credit Risk above)",
-          "pct_of_total_rwa": 0.07,
-          "value": 0.8
-        }
-      ],
-      "451720:2025": [
-        {
-          "label": "Credit Risk (excluding CCR)",
-          "pct_of_total_rwa": 89.32,
-          "value": 1224.3
-        },
-        {
-          "label": "Counterparty Credit Risk (CCR)",
-          "pct_of_total_rwa": 0.37,
-          "value": 5.1
+          "value": 78360.4
         },
         {
           "label": "Settlement Risk",
@@ -36198,12 +36785,44 @@
         {
           "label": "Market Risk (FX and commodities)",
           "pct_of_total_rwa": 0.28,
-          "value": 3.8
+          "value": 3357.6
+        },
+        {
+          "label": "Operational Risk",
+          "pct_of_total_rwa": 11.38,
+          "value": 134207.0
+        },
+        {
+          "label": "Memo: amounts below thresholds for deduction (already included within Credit Risk above)",
+          "pct_of_total_rwa": 0.07,
+          "value": 818.2
+        }
+      ],
+      "451720:2025": [
+        {
+          "label": "Credit Risk (excluding CCR)",
+          "pct_of_total_rwa": 89.32,
+          "value": 1224324.1
+        },
+        {
+          "label": "Counterparty Credit Risk (CCR)",
+          "pct_of_total_rwa": 0.37,
+          "value": 5120.5
+        },
+        {
+          "label": "Settlement Risk",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Market Risk (FX and commodities)",
+          "pct_of_total_rwa": 0.28,
+          "value": 3772.3
         },
         {
           "label": "Operational Risk",
           "pct_of_total_rwa": 10.03,
-          "value": 137.5
+          "value": 137478.4
         },
         {
           "label": "Memo: amounts below thresholds for deduction (already included within Credit Risk above)",
@@ -37573,6 +38192,127 @@
           "value": 221028.9
         }
       ],
+      "488982:2011": [
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Loans and advances to banks (20% risk weight)",
+          "pct_of_total_rwa": 6.12,
+          "value": 5.7
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Investments (10%-100% risk weight)",
+          "pct_of_total_rwa": 8.37,
+          "value": 7.8
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Secured residential lending (35%-75% risk weight)",
+          "pct_of_total_rwa": 9.33,
+          "value": 8.7
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Retail and commercial lending (75%-100% risk weight; FY2011/FY2013 label)",
+          "pct_of_total_rwa": 18.88,
+          "value": 17.6
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Fixed and other assets (100% risk weight)",
+          "pct_of_total_rwa": 53.97,
+          "value": 50.3
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Contingent assets - secured and unsecured lending facilities",
+          "pct_of_total_rwa": 3.43,
+          "value": 3.2
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Cash and balances with the Bank of England, and UK government bonds (0% risk weight)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        }
+      ],
+      "488982:2013": [
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Loans and advances to banks (20% risk weight)",
+          "pct_of_total_rwa": 0.64,
+          "value": 5.0
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Investments (10%-100% risk weight)",
+          "pct_of_total_rwa": 20.03,
+          "value": 155.3
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Secured residential lending (35%-75% risk weight)",
+          "pct_of_total_rwa": 17.83,
+          "value": 138.2
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Retail and commercial lending (75%-100% risk weight; FY2011/FY2013 label)",
+          "pct_of_total_rwa": 36.82,
+          "value": 285.5
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Fixed and other assets (100% risk weight)",
+          "pct_of_total_rwa": 20.68,
+          "value": 160.3
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Past due >20% impaired secured (50% risk weight)",
+          "pct_of_total_rwa": 0.06,
+          "value": 0.5
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Contingent assets - secured and unsecured lending facilities",
+          "pct_of_total_rwa": 3.93,
+          "value": 30.5
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Cash and balances with the Bank of England, and UK government bonds (0% risk weight)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        }
+      ],
+      "488982:2014": [
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Loans and advances to banks (20% risk weight)",
+          "pct_of_total_rwa": 0.48,
+          "value": 6.8
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Investments (10%-100% risk weight)",
+          "pct_of_total_rwa": 28.7,
+          "value": 406.3
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Retail lending (35%-75% risk weight; FY2014 label)",
+          "pct_of_total_rwa": 24.35,
+          "value": 344.8
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - SME and commercial (35%-100% risk weight; FY2014 label)",
+          "pct_of_total_rwa": 30.09,
+          "value": 426.0
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Fixed and other assets (100% risk weight)",
+          "pct_of_total_rwa": 11.77,
+          "value": 166.6
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Past due >20% impaired secured (50% risk weight)",
+          "pct_of_total_rwa": 0.08,
+          "value": 1.1
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Contingent assets - secured and unsecured lending facilities",
+          "pct_of_total_rwa": 4.54,
+          "value": 64.3
+        },
+        {
+          "label": "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above - Cash and balances with the Bank of England, and UK government bonds (0% risk weight)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        }
+      ],
       "488982:2016": [
         {
           "label": "Credit risk (excluding counterparty credit risk)",
@@ -37647,6 +38387,11 @@
           "label": "Operational risk",
           "pct_of_total_rwa": 4.14,
           "value": 370.0
+        },
+        {
+          "label": "Amounts below the thresholds for deduction (subject to 250% risk weight)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
         }
       ],
       "488982:2019": [
@@ -37669,6 +38414,11 @@
           "label": "Operational risk",
           "pct_of_total_rwa": 5.97,
           "value": 546.0
+        },
+        {
+          "label": "Amounts below the thresholds for deduction (subject to 250% risk weight)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
         }
       ],
       "488982:2020": [
@@ -38074,30 +38824,30 @@
       "514744:2019": [
         {
           "label": "Risk-weighted exposure amounts by risk type - Credit and counterparty credit risk",
-          "pct_of_total_rwa": 99.98,
+          "pct_of_total_rwa": 82.77,
           "value": 23600.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Market risk",
-          "pct_of_total_rwa": 0.37,
+          "pct_of_total_rwa": 0.31,
           "value": 88.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Operational risk (Basic Indicator Approach)",
-          "pct_of_total_rwa": 17.74,
+          "pct_of_total_rwa": 14.69,
           "value": 4188.0
         }
       ],
       "514744:2020": [
         {
           "label": "Risk-weighted exposure amounts by risk type - Credit and counterparty credit risk",
-          "pct_of_total_rwa": 88.71,
-          "value": 34463.0
+          "pct_of_total_rwa": 88.74,
+          "value": 34473.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Market risk",
           "pct_of_total_rwa": 0.48,
-          "value": 188.0
+          "value": 187.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Operational risk (Basic Indicator Approach)",
@@ -38108,17 +38858,17 @@
       "514744:2021": [
         {
           "label": "Risk-weighted exposure amounts by risk type - Credit and counterparty credit risk",
-          "pct_of_total_rwa": 100.0,
+          "pct_of_total_rwa": 84.36,
           "value": 24509.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Market risk",
-          "pct_of_total_rwa": 1.23,
+          "pct_of_total_rwa": 1.04,
           "value": 302.0
         },
         {
           "label": "Risk-weighted exposure amounts by risk type - Operational risk (Basic Indicator Approach)",
-          "pct_of_total_rwa": 17.3,
+          "pct_of_total_rwa": 14.6,
           "value": 4241.0
         }
       ],
@@ -38463,31 +39213,48 @@
       ],
       "575105:2021": [
         {
-          "label": "UK OV1 basis (2022 Pillar 3 edition) - Total credit risk (excluding CCR)",
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total credit risk (excluding CCR)",
           "pct_of_total_rwa": 89.76,
           "value": 1272000.0
         },
         {
-          "label": "UK OV1 basis (2022 Pillar 3 edition) - Total operational risk (standardised approach)",
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total operational risk (standardised approach)",
           "pct_of_total_rwa": 8.26,
           "value": 117000.0
         }
       ],
       "575105:2022": [
         {
-          "label": "UK OV1 basis (2022 Pillar 3 edition) - Counterparty credit risk (CCR)",
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Counterparty credit risk (CCR)",
           "pct_of_total_rwa": 0.11,
           "value": 2000.0
         },
         {
-          "label": "UK OV1 basis (2022 Pillar 3 edition) - Total operational risk (standardised approach)",
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total operational risk (standardised approach)",
           "pct_of_total_rwa": 7.46,
           "value": 136000.0
         },
         {
-          "label": "UK OV1 basis (2022 Pillar 3 edition) - Total credit risk (excluding CCR)",
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total credit risk (excluding CCR)",
           "pct_of_total_rwa": 92.47,
           "value": 1685000.0
+        }
+      ],
+      "575105:2023": [
+        {
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total operational risk (standardised approach)",
+          "pct_of_total_rwa": 8.59,
+          "value": 179000.0
+        },
+        {
+          "label": "UK OV1 basis (2023 and 2022 Pillar 3 editions) - Total credit risk (excluding CCR)",
+          "pct_of_total_rwa": 91.4,
+          "value": 1905000.0
         }
       ],
       "575225:2014": [
@@ -39362,65 +40129,209 @@
           "value": 42032.0
         }
       ],
+      "627671:2016": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 92.23,
+          "value": 310219.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 7.49,
+          "value": 25183.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.34,
+          "value": 1139.0
+        }
+      ],
+      "627671:2017": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 91.68,
+          "value": 330001.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 8.19,
+          "value": 29497.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.12,
+          "value": 443.0
+        }
+      ],
+      "627671:2018": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 91.27,
+          "value": 353393.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 8.64,
+          "value": 33470.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.08,
+          "value": 316.0
+        }
+      ],
+      "627671:2019": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 88.27,
+          "value": 407459.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 7.48,
+          "value": 34540.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.11,
+          "value": 494.0
+        }
+      ],
+      "627671:2020": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 92.86,
+          "value": 477272.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 6.98,
+          "value": 35898.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.15,
+          "value": 781.0
+        }
+      ],
+      "627671:2021": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 93.47,
+          "value": 512151.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 6.4,
+          "value": 35091.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.13,
+          "value": 696.0
+        }
+      ],
       "627671:2022": [
         {
-          "label": "Credit risk (excluding CCR)",
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
           "pct_of_total_rwa": 93.68,
           "value": 538880.0
         },
         {
-          "label": "Counterparty credit risk including CVA",
-          "pct_of_total_rwa": 0.05,
-          "value": 313.0
-        },
-        {
-          "label": "Operational risk",
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
           "pct_of_total_rwa": 6.26,
           "value": 36011.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.05,
+          "value": 313.0
         }
       ],
       "627671:2023": [
         {
-          "label": "Credit risk (excluding CCR)",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 93.14,
           "value": 547178.0
         },
         {
-          "label": "Counterparty credit risk including CVA",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Counterparty credit risk including CVA",
           "pct_of_total_rwa": 0.02,
           "value": 137.0
         },
         {
-          "label": "Market risk (including CVA where separately reported)",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Market risk",
           "pct_of_total_rwa": 0.01,
           "value": 42.0
         },
         {
-          "label": "Operational risk",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Operational risk",
           "pct_of_total_rwa": 6.82,
           "value": 40092.0
+        },
+        {
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Total risk-weighted exposure amount (RWEAs) - OV1 presentation",
+          "pct_of_total_rwa": 100.0,
+          "value": 587449.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 93.14,
+          "value": 547178.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 6.82,
+          "value": 40092.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.03,
+          "value": 179.0
         }
       ],
       "627671:2024": [
         {
-          "label": "Credit risk (excluding CCR)",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Credit risk (excluding CCR)",
           "pct_of_total_rwa": 92.0,
           "value": 611684.0
         },
         {
-          "label": "Counterparty credit risk including CVA",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Counterparty credit risk including CVA",
           "pct_of_total_rwa": 0.29,
           "value": 1895.0
         },
         {
-          "label": "Market risk (including CVA where separately reported)",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Market risk",
           "pct_of_total_rwa": 0.01,
           "value": 42.0
         },
         {
-          "label": "Operational risk",
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Operational risk",
           "pct_of_total_rwa": 7.71,
           "value": 51268.0
+        },
+        {
+          "label": "As presented in the FY2024 Pillar 3 edition's OV1 table (counterparty credit risk split out) - Total risk-weighted exposure amount (RWEAs) - OV1 presentation",
+          "pct_of_total_rwa": 100.0,
+          "value": 664889.0
+        }
+      ],
+      "627671:2025": [
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Credit risk (combined - CCR not separately disclosed in these editions)",
+          "pct_of_total_rwa": 91.67,
+          "value": 709091.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Operational risk",
+          "pct_of_total_rwa": 8.26,
+          "value": 63924.0
+        },
+        {
+          "label": "As presented in each year's own Pillar 3 'Own Funds Requirements' table (credit risk combined) - Market risk (including CVA from FY2020 onward, where the Bank labels it so)",
+          "pct_of_total_rwa": 0.06,
+          "value": 478.0
         }
       ],
       "629564:2015": [
@@ -42441,12 +43352,17 @@
       ],
       "834822:2022": [
         {
-          "label": "Credit Risk (excluding CCR)",
+          "label": "Credit Risk (excluding CCR) - standardised approach",
           "pct_of_total_rwa": 100.0,
           "value": 282001.0
         },
         {
-          "label": "Operational risk",
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk - basic indicator approach",
           "pct_of_total_rwa": 3.34,
           "value": 9411.0
         },
@@ -42458,12 +43374,17 @@
       ],
       "834822:2023": [
         {
-          "label": "Credit Risk (excluding CCR)",
+          "label": "Credit Risk (excluding CCR) - standardised approach",
           "pct_of_total_rwa": 100.0,
           "value": 426705.0
         },
         {
-          "label": "Operational risk",
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk - basic indicator approach",
           "pct_of_total_rwa": 4.36,
           "value": 18622.0
         },
@@ -42471,6 +43392,50 @@
           "label": "Total risk weighted exposure amount (as disclosed - see data quality note)",
           "pct_of_total_rwa": 100.0,
           "value": 426705.0
+        }
+      ],
+      "834822:2024": [
+        {
+          "label": "Credit Risk (excluding CCR) - standardised approach",
+          "pct_of_total_rwa": 100.0,
+          "value": 684357.0
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk - basic indicator approach",
+          "pct_of_total_rwa": 2.3,
+          "value": 15763.0
+        },
+        {
+          "label": "Total risk weighted exposure amount (as disclosed - see data quality note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 684357.0
+        }
+      ],
+      "834822:2025": [
+        {
+          "label": "Credit Risk (excluding CCR) - standardised approach",
+          "pct_of_total_rwa": 100.0,
+          "value": 1168300.0
+        },
+        {
+          "label": "Counterparty credit risk (CCR)",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "Operational risk - basic indicator approach",
+          "pct_of_total_rwa": 3.02,
+          "value": 35232.0
+        },
+        {
+          "label": "Total risk weighted exposure amount (as disclosed - see data quality note)",
+          "pct_of_total_rwa": 100.0,
+          "value": 1168300.0
         }
       ],
       "848291:2020": [
@@ -43347,6 +44312,7 @@
         "2025": 58.42
       },
       "122093": {
+        "2019": 34.01,
         "2020": 34.02,
         "2021": 29.39,
         "2022": 25.05,
@@ -43649,6 +44615,8 @@
         "2025": 76.49
       },
       "204471": {
+        "2019": 48.67,
+        "2020": 49.87,
         "2021": 58.73,
         "2022": 59.76,
         "2023": 61.59,
@@ -43696,7 +44664,8 @@
         "2021": 64.27,
         "2022": 68.33,
         "2023": 71.21,
-        "2024": 75.93
+        "2024": 75.93,
+        "2025": 70.24
       },
       "204532": {
         "2016": 56.26,
@@ -43709,10 +44678,15 @@
         "2025": 58.04
       },
       "204537": {
+        "2021": 29.24,
         "2022": 28.57,
         "2023": 32.97
       },
       "204550": {
+        "2017": 76.45,
+        "2018": 74.65,
+        "2019": 78.95,
+        "2020": 75.13,
         "2021": 72.33,
         "2022": 69.08,
         "2023": 70.23,
@@ -43859,9 +44833,6 @@
         "2025": 28.22
       },
       "223268": {
-        "2014": 83.59,
-        "2015": 89.23,
-        "2016": 88.93,
         "2017": 96.44,
         "2018": 90.08,
         "2019": 89.17,
@@ -43901,9 +44872,22 @@
         "2023": 31.9,
         "2024": 48.95
       },
+      "400972": {
+        "2020": 56.79,
+        "2021": 53.77
+      },
       "446951": {
         "2021": 71.39,
         "2022": 75.4
+      },
+      "451720": {
+        "2014": 47.8,
+        "2015": 80.12,
+        "2020": 42.99,
+        "2021": 46.96,
+        "2022": 35.89,
+        "2023": 43.9,
+        "2024": 55.71
       },
       "454750": {
         "2014": 83.49,
@@ -43998,6 +44982,9 @@
         "2023": 68.38
       },
       "488982": {
+        "2011": 38.78,
+        "2013": 40.99,
+        "2014": 38.68,
         "2016": 35.7,
         "2017": 35.96,
         "2018": 41.28,
@@ -44031,9 +45018,9 @@
       },
       "514744": {
         "2018": 15.47,
-        "2019": 13.86,
+        "2019": 16.74,
         "2020": 27.01,
-        "2021": 50.4,
+        "2021": 59.74,
         "2023": 20.59,
         "2024": 35.49,
         "2025": 36.25
@@ -44066,7 +45053,8 @@
         "2019": 46.3,
         "2020": 43.99,
         "2021": 40.28,
-        "2022": 44.18
+        "2022": 44.18,
+        "2023": 45.2
       },
       "575225": {
         "2014": 101.05,
@@ -44129,7 +45117,8 @@
         "2021": 61.42,
         "2022": 56.45,
         "2023": 51.3,
-        "2024": 51.77
+        "2024": 51.77,
+        "2025": 52.15
       },
       "629564": {
         "2015": 56.65,
@@ -44188,6 +45177,7 @@
         "2026": 23.62
       },
       "730427": {
+        "2019": 15.3,
         "2020": 11.78,
         "2021": 6.52,
         "2022": 7.11,
@@ -44310,7 +45300,9 @@
       },
       "834822": {
         "2022": 55.47,
-        "2023": 36.66
+        "2023": 36.66,
+        "2024": 27.08,
+        "2025": 32.8
       },
       "848291": {
         "2020": 47.4,

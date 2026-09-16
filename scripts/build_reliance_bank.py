@@ -18,17 +18,20 @@ AR_URLS = {
 P3_2023_URL = "https://www.reliancebankltd.com/wp-content/uploads/2023/10/RBL-Pillar-3-Disclosures-31-March-2023-for-website-30Oct2023.pdf"
 P3_2022_URL = "https://www.reliancebankltd.com/wp-content/uploads/2023/04/RBL-Pillar-3-Disclosures-31-March-2022-final-post-Board.pdf"
 
-# The Bank's own website copies of FY2024-FY2026, found 2026-09-15 by enumerating its
-# WordPress media library (/wp-json/wp/v2/media?mime_type=application/pdf) rather than
-# guessing filenames. These matter because the Companies House copies used above are
-# image-only scans that had to be OCR'd, whereas all three of these carry a real text
-# layer - so every "not disclosed" finding for FY2024-FY2026 now rests on exact text
-# extraction instead of OCR. Kept alongside, not in place of, the Companies House URLs,
-# which remain the filed-of-record source.
+# The Bank's own website copies, found by enumerating its WordPress media library
+# (/wp-json/wp/v2/media?mime_type=application/pdf) rather than guessing filenames:
+# FY2024-FY2026 found 2026-09-15, FY2022-FY2023 found 2026-09-16 on a re-enumeration
+# (6 pages, 600 PDFs). These matter because the Companies House copies used above are
+# image-only scans (Producer "libtiff / tiff2pdf", ~1 character of text per page) that
+# had to be OCR'd, whereas all five of these carry a real text layer - so findings for
+# those years rest on exact text extraction instead of OCR. Kept alongside, not in
+# place of, the Companies House URLs, which remain the filed-of-record source.
 AR_WEBSITE_URLS = {
     "FY2026": "https://www.reliancebankltd.com/wp-content/uploads/2026/08/RBL-Annual-Accounts-31st-March-2026.pdf",
     "FY2025": "https://www.reliancebankltd.com/wp-content/uploads/2025/07/Reliance-Bank-Report-and-Accounts-FINAL.pdf",
     "FY2024": "https://www.reliancebankltd.com/wp-content/uploads/2024/08/2024-07-23-Reliance-Bank-Report-and-Accounts-2024-Final_20-Aug.pdf",
+    "FY2023": "https://www.reliancebankltd.com/wp-content/uploads/2023/10/Reliance-Bank-Report-and-Accounts-2023-Final-for-website-30Oct2023.pdf",
+    "FY2022": "https://www.reliancebankltd.com/wp-content/uploads/2023/04/Reliance-Bank-Report-and-Accounts-31-March-2022.pdf",
 }
 
 ENTITY_NOTE = (
@@ -313,8 +316,11 @@ bw.add_asset_quality_sheet(
 P3_SOURCES = (
     f"Reliance Bank Pillar 3 Disclosure for 31 March 2023, KM1/capital and risk disclosures, {P3_2023_URL}\n"
     f"Reliance Bank Pillar 3 Disclosure for 31 March 2022, KM1/capital and risk disclosures, {P3_2022_URL}\n"
-    "Reliance Bank Annual Reports and Accounts FY2022-FY2026, Strategic Report capital/liquidity sections and KPI tables, "
+    "Reliance Bank Annual Reports and Accounts FY2019-FY2026, Strategic Report capital/liquidity sections and KPI tables, "
     + "; ".join(AR_URLS[y] for y in YEARS) + "\n"
+    "Text-layer copies on the Bank's own website, used for exact extraction where the Companies House filing is an "
+    "image-only scan (the Companies House URLs above remain the filed-of-record source): "
+    + "; ".join(f"{y} {AR_WEBSITE_URLS[y]}" for y in ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022"]) + "\n"
     "Blank cells mean the metric was not explicitly disclosed; no capital amount, RWA, NSFR or MREL figure has been inferred. "
     "No standalone Pillar 3 disclosure document for 31 March 2024, 2025 or 2026 was found (Bank website, Companies House, "
     "Wayback Machine, and URL-pattern guesses all came up empty) - CET1 Capital/Total Capital/Total RWAs for those years are "
@@ -345,14 +351,30 @@ P3_SOURCES = (
     "the documents exist, are fully machine-readable, and do not contain the figures. Deriving Total RWAs from CET1 capital / CET1 ratio is "
     "possible in principle but is the back-solve this project forbids (see build_alpha_bank_london.py and "
     "build_bank_mandiri_europe.py, where such values were withdrawn), and in any case CET1 capital itself is "
-    "undisclosed for the year, so there is nothing to divide."
+    "undisclosed for the year, so there is nothing to divide.\n"
+    "FY2021 FIGURES SOURCED FROM THE FOLLOWING YEAR'S EDITION (added 2026-09-16, comparative-column sweep). "
+    "The Bank published no Pillar 3 disclosure as at 31 March 2021, but the 31 March 2022 edition prints a full "
+    "prior-year comparative column headed '2021' - section 2 'Summary of Key Metrics' (p.3) and section 3 "
+    "'Capital Resources' (p.3, column headed '31 March 2021'). The FY2021 values on the CET1 Capital, Tier 1 "
+    "Capital, Tier 1 Ratio, Total Capital and Total RWAs sheets are read from that comparative column, NOT from a "
+    "FY2021 document, and each sheet's note says so. The edition was dated from its own cover ('Pillar 3 "
+    "Disclosures / As at 31 March 2022') and running page footer, not from its filename or upload path (the URL "
+    "carries a 2023 upload date). Document verified before reading: HTTP 200, Content-Type application/pdf, %PDF "
+    "magic bytes, 524,698 bytes, 14 pages, clean text layer. Column alignment cross-checked rather than assumed: "
+    "the 2022 edition's '2022' column and the 2023 edition's '2022' comparative column agree digit-for-digit on "
+    "every line (CET1 Resources 13,952; RWAs 71,782; CET1 ratio 18.05%; leverage exposure 274,521 and 5.08%; "
+    "HQLA 115,575; net cash outflow 18,809; LCR 605%; Capital Resources 14,443/(306)/14,137), so the headers are "
+    "not off by one and NO RESTATEMENT of any kind was found between the two editions. Nothing was derived or "
+    "back-solved: the FY2021 comparative column prints no NSFR, no MREL and no separate Tier 1 or Tier 2 line, so "
+    "those sheets stay blank for FY2021."
 )
-def metric(name, unit, data, note=None):
-    bw.add_metric_sheet(name, unit, data, P3_SOURCES, note=note, first_col_width=54, source_height=200)
+def metric(name, unit, data, note=None, first_col_width=54, source_height=200):
+    bw.add_metric_sheet(name, unit, data, P3_SOURCES, note=note, first_col_width=first_col_width,
+                        source_height=source_height)
 
-metric("CET1 Capital", "£", [("CET1 capital", {"FY2023": 20965000, "FY2022": 13952000})], "£20,965,000 (FY2023) and £13,952,000 (FY2022) per the Pillar 3 Summary of Key Metrics table. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
+metric("CET1 Capital", "£", [("CET1 capital", {"FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000})], "£20,965,000 (FY2023) and £13,952,000 (FY2022) per the Pillar 3 Summary of Key Metrics table. FY2021 £11,799,000 added 2026-09-16: the Bank published no Pillar 3 as at 31 March 2021, and this figure is the 'Common Equity Tier 1 (CET1) Resources' line in the PRIOR-YEAR COMPARATIVE COLUMN (headed '2021', £'000s) of the FOLLOWING year's edition - Pillar 3 Disclosures as at 31 March 2022, section 2 'Summary of Key Metrics', p.3. A printed figure, not a derivation. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
 metric("CET1 Ratio", "% of RWA", [("CET1 ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.1%", "FY2022": "18.2%", "FY2021": "15.7%", "FY2020": "17.7%", "FY2019": "20.2%"})])
-metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2023": 20965000, "FY2022": 13952000})],
+metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000})],
        "Added 2026-09-12. Not labelled 'Tier 1' anywhere in the source: Reliance Bank's Pillar 3 uses its own "
        "'Summary of Key Metrics' table rather than the UK KM1 template, and that table has no Tier 1 row. The "
        "figure shown is the disclosed CET1 Resources amount, carried across because the Bank's own Pillar 3 "
@@ -361,8 +383,16 @@ metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2023": 20965000, "FY2022"
        "p.2) and 'All of Reliance Bank's capital resources are currently Common Equity Tier 1 capital' (section "
        "on TCR composition, p.6). With no AT1 in issue, Tier 1 = CET1 by definition - the same treatment applied "
        "to other all-CET1 banks in this workbook set, and a disclosed fact rather than an estimate. FY2024-FY2026: "
-       "not found - see RWA Breakdown sheet's access-gap note.")
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.07%", "FY2022": "18.05%"})],
+       "not found - see RWA Breakdown sheet's access-gap note. "
+       "FY2021 £11,799,000 added 2026-09-16 from the PRIOR-YEAR COMPARATIVE COLUMN of the FOLLOWING year's edition "
+       "(Pillar 3 Disclosures as at 31 March 2022, section 2 'Summary of Key Metrics', p.3, column headed '2021'), "
+       "there being no 31 March 2021 edition. The no-AT1 basis is evidenced for FY2021 by that same document's "
+       "section 3 Capital Resources table, whose '31 March 2021' column lists only CET1 components (Ordinary Share "
+       "Capital 10,000 + Revaluation Reserve 1,258 + P&L Reserves 934 = 12,192 'CET1 capital prior to "
+       "adjustments', less CRR adjustments (239) = Total Capital 11,953) with no Additional Tier 1 or Tier 2 line "
+       "at all, and by section 6 (p.8), 'All of Reliance Bank's capital resources are currently Common Equity Tier "
+       "1 capital'.")
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.07%", "FY2022": "18.05%", "FY2021": "15.45%"})],
        "Added 2026-09-12 on the same basis as the Tier 1 Capital sheet (no AT1 in issue, so Tier 1 = CET1). "
        "These are the Pillar 3 'Summary of Key Metrics' table's own CET1 ratio figures (23.07% / 18.05%). Note "
        "they differ marginally from the CET1 Ratio sheet's FY2023/FY2022 values (23.1% / 18.2%), which come from "
@@ -374,17 +404,84 @@ metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "21.8%", "FY2025
        "FY2026 Annual Report's reference to the simplified SDDT regime), so these three years mirror the CET1 "
        "Ratio sheet's Annual-Report figures on the no-AT1 basis set out on the Tier 1 Capital sheet: with no AT1 "
        "in issue, Tier 1 Ratio is CET1 Ratio by definition. They are therefore Annual-Report-sourced and stated "
-       "to 1 d.p., unlike the 2 d.p. Pillar 3 figures for FY2023/FY2022 above. Blank before FY2022 because the "
-       "no-AT1 statement is only evidenced from the FY2023 Pillar 3 onward.")
-metric("Total Capital", "£", [("Total capital", {"FY2023": 21218000, "FY2022": 14137000})], "£21,218,000 (FY2023) and £14,137,000 (FY2022) per the Pillar 3 Capital Resources table (CET1 capital prior to adjustments less CRR adjustments). FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
+       "to 1 d.p., unlike the 2 d.p. Pillar 3 figures for FY2023/FY2022 above. "
+       "FY2021 15.45% added 2026-09-16, superseding the previous 'blank before FY2022' note: it is the 'Common "
+       "Equity Tier 1 ratio (%)' line in the PRIOR-YEAR COMPARATIVE COLUMN (headed '2021') of the FOLLOWING "
+       "year's edition - Pillar 3 Disclosures as at 31 March 2022, section 2 'Summary of Key Metrics', p.3 - not "
+       "from a FY2021 document, there being none. The no-AT1 basis for FY2021 is evidenced from the same "
+       "document's section 3 comparative column, which lists CET1 components only (see the Tier 1 Capital sheet). "
+       "It sits on this sheet's Pillar 3 series at 2 d.p. and is deliberately NOT reconciled with the CET1 Ratio "
+       "sheet's Annual-Report FY2021 value of 15.7%.")
+metric("Total Capital", "£", [("Total capital", {"FY2023": 21218000, "FY2022": 14137000, "FY2021": 11953000})], "£21,218,000 (FY2023) and £14,137,000 (FY2022) per the Pillar 3 Capital Resources table (CET1 capital prior to adjustments less CRR adjustments). FY2021 £11,953,000 added 2026-09-16: printed as the 'Total Capital' line in the PRIOR-YEAR COMPARATIVE COLUMN headed '31 March 2021' of the FOLLOWING year's edition - Pillar 3 Disclosures as at 31 March 2022, section 3 'Capital Resources', p.3 (12,192 CET1 capital prior to adjustments less (239) CRR adjustments). There is no 31 March 2021 edition; this is a printed figure in the 2022 edition, not a derivation. It exceeds the FY2021 CET1 Resources figure of £11,799,000 on the CET1 Capital sheet by £154,000, mirroring the same £185,000 gap in FY2022 between the Bank's two tables - the two are kept on separate sheets and deliberately not reconciled. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2023": "25.5%", "FY2022": "19.7%", "FY2021": "15.9%", "FY2020": "17.9%", "FY2019": "20.2%"})], "FY2023/FY2022 are derived from disclosed Pillar 3 capital and RWAs; FY2021-FY2019 are directly disclosed in the annual-report Strategic Report (FY2021: 15.9%; FY2020: 17.9%; FY2019: 20.2%). The accounts also disclose total capital requirement (TCR), a distinct figure not substituted here. FY2024-FY2026: not found.")
-metric("Total RWAs", "£", [("Total risk-weighted assets", {"FY2023": 83146000, "FY2022": 71782000})], "£83,146,000 (FY2023) and £71,782,000 (FY2022) per the Pillar 3 Summary of Key Metrics table; ties to the RWA Breakdown sheet's standardised-approach total. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
+metric("Total RWAs", "£", [("Total risk-weighted assets", {"FY2023": 83146000, "FY2022": 71782000, "FY2021": 71451000})], "£83,146,000 (FY2023) and £71,782,000 (FY2022) per the Pillar 3 Summary of Key Metrics table; ties to the RWA Breakdown sheet's standardised-approach total. FY2021 £71,451,000 added 2026-09-16: the 'Risk Weighted Assets' line in the PRIOR-YEAR COMPARATIVE COLUMN headed '2021' of the FOLLOWING year's edition - Pillar 3 Disclosures as at 31 March 2022, section 2 'Summary of Key Metrics', p.3. No 31 March 2021 edition exists. BASIS CAVEAT, checked explicitly rather than assumed: the Bank's 'Risk Weighted Assets' line is the STANDARDISED CREDIT-RISK total only. The FY2022 edition's section 7.1 credit-risk table (p.9) totals exactly 71,782 for 31 March 2022, matching the section 2 line digit for digit, and the same edition discloses market risk (section 8) and operational risk outside it. Consistent with that, the Bank's own printed CET1 ratios do NOT reproduce from these figures - 13,952/71,782 = 19.44% against a printed 18.05%, and 11,799/71,451 = 16.51% against a printed 15.45% - because the ratio denominator includes operational and market risk (implied roughly 5,514 and 4,918 respectively). Those implied amounts are NOT recorded anywhere in this workbook: they are back-solved and the Bank does not print them. FY2021 is placed on the same credit-risk-total basis as FY2022/FY2023 so the series is internally consistent. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
 bw.add_rwa_breakdown_sheet(
     title="Reliance Bank Limited - RWA Breakdown",
     subtitle="Entity basis, £; standardised approach to credit risk, FY2023 and FY2022 only. See source note.",
     rows=rwa_rows, sources_text=RWA_SOURCES, first_col_width=58, source_height=200, unit_suffix=" (£)",
 )
-metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", {"FY2026": "13.3%", "FY2025": "11.0%", "FY2024": "10.8%", "FY2023": "11.5%", "FY2022": "7.6%", "FY2021": "4.50%", "FY2020": "5.45%", "FY2019": "6.12%"})], "FY2025's own report says 11.0%; FY2026's comparative chart labels FY2025 11.4%. The own-year figure is retained and the cross-report difference is documented. FY2021-FY2019 are directly disclosed in the annual reports.")
+metric(
+    "Leverage Ratio", "£'000 / %",
+    [
+        ("Leverage ratio EXCLUDING claims on central banks - Annual Report basis (FY2022 onward)",
+         {"FY2026": "13.3%", "FY2025": "11.0%", "FY2024": "10.8%", "FY2023": "11.5%", "FY2022": "7.6%"}),
+        ("Leverage ratio INCLUDING claims on central banks - Annual Report basis, 'capital as a % of total "
+         "exposures' (pre-2022 UK framework; not comparable with the row above)",
+         {"FY2021": "4.50%", "FY2020": "5.45%", "FY2019": "6.12%"}),
+        ("Basel III leverage ratio INCLUDING claims on central banks - Pillar 3 basis",
+         {"FY2023": "7.90%", "FY2022": "5.08%", "FY2021": "4.45%"}),
+        ("Total Basel III leverage ratio exposure measure (£'000) - Pillar 3 basis",
+         {"FY2023": 267687, "FY2022": 274521, "FY2021": 265321}),
+    ],
+    "RESOLVED 2026-09-16 BY A DEDICATED SOURCING PASS. A cross-bank leverage-basis sweep the same day had "
+    "flagged this sheet twice - that the row label 'excluding claims on central banks' appeared in neither "
+    "Pillar 3 edition, and that the figures 4.50% / 7.6% / 11.5% appeared in neither Pillar 3 edition either - "
+    "and had withdrawn the label while leaving the figures alone. Both observations were correct about the "
+    "PILLAR 3 documents and wrong about where the figures come from. THE FIGURES ARE THE BANK'S OWN ANNUAL "
+    "REPORT DISCLOSURES, and the withdrawn label was the Bank's own wording for FY2022 onward. It was wrong "
+    "only in having been applied to the whole row, pre-2022 years included. The row is now split by basis.\n"
+    "TWO SERIES ON TWO BASES, BOTH SOURCED, NEITHER RECONCILED INTO THE OTHER.\n"
+    "(A) ANNUAL REPORT SERIES, rows 1-2. Every figure was read this session from a text-layer PDF, and the two "
+    "boundary figures were additionally read VISUALLY from the Companies House scans rendered at 170 dpi (not "
+    "OCR'd) and match digit for digit. FY2019/FY2020: FY2020 Annual Report, KPI table p.10 (commentary 'Capital "
+    "as a % of total exposures') and Strategic Report narrative p.11, 'As at 31 March 2020, the Bank's Leverage "
+    "Ratio (capital as a percentage of total exposures) was 5.45% (2019: 6.12%)'. FY2021: FY2021 Annual Report, "
+    "KPI table p.11 ('Capital as a % of total assets (not risk weighted)') and narrative p.12. FY2022: FY2022 "
+    "Annual Report, Strategic Report CAPITAL section p.10. FY2023: FY2023 Annual Report, CAPITAL p.10, 'the "
+    "Bank's Leverage Ratio (excluding claims on central banks) increased to 11.5% (2022: 7.6%)'. FY2024: FY2024 "
+    "Annual Report p.11, same 'excluding claims on central banks' wording. FY2025: FY2025 Annual Report p.14. "
+    "FY2026: FY2026 Annual Report p.15.\n"
+    "(B) PILLAR 3 SERIES, rows 3-4, from the 'Summary of Key Metrics' table (section 2, p.3) of each of the two "
+    "editions that exist. Reliance does not use the UK KM1 template, so there is no row 14b and no "
+    "central-bank-exclusion line anywhere in either document; the template prints 'Basel III Leverage Ratio' "
+    "and 'Total Basel III leverage ratio exposure measure' only.\n"
+    "WHY THE FY2022 FIGURE SITS ON THE 'EXCLUDING' ROW, AND THE ONE CONFLICT IN THE SOURCES. The FY2022 Annual "
+    "Report's own parenthetical still reads 'capital as a percentage of total exposures' - the pre-2022 "
+    "wording - yet the FY2023 Annual Report re-presents that IDENTICAL 7.6% as its 2022 comparative directly "
+    "under the heading 'excluding claims on central banks'. The Bank therefore carries one figure under two "
+    "different basis labels, and the later, explicit statement is followed here. Both labels are recorded above "
+    "rather than one being suppressed. The supporting evidence is the denominator, not the ratio: the Pillar 3 "
+    "exposure measure (row 4) is 265,321 / 274,521 / 267,687 against total assets of 244,326 / 251,247 / 252,188 "
+    "- it EXCEEDS total assets every year (off-balance-sheet commitments) and never falls, whereas excluding the "
+    "Bank's central-bank balances of £73.9m / £91.3m / £83.3m would have cut it to roughly £191m / £183m / "
+    "£184m. So the Pillar 3 denominator includes claims on central banks throughout, on one unbroken basis. "
+    "Consistent with that, the two series AGREE at FY2021 (Annual Report 4.50% vs Pillar 3 4.45%, both "
+    "including central banks) and diverge sharply from FY2022 onward (7.6% vs 5.08%, 11.5% vs 7.90%) - the "
+    "signature of the UK framework's exclusion of central-bank claims from 1 January 2022 entering the Annual "
+    "Report series but not the Pillar 3 one.\n"
+    "YEAR ALIGNMENT WAS CHECKED, AND ONE SOURCE-SIDE TRAP WAS FOUND. The Pillar 3 columns are explicitly headed "
+    "('2022 | 2021' and '2023 | 2022') and the shared 5.08% confirms the overlap, so that series is aligned. "
+    "BUT THE FY2020 ANNUAL REPORT'S KPI TABLE HEADERS ARE OFF BY ONE YEAR: the table on p.10 is headed '2019' "
+    "and '2018 (as stated)' while holding the FY2020 and FY2019 figures. Proof from the same document - the "
+    "Capital narrative below it reads 'as at 31 March 2020 ... 17.7% (2019: 20.2%)' while the table's '2019' "
+    "column shows 17.7% and its '2018 (as stated)' column 20.2%, and the p.11 narrative gives 5.45% for 31 "
+    "March 2020 against 6.12% for 2019. Independently corroborated by the FY2021 Annual Report's KPI table, "
+    "correctly headed '2021 | 2020', showing 4.50% / 5.45%. The assignment above is therefore correct; do NOT "
+    "shift this series by a year to match that table's printed headers.\n"
+    "FY2025 RESTATEMENT: the FY2025 Annual Report states 11% for its own year; the FY2026 Annual Report labels "
+    "its 2025 comparative 11.4%. Both are on the 'excluding claims on central banks' basis. The own-year figure "
+    "is retained per project convention and the cross-report difference is documented rather than applied.",
+)
 metric("LCR", "%", [("Liquidity Coverage Ratio", {"FY2026": "228%", "FY2025": "247%", "FY2024": "408%", "FY2023": "315%", "FY2022": "605%", "FY2021": "986%", "FY2020": "690%", "FY2019": "1100%"})],
        "Ratios are the Bank's year-end disclosures; FY2021-FY2019 are directly disclosed in the annual reports.\n"
        "FY2026 - THE SOURCE DOCUMENT CONTRADICTS ITSELF, and 228% is the right figure. Recorded here 2026-09-15 so "
@@ -434,9 +531,15 @@ bw.add_overview_sheet(
     cash_flow_unit="£",
     ratios=[
         ("CET1 Ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.1%", "FY2022": "18.2%"}),
-        ("Leverage Ratio", {"FY2026": "13.3%", "FY2025": "11.0%", "FY2024": "10.8%", "FY2023": "11.5%", "FY2022": "7.6%"}),
+        ("Leverage Ratio (excluding claims on central banks; Annual Report basis - see Leverage Ratio sheet)", {"FY2026": "13.3%", "FY2025": "11.0%", "FY2024": "10.8%", "FY2023": "11.5%", "FY2022": "7.6%"}),
         ("LCR", {"FY2026": "228%", "FY2025": "247%", "FY2024": "408%", "FY2023": "315%", "FY2022": "605%", "FY2021": "986%", "FY2020": "690%", "FY2019": "1100%"}),
     ],
-    note="Entity-only cash flows. Regulatory ratios are disclosed on the Bank's regulatory basis. Blank cells mean not disclosed, not zero. The 2023 cash-flow comparative restatement is explained on the cash-flow sheet.",
+    note="Entity-only cash flows. Regulatory ratios are disclosed on the Bank's regulatory basis. Blank cells mean "
+         "not disclosed, not zero. The 2023 cash-flow comparative restatement is explained on the cash-flow sheet. "
+         "The Leverage Ratio row above is shown on the 'excluding claims on central banks' basis only, for "
+         "comparability: FY2021 and earlier were disclosed on the pre-2022 'capital as a % of total exposures' basis "
+         "and are deliberately NOT carried here, and the Bank's Pillar 3 disclosures give a separate, lower Basel III "
+         "leverage series on the including-central-banks basis. All three series, with their sources and the evidence "
+         "for each basis, are on the Leverage Ratio sheet.",
 )
 bw.save("/Users/armaan/code/katalysis/banks/RELIANCE BANK FINANCIALS.xlsx")

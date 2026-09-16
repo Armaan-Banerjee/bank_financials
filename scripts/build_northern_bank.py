@@ -429,7 +429,34 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 
-metric("Leverage Ratio", "%", "Leverage ratio", {"FY2025": "6.4%", "FY2024": "7.2%", "FY2023": "7.4%", "FY2022": "6.7%", "FY2021": "4.2%", "FY2020": "5.2%"}, capital_pages)
+bw.add_metric_sheet(
+    "Leverage Ratio", "%",
+    [
+        ("Leverage ratio - UK Leverage Ratio Framework basis, exposure measure EXCLUDES central bank reserves "
+         "and government-guaranteed Bounce Back Loans (FY2022 onward)",
+         {"FY2025": "6.4%", "FY2024": "7.2%", "FY2023": "7.4%", "FY2022": "6.7%"}),
+        ("Leverage ratio - pre-2022 basis, exposure measure INCLUDES central bank reserves and BBLs, "
+         "as originally reported (FY2020-FY2021)",
+         {"FY2021": "4.2%", "FY2020": "5.2%"}),
+    ],
+    sources("Leverage Ratio", capital_pages),
+    note="THESE TWO ROWS ARE NOT A LIKE-FOR-LIKE SERIES. The Bank says so itself, in the FY2022 Annual Report's "
+         "'Capital and leverage position (unaudited)' section (p.52): 'On 8 October 2021, the FPC and PRA jointly "
+         "published PS21/21 \"The UK Leverage Ratio Framework\", with an implementation date for certain "
+         "requirements of 1 January 2022. As a result, the Bank is no longer subject to a regulatory leverage "
+         "ratio requirement, but instead a supervisory expectation to maintain a leverage ratio above 3.25%. In "
+         "addition, the leverage exposure measure excludes central bank reserves and the government guaranteed "
+         "lending through Bounce Bank [sic] Loans (BBLs). This has resulted in an increase in the leverage ratio "
+         "to 6.7% at 31 December 2022 (2021: 4.2%).' The Bank therefore attributes the whole 4.2% -> 6.7% step to "
+         "the change of denominator, not to any change in the Bank - which is why the two bases are on separate "
+         "rows here and must never be read, charted or trended as one series. Note the exclusion is TWO items, "
+         "not just central bank claims: BBL lending is excluded as well. The Bank did NOT restate FY2020 or "
+         "FY2021 onto the excluding basis and did not publish an including-basis figure for FY2022 onward, so "
+         "each row stops where the Bank's own disclosure stops; nothing here is back-solved from the other basis. "
+         "The FY2022 report is the only edition that states the exclusion explicitly - the FY2023, FY2024 and "
+         "FY2025 reports simply carry the ratio forward on the framework basis then in force.",
+    first_col_width=76, source_height=260,
+)
 metric("LCR", "%", "Liquidity coverage ratio (pillar 1 + 2)", {"FY2025": "287%", "FY2024": "318%", "FY2023": "309%", "FY2022": "290%", "FY2021": "293%", "FY2020": "264%"}, liquidity_pages)
 metric("NSFR", "%", "Net Stable Funding Ratio", {"FY2025": "200%", "FY2024": "207%", "FY2023": "203%", "FY2022": "217%", "FY2021": "213%", "FY2020": "199%"}, liquidity_pages, note="The FY2020 figure (199%) is not disclosed in the Bank's own FY2020 Annual Report (which predates the Bank's NSFR disclosure) - it is the FY2021 Annual Report's own '31 December 2020' comparative (p.70), corroborated as the same NSFR metric introduced that year (a binding NSFR requirement came into force in Q1 2022).")
 metric("MREL Ratio", "%", "MREL ratio", {"FY2025": "127%", "FY2024": "148%", "FY2023": "148%", "FY2022": "146%", "FY2021": "134%"}, {"FY2025": 60, "FY2024": 83, "FY2023": 86, "FY2022": 55, "FY2021": 65, "FY2020": 47}, note="MREL ratios are the Bank's own annual internal-MREL disclosures. The 2021 figure is the 2021 comparative in the 2022 report and is corroborated by the 2021 report's MREL discussion. FY2020 SELF-SKIP: no numeric MREL ratio for FY2020 is disclosed anywhere - not in the Bank's own FY2020 Annual Report (p.47-48 discusses MREL only qualitatively, 'the Bank did not require any additional MREL funds'), not in the FY2021 Annual Report (same qualitative-only treatment, p.65), and the FY2022 Annual Report's own MREL reconciliation table (p.55) only tables FY2022 and FY2021, with no FY2020 comparative column. This is a genuine non-disclosure, not an access gap - all three primary-source PDFs were read in full.")
@@ -466,9 +493,18 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "14.9%", "FY2024": "16.1%", "FY2023": "15.6%", "FY2022": "13.6%", "FY2021": "14.4%", "FY2020": "16.1%"}),
         ("Tier 1 Ratio", {"FY2025": "19.0%", "FY2024": "20.2%", "FY2023": "19.6%", "FY2022": "18.0%", "FY2021": "16.3%", "FY2020": "18.1%"}),
         ("Total Capital Ratio", {"FY2025": "19.0%", "FY2024": "20.2%", "FY2023": "19.6%", "FY2022": "18.0%", "FY2021": "18.8%", "FY2020": "20.7%"}),
-        ("Leverage Ratio", {"FY2025": "6.4%", "FY2024": "7.2%", "FY2023": "7.4%", "FY2022": "6.7%", "FY2021": "4.2%", "FY2020": "5.2%"}),
+        ("Leverage Ratio (BASIS BREAK at FY2021/FY2022 - see note; not a like-for-like series)", {"FY2025": "6.4%", "FY2024": "7.2%", "FY2023": "7.4%", "FY2022": "6.7%", "FY2021": "4.2%", "FY2020": "5.2%"}),
     ],
-    note="All figures are duplicated from the detail sheets for trend viewing. See each detail sheet for the exact annual-report source citation.\n\n" + ENTITY_NOTE,
+    note="All figures are duplicated from the detail sheets for trend viewing. See each detail sheet for the exact annual-report source citation.\n\n"
+         "LEVERAGE RATIO - DO NOT READ THE 4.2% -> 6.7% STEP AS DELEVERAGING. This sheet is a copy and its chart "
+         "would otherwise draw a false trend. From 1 January 2022 the PRA's UK Leverage Ratio Framework (PS21/21) "
+         "removed central bank reserves, and the Bank's government-guaranteed Bounce Back Loans, from the leverage "
+         "exposure measure. The Bank's own FY2022 Annual Report (p.52) attributes the entire increase to that: "
+         "'the leverage exposure measure excludes central bank reserves and the government guaranteed lending "
+         "through Bounce Bank [sic] Loans (BBLs). This has resulted in an increase in the leverage ratio to 6.7% "
+         "at 31 December 2022 (2021: 4.2%).' FY2020-FY2021 are on the old (including) basis and FY2022-FY2025 on "
+         "the new (excluding) one; the Bank published neither basis for the other years, so no comparable "
+         "six-year series exists. The Leverage Ratio sheet splits the two bases onto separate rows.\n\n" + ENTITY_NOTE,
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/NORTHERN BANK FINANCIALS.xlsx")

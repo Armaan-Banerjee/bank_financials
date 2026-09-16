@@ -12,7 +12,17 @@ AR2025_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzQzMzA4NzcwMWFkaXF6a2N4/document?download=0&format=pdf"
 AR2023_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzM4OTExNTc1NmFkaXF6a2N4/document?download=0&format=pdf"
 AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzM1NTU5ODQzNmFkaXF6a2N4/document?download=0&format=pdf"
-PILLAR3_2021_URL = "https://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf"
+# SCHEME DELIBERATELY SET TO http:// - 2026-09-16. DO NOT "UPGRADE" THIS TO https://.
+# persiabank.co.uk's TLS is broken at the server: the TCP connection to port 443 is
+# accepted (95.215.227.247:443) and then the server RESETS the connection during the
+# TLS handshake - "Recv failure: Connection reset by peer" at Client hello, so no
+# certificate is ever presented and no HTTPS client of any kind can fetch the file.
+# Plain HTTP serves it perfectly: HTTP 200, %PDF, 1,382,251 bytes, 28 pages. This is
+# a server defect, not a redirect and not something a different client or user-agent
+# can work around, and it is why earlier sessions wrongly recorded this domain as
+# dead. The https:// form is kept below purely as the record of what was tried.
+PILLAR3_2021_URL = "http://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf"
+PILLAR3_2021_URL_HTTPS_BROKEN = "https://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf"
 
 # HD-021 (extend to FY2015) source documents: Companies House full-accounts filings
 # (scanned, no text layer - transcribed from page images) plus Wayback Machine snapshots
@@ -28,14 +38,14 @@ AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzE1NjI0NzM2OWFkaXF6a2N4/document?download=0&format=pdf"
 AR2015_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzEyNzM3Mjc4NWFkaXF6a2N4/document?download=0&format=pdf"
 PILLAR3_2020_URL = (
-    "http://web.archive.org/web/20220125010012if_/http://www.persiabank.co.uk/Pillar%203%202020%20v7.pdf"
+    "http://web.archive.org/web/20220125010012id_/http://www.persiabank.co.uk/Pillar%203%202020%20v7.pdf"
 )
 PILLAR3_2018_URL = (
-    "http://web.archive.org/web/20180902131909if_/http://www.persiabank.co.uk/"
+    "http://web.archive.org/web/20180902131909id_/http://www.persiabank.co.uk/"
     "Pillar%203%20Disclosure%20as%20at%2031_03_2018%20(final).pdf"
 )
 PILLAR3_2016_URL = (
-    "http://web.archive.org/web/20161024202355if_/http://www.persiabank.co.uk/"
+    "http://web.archive.org/web/20161024202355id_/http://www.persiabank.co.uk/"
     "Pillar%203%20Disclosure%20as%20at%2031%20March%202016.pdf"
 )
 # FY2015 STANDALONE PILLAR 3 (2026-09-15). The FY2015 regulatory figures in this
@@ -46,7 +56,7 @@ PILLAR3_2016_URL = (
 # visually off the page images for every figure used (pp.8-9 capital tables,
 # pp.14-15 market and operational risk), per this project's standing OCR rule.
 PILLAR3_2015_URL = (
-    "http://web.archive.org/web/20160316221826if_/http://www.persiabank.co.uk/"
+    "http://web.archive.org/web/20160316221826id_/http://www.persiabank.co.uk/"
     "Pillar3_disclosures_March%202015.pdf"
 )
 
@@ -57,7 +67,9 @@ PILLAR3_2015_URL = (
 # a capture artefact, not a different edition. Use v7 only.
 
 # The Bank reports in EUR and discloses its own EUR/GBP rates in the accounting
-# policies.  Rates are EUR per GBP, so EUR / rate = GBP.  FY2015 and FY2016's own
+# policies.  Rates are GBP PER EUR, so EUR * rate = GBP (see the RATE DIRECTION
+# note above the helpers - this line said "EUR per GBP, so EUR / rate = GBP"
+# until 2026-09-16, which inverted every conversion).  FY2015 and FY2016's own
 # accounts disclose only an average rate for the year, not a year-end/closing rate -
 # so stock (balance-sheet-type) figures for those two years cannot be converted to GBP
 # and are left in EUR '000 (see stock_v/stock below, which pass EUR through unchanged
@@ -107,9 +119,52 @@ ENTITY_NOTE = (
     "ratios, Leverage Ratio, LCR)."
 )
 
+LINK_PROVENANCE = (
+    "LINK PROVENANCE (checked 16 September 2026). Two deliberate URL conventions are used for this bank's "
+    "Pillar 3 sources. Both are easy to 'helpfully' undo, so both are recorded here with the reason.\n"
+    "1) THE FY2021 PILLAR 3 IS CITED OVER PLAIN http://, NOT https://. DO NOT UPGRADE IT. persiabank.co.uk's "
+    "TLS is broken at the server, not merely misconfigured: the TCP connection to port 443 is accepted and the "
+    "server then RESETS the connection during the TLS handshake ('Recv failure: Connection reset by peer' at "
+    "Client hello), so no certificate is ever presented and NO https client can retrieve the file - this is not "
+    "something a different user-agent, client or retry can get around. Over plain HTTP the same file serves "
+    "perfectly: HTTP 200, %PDF magic bytes, 1,382,251 bytes, 28 pages. The https:// form that fails is kept in "
+    "the script as PILLAR3_2021_URL_HTTPS_BROKEN so the record of what was tried is not lost. This TLS failure "
+    "is also why earlier sessions wrongly recorded the whole domain as dead; it is alive over HTTP.\n"
+    "   INTEGRITY CHECK: the file served live over HTTP is byte-identical to the Internet Archive's capture of "
+    "it - both MD5 08b8d37ca13c50b214d275062ab119c3 - so the live HTTP copy and the archived copy are the same "
+    "document, and the figures taken from it are unaffected by which one is read.\n"
+    "   SCOPE: the live site was re-enumerated over HTTP this session and carries exactly ONE Pillar 3 "
+    "document, 'Pillar 3 2021 v3.pdf'. There is no later edition to switch to.\n"
+    "2) ALL FIVE WAYBACK CITATIONS USE THE id_ MODIFIER, NOT if_ (changed 16 September 2026). id_ is the "
+    "Internet Archive's identity mode, which returns the originally captured bytes; if_ is iframe mode. Every "
+    "one of the five was fetched under BOTH modifiers and verified: all returned HTTP 200 with %PDF magic bytes "
+    "and byte-identical content, MD5 for MD5, so this change repaired nothing and altered no figure - it simply "
+    "pins the citations to the canonical raw-bytes form. Verified page counts and MD5s, id_ form:\n"
+    "   FY2021 (capture 20260110002617): 28 pages, 1,382,251 bytes, MD5 08b8d37ca13c50b214d275062ab119c3\n"
+    "   FY2020 (capture 20220125010012): 28 pages, 1,109,265 bytes, MD5 1016257632cab1c38991d1bb3dd10606\n"
+    "   FY2018 (capture 20180902131909): 27 pages,   936,437 bytes, MD5 f2ba9c655e0d16e9d22889d93f33b6b7\n"
+    "   FY2016 (capture 20161024202355): 21 pages,   965,006 bytes, MD5 dfcc56241e21d72f059f5e21e9749c88\n"
+    "   FY2015 (capture 20160316221826): 18 pages,   994,951 bytes, MD5 16035cdfe27c311e39daa96e7fde9371\n"
+    "   The FY2015 count of 18 pages confirms the image-only scan already described in this script, and the "
+    "FY2020 count of 28 pages confirms the v7 capture rather than the 1 MiB-truncated v6 one.\n"
+    "   NOTE ON THE ARCHIVED-SIDE SCHEME: inside each Wayback URL the original address is recorded as "
+    "http://www.persiabank.co.uk/... That http is part of the archived URL's identity - the key the capture is "
+    "stored under - and rewriting it to https would address a DIFFERENT key that the Archive may hold no "
+    "capture for. Leave it as http, on both sides."
+)
+
 FX_NOTE = (
-    "FX METHODOLOGY: the Bank's accounting policies disclose EUR/GBP rates (EUR per GBP). Flow figures are divided "
-    "by the year's disclosed average rate; balance figures are divided by the year's disclosed year-end rate. The "
+    "FX METHODOLOGY: the Bank's accounting policies disclose EUR/GBP rates, which are GBP PER EUR (FY2025 Annual "
+    "Report, Note 2.1, p.40: \"The average exchange rate for EUR/GBP applied during the year was 0.8390 (2023/24: "
+    "0.8630). The year-end exchange rate used was 0.8350 (2023/24: 0.8550)\" - at 31 March 2025 EUR1 bought "
+    "GBP0.8358, so 0.8350 is pounds per euro). Flow figures are therefore MULTIPLIED by the year's disclosed "
+    "average rate and balance figures by its disclosed year-end rate. CORRECTION 2026-09-16: until that date this "
+    "workbook DIVIDED by both rates, on the strength of a code comment that mis-stated them as \"EUR per GBP\"; "
+    "every converted figure was consequently overstated by 1/rate-squared (about 1.43x). The conversion was "
+    "corrected in both directions of travel; no transcribed source figure was altered, and no percentage moved, "
+    "because a ratio converts its numerator and denominator by the same factor. Bank Sepah International, the same "
+    "shape of entity (Iranian-owned, EUR presentation, 31 March year-end), discloses near-identical rates, labels "
+    "them \"GBP per EUR 1\" and multiplies - which is the corroborating precedent for this direction. The "
     "cash-flow sheet includes the Bank's own exchange-difference line and a programmatic GBP translation line where "
     "the use of average rates for flows and year-end rates for balances creates a residual. FY2021 opening cash is "
     "left blank because the source does not provide a FY2020 year-end rate in the reviewed five-year source set. "
@@ -284,31 +339,54 @@ def p3_sources():
         "The Bank states in the FY2023-FY2025 annual reports that Pillar 3 disclosures are made separately and can "
         "be made available on request; no public 2022-2025 Pillar 3 document was locatable. The 2021 Pillar 3 document "
         "is unaudited and provides the only directly disclosed FY2021 RWA, LCR and leverage values used here.\n\n"
-        + P3_CESSATION_NOTE
+        + P3_CESSATION_NOTE + "\n\n" + LINK_PROVENANCE
     )
 
 
+# RATE DIRECTION (corrected 2026-09-16, research/RESUME_fx_scale_sweep.md).
+# The rates below are GBP PER EUR, so the conversion is  GBP = EUR * rate.
+# These four helpers previously DIVIDED, on the strength of a comment claiming
+# the rates were "EUR per GBP"; that comment was wrong and every converted
+# figure in this workbook was overstated by 1/rate^2 (~1.43x). Proven twice:
+#  1. The Bank's own FY2025 Annual Report, Note 2.1 "Basis of preparation and
+#     currency" (p.40): "The euro is both the functional and presentation
+#     currency ... Amounts are rounded to the nearest thousand euros ... The
+#     average exchange rate for EUR/GBP applied during the year was 0.8390
+#     (2023/24: 0.8630). The year-end exchange rate used was 0.8350 (2023/24:
+#     0.8550)." Those are AVG_RATE/YEAR_END_RATE FY2025 and FY2024 exactly. At
+#     31 Mar 2025 EUR1 bought GBP0.8358 and GBP1 bought EUR1.1965, so 0.8350 can
+#     only be pounds-per-euro. No rate in either table is above 1.0, and an
+#     EUR-per-GBP rate was never below 1.0 in the FY2015-FY2025 window.
+#  2. Bank Sepah International (build_bank_sepah_international.py) is the same
+#     shape - Iranian-owned UK bank, EUR presentation, 31 March year-end - and
+#     discloses near-identical rates (FY2025 0.8354/0.8418, FY2024 0.8548/0.8636
+#     against Persia's 0.8350/0.8390 and 0.8550/0.8630). It documents them as
+#     "i.e. GBP per EUR 1" and MULTIPLIES. The two banks cannot both be right.
+# Every ratio is unaffected: numerator and denominator are converted by the same
+# factor, so this is scale-invariant and no printed ratio moves.
+
+
 def flow(values):
-    return {y: round(v / AVG_RATE[y], 1) if y in AVG_RATE else v for y, v in values.items()}
+    return {y: round(v * AVG_RATE[y], 1) if y in AVG_RATE else v for y, v in values.items()}
 
 
 def stock(values):
-    return {y: round(v / YEAR_END_RATE[y], 1) if y in YEAR_END_RATE else v for y, v in values.items()}
+    return {y: round(v * YEAR_END_RATE[y], 1) if y in YEAR_END_RATE else v for y, v in values.items()}
 
 
 bw = BankWorkbook(bank_name="Persia International Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="6B3E75")
 
 
-def stock_v(v, y):
+def stock_v(v, y):  # GBP = EUR * rate - see the RATE DIRECTION note above
     if y not in YEAR_END_RATE:
         return v
-    return round(v / YEAR_END_RATE[y], 1)
+    return round(v * YEAR_END_RATE[y], 1)
 
 
-def flow_v(v, y):
+def flow_v(v, y):  # GBP = EUR * rate - see the RATE DIRECTION note above
     if y not in AVG_RATE:
         return v
-    return round(v / AVG_RATE[y], 1)
+    return round(v * AVG_RATE[y], 1)
 
 
 STATEMENTS_SOURCES = (
@@ -425,7 +503,7 @@ bw.add_balance_sheet_sheet(
     rows=bs_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=100,
-    source_height=340,
+    source_height=500,
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
@@ -495,7 +573,7 @@ bw.add_income_statement_sheet(
     rows=pl_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=120,
-    source_height=340,
+    source_height=500,
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
@@ -629,7 +707,7 @@ bw.add_cash_flow_sheet(
     subtitle="Entity-level basis, £'000 converted from EUR (FY2015/FY2016 figures are EUR '000, unconverted - no year-end "
               "EUR/GBP rate is disclosed for those two years; FY2017 and FY2021 opening cash are each left blank for the "
               "same reason, one year removed); see source note for sanctions, reporting basis and FX methodology",
-    rows=rows, sources_text=CASH_FLOW_SOURCES, first_col_width=86, source_height=330,
+    rows=rows, sources_text=CASH_FLOW_SOURCES, first_col_width=86, source_height=420,
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
@@ -729,17 +807,17 @@ bw.add_asset_quality_sheet(
     rows=aq_rows + aq_ratio_rows_eur + aq_stage_charge + aq_fy25_exposure + aq_pre_ifrs9 + aq_fy19_20_exposure,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=110,
-    source_height=340,
+    source_height=500,
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
 def metric(name, unit, rows_data, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=50, source_height=240)
+    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=50, source_height=620)
 
 
 CAPITAL_EUR = {"FY2025": 110424, "FY2024": 127693, "FY2023": 132561, "FY2022": 131758, "FY2021": 130644}
 CAPITAL_GBP = stock(CAPITAL_EUR)
-RWA_GBP = {"FY2021": round(318824 / YEAR_END_RATE["FY2021"], 1)}
+RWA_GBP = {"FY2021": round(318824 * YEAR_END_RATE["FY2021"], 1)}  # GBP = EUR * rate
 NOT_DISCLOSED = (
     "Not publicly disclosed for this entity/year. The Bank says later Pillar 3 disclosures are available on request; "
     "no public 2022-2025 Pillar 3 document was found, and the statutory accounts do not state this metric.\n\n"
@@ -974,10 +1052,13 @@ bw.add_rwa_breakdown_sheet(
     sources_text=(
         "Sources - Persia International Bank Plc Pillar 3 disclosures, Pillar 1 capital requirements tables:\n"
         "FY2021, p.18, recovered via Wayback Machine snapshot (captured 10 January 2026) - "
-        "http://web.archive.org/web/20260110002617if_/http://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf "
-        "(original URL: " + PILLAR3_2021_URL + " - that HTTPS form still fails the TLS handshake, but re-checked "
-        "2026-09-15 the same file does serve over plain HTTP at http://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf, "
-        "and is the ONLY Pillar 3 document on the Bank's live site - see the Total RWAs sheet's cessation note)\n"
+        "http://web.archive.org/web/20260110002617id_/http://www.persiabank.co.uk/Pillar%203%202021%20v3.pdf "
+        "(live original URL, plain HTTP: " + PILLAR3_2021_URL + " - re-checked 16 September 2026, HTTP 200, %PDF, "
+        "28 pages, and byte-identical to the Wayback capture above, MD5 08b8d37ca13c50b214d275062ab119c3 for both. "
+        "The https:// form of the same path, " + PILLAR3_2021_URL_HTTPS_BROKEN + ", still cannot be fetched by any "
+        "client: the server resets the TLS handshake at Client hello, so no certificate is presented - see the LINK "
+        "PROVENANCE note on this sheet, and do not 'upgrade' the cited scheme. This is the ONLY Pillar 3 document on "
+        "the Bank's live site - see the Total RWAs sheet's cessation note)\n"
         f"FY2020/FY2019: Pillar 3 Disclosure as at 31 March 2020, p.17, recovered via Wayback Machine (captured 25 January "
         f"2022) - {PILLAR3_2020_URL}\n"
         f"FY2018/FY2017: Pillar 3 Disclosure as at 31/03/2018, p.16, recovered via Wayback Machine (captured 2 September "
@@ -997,10 +1078,10 @@ bw.add_rwa_breakdown_sheet(
         "figure for a disclosed one on that sheet; the arithmetic sum of the three components (236,850) is shown on "
         "its own explicitly-labelled row here, and nowhere else, so the size of the understatement is visible "
         "without being presented as a disclosure. See the FY2015 note on the metric sheets for the full extract.\n\n"
-        + ENTITY_NOTE + "\n" + FX_NOTE
+        + ENTITY_NOTE + "\n" + FX_NOTE + "\n\n" + LINK_PROVENANCE
     ),
     first_col_width=54,
-    source_height=220,
+    source_height=520,
     unit_suffix=" (£'000, conv. from EUR)",
 )
 

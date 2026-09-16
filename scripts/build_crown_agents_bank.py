@@ -425,9 +425,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, source_height=170):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
-                         rows_data, sources_text, note=note, first_col_width=48, source_height=170)
+                         rows_data, sources_text, note=note, first_col_width=48, source_height=source_height)
 
 
 CET1_CAPITAL = {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871, "FY2021": 56906}
@@ -527,7 +527,28 @@ bw.add_rwa_breakdown_sheet(
     source_height=420,
 )
 
-metric("Leverage Ratio", "%, excluding claims on central banks", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources())
+metric(
+    "Leverage Ratio", "%, excluding claims on central banks",
+    [("Leverage ratio", LEVERAGE_RATIO)],
+    p3_sources(),
+    note="NO BASIS BREAK AT FY2021/FY2022 - CHECKED AND CLEARED 2026-09-16, recorded so this series is not "
+         "'corrected' later on a false positive. Many UK banks' leverage series break across that boundary "
+         "because the UK Leverage Ratio Framework excluded claims on central banks from the exposure measure from "
+         "1 January 2022; this Bank's does not, because it was already excluding them well before then. Its own "
+         "FY2021 Pillar 3 (p.19, Table LR Sum) carries the line 'Less: central bank exposures (160,863)' for 2021 "
+         "and '(125,844)' for 2020, footnoted 'Exposures to central banks subject to a maximum of deposits in the "
+         "same currency is excluded from the leverage ratio exposure measure', and cites PS21/17 'UK leverage "
+         "ratio: treatment of claims on central banks (October 2017)'. The FY2022 document carries the identical "
+         "line at (189,334). So FY2021 and FY2022 are on the SAME excluding basis and the 5.0% -> 6.9% rise is "
+         "real: Tier 1 capital rose 59% (£56,595k to £89,871k) while the exposure measure rose only 13% "
+         "(£1,144,181k to £1,298,041k), and the Bank attributes it in its own words to 'current year profit being "
+         "included in the Capital resources'. Note also that the exclusion is CAPPED at the level of the Bank's "
+         "deposits in the same currency, so it is much smaller than the gross BoE balance - at 31 December 2022 "
+         "the Bank's BoE reserve account held £608,298k but only £189,334k was excluded. The general "
+         "FY2021-comparability hedge in the source citation below is about the wider CRR/KM1 regime change and "
+         "does NOT apply to the leverage ratio, which is like-for-like across all five years.",
+    source_height=260,
+)
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], p3_sources(), note=LIQUIDITY_BASIS_NOTE)
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], p3_sources(), note=LIQUIDITY_BASIS_NOTE)
 

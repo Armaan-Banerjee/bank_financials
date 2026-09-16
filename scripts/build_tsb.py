@@ -34,9 +34,59 @@ P3_20_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/rn
 # "Disclosed in the Sabadell Pillar 3 report", which had "not been approved" as at each
 # report's own publication date) - so FY2017/FY2018 capital metrics are sourced from the
 # TSB Banking Group plc Annual Report's own "Capital resources"/"Sources of funding" section.
+# FY2016 and FY2014 URLs re-checked 2026-09-16: both still LIVE (HTTP 200,
+# Content-Type application/pdf, 1,101,787 and 1,078,676 bytes) and so are
+# deliberately left pointing at the publisher rather than at an archive.
 P3_16_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/financial-results-and-reports/2016/tsb-material-subsidiary-2016.pdf"
-P3_15_URL = "https://www.tsb.co.uk/investors/results-and-reports/TSB-Significant-Subsidiary-Disclosures-2015.pdf"
+# FY2015 is the one dead URL in this workbook - see P3_15_DEAD_URL_NOTE below.
+ORIG_P3_15_URL = "https://www.tsb.co.uk/investors/results-and-reports/TSB-Significant-Subsidiary-Disclosures-2015.pdf"
+P3_15_URL = "https://web.archive.org/web/20221214093332id_/" + ORIG_P3_15_URL
 P3_14_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/financial-results-and-reports/2014/TSB-Pillar-3-2014,0.pdf"
+
+P3_15_DEAD_URL_NOTE = (
+    "DEAD SOURCE URL REGISTER (recorded 2026-09-16, nothing deleted). The FY2015 Significant Subsidiary "
+    "Disclosures were published at " + ORIG_P3_15_URL + " and that URL is now DEAD: re-fetched 2026-09-16 it "
+    "returns HTTP 404 with Content-Type text/html, not a PDF. It is kept on the record here rather than "
+    "deleted so the provenance of the FY2015 capital figures stays readable now that TSB no longer serves the "
+    "file. The working replacement, cited above, is the Wayback Machine snapshot "
+    "https://web.archive.org/web/20221214093332id_/" + ORIG_P3_15_URL + " - given in the 'id_' form, which "
+    "returns the original archived bytes rather than the Wayback viewer page. Verified on fetch: begins "
+    "'%PDF', 440,862 bytes, 37pp. "
+    "DOCUMENT AND BASIS CONFIRMED BY OPENING IT, NOT INFERRED. Its cover reads 'TSB Banking Group plc / "
+    "Significant Subsidiary Disclosures / 31 December 2015' and its running header reads 'TSB Banking Group "
+    "plc Pillar 3 Disclosures 2015' - both titles belong to this one document, which is why it is cited above "
+    "under the latter name. Its Introduction states verbatim: 'This document presents the Pillar III "
+    "Significant Subsidiary Disclosures at 31 December 2015 relating to TSB Banking Group plc (TSB Group) as "
+    "part of the Banco de Sabadell Group (Sabadell). Following TSB Group's acquisition by Sabadell in June "
+    "2015, TSB is not required to produce and publish full Pillar III disclosures. TSB Group's risk "
+    "disclosures are included in Sabadell's consolidated Pillar III disclosures.' "
+    "This is therefore the significant-subsidiaries annex form: a disclosure naming a specific subsidiary "
+    "within a foreign parent's consolidation, which under this project's rules IS usable entity data rather "
+    "than a parent-group figure substituted for the entity. The named subsidiary is TSB Banking GROUP plc "
+    "(the UK consolidated sub-group inside Sabadell), NOT TSB Bank plc solo - exactly the basis the Pillar 3 "
+    "sheets are already labelled with ('TSB Banking Group plc consolidated Pillar 3/capital disclosure "
+    "basis'), and the same basis as the FY2016 Material Subsidiary and FY2019-FY2025 Significant/Large "
+    "Subsidiary disclosures either side of it, so the series is consistent. See the ENTITY NOTE for why that "
+    "sub-group basis is treated as the banking entity here (TSB Banking Group plc's only direct subsidiary is "
+    "TSB Bank plc) and for the genuine entity-basis break at the FY2016/FY2017 boundary. "
+    "VALIDATION GATE PASSED. The recovered document's own Executive Summary key-metrics table (2015 / 2014 "
+    "columns) reads: CET1 £1.7bn / £1.6bn, CET1 ratio 17.8% / 23.0%, Total Capital £2.1bn / £2.0bn, Total "
+    "Capital ratio 21.9% / 28.5%, Total RWAs £9.4bn / £6.9bn. Every one of those reproduces the FY2015 figures "
+    "already in this workbook (CET1 £1,672,458k, CET1 ratio 17.8%, Total capital £2,055,971k, Total capital "
+    "ratio 21.9%, Total RWAs £9,402,364k), and its narrative total-assets figure ('TSB Group's total assets "
+    "grew from £27.2bn to £31.6bn') reproduces the Balance Sheet sheet's FY2015 total assets of £31,618.0m. "
+    "The replacement document is therefore the same edition the figures were transcribed from, not a "
+    "restatement. NO figure in this workbook was changed as part of this URL repair. "
+    "ONE DISCLOSED-BUT-DELIBERATELY-UNUSED FIGURE, recorded so it is not re-chased: the same table also gives "
+    "a 'Basel III Leverage ratio' of 5.2% (2015) and 5.8% (2014), while the Leverage Ratio sheet leaves FY2015 "
+    "and FY2014 blank. That blank is deliberate and correct, NOT an unresearched gap. The Leverage Ratio "
+    "sheet's row is specifically 'Leverage ratio excluding claims on central banks (%)' - the UK "
+    "exclusion-basis measure used from FY2019 onward - whereas this 2015 document's 5.2% is the original "
+    "Basel III/CRD IV leverage ratio, whose exposure measure INCLUDES claims on central banks. They are two "
+    "different series and must never be merged into one row, the same discipline applied to point-in-time vs "
+    "12-month-average LCR elsewhere in this project. The 5.2%/5.8% figures are preserved here on the record "
+    "rather than written into the sheet."
+)
 
 ENTITY_NOTE = (
     "ENTITY NOTE: TSB Bank plc (Companies House SC095237) is the entity on the PRA register; its own Annual "
@@ -139,13 +189,17 @@ def p3_sources(page_km1, table_km1="Table 1: Key metrics (KM1)"):
         f"'Sources of funding') - {BG_AR17_URL}\n"
         f"FY2016: TSB Banking Group plc Material Subsidiary Pillar 3 Disclosures 2016, p.4 (Table 1: Own funds) "
         f"- {P3_16_URL}\n"
-        f"FY2015: TSB Banking Group plc Pillar 3 Disclosures 2015, p.5 (Table 1: Own funds) - {P3_15_URL}\n"
+        f"FY2015: TSB Banking Group plc Pillar 3 Disclosures 2015 (cover title 'Significant Subsidiary "
+        f"Disclosures, 31 December 2015'), p.5 (Table 1: Own funds) - {P3_15_URL} (TSB's own published URL for "
+        f"this document is DEAD as at 2026-09-16 and returns HTTP 404; the Wayback 'id_' snapshot cited here is "
+        f"the working replacement - see the dead source URL register below)\n"
         f"FY2014: TSB Banking Group plc Pillar 3 Disclosures 2014, p.17 (Table 6: Own funds) - {P3_14_URL}\n\n"
         "NOTE (FY2017/FY2018): TSB published no standalone Pillar 3/Significant Subsidiary Disclosure document "
         "for these two years - see ENTITY NOTE on the Cash Flow Statement sheet. Figures are sourced from the "
         "capital summary within the Banking Group's own Annual Report instead, which discloses CET1/Tier 1/Total "
         "capital, RWAs, and capital ratios on the same fully-loaded CRD IV basis as the standalone Pillar 3 "
-        "documents used for adjacent years."
+        "documents used for adjacent years.\n\n"
+        + P3_15_DEAD_URL_NOTE
     )
 
 

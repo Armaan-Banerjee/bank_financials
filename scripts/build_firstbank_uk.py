@@ -22,12 +22,79 @@ AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzMxMTQ1Nzc1OGFkaXF6a2N4/document?download=0&format=pdf"
 AR2019_URL = "https://find-and-update.company-information.service.gov.uk/company/04459383/filing-history/MzI3NzY5NDQwNWFkaXF6a2N4/document?download=0&format=pdf"
 
-P3_2024_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2025/09/FirstBank-UK-Pillar-3-Dec-2024-1.pdf"
-P3_2023_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2023.pdf"
-P3_2022_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2022-V1.0.pdf"
-P3_2021_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Disclosures_-2021.pdf"
-P3_2020_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK_Pillar-3-Disclosures_2020.pdf"
-P3_2019_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Dec-19-FINAL-Published_v3.pdf"
+# --- Pillar 3 source URLs ----------------------------------------------------
+# ALL SIX of the Bank's own Pillar 3 URLs on fbnbank.co.uk are DEAD as at
+# 2026-09-16. Each was re-fetched this session and returns HTTP 404 with
+# Content-Type text/html (a ~363KB WordPress "not found" page), not a PDF - so
+# this is a genuine removal, not a 403/WAF block and not a throttled fetch. The
+# dead originals are preserved below as ORIG_P3_* and are still named in every
+# citation, because the provenance chain must stay readable after the host drops
+# the file; the citations additionally carry a Wayback Machine snapshot, which is
+# now the only working form.
+#
+# Snapshots are given in the "id_" form (.../web/<timestamp>id_/<original URL>),
+# which is a contract to return the original archived bytes; the bare
+# .../web/<timestamp>/ form returns the Wayback *viewer*, whose behaviour the
+# Internet Archive can change at any time.
+#
+# PATH TRAP - DO NOT INFER THE REPORTING YEAR FROM THE URL. Five of the six files
+# sit under the upload directory /wp-content/uploads/2019/06/ regardless of which
+# financial year they report (only the FY2024 edition is under 2025/09). The
+# "2019/06" is the WordPress media-library upload folder, not a reporting date.
+# Every one of the six was therefore downloaded and its COVER PAGE read on
+# 2026-09-16 to establish the year from the document itself:
+#   FY2019 -> "FBN Bank (UK) Limited / Pillar 3 Disclosures / As at 31st December
+#             2019", v2.2, issued July 2020         - 650,322 bytes, 27pp
+#   FY2020 -> "FBN Bank (UK) Limited ... As at 31st December 2020", v2.0,
+#             issued March 2021                     - 974,989 bytes, 36pp
+#   FY2021 -> "FBN Bank (UK) Limited ... As at 31st December 2021", v1.0,
+#             issued March 2022                     - 832,706 bytes, 39pp
+#   FY2022 -> "FirstBank UK Limited ... As at 31st December 2022", v1.0,
+#             issued March 2023                     - 785,557 bytes, 39pp
+#   FY2023 -> "FirstBank UK Limited ... As at 31st December 2023", v1.0,
+#             issued April 2024                     - 705,562 bytes, 33pp
+#   FY2024 -> "FirstBank UK Limited ... As at 31st December 2024"
+#                                                   - 764,866 bytes, 39pp
+# All six begin "%PDF", all six page counts match, and none is exactly 1 MiB (the
+# known Wayback truncation failure mode). The cover pages also corroborate the
+# FY2022/FY2023 rename from "FBN Bank (UK) Limited" to "FirstBank UK Limited"
+# already documented above: the FY2022 edition is the first titled FirstBank UK.
+ORIG_P3_2024_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2025/09/FirstBank-UK-Pillar-3-Dec-2024-1.pdf"
+ORIG_P3_2023_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2023.pdf"
+ORIG_P3_2022_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FirstBank-UK-Pillar-3-Dec-2022-V1.0.pdf"
+ORIG_P3_2021_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Disclosures_-2021.pdf"
+ORIG_P3_2020_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK_Pillar-3-Disclosures_2020.pdf"
+ORIG_P3_2019_URL = "https://www.fbnbank.co.uk/wp-content/uploads/2019/06/FBNUK-Pillar-3-Dec-19-FINAL-Published_v3.pdf"
+
+P3_2024_URL = "https://web.archive.org/web/20251203042809id_/" + ORIG_P3_2024_URL
+P3_2023_URL = "https://web.archive.org/web/20240527034030id_/" + ORIG_P3_2023_URL
+P3_2022_URL = "https://web.archive.org/web/20240219211830id_/" + ORIG_P3_2022_URL
+P3_2021_URL = "https://web.archive.org/web/20240718195901id_/" + ORIG_P3_2021_URL
+P3_2020_URL = "https://web.archive.org/web/20231206074745id_/" + ORIG_P3_2020_URL
+P3_2019_URL = "https://web.archive.org/web/20200918094410id_/" + ORIG_P3_2019_URL
+
+P3_DEAD_URL_NOTE = (
+    "DEAD SOURCE URL REGISTER (recorded 2026-09-16, nothing deleted). Every one of FirstBank UK's six "
+    "Pillar 3 disclosure PDFs has been removed from the Bank's own website. The original published URLs "
+    "were: FY2024 " + ORIG_P3_2024_URL + "; FY2023 " + ORIG_P3_2023_URL + "; FY2022 " + ORIG_P3_2022_URL +
+    "; FY2021 " + ORIG_P3_2021_URL + "; FY2020 " + ORIG_P3_2020_URL + "; FY2019 " + ORIG_P3_2019_URL + ". "
+    "All six were re-fetched on 2026-09-16 and every one returned HTTP 404 with Content-Type text/html "
+    "(a ~363KB WordPress 'not found' page) rather than a PDF - a genuine removal by the host, NOT a "
+    "403/WAF block and not a failed or throttled fetch. They are recorded here rather than deleted so the "
+    "provenance of each figure stays readable now that the publisher no longer serves the document. The "
+    "working replacement for each is the Wayback Machine snapshot cited alongside it on every sheet, given "
+    "in the 'id_' form (https://web.archive.org/web/<timestamp>id_/<original URL>) which returns the "
+    "original archived bytes rather than the Wayback viewer page. "
+    "IMPORTANT - the URL path does NOT indicate the reporting year: five of the six files sit under the "
+    "WordPress upload folder /wp-content/uploads/2019/06/ whatever year they report (only FY2024 is under "
+    "2025/09). Each snapshot was therefore downloaded and its cover page read on 2026-09-16 to confirm the "
+    "year from the document itself, and all six matched: 'As at 31st December 2019' (27pp), '...2020' "
+    "(36pp), '...2021' (39pp), '...2022' (39pp), '...2023' (33pp) and '...2024' (39pp). All six begin "
+    "'%PDF' with the page counts stated. The covers also corroborate the entity rename: the FY2022 edition "
+    "is the first headed 'FirstBank UK Limited', the FY2021 and earlier editions being headed 'FBN Bank "
+    "(UK) Limited' - the same legal entity (company 04459383, FRN 216772) throughout. "
+    "No figure in this workbook was changed as part of this URL repair."
+)
 
 # ---------------------------------------------------------------
 # Currency note: the Bank changed its presentation/functional currency from
@@ -134,6 +201,7 @@ def p3_sources(page2024=None, page2023=None, page2022=None, page2021=None, table
                  "LCR and NSFR. In particular the Strategic Report's 'Liquidity Capital Ratio (Pillar 1)' "
                  "(FY2025 282%, FY2024 278%) is NOT the LCR and has not been used as one: this workbook's "
                  "FY2024 LCR from the Pillar 3 report is 409.09%, so that line is a different measure.\n")
+    lines.append("\n" + P3_DEAD_URL_NOTE)
     return "".join(lines)
 
 
@@ -827,7 +895,8 @@ RWA_BREAKDOWN_SOURCES = (
     f"split CCR out of credit risk - shown as one combined 'Credit risk (including CCR)' row) - "
     f"{P3_2019_URL} (via Wayback Machine archive). Converted to $ at the FY2019 year-end spot rate (£1 = "
     "$1.3210); DATA rows sum to $1,169,415k, matching the Total RWAs sheet's FY2019 figure of $1,169,414k "
-    "within $1k rounding.\n"
+    "within $1k rounding.\n\n"
+    + P3_DEAD_URL_NOTE + "\n\n"
     + CURRENCY_NOTE
 )
 

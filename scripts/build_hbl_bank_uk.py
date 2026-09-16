@@ -555,9 +555,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, source_height=190):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
-                         rows_data, sources_text, note=note, first_col_width=44, source_height=190)
+                         rows_data, sources_text, note=note, first_col_width=44, source_height=source_height)
 
 
 metric(
@@ -711,8 +711,19 @@ metric(
         "FY2025": "13.11%", "FY2024": "11.85%", "FY2023": "13.42%", "FY2022": "13.01%", "FY2021": "9.41%",
     })],
     p3_sources(),
-    note="FY2024 uses FY2024's own originally-published figure (11.85%); the FY2025 Pillar 3 "
+    note="NO FY2021/FY2022 BASIS BREAK - CHECKED AND CLEARED 2026-09-16, recorded so this series is not "
+         "'corrected' later on a false positive. The 9.41% -> 13.01% step is a real capital increase, not the "
+         "UK Leverage Ratio Framework's exclusion of claims on central banks (which took effect 1 January 2022 "
+         "and does break other banks' series in this project). Both the FY2021 and FY2022 Pillar 3 documents were "
+         "downloaded and read in full this session (%PDF verified, 36 and 38 pages): each states the same CRR "
+         "Article 451 / CRD IV definition - exposure is 'the sum of balance sheet assets, plus off-balance sheet "
+         "items', with no central-bank-exclusion line in either - and the exposure measure barely moved, "
+         "£546,542k at 31 December 2021 to £543,633k at 31 December 2022 (-0.5%). The FY2022 document's own "
+         "FY2021 comparative is £546,542k / 9.41%, i.e. identical to FY2021's own report: no restatement. The "
+         "ratio therefore rose because Tier 1 capital rose roughly 37%, not because the denominator changed.\n"
+         "FY2024 uses FY2024's own originally-published figure (11.85%); the FY2025 Pillar 3 "
          "document's FY2024 comparative restates this to 11.56% - see the source citation.",
+    source_height=250,
 )
 
 metric(

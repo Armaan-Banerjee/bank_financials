@@ -308,7 +308,15 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 CET1_CAPITAL = {"FY2025": 217373, "FY2024": 246095, "FY2023": 220848, "FY2022": 268414, "FY2021": 537042}
 CET1_RATIO = {"FY2025": "78.20%", "FY2024": "98.74%", "FY2023": "122.8%", "FY2022": "246.5%"}
-RWA_CALC = {"FY2025": 277971, "FY2024": 249235, "FY2023": 179844, "FY2022": 108890}
+# WITHDRAWN 2026-09-16 on the user's decision. These four values were never
+# disclosed by the bank: each was Total Capital Resources DIVIDED BY that year's
+# CET1 ratio. They are retained here, unused, ONLY as the record of what was
+# removed and of the arithmetic that produced them - do NOT re-wire them into
+# the Total RWAs sheet, which now reads "Not publicly disclosed".
+#   FY2025 217,373/0.7820 = 277,971    FY2024 246,095/0.9874 = 249,235
+#   FY2023 220,848/1.2280 = 179,844    FY2022 268,414/2.4650 = 108,890
+RWA_CALC_WITHDRAWN = {"FY2025": 277971, "FY2024": 249235, "FY2023": 179844, "FY2022": 108890}  # noqa: F841
+RWA_NOT_DISCLOSED = {y: "Not publicly disclosed" for y in YEARS}
 
 NOT_DISCLOSED_NOTE = (
     "Not publicly disclosed. Cater Allen's Annual Report discloses only CET1 capital ratio and "
@@ -386,24 +394,25 @@ metric("Total Capital", "£'000 (= CET1 Capital; no Tier 2 instruments)", [("Tot
 metric("Total Capital Ratio", "%", [("CET1 capital ratio (= Total Capital Ratio; no AT1/Tier 2 instruments)", CET1_RATIO)])
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted assets", RWA_CALC)],
-    note="*** BACK-SOLVED FIGURES - NOT DISCLOSED DATA. FLAGGED 2026-09-15 FOR WITHDRAWAL. ***\n"
-         "Every value on this sheet is CALCULATED, not disclosed: each is Total Capital Resources "
-         "DIVIDED BY the CET1 capital ratio for that year (FY2025 217,373/0.7820 = 277,971; "
-         "FY2024 246,095/0.9874 = 249,235; FY2023 220,848/1.2280 = 179,844; FY2022 268,414/2.4650 "
-         "= 108,890). No risk-weighted-assets figure, aggregate or by category, appears in any "
-         "source reviewed for any year - re-confirmed 2026-09-15 against the text-layer FY2022, "
-         "FY2023 and FY2024 Annual Reports, whose Capital adequacy tables carry only the Tier 1 "
-         "build-up (Total Tier 1 Capital, Deductions, Total Capital Resources).\n\n"
-         "This is the same back-solving pattern that was withdrawn from Bank Mandiri (Europe) and "
-         "Alpha Bank London on 2026-09-15, and it breaches the project rule against deriving RWA "
-         "from capital divided by a ratio. The figures are retained here pending a project-level "
-         "decision because removing populated data is not a per-bank call; they should be treated "
-         "as unreliable and should not be used in cross-bank analysis. Note also that the derived "
-         "series is only as precise as the rounded ratio it divides by - the FY2023 ratio is "
-         "published to four significant figures (122.8%), so the implied RWA carries roughly a "
-         "+/-0.05% rounding band, and the figures move in the opposite direction to capital in "
-         "three of the four years purely as an artefact of that division.",
+    [("Total risk-weighted assets", RWA_NOT_DISCLOSED)],
+    note="NOT PUBLICLY DISCLOSED. Cater Allen Limited does not publish a risk-weighted-assets "
+         "figure - aggregate or by risk category - in any source reviewed, for any year. Confirmed "
+         "against the text-layer FY2022, FY2023 and FY2024 Annual Reports, whose Capital adequacy "
+         "tables carry only the Tier 1 build-up (Total Tier 1 Capital, Deductions, Total Capital "
+         "Resources).\n\n"
+         "WITHDRAWAL RECORD (2026-09-16). This sheet previously carried four populated values - "
+         "FY2025 277,971; FY2024 249,235; FY2023 179,844; FY2022 108,890 - which were NOT disclosed "
+         "data. Each was back-solved as Total Capital Resources divided by that year's CET1 ratio "
+         "(e.g. FY2025 217,373/0.7820). They were withdrawn on the project owner's decision because "
+         "deriving RWAs from capital divided by a ratio breaches this project's rule against "
+         "presenting a computed figure as a disclosure - the same pattern already withdrawn from "
+         "Bank Mandiri (Europe) and Alpha Bank London on 2026-09-15.\n\n"
+         "Two properties of the withdrawn series show why it could not be relied on: it was only as "
+         "precise as the rounded ratio it divided by (the FY2023 ratio is published to four "
+         "significant figures, 122.8%, giving the implied RWA a roughly +/-0.05% band), and it moved "
+         "in the OPPOSITE direction to capital in three of the four years purely as an artefact of "
+         "that division. The arithmetic is preserved in this build script as RWA_CALC_WITHDRAWN so "
+         "the removal stays auditable.",
 )
 
 bw.add_rwa_breakdown_sheet(

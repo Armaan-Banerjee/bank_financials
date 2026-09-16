@@ -19,7 +19,7 @@ AR2018_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzIwMzc4OTY1M2FkaXF6a2N4/document?format=pdf"
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzE4MjAzNTU0NWFkaXF6a2N4/document?format=pdf"
 P3_2023_URL = "https://www.ubluk.com/media/lupbssja/annual-report-unb-2023-pillar3-final-approved.pdf"
-P3_2022_URL = "https://web.archive.org/web/20230923163742if_/https://www.ubluk.com/media/1368/ubl-2022-pillar-3-final-published.pdf"
+P3_2022_URL = "https://web.archive.org/web/20230923163742id_/https://www.ubluk.com/media/1368/ubl-2022-pillar-3-final-published.pdf"
 # CORRECTION (2026-09-15). This used to point at
 # https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf , found by Wayback CDX and
 # noted at the time as "not linked from the live site's own resources page". That
@@ -38,12 +38,12 @@ P3_2022_URL = "https://web.archive.org/web/20230923163742if_/https://www.ubluk.c
 # not a data restatement, and no FY2024 value moved.
 P3_2024_URL = "https://www.ubluk.com/media/sr5puvji/unb-2024-pillar3-approved-finalplusamended.pdf"
 P3_2024_SUPERSEDED_DRAFT_URL = "https://www.ubluk.com/media/vsvfbmui/pillar260825.pdf"
-P3_2021_URL = "https://web.archive.org/web/20250726151714if_/https://www.ubluk.com/media/pqqda2ng/pillar-iii-disclosure-2021.pdf"
-P3_2020_URL = "https://web.archive.org/web/20250803030355if_/https://www.ubluk.com/media/xq1lvuuj/pillar-iii-disclosure-2020.pdf"
-P3_2019_URL = "https://web.archive.org/web/20250804025501if_/https://www.ubluk.com/media/sqgdszjz/pillar-iii-disclosure-2019.pdf"
-P3_2018_URL = "https://web.archive.org/web/20250804031750if_/https://www.ubluk.com/media/5avboizc/pillar-iii-disclosure-2018.pdf"
-P3_2017_URL = "https://web.archive.org/web/20250802155220if_/https://www.ubluk.com/media/o0bp44wd/pillar-iii-disclosure-2017.pdf"
-P3_2016_URL = "https://web.archive.org/web/20250805064645if_/https://www.ubluk.com/media/sp5brt0v/pillar-iii-disclosure-2016.pdf"
+P3_2021_URL = "https://web.archive.org/web/20250726151714id_/https://www.ubluk.com/media/pqqda2ng/pillar-iii-disclosure-2021.pdf"
+P3_2020_URL = "https://web.archive.org/web/20250803030355id_/https://www.ubluk.com/media/xq1lvuuj/pillar-iii-disclosure-2020.pdf"
+P3_2019_URL = "https://web.archive.org/web/20250804025501id_/https://www.ubluk.com/media/sqgdszjz/pillar-iii-disclosure-2019.pdf"
+P3_2018_URL = "https://web.archive.org/web/20250804031750id_/https://www.ubluk.com/media/5avboizc/pillar-iii-disclosure-2018.pdf"
+P3_2017_URL = "https://web.archive.org/web/20250802155220id_/https://www.ubluk.com/media/o0bp44wd/pillar-iii-disclosure-2017.pdf"
+P3_2016_URL = "https://web.archive.org/web/20250805064645id_/https://www.ubluk.com/media/sp5brt0v/pillar-iii-disclosure-2016.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: United National Bank Limited (Companies House 04146820) was formed in 2001 from the merger of the "

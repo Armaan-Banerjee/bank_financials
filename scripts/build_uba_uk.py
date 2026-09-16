@@ -63,12 +63,52 @@ def opening_cash(usd_000s):
 AR2024_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2025/07/UBA-UK-2024-AR-1.pdf"
 AR2022_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2023/09/UBA-UK-FIN-A-Ann-Rpt-and-Accts-31-Dec-2022.pdf"
 AR2020_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/UBA-UK-FIN-Ann-Rpt-and-Accts-31-Dec-2020-009-1.pdf"
-AR2018_URL = "https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accts-31-Dec-2018.pdf"
+AR2018_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accounts-31-Dec-2018.pdf"
 
 P3_2024_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2026/05/UBA-UK-Pillar-3-Disclosures-31-Dec-2024.pdf"
 P3_2022_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2023/08/UBA-UK-Pillar-3-Disclosures-31-Dec-2022_final-clean-trotter-comments.1-1.pdf"
 P3_2020_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/uba-uk-pillar-3-disclosures-31-dec-2020.pdf"
-P3_2018_URL = "https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf"
+P3_2018_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf"
+
+# Dead / superseded originals, retained for provenance - do NOT delete.
+# See LINK_PROVENANCE below for the full write-up.
+AR2018_URL_DEAD = "https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accts-31-Dec-2018.pdf"
+P3_2018_URL_LEGACY = "https://www.ubagroup.com/uk/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf"
+
+LINK_PROVENANCE = (
+    "LINK PROVENANCE (checked 15 September 2026). UBA UK's documents moved from the parent group's site path "
+    "www.ubagroup.com/uk/ to the Bank's own domain www.ubauk.com; the /wp-content/uploads/sites/29/... path is "
+    "unchanged, and the two hosts serve BYTE-IDENTICAL files (verified by MD5 below). Both FY2018 URLs in this "
+    "script have been moved to www.ubauk.com. Every replacement was fetched and confirmed to be a real PDF "
+    "(%PDF magic bytes, not merely HTTP 200) with its cover and entity read.\n"
+    "1) FY2018 ANNUAL REPORT - the URL previously cited here was DEAD, but NOT for the reason previously recorded "
+    "in this script. It 404s because of a FILENAME error, not the domain move: it says '...Report-and-Accts-...' "
+    "where the file UBA actually published is '...Report-and-Accounts-...' (spelled out). Confirmed HTTP 404 on "
+    "BOTH hosts on 15 September 2026, with a genuine 404 body (409 and 329 bytes of HTML respectively), not a "
+    "soft-404 and not a 403/block. Dead original: " + AR2018_URL_DEAD + " -> live replacement: " + AR2018_URL +
+    " (HTTP 200, %PDF, 956,558 bytes, 52 pages, cover 'UNITED BANK for AFRICA (UK) LIMITED / ANNUAL REPORT AND "
+    "ACCOUNTS / 31 DECEMBER 2018'). The correctly-named file is ALSO still live on the legacy ubagroup.com path "
+    "and is byte-identical to the ubauk.com copy (both MD5 7e97b0f5364393ce657b0b796bb170b8), so there is no "
+    "question of a different edition having been substituted.\n"
+    "   CONSEQUENCE - a data gap this re-pointing CLOSED, not merely a citation fix: because the FY2018 Annual "
+    "Report was believed unobtainable, this workbook previously left FY2018's investment-securities "
+    "measurement-basis sub-rows blank, with a note saying no copy could be located. The recovered document's "
+    "Note 5.7.11 'Investment securities' (p.39) does disclose that split, and it is now transcribed onto those "
+    "rows - see the Balance Sheet source note.\n"
+    "2) FY2018 PILLAR 3 - this URL was NOT dead. " + P3_2018_URL_LEGACY + " still returns HTTP 200 and a real "
+    "PDF as at 15 September 2026, and is byte-identical to the ubauk.com copy now cited (both MD5 "
+    "975b3403146028c16184ca72958332e8, 363,778 bytes, 19 pages). It has been migrated to www.ubauk.com "
+    "pre-emptively, for consistency with the other six source URLs in this script and because ubagroup.com/uk/ "
+    "is the legacy path the Bank has moved off. The legacy URL is recorded here rather than discarded.\n"
+    "REPRODUCTION CHECK: every FY2018 figure in this workbook was re-read from the two ubauk.com documents and "
+    "all reproduce exactly, with no restatement. Statement of Financial Position p.26 (Total assets $166,173k; "
+    "total shareholders' equity $44,723k; loans from banks $110,774k); Statement of Comprehensive Income p.25 "
+    "(interest income $9,863k; loss after tax $(1,881)k); Pillar 3 section 3 p.7 (TOTAL OWN FUNDS $42,697k), "
+    "section 3.1 p.8 (exposure value of assets $174,209k; leverage ratio 24%), section 4.4 p.9 (credit risk "
+    "$4,021k, market risk $231k, operational risk $805k, Minimum Capital Resource Requirement $5,057k) and the "
+    "liquidity-ratios table (LCR 466%, NSFR 113%). Digits were checked visually, not taken from OCR - both "
+    "documents carry a real text layer, so no OCR step was involved."
+)
 
 ENTITY_NOTE = (
     "ENTITY NOTE: United Bank for Africa (UK) Limited (Companies House 03104974, FRN 695048) is a UK subsidiary of "
@@ -147,7 +187,7 @@ CASH_FLOW_SOURCES = (
     "is genuinely post-tax in these 3 years). Both are shown exactly as reported, on two separate rows, since "
     "using the wrong one for either group would break that year's own operating-activities subtotal. Each year's own as-reported line items and labels are preserved rather than forced into a common "
     "shape; blank cells indicate that year's report did not disclose that specific split.\n\n"
-    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + RECONCILIATION_NOTE
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + RECONCILIATION_NOTE + "\n\n" + LINK_PROVENANCE
 )
 
 
@@ -193,7 +233,7 @@ STATEMENTS_SOURCES = (
     "do not reconcile line-for-line - an unresolved labelling inconsistency in the source document itself, "
     "reproduced here exactly as each statement presents it rather than silently reconciled or picked one over "
     "the other.\n\n"
-    + ENTITY_NOTE + "\n\n" + FX_NOTE
+    + ENTITY_NOTE + "\n\n" + FX_NOTE + "\n\n" + LINK_PROVENANCE
 )
 
 INVESTMENT_SECURITIES_BREAKDOWN_NOTE = (
@@ -205,13 +245,25 @@ INVESTMENT_SECURITIES_BREAKDOWN_NOTE = (
     "and is held to meet Level 1 HQLA requirements) - each shown gross, with a deduction for the ECL "
     "impairment provision (and, in FY2022/FY2021 only, a further 'FX Movement' deduction the source note "
     "itself states separately) so the sub-rows sum EXACTLY to that year's own 'Total investment securities' "
-    "line:\n"
+    "line as reported in US$. In the converted £ columns shown here the sub-rows can miss the total by £0.1k "
+    "(FY2019 and FY2018 do), purely because each line is converted and rounded independently at that year's "
+    "spot rate - it is a display-rounding artefact, not an unreconciled balance:\n"
     f"FY2024 & FY2023: Annual Report and Accounts 2024, Note 17 'Investment securities', p.72 - {AR2024_URL}\n"
     f"FY2022 & FY2021: Annual Report and Accounts 2022, Note 14 'Investment securities', p.53 - {AR2022_URL}\n"
     f"FY2020 & FY2019: Annual Report and Accounts 2020, Note 14 'Investment securities', p.54 - {AR2020_URL}\n"
-    "FY2018: no equivalent breakdown available - the FY2018 Annual Report's own source URL (previously cited "
-    "for this workbook's other sheets) now 404s and no archived copy could be located, so FY2018's single "
-    "lump 'Total investment securities' figure is retained with its sub-rows left blank rather than guessed.\n\n"
+    f"FY2018: Annual Report and Accounts 2018, Note 5.7.11 'Investment securities', p.39 - {AR2018_URL}\n"
+    "  GAP CLOSED 15 September 2026. This line previously read 'no equivalent breakdown available - the FY2018 "
+    "Annual Report's own source URL now 404s and no archived copy could be located', and FY2018's sub-rows were "
+    "left blank. That 404 turned out to be a filename error in the cited URL rather than a lost document (see "
+    "the LINK PROVENANCE note on this sheet); the correctly-named file is live, and its Note 5.7.11 does "
+    "disclose the measurement-basis split. It is now transcribed: 'Debt instruments held at amortised cost' "
+    "$34,516k, 'Less impairment provision' $(546)k, 'Debt instruments held at FVOCI' $27,784k - footing exactly "
+    "to that year's own disclosed 'Total investment securities' of $61,754k (34,516 - 546 + 27,784 = 61,754). "
+    "FY2018's note carries no FVTPL/Collective Investment Undertaking line at all (the BlackRock ICS US Treasury "
+    "Fund holding first appears in FY2020), so that sub-row is left BLANK for FY2018 rather than written as "
+    "zero, and there is no 'FX movement' line either. The FY2017 comparative in the same note uses the "
+    "pre-IFRS 9 labels 'Debt instruments held to maturity' $13,913k and 'Debt instruments held for available "
+    "for sale' $19,955k; FY2017 is outside this workbook's window and is not recorded.\n\n"
     "ISSUER-TYPE NOTE: none of the 4 report vintages disclose investment securities by issuer type (e.g. UK "
     "government/gilts vs corporate/other) as a reconciling £/$ table - UBA UK is a wholesale/treasury bank "
     "with no UK government gilt holdings in this book at all. Qualitatively, the FY2024 Annual Report's credit "
@@ -261,7 +313,7 @@ EQUITY_SOURCES = (
     "for every year, consistent with how every other year on this sheet is already shown (see 'WHY NOT "
     "CONVERTED' above); the combined FY2018 closing figure ($(42)k) ties exactly to the FY2019 Annual Report's "
     "own FY2019 opening balance.\n\n"
-    + ENTITY_NOTE
+    + ENTITY_NOTE + "\n\n" + LINK_PROVENANCE
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -300,7 +352,7 @@ ASSET_QUALITY_SOURCES = (
     "independently cross-checked against the FY2020 Annual Report's Note 27, which shows an identical $622k "
     "'Balance as at 1 January 2019' (i.e. UBA UK's own FY2019 opening balance, carried forward from its FY2018 "
     "closing position) - both routes agree exactly.\n\n"
-    + ENTITY_NOTE
+    + ENTITY_NOTE + "\n\n" + LINK_PROVENANCE
 )
 
 
@@ -330,7 +382,8 @@ def p3_sources(page_24="10", page_22="9"):
         "since none of the three years' own reports print a capital ratio percentage directly. HQLA, net cash "
         "outflow, available stable funding, and required stable funding £ amounts are not disclosed in any of the "
         "3 years' Pillar 3 reports - only the LCR/NSFR ratios themselves - so the LCR and NSFR sheets show only "
-        "the ratio row for FY2018-FY2020, with the underlying $ amount rows blank."
+        "the ratio row for FY2018-FY2020, with the underlying $ amount rows blank.\n\n"
+        + LINK_PROVENANCE
     )
 
 
@@ -349,14 +402,24 @@ bs_rows_usd = [
     ("DATA", "Loans and advances to customers", {"FY2024": 0, "FY2023": 2561}),
     ("DATA", "Total investment securities", {"FY2024": 181213, "FY2023": 147377, "FY2022": 140253, "FY2021": 133829,
                                               "FY2020": 119082, "FY2019": 80125, "FY2018": 61754}),
+    # FY2018 added 2026-09-15, unlocked by recovering the FY2018 Annual Report URL
+    # (see LINK_PROVENANCE) - Note 5.7.11 'Investment securities', p.39. Its own
+    # labels are 'Debt instruments held at amortised cost' 34,516 / 'Less impairment
+    # provision' (546) / 'Debt instruments held at FVOCI' 27,784, footing exactly to
+    # the disclosed Total investment securities of 61,754. FY2018 has no FVTPL/CIU
+    # holding at all (the BlackRock ICS US Treasury Fund position starts FY2020), so
+    # that key is deliberately absent rather than set to 0.
     ("DATA", "Investment securities - Debt securities at amortised cost (gross)",
-     {"FY2024": 23286, "FY2023": 44535, "FY2022": 46726, "FY2021": 33135, "FY2020": 41008, "FY2019": 24016}),
+     {"FY2024": 23286, "FY2023": 44535, "FY2022": 46726, "FY2021": 33135, "FY2020": 41008, "FY2019": 24016,
+      "FY2018": 34516}),
     ("DATA", "Investment securities - Debt securities at FVOCI (gross)",
-     {"FY2024": 110519, "FY2023": 65393, "FY2022": 71339, "FY2021": 89500, "FY2020": 76480, "FY2019": 56257}),
+     {"FY2024": 110519, "FY2023": 65393, "FY2022": 71339, "FY2021": 89500, "FY2020": 76480, "FY2019": 56257,
+      "FY2018": 27784}),
     ("DATA", "Investment securities - FVTPL / Collective Investment Undertaking (gross)",
      {"FY2024": 48644, "FY2023": 42684, "FY2022": 27050, "FY2021": 12502, "FY2020": 2000, "FY2019": 0}),
     ("DATA", "Investment securities - Less: ECL impairment provision",
-     {"FY2024": -1236, "FY2023": -5235, "FY2022": -4095, "FY2021": -1221, "FY2020": -406, "FY2019": -148}),
+     {"FY2024": -1236, "FY2023": -5235, "FY2022": -4095, "FY2021": -1221, "FY2020": -406, "FY2019": -148,
+      "FY2018": -546}),
     ("DATA", "Investment securities - Less: FX movement",
      {"FY2022": -767, "FY2021": -87}),
     ("DATA", "Property, plant and equipment", {"FY2024": 1740, "FY2023": 1600, "FY2022": 1831, "FY2021": 2399,
@@ -406,7 +469,7 @@ bw.add_balance_sheet_sheet(
     rows=bs_rows,
     sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=68,
-    source_height=480,
+    source_height=640,
     unit_suffix=" (£'000, conv. from USD)",
 )
 
@@ -466,7 +529,7 @@ bw.add_income_statement_sheet(
     rows=is_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=78,
-    source_height=420,
+    source_height=580,
     unit_suffix=" (£'000, conv. from USD)",
 )
 
@@ -511,7 +574,7 @@ bw.add_equity_changes_sheet(
     rows=equity_rows,
     sources_text=EQUITY_SOURCES,
     first_col_width=52,
-    source_height=460,
+    source_height=620,
 )
 
 # ---------------------------------------------------------------
@@ -609,7 +672,7 @@ bw.add_cash_flow_sheet(
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=78,
-    source_height=340,
+    source_height=500,
     unit_suffix=" (£'000, conv. from USD)",
 )
 
@@ -637,7 +700,7 @@ bw.add_asset_quality_sheet(
     rows=aq_rows,
     sources_text=ASSET_QUALITY_SOURCES,
     first_col_width=68,
-    source_height=380,
+    source_height=540,
     unit_suffix=" (£'000, conv. from USD)",
 )
 
@@ -645,7 +708,7 @@ bw.add_asset_quality_sheet(
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=120)
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=400)
 
 
 CET1_TIER1_TOTAL_USD = {"FY2024": 78168.563, "FY2023": 60900.368, "FY2022": 36513.246, "FY2021": 38317.917,
@@ -795,10 +858,10 @@ bw.add_rwa_breakdown_sheet(
         "error. Checked for a resolving source: the FY2024 Pillar 3 Disclosures' own OV1 table only carries a "
         "FY2023 comparative column (not FY2022 or FY2021), so it cannot help; no restated or corrected FY2022 "
         "Pillar 3 document was found anywhere. The decision not to add this data stands.\n\n"
-        + ENTITY_NOTE
+        + ENTITY_NOTE + "\n\n" + LINK_PROVENANCE
     ),
     first_col_width=68,
-    source_height=340,
+    source_height=500,
     unit_suffix=" (£'000)",
 )
 

@@ -1,0 +1,3961 @@
+{{)} MONUMENT
+
+Monument Bank Limited
+Financial Statements for the Year Ended 31 December 2023
+
+Company registration number: 10921940
+
+TUESDAY
+
+mT
+
+17/09/2024 #161
+COMPANIES HOUSE
+Contents of the Financial Statements
+for the Year Ended 31 December 2023
+
+Company Information
+
+Strategic Report
+
+Report of the Directors
+
+Report of the Independent Auditors
+Statement of Total Comprehensive Income
+Statement of Financial Position
+
+Statement of Changes in Equity
+
+Statement of Cash Flows
+
+Notes to the Financial Statements
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page
+
+17
+a1
+32
+33
+34
+35
+
+36
+Company Information
+for the Year Ended 31 December 2023
+
+DIRECTORS:
+
+REGISTERED OFFICE:
+
+REGISTERED NUMBER:
+
+INDEPENDENT AUDITOR:
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+F Pollard
+
+A Likierman
+
+S Friedlos
+
+M Hagerty
+
+K Kalban (appointed 25 Sept 2023)
+H Mishr (appointed 25 Sept 2023)
+A Piranie (appointed 25 Sept 2023)
+H Brichet
+
+C Ashton (appointed 1 March 2024)
+| Rand
+
+| Evans
+
+33 Cavendish Square
+London
+W1G OPW
+
+10921940 (England and Wales)
+
+BDO LLP
+55 Baker Street
+London
+
+W1U 7EU
+
+Page 1
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+The Directors present their Strategic Report on Monument Bank (the 'Company', 'Bank' or 'Monument'’) for the
+year ended 31 December 2023.
+
+OUR BUSINESS
+
+Monument was founded to meet the needs of the mass-affluent community, one of the most overlooked segments
+in the UK banking market today. This poorly served community of circa 7m people deserves far more than they
+currently experience from their existing banks. These people work hard for their success and appreciate everything
+it enables them to do and become. Their loyalty is taken for granted rather than rewarded. Until now, they rarely
+receive the service they deserve, particularly as they tend to have little time to devote to their banking needs.
+
+STRATEGY
+
+The mass-affluent community is a highly valuable, growing and yet neglected segment. Legacy technology,
+increasing cost income ratios and regulatory change has meant that private banks have shifted their focus to
+high/ultra-high net worth individuals. At the same time, the ‘premier banks have only been able to offer a very
+limited service proposition and products that do not address what the mass-affluent want or need. As a result, this
+community has been orphaned and forced to endure poor levels of service.
+
+Our strategy focuses on delivering exceptional levels of service that cater to a time-poor, aspirational community
+who want to build their legacy. Their success is not bought, it is built. Our differentiation will be delivered through:
+
+~ Our focus: focusing everything we do on the needs of our target segment and building the Monument
+community. ;
+
+- Our technology: leveraging best-in-class, cloud-based, microservices architecture to bring new digital
+experiences and innovative offerings.
+
+— Our unrivalled service: All based on one belief - our clients’ time is more valuable than our own.
+
+Our vision: ‘to create the means to prosper’ — to prosper you need to make the best of your money and time:
+~ Money — exceptional savings experience and view of net worth/noney management (coming soon)
+
+~ Time — lifestyle - expert curator, 35 hand picked services across many aspects of life.
+
+THE MONUMENT TEAM
+To build a world class banking institution, we have assembled a driven, diverse Board & Management Team to
+lead, grow and manage the business.
+
+BOARD MEMBERS
+
+Fiona Pollard - Chair
+
+Fiona has served as an independent Non-Executive Director of the Bank since September 2019. Fiona has held
+a varied portfolio of Non-Executive Director roles including Chair of Melton Building Society and the VisitEngland
+Advisory Board. In her earlier banking career, she worked for Barclays, Daiwa Europe Bank, NatWest Capital
+Markets, and Goldman Sachs.
+
+Fiona was on the Board of SEEDA with responsibility for Business and Tourism as well as being a founder member
+of the Kent Tourism Alliance, Chair of KM Radio, and one of the Trustees behind the building of the Turner
+Contemporary Art Gallery in Margate. ,
+
+Sir Andrew Likierman - Audit Chair and Senior Independent Director
+A London Business School professor and former Dean, his past non-executive directorships include the Bank of
+England and Barclays plc.
+
+Andrew has won the Sunday Times award for Non-Executive Director of the Year in the public/not for profit sector.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 2
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Steve Friedlos - Chair of Remuneration & Nomination Committee
+
+Steve brings 30+ years of technology management experience to our Board. He has held CIO positions across
+investment banks, private banks, brokers and other financial services firms and has led the delivery of complex
+technology implementations and transformations.
+
+Until recently Steve was the CIO at Bupa UK. Prior to that he was CIO and subsequently COO at The Co-operative
+Bank plc where he led a successful technology migration and was a key member of the Executive team which
+turned the Bank around.
+
+Martin Hagerty - Risk Chair
+
+Martin held senior roles at a variety of large institutions as well as a number of recent Fintechs. He was the CRO
+at HSBC for the retail bank in Europe and latterly for Latin America and held similar roles at Marks & Spencer
+Money, MBNA, and Standard Chartered Bank. Martin was also the Chair of the Risk Committee for Chetwood
+Financial and helped Equifax go through the FCA Authorisation process following changes in the UK consumer
+credit regulations.
+
+Martin was a NED at Oakbrook Finance until February 2021, and was Chairman of Castlight Financial until
+recently, when it was acquired by Experian.
+
+Khalid Kalban - Non-Executive Director
+
+Mr Kalban is one of the most distinguished executives in the GCC Region. He has a long and successful career
+in various key management roles across the investment, financial, insurance, real estate, manufacturing and
+education sectors. As Vice Chairman and CEO of Dubai Investments, for more than 20 years he has led the
+company through a pioneering journey, successfully growing it into a leading diversified business group in the
+UAE and across the region.
+
+He additionally holds the role of Chairman of Al Mal Capital PSC, Board Director of National General Insurance
+Company (NGI) and Board Director for Arcapita Group, Bahrain and Africa Crest Education (ACE) Holding Co.
+
+His career experience was gained through various Executive positions within the UAE Central Bank in Abu Dhabi,
+Al Khaleej Investment Singapore and Arab Insurance Group (ARIG) and has previously held Chair and Board
+Director positions at Emirates International Bank, Islamic Bank of Singapore and Ajman Bank.
+
+Mr Kalban holds an Associate Degree of Arts in Business Management from Arapahoe Community College, USA,
+and a BS in Management from the Metropolitan State College, USA
+
+Hemant Mishr - Non-Executive Director
+Hemant is an Asian Financial markets expert and Co-founded SCUBE Capital, a Monetary Authority of Singapore-
+regulated fund management company, after a successful 20-year stint with Standard Chartered bank
+
+He was a member of the SCB Global Leadership team and led the Financial Markets & the Investment Bank for
+South Asia before taking responsibility for the Markets business for 10 Asian countries.
+
+Hemant has served on the boards of Standard Chartered Securities Limited, Standard Chartered Investment and
+Loans Limited & the Fixed Income, Money Markets and Derivatives association and the advisory board of a leading
+Indian commodity exchange.
+
+Monument Bank Limited
+Financia! statements for the year ended 31 December 2023
+Page 3
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Ashraf Piranie — Non-Executive Director
+Ashraf has had a long and successful career in financial services.
+
+Ashrafs experience includes Chief Financial Officer role at Redwood Bank, Group Finance and Operations
+Director at West Bromwich Building Society for six years, and he previously held the position of Deputy Chief
+Executive and Finance Director at Nottingham Building Society for ten years. Ashraf has also held positions of
+Finance Director and Joint Managing Director at Al Rayan Bank (formerly Islamic Bank of Britain) and Director of
+Finance at Santander (formally Alliance & Leicester plc). ‘
+
+During this period Ashraf was responsible for a wide range of areas: strategy (including acquisition and mergers),
+operations, customer service, change management, IT, branch network, risk, finance and treasury. Ashraf has
+also led and delivered on long term wholesale funding programmes and capital raising initiatives.
+
+Ashraf was Deputy Chairman of the Bank of England’s PRA Practitioner Panel from 2013 to 2020 and Non-
+Executive Director of Nottingham Development Enterprise.
+
+Helene Brichet - Non-Executive Director
+
+Helene brings a 30-year career in Financial Services, most recently as CFO at Capital One UK and as European
+CFO at EVO Payments. Her experience spans international blue-chip companies in payments, and retail and
+consumer finance, including at Barclays Bank and a 16-year stint at Visa. She has acquired a strong commercial
+outlook from senior roles in Finance, Strategy, Pricing and Acquisitions & Partnerships.
+
+Helene’s Non-Executive Directorships include humm UK, the subsidiary of the consumer and commercial finance
+Australian-listed group. A strong advocate of a fairer financial services market, she sits on the Customer Advisory
+Board of Fairer Finance.
+
+Helene is also a Trustee on the EDHEC Business School’s foundation. She is a Senior Practitioner with the EMCC
+and an Executive Coach and Mentor.
+
+Caroline Ashton - Non-Executive Director
+
+Caroline is a Chartered Management Accountant and has 20+ years Executive Director experience at TD Bank
+and Tenet Group. She brings in depth Finance, Risk and Regulatory experience. She also has experience in
+significant digital projects.
+
+Caroline is Non-Executive Director at Al Rayan Bank and Loughborough Building Society. She is a trustee of St
+Anne’s Community Services providing supporting living and support for homeless people.
+
+lan Rand - Chief Executive Officer
+
+lan has worked in finance for over 20 years; with JPMorgan in London and New York, and with Barclays. Before
+Monument lan led Business Banking at Barclays UK, supporting 1m UK businesses, and during his career has
+developed 2 passions — for clients, and for transforming the technology that helps them fulfil their ambitions.
+
+lestyn Evans - Chief Financial Officer
+
+lestyn brings 20 years of diverse experience in Financial Services. Having started his career at Lloyds, he joined
+us from Target Group, where he held CFO and interim CEO positions. He was previously a partner and Group
+Finance Director at Omni Partners and Amicus Finance, and interim CFO and COO at Cambridge & Counties
+Bank. lestyn was appointed as a NED at the Development Bank of Wales Limited in March 2022.
+
+lestyn holds a BA in History from Aberystwyth University, an MBA from the University of Warwick Business School
+and is a qualified accountant.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 4
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+MANAGEMENT TEAM
+
+David Young - Chief Operating Officer
+
+Prior to joining Monument, David previously worked as COO at both GB Bank and BFC Bank. David has
+extensive experience in banking having worked for nine years at Metro Bank where he helped to scale the UK’s
+first new high street bank in over 100 years. David has also held several senior roles at HBOS and Lloyds.
+
+David holds a M.Litt. in Business Studies from Trinity College, Dublin.
+
+Mintoo Bhandari - Founder, Head of Global Institutional Relationships
+
+Mintoo spent most of his career as an investor, building teams, and developing forward thinking institutions.
+Mintoo left Apollo Global Management after nearly 12 years as a Senior Partner and Managing Director, working
+in New York, London and then successfully setting them up in India. Mintoo has also worked at the world's
+largest university endowment (Harvard University) as an investor and served on the boards of more than 20
+companies across three continents.
+
+Mintoo graduated from MIT with a S.B. in Mechanical Engineering and earned his MBA at Harvard.
+
+Wasim Khouri - Chief Commercial Officer
+
+Prior to joining, he spent most of his career at McKinsey working with clients on strategy, revenue growth
+management and large digital transformations, specialising in consumer-centric organisations and the use of
+data science.
+
+Wasim holds a MEng in Electrical and Electronic Engineering from Imperial College, London.
+
+Feike Brouwers - Chief Risk Officer
+Feike has over 25 years of experience in retail banking with CRO roles at Kensington Mortgages, Tesco Bank,
+the Coventry Building Society and as CFO at on-line retail banks ING Direct UK and ING Direct France.
+
+Feike holds a postgraduate degree in Accountancy and MSc in Economics from Vrije Universiteit Amsterdam
+and an MBA from William E Simon Business School in Rochester (NY).
+
+Simon Coles - General Counsel
+
+Simon spent over 20 years advising financial services and banking clients both in-house and in private practice.
+Simon has been General Counsel at a number of financial services technology providers, including
+MarketFinance and Capital on Tap and was a partner at both TLT and Fieldfisher.
+
+Simon holds an MA in Law from the University of Cambridge and is a qualified solicitor.
+
+Dominique Ogilvie - Chief People Officer
+
+Dominique brings 20+ years of financial services and regulated market experience from ING Direct UK, Friends
+Life, Aviva and Entain. She has led some of the largest FTSE100 transformations in the City in recent years and
+has a passion for driving change and building high performing teams. She champions our people and drives the
+strategic agenda to ensure we value our people as much as our clients.
+
+Dominique graduated with a BA Hons from Brunel University specialising in Economics and International
+Finance.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 5
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+PRINCIPAL RISKS AND UNCERTAINTIES
+
+The Risk Management Framework
+
+Monument maintains a conservative risk profile whilst supporting the business objectives of the Bank. Our
+approach to risk and risk management is fully aligned with these twin aims. To maintain this risk profile, Monument
+has established a Risk Management Framework ("RMF") which defines our approach to managing and controlling
+the risks to which the Bank is exposed, in a coherent manner. The RMF defines the structure within which we
+identify, assess, manage, monitor, and report potential and crystallised risk exposure. The purpose of the RMF is
+to set the standards of risk management within Monument, including:
+
+- Governance;
+
+- Risk appetite;
+
+- Risk assessment and measurement; and
+- Risk monitoring and reporting.
+
+In setting these standards, the RMF provides the Board with the ability to set risk appetite which will support
+profitable business development within acceptable tolerances. The RMF is developed in compliance with relevant
+UK legislation and regulation and takes account of industry codes of conduct and standards. The framework is
+subject to constant evaluation, to ensure it remains fit for purpose, takes account of emerging issues, and meets
+the needs of evolving regulatory standards and best practice.
+
+Risk Strategy and the Three Lines of Defence
+
+A fundamental requirement in delivering our business model in line with our objectives is the effective management
+of risk. We utilise best practice industry principles and standards within our RMF to provide a basis for a
+comprehensive, internal governance and controls structure for the management and control of risks, which is
+
+summarised in the diagram below:
+
+Strategy
+
+/ Ye Risk Appetite Q
+
+Risk Management Principles & Tools
+Policy Framework:
+
+ue Cyate’
+
+_.” Assessment a
+
+of Defence ]
+| =
+i ie
+ho.
+
+Principal Risks Risks
+
+Business & Operational Liquidity & Credit &
+Suratezy Funding Concentration
+as
+
+integrated Risk Processes
+
+Internal Coprtal Adequacy Accacsment Process (IT AP) foternal Liquedaty Adequacy Actexsment Process (1LASP} Recovery Phen (RP) aed Resolution Planning
+
+a _ = Risk Culture, Values and Training
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 6
+
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Central to our risk management strategy and our operating model is the application of the three lines of defence
+model. The first line of defence is the commercial, business, and operational functions, whilst the second line is
+the Risk and Compliance function, and third line is Internal Audit (currently outsourced). In this model, primary
+responsibility for identification and reporting of risk sits with the first line business functions who are responsible
+for identifying risks in their own function. The second line is responsible for identifying risks in their own area as
+well as monitoring and challenging effectiveness of risk management across the whole firm. In developing the
+RMF, we have taken account of the key risk categories (Principal Risks in the diagram above) that can materially
+impact our business outcomes.
+
+Capital Risk
+
+This is the risk that Monument has insufficient capital resources to support its strategy or meet its regulatory capital
+requirements. This risk can crystallise through the business suffering operational or credit losses or through
+growing the business at a rapid rate beyond our means. We may also face this risk if our committed capital cannot
+be drawn down or we are unable to raise the capital required to support our business growth.
+
+Business & Strategy Risk
+This is the risk associated with successfully delivering the future performance of the business plan and we consider
+this risk may arise from any of the following:
+
+— Changes in the macro-economic environment;
+
+— Changes in business performance against targets;
+— Competitor activity;
+
+— New products;
+
+— Regulatory change;
+
+— Financial risks from climate change; and
+
+~— Environmental, social or governance issues.
+
+Credit Risk and Concentration Risk
+
+Given Monument'’s business model, it is likely that credit risk (the risk of loss resulting from a borrower's failure to
+repay a loan or meet contractual obligations) will be one of the most significant exposures due to loan defaults,
+either directly via loans that we have originated or via securitised loan notes in which we invest, which are backed
+by third party client lending. Monument has very low credit risk appetite, and we seek to lend either directly to
+credit worthy borrowers who can afford to repay with strong collateral against the lending and to highly rated
+institutions and securities. Concentration Risk is a specific type of credit risk which arises as a result of a large
+loss arising from a lack of diversification of the loan book. This could relate to a single counterparty, connected
+counterparties, geographic concentration and/or sector concentration. There are two main types of counterparty
+where concentration risk occurs- firstly, concentration to borrowers (individuals and corporate vehicles) and
+secondly financial institutions (e.g. commercial banks that hold our cash and derivatives).
+
+Operational Risk
+
+This is defined as the loss resulting from failed or insufficient internal processes, people, and systems, or through
+external events. This includes failure to comply with relevant laws or regulations. Operational risk is managed via
+the Risk and Control Self-Assessment process (RCSA) which is a bottom-up assessment of operational risks
+which is business wide and performed by the owners of each business line.
+
+Conduct Risk
+
+This is the risk of creating detriment or harm to a client or a market. There is a heightened conduct risk in relation
+to vulnerable clients, to which we may become exposed. We have no appetite for known conduct failings; however,
+we accept that the risk cannot be completely mitigated for unknown failings. All Monument processes and business
+practices will seek to achieve good outcomes for clients and avoid harm.
+
+Monument Bank Limited
+Financia! statements for the year ended 31 December 2023
+Page 7
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Anti-Money Laundering (AML) & Counter Terrorist Financing (CTF) Risk
+
+There is a risk that the Bank may be used to process illegal sources of funds, facilitate counter-terrorist financing
+or deal with an individual, company or country on a sanctions list. The Bank has no appetite for being utilised for
+money laundering or counter terrorist financing. Neither is there any appetite for breaches to AML/CTF regulations.
+We do not have appetite for systemic or repeated non-adherence to either financial crime related regulatory
+requirements or policy breaches.
+
+Funding/Liquidity Risk
+
+This is the risk that Monument is unable to meet its liabilities and financial obligations as they fall due. This includes
+meeting such liabilities and obligations at a very high cost. Monument’s Board has no appetite for regulatory
+liquidity breach and will always maintain sufficient Liquid Asset Buffers. The Banks liquidity position is monitored
+
+on a daily basis. We closely monitor regulatory developments regarding liquidity.
+
+Interest Rate Risk in the Banking Book (IRRBB)
+
+This is the risk to Monument’s capital resources or net interest income as a result of movements in interest rates
+on loans, deposits and the broader banking book. This is linked to our funding risk as it is the risk arising because
+of mismatches in duration for our deposit and loan books. We minimise interest rate risk in the banking book by
+having both natural and synthetic hedging in place on our balance sheet. Natural hedging is achieved by matching
+fixed maturity cashflows from either side of the banking book. Where this is not possible, synthetic hedging is
+utilised and cashflows are matched with interest rate swaps of corresponding maturity on a fixed to float basis.
+Whilst these instruments provide an appropriate hedge over the life of the transaction, they are subject to large
+swings in the mark to market value at any given time. The economics of these instruments mean that over the life
+of the instrument they will return to par, and therefore the swings in market value are timing differences rather than
+‘pure’ P&L events.
+
+Reputational Risk
+
+Reputational Risk is the risk that an event or issue damages the Monument brand and could result in client and
+deposit attrition, increased regulatory sanction, lost revenue, increased costs, depletion in shareholder value and
+may also lead to key employee attrition, loss of partners (if any), and of potential investors. This may occur because
+of some of the above risks. The Bank will seek to minimise any risk to its reputation and ultimately its brand through
+a robust system of processes, systems, and controls to mitigate for the risks noted above and indeed the wider
+risk universe it will be subject to.
+
+Climate Risk
+
+The Bank has identified financial risks from climate change (“climate risk”) as being a particular emerging risk that
+has also warranted a greater level of focus in the industry over the last few years. Climate risk can crystalise
+through physical or transition risk. Monument has one office and no branches, so our own footprint is considered
+relatively low, but we recognise that our operations contribute to the global climate crisis both directly, and indirectly
+through our lending. Our ESG approach continues to develop with Climate related issues now enshrined within
+our RMF.
+
+FINANCIAL REVIEW
+
+During the year, Monument has continued to invest heavily in its technology platform whilst building its asset book
+through a diversified portfolio approach.
+
+The market conditions of the second half of the year saw us take decisions to pivot to a treasury led strategy and
+pause our traditional buy to let lending pipeline. This strategic change moved the bank's asset strategy towards
+asset backed securities to manage yield and profitability. We launched deposit aggregators in December 2023,
+introducing another channel that can add savings. Our focus remains on servicing our mass affluent community
+whilst achieving profitability - a key aim of all our stakeholders, which this strategic change will help us to achieve
+in a shorter time scale.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 8
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+The results for the business, as set out on page 32, show, a loss for the financial year of £19, 359,604. The
+comparative loss for the year ended 31 December 2022 was £12,709,555.
+
+The main movements between the two years, a total difference of £6.65m, are:
+
+* A £2.96m positive increase in Net Interest Income, driven by the growth of Interest-bearing Assets and
+their corresponding deposit funding during the year, as we grow the bank balance sheet;
+
+« A£5.80m negative year on year profit and loss differential from the mark to market movement on derivative
+financial instruments. These are interest rate swaps used to hedge interest rate risk in the banking book.
+These are held on the balance sheet at fair value, which is the value that a third party would pay for them.
+The movement in fair value is recognised through the profit and loss. Unless the instruments are sold
+early, which we have no need or intention to do, any gains or losses will unwind over the life of the
+instrument.
+
+¢ Administrative expenses increase of £2.42m, as we continue to build out our banking processes for scale
+in terms of both technology and people, to allow us to develop both our service proposition and product
+set; and
+
+e We received £1.37m less in Research and Development (R&D) tax credits. Amounts received were higher
+in 2022 due to the proximity to the initial tech build.
+
+In building the Bank, we have had success in raising capital to date, with investors sharing and supporting our
+vision to create value in the mass affluent segment, and we continue to build a successful business with their
+support.
+
+KEY PEFORMANCE INDICATORS (KPIs)
+
+The Board monitors the progress of the Bank by reference to the following KPls:
+
+KPls 2023 2022
+Common Equity Tier 1 (CET1) capital £28,035,733 £21,299,969
+Total capital ratio (TCR) 22% 44%
+Liquidity coverage ratio (LCR) 1,093% 10,128%
+Tonnes of COze per employee* 14.95 1.96
+Number of customers 17,159 2,716
+
+*Monument has matured as a business and has chosen to proactively include screening of its GHG emissions
+from purchased goods and services, incorporating them into its scope 3 emissions in the current year. This
+strategic step underscores the Bank’s dedication to comprehensively addressing its carbon footprint and fulfilling
+its commitment to complete carbon offsetting. We do not have this information for 2022, and therefore cannot
+restate the 2022 position to be comparative. However, if we were to exclude the GHG emissions in the 2023
+reporting, the tonnes of Co2e per employee would have increased to 2.26 tonnes, an increase of 15.3%, due to
+the increase in scale of the operation and an element of travel. Further details are included on page 19 of the
+strategic report.
+
+FUTURE DEVELOPMENTS
+
+The Bank will look to build on the strong foundations that have been put in place and will continue to build the
+Banking Book sustainably and increase the number of mass affluent customers that we are servicing. The bank
+continues to invest in its award winning, best in class automation and self-service technology
+
+We recognise that the macro-economic conditions of 2023 (heightened inflation and ongoing conflicts) continue
+into 2024. We will continue our vigilance with respect to the external environment and continue to make decisions
+regarding business volumes and lending appetites as appropriate, accelerating or pausing our business growth
+as required.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 9
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+CORPORATE GOVERNANCE
+
+The Board, with a majority of independent non-executive directors, has great breadth and depth of complimentary
+experience, which provides the requisite skills needed to govern and oversee the development of our business
+model. We have created a governance structure as follows:
+
+Remuneration& Hi : nl
+Audit Committee Nominations . EXECUTIVE
+
+Board Risk
+
+Committee | COMMITTEE Committee (BRC)
+
+(EXCO) ;
+
+Product Executive Risk &
+Governance
+
+Committee (PGC)
+
+Assets & Liabilities
+Committee (ALCO)
+
+Compliance
+Committee (ERCC)
+
+Credit Risk
+Committee (CRC)
+
+Board of Directors
+
+The Board is collectively responsible for the overall management and proper conduct of the Bank to create a long-
+term sustainable business model that delivers the right outcomes for all stakeholders. This is done by:
+
+- Providing leadership to the Bank and direction to the CEO;
+
+- Setting a clear strategy for the Bank and monitoring progress against this;
+
+— Clearly articulating the risk appetite to deliver the strategy and monitoring this regularly;
+
+— Ensuring adequate resources are available to the Bank in order to deliver the strategy;
+
+~ Establishing the culture and values of the Bank;
+
+~ Managing conflicts of interest and balancing the needs of stakeholders, including but not limited to
+customers, shareholders, employees, regulators and the wider financial system;
+
+- Overseeing the Bank's ESG strategy;
+
+~ Ensuring any specific legal and regulatory responsibilities of the Board are fulfilled;
+
+~ Ensuring the Board, Executives and firm are diverse; and
+
+— The Directors act in accordance with all relevant and applicable legislative and regulatory rules and
+expectations;
+
+To enable it to provide the appropriate governance and oversight expected of a regulated bank, the Board has
+established, and has regard to advice from, a number of sub-committees (Board Risk, Audit, Remuneration and
+Nomination) and the Executive Committee.
+
+Each of the Board sub-committees deals with specific areas of the Bank's activities as described below. Each of
+these has a chair, a clear term of reference with delegated authorities and meets regularly.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 10
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Board Risk Committee
+
+The Board Risk Committee is responsible for risk governance and oversight across the business. This is done by:
+
+Providing advice to the Board on risk strategy, including the oversight of current risk exposures and
+conduct risk of the firm;
+
+Developing, for consideration by the Board, the overall firm-wide risk management framework, and the
+risk appetite;
+
+Overseeing the firm's credit risk models, risk management performance and establishing the metrics to
+monitor this;
+
+Review of outputs of risk monitoring and assurance activity and provide challenge on proposed
+actions/remediation;
+
+Review and approval of risk matters in line with delegations, and providing recommendations to the Board
+for approval as required;
+
+Reviewing business change, risk events, horizon scanning and regulatory updates, providing
+recommendations to mitigate risk;
+
+Providing oversight and challenge of the design and execution of stress and scenario testing;
+
+Reviewing and challenging effectiveness of the whistleblowing arrangements; and
+
+Delivering advice, oversight, and challenge necessary to embed and maintain a supportive risk culture
+throughout the firm, including providing advice on remuneration.
+
+The Board Risk Committee will have regard to relevant advice from the Audit Committee and the Internal Audit
+function concerning the effectiveness of the control framework. The Board Risk Committee is chaired by Martin
+Hagerty.
+
+Audit Committee
+
+The Audit Committee provides oversight of the financial reporting process, the audit process, and the internal
+controls framework. This is done by:
+
+Reviewing, monitoring, and challenging the integrity of financial statements, disclosure and reporting
+requirements, including annual reports and accounts;
+
+Monitoring the adequacy and effectiveness of internal financial controls, including the mandate and scope
+of internal and external audit work;
+
+Reviewing the outputs of internal and external audit activity and any resulting actions required;
+
+Ensuring the independence and oversight of the external auditor;
+
+Overseeing the relationship with the external auditor;
+
+Ensuring the independence and oversight of the outsourced Internal Auditor; and
+
+Overseeing implementation of Accounting Policies and policy around income and loss recognition.
+
+The Audit Committee is chaired by Sir Andrew Likierman.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 11
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Remuneration and Nomination Committee
+
+The purpose of the Remuneration and Nomination Committee is to develop and maintain the process of making
+recommendations on appointments and reappointments to the Board, its sub-committees and the Executive.
+Additionally, it is responsible for reviewing the succession plans for the executive directors and the Non-Executive
+Directors. This is achieved by:
+
+- Reviewing the structure, size and composition of Board and its sub-committees, having regard for
+Monument strategy and diversity;
+
+- Establishing and embedding the nominations process; and
+
+-— Overseeing succession planning for Board and Executives.
+
+The Remuneration and Nomination Committee is also responsible for reviewing and making recommendations to
+the Board on the remuneration policy to ensure the right incentives are in place to deliver the strategy within stated
+risk appetite. This is done by:
+
+~ Overseeing the remuneration strategy and associated policies for the Board and the Executive Team; and
+~ Reviewing the performance of individual executives against objectives to make appropriate
+recommendations on remuneration.
+
+The Committee will have regard to advice from the Board Risk Committee. Steve Friedlos is the Chair of the .
+Remuneration and Nomination Committee.
+
+The Executive Committee
+
+The role of the Executive Committee is to support the CEO in implementing the strategy agreed by the Board and
+to drive the performance of the business. The Executive Committee does this by supporting the CEO in:
+
+~ Developing strategy and working with the Board on approval;
+
+~ Delivering the approved strategy and annual priorities;
+
+~- Reviewing annual capital and revenue budgets and recommending them to the Board for approval;
+
+~ Monitoring performance against key financial objectives including delivery of objectives by individual
+Executive Committee members;
+
+- Reviewing and acting on business and financial reports, including recommendations from external
+advisors;
+
+~ Receiving and considering reports on operational matters, and taking action as it considers appropriate;
+
+~ Reviewing employee development, performance and succession planning and making recommendations
+to the Remuneration and Nomination Committee in respect of Executive Committee succession planning;
+
+~ Actively promoting Monument's culture and values; and
+
+~ Receiving reports from and monitoring the performance of the Asset and Liability Committee, Executive
+Risk and Compliance Committee, Credit Risk Committee and Product Governance Committee.
+
+The Executive Risk & Compliance Committee
+
+The Executive Risk & Compliance Committee is responsible for the management and monitoring of risk
+management and compliance matters throughout the business, escalating issues as required to the Executive
+Committee and the Board Risk Committee.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 12
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+The Credit Risk Committee
+
+Within Board delegated authority levels, the Credit Risk Committee is the highest-level executive decision-making
+body for credit decisions. The Credit Risk Committee is responsible for establishing and embedding credit policies,
+including review and recommendation to Board Risk Committee for approval. The Credit Risk Committee reviews
+credit performance across the credit portfolios, including a review of actual and estimated impairment provisioning
+and write-offs. The Credit Risk Committee reviews and approves all special cases as stated within the Credit
+Policy.
+
+The Asset and Liability Committee
+
+The Asset and Liability Committee monitors the composition of the Bank's assets and liabilities, controls financial,
+capital, liquidity and treasury risks and reviews control procedures including limits, reporting lines and mandates.
+The Committee will focus on managing internal capital and liquidity levels for both current and future activities to
+maintain balance sheet growth in line with the company's strategy and risk appetite.
+
+For Treasury Securities purchases, the ALCO sets the transaction parameters and size limits, for the CFO and
+Treasury team to transact in the market. The ALCO reviews the portfolio every month in detail as part of its
+monitoring functions for the risk management of assets and liabilities within Monument.
+
+The Product Governance Committee
+
+The Product Governance Committee is responsible for the review and challenge of significant product and service
+changes, including new products, withdrawals and changes. The Product Governance Committee reviews client
+outcomes in relation to products and services and any associated conduct risks of harm. This is done by:
+
+' = f£stablishing the policies relating to product governance, product performance and client outcomes;
+~ Reviewing new products, proposals for significant product changes and product withdrawal proposals,
+providing challenge and approvals where appropriate;
+~ Reviewing product performance, including conduct risk and Consumer Duty monitoring;
+~ Making recommendations to the Executive Committee where issues are identified; and
+~ Ensuring that products are constructed for the benefit of clients.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 13
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+S. 172 STATEMENT
+
+This section of the Strategic Report describes how the Directors have had regard to the matters set out in section
+172(1) (a) to (f), and forms the Directors' statement required under section 414CZA, of The Companies Act 2006.
+
+The Directors consider that they have, in good faith, promoted the success of the Company for the benefit of its
+members, and in doing so, have regard (amongst other matters) to: oS
+
+Long-term decisions
+
+In recognising Monument as a long-term investment for shareholders, the Bank's management team diligently
+evaluates opportunities for sustained commercial success. This involves a meticulous balancing act, considering
+the needs of clients, shareholders, employees, regulators, and other stakeholders. Long-term strategic decisions
+are made transparently, with the full engagement of the Board and its sub-committees, all while ensuring strict
+adherence to Prudential and Conduct Regulations.
+
+Employees
+
+Monument places paramount importance on its people, navigating challenges and fostering a thriving environment
+through collaborative efforts, innovative technology, and a supportive culture. The Bank remains committed to
+diversity, fostering an environment of openness where colleagues feel empowered to bring their authentic selves
+to work. A flexible approach to remuneration and development supports both physical and mental well-being,
+cultivating a workplace with a strong sense of purpose.
+
+Business conduct
+
+Recognising the value of a strong business standards reputation in the highly regulated banking environment, the
+Board addresses business conduct matters through comprehensive governance structures and delegation of
+authority to executive management. This includes strategic development, continuous monitoring of executive
+actions, review and approval of client policies, and the creation of frameworks promoting high business standards,
+culture, and conduct risk management.
+
+Business relationships with suppliers, clients and others
+
+With a focus on meeting the needs of underserved populations, Monument underscores the importance of placing
+the client at the heart of its business model. The Board and Management team are aligned in consistently
+providing an exceptional client experience as evidenced by our externally validated customer scores. Additionally,
+as a business leveraging SaaS, Monument collaborates with suppliers to enhance client experience and
+functionality, emphasizing fair and transparent practices. Deep, collaborative relationships with suppliers are
+fostered to understand emerging needs and mitigate risks in the supply chain.
+
+Community and environment
+
+Monument aspires to build a financial experience and community that creates enduring value in the world.
+Embracing a digital-first strategy, the bank delivers superior client service with a limited carbon footprint. The
+corporate social responsibility strategy continues to evolve, involving input from colleagues and clients to support
+causes that matter most to teams and communities.
+
+Monument Bank Limited .
+Financial statements for the year ended 31 December 2023
+Page 14
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Interaction between stakeholders
+
+The Board actively pursues fair outcomes for all stakeholders. A tangible example of this commitment is the
+inclusion of key shareholder representatives on the Board, contributing diverse experiences and judgements to
+the creation of Monument Bank. This approach ensures a broad spectrum of perspectives in decision-making,
+fostering an environment of inclusivity and fairness.
+
+Specific decisions taken in the year:
+
+Decision: Renewing the Current Head Office Lease
+In renewing the current head office lease, the Bank undertook a comprehensive assessment to ensure alignment
+
+with the company's long-term strategy and the interests of our stakeholders. The decision-making process
+included a thorough analysis of both the financial implications and broader impact on employees, customers, and
+the locai community.
+
+Consideration of Stakeholder interests:
+
+Employees: The potential impact on our employees was a primary focus. Ensuring a stable and conducive
+working environment was a priority to maintain employee well-being and productivity.
+
+Suppliers: The board assessed the accessibility of the head office for our suppliers, aiming to minimize any
+disruption to services and maintain strong supplier relationships.
+
+Community and environment: Recognising our responsibility to the local community and the environment, the
+board considered the lease renewal's impact on the community and carbon footprint, aiming for positive
+contributions and engagement.
+
+Financial Implications: The board considered the financial implications of the lease renewal, evaluating the
+terms, costs, and potential alternatives. This included a cost-benefit analysis to ensure that the decision aligns
+with the company's financial objectives and sustainability.
+
+Risk Mitigation: Possible risks associated with the renewal were thoroughly assessed, including market
+conditions, potential changes in business needs, and regulatory considerations. Mitigation strategies were
+implemented to address identified risks and ensure the company’s resilience in the face of uncertainties.
+
+Decision: Incorporating a Technology Subsidiary
+
+The development of Monuments leading technology stack has created an opportunity for generating significant
+revenues by licensing the product to third parties. In assessing this opportunity and in agreeing an approach which
+best serves the aspirations of the organisation, incorporating a technology subsidiary was a strategic decision
+that involved a comprehensive assessment of stakeholder interests to ensure alignment with the company’s
+values and long-term objectives. The board recognised the importance of engaging with various stakeholders and
+considering their perspectives in the decision-making process.
+
+Consideration of Stakeholder Interests:
+
+Shareholders: The board considered the interests of our shareholders in terms of the long-term value creation
+associated with technological advancements and revenue generating opportunities. By incorporating a technology
+subsidiary, we aim to enhance the overall competitiveness of the Bank, contributing to sustained growth and
+delivering value to our shareholders over the long term.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 15
+Strategic Report (continued)
+for the Year Ended 31 December 2023
+
+Employees and Talent Development: The board acknowledged the vital role of employees in driving
+technological innovation. By incorporating a technology subsidiary, we aim to provide exciting opportunities for
+our existing workforce to contribute to cutting-edge projects. Additionally, the subsidiary's establishment is seen
+as a strategic move to attract top-tier talent in the technology sector, ensuring that our team remains at the
+forefront of industry advancements.
+
+Customers: Recognising that our customers increasingly expect innovative solutions and seamless technological
+experiences, the board considered the potential impact of the subsidiary on customer satisfaction. The decision
+reflects our commitment to staying ahead of industry trends and providing our customers with state-of-the-art
+technological solutions that meet and exceed their expectations within the context of affordable investment.
+
+Risk and Compliance: The board conducted thorough risk assessments, taking into account the potential impact
+on stakeholders. Mitigation strategies were developed to address any identified risks, ensuring compliance with
+relevant regulations, and safeguarding the interests of all stakeholders.
+
+By incorporating stakeholder considerations into our decision-making process, the board seeks to balance the
+interests of employees, customers, the local community, and shareholders, ultimately making a strategic
+decision’s that align with the Bank's values and long-term vision.
+
+On behalf of the Board:
+
+DecuSigned by:
+
+Fiona Pollard
+
+1 owmine G2BEBUIQOASFADT,.. eaten eee en senna eee ene e eae
+F Pollard - Director
+
+Date: 24 April 2024
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 16
+Report of the Directors (continued)
+for the Year Ended 31 December 2023
+
+The Directors present their report with the Financial Statements of the Company for the year ended 31 December
+2023.
+
+PRINCIPAL ACTIVITY
+The principal activity of the Company in the year under review was that of banking services.
+
+DIVIDENDS
+No dividends will be distributed for the year ended 31 December 2023 (2022: Enil).
+
+EVENTS SINCE THE END OF THE YEAR
+Information relating to events since the end of the year are given in the notes to the financial statements.
+
+QUALIFYING THIRD PARTY INDEMNITY INSURANCE
+The Bank has arranged qualifying third-party indemnity insurance for all its directors.
+
+DIRECTORS
+The directors shown below have held office during the whole of the period from ist January 2023 to the date of
+this report.
+
+F Pollard
+
+J Likierman
+S Friedlos
+M Hagerty
+H Brichet
+
+| Rand
+
+| Evans
+
+Changes in directors holding office are as follows:
+
+K Kalban was appointed as a director on 25 Sept 2023.
+H Mishr was appointed as a director on 25 Sept 2023.
+A Piranie was appointed as a director on 25 Sept 2023.
+C Ashton was appointed as a director on 1 March 2024
+M Rajaram resigned as a director on 25 Sept 2023.
+
+N Booker resigned as a director on 25 July 2023.
+
+V Gupta resigned as a director on 18 April 2024.
+
+GOING CONCERN
+
+Companies are required to adopt the going concern basis of accounting, except in circumstances where the
+directors determine at the date of approval of the financial statements either that they intend to liquidate the entity,
+or to cease trading, or have no realistic alternative to liquidation or cessation of operations.
+
+The Board has assessed the appropriateness of the going concern basis of accounting when preparing the
+financial statements in accordance with accounting standards and guidance from the Financial Reporting Council
+(FRC’). As part of that assessment, the Directors have considered whether there are any material uncertainties
+relating to events or conditions (other than those with a remote probability of occurring) that may cast significant
+doubt upon the continuing use of the going concern basis of accounting in the period 12 months from the date of
+approval of the financial statements, and the associated requirements to disclose these.
+
+A material uncertainty is one relating to events or conditions that may cast significant doubt on the Bank’s ability
+to continue as a going concern and therefore may be unable to realise its assets and discharge its liabilities in the
+normal course of business. The assessment below analyses the uncertainties facing the Bank.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 17
+Report of the Directors (continued)
+for the Year Ended 31 December 2023
+
+In performing this assessment, the Directors have considered all available information about the future, the
+realistically possible outcomes of events and changes in conditions and the realistically possible responses to
+such events and conditions that would be available to the Directors.
+
+During their assessment of the Bank’s ability to continue as a going concern the Directors considered a broad
+range of information and scenarios, including the medium-term business plan, ability to raise capital, rising inflation
+and the potential impact on the wider global economy from ongoing conflicts.
+
+Below we have detailed the material uncertainty which the Directors have considered to be present in the going
+concern assumption of the Bank.
+
+Regulatory Capital Requirements
+
+The Bank will require access to further capital in the period 12 months from the date of approval of the financial
+statements to fund its ongoing operations and to enact its growth plans whilst meeting its regulatory capital
+requirements.
+
+If the Bank cannot obtain further capital either from its existing shareholders or from third parties, it would
+potentially need to cease trading.
+
+As well as assessing the Bank’s capital requirements on a base case scenario, the Board has also considered the
+risks to the base case assessment.
+
+The Directors acknowledge the risks involved in placing reliance on the receipt of future equity and the future
+actions of the Bank should additional equity not be received, and these have also been evaluated by the Directors.
+
+However, an inherent risk of a new bank is that it may not be able to raise sufficient regulatory capital to meet its
+business plan and, at worst, to continue as an authorised institution.
+
+As a result, the Board has concluded that, although the Bank is likely to secure the commitment of further equity
+from both existing and new investors, there remains a material uncertainty regarding its ability to source further
+additional equity during and beyond the period 12 months from the date of approval of the financial statements.
+
+Specifically, future equity capita! is not guaranteed, and the Bank is still at risk that the required capital may not be
+obtained from the wider market. Should future equity raises be unsuccessful the Directors will need to consider all
+necessary actions.
+
+However, the Directors remain confident that the Bank can raise the necessary capital and deliver the business
+plan. Therefore, the financial statements do not include any adjustments that would result if the Bank was unable
+to continue as a going concern.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 18
+Report of the Directors (continued)
+for the Year Ended 31 December 2023
+
+STREAMLINED ENERGY AND CARBON REPORTING (SECR)
+The Bank’s energy and carbon reporting disclosures are presented pursuant to the Companies (Directors’ Report)
+and Limited Liability Partnerships (Energy and Carbon Report) Regulations 2018 (“the 2018 Regulations’).
+
+Organisational control boundary
+In accordance with the 2018 Regulations, the energy use and associated greenhouse gas emissions are for those
+within the UK, that come under the operational control boundary.
+
+Reporting period
+The annual reporting period is 1 January to 31 December each year.
+
+Quantification and reporting methodology
+
+The report has been prepared using the UK Government Environmental Reporting Guidelines. The energy
+consumption data reported is based on the Bank’s direct use of natural gas in occupied facilities (scope 1), indirect
+consumption of purchased electricity (scope 2) and residual downstream activities (scope 3). This energy data
+was converted to carbon emissions using emission factors from the Department of Business, Energy & Industrial
+Strategy.
+
+Energy usage
+During the year, the bank utilised 148,378kWh of energy.
+
+CO2e Emissions
+
+Scope Activity 2023 2022
+‘ Emissions, Emissions,
+Tonnes COQ2e Tonnes CO2e
+Scope 1 Site gas 20.00 10.22
+Scope 1 Sub Total 20.00 10.22
+Scope 2 Electricity generation 8.08 11.23
+Scope 2 Sub Total 8.08 11.23
+Purchased goods* 951.13 -
+Water 0.07 -
+Computing 24.85 5.23
+Well to tank 5.09 1.74
+Transmission & distribution 0.85 1.27
+Wastewater 0.08 -
+Scope 3 Flights 87.08 89.66
+Grey Fleet (employee-owned vehicles) - 3.79
+Hotel stays 3.89 -
+Rail 0.58 0.64
+Taxi 0.33 0.44
+Commuting 15.62 15.36
+Home-working 3.65 5.21
+Scope 3 Sub Total 1,093.22 __ 123.34
+Total tonnes of CO2e 1,121.30 144.83
+Tonnes of CO2e per employee 14.95 1.96
+
+Note that the impact of the ‘purchased goods’ element relating to emissions in our supply chain in this year’s
+methodology, which was not required for the 2022 calculation, has led to a significant increase in the Tonnes of
+CO2e. If we compared on a like for like basis on 2022, the Tonnes of Co2e per employee would be 2.26 tonnes,
+an increase of 15.3%. This is due to the increased size of our operation, and an element of travel.
+
+Since 2021, the Bank has offset its carbon footprint by purchasing carbon credits.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 19
+Report of the Directors (continued)
+for the Year Ended 31 December 2023
+
+STATEMENT OF DIRECTORS’ RESPONSIBILITIES
+
+The directors are responsible for preparing the Strategic Report, the Report of the Directors and the financial
+statements in accordance with applicable law and regulations.
+
+Company law requires the directors to prepare financial statements for each financial year. Under that law the
+directors have elected to prepare the financial statements in accordance with United Kingdom Generally Accepted
+Accounting Practice (United Kingdom Accounting Standards and applicable law), including Financial Reporting
+Standard 102 'The Financial Reporting Standard applicable in the UK and Republic of Ireland’. Under company
+law the directors must not approve the financial statements unless they are satisfied that they give a true and fair
+view of the situation of the company and of the profit or loss of the company for that period. In preparing these
+financial statements, the directors are required to:
+
+— Select suitable accounting policies and then apply them consistently;
+
+~ Make judgements and accounting estimates that are reasonable and prudent;
+
+- State whether applicable accounting standards have been followed, subject to any material departures
+disclosed and explained in the financial statements; and ‘
+
+~ Prepare the financial statements on the going concern basis unless it is inappropriate to presume that
+the company will continue in business.
+
+The Directors are responsible for keeping adequate accounting records that are sufficient to show and explain the
+company's transactions and disclose with reasonable accuracy at any time the financial position of the company
+and enable them to ensure that the financial statements comply with the Companies Act 2006. They are also
+responsible for safeguarding the assets of the company and hence for taking reasonable steps for the prevention
+and detection of fraud and other irregularities.
+
+STATEMENT AS TO DISCLOSURE OF INFORMATION TO AUDITORS
+
+So far as the directors are aware, there is no relevant audit information (as defined by Section 418 of the
+Companies Act 2006) of which the company's auditors are unaware, and each director has taken all the steps that
+he or she ought to have taken as a director in order to make himself or herself aware of any relevant audit
+information and to establish that the company's auditors are aware of that information.
+
+AUDITORS
+The auditors, BDO LLP, will be proposed for re-appointment by the shareholders via a shareholder resolution.
+On behalf of the Board:
+
+rome Oocusigned by:
+
+Fiona Pollard
+
+Q2B5G1DO0AGFAD7...  ccccccnenecceneecereeees
+F Pollard - Director
+
+Date: 24 April 2024
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 20
+Report of the Independent Auditors to the Members of Monument Bank Limited
+for the Year Ended 31 December 2023
+
+Independent auditor’s report to the members of Monument Bank
+Limited
+
+Opinion on the financial statements
+In our opinion:
+
+e the financial statements give a true and fair view of the state of the Bank’s affairs as at 31 December
+2023 and its loss for the year then ended;
+
+e the financial statements have been properly prepared in accordance with UK adopted international
+accounting standards United Kingdom Generally Accepted Accounting Practice (UK GAAP); and
+
+e the financial statements have been prepared in accordance with the requirements of the Companies
+Act 2006.
+
+We have audited the financial statements of Monument Bank Limited (“the Bank”) for the year ended 31
+December 2023 which comprise the Statement of Total Comprehensive Income, the Statement of Financial
+Position, the Statement of Changes in Equity, the Statement of Cash Flows, and notes to the financial
+statements, including a summary of significant accounting policies. The financial reporting framework that has
+been applied in their preparation is applicable law and UK adopted international accounting standards, including
+Financial Reporting Standard 102 The Financial Reporting Standard applicable in the United Kingdom and
+Republic of Ireland (United Kingdom Generally Accepted Accounting Practice) and the Companies Act 2006.
+
+Basis for opinion
+
+We conducted our audit in accordance with International Standards on Auditing (UK) (ISAs
+
+(UK)) and applicable Jaw. Our responsibilities under those standards are further described in the
+
+Auditor’s responsibilities for the audit of the financial statements section of our report. We believe that the audit
+evidence we have obtained is sufficient and appropriate to provide a basis for our opinion. Our audit opinion is
+consistent with the additional report to the audit committee.
+
+Independence
+
+Following the recommendation of the audit committee, we were appointed by the Board of Directors on 4 January
+2021 to audit the financial staternents for the year ended 31 December 2020 and subsequent financial periods.
+The period of total uninterrupted engagement including retenders and reappointments is 4 years, covering the
+years ended 31 December 2020 to 31 December 2023. We remain independent of the Bank in accordance with
+the ethical requirements that are relevant to our audit of the financial statements in the UK, including the FRC’s
+Ethical Standard as applied to public interest entities, and we have fulfilled our other ethical responsibilities in
+accordance with these requirements. The non-audit services prohibited by that standard were not provided to
+the Bank.
+
+Material uncertainty relating to going concern
+
+We draw attention to Note 2.1 of the financial statements, which indicates that the Bank is dependent on further
+capital injections from its investors which is not guaranteed.
+
+As stated in Note 2.1 these events or conditions, along with other matters as set out in Note 2.1, indicate that a
+material uncertainty exists that may cast significant doubt on the Bank’s ability to continue as a going concern.
+Our opinion is not modified in respect of this matter.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 21
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued
+for the Year Ended 31 December 2023
+
+For the reasons set out above, we considered going concern to be a key audit matter.
+
+Our evaluation of the directors’ assessment of the Bank’s ability to continue to adopt the going concern basis
+of accounting and in response to the key audit matter included:
+
+e Obtaining the Directors’ board paper on their assessment of the going concern of the Bank, and
+challenging the Director’s assumptions and judgements with regards to the forecast for the period and
+beyond 12 months from the date of approval of the financial statements. This was done by assessing the
+reasonability of assumptions applied with reference to actual growth trends experienced by the Bank. In
+addition, with the assistance from our regulatory experts, we reviewed the Internal Capital Adequacy
+Assessment Procedure (ICAAP) report prepared by management;
+
+¢ Challenging the Directors’ board paper in light of our understanding of the Bank’s strategy and assessing
+the impact of various stress scenarios pertaining to the expected capital injection on capital and liquidity
+headroom;
+
+« Reviewing the Directors’ forecasted position against capital requirements to evaluate the reasonability of
+the Directors’ assessment of minimum capital injections required and the point at which they would be
+required;
+
+¢ Assessing the i management's forecasts for mathematical accuracy of the forecasts;
+
+Reviewing the capital raise and forecasts provided in prior period against the Bank's actual performance
+for the year to date to assess the reasonableness of the business pian;
+
+« Enquiring with the Directors’ and assessing the continued economic impact such as high inflation, cost of
+living crisis and increasing interest rates on the business, and whether the impact thereof has been
+adequately factored into their assessment of going concern.
+
+Assessing management's fundraising history as evidence of management's ability to execute fundraising;
+Reviewing the Bank's regulatory correspondence and discussing with the Prudential Regulatory Authority
+(PRA) prior to signing the audit report to understand their views of the Bank and ascertain whether there
+were any other matters that may impact the Bank’s ability to continue as a going concern;
+
+e Checking that the going concern disclosures were appropriate and consistent with the Directors’
+assessment, and the requirements of the applicable financial reporting standard.
+
+In auditing the financial statements, we have concluded that the directors’ use of the going concern basis of
+accounting in the preparation of the financial statements is appropriate.
+
+Our responsibilities and the responsibilities of the Directors with respect to going concern are described in the
+relevant sections of this report.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 22
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+for the Year Ended 31 December 2023
+
+Overview
+2023 2022
+Key audit matters Revenue recognition related to iS) v
+application of EIR
+Revenue recognition on Treasury v 8
+assets
+Going concern Vv v
+Loan loss provisioning Jv v
+Intangible asset recognition and , a v
+assessment for impairment
+Revenue recognition related to the application of the EIR |
+method is no longer considered to be a key audit matter
+because the risk associated with measurement uncertainty
+in the current financial year has been assessed as low as
+most of the new loans are in issue and the Bank only has a
+loan portfolio in its early phase. There is a reduced focus by
+management in building the loan book due to capital
+constraints.
+Materiality £536,000 (2022: £259,000) based on 1% (2022: 0.75%) of
+Net Assets.
+
+An overview of the scope of our audit
+
+Our an understanding of the Bank and its environment, including the Bank’s system of internal control,
+and assessing the risks of material misstatement in the financial statements. We also addressed the risk
+of management override of internal controls, including assessing whether there was evidence of bias by
+the Directors that may have represented a risk of material misstatement.
+
+Climate change
+Our work on the assessment of potential impacts of climate-related risks on the Bank’s operations and
+financial statements included:
+
+¢ Enquiries and challenge of management to understand the actions they have taken to identify
+climate-related risks and their potential impacts on the financial statements and adequately
+disclose climate-related risks within the annual report;
+
+« Our own qualitative risk assessment taking into consideration the sector in which the Bank
+operates and how climate change affects this particular sector; and
+
+e Review of the minutes of Board and Audit Committee meetings and any other relevant party and
+other papers related to climate change and performed a risk assessment as to how the impact of
+the Bank’s as set out in the other information of the annual report may affect the financial
+statements and our audit.
+
+We challenged the extent to which climate-related considerations, including the expected cash flows from
+the initiatives and commitments have been reflected, where appropriate, in the Directors’ going concern
+assessment and in management's judgements and estimates in relation to the loan loss provision.
+
+We also assessed the consistency of managements disclosures included as ‘Other Information’ on page
+17 with the financial statements and with our knowledge obtained from the audit. Based on our risk
+assessment procedures, we did not identify there to be any Key Audit Matters materially impacted by
+climate-related risks and related commitments.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 23
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+
+for the Year Ended 31 December 2023
+
+Key audit matters
+
+Key audit matters are those matters that, in our professional judgement, were of most significance in our audit
+of the financial statements of the current period and include the most significant assessed risks of materia!
+misstatement (whether or not due to fraud) that we identified, including those which had the greatest effect on:
+the overall audit strategy, the allocation of resources in the audit, and directing the efforts of the engagement
+team. These matters were addressed in the context of our audit of the financial statements as a whole, and in
+forming our opinion thereon, and we do not provide a separate opinion on these matters.
+
+In addition to the matter described in the Material uncertainty related to going concern section, we have
+determined the matters below to be the key audit matters to be communicated in our report.
+
+Key audit matter
+
+How the scope of our audit addressed
+the key audit matter
+
+Revenue
+recognition on
+Treasury assets
+
+Note 2.6
+(accounting policy:
+page 38) and note
+4.
+
+Income derived from Treasury Assets
+is recognised in the financial reporting
+system through a manual process
+and through manual journal entries.
+
+In addition, increased trading in
+treasury assets in the current financial
+year has led to a significant increase
+in the revenue recognised from
+treasury assets.
+
+Therefore, we identified a significant
+risk of material misstatement due to
+fraud in relation to revenue
+recognition on treasury assets and
+therefore considered it to be a Key
+audit matter.
+
+We assessed the design and
+implementation and operating effectiveness
+of the custody reconciliation controls
+implemented over treasury assets
+throughout the financial year.
+
+We agreed the year end balances of the
+treasury assets, to the confirmation from the
+bank's custodian which supports the
+occurrence of revenue received on treasury
+assets held.
+
+We assessed the inputs utilised in the
+interest income computation against data
+independently obtained from Bloomberg to
+check their accuracy and validity. These
+inputs include the interest payment date,
+notional amounts and sink factors related to
+the treasury assets.
+
+On a sample basis, we recalculated the
+interest income on the treasury assets. This
+includes the calculation of the interest
+received on treasury assets sold in the
+period.
+
+On a sample basis, we agreed the income
+received in cash on treasury assets settled
+during the year to the bank statement.
+
+Key observations:
+
+Based on the procedures performed we did
+not identify any matter to suggest that the
+revenue recognition on treasury assets was
+not appropriate.
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page 24
+
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+
+for the Year Ended 31 December 2023
+
+Loan loss
+provisioning
+
+Note 2.6
+
+(accounting policy:
+page 39) and note
+15. types of provisions.
+
+event.
+
+loans.
+
+recovering the asset.
+
+assumptions.
+
+to be a key audit matter.
+
+The Bank accounts for the impairment
+of loans and advances to customers
+using an incurred loss model. In
+accordance with the requirements of
+the applicable accounting standards,
+management has calculated two
+
+(i) A specific provision is
+calculated for loans where
+there is an observable loss
+
+(ii) A collective provision is
+recognised for loans which
+
+\ are impaired as at the year
+
+end date and, whilst not
+
+specifically identified as such,
+
+are known from experience to
+
+be present in any portfolio of
+
+Estimating an appropriate loan loss
+provision requires significant
+management judgement in
+determining the value and timing of
+future cash flows expected in
+
+Key inputs to the loan loss provision
+are subject to management
+judgement , and include the value of
+collateral recovered and probability of
+default rates applied. These
+assumptions are considered to be
+subject to measurement uncertainty
+given that management has limited
+loss data upon which to derive these
+
+For these reasons we considered this
+
+We obtained an understanding of
+management's criteria for the identification of
+underperforming loans which attract specific
+provisioning as defined in management's
+credit policy.
+
+We assessed that management's criteria for
+the identification of underperforming loans
+meet the criteria for the specific provision as
+per the requirements of applicable financial
+reporting standards.
+
+We tested the operating effectiveness of
+controls in the core-banking system over the
+reliability, completeness and accuracy of data
+inputs into the Bank’s credit risk model. These
+controls encompass various input and
+interface controls over the reliability of reports
+generated from the underlying system. With
+the assistance of our internal IT specialists,
+we have also tested the operating
+effectiveness of controls in the system which
+identify loans in arrears and the ageing of the
+arrears.
+
+We reviewed the minutes of Executive Credit
+and Risk Committee meetings where
+performance of facilities is discussed and
+highlighted to check that no facility has been
+omitted from management’s assessment.
+
+We evaluated the appropriateness of
+managements model including the
+methodology employed.
+
+We tested the reasonability of the key
+assumptions within this model such as
+probability of loss, and loss rates in the event
+of impairment by performing benchmarking
+and sensitivity analysis based on observable
+market data. We reperformed the credit risk
+bucketing for determination of relevant
+probability of loss & loss rates and
+reperformed calculations of the resultant
+impairment provision on a sample basis.
+
+We tested the completeness and accuracy of
+loan data which feeds into the model by
+selecting a sample of loans and agreeing
+them to underlying loan contracts.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 25
+
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+
+for the Year Ended 31 December 2023
+
+We assessed the mathematical accuracy of
+the model by reperforming the application of
+management's credit scoring criteria to check
+that this has been consistently and accurately
+applied. We also recalculated the resultant
+provision based on computed credit scoring
+and the assumptions applied to each loan.
+
+We challenged management on their rationale
+for assumptions adopted at varying levels of
+customer grade risks, and further at varying
+scenarios adopted in the credit risk model.
+The basis of our challenge was to determine
+an independent range of comparable
+assumptions at the levels of risks included in
+management’s methodology, these are used
+to evaluate the reasonability of those applied
+by management.
+
+We assessed the adequacy and
+appropriateness of disclosures for compliance
+with the applicable financial reporting
+standards.
+
+Key observations
+
+We have not identified any indicators that the
+provision for loans and advances to
+customers and the related disclosures is
+unreasonably estimated in consideration of
+the key assumptions and judgements made.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 26
+
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+for the Year Ended 31 December 2023
+
+Intangible Asset
+Recognition and
+impairment
+assessment
+
+Note 2.4
+(accounting
+policy: page 38)
+and note 19.
+
+The capitalisation of software
+development expenses in respect of
+internally generated software is
+recognised only if it is probable that
+the expected future economic benefits
+that are attributable to the asset will
+flow to the entity and the cost of the
+asset can be measured reliably.
+
+There is a risk that the software
+development expenses which include
+staff costs, are not capitalised in
+accordance with the accounting
+framework.
+
+Management are required to assess
+whether capitalised assets are
+impaired. There is a risk that the
+impairment assessment is incomplete,
+due to the judgement involved.
+
+Therefore, this was considered to be
+an area of audit focus.
+
+We tested a sample of software development
+expenses capitalised to supporting
+documentation. For the sample tested, we
+assessed whether the costs capitalised met
+the capitalisation requirements of the
+applicable financial reporting standard.
+
+We confirmed that the current amortisation
+rate used is both consistent with the prior year
+and appropriate, and that the remaining useful
+life is in line with the requirements of the
+applicable, financial reporting standard. We
+reperformed the amortisation expense
+calculation for the current year and compared
+to that recorded.
+
+For staff costs, we performed audit
+procedures to confirm the existence and
+accuracy of payroll costs for the relevant
+employees, who work solely on generating
+intangibles, through agreeing to payroll
+records, payment to bank statements and to
+signed employment contracts.
+
+For all development expenditure incurred, we
+considered the reasonableness of
+management's assessment of whether future
+economic benefits attributable to the
+capitalised software development costs will
+flow to the Bank, based on future business
+strategy and forecasts.
+
+We have independently assessed whether
+there are any indicators of impairment of the
+intangible assets, in giving consideration to
+the indicators per the relevant financial
+reporting standard and their applicability to the
+assets, in order to consider the reasonability
+of management's judgement.
+
+Key observations:
+
+Based on the work performed, we consider
+development costs to have been appropriately
+capitalised and management's judgements
+regarding the absence of impairment to be
+reasonable.
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page 27
+
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+
+for the Year Ended 31 December 2023
+
+Our application of materiality
+
+We apply the concept of materiality both in planning and performing our audit, and in evaluating the effect of
+misstatements. We consider materiality to be the magnitude by which misstatements, including omissions,
+
+could influence the economic decisions of reasonable users that are taken on the basis of the financial
+
+statements.
+
+In order to reduce to an appropriately low level the probability that any misstatements exceed materiality, we
+use a lower materiality level, performance materiality, to determine the extent of testing needed. Importantly,
+misstatements below these levels will not necessarily be evaluated as immaterial as we also take account of the
+nature of identified misstatements, and the particular circumstances of their occurrence, when evaluating their
+effect on the financial statements as a whole.
+
+Based on our professional judgement, we determined materiality for the financial statements as a whole and
+
+performance materiality as follows:
+
+Bank financial statements
+
+would be on a PBT measure, the
+Bank has only been fully trading for 2
+years and is not yet profit making.
+Therefore, NAV is considered to be
+more appropriate given the continued
+focus of stakeholders on capital
+raising in the current year.
+
+We have used the current year NAV
+as a base, and the percentage
+applied of 1% has based on the
+familiarity with the entity and its
+existing processes. This further
+aligns to our methodology for similar
+entities.
+
+2023 2022
+£m gm
+Materiality £536,000 £259,000
+Basis for determining 1% of Net Assets 0.75% of Net Assets
+materiality
+Rationale for the benchmark Whilst we would expect that as a Whilst we would expect that as a
+applied PIE, the focus of the Bank's users PIE, the focus of the Bank’s users
+
+would be on a PBT measure, the
+Bank has only been fully trading
+for a year and is not yet profit
+making. Therefore, NAV is
+considered to be more appropriate
+given the continued focus of
+stakeholders on capital raising in
+the current year.
+
+We have considered it appropriate
+to use a 3-year average in
+considering the volatility in the
+benchmark across the years given
+the different stages in lifecycle the
+bank has moved through.
+
+Performance materiality
+
+75% (£402,000)
+
+65% (£168,000)
+
+Basis for determining
+performance materiality
+
+This is based on a percentage of
+final materiality.
+
+This level was selected on the
+basis of our risk assessment in
+light of the expected total value of
+known and likely misstatements
+given this being the Bank’s first
+year of trading operations.
+
+Rationale for the percentage
+applied for performance
+materiality
+
+This level was selected based on our
+PM tisk factors tending to a lower
+risk, as a result of this being a
+second year audit and management
+attitude towards correcting
+misstatements being positive.
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page 28
+
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued
+for the Year Ended 31 December 2023
+
+Reporting threshold
+
+We agreed with the Audit Committee that we would report to them all individual audit differences in excess of
+£26,000 (2022: £5,000). We also agreed to report differences below this threshold that, in our view, warranted
+reporting on qualitative grounds.
+
+Other information
+
+The directors are responsible for the other information. The other information comprises the information included
+in the Strategic Report and the Report of the Directors other than the financial statements and our auditor’s report
+thereon. Our opinion on the financial statements does not cover the other information and, except to the extent
+otherwise explicitly stated in our report, we do not express any form of assurance conclusion thereon. Our
+responsibility is to read the other information and, in doing so, consider whether the other information is materially
+inconsistent with the financial statements or our knowledge obtained in the course of the audit, or otherwise
+appears to be materially misstated. If we identify such material inconsistencies or apparent material
+misstatements, we are required to determine whether this gives rise to a material misstatement in the financial
+statements themselves. If, based on the work we have performed, we conclude that there is a material
+misstatement of this other information, we are required to report that fact.
+
+We have nothing to report in this regard.
+Other Companies Act 2006 reporting
+
+Based on the responsibilities described below and our work performed during the course of the audit, we are
+required by the Companies Act 2006 and ISAs (UK) to report on certain opinions and matters as described below.
+
+Strategic report and | In our opinion, based on the work undertaken in the course of the audit:
+
+Directors’ report
+
+e the information given in the Strategic report and the Directors’ report for the
+financial year for which the financial statements are prepared is consistent with
+the financial statements; and
+
+e the Strategic report and the Directors’ report have been prepared in
+accordance with applicable legal requirements.
+
+In the light of the knowledge and understanding of the Bank and its environment
+obtained in the course of the audit, we have not identified material misstatements in the
+strategic report or the Directors’ report.
+
+Matters on which We have nothing to report in respect of the following matters in relation to which the
+
+we are required to Companies Act 2006 requires us to report to you if, in our opinion:
+
+report by exception
+
+¢ adequate accounting records have not been kept by the Bank, or returns
+
+adequate for our audit have not been received from branches not visited by us;
+
+or
+
+e the Bank financial statements are not in agreement with the accounting records
+and returns; or
+
+¢ certain disclosures of Directors’ remuneration specified by law are not made;
+or
+
+e we have not received ail the information and explanations we require for our
+audit.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 29
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued)
+for the Year Ended 31 December 2023
+
+Opinion on other matter prescribed by the Capital Requirements (Country-by-Country
+Reporting) Regulations 2013
+
+In our opinion the information given in note 22 for the financial year ended 31 December 2023 has been properly
+prepared, in all material respects, in accordance with the Capital Requirements (Country-by-Country Reporting)
+Regulations 2013.
+
+Responsibilities of Directors
+
+As explained more fully in the Statement of Directors’ Responsibilities on page 20 of the Financial Statements,
+the Directors are responsible for the preparation of the financial statements and for being satisfied that they give
+a true and fair view, and for such internal control as the Directors determine is necessary to enable the preparation
+of financial statements that are free from material misstatement, whether due to fraud or error.
+
+In preparing the financial statements, the Directors are responsible for assessing the Bank’s ability to continue as
+a going concern, disclosing, as applicable, matters related to going concern and using the going concern basis of
+accounting unless the Directors either intend to liquidate the Bank or to cease operations, or have no realistic
+alternative but to do so.
+
+Auditor’s responsibilities for the audit of the financial statements
+
+Our objectives are to obtain reasonable assurance about whether the financial statements as a whole are free
+from material misstatement, whether due to fraud or error, and to issue an auditor's report that includes our
+opinion. Reasonable assurance is a high level of assurance, but is not a guarantee that an audit conducted in
+accordance with ISAs (UK) will always detect a material misstatement when it exists. Misstatements can arise
+from fraud or error and are considered material if, individually or in the aggregate, they could reasonably be
+expected to influence the economic decisions of users taken on the basis of these financial statements.
+
+Extent to which the audit was capable of detecting irregularities, including fraud
+
+Irregularities, including fraud, are instances of non-compliance with laws and regulations. We design procedures
+in line with our responsibilities, outlined above, to detect material misstatements in respect of irregularities,
+including fraud. The extent to which our procedures are capable of detecting irregularities, including fraud is
+detailed below:
+
+We gained an understanding of the legai and regulatory framework applicable to the Bank and the industry in
+which it operates and considered the risk of acts by the Bank which would be contrary to applicable laws and
+regulations, including fraud. These included but were not limited to compliance with the Financial Conduct
+Authority (“FCA”) regulations, FCA Mortgage Advice and Selling Standards, the applicable accounting standards
+and tax legislation.
+
+We also communicated relevant identified laws and regulations and potential fraud risks to all engagement team
+members including and remained alert to any indications of fraud or non-compliance with laws and regulations
+throughout the audit.
+
+Fraud
+
+We assessed the susceptibility of the financial statements to material misstaternent, including fraud and
+considered the fraud risk areas to be management override of controls, the risk of fraud in revenue recognition
+and in relation to accounting estimates such as the clawback provision and intangible assets recognition and
+measurement.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 30
+Report of the Independent Auditors to the Members of Monument Bank Limited (continued
+for the Year Ended 31 December 2023
+
+Our procedures in response to the above included:
+
+‘e reviewing the financial statement disclosures and testing to supporting documentation to assess
+compliance with relevant laws and regulations discussed above;
+
+* enquiring of management and the audit committee of for any instances of non- compliance with laws and
+regulation and any known or suspected instances of fraud;
+
+e performing analytical procedures to identify any unusual or unexpected relationships that may indicate
+risks of material misstatement due to fraud;
+
+* reading minutes of meetings of those charged with governance and correspondence with the Financial
+Conduct Authority to check for any instances of non-compliance with applicable laws and regulations;
+
+¢ in addressing the risk of fraud through management override of controls, testing the appropriateness of
+journal entries and other adjustments on a sample basis to supporting documentation;
+
+« in respect of the risk of fraud in relation to revenue recognitions and in accounting estimates such as the
+clawback provision and intangible assets recognition and measurement, performing the procedures as
+set out in the Key Audit Matters section of our report; and
+
+* evaluating the business rationale of any significant transactions that are unusual or outside the normal
+course of business.
+
+Our audit procedures were designed to respond to risks of material misstatement in the financial statements,
+recognising that the risk of not detecting a material misstatement due to fraud is higher than the risk of not
+detecting one resulting from error, as fraud may involve deliberate concealment by, for example, forgery,
+misrepresentations or through collusion. There are inherent limitations in the audit procedures performed and the
+further removed non-compliance with laws and regulations is from the events and transactions reflected in the
+financial statements, the less likely we are to become aware of it.
+
+A further description of our responsibilities is available on the Financial Reporting Council's website at:
+www. frc.org.uk/auditorsresponsibilities. This description forms part of our auditor's report.
+
+Use of our report
+
+This report is made solely to the Parent Bank’s members, as a body, in accordance with Chapter 3 of Part 16 of
+the Companies Act 2006. Our audit work has been undertaken so that we might state to the Parent Bank's
+members those matters we are required to state to them in an auditor's report and for no other purpose. To the
+fullest extent permitted by law, we do not accept or assume responsibility to anyone other than the Parent Bank
+and the Parent Bank’s members as a body, for our audit work, for this report, or for the opinions we have formed.
+
+DocuSigned by:
+
+Stefan Buyers
+CET28DABA36C4AT...
+Stefan Beyers (Senior Statutory Auditor)
+For and on behalf of BDO LLP, Statutory Auditor
+
+London, UK
+
+24 April 2024
+
+BDO LLP is a limited liability partnership registered in England and Wales (with registered number OC305127).
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 31
+Statement of Total Comprehensive Income
+for the Year Ended 31 December 2023
+
+Interest receivable and similar income
+Interest payable and similar charges
+Net interest income/(expense)
+
+Net (losses)/gains from derivative financial instruments
+
+Other operating expense
+Total net income/(expense)
+
+Administrative expenses
+Impairment charge on loans and advances
+Operating loss before taxation
+
+Taxation
+Loss for the financial year
+
+Other comprehensive income
+
+Items that may be transferred to the income statement:
+
+Available-for-sale investments:
+Fair value movements taken to reserves
+Amount transferred to income statement
+Other comprehensive income for the year
+
+Total comprehensive loss for the year
+
+The above results are derived wholly from continuing activities.
+
+Notes
+
+10
+
+The notes on pages 36 to 63 form part of these financial statements.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 32
+
+2023 2022
+£ £
+20,705,218 2,128,074
+(17,400,509) (1,784,745)
+3,304,709 343,329
+(2,331,057) 3,464,937 |
+(48,262) -
+925,390 3,808,266
+(20,895,315) (18,474,978)
+(82,581) (101,980)
+(20,052,506) (14,768,692)
+692,902 2,059,137
+(19,359,604) (12,709,555)
+552,313 -
+22,919 -
+575,232 ”
+
+(18,784,372)
+
+(12,709,555)
+
+Monument Bank Limited (Registered number: 10921940)
+
+Statement of Financial Position 31 December 2023
+
+Notes
+Assets
+Cash and balances at central banks
+Loans and advances to credit institutions 12
+Treasury bills 13
+Debt securities 13
+Derivative financial instruments 14
+Loans and advances to customers 15
+Other assets 16
+Investment in subsidiary 17
+Tangible fixed assets 18
+Intangible fixed assets 19
+Total Assets
+Liabilities
+Customer Deposits 20
+Derivative financial instruments 14
+Other liabilities and accruals 21
+Total Liabilities
+Equity
+Called up share capital 22
+
+Share premium reserve
+Shares to be issued
+Available-for-sale reserve
+Accumulated losses
+Total Equity
+
+Total Liabilities and equity
+
+2023
+
+£
+354,658,442
+22,557,343
+130,101,590
+384,491,450
+2,422,691
+139,689,176
+2,520,971
+10
+
+163,698
+11,184,215
+
+1,047,789,586
+
+990,501,804
+2,177,611
+1,416,644
+
+994,096,059
+
+32,065
+87,458,748
+13,980,144
+
+575,232
+
+(48,352,662)
+53,693,527
+
+1,047,789,586
+
+The notes on pages 36 to 63 form part of these financial statements.
+
+2022
+
+£
+60,337,153
+5,336,605
+
+10,542,496
+3,648,550
+93,371,115
+1,102,443
+
+160,952
+10,560,587
+185,059,901
+
+147,657,857
+1,072,413
+1,673,075
+
+150,403,345
+
+27,256
+61,434,408
+2,796,000
+
+(29,601,108)
+34,656,556
+
+185,059,901
+
+The financial statements were approved by the Board of Directors and authorised for issue on 24 April 2024
+
+and were signed on its behalf by:
+
+DocuSigned by:
+Cc vw Evans 24-Apr-24
+
+OF 3S7FS4ADAAAED... ov eeeeseeseseeeesseeernseeeeeny
+| Evans - Director
+
+DocuSigned by:
+
+Fiona P ollay, 4 24-Apr-24
+
+Q2B561DOOAGFAD?... nce e cece eee cere cee e en eeene
+F Pollard - Director
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 33
+Statement of Changes in Equity
+for the Year Ended 31 December 2023
+
+Called Up Available-
+Capital reserve
+
+£ £ £ £ £ £
+Balance at 1 January 2022 25,730 58,982,976 724,816 : (17,610,249) 42,123,273
+Changes in Equity
+Loss for the year - - - - (12,709,555) (12,709,555)
+Employee share scheme charge - - - - 718,696 718,696
+Issue of share capital 1,526 2,451,432 (724,816) - - 1,728,142
+Shares to be issued - - 2,796,000. - - 2,796,000
+Balance at 31 December 2022 27,256 61,434,408 2,796,000 - (29,601,108) 34,656,556
+Changes in Equity
+Loss for the year - - - - (19,359,604) (19,359,604)
+Movement in available-for-sale reserve - ~ - §75,232 - §75,232
+Employee share scheme charge - - - - 608,050 608,050
+Issue of share capital 4,809 26,024,340 (2,796,000) - - 23,233,149
+Shares to be issued - - 13,980,144 ~ > 13,980,144
+Balance at 31 December 2023 32,065 87,458,748 13,980,144 575,232 (48,352,662) §3,693,527
+
+The notes on pages 36 to 63 form part of these financial statements
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 34
+Notes to the Financial Statements (continued)
+
+for the Year Ended 31 December 2023
+
+Cash flows from operating activities
+Loss for the financial year
+
+Adjustments for non-cash items:
+
+2023
+£
+
+(19,359,604)
+
+2022
+
+(12,709,555)
+
+Amortisation charges 2,793,918 2,175,212
+Depreciation charges 69,739 57,660
+Impairment charge on loans and advances to customers 82,581 101,980
+Employee share scheme charge 608,050 718,696
+Net changes in operating assets and liabilities
+Increase in loans and advances to customers (46,400,642) (92,714,010)
+Increase in customer deposits 842,843,947 145,564,821
+Increase in other assets (1,418,529) (112,616)
+Increase/(decrease) in other liabilities (256,431) 332,370
+Decrease/(increase) in derivative financial instruments 2,331,057 (2,576,137)
+Purchase of treasury bills (130,101,590) -
+Purchase of debt securities (373,373,722) (242,496)
+Net cash from/(used in) operating activities 277,818,774 40,595,925
+Cash flows from investing activities
+Expenditure on internally generated intangible assets (3,417,546) (3,256,064)
+Investment in subsidiary (10) -
+Purchase of tangible fixed assets (72,485) (78,582)
+Net cash used in investing activities (3,490,041) (3,334,646)
+Cash flows from financing activities
+Share issuance 23,233,150 1,728,142
+Cash inflows from shares to be issued 13,980,144 2,796,000
+Net cash from financing activities 37,213,294 4,524,142
+Increase/(decrease) in cash and cash equivalents 311,542,027 41,785,421
+Cash and cash equivalents at beginning of year 65,673,758 23,888,337
+Cash and cash equivalents at end of year 377,215,785 65,673,758
+Represented by:
+Cash and balances at central banks 354,658,442 60,337,153
+Loans and advances to credit institutions repayable on demand 22,557 343 5,336,605
+377,215,785 65,673,758
+
+Contained within cash flow movement is £20,705,218 (2022: £2,128,074) of interest received, £17,400,509
+(2022: £1,784,745) of interest paid and £692,902 (2022: £2,059, 137) of taxation received.
+
+The notes on pages 36 to 63 form part of these financial statements
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 35
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+1.
+
+Statutory information
+
+Monument Bank Limited is a private company, limited by shares, registered in England and Wales. The
+company's registered number and registered office address can be found on the Company Information
+page. The principal activity of the company is that of a Bank.
+
+2. Accounting policies
+2.1 Basis of preparing the financial statements
+
+These financial statements have been prepared in accordance with Financial Reporting Standard 102 "The
+Financial Reporting Standard applicable in the UK and Republic of Ireland" and the Companies Act 2006
+("FRS 102”) in conjunction with IAS 39 'Financial !nstruments: Recognition and Measurement (via the option
+in FRS 102 paras 11.2 (b) & 12.2 (b)).
+
+The presentation currency of these financial statements is sterling. All amounts in the annual accounts have
+been rounded to the nearest £. ;
+
+The financial statements have been prepared under the historical cost convention.
+
+The accounting policies set out below have, unless otherwise stated, been applied consistently to all periods
+presented in these annual accounts.
+
+Going Concern
+The financial statements have been prepared on the going concern basis.
+
+The Board has assessed the appropriateness of the going concern basis of accounting when preparing the
+financial statements in accordance with accounting standards and guidance from the Financial Reporting
+Council (‘FRC’). As part of that assessment, the Directors have considered whether there are any material
+uncertainties relating to events or conditions (other than those with a remote probability of occurring) that
+may cast significant doubt upon the continuing use of the going concern basis of accounting in the period
+12 months from the date of approval of the financial statements, and the associated requirements to disclose
+these.
+
+A material uncertainty is one relating to events or conditions that may cast significant doubt on the Bank’s
+ability to continue as a going concern and therefore may be unable to realise its assets and discharge its
+liabilities in the normal course of business. The assessment below analyses the uncertainties facing the
+Bank.
+
+In performing this assessment, the Directors have considered all available information about the future and
+performed forecasts considering realistically possible outcomes of events and changes in conditions, and
+the realistically possible responses to such events and conditions that would be available to the Directors.
+
+During their assessment of the Bank’s ability to continue as a going concern the Directors considered a
+broad range of information and scenarios, including the medium-term business plan, ability to raise capital,
+rising inflation and the potential impact on the wider global economy.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 36
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.1 Basis of preparing the financial statements (continued)
+
+Below we have detailed the material uncertainty which the Directors have considered to be present in the
+going concern assumption of the Bank.
+
+Regulatory Capital Requirements
+
+The Bank will require access to further capital in the period 12 months from the date of approval of the
+financial statements to fund its ongoing operations and to enact its growth plans whilst meeting its regulator
+capital requirements.
+
+If the Bank cannot obtain further capital either from its existing shareholders or from third parties, it would
+potentially need to cease trading.
+
+As well as assessing the Bank's capital requirements on a base case scenario, the Board has also
+considered the risks to the base case assessment.
+
+The Directors acknowledge the risks involved in placing reliance on the receipt of future equity and the
+future actions of the Bank should additional equity not be received, and these have also been evaluated by
+the Directors.
+
+However, an inherent risk of a new bank is that it may not be able to raise sufficient regulatory capital to
+meet its business plan and, at worst, to continue as an authorised institution.
+
+As a result, the Board has concluded that, although the Bank is likely to secure the commitment of further
+equity from both existing and new investors, there remains a material uncertainty regarding its ability to
+source further additional equity during and beyond the period 12 months from the date of approval of the
+financial statements.
+
+Specifically, future equity capital is not guaranteed, and the Bank is still at risk that the required capital may
+not be obtained from the wider market. Should future equity raises be unsuccessful the Directors will need
+to consider all necessary actions.
+
+However, the Directors remain confident that the Bank can raise the necessary capital and deliver the
+business plan. Therefore, the financial statements do not include any adjustments that would result if the
+company was unable to continue as a going concern.
+
+The preparation of accounts in conformity with FRS102 and IAS39 requires management to make
+judgements, estimates and assumptions that affect the application of accounting policies and reported
+amounts of assets and liabilities, income and expenses. These judgements, estimates and assumptions
+are discussed in note 3 and are based on historical experience and various other factors that are believed
+to be reasonable under the circumstances. Although these estimates are based on management's best
+knowledge of the amount, event or actions, actual results may differ from those estimates.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 37
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.2 Interest income and interest expense
+
+Interest income and expense are recognised in profit or loss using the effective interest rate method. The
+‘effective interest rate’ is the rate that exactly discounts the estimated future cash payments and receipts
+through the expected life of the financial asset or financial liability (or, where appropriate, a shorter period)
+to the carrying amount of the financial asset or financial liability. When calculating the effective interest rate,
+the Bank estimates future cash flows considering all contractual terms of the financial instrument, but not
+future credit losses.
+
+The calculation of the effective interest rate includes those transaction costs and fees paid or received,
+which are deemed to be an integral part of the effective interest rate. Transaction costs include incremental
+
+costs that are directly attributable to the acquisition or issue of a financial asset or financial liability.
+
+Interest income and expense also includes interest on derivatives measured at FVTPL using the contractual
+interest rate.
+
+2.3 Tangible fixed assets
+
+Tangible fixed assets are stated at historical cost less accumulated depreciation and any accumulated
+impairment losses. Historical cost includes expenditure that is directly attributable to the acquisition of
+the items.
+
+Depreciation is charged to the income statement on a straight-line basis over the estimated useful lives of
+each part of an item of plant and equipment at the following rates:
+
+~ Fixtures & Fittings 4 years;
+- Computer Equipment 4 years
+
+Depreciation methods, useful lives and residual values are reviewed at each reporting date. Tangible fixed
+assets are reviewed for impairment annually.
+
+2.4 Intangible fixed assets
+
+Intangible fixed assets are initially measured at cost. After initial recognition, intangible assets are measured
+at cost less any accumulated amortisation and any accumulated impairment losses.
+
+Amortisation is provided to write down the intangible assets, on a straight-line basis over their expected
+useful economic lives. It is provided at the following range:
+
+~ Software Development 4-7 years
+
+Amortisation methods, useful lives and residual values are reviewed at each reporting date. Intangible fixed
+assets are reviewed for impairment annually.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 38
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.5 Investments in subsidiaries
+
+Investments in subsidiaries are stated at cost less any provision for impairment.
+2.6 Financial Instruments
+
+Recognition
+
+The Bank initially recognises loans and advances, deposits, derivatives and debt securities on the date on
+which they are originated. A financial asset or financial liability is measured initially at fair value plus, for an
+item not at fair value through profit or loss, transaction costs that are directly attributable to its acquisition or
+issue.
+
+Classification
+
+Financial assets
+
+The Bank classifies its financial assets into one of the following categories:
+Loans and advances to customers
+
+Loans and advances to customers are non-derivative financial assets with fixed or determinable payments
+that are not quoted in an active market and that the Bank does not intend to sell immediately or in the near
+term.
+
+Loans and advances are initially measured at fair value plus incremental direct transaction costs, and
+subsequently measured at their amortised cost using the effective interest rate method. Direct transaction
+costs include brokerage and arrangement fees.
+
+Debt Securities - held to maturity
+
+‘Held-to-maturity’ assets are non-derivative financial assets with fixed or determinable payments and fixed
+maturities that the Bank positively intends, and is able, to hold to maturity. Held-to-maturity debt securities
+are initially recorded at fair value plus any directly attributable transaction costs, and are subsequently
+measured at amortised cost; less any impairment losses.
+
+Interest income is recognised at the effective interest rate over a debt security's expected life. Premiums
+and/or discounts arising on the purchase of dated debt securities are included in the interest recognised.
+
+Debt Securities - available-for-sale
+
+‘Available-for-sale’ assets are non-derivative financial assets with fixed or determinable payments and fixed
+maturities that the Bank intends to hold, but may sell, prior to maturity. Available-for-sale assets are
+measured at fair value based on quoted market prices.
+
+Unrealised gains and losses arising from changes in fair value are recognised directly in the Available—for—
+sale reserve. Gains and losses arising on the sale of Available-for-sale assets, including any cumulative
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 39
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.6 Financial Instruments (continued)
+
+gains or losses previously recognised in the Available-for-sale reserve, are recognised in the Income
+Statement.
+
+Interest income is recognised at the effective interest rate over a debt security's expected life. Premiums
+and/or discounts arising on the purchase of dated debt securities are included in the interest recognised.
+
+Derivatives
+
+Derivative financial instruments are recognised at fair value. The gain or loss on remeasurement to fair
+value is recognised immediately in profit or loss.
+
+Financial liabilities
+Customer deposits
+
+Customer deposits are initially measured at transaction value and are subsequently measured at amortised
+cost, including accrued interest, using the effective interest rate method.
+
+Trade creditors
+
+Trade creditors are initially measured at transaction price plus attributable transaction costs, and are
+subsequently measured at amortised cost, using the effective interest rate method.
+
+Measurement
+Amortised cost measurement
+
+The amortised cost of a financial asset or financial liability is the amount at which the financial asset or
+financial liability is measured at initial recognition, minus principal repayments, plus or minus the cumulative
+amortisation using the effective interest method of any difference between the initial amount recognised and
+the maturity amount, minus any reduction for impairment.
+
+Fair value measurement
+
+Fair value is the amount for which an asset could be exchanged, a liability settled, or an equity instrument
+granted could be exchanged, between knowledgeable, willing parties, in an arm's length transaction.
+
+When available, the Bank measures the fair value of an instrument using the quoted price in an active
+market for that instrument. A market is regarded as active if transactions for the asset or liability take place
+with sufficient frequency and volume to provide pricing information on an ongoing basis.
+
+If there is no quoted price in an active market, then the Bank uses valuation techniques that maximise the
+use of relevant observable inputs and minimise the use of unobservable inputs. The chosen valuation
+technique incorporates all the factors that market participants would take into account in pricing a
+transaction.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 40
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.6 Financial Instruments (continued)
+
+The best evidence of the fair value of a financial instrument at initial recognition is normally the transaction
+price - i.e. the fair value of the consideration given or received. If the Bank determines that the fair value at
+initial recognition differs from the transaction price and the fair value is evidenced neither by a quoted price —
+in an active market for an identical asset or liability or based on a valuation technique that uses only data
+from observable markets, then the financial instrument is initially measured at fair value, adjusted to defer
+
+the difference between the fair value at initial recognition and the transaction price. Subsequently, that
+difference is recognised in profit or loss on an appropriate basis over the life of the instrument, but no later
+than when the valuation is wholly supported by observable market data or the transaction is closed out.
+
+Identification and measurement of impairment
+
+At each reporting date, the Bank assesses whether there is objective evidence that financial assets not
+carried at fair value through profit or loss are impaired. A financial asset or a group of financial assets is
+‘impaired’ when objective evidence demonstrates that a loss event has occurred after the initial recognition
+of the asset(s) and that the loss event has an impact on the future cash flows of the asset(s) that can be
+estimated reliably.
+
+Objective evidence that financial assets are impaired includes:
+
+e significant financial difficulty of the borrower or issuer; or
+
+e = default or delinquency by a borrower; or
+
+e the restructuring of a loan or advance by the Bank on terms that the Bank would not consider
+otherwise; or
+
+e indications that a borrower or issuer will enter bankruptcy; or
+
+e the disappearance of an active market for a security; or
+
+e observable data relating to a group of assets, such as adverse changes in the payment status of
+borrowers or issuers in the group, or economic conditions that correlate with defaults in the group.
+
+The Bank considers evidence of impairment for loans and advances at both a specific asset and a collective
+level. All loans and advances are assessed for specific impairment. Those found not to be specifically
+impaired are then collectively assessed for any impairment that has been incurred but not yet identified.
+Impairment losses on assets measured at amortised cost are calculated as the difference between the
+carrying amount and the present value of estimated future cash flows discounted at the asset's original
+effective interest rate.
+
+2.7 Cash and cash equivalents
+
+Cash at central banks and loans and advances to credit institutions comprise cash on hand and demand
+deposits, and other short-term highly liquid investments that are readily convertible to a known amount of
+cash with an original maturity of less than 3 months. These are initially measured at fair value and
+subsequently recorded at amortised cost.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 41
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.8 Share capital and equity
+
+In accordance with FRS 102.22, financial instruments issued by the Bank are treated as equity only to the
+extent that they meet the following two conditions:
+
+e they include no contractual obligations upon the Bank to deliver cash or other financial assets or to
+exchange financial assets or liabilities with another party under conditions that are potentially
+unfavourable to the Bank; and
+
+e where the instrument will or may be settled in the Bank's own equity instruments, it is either a
+non-derivative that includes no obligation to deliver a variable number of the Bank's own equity
+instruments or is a derivative that will be settled by the Bank’s exchanging of a fixed amount of cash
+or other financial assets for a fixed number of its own equity instruments.
+
+To the extent that this definition is not met, the proceeds of issue are classified as a financial liability. Where
+the instrument so classified takes the legal form of the Bank's own shares, the amounts that are presented
+in these financial statements for called up share capital and share premium account exclude amounts in
+relation to those shares.
+
+2.9 Operating leases: the Bank as lessee
+
+Leases are classified as finance leases whenever the terms of the lease transfer substantially all the risks
+and rewards of ownership to the lessee. All other leases are classified as operating leases.
+
+Payments made under operating leases are recognised in profit and loss on a straight-line basis over the
+term of the lease. Lease incentives received are recognised in profit or loss over the term of the lease as
+an integral part of the total lease expense.
+
+2.10 Pensions
+The Bank operates a defined contribution plan for its employees. A defined contribution plan is a pension
+plan under which the Bank pays fixed contributions into a separate entity. Once the contributions have been
+
+paid the Bank has no further payment obligations.
+
+Amounts not paid are shown in accruals as a liability in the Statement of Financial Position. The assets of
+the plan are held separately from the Bank in independently administered funds.
+
+Contributions to defined contribution pension schemes are charged to profit and loss in the year to which
+they relate.
+
+All pension costs incurred relate to defined contribution expenses — see note 8.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 42
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+2.11 Tax
+
+Tax comprises current tax and deferred tax. Tax is recognised in profit or loss except to the extent that it
+relates to items recognised directly in equity or other comprehensive income.
+
+Current tax
+
+Current tax comprises the expected tax payable or receivable on the taxable income or loss for the year
+and any adjustment to the tax payable or receivable in respect of previous years. It is measured using tax
+rates enacted or substantively enacted at the reporting date.
+
+Deferred tax
+
+Deferred tax is provided in full using the liability method on temporary differences between the carrying
+amounts of assets and liabilities for financial reporting purposes and the amounts used for tax purposes.
+The amount of deferred tax provided is based on the expected manner of realisation or settlement of the
+carrying amount of assets and liabilities, using tax rates enacted or substantively enacted at the reporting
+date.
+
+A deferred tax asset is recognised in the statement of financial position for unused tax losses, unused tax
+credits and deductible temporary differences to the extent that it is probable that future taxable profits will
+be available against which they can be utilised. Deferred tax assets are reviewed at each reporting date
+and are reduced to the extent that it is no longer probable that the related tax benefit will be realised.
+
+2.12 Share Based Payments
+
+Monument Bank issues equity-settled share options to certain employees of the Bank. Equity-settled share
+option payments are measured at fair value at the date of grant. The fair value determined at the grant date
+is expensed on a straight-line basis over the vesting period, based on the Bank’s estimate of shares that
+will eventually vest and adjusted for the effect of non-market based vesting conditions. The grant date fair
+value of a share-based payment transaction is recognised as an employee expense, with a corresponding
+increase in equity over the period that the employees become unconditionally entitled to the awards. In the
+absence of market prices, the fair value of the equity at the date of the acquisition is assessed based on the
+value of the Bank adjusted for factors such as illiquidity, control and exit conditions, and the option price is
+derived from the Black Scholes pricing model.
+
+The expected life used in the model is based on management's best estimate, which considers non-
+transferability, exercise restrictions and behavioural factors. The volatility measure is also based on
+management's best estimate, as the shares are unlisted and there is no trading.
+
+The amount recognised as an expense in profit or loss is based on amortising the grant date fair value at a
+constant rate to the vesting date.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 43
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+3.
+
+Accounting estimates and judgements
+
+The preparation of financial statements in conformity with FRS 102 requires management, from time to time,
+to make judgements and estimates that affect the application of policies and reported amounts of assets,
+liabilities, income and expenses.
+
+These estimates are based on experience and various other factors that are believed to be reasonable
+under the circumstances. Actual results may differ from these estimates. The estimates and underlying
+assumptions are reviewed on an ongoing basis. Revisions to accounting estimates are recognised in the
+period in which the estimates are revised and in any future periods affected.
+
+Effective interest rate
+
+FRS 102 requires interest and fee income earned from loans and advances to be measured under the
+Effective Interest Rate (EIR) method. Management must therefore use judgement to estimate the expected
+life of each financial instrument and hence the expected cash flows relating to it.
+
+The key assumption applied by management in the EIR methodology is in relation to the behavioural life of
+the underlying loans and advances. The behavioural life assumption can be subject to changes in internal
+and external factors and may result in adjustments to the carrying value of the loans which must be
+recognised in profit or loss.
+
+Due to the immaturity of the lending portfolio, the Bank currently has no historical experience of customer
+redemption and reversion behaviour and therefore currently calculates EIR over the fixed period of its
+lending products.
+
+Impairment of financial assets
+
+The Bank has adopted FRS 102 in conjunction with IAS 39 ‘Financial Instruments: Recognition and
+Measurement’ (via the option in FRS 102 paras 11.2 (b) & 12.2(b)) and therefore assess the impairment of
+loans and advances to customers in accordance with |AS39’s incurred loss model. Therefore, the Banks
+assessment of impairment of financial assets consists of:
+
+« Individual assessments of impairment of all mortgage loans that are in arrears or where other
+objective evidence exists that all cash flows will not be received; and
+
+* Collective assessments of impairment of mortgage loans that are not subject to individual
+impairment provisions, where there is objective evidence that credit losses have been incurred but
+not identified at the reporting date.
+
+On an on-going basis the Bank assesses whether there is objective evidence that a financial asset or group
+of financial assets is impaired. Objective evidence of impairment may include observable data indicating
+that there has been an adverse change in the payment status of borrowers, or economic conditions that
+correlate with defaults on assets in the portfolio. Assumptions based on historical loss experience for assets
+with similar credit risk characteristics and external data are used to assess impairment. The methodology
+and assumptions used for estimating both the amount and timing of future cash flows are reviewed regularly
+to reduce any differences between loss estimates and actual loss experience.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 44
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+3.
+
+Accounting estimates and judgements (continued)
+Individual impairments
+
+The recoverable amount is typically dependent on the sale of the collateral. The amount recoverable is
+determined with reference to:
+
+« The property valuation haircut;
+« The time taken to realise the sale proceeds; and
+« The property legal and marketing costs.
+
+Collective impairment
+A quantitative collective impairment provision assessment is carried out across the loan portfolios based on
+risk graded probabilities of default and the level of exposures which exceed the discounted market value of
+
+the property security held. The measurement of the Bank’s provision for bad and doubtful debts involves
+management judgement.
+
+Valuation of Share based payments
+
+Estimating the fair value for share-based payment transactions requires determination of the most
+
+- appropriate valuation method, which depends on the terms and conditions of the award. This estimate also
+
+requires determination of the most appropriate inputs to the valuation model, including the expected life of
+the share option and volatility and making assumptions about them. The Bank uses a Black-Scholes option
+pricing model for the employee share scheme. The main assumptions are detailed in note 11.
+
+Valuation of intangible assets
+
+In determining the value of the intangible assets capitalised to the balance sheet the bank has made
+estimates with regards to the costs capitalised and the expected useful economic life of the underlying
+assets. The capitalised costs are based on the value of the relevant purchase invoices from external
+vendors, and an allocation of time from relevant salary costs.
+
+The bank has also made judgements as to whether there are any indicators of impairment. Factors taken
+into consideration during this process include considering the economic viability and expected future
+financial performance of the underlying assets.
+
+Deferred tax
+
+The Bank has performed an analysis of the recoverability of deferred tax assets. In doing so has considered
+the following:
+
+« The availability of sufficient taxable temporary differences:
+
+« The probability that the entity will have sufficient taxable profits in the foreseeable future, in the
+same period as the reversal of the deductible temporary difference, or in the periods into which a
+tax loss can be carried back or forward; and
+
+* The availability of tax planning opportunities that allow the recovery of deferred tax assets
+
+It is not considered appropriate to recognise a Deferred Tax Asset as at 31 December 2023.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 45
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+4. Interest receivable and similar income
+
+Interest on debt securities
+
+Interest on cash and balances with banks
+
+Interest on loans and advances
+
+Other interest income
+
+Net income/(expense) on financial instruments hedging assets
+
+All revenue was generated by operations within the UK.
+
+2023 2022
+
+£ £
+8,057,436 105,064
+6,329,466 635,548
+4,791,795 1,452,813
+143,881 26,525
+1,382,640 (91,876)
+20,705,218 2,128,074
+
+The total interest on financial assets not measured at fair value through profit and loss was £19,322,578.
+
+5. Interest payable and similar charges
+
+Interest on customer deposits
+Origination fees
+Other interest expense
+
+Net expense/(income) on financial instruments hedging liabilities
+
+2023 2022
+£ £
+15,998,719 1,911,149
+180,696 65,492
+138,620 22,612
+1,082,474 (214,508)
+17,400,509 1,784,745
+
+The total interest on financial liabilities not measured at fair value through profit and loss was £16,318,035.
+
+6. Net gains from derivative financial instruments
+
+Realised gains
+Unrealised (losses)/gains
+
+7. Operating loss
+
+The operating loss is stated after charging:
+
+Staff costs*
+
+Operating lease charges
+
+Audit fees payable to the Company’s auditor
+Depreciation
+Amortisation
+
+Impairment of loans and advances to customers
+
+“Total staff costs less amounts capitalised.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 46
+
+2023 2022
+£ £
+
+- 888,800
+(2,331,057) 2,576,137
+(2,331,057) 3,464,937
+2023 2022
+
+£ £
+10,559,849 9,075,013
+182,798 123,349
+250,000 142,600
+69,739 57,660
+2,793,918 2,175,212
+82,581 101,980
+13,938,885 11,675,814
+
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+8. Staff Costs
+
+2023 2022
+
+£ £
+
+Wages and salaries 10,006,043 8,071,960
+Social security costs , 1,244,548 1,082,010
+Pension costs 887,941 688 334
+Share based payments 608,050 718,696
+
+12,746,582
+
+Of the total staff costs, £2,186,733 (2022: £1,485,989) were capitalised (note 19).
+
+10,561,000
+
+Of the total pension costs incurred, £188,361 (2022: £133,440) formed part of the capitalised staff costs
+
+and £694,996 (2022: £554,893) were expensed to the profit and loss account.
+
+The average number of employees during the year was as follows:
+
+2023
+
+2022
+No. No.
+Non-Executive Directors 8 7
+Executive Committee 9 9
+Staff 68 59
+85 75
+Directors Remuneration:
+2023 2022
+£ £
+Wages and salaries 1,223,891 1,143,846
+Pension 34,333 59,750
+1,258,224 1,203,596
+During the year retirement benefits accrued to 2 Directors’ (2022: 2 Directors’) in respect of defined
+contribution pension schemes.
+Information regarding the highest paid director is as follows:
+2023 2022
+£ £
+Directors’ remuneration 495,333 350,000
+
+The value of the Bank’s contributions to a defined contribution pension scheme in respect of the highest
+paid Director amount to £3,208 (2022: £35,000).
+
+Monument believes that ‘key management personnel’ are the Board Directors, whose remuneration is
+disclosed above.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 47
+Notes to the Financial Statements (continued)
+
+for the Year Ended 31 December 2023
+
+9. Auditors’ remuneration
+2023 2022
+£ £
+Fees payable to the Company's auditors and their associates for the
+audit of the company's financial statements 250,000 142,600
+10. Taxation
+; 2023 2022
+Corporation tax £ £
+R&D tax credit receipts in respect of prior periods (692,902) (2,059,137)
+Total current tax (692,902) (2,059,137)
+
+Reconciliation of total tax charge included in profit and loss
+The tax assessed for the year is higher than the standard rate of corporation tax in the UK. The difference
+
+is explained below:
+
+Analysis of the tax charge
+
+2023 2022
+£ £
+Loss before tax (20,052,506) (14,768,692)
+Loss multiplied by the standard rate of corporation tax in the UK of
+23.52% (2022 - 19%) (4,716,459) (2,806,051)
+Effects of:
+Expenses not deductible for tax purposes 146,079 12,493
+Capital allowances in excess of depreciation and amortisation (9) 68,141
+Share based payments 120 (60,481)
+Unused tax loss 4,570,269 2,785,898
+R&D tax credit receipts in respect of prior periods (692,902) (2,059,137).
+Total tax receipt (692,902) (2,059,137)
+
+The Company has unused allowable losses carried forward. Deferred tax liabilities that arise have been
+offset with unrecognised Deferred tax assets largely related to tax losses. The total unused taxable losses
+carried forward are £49,256 ,968 (2022: £31,662,630).
+
+Factors that may affect future tax charges
+
+From 1 April 2023 the main rate of UK corporation tax rose to 25%
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 48
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+11. Share based payments
+Monument operates an equity-settled employee share option scheme.
+
+Weighted = Number Weighted Number
+
+average 2023 average 2022
+exercise exercise
+price price
+2023 2022
+£. # £ #
+Outstanding at the Beginning of the Year 1.38 137,614 0.37 172,706
+Granted during the Year 2.00 9,990 2.00 77,942
+Exercised during the Year - , - 0.21 (97,702)
+Forfeited during the Year 1.40 (28,899) 0.66 (15,332)
+Outstanding at the end of the Year 1.43 118,705 1.38 137,614
+Weighted average remaining: Vesting period Contractual life © Number of
+options
+Years Years #
+2021 CSOP 1.16 7.16 48,263
+2022 NTFSOP 2.14 8.14 62,452
+2023 NTFSOP 3.01 9.01 7,990
+
+The Black-Scholes option pricing model was used to value equity-settled share-based payment awards
+and it was considered that this approach would result in a materially accurate estimate of the fair value of
+the options granted. The following information was used in this valuation:
+
+2023 Tranche 2022 Tranche 2021 Tranche
+
+(NTFSOP) (NTFSOP) (CSOP)
+
+Option pricing Model Used Black-Scholes Black-Scholes Black-Scholes
+
+Weighted Average Exercise Price at Grant Date £2 £2 59p
+
+Weighted Average Vesting Period 4 Years 4 Years 4 Years
+
+Weighted Average Contractual Life 10 Years 10 Years 10 Years
+
+Expected Volatility 10% 10% 10%
+
+Risk free Interest Rate 5% 1.86% 0.06%
+The share-based remuneration expense comprises:
+
+2023 2022
+
+£ £
+
+Equity Settled Schemes 608,050 718,696
+
+Monument did not enter any share-based payment transactions with parties other than employees during
+2023 or 2022.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 49
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+12. Loans and advances to credit institutions
+
+2023 2022
+
+£ £
+
+Amounts repayable on demand 18,337,343 5,336,605
+Credit Support Annex (CSA) asset 4,220,000 -
+; 22,557 343 5,336,605
+
+The Bank’s derivative activity is entered into under an [International Swaps and Derivatives Association
+(ISDA) Master Agreement. A Credit Support Annex (CSA) has been executed in conjunction with the ISDA.
+Under a CSA, cash collateral is passed between counterparties to mitigate the market contingent
+counterparty risk inherent in the outstanding positions. As at 31 December 2023, £4,220,000 had been
+placed (2022: £550,000 received — shown in other liabilities and accruals note 21).
+
+Independent amounts of £4,350,000 (2022: £2,000,000) are maintained as security by the swap
+counterparties. The holders of the collateral cannot sell or repledge in absence of default.
+
+The table below presents an analysis of loans and advances to credit institutions by rating agency
+designation as at 31 December 2023, based on Moody's long term ratings.
+
+2023 2022
+£ £
+Al . 2,870,000 -
+A3 2,448,309 3,149,524
+Unrated 17,239,034 2,187,081
+22,557,343 §,336,605
+Unrated amounts represent funds held at Clearbank.
+13. Treasury assets
+2023 2022
+Quoted Investments £ £
+Available-for-sale:
+Treasury bills — ; 130,101,590 -
+Covered bonds 29,489,978 -
+Residential mortgage-backed securities 293,840,136 -
+Asset backed securities 35,403,983 -
+Amortised cost:
+Supranational bonds 20,413,909 -
+Gilts 5,343,444 10,542,496
+514,593,040 10,542,496
+
+The fair value of the Supranational bonds held at the balance sheet date was £20,481,929 (2022: Enil).
+
+The fair value of the Gilts held at the balance sheet date was £5,301 ,456 (2022: £10,366,149)
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 50
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+14.
+
+15.
+
+Derivative financia! instruments
+
+2023
+
+Interest rate swaps
+
+2022
+
+Interest rate swaps
+
+Loans and advances to customers
+
+Gross loans and advances
+
+Less: allowances for impairment on loans and advances
+
+Amounts Falling due:
+- Less than one year
+
+- More than one year but not more than five years
+
+Notional Fair Value Fair Value
+amount of assets of liabilities
+£ £ £
+510,500,000 2,422,691 2,177,611
+510,500,000 2,422,691 2,177,611
+Notional Fair Value Fair Value
+amount of assets of liabilities
+£ £ £
+162,500,000 3,648,550 1,072,413
+162,500,000 3,648,550 1,072,413
+2023 2022
+£ £
+139,876,401 93,475,759
+(187,225) (104,644)
+139,689,176 93,371,115
+2,411,300 230,992
+137,465,101 93,244,767
+139,876,401 93,475,759
+
+The above analysis is based on contractual maturity and may not reflect actual experience of repayments,
+
+since loans can be repaid early.
+Total impairment provisions:
+
+Individual impairments
+Collective impairments
+
+Individual impairment provision:
+
+Balance brought forward
+
+Increase recognised in the income statement
+Utilised during the year
+
+As at 31 December
+
+Collective impairment provision:
+
+Balance brought forward
+
+Increase recognised in the income statement
+Utilised during the year
+
+As at 31 December
+
+Impairment losses taken to the income statement:
+
+Individual impairments
+Collective impairments
+
+Monument Bank Limited. .
+Financial statements for the year ended 31 December 2023
+
+Page 51
+
+‘2023 2022
+
+£ £
+187,225 104,644
+187,225 104,644
+2023 2022
+
+£ £
+
+2023 2022
+
+£ £
+104,644 2,664
+82,581 101,980
+187,225 104,644
+2023 2022
+
+£ £
+187,225 101,980
+187,225 101,980
+
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+16. Other assets
+
+2023 2022
+
+£ £
+
+Prepayments and accrued income 1,034,055 992,443
+Other debtors 1,376,916 -
+Rental deposit 110,000 110,000
+2,520,971 1,102,443
+
+Other debtors pertain to unsettled cash amounts due from the Bank’s treasury asset custodian.
+
+17. Investment in subsidiary
+Investments
+in subsidiary
+companies
+Cost £
+At 1 January 2023 -
+Additions 10
+At 31 December 2023 10
+Net book value
+At 31 December 2023 10
+At 31 December 2022 -
+Subsidiary undertakings
+The following are subsidiary undertakings of the company:
+Name Class of shares Holding% Principal activity
+Monument Technology Limited Ordinary 100% Software development
+
+The aggregate vaiue of the share capital and reserves as at 31 December 2023 and of the profit or loss
+for the year ended on that date for the subsidiary undertaking was as follows:
+
+Aggregate of share
+capital and reserves Profit/(loss)
+
+31 December 2023 31 December 2023
+
+£ £
+
+Monument Technology Limited 10 oe
+10 -
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 52
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+18.
+
+19.
+
+Tangible fixed assets
+
+Cost
+
+At 1 January 2023
+Additions
+
+Disposals
+
+At 31 December 2023
+
+Depreciation
+
+At 1 January 2023
+Charge for year
+Disposals
+
+At 31 December 2023
+
+Net book value
+At 31 December 2023
+
+At 31 December 2022
+
+Intangible fixed assets
+
+Cost
+
+At 1 January 2023
+Additions
+
+At 31 December 2023
+
+Amortisation
+
+At 1 January 2023
+Charge for year
+
+At 31 December 2023
+
+Net book value
+At 31 December 2023
+
+At 31 December 2022
+
+Fixtures & Computer
+
+Fittings Equipment Total
+£ £ £
+48,498 216,243 264,741
+- 72,485 72,485
+(7,006) (10,993) (17,999)
+41,492 277,735 319,227
+21,275 82,514 103,789
+10,411 59,328 69,739
+(7,006) (10,993) (17,999)
+24,680 130,849 155,529
+16,812 146,886 163,698
+27,223 133,729 160,952
+Software
+Development
+£
+12,864,458
+3,417,546
+16,282,004
+2,303,871
+2,793,918
+
+___ 5,097,789
+11,184,215
+
+Individual material assets within Software Development:
+
+Front End User Interface - (IOS & Android)
+
+Banking Ecosystem
+
+10,560,587
+
+Weighted
+Average
+Remaining
+Amortisation
+Carrying amount period
+2023 2022 Years
+£ £
+4,718,509 4,729,852 2.6
+6,465,706 5,830,735 5.5
+
+During the year, £2,186,734 (2022: £1,485,989) of staff costs were capitalised (note 8).
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page 53
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+20. Customer Deposits
+
+2023 2022
+£ £
+Instant Access 241,381,214 115,939
+Notice Accounts 188,480,110 -
+Fixed Term deposits 560,640,480 147,541,918
+990,501,804 147,657,857
+
+Agreed maturity dates or period of notice by remaining maturity:
+2023 2022
+£ £
+Not more than three months 565,006,529 22,290,548
+More than three months but not more than one year 391,079,075 57,945,607
+More than one year but not more than five years 34,416,200 67,421,702
+990,501,804 147,657,857
+
+21. Other liabilities and accruals
+
+2023 2022
+£ £
+Trade creditors 667,392 312,046
+Other creditors 405,261 614,366
+Accruals 343,981 196,663
+Amounts due to group companies 10 -
+Credit Support Annex (CSA) liability - §50,000
+1,416,644 1,673,075
+
+22.
+
+The Bank’s derivative activity is entered into under an International Swaps and Derivatives Association
+(ISDA) Master Agreement. A Credit Support Annex (CSA) has been executed in conjunction with the ISDA.
+Under a CSA, cash collateral is passed between counterparties to mitigate the market contingent
+counterparty risk inherent in the outstanding positions. As at 31 December 2023, £4,220,000 had been
+placed — shown in note 12 (2022: £550,000 received).
+
+Independent amounts of £4,350,000 (2022: £2,000,000) are maintained as security by the swap
+counterparties. The holders of the collateral cannot sell or repledge in absence of default.
+
+Called up share capital
+
+Allotted, issued and fully paid:
+
+Number: Class Nominal Value . 2023 2022
+£ £
+3,206,545 Ordinary 0.01 32,065 27,256
+
+480,942 ordinary shares of 0.01 each were allotted and fully paid for cash during the year.
+
+Ordinary shares are non-redeemable and have attached to them full voting rights, dividend rights and
+capital distribution (including on winding up) rights.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 54
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23. Risk Management
+The main areas of risk that the business is exposed to are:
+
+Credit risk;
+
+Funding /Liquidity risk;
+
+Interest Rate Risk in the Banking Book (IRRBB);
+Operational risk; and
+
+Capital risk
+
+Credit Risk
+
+Credit risk is the risk of suffering financial ‘loss should borrowers or counterparties default on their
+contractual obligations to the Bank. The Bank currently only lends against fixed property up to a maximum
+loan to value (LTV) of 75%. All loans are manually underwritten, taking into consideration the specific
+circumstances of each borrower. Borrowers are required to have a minimum interest cover ratio of 125%.
+Credit risks are managed by the Credit Risk Committee and overseen by the Executive Risk & Compliance
+Committee.
+
+The Bank specialises in providing fending to experienced residential property investors. Loans are secured
+on properties solely located in the UK and concentration risks are monitored by the Credit Risk Committee.
+Credit exposures are diversified by sector geography.
+
+Lending by Geographical location value 2023 2022
+% %
+Greater London 75 69
+East of England 12 11
+South East 8 13
+West Midlands 2 3
+North West 2 3
+North East 1 1
+Total 100 100
+Lending by loan size (number of loans) 2023 2022
+% %
+0-£250k 11 6
+£251k-£500k 24 20
+£501k-£1,000k 21 17
+£1,001k-£2,000k 28 32
+£2,001k-£3,000k 6. 11
+£3,001k-£4,000k 5 6
+>£4,001k 5 8
+Total . 100 100
+Lending by LTV Ratio 2023 2022
+% %
+< 55% 16 20
+55-65% 42 25
+65-75% 42 55
+Total 100 ‘100
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 55
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23. Risk Management (continued)
+
+The Bank's maximum exposure to credit risk is the carrying value of its financial assets, without taking
+
+account of any underlying collateral, and contractual commitments, which represent agreements entered
+
+into but not advanced, as at 31 December 2023.
+
+Assets
+
+Deposits at central banks
+
+Deposits at other banks
+
+Loans and advances to customers
+Treasury bills
+
+Covered bonds
+
+Residential mortgage-backed securities
+Asset backed securities
+Supranational bonds
+
+Gilts
+
+Derivative financial instruments
+Credit Support Annex (CSA) asset
+Other debtors
+
+Rental deposit
+
+Accrued income
+
+Maximum exposure to credit risk
+
+As at 31 December 2023 the total collateral held against retail lending secured against residential property
+
+was estimated to be £234.3m (2022: £160.9m).
+
+Credit risk exists with treasury assets where the Bank has acquired securities or placed cash deposits with
+
+2023 2022
+
+£ £
+354,658,442 60,337,153
+18,337,343 5,336,605
+139,689,176 93,371,115
+130,101,590 -
+29,489,978 -
+293,840,136 -
+35,403,983 -
+20,413,909 -
+5,343,444 10,542,496
+2,422,691 3,648,550
+4,220,000 -
+1,376,916 -
+110,000 110,000
+67,532 97,953
+1,035,475,140 174,448,872
+
+other financial institutions. No assets are held for speculative purposes.
+
+The table below sets out the credit quality of the Bank's on-balance sheet treasury and lending assets:
+
+Assets by counterparty credit rating
+
+Residential mortgage-backed securities — Rated Aaa/AAA*
+
+Asset backed securities — Rated Aaa/AAA*
+Covered bonds — Rated Aaa/AAA*
+Supranational bonds — Rated Aaa/AAA*
+Deposits at central banks - Rated Aa3**
+
+UK treasury bills & gilts - Rated Aa3**
+Deposits at other banks - Rated A1**
+Derivative financial instruments - Rated A1**
+Deposits at other banks - Rated A3**
+Derivative financial instruments - Rated A3**
+Deposits at other banks - Unrated
+
+Loans and advances to customers - Unrated
+
+Unrated amounts represent funds held at Clearbank.
+
+*Ratings based on either Moody’s, S&P’s or Fitch’s credit ratings.
+
+**Ratings based on Moody's long-term credit rating.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 56
+
+2023 2022
+
+£ £
+293,840,136 -
+35,403,983 -
+29,489,978 -
+20,413,909 -
+354,658,442 60,337,153
+135,445,034 10,542,496
+2,870,000 3,149,524
+2,335,637 3,648,550
+2,448,309 -
+87,053 -
+17,239,035 2,187,081
+139,689,176 93,371,115
+173,253,919
+
+1,033,920,692
+
+Notes to the Financial Statements (continued)
+
+for the Year Ended 31 December 2023
+
+23. Risk Management (continued)
+
+Liquidity risk
+
+Liquidity risk is the risk that the Bank is unable to meet its current and future financial obligations as they
+fall due or is only able to do so at an excessive cost. The Bank's liquidity is managed by the Asset and
+Liability Committee, with oversight from the Executive Committee.
+
+The Bank has developed comprehensive funding and liquidity policies to ensure that it maintains sufficient
+liquid assets to be able to meet all of its financial obligations and maintain public confidence.
+
+Liquidity stress testing is conducted under a variety of scenarios, covering both normal and more severe
+
+market conditions.
+
+The Bank's European Banking Authority Liquidity Coverage Ratio io CER) at 31 December 2023 was 1,093%
+
+(2022: 10,128%).
+
+The table below analyses the Bank’s contractual undiscounted cash flows of its financial assets and
+
+liabilities:
+
+2023
+Assets
+
+Cash and balances at central banks
+Loans and advances to credit institutions
+
+Loans and advances to customers
+Treasury bills
+Covered bonds
+
+Residential mortgage-backed securities
+
+Asset backed securities
+Supranational bonds
+
+Gilts
+
+Derivative financial instruments
+Other debtors
+
+Rental deposit
+
+Accrued income
+
+Total Assets
+
+Liabilities
+
+Customer deposits
+
+Trade creditors
+
+Derivative financial instruments
+Other creditors
+
+Accruals
+
+Total Liabilities
+
+Net liquidity gap
+
+Monument Bank Limited
+
+Greater
+than 1 year
+but not Greater
+Carrying Less than 3 3 months to1 more than 5 than 5
+amount Months year years years
+£ £ £ £
+
+354,658,442 354,658,442 - - -
+22,557 343 22,557,343 - - -
+139,689,176 1,402,524 6,818,741 154,997,471 -
+130,101,590 46,000,000 86,000,000 - -
+29,489,978 418,855 1,256,565 30,020,551 5,585,670
+293,840,136 . 29,277,925 98,160,987 184,907,257 2,982,406
+35,403,983 536,678 6,926,591 31,525,294 -
+20,413,909 229,356 906,819 15,884,160 7,216,535
+§,343,444 §,003,125 4,312 352,625 -
+2,422,691 403,896 1,004,395 1,166,129 -
+1,376,916 1,376,916 - - -
+110,000 - - 110,000 -
+67,532 67,532 - - -
+1,035,475,140 461,932,592 201,075,410 418,963,484 15,784,611
+990,501,804 563,900,445 400,757,619 38,509,714 -
+667,392 667,392 - - -
+2,177,611 150,818 131,125 2,086,198 -
+177,776 177,776 - - -
+343,981 343,981 - - -
+993,868,564 565,240,412 400,888,744 40,595,912 "
+41,606,576 (103,307,820) (199,813,334) 378,367,572 15,784,611
+
+Financial statements for the year ended 31 December 2023
+
+Page 57
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23. Risk Management (continued)
+
+Greater
+than 1 year
+but not Greater
+Carrying Less than 3 3 months to more than 5 than 5
+
+2022 amount Months 1 year years years
+Assets £ £ £ £
+Cash and balances at central banks 60,337,153 60,337,153 ~ -
+Loans and advances to credit institutions 5,336,605 5,336,605 - -
+Loans and advances to customers 93,475,759 763,064 2,539,078 103,680,081
+Gilts 10,542,496 5,009,063 257,250 5,357,063
+Derivative financial instruments 3,648,550 164,168 458,076 1,797 696
+Rental deposit 110,000 - 110,000 -
+Accrued income 97,953 97,953 - -
+Total Assets 173,548,516 71,708,006 3,364,404 110,834,840
+Liabilities
+Customer deposits 147,657,857 22,378,312 59,147,483 71,528,208
+Trade creditors 312,046 312,046 - coe
+Derivative financial instruments 1,072,413 245,351 162,656 53,253
+Other creditors 376,616 376,616 - -
+Accruals 196,663 196,663 - -
+Credit Support Annex (CSA) liability §50,000 550,000 - -
+Total Liabilities 150,165,595 24,058,988 59,310,139 - 71,581,461
+Net liquidity gap 23,932,921 48,199,018 (55,945,735) 39,253,379
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 58
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23.
+
+Risk Management (continued)
+Interest rate and basis risk
+
+Interest rate risk is the risk of loss arising from adverse movements in interest rates that cause a mismatch
+between the rates banks set on client loans and on deposits. This risk is managed through the use of
+derivatives (interest rate swaps) and government gilts with established risk limits, reporting lines, mandates
+and other control procedures.
+
+Basis risk is the risk of loss arising from changes in the relationship between interest rates which have
+similar, but not identical characteristics (for example, SONIA and the Bank of England base rate). This is
+monitored closely and regularly reported to the Assets and Liabilities Committee. This risk is managed by
+matching, and where appropriate and necessary, with established risk limits and other control procedures.
+
+The Bank's forecasts and plans take account of the risk of interest rate changes and are prepared in line
+with PRA guidance.
+
+The interest rate sensitivity exposure of the Bank at 31 December 2023 was:
+
+More than 1 .
+More than 3 year but Non
+Within 3 but less than less than5 More than 5 interest
+2023 months 12 months years years bearing
+Assets £ £ £
+Cash and balances at central banks 354,658,442 -
+Loans and advances to credit institutions 21,459,034 - - - 1,098,309
+Loans and advances to customers - 2,411,300 137,465,101 - -
+Treasury bills 45,738,620 84,362,970 - - -
+Covered bonds - - 24,432,869 5,057,108 -
+Residential mortgage-backed securities 20,674,116 61,074,406 204,862,594 7,229,010 -
+Asset backed securities 950,966 - 34,453,017 - -
+Supranational bonds - - 43,206,508 7,558,606 -
+Gilts 4,998,888 - 344,556 - -
+Derivative financial instruments 22,483 243,221 ” 2,156,987 - -
+Other debtors - ~ - - 1,376,916
+Rental deposit - ~ - - 110,000
+Accrued income - “ - - 67,532
+Total Assets 448,502,549 148,091,897 416,921,632 19,844,724 2,652,757
+Liabilities
+Customer deposits 565,006,529 391,079,075 34,416,200 - -
+Trade creditors . - - - . 667,392
+Derivative financial instruments 107,313 336,157 1,734,140 - -
+Other creditors * - - - 177,776
+Accruals - - - - 343,981
+Total Liabilities §65,113,842 391,415,232 36,150,340 - 1,189,149
+
+Monument Bank Limited
+
+Financial statements for the year ended 31 December 2023
+
+Page 59
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23.
+
+Risk Management (continued)
+
+More than 1
+More than 3 year but Non
+Within 3 but less than less than 5 More than 5 interest
+
+2022 months 12 months years years bearing
+Assets £ £ £ £ £
+Cash and balances at central banks 60,337,153 - - - -
+Loans and advances to credit institutions - - - - §,336,605
+Loans and advances to customers - 230,992 93,244,768 - -
+Gilts 4,997,979 254,415 5,290,102 - -
+Derivative financial instruments - 17,247 3,631,303 - -
+Rental deposit - - - - 110,000
+Accrued income - - - - 97,953
+Total Assets 65,335,132 502,654 102,166,173 - 5,544,558
+Liabilities
+
+Customer deposits 22,290,548 57,945,608 67,421,702 - -
+Trade creditors - - - - 312,046
+Derivative financial instruments 111,436 159,365 801,613 - -
+Other creditors - - - - 376,616
+Accruals - - - - 196,663
+Credit Support Annex (CSA) liability 550,000 - - - -
+Total Liabilities 22,951,984 58,104,973 - 885,325
+
+There were no off-balance sheet items in 2023 or 2022.
+
+Operational risk
+
+68,223,315
+
+Operational risk is the risk of direct or indirect loss arising from a wide variety of causes associated with the
+Bank's processes, personnel, technology and infrastructure, and from external factors other than credit,
+market and liquidity risks, such as those arising from legal and regulatory requirements and generally
+accepted standards of corporate behaviour. Operational risk arises from all of the Bank's operations.
+
+The Bank's objective is to manage operational risk to balance the avoidance of financial losses and damage
+to the Bank's reputation with overall cost effectiveness and innovation. Bank policy requires compliance
+with all applicable legal and regulatory requirements.
+
+The Board of directors has delegated responsibility for operational risk to its Executive Risk & Compliance
+Committee, which is responsible for the development and management of controls to address operational
+risk.
+
+Compliance with standards is supported by a programme of periodic reviews undertaken by the Bank’s
+Internal Auditors.
+
+The results of Internal Audit reviews are discussed at the Audit Committee.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 60
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23.
+
+Risk Management (continued)
+Capital risk management
+
+The Bank's objective in managing its capital is to maintain appropriate levels of capital to support its
+business strategy and meet regulatory requirements, including holding capital for undrawn credit lines.
+
+The Bank's capital resources are comprised of a minimum of 75% CET1 and a maximum of 25% Tier 2
+regulatory capital (any Tier 2 in excess of 25% of total capital is considered ineligible for capital purposes).
+The total capital ratio sits at 22% (2022: 44%) and the Bank's regulatory capital requirements for CET1 and
+total capital are met. The Bank also holds capital for undrawn credit lines (pipeline).
+
+The Bank manages its capital under the Capital Requirements Regulation (CRR) and the Capital
+Requirements Directive (together referred to as CRDIV). The framework is enforced by the Prudential
+Regulatory Authority (PRA). The PRA sets and monitors the Bank's capital requirements.
+
+The PRA's approach to the measurement of capital adequacy is primarily based on monitoring the
+relationship of the capital resources requirement to available capital resources. The regulator sets the total
+capital requirement (TCR) for each bank in excess of the minimum resources requirement of 8%. A key
+input to the TCR setting process is the Bank's Internal Capital Adequacy Assessment Process (ICAAP),.
+
+The Bank's policy is to maintain a strong capital base to maintain investor and market confidence and to
+sustain the future development of the business.
+
+The Bank has elected to use the standardised approach for credit risk. Under CRDIV the Bank must set
+aside 8% of its total risk weighted assets to cover its ‘Pillar 1‘ capital requirements. The Bank must also set
+aside additional ‘Pillar 2' capital to provide for additional risks. This is calculated by multiplying the Pillar 1
+capital by the TCR ratio. The TCR ratio is based on the various risks which the Bank faces and is agreed
+by the PRA. The Bank's capital base was in excess of the minimum required under the TCR throughout
+the year.
+
+As at 31 December 2023, the Bank's capital base was made up of £28.0m of Tier 1 capital (2022: £21.3m).
+The Bank's regulatory capital consists of the following:
+
+Regulatory capital 2023 2022
+
+£ £
+Ordinary share capital and share premium 87,490,814 61,461,664
+AFS reserve less PruVal adjustment 81,796 -
+Accumulated losses (48,352,662) (29,601,108)
+Deductions: intangible assets (11,184,215) (10,560,587)
+Total Tier 1 capital — 28,035,733 21,299,969
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+
+Page 61
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+23. Risk Management (continued)
+Fair Value Hierarchy
+
+The level in the fair value hierarchy within which the financial asset or financial liability is categorised is
+determined on the basis of the lowest level input that is relevant to the fair value measurement. Financial
+assets and liabilities are classified in their entirety into only one of the three levels. The fair value hierarchy
+has the following levels:
+
+Level 1 - quoted prices (unadjusted) in active markets for identical assets or liabilities;
+Level 2 - inputs other than quoted prices included within Level 1 that are observable for the asset
+or liability, either directly (i.e. as prices) or indirectly (i.e. derived from prices); and
+
+e Level 3 - inputs for the asset or liability that are not based on observable market data (unobservable
+inputs).
+
+The objective of valuation techniques is to arrive at a fair value measurement that reflects the price that
+would be received to sell the asset or paid to transfer the liability in an orderly transaction between market
+participants at the measurement date.
+
+2023 Level 1 Level 2 Level 3
+Financial instruments measured at fair value £’m £’m £’m £’m
+Treasury bills 130.1 130.1 - -
+Covered bonds 29.5 29.5 - _
+Residential mortgage-backed securities 293.8 293.8 - -
+Asset backed securities 35.4 35.4 - -
+Derivative financial assets 2.42 - 2.42 -
+Derivative financial liabilities (2.18) - (2.18) -
+
+2022 Level 1 Level 2 Level 3
+Financial instruments measured at fair value £m £’m £’'m £’m
+Derivative financial assets 3.65 - 3.65 -
+Derivative financial liabilities (1.07) - (1.07) -
+
+24. Commitments under operating leases
+
+Minimum lease payments under non-cancellable operating leases fall due as follows:
+
+2023 2022
+
+£ £
+
+Within one year 183,000 19,389
+Between one and five years 392,000 -
+575,000 19,389
+
+During the year, £182,798 (2022: £123,348) was recognised as an expense in the statement of profit and
+loss in respect of operating leases.
+
+25. Post balance sheet events
+
+The shares to be issued held at the balance sheet date were allotted on 17 January 2024 as ordinary
+shares. The total number of ordinary shares issued was 245,265.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+, Page 62
+Notes to the Financial Statements (continued)
+for the Year Ended 31 December 2023
+
+26. Related party transactions
+
+Monument Technology Limited is a subsidiary of Monument Bank Limited.
+
+At the year end, Monument Bank Limited owed Monument Technology Limited £10 (2022: N/A).
+27. Ultimate controlling party |
+
+There is no ultimate controlling party.
+
+Monument Bank Limited
+Financial statements for the year ended 31 December 2023
+Page 63

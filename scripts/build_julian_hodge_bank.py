@@ -31,6 +31,46 @@ YEAR_LABEL = {y: y for y in YEARS}
 PILLAR3_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016",
                  "FY2015", "FY2014"]
 
+# HD-080 (2026-09-16): the FY2010-FY2013 Pillar 3 documents were located live (see PILLAR3_URL_NOTE), so the
+# FY2014 floor above is no longer a sourcing boundary for the CAPITAL metric sheets - it is now a REGIME
+# boundary. Those four editions are Basel II / BIPRU, so only the metric sheets carry them, via this third
+# year axis. Asset Quality and RWA Breakdown deliberately stay on PILLAR3_YEARS: neither has any pre-FY2014
+# content at all (no IFRS 9 staging existed, and no risk-weighted-asset figure is disclosed in any of the four
+# editions), so extending them would add nothing but four empty columns. Project precedent for exactly this
+# shape: build_aldermore.py's P3_DISCLOSURE_YEARS.
+P3_DISCLOSURE_YEARS = PILLAR3_YEARS + ["FY2013", "FY2012", "FY2011", "FY2010"]
+
+BASEL2_NOTE = (
+    "PRE-CRD IV (BASEL II) COLUMNS FY2013-FY2010 - READ BEFORE USING THEM. CRD IV took effect 1 January 2014. "
+    "The FY2013, FY2012, FY2011 and FY2010 Pillar 3 documents are Basel II / BIPRU disclosures and they do not "
+    "report the same things under the same names. What each of the four actually prints, in its section 4 "
+    "'Capital resources' table, is: Tier 1 capital (ordinary shares + profit and loss reserve), a deduction for "
+    "investments in subsidiaries, 'Total Tier 1 capital', a Tier 2 line (eligible general provisions, less a "
+    "revaluation reserve deduction in FY2013/FY2012/FY2011), and 'Total capital resources'. In its section 5.1 "
+    "it prints a 'Pillar 1 capital requirement' by exposure class.\n"
+    "WHAT IS DELIBERATELY NOT POPULATED, and why. (1) CET1: the concept did not exist before CRD IV and none of "
+    "the four documents uses the term - a Basel II 'Total Tier 1 capital' is NOT a CET1 figure and is not "
+    "placed on the CET1 sheet. (2) Tier 1 Capital: each edition's own Total Tier 1 capital is FY2013 113.7, "
+    "FY2012 111.1, FY2011 109.7, FY2010 108.1 - recorded here in prose only and NOT as a data column, which is "
+    "the treatment this script already applies to the FY2015/FY2014 Basel II Tier 1 figures, kept consistent "
+    "rather than changed for the newly-added years. (3) EVERY RATIO SHEET: no risk-weighted-asset amount "
+    "appears anywhere in any of the four documents (grep for 'risk weighted'/'risk-weighted' returns zero hits "
+    "in all four), so there is no denominator, and none of the four prints a capital ratio of any kind. "
+    "Grossing the Pillar 1 capital requirement up by 12.5 would manufacture an RWA no document states, and is "
+    "deliberately not done. (4) Leverage / LCR / NSFR: none of the three existed as a UK disclosure "
+    "requirement in these years. FY2013's document mentions a leverage ratio exactly once, as forward-looking "
+    "prose about CRD IV's forthcoming requirements ('enhanced reporting requirements include the introduction "
+    "of a leverage ratio, liquidity coverage...'), with no value; FY2012/FY2011/FY2010 do not mention it at "
+    "all. In particular these years belong on NEITHER row of the Leverage Ratio sheet's excluding-/"
+    "including-claims-on-central-banks pair - that is a 2022 UK framework distinction and reading it back onto "
+    "a Basel II year would be meaningless.\n"
+    "WHAT IS POPULATED: 'Total capital resources' only, on the Total Capital sheet - a figure each document "
+    "states directly as a total. This matches how FY2015 (122.4) and FY2014 (118.8) were already handled on "
+    "that sheet before this extension. The Pillar 1 capital requirement for the four new years is FY2013 35.3 "
+    "(credit risk 34.9 + operational risk 0.4), FY2012 36.8 (36.0 + 0.8), FY2011 38.9 (37.7 + 1.2), FY2010 "
+    "41.5 (40.2 + 1.3) - recorded in prose on the Total RWAs sheet, as CAPITAL, never converted to RWA."
+)
+
 AR2025_URL = "https://hodgebank.co.uk/wp-content/uploads/2026/02/Hodge-AR-28.01.26.pdf"
 AR2024_URL = "https://hodgebank.co.uk/wp-content/uploads/2025/02/Hodge-annual-report-21.02.25.pdf"
 AR2023_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/Annual-report-Jan-25.01.24.pdf"
@@ -40,25 +80,98 @@ P3_2023_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/Hodge-pillar-3
 P3_2022_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/Hodge-pillar-3-19.06.23.pdf"
 P3_2021_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/Hodge-Pillar-3-Document-2020_2021.pdf"
 
-# HD-049 (historical-depth extension, capped at FY2014): FY2014-FY2020 source documents. The bank's own site no
-# longer hosts these live; all retrieved from the Wayback Machine, which held a full historical archive at
-# /wp-content/uploads/2019/01/jhb-financial-statements-YYYY1031.pdf and jhb-pillar3-YYYY.pdf (as crawled
-# 2019-2022) plus the FY2018/FY2019/FY2020 originals at /wp-content/uploads/2020/02/ and /2021/02/. FY2018
-# annual report cross-checked against the Companies House filing history (company 00743437) - both copies agree.
+# HD-049 (historical-depth extension, capped at FY2014): FY2014-FY2020 source documents.
+#
+# ANNUAL REPORTS stay on Wayback. The jhb-financial-statements-YYYY1031.pdf series (FY2010-FY2017)
+# and 1.-JHB-Financial-Statements.pdf (FY2020) are genuinely gone from the live host - honest 404
+# everywhere tried. FY2018 annual report cross-checked against the Companies House filing history
+# (company 00743437) - both copies agree.
 AR2020_URL = "https://web.archive.org/web/20210517011507id_/https://hodgebank.co.uk/wp-content/uploads/2021/02/1.-JHB-Financial-Statements.pdf"
-P3_2020_URL = "https://web.archive.org/web/20220620025450id_/https://hodgebank.co.uk/wp-content/uploads/2021/02/2.-JHB-Pillar-III.pdf"
 AR2019_URL = "https://web.archive.org/web/20220620025335id_/https://hodgebank.co.uk/wp-content/uploads/2020/02/Julian-Hodge-Bank-Limited-Master-FINAL-EY-Signed-FY19.pdf"
-P3_2019_URL = "https://web.archive.org/web/20210517002419id_/https://hodgebank.co.uk/wp-content/uploads/2020/02/Pillar-3-Disclosure-FY19-FINAL.pdf"
 AR2018_URL = "https://web.archive.org/web/20210517014628id_/https://hodgebank.co.uk/wp-content/uploads/2020/02/FINAL-Julian-Hodge-Bank-Limited-FY18.pdf"
-P3_2018_URL = "https://web.archive.org/web/20210517004624id_/https://hodgebank.co.uk/wp-content/uploads/2019/04/jhb-pillar3-2018.pdf"
 AR2017_URL = "https://web.archive.org/web/20220620025318id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20171031-1.pdf"
-P3_2017_URL = "https://web.archive.org/web/20220620025310id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2017.pdf"
 AR2016_URL = "https://web.archive.org/web/20220620025318id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20161031-1.pdf"
-P3_2016_URL = "https://web.archive.org/web/20220620025406id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2016.pdf"
 AR2015_URL = "https://web.archive.org/web/20220620025258id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20151031.pdf"
-P3_2015_URL = "https://web.archive.org/web/20220620025429id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2015.pdf"
 AR2014_URL = "https://web.archive.org/web/20220620025529id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-financial-statements-20141031.pdf"
-P3_2014_URL = "https://web.archive.org/web/20220620025434id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2014.pdf"
+# AR2018/AR2019 ALSO exist live at /wp-content/uploads/2024/07/FINAL-Julian-Hodge-Bank-Limited-FY18.pdf
+# and /2024/07/Julian-Hodge-Bank-Limited-Master-FINAL-EY-Signed-FY19.pdf (both verified 2026-09-16:
+# application/pdf, %PDF, 86pp / 79pp). The Wayback captions above are intact and content-equivalent,
+# so they are deliberately left as the cited source; the live pair is recorded here as an alternate.
+
+# PILLAR 3 DOCUMENTS ARE LIVE AGAIN ON THE PUBLISHER'S SITE - repointed 2026-09-16 (see PILLAR3_URL_NOTE).
+# The whole historical series was re-uploaded on 2024-07-25 to /wp-content/uploads/2024/07/, where it
+# is live and genuine. Each Wayback capture is retained immediately below its live URL as a labelled
+# fallback - never delete these, they are the proven-good copies the figures were transcribed from.
+# (P3_2023_URL / P3_2022_URL / P3_2021_URL above were already live at this path and are unchanged.)
+P3_2020_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/2.-JHB-Pillar-III.pdf"
+P3_2019_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/Pillar-3-Disclosure-FY19-FINAL.pdf"
+P3_2018_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2018.pdf"
+P3_2017_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2017.pdf"
+P3_2016_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2016.pdf"
+P3_2015_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2015.pdf"
+P3_2014_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2014.pdf"
+# Pre-CRD IV Basel II editions, newly located 2026-09-16 (HD-080). Same live directory.
+P3_2013_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2013.pdf"
+P3_2012_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2012.pdf"
+P3_2011_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2011.pdf"
+P3_2010_URL = "https://hodgebank.co.uk/wp-content/uploads/2024/07/jhb-pillar3-2010.pdf"
+
+# Wayback fallbacks - the captures these figures were originally transcribed from. Each was
+# re-fetched 2026-09-16 and is byte-identical (md5) to the live file now cited above, which is what
+# makes the repointing safe: no figure on any sheet changes meaning.
+P3_2020_URL_ARCHIVE = "https://web.archive.org/web/20220620025450id_/https://hodgebank.co.uk/wp-content/uploads/2021/02/2.-JHB-Pillar-III.pdf"
+P3_2019_URL_ARCHIVE = "https://web.archive.org/web/20210517002419id_/https://hodgebank.co.uk/wp-content/uploads/2020/02/Pillar-3-Disclosure-FY19-FINAL.pdf"
+P3_2018_URL_ARCHIVE = "https://web.archive.org/web/20210517004624id_/https://hodgebank.co.uk/wp-content/uploads/2019/04/jhb-pillar3-2018.pdf"
+P3_2017_URL_ARCHIVE = "https://web.archive.org/web/20220620025310id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2017.pdf"
+P3_2016_URL_ARCHIVE = "https://web.archive.org/web/20220620025406id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2016.pdf"
+P3_2015_URL_ARCHIVE = "https://web.archive.org/web/20220620025429id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2015.pdf"
+P3_2014_URL_ARCHIVE = "https://web.archive.org/web/20220620025434id_/https://hodgebank.co.uk/wp-content/uploads/2019/01/jhb-pillar3-2014.pdf"
+
+PILLAR3_URL_NOTE = (
+    "PILLAR 3 URL STATUS, established 2026-09-16 (HD-080). This CORRECTS a note previously held here "
+    "which asserted that the historical Pillar 3 documents were NOT live on hodgebank.co.uk and that "
+    "the Wayback citations must not be repointed. That note tested only the OLD paths - "
+    "/wp-content/uploads/2019/01/, /2019/04/, /2020/02/ and /2021/02/ - and about those it was right: "
+    "they are dead. But it never tested /wp-content/uploads/2024/07/, and the entire historical series "
+    "was re-uploaded there on 2024-07-25. All 14 editions FY2010-FY2023 are live and genuine at that "
+    "path. The old note's conclusion was therefore wrong and has been removed.\n"
+    "HOW EACH FILE WAS VERIFIED (not by status code): HTTP status + Content-Type: application/pdf + "
+    "%PDF magic bytes + pdfinfo page count + the cover page read for its stated period. Two traps on "
+    "this host, both real:\n"
+    "  (1) www.hodgebank.co.uk 301-redirects to the apex domain. curl without -L returns 301 / 162 "
+    "bytes, which looks like a dead link and is almost certainly what produced the earlier report.\n"
+    "  (2) The SOFT-404 on this host is PER-FILENAME, not per-directory - do not generalise a "
+    "negative control across a directory. WordPress serves one 'Financial Information' landing page "
+    "(HTTP 200, text/html, 108,306 bytes, md5 c69229b0d911df8ea64ada86d57738a2) for certain KNOWN OLD "
+    "attachment slugs, while an unknown filename in that very same directory 404s honestly (146 "
+    "bytes). Measured 2026-09-16: /2020/02/FINAL-Julian-Hodge-Bank-Limited-FY18.pdf -> soft-404 but "
+    "/2020/02/zzz-nonexistent-control.pdf -> honest 404; /2021/02/2.-JHB-Pillar-III.pdf -> soft-404 "
+    "but /2021/02/zzz-control.pdf -> honest 404; /2019/01/jhb-pillar3-2014.pdf -> honest 404; "
+    "/2024/07/zzz-nonexistent-control.pdf -> honest 404. The decisive test is always the per-URL "
+    "Content-Type plus %PDF check, never HTTP 200 and never a control run on a different filename.\n"
+    "SAFETY OF THE REPOINTING: every live file was md5-compared against the Wayback capture the "
+    "figures were originally transcribed from, and all five checked pairs are byte-identical - "
+    "FY2018 addbb5d0301b1b2349dbd9b05d3b3dfc, FY2017 b76617584f830bf3f6dbb68720744fdd, FY2016 "
+    "0bd97d21c8ebd0972d5e96be8c6c1d9b, FY2015 c448471eea12e998bbfb104e3074d3cc, FY2014 "
+    "5318b684c1a1d4ef8e84d62a4ba055a4. The FY2019 (695,975 B) and FY2020 (2,416,601 B) live files "
+    "likewise match their captures exactly. No transcribed figure changes. Every superseded Wayback "
+    "URL is kept above as a *_URL_ARCHIVE fallback.\n"
+    "ENUMERATION: the back catalogue was enumerated three ways - filename permutation "
+    "jhb-pillar3-<year>.pdf across 2008-2023 (2008, 2009 and 2019-2023 honestly 404 under that name); "
+    "the WordPress REST media API, whose library was walked in full (66 items over 2 pages, complete) "
+    "and which is what surfaced the five irregularly-named editions that permutation can never find; "
+    "and a Wayback CDX sweep of hodgebank.co.uk and julianhodgebank.co.uk which was BLOCKED (HTTP "
+    "503/504, 'Internet Archive services are temporarily offline') and is therefore recorded as "
+    "unknown, not as an absence - worth re-running, though the media API is already a complete "
+    "listing of the WP library. Result: a continuous FY2010-FY2023 run of 14 editions, no FY2009, no "
+    "FY2024, no FY2025.\n"
+    "FILENAME NEVER EQUALS PERIOD ON THIS SITE. Hodge-pillar-3-19.06.23.pdf is a 2023 PUBLICATION "
+    "date on the FY2022 edition, and Hodge-pillar-3-11.03.24.pdf is a 2024 publication date on the "
+    "FY2023 edition. The cover page is the only trustworthy source of the period, and every period "
+    "recorded in this script was read off the cover. This matters doubly because the year-end MOVES "
+    "mid-series: 31 October through FY2019, 30 September from FY2021, with FY2020 an 11-month "
+    "transition period."
+)
 
 # HD-074 (2026-09-07): FY2010-FY2013 extension, down to this entity's real statutory floor (HD-004/HD-002).
 # Same Wayback archive as HD-049's FY2014-FY2020 batch, at the same /wp-content/uploads/2019/01/ path - all 3
@@ -126,12 +239,17 @@ EXEMPTION_NOTE = (
 CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE + "\n\n" + HD074_NOTE
 
 BASIS_NOTE = (
+    "DOCUMENT COVERAGE (re-established 2026-09-16, HD-080): this entity published a CONTINUOUS run of 14 "
+    "standalone Pillar 3 documents, FY2010 through FY2023, and all 14 are cited above and live on the "
+    "publisher's site. There is no FY2009 edition and no FY2024 or FY2025 edition. The run splits at the CRD IV "
+    "boundary: FY2010-FY2015 are Basel II / BIPRU (see the pre-CRD IV note - only Total capital resources is "
+    "transcribable from them), FY2016-FY2023 are CRD IV.\n"
     "FY2021-FY2023: full UK KM1-format 'Key Regulatory Metrics' table from each year's own standalone Pillar 3 "
-    "Disclosures document. FY2024-FY2025: no standalone Pillar 3 document was located on the bank's site (financial "
+    "Disclosures document. FY2024-FY2025: no standalone Pillar 3 document exists (the bank's financial "
     "information page lists a Pillar 3 disclosure link for FY2018-FY2023 only) - CET1/RWA/ratio figures instead "
     "come from each year's own Annual Report 'Capital risk management (unaudited)' note, which does not include "
-    "Leverage Ratio, LCR, or NSFR - those 3 metrics are genuinely unavailable for FY2024/FY2025 this session, not "
-    "assumed absent.\n"
+    "Leverage Ratio, LCR, or NSFR. For FY2025 those 3 metrics are NOT APPLICABLE (structurally exempt, see "
+    "below); for FY2024 they are an ordinary open gap - genuinely not located, not assumed absent.\n"
     "SDDT EXEMPTION - REASON FOR THE FY2025 CESSATION, established 2026-09-15 (cross-bank SDDT pass). Julian "
     "Hodge Bank is a Small Domestic Deposit Taker (SDDT) and is therefore not required to publish Pillar 3 "
     "disclosures, so the FY2025 absence is an EVIDENCED STRUCTURAL EXEMPTION and no FY2025 Pillar 3 document "
@@ -173,6 +291,19 @@ BASIS_NOTE = (
 )
 
 
+LEVERAGE_BASIS_SOURCES = (
+    "LEVERAGE-RATIO DUAL-BASIS SOURCES (both bases are printed by the Bank; neither is derived here):\n"
+    f"FY2023 and FY2022 comparative, Template UK LRCom 'Leverage Ratio common disclosure at 30 September', "
+    f"section 9 'Leverage Ratio' (rows 24, UK-24a, UK-24b, 25, UK-25c) - {P3_2023_URL}\n"
+    f"FY2022 and FY2021 comparative, Template UK LRCom, section 9 'Leverage Ratio' (same rows), and Table "
+    f"'3 Key Regulatory Metrics' rows 13/14 - {P3_2022_URL}\n"
+    f"FY2021 as originally reported ('Basel III Leverage Ratio' / 'Total Basel III Leverage Ratio exposure "
+    f"measure'), Summary of Key Regulatory Metrics - {P3_2021_URL}\n"
+    "All three PDFs were downloaded and verified before reading (%PDF magic bytes; pdfinfo page counts 39, 41 "
+    "and 58 respectively; none at the 1,048,576-byte Wayback truncation size), 2026-09-16."
+)
+
+
 def p3_sources(extra=""):
     return (
         "Sources - Julian Hodge Bank Limited:\n"
@@ -189,11 +320,28 @@ def p3_sources(extra=""):
         f"FY2016: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2016, Summary of Key Capital Ratios/Capital Resources, p.6/15 - {P3_2016_URL}\n"
         f"FY2015: Julian Hodge Bank Limited Pillar 3 Disclosures - Period ended 31 October 2015, Capital Resources, p.12-13 - {P3_2015_URL}\n"
         f"FY2014: Julian Hodge Bank Limited Pillar 3 Disclosures - period ended 31 October 2014, Capital Resources, p.12-13 - {P3_2014_URL}\n"
+        f"FY2013: Julian Hodge Bank Limited Pillar 3 disclosures - as at 31 October 2013 (Basel II), section 4 "
+        f"\"Capital resources\", PDF p.12 of 23, and section 5.1 \"Pillar 1 capital requirement\", PDF p.13 - {P3_2013_URL}\n"
+        f"FY2012: Julian Hodge Bank Limited Pillar 3 disclosures - as at 31 October 2012 (Basel II), section 4 "
+        f"\"Capital resources\", PDF p.11 of 21, and section 5.1 \"Pillar 1 capital requirement\", PDF p.12 - {P3_2012_URL}\n"
+        f"FY2011: Julian Hodge Bank Limited Pillar 3 disclosures - as at 31 October 2011 (Basel II), section 4 "
+        f"\"Capital resources\", PDF p.13 of 28, and section 5.1 \"Pillar 1 capital requirement\", PDF p.15 - {P3_2011_URL}\n"
+        f"FY2010: Julian Hodge Bank Limited Pillar 3 disclosures - as at 31 October 2010 (Basel II), section 4 "
+        f"\"Capital resources\", PDF p.13 of 27, and section 5.1 \"Pillar 1 capital requirement\", PDF p.15 - {P3_2010_URL}\n"
         f"FY2024: Julian Hodge Bank Limited Annual Report 2024, Note 32 'Capital risk management (unaudited)', "
         f"p.73 - {AR2024_URL}\n"
         f"FY2025: Julian Hodge Bank Limited Annual Report 2025, Note 34 'Capital risk management (unaudited)', "
         f"p.76 - {AR2025_URL}\n"
-        + (extra + "\n" if extra else "") + BASIS_NOTE
+        "Wayback fallbacks for the FY2020-FY2014 documents, retained and never to be deleted (each is "
+        "byte-identical to the live file now cited above):\n"
+        f"  FY2020 - {P3_2020_URL_ARCHIVE}\n"
+        f"  FY2019 - {P3_2019_URL_ARCHIVE}\n"
+        f"  FY2018 - {P3_2018_URL_ARCHIVE}\n"
+        f"  FY2017 - {P3_2017_URL_ARCHIVE}\n"
+        f"  FY2016 - {P3_2016_URL_ARCHIVE}\n"
+        f"  FY2015 - {P3_2015_URL_ARCHIVE}\n"
+        f"  FY2014 - {P3_2014_URL_ARCHIVE}\n"
+        + (extra + "\n" if extra else "") + BASIS_NOTE + "\n" + BASEL2_NOTE + "\n" + PILLAR3_URL_NOTE
     )
 
 
@@ -552,8 +700,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=170, years=PILLAR3_YEARS)
+def metric(name, unit, rows_data, sources_text, note=None, first_col_width=52, source_height=170):
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=first_col_width,
+                        source_height=source_height, years=P3_DISCLOSURE_YEARS)
 
 
 metric(
@@ -562,16 +711,25 @@ metric(
     p3_sources(),
     note="FY2021's own report (P3 2021) shows CET1 = 143.8; the following year's Pillar 3 document (P3 2022) "
          "restates the FY2021 comparative to 144 (rounding to whole £m from that document's own precision) - "
-         "each year's own originally-published figure is used per this project's convention. FY2014/FY2015 not "
-         "shown: this bank's own Pillar 3 documents for those two years pre-date the CET1 concept (still reporting "
+         "each year's own originally-published figure is used per this project's convention. FY2015-FY2010 not "
+         "shown: this bank's own Pillar 3 documents for those six years pre-date the CET1 concept (still reporting "
          "under Basel II Pillar 1 - 'Tier 1 capital' and 'Total capital resources' only, no CRD IV capital tiers). "
-         "See the Total Capital sheet for the FY2014/FY2015 Basel II 'Total capital resources' figures instead.",
+         "A Basel II 'Total Tier 1 capital' is not a CET1 figure and is deliberately not placed here. See the "
+         "Total Capital sheet for those years' Basel II 'Total capital resources' figures instead, and this "
+         "sheet's sources for the full pre-CRD IV note. The FY2013-FY2010 columns are blank BY DESIGN and "
+         "well-sourced, not unresearched: all four documents were located live, read in full and are cited.",
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
     [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"})],
     p3_sources(),
+    note="FY2015-FY2010 are blank by design, not unresearched. All six years' Pillar 3 documents were located, "
+         "read in full and are cited in this sheet's sources. They are Basel II: none defines CET1, none "
+         "discloses a risk-weighted-asset amount to serve as a denominator, and none prints a capital ratio of "
+         "any kind. There is therefore no ratio to transcribe, and one is deliberately not derived by grossing "
+         "the disclosed Pillar 1 capital requirement up by 12.5. See the Total RWAs sheet note and the pre-CRD "
+         "IV note in this sheet's sources.",
 )
 
 metric(
@@ -581,36 +739,54 @@ metric(
     note="Tier 1 = CET1 every year (no AT1 instruments in issue - 'Hold all its capital in the form of Common "
          "Equity Tier 1 and Tier 2 capital', and Tier 2 = nil every year per the Pillar 3 documents). FY2024/FY2025 "
          "not separately labelled 'Tier 1' in the Annual Report's brief capital note but equal to CET1 by the same "
-         "pattern confirmed directly in FY2021-FY2023. FY2014/FY2015: pre-CRD IV Basel II regime - see CET1 Capital "
-         "sheet note; for those two years 'Total Tier 1 capital' as reported was GBP117.1m (FY2014) and GBP118.6m "
-         "(FY2015), which differs from the 'Total capital resources' shown on the Total Capital sheet because those "
-         "two years DID hold a small amount of Tier 2 (general provisions less revaluation reserve deduction) - "
-         "shown here only for completeness, not populated as a data column to avoid conflating Basel II Tier 1 with "
-         "CRD IV Tier 1.",
+         "pattern confirmed directly in FY2021-FY2023. FY2015-FY2010: pre-CRD IV Basel II regime - see CET1 Capital "
+         "sheet note; for those six years 'Total Tier 1 capital' as reported was GBP118.6m (FY2015), GBP117.1m "
+         "(FY2014), GBP113.7m (FY2013), GBP111.1m (FY2012), GBP109.7m (FY2011) and GBP108.1m (FY2010), each after "
+         "that edition's deduction for investments in subsidiaries (GBP16.0m throughout). Each differs from the "
+         "'Total capital resources' shown on the Total Capital sheet because every one of those years DID hold a "
+         "small amount of Tier 2 (general provisions, less a revaluation reserve deduction in FY2013/FY2012/FY2011) "
+         "- shown here only for completeness, not populated as a data column to avoid conflating Basel II Tier 1 "
+         "with CRD IV Tier 1. The FY2013-FY2010 figures were added 2026-09-16 (HD-080) on exactly the same "
+         "prose-only footing the FY2015/FY2014 pair already had, deliberately keeping one consistent treatment "
+         "across the whole Basel II run rather than promoting the new years to a data column.",
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"})],
     p3_sources(),
-    note="Equal to CET1 ratio every year - see Tier 1 Capital sheet note.",
+    note="Equal to CET1 ratio every year - see Tier 1 Capital sheet note. FY2015-FY2010 blank by design: no RWA "
+         "denominator and no capital ratio is published in any of those six Basel II editions, and none is "
+         "derived - see the CET1 Ratio and Total RWAs sheet notes.",
 )
 
 metric(
     "Total Capital", "£m",
-    [("Total capital", {"FY2025": 162.8, "FY2024": 166.2, "FY2023": 172.9, "FY2022": 177, "FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0, "FY2017": 149.5, "FY2016": 129.3, "FY2015": 122.4, "FY2014": 118.8})],
+    [("Total capital", {"FY2025": 162.8, "FY2024": 166.2, "FY2023": 172.9, "FY2022": 177, "FY2021": 143.8, "FY2020": 136.4, "FY2019": 156.6, "FY2018": 168.0, "FY2017": 149.5, "FY2016": 129.3, "FY2015": 122.4, "FY2014": 118.8,
+       "FY2013": 114.3, "FY2012": 114.1, "FY2011": 114.8, "FY2010": 114.7})],
     p3_sources(),
-    note="Equal to CET1/Tier 1 FY2016-FY2025 - the Bank holds no Tier 2 capital in those years. FY2014/FY2015: "
-         "these figures are Basel II Pillar 1 'Total capital resources' (Tier 1 + a small Tier 2 add-back for "
-         "eligible general provisions, net of a revaluation reserve deduction) - not directly comparable to the "
-         "CRD IV 'Total capital' figures shown FY2016 onward, though presented on the same row per this project's "
-         "convention of showing each year's own headline total-capital figure.",
+    note="Equal to CET1/Tier 1 FY2016-FY2025 - the Bank holds no Tier 2 capital in those years. FY2015-FY2010: "
+         "these figures are Basel II 'Total capital resources' (Tier 1 after the deduction for investments in "
+         "subsidiaries, plus a small Tier 2 add-back for eligible general provisions, net of a revaluation "
+         "reserve deduction in FY2013/FY2012/FY2011) - each is a total the source document states directly, none "
+         "is summed or derived here. They are NOT directly comparable to the CRD IV 'Total capital' figures "
+         "shown FY2016 onward, though presented on the same row per this project's convention of showing each "
+         "year's own headline total-capital figure. FY2013-FY2010 added 2026-09-16 (HD-080) from the four "
+         "newly-located Basel II editions; FY2015/FY2014 were already on this basis before that, so the four new "
+         "years extend an existing Basel II run rather than introducing a new mixed basis. This is the ONLY "
+         "metric sheet those four years populate - see the pre-CRD IV note in this sheet's sources for why every "
+         "other sheet is deliberately blank for them.",
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
     [("Total capital ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.2%", "FY2016": "19.2%"})],
     p3_sources(),
+    note="FY2015-FY2010 blank by design even though the NUMERATOR is known for all six years (the Total Capital "
+         "sheet carries each year's disclosed 'Total capital resources'). The Basel II editions publish no "
+         "risk-weighted-asset amount at all, so there is no denominator, and computing one from the Pillar 1 "
+         "capital requirement would be back-solving a figure no document states. See the CET1 Ratio and Total "
+         "RWAs sheet notes.",
 )
 
 metric(
@@ -619,10 +795,18 @@ metric(
     p3_sources(),
     note="FY2021's own report (P3 2021) shows RWA = 711.0; the FY2022 Pillar 3 document's FY2021 comparative "
          "restates this to 711 (rounding only, immaterial) - each year's own originally-published figure is used. "
-         "FY2014/FY2015 not available: those years' Pillar 3 documents pre-date CRD IV Pillar 3 RWA disclosure for "
-         "this bank - only a Basel II 'Pillar 1 capital requirement' figure is given (FY2014: GBP36.3m; FY2015: "
-         "GBP42.6m), not a risk-weighted-assets figure, so no RWA is shown for those two years rather than backing "
-         "one out via an assumed 8% minimum ratio (which the source document itself does not state).",
+         "FY2015-FY2010 not available, and this is the most important gap to understand in the historical "
+         "columns: those years' Pillar 3 documents pre-date CRD IV Pillar 3 RWA disclosure for this bank. A "
+         "search for 'risk weighted'/'risk-weighted' returns ZERO hits in the FY2013, FY2012, FY2011 and FY2010 "
+         "documents - no risk-weighted-asset amount is printed anywhere in any of them, and no capital ratio is "
+         "either. What each gives instead is a Basel II 'Pillar 1 capital requirement', which is CAPITAL, not "
+         "RWA: FY2015 GBP42.6m, FY2014 GBP36.3m, FY2013 GBP35.3m (credit risk 34.9 + operational risk 0.4), "
+         "FY2012 GBP36.8m (36.0 + 0.8), FY2011 GBP38.9m (37.7 + 1.2), FY2010 GBP41.5m (40.2 + 1.3). No RWA is "
+         "shown for any of these years rather than backing one out by grossing those figures up via an assumed "
+         "8% minimum ratio - a multiplication none of the source documents itself states or invites. Note the "
+         "contrast with the FY2016 entry on the RWA Breakdown sheet, where a x12.5 derivation WAS made and is "
+         "labelled as derived; that year is CRD IV and its document states the ratio the derivation reproduces, "
+         "which is what makes it checkable. Nothing equivalent exists pre-FY2014, so nothing is derived there.",
 )
 
 # ---------------------------------------------------------------
@@ -704,7 +888,14 @@ bw.add_rwa_breakdown_sheet(
         "disclosures pages returned HTTP 403 (bot-blocked) on direct fetch, so this remains an access-limited "
         "re-confirmation, not a from-scratch guarantee no such document exists.\n"
         "FY2015/FY2014: no RWA figure of any kind is disclosed for these two years (pre-CRD IV regime) - see the "
-        "Total RWAs sheet note."
+        "Total RWAs sheet note.\n"
+        "FY2013-FY2010 ARE DELIBERATELY NOT COLUMNS ON THIS SHEET, even though all four of those years' Pillar 3 "
+        "documents were located live and read in full in 2026-09-16's HD-080 pass. This sheet (and the Asset "
+        "Quality sheet) stay pinned to the FY2014 window while the 11 capital metric sheets extend back to "
+        "FY2010, because there is literally nothing pre-FY2014 to put here: none of the four Basel II editions "
+        "discloses a risk-weighted-asset amount at all, in total or by risk type. Adding the columns would add "
+        "four entirely empty ones. The four editions' Pillar 1 CAPITAL requirements are recorded instead on the "
+        "Total RWAs sheet's note, as capital, deliberately never multiplied by 12.5 into an RWA no document states."
     ),
     first_col_width=90,
     source_height=460,
@@ -715,18 +906,52 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
-        ("Total Basel III/leverage ratio exposure measure (£m)", {"FY2023": 1649.9, "FY2022": 1624, "FY2021": 1732.2, "FY2020": 1423.5, "FY2019": 1393.2, "FY2018": 1412.2, "FY2017": 1309.5, "FY2016": 1359.3}),
-        ("Leverage Ratio (%)", {"FY2023": "10.5%", "FY2022": "10.9%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
+        ("Total exposure measure EXCLUDING claims on central banks (£m) (UK LRCom row UK-24b / UK KM1 row 13; "
+         "the FY2022-onward basis)",
+         {"FY2023": 1649.9, "FY2022": 1624, "FY2021": 1320}),
+        ("Leverage ratio EXCLUDING claims on central banks (%) (UK LRCom row 25 / UK KM1 row 14; "
+         "the FY2022-onward basis)",
+         {"FY2023": "10.5%", "FY2022": "10.9%", "FY2021": "10.9%"}),
+        ("Total exposure measure INCLUDING claims on central banks (£m) (UK LRCom row 24 for FY2022-FY2023; "
+         "the Basel III/CRR exposure measure as originally reported FY2016-FY2021)",
+         {"FY2023": 1803.7, "FY2022": 1852, "FY2021": 1732.2, "FY2020": 1423.5, "FY2019": 1393.2, "FY2018": 1412.2, "FY2017": 1309.5, "FY2016": 1359.3}),
+        ("Leverage ratio INCLUDING claims on central banks (%) (UK LRCom row UK-25c for FY2022-FY2023; "
+         "the Basel III/CRR leverage ratio as originally reported FY2016-FY2021)",
+         {"FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
     ],
-    p3_sources(),
-    note="FY2024/FY2025 not available - no standalone Pillar 3 document exists for those years and the Annual "
-         "Report's brief 'Capital risk management' note does not include a leverage ratio. DATA QUALITY FLAG: the "
-         "FY2022 Pillar 3 document's own FY2021 comparative column shows a materially different leverage exposure "
-         "(£1,320m) and ratio (10.9%) than FY2021's own contemporaneous report (£1,732.2m / 8.3%) - a genuine "
-         "cross-vintage restatement in the bank's own documents, not a transcription error. Per this project's "
-         "convention, each year's own originally-published figure is used (FY2021 = 8.3%, not the later-restated "
-         "10.9%) - worth double-checking if this workbook is relied on for leverage-ratio trend analysis. FY2015/"
-         "FY2014 not available - no leverage ratio concept existed under the Basel II regime those years used.",
+    p3_sources(LEVERAGE_BASIS_SOURCES),
+    first_col_width=96,
+    source_height=420,
+    note="THE TWO PAIRS OF ROWS ARE NOT A LIKE-FOR-LIKE SERIES AND MUST NOT BE READ AS ONE. The PRA's UK Leverage "
+         "Ratio Framework, in force from 1 January 2022, allows firms in its scope to exclude claims on central "
+         "banks from the total exposure measure - the Bank's own FY2022 Pillar 3 says so in terms ('The PRA's UK "
+         "Leverage Ratio framework that came into force from 1 January 2022, allows institutions within its scope "
+         "to exclude assets held with the Bank of England from their leverage calculations'). From FY2022 the Bank "
+         "prints BOTH bases in Template UK LRCom, and restated FY2021 onto the excluding basis. Excluding basis: "
+         "FY2021 10.9%, FY2022 10.9%, FY2023 10.5% - i.e. flat, then slightly down. Including basis: FY2021 8.3%, "
+         "FY2022 9.6%, FY2023 9.6%. The apparent 8.3% -> 10.9% jump a single blended row would show across the "
+         "FY2021/FY2022 boundary is ENTIRELY the change of denominator, not a change in the Bank: on either basis "
+         "held consistently the ratio did not improve by 2.6pp. The excluded amounts are stated by the Bank: "
+         "UK-24a '(-) Claims on central banks excluded' = £411m at 30 Sep 2021, £228m (£228.4m in the FY2023 "
+         "edition) at 30 Sep 2022, £153.9m at 30 Sep 2023. Neither basis is computed here from the other; every "
+         "figure above is printed in one of the cited documents. FY2021's excluding-basis pair (1,320 / 10.9%) "
+         "exists only as the FY2022 edition's comparative column - the Bank published no excluding-basis figure "
+         "for FY2020 or earlier, so those years appear on the including row only and are NOT back-solved. "
+         "FY2022's exposure measure is 1,624 / 1,852 as the FY2022 edition printed it and 1,623.2 / 1,851.6 as "
+         "the FY2023 edition's comparative restates it, a rounding-level difference recorded rather than "
+         "reconciled; the own-year figure is the one shown. FY2021's including-basis exposure is 1,732.2 per "
+         "FY2021's own report and 1,731 per the FY2022 edition's comparative - same, to rounding. "
+         "FY2025 is NOT APPLICABLE rather than undisclosed - the SDDT modification (PRA Rule 3.1, effective 18 "
+         "February 2025) removed the Pillar 3 duty before the 30 September 2025 year-end, so no FY2025 leverage "
+         "disclosure will ever exist; FY2024 is an ordinary open gap, its year having ended before that "
+         "modification took effect, and the Annual Report's brief 'Capital risk management' note carries no "
+         "leverage ratio. FY2015-FY2010 not available - no Basel III leverage ratio existed as a UK disclosure "
+         "requirement under the Basel II regime those six years used. Those years belong on NEITHER of the two "
+         "rows above: the excluding-/including-claims-on-central-banks distinction is a UK framework change "
+         "effective 1 January 2022 and is meaningless applied to a Basel II year. The FY2013 document mentions a "
+         "leverage ratio exactly once, as forward-looking prose about CRD IV's forthcoming requirements, with no "
+         "value attached; FY2012/FY2011/FY2010 do not mention it at all. (FY2013-FY2010 columns added 2026-09-16 "
+         "by HD-080's Basel II extension; that pass added no figure to this sheet and collapsed none of its rows.)",
 )
 
 metric(
@@ -737,11 +962,17 @@ metric(
         ("Liquidity Coverage Ratio (%)", {"FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
     ],
     p3_sources(),
-    note="FY2024/FY2025 not available - see Leverage Ratio sheet note. Year-end (point-in-time) values shown, "
-         "per each source document's own basis ('year end value for LCR related metrics'). FY2017/FY2016 Pillar 3 "
-         "documents were reviewed in full but contain no LCR disclosure (UK LCR reporting for this class of firm "
-         "phased in gradually; FY2018 is this bank's first year showing it). FY2015/FY2014 not available - see "
-         "Leverage Ratio sheet note on the pre-CRD IV regime.",
+    note="FY2025 is NOT APPLICABLE, not merely undisclosed - the SDDT modification (PRA Rule 3.1, effective 18 "
+         "February 2025) removed this bank's Pillar 3 duty before its 30 September 2025 year-end, so no FY2025 "
+         "LCR disclosure will ever exist. FY2024 is an ordinary open gap: its year ended 30 September 2024, "
+         "BEFORE that modification took effect, so the exemption does not cover it and no document was found. "
+         "The distinction is deliberate - see BASIS_NOTE. Year-end (point-in-time) values shown, per each source "
+         "document's own basis ('year end value for LCR related metrics'); these are NOT the 12-month averages a "
+         "UK KM1 template prints elsewhere, and the two bases are never merged. FY2017/FY2016 Pillar 3 documents "
+         "were reviewed in full but contain no LCR disclosure (UK LCR reporting for this class of firm phased in "
+         "gradually; FY2018 is this bank's first year showing it). FY2015-FY2010 not available - the LCR did not "
+         "exist as a UK disclosure requirement under the Basel II regime those six years used; see the pre-CRD IV "
+         "note in this sheet's sources.",
 )
 
 metric(
@@ -752,21 +983,34 @@ metric(
         ("Net Stable Funding Ratio (%)", {"FY2023": "150.5%", "FY2022": "143%", "FY2021": "168.1%", "FY2020": "154.6%", "FY2019": "217.6%"}),
     ],
     p3_sources(),
-    note="FY2024/FY2025 not available - see Leverage Ratio sheet note. FY2019's own Pillar 3 document gives the "
+    note="FY2025 is NOT APPLICABLE, not merely undisclosed - see the LCR sheet note; the SDDT modification "
+         "(effective 18 February 2025) also replaces the full NSFR with a Simplified Retail Deposit Ratio going "
+         "forward, and no SRDR value is disclosed either, so nothing succeeds this series. FY2024 is an ordinary "
+         "open gap (year ended before the modification took effect). FY2019's own Pillar 3 document gives the "
          "ratio only (217.6%), with no ASF/RSF breakdown; the breakdown shown for FY2020 comes from FY2020's own "
          "report. FY2018/FY2017/FY2016 Pillar 3 documents were reviewed in full but contain no NSFR disclosure "
          "(UK NSFR reporting phased in later than LCR for this class of firm - FY2019 is this bank's first year "
-         "showing it). FY2015/FY2014 not available - see Leverage Ratio sheet note on the pre-CRD IV regime.",
+         "showing it). FY2015-FY2010 not available - the NSFR did not exist as a UK disclosure requirement under "
+         "the Basel II regime those six years used; see the pre-CRD IV note in this sheet's sources.",
 )
 
 metric(
     "MREL Ratio", "£m / %",
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", {y: ("Not applicable" if y == "FY2025" else "Not publicly disclosed") for y in YEARS})],
     p3_sources(),
-    note="No MREL figure (numeric or qualitative) appears in any of the Pillar 3 documents reviewed (FY2014-"
-         "FY2023), nor in any Annual Report's brief capital note - no reason is stated. Consistent with this small "
-         "private bank not being set an independent MREL requirement by the Bank of England, the same pattern "
-         "seen at other small UK banks in this project (e.g. Cynergy Bank, DF Capital Bank).",
+    note="FY2025 reads 'Not applicable', every other year 'Not publicly disclosed', and the difference is "
+         "deliberate and load-bearing. 'Not publicly disclosed' asserts a figure may exist that was not found; "
+         "'Not applicable' means no such disclosure can exist. FY2025 is the latter: the SDDT modification (PRA "
+         "Rule 3.1, FRN 204439, effective 18 February 2025) removed this bank's Pillar 3 disclosure duty before "
+         "its 30 September 2025 year-end, so no FY2025 Pillar 3 document will ever be published. FY2024 stays "
+         "'Not publicly disclosed' because its year ended 30 September 2024, BEFORE the modification took "
+         "effect - it is an ordinary negative, not a structural exemption (see BASIS_NOTE for why that is left "
+         "as NOT ESTABLISHED rather than claimed). For FY2023-FY2010, no MREL figure (numeric or qualitative) "
+         "appears in any of the 14 Pillar 3 documents reviewed, nor in any Annual Report's brief capital note, "
+         "and no reason is stated; for the six Basel II years FY2015-FY2010 the concept did not exist as a UK "
+         "requirement at all. Consistent with this small private bank not being set an independent MREL "
+         "requirement by the Bank of England, the same pattern seen at other small UK banks in this project "
+         "(e.g. Cynergy Bank, DF Capital Bank).",
 )
 
 # ---------------------------------------------------------------
@@ -799,16 +1043,34 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"}),
         ("Tier 1 Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"}),
         ("Total Capital Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.2%", "FY2016": "19.2%"}),
-        ("Leverage Ratio", {"FY2023": "10.5%", "FY2022": "10.9%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
+        ("Leverage Ratio (incl. claims on central banks - the only basis comparable across all years; see note)", {"FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
         ("LCR", {"FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
         ("NSFR", {"FY2023": "150.5%", "FY2022": "143%", "FY2021": "168.1%", "FY2020": "154.6%", "FY2019": "217.6%"}),
     ],
     note="This entity takes the FRS 101/FRS 1 cash-flow-statement exemption every year FY2014-FY2025 (see the Cash "
          "Flow Statement sheet), so no cash flow summary or chart is shown here - Balance Sheet/Profit & Loss/"
          "Statement of Changes in Equity summaries and the Pillar 3 Key Metrics trend chart are shown instead. "
+         "PILLAR 3 YEAR COVERAGE (updated 2026-09-16, HD-080): the 11 capital metric sheets now run back to "
+         "FY2010, on the strength of a continuous FY2010-FY2023 run of 14 published Pillar 3 documents. Only the "
+         "Total Capital sheet carries data before FY2016, because FY2010-FY2015 are Basel II editions that "
+         "disclose 'Total capital resources' but no risk-weighted assets, no CET1 and no capital ratio of any "
+         "kind - every other pre-FY2016 cell is blank BY DESIGN and well-sourced, never back-solved. The Asset "
+         "Quality and RWA Breakdown sheets deliberately stop at FY2014, where their content genuinely stops. "
+         "FY2025's Pillar 3 cells read 'Not applicable' rather than 'Not publicly disclosed': the SDDT "
+         "modification (PRA Rule 3.1, effective 18 February 2025) ended the disclosure duty before that "
+         "year-end, so the figures cannot exist. FY2024 is an ordinary open gap, its year having ended before "
+         "the modification took effect. "
          "Leverage/LCR/NSFR availability varies by year - see each Pillar 3 sheet's own source citation for detail "
-         "(pre-CRD IV FY2014/FY2015 have none of the three; LCR/NSFR were phased in for this bank in FY2018/FY2019 "
-         "respectively). The FY2022 and FY2017 'Other equity movements' figures (£25.0m and £5.0m) are real share "
+         "(pre-CRD IV FY2015-FY2010 have none of the three; LCR/NSFR were phased in for this bank in FY2018/FY2019 "
+         "respectively). LEVERAGE RATIO BASIS, stated here because this sheet is a standalone copy and the chart "
+         "would otherwise draw a false trend: the PRA's UK Leverage Ratio Framework, in force from 1 January 2022, "
+         "lets firms exclude claims on central banks from the exposure measure, and from FY2022 the Bank reports "
+         "on that excluding basis as its headline (FY2021 restated 10.9%, FY2022 10.9%, FY2023 10.5%). Charting "
+         "the headline figures would show an 8.3% -> 10.9% jump across the FY2021/FY2022 boundary that is purely "
+         "the change of denominator. The row above therefore uses the INCLUDING-claims-on-central-banks basis, "
+         "which is the one the Bank reports consistently from FY2016 through FY2023 (UK LRCom row UK-25c for "
+         "FY2022-FY2023, the Basel III/CRR ratio before that). Both bases, with their exposure measures and the "
+         "amounts excluded, are on the Leverage Ratio sheet - see its note. The FY2022 and FY2017 'Other equity movements' figures (£25.0m and £5.0m) are real share "
          "capital issuances those years, not plugs; the FY2019 figure (-£3.4m) is the IFRS 9 transition adjustment "
          "on adoption. Note FY2017's own 'Opening equity' (£153.5m) is the FY2017 Annual Report's RESTATED FY2016 "
          "closing position (Note 36 prior-period error, +£7.2m vs. the £146.3m FY2016 originally reported as its "

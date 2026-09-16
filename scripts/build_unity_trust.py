@@ -22,7 +22,7 @@ P3_2023_URL = "https://assets.unity.co.uk/Unity-Trust-Bank-PILLAR3-2023-1.pdf"
 P3_2022_URL = "https://assets.unity.co.uk/2023/03/Unity-Trust-Bank_2022-Pillar-3-Disclosures.pdf"
 P3_2021_URL = "https://assets.unity.co.uk/2022/08/PILLAR3-2021-FINAL.pdf"
 # FY2020 Pillar 3 disclosures no longer live on unity.co.uk - recovered via Wayback Machine.
-P3_2020_URL = "https://web.archive.org/web/20221124023931/https://assets.unity.co.uk/2022/08/PILLAR3-2020-Final.pdf"
+P3_2020_URL = "https://web.archive.org/web/20221124023931id_/https://assets.unity.co.uk/2022/08/PILLAR3-2020-Final.pdf"
 # FY2019 Pillar 3 disclosures are still live at this URL (checked directly, not just via a prior scan).
 P3_2019_URL = "https://assets.unity.co.uk/Unity-Trust-Bank-PILLAR3-2019.pdf"
 # FY2018 Pillar 3 disclosures ("PILLAR3-2018-Final-Clean.pdf") are genuinely unobtainable - not live

@@ -9,7 +9,15 @@ AR25_URL = "https://find-and-update.company-information.service.gov.uk/company/0
 AR24_URL = "https://find-and-update.company-information.service.gov.uk/company/00185070/filing-history/MzQ2NDAyMTQ4MGFkaXF6a2N4/document?format=pdf&download=0"
 AR22_URL = "https://find-and-update.company-information.service.gov.uk/company/00185070/filing-history/MzM3OTU0ODM0NWFkaXF6a2N4/document?format=pdf&download=0"
 AR20_URL = "https://www.alphabanklondon.co.uk/sites/default/files/2025-10/ABL-Financial-Statements-2020.pdf"
-AR19_URL = "https://alphabanklondon.co.uk/wp-content/uploads/2020/05/ABL-Financial-Statements-2019-1.pdf"
+# RE-POINTED 2026-09-15. The old WordPress-tree URL is genuinely DEAD, and proving
+# that took a second HTTP client: alphabanklondon.co.uk's firewall answers curl with
+# HTTP 403 for EVERY path, live or not, regardless of user-agent or headers - so a
+# 403 from this host means BLOCKED and says nothing about whether the file exists.
+# Fetched instead through a browser-equivalent client, which returned a real HTTP
+# 404 for the old URL and a real PDF for the new one. Do not re-classify this host's
+# 403s as 404s, and do not conclude a file here is missing on curl's evidence alone.
+AR19_URL = "https://www.alphabanklondon.co.uk/sites/default/files/2025-10/ABL%20Financial%20Statements%202019.pdf"
+AR19_URL_DEAD = "https://alphabanklondon.co.uk/wp-content/uploads/2020/05/ABL-Financial-Statements-2019-1.pdf"
 # ADDED 2026-09-15: the FY2021 statements as a standalone primary source. Until now
 # FY2021 was taken only from the FY2022 report's comparative column; this is the
 # FY2021 report itself, and it is a full text-layer PDF, so Note 34.6 could be read
@@ -19,6 +27,27 @@ AR19_URL = "https://alphabanklondon.co.uk/wp-content/uploads/2020/05/ABL-Financi
 AR21_URL = (
     "https://web.archive.org/web/20260118042750id_/https://www.alphabanklondon.co.uk/"
     "sites/default/files/2025-10/ABL%20Financial%20Statements%202021%20Final%20contents%20page%20fixed.pdf"
+)
+
+LINK_PROVENANCE = (
+    "LINK PROVENANCE (checked 15 September 2026). Alpha Bank London migrated from a WordPress site "
+    "(/wp-content/uploads/<year>/<month>/) to Drupal (/sites/default/files/<year>-<month>/), and the FY2019 "
+    "Annual Report's old WordPress URL died in the move. Dead original, kept so the provenance chain stays "
+    "readable: " + AR19_URL_DEAD + " -> live replacement: " + AR19_URL + " (a real PDF, %PDF magic bytes, 72 "
+    "pages, cover 'ALPHA BANK LONDON LIMITED / Annual Report and Financial Statements / 31 December 2019', "
+    "company number 185070 printed on the cover). Every FY2019 figure in this workbook was re-read from it and "
+    "reproduces exactly - see the FY2019 VALIDATION GATE paragraph in the capital-metrics source note.\n"
+    "HOW THIS HOST MUST BE TESTED - read this before ever recording an Alpha Bank URL as dead. "
+    "alphabanklondon.co.uk sits behind a firewall that returns HTTP 403 to curl for EVERY path, existing or "
+    "not, whatever user-agent and headers are sent. A 403 from this host therefore means BLOCKED, which is a "
+    "different and unresolved state from dead, and carries no information about whether the file is there. "
+    "Both URLs above return 403 to curl; the live one is a perfectly good PDF. The classification above was "
+    "made with a second, browser-equivalent HTTP client, which returned a genuine HTTP 404 for the old URL and "
+    "the full document for the new one. The FY2020 URL (" + AR20_URL + ") was checked the same way and is fine "
+    "- it is on the current Drupal tree already and is deliberately left unchanged.\n"
+    "WHY THE FY2021 REPORT STILL CITES A WAYBACK CAPTURE: that is the same 403 firewall, not link rot. The "
+    "Wayback copy is used there because it serves the file to any client; it is not evidence that the Bank's "
+    "own copy is missing."
 )
 
 CASH_FLOW_SOURCES = (
@@ -47,7 +76,8 @@ CASH_FLOW_SOURCES = (
     "£668k paid) and FY2021 (£161k accrued vs £162k paid) — normal accrual/cash timing, not an error, both used "
     "exactly as each section states them.\n"
     "FY2023 investing-activities section: component lines sum to £16,147k but the source's own printed total reads "
-    "£16,148k — an immaterial £1k rounding artifact in the original filing, kept as printed (not force-corrected)."
+    "£16,148k — an immaterial £1k rounding artifact in the original filing, kept as printed (not force-corrected).\n\n"
+    + LINK_PROVENANCE
 )
 
 def p3_sources():
@@ -61,6 +91,22 @@ def p3_sources():
         f"management, Regulatory analysis) — {AR24_URL}\n"
         f"FY2022 & FY2021: Annual Report 2022, p.65 Note 34.6 (Capital management, Regulatory analysis) — {AR22_URL}\n"
         f"FY2020 & FY2019: Annual Report 2020, p.67 Note 33.6 (Capital management, Regulatory analysis) — {AR20_URL}\n"
+        f"FY2019 (standalone primary source, added 2026-09-15): Annual Report and Financial Statements 31 December "
+        f"2019, Note 33.6 'Capital management — Regulatory capital analysis' — {AR19_URL}\n"
+        "FY2019 VALIDATION GATE PASSED: until now FY2019 rested solely on the FY2020 report's comparative column, "
+        "because the FY2019 report's cited URL appeared to be gone. It was not gone - only mis-addressed (see the "
+        "LINK PROVENANCE note below). The FY2019 report's own Note 33.6 has now been read directly and prints, in "
+        "£000's for 2019 (2018 comparative): Share capital 30,000 (30,000); Retained earnings 23,510 (20,915); "
+        "FVTOCI reserve (59) ((384)); Intangible assets (15) ((57)); Total Tier 1 capital 53,436 (50,474); "
+        "Subordinated debt excluding accrued interest 10,000 (10,000); Total Tier 2 capital 10,000 (10,000); Total "
+        "Tier 1 and Tier 2 capital 63,436 (60,474); Total regulatory capital 63,436 (60,474). Every FY2019 figure "
+        "matches what this workbook already carried from the FY2020 comparative, to the pound. No restatement.\n"
+        "IT ALSO CORROBORATES THE RWA WITHDRAWAL: a full-text search of the FY2019 report for 'risk-weighted', "
+        "'risk weighted' and 'RWA' returns exactly one hit, and it is narrative - the sentence saying the PRA's "
+        "Individual Capital Guidance 'is expressed as a percentage of total capital to total risk-weighted assets "
+        "together with a capital planning buffer'. No RWA amount is printed, and the Bank's 'Capital adequacy "
+        "ratio' KPI does not appear in this report either. So FY2019, like FY2020-FY2022, has no disclosed "
+        "denominator, independently confirming that the Total RWAs sheet is correctly left blank for that year.\n"
         f"FY2021 & FY2020 (standalone primary source, added 2026-09-15): Annual Report 2021, p.68 Note 34 "
         f"'Capital management — Regulatory analysis' — {AR21_URL}\n"
         f"Companies House filing history — {CH_URL}\n"
@@ -101,7 +147,8 @@ def p3_sources():
         "itself confirms this by renaming that same KPI line to 'Total equity' and dropping the 'Total regulatory "
         "capital' label entirely. This is treated as a labelling fix made in the FY2025 report rather than an "
         "arithmetic error: Note 34.7's fully itemised, internally-consistent regulatory-capital build-up (used "
-        "throughout this workbook) is the correct regulatory figure in every year."
+        "throughout this workbook) is the correct regulatory figure in every year.\n\n"
+        + LINK_PROVENANCE
     )
 
 bw = BankWorkbook(bank_name="Alpha Bank London Limited", years=YEARS, header_color="1D3557")
@@ -109,7 +156,8 @@ bw = BankWorkbook(bank_name="Alpha Bank London Limited", years=YEARS, header_col
 ENTITY_NOTE = (
     "Alpha Bank London Limited (FRN 135327, company 00185070) prepares entity-only accounts - no group/"
     "consolidated statements are produced. All figures below are on that entity-level basis, consistent with "
-    "the Cash Flow Statement and Pillar 3 sheets."
+    "the Cash Flow Statement and Pillar 3 sheets.\n\n"
+    + LINK_PROVENANCE
 )
 
 BALANCE_SHEET_SOURCES = (
@@ -356,15 +404,22 @@ RWA_BREAKDOWN_SOURCES = (
     "document or a UK OV1-style risk-weighted-exposure-by-category table in any of the 7 Annual Reports reviewed "
     "(confirmed by reading Note 34.7 in full, p.67 of the 2025 Annual Report and the equivalent pages of the "
     "2024/2022 Annual Reports — it discloses only the aggregate Tier 1/Tier 2/Total regulatory capital build-up, "
-    "not a risk-category RWA split). Total RWAs (a single aggregate figure) is calculated on the Total RWAs "
-    "sheet from Total Capital ÷ Capital adequacy ratio, per that sheet's own note; no further breakdown by "
-    "credit/market/operational risk is available for any year.\n\n"
+    "not a risk-category RWA split). No breakdown by credit/market/operational risk is available for any year.\n"
+    "STALE-TEXT CORRECTION 2026-09-15: this paragraph previously ended 'Total RWAs (a single aggregate figure) "
+    "is calculated on the Total RWAs sheet from Total Capital ÷ Capital adequacy ratio, per that sheet's own "
+    "note'. That sentence describes a back-solve that was WITHDRAWN earlier on 2026-09-15 and no longer exists: "
+    "the Total RWAs sheet now reads 'Not publicly disclosed' for every year, because the back-solve used the "
+    "wrong numerator (the Annual Report defines the Capital adequacy ratio as shareholders' funds ÷ RWA, not "
+    "total regulatory capital ÷ RWA) and because a ratio published to two significant figures cannot support "
+    "one anyway. The sentence is removed rather than left standing, so that nothing in this workbook still "
+    "describes the withdrawn calculation as if it were live. Do NOT reinstate it.\n\n"
     "RE-VERIFIED 2026-09-12: independently re-downloaded and OCR'd the live FY2025 Annual Report "
     "(a scanned, no-text-layer PDF) directly from Companies House and re-read Note 34.7 in full "
     "(pp.66-67) - confirmed it still contains only the Tier 1/Tier 2 regulatory-capital build-up "
     "table shown above, with no risk-weighted-assets figure or category split anywhere on that page "
     "or the surrounding notes. No standalone Pillar 3 document was found on the bank's own site or "
-    "in the Wayback Machine archive. The non-disclosure is confirmed current."
+    "in the Wayback Machine archive. The non-disclosure is confirmed current.\n\n"
+    + LINK_PROVENANCE
 )
 rwa_breakdown_rows = [
     ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
@@ -375,6 +430,7 @@ bw.add_balance_sheet_sheet(
     subtitle="Entity-level basis, £000's, as at 31 December, FY2019-FY2025",
     rows=balance_sheet_rows,
     sources_text=BALANCE_SHEET_SOURCES,
+    source_height=380,
     unit_suffix=" (£'000)",
 )
 
@@ -383,6 +439,7 @@ bw.add_income_statement_sheet(
     subtitle="Entity-level basis, £000's, FY2019-FY2025",
     rows=income_statement_rows,
     sources_text=INCOME_STATEMENT_SOURCES,
+    source_height=380,
     unit_suffix=" (£'000)",
 )
 
@@ -392,6 +449,7 @@ bw.add_equity_changes_sheet(
     headers=EQUITY_HEADERS,
     rows=equity_changes_rows,
     sources_text=EQUITY_CHANGES_SOURCES,
+    source_height=380,
 )
 
 # ---------------------------------------------------------------
@@ -467,6 +525,7 @@ bw.add_cash_flow_sheet(
     subtitle="Entity-level basis, £000's, FY2019-FY2025",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
+    source_height=400,
     unit_suffix=" (£'000)",
 )
 
@@ -475,6 +534,7 @@ bw.add_asset_quality_sheet(
     subtitle="Entity-level basis, £000's, FY2019-FY2025",
     rows=asset_quality_rows,
     sources_text=ASSET_QUALITY_SOURCES,
+    source_height=380,
     unit_suffix=" (£'000)",
 )
 
@@ -483,7 +543,7 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Entity-level basis, {unit}" if unit else "Entity-level basis",
-                         rows_data, sources_text, note=note, first_col_width=46, source_height=110)
+                         rows_data, sources_text, note=note, first_col_width=46, source_height=430)
 
 metric(
     "CET1 Capital", "£000's",
@@ -574,6 +634,7 @@ bw.add_rwa_breakdown_sheet(
     subtitle="Entity-level basis, FY2019-FY2025",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
+    source_height=380,
     unit_suffix="",
 )
 

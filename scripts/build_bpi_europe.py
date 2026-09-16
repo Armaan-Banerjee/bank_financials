@@ -418,26 +418,41 @@ bw.add_overview_sheet(
         ("Deposits from customers", {**gbp({"FY2025": 142032600, "FY2024": 88970695, "FY2023": 1696057}), "FY2022": 1180161, "FY2021": 1291370}),
         ("Total shareholder's funds", {**gbp({"FY2025": 122217893, "FY2024": 121285216, "FY2023": 121885562}), "FY2022": 101883089, "FY2021": 101901342}),
     ],
-    balance_sheet_unit="£'000-equivalent",
+    # UNIT (corrected 2026-09-16, research/RESUME_fx_scale_sweep.md): these three
+    # Overview blocks carry WHOLE POUNDS, copied cell-for-cell from the Balance
+    # Sheet / Profit & Loss / Statement of Changes in Equity sheets, whose own
+    # subtitles say "£-equivalent, whole pounds". They were labelled "£'000-
+    # equivalent", a 1000x overstatement to any reader and to scripts/insights/
+    # (extract_metrics.py parses this label and the in040/in041/build_deliverable
+    # consumers scale by it). The FIGURES are right; only the labels were wrong,
+    # so only the labels changed. NB the Pillar 3 metric sheets and the RWA
+    # Breakdown really ARE £'000 - this workbook genuinely mixes the two scales,
+    # which is why each label has to be stated separately and correctly.
+    balance_sheet_unit="£-equivalent, whole pounds",
     income_statement_totals=[
         ("Operating income", {**gbp({"FY2025": 5745790, "FY2024": 4493602, "FY2023": 2584608}), "FY2022": 2456242, "FY2021": 2577575}),
         ("Total operating expense", {**gbp({"FY2025": -4510345, "FY2024": -5290727, "FY2023": -3611024}), "FY2022": -2472994, "FY2021": -2124748}),
         ("Profit/(loss) for the year", {**gbp({"FY2025": 932677, "FY2024": -600346, "FY2023": -771489}), "FY2022": -18387, "FY2021": 372855}),
     ],
-    income_statement_unit="£'000-equivalent",
+    income_statement_unit="£-equivalent, whole pounds",
     equity_changes_totals=[
         ("Opening equity", {"FY2025": 96911879, "FY2024": 95731670, "FY2023": 101883089, "FY2022": 101901342, "FY2021": 41528487}),
         ("Total comprehensive income", {"FY2025": 693543, "FY2024": -479701, "FY2023": -605945, "FY2022": -18387, "FY2021": 372855}),
         ("Other equity movements, net", {"FY2025": -6723585, "FY2024": 1659909, "FY2023": -5545474, "FY2022": 134, "FY2021": 60000000}),
         ("Closing equity", {**gbp({"FY2025": 122217893, "FY2024": 121285216, "FY2023": 121885562}), "FY2022": 101883089, "FY2021": 101901342}),
     ],
-    equity_changes_unit="£'000-equivalent (native/converted per year - see Statement of Changes in Equity sheet)",
+    equity_changes_unit="£-equivalent, whole pounds (native/converted per year - see Statement of Changes in Equity sheet)",
     note="This is a PILLAR-3-ONLY workbook: BPI Europe takes the FRS 102 cash-flow-statement exemption every year "
          "(see the Cash Flow Statement sheet), so no cash flow summary or chart is shown here. Also note a genuine "
-         "mid-series functional-currency change (GBP through FY2022, USD from FY2023) - monetary (£'000) figures "
-         "on the capital/RWA sheets and the new Balance Sheet/P&L/Equity/Asset Quality sheets are on a mixed "
+         "mid-series functional-currency change (GBP through FY2022, USD from FY2023) - monetary figures on the "
+         "capital/RWA sheets and on the Balance Sheet/P&L/Equity/Asset Quality sheets are on a mixed "
          "native/converted basis across the window; see each sheet's own source note and the CURRENCY note there "
-         "for the exact treatment. The Equity block's 'Other equity movements, net' line absorbs both real equity "
+         "for the exact treatment. UNIT WARNING: this workbook uses TWO scales, and each sheet states its own. "
+         "The Balance Sheet, Profit & Loss, Statement of Changes in Equity and Asset Quality sheets - and the "
+         "three blocks above, which are copies of them - are in WHOLE POUNDS. The Pillar 3 capital/RWA sheets "
+         "and the RWA Breakdown are in £'000. Until 2026-09-16 the three blocks above were mislabelled "
+         "\"£'000-equivalent\" while carrying whole-pound values; the labels were corrected and no figure was "
+         "changed.The Equity block's 'Other equity movements, net' line absorbs both real equity "
          "events (e.g. FY2021's £60m share issuance) and the FX retranslation plugs documented on the Statement "
          "of Changes in Equity sheet - see that sheet for the breakdown. % ratios are unaffected by the currency "
          "change.",

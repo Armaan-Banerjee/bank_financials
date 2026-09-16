@@ -39,3 +39,6 @@ research/in017_quality.json
 research/in023_distribution_visuals.json
 research/in025_quality_views.json
 research/powerbi/fact_observation.csv
+
+# Fetched source-document cache (4.4GB of bank PDFs) - never commit.
+research/doc_cache/

@@ -155,7 +155,7 @@ balance_sheet_rows = [
     ("DATA", "Cash and balances at central banks", {"FY2025": 29911, "FY2024": 35083, "FY2023": 48238, "FY2022": 73062, "FY2021": 101210, "FY2020": 62878, "FY2019": 26377, "FY2018": 43966, "FY2017": 34763, "FY2016": 1198, "FY2015": 819, "FY2014": 1054, "FY2013": 734, "FY2012": 921}),
     ("DATA", "Derivatives", {"FY2025": 1106, "FY2024": 2892, "FY2023": 3213, "FY2022": 4430, "FY2021": 2547, "FY2020": 3438, "FY2019": 3404, "FY2018": 1277, "FY2017": 2277, "FY2016": 3082, "FY2015": 2086, "FY2014": 3112, "FY2013": 2642, "FY2012": 3912}),
     ("DATA", "Loans to banks - amortised cost", {"FY2025": 4261, "FY2024": 3148, "FY2023": 3043, "FY2022": 2870, "FY2021": 3638, "FY2020": 2798, "FY2019": 2741, "FY2018": 5875, "FY2017": 55788, "FY2016": 64603, "FY2015": 73249, "FY2014": 78504, "FY2013": 89546, "FY2012": 80915}),
-    ("DATA", "Loans to customers - amortised cost", {"FY2025": 310121, "FY2024": 297548, "FY2023": 284314, "FY2022": 267401, "FY2021": 255443, "FY2020": 238368, "FY2019": 198504, "FY2018": 171433, "FY2017": 160679, "FY2016": 150147, "FY2015": 134383, "FY2014": 124297, "FY2013": 119541, "FY2012": 120168}),
+    ("DATA", "Loans to customers - amortised cost", {"FY2025": 310121, "FY2024": 297548, "FY2023": 284314, "FY2022": 267401, "FY2021": 255443, "FY2020": 238366, "FY2019": 198504, "FY2018": 171433, "FY2017": 160679, "FY2016": 150147, "FY2015": 134383, "FY2014": 124297, "FY2013": 119541, "FY2012": 120168}),
     ("DATA", "Amounts due from holding companies and fellow subsidiaries", {"FY2025": 38965, "FY2024": 36383, "FY2023": 33499, "FY2022": 32133, "FY2021": 27122, "FY2020": 28176, "FY2019": 31705, "FY2018": 30780}),
     ("DATA", "Securities subject to repurchase agreements", {"FY2025": 15004, "FY2024": 8984, "FY2023": 6469, "FY2022": 2140, "FY2021": 10813, "FY2020": 11438, "FY2019": 4175, "FY2018": 9890, "FY2017": 0, "FY2016": 0, "FY2015": 0, "FY2014": 0, "FY2013": 0, "FY2012": 0}),
     ("DATA", "Other financial assets excluding securities subject to repurchase agreements", {"FY2025": 37152, "FY2024": 29814, "FY2023": 24623, "FY2022": 12040, "FY2021": 17836, "FY2020": 26168, "FY2019": 36383, "FY2018": 30944, "FY2017": 1066, "FY2016": 120, "FY2015": 51, "FY2014": 829, "FY2013": 2592, "FY2012": 2616}),
@@ -174,7 +174,7 @@ balance_sheet_rows = [
     ("TOTAL", "Total assets", {"FY2025": 444649, "FY2024": 421875, "FY2023": 411749, "FY2022": 401747, "FY2021": 426111, "FY2020": 380603, "FY2019": 310954, "FY2018": 301624, "FY2017": 259717, "FY2016": 228921, "FY2015": 220392, "FY2014": 218304, "FY2013": 223179, "FY2012": 216511}),
     ("SECTION", "Liabilities", {}),
     ("DATA", "Bank deposits", {"FY2025": 33016, "FY2024": 24778, "FY2023": 18052, "FY2022": 16059, "FY2021": 22829, "FY2020": 14866, "FY2019": 15487, "FY2018": 17557, "FY2017": 32465, "FY2016": 9208, "FY2015": 10936, "FY2014": 9548, "FY2013": 11091, "FY2012": 24042}),
-    ("DATA", "Customer deposits", {"FY2025": 282427, "FY2024": 275972, "FY2023": 276202, "FY2022": 281558, "FY2021": 292470, "FY2020": 285290, "FY2019": 208698, "FY2018": 204279, "FY2017": 201150, "FY2016": 192490, "FY2015": 185139, "FY2014": 182210, "FY2013": 189156, "FY2012": 167649}),
+    ("DATA", "Customer deposits", {"FY2025": 282427, "FY2024": 275972, "FY2023": 276202, "FY2022": 281558, "FY2021": 292470, "FY2020": 255290, "FY2019": 208698, "FY2018": 204279, "FY2017": 201150, "FY2016": 192490, "FY2015": 185139, "FY2014": 182210, "FY2013": 189156, "FY2012": 167649}),
     ("DATA", "Amounts due to holding companies and fellow subsidiaries", {"FY2025": 98661, "FY2024": 90925, "FY2023": 84174, "FY2022": 75037, "FY2021": 76722, "FY2020": 69617, "FY2019": 51019, "FY2018": 50968}),
     ("DATA", "Derivatives", {"FY2025": 780, "FY2024": 1323, "FY2023": 2014, "FY2022": 2582, "FY2021": 4336, "FY2020": 6769, "FY2019": 5013, "FY2018": 1185, "FY2017": 3117, "FY2016": 3938, "FY2015": 2295, "FY2014": 3756, "FY2013": 2984, "FY2012": 4409}),
     ("DATA", "Other financial liabilities", {"FY2025": 3670, "FY2024": 3824, "FY2023": 8147, "FY2022": 4525, "FY2021": 6384, "FY2020": 9612, "FY2019": 7635, "FY2018": 5889, "FY2017": 0, "FY2016": 86, "FY2015": 53, "FY2014": 67, "FY2013": 73, "FY2012": 38}),
@@ -753,7 +753,7 @@ metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2025": 
 # and Coutts & Co side by side), p.25. Found via Wayback Machine CDX search
 # against investors.natwestgroup.com/results-center/18022022/ after the live
 # site's search/index no longer surfaces it - archived copy:
-# https://web.archive.org/web/20220218072522/https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/nwh-pillar-3-supplement-fy-2021.pdf
+# https://web.archive.org/web/20220218072522id_/https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/nwh-pillar-3-supplement-fy-2021.pdf
 #
 # Note a methodology/template difference versus FY2022 onward: in this
 # FY2021 table the "Amounts below the thresholds for deduction" memo row is
@@ -762,7 +762,7 @@ metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2025": 
 # reported; the FY2021 Total (86,217) ties precisely to the existing Total
 # RWAs figure for FY2021 used elsewhere in this workbook, confirming the
 # reconciliation: 66,419 + 574 + 1,054 + 53 + 12,874 + 5,243 = 86,217.
-NWH_P3_2021_URL = "https://web.archive.org/web/20220218072522/https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/nwh-pillar-3-supplement-fy-2021.pdf"
+NWH_P3_2021_URL = "https://web.archive.org/web/20220218072522id_/https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/nwh-pillar-3-supplement-fy-2021.pdf"
 rwa_breakdown_rows = [
     ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2025": 110314, "FY2024": 106185, "FY2023": 105860, "FY2022": 98731, "FY2021": 66419, "FY2020": 73445, "FY2019": 67778, "FY2018": 63548, "FY2017": 48575, "FY2016": 56066, "FY2015": 54400, "FY2014": 61700}),
     ("DATA", "Counterparty credit risk", {"FY2025": 600, "FY2024": 606, "FY2023": 713, "FY2022": 497, "FY2021": 574, "FY2020": 576, "FY2019": 605, "FY2018": 325, "FY2017": 266, "FY2016": 473, "FY2015": 700, "FY2014": 600}),
@@ -883,8 +883,8 @@ bw.add_wide_interim_sheet(
 bw.add_overview_sheet(
     balance_sheet_totals=[
         ("Total assets", {"FY2025": 444649, "FY2024": 421875, "FY2023": 411749, "FY2022": 401747, "FY2021": 426111, "FY2020": 380603, "FY2019": 310954, "FY2018": 301624, "FY2017": 259717, "FY2016": 228921, "FY2015": 220392, "FY2014": 218304}),
-        ("Loans to customers - amortised cost", {"FY2025": 310121, "FY2024": 297548, "FY2023": 284314, "FY2022": 267401, "FY2021": 255443, "FY2020": 238368, "FY2019": 198504, "FY2018": 171433, "FY2017": 160679, "FY2016": 150147, "FY2015": 134383, "FY2014": 124297}),
-        ("Customer deposits", {"FY2025": 282427, "FY2024": 275972, "FY2023": 276202, "FY2022": 281558, "FY2021": 292470, "FY2020": 285290, "FY2019": 208698, "FY2018": 204279, "FY2017": 201150, "FY2016": 192490, "FY2015": 185139, "FY2014": 182210}),
+        ("Loans to customers - amortised cost", {"FY2025": 310121, "FY2024": 297548, "FY2023": 284314, "FY2022": 267401, "FY2021": 255443, "FY2020": 238366, "FY2019": 198504, "FY2018": 171433, "FY2017": 160679, "FY2016": 150147, "FY2015": 134383, "FY2014": 124297}),
+        ("Customer deposits", {"FY2025": 282427, "FY2024": 275972, "FY2023": 276202, "FY2022": 281558, "FY2021": 292470, "FY2020": 255290, "FY2019": 208698, "FY2018": 204279, "FY2017": 201150, "FY2016": 192490, "FY2015": 185139, "FY2014": 182210}),
         ("Total equity", {"FY2025": 22685, "FY2024": 21609, "FY2023": 19701, "FY2022": 18243, "FY2021": 19166, "FY2020": 18464, "FY2019": 18026, "FY2018": 18276, "FY2017": 15355, "FY2016": 15297, "FY2015": 11282, "FY2014": 13312}),
     ], balance_sheet_unit="£m",
     income_statement_totals=[
