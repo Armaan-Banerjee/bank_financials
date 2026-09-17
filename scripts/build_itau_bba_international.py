@@ -583,6 +583,127 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Group/consolidated basis, {unit}" if unit else "Group/consolidated basis",
                          rows_data, sources_text, note=note, first_col_width=48, source_height=150)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (the bank's own UK KM1 template, reproduced whole).
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — Itau BBA International plc's own 'Template UK KM1: Key Metrics', reproduced as published. "
+    "IBBAInt Group (consolidated basis — the document states the disclosures refer to the IBBAInt Group, "
+    "comprising the Bank and its subsidiaries), amounts in thousands of US dollars, the unit the template "
+    "itself is printed in.\n"
+    f"FY2023: 'Market Discipline - 2023 Pillar III' (2023 Pillar 3 Disclosures), Section 10 'Key Metrics', "
+    f"Template UK KM1, p.41, its OWN reporting year — live: {PILLAR3_2023_URL} — archived: {PILLAR3_2023_WAYBACK}\n"
+    f"FY2022: '2022 Pillar 3 Disclosures', Section 10 'Key Metrics', Template UK KM1, p.44, its OWN reporting "
+    f"year — live: {PILLAR3_2022_URL} — archived: {PILLAR3_2022_WAYBACK}\n"
+    f"FY2021: NOT from a FY2021 KM1 — the 2021 Pillar 3 Disclosures document predates the template and prints "
+    f"none (see the sheet note). The FY2021 column here is the 2022 edition's own 'Dez 21' COMPARATIVE column, "
+    f"p.44 — live: {PILLAR3_2022_URL} — archived: {PILLAR3_2022_WAYBACK}\n"
+    "The columns carry the template's own reference letters 'a' (reporting date) and 'e' (comparative), and "
+    "the bank heads them 'Dez 22' / 'Dez 21' in Portuguese-style abbreviation; both are 31 December dates.\n\n"
+    + BLOCKED_HOST_NOTE
+)
+
+KM1_NOTE = (
+    "FY2025 AND FY2024 ARE BLANK BECAUSE NO PILLAR 3 DOCUMENT FOR EITHER YEAR COULD BE LOCATED — NOT BECAUSE "
+    "THE BANK IS KNOWN NOT TO PUBLISH ONE. This is an unknown, not a finding. itau.com.br, which hosts the "
+    "three documents cited above, refused every automated request this session (HTTP 403 with a short "
+    "text/html WAF body, re-tested with browser user-agent, Accept and Referer headers); itaubba.com timed "
+    "out; itau.co.uk returned 403; and the Internet Archive was itself unavailable for part of the session "
+    "(HTTP 503 'temporarily offline', then HTTP 429). A blocked host is never evidence of absence.\n\n"
+    "FY2021 IS FILLED FROM A COMPARATIVE. The 2021 Pillar 3 Disclosures document prints no UK KM1 template at "
+    "all — it predates it, disclosing liquidity instead through its own 'Table 26: Liquidity Coverage Ratio'. "
+    "A full-text search of that document for 'KM1' and 'key metric' returns nothing while the same document "
+    "returns healthy counts on neighbouring prudential terms (countercyclical 9, own funds 5, liquidity "
+    "coverage ratio 4, Common Equity Tier 1 4), so the zero is a fact about the document rather than about the "
+    "search. Since there is no own-edition table for FY2021 to displace, the column here is the 2022 edition's "
+    "own Dez 21 comparative.\n\n"
+    "THE LEVERAGE CAPTIONS CHANGE BETWEEN THE TWO EDITIONS AND ARE NOT MERGED. The 2022 edition captions row "
+    "13 'Leverage ratio total exposure measure' and row 14 'Leverage ratio'; the 2023 edition captions the "
+    "same row numbers 'Total exposure measure excluding claims on central banks' and 'Leverage ratio excluding "
+    "claims on central banks'. These are two different exposure bases, so they are shown as two separate "
+    "caption blocks with nothing carried across them, even though the row numbers are identical.\n\n"
+    "THE UK 14 BLOCK IS A DIFFERENT BLOCK IN EACH EDITION, FOR THE SAME REASON. The 2022 edition prints UK "
+    "14a-14f under the heading 'Additional own funds requirements to address risks of excessive leverage', all "
+    "six as an explicit 0.00%. The 2023 edition prints UK 14a-14e under a different heading, 'Additional "
+    "leverage ratio disclosure requirements', with entirely different row meanings (fully-loaded and "
+    "including-central-bank leverage ratios, average leverage ratios, and a countercyclical leverage buffer). "
+    "Same numbers, different metrics — they are kept apart. In the 2023 block, UK 14c, 14d and 14e are printed "
+    "as a dash and are therefore left BLANK; the 2022 block's zeros are printed zeros and are kept as zeros.\n\n"
+    "Row UK 8a appears only in the 2022 edition (printed 0.00%); the 2023 edition omits it. The bank prints "
+    "the countercyclical buffer to five decimal places (0.00449%, 0.00171%, 0.00964%) and the LCR and NSFR as "
+    "whole percentages; both precisions are its own and are reproduced unchanged. The 2022 edition's NSFR "
+    "comparative for Dez 21 is blank with the footnote 'No prior comparative available', the NSFR having only "
+    "become a PRA requirement on 1 January 2022 — blank here, not zero. LCR is a trailing average of 12 "
+    "month-end observations and NSFR a trailing average of the last four quarter-ends, per each edition's own "
+    "footnotes."
+)
+
+bw.add_km1_sheet(
+    title="Itau BBA International plc — UK KM1 Key Metrics Template",
+    subtitle="IBBAInt Group (consolidated basis), as published. Amounts in USD'000; ratios as printed.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (USD'000)", {"FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
+        ("DATA", "2 Tier 1 capital (USD'000)", {"FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
+        ("DATA", "3 Total capital (USD'000)", {"FY2023": 1939956, "FY2022": 1334422, "FY2021": 1317685}),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted exposure amount (USD'000)", {"FY2023": 7170116, "FY2022": 6811769, "FY2021": 5835714}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2023": "27.06%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2023": "2.16%", "FY2022": "2.13%", "FY2021": "2.23%"}),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {"FY2023": "0.71%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2023": "0.96%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2023": "11.83%", "FY2022": "11.83%", "FY2021": "12.03%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+        ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2023": "0.00964%", "FY2022": "0.0045%", "FY2021": "0.00171%"}),
+        ("DATA", "UK 9a Systemic risk buffer (%)", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "10 Global Systemically Important Institution buffer (%)", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 10a Other Systemically Important Institution buffer", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2023": "2.51%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2023": "14.34%", "FY2022": "14.34%", "FY2021": "14.53%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2023": "20.41%", "FY2022": "12.96%", "FY2021": "15.84%"}),
+        ("SECTION", "Leverage ratio — 2023 edition caption ('excluding claims on central banks')", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (USD'000)", {"FY2023": 11582569}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2023": "16.74%"}),
+        ("SECTION", "Leverage ratio — 2022 edition caption (total exposure measure, no central-bank exclusion stated)", {}),
+        ("DATA", "13 Leverage ratio total exposure measure (USD'000)", {"FY2022": 11217813, "FY2021": 9007527}),
+        ("DATA", "14 Leverage ratio (%)", {"FY2022": "11.90%", "FY2021": "14.63%"}),
+        ("SECTION", "Additional leverage ratio disclosure requirements — 2023 edition block", {}),
+        ("DATA", "UK 14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {"FY2023": "16.74%"}),
+        ("DATA", "UK 14b Leverage ratio including claims on central banks (%)", {"FY2023": "16.74%"}),
+        ("DATA", "UK 14c Average leverage ratio excluding claims on central banks (%)", {}),
+        ("DATA", "UK 14d Average leverage ratio including claims on central banks (%)", {}),
+        ("DATA", "UK 14e Countercyclical leverage ratio buffer (%)", {}),
+        ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount) — 2022 edition block", {}),
+        ("DATA", "UK 14a Additional CET1 leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 14b Additional AT1 leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 14c Additional T2 leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 14d Total SREP leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 14e Applicable leverage buffer [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 14f Overall leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("SECTION", "Liquidity Coverage Ratio (trailing average of 12 month-end observations)", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (USD'000)", {"FY2023": 1705730, "FY2022": 1767960, "FY2021": 1484567}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (USD'000)", {"FY2023": 1436296, "FY2022": 1612829, "FY2021": 1459720}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (USD'000)", {"FY2023": 616585, "FY2022": 674593, "FY2021": 580600}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (USD'000)", {"FY2023": 819710, "FY2022": 938236, "FY2021": 879120}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2023": "208%", "FY2022": "188%", "FY2021": "169%"}),
+        ("SECTION", "Net Stable Funding Ratio (trailing average of the last four quarter-ends)", {}),
+        ("DATA", "18 Total available stable funding (USD'000)", {"FY2023": 6583126, "FY2022": 6022050}),
+        ("DATA", "19 Total required stable funding (USD'000)", {"FY2023": 4097473, "FY2022": 4007354}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2023": "161%", "FY2022": "150%"}),
+    ],
+    sources_text=KM1_SOURCES + "\n\n" + KM1_NOTE,
+    first_col_width=104,
+    source_height=380,
+)
+
 metric(
     "CET1 Capital", "USD m",
     [("Common equity tier 1 (CET1) capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1939, "FY2022": 1334, "FY2021": 1318, "FY2020": 1291, "FY2019": 1210, "FY2018": 1127, "FY2017": 1049, "FY2016": 992, "FY2015": 945, "FY2014": 933})],

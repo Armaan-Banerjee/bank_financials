@@ -443,6 +443,85 @@ SUFFIX = (
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, P3_SOURCES, note=note, first_col_width=52, source_height=170)
 
+
+KM1_SOURCES = (
+    "Sources - RCI Bank UK Limited / Mobilize Financial Services UK, 'Table 2: UK KM1 - Key metrics template', "
+    "as published in the entity's own Pillar III Disclosures. The bank prints this table in £'million, and this "
+    "sheet keeps that unit - the rest of the workbook is in £'000, so the two are the same figures on different "
+    "scales, not different figures:\n"
+    f"FY2024: Pillar III Disclosures FY2024, printed p.24 (two columns, 31st December 2024 and 31st December "
+    f"2023) - {P3_24_URL}\n"
+    f"FY2023: Pillar III Disclosures FY2023, printed p.22 (a SINGLE column, 31st December 2023) - {P3_23_URL}\n"
+    "The FY2023 column here is taken from the FY2023 edition, its own year's edition. The FY2024 edition's "
+    "31st December 2023 comparative reproduces it value for value - CET1 669, Tier 1 669, total capital 774, "
+    "RWAs 4,842, ratios 13.81/13.81/15.99, UK 7a 1.86, UK 7c 0.46, UK 7d 9.86, buffers 2.5/2.0/4.5, UK 11a 14.36, "
+    "row 12 3.95, leverage 6,148 and 10.9%, LCR 1,035/718/251/467/236%, NSFR 5,622/4,312/130% - an independent "
+    "confirmation of the whole column at no extra sourcing cost.\n\n"
+    "FY2022, FY2021, FY2020 AND FY2019 ARE BLANK, AND BLANK MEANS NEVER PUBLISHED IN THIS TEMPLATE, ON ANY BASIS, "
+    "IN ANY EDITION. Two things have to hold for that, and both do. (i) No earlier Pillar 3 disclosure exists: the "
+    "FY2023 edition describes itself as the 'first iteration of the document' and the FY2024 edition as the "
+    "'second iteration', and a Wayback CDX sweep of the whole rcibank.co.uk domain returns only those two Pillar 3 "
+    "documents. (ii) No LATER edition prints a comparative reaching those years: the FY2023 edition's KM1 has one "
+    "column only, and the FY2024 edition's has two, the earlier of which is 31st December 2023. So there is no "
+    "comparative column anywhere to fill FY2022 or earlier from. The capital ratios those years' ANNUAL REPORTS "
+    "disclose are on the single-metric sheets; they are a different disclosure, not this template, and are not "
+    "mapped onto template row numbers here.\n\n"
+    "Row UK 7b (Additional AT1 SREP requirements) is not printed in either edition and so does not appear on this "
+    "sheet. Rows 1 and 2 are identical in both years, as are rows 5 and 6, which is consistent with the bank "
+    "holding no AT1 capital.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: the bank's own publications index at "
+    f"{FACTS_URL} was read directly. It lists exactly two Pillar III disclosures, FY2023 and FY2024 (the FY2024 "
+    "file sits under a 2025-12 upload path), and no FY2025 edition has been published. The FY2024 edition is "
+    "therefore the newest, and this workbook already runs to FY2024.\n\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="RCI Bank UK Limited — KM1 Key Metrics",
+    subtitle="UK KM1 - Key metrics template, as published in RCI Bank UK Limited / Mobilize Financial Services UK "
+             "Pillar III Disclosures. Reproduced in the bank's own row order, row numbering, labels and precision, "
+             "and in the bank's own unit of £'million. FY2023 and FY2024 are each that year's own edition; no "
+             "Pillar 3 disclosure exists for FY2022 or earlier and no later edition carries a comparative for "
+             "those years - see the source note.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'million)", {"FY2024": 707, "FY2023": 669}),
+        ("DATA", "2 Tier 1 capital (£'million)", {"FY2024": 707, "FY2023": 669}),
+        ("DATA", "3 Total capital (£'million)", {"FY2024": 809, "FY2023": 774}),
+        ("SECTION", "Risk-weighted exposure (amounts)", {}),
+        ("DATA", "4 Total risk-weighted exposure amount (£'million)", {"FY2024": 5247, "FY2023": 4842}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2024": "13.46%", "FY2023": "13.81%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2024": "13.46%", "FY2023": "13.81%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2024": "15.42%", "FY2023": "15.99%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2024": "1.84%", "FY2023": "1.86%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2024": "0.46%", "FY2023": "0.46%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2024": "9.84%", "FY2023": "9.86%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2024": "2.5%", "FY2023": "2.5%"}),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2024": "2.0%", "FY2023": "2.0%"}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2024": "4.5%", "FY2023": "4.5%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2024": "14.34%", "FY2023": "14.36%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2024": "3.62%", "FY2023": "3.95%"}),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£'million)", {"FY2024": 6642, "FY2023": 6148}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2024": "10.6%", "FY2023": "10.9%"}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value -average) (£'million)", {"FY2024": 899, "FY2023": 1035}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (£'million)", {"FY2024": 659, "FY2023": 718}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (£'million)", {"FY2024": 293, "FY2023": 251}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£'million)", {"FY2024": 365, "FY2023": 467}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2024": "287%", "FY2023": "236%"}),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18 Total available stable funding (£'million)", {"FY2024": 6115, "FY2023": 5622}),
+        ("DATA", "19 Total required stable funding (£'million)", {"FY2024": 4863, "FY2023": 4312}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2024": "126%", "FY2023": "130%"}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=380,
+)
+
 metric("CET1 Capital", "£'000, UK KM1 / Group basis", [("Common Equity Tier 1 (CET1) capital", {"FY2024": 707000, "FY2023": 669000})], "Absolute CET1 capital is disclosed in the UK KM1 table only for FY2024-FY2023; the earlier annual reports disclose ratios but not the absolute capital amount."+SUFFIX)
 # CET1 ratio, Pillar 3 UK KM1 basis where a KM1 exists (FY2024/FY2023), annual report
 # thereafter. FY2024 CORRECTED 2026-09-15 from 13.69% to 13.46%: see CET1_RATIO_NOTE.

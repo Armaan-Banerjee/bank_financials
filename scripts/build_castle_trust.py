@@ -515,6 +515,122 @@ FY2021_ALT_NOTE = (
     "71,644 / 647,358 both round to 11.07%, so that pair is a precision difference, not a restatement."
 )
 
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - Castle Trust Bank Pillar 3 Disclosures, 'Key Metrics for the Bank' table, GBP'000. Each year is "
+    "transcribed from the edition in which it is the REPORTING year, never from a later edition's comparative "
+    "column (map rule 1):\n"
+    f"FY2025: Pillar 3 Disclosures FY ended 30 Sept 2025, p.6 (September 2025 column) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures FY ended 30 Sept 2024, p.6 (September 2024 column) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures FY ended 30 Sept 2023, p.6 (September 2023 column) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures FY ended 30 Sept 2022, p.6 (September 2022 column) - {P3_2022_URL}\n\n"
+    "ENTITY - THE BANK, NOT THE GROUP. Every edition prints the template TWICE, on consecutive pages: 'Key "
+    "Metrics for the Group' (p.5, Castle Trust Holdings Limited consolidated) and then 'Key Metrics for the "
+    "Bank' (p.6, Castle Trust Capital plc, FRN 541910 - this workbook's entity). The two DIFFER materially and "
+    "the wrong block is entirely plausible: at 30 September 2022 the Group table shows CET1 92,572 and a CET1 "
+    "ratio of 17.43%, the Bank table 75,267 and 21.03%. This sheet carries the BANK block throughout, matching "
+    "the single-metric sheets. The document states the split itself: 'The key metrics disclosures have been "
+    "prepared for both the Group and the Bank as required per Article 18 of the CRR.' Read to the end of the "
+    "section rather than stopping at the first matching table (map rule 11).\n\n"
+    "A RELATED TRAP, RECORDED SO IT IS NOT RE-TRIPPED: the contents page lists 'Key Metrics for the Group' and "
+    "'Key Metrics for the Bank' before either table appears, so anchoring on the first occurrence of the "
+    "caption lands in the table of contents, not the table (map rule 16 - anchor on structure, not on the first "
+    "match). The body headings are the SECOND occurrence in every edition.\n\n"
+    "'N/A' IS REPRODUCED AS PRINTED (map rules 2 and 7). Rows UK 7b and UK 7c read 'N/A' in FY2022-FY2024 and "
+    "carry figures only from FY2025; NSFR rows 18-20 read 'N/A' in the September 2021 comparative. The document "
+    "explains its own glyph: 'Where \"N/A\" is shown, this indicates that this metric was not relevant for the "
+    "Group and Bank or that the calculation methodology has been amended in the current year and therefore "
+    "comparators are not available.' N/A is neither a dash nor a zero and is left exactly as printed.\n\n"
+    "A CROSS-EDITION DIVERGENCE IN ROW 12, recorded not corrected (map rules 1 and 7). The FY2024 edition's own "
+    "September 2024 figure for row 12 'CET1 available after meeting the total SREP own funds requirements' is "
+    "7.54%. The FY2025 edition's September 2024 COMPARATIVE for the same row prints 8.94% - which is precisely "
+    "the FY2024 edition's row 14 (leverage ratio) figure for September 2023, so it has the signature of a "
+    "transposition in the later edition rather than a restatement. This sheet shows 7.54% for FY2024 because "
+    "that is the year's own edition; the FY2025 edition's 8.94% is recorded here and nowhere adopted.\n\n"
+    "FY2021 IS THE FY2022 EDITION'S SEPTEMBER 2021 COMPARATIVE COLUMN, not an own-edition year - filled under "
+    "map rule 28. Castle Trust's FY2021 year ended 30 SEPTEMBER 2021, before the UK KM1 template took effect on "
+    "1 January 2022, and its FY2021 Pillar 3 document carries no KM1 anywhere: it discloses the Bank through an "
+    "'Appendix 4. Bank Disclosures' section (p.40-43) which is a pre-KM1 own-funds/RWA build-up, not the "
+    "template, and so fails the row-set test (map rule 8). That makes this rule 28's whole-missing-table case "
+    "rather than rule 20's dashed-row case: there is no own-edition table for a later edition to displace, so "
+    f"rule 1 has nothing to bite on. Source for every FY2021 cell here: Pillar 3 Disclosures FY ended 30 Sept "
+    f"2022, p.6, 'Key Metrics for the Bank', September 2021 column - {P3_2022_URL} .\n"
+    "Rows UK 7b, UK 7c and 18-20 read 'N/A' in that comparative and are reproduced as 'N/A', not as blanks and "
+    "not as zeroes.\n"
+    "A DIVERGENCE THE READER SHOULD KNOW ABOUT: the single-metric sheets take FY2021 from a DIFFERENT source - "
+    "the FY2021 edition's own Appendix 4, which gives CET1 = Tier 1 = Total capital of 71,677 and a ratio of "
+    "20.0% - and carry the FY2022 restatement (71,644 / 19.94%) on a separate labelled row beside it. This KM1 "
+    "sheet shows 71,644 and 19.94% because rule 28 fills the column from the comparative, and the comparative "
+    "is what the FY2022 edition printed. Both figures are real, published, and 33k apart; neither is corrected "
+    "into the other. See the FY2021 CROSS-EDITION DIVERGENCE note on the CET1 Capital sheet for the full "
+    "build-up and the reconciliation that the later edition does not give.\n\n"
+    "SDDT - EXPLICIT NEGATIVE, DATE-FITTED. Castle Trust holds the SDDT opt-in but it explains nothing in this "
+    "window: Bank of England consolidated waivers register (re-downloaded 2026-09-16), FRN 541910 'Castle Trust "
+    "Capital PLC', Rule 3.1 of the SDDT Regime - General Application Part, ref A00011417P.pdf, START DATE "
+    "06/01/2026. The Bank's year-end is 30 September, and it published a full Pillar 3 with a complete KM1 for "
+    "FY2025 (year ended 30 September 2025) on 9 April 2026 - three months AFTER opting in. A Rule 3.1 row alone "
+    "therefore does not prove a bank stopped disclosing; the exemption can bite no earlier than FY2026. The "
+    "register's other rows for this firm - 'Ru 1.2 & 2.1(9)', ref A00011283P.pdf, 01/12/2025-01/12/2028 - "
+    "modify ELIGIBILITY CRITERIA only and are not an exemption.\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026: castletrust.co.uk's own media library lists seven Pillar 3 PDFs, "
+    "the newest being fy-30_sept-2025-ctb-pillar-3-disclosures.pdf uploaded 9 April 2026. Newest edition "
+    "published: FY2025, which this workbook holds. None newer. Also confirmed that "
+    "/wp-content/uploads/2025/05/Pillar-3-Document.pdf is a byte-identical DUPLICATE of the FY2024 edition "
+    "(both md5 284d09c52c9b28eeaf50b546f7ca55c1, both 1,434,534 bytes) - one document under two URLs, not a "
+    "second basis (map rule 11's inverse case)."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2025": 84719, "FY2024": 83107, "FY2023": 83177, "FY2022": 75267, "FY2021": 71644}),
+    ("DATA", "2  Tier 1 capital (£'000)", {"FY2025": 84719, "FY2024": 83107, "FY2023": 83177, "FY2022": 75267, "FY2021": 71644}),
+    ("DATA", "3  Total capital (£'000)", {"FY2025": 99719, "FY2024": 90107, "FY2023": 83177, "FY2022": 75267, "FY2021": 71644}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2025": 634489, "FY2024": 499532, "FY2023": 413907, "FY2022": 357870, "FY2021": 359249}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2025": "13.35%", "FY2024": "16.64%", "FY2023": "20.10%", "FY2022": "21.03%", "FY2021": "19.94%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2025": "13.35%", "FY2024": "16.64%", "FY2023": "20.10%", "FY2022": "21.03%", "FY2021": "19.94%"}),
+    ("DATA", "7  Total capital ratio (%)", {"FY2025": "15.72%", "FY2024": "18.04%", "FY2023": "20.10%", "FY2022": "21.03%", "FY2021": "19.94%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2025": "0.65%", "FY2024": "1.10%", "FY2023": "1.18%", "FY2022": "1.18%", "FY2021": "2.27%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2025": "0.22%", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2025": "0.29%", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2025": "9.15%", "FY2024": "9.10%", "FY2023": "9.18%", "FY2022": "9.18%", "FY2021": "10.27%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2025": "1.94%", "FY2024": "1.88%", "FY2023": "1.88%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2025": "4.44%", "FY2024": "4.38%", "FY2023": "4.38%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2025": "13.59%", "FY2024": "13.48%", "FY2023": "13.56%", "FY2022": "11.68%", "FY2021": "12.77%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {"FY2025": "6.49%", "FY2024": "7.54%", "FY2023": "10.92%", "FY2022": "11.85%", "FY2021": "9.67%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)", {"FY2025": 1173013, "FY2024": 860147, "FY2023": 930371, "FY2022": 821174, "FY2021": 647358}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {"FY2025": "7.22%", "FY2024": "9.66%", "FY2023": "8.94%", "FY2022": "9.17%", "FY2021": "11.07%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)", {"FY2025": 264609, "FY2024": 107626, "FY2023": 91141, "FY2022": 89542, "FY2021": 77922}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2025": 184773, "FY2024": 109670, "FY2023": 86257, "FY2022": 71131, "FY2021": 50766}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2025": 44818, "FY2024": 74788, "FY2023": 62056, "FY2022": 53158, "FY2021": 44223}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2025": 139955, "FY2024": 36257, "FY2023": 28052, "FY2022": 22292, "FY2021": 13535}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2025": "189.07%", "FY2024": "296.84%", "FY2023": "324.90%", "FY2022": "401.68%", "FY2021": "575.71%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2025": 1473649, "FY2024": 943517, "FY2023": 810485, "FY2022": 715551, "FY2021": "N/A"}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2025": 826660, "FY2024": 603108, "FY2023": 471300, "FY2022": 421346, "FY2021": "N/A"}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2025": "178.27%", "FY2024": "156.44%", "FY2023": "171.97%", "FY2022": "169.82%", "FY2021": "N/A"}),
+]
+
+bw.add_km1_sheet(
+    title="Castle Trust Capital plc - KM1 Key Metrics",
+    subtitle="'Key Metrics for the Bank' as published (Castle Trust Capital plc solo, NOT the Castle Trust "
+             "Holdings Group block printed on the facing page), GBP'000. FY2022-FY2025 are own-edition years; "
+             "FY2021 predates the UK KM1 template and is the FY2022 edition's September 2021 comparative "
+             "column (map rule 28) - see source note",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=84,
+    source_height=700,
+    years=KM1_YEARS,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", CET1_TIER1),

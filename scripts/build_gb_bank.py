@@ -438,6 +438,135 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=58, source_height=210)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own UK KM1 template, reproduced whole
+# ---------------------------------------------------------------
+KM1_NOTE = (
+    "\n\nKM1 KEY METRICS SHEET - WHAT THIS IS AND HOW IT WAS BUILT\n"
+    "GB Bank prints the UK KM1 key-metrics template UNNUMBERED. It is still the template: it carries the "
+    "template's row set in the template's order (available own funds -> risk-weighted exposure amounts -> "
+    "capital ratios -> SREP add-ons -> combined buffer -> leverage -> LCR -> NSFR), which is the test that "
+    "matters, not the presence of row numbers. Row numbers are NOT added here - the rows appear exactly as "
+    "the Bank prints them.\n"
+    "\n"
+    "EACH YEAR IS TAKEN FROM ITS OWN EDITION'S CURRENT-PERIOD COLUMN, not from a later edition's comparative, "
+    "with one deliberate exception noted below. Where an edition's own figure differs from a later edition's "
+    "restatement of the same year, the figure printed at the time is the one reproduced here and the "
+    "divergence is recorded rather than reconciled away.\n"
+    "\n"
+    "REPORTING-PERIOD CHANGE. The Bank moved its year-end from 31 December to 30 September. FY2023 and "
+    "earlier columns are 31 December year-ends; FY2024 is the 30 September 2024 period and FY2025 the "
+    "30 September 2025 period. The columns are the Bank's own reporting periods and are NOT restated onto a "
+    "common 12-month basis.\n"
+    "\n"
+    "FY2021 IS A COMPARATIVE COLUMN, NOT AN OWN EDITION. No FY2021 Pillar 3 disclosure exists - the 2022 "
+    "edition is the Bank's first - so the FY2021 column here is that edition's own 31 December 2021 "
+    "comparative column, reproduced in the 2022 edition's row structure. This is disclosed rather than left "
+    "blank because the Bank itself published these figures; it is flagged so the column is never mistaken "
+    "for a FY2021-edition disclosure.\n"
+    "\n"
+    "TWO PRINTED SOURCE DEFECTS ARE REPRODUCED, NOT CORRECTED:\n"
+    "1. Total risk-weighted exposure amount. The 2023 edition prints 2,735 for FY2023 and the 2022 edition "
+    "prints 2,089 for FY2022. Neither reconciles to its own edition's capital ratio (19,299/2,735 = 705%, "
+    "not the 56.46% printed alongside it; 22,096/2,089 = 1,058%, not the 234.21% printed alongside it), "
+    "whereas the later editions' restated 34,184 and 9,434 do reconcile exactly. The Total RWAs metric sheet "
+    "in this workbook therefore carries 34,184 and 9,434, while THIS sheet carries 2,735 and 2,089 as "
+    "printed. The resulting cross-check disagreement is expected and is the point: it preserves the "
+    "difference between what was published at the time and what was published later.\n"
+    "2. NSFR block of the 2023 edition. Its FY2022 comparative column prints available stable funding 16,546 "
+    "and required stable funding 1,696 - which are the 2022 edition's FY2021 figures, not its FY2022 figures "
+    "(20,742 and 1,006) - while carrying a FY2022 NSFR ratio of 2,062%. That block is column-shifted. It "
+    "does not affect this sheet, because FY2022 is taken from its own 2022 edition, but it is recorded here "
+    "as a defect in the source.\n"
+    "\n"
+    "BLANK, ZERO AND A CAPPED RATIO ARE THREE DIFFERENT THINGS in the FY2021 column and are reproduced as "
+    "three different things: cash outflows and cash inflows are genuinely absent (blank); total net cash "
+    "outflows prints a real 0; and the liquidity coverage ratio prints 9999.99%, a capped/placeholder value "
+    "that is reproduced verbatim rather than recomputed from a zero denominator.\n"
+    "\n"
+    "BASIS: SOLO. The 2025 edition prints the key-metrics template TWICE - once on a solo basis in section 5 "
+    "(folio 13) and again in Appendix 3 'Individual Consolidated Reporting' (folio 23), the latter reflecting "
+    "the PRA permission received 23 October 2025 to report on an individual consolidation basis (CRR Article "
+    "9) backdated to 1 October 2025, bringing SilverRock Financial Services Ltd into scope. The 2025 edition "
+    "states expressly that all figures in the document are on a solo basis as at 30 September 2025 unless "
+    "stated otherwise. THIS SHEET REPRODUCES THE SOLO TABLE, which is the basis the rest of this workbook is "
+    "built on. The Appendix 3 individual-consolidation table is a different basis and is deliberately NOT "
+    "merged into this column."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 capital (CET1) (£'000)", CAPITAL),
+    ("DATA", "Tier 1 capital (£'000)", CAPITAL),
+    ("DATA", "Total capital (£'000)", CAPITAL),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 548458, "FY2024": 151536, "FY2023": 2735, "FY2022": 2089, "FY2021": 4112}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", CAPITAL_RATIO),
+    ("DATA", "Tier 1 ratio (%)", CAPITAL_RATIO),
+    ("DATA", "Total capital ratio (%)", CAPITAL_RATIO),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.17%", "FY2024": "4.16%", "FY2023": "4.16%", "FY2022": "4.16%", "FY2021": "80.94%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.74%", "FY2024": "1.41%", "FY2023": "1.41%", "FY2022": "1.41%", "FY2021": "27.46%"}),
+    ("DATA", "Additional T2 SREP requirements (%)",
+     {"FY2025": "0.97%", "FY2024": "1.86%", "FY2023": "1.86%", "FY2022": "1.86%", "FY2021": "36.13%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2025": "11.88%", "FY2024": "15.43%", "FY2023": "15.43%", "FY2022": "15.43%", "FY2021": "152.53%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.78%", "FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1%", "FY2021": "0%"}),
+    ("DATA", "Global Systemically Important Institution buffer (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2025": "4.28%", "FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.50%", "FY2021": "2.50%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2025": "16.16%", "FY2024": "19.93%", "FY2023": "19.93%", "FY2022": "18.93%", "FY2021": "155.03%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "37.93%", "FY2024": "25.78%", "FY2023": "36.53%", "FY2022": "218.78%", "FY2021": "250.84%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)", LEVERAGE_EXPOSURE),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)", LEVERAGE_RATIO),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)", HQLA),
+    ("DATA", "Cash outflows - Total weighted value (£'000)",
+     {"FY2025": 524088, "FY2024": 142416, "FY2023": 50957, "FY2022": 153}),
+    ("DATA", "Cash inflows - Total weighted value (£'000)",
+     {"FY2025": 1908, "FY2024": 2593, "FY2023": 542, "FY2022": 61}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)", NET_OUTFLOWS),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2025": "210%", "FY2024": "306%", "FY2023": "416%", "FY2022": "20,091%", "FY2021": "9999.99%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "Total available stable funding (£'000)", ASF),
+    ("DATA", "Total required stable funding (£'000)", RSF),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2025": "191%", "FY2024": "538%", "FY2023": "3,375%", "FY2022": "2061.89%", "FY2021": "978.24%"}),
+]
+
+bw.add_km1_sheet(
+    title="GB Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own UK KM1 key-metrics template (solo basis), reproduced in its own row order, "
+             "labels and precision. Amounts in £'000, ratios as printed. The template is printed unnumbered "
+             "and is left unnumbered here. FY2025 and FY2024 are 30 September period-ends, FY2023 and "
+             "earlier 31 December. FY2021 is the 2022 edition's comparative column (no FY2021 edition "
+             "exists). Two printed source defects are reproduced rather than corrected - see the note.",
+    rows=km1_rows,
+    sources_text=p3_sources() + (
+        "\n\nKM1 key-metrics table, section 5 'Key Metrics', by edition (printed folios, not PDF sheet "
+        "indices): FY2025 = Pillar 3 Disclosures 2025, folio 13 (solo table; a second, individual-"
+        "consolidation table appears at folio 23, Appendix 3, and is NOT used here). FY2024 = Pillar 3 "
+        "Disclosures 2024, folio 12. FY2023 = Pillar 3 Disclosures 2023, folio 11. FY2022 = Pillar 3 "
+        "Disclosures 2022, folio 11. FY2021 = the 31 December 2021 comparative column of that same 2022 "
+        "edition, folio 11."
+    ) + KM1_NOTE,
+    first_col_width=72,
+    source_height=760,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CAPITAL)])
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 (CET1) ratio", CAPITAL_RATIO)])
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", CAPITAL)], note="No AT1 instruments are disclosed in the annual KM1 tables; Tier 1 equals CET1 throughout.")

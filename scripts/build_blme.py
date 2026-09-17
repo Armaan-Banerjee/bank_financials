@@ -669,7 +669,12 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
-# KM1 Key Metrics - BLME's own 'Key metrics' table, FY2022-FY2025
+# KM1 Key Metrics - BLME's own 'Key metrics' table, FY2022-FY2025 from each
+# year's own edition, plus FY2021 from the FY2022 edition's comparative column
+# (KM1-035 / map rule 28: the FY2021 edition prints no template at all, only a
+# shorter bespoke "Table 2: Key ratios" that fails the row-set test). See the
+# sheet note for the evidence and for the two FY2021 figures - LCR and NSFR -
+# on which BLME's two tables genuinely disagree.
 # ---------------------------------------------------------------
 KM1_SOURCES = (
     "Source - BLME plc's own 'Key metrics' table, p.4 of each year's Pillar III Disclosure, amounts in "
@@ -677,31 +682,62 @@ KM1_SOURCES = (
     f"FY2025: Pillar III Disclosure 31 December 2025, p.4 - {P32025_URL}\n"
     f"FY2024: Pillar III Disclosure 31 December 2024, p.4 - {P32024_URL}\n"
     f"FY2023: Pillar III Disclosure 31 December 2023, p.4 - {P32023_URL}\n"
-    f"FY2022: Pillar III Disclosure 31 December 2022, p.4 - {P32022_URL}\n\n"
-    "EACH YEAR IS TAKEN FROM ITS OWN EDITION'S FIRST COLUMN. Every edition prints two columns (its own "
-    "year-end and the prior year's comparative); only the own-year column is used here, so no figure on this "
-    "sheet is a later report's restatement of an earlier year.\n\n"
+    f"FY2022: Pillar III Disclosure 31 December 2022, p.4 - {P32022_URL}\n"
+    f"FY2021 (NOT AN OWN-EDITION COLUMN): the SAME Pillar III Disclosure 2022 document, section 2 'Key "
+    f"metrics', printed p.4 ('Page 4 of 5'), COMPARATIVE COLUMN headed 31/12/2021 - {P32022_URL}\n\n"
+    "FY2022-FY2025 ARE EACH TAKEN FROM THEIR OWN EDITION'S FIRST COLUMN, so no figure in those four columns "
+    "is a later report's restatement. FY2021 is the single exception and is flagged as such above and "
+    "explained below.\n\n"
     "THE TABLE IS UNNUMBERED AND UNTITLED AS 'KM1'. BLME captions it simply 'Key metrics' and prints no "
     "template row numbers at all. It is nonetheless the template: it carries the template's row set in the "
     "template's order - available own funds, then risk-weighted exposure amounts, then capital ratios, then "
     "the SREP block, then the combined buffer block, then leverage, then the LCR with its component rows, "
     "then the NSFR with its component rows. Identified by row set rather than by caption, per the map's "
     "row-set test. Row labels are reproduced as BLME prints them, so they carry no row numbers here either.\n\n"
-    "WHY THIS SHEET STOPS AT FY2022 while the rest of the workbook runs back to FY2014. BLME adopted this "
-    "table in its 2022 edition. The FY2021 and FY2020 editions instead print '1.3/1.4 Table 2: Key ratios' "
-    "(56 and 59 pages respectively, both fetched and read: FY2021 p.7, FY2020 p.7), a much smaller summary in "
-    "£m carrying CET1/Tier 1/Total regulatory capital, RWAs, the three capital ratios, leverage exposure and "
-    "ratio, LCR%, NSFR% and 'Total capital requirement (Pillar 1 + Pillar 2A)'. It has no SREP block, no "
-    "buffer block, and none of the LCR or NSFR component rows, so it fails the row-set test and is NOT this "
-    "template. Those years are therefore left off this sheet rather than part-filled from a different table; "
-    "their figures remain on the individual metric sheets, cited to their own editions.\n"
-    "FOR THE RECORD, AND DELIBERATELY NOT USED: the FY2022 edition does print an FY2021 comparative column in "
-    "this template's shape (CET1/Tier 1/Total capital 238,839; RWEA 1,313,776; all three ratios 18.18%; "
-    "additional CET1 SREP 1.94%; total SREP 9.94%; CCB 2.50%; CCyB 0.00%; combined buffer 2.50%; overall "
-    "12.44%; CET1 available 5.74%; leverage exposure 1,600,428; leverage 14.92%; HQLA 71,695; outflows "
-    "90,975; inflows 140,123; net outflows 22,744; LCR 315%; and 'N/A' against all three NSFR rows). It is "
-    "quoted here so the choice stays recoverable, but it is not carried into the FY2021 column, because the "
-    "FY2021 edition itself published no such table.\n\n"
+    "WHY FY2021 IS FILLED FROM THE FY2022 EDITION, AND FY2020 AND EARLIER ARE NOT (revised 17 September "
+    "2026). BLME adopted this table in its 2022 edition, so THE FY2021 EDITION PUBLISHES NO KM1 TEMPLATE AT "
+    "ALL - not a template with rows left blank, but no template, and therefore no own-edition disclosure for "
+    "a later comparative to displace. What the FY2021 edition prints instead, at its section 1.3 'Table 2: "
+    "Key ratios' (printed p.7 of 55), is a 13-line summary in £m: CET1 / Tier 1 / Total regulatory capital "
+    "resources, risk-weighted assets, the three capital ratios, leverage exposure and ratio, LCR%, NSFR%, "
+    "and a 'Total capital requirement (Pillar 1 + Pillar 2A)' line that is not a template row at all. No row "
+    "numbers, no SREP block, no buffer block, and none of the LCR or NSFR component rows. It fails the "
+    "row-set test and is a different and shorter table, not an unnumbered template.\n"
+    "That absence was re-established from the document on 17 September 2026 before this column was filled, "
+    "and it is a finding rather than a failed search: extraction from the 55-page FY2021 PDF is RICH (103 "
+    "hits for 'capital', 123 for 'ratio', 54 for 'liquidity', 21 for 'buffer', 14 for 'leverage'), and "
+    "against that richness it returns ZERO hits for 'KM1', 'Key metrics', 'SREP' and 'NSFR' - the last two "
+    "being blocks the template cannot omit.\n"
+    "THE FY2022 EDITION'S COMPARATIVE COLUMN, headed 31/12/2021 and in GBP'000, carries the complete table "
+    "for that date, and THAT IS WHAT THIS SHEET'S FY2021 NOW CARRIES, in the row structure the FY2022 "
+    "edition prints it in - the same 24-row structure as the FY2022 column beside it, so nothing is "
+    "reshaped. All 24 values were read off the FY2022 PDF directly.\n"
+    "This reverses the treatment this sheet carried until 17 September 2026, which omitted FY2021 as a "
+    "column entirely and quoted the comparative in this note instead. The evidence above is unchanged; only "
+    "the conclusion drawn from it has changed, so that a BLANK on this sheet now means one thing only: BLME "
+    "has never published that figure, in any edition, on any basis.\n"
+    "FY2020 AND EARLIER REMAIN OFF THIS SHEET for exactly that reason. The FY2021 edition's Table 2 does "
+    "carry a 31/12/2020 comparative, but it is the same bespoke 13-line shape, not the template, so it "
+    "cannot fill a template column; and no other edition prints FY2020 in template form. Those years' "
+    "figures remain on the individual metric sheets, cited to their own editions.\n\n"
+    "THE THREE NSFR ROWS FOR FY2021 READ 'N/A' BECAUSE THAT IS THE LITERAL STRING THE BANK PRINTS IN THAT "
+    "COLUMN - not a dash and not an empty cell - so 'N/A' is what this sheet carries (map rule 2). The "
+    "FY2021 column's countercyclical buffer row, by contrast, is a printed '0.00%', a disclosed zero, and is "
+    "carried as the zero.\n\n"
+    "TWO FY2021 FIGURES ON WHICH THE BANK'S TWO TABLES GENUINELY DISAGREE - BOTH RECORDED, NEITHER "
+    "RECONCILED. This surfaced when FY2021 was filled and it is a real finding, not a transcription slip:\n"
+    "• LIQUIDITY COVERAGE RATIO. This sheet carries 315%, the figure the FY2022 edition's comparative "
+    "column prints, and it is internally consistent with its own component rows in that column (HQLA 71,695 "
+    "/ net cash outflows 22,744 = 315.2%), which are 12-month weighted AVERAGES as the row captions say. The "
+    "FY2021 edition's own Table 2 prints 208% for the same date - a smaller, differently-built summary that "
+    "gives no components and states no averaging basis. The two are not reconciled here and neither is "
+    "adjusted to match the other; this sheet reproduces the template column, and the divergence is recorded "
+    "so a reader meeting 208% elsewhere knows where it comes from.\n"
+    "• NET STABLE FUNDING RATIO. The FY2022 edition's comparative prints 'N/A' for all three NSFR rows, "
+    "which is what this sheet shows. The FY2021 edition's own Table 2 does print an NSFR of 113.85%, on its "
+    "own bespoke basis, and that is the figure the NSFR metric sheet in this workbook carries under its own "
+    "citation. So this sheet and that one legitimately differ for FY2021, each faithful to a different "
+    "published table, and neither has been edited to agree with the other.\n\n"
     "LATEST-EDITION CHECK: BLME's own Financial Results and Reporting page "
     "(https://www.blme.com/about-us/investors/financial-results-and-reporting/) was read on 2026-09-16. It "
     "lists Pillar III Disclosures for every year from 2009 to 2025; 2025 is the newest and this workbook "
@@ -713,70 +749,74 @@ KM1_SOURCES = (
 km1_rows = [
     ("SECTION", "AVAILABLE OWN FUNDS (AMOUNTS)", {}),
     ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)",
-     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212, "FY2021": 238839}),
     ("DATA", "Tier 1 capital (£'000)",
-     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212, "FY2021": 238839}),
     ("DATA", "Total capital (£'000)",
-     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212}),
+     {"FY2025": 225806, "FY2024": 227639, "FY2023": 226478, "FY2022": 227212, "FY2021": 238839}),
     ("SECTION", "RISK-WEIGHTED EXPOSURE AMOUNTS", {}),
     ("DATA", "Total risk-weighted exposure amount (£'000)",
-     {"FY2025": 1170428, "FY2024": 1279034, "FY2023": 1342418, "FY2022": 1376389}),
+     {"FY2025": 1170428, "FY2024": 1279034, "FY2023": 1342418, "FY2022": 1376389, "FY2021": 1313776}),
     ("SECTION", "CAPITAL RATIOS (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "Common Equity Tier 1 ratio (%)",
-     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%", "FY2021": "18.18%"}),
     ("DATA", "Tier 1 ratio (%)",
-     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%", "FY2021": "18.18%"}),
     ("DATA", "Total capital ratio (%)",
-     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%"}),
+     {"FY2025": "19.29%", "FY2024": "17.80%", "FY2023": "16.87%", "FY2022": "16.51%", "FY2021": "18.18%"}),
     ("SECTION", "ADDITIONAL OWN FUNDS REQUIREMENTS BASED ON SREP (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "Additional CET1 SREP requirements (%)",
-     {"FY2025": "3.59%", "FY2024": "3.59%", "FY2023": "3.59%", "FY2022": "1.94%"}),
+     {"FY2025": "3.59%", "FY2024": "3.59%", "FY2023": "3.59%", "FY2022": "1.94%", "FY2021": "1.94%"}),
     ("DATA", "Total SREP own funds requirements (%)",
-     {"FY2025": "11.59%", "FY2024": "11.59%", "FY2023": "11.59%", "FY2022": "9.94%"}),
+     {"FY2025": "11.59%", "FY2024": "11.59%", "FY2023": "11.59%", "FY2022": "9.94%", "FY2021": "9.94%"}),
     ("SECTION", "COMBINED BUFFER REQUIREMENT (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "Capital conservation buffer (%)",
-     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
     ("DATA", "Institution specific countercyclical capital buffer (%)",
-     {"FY2025": "1.58%", "FY2024": "1.67%", "FY2023": "1.76%", "FY2022": "0.95%"}),
+     {"FY2025": "1.58%", "FY2024": "1.67%", "FY2023": "1.76%", "FY2022": "0.95%", "FY2021": "0.00%"}),
     ("DATA", "Combined buffer requirement (%)",
-     {"FY2025": "4.08%", "FY2024": "4.17%", "FY2023": "4.26%", "FY2022": "3.45%"}),
+     {"FY2025": "4.08%", "FY2024": "4.17%", "FY2023": "4.26%", "FY2022": "3.45%", "FY2021": "2.50%"}),
     ("DATA", "Overall capital requirements (%)",
-     {"FY2025": "15.67%", "FY2024": "15.76%", "FY2023": "15.85%", "FY2022": "13.39%"}),
+     {"FY2025": "15.67%", "FY2024": "15.76%", "FY2023": "15.85%", "FY2022": "13.39%", "FY2021": "12.44%"}),
     ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
-     {"FY2025": "3.62%", "FY2024": "2.04%", "FY2023": "1.02%", "FY2022": "3.11%"}),
+     {"FY2025": "3.62%", "FY2024": "2.04%", "FY2023": "1.02%", "FY2022": "3.11%", "FY2021": "5.74%"}),
     ("SECTION", "LEVERAGE RATIO", {}),
     ("DATA", "Total exposure measure excluding claims on central banks (£'000)",
-     {"FY2025": 1510175, "FY2024": 1519554, "FY2023": 1521865, "FY2022": 1622691}),
+     {"FY2025": 1510175, "FY2024": 1519554, "FY2023": 1521865, "FY2022": 1622691, "FY2021": 1600428}),
     ("DATA", "Leverage ratio excluding claims on central banks (%)",
-     {"FY2025": "14.95%", "FY2024": "14.98%", "FY2023": "14.88%", "FY2022": "14.00%"}),
+     {"FY2025": "14.95%", "FY2024": "14.98%", "FY2023": "14.88%", "FY2022": "14.00%", "FY2021": "14.92%"}),
     ("SECTION", "LIQUIDITY COVERAGE RATIO", {}),
     ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
-     {"FY2025": 63913, "FY2024": 57829, "FY2023": 60522, "FY2022": 92894}),
+     {"FY2025": 63913, "FY2024": 57829, "FY2023": 60522, "FY2022": 92894, "FY2021": 71695}),
     ("DATA", "Cash outflows - Total weighted value (£'000)",
-     {"FY2025": 83047, "FY2024": 74573, "FY2023": 83950, "FY2022": 105540}),
+     {"FY2025": 83047, "FY2024": 74573, "FY2023": 83950, "FY2022": 105540, "FY2021": 90975}),
     ("DATA", "Cash inflows - Total weighted value (£'000)",
-     {"FY2025": 78968, "FY2024": 69733, "FY2023": 113997, "FY2022": 109725}),
+     {"FY2025": 78968, "FY2024": 69733, "FY2023": 113997, "FY2022": 109725, "FY2021": 140123}),
     ("DATA", "Total net cash outflows (adjusted value) (£'000)",
-     {"FY2025": 20762, "FY2024": 18643, "FY2023": 20987, "FY2022": 26385}),
+     {"FY2025": 20762, "FY2024": 18643, "FY2023": 20987, "FY2022": 26385, "FY2021": 22744}),
     ("DATA", "Liquidity coverage ratio (%)",
-     {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%"}),
+     {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "315%"}),
     ("SECTION", "NET STABLE FUNDING RATIO", {}),
     ("DATA", "Total available stable funding (£'000)",
-     {"FY2025": 1289527, "FY2024": 1281180, "FY2023": 1401110, "FY2022": 1502432}),
+     {"FY2025": 1289527, "FY2024": 1281180, "FY2023": 1401110, "FY2022": 1502432, "FY2021": "N/A"}),
     ("DATA", "Total required stable funding (£'000)",
-     {"FY2025": 1070069, "FY2024": 1025644, "FY2023": 969949, "FY2022": 1053953}),
+     {"FY2025": 1070069, "FY2024": 1025644, "FY2023": 969949, "FY2022": 1053953, "FY2021": "N/A"}),
     ("DATA", "NSFR ratio (%)",
-     {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%"}),
+     {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%", "FY2021": "N/A"}),
 ]
 
 bw.add_km1_sheet(
     title="BLME plc - KM1 Key Metrics",
-    subtitle="BLME plc's own 'Key metrics' table, as published each year - amounts in GBP'000 as printed",
+    subtitle="BLME plc's own 'Key metrics' table, as published each year - amounts in GBP'000 as printed. "
+             "FY2022-FY2025 come from each year's own edition; FY2021 is the FY2022 edition's comparative "
+             "column, because BLME's own FY2021 edition prints no template at all (it prints a shorter "
+             "bespoke 'Table 2: Key ratios' instead). See the source note, which also records two FY2021 "
+             "figures on which the Bank's two tables disagree.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=78,
     source_height=520,
-    years=["FY2025", "FY2024", "FY2023", "FY2022"],
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
 )
 
 # ---------------------------------------------------------------

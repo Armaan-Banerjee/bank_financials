@@ -462,6 +462,262 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own published "Summary of Key Metrics" table,
+# reproduced whole. Called BEFORE the first add_metric_sheet() so the sheet
+# lands immediately after Asset Quality and immediately before CET1 Capital.
+#
+# FOUR SEPARATE TABLES, NOT ONE. Unity's row NUMBERS are reused for different
+# metrics between editions, so nothing may be merged across the blocks below:
+#   A. FY2019/FY2020/FY2021 editions - unnumbered, 10 rows, no Tier 1, no
+#      Total capital, no SREP/overall-requirement row, no NSFR.
+#   B. FY2022 edition            - numbered Basel III table, 28 rows. Plain
+#      "7a" here is the FULLY LOADED total capital ratio, not the UK
+#      template's "UK 7a" SREP requirement. 10 = G-SIB/D-SIB, 11 = combined
+#      buffer, 12 = CET1 after SREP.
+#   C. FY2023 edition            - 19 rows. 10 = combined buffer (B's 10 is
+#      G-SIB), 11a = overall capital requirement, NO row 11 and NO row 12.
+#   D. FY2024/FY2025 editions    - 21 rows. 12/13 = UK leverage exposure and
+#      ratio, 14/15 = Basel III leverage exposure and ratio, 16-18 LCR,
+#      19-21 NSFR. Every number from 10 down means something different from
+#      B and C.
+# Each year is taken from its OWN edition. The only exception is FY2018, whose
+# standalone Pillar 3 is genuinely unobtainable (see P3_2019_URL comment above)
+# and which is therefore filled from the FY2019 edition's own 2018 comparative
+# column - named as such in the source note below.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "BLOCK D - 'Summary of Key Metrics' as printed in the FY2024 and FY2025 editions "
+                "(21 numbered rows). Row numbers below are NOT comparable with Blocks B and C.", {}),
+    ("SECTION", "Available Capital", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)", {"FY2025": 259127, "FY2024": 222740}),
+    ("DATA", "2    Tier 1 capital (£'000)", {"FY2025": 259127, "FY2024": 222740}),
+    ("DATA", "3    Total capital (£'000)", {"FY2025": 259127, "FY2024": 222740}),
+    ("SECTION", "Risk Weighted Assets", {}),
+    ("DATA", "4    Total risk weighted assets (RWA) (£'000)", {"FY2025": 1065248, "FY2024": 925984}),
+    ("SECTION", "Risk-based Capital Ratios as a percentage of RWA", {}),
+    ("DATA", "5    CET1 ratio (%)", {"FY2025": "24.33%", "FY2024": "24.05%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2025": "24.33%", "FY2024": "24.05%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2025": "24.33%", "FY2024": "24.05%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "8    Capital conservation buffer requirement (%)", {"FY2025": "2.50%", "FY2024": "2.50%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)", {"FY2025": "2.00%", "FY2024": "2.00%"}),
+    ("DATA", "10    Combined buffer requirement (%)", {"FY2025": "4.50%", "FY2024": "4.50%"}),
+    ("DATA", "11    Overall capital requirement (%)", {"FY2025": "15.19%", "FY2024": "15.19%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "12    Total UK leverage ratio exposure measure (£'000)", {"FY2025": 2045234, "FY2024": 1394612}),
+    ("DATA", "13    UK leverage ratio (%) (excluding the impact of any applicable temporary exemption of "
+             "central bank reserves)", {"FY2025": "12.67%", "FY2024": "15.97%"}),
+    ("DATA", "14    Total Basel III leverage ratio exposure measure (£'000)", {"FY2025": 2263918, "FY2024": 2016510}),
+    ("DATA", "15    Basel III leverage ratio (%) (including the impact of any applicable temporary exemption "
+             "of central bank reserves)", {"FY2025": "11.45%", "FY2024": "11.05%"}),
+    ("SECTION", "Liquidity Coverage Ratio (LCR)", {}),
+    ("DATA", "16    Total high-quality liquid assets (HQLA) (£'000)", {"FY2025": 915263, "FY2024": 913969}),
+    ("DATA", "17    Total net cash outflow (£'000)", {"FY2025": 405412, "FY2024": 400945}),
+    ("DATA", "18    LCR ratio (%)", {"FY2025": "225.76%", "FY2024": "227.95%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    ("DATA", "19    Total available stable funding (£'000)", {"FY2025": 1420532, "FY2024": 1303839}),
+    ("DATA", "20    Total required stable funding (£'000)", {"FY2025": 955318, "FY2024": 845763}),
+    ("DATA", "21    NSFR ratio (%)", {"FY2025": "148.70%", "FY2024": "154.16%"}),
+
+    ("SECTION", "BLOCK C - 'Summary of Key Metrics' as printed in the FY2023 edition (19 numbered rows). "
+                "A DIFFERENT NUMBERING from Block D: here 13/14 are the Basel III leverage rows and 15-17 "
+                "the LCR rows, and there is no row 11 and no row 12.", {}),
+    ("SECTION", "Available Capital", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)", {"FY2023": 172898}),
+    ("DATA", "2    Tier 1 capital (£'000)", {"FY2023": 172898}),
+    ("DATA", "3    Total capital (£'000)", {"FY2023": 172898}),
+    ("SECTION", "Risk Weighted Assets", {}),
+    ("DATA", "4    Total risk weighted assets (RWA) (£'000)", {"FY2023": 878472}),
+    ("SECTION", "Risk-based Capital Ratios as a percentage of RWA", {}),
+    ("DATA", "5    CET1 ratio (%)", {"FY2023": "19.68%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2023": "19.68%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2023": "19.68%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "8    Capital conservation buffer requirement (%)", {"FY2023": "2.50%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)", {"FY2023": "2.00%"}),
+    ("DATA", "10    Combined buffer requirement (%)", {"FY2023": "4.50%"}),
+    # Reproduced exactly as printed - the FY2023 edition really does run the
+    # caption twice in one cell ("...requirement (%)Overall capital
+    # requirements (%)"). Confirmed by rendering the page, so it is a defect in
+    # the published PDF, not a text-extraction artefact. Recorded, not tidied.
+    ("DATA", "11a    Overall capital requirement (%)Overall capital requirements (%)  [caption printed twice - "
+             "source defect, reproduced as published]", {"FY2023": "15.19%"}),
+    ("SECTION", "Basel III Leverage Ratio", {}),
+    ("DATA", "13    Total Basel III leverage ratio exposure measure (£'000)", {"FY2023": 1797760}),
+    ("DATA", "14    Basel III leverage ratio (%) (including the impact of any applicable temporary exemption "
+             "of central bank reserves)", {"FY2023": "9.62%"}),
+    ("SECTION", "Liquidity Coverage Ratio (LCR)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (£'000)", {"FY2023": 697018}),
+    ("DATA", "16    Total net cash outflow (£'000)", {"FY2023": 332338}),
+    ("DATA", "17    LCR ratio (%)", {"FY2023": "210%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    ("DATA", "18    Total available stable funding (£'000)", {"FY2023": 1200480}),
+    ("DATA", "19    Total required stable funding (£'000)", {"FY2023": 909694}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2023": "131.97%"}),
+
+    ("SECTION", "BLOCK B - 'Summary of Key Metrics' as printed in the FY2022 edition (28 numbered rows, the "
+                "pre-2022 Basel III shape with fully-loaded ECL twins). PLAIN '7a' HERE IS THE FULLY LOADED "
+                "TOTAL CAPITAL RATIO, not the UK template's 'UK 7a' SREP requirement; 10 is the G-SIB/D-SIB "
+                "row and 11 the combined buffer, both of which mean something else in Blocks C and D. This "
+                "edition heads its amount column '£000s'; shown here as £'000, the same unit.", {}),
+    ("SECTION", "Available capital (£000s, as headed in the source)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)", {"FY2022": 122931}),
+    ("DATA", "1a    Fully loaded ECL accounting model (£'000)", {"FY2022": 120696}),
+    ("DATA", "2    Tier 1 (£'000)", {"FY2022": 122931}),
+    ("DATA", "2a    Fully loaded ECL accounting model Tier 1 (£'000)", {"FY2022": 120696}),
+    ("DATA", "3    Total capital (£'000)", {"FY2022": 122931}),
+    ("DATA", "3a    Fully loaded ECL accounting model total capital (£'000)", {"FY2022": 120696}),
+    ("SECTION", "Risk-weighted assets (amounts)", {}),
+    ("DATA", "4    Total risk-weighted assets (RWA) (£'000)", {"FY2022": 672893}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "5    CET1 ratio (%)", {"FY2022": "18.27%"}),
+    ("DATA", "5a    Fully loaded ECL accounting model CET1 (%)", {"FY2022": "17.94%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2022": "18.27%"}),
+    ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2022": "17.94%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2022": "18.27%"}),
+    ("DATA", "7a    Fully loaded ECL accounting model total capital ratio (%)", {"FY2022": "17.94%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "8    Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2022": "2.50%"}),
+    ("DATA", "9    Countercyclical buffer requirement (%)", {"FY2022": "1%"}),
+    ("DATA", "10    Bank G-SIB and/or D-SIB additional requirements (%)", {"FY2022": "0%"}),
+    ("DATA", "11    Combined buffer requirement (%) (row 8 + row 9 + row 10)", {"FY2022": "3.50%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements",
+     {"FY2022": "12.59%"}),
+    ("SECTION", "Basel III leverage ratio", {}),
+    ("DATA", "13    Total Basel III leverage ratio exposure measure (£'000)", {"FY2022": 1710211}),
+    ("DATA", "14    Basel III leverage ratio (%) (including the impact of any applicable temporary exemption "
+             "of central bank reserves)", {"FY2022": "7.19%"}),
+    ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (including the impact of any "
+             "applicable temporary exemption of central bank reserves) (%)", {"FY2022": "7.07%"}),
+    ("DATA", "14b    Basel III leverage ratio (%) (excluding the impact of any applicable temporary exemption "
+             "of central bank reserves)", {"FY2022": "7.18%"}),
+    ("SECTION", "Liquidity Coverage Ratio (LCR)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (£'000)", {"FY2022": 782783}),
+    ("DATA", "16    Total net cash outflow (£'000)", {"FY2022": 355595}),
+    ("DATA", "17    LCR ratio (%)", {"FY2022": "220%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    ("DATA", "18    Total available stable funding (£'000)", {"FY2022": 1144865}),
+    ("DATA", "19    Total required stable funding (£'000)", {"FY2022": 741481}),
+    ("DATA", "20    NSFR ratio", {"FY2022": "154.4%"}),
+
+    ("SECTION", "BLOCK A - 'Summary of Key Metrics' as printed in the FY2019, FY2020 and FY2021 editions: "
+                "ABBREVIATED AND UNNUMBERED, 10 rows only. The Bank printed no row numbers in these editions, "
+                "so none are shown here; and it printed no Tier 1 capital row, no Total capital row, no "
+                "SREP/overall capital requirement row and no NSFR block at all, so those are BLANK below "
+                "rather than zero. FY2018 is the FY2019 edition's own 2018 comparative column.", {}),
+    ("SECTION", "Capital", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) (£'000)",
+     {"FY2021": 104260, "FY2020": 87476, "FY2019": 79645, "FY2018": 71801}),
+    ("DATA", "Risk weighted assets (£'000)",
+     {"FY2021": 589551, "FY2020": 524088, "FY2019": 453226, "FY2018": 372156}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2021": "17.7%", "FY2020": "16.7%", "FY2019": "17.6%", "FY2018": "19.3%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer requirement (%)",
+     {"FY2021": "2.5%", "FY2020": "2.5%", "FY2019": "2.5%", "FY2018": "1.875%"}),
+    ("DATA", "Countercyclical buffer requirement (%)",
+     {"FY2021": "0%", "FY2020": "0%", "FY2019": "1%", "FY2018": "1%"}),
+    ("SECTION", "Basel III Leverage Ratio", {}),
+    ("DATA", "Total Basel III leverage ratio exposure measure (£'000)",
+     {"FY2021": 1673611, "FY2020": 1481176, "FY2019": 1162383, "FY2018": 1120424}),
+    ("DATA", "Basel III leverage ratio (%)",
+     {"FY2021": "5.7%", "FY2020": "5.9%", "FY2019": "6.9%", "FY2018": "6.4%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total HQLA (£'000)",
+     {"FY2021": 822783, "FY2020": 760666, "FY2019": 548149, "FY2018": 587850}),
+    ("DATA", "Total net cash outflow (£'000)",
+     {"FY2021": 303007, "FY2020": 229721, "FY2019": 161586, "FY2018": 149557}),
+    ("DATA", "LCR ratio (%)",
+     {"FY2021": "272%", "FY2020": "331%", "FY2019": "339%", "FY2018": "393%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Unity Trust Bank Plc's own published 'Summary of Key Metrics' table, one edition per year, "
+    "each year taken from the edition in which it is the REPORTING year (never from a later edition's "
+    "comparative column) with the single documented exception of FY2018. Printed folio numbers, as stated in "
+    "each page's own footer (the PDF sheet index and the printed folio coincide in every edition here):\n"
+    f"FY2025: Pillar 3 Disclosures 2025, printed p.6 - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, printed p.6 - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, printed p.6 - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, printed p.5 - {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosures 2021, printed p.4 - {P3_2021_URL}\n"
+    f"FY2020: Pillar 3 Disclosures 2020, printed p.3 - {P3_2020_URL}\n"
+    f"FY2019: Pillar 3 Disclosures 2019, printed p.3 ('Page 3' in the footer) - {P3_2019_URL}\n"
+    f"FY2018: Pillar 3 Disclosures 2019, printed p.3, 2018 COMPARATIVE column - {P3_2019_URL}. A standalone "
+    "FY2018 Pillar 3 document is not obtainable (not live on unity.co.uk, and the only Wayback capture of its "
+    "known filename is a 345-byte error page - checked via a full CDX search of the unity.co.uk domain for "
+    "every 'pillar' filename ever archived), so FY2018 is filled from the FY2019 edition's own comparative "
+    "and is flagged as such here.\n\n"
+    "WHY FOUR BLOCKS. This is a reproduction of what the Bank printed, not a normalised view, and Unity "
+    "REUSES ITS ROW NUMBERS FOR DIFFERENT METRICS between editions - so the blocks are kept apart and nothing "
+    "is merged across them. Reading down a single column is therefore correct; reading across a row between "
+    "blocks is not, because no row appears in more than one block. Specifically: row 10 is the G-SIB/D-SIB "
+    "requirement in the FY2022 edition but the combined buffer requirement in FY2023-FY2025; row 11 is the "
+    "combined buffer in FY2022 but the overall capital requirement in FY2024/FY2025 (and is printed as '11a' "
+    "in FY2023, with no row 11 at all); rows 13/14 are the Basel III leverage exposure and ratio in "
+    "FY2022/FY2023 but the UK leverage ratio and the Basel III exposure measure in FY2024/FY2025; and every "
+    "LCR and NSFR row number shifts by one between FY2023 and FY2024. Plain '7a' in the FY2022 edition is the "
+    "FULLY LOADED total capital ratio - it is NOT the UK template's 'UK 7a' additional CET1 SREP requirement, "
+    "which Unity has never published.\n\n"
+    "WHAT THE FY2019-FY2021 EDITIONS DO NOT PUBLISH (Block A). Those three editions print an abbreviated, "
+    "UNNUMBERED version of the same table with ten rows. No row numbers are shown here because the Bank "
+    "printed none - attaching template numbers would assert a correspondence it never published. Those "
+    "editions carry no Tier 1 capital row, no Total capital row, no SREP or overall-capital-requirement row, "
+    "and no NSFR block, so those cells are BLANK: the row was not printed, which is neither a zero nor a row "
+    "we failed to locate. For the avoidance of doubt about where those figures DO exist: the FY2022 edition's "
+    "31-Dec-21 comparative column prints Tier 1 104,260, Total capital 104,260, ASF 1,077,138, RSF 628,367 "
+    "and NSFR 171.4% for that date, and that comparative is where the Tier 1 Capital, Total Capital and NSFR "
+    "sheets in this workbook source their FY2021 figures - it is deliberately NOT carried onto this sheet, "
+    "because this sheet reproduces each edition's own table. No edition anywhere prints a Tier 1, Total "
+    "capital or NSFR figure for 31-Dec-20, 31-Dec-19 or 31-Dec-18 on any basis.\n\n"
+    "ZERO GLYPHS (checked at the character level, and every table also read as a rendered image). Unity uses "
+    "no dashes and no empty cells inside any of the four tables - every cell that exists carries a figure. "
+    "The zeros that appear are PRINTED zeros and are kept as zeros: the FY2022 edition's row 9 "
+    "countercyclical buffer 1% / row 10 G-SIB 0%, and the FY2019-FY2021 editions' countercyclical buffer "
+    "0% (2021, 2020) and 1% (2019, 2018).\n\n"
+    "PRECISION IS THE BANK'S OWN and is not harmonised: the LCR ratio is printed to no decimal places in the "
+    "FY2019-FY2023 editions (339%, 331%, 272%, 220%, 210%) and to two from FY2024 (227.95%, 225.76%); the "
+    "CET1 ratio is one decimal place to FY2021 and two from FY2022; the FY2018 capital conservation buffer "
+    "is printed to three (1.875%), the year the 2.5% buffer was still phasing in.\n\n"
+    "SOURCE DEFECT REPRODUCED, NOT CORRECTED: the FY2023 edition's row 11a caption is printed twice inside "
+    "the one cell - 'Overall capital requirement (%)Overall capital requirements (%)'. Confirmed by rendering "
+    "printed p.6 of that PDF at 150 dpi, so it is a defect in the published document rather than a "
+    "text-extraction artefact, and it is shown here as published.\n\n"
+    "LCR BASIS: every edition footnotes the LCR block as at 31 December, NOT a trailing average, and says so "
+    "explicitly - 'LCR balances included above are as of 31 December and do not agree to LCR balances "
+    "disclosed in section 3.4 which reports average LCR balances.'\n\n"
+    "ENTITY (one entity throughout, no second basis and no second copy of the table): every edition is "
+    "titled 'Unity Trust Bank plc', and §1.7 Scope of disclosures states 'The Bank has no trading "
+    "subsidiaries. The information disclosed therefore relates to Unity Trust Bank plc only.' Each edition "
+    "prints the table exactly once, with one reporting-year column and one prior-year comparative column.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17 against the Bank's own website (not Wayback and not our cited URLs). "
+    "unity.co.uk is JavaScript-rendered, so the document index was reached via unity.co.uk/robots.txt -> "
+    "sitemap_index.xml -> page-sitemap.xml -> /about-us/financial-profile/, which is static HTML and carries "
+    "every document link. Newest Pillar 3 published = 2025; newest Report & Accounts = 2025. Both are already "
+    "held here, so this workbook is not an edition behind. (The investor-relations page links the 2025 Pillar "
+    "3 as '...PILLAR3-2025.pdf' and the financial-profile page as '...PILLAR3-2025-1.pdf'; both URLs return "
+    "the identical 564,950-byte file - one edition under two names, not two editions.) Link-rot note: that "
+    "index still links '/2022/08/PILLAR3-2020-Final.pdf' and '/2020/03/PILLAR3-2019-Board_post_v2.pdf', but "
+    "both now return an empty HTTP 200 text/html body rather than a PDF, which is why FY2020 is cited to a "
+    "Wayback capture; the FY2019 edition remains live under its other filename, cited above.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Unity Trust Bank Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published 'Summary of Key Metrics' table, reproduced whole in its own row order, "
+             "row numbering, labels and printed precision. Amounts £'000, ratios as printed. Unity Trust Bank "
+             "plc, solo (the Bank has no trading subsidiaries). FOUR SEPARATE TABLES are shown as four "
+             "blocks - FY2024/FY2025, FY2023, FY2022, and the abbreviated unnumbered FY2019-FY2021 version - "
+             "because the Bank reuses its row numbers for different metrics between editions. Nothing is "
+             "merged across the blocks; read down a column, not across a row. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=86,
+    source_height=860,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):

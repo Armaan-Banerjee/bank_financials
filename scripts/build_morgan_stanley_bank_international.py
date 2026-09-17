@@ -506,6 +506,65 @@ def metric(name, unit, rows, note=None):
                          years=PILLAR3_YEARS)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE for this entity, on affirmative evidence
+# from three independent documents rather than on a failed search. See the
+# sheet's own source note for the evidence chain.
+# ---------------------------------------------------------------
+bw.add_km1_sheet(
+    title="Morgan Stanley Bank International Limited - KM1 Key Metrics",
+    subtitle="Not applicable: MSBIL publishes no Pillar 3 disclosure of its own, and its UK parent's "
+             "Pillar 3 carries no KM1 on an MSBIL basis. The parent's own KM1 is a Morgan Stanley "
+             "International Limited Group consolidated table and is deliberately NOT reproduced here - a "
+             "group figure is not this entity's figure. See the source note for the affirmative evidence.",
+    rows=[("DATA", "UK KM1 key metrics template", {y: "Not applicable" for y in PILLAR3_YEARS})],
+    sources_text=annual_sources() + "\n\n" + (
+        "WHY THIS SHEET IS 'NOT APPLICABLE' - AFFIRMATIVE EVIDENCE, NOT A FAILED SEARCH. Checked "
+        "2026-09-17 against Morgan Stanley's own UK regulatory-disclosures page, "
+        "https://www.morganstanley.com/about-us-ir/pillar-uk, which lists every UK Pillar 3 document the "
+        "group publishes, annual and quarterly, from 2009 to the 2026 first quarter. Three separate "
+        "documents settle it:\n\n"
+        "1. THE BANK'S OWN ACCOUNTS SAY WHERE ITS PILLAR 3 INFORMATION LIVES. MSBIL's Report and "
+        "Financial Statements for the year ended 31 December 2025, Strategic Report, 'Capital Management': "
+        "'Further information is available in the Pillar 3 Regulatory Disclosures Report of the MSI Group, "
+        "available at www.morganstanley.com/about-us-ir/'. The Company points the reader at its parent's "
+        "document rather than at one of its own. (That filing is a 98-page scan with no text layer - "
+        "pdftotext returns 99 characters from the whole document - so it was read by rendering the pages "
+        "at 200dpi and OCRing them. A plain text search of it returns a false negative on every term.)\n\n"
+        "2. THE PARENT'S PILLAR 3 STATES ITS OWN LEVEL OF APPLICATION, AND IT IS NOT PER-ENTITY. Morgan "
+        "Stanley International Limited Group, Pillar 3 Regulatory Disclosure (UK) as at 31 December 2025, "
+        "section 4 'Basis of Preparation and Linkage to Financial Accounts': 'This disclosure is prepared "
+        "for the MSI Group, rather than on an individual basis for each regulated entity, as permissible "
+        "under the PRA rulebook.' Identical wording appears in the 2021, 2022, 2023 and 2024 editions.\n\n"
+        "3. MSBIL IS NAMED AS A SUBSIDIARY AND EXCLUDED FROM THE LARGE-SUBSIDIARY POPULATION. The same "
+        "document's scope-of-disclosure section: 'As at 31 December 2025, Morgan Stanley & Co. "
+        "International plc (“MSIP”) and MSESE are considered large subsidiaries within the MSI Group... "
+        "The Pillar 3 disclosures as at 31 December 2025 are prepared on the basis of the consolidated "
+        "situation of the MSI Group. In addition, certain disclosures are required for MSIP as a large "
+        "subsidiary and MSESE as a large non-listed subsidiary of MSI Group.' MSBIL appears in the same "
+        "document's list of MSI Group subsidiaries but is not among the large subsidiaries, so no "
+        "subsidiary-level KM1 block is owed for it or printed for it. This is the UK Article 433 / "
+        "large-subsidiary test producing a FORMAL EXCLUSION, which is a stronger finding than not "
+        "locating a table.\n\n"
+        "THE PARENT'S KM1 IS DELIBERATELY NOT COPIED HERE. The MSI Group Pillar 3 does carry a UK KM1 - "
+        "'Table 1a: Key metrics (UK KM1) - MSI Group' - and a second one, 'Table 1b: Key metrics (EU KM1) "
+        "- MSESE Group'. Neither is an MSBIL table. MSI Group is the consolidated UK sub-group that "
+        "contains MSIP and the other UK entities as well as MSBIL, so its capital, RWAs, leverage and "
+        "liquidity are materially different from this Company's, and substituting them would misstate "
+        "every row. The entity chain is Morgan Stanley (US ultimate parent) -> Morgan Stanley "
+        "International Limited (the ultimate UK parent undertaking, and the entity that discloses under "
+        "the PRA Rulebook) -> Morgan Stanley Bank International Limited, and it is the middle layer, not "
+        "the US top, that carries the UK disclosure duty.\n\n"
+        "WHAT THE 11 SINGLE-METRIC SHEETS IN THIS WORKBOOK THEREFORE REST ON: MSBIL's own audited annual "
+        "reports, which disclose its own-entity capital, RWAs, leverage and liquidity in their capital "
+        "management notes. Those are this Company's figures on this Company's basis; they are simply not "
+        "presented in the KM1 template, because MSBIL never publishes that template."
+    ),
+    first_col_width=72,
+    source_height=340,
+    years=PILLAR3_YEARS,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", {
     "FY2025": 676229, "FY2024": 709078, "FY2023": 685522, "FY2022": 702944, "FY2021": 717693,
     "FY2020": 574718, "FY2019": 593318, "FY2018": 578569, "FY2017": 543786, "FY2016": 517117, "FY2015": 472587,

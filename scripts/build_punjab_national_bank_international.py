@@ -203,12 +203,16 @@ def p3_sources():
             # KM1-024 (2026-09-16): FY2022 was cited to the 2023 edition's COMPARATIVE column. The
             # 2022 edition carries its OWN full UK KM1 at Appendix 1, printed pp.24-25 - located by
             # reading that document's own contents page. FY2021 was not cited here at all; its own
-            # edition carries a (pre-UK, Basel III) Table KM1 at printed p.2. Both now cite their own
+            # edition carries a (pre-UK, Basel III) Table KM1 at printed p.3. Both now cite their own
             # edition, per the "each year from its own edition" rule.
+            # KM1-035 (2026-09-17): the three pre-2022 folios below were corrected from p.2 to p.3.
+            # In each of the FY2019/FY2020/FY2021 documents the contents page's footer reads 2 and the
+            # key-metrics page's footer reads 3 - checked page by page against each document's own
+            # footer (map rule 26).
             f"FY2022: {P3_URL['FY2022']}, Appendix 1, printed pp.24-25 (own-year UK KM1; the table runs over onto p.25). The 2023 edition's 2022 comparative agrees on every row except precision - it prints LCR 405% and NSFR 128% where the 2022 edition prints 405.1% and 128.2%; the own-edition printing is used",
-            f"FY2021: {P3_URL['FY2021']}, printed p.2 (own-year 'Key metrics - Table KM1', the PRE-2022 Basel III version of the template). NSFR is not a row in that version at all - FY2021's NSFR comes from the same document's separate 'Key Liquidity Metrics' table, printed p.10",
-            f"FY2020: {P3_URL['FY2020']}, printed p.2 (2020 KM1 table, with FY2019 comparative)",
-            f"FY2019: {P3_URL['FY2019']}, printed p.2 (2019 KM1 table, with FY2018 comparative)",
+            f"FY2021: {P3_URL['FY2021']}, printed p.3 (own-year 'Key metrics - Table KM1', the PRE-2022 Basel III version of the template). NSFR is not a row in that version at all - FY2021's NSFR comes from the same document's separate 'Key Liquidity Metrics' table, printed p.10",
+            f"FY2020: {P3_URL['FY2020']}, printed p.3 (2020 KM1 table, with FY2019 comparative)",
+            f"FY2019: {P3_URL['FY2019']}, printed p.3 (2019 KM1 table, with FY2018 comparative)",
             f"FY2018: {P3_URL['FY2018']}, printed pp.11-12/16 (own-basis capital/leverage/liquidity tables; FY2017 comparative also sourced here)",
             f"FY2017: {P3_URL['FY2017']}, printed pp.7/12-13 (own-year capital resources, leverage, LCR/NSFR tables)",
             f"FY2016: {P3_URL['FY2016']}, printed pp.1/4-6 (own-year capital resources, Pillar I RWA, leverage, LCR, NSFR tables; OCR'd from a scanned PDF)",
@@ -1144,15 +1148,28 @@ NSFR = {"FY2026": "118%", "FY2025": "121%", "FY2024": "130%", "FY2023": "135%", 
 # published, so they are two blocks. Each block's rows carry only the years
 # that block's editions actually printed.
 #
-# FY2018 AND EARLIER ARE BLANK. The FY2018 edition publishes a full Pillar 3
-# but NO key-metrics table of any kind - its contents page runs Overview /
-# Risk Management / Capital Resources / Capital Requirements / Leverage /
-# ... with no key-metrics section, and its one hit for "key metrics" is a
-# narrative sentence about risk-appetite limits. (Extraction was rich on that
-# document - 88 hits for "capital", 63 for "ratio", 9 for "cet" - so that is a
-# fact about the document, not a failed search.) The FY2019 edition's
-# comparative column DOES carry a 2018 KM1; it is quoted in the note rather
-# than written into the FY2018 column, because it is a FY2019 disclosure.
+# FY2018 IS FILLED FROM THE FY2019 EDITION'S COMPARATIVE, IN THE BASEL BLOCK.
+# Revised 2026-09-17 under KM1-035 / map rule 28, superseding this script's
+# previous treatment, which left FY2018 blank and quoted the comparative in
+# prose. The FY2018 edition publishes a full Pillar 3 but NO key-metrics table
+# of any kind - its own contents page runs Overview / Risk Management Overview
+# / Risk Appetite Framework / Capital Resources / Capital Requirements /
+# Leverage / Asset Encumbrance / Liquidity / Credit Risk / ... / Annexures
+# I-III, with no key-metrics section at any level, and its one hit for "key
+# metrics" is a narrative sentence about risk-appetite limits. (Extraction is
+# rich on that document - 97 hits for "capital", 67 for "ratio", 18 for
+# "buffer", 17 for "leverage", against ZERO for "KM1" - so that is a fact about
+# the document, not a failed search.) With no own-edition table there is
+# nothing for the comparative to displace, which is what makes this rule 28
+# rather than rule 20.
+# THE FILLED COLUMN GOES IN BLOCK B (pre-2022 Basel), never block A, because
+# that is the template the FY2019 edition prints it in - see the row-number
+# collision above. Seven rows of it (1a/2a/3a/5a/6a/7a/14a) are printed as
+# dashes and stay BLANK (map rule 2), so FY2018 carries 16 figures and 7
+# blanks. The same document's own "Key metrics" summary strip, printed under
+# the table, independently reproduces five of them on its "Mar 2018" line
+# (15.8% / 26.2% / 12.9% / 1027% / $906.2mn) - map rule 23.
+# FY2017 and earlier stay blank: no edition anywhere prints them.
 #
 # DIVERGENCES BETWEEN AN EDITION AND A LATER EDITION'S COMPARATIVE, recorded
 # and NOT reconciled - every cell below is from the edition in which that year
@@ -1238,61 +1255,63 @@ km1_rows = [
                 "'7a' here is the fully-loaded total capital ratio, not a SREP requirement.", {}),
     ("SECTION", "Available capital ($ million)", {}),
     ("DATA", "1    Common equity tier 1 (CET 1)",
-     {"FY2021": 134.4, "FY2020": 146.1, "FY2019": 150.4}),
+     {"FY2021": 134.4, "FY2020": 146.1, "FY2019": 150.4, "FY2018": 142.8}),
     ("DATA", "1a    Fully loaded ECL accounting model",
      {"FY2021": 132.9, "FY2020": 144.3, "FY2019": 146.4}),
     ("DATA", "2    Tier 1",
-     {"FY2021": 179.4, "FY2020": 191.1, "FY2019": 195.4}),
+     {"FY2021": 179.4, "FY2020": 191.1, "FY2019": 195.4, "FY2018": 187.8}),
     ("DATA", "2a    Fully loaded ECL accounting model Tier 1",
      {"FY2021": 177.9, "FY2020": 189.3, "FY2019": 191.4}),
     ("DATA", "3    Total Capital",
-     {"FY2021": 206.6, "FY2020": 225.7, "FY2019": 236.3}),
+     {"FY2021": 206.6, "FY2020": 225.7, "FY2019": 236.3, "FY2018": 237.2}),
     ("DATA", "3a    Fully loaded ECL accounting model total capital",
      {"FY2021": 205.1, "FY2020": 223.9, "FY2019": 232.3}),
     ("SECTION", "Risk weighted assets (RWA) ($ million)", {}),
     ("DATA", "4    Total RWA",
-     {"FY2021": 784.6, "FY2020": 755.9, "FY2019": 797.6}),
+     {"FY2021": 784.6, "FY2020": 755.9, "FY2019": 797.6, "FY2018": 906.2}),
     ("SECTION", "Risk weighted capital ratios as a % of RWA", {}),
     ("DATA", "5    Common equity tier 1 ratio (%)",
-     {"FY2021": "17.1%", "FY2020": "19.3%", "FY2019": "18.9%"}),
+     {"FY2021": "17.1%", "FY2020": "19.3%", "FY2019": "18.9%", "FY2018": "15.8%"}),
     ("DATA", "5a    Fully loaded ECL accounting model Common equity tier 1 ratio (%)",
      {"FY2021": "17.0%", "FY2020": "19.1%", "FY2019": "18.4%"}),
     ("DATA", "6    Tier 1 ratio (%)",
-     {"FY2021": "22.9%", "FY2020": "25.3%", "FY2019": "24.5%"}),
+     {"FY2021": "22.9%", "FY2020": "25.3%", "FY2019": "24.5%", "FY2018": "20.7%"}),
     ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)",
      {"FY2021": "22.7%", "FY2020": "25.0%", "FY2019": "24.0%"}),
     ("DATA", "7    Total capital ratio (%)",
-     {"FY2021": "26.3%", "FY2020": "29.9%", "FY2019": "29.6%"}),
+     {"FY2021": "26.3%", "FY2020": "29.9%", "FY2019": "29.6%", "FY2018": "26.2%"}),
     ("DATA", "7a    Fully loaded ECL accounting model Total capital ratio (%)",
      {"FY2021": "26.1%", "FY2020": "29.6%", "FY2019": "29.1%"}),
     ("SECTION", "Additional CET 1 buffer requirements as a % of RWA", {}),
     ("DATA", "8    Capital conservation buffer requirement (%)",
-     {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "2.9%"}),
+     {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "2.9%", "FY2018": "1.88%"}),
     ("DATA", "9    Countercyclical buffer requirement (%)",
-     {"FY2021": "0.0%", "FY2020": "0.02%", "FY2019": "0.01%"}),
+     {"FY2021": "0.0%", "FY2020": "0.02%", "FY2019": "0.01%", "FY2018": "0.02%"}),
     ("DATA", "11    Total of bank's CET 1 specific buffer requirements (%)",
-     {"FY2021": "2.5%", "FY2020": "2.52%", "FY2019": "2.9%"}),
+     {"FY2021": "2.5%", "FY2020": "2.52%", "FY2019": "2.9%", "FY2018": "1.9%"}),
     ("DATA", "12    CET 1 available after meeting bank's minimum capital requirements (%)",
-     {"FY2021": "6.8%", "FY2020": "8.1%", "FY2019": "7.4%"}),
+     {"FY2021": "6.8%", "FY2020": "8.1%", "FY2019": "7.4%", "FY2018": "5.1%"}),
     ("SECTION", "Basel III leverage ratio ($ million / %)", {}),
     ("DATA", "13    Total Basel III leverage ratio exposure measure",
-     {"FY2021": 1035.7, "FY2020": 937.4, "FY2019": 1290.7}),
+     {"FY2021": 1035.7, "FY2020": 937.4, "FY2019": 1290.7, "FY2018": 1451.6}),
     ("DATA", "14    Basel III leverage ratio (%)",
-     {"FY2021": "17.3%", "FY2020": "20.4%", "FY2019": "15.1%"}),
+     {"FY2021": "17.3%", "FY2020": "20.4%", "FY2019": "15.1%", "FY2018": "12.9%"}),
     ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%)",
      {"FY2021": "17.2%", "FY2020": "20.2%", "FY2019": "14.8%"}),
     ("SECTION", "Liquidity coverage ratio ($ million / %)", {}),
     ("DATA", "15    Total HQLA",
-     {"FY2021": 239.4, "FY2020": 102.3, "FY2019": 75.9}),
+     {"FY2021": 239.4, "FY2020": 102.3, "FY2019": 75.9, "FY2018": 167.0}),
     ("DATA", "16    Total net cash outflow",
-     {"FY2021": 32.0, "FY2020": 25.4, "FY2019": 14.5}),
+     {"FY2021": 32.0, "FY2020": 25.4, "FY2019": 14.5, "FY2018": 16.3}),
     ("DATA", "17    LCR ratio (%)",
-     {"FY2021": "748%", "FY2020": "403%", "FY2019": "524%"}),
+     {"FY2021": "748%", "FY2020": "403%", "FY2019": "524%", "FY2018": "1027%"}),
 ]
 
 KM1_SOURCES = (
-    "Sources - PNBIL's own key-metrics template, SOLO basis, taken from EACH YEAR'S OWN edition (that "
-    "edition's own reporting-date column), never from a later edition's comparative. Amounts in $ MILLION, "
+    "Sources - PNBIL's own key-metrics template, SOLO basis. FY2019 through FY2026 are each taken from THAT "
+    "YEAR'S OWN edition (that edition's own reporting-date column). FY2018 is the single exception and is "
+    "flagged as such below - it is the FY2019 edition's comparative column, used because PNBIL's own FY2018 "
+    "edition prints no key-metrics table of any kind. Amounts in $ MILLION, "
     "the Bank's own Pillar 3 currency - not the £m used on the other sheets in this workbook. The FY2022 "
     "edition states it in terms: 'The Pillar 3 disclosures are presented in US Dollars as this is functional "
     "currency of the Bank.'\n"
@@ -1301,9 +1320,17 @@ KM1_SOURCES = (
     f"FY2024: 31 March 2024 edition, section 1.9, printed pp.6-7 - {P3_URL['FY2024']}\n"
     f"FY2023: 31 March 2023 edition, section 1.9, printed pp.6-7 - {P3_URL['FY2023']}\n"
     f"FY2022: 31 March 2022 edition, Appendix 1 'UK KM1 - Key metrics template', printed pp.24-25 - {P3_URL['FY2022']}\n"
-    f"FY2021: 31 March 2021 edition, 'Key metrics - Table KM1', printed p.2 - {P3_URL['FY2021']}\n"
-    f"FY2020: 31 March 2020 edition, 'Key metrics - Table KM1', printed p.2 - {P3_URL['FY2020']}\n"
-    f"FY2019: 31 March 2019 edition, 'Table KM1: Key metrics', printed p.2 - {P3_URL['FY2019']}\n\n"
+    f"FY2021: 31 March 2021 edition, 'Key metrics - Table KM1', printed p.3 - {P3_URL['FY2021']}\n"
+    f"FY2020: 31 March 2020 edition, 'Key metrics - Table KM1', printed p.3 - {P3_URL['FY2020']}\n"
+    f"FY2019: 31 March 2019 edition, 'Table KM1: Key metrics', printed p.3 - {P3_URL['FY2019']}\n"
+    f"FY2018 (NOT AN OWN-EDITION COLUMN): the SAME 31 March 2019 edition, 'Table KM1: Key metrics', printed "
+    f"p.3, COMPARATIVE COLUMN headed 2018 - {P3_URL['FY2019']}\n\n"
+    "CITATION CORRECTION, 17 September 2026 (map rule 26 - cite the printed folio, never the PDF sheet "
+    "index). The three pre-2022 editions were cited above as 'printed p.2' until today. That was wrong in "
+    "all three: in each of the FY2019, FY2020 and FY2021 documents the contents page carries the footer '2' "
+    "and the key-metrics page carries the footer '3'. The table is on PRINTED PAGE 3. Checked page by page "
+    "in each document by reading its own footer, not by counting PDF sheets (the offset happens to be zero "
+    "in all three, so the error was in the original reading rather than in an offset).\n\n"
     "LATEST-EDITION CHECK, 16 September 2026. PNBIL's own library at pnbint.com "
     "(https://www.pnbint.com/PNBIL/About-Us/Financial-Report) was listed directly rather than relying on the "
     "URLs already cited in this script. The NEWEST Pillar 3 on it is 'Basel-III-Pillar-3-Disclosure-31-03-"
@@ -1330,18 +1357,41 @@ KM1_SOURCES = (
     "• PNBIL's NSFR for FY2019-FY2021 is therefore NOT on this sheet: that template has no NSFR row. The "
     "FY2021 figure on the NSFR metric sheet (146%) comes from a separate 'Key Liquidity Metrics' table at "
     "printed p.10 of the FY2021 edition, not from a KM1 row.\n\n"
-    "FY2018 AND EARLIER ARE BLANK, and this is a 'the template is not used' finding rather than a failed "
-    "search. The FY2018 edition publishes a full Pillar 3 but no key-metrics table of any kind - its own "
-    "contents page runs Overview / Risk Management Overview / Risk Appetite Framework / Capital Resources / "
-    "Capital Requirements / Leverage / ... with no key-metrics section, and its single hit for 'key metrics' "
-    "is a narrative sentence about risk-appetite limits. The extraction of that document was rich (88 hits "
-    "for 'capital', 63 for 'ratio', 9 for 'cet'), so the absence is a fact about the document rather than a "
-    "tooling failure. The FY2019 edition's comparative column DOES print a 2018 KM1; it is quoted here "
-    "rather than written into the FY2018 column, because it is a FY2019-edition disclosure: 1 142.8; 1a -; "
-    "2 187.8; 2a -; 3 237.2; 3a --; 4 906.2; 5 15.8%; 5a -; 6 20.7%; 6a -; 7 26.2%; 7a -; 8 1.88%; 9 0.02%; "
-    "11 1.9%; 12 5.1%; 13 1451.6; 14 12.9%; 14a -; 15 167.0; 16 16.3; 17 1027%. (Note that edition prints "
-    "two different missing-value glyphs in one column - a single '-' on most fully-loaded rows and a double "
-    "'--' on row 3a. Both are dashes and both would be blank here.)\n\n"
+    "WHY FY2018 IS FILLED FROM THE FY2019 EDITION, AND FY2017 AND EARLIER ARE NOT (revised 17 September "
+    "2026). PNBIL'S OWN FY2018 EDITION PRINTS NO KEY-METRICS TABLE OF ANY KIND - not a template with rows "
+    "left blank, but no template, and therefore no own-edition disclosure for a later comparative to "
+    "displace. That absence is a finding rather than a failed search, and it was re-established from the "
+    "document on 17 September 2026 before this column was filled: the FY2018 edition's OWN CONTENTS PAGE "
+    "runs Overview / Risk Management Overview / Risk Appetite Framework / Capital Resources / Capital "
+    "Requirements / Leverage / Asset Encumbrance / Liquidity / Credit Risk / Credit Risk Mitigation / "
+    "Securitization Exposures & Market Risk / Operational Risk / IRRBB / Counterparty Credit Risk / "
+    "Remuneration Policy / Annexures I-III - NO key-metrics section at any level. Extraction from the "
+    "40-page PDF is RICH (97 hits for 'capital', 67 for 'ratio', 18 for 'buffer', 17 for 'leverage'), which "
+    "is what makes its ZERO hits for 'KM1' evidence about the document; and its single 'key metrics' hit is "
+    "a narrative sentence introducing bullet points about risk-appetite limits, not a table.\n"
+    "THE FY2019 EDITION'S COMPARATIVE COLUMN, headed 2018, carries the complete pre-2022 Basel III Table "
+    "KM1 for 31 March 2018, and THAT IS WHAT THIS SHEET'S FY2018 NOW CARRIES. It is placed in the "
+    "PRE-2022 BASEL BLOCK below, never in the UK block, because that is the template it is printed in - "
+    "putting it anywhere else would map one template's row numbers onto the other's and invent a "
+    "correspondence PNBIL never published.\n"
+    "SEVEN ROWS OF THAT COLUMN ARE PRINTED AS DASHES AND STAY BLANK (map rule 2): the fully-loaded ECL rows "
+    "1a, 2a, 5a, 6a, 7a and 14a are printed '-', and row 3a is printed '--'. Two different missing-value "
+    "glyphs in one column; both are dashes, neither is a zero, and neither is filled. So FY2018 carries 16 "
+    "figures and 7 blanks, exactly as the Bank printed it.\n"
+    "A SECOND TABLE IN THE SAME DOCUMENT CORROBORATES FIVE OF THEM (map rule 23). Immediately beneath the "
+    "template, the FY2019 edition prints its own 'Key metrics' summary strip, each tile carrying a 'Mar "
+    "2018' line: CET 1 ratio 15.8%, Total capital ratio 26.2%, Leverage ratio 12.9%, LCR 1027%, Total RWA "
+    "$906.2mn. All five reproduce the comparative column exactly, independently of the template.\n"
+    "The column is also internally consistent: 142.8 / 906.2 = 15.76% against a printed 15.8%; 187.8 / "
+    "906.2 = 20.72% against 20.7%; 237.2 / 906.2 = 26.17% against 26.2%; and 187.8 / 1451.6 = 12.94% "
+    "against a printed leverage ratio of 12.9%.\n"
+    "This reverses the treatment this sheet carried until 17 September 2026, which left FY2018 blank and "
+    "quoted the comparative in this note instead. The evidence above is unchanged; only the conclusion "
+    "drawn from it has changed, so that a BLANK on this sheet now means one thing only: PNBIL has never "
+    "published that figure, in any edition, on any basis.\n"
+    "FY2017 AND EARLIER REMAIN BLANK for exactly that reason - no edition anywhere prints them in either "
+    "template's form, the FY2018 edition (which would have been the only possible source of a 2017 "
+    "comparative) printing no key-metrics table at all.\n\n"
     "DASHES ARE BLANK, PRINTED ZEROES ARE KEPT (and a later edition's zero does not fill an earlier "
     "edition's missing row). Rows UK 8a, UK 9a, 10 and UK 10a are printed '-' in every FY2022-FY2026 "
     "edition, so they are blank here. Row 9 is a printed '0.0%' for FY2022 and a printed '0.02%'/'0.01%' for "
@@ -1375,7 +1425,8 @@ KM1_SOURCES = (
     "14a-14e are absent for that reason.\n\n"
     "COLUMN LETTERS DO NOT TRANSFER. Each edition prints two columns, its own reporting date and the prior "
     "year (lettered a and b in the FY2022/FY2023 editions, unlettered in the others). This sheet is one "
-    "column per YEAR, each from that year's own edition's own-date column. NOTE the FY2022 edition prints no "
+    "column per YEAR: FY2019-FY2026 each from that year's own edition's own-date column, and FY2018 from the "
+    "FY2019 edition's 2018 comparative column as set out above. NOTE the FY2022 edition prints no "
     "2021 comparative at all for rows 13-20; that does not affect this sheet, since FY2021 comes from its "
     "own edition.\n\n"
     + ENTITY_NOTE
@@ -1387,8 +1438,10 @@ bw.add_km1_sheet(
              "numbers, labels and printed precision. AMOUNTS ARE IN $ MILLION - the Bank's own Pillar 3 currency, "
              "not the £m used on the other sheets here. Solo basis. TWO SEPARATE TEMPLATES are shown as two "
              "blocks: the UK KM1 (FY2022-FY2026) and the pre-2022 Basel III Table KM1 (FY2019-FY2021), whose row "
-             "numbers collide but do NOT mean the same things. FY2018 and earlier publish no key-metrics table "
-             "at all. See the source note.",
+             "numbers collide but do NOT mean the same things. FY2018 sits in the Basel block and is the FY2019 "
+             "edition's comparative column, because PNBIL's own FY2018 edition publishes no key-metrics table "
+             "at all; its seven fully-loaded ECL rows are printed as dashes there and stay blank. FY2017 and "
+             "earlier are blank because no edition prints them. See the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     years=PILLAR3_YEARS,

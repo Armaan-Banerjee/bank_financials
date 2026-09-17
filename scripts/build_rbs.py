@@ -450,6 +450,108 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=52, source_height=140)
 
 
+P3_2022_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/rbs-plc-pillar-3-report.pdf"
+
+KM1_SOURCES = (
+    "Sources - RBS plc's own Pillar 3 Report, table 'UK KM1: Key metrics' in 'Annex I: Key metrics and overview of "
+    "risk-weighted assets', RBS plc entity basis, £m. Each annual edition prints five columns (the four quarter-ends "
+    "of its own year and the prior 31 December); this sheet takes each year's 31 DECEMBER column from that year's "
+    "OWN edition:\n"
+    f"FY2025: RBS plc Pillar 3 Report 2025, printed p.6 - {P3_2025_URL}\n"
+    f"FY2024: RBS plc Pillar 3 Report 2024, printed p.7 - {P3_2024_URL}\n"
+    f"FY2023: RBS plc Pillar 3 Report 2023, printed p.7 - {P3_2023_URL}\n"
+    f"FY2022: RBS plc Pillar 3 Report 2022, printed p.7 - {P3_2022_URL}\n"
+    f"FY2021: FILLED FROM A LATER EDITION'S COMPARATIVE - the 31 December 2021 column of the FY2022 edition, "
+    f"printed p.7 - {P3_2022_URL}. RBS plc published no Pillar 3 Report of its own for FY2021: the NatWest Group "
+    "results-day document set of 18 February 2022 contains Pillar 3 reports for NatWest Group, NatWest Holdings "
+    "and Ulster Bank Ireland DAC, and an RBS plc Annual Report, but no RBS plc Pillar 3 report; the FY2022 edition "
+    "(17 February 2023) is the first RBS plc Pillar 3 Report published. Rows 13 and 14 are printed for the four "
+    "2022 quarter-ends only in that table, so leverage is blank for FY2021 here.\n\n"
+    "ROWS THE BANK PRINTS EMPTY, AND WHY IT SAYS THEY ARE EMPTY:\n"
+    "- Rows 15-17 (LCR) and 18-20 (NSFR) carry no figures in any edition. Every edition footnotes the two blocks: "
+    "'Under the UK DoLSub waiver RBS plc liquidity is managed and disclosed at the sub-group level rather than "
+    "entity level'. This is a disclosure made at another level, not a missing figure; the UK DoLSub sub-group "
+    "numbers are on the LCR and NSFR metric sheets.\n"
+    "- Rows UK 14a-14e carry no figures in any edition, footnoted 'RBS plc is not an LREQ firm therefore not "
+    "subject to the additional leverage ratio disclosure requirements'.\n"
+    "- Rows UK 8a, UK 9a, 10 and UK 10a are NOT PRINTED at all and so do not appear on this sheet. The FY2022, "
+    "FY2024 and FY2025 editions say 'The following rows are not presented in the table above as not applicable: "
+    "UK8a, UK9a, 10 and UK10a'; the FY2023 edition words it 'because they have zero values'.\n\n"
+    "A SOURCE DEFECT, RECORDED NOT CORRECTED: the FY2023 edition's fifth column is headed '31 December 2021' but "
+    "carries 31 December 2022 figures. Every value in it (CET1 2,149; Tier 1 3,119; total capital 4,715; RWAs "
+    "18,540; ratios 11.6/16.8/25.4; leverage exposure 48,957 and 6.4%) reproduces the FY2022 edition's own "
+    "31 December 2022 column exactly, and none of them is that edition's 31 December 2021 column (CET1 2,682; RWAs "
+    "19,592; ratios 13.7/18.6/26.1). The mislabelled column is not used here - FY2022 comes from the FY2022 "
+    "edition and FY2021 from the FY2022 edition's 2021 column - and no figure has been moved to make the header "
+    "true.\n\n"
+    "Row 9 for FY2021 is a PRINTED ZERO ('0.0'), not a dash, and is kept as zero.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: investors.natwestgroup.com was checked directly. The newest RBS plc ANNUAL "
+    "Pillar 3 Report is the 2025 edition published 13 February 2026 (already used here, and the newest annual "
+    "report is the RBS plc Annual Report and Accounts 2025 of the same date). A quarterly RBS plc Pillar 3 report "
+    "for Q1 2026 (13 May 2026) exists and is not a year-end edition; no half-year 2026 edition was found. RBS "
+    "plc's year-end is 31 December, so FY2026 had not closed.\n\n" + ENTITY_NOTE
+)
+
+
+def _km1v(fy2025=None, fy2024=None, fy2023=None, fy2022=None, fy2021=None):
+    vals = {"FY2025": fy2025, "FY2024": fy2024, "FY2023": fy2023, "FY2022": fy2022, "FY2021": fy2021}
+    return {k: v for k, v in vals.items() if v is not None}
+
+
+bw.add_km1_sheet(
+    title="RBS plc — KM1 Key Metrics",
+    subtitle="UK KM1: Key metrics, as published in RBS plc's own Pillar 3 Reports (RBS plc entity basis, £m). "
+             "Reproduced in the bank's own row order, row numbering, labels and precision. FY2022-FY2025 are each "
+             "year's own edition; FY2021 is the FY2022 edition's 31 December 2021 comparative, RBS plc having "
+             "published no Pillar 3 Report for FY2021. The LCR and NSFR blocks are printed empty every year under "
+             "the UK DoLSub waiver - see the source note.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common equity tier 1 (CET1) capital (£m)", _km1v(1905, 1956, 2042, 2149, 2682)),
+        ("DATA", "2 Tier 1 capital (£m)", _km1v(2405, 2456, 2542, 3119, 3651)),
+        ("DATA", "3 Total capital (£m)", _km1v(2955, 3080, 2998, 4715, 5106)),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted exposure amount (£m)", _km1v(17385, 17591, 18228, 18540, 19592)),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common equity tier 1 ratio (%)", _km1v("11.0%", "11.1%", "11.2%", "11.6%", "13.7%")),
+        ("DATA", "6 Tier 1 ratio (%)", _km1v("13.8%", "14.0%", "13.9%", "16.8%", "18.6%")),
+        ("DATA", "7 Total capital ratio (%)", _km1v("17.0%", "17.5%", "16.4%", "25.4%", "26.1%")),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", _km1v("1.3%", "1.5%", "1.5%", "1.4%", "1.9%")),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", _km1v("0.4%", "0.5%", "0.5%", "0.5%", "0.7%")),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", _km1v("0.6%", "0.6%", "0.7%", "0.6%", "0.8%")),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", _km1v("10.3%", "10.6%", "10.7%", "10.5%", "11.4%")),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", _km1v("2.5%", "2.5%", "2.5%", "2.5%", "2.5%")),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", _km1v("1.9%", "1.9%", "1.9%", "0.9%", "0.0%")),
+        ("DATA", "11 Combined buffer requirement (%)", _km1v("4.4%", "4.4%", "4.4%", "3.4%", "2.5%")),
+        ("DATA", "UK 11a Overall capital requirements (%)", _km1v("14.7%", "15.0%", "15.1%", "13.9%", "13.9%")),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", _km1v("5.2%", "5.2%", "5.2%", "5.7%", "7.3%")),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£m)", _km1v(42877, 42687, 43770, 48957)),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", _km1v("5.6%", "5.8%", "5.8%", "6.4%")),
+        ("SECTION", "Additional leverage ratio disclosure requirements (printed empty every year - RBS plc is not an LREQ firm)", {}),
+        ("DATA", "UK 14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+        ("DATA", "UK 14b Leverage ratio including claims on central banks (%)", {}),
+        ("DATA", "UK 14c Average leverage ratio excluding claims on central banks (%)", {}),
+        ("DATA", "UK 14d Average leverage ratio including claims on central banks (%)", {}),
+        ("DATA", "UK 14e Countercyclical leverage ratio buffer (%)", {}),
+        ("SECTION", "Liquidity coverage ratio (printed empty every year - UK DoLSub waiver, disclosed at sub-group level)", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (weighted value-average) (£m)", {}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (£m)", {}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (£m)", {}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£m)", {}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {}),
+        ("SECTION", "Net stable funding ratio (printed empty every year - UK DoLSub waiver, disclosed at sub-group level)", {}),
+        ("DATA", "18 Total available stable funding (£m)", {}),
+        ("DATA", "19 Total required stable funding (£m)", {}),
+        ("DATA", "20 NSFR ratio (%)", {}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=420,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 1905, "FY2024": 1956, "FY2023": 2042, "FY2022": 2149, "FY2021": 2682})],

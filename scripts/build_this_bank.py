@@ -36,6 +36,30 @@ HISTORICAL_FLOOR_NOTE = (
 )
 
 
+SITE_SWEEP_NOTE = (
+    "RE-VERIFIED AT SITE LEVEL, most recently 2026-09-16 (maximum-effort disclosure sweep; prior 'unavailable' "
+    "verdicts treated as unproven). thisbank.co.uk is live and was enumerated from its OWN robots.txt -> "
+    "sitemap_index.xml rather than by guessing paths. The 2026-09-15 pass read only page-sitemap.xml and called "
+    "that a complete page list, which it was not; the 2026-09-16 pass fetched ALL EIGHT sub-sitemaps (post, page, "
+    "news_and_press, category, post_tag, news_and_press_category, department, job_category) for 68 URLs in total, "
+    "54 of which serve HTML. That full list contains no Pillar 3, regulatory-disclosures, investor, annual-report "
+    "or results page of any kind - the pages are retail product, support-hub, careers and policy pages only. The "
+    "WordPress REST media library was also enumerated (/wp-json/wp/v2/media?media_type=application), the route "
+    "that finds PDFs no page links to: it returns exactly THREE PDFs on the whole domain (two historic "
+    "savings-rate tables and an FSCS leaflet), and the unfiltered endpoint's X-WP-Total of 501 confirms the "
+    "library is fully readable, so three is a real count rather than an empty response. Twenty direct path probes "
+    "(/pillar-3, /pillar-3-disclosures, /pillar3, /regulatory-disclosures, /disclosures, /about-us/pillar-3, "
+    "/investors, /annual-report, /annual-reports, /reports, /legal, /legals, /governance and others) each "
+    "returned a genuine HTTP 404 serving a 68,091-byte error page, plainly distinct from the 118,243-byte "
+    "homepage, so no soft-404 is hiding a page. Nothing was blocked at any point: a browser user-agent was used "
+    "throughout and every real page returned HTTP 200. The second host portal.thisbank.co.uk (the legacy JN Bank "
+    "customer portal) was checked too and redirects every path, root included, to the main site - it is a "
+    "catch-all redirect host, not a disclosures site. This corroborates the accounts' own 'available on request' "
+    "wording from the publication side: the Bank does not publish Pillar 3 material, so the blanks here are a "
+    "genuine non-publication rather than an access failure or an unsearched source."
+)
+
+
 def account_sources():
     return (
         "Sources - THIS BANK LIMITED / JN Bank UK Ltd own annual accounts, all figures in £'000 unless stated otherwise:\n"
@@ -92,16 +116,7 @@ def p3_sources():
         "FY2026 onward. This is the SDDT DISCLOSURE exemption, in force now - not the separate SDDT CAPITAL "
         "regime beginning 1 January 2027.\n"
         + ENTITY_NOTE + " " + HISTORICAL_FLOOR_NOTE + " The accounts state that Pillar 3 disclosures were available on request rather than publishing a standalone Pillar 3 document."
-        + "\nRE-VERIFIED 2026-09-15 AT SITE LEVEL (maximum-effort disclosure sweep, prior 'unavailable' verdicts "
-        "treated as unproven): thisbank.co.uk is live and was enumerated from its OWN WordPress sitemap index "
-        "(wp-sitemap.xml -> page-sitemap.xml) rather than by guessing paths, so this is a complete list of the "
-        "site's published pages, not a failed search. It contains no Pillar 3, regulatory-disclosures, investor "
-        "or reports page of any kind - the pages are retail product, support-hub, careers and policy pages only. "
-        "Five direct path probes (/pillar-3-disclosures, /regulatory-disclosures, /about-us/regulatory-"
-        "disclosures, /disclosures, /about-us/pillar-3) each returned HTTP 404 against a site serving HTTP 200. "
-        "This corroborates the accounts' own 'available on request' wording from the publication side: the Bank "
-        "does not publish Pillar 3 material, so the blanks here are a genuine non-publication rather than an "
-        "access failure or an unsearched source."
+        + "\n" + SITE_SWEEP_NOTE
     )
 
 
@@ -363,8 +378,8 @@ CET1 = {"FY2025": 25927, "FY2024": 8254, "FY2023": 8101, "FY2022": 8012, "FY2021
 CET1_RATIO = {"FY2025": "16.44%", "FY2024": "19.20%", "FY2023": "16.28%", "FY2022": "15.90%", "FY2021": "66.50%", "FY2020": "Not publicly disclosed"}
 LCR = {"FY2025": "554%", "FY2024": "4840%", "FY2023": "7758%", "FY2022": "Not publicly disclosed", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed"}
 DISCLOSURE_NOTE = (
-    "The accounts provide entity-level regulatory capital data but do not publish a complete standalone Pillar 3 "
-    "template. FY2023 values use the FY2024 report's comparative KPI/capital figures. FY2021 values use the FY2022 "
+    "The accounts provide entity-level regulatory capital data, but the Bank publishes no Pillar 3 document at "
+    "all - in any year - and no UK KM1 template; see the KM1 Key Metrics sheet for the full evidence. FY2023 values use the FY2024 report's comparative KPI/capital figures. FY2021 values use the FY2022 "
     "report's 2021 comparative regulatory-capital column. Ratios are as reported; no RWA, leverage, NSFR, or MREL "
     "values are derived from them. Where narrative KPI percentages differ from the regulatory-capital table, the "
     "regulatory-capital table is used: FY2025 narrative CET1 ratio 16.58% versus table 16.44%, and FY2025's "
@@ -373,6 +388,97 @@ DISCLOSURE_NOTE = (
     "Note 27 regulatory-capital table, but no CET1/Tier1/Total Capital ratio (%) was found anywhere - neither in "
     "FY2020's own report nor in the FY2021 report's later FY2020 comparative column - so the FY2020 ratio cells "
     "are genuinely not publicly disclosed, not merely uncollected."
+)
+
+KM1_SOURCES = (
+    "NOT APPLICABLE - this entity has never published a UK KM1 'Key metrics' template, in any year of this "
+    "workbook's range or before it. The evidence below is first-hand and affirmative; it is not a failed search, "
+    "and none of it rests on a blocked fetch.\n\n"
+    "1. THE BANK SAYS SO ITSELF, IN ALL SIX EDITIONS. Every annual report FY2020-FY2025 carries the heading "
+    "'Pillar 3 and Country-by-Country Reporting' in its Strategic/Directors' Report, and every one of them says "
+    "the Pillar 3 disclosures are furnished on request rather than published: FY2020 and FY2021 - 'The "
+    "disclosures required under EU Directives for Pillar 3 risk disclosure reporting are available on request in "
+    "writing. (Chief Risk and Compliance Officer, 410 Brixton Road, London, SW9 7AW)'; FY2022, FY2023 and FY2024 "
+    "- the same sentence, 'available on request by writing to Chief Risk and Compliance Officer' at the same "
+    "address; FY2025 (printed p.17) - '...available on request by writing to the Chief Risk and Compliance "
+    "Officer at City Bridge House, 57 Southwark Street, London, SE1 1RU', the address change reflecting the "
+    "Bank's head-office move and not a change of policy. Each edition says the same of the remuneration "
+    "disclosures - they are 'set out in the Bank's Pillar 3 disclosures which are available on written request'. "
+    "An on-request disclosure is not a published document, so there is no public KM1 to reproduce.\n\n"
+    "2. THE BANK'S ONLY CAPITAL TABLE IS NOT THE TEMPLATE, AND NOTHING HAS BEEN MAPPED ONTO TEMPLATE ROW "
+    "NUMBERS. Every edition prints exactly one capital table, introduced by the identical sentence 'The "
+    "following shows the regulatory capital resources managed by the Bank' - FY2020 printed p.49 (note 27 'Risk "
+    "Management cont.'), FY2021 printed p.58 (note 28), FY2022 printed p.8, FY2023 printed p.5, FY2024 printed "
+    "p.6, FY2025 printed p.7. In FY2020-FY2024 it has EIGHT unnumbered rows: Share capital, Share premium, "
+    "Accumulated loss, Deduction: Intangible assets, Other regulatory adjustments, Common Equity Tier 1 Capital, "
+    "Tier 2 capital, Total Regulatory Capital. FY2025 adds three more - CET1 Ratio, LCR, HQLA - for eleven. In "
+    "no year does it carry a risk-weighted-assets row, a TSCR or SREP block, a buffer block, any leverage row, "
+    "or any NSFR row. A published template can legitimately be unnumbered and can legitimately never write the "
+    "token 'KM1', so neither of those is the test; the test is the ROW SET, and this table fails it. It is a "
+    "different and much shorter table, so its rows are shown on this workbook's individual metric sheets and are "
+    "NOT recast here as template rows 1-27.\n\n"
+    "3. THE DOCUMENTS WERE READ AS IMAGES, NOT SEARCHED AS TEXT. All six Companies House filings are image-only "
+    "scans - pdftotext returns exactly one character per page from every one of them (52, 60, 70, 72, 94 and 82 "
+    "characters from 52, 60, 70, 72, 94 and 82 pages), so a text search of these PDFs would be a guaranteed "
+    "false negative. Each was therefore rendered at 200dpi and OCR'd page by page on 2026-09-17, yielding "
+    "113,660 / 143,752 / 163,930 / 170,488 / 181,352 / 177,670 characters for FY2020 through FY2025. Those "
+    "transcripts are rich on neighbouring regulatory vocabulary - 'capital' 64/60/66/65/78/77, 'ratio' "
+    "68/72/81/71/82/89, 'risk' 152/199/201/212/218/204, 'regulatory' 21/20/18/21/24/36 - which is what makes the "
+    "zeroes meaningful rather than an instrument failure. Case-insensitive, and zero in EVERY one of the six "
+    "years: 'KM1', 'key metric', 'own funds', 'risk-weighted', 'countercyclical', 'NSFR', 'net stable', 'total "
+    "exposure measure', 'UK 7a', 'UK 8a', 'UK 9a', 'available own funds', 'total risk exposure', 'risk exposure "
+    "amount', 'combined buffer', 'overall capital requirement', 'additional own funds', 'capital conservation'. "
+    "Two substring traps are recorded so a later pass does not re-find them as content: 'SREP' returns exactly "
+    "one hit in each of the six years and every one is inside the word 'misrepresentations' in the auditors' "
+    "report, and 'RWA' returns 9-16 hits a year of which not one is a risk-weighted asset - every hit is inside "
+    "'forward', 'forward-looking' or 'forward flow'. The only other 'Pillar' hit anywhere is FY2024's IAS 12 "
+    "note on 'International Tax Reform - Pillar Two Model Rules', an accounting standard rather than a Basel "
+    "pillar.\n\n"
+    "4. NO PARENT PILLAR 3 CARRIES THIS ENTITY EITHER, AND THE OWNERSHIP CHANGED MID-WINDOW. The Companies House "
+    "PSC register for company 11734380 (re-read 2026-09-17) shows control passing from JN FINANCIAL GROUP "
+    "LIMITED (Companies Office of Jamaica #92516, 2-4 Constant Spring Road, Halfway Tree, St Andrew, Jamaica; "
+    "75%+ of shares, notified 23 January 2019, CEASED 30 September 2024) to STEP ONE MONEY UK LIMITED (company "
+    "15794213, Premier House, 15-19 Church Street West, Woking GU21 6DJ; 75%+ of shares and of voting rights, "
+    "notified 30 September 2024, active). For FY2020-FY2024 the parent was therefore a JAMAICAN group, which "
+    "carries neither a UK Article 433 duty nor an EU Article 13(1) duty and so could not publish a UK KM1 for "
+    "this subsidiary. Every later layer was checked as well. Step One Money UK Limited's first group accounts "
+    "(period shortened to 31 March 2025 to line up with this Bank's year-end, filed 19 August 2026, 68 pages, "
+    "also an image-only scan) were OCR'd in full - 138,463 characters, rich on 'ratio' 86, 'capital' 68, "
+    "'regulatory' 28 - and contain no Pillar 3 and no KM1; their only regulatory figures are two narrative "
+    "bullets on printed p.5 (Group CET1 ratio 16.58%, Group LCR 554%), and printed p.67's 'Capital risk and "
+    "management' note is narrative only. Note 30 'Controlling party' on printed p.68 states that the immediate "
+    "and ultimate parent is STEP ONE GROUP LIMITED, incorporated in GUERNSEY, and that it 'does not prepare "
+    "consolidated financial statements' - so the layer above cannot publish a consolidated Pillar 3 at all, and "
+    "Guernsey sits outside UK CRR in any case. The PSC register for 15794213 terminates the chain at an "
+    "individual, Mr Michael George Childress. Neither parent publishes a disclosures site: steponemoney.com and "
+    "steponemoney.co.uk are a 114-byte parked-domain lander.\n\n"
+    "5. A LATER EDITION'S COMPARATIVE CANNOT FILL THESE COLUMNS, because there is no later edition that prints "
+    "the table. Where a year's own edition omits the template but a subsequent edition prints a comparative "
+    "column for that date, this project fills the column from the comparative and names the source edition. That "
+    "is not available here: no edition of this Bank, in any year, prints a KM1 at all. The absence is therefore "
+    "the strong kind - this entity has never published these figures, on any basis, in any edition.\n\n"
+    "6. Nothing on this sheet is back-filled from the statutory accounts. The capital and liquidity figures the "
+    "accounts DO disclose are already carried, on their own basis and with their own citations, on the CET1 "
+    "Capital, CET1 Ratio, Tier 1 Capital, Tier 1 Ratio, Total Capital, Total Capital Ratio and LCR sheets; the "
+    "Total RWAs, RWA Breakdown, Leverage Ratio, NSFR and MREL Ratio sheets record that no value is disclosed.\n\n"
+    "Latest-edition check, 2026-09-16 (both legs, re-confirmed 2026-09-17): newest Pillar 3 = NONE, in any year; "
+    "newest Annual Report = FY2025 (year ended 31 March 2025), 'Full accounts made up to 31 March 2025' filed 01 "
+    "December 2025, which is the FY2025 document this workbook already cites. Checked, none newer - the Bank's "
+    "year-end is 31 MARCH, so FY2026 accounts are not due until 31 December 2026 and none is filed. Companies "
+    "House filing history: " + CH + "\n\n"
+    + ENTITY_NOTE + "\n\n" + SITE_SWEEP_NOTE
+)
+
+bw.add_km1_sheet(
+    title="THIS BANK LIMITED (formerly JN Bank UK Ltd) - KM1 Key Metrics",
+    subtitle="Not applicable - this entity publishes no Pillar 3 document in any year, and its accounts state in "
+             "every edition FY2020-FY2025 that the Pillar 3 disclosures are available on request rather than "
+             "published, so there is no UK KM1 template to reproduce. See the source note below for the positive "
+             "evidence, including why the Bank's own regulatory-capital table is not the template.",
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=1500,
 )
 
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1)], DISCLOSURE_NOTE)

@@ -536,6 +536,126 @@ def metric(name, unit, rows_data, note=None):
                          rows_data, p3_sources(), note=note, first_col_width=48, source_height=130)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (must be added BEFORE the first metric sheet so it
+# lands immediately after Asset Quality and immediately before CET1 Capital)
+# ---------------------------------------------------------------
+P3_HY2026_URL = "https://www.vidabank.co.uk/media/g1vnsxxu/pillar-3-disclosures-30-june-2026.pdf"
+
+KM1_SOURCES = (
+    "Sources - Vida's own published UK KM1 'Key metrics' table, reproduced whole in the bank's own row order, "
+    "row labels and printed precision. Entity/basis: Vida Group Holdings Limited (FY2024 edition) / Vida Group "
+    "Holdings plc (FY2025 edition) CONSOLIDATED - the CRR consolidation entity, with Vida Bank Limited as its "
+    "principal regulated subsidiary. Both editions state 'Regulatory ratios are presented on a Group-basis "
+    "only', so no Vida-Bank-Limited-solo KM1 exists to prefer; this is the same basis every other Pillar 3 "
+    "sheet in this workbook uses (see the metric sheets' own BASIS DETERMINATION note).\n"
+    f"FY2025: Vida Group Holdings Limited Pillar 3 Disclosures 31 December 2025, section 3.1 'Key Metrics', "
+    f"PRINTED PAGE 5 (the page's own footer reads '5|Page') - {P3_2025_URL}\n"
+    f"FY2024: Vida Group Holdings Limited Pillar 3 Disclosures 31 December 2024, section 3.1 'Key Metrics', "
+    f"PRINTED PAGE 5 (footer '5|Page') - {P3_2024_URL}\n"
+    "Each year is taken from its OWN edition. The FY2025 edition also prints a 31 Dec 2024 comparative column "
+    "and it agrees with the FY2024 edition digit-for-digit on every one of the 23 rows, so nothing here depends "
+    "on which edition a FY2024 figure came from.\n\n"
+    "COLUMN ORDER: both editions print the OLDER year on the LEFT (the FY2025 edition's header block reads "
+    "'31 Dec 2024   31 Dec 2025'). This sheet keeps the workbook's standard most-recent-first column order, "
+    "which reorders columns but not rows - no row, label, figure or precision is altered.\n\n"
+    "THE TABLE IS UNNUMBERED, AND IT IS STILL THE TEMPLATE. Vida prints no template row numbers at all (no "
+    "'1', no 'UK 7a'), but the table carries the UK KM1 row set in template order - available own funds, "
+    "risk-weighted exposure amount, the three capital ratios, the additional own-funds (SREP) requirement, the "
+    "combined buffer build-up, leverage, LCR and NSFR - and the bank's own sentence above it names it: 'The key "
+    "metrics table (KM1) covering capital, leverage and liquidity is set out below.' Both editions are reduced-"
+    "scope Article 433b disclosures ('small and non-complex institution', UK CRR Article 4(145)), and both say "
+    "'Specific rows and columns in the tables prescribed by the PRA have been omitted where these are not "
+    "applicable to the Group' - so the shorter row set is a permitted reduction of the prescribed template, not "
+    "a different table and not an omission.\n\n"
+    "NO MISSING-VALUE GLYPHS: neither edition prints a dash, an 'n/a' or a zero anywhere in this table. Every "
+    "row the bank printed carries a figure in every column it printed.\n\n"
+    "UNITS: the bank declares £'000 on its own block captions ('Available own funds (£’000)', 'Risk-weighted "
+    "exposure (£’000)') and again on most individual rows. Each amount row below carries its own '(£'000)' so "
+    "the unit never has to be inferred from how far a lookup walks. The bank's own table mixes a typewriter "
+    "apostrophe and a typographic one for the same unit within a single page; the typewriter form is used "
+    "throughout here, which is a glyph choice in an annotation and changes no wording and no figure.\n\n"
+    "FY2018-FY2023 ARE BLANK BECAUSE NO PILLAR 3 DISCLOSURE OF ANY KIND EXISTS FOR THEM, on any basis, in any "
+    "edition. The entity was not PRA-authorised as a deposit-taker until 19 November 2024, so no Pillar 3 "
+    "obligation could attach to any earlier year; FY2018-FY2020 it was FCA-regulated only. FY2024 is the first "
+    "year for which any Pillar 3 document exists, and no later edition prints a pre-FY2024 comparative that "
+    "could fill those columns. This is a structural pre-authorisation absence, not an exemption - see the "
+    "ENTITY_NOTE on the Cash Flow Statement sheet and the SDDT date-fit note on the metric sheets, which "
+    "records that Vida's Rule 3.1 SDDT modification began 3 April 2026 and therefore explains none of these "
+    "blanks.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-17: checked Vida's own site (www.vidabank.co.uk -> About Vida Bank -> "
+    "Investors -> Debt Investors), not a cached citation list. The newest ANNUAL Pillar 3 is the 31 December "
+    "2025 edition used above, and the newest Annual Report is the 2025 Annual Report and Accounts already used "
+    "throughout this workbook - so no year is missing. The site additionally carries an INTERIM Pillar 3 as at "
+    f"30 June 2026 ({P3_HY2026_URL}), published alongside a 30 June 2026 Interim Report. It falls outside this "
+    "workbook's financial years (Vida's year-end is 31 December) and so adds no column, but its 31 Dec 2025 "
+    "comparative was read as an independent second transcription of the whole FY2025 column.\n\n"
+    "WHAT THAT SECOND OPINION FOUND - RECORDED, NOT RECONCILED. The interim edition reproduces the FY2025 "
+    "capital and leverage block exactly: CET1 168,319, Tier 1 168,319, Total capital 202,429, RWEA 1,105,780, "
+    "ratios 15.2% / 15.2% / 18.3%, leverage exposure 3,440,332 and leverage ratio 4.9%. It differs in two "
+    "places, both of which are the interim edition changing how it MEASURES a row rather than correcting a "
+    "figure, so the FY2025 column below stays exactly as Vida's own FY2025 edition printed it. (1) The SREP "
+    "block is presented differently: the FY2025 edition prints one combined 'Additional own funds requirements "
+    "(%)' of 1.2% and a 9.2% total, while the interim edition splits the same requirement into 'Additional "
+    "CET1 SREP requirements 0.66% / Additional AT1 SREP requirements 0.22% / Additional T2 SREP requirements "
+    "0.30%' with a 9.18% total - the components sum to 1.18%, i.e. the same requirement shown to two decimals "
+    "instead of one. (2) The LIQUIDITY rows are on a different averaging window. The interim edition footnotes "
+    "its LCR as 'the simple average of month end observations over the preceding 12 months' and its NSFR as "
+    "'the simple average of quarter end observations over the preceding 4 quarter ends', and on that basis "
+    "restates 31 Dec 2025 to HQLA 612,552 / outflows 330,304 / inflows 101,370 / net outflows 252,077 / LCR "
+    "528%, and NSFR 2,327,088 / 1,646,865 / 142%, against the 1,073,005 / 747,252 / 77,815 / 669,438 / 163% "
+    "and 2,377,496 / 1,719,626 / 138% that the FY2025 annual edition printed for the same date. Two printings "
+    "of one date on two bases is a documented divergence, not a transcription error in either; each year's own "
+    "edition governs its own column."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (£'000)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)", {"FY2025": 168319, "FY2024": 160316}),
+    ("DATA", "Tier 1 capital (£'000)", {"FY2025": 168319, "FY2024": 160316}),
+    ("DATA", "Total capital (£'000)", {"FY2025": 202429, "FY2024": 160316}),
+    ("SECTION", "Risk-weighted exposure (£'000)", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)", {"FY2025": 1105780, "FY2024": 986809}),
+    ("SECTION", "Capital ratios", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", {"FY2025": "15.2%", "FY2024": "16.2%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2025": "15.2%", "FY2024": "16.2%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2025": "18.3%", "FY2024": "16.2%"}),
+    ("SECTION", "Additional own funds requirements", {}),
+    ("DATA", "Additional own funds requirements (%)", {"FY2025": "1.2%", "FY2024": "1.2%"}),
+    ("DATA", "Total own funds requirements (%)", {"FY2025": "9.2%", "FY2024": "9.2%"}),
+    ("SECTION", "Combined buffer requirement", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)", {"FY2025": "1.9%", "FY2024": "1.9%"}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2025": "4.4%", "FY2024": "4.4%"}),
+    ("DATA", "Overall capital requirements (%)", {"FY2025": "13.6%", "FY2024": "13.6%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)", {"FY2025": 3440332, "FY2024": 2331835}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)", {"FY2025": "4.9%", "FY2024": "6.9%"}),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (weighted value - average) (£'000)", {"FY2025": 1073005, "FY2024": 167705}),
+    ("DATA", "Cash outflows - total weighted value (£'000)", {"FY2025": 747252, "FY2024": 64182}),
+    ("DATA", "Cash inflows - total weighted value (£'000)", {"FY2025": 77815, "FY2024": 205580}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)", {"FY2025": 669438, "FY2024": 16046}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2025": "163%", "FY2024": "1,045%"}),
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "Total available stable funding (£'000)", {"FY2025": 2377496, "FY2024": 2016146}),
+    ("DATA", "Total required stable funding (£'000)", {"FY2025": 1719626, "FY2024": 1830180}),
+    ("DATA", "Net stable funding ratio (%)", {"FY2025": "138%", "FY2024": "110%"}),
+]
+
+bw.add_km1_sheet(
+    title="Vida Bank Limited — KM1 Key Metrics",
+    subtitle="Vida Group Holdings (CRR consolidation entity) basis - the bank's own published UK KM1 table, "
+             "reproduced whole in its own row order, labels and precision. The bank prints no template row "
+             "numbers; amounts £'000, ratios as printed. FY2018-FY2023 are blank because no Pillar 3 "
+             "disclosure of any kind exists for them (pre-authorisation) - see source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=560,
+    years=YEARS,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", {"FY2025": 168319, "FY2024": 160316})])
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "15.2%", "FY2024": "16.2%"})])
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", {"FY2025": 168319, "FY2024": 160316})],

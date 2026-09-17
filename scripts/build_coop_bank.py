@@ -80,6 +80,17 @@ YEARS = [
 PILLAR3_YEARS = YEARS[:11]
 YEAR_LABEL = {y: y for y in YEARS}
 
+# KM1-011: the KM1 Key Metrics sheet spans FY2025-FY2020 on its own, which is
+# neither YEARS nor PILLAR3_YEARS. FY2025 is one year NEWER than anything else
+# in this workbook: the Bank's December 2025 Pillar 3 is published, but the
+# FY2025 Annual Report that every statement sheet depends on is not reflected
+# here yet, so FY2025 is carried only on the sheet whose own source document
+# supports it rather than added to YEARS (which would open a blank FY2025
+# column on all four statement sheets). FY2020 is included because the 2022
+# edition's KM1 prints five half-year columns reaching back to 31 Dec 2020.
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020"]
+YEAR_LABEL["FY2025"] = "FY2025"
+
 AR2024_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2024-annual-report-and-accounts.pdf"
 AR2022_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2022-annual-report-and-accounts.pdf"
 AR2020_URL = "https://www.co-operativebank.co.uk/assets/pdf/bank/investorrelations/2020-annual-report-and-accounts.pdf"
@@ -91,6 +102,7 @@ AR2015_URL = "https://www.co-operativebank.co.uk/assets/pdf/bank/investorrelatio
 AR2014_URL = "https://www.co-operativebank.co.uk/assets/pdf/bank/investorrelations/annual-report.pdf"
 
 P3_2024_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2024-pillar-3-disclosures.pdf"
+P3_2023_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2023-pillar-3-disclosures.pdf"
 P3_2022_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2022-pillar-3-disclosures.pdf"
 P3_2020_URL = "https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/2020-pillar-3-disclosures.pdf"
 P3_2019_URL = "https://www.co-operativebank.co.uk/assets/pdf/bank/investorrelations/2019-pillar-3-disclosures.pdf"
@@ -2153,6 +2165,173 @@ bw.add_asset_quality_sheet(
     source_height=170,
     unit_suffix=" (£m)",
     years=PILLAR3_YEARS,  # HD-078: not extended past FY2014 - see PRE2014_HISTORY_NOTE above.
+)
+
+KM1_SOURCES = (
+    "Sources - The Co-operative Bank p.l.c.'s own published 'UK KM1 - Key Metrics' template on the "
+    "INDIVIDUAL (Bank) basis, reproduced whole in the Bank's own row order, row numbers, labels and "
+    "precision. Amounts in £m, ratios exactly as printed.\n\n"
+    "ENTITY TRAP - EACH EDITION PRINTS THIS TEMPLATE TWICE. The 2022, 2023 and 2024 editions carry a GROUP "
+    "KM1 at section 3.2 in the front of the document AND a separate 'KM1 - KEY METRICS TEMPLATE "
+    "(INDIVIDUAL)' in the appendix. This workbook is Bank Company-only throughout, so every figure below is "
+    "taken from the INDIVIDUAL table and never from the Group one.\n"
+    f"FY2025: Pillar 3 Disclosures December 2025, section 2.1 'Template UK KM1 - Key metrics', printed "
+    f"folios 4-5 (31 December 2025 column) - {P3_2025_URL}\n"
+    f"FY2024: 2024 Pillar 3 Disclosures, 'KM1 - Key Metrics (Individual)', printed folios 139-140 "
+    f"(31 December 2024 column) - {P3_2024_URL}\n"
+    f"FY2023: 2023 Pillar 3 Disclosures, 'KM1 - Key Metrics Template (Individual)', printed folios 140-141 "
+    f"(31 December 2023 column) - {P3_2023_URL}\n"
+    f"FY2022: 2022 Pillar 3 Disclosures, 'KM1 - Key Metrics Template (Individual)', printed folios 101-102 "
+    f"(column a, 31 Dec 22) - {P3_2022_URL}\n"
+    f"FY2021 and FY2020: FILLED FROM A LATER EDITION'S COMPARATIVE COLUMNS, and flagged here rather than "
+    f"presented as own-year figures. Neither the 2020 nor the 2021 edition prints a KM1 template at all - "
+    f"both pre-date the UK CRR template regime. That was tested rather than assumed: each contains zero "
+    f"occurrences of 'KM1', 'combined buffer', 'total exposure measure', 'high-quality liquid' and 'net "
+    f"stable funding', while the same documents return healthy counts for the control phrases 'own funds' "
+    f"(12 and 10) and 'countercyclical' (10 and 10) - so both texts extract fine and the template is "
+    f"genuinely absent. The 2022 edition's Individual KM1 prints five columns (31 Dec 22 / 30 Jun 22 / 31 "
+    f"Dec 21 / 30 Jun 21 / 31 Dec 20), so FY2021 is its column c and FY2020 its column e - {P3_2022_URL}\n\n"
+    "THE FY2025 COLUMN IS ONE YEAR NEWER THAN THE REST OF THIS WORKBOOK. The Bank's December 2025 Pillar 3 "
+    "is published and supports this sheet in full; the statement sheets still end at FY2024 because they "
+    "depend on the FY2025 Annual Report, which is a separate transcription. This sheet therefore carries "
+    "FY2025 while the others do not - a deliberate difference, not an inconsistency.\n\n"
+    "PRECISION CHANGES BETWEEN EDITIONS AND IS REPRODUCED, NOT NORMALISED. The FY2025 edition prints whole "
+    "£m (CET1 968, RWA 5,112) where the FY2020-FY2024 editions print one decimal (923.5, 4,950.8). Each "
+    "edition's own precision is kept.\n\n"
+    "ROWS 18-20 ARE BLANK FOR FY2022, FY2021 AND FY2020 BY FORMAL EXCLUSION, not for want of data, and this "
+    "is the reason they are left blank rather than back-filled. The 2022 edition's own footnote 4 states: "
+    "'In line with PS22/21 \"Implementation of Basel Standards...\", disclosures for the Net Stable Funding "
+    "Ratio (NSFR) are not required until after 1 January 2024.' The 2023 edition does later print an NSFR "
+    "for 31 Dec 2022 in its comparative column (available stable funding 25,930.2, required stable funding "
+    "18,994.5, NSFR 136.5%). Those rows are absent from an otherwise complete FY2022 table, so they stay "
+    "blank here and the later figures are recorded in this note instead.\n"
+    "Rows 14a-14e are likewise blank by formal exclusion in every edition. Each document's footnote 2 "
+    "states the additional leverage disclosures are 'Only required for LREQ firms... The rows have been "
+    "left blank as the Bank is not currently captured by either threshold'. Rows UK 8a, UK 9a, 10 and "
+    "UK 10a print '-' in the FY2020-FY2024 editions and are not printed at all in the FY2025 edition; a "
+    "printed dash is reproduced as a blank, never as a zero.\n"
+    "Each edition's footnote 3 records that the LCR rows 'have been calculated as a simple average of the "
+    "12 month end observations preceding the end of each half year', and the FY2025 edition adds that the "
+    "NSFR 'is calculated as an average of the current and three preceding quarters'. The FY2025 edition "
+    "also warns that 'the liquidity position reported in the ARAs is not a 12-month average but is reported "
+    "as at 31 December 2025, therefore is not directly comparable to Pillar 3 disclosures'.\n\n"
+    "LATEST-EDITION CHECK (2026-09-17): co-operativebank.co.uk's own investor-relations results page was "
+    "enumerated directly. The newest FULL-YEAR Pillar 3 is the December 2025 edition used above, and it is "
+    "used here, so this sheet is current. The Bank also publishes interim editions - a June 2025 half-year "
+    "and a 'Bank Pillar 3 Disclosures March 2026' quarterly - which add no further year-end column. A "
+    "caution for anyone repeating this check: several plausible filenames on that site "
+    "('2025-pillar-3-disclosures.pdf', '2026-pillar-3-disclosures.pdf', '2026-h1-pillar-3-disclosures.pdf', "
+    "'2026-annual-report-and-accounts.pdf') return HTTP 200 with an 81,445-byte HTML page rather than a PDF. "
+    "They are soft-404s and are NOT evidence of a newer edition; each was checked for the %PDF magic bytes.\n"
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)", {
+        "FY2025": 968, "FY2024": 923.5, "FY2023": 995.4, "FY2022": 947.3, "FY2021": 901.5, "FY2020": 874.9}),
+    ("DATA", "2  Tier 1 capital (£m)", {
+        "FY2025": 968, "FY2024": 923.5, "FY2023": 995.4, "FY2022": 947.3, "FY2021": 901.5, "FY2020": 874.9}),
+    ("DATA", "3  Total capital (£m)", {
+        "FY2025": 1169, "FY2024": 1123.9, "FY2023": 1231.8, "FY2022": 1141.5, "FY2021": 1103.7,
+        "FY2020": 1084.9}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)", {
+        "FY2025": 5112, "FY2024": 4950.8, "FY2023": 4830.6, "FY2022": 4806.7, "FY2021": 4399.8,
+        "FY2020": 4668.4}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {
+        "FY2025": "18.9%", "FY2024": "18.7%", "FY2023": "20.6%", "FY2022": "19.7%", "FY2021": "20.5%",
+        "FY2020": "18.7%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {
+        "FY2025": "18.9%", "FY2024": "18.7%", "FY2023": "20.6%", "FY2022": "19.7%", "FY2021": "20.5%",
+        "FY2020": "18.7%"}),
+    ("DATA", "7  Total capital ratio (%)", {
+        "FY2025": "22.9%", "FY2024": "22.7%", "FY2023": "25.5%", "FY2022": "23.7%", "FY2021": "25.1%",
+        "FY2020": "23.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
+                "exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {
+        "FY2025": "2.3%", "FY2024": "2.8%", "FY2023": "2.8%", "FY2022": "2.8%", "FY2021": "3.4%",
+        "FY2020": "3.2%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {
+        "FY2025": "0.7%", "FY2024": "1.0%", "FY2023": "1.0%", "FY2022": "1.0%", "FY2021": "1.1%",
+        "FY2020": "1.1%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {
+        "FY2025": "1.0%", "FY2024": "1.3%", "FY2023": "1.3%", "FY2022": "1.3%", "FY2021": "1.5%",
+        "FY2020": "1.4%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {
+        "FY2025": "12.0%", "FY2024": "13.1%", "FY2023": "13.1%", "FY2022": "13.1%", "FY2021": "14.0%",
+        "FY2020": "13.7%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {
+        "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%",
+        "FY2020": "2.5%"}),
+    ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the level "
+             "of a Member State (%)", {}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {
+        "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+    ("DATA", "11  Combined buffer requirement (%)", {
+        "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%",
+        "FY2020": "2.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {
+        "FY2025": "16.5%", "FY2024": "17.5%", "FY2023": "17.5%", "FY2022": "16.6%", "FY2021": "16.5%",
+        "FY2020": "16.2%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {
+        "FY2025": "9.9%", "FY2024": "8.9%", "FY2023": "10.8%", "FY2022": "9.9%", "FY2021": "10.0%",
+        "FY2020": "8.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)", {
+        "FY2025": 22035, "FY2024": 23124.4, "FY2023": 23572.7, "FY2022": 23525.6, "FY2021": 24100.6,
+        "FY2020": 22736.0}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {
+        "FY2025": "4.4%", "FY2024": "4.0%", "FY2023": "4.2%", "FY2022": "4.0%", "FY2021": "3.7%",
+        "FY2020": "3.8%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements (LREQ firms only - left blank by the "
+                "Bank in every edition, see note)", {}),
+    ("DATA", "14a  Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14b  Leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14c  Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d  Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e  Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)", {
+        "FY2025": 3816, "FY2024": 4014.6, "FY2023": 4457.7, "FY2022": 5880.3, "FY2021": 4708.0,
+        "FY2020": 3367.2}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£m)", {
+        "FY2025": 2292, "FY2024": 2418.8, "FY2023": 2703.5, "FY2022": 2792.3, "FY2021": 2927.1,
+        "FY2020": 2998.4}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)", {
+        "FY2025": 154, "FY2024": 337.6, "FY2023": 636.0, "FY2022": 611.8, "FY2021": 656.1,
+        "FY2020": 1210.9}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)", {
+        "FY2025": 2138, "FY2024": 2081.1, "FY2023": 2067.6, "FY2022": 2180.5, "FY2021": 2271.0,
+        "FY2020": 1787.6}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {
+        "FY2025": "179.8%", "FY2024": "193.4%", "FY2023": "215.4%", "FY2022": "270.4%", "FY2021": "207.6%",
+        "FY2020": "188.2%"}),
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "18  Total available stable funding (£m)", {
+        "FY2025": 21719, "FY2024": 22318.3, "FY2023": 23816.4}),
+    ("DATA", "19  Total required stable funding (£m)", {
+        "FY2025": 16129, "FY2024": 16751.5, "FY2023": 18027.2}),
+    ("DATA", "20  NSFR ratio (%)", {
+        "FY2025": "134.7%", "FY2024": "133.3%", "FY2023": "132.1%"}),
+]
+
+bw.add_km1_sheet(
+    title="The Co-operative Bank p.l.c. — KM1 Key Metrics",
+    subtitle="The Bank's own published 'UK KM1 - Key Metrics' template on the INDIVIDUAL (Bank) basis - not "
+             "the Group table printed alongside it - reproduced whole; £m and ratios as printed. FY2021 and "
+             "FY2020 are filled from the 2022 edition's comparative columns; FY2025 is one year newer than "
+             "the rest of this workbook. See note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=480,
+    years=KM1_YEARS,
 )
 
 # ---------------------------------------------------------------

@@ -462,6 +462,321 @@ ANNUAL = {
     "LCR": {"FY2025": "135%", "FY2024": "137%", "FY2023": "133%", "FY2022": "136%", "FY2021": "126%", "FY2020": "126%", "FY2019": "127%"},
     "NSFR": {"FY2025": "119%", "FY2024": "124%", "FY2023": "126%"},
 }
+# ---------------------------------------------------------------
+# KM1 Key Metrics (wayfinder/km1/map.md) - Lloyds Bank plc Group's own
+# published key-metrics template, reproduced whole. add_km1_sheet() is
+# called BEFORE the first add_metric_sheet() below so the sheet lands
+# immediately after Asset Quality and immediately before CET1 Capital:
+# sheet order follows call order.
+#
+# TWO CAPTION BLOCKS, NEVER MERGED (map rule 24). The Group's series crosses
+# 1 January 2022 and the table changes identity at that date:
+#   FY2022-FY2025  the UK template, "KM1: Key metrics", rows numbered
+#                  1-20 with UK 7a-7d, UK 10a, UK 11a and UK 14a-14e.
+#   FY2019-FY2021  the older Basel/IFRS9-FL table, "KM1: Key metrics and a
+#                  comparison of own funds and capital and leverage ratios
+#                  with and without the application of transitional
+#                  arrangements for IFRS 9 (IFRS9-FL)".
+# The row NUMBERS are reused for different metrics across that break and a
+# row number alone never identifies a row - in the older table plain "9" is
+# the CET1 ratio and plain "13" the total capital ratio, whereas in the UK
+# template "9" is the countercyclical buffer and "13" the leverage exposure
+# measure. The two blocks are therefore kept apart, each with the caption
+# its own editions printed, and nothing is carried across.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "UK template — 'KM1: Key metrics' (FY2022 onward; row numbers and LR2 cross-references as printed)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 26468, "FY2024": 25610, "FY2023": 26220, "FY2022": 25926}),
+    ("DATA", "2    Tier 1 capital (£m)",
+     {"FY2025": 31835, "FY2024": 31305, "FY2023": 31238, "FY2022": 30194}),
+    ("DATA", "3    Total capital (£m)",
+     {"FY2025": 38995, "FY2024": 37214, "FY2023": 37402, "FY2022": 35815}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£m)",
+     {"FY2025": 194300, "FY2024": 186996, "FY2023": 182560, "FY2022": 174902}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "13.6%", "FY2024": "13.7%", "FY2023": "14.4%", "FY2022": "14.8%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "16.4%", "FY2024": "16.7%", "FY2023": "17.1%", "FY2022": "17.3%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "20.1%", "FY2024": "19.9%", "FY2023": "20.5%", "FY2022": "20.5%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.6%", "FY2024": "1.7%", "FY2023": "1.7%", "FY2022": "1.7%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.6%", "FY2024": "0.6%", "FY2023": "0.6%", "FY2022": "0.6%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "0.8%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.7%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "10.9%", "FY2024": "11.0%", "FY2023": "11.0%", "FY2022": "11.0%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.500%", "FY2022": "2.500%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.9%", "FY2024": "1.9%", "FY2023": "1.905%", "FY2022": "0.934%"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.000%", "FY2022": "2.000%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "6.4%", "FY2024": "6.4%", "FY2023": "6.405%", "FY2022": "5.434%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "17.3%", "FY2024": "17.4%", "FY2023": "17.4%", "FY2022": "16.5%"}),
+    ("DATA", "12    CET1 available after meeting minimum SREP own funds requirements (%)",
+     {"FY2025": "7.5%", "FY2024": "7.5%", "FY2023": "8.2%", "FY2022": "8.6%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  (LR2 UK-24b)    Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 612730, "FY2024": 582332, "FY2023": 562153, "FY2022": 559585}),
+    ("DATA", "14  (LR2 25)    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.2%", "FY2024": "5.4%", "FY2023": "5.6%", "FY2022": "5.4%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "UK 14a  (LR2 UK-25a)    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.2%", "FY2024": "5.4%", "FY2023": "5.5%", "FY2022": "5.3%"}),
+    ("DATA", "UK 14b  (LR2 UK-25c)    Leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.9%", "FY2024": "5.0%", "FY2023": "5.0%", "FY2022": "4.8%"}),
+    ("DATA", "UK 14c  (LR2 UK-34)    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "5.1%", "FY2024": "5.3%", "FY2023": "5.5%", "FY2022": "5.4%"}),
+    ("DATA", "UK 14d  (LR2 UK-33)    Average leverage ratio including claims on central banks (%)",
+     {"FY2025": "4.8%", "FY2024": "4.9%", "FY2023": "5.0%", "FY2022": "4.8%"}),
+    ("DATA", "(LR2 UK-31)    Average total exposure measure including claims on central banks (£m)",
+     {"FY2025": 661217, "FY2024": 638358}),
+    ("DATA", "(LR2 UK-32)    Average total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 620362, "FY2024": 597279}),
+    ("DATA", "(LR2 27)    Leverage ratio buffer (%)", {"FY2025": "1.4%", "FY2024": "1.4%"}),
+    ("DATA", "(LR2 UK-27a)    Of which: G-SII or O-SII additional leverage ratio buffer (%)",
+     {"FY2025": "0.7%", "FY2024": "0.7%"}),
+    ("DATA", "UK 14e  (LR2 UK-27b)    Of which: countercyclical leverage ratio buffer (%)",
+     {"FY2025": "0.7%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "0.3%"}),
+    ("SECTION", "Average Liquidity Coverage Ratio (weighted) (LCR)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)",
+     {"FY2025": 104542, "FY2024": 107531, "FY2023": 108655, "FY2022": 120822}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value - average (£m)",
+     {"FY2025": 83177, "FY2024": 84399, "FY2023": 87371, "FY2022": 92932}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value - average (£m)",
+     {"FY2025": 5744, "FY2024": 5738, "FY2023": 5687, "FY2022": 4067}),
+    ("DATA", "16    Total net cash outflows (adjusted value - average) (£m)",
+     {"FY2025": 77433, "FY2024": 78661, "FY2023": 81684, "FY2022": 88865}),
+    ("DATA", "17    Average liquidity coverage ratio (%)",
+     {"FY2025": "135%", "FY2024": "137%", "FY2023": "133%", "FY2022": "136%"}),
+    ("SECTION", "Average Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (Weighted value - average) (£m)",
+     {"FY2025": 478176, "FY2024": 481973, "FY2023": 483745}),
+    ("DATA", "19    Total required stable funding (Weighted value - average) (£m)",
+     {"FY2025": 400607, "FY2024": 390213, "FY2023": 387305}),
+    ("DATA", "20    Average NSFR ratio (%)",
+     {"FY2025": "119%", "FY2024": "124%", "FY2023": "125%"}),
+
+    ("SECTION", "Pre-2022 Basel template — 'KM1: Key metrics and a comparison of own funds and capital and "
+                "leverage ratios with and without the application of transitional arrangements for IFRS 9 "
+                "(IFRS9-FL)' (FY2019-FY2021). DIFFERENT TABLE, DIFFERENT ROW NUMBERING — see note", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) (£m)  [pre-2022 table]",
+     {"FY2021": 26904, "FY2020": 26567, "FY2019": 24637}),
+    ("DATA", "2    CET1 capital as if IFRS 9 transitional arrangements had not been applied (£m)  [pre-2022 table]",
+     {"FY2021": 26253, "FY2020": 24591, "FY2019": 24185}),
+    ("DATA", "3    Tier 1 (£m)  [pre-2022 table]", {"FY2021": 31853, "FY2020": 33862, "FY2019": 31542}),
+    ("DATA", "4    Tier 1 capital as if IFRS 9 transitional arrangements had not been applied (£m)  [pre-2022 table]",
+     {"FY2021": 31202, "FY2020": 31886, "FY2019": 31090}),
+    ("DATA", "5    Total capital (£m)  [pre-2022 table]", {"FY2021": 37909, "FY2020": 40163, "FY2019": 37976}),
+    ("DATA", "6    Total capital as if IFRS 9 transitional arrangements had not been applied (£m)  [pre-2022 table]",
+     {"FY2021": 38039, "FY2020": 39422, "FY2019": 38004}),
+    ("DATA", "7    Total risk-weighted assets (£m)  [pre-2022 table]",
+     {"FY2021": 161576, "FY2020": 170862, "FY2019": 171940}),
+    ("DATA", "8    Total risk-weighted assets as if IFRS 9 transitional arrangements had not been applied (£m)  [pre-2022 table]",
+     {"FY2021": 161805, "FY2020": 171015, "FY2019": 172324}),
+    ("DATA", "9    Common Equity Tier 1 ratio (%)  [pre-2022 table]",
+     {"FY2021": "16.7%", "FY2020": "15.5%", "FY2019": "14.3%"}),
+    ("DATA", "10    CET1 ratio as if IFRS 9 transitional arrangements had not been applied (%)  [pre-2022 table]",
+     {"FY2021": "16.2%", "FY2020": "14.4%", "FY2019": "14.0%"}),
+    ("DATA", "11    Tier 1 ratio (%)  [pre-2022 table]",
+     {"FY2021": "19.7%", "FY2020": "19.8%", "FY2019": "18.3%"}),
+    ("DATA", "12    Tier 1 ratio as if IFRS 9 transitional arrangements had not been applied (%)  [pre-2022 table]",
+     {"FY2021": "19.3%", "FY2020": "18.6%", "FY2019": "18.0%"}),
+    ("DATA", "13    Total capital ratio (%)  [pre-2022 table]",
+     {"FY2021": "23.5%", "FY2020": "23.5%", "FY2019": "22.1%"}),
+    ("DATA", "14    Total capital ratio as if IFRS 9 transitional arrangements had not been applied (%)  [pre-2022 table]",
+     {"FY2021": "23.5%", "FY2020": "23.1%", "FY2019": "22.1%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA (pre-2022 table; printed unnumbered)", {}),
+    ("DATA", "Capital conservation buffer requirement (%)  [pre-2022 table]",
+     {"FY2021": "2.500%", "FY2020": "2.5%", "FY2019": "2.5%"}),
+    ("DATA", "Countercyclical buffer requirement (%)  [pre-2022 table]",
+     {"FY2021": "0.003%", "FY2020": "0.0%", "FY2019": "0.9%"}),
+    ("DATA", "Bank G-SIB and/or D-SIB additional requirements (%)  [pre-2022 table]",
+     {"FY2021": "2.000%", "FY2020": "2.0%", "FY2019": "2.0%"}),
+    ("DATA", "Total of bank CET1 specific buffer requirements (%)  [pre-2022 table]",
+     {"FY2021": "4.503%", "FY2020": "4.5%", "FY2019": "5.4%"}),
+    ("DATA", "CET1 available after meeting the bank's minimum capital requirements (%)  [pre-2022 table]",
+     {"FY2021": "12.2%", "FY2020": "11.0%", "FY2019": "9.8%"}),
+    ("SECTION", "UK leverage ratio (pre-2022 table — ORIGINAL CRR basis, INCLUDING claims on central banks)", {}),
+    ("DATA", "15    UK leverage ratio exposure measure (£m)  [pre-2022 table]",
+     {"FY2021": 584650, "FY2020": 593546, "FY2019": 582921}),
+    ("DATA", "16    UK leverage ratio (%)  [pre-2022 table]",
+     {"FY2021": "5.3%", "FY2020": "5.5%", "FY2019": "5.1%"}),
+    ("DATA", "17    UK leverage ratio as if IFRS 9 transitional arrangements had not been applied (%)  [pre-2022 table]",
+     {"FY2021": "5.2%", "FY2020": "5.2%", "FY2019": "5.0%"}),
+    ("SECTION", "Average Liquidity Coverage Ratio (weighted) (LCR) (pre-2022 table; printed unnumbered)", {}),
+    ("DATA", "Total High Quality Liquid Assets (HQLA) (£m)  [pre-2022 table]",
+     {"FY2021": 114712, "FY2020": 113434, "FY2019": 112203}),
+    ("DATA", "Total net cash outflow (£m)  [pre-2022 table]",
+     {"FY2021": 91296, "FY2020": 89844, "FY2019": 88490}),
+    ("DATA", "LCR ratio (%)  [pre-2022 table]",
+     {"FY2021": "126%", "FY2020": "126%", "FY2019": "127%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Lloyds Bank plc's own year-end Pillar 3 disclosures, key-metrics template, £m and % exactly as "
+    "printed. EACH YEAR IS TAKEN FROM THE EDITION IN WHICH IT IS THE REPORTING YEAR (the '31 Dec' column, or "
+    "the 'T'/'Q4' column in the pre-2022 editions), never from a later edition's comparative. Page numbers are "
+    "the PRINTED FOLIOS from each document's own 'Page N of M' footer, each cross-confirmed against that "
+    "document's own contents/List of Tables entry:\n"
+    f"FY2025: 2025 Year-End Pillar 3 Disclosures, 'KM1: Key metrics', printed pp.6-7 (the table breaks across "
+    f"two pages, capital and leverage on p.6, LCR and NSFR on p.7) - {P3_URLS['FY2025']}\n"
+    f"FY2024: 2024 Year-End Pillar 3 Disclosures, printed pp.8-9 - {P3_URLS['FY2024']}\n"
+    f"FY2023: 2023 Year-End Pillar 3 Disclosures, printed p.8 (whole table on one page) - {P3_URLS['FY2023']}\n"
+    f"FY2022: 2022 Year-End Pillar 3 Disclosures, printed p.9 - {P3_URLS['FY2022']}\n"
+    f"FY2021: 2021 Year-End Pillar 3 Disclosures, printed p.5 - {P3_URLS['FY2021']}\n"
+    f"FY2020: 2020 Year-End Pillar 3 Disclosures, 'Table 1: Key metrics (KM1)...', printed p.3 - "
+    f"{P3_URLS['FY2020']}\n"
+    f"FY2019: Capital and Risk Management Pillar 3 Report 2019, 'Table 1: Key Metrics (KM1)...', printed p.3 - "
+    f"{P3_URLS['FY2019']}\n"
+    "FY2018 and FY2017: blank. No standalone Lloyds Bank plc Pillar 3 disclosure exists for those years - "
+    "full Pillar 3 reporting for this entity began with the FY2019 year-end, following 1 January 2019 "
+    "ring-fencing implementation. The blank is the absence of a document, not a row we failed to find.\n\n"
+    "ENTITY - THE ONE THING MOST EASILY GOT WRONG IN THIS FAMILY. Every figure above is Lloyds Bank plc GROUP "
+    "consolidated. Lloyds Banking Group plc, Lloyds Bank plc and Bank of Scotland plc are three different "
+    "entities that each publish their own Pillar 3 document, in the same folder structure on the same website, "
+    "with near-identical filenames and near-plausible figures. Each document states its own scope in its first "
+    "sentence, and this workbook's editions all read: 'This document presents the consolidated Pillar 3 "
+    "disclosures of Lloyds Bank plc (the Group) as at 31 December [year].' No figure from the parent or from "
+    "the sibling is substituted anywhere on this sheet.\n\n"
+    "LEVEL OF APPLICATION, read from the documents' own 'Introduction and basis of preparation' section rather "
+    "than inferred from the group structure. Lloyds Bank plc discloses in its own right, under the Disclosure "
+    "(CRR) Part of the PRA Rulebook, and its editions say so affirmatively. The same section also disposes of "
+    "the sibling entity in one sentence - 'Additional disclosures surrounding the capital resources, leverage "
+    "exposures and capital requirements of Bank of Scotland plc will be published separately in conjunction "
+    "with the Annual Report and Accounts for this subsidiary' - so Bank of Scotland's figures are not in this "
+    "document and this document's figures are not Bank of Scotland's. Capital instrument main-features and "
+    "TLAC2 disclosures are the one thing deliberately pushed up to Lloyds Banking Group plc's own Pillar 3, "
+    "and neither is a KM1 row.\n\n"
+    "TWO TEMPLATES, KEPT APART (map rule 24 - a dated, corpus-wide break, and not the same thing as the "
+    "leverage-basis break below). The Group's FY2019, FY2020 and FY2021 editions print the older Basel "
+    "IFRS9-FL table; the FY2022 edition onward prints the UK KM1 template. THE ROW NUMBERS ARE REUSED FOR "
+    "DIFFERENT METRICS ACROSS THAT BREAK, so the two are shown as two separate caption blocks above and "
+    "nothing is merged into a single series. Worked examples of how badly a row number alone would mislead "
+    "here: in the pre-2022 table row 9 is the CET1 RATIO and row 13 the TOTAL CAPITAL RATIO, while in the UK "
+    "template row 9 is the countercyclical buffer and row 13 the leverage exposure measure; the pre-2022 "
+    "table's rows 15-17 are the UK leverage block, while the UK template's rows 15-17 are the LCR block. "
+    "Every pre-2022 row above is also suffixed '[pre-2022 table]' so a row can never be read out of its "
+    "block.\n\n"
+    "THE PRE-2022 TABLE IS A DIFFERENT DISCLOSURE, NOT A SPARSER ONE. Half its rows are the IFRS 9 "
+    "fully-loaded twins ('as if IFRS 9 transitional arrangements had not been applied'), which the UK template "
+    "does not carry at all - the Group publishes those separately as IFRS 9-FL from FY2022 onward, and that "
+    "separate table is not reproduced on this sheet. Conversely the pre-2022 table has no SREP block "
+    "(UK 7a-7d), no O-SII buffer row, and no NSFR rows of any kind.\n\n"
+    "THE 1 JANUARY 2022 LEVERAGE BASIS BREAK (map rule 5) falls exactly on the same boundary and is stated by "
+    "the Group itself. The pre-2022 block's rows 15/16 are captioned 'UK leverage ratio exposure measure' and "
+    "'UK leverage ratio' on the ORIGINAL CRR basis, INCLUDING claims on central banks; from FY2022 rows 13/14 "
+    "are captioned 'Total exposure measure EXCLUDING claims on central banks' and 'Leverage ratio EXCLUDING "
+    "claims on central banks'. The two are not comparable and are never merged. The pre-2022 editions also "
+    "footnote a third figure, the CRD IV leverage ratio, at 4.9% for 31 December 2021, 5.1% for 2020 and 4.8% "
+    "for 2019 - a different basis again, recorded here rather than placed in a row the Group did not print.\n\n"
+    "ROW SETS DRIFT BETWEEN EDITIONS, and every blank in the UK block is a row that edition did not print:\n"
+    "• NSFR (rows 18-20) is absent from the FY2022 edition entirely - its KM1 ends at row 17. The UK NSFR "
+    "framework took effect during 2022 and the Group's first KM1 NSFR rows appear in the FY2023 edition. "
+    "FY2022 is therefore blank on rows 18-20, not zero.\n"
+    "• The four leverage rows carrying only an LR2 reference and no KM1 number (UK-31, UK-32, 27 and UK-27a) "
+    "appear inside KM1 only from the FY2024 edition. In the FY2023 edition the same figures are printed in "
+    "that edition's footnotes and in its standalone LR2 table instead, and for the record they are: average "
+    "total exposure measure for 1 October to 31 December 2023 of £627,191m including and £568,917m excluding "
+    "claims on central banks, a total leverage ratio buffer of 1.4% (31 December 2022: 1.0%) and an additional "
+    "leverage ratio buffer of 0.7%. They are recorded here rather than written into KM1 rows that edition did "
+    "not have.\n"
+    "• The Group prints both a 'KM1 Ref' and an 'LR2 Ref' column from the FY2023 edition onward, because the "
+    "table embeds extracts of LR2 that must be disclosed quarterly. Both references are kept in the row labels "
+    "above.\n\n"
+    "CAPTION DRIFT ALONG ROW UK 14e. The FY2024 and FY2025 editions caption it 'Of which: countercyclical "
+    "leverage ratio buffer (%)'; the FY2022 and FY2023 editions caption the same row 'Countercyclical leverage "
+    "ratio buffer (%)', without the 'Of which'. The newer wording is used for the row label.\n\n"
+    "PRECISION DRIFT ALONG ROWS 8, 9, UK 10a AND 11. The FY2022 and FY2023 editions print these to three "
+    "decimals ('2.500%', '0.934%', '1.905%', '6.405%'); the FY2024 and FY2025 editions print one ('2.5%', "
+    "'1.9%', '6.4%'). Each cell comes from its own year's edition, so the printed precision genuinely varies "
+    "along the row. This also means FY2023's countercyclical buffer reads 1.905% here where the FY2024 "
+    "edition's comparative rounds it to 1.9%.\n\n"
+    "AN UNRESOLVED DISAGREEMENT WITH THIS WORKBOOK'S OWN NSFR FIGURES, RECORDED RATHER THAN RECONCILED, AND "
+    "NOT SILENTLY CORRECTED. Row 20 above gives FY2023's average NSFR as 125%. That is what Lloyds Bank plc's "
+    "FY2023 year-end Pillar 3 prints for 31 December 2023, in TWO independent places in that document - KM1 "
+    "row 20, and row 34 of the LIQ2 net stable funding ratio template - and the FY2024 edition's comparative "
+    "column for the same date prints 125% as well. This workbook's separate NSFR metric sheet carries 126% "
+    "for FY2023, and its Interim Pillar 3 sheet carries 127% for 2023-Q1, 127% for 2023-H1, 126% for 2023-Q3 "
+    "and 126% for 2024-Q1.\n"
+    "THOSE FIGURES COULD NOT BE SOURCED TO ANY DOCUMENT, and the search for them was exhaustive rather than "
+    "cursory (all checked 2026-09-17, every document fetched directly and verified by HTTP status, "
+    "Content-Type and %PDF magic bytes):\n"
+    "• Lloyds Bank plc's own 2023 editions print, each in its own reporting-date column, Q1 124%, H1 124%, "
+    "Q3 125% and year-end 125%. None of them prints 126% or 127% for any 2023 date, in any column.\n"
+    "• The string '126%' does not occur anywhere in the FY2023 year-end Pillar 3 document. The only "
+    "three-digit percentages of that magnitude anywhere in it are 115%, 116%, 119%, 124% and 125%.\n"
+    "• The Lloyds Bank plc Annual Report and Accounts 2023 states no NSFR figure at all - it names the ratio "
+    "once, in narrative, without a number. Its one '127 per cent' is a different measure entirely (internal "
+    "liquidity stress-testing resources against modelled outflows) and its one '125 per cent' is a pension "
+    "asset-liability hedging ratio.\n"
+    "• The obvious remaining explanation - that a parent figure had been substituted for the subsidiary's, "
+    "which is the classic failure mode in this three-entity family - was TESTED AND DISPROVED. Lloyds "
+    "Banking Group plc's own FY2023 Pillar 3 prints an average NSFR of 130% at 31 December 2023 and its "
+    "Q1 2023 edition prints 129%. So 126% and 127% are not the parent's figures either; they match neither "
+    "entity.\n"
+    "WHAT HAS BEEN DONE ABOUT IT: nothing, deliberately, beyond this record. The KM1 row above is transcribed "
+    "as printed at 125%. The 126%/127% figures on the NSFR and Interim Pillar 3 sheets have been left exactly "
+    "as they stood - not deleted, not overwritten with the KM1 figure, and not back-solved - because removing "
+    "or amending an unexplained figure destroys the evidence that it was ever there, and the correct next "
+    "step is for someone to identify its true source. Note that FY2024 and FY2025 do NOT have this problem: "
+    "the NSFR sheet's 124% and 119% agree exactly with rows 20 above and with the 2025 and 2026 editions' "
+    "comparatives, as do the 2025 interim observations (123%/122%/121%). The anomaly is confined to the four "
+    "2023 and 2024-Q1 NSFR cells named above.\n\n"
+    "DASHES. The Group states its own convention in the basis of preparation: 'Where relevant, de minimis "
+    "monetary amounts (<£0.5 million) are rounded down for reporting purposes and disclosed as a dash in the "
+    "table.' So a dash in these documents means a rounded-down small amount rather than an inapplicable "
+    "requirement. No such dash falls in the rows above.\n\n"
+    "FREE SECOND OPINION FROM THE INTERIM EDITIONS. Lloyds Bank plc publishes quarterly and half-year Pillar 3 "
+    "disclosures (this workbook carries them on its Interim Pillar 3 sheet), and each reproduces the four "
+    "preceding quarter-ends as comparatives. The 2026 half-year edition's '31 Dec 2025' comparative column "
+    "confirms this sheet's whole FY2025 column independently - CET1 26,468, Tier 1 31,835, Total capital "
+    "38,995, RWAs 194,300, CET1 ratio 13.6%, Tier 1 ratio 16.4%, total capital ratio 20.1% - at no "
+    "transcription cost.\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17 against the bank's OWN website "
+    "rather than our cited URLs. The Lloyds Banking Group plc Financial Downloads page "
+    "(lloydsbankinggroup.com/investors/financial-downloads) loads normally with an ordinary browser "
+    "User-Agent and lists 20 Lloyds Bank plc Pillar 3 PDFs, from 2021 Q1 through 2026 H1. The newest YEAR-END "
+    "edition is the 2025 one, which is this workbook's most recent year - the FY2026 year-end edition is not "
+    "due until early 2027. Two editions newer than any year-end document do exist and are interim, not "
+    "annual: 2026 Q1 (31 March 2026) and 2026 H1 (30 June 2026). They are half-year and quarterly positions, "
+    "not financial years, so they add no column to a workbook of financial years; the 2026 H1 edition was "
+    "nonetheless downloaded and used above as a check on FY2025. NO NEWER FULL-YEAR EDITION EXISTS; this "
+    "workbook is not an edition behind.\n\n"
+    "FETCH PROVENANCE, recorded because this exact website once produced a false 'not published' statement in "
+    "a sibling workbook in this project (Bank of Scotland plc, whose script asserted that no standalone "
+    "Pillar 3 document is published for that entity, on the strength of a Cloudflare block). All seven "
+    "year-end documents cited above, plus the 2026 half-year edition, were downloaded directly on 2026-09-17 "
+    "and each was verified by HTTP status 200, Content-Type application/pdf AND the %PDF magic bytes. No "
+    "reader-proxy or text-extraction service stands between these figures and the PDFs.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Lloyds Bank plc — KM1 Key Metrics",
+    subtitle="Lloyds Bank plc GROUP consolidated basis — not Lloyds Banking Group plc and not Bank of Scotland "
+             "plc, each of which publishes its own separate Pillar 3 document. The Group's own published "
+             "key-metrics template, from its year-end Pillar 3 disclosures, reproduced in its row order with "
+             "its own row numbers, LR2 cross-references and printed precision. Amounts in £m, ratios as "
+             "printed. Each year comes from its own edition, never a later comparative. TWO CAPTION BLOCKS: "
+             "the UK KM1 template for FY2022-FY2025, and the older Basel IFRS9-FL key-metrics table for "
+             "FY2019-FY2021, which reuses the same row numbers for different metrics and is never merged with "
+             "it. FY2018 and FY2017 are blank: no Pillar 3 document exists for this entity before FY2019.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=104,
+    source_height=560,
+)
+
 for name, values in ANNUAL.items():
     unit = "%" if "Ratio" in name or name in {"LCR", "NSFR"} else "£m"
     row = [(name, dict(values))]

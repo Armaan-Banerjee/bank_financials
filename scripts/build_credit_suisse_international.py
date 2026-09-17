@@ -779,6 +779,132 @@ cet1_gbp = dict(tier1_gbp)
 for _y, _v in CET1_USD.items():
     cet1_gbp[_y] = stock(_v, _y)
 
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - Credit Suisse International's own published 'KM1 - Key metrics template', reproduced whole in "
+    "CSi's own row order, labels and precision.\n\n"
+    "THIS SHEET IS IN USD MILLION, the currency and unit CSi prints the template in ('end of (USD million)'). "
+    "It is deliberately NOT converted to sterling. Every other Pillar 3 sheet in this workbook is converted at "
+    "the year-end spot rate and is headed '£m (conv. from USD)'; a prescribed template is reproduced as "
+    "published, so amounts here will not tie to those sheets by inspection. The percentage rows are "
+    "currency-free and do tie.\n\n"
+    "CSi PRINTS THIS TEMPLATE WITHOUT ROW NUMBERS. The UK KM1 row numbering ('1', 'UK 7a', 'UK 16b', ...) "
+    "does not appear in any CSi edition - the table is a Credit Suisse house format carrying the row LABELS "
+    "only. That was confirmed by rendering the page image, not merely by text extraction. No row numbers have "
+    "been added here, since inventing them would misrepresent what the Bank published.\n"
+    f"FY2025: Pillar 3 Disclosures 2025, 'KM1 - Key metrics template', printed folio 6 (2025 column) - "
+    f"{CSI_P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, printed folio 8 (2024 column) - {CSI_P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, printed folio 6 (Q4 2023 column) - {CSI_P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, printed folio 6 (2022 column) - {CSI_P3_2022_URL}\n"
+    "FOLIO NOTE: the citations above give the folio printed on the page itself. Other sheets in this workbook "
+    "cite these same tables as 'p.5', which is the PDF sheet index, one or more ahead of the printed folio "
+    "(the FY2022 and FY2023 KM1 both sit on PDF sheet 8 bearing printed folio 6). The printed folio is used "
+    "here.\n"
+    f"FY2021: FILLED FROM A LATER EDITION'S COMPARATIVE, and flagged rather than presented as an own-year "
+    f"figure. CSi's FY2021 edition prints NO KM1 template at all, which was established three independent "
+    f"ways: a page-by-page scan of all 85 pages finds no page containing 'KM1'; the only matches for 'key "
+    f"metrics' anywhere in the document are interest-rate-risk prose ('monitoring of key metrics including "
+    f"survival days', 'the following key metrics: The economic impacts of adverse shifts in interest rates'); "
+    f"and a phrase-level control shows zero occurrences of 'combined buffer', 'total exposure measure' and "
+    f"'Total SREP' while the same document returns healthy counts for 'own funds' (7), 'risk-weighted' (10), "
+    f"'countercyclical' (5) and 'high-quality liquid' (4) - so the text extracts fine and the template is "
+    f"genuinely absent. The FY2021 column here is the FY2022 edition's own '2021' comparative column "
+    f"({CSI_P3_2022_URL}); the FY2021 edition itself is at {P3_URLS['FY2021']}.\n\n"
+    "DASHES ARE REPRODUCED AS BLANKS, not zeroes. The FY2022 edition's 2021 comparative column prints '-' "
+    "for 'Overall leverage ratio requirements' and for all three Net Stable Funding Ratio rows; NSFR became a "
+    "disclosed KM1 line for CSi only from FY2022.\n\n"
+    "FY2022 CROSS-EDITION DIVERGENCE, documented rather than reconciled. This sheet follows the rule that "
+    "each year is taken from its OWN edition, so the FY2022 column is the FY2022 document's originally "
+    "published figures: Total risk-weighted exposure amount 60,818, CET1 ratio 24.02%, Tier 1 ratio 25.99% "
+    "and Total capital ratio 26.00%. The FY2023 edition later RESTATES that same date to 60,646 / 24.09% / "
+    "26.07% / 26.07%. The Total RWAs, CET1 Ratio and Total Capital Ratio metric sheets in this workbook "
+    "carry the RESTATED figures (a deliberate earlier choice, so that capital, RWA and ratio stay internally "
+    "consistent across those three sheets - see the CET1 note there). Both sets are correct on their own "
+    "basis. A verifier disagreement on the FY2022 ratio rows is the expected consequence of that difference "
+    "and must not be removed by editing a figure on either side.\n\n"
+    "LATEST-EDITION CHECK (2026-09-17): the UBS-hosted Credit Suisse regulatory directory was fetched "
+    "directly. The newest CSi Pillar 3 is the 2025 edition used above, so this workbook is current.\n"
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (USD million)", {
+        "FY2025": 3014, "FY2024": 6883, "FY2023": 12689, "FY2022": 14609, "FY2021": 15022}),
+    ("DATA", "Tier 1 capital (USD million)", {
+        "FY2025": 3014, "FY2024": 6883, "FY2023": 13889, "FY2022": 15809, "FY2021": 15022}),
+    ("DATA", "Total capital (USD million)", {
+        "FY2025": 3014, "FY2024": 6883, "FY2023": 13889, "FY2022": 15812, "FY2021": 15027}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (USD million)", {
+        "FY2025": 2052, "FY2024": 10951, "FY2023": 34698, "FY2022": 60818, "FY2021": 62643}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "CET1 ratio (%)", {
+        "FY2025": "146.90%", "FY2024": "62.86%", "FY2023": "36.57%", "FY2022": "24.02%", "FY2021": "23.98%"}),
+    ("DATA", "Tier 1 ratio (%)", {
+        "FY2025": "146.90%", "FY2024": "62.86%", "FY2023": "40.03%", "FY2022": "25.99%", "FY2021": "23.98%"}),
+    ("DATA", "Total capital ratio (%)", {
+        "FY2025": "146.90%", "FY2024": "62.86%", "FY2023": "40.03%", "FY2022": "26.00%", "FY2021": "23.99%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a % of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)", {
+        "FY2025": "2.79%", "FY2024": "2.79%", "FY2023": "2.32%", "FY2022": "2.32%", "FY2021": "2.27%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)", {
+        "FY2025": "0.93%", "FY2024": "0.93%", "FY2023": "0.77%", "FY2022": "0.77%", "FY2021": "0.76%"}),
+    ("DATA", "Additional T2 SREP requirements (%)", {
+        "FY2025": "1.24%", "FY2024": "1.24%", "FY2023": "1.03%", "FY2022": "1.03%", "FY2021": "1.01%"}),
+    ("DATA", "Total SREP own funds requirements (%)", {
+        "FY2025": "12.96%", "FY2024": "12.96%", "FY2023": "12.12%", "FY2022": "12.12%", "FY2021": "12.04%"}),
+    ("SECTION", "Combined buffer requirement (as a % of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)", {
+        "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.49%", "FY2021": "2.51%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)", {
+        "FY2025": "1.16%", "FY2024": "0.76%", "FY2023": "0.83%", "FY2022": "0.26%", "FY2021": "0.05%"}),
+    ("DATA", "Combined buffer requirement (%)", {
+        "FY2025": "3.66%", "FY2024": "3.26%", "FY2023": "3.33%", "FY2022": "2.75%", "FY2021": "2.55%"}),
+    ("DATA", "Overall capital requirements (%)", {
+        "FY2025": "16.62%", "FY2024": "16.22%", "FY2023": "15.45%", "FY2022": "14.87%", "FY2021": "14.59%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure (USD million)", {
+        "FY2025": 5679, "FY2024": 32521, "FY2023": 78135, "FY2022": 126360, "FY2021": 201010}),
+    ("DATA", "Leverage ratio (%)", {
+        "FY2025": "53.08%", "FY2024": "21.16%", "FY2023": "17.78%", "FY2022": "12.51%", "FY2021": "7.47%"}),
+    ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a % of "
+                "leverage ratio total exposure amount)", {}),
+    ("DATA", "Overall leverage ratio requirements (%)", {
+        "FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "3.25%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (USD million)", {
+        "FY2025": 8090, "FY2024": 15031, "FY2023": 15364, "FY2022": 25457, "FY2021": 21785}),
+    ("DATA", "Cash outflows - Total weighted value (USD million)", {
+        "FY2025": 4026, "FY2024": 7295, "FY2023": 11376, "FY2022": 27983, "FY2021": 23697}),
+    ("DATA", "Cash inflows - Total weighted value (USD million)", {
+        "FY2025": 1614, "FY2024": 3042, "FY2023": 5386, "FY2022": 11376, "FY2021": 9506}),
+    ("DATA", "Total net cash outflows (adjusted value) (USD million)", {
+        "FY2025": 2412, "FY2024": 4253, "FY2023": 5990, "FY2022": 16608, "FY2021": 14191}),
+    ("DATA", "Liquidity coverage ratio (%)", {
+        "FY2025": "341.45%", "FY2024": "363.29%", "FY2023": "280.3%", "FY2022": "150.4%", "FY2021": "152.7%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "Total available stable funding (USD million)", {
+        "FY2025": 6345, "FY2024": 17503, "FY2023": 30356, "FY2022": 49315}),
+    ("DATA", "Total required stable funding (USD million)", {
+        "FY2025": 1903, "FY2024": 8693, "FY2023": 24166, "FY2022": 38717}),
+    ("DATA", "NSFR ratio (%)", {
+        "FY2025": "384.98%", "FY2024": "214.78%", "FY2023": "125.6%", "FY2022": "127.5%"}),
+]
+
+bw.add_km1_sheet(
+    title="Credit Suisse International — KM1 Key Metrics",
+    subtitle="CSi's own published 'KM1 - Key metrics template', reproduced whole IN USD MILLION as printed "
+             "(not converted to sterling) and without row numbers, which CSi does not print. FY2021 is "
+             "filled from the FY2022 edition's comparative column - see note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=74,
+    source_height=460,
+    years=KM1_YEARS,
+)
+
 metric(
     "CET1 Capital", "£m (conv. from USD) - see note",
     [("Common Equity Tier 1 (CET1) capital", {y: cet1_gbp[y] for y in

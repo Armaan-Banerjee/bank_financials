@@ -687,13 +687,17 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # converted to £'000, stated in their source note) - that is a presentation
 # choice available to a summary sheet, not to a reproduced template.
 KM1_SOURCES = (
-    "Sources - Table UK KM1 'Key metrics', ATOM BANK PLC ('Bank') column, as at 31 March each year. Each year is "
-    "transcribed from ITS OWN edition, never from a later edition's comparative column:\n"
+    "Sources - Table UK KM1 'Key metrics', ATOM BANK PLC ('Bank') column, as at 31 March each year. FY2022 "
+    "through FY2026 are each transcribed from THAT YEAR'S OWN edition. FY2021 is the single exception and is "
+    "flagged as such below - it is the FY2022 edition's comparative column, used because Atom's own FY2021 "
+    "edition prints no KM1 template at all:\n"
     f"FY2026: Atom Holdco plc Pillar 3 Disclosures 2026, p.15 (4. Key metrics) - {P3_FY26_URL}\n"
     f"FY2025: Atom Holdco plc Pillar 3 Disclosures 2025, p.13 (4. Key metrics) - {P3_FY25_URL}\n"
     f"FY2024: Atom Holdco Limited Pillar 3 Disclosures 2024, p.13 (4. Key metrics) - {P3_FY24_URL}\n"
     f"FY2023: Atom Holdco Limited Pillar 3 Disclosures 2023, pp.12-13 (5. Key metrics) - {P3_FY23_URL}\n"
-    f"FY2022: Atom Bank Plc Pillar 3 Disclosures 2021/22, p.17 (5. Key Metrics) - {P3_FY22_URL}\n\n"
+    f"FY2022: Atom Bank Plc Pillar 3 Disclosures 2021/22, p.17 (5. Key Metrics) - {P3_FY22_URL}\n"
+    f"FY2021 (NOT AN OWN-EDITION COLUMN): the SAME Atom Bank Plc Pillar 3 Disclosures 2021/22 document, "
+    f"printed p.17, section 5 'Key Metrics', COMPARATIVE COLUMN headed 2021 - {P3_FY22_URL}\n\n"
     "ENTITY (the single most important choice on this sheet). From FY2023 the template is published by the "
     "HOLDING COMPANY and prints Group and Bank side by side - FY2026 carries four columns (2026 Group, 2026 Bank, "
     "2025 Group, 2025 Bank). Every figure here is the BANK column, because this workbook is Atom Bank Plc "
@@ -701,27 +705,59 @@ KM1_SOURCES = (
     "never substituted, even where it is the only one discussed in the surrounding narrative. FY2022's edition "
     "predates the holding company and prints a single column that IS the Bank. The two differ materially and "
     "visibly: FY2026 CET1 is 363.6 Group against 365.2 Bank, and total RWAs 2,739.7 Group against 2,728.8 Bank.\n\n"
-    "FY2021 AND EARLIER ARE DELIBERATELY BLANK - THE TEMPLATE IS NOT USED, which is a different finding from "
-    "'no Pillar 3 exists'. The FY2020/21 edition publishes '3. Summary analysis': prose ratios plus two bespoke "
-    "tables (an own-funds build-up and a 'Summary of risk weighted assets'). It carries no row numbers, no SREP "
-    "rows, no buffer rows, no row 12, and no LCR or NSFR build-up - it fails the row-set test, so it is not an "
-    "unnumbered KM1. The FY2022 edition DOES print a full FY2021 comparative column (CET1 114,012; RWAs 743,296; "
-    "leverage 3.9%; LCR 241.8%; NSFR 125.0%) and it is deliberately unused here, because a comparative is not the "
-    "year's own edition. Those FY2021 figures do appear on the single-metric sheets, which are sourced on a "
-    "different basis and cite that comparative explicitly. Checked for a hidden image-only table before "
-    "concluding: the FY2021 edition is text-native (32pp, ~8,800 chars/page), its summary page carries 342 digits "
-    "of extractable text and no embedded image, and its only images sit on pages 3 and 5.\n\n"
-    "ROWS THE SOURCE NEVER PRINTED STAY BLANK (and a later edition does not license filling them). The FY2022 "
-    "edition prints no UK 16a and no UK 16b - it goes straight from row 15 to row 16 - so both are blank in that "
-    "column here. The FY2023 edition's own 2022 comparative DOES print them (335,102 and 24,619), and those "
-    "figures are deliberately not carried back: a row the year's own edition never printed is not disclosed for "
-    "that year.\n\n"
+    "WHY FY2021 IS FILLED FROM THE FY2022 EDITION, AND FY2020 AND EARLIER ARE NOT (revised 17 September "
+    "2026). ATOM'S OWN FY2020/21 EDITION PRINTS NO KM1 TEMPLATE AT ALL - not a template with rows left "
+    "blank, but no template, and therefore no own-edition disclosure for a later comparative to displace. "
+    "What it publishes instead, at its section '3. Summary analysis', is prose plus three bespoke tables: "
+    "'Table 1 - Capital and leverage ratios' (four ratios only), 'Table 2 - Own funds' (a CC1-style build-up "
+    "from balance-sheet equity) and 'Table 3 - Summary of risk weighted assets'. No row numbers, no SREP "
+    "rows, no buffer rows, no row 12, and no LCR or NSFR build-up anywhere. It fails the row-set test and is "
+    "a different and shorter set of tables, not an unnumbered KM1.\n"
+    "That absence was re-established from the document on 17 September 2026 before this column was filled. "
+    "Its own contents list runs 1 Introduction / 2 Overview / 3 Summary analysis / 4 Regulatory capital "
+    "framework / 5 Risk management / 6 Capital adequacy risk / 7 Liquidity and funding risk / 8 Pillar 1 "
+    "capital requirements / 9 Remuneration plus seven appendices - NO 'Key metrics' section. And extraction "
+    "from the 31-page PDF is RICH (222 hits for 'capital', 143 for 'ratio', 49 for 'buffer', 40 for "
+    "'liquidity', 36 for 'leverage', 24 for 'CET1'), which is what makes its ZERO hits for 'KM1' and for "
+    "'NSFR' evidence about the document rather than about the search - the template cannot omit its NSFR "
+    "block. Checked for a hidden image-only table too (map rule 13): the edition is text-native and its "
+    "summary pages carry their figures as extractable text.\n"
+    "THE FY2022 EDITION'S COMPARATIVE COLUMN, headed 2021 and in £'000, carries the complete template for "
+    "31 March 2021, and THAT IS WHAT THIS SHEET'S FY2021 NOW CARRIES, in the row structure the FY2022 "
+    "edition prints it in - the same structure as the FY2022 column beside it, so nothing is reshaped, and "
+    "in £'000, so it lands in the £'000 caption blocks. All 26 values were read off the FY2022 PDF directly, "
+    "confirmed twice (text extraction at full width and a 150dpi rendering of the page).\n"
+    "IT IS NOT A RESTATEMENT. Every figure in that comparative that the FY2021 edition also published agrees "
+    "with it exactly: CET1 114,012, total own funds 121,990, total RWAs 743,296 (its Tables 2 and 3) and "
+    "CET1/T1 ratio 15.3%, total capital ratio 16.4%, leverage ratio 3.9% (its Table 1).\n"
+    "This reverses the treatment this sheet carried until 17 September 2026, which omitted FY2021 as a "
+    "column entirely and quoted five of its figures in this note instead. The evidence above is unchanged; "
+    "only the conclusion drawn from it has changed, so that a BLANK on this sheet now means one thing only: "
+    "Atom has never published that figure, in any edition, on any basis.\n"
+    "FY2020 AND EARLIER REMAIN OFF THIS SHEET for that reason - no edition anywhere prints them in template "
+    "form. The FY2021 edition's Tables 1-3 do carry 2020 comparatives, but in the same bespoke shape, which "
+    "cannot fill a template column.\n\n"
+    "CORRECTION, 17 September 2026 - ROWS UK 16a AND UK 16b FOR FY2022 WERE WRONGLY BLANK. This sheet "
+    "previously stated that 'the FY2022 edition prints no UK 16a and no UK 16b - it goes straight from row "
+    "15 to row 16', and left both cells empty on the strength of it. THAT WAS WRONG ABOUT THE DOCUMENT. The "
+    "FY2022 edition's own 2022 column prints both rows: UK 16a 'Cash outflows - Total weighted value' "
+    "335,102 and UK 16b 'Cash inflows - Total weighted value' 24,619. Both are now carried, cited to that "
+    "own edition. The figures are the same ones the FY2023 edition's comparative prints, which is why the "
+    "error was self-consistent and invisible from inside the workbook. The likely cause is a known one for "
+    "this bank (map rule 22, whose examples are all Atom): in these two rows Atom prints the row reference "
+    "'UK' and '16a' on two separate lines inside the row-number column, so a scanner looking for a row "
+    "number on the same line as the label passes straight over them. Verified twice before correcting - "
+    "`pdftotext -layout` read at full width with the column count checked against the header block, and a "
+    "150dpi rendering of printed p.17 read by eye - and the two agree digit-for-digit. The FY2021 "
+    "comparative prints the same two rows (206,486 and 21,455) and they are carried too.\n\n"
     "NO RESTATEMENTS FOUND ACROSS EDITIONS - each overlapping year was cross-checked against the following "
     "edition's comparative and every figure matched exactly (FY2024 Bank in the FY2024 edition vs its FY24 Bank "
     "comparative in the FY2025 edition; FY2025 Bank in the FY2025 edition vs its 2025 Bank comparative in the "
-    "FY2026 edition; FY2022 in its own edition vs the FY2023 edition's 2022 column apart from the two rows named "
-    "above). Where a later edition rounds £'000 into £m the two agree to the rounding (FY2023 Bank CET1 241,213 "
-    "appears as 241.3 in the FY2024 edition).\n\n"
+    "FY2026 edition; FY2022 in its own edition vs the FY2023 edition's 2022 column - and following the "
+    "correction recorded above, that pair now matches on EVERY row including UK 16a and UK 16b, with no "
+    "exceptions at all; FY2021 in the FY2022 edition's comparative vs the FY2021 edition's own Tables 1-3 on "
+    "the six lines they share). Where a later edition rounds £'000 into £m the two agree to the rounding "
+    "(FY2023 Bank CET1 241,213 appears as 241.3 in the FY2024 edition).\n\n"
     "LABEL DRIFT IS REPRODUCED, NOT HARMONISED: row 20 is printed 'NSFR ratio (%)' in FY2022/FY2023 and 'Net "
     "Stable Funding Ratio (%)' from FY2025; UK 16a is 'Cash outflows - Total weighted value' in FY2023 and "
     "'Outflows - Total weighted value' later. Each caption block carries the wording of the editions it covers; "
@@ -741,94 +777,97 @@ km1_rows = [
     ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)",
      {"FY2026": 365.2, "FY2025": 356.4, "FY2024": 347.3}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)",
-     {"FY2023": 241213, "FY2022": 217158}),
+     {"FY2023": 241213, "FY2022": 217158, "FY2021": 114012}),
     ("DATA", "2  Tier 1 capital (£m)",
      {"FY2026": 414.3, "FY2025": 356.4, "FY2024": 347.3}),
     ("DATA", "2  Tier 1 capital (£'000)",
-     {"FY2023": 241213, "FY2022": 217158}),
+     {"FY2023": 241213, "FY2022": 217158, "FY2021": 114012}),
     ("DATA", "3  Total capital (£m)",
      {"FY2026": 463.2, "FY2025": 406.4, "FY2024": 347.3}),
     ("DATA", "3  Total capital (£'000)",
-     {"FY2023": 248418, "FY2022": 225151}),
+     {"FY2023": 248418, "FY2022": 225151, "FY2021": 121990}),
     ("SECTION", "RISK-WEIGHTED EXPOSURE AMOUNTS", {}),
     ("DATA", "4  Total risk-weighted exposure amount (£m)",
      {"FY2026": 2728.8, "FY2025": 2379.3, "FY2024": 1828.0}),
     ("DATA", "4  Total risk-weighted exposure amount (£'000)",
-     {"FY2023": 1271669, "FY2022": 1043001}),
+     {"FY2023": 1271669, "FY2022": 1043001, "FY2021": 743296}),
     ("SECTION", "CAPITAL RATIOS (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "5  Common Equity Tier 1 ratio (%)",
-     {"FY2026": "13.4%", "FY2025": "15.0%", "FY2024": "19.0%", "FY2023": "19.0%", "FY2022": "20.8%"}),
+     {"FY2026": "13.4%", "FY2025": "15.0%", "FY2024": "19.0%", "FY2023": "19.0%", "FY2022": "20.8%", "FY2021": "15.3%"}),
     ("DATA", "6  Tier 1 ratio (%)",
-     {"FY2026": "15.2%", "FY2025": "15.0%", "FY2024": "19.0%", "FY2023": "19.0%", "FY2022": "20.8%"}),
+     {"FY2026": "15.2%", "FY2025": "15.0%", "FY2024": "19.0%", "FY2023": "19.0%", "FY2022": "20.8%", "FY2021": "15.3%"}),
     ("DATA", "7  Total capital ratio (%)",
-     {"FY2026": "17.0%", "FY2025": "17.1%", "FY2024": "19.0%", "FY2023": "19.5%", "FY2022": "21.6%"}),
+     {"FY2026": "17.0%", "FY2025": "17.1%", "FY2024": "19.0%", "FY2023": "19.5%", "FY2022": "21.6%", "FY2021": "16.4%"}),
     ("SECTION", "ADDITIONAL OWN FUNDS REQUIREMENTS BASED ON SREP (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
-     {"FY2026": "0.1%", "FY2025": "0.1%", "FY2024": "0.8%", "FY2023": "0.8%", "FY2022": "1.5%"}),
+     {"FY2026": "0.1%", "FY2025": "0.1%", "FY2024": "0.8%", "FY2023": "0.8%", "FY2022": "1.5%", "FY2021": "1.5%"}),
     ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
-     {"FY2026": "0.0%", "FY2025": "0.0%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.9%"}),
+     {"FY2026": "0.0%", "FY2025": "0.0%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.9%", "FY2021": "0.9%"}),
     ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
-     {"FY2026": "0.1%", "FY2025": "0.1%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "1.1%"}),
+     {"FY2026": "0.1%", "FY2025": "0.1%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "1.1%", "FY2021": "1.1%"}),
     ("DATA", "UK 7d  Total SREP own funds requirements (%)",
-     {"FY2026": "8.2%", "FY2025": "8.2%", "FY2024": "9.4%", "FY2023": "9.4%", "FY2022": "9.5%"}),
+     {"FY2026": "8.2%", "FY2025": "8.2%", "FY2024": "9.4%", "FY2023": "9.4%", "FY2022": "9.5%", "FY2021": "9.5%"}),
     ("SECTION", "COMBINED BUFFER REQUIREMENT (AS A PERCENTAGE OF RISK-WEIGHTED EXPOSURE AMOUNT)", {}),
     ("DATA", "8  Capital conservation buffer (%)",
-     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
     ("DATA", "9  Institution specific countercyclical capital buffer (%)",
-     {"FY2026": "2.0%", "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "1.0%", "FY2022": "0.0%"}),
+     {"FY2026": "2.0%", "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "1.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
     ("DATA", "11  Combined buffer requirement (%)",
-     {"FY2026": "4.5%", "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "3.5%", "FY2022": "2.5%"}),
+     {"FY2026": "4.5%", "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "3.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
     ("DATA", "UK 11a  Overall capital requirements (%)",
-     {"FY2026": "12.7%", "FY2025": "12.7%", "FY2024": "13.9%", "FY2023": "12.9%", "FY2022": "12.0%"}),
+     {"FY2026": "12.7%", "FY2025": "12.7%", "FY2024": "13.9%", "FY2023": "12.9%", "FY2022": "12.0%", "FY2021": "12.0%"}),
     ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
-     {"FY2026": "3.4%", "FY2025": "5.0%", "FY2024": "8.7%", "FY2023": "9.7%", "FY2022": "12.5%"}),
+     {"FY2026": "3.4%", "FY2025": "5.0%", "FY2024": "8.7%", "FY2023": "9.7%", "FY2022": "12.5%", "FY2021": "5.9%"}),
     ("SECTION", "LEVERAGE RATIO", {}),
     ("DATA", "13  Leverage ratio total exposure measure (£m)",
      {"FY2026": 7665.4, "FY2025": 7174.6, "FY2024": 5064.5}),
     ("DATA", "13  Leverage ratio total exposure measure (£'000)",
-     {"FY2023": 3723901, "FY2022": 3313171}),
+     {"FY2023": 3723901, "FY2022": 3313171, "FY2021": 2914267}),
     ("DATA", "14  Leverage ratio (%)",
-     {"FY2026": "5.4%", "FY2025": "5.0%", "FY2024": "6.9%", "FY2023": "6.5%", "FY2022": "6.6%"}),
+     {"FY2026": "5.4%", "FY2025": "5.0%", "FY2024": "6.9%", "FY2023": "6.5%", "FY2022": "6.6%", "FY2021": "3.9%"}),
     ("SECTION", "LIQUIDITY COVERAGE RATIO", {}),
     ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)",
      {"FY2026": 3756.0, "FY2025": 2333.1, "FY2024": 3849.0}),
     ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
-     {"FY2023": 2494398, "FY2022": 971602}),
+     {"FY2023": 2494398, "FY2022": 971602, "FY2021": 415697}),
     ("DATA", "UK 16a  Outflows - Total weighted value (£m)",
      {"FY2026": 1131.8, "FY2025": 594.7, "FY2024": 586.0}),
     ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)",
-     {"FY2023": 495538}),
+     {"FY2023": 495538, "FY2022": 335102, "FY2021": 206486}),
     ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)",
      {"FY2026": 52.9, "FY2025": 44.3, "FY2024": 52.0}),
     ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)",
-     {"FY2023": 49208}),
+     {"FY2023": 49208, "FY2022": 24619, "FY2021": 21455}),
     ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
      {"FY2026": 1078.9, "FY2025": 550.4, "FY2024": 534.0}),
     ("DATA", "16  Total net cash outflows (adjusted value) (£'000)",
-     {"FY2023": 446330, "FY2022": 310483}),
+     {"FY2023": 446330, "FY2022": 310483, "FY2021": 185032}),
     ("DATA", "17  Liquidity coverage ratio (%)",
-     {"FY2026": "350.9%", "FY2025": "418.6%", "FY2024": "727.8%", "FY2023": "578.6%", "FY2022": "316.7%"}),
+     {"FY2026": "350.9%", "FY2025": "418.6%", "FY2024": "727.8%", "FY2023": "578.6%", "FY2022": "316.7%", "FY2021": "241.8%"}),
     ("SECTION", "NET STABLE FUNDING RATIO", {}),
     ("DATA", "18  Total available stable funding (£m)",
      {"FY2026": 8562.0, "FY2025": 6821.3, "FY2024": 6891.4}),
     ("DATA", "18  Total available stable funding (£'000)",
-     {"FY2023": 5557689, "FY2022": 3492177}),
+     {"FY2023": 5557689, "FY2022": 3492177, "FY2021": 2536566}),
     ("DATA", "19  Total required stable funding (£m)",
      {"FY2026": 4378.4, "FY2025": 3987.7, "FY2024": 3146.1}),
     ("DATA", "19  Total required stable funding (£'000)",
-     {"FY2023": 2615311, "FY2022": 2248265}),
+     {"FY2023": 2615311, "FY2022": 2248265, "FY2021": 2029057}),
     ("DATA", "20  Net Stable Funding Ratio (%)",
-     {"FY2026": "196.0%", "FY2025": "171.2%", "FY2024": "221.8%", "FY2023": "211.8%", "FY2022": "154.9%"}),
+     {"FY2026": "196.0%", "FY2025": "171.2%", "FY2024": "221.8%", "FY2023": "211.8%", "FY2022": "154.9%", "FY2021": "125.0%"}),
 ]
 
 bw.add_km1_sheet(
     title="Atom Bank Plc - KM1 Key Metrics",
-    subtitle="Bank column, as published each year - amounts in two blocks because the source unit changes",
+    subtitle="Bank column, as published each year - amounts in two blocks because the source unit changes "
+             "(£'000 to FY2023, £m from FY2024). FY2022-FY2026 come from each year's own edition; FY2021 is "
+             "the FY2022 edition's comparative column, because Atom's own FY2021 edition prints no template "
+             "at all. See the source note, which also records a correction to rows UK 16a/UK 16b for FY2022.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=76,
     source_height=460,
-    years=["FY2026", "FY2025", "FY2024", "FY2023", "FY2022"],
+    years=["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
 )
 
 

@@ -444,6 +444,122 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=48, source_height=140)
 
 
+KM1_YEARS = ["FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - The Charity Bank Limited, 'Template UK KM1' under heading '3.4 Consolidated View of Key "
+    "Ratios', GBP'000. Each year is transcribed from the edition in which it is the REPORTING year, never "
+    "from a later edition's comparative column (map rule 1):\n"
+    f"FY2023: Pillar 3 Disclosures 2023, p.14, 'Template UK KM1' (31 Dec 2023 column) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, p.14-15, 'Template UK KM1' (31 Dec 2022 column) - {P3_2022_URL}\n\n"
+    "UNNUMBERED TEMPLATE. Charity Bank prints the UK KM1 row set with its section headers and row labels but "
+    "WITHOUT the template's row numbers, and it heads the section '3.4 Consolidated View of Key Ratios' rather "
+    "than 'KM1'. It is still the template (map rule 8 - the row-set test): every row of the UK KM1 is present, "
+    "including the three NSFR rows and the four buffer rows, and the table itself is captioned 'Template UK "
+    "KM1'. Row labels are reproduced exactly as the Bank prints them, unnumbered.\n\n"
+    "FY2021 IS THE FY2022 EDITION'S COMPARATIVE COLUMN, not an own-edition year - filled under map rule 28. "
+    "Charity Bank's FY2021 Pillar 3 Disclosures (35 pages) contain NO KM1 template at all: zero occurrences of "
+    "'KM1' and zero of 'LCR', against a richness control on the same extraction of 'capital' 148, 'ratio' 92, "
+    "'own funds' 14, 'leverage' 14, 'liquidity' 13 - so that zero is a fact about the document, not a failed "
+    "extraction (map rule 15). The template took effect 1 January 2022 and FY2021 ended 31 December 2021, so no "
+    "own-edition KM1 can exist and rule 1 has no original to protect. This is rule 28's whole-missing-table "
+    "case, NOT rule 20 (which governs a single row dashed in an own edition that does exist, and is "
+    "untouched): every FY2021 figure on this sheet is taken from the 31 Dec 2021 comparative column printed in "
+    f"the Pillar 3 Disclosures 2022, p.14-15 - {P3_2022_URL} .\n"
+    "Where that comparative column itself prints nothing, the cell stays blank: the three NSFR rows are empty "
+    "for 31 Dec 2021 under the edition's own footnote, 'Note that NSFR became a reportable regulatory "
+    "requirement from Jan 1st 2022, therefore no results for 2021 have been included'. Filling a column from a "
+    "comparative does not license inventing the cells the comparative leaves empty.\n"
+    "The single-metric sheets carry FY2021 from this same comparative, so the two agree by construction.\n\n"
+    "FY2024 AND FY2025 - BLANK, WITH AN AFFIRMATIVE AND DATE-FITTED EXPLANATION. Charity Bank stopped "
+    "publishing Pillar 3 after the FY2023 edition, and says so itself in that edition's section 7: 'On 5th "
+    "December 2023 the PRA released PS15/23 ... the PRA confirmed that Small Domestic Deposit Takers (SDDT's) "
+    "without listed instruments would be excluded from the requirement to disclose a Pillar 3 report. Charity "
+    "Bank falls into this category of firm; as such, management anticipate this will be the last publicly "
+    "disclosed Pillar 3 report (unless and until regulatory requirements change).' The Bank of England "
+    "consolidated waivers register (downloaded 2026-09-16) corroborates it with an exact date: FRN 207701, 'The "
+    "Charity Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - "
+    "General Application Part', sub rule 'Ru 3.1', ref A00007506P.pdf, START DATE 01/02/2024, no end date. DATE "
+    "FIT: Charity Bank's year-end is 31 December, so the opt-in precedes the whole of FY2024 and FY2025 and "
+    "explains both; it does NOT reach back to FY2023 or earlier, which is why those years carry a full "
+    "template. Only a Rule 3.1 row removes the disclosure obligation - this is the SDDT DISCLOSURE exemption in "
+    "force now, not the separate SDDT CAPITAL regime beginning 1 January 2027.\n\n"
+    "PRECISION IS THE BANK'S OWN (map rule 3), including where it drifts between editions: the FY2022 edition "
+    "prints 'Additional CET1 SREP requirements 0.330%' and 'Total SREP own funds requirements 8.590%', while "
+    "the FY2023 edition restates the same FY2022 figures as 0.332% and prints 8.59% to two decimals. Each "
+    "column here shows what its own edition printed, so 0.330%/8.590% stand for FY2022. Within the FY2023 "
+    "column the Bank mixes precisions in the same table (9.64% beside 8.385%, 2.000% beside 2.500%); that is "
+    "house style and is reproduced, not normalised. ONE CONSEQUENCE IS VISIBLE TO THE WORKBOOK'S OWN CHECKER: "
+    "this sheet prints the FY2022 leverage ratio excluding claims on central banks as 8.385%, while the "
+    "Leverage Ratio sheet carries the same disclosed figure as the Bank printed it elsewhere, 8.39%. These are "
+    "the SAME figure at two printed precisions, not two measurements, and neither has been altered to match the "
+    "other. The pair is recorded here because it is real and a reader comparing the two sheets will notice it, not "
+    "because anything is wrong with either figure. (It briefly surfaced as a checker disagreement: the "
+    "difference is exactly half a unit of the coarser printing, so it sat precisely on verify_workbook.py's "
+    "tolerance boundary and was tipped over by binary floating point. The checker gained an epsilon on "
+    "2026-09-17 and no longer reports it. Neither figure was altered at any point.)\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026: charitybank.org's own '/reports-and-publications/' page lists "
+    "Annual Reports for 2025 and 2024 and NO Pillar 3 document of any year. The WordPress media API returned "
+    "HTTP 403 on every query including the empty control, so that route proves nothing either way (map rule 9 - "
+    "a blocked fetch is not an absence); the page listing above was reached instead via the site's own "
+    "robots.txt sitemap index. Newest Pillar 3 edition published: FY2023. The three Pillar 3 URLs cited by this "
+    "workbook are Wayback captures because the live copies have since been withdrawn from the site."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (£000)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)", {"FY2023": 30701, "FY2022": 26146, "FY2021": 24522}),
+    ("DATA", "Tier 1 capital (£'000)", {"FY2023": 30701, "FY2022": 26146, "FY2021": 24522}),
+    ("DATA", "Total capital (£'000)", {"FY2023": 33541, "FY2022": 29878, "FY2021": 27812}),
+    ("SECTION", "Risk-weighted exposure amounts (£000)", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)", {"FY2023": 190056, "FY2022": 173774, "FY2021": 153193}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", {"FY2023": "16.15%", "FY2022": "15.05%", "FY2021": "16.01%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2023": "16.15%", "FY2022": "15.05%", "FY2021": "16.01%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2023": "17.65%", "FY2022": "17.19%", "FY2021": "18.15%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)", {"FY2023": "0.332%", "FY2022": "0.330%", "FY2021": "0.330%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)", {"FY2023": "0.111%", "FY2022": "0.112%", "FY2021": "0.112%"}),
+    ("DATA", "Additional T2 SREP requirements (%)", {"FY2023": "0.148%", "FY2022": "0.148%", "FY2021": "0.148%"}),
+    ("DATA", "Total SREP own funds requirements (%)", {"FY2023": "8.59%", "FY2022": "8.590%", "FY2021": "8.590%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2023": "2.500%", "FY2022": "2.500%", "FY2021": "2.500%"}),
+    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {"FY2023": "0%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)", {"FY2023": "2.000%", "FY2022": "1.000%", "FY2021": "0%"}),
+    ("DATA", "Systemic risk buffer (%)", {"FY2023": "0%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Global Systemically Important Institution buffer (%)", {"FY2023": "0%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Other Systemically Important Institution buffer", {"FY2023": "0%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2023": "4.500%", "FY2022": "3.500%", "FY2021": "2.500%"}),
+    ("DATA", "Overall capital requirements (%)", {"FY2023": "13.09%", "FY2022": "12.09%", "FY2021": "11.09%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)", {"FY2023": "11.32%", "FY2022": "10.24%", "FY2021": "11.2%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)", {"FY2023": 318506, "FY2022": 311813, "FY2021": 317557}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)", {"FY2023": "9.64%", "FY2022": "8.385%", "FY2021": "7.722%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)", {"FY2023": 80628, "FY2022": 60685, "FY2021": 67018}),
+    ("DATA", "Cash outflows - Total weighted value (£'000)", {"FY2023": 53461, "FY2022": 45791, "FY2021": 39841}),
+    ("DATA", "Cash inflows - Total weighted value (£'000)", {"FY2023": 13724, "FY2022": 12126, "FY2021": 9498}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)", {"FY2023": 39737, "FY2022": 33665, "FY2021": 30343}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2023": "206.0%", "FY2022": "182.2%", "FY2021": "222.4%"}),
+    ("SECTION", "Net Stable Funding Ratio (FY2021 blank in the source: the requirement took effect 1 Jan 2022)", {}),
+    ("DATA", "Total available stable funding (£'000)", {"FY2023": 308698, "FY2022": 277789}),
+    ("DATA", "Total required stable funding (£'000)", {"FY2023": 220941, "FY2022": 204829}),
+    ("DATA", "NSFR ratio (%)", {"FY2023": "139.7%", "FY2022": "135.6%"}),
+]
+
+bw.add_km1_sheet(
+    title="The Charity Bank Limited - KM1 Key Metrics",
+    subtitle="'Template UK KM1' as published, GBP'000, unnumbered rows as the Bank prints them. FY2023 and "
+             "FY2022 are own-edition years; FY2021 is the FY2022 edition's comparative column (map rule 28), "
+             "the template postdating that year. FY2024-FY2025 have no Pillar 3 at all - the Bank ceased "
+             "disclosure under the SDDT exemption (PRA Rule 3.1, from 01/02/2024) - see source note",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=88,
+    source_height=680,
+    years=KM1_YEARS,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {

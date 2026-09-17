@@ -666,6 +666,59 @@ MREL_NOTE = (
     "exemption statement found."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - documented "Not applicable" (see note)
+# ---------------------------------------------------------------
+KM1_NOT_APPLICABLE_NOTE = (
+    "\n\nWHY THIS SHEET IS 'NOT APPLICABLE' RATHER THAN BLANK OR UNRESEARCHED\n"
+    "FCMB Bank (UK) Limited DOES publish Pillar 3 disclosures - a continuous annual series, the newest "
+    "being the FYE 2025 edition - but none of them uses the UK KM1 key-metrics template. This is the "
+    "distinction between 'no Pillar 3 is published', 'a Pillar 3 is published but the template is not used' "
+    "and 'the rows are formally excluded'. This bank is the middle case, and the entry above says so.\n"
+    "\n"
+    "WHAT THE BANK PUBLISHES INSTEAD. Every edition prints a bespoke 15-row table of the Bank's own design, "
+    "headed 'Key Regulatory Metrics'. A shared caption is not the test; the ROW SET is. That table has no "
+    "row numbers, no Tier 1 capital row, no capital-ratio rows of any kind, no SREP block, and no "
+    "countercyclical-buffer or G-SII rows. It is missing the majority of the template's rows and the whole "
+    "of three of its sections, so it is a different disclosure that happens to summarise some of the same "
+    "quantities - not the template printed without numbering.\n"
+    "\n"
+    "HOW THAT WAS ESTABLISHED (2026-09-17). Six editions (FYE 2020 to FYE 2025) were read in full and the "
+    "FYE 2019 edition was phrase-tested. Every edition was searched on whole phrases that cannot occur as "
+    "substrings of ordinary prose - 'Available own funds', 'Total SREP own funds requirements', 'Additional "
+    "CET1 SREP', 'Tier 1 ratio', 'Common Equity Tier 1 ratio' and 'KM1' - and every one returned zero hits "
+    "in every edition. The only near-misses, 'countercyclical' and 'combined buffer requirement', were "
+    "inspected line by line rather than counted: they belong to a different table and to the Bank's own "
+    "narrative, not to a key-metrics template. A hit count was never treated as an answer in either "
+    "direction.\n"
+    "\n"
+    "NOTHING IS BACK-FILLED. The individual Pillar 3 metric sheets in this workbook carry what the Bank's "
+    "own table does disclose. No KM1 row is reconstructed here from the statutory accounts, from the "
+    "parent's disclosures, or from any figure on those sheets - a template the Bank did not publish is not "
+    "manufactured on its behalf.\n"
+    "\n"
+    "ENTITY BASIS. FCMB Bank (UK) Limited publishes its own entity-level Pillar 3, so this finding rests on "
+    "the UK entity's own documents throughout. No figure from FCMB Group Plc's consolidated disclosures is "
+    "used or substituted anywhere on this sheet."
+)
+
+bw.add_km1_sheet(
+    title="FCMB Bank (UK) Limited — KM1 Key Metrics",
+    subtitle="Not applicable — the Bank publishes Pillar 3 disclosures every year, but no edition uses the "
+             "UK KM1 key-metrics template. Its capital disclosure is a bespoke 15-row 'Key Regulatory "
+             "Metrics' table of the Bank's own design, which is a different thing. See the source note for "
+             "the test applied, and the individual Pillar 3 metric sheets for what that table does "
+             "disclose.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not used in any Pillar 3 edition" for y in YEARS}),
+    ],
+    sources_text=p3_sources(page_2025="3", page_2024="2", page_2023="19", page_2022="19")
+    + KM1_NOT_APPLICABLE_NOTE,
+    first_col_width=52,
+    source_height=520,
+)
+
 metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) Capital", stock(CET1_USD))], p3_sources())
 metric("CET1 Ratio", "% of TREA (calculated - see note)", [("CET1 Ratio", CET1_RATIO)], p3_sources(),
        note="CALCULATED as CET1 Capital / Total Risk-Weighted exposure amount (TREA) for each year - "

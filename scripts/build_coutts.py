@@ -355,6 +355,138 @@ NOT_DISCLOSED_MREL_NOTE = (
     "concepts, but no MREL ratio for Coutts specifically is ever stated."
 )
 
+NWG_IR = "https://investors.natwestgroup.com"
+P3_2025_URL = NWG_IR + "/~/media/Files/R/RBS-IR-V2/results-center/13022026/coutts-co-pillar-3-report.pdf"
+P3_2024_URL = NWG_IR + "/~/media/Files/R/RBS-IR-V2/results-center/14022025/coutts-pillar-3-report.pdf"
+P3_2023_URL = NWG_IR + "/~/media/Files/R/RBS-IR-V2/results-center/16022024/coutts-co-pillar-3-report.pdf"
+P3_2022_URL = NWG_IR + "/~/media/Files/R/RBS-IR-V2/results-center/17022023/coutts-co-pillar-3-report.pdf"
+
+KM1_SOURCES = (
+    "Sources - Coutts & Company's OWN entity-level 'UK KM1: Key metrics' template, reproduced whole in the "
+    "Bank's own row order, row numbers, labels and precision. Amounts in £m, ratios exactly as printed:\n"
+    f"FY2025: Coutts & Co Pillar 3 Report 2025, p.8 (31 December 2025 column) - {P3_2025_URL}\n"
+    f"FY2024: Coutts & Co Pillar 3 Report 2024, p.7 (31 December 2024 column) - {P3_2024_URL}\n"
+    f"FY2023: Coutts & Co Pillar 3 Report 2023, p.7 (31 December 2023 column) - {P3_2023_URL}\n"
+    f"FY2022: Coutts & Co Pillar 3 Report 2022, p.7 (31 December 2022 column) - {P3_2022_URL}\n"
+    f"FY2021: NO COUTTS-SPECIFIC PILLAR 3 REPORT EXISTS FOR FY2021 - the earliest Coutts & Co Pillar 3 "
+    f"document published on the NatWest Group investor site is the half-year 2022 supplement (29 July 2022), "
+    f"and the FY2022 report above is the first full-year one. The FY2021 column here is therefore taken from "
+    f"the FY2022 report's own '31 December 2021' COMPARATIVE COLUMN, which that report's 'Presentation of "
+    f"Information' section states is its standard comparative period ('Where a comparative is not prescribed, "
+    f"the comparative period provided is December 2021') - {P3_2022_URL}\n\n"
+    "SOURCE-SET CORRECTION (2026-09-17). This Pillar 3 document set was NOT previously cited anywhere in this "
+    "workbook: the other Pillar 3 sheets here are sourced from Coutts's own Annual Report 'Risk and capital "
+    "management' section at Companies House. Coutts & Company does publish its own standalone, entity-level "
+    "Pillar 3 reports - quarterly, on the NatWest Group investor-relations site rather than its own - and they "
+    "carry a full UK KM1. They were located by enumerating investors.natwestgroup.com's results centre; "
+    "natwestgroup.com's own sitemap lists no Pillar 3 page and coutts.com's lists none either, which is why "
+    "earlier searches of the obvious domains found nothing. The figures agree with the Annual-Report-sourced "
+    "figures already on the other sheets in every year and every row cross-checked.\n\n"
+    "ROWS 15-20 (LCR AND NSFR) ARE BLANK IN EVERY EDITION, AND THIS IS A FORMAL EXCLUSION RATHER THAN A DATA "
+    "GAP. Each report footnotes the block: 'Under the UK DoLSub waiver Coutts & Co liquidity and funding are "
+    "managed and disclosed at the sub-group level rather than entity level.' The 'Presentation of Information' "
+    "section adds that 'The liquidity disclosures completed at UK Domestic Liquidity Subgroup (UK DoLSub) level "
+    "are published in the NatWest Holdings Group Pillar 3 report. The UK DoLSub waiver allows NWB Plc, RBS plc "
+    "and Coutts & Co to manage liquidity as a single sub-group rather than at an entity level.' The NatWest "
+    "Holdings Group figure is a THREE-ENTITY SUB-GROUP figure and is deliberately NOT substituted for Coutts's "
+    "own, which would be a basis error.\n"
+    "ROWS UK 14a-14e ARE LIKEWISE A FORMAL EXCLUSION: 'Coutts & Co is not an LREQ firm, therefore not subject "
+    "to the additional leverage ratio disclosure requirements.'\n"
+    "ROWS UK 8a, UK 9a, 10 AND UK 10a ARE NOT PRINTED AT ALL in any edition - each report lists them by name "
+    "and says they are omitted as zero / not applicable - so they are omitted here too rather than shown as "
+    "zeros.\n"
+    "ROWS 13 AND 14 ARE BLANK FOR FY2021 SPECIFICALLY: the FY2022 report's KM1 prints leverage figures for its "
+    "four 2022 columns only and leaves the 31 December 2021 cell empty. That is a blank in the comparative "
+    "itself, not an omission here.\n"
+    "ROW 9 FY2021 IS A PRINTED ZERO ('0.0'), not a dash, and is recorded as a zero - the UK countercyclical "
+    "buffer rate was genuinely 0% at 31 December 2021 and was reset to 1% during 2022 and 2% from July 2023.\n"
+    "LEVEL OF APPLICATION (the basis on which these disclosures are owed): 'Coutts & Co being a large, "
+    "non-listed subsidiary of NatWest Group is subject to a reduced number of disclosures as set out in the "
+    "Level of Application chapter in the Disclosure (CRR) part of the PRA Rulebook.' NatWest Group defines its "
+    "large subsidiaries as those designated O-SII by the PRA or with total assets of €30bn or more.\n\n"
+    "LATEST-EDITION CHECK (2026-09-17): the NatWest Group results centre was enumerated in full. Coutts's "
+    "newest FULL-YEAR Pillar 3 is the 2025 report used here (published 13 February 2026), so this workbook is "
+    "current. Coutts also publishes Q1, half-year and Q3 reports - the newest of any kind is the half-year 2026 "
+    "report (12 August 2026) - but this workbook is annual, so no interim edition is used.\n\n"
+    + ENTITY_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common equity tier 1 (CET1) capital (£m)",
+     {"FY2025": 1248, "FY2024": 1192, "FY2023": 1199, "FY2022": 1260, "FY2021": 1235}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2025": 1488, "FY2024": 1432, "FY2023": 1439, "FY2022": 1535, "FY2021": 1437}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2025": 1788, "FY2024": 1732, "FY2023": 1739, "FY2022": 1790, "FY2021": 1703}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2025": 10982, "FY2024": 10564, "FY2023": 10591, "FY2022": 10722, "FY2021": 10367}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common equity tier 1 ratio (%)",
+     {"FY2025": "11.4", "FY2024": "11.3", "FY2023": "11.3", "FY2022": "11.8", "FY2021": "11.9"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "13.5", "FY2024": "13.6", "FY2023": "13.6", "FY2022": "14.3", "FY2021": "13.9"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "16.3", "FY2024": "16.4", "FY2023": "16.4", "FY2022": "16.7", "FY2021": "16.4"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.3", "FY2024": "1.5", "FY2023": "1.5", "FY2022": "1.4", "FY2021": "1.5"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.4", "FY2024": "0.5", "FY2023": "0.5", "FY2022": "0.5", "FY2021": "0.5"}),
+    ("DATA", "UK 7c  Additional Tier 2 SREP requirements (%)",
+     {"FY2025": "0.6", "FY2024": "0.6", "FY2023": "0.7", "FY2022": "0.6", "FY2021": "0.7"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "10.3", "FY2024": "10.6", "FY2023": "10.7", "FY2022": "10.5", "FY2021": "10.6"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5", "FY2024": "2.5", "FY2023": "2.5", "FY2022": "2.5", "FY2021": "2.5"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.9", "FY2024": "1.9", "FY2023": "1.9", "FY2022": "1.0", "FY2021": "0.0"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "4.4", "FY2024": "4.4", "FY2023": "4.4", "FY2022": "3.5", "FY2021": "2.5"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "14.7", "FY2024": "15.0", "FY2023": "15.1", "FY2022": "14.0", "FY2021": "13.1"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "5.6", "FY2024": "5.3", "FY2023": "5.3", "FY2022": "5.9", "FY2021": "5.9"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 19649, "FY2024": 19022, "FY2023": 19358, "FY2022": 20022}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "7.6", "FY2024": "7.5", "FY2023": "7.4", "FY2022": "7.7"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements "
+                "(blank in every edition: Coutts & Co is not an LREQ firm)", {}),
+    ("DATA", "UK 14a  Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "UK 14b  Leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "UK 14c  Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "UK 14d  Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "UK 14e  Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity coverage ratio (blank in every edition: managed and disclosed at UK DoLSub "
+                "sub-group level under the DoLSub waiver, not at entity level)", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (weighted value-average) (£m)", {}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£m)", {}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)", {}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)", {}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {}),
+    ("SECTION", "Net stable funding ratio (blank in every edition: same UK DoLSub waiver basis)", {}),
+    ("DATA", "18  Total available stable funding (£m)", {}),
+    ("DATA", "19  Total required stable funding (£m)", {}),
+    ("DATA", "20  NSFR ratio (%)", {}),
+]
+
+bw.add_km1_sheet(
+    title="Coutts & Company — KM1 Key Metrics",
+    subtitle="Coutts & Company's own entity-level 'UK KM1: Key metrics' template, reproduced whole in its own "
+             "row order, row numbers, labels and precision. Amounts in £m, ratios as printed. FY2025-FY2022 are "
+             "each from that year's OWN Pillar 3 report; FY2021 is the FY2022 report's comparative column, "
+             "because no Coutts-specific FY2021 Pillar 3 report exists. Rows 15-20 and UK 14a-14e are blank by "
+             "formal exclusion, not for want of data - see source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=330,
+)
+
 metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)])
 metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)])
 metric("Tier 1 Capital", "£m", [("Tier 1 capital", TIER1_CAPITAL)])

@@ -343,6 +343,59 @@ def metric(name, unit, rows_data, note=None, extra_source=""):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(extra_source), note=note, first_col_width=44, source_height=150)
 
 
+KM1_SOURCES = (
+    "Sources - UK KM1 'Key metrics' template, Charter Court Financial Services Limited (CCFSL, FRN 494549, "
+    "company 06749498):\n"
+    "NOT APPLICABLE AT THIS ENTITY LEVEL. CCFSL publishes no Pillar 3 document of its own in any year of this "
+    "workbook's window, and the only KM1 template covering it is its parent's, on a basis this workbook may not "
+    "adopt. Re-verified independently 2026-09-16 (KM1-009) against the earlier 2026-09-12 audit already recorded "
+    "on the metric sheets; both reached the same conclusion by different routes.\n\n"
+    "WHAT THE PARENT PUBLISHES. OSB GROUP PLC's Pillar 3 disclosures carry section 2.1 'UK KM1 - Key metrics "
+    "template', introduced in the document's own words as 'a summary of THE GROUP'S prudential key metrics' - "
+    "OSB Group consolidated, five quarterly columns in GBPm. Editions read in full for this check: FY2025 "
+    "(q4-2025-osbg-pillar-3-disclosure.pdf) and FY2022 (osb-group-pillar-3-disclosures-2022.pdf), plus the "
+    "Q4-2023 and Q4-2024 editions checked previously. Every one presents KM1 on a Group consolidated basis "
+    "only; none prints a CCFSL solo KM1, and none carries a CCFSL column, sub-block or appendix table.\n\n"
+    "WHY NO SUBSIDIARY BLOCK EXISTS - the regime test (map rule 18). A parent's Pillar 3 is the normal home for "
+    "a UK subsidiary's numbers ONLY where the group applies UK CRR Article 9 individual consolidation to that "
+    "subsidiary, which is exactly why Close Brothers Limited appears as an 'Individual' column in Close Brothers "
+    "Group's Pillar 3. OSB Group does not. Its Article 436(h) section states: 'The Group and its two banking "
+    "entities are required to calculate and maintain capital on a consolidated basis as well on an individual "
+    "basis. On a Group basis the derogations referred to in Article 7 or Article 9 CRR are not applied, however "
+    "OSB makes use of Article 9 CRR where the PRA has granted the firm permission to incorporate in the "
+    "calculation of its requirement under Article 6(1) of the CRR the undertakings listed below' - and the "
+    "undertakings listed are SPVs (Jersey Home Loans, Guernsey Home Loans, Reliance Property Loans, 5D Finance, "
+    "InterBay Asset Finance), NOT CCFSL. The Bank of England consolidated waivers register (downloaded "
+    "2026-09-16) confirms this from the other side: the only 'Individual consolidation / Article 9' permission "
+    "in the group is held by FRN 530504 'OneSavings Bank Plc', ref A00009293P.pdf, 18/12/2024-18/12/2027. There "
+    "is no such permission for FRN 494549. So CCFSL calculates capital individually but the group is not "
+    "required to, and does not, publish those figures. That is an affirmative finding, not a failed search.\n\n"
+    "SDDT - EXPLICIT NEGATIVE. The same register carries no SDDT row of any kind for FRN 494549. CCFSL's rows "
+    "are Article 26(3) own-funds permissions, a Capital Buffers 5.1-5.3 modification (02/12/2024) and a DoLSub "
+    "liquidity permission (Ru 2.2, 18/07/2025-18/07/2030). The absence of a KM1 here is NOT an SDDT exemption.\n\n"
+    "ENTITY BASIS - WHY THE GROUP TABLE IS NOT SUBSTITUTED. OSB Group consolidated covers OSBG plus OneSavings "
+    "Bank plc plus CCFSL plus the SPVs; CCFSL is one of two banking entities inside it. Copying the Group KM1 "
+    "into a CCFSL workbook would state as this entity's own figures a number that includes its sister bank. "
+    "Where the parent DOES disclose a genuine CCFSL solo figure it is used - the FY2022 edition prints CCFSL's "
+    "own LCR of 148% alongside OSB's 229%, and that figure is on the LCR sheet - but a solo LCR quoted in "
+    "narrative is not a KM1 template, and mapping it onto template row numbers would invent a correspondence "
+    "the bank never published (map rule 8).\n\n"
+    "For completeness, the newest OSB Group Pillar 3 edition published as at 16 September 2026 is Q2 2026 "
+    "(30 June 2026); the newest annual edition is FY2025, which this workbook already cites. Checked against "
+    "https://osb.co.uk/investors/results-reports-presentations/ - the bank's own page, not our citation list."
+)
+
+bw.add_km1_sheet(
+    title="Charter Court Financial Services Limited - KM1 Key Metrics",
+    subtitle="Not applicable - CCFSL publishes no Pillar 3 of its own, and its parent's UK KM1 is disclosed on "
+             "an OSB Group consolidated basis only, which is not this entity's basis",
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=560,
+    years=YEARS,
+)
+
 # Sheet order matches the project-wide standard: CET1 Capital, CET1 Ratio, Tier 1
 # Capital, Tier 1 Ratio, Total Capital, Total Capital Ratio, Total RWAs, Leverage
 # Ratio, LCR, NSFR, MREL Ratio - even though this entity only discloses 3 of them.

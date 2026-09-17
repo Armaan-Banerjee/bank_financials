@@ -411,6 +411,109 @@ bw.add_asset_quality_sheet(
     unit_suffix=" (£'000)",
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Monument's own published key-metrics template,
+# reproduced whole, in the bank's own row order, row numbers, labels and
+# precision. Each year comes from the edition in which it is the REPORTING
+# year, never from a later edition's comparative column:
+#   FY2023 <- the FY2023 Pillar 3 (p.28), FY2022 <- the FY2022 Pillar 3
+#   (p.28), FY2021 <- the FY2021 Pillar 3 (pp.30-31).
+# Amounts are printed in SINGLE POUNDS in all three editions (the column
+# header is a bare "£"), not £'000 - the unit is carried on each amount row
+# rather than on a divider.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available capital", {}),
+    ("DATA", "1 Common Equity Tier 1 (CET1) (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("DATA", "1a Fully loaded ECL accounting model CET1 (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("DATA", "2 Tier 1 (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("DATA", "2a Fully loaded ECL accounting model Tier 1 (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("DATA", "3 Total capital (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("DATA", "3a Fully loaded ECL accounting model total capital (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
+    ("SECTION", "Risk-weighted assets", {}),
+    ("DATA", "4 Total risk-weighted assets (RWA) (£, single pounds as printed)", {"FY2023": 126732992, "FY2022": 48417473, "FY2021": 29951235}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("DATA", "5a Fully loaded ECL accounting model Common Equity Tier 1 (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("DATA", "6 Tier 1 ratio (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("DATA", "6a Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("DATA", "7 Total capital ratio (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("DATA", "7a Fully loaded ECL accounting model total capital ratio (%)", {"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "8 Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "9 Countercyclical buffer requirement (%)", {"FY2023": "2.00%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "10 Bank specific buffer requirement (%)", {"FY2023": "0.00%", "FY2022": "0.28%"}),
+    ("DATA", "10 Bank G-SIB and/or D-SIB additional requirements (%)", {"FY2021": "0%"}),
+    ("DATA", "11 Total of bank CET1 specific buffer requirements (%)", {"FY2023": "4.50%", "FY2022": "2.78%", "FY2021": "2.50%"}),
+    ("DATA", "12 CET1 available after meeting the bank's minimum capital requirements (%)", {"FY2023": "18.32%", "FY2022": "35.99%", "FY2021": "100.99%"}),
+    ("SECTION", "Basel III leverage ratio", {}),
+    ("DATA", "13 Total Basel III leverage ratio exposure measure (£, single pounds as printed)", {"FY2023": 1040727012, "FY2022": 177552754, "FY2021": 36077278}),
+    ("DATA", "14 Basel III leverage ratio (%) (row 2 / row 13)", {"FY2023": "4.08%", "FY2022": "12.00%", "FY2021": "90.48%"}),
+    ("DATA", "14a Fully loaded ECL accounting model Basel III leverage ratio (%)", {"FY2023": "4.08%", "FY2022": "12.00%", "FY2021": "90.48%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15 Total high-quality liquid assets (HQLA) (£, single pounds as printed)", {"FY2023": 489275319, "FY2022": 70879649, "FY2021": 10300000}),
+    ("DATA", "16 Total net cash outflow (£, single pounds as printed)", {"FY2023": 44771829, "FY2022": 699861, "FY2021": 0.36}),
+    ("DATA", "17 LCR (%)", {"FY2023": "1,093%", "FY2022": "10,128%", "FY2021": "2,861,111,111.11%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18 Total available stable funding (£, single pounds as printed)", {"FY2023": 914948708, "FY2022": 160835001, "FY2021": 34625872}),
+    ("DATA", "19 Total required stable funding (£, single pounds as printed)", {"FY2023": 385273385, "FY2022": 66227130, "FY2021": 22572338}),
+    ("DATA", "20 NSFR (%)", {"FY2023": "237.48%", "FY2022": "242.85%", "FY2021": "153.40%"}),
+]
+
+bw.add_km1_sheet(
+    title="Monument Bank Limited - KM1 Key Metrics",
+    subtitle="Monument's own published key-metrics template (section 11 'Key Metrics' of each Pillar 3 "
+             "document), reproduced whole in the bank's own row order, row numbers, labels and precision. "
+             "AMOUNTS ARE IN SINGLE POUNDS, as printed - the source column header is a bare '£', not "
+             "£'000 - so each amount row carries that unit in its own label; ratio rows are percentages. "
+             "Only FY2023, FY2022 and FY2021 are populated, and each comes from the edition in which that "
+             "year is the reporting year, never from a later edition's comparative column. FY2024, FY2025 "
+             "and FY2020 are blank because no KM1 column for those dates exists in any edition anywhere "
+             "(see the source note).",
+    rows=km1_rows,
+    sources_text=P3_SOURCES + "\n\n" + (
+        "KM1 SHEET SOURCES - one edition per column, per this project's own-year sourcing rule:\n"
+        f"FY2023: Monument Bank Pillar 3 Disclosures for the year ended 31 December 2023, section 11 "
+        f"'Key Metrics', p.28 - {P3_23_URL}\n"
+        f"FY2022: Monument Bank Pillar 3 Disclosures for the Year Ended 31 December 2022, section 11 "
+        f"'Key Metrics', p.28 - {P3_22_URL}\n"
+        f"FY2021: Monument Bank Pillar 3 Disclosures for the year ended 31 December 2021, section 11 "
+        f"'Key Metrics', pp.30-31 (the table breaks across two pages: rows 1-12 on p.30, rows 13-20 on "
+        f"p.31) - {P3_21_URL}\n\n"
+        "WHY FY2024, FY2025 AND FY2020 ARE BLANK - three different reasons, none of them a sourcing gap.\n"
+        "FY2024 and FY2025: Monument became a Small Domestic Deposit Taker on 15 January 2025 (PRA "
+        "register, Rule 3.1 of the SDDT Regime - General Application Part; see the SDDT note above), which "
+        "removed the obligation to publish Pillar 3 disclosures as at 31 December 2024. No FY2024 or FY2025 "
+        "Pillar 3 document exists or will exist, Monument's own annual-reports page lists none, and no "
+        "later edition prints a comparative column for either date - so there is no published KM1 column "
+        "for those years on any basis.\n"
+        "FY2020: predates Monument's first Pillar 3 document entirely (the Bank was in its post-licence "
+        "mobilisation phase), and the FY2021 edition is a SINGLE-COLUMN table carrying 2021 only, so it "
+        "prints no 2020 comparative either. Nothing has been back-filled from the annual reports, which "
+        "are a different basis.\n\n"
+        "TWO ROWS NUMBERED 10, DELIBERATELY NOT MERGED. The FY2023 and FY2022 editions print row 10 as "
+        "'Bank specific buffer requirement'; the FY2021 edition prints row 10 as 'Bank G-SIB and/or D-SIB "
+        "additional requirements (%)'. Same row number, different captions and different metrics, so they "
+        "are kept as two rows rather than combined into one series.\n\n"
+        "PRECISION IS THE BANK'S OWN. Row 17's FY2021 value is printed as 2,861,111,111.11% in the FY2021 "
+        "edition and as 2,861,111,111% in the FY2022 edition's comparative column; this sheet carries the "
+        "FY2021 edition's own two-decimal figure, and the LCR metric sheet carries the whole-number form. "
+        "Neither is adjusted to match the other. The extreme value is genuine and is explained on the "
+        "Leverage Ratio and LCR sheets: the Bank held a full capital base against an almost empty balance "
+        "sheet, with a total net cash outflow of £0.36.\n\n"
+        "KNOWN DISAGREEMENTS WITH THE SINGLE-METRIC SHEETS, all pre-existing and all documented rather "
+        "than reconciled. This sheet reproduces the Pillar 3 documents; the Total RWAs, CET1 Ratio and "
+        "NSFR sheets carry the FY2024 annual report's restated FY2023 figures so that FY2023 sits on the "
+        "same basis as FY2024 beside it. So for FY2023 this sheet shows RWA 126,732,992 against the Total "
+        "RWAs sheet's 126,528 (£'000), CET1 ratio 22.12% against 22%, and NSFR 237.48% against 228%. Each "
+        "pair is two correctly-transcribed figures from two different documents - see those sheets' own "
+        "notes, which carry the same divergence in the other direction."
+    ),
+    first_col_width=72,
+    source_height=300,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, P3_SOURCES, note=note, first_col_width=56, source_height=180)
 

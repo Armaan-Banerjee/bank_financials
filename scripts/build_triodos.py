@@ -537,6 +537,101 @@ bw.add_asset_quality_sheet(
 )
 
 # ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics. TBUK publishes a Pillar 3 report every year from
+# FY2020 to FY2024, but NONE of those editions uses the UK KM1 key-metrics
+# template. Each edition prints its own bespoke summary table instead, and
+# the row set of that table changes from vintage to vintage. Mapping any of
+# them onto UK KM1 row numbers would invent a correspondence TBUK never
+# published, so this sheet records the non-use of the template rather than
+# a reconstruction of it. Every figure those summary tables DO contain is
+# already carried on the single-metric Pillar 3 sheets below.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - every Triodos Bank UK Limited (TBUK) Pillar 3 Report published, read in full "
+    "(pdftotext -layout; all five extract as ordinary text - table bodies included - so this is a finding "
+    "about the documents, not about the extraction):\n"
+    f"FY2024 edition: 2024 Pillar 3 Report, 'Key metrics table', printed p.6 (17 pages) - {P3_2024_URL}\n"
+    f"FY2023 edition: 2023 Pillar 3 Report, 'Key metrics table', printed p.6 (25 pages) - {P3_2023_URL}\n"
+    f"FY2022 edition: 2022 Pillar 3 Report, 'Table 2: Overview of key risk management ratios and figures', "
+    f"printed p.15 (27 pages) - {P3_2022_URL}\n"
+    f"FY2021 edition: 2021 Pillar 3 Report, 'Table 19 Summary of metrics', printed p.25 (33 pages) - "
+    f"{P3_2021_URL}\n"
+    f"FY2020 edition: 2020 Pillar 3 Report, 'Table 19 Summary of metrics', printed p.25 (33 pages) - "
+    f"{P3_2020_URL}\n"
+    "FY2019: no standalone Pillar 3 report was ever published (TBUK's first, eight-month period - see the "
+    "sheet note and ENTITY NOTE). FY2025: none published and none will be (SDDT exemption - see ENTITY NOTE).\n\n"
+    "WHY THIS IS 'NOT APPLICABLE' RATHER THAN 'NOT FOUND'. TBUK files as a 'small and non-complex "
+    "institution' under Article 433b of the PRA Rulebook - stated in its own words in every edition from "
+    "FY2022 on ('Triodos Bank UK (TBUK) has reviewed itself against these criteria and determined that it "
+    "is eligible for this classification. Article 433b of the PRA rulebook sets out the disclosure "
+    "requirements for small and non-complex institutions and it is with regard to these requirements that "
+    "this Pillar 3 disclosure has been prepared.'). Article 433b filers CAN print the UK KM1 template (other "
+    "banks in this project series do, e.g. Allica, which likewise never writes the token 'KM1'), so the "
+    "classification does not by itself settle the question - the documents do. What each edition actually "
+    "prints is a bespoke summary whose rows are NOT the template's row set, are not numbered, and change "
+    "between vintages:\n"
+    "- FY2020 and FY2021 editions, 'Table 19 Summary of metrics': CET1 capital, RWA, CET1 ratio, capital "
+    "conservation buffer, countercyclical buffer, leverage exposure measure, leverage ratio, HQLA, net cash "
+    "outflow, LCR. NO Tier 1 capital, NO Total capital, NO Tier 1 or Total capital ratio, NO NSFR, NO SREP "
+    "rows, NO combined buffer requirement.\n"
+    "- FY2022 edition, 'Table 2: Overview of key risk management ratios and figures': total exposure "
+    "measure, total RWEA, total own funds, CET1/Tier 1/Total capital ratios, Overall Capital Ratio "
+    "Requirement, leverage ratio, LCR, NSFR. NO CET1 capital amount, NO buffer rows, NO HQLA/outflow, NO "
+    "ASF/RSF.\n"
+    "- FY2023 and FY2024 editions, 'Key metrics table': Total Capital, CET1, RWA, Total Capital Ratio, CET1 "
+    "ratio, then a UK ICAAP-style requirements block (Pillar 1, Pillar 2a, Pillar 2b, capital conservation "
+    "buffer, countercyclical buffer, Overall Capital Requirement), leverage exposure and ratio, HQLA, net "
+    "cash outflow, LCR, ASF, RSF, NSFR. This is the closest of the three to the template and still is not "
+    "it: there is no Tier 1 capital row and no Tier 1 ratio row at all, no combined buffer requirement row, "
+    "no 'CET1 available after meeting the total SREP own funds requirements' row, and the 'Pillar 1 8.00%' "
+    "row has no counterpart anywhere in UK KM1. The UK 7a-7d SREP block is not printed in any edition.\n"
+    "SEARCH CONTROL (so the zeroes below are facts about the documents rather than about the search): across "
+    "the five editions the phrase 'own funds' returns 8-17 hits each and 'countercyclical' 2-11 hits each - "
+    "the extraction is rich - while 'Additional own funds requirements', 'Total own funds requirement' and "
+    "'available after meeting' return ZERO in every one of the five.\n\n"
+    "PARENT CHECKED, AND THE PARENT DOES NOT CARRY TBUK. TBUK is a wholly owned subsidiary of Triodos Bank "
+    "N.V. (the Netherlands), which is an EU CRR filer. Its own Pillar 3 Report 2025 "
+    "(https://www.triodos.com/binaries/content/assets/tbho/annual-report/2025/triodos-bank-pillar-3-report-2025.pdf, "
+    "fetched and read 2026-09-17) prints 'EU KM1 - Key metrics template' - the EU template, not the UK one - "
+    "for the CONSOLIDATED Triodos Bank N.V. group ONLY, in EUR 1,000, five quarterly columns. 'Triodos Bank "
+    "UK Ltd' appears in that document only in the scope-of-consolidation table (as 'Full consolidation', a "
+    "credit institution), in the FX-risk narrative and in the remuneration section - there is no TBUK "
+    "column, no TBUK block and no subsidiary KM1 of any kind. An EU parent's Article 13(1) subsidiary "
+    "disclosure duty attaches only to 'large subsidiaries', a population a UK-authorised, PRA-supervised "
+    "subsidiary sits outside, so this absence is the expected one. TBUK's own document set is therefore the "
+    "complete source for TBUK key metrics, and it does not use the template.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Triodos Bank UK Limited — KM1 Key Metrics",
+    subtitle="Not applicable - TBUK publishes a Pillar 3 report for FY2020-FY2024 but does NOT use the UK KM1 "
+             "key-metrics template in any of them. Each edition prints its own bespoke summary table "
+             "('Table 19 Summary of metrics' FY2020-FY2021, 'Table 2: Overview of key risk management ratios "
+             "and figures' FY2022, 'Key metrics table' FY2023-FY2024), and their row sets differ from one "
+             "another and from the template - no row numbers, no UK 7a-7d SREP block, no combined buffer "
+             "requirement row, and (FY2023/FY2024) no Tier 1 capital or Tier 1 ratio row at all. This is the "
+             "'Pillar 3 is published but the template is not used' finding, not 'no Pillar 3 is published' "
+             "and not 'we could not find the table'. The figures those summary tables do carry are all "
+             "transcribed on the single-metric Pillar 3 sheets that follow. FY2019 predates TBUK's first "
+             "Pillar 3 report; FY2025 is covered by the SDDT disclosure exemption - see source note.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {
+            "FY2025": "No Pillar 3 report (SDDT exemption)",
+            "FY2024": "Template not used - bespoke 'Key metrics table'",
+            "FY2023": "Template not used - bespoke 'Key metrics table'",
+            "FY2022": "Template not used - bespoke 'Table 2'",
+            "FY2021": "Template not used - bespoke 'Table 19'",
+            "FY2020": "Template not used - bespoke 'Table 19'",
+            "FY2019": "No Pillar 3 report published for this period",
+        }),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=46,
+    source_height=420,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -695,21 +790,33 @@ metric(
 metric(
     "LCR", "£'000 / %",
     [
-        ("Total HQLA (point-in-time, year-end)", {"FY2024": 826600, "FY2023": 715900, "FY2022": 668900, "FY2021": 628207, "FY2020": 519500}),
-        ("Total net cash outflows over 30-day stress (point-in-time, year-end)", {"FY2024": 175400, "FY2023": 170100, "FY2022": 151100, "FY2021": 151875, "FY2020": 125400}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "446%", "FY2024": "471.1%", "FY2023": "420.8%", "FY2022": "442.7%", "FY2021": "413.6%", "FY2020": "414.1%"}),
+        ("Total HQLA (point-in-time, year-end)", {"FY2024": 826583, "FY2023": 715906, "FY2022": 668900, "FY2021": 628207, "FY2020": 519569, "FY2019": 343679}),
+        ("Total net cash outflows over 30-day stress (point-in-time, year-end)", {"FY2024": 175445, "FY2023": 170147, "FY2022": 151100, "FY2021": 151875, "FY2020": 125480, "FY2019": 67968}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "446%", "FY2024": "471.1%", "FY2023": "420.8%", "FY2022": "442.7%", "FY2021": "413.6%", "FY2020": "414.1%", "FY2019": "505.6%"}),
     ],
     p3_sources(),
     note="All ratios are the year-end point-in-time LCR (not the 12-month average-by-quarter tables each Pillar 3 "
-         "report also separately discloses). FY2025's ratio (446%) is from the Annual Report narrative only (p.15) "
-         "- no £ HQLA/outflow breakdown is available since no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE). FY2020's figures "
-         "are from TBUK's own FY2020 Pillar 3 Report's narrative ('As at 31 December 2020, the Bank's LCR was at "
-         "414.1%...calculated as a total HQLA of £519.5m against net outflows of £125.4m'). FY2019: NOT DISCLOSED "
-         "- no standalone FY2019 Pillar 3 report exists, the FY2020 Pillar 3 Report's own Table 17 quarterly "
-         "series only starts at 31-Mar-2020 (and is itself a 12-month-average basis, not point-in-time - see the "
-         "same caveat already noted for other years' average tables), and AR2019's own Liquidity section gives "
-         "only a qualitative statement ('significantly in excess of all liquidity targets and requirements') with "
-         "no numeric LCR% - genuinely not disclosed anywhere reviewed, not an access gap.",
+         "report also separately discloses). Each year's £ amounts are taken from that year's OWN edition's "
+         "summary table, at that table's own £'000 precision: FY2024 from the 2024 Pillar 3 Report's 'Key metrics "
+         "table' (printed p.6); FY2023 from the 2023 Report's 'Key metrics table' (printed p.6); FY2021 and "
+         "FY2020 from 'Table 19 Summary of metrics' (printed p.25 of each). The same reports ALSO state rounded "
+         "versions of the same figures in their narrative (e.g. FY2024 'a total HQLA of £826.6m divided by net "
+         "cash outflows of £175.4m'; FY2020 'a total HQLA of £519.5m against net outflows of £125.4m') - the "
+         "£'000 table figures are used here as the more precise printing of the same disclosure, not a different "
+         "measure. FY2022 IS THE ONE EXCEPTION and is deliberately the rounded pair (£668.9m / £151.1m): the "
+         "FY2022 edition's own summary table ('Table 2: Overview of key risk management ratios and figures', "
+         "printed p.15) carries the LCR ratio but NO HQLA or net-outflow row at all, so its narrative is that "
+         "year's only own-edition source for the amounts. The FY2023 edition's comparative column prints them as "
+         "668,914 / 151,100, which is not used here because this workbook sources each year from its own edition. "
+         "FY2019 (CORRECTED 2026-09-17): no standalone FY2019 Pillar 3 report was ever published, so the column is "
+         "filled from the FY2020 Pillar 3 Report's own audited 31-Dec-19 comparative column in Table 19 "
+         "(HQLA £343,679k, net cash outflow £67,968k, LCR 505.6%) - the same comparative column this workbook "
+         "already uses for FY2019 CET1 capital, RWAs and capital ratios. An earlier build of this sheet left "
+         "FY2019 blank and stated the figure was 'genuinely not disclosed anywhere reviewed'; that was WRONG - it "
+         "had been reached from the FY2020 report's Table 17 quarterly average series (which does start only at "
+         "31-Mar-2020) without reading that report's own Table 19 point-in-time comparative. FY2025: no £ "
+         "HQLA/outflow breakdown, since no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see "
+         "ENTITY NOTE); the 446% ratio is from the FY2025 Annual Report narrative (p.15).",
 )
 
 metric(
@@ -779,7 +886,7 @@ bw.add_overview_sheet(
         ("Tier 1 Ratio", {"FY2025": "21.3%", "FY2024": "22.1%", "FY2023": "22.36%", "FY2022": "21.57%", "FY2021": "21.2%", "FY2020": "22.6%", "FY2019": "20.3%"}),
         ("Total Capital Ratio", {"FY2025": "21.3%", "FY2024": "22.7%", "FY2023": "23.02%", "FY2022": "22.20%", "FY2021": "21.8%", "FY2020": "23.4%", "FY2019": "20.3%"}),
         ("Leverage Ratio", {"FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
-        ("LCR", {"FY2025": "446%", "FY2024": "471.1%", "FY2023": "420.8%", "FY2022": "442.7%", "FY2021": "413.6%", "FY2020": "414.1%"}),
+        ("LCR", {"FY2025": "446%", "FY2024": "471.1%", "FY2023": "420.8%", "FY2022": "442.7%", "FY2021": "413.6%", "FY2020": "414.1%", "FY2019": "505.6%"}),
         ("NSFR", {"FY2024": "206%", "FY2023": "188%", "FY2022": "181%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
@@ -793,8 +900,9 @@ bw.add_overview_sheet(
          "off share capital issued plus merger reserve created by the Part VII transfer, not a recurring item. "
          "FY2020's 'Opening equity' (£175,711k) uses AR2020's own restated FY2019 closing figure, not AR2019's "
          "own closing figure (£175,718k) - a genuine £7k gap, see the Statement of Changes in Equity sheet's own "
-         "note. LCR and NSFR are blank for FY2019 - neither was disclosed anywhere reviewed for that year (see "
-         "each metric's own sheet note).",
+         "note. FY2019's LCR (505.6%) comes from the FY2020 Pillar 3 Report's own audited 31-Dec-19 comparative "
+         "column, since no FY2019 Pillar 3 report was ever published; NSFR is blank for FY2019 because that "
+         "comparative column carries no NSFR row at all (see each metric's own sheet note).",
 )
 
 # ---------------------------------------------------------------

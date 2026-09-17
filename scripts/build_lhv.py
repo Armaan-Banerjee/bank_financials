@@ -345,6 +345,136 @@ def metric(name, unit, rows_data, note=None):
                          rows_data, p3_sources(), note=note, first_col_width=46, source_height=120)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (wayfinder/km1/map.md) - the Bank's own published
+# key-metrics template, reproduced whole in its own row order, labels and
+# precision. add_km1_sheet() is called BEFORE the first add_metric_sheet()
+# so the sheet lands immediately after Asset Quality and immediately before
+# CET1 Capital: sheet order follows call order.
+#
+# ROW-SET TEST (map rule 8). The FY2023 and FY2024 editions head this table
+# simply "Key metrics", print no row numbers and never write the token
+# "KM1"; the FY2025 edition heads the identical table "3.1.2 Template UK KM1
+# - Key metrics template". The row set is the test, and it is the template's:
+# own funds, risk-weighted exposure amount, capital ratios, additional own
+# funds requirements, the combined buffer block, leverage, and the full LCR
+# and NSFR component build-ups. So all three years are the template. The
+# Bank's own SREP block is CONDENSED ("Additional requirement" / "Total own
+# funds requirements" in place of the template's UK 7a-7d split) and no
+# edition prints row numbers at all - both reproduced exactly as published
+# rather than mapped onto template row numbers the Bank never printed.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds", {}),
+    ("DATA", "Common equity Tier 1 capital (£'000)", {"FY2025": 103888, "FY2024": 68399, "FY2023": 44532}),
+    ("DATA", "Tier 1 capital (£'000)", {"FY2025": 103888, "FY2024": 68399, "FY2023": 44532}),
+    ("DATA", "Total capital (£'000)", {"FY2025": 113921, "FY2024": 68399, "FY2023": 44532}),
+    ("SECTION", "Risk weighted exposure amounts", {}),
+    ("DATA", "Total risk weighted exposure amount (£'000)", {"FY2025": 561468, "FY2024": 284276, "FY2023": 140702}),
+    ("SECTION", "Capital ratios", {}),
+    ("DATA", "Common equity Tier 1 capital ratio (%)", {"FY2025": "18.5%", "FY2024": "24.1%", "FY2023": "31.7%"}),
+    ("DATA", "Tier 1 capital ratio (%)", {"FY2025": "18.5%", "FY2024": "24.1%", "FY2023": "31.7%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2025": "20.3%", "FY2024": "24.1%", "FY2023": "31.7%"}),
+    ("SECTION", "Additional own funds requirements", {}),
+    ("DATA", "Additional requirement (%)", {"FY2025": "3.5%", "FY2024": "2.2%", "FY2023": "1.7%"}),
+    ("DATA", "Total own funds requirements (%)", {"FY2025": "11.5%", "FY2024": "10.2%", "FY2023": "9.7%"}),
+    ("SECTION", "Combined buffer requirement", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%"}),
+    ("DATA", "Institution specific countercyclical buffer (%)", {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%"}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%"}),
+    ("DATA", "Total capital requirement and combined buffers (%)", {"FY2025": "16.0%", "FY2024": "14.7%", "FY2023": "14.2%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims made on central banks (£'000)",
+     {"FY2025": 721124, "FY2024": 317763, "FY2023": 79084}),
+    ("DATA", "Leverage ratio excluding claims made on central banks (%)",
+     {"FY2025": "14.4%", "FY2024": "21.5%", "FY2023": "56.3%"}),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "Total HQLA (£'000)", {"FY2025": 405138, "FY2024": 296989, "FY2023": 137258}),
+    ("DATA", "Cash outflows (£'000)", {"FY2025": 224517, "FY2024": 183800, "FY2023": 113127}),
+    ("DATA", "Cash inflows (£'000)", {"FY2025": 19154, "FY2024": 12270, "FY2023": 9352}),
+    ("DATA", "Total net cash outflows (£'000)", {"FY2025": 205363, "FY2024": 171530, "FY2023": 103776}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2025": "196%", "FY2024": "175%", "FY2023": "133%"}),
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "Total available funding (£'000)", {"FY2025": 802886, "FY2024": 372192, "FY2023": 144797}),
+    ("DATA", "Total required funding (£'000)", {"FY2025": 441159, "FY2024": 153881, "FY2023": 51410}),
+    ("DATA", "Net stable funding ratio (%)", {"FY2025": "182%", "FY2024": "260%", "FY2023": "278%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - LHV Bank Limited's own Pillar 3 Disclosures (solo basis), key-metrics template, £'000 and % "
+    "exactly as printed. EACH YEAR IS TAKEN FROM THE EDITION IN WHICH IT IS THE REPORTING YEAR, never from a "
+    "later edition's comparative column:\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, section 3.1.2 'Template UK KM1 - Key metrics template', "
+    f"printed p.6-7 (the table breaks across the two pages, splitting after 'Combined buffer requirement'), "
+    f"column '31 December 2025' - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, 'Key metrics', printed p.11, column '31 December 2024' - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, 'Key metrics', printed p.12, single column '31 December 2023' - "
+    f"{P3_2023_URL}\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17 against the Bank's OWN website rather "
+    "than our cited URLs or Wayback: lhv.com/about/reports (the reports page the Pillar 3 document itself names "
+    "in its section 1.1) lists exactly six documents - Annual Reports for 2023, 2024 and 2025 and Pillar 3 "
+    "Disclosures for 2023, 2024 and 2025 - which are the six already cited in this build script. The newest "
+    "edition published is the Pillar 3 Disclosures for 31 December 2025. NONE NEWER EXISTS; this workbook is "
+    "not an edition behind.\n\n"
+    "IS THIS THE KM1 TEMPLATE? YES, ON THE ROW-SET TEST, AND THE BANK SAYS SO ITSELF IN THE NEWEST EDITION. "
+    "The FY2023 and FY2024 editions head the table simply 'Key metrics', print no row numbers, and never write "
+    "the token 'KM1' anywhere; a presence test keyed on the token or on row numbering would miss both. The "
+    "FY2025 edition prints the identical table under the heading 'Template UK KM1 - Key metrics template' and "
+    "states it 'outlines the key metrics referenced in Article 447'. The row set is the template's throughout: "
+    "available own funds, risk-weighted exposure amount, capital ratios, additional own funds requirements, the "
+    "combined buffer block, leverage ratio and exposure measure, and the full LCR and NSFR component "
+    "build-ups.\n\n"
+    "WHAT THE BANK DOES NOT PRINT, reproduced as absent rather than filled in:\n"
+    "• NO ROW NUMBERS in any edition. The template's own numbering ('1', 'UK 7a', '15') is therefore absent "
+    "from this sheet too - mapping the Bank's rows onto template numbers it never printed would invent a "
+    "correspondence.\n"
+    "• A CONDENSED SREP BLOCK. Where the UK template splits additional own funds requirements into UK 7a-7d "
+    "(CET1/AT1/T2/total), LHV prints two rows only - 'Additional requirement' and 'Total own funds "
+    "requirements'. Shown as the Bank prints them.\n"
+    "• NO ROWS BEFORE FY2023, because no earlier edition exists. LHV Bank Limited was granted its unrestricted "
+    "PRA banking licence on 3 May 2023 and FY2023 is its first Pillar 3 disclosure - the blank is the absence "
+    "of a reporting period, not an access gap or a row we failed to find.\n\n"
+    "BASIS NOTE ON THE LIQUIDITY ROWS. The LCR and NSFR rows are period AVERAGES, not year-end points, and each "
+    "edition says so in its own footnote. FY2023's average covers only 3 May 2023 (authorisation) to 31 "
+    "December 2023 - 'the period from when the entity became an authorised credit institution subject to "
+    "reporting requirements', in the Bank's own words - so it is a partial-period average beside FY2024's and "
+    "FY2025's full 12-month averages. That is a genuine basis difference across the row, flagged rather than "
+    "smoothed.\n\n"
+    "TWO ROWS ARE REPORTED AS DISAGREEMENTS BY verify_workbook.py AND BOTH REPORTS ARE FALSE POSITIVES OF THE "
+    "CHECKER'S LABEL MATCHING, NOT ERRORS IN THESE FIGURES. The checker decides which metric sheet a KM1 row "
+    "belongs to by longest-prefix match on the row label, and two of LHV's own captions begin with the name "
+    "of a different metric:\n"
+    "• 'Tier 1 capital ratio (%)' begins with 'Tier 1 capital', so the checker compares this PERCENTAGE "
+    "against the Tier 1 Capital sheet's AMOUNT (18.5% against £103,888k, and so on for each year). LHV writes "
+    "'Tier 1 capital ratio' where the UK template writes 'Tier 1 ratio'; the figures are right and agree with "
+    "the Tier 1 Ratio sheet.\n"
+    "• 'Total capital requirement and combined buffers (%)' begins with 'Total capital', so it is compared "
+    "against the Total Capital sheet's amount. It is a buffer requirement, not a capital amount, and has no "
+    "counterpart metric sheet at all.\n"
+    "Neither row has been reworded to satisfy the checker: these are the Bank's own printed captions, and "
+    "editing them to suit a matching heuristic would be normalising the source by the back door. Six "
+    "disagreements on this sheet are these two rows across three years each; every other cross-checked cell "
+    "agrees.\n\n"
+    "CROSS-CONFIRMATION. Every FY2023 and FY2024 figure above also appears, identically, as the following "
+    "edition's comparative column - an independent confirmation of both columns at no transcription cost. "
+    "FY2025's are single-sourced from their own edition, LHV publishing no half-year Pillar 3.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="LHV Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published key-metrics template (headed 'Template UK KM1 - Key metrics template' in "
+             "the FY2025 edition and simply 'Key metrics', unnumbered, in the FY2023 and FY2024 editions), "
+             "reproduced whole in its own row order, labels and printed precision. Solo basis. Amounts in £'000, "
+             "ratios as printed. Each year comes from its own edition, never a later comparative. LHV prints no "
+             "template row numbers and prints a condensed two-row SREP block - both reproduced as published. No "
+             "columns before FY2023: the Bank was authorised on 3 May 2023.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=420,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 103888, "FY2024": 68399, "FY2023": 44532})],

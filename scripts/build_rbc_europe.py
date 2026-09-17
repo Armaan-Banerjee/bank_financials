@@ -534,6 +534,112 @@ HISTORICAL_CAPITAL_NOTE = ("FY2014-FY2020 (HD-018): EU CRR transitional-provisio
     "No Additional Tier 1 capital existed before the FY2018 AT1 issuance, so CET1 = Tier 1 exactly for FY2014-FY2017 "
     "- not a data-entry duplication. FY2014's leverage ratio was not yet a disclosure requirement (RBC Europe's own "
     "FY2014 filing states its first published leverage ratio would be for the year ending 31 October 2015).")
+KM1_SOURCES = (
+    "Sources - RBC Europe Limited's own annual Pillar III disclosures, table 'UK KM1 - Key Metrics', Company "
+    "(RBCEL) basis, £m, 31 October year-end. Each year's column is that year's OWN edition, at the folio printed "
+    "in the page footer (which matches each edition's own contents page):\n"
+    f"FY2025 (Oct-25, column 'T'): printed p.11 - {P3_URL['FY2025']}\n"
+    f"FY2024 (Oct-24, column 'T'): printed p.11 - {P3_URL['FY2024']}\n"
+    f"FY2023 (Oct-23, column 'T'): printed p.12 - {P3_URL['FY2023']}\n"
+    f"FY2022 (Oct-22, column 'T'): printed p.13 - {P3_URL['FY2022']}\n"
+    f"FY2021 (Oct-21): FILLED FROM A LATER EDITION'S COMPARATIVE - the FY2022 edition's 'T-4' column, printed "
+    f"p.13 - {P3_URL['FY2022']}. RBC Europe's own FY2021 Pillar III disclosure prints no key-metrics template of "
+    "any kind: its contents page lists Tables 1-30 (own funds disclosure, countercyclical buffer, leverage ratio "
+    "disclosure, risk exposure amounts, credit risk and so on - the CRR-era presentation), and its only leverage "
+    "summary is a three-line block reading 'Leverage ratio total exposure measure 46,924,653 / Leverage ratio "
+    f"3.51%' - {P3_URL['FY2021']}. The FY2022 edition footnotes the Oct-21 column: 'Restatement of capital for "
+    "Oct-21 and Apr-22 following restatement of FY 21 audited financial statements'.\n"
+    "FY2020-FY2014: BLANK, and blank here means never published in this template in any edition. The UK KM1 "
+    "template arrived with the Disclosure (CRR) Part of the PRA Rulebook; RBC Europe first prints it in its FY2022 "
+    "edition and no edition anywhere carries a key-metrics column dated Oct-20 or earlier. Those years' own "
+    "CRR-era own-funds and leverage tables are transcribed on the single-metric sheets instead.\n\n"
+    "REPRODUCED AS PRINTED:\n"
+    "- 'N/A' is the bank's own glyph and is kept as 'N/A'. An empty cell here means the edition did not print that "
+    "row at all: the FY2022 edition omits row 12 entirely, so Oct-22 is empty rather than 'N/A'.\n"
+    "- The FY2023 edition prints row 12 as AMOUNTS (Oct-23 480, Apr-23 439, Oct-22 484, Apr-22 369) beneath a "
+    "caption reading '(%)'; the 480 is reproduced as published rather than converted. The FY2024 and FY2025 "
+    "editions print that row as a percentage again.\n"
+    "- Rows 14c/14d/14e read 'N/A' for Oct-22 and Oct-21 and carry figures from Oct-23 onward.\n"
+    "- The FY2022 edition prints row 8 for its Apr-22 column as '0.025' rather than '2.50%', and the FY2023 "
+    "edition does the same for its Oct-22 column. Both are the source's own formatting slips, in columns this "
+    "sheet does not take: the Oct-22 column here comes from the FY2022 edition, which prints 2.50%.\n\n"
+    "WHERE TWO EDITIONS PRINT THE SAME DATE DIFFERENTLY, both printings are recorded and neither is altered:\n"
+    "- Oct-22 total risk-weighted exposure amount: 8,911 in the FY2022 edition (used here) against 8,916 in the "
+    "FY2023 edition's comparative.\n"
+    "- Oct-22 CET1 ratio: 15.46% in the FY2022 edition (used here) against 15.45% in the FY2023 edition.\n"
+    "- Oct-24 row 12: 10.97% in the FY2024 edition (used here) against 2.93% in the FY2025 edition.\n"
+    "- The FY2023 edition marks its Apr-23 column '*TCR restated'.\n"
+    "- Oct-21 CET1 capital is 1,349 here (the FY2022 edition's restated comparative) while the CET1 Capital metric "
+    "sheet carries 1,348 from RBC Europe's own FY2021 own-funds table. The restatement footnote quoted above is "
+    "why the two differ; both are as published and neither has been moved to match the other.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: rbc.com's Pillar III document library was checked directly. The newest "
+    "ANNUAL disclosure is the 31 October 2025 edition already used here; the newest disclosure of any kind is the "
+    "quarterly 'RBC Europe Limited Quarterly Pillar 3 Disclosures, 31st January 2026', which covers leverage only "
+    "(its contents page lists Overview and Leverage Ratio, and it contains no KM1). No April 2026 semi-annual "
+    "edition was published at the date of this check. RBC Europe's year-end is 31 October, so FY2026 had not "
+    "closed.\n\n" + ENTITY_NOTE
+)
+
+
+def _km1v(fy2025=None, fy2024=None, fy2023=None, fy2022=None, fy2021=None):
+    vals = {"FY2025": fy2025, "FY2024": fy2024, "FY2023": fy2023, "FY2022": fy2022, "FY2021": fy2021}
+    return {k: v for k, v in vals.items() if v is not None}
+
+
+bw.add_km1_sheet(
+    title="RBC Europe Limited — KM1 Key Metrics",
+    subtitle="UK KM1 - Key Metrics, as published in RBC Europe Limited's own annual Pillar III disclosures "
+             "(Company/RBCEL basis, £m, 31 October year-end). Reproduced in the bank's own row order, row "
+             "numbering, labels and precision. FY2022-FY2025 are each year's own edition; FY2021 is the FY2022 "
+             "edition's restated Oct-21 comparative (that year's own edition prints no key-metrics table at all). "
+             "FY2020-FY2014 predate the template entirely - see the source note.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (£m)", _km1v(1773, 1454, 1439, 1377, 1349)),
+        ("DATA", "2 Tier 1 capital (£m)", _km1v(2072, 1754, 1738, 1677, 1649)),
+        ("DATA", "3 Total capital (£m)", _km1v(2358, 1832, 1821, 1764, 1721)),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted exposure amount (£m)", _km1v(12834, 12049, 9579, 8911, 8961)),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", _km1v("13.81%", "12.07%", "15.02%", "15.46%", "15.05%")),
+        ("DATA", "6 Tier 1 ratio (%)", _km1v("16.15%", "14.56%", "18.15%", "18.82%", "18.40%")),
+        ("DATA", "7 Total capital ratio (%)", _km1v("18.37%", "15.20%", "19.01%", "19.80%", "19.21%")),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", _km1v("1.20%", "1.20%", "1.13%", "1.14%", "2.08%")),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", _km1v("0.40%", "0.40%", "0.38%", "0.38%", "0.69%")),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", _km1v("0.53%", "0.53%", "0.50%", "0.51%", "0.93%")),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", _km1v("10.04%", "10.14%", "10.00%", "10.03%", "11.71%")),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", _km1v("2.50%", "2.50%", "2.50%", "2.50%", "2.50%")),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", _km1v("0.91%", "0.94%", "0.74%", "0.09%", "0.03%")),
+        ("DATA", "11 Combined buffer requirement (%)", _km1v("3.41%", "3.44%", "3.24%", "2.59%", "2.53%")),
+        ("DATA", "UK 11a Overall capital requirements (%)", _km1v("13.54%", "13.58%", "13.24%", "12.61%", "14.24%")),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", _km1v("12.56%", "10.97%", 480)),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£m)", _km1v(45993, 42872, 40693, 40753, "N/A")),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "N/A")),
+        ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+        ("DATA", "14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "N/A")),
+        ("DATA", "14b Leverage ratio including claims on central banks (%)", _km1v("4.28%", "3.71%", "3.48%", "3.27%", "N/A")),
+        ("DATA", "14c Average leverage ratio excluding claims on central banks (%)", _km1v("4.34%", "4.29%", "4.27%", "N/A", "N/A")),
+        ("DATA", "14d Average leverage ratio including claims on central banks (%)", _km1v("3.94%", "3.82%", "3.48%", "N/A", "N/A")),
+        ("DATA", "14e Countercyclical leverage ratio buffer (%)", _km1v("0.32%", "0.33%", "0.26%", "N/A", "N/A")),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value -average) (£m)", _km1v(12642, 10688, 11490, 10868, 8388)),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (£m)", _km1v(13416, 11589, 12047, 11851, 9203)),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (£m)", _km1v(3553, 3553, 3155, 3155, 2586)),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£m)", _km1v(9632, 8036, 9031, 8696, 6618)),
+        ("DATA", "17 Liquidity coverage ratio (%)", _km1v("132%", "134%", "127%", "125%", "127%")),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18 Total available stable funding (£m)", _km1v(18791, 17010, 16879, 18964, 14695)),
+        ("DATA", "19 Total required stable funding (£m)", _km1v(16780, 15158, 13654, 17081, 15247)),
+        ("DATA", "20 NSFR ratio (%)", _km1v("112%", "112%", "124%", "111%", "97%")),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=460,
+)
+
 metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1)], note=HISTORICAL_CAPITAL_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1R)], note=HISTORICAL_CAPITAL_NOTE)
 metric("Tier 1 Capital", "£m", [("Tier 1 capital", T1)], note=HISTORICAL_CAPITAL_NOTE)

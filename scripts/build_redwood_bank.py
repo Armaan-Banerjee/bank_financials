@@ -463,6 +463,159 @@ P3_SOURCES = P3_SOURCES + "\n\n" + PILLAR3_DISCOVERY_NOTE
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, P3_SOURCES, note=note, first_col_width=46, source_height=190)
 
+
+KM1_SOURCES = (
+    "Sources - Redwood Bank Limited's own Pillar 3 disclosures, key-metrics table, Bank basis, amounts in single "
+    "pounds as printed (this bank publishes its template in plain £, not £'000 or £m). Every column is that "
+    "year's OWN edition, at the folio its own contents page gives:\n"
+    f"FY2023: 'Table 1: Key metrics', printed p.5 - {P3_2023_URL}\n"
+    f"FY2022: 'Table 1: Key metrics', printed p.6 - {P3_2022_URL}\n"
+    f"FY2021: 'Table 1: Key metrics', printed pp.4-5 (the table breaks across the page) - {P3_2021_URL}\n"
+    f"FY2020: 'Table 4: Overview of prudential metrics', printed pp.18-19 - {P3_2020_URL}\n"
+    f"FY2019: 'Table 4: Overview of prudential metrics', printed pp.17-18 - {P3_2019_URL}\n"
+    f"FY2018: 'Table 4 : Overview of prudential metrics', printed pp.17-18 - {P3_2018_URL}\n"
+    f"FY2017: 'Table 4 - Overview of prudential metrics', printed pp.18-19 - {P3_2017_URL}\n\n"
+    "TWO TEMPLATES, DELIBERATELY NOT MERGED. FY2022 and FY2023 are the UK KM1 template (SREP rows numbered "
+    "'UK 7a'/'UK7d', an overall-capital-requirements row 'UK 11a', leverage on the excluding-central-bank-claims "
+    "basis, and NSFR rows 18-20). FY2017-FY2021 are the earlier Basel III 'Overview of prudential metrics' "
+    "template, which REUSES ROW NUMBERS FOR DIFFERENT METRICS: its plain '7a' is the fully loaded ECL total "
+    "capital ratio, where the UK template's 'UK 7a' is the additional CET1 SREP requirement, and its rows 1a/2a/"
+    "3a/5a/6a/14a are fully loaded ECL twins that the UK template does not carry at all. Its leverage rows are the "
+    "Basel III total exposure measure, a different basis from rows 13/14 of the UK template. The two blocks are "
+    "therefore kept separate and nothing is carried across them.\n\n"
+    "FY2025 AND FY2024 ARE BLANK BECAUSE THE DUTY ENDED, and the instrument is dated. The Bank of England "
+    "consolidated waivers register (re-downloaded and re-read 2026-09-17) carries, for FRN 755924 REDWOOD BANK "
+    "LIMITED, a 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General "
+    "Application Part' (rule description 'SDDT Regime - General Application', sub-rule 'Ru 3.1', waiver ref "
+    "A00008317P.pdf), start date 26/07/2024, no end date. Rule 3.1 removes the Pillar 3 disclosure obligation "
+    "itself. Redwood's year-end is 31 December, so the FY2024 (31 Dec 2024) and FY2025 (31 Dec 2025) year-ends "
+    "both fall after that date while FY2023 (31 Dec 2023) precedes it - which is exactly the pattern the documents "
+    "show, an unbroken series to FY2023 and nothing after. Opting in does not by itself stop a bank publishing, so "
+    "the absence was also checked directly on 2026-09-17: the bank's own reports page (redwoodbank.co.uk/legal/"
+    "reports/), which listed the FY2017-FY2022 Pillar 3 PDFs when it was archived in March 2024, now returns HTTP "
+    "404, and the current site navigation carries no reports or disclosures page at all; its performance-summary "
+    "page links the 2023, 2024 and 2025 Annual Reports and no Pillar 3 document. The FY2023 edition is the last "
+    "one published.\n\n"
+    "THE PRINTED ROW 4 IS WRONG IN THE THREE OLDEST EDITIONS, AND IS REPRODUCED ANYWAY. For FY2019, FY2018 and "
+    "FY2017 the key-metrics row 4 carries the CREDIT-RISK subtotal rather than total Pillar 1 risk-weighted "
+    "assets: 114,001,332 + operational risk 14,611,306 = 128,612,638 (FY2019); 52,495,810 + 13,398,025 = "
+    "65,893,829 (FY2018); 8,268,832 + 7,025,000 = 15,293,832 (FY2017), each equal to that edition's own Pillar 1 "
+    "capital-requirements table total. The bank's own printed ratios only reconcile against the Pillar 1 totals "
+    "(25,830,817/128,612,638 = 20.08% against a printed 20.08%; 9,142,150/15,293,832 = 59.78% against a printed "
+    "59.78%), which is what identifies the row-4 figures as the subtotal. This sheet prints row 4 as the bank "
+    "printed it; the Total RWAs and RWA Breakdown sheets carry the Pillar 1 totals. From the FY2020 edition "
+    "onward row 4 is correct.\n\n"
+    "WHERE TWO EDITIONS PRINT THE SAME YEAR DIFFERENTLY, each column here is its own edition's printing:\n"
+    "- FY2020 total regulatory capital is 38,647,805 and the total capital ratio 18.81% in the FY2020 edition "
+    "(printed here). The FY2021 edition restates both, to 36,528,841 and 17.8%, footnoted 'Restated due to the "
+    "correction of total regulatory capital and its ratio and leverage ratio'; the Total Capital and Total Capital "
+    "Ratio metric sheets carry those restated figures. Both printings are internally consistent against the same "
+    "RWA (38,647,805/205,441,523 = 18.81%; 36,528,841/205,441,523 = 17.78%), so this is a genuine restatement of "
+    "the capital figure and not a rounding or unit artefact.\n"
+    "- FY2019 row 16 total net cash outflows: 18,699,805 in the FY2019 edition (printed here) against 15,634,030 "
+    "in the FY2020 edition's comparative; both editions print the LCR as 541.05%.\n"
+    "- FY2018 rows 15 and 17: 56,305,459 HQLA and a 399.32% LCR in the FY2018 edition (printed here) against "
+    "56,205,459 and 391.32% in the FY2019 edition's comparative.\n"
+    "- FY2022 row 12: 9.38% in the FY2022 edition (printed here) against 6.47% in the FY2023 edition.\n"
+    "- FY2020 row 5: 13.34% in the FY2020 edition (printed here); the FY2021 edition prints 13.3%.\n\n"
+    "OTHER THINGS THE READER SHOULD KNOW ABOUT THE PRINTING:\n"
+    "- An NSFR row appears in ONE edition only: the FY2019 edition prints '18 NSFR (%) 170.9%' (with a 193.4% "
+    "comparative for 2018). The FY2017, FY2018, FY2020 and FY2021 editions print no NSFR row in the key-metrics "
+    "table at all, so those cells are blank here even where a later edition or that edition's narrative gives a "
+    "figure - the NSFR metric sheet carries those, sourced from the narrative sections.\n"
+    "- FY2017's buffer rows 8-12 are printed as '0%' - printed zeros, kept as zeros, not dashes.\n"
+    "- Label drift between editions is the bank's, not ours: row 3 reads 'Total regulatory capital' in the FY2020 "
+    "and FY2021 editions and 'Total capital' in the FY2017-FY2019 ones; row 7 reads 'Total regulatory capital "
+    "ratio (%)' in the FY2021-FY2023 editions and 'Total capital ratio (%)' in the earlier ones; row 12 reads "
+    "'CET1 available after meeting the Bank's minimum capital requirements (%)' in the old template and 'CET1 "
+    "available after meeting the total SREP own funds requirements (%)' in the UK one. Each block uses one "
+    "printed wording, named here.\n"
+    "- The CET1 Capital metric sheet carries 9,142,150 for FY2017 and 15,052,747 for FY2018, while row 1 of the "
+    "bank's own key-metrics table prints 9,142,139 and 15,052,746 for those years - the FY2017 figure on that "
+    "sheet is in fact the total capital figure the same table prints on row 3 (9,142,150, which includes £11 of "
+    "Tier 2). Both printings are recorded; nothing has been altered here to make them agree.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Redwood Bank Limited — KM1 Key Metrics",
+    subtitle="The bank's own published key-metrics template, Bank basis, amounts in single pounds as printed. "
+             "FY2022-FY2023 are the UK KM1 template; FY2017-FY2021 are the earlier Basel III 'Overview of "
+             "prudential metrics' template, kept as a separate block because it reuses the same row numbers for "
+             "different metrics. Every column is that year's own edition. FY2024 and FY2025 are blank: Redwood "
+             "became an SDDT on 26 July 2024 and publishes no Pillar 3 for those years - see the source note.",
+    rows=[
+        ("SECTION", "FY2022-FY2023 editions - UK KM1 template", {}),
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (£, single pounds as printed)", {"FY2023": 46764475, "FY2022": 41430663}),
+        ("DATA", "2 Tier 1 (£, single pounds as printed)", {"FY2023": 46764475, "FY2022": 41430663}),
+        ("DATA", "3 Total capital (£, single pounds as printed)", {"FY2023": 56888551, "FY2022": 51320588}),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted assets (RWA) (£, single pounds as printed)", {"FY2023": 294050082, "FY2022": 269415717}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2023": "16.0%", "FY2022": "15.4%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2023": "16.0%", "FY2022": "15.4%"}),
+        ("DATA", "7 Total regulatory capital ratio (%)", {"FY2023": "19.4%", "FY2022": "19.0%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2023": "3.59%", "FY2022": "3.88%"}),
+        ("DATA", "UK7d Total SREP own funds requirements (%)", {"FY2023": "11.59%", "FY2022": "11.88%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer requirement (%)", {"FY2023": "2.5%", "FY2022": "2.5%"}),
+        ("DATA", "9 Countercyclical buffer requirement (%)", {"FY2023": "2.0%", "FY2022": "1.0%"}),
+        ("DATA", "11 Total of Bank CET1 specific buffer requirements (%) (row 8 + row 9 + row 10)", {"FY2023": "4.5%", "FY2022": "3.5%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2023": "16.09%", "FY2022": "15.38%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2023": "7.21%", "FY2022": "9.38%"}),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£, single pounds as printed)", {"FY2023": 505085850, "FY2022": 472748850}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2023": "9.3%", "FY2022": "8.8%"}),
+        ("SECTION", "Liquidity Coverage Ratio (* average of preceding 12 months, per the editions' own footnote)", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (weighted value -average) (£, single pounds as printed)", {"FY2023": 119485890, "FY2022": 111134353}),
+        ("DATA", "UK 16a Cash outflows - total weighted value (£, single pounds as printed)", {"FY2023": 31080764, "FY2022": 33822803}),
+        ("DATA", "UK 16b Cash inflows - total weighted value (£, single pounds as printed)", {"FY2023": 7395149, "FY2022": 5606270}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£, single pounds as printed)", {"FY2023": 23685615, "FY2022": 28216533}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2023": "504%", "FY2022": "394%"}),
+        ("SECTION", "Net Stable Funding Ratio (** average of preceding four quarters, per the editions' own footnote)", {}),
+        ("DATA", "18 Total available stable funding (£, single pounds as printed)", {"FY2023": 521345972, "FY2022": 475506474}),
+        ("DATA", "19 Total required stable funding (£, single pounds as printed)", {"FY2023": 351654764, "FY2022": 331042832}),
+        ("DATA", "20 Net stable funding ratio (%)", {"FY2023": "148%", "FY2022": "144%"}),
+        ("SECTION", "FY2017-FY2021 editions - earlier Basel III 'Overview of prudential metrics' template. Row numbers are NOT the UK template's: plain '7a' here is the fully loaded ECL total capital ratio, not an SREP requirement.", {}),
+        ("SECTION", "Available capital (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) (£, single pounds as printed)", {"FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052746, "FY2017": 9142139}),
+        ("DATA", "1a Fully loaded ECL accounting model (£, single pounds as printed)", {"FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052746, "FY2017": 9142139}),
+        ("DATA", "2 Tier 1 (£, single pounds as printed)", {"FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052746, "FY2017": 9142139}),
+        ("DATA", "2a Fully loaded ECL accounting model Tier 1 (£, single pounds as printed)", {"FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052746, "FY2017": 9142139}),
+        ("DATA", "3 Total regulatory capital (£, single pounds as printed)", {"FY2021": 49909754, "FY2020": 38647805, "FY2019": 26211691, "FY2018": 15147620, "FY2017": 9142150}),
+        ("DATA", "3a Fully loaded ECL accounting model regulatory capital (£, single pounds as printed)", {"FY2021": 49909754, "FY2020": 38647805, "FY2019": 26211691, "FY2018": 15147620, "FY2017": 9142150}),
+        ("SECTION", "Risk-weighted assets (amounts)", {}),
+        ("DATA", "4 Total risk-weighted assets (RWA) (£, single pounds as printed)", {"FY2021": 233133033, "FY2020": 205441523, "FY2019": 114001332, "FY2018": 52495810, "FY2017": 8268832}),
+        ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}),
+        ("DATA", "5a Fully loaded ECL accounting model Common Equity Tier 1 (%)", {"FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}),
+        ("DATA", "6a Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}),
+        ("DATA", "7 Total regulatory capital ratio (%)", {"FY2021": "21.4%", "FY2020": "18.81%", "FY2019": "20.38%", "FY2018": "22.99%", "FY2017": "59.78%"}),
+        ("DATA", "7a Fully loaded ECL accounting model total capital ratio (%)", {"FY2021": "21.4%", "FY2020": "18.81%", "FY2019": "20.38%", "FY2018": "22.99%", "FY2017": "59.78%"}),
+        ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+        ("DATA", "8 Capital conservation buffer requirement (%)", {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "2.50%", "FY2018": "1.875%", "FY2017": "0%"}),
+        ("DATA", "9 Countercyclical buffer requirement (%)", {"FY2021": "0.0%", "FY2020": "0.00%", "FY2019": "1.00%", "FY2018": "1.00%", "FY2017": "0%"}),
+        ("DATA", "10 Bank G-SIB and/or D-SIB additional requirements (%)", {"FY2021": "0.0%", "FY2020": "0%", "FY2019": "0%", "FY2018": "0%", "FY2017": "0%"}),
+        ("DATA", "11 Total of Bank CET1 specific buffer requirements (%) (row 8 + row 9 + row 10)", {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "3.50%", "FY2018": "2.875%", "FY2017": "0%"}),
+        ("DATA", "12 CET1 available after meeting the Bank's minimum capital requirements (%)", {"FY2021": "10.9%", "FY2020": "4.34%", "FY2019": "4.09%", "FY2018": "8.275%", "FY2017": "0%"}),
+        ("SECTION", "Basel III Leverage Ratio", {}),
+        ("DATA", "13 Total Basel III Leverage ratio exposure measure (£, single pounds as printed)", {"FY2021": 535602756, "FY2020": 448047098, "FY2019": 264626187, "FY2018": 143250300, "FY2017": 34912525}),
+        ("DATA", "14 Basel III leverage ratio (%) (row 2 / row 13)", {"FY2021": "7.4%", "FY2020": "6.11%", "FY2019": "9.76%", "FY2018": "10.51%", "FY2017": "26.19%"}),
+        ("DATA", "14a Fully loaded ECL accounting model Basel III leverage ratio (%) (row 3 / row 13)", {"FY2021": "9.3%", "FY2020": "8.15%", "FY2019": "9.91%", "FY2018": "10.51%", "FY2017": "28.67%"}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total HQLA (£, single pounds as printed)", {"FY2021": 111539577, "FY2020": 88860083, "FY2019": 84588399, "FY2018": 56305459, "FY2017": 15024205}),
+        ("DATA", "16 Total net cash outflows (£, single pounds as printed)", {"FY2021": 11495946, "FY2020": 18303758, "FY2019": 18699805, "FY2018": 16501130, "FY2017": 2412433}),
+        ("DATA", "17 LCR ratio (%)", {"FY2021": "970.3%", "FY2020": "485.47%", "FY2019": "541.05%", "FY2018": "399.32%", "FY2017": "622.78%"}),
+        ("DATA", "18 NSFR (%)", {"FY2019": "170.9%"}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=84,
+    source_height=560,
+)
+
 metric("CET1 Capital", "£", [("Common Equity Tier 1 capital (rounded as reported)", {"FY2025": 48900000, "FY2024": 48400000, "FY2023": 46800000, "FY2022": 41400000, "FY2021": 39400000, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052747, "FY2017": 9142150})], "The annual reports state CET1 capital rounded to £m; these values preserve that stated precision and are not presented as inferred exact amounts. FY2020-FY2017 use the Total Tier 1 capital figure from each year's own regulatory capital note (no AT1 capital is disclosed in any year, so Tier 1 = CET1).")
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", {"FY2025": "16.6%", "FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"})], "FY2019 AND FY2018 REPLACED 2026-09-15 (second pass) WITH THE BANK'S OWN DIRECTLY-PRINTED FIGURES. These cells previously read 20.3% and 23.18%, values NOT disclosed as CET1 ratios at all - they were each year's Annual Report total capital ratio, copied across on the strength of the Bank's narrative that capital resources were '100% CET1'. Row 5 of the KM1 table in the Bank's own Pillar 3 disclosures prints the CET1 ratio directly for all three of these years: FY2019 20.08% and FY2018 22.83% (FY2019 edition, Table 4, p.16, and reconfirmed by the FY2020 edition's comparative), FY2017 59.78% (FY2017 edition, row 5 - which happens to equal the previously-carried value, so that cell is unchanged). A directly printed figure supersedes a derived equivalence, so the derivation is retired. The replacements reconcile: 25,830,817/128,612,638 = 20.08% and 15,052,746/65,893,829 = 22.84% against a printed 22.83%. On the FY2018 figure specifically, the Annual Report's 23.18% is not a rounding difference from 22.83% but a different measure - total EQUITY of 15,274,275 divided by RWA of 65,893,829 gives exactly 23.18%, where the regulatory ratio uses CET1 own funds of 15,052,746. FY2020 FILLED 2026-09-15: this cell previously read 'Not publicly disclosed', on the ground that from FY2020 the Bank moved to a 75% CET1 / 25% Tier 2 structure 'with no separate CET1 ratio disclosed anywhere in the report'. That was true of the ANNUAL REPORT but not of the Bank's Pillar 3 disclosure, which was not consulted at the time - row 5 of the FY2020 edition's KM1 table states the CET1 ratio as 13.34% (2019: 20.08%) directly. The FY2021 edition restates it as 13.3%, a rounding difference only. This is a disclosed figure, not a derivation. See the PILLAR 3 DISCOVERY NOTE in the source citation.")
 metric("Tier 1 Capital", "£", [("Total Tier 1 capital", {"FY2025": 48846803, "FY2024": 48365248, "FY2023": 46764475, "FY2022": 41430663, "FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052747, "FY2017": 9142150})])

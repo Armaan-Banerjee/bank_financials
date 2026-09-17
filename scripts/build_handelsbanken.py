@@ -11,6 +11,10 @@ AR2022_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/documen
 AR2021_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-141596"
 
 P3_2025_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-278302"
+# Added 2026-09-17 (KM1-015): the FY2024 Pillar 3 was linked from the Bank's own investor-relations
+# page all along but had never been cited here - the page lists a Pillar 3 for 2022, 2023, 2024 and
+# 2025, and an Annual Report for 2020-2025. It is the own-edition source for FY2024's KM1.
+P3_2024_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-265185"
 P3_2023_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-223742"
 P3_2022_URL = "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-175532"
 
@@ -431,6 +435,159 @@ HISTORICAL_P3_NOTE = (
     "'Capital resources'/'Capital requirements'/'Capital adequacy ratios'/'Leverage ratio'/'Liquidity coverage "
     f"ratio' tables of each year's own Report and Financial Statements: FY2018 ({AA2018_URL}); FY2019 and FY2020 "
     f"(both from the FY2020 report, which shows FY2019 as its own clean comparative column) ({AA2020_URL})."
+)
+
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (the UK Group's own published UK KM1 template)
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - Handelsbanken plc's own 'UK KM1 Key metrics' template, reproduced from the edition in which "
+    "each year is the REPORTING year, never from a later edition's comparative column:\n"
+    f"FY2025: Risk and Capital Information according to Pillar 3 - 2025, p.8 (folio printed on the page; the "
+    f"document's own contents page lists 'UK KM1 Key metrics ... 008') - {P3_2025_URL}\n"
+    f"FY2024: Risk and Capital Information according to Pillar 3 2024, p.6 (contents: 'UK KM1 Key metrics ... "
+    f"006') - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosure 2023, p.6 (contents: 'UK KM1 Key metrics ... 6') - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Report 2022, p.8 (contents: 'UK KM1 Key metrics ... 08') - {P3_2022_URL}\n\n"
+    "ENTITY BASIS: the UK Group (Handelsbanken plc consolidated), stated by each edition itself - \"Template "
+    "KM1 shows key metrics ... covering the UK Group's available capital\". The FY2025 edition's 'Level of "
+    "Application' section adds that \"As a UK parent institution, the UK Group satisfies its consolidated "
+    "disclosure requirements under Rule 2.4 and applies the derogation available under Rule 2.5. The UK Group "
+    "is consolidated into its third country parent, Handelsbanken Group Pillar 3 disclosure.\" So the "
+    "consolidating entity for UK disclosure purposes is Handelsbanken plc itself, not Svenska Handelsbanken "
+    "AB; no figure from the Swedish parent's consolidated Pillar 3 is used anywhere on this sheet. Same basis "
+    "as this workbook's Pillar 3 metric sheets.\n\n"
+    "FY2018-FY2021 ARE BLANK BECAUSE NO KM1 EXISTS FOR THEM, ON ANY BASIS, IN ANY EDITION - three independent "
+    "checks:\n"
+    "(a) The Bank's own investor-relations page lists a Pillar 3 report for 2022, 2023, 2024 and 2025 only, "
+    "against Annual Reports going back to 2020. The FY2022 report is the first Pillar 3 Handelsbanken plc "
+    "published.\n"
+    "(b) The FY2022 edition's KM1 prints a SINGLE column (2022) with no 2021 comparative, so there is no "
+    "comparative anywhere to fill FY2021 from. (Contrast FY2023-FY2025, each of which prints two columns.)\n"
+    "(c) The FY2021 and FY2020 Annual Reports contain no KM1 either. That is an affirmative finding, not a "
+    "failed search: both extract cleanly and richly (787k and 710k characters; 131 and 138 hits for 'capital', "
+    "322 and 280 for 'ratio', with Pillar 2A, TCR, MREL and LCR all discussed in prose) while 'Available own "
+    "funds', 'Key metrics', 'Total SREP' and 'Combined buffer requirement' each appear zero times in both.\n"
+    "FY2018-FY2021 on the other Pillar 3 sheets in this workbook therefore come from Annual Report narrative "
+    "tables on a different (and for FY2018-FY2020 a Bank-only/solo) basis - see the FY2021 basis note and "
+    "historical Pillar 3 note on those sheets. None of that is reproduced here, because this sheet reproduces "
+    "a template rather than assembling a series.\n\n"
+    "TWO SOURCE FEATURES WORTH KNOWING, BOTH LEFT AS PUBLISHED:\n"
+    "1. The FY2022 and FY2023 editions print only rows UK 7a and UK 7d of the SREP block, omitting UK 7b and "
+    "UK 7c entirely. The FY2024 edition then prints all four, and its 2023 comparative column shows UK 7b 0.5% "
+    "and UK 7c 0.7%. Those two cells are nonetheless left BLANK for FY2023 and FY2022 here: a row the bank's "
+    "own edition did not print is not the same as a figure it published, and a later edition's comparative is "
+    "not that year's own edition.\n"
+    "2. The FY2023 edition restates FY2022's liquidity comparatives materially: it shows 2022 HQLA 8,016, cash "
+    "outflows 6,444, cash inflows 3,402, net cash outflows 3,043 and an LCR of 312%, against the FY2022 "
+    "edition's own 7,904 / 6,792 / 1,415 / 5,377 and 147%. FY2022 below carries its OWN edition's figures "
+    "(147%), which is also what this workbook's LCR sheet carries. Both sets are the Bank's own published "
+    "numbers for 31 December 2022; neither has been adjusted to agree with the other.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: handelsbanken.co.uk's own investor-relations page was read directly "
+    "(/en/about-us/investor-relations). Newest Pillar 3 published: 2025. Newest Annual Report published: 2025. "
+    "Both are already the newest year in this workbook; nothing newer exists."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1 Common Equity Tier 1 (CET1) capital (£m)", {
+        "FY2025": 2155, "FY2024": 2089, "FY2023": 2214, "FY2022": 2426,
+    }),
+    ("DATA", "2 Tier 1 capital (£m)", {
+        "FY2025": 2155, "FY2024": 2089, "FY2023": 2214, "FY2022": 2426,
+    }),
+    ("DATA", "3 Total capital (£m)", {
+        "FY2025": 2456, "FY2024": 2389, "FY2023": 2614, "FY2022": 2826,
+    }),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4 Total risk-weighted exposure amount (£m)", {
+        "FY2025": 12309, "FY2024": 11605, "FY2023": 11066, "FY2022": 11404,
+    }),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5 Common Equity Tier 1 ratio (%)", {
+        "FY2025": "17.5%", "FY2024": "18.0%", "FY2023": "20.0%", "FY2022": "21.3%",
+    }),
+    ("DATA", "6 Tier 1 ratio (%)", {
+        "FY2025": "17.5%", "FY2024": "18.0%", "FY2023": "20.0%", "FY2022": "21.3%",
+    }),
+    ("DATA", "7 Total capital ratio (%)", {
+        "FY2025": "20.0%", "FY2024": "20.6%", "FY2023": "23.6%", "FY2022": "24.8%",
+    }),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {
+        "FY2025": "1.5%", "FY2024": "1.5%", "FY2023": "1.6%", "FY2022": "1.6%",
+    }),
+    ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {
+        "FY2025": "0.5%", "FY2024": "0.5%",
+    }),
+    ("DATA", "UK 7c Additional T2 SREP requirements (%)", {
+        "FY2025": "0.6%", "FY2024": "0.6%",
+    }),
+    ("DATA", "UK 7d Total SREP own funds requirements (%)", {
+        "FY2025": "10.6%", "FY2024": "10.6%", "FY2023": "10.8%", "FY2022": "10.8%",
+    }),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8 Capital conservation buffer (%)", {
+        "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%",
+    }),
+    ("DATA", "9 Institution specific countercyclical capital buffer (%)", {
+        "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%",
+    }),
+    ("DATA", "11 Combined buffer requirement (%)", {
+        "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%",
+    }),
+    ("DATA", "UK 11a Overall capital requirements (%)", {
+        "FY2025": "15.1%", "FY2024": "15.1%", "FY2023": "15.3%", "FY2022": "14.3%",
+    }),
+    ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {
+        "FY2025": "11.1%", "FY2024": "13.1%", "FY2023": "15.7%", "FY2022": "15.2%",
+    }),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13 Total exposure measure excluding claims on central banks (£m)", {
+        "FY2025": 23011, "FY2024": 22473, "FY2023": 24356, "FY2022": 25680,
+    }),
+    ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {
+        "FY2025": "9.4%", "FY2024": "9.3%", "FY2023": "9.1%", "FY2022": "9.4%",
+    }),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)", {
+        "FY2025": 8039, "FY2024": 8853, "FY2023": 7946, "FY2022": 7904,
+    }),
+    ("DATA", "UK 16a Cash outflows - Total weighted value (£m)", {
+        "FY2025": 5874, "FY2024": 6792, "FY2023": 7390, "FY2022": 6792,
+    }),
+    ("DATA", "UK 16b Cash inflows - Total weighted value (£m)", {
+        "FY2025": 1302, "FY2024": 1392, "FY2023": 2170, "FY2022": 1415,
+    }),
+    ("DATA", "16 Total net cash outflows (adjusted value) (£m)", {
+        "FY2025": 4572, "FY2024": 5400, "FY2023": 5220, "FY2022": 5377,
+    }),
+    ("DATA", "17 Liquidity coverage ratio (%)", {
+        "FY2025": "180%", "FY2024": "165%", "FY2023": "153%", "FY2022": "147%",
+    }),
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "18 Total available stable funding (£m)", {
+        "FY2025": 19047, "FY2024": 19210, "FY2023": 19525, "FY2022": 20678,
+    }),
+    ("DATA", "19 Total required stable funding (£m)", {
+        "FY2025": 14676, "FY2024": 14166, "FY2023": 14950, "FY2022": 15953,
+    }),
+    ("DATA", "20 NSFR ratio (%)", {
+        "FY2025": "130%", "FY2024": "136%", "FY2023": "131%", "FY2022": "130%",
+    }),
+]
+
+bw.add_km1_sheet(
+    title="Handelsbanken plc — KM1 Key Metrics",
+    subtitle="The UK Group's own published 'UK KM1 Key metrics' template, reproduced in its own row order with "
+             "its own template row numbers, labels and printed precision. Handelsbanken plc UK Group "
+             "(consolidated) basis, amounts in £m as published, ratios as printed. FY2018-FY2021 are blank "
+             "because the Bank published no Pillar 3 before the FY2022 edition and no edition carries a "
+             "comparative for those dates - see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=360,
 )
 
 metric(

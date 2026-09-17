@@ -413,6 +413,156 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - SBI UK's own published UK KM1 template.
+#
+# The Bank heads the table "UK KM1 - Key Metrics:" and prints it UNNUMBERED,
+# in £m, splitting it across three tables on consecutive pages: the capital /
+# SREP / buffer / leverage block, then a Liquidity Coverage Ratio table, then
+# a Net Stable Funding Ratio table. All three are reproduced here in template
+# order, which is the order the Bank prints them in.
+#
+# FY2025-FY2022 come from their own editions. FY2021 is filled from the
+# FY2022 edition's 2021 comparative column - the FY2021 edition prints a short
+# bespoke capital table that fails the row-set test. FY2026 is blank because
+# no FY2026 Pillar 3 has been published (see P3_PENDING_NOTE); FY2020 and
+# FY2019 are blank for the same row-set reason as FY2021, and neither has a
+# comparative anywhere to fill from.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50}),
+    ("DATA", "Tier 1 capital (£m)",
+     {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50}),
+    ("DATA", "Total capital (£m)",
+     {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 247.76}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£m)",
+     {"FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "17.93%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2025": "1.59%", "FY2024": "1.59%", "FY2023": "3.63%", "FY2022": "3.63%", "FY2021": "3.63%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.53%", "FY2024": "0.53%", "FY2023": "0.73%", "FY2022": "0.73%", "FY2021": "0.73%"}),
+    ("DATA", "Additional T2 SREP requirements (%)",
+     {"FY2025": "0.71%", "FY2024": "0.71%", "FY2023": "0.97%", "FY2022": "0.97%", "FY2021": "0.97%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2025": "10.82%", "FY2024": "10.82%", "FY2023": "13.33%", "FY2022": "13.33%", "FY2021": "13.33%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.48%", "FY2024": "1.39%", "FY2023": "0.60%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Systemic risk buffer (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Global Systemically Important Institution buffer (%)",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Other Systemically Important Institution buffer",
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2025": "3.98%", "FY2024": "3.89%", "FY2023": "3.10%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2025": "14.80%", "FY2024": "14.71%", "FY2023": "16.43%", "FY2022": "15.83%", "FY2021": "15.83%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "10.07%", "FY2024": "9.98%", "FY2023": "11.23%", "FY2022": "10.63%", "FY2021": "10.63%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 1919.23, "FY2024": 1774.80, "FY2023": 1864.49, "FY2022": 1749.04}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "14.43%", "FY2024": "15.32%", "FY2023": "13.93%", "FY2022": "14.25%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value -average) (£m)",
+     {"FY2025": 183.96, "FY2024": 184.64, "FY2023": 188.83, "FY2022": 142.01}),
+    ("DATA", "Cash outflows - Total weighted value (£m)",
+     {"FY2025": 80.05, "FY2024": 105.33, "FY2023": 135.01, "FY2022": 124.25}),
+    ("DATA", "Cash inflows - Total weighted value (£m)",
+     {"FY2025": 48.09, "FY2024": 49.57, "FY2023": 43.28, "FY2022": 37.66}),
+    ("DATA", "Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 36.64, "FY2024": 55.75, "FY2023": 91.72, "FY2022": 86.59}),
+    ("DATA", "Liquidity coverage ratio (%)",
+     {"FY2025": "572.38%", "FY2024": "331.15%", "FY2023": "205.87%", "FY2022": "164.00%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "Total available stable funding (£m)",
+     {"FY2025": 1782.87, "FY2024": 1687, "FY2023": 1765, "FY2022": 1571.94}),
+    ("DATA", "Total required stable funding (£m)",
+     {"FY2025": 1311.47, "FY2024": 1200, "FY2023": 1231, "FY2022": 1209.80}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - State Bank of India (UK) Limited's own 'UK KM1 - Key Metrics' template, £m and % as printed. "
+    "The Bank splits the template across three consecutive tables (capital/SREP/buffers/leverage, then "
+    "Liquidity Coverage Ratio, then Net Stable Funding Ratio):\n"
+    f"FY2025: Pillar 3 disclosure for the year ended 31 March 2025, pp. {PAGES['FY2025']} - {P3['FY2025']}\n"
+    f"FY2024: Pillar 3 disclosure for the year ended 31 March 2024, pp. {PAGES['FY2024']} - {P3['FY2024']}\n"
+    f"FY2023: Pillar 3 disclosure for the year ended 31 March 2023, pp. {PAGES['FY2023']} - {P3['FY2023']}\n"
+    f"FY2022: Pillar 3 disclosure for the year ended 31 March 2022, pp. {PAGES['FY2022']} - {P3['FY2022']}\n"
+    f"FY2021: the FY2022 disclosure's 2021 comparative column, same pages - {P3['FY2022']}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-17: sbiuk.statebank was read directly (root HTTP 200; the "
+    "/regulatory-disclosures path returns 404 and the site's own sitemap carries no Pillar 3 links). No FY2026 "
+    "Pillar 3 document is published, consistent with the Bank's pattern of publishing each year's disclosure "
+    "several months after the accounts (FY2025's went up 29 December 2025, FY2024's 28 October 2024). Checked, "
+    "none newer than FY2025.\n\n"
+    "WHY FY2026 IS BLANK: no Pillar 3 disclosure exists for the year ended 31 March 2026 yet, so there is no "
+    "KM1 table to reproduce. The FY2026 capital and ratio figures that DO appear on the metric sheets come from "
+    "the FY2026 Annual Report's own Regulatory Capital resources table, which is not this template and is not "
+    "mapped onto it here.\n\n"
+    "WHY FY2021 IS FILLED FROM THE FY2022 EDITION, AND WHY FY2020/FY2019 ARE NOT FILLED AT ALL. The FY2021, "
+    "FY2020 and FY2019 disclosures pre-date the Bank's adoption of the template: each prints a short bespoke "
+    "capital table (capital resources, RWAs and ratios, with headline LCR and NSFR percentages quoted in a "
+    "financial-ratios section) and none carries the SREP rows, the buffer block, the overall capital "
+    "requirement row or the LCR/NSFR build-ups. On the row-set test that is a different and shorter table, not "
+    "an unnumbered template. The FY2022 edition prints a full 2021 comparative column, so FY2021 is filled from "
+    "it and labelled as such; no edition anywhere prints a 2020 or 2019 comparative in template form, so those "
+    "two years stay blank. What those older tables do disclose is on the individual metric sheets.\n\n"
+    "ROWS LEFT BLANK IN THE FILLED FY2021 COLUMN: the FY2022 edition prints its leverage block, its LCR table "
+    "and its NSFR table with a 2022 column only - there is no 2021 comparative for those rows anywhere in the "
+    "document - so the FY2021 cells are blank rather than carried across from the Bank's older financial-ratios "
+    "presentation, which is a different basis. The headline FY2021 LCR (156%) and NSFR (124%) that the FY2021 "
+    "edition does quote remain on the LCR and NSFR metric sheets.\n\n"
+    "SOURCE DEFECTS, REPRODUCED NOT CORRECTED:\n"
+    "- The FY2025 edition's narrative above the table says 'the capital adequacy ratio remained strong at "
+    "20.99%, with a Tier 1 capital ratio of 20.99%' while the table itself prints 20.98% in all three ratio "
+    "rows. The table's figure is what is reproduced here, and it is what the metric sheets carry.\n"
+    "- The FY2022 edition prints '0.00%' against the 'Combined buffer requirement (as a percentage of "
+    "risk-weighted exposure amount)' CAPTION row - a section heading that should carry no figures - as well as "
+    "the real 2.50% on the 'Combined buffer requirement (%)' row beneath it. The caption is a divider here and "
+    "the stray zeroes are not reproduced as data; the row that carries the figure is.\n"
+    "- The FY2023 and FY2022 editions print the total RWEA without a thousands separator ('1276.68', "
+    "'1357.75'). That is a typographic difference only; the value is unchanged.\n"
+    "- The FY2024 and FY2023 editions print the two NSFR amount rows as whole £m ('1,687', '1,200', '1,765', "
+    "'1,231') while every other amount carries two decimals. The Bank's own precision is kept.\n"
+    "- The Bank's last buffer row is captioned 'Other Systemically Important Institution buffer', without the "
+    "'(%)' the other buffer rows carry, in every edition. Reproduced as printed.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="State Bank of India (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published 'UK KM1 - Key Metrics' template, reproduced whole in its own row order, "
+             "labels and printed precision. SBI UK prints the template unnumbered and splits it across three "
+             "consecutive tables (capital/SREP/buffers/leverage, LCR, NSFR), which are shown here in template "
+             "order. Amounts in £m, ratios as printed. FY2025-FY2022 come from their own editions; FY2021 is "
+             "the FY2022 edition's comparative column. FY2026 is blank because no FY2026 Pillar 3 has been "
+             "published, and FY2020/FY2019 pre-date the Bank's adoption of the template - see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=460,
+)
+
+
 def metric(name, unit, rows, note=None):
     bw.add_metric_sheet(name, unit, rows, sources(), note=note, first_col_width=52, source_height=150)
 

@@ -962,6 +962,174 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=44, source_height=130)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (the Bank's own published UK KM1 template)
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - Hampshire Trust Bank Plc's own 'Key Metrics' table (the UK KM1 key-metrics template, printed "
+    "with its own template row numbers but no 'KM1' caption), section 3 of each year's own Pillar 3 "
+    "Disclosures. Each year is transcribed from the edition in which it is the REPORTING year, never from a "
+    "later edition's comparative column, except FY2021 - see the FY2021 note below:\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, pp.10-11 (the table breaks across two pages; rows 18-20 "
+    f"sit alone on p.11) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 31 December 2024, pp.9-10 (same two-page break) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 31 December 2023, pp.10-11 - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 31 December 2022, pp.10-11 - {P3_2022_URL}\n"
+    f"FY2021: NOT from a FY2021 KM1 - the FY2021 edition contains no key-metrics template at all (see below) - "
+    f"but from the FY2022 edition's own 2021 comparative column, pp.10-11 - {P3_2022_URL}\n\n"
+    "ENTITY BASIS - READ THIS BEFORE COMPARING ANY FIGURE. From FY2022 the Bank prints the template TWICE "
+    "over, side by side: a 'Group' column (HTB Group - Hampshire Trust Bank Plc and its subsidiaries, the "
+    "consolidated accounts basis) beside a 'Bank' column (Hampshire Trust Bank Plc alone). The two differ "
+    "materially - at 31 December 2025 CET1 capital is 398,863 Group against 397,694 Bank, and at 31 December "
+    "2022 it is 254,118 against 180,193, a 41% gap. This workbook's Pillar 3 basis is the BANK, so rows 1-14 "
+    "below reproduce the BANK column in every year, and the Group column's figures are deliberately NOT shown "
+    "here.\n"
+    "Rows 15-20 are the one exception, and it is the Bank's own doing rather than a choice made here: HTB "
+    "reports liquidity only on a consolidated basis. Its FY2023 edition footnotes the LCR and NSFR blocks "
+    "'Consolidated only as the Group forms a Domestic Liquidity Sub-Group', and its FY2024 and FY2025 editions "
+    "'Liquidity is managed on a consolidated basis hence only Group metrics are reported' (FY2025 adding "
+    "'Quarterly weighted average metrics used'). Those three editions therefore print ONE set of liquidity "
+    "figures, not two, and it is the Group's. Rows 15-20 below are consequently on the GROUP basis in every "
+    "year, matching this workbook's own LCR and NSFR sheets.\n"
+    "FY2022 is the year where that distinction is visible rather than forced: its edition does print liquidity "
+    "for both entities. The Group figures are used here (LCR 386.9%, NSFR 152.5%) for continuity with "
+    "FY2023-FY2025 and with the LCR/NSFR sheets. RECORDED, NOT USED: the same table's BANK-level FY2022 "
+    "liquidity figures are HQLA 423,381, cash outflows 171,278, cash inflows 22,793, net cash outflows "
+    "148,484, LCR 285.1%, ASF 2,188,656, RSF 1,560,511, NSFR 140.3%.\n\n"
+    "FY2021 IS A FILLED COLUMN, AND THIS IS WHY. The FY2021 Pillar 3 edition prints no key-metrics template "
+    "anywhere - not under that name and not under any other. Its section 1.5 'Summary of key ratios' is a "
+    "five-line table (CET1 ratio, total capital ratio, risk weighted assets, leverage ratio, LCR) with no "
+    "SREP block, no buffer block, no NSFR and no template row numbers, which is a different and much shorter "
+    "table, not an unnumbered template. That was confirmed against the whole document rather than inferred "
+    "from a failed search: the FY2021 PDF extracts 181,170 characters of text and is rich in capital content "
+    "(a full Appendix 1 own-funds disclosure template on pp.57-61, an Appendix 3 IFRS 9 transitional capital "
+    "table on p.66, a capital resources table on p.15), while the phrases 'Available own funds' and 'Key "
+    "metric' appear zero times in it. So FY2021's own edition has no table to quote, and the FY2022 edition's "
+    "2021 comparative column is used instead - the whole column, including its printed 0.0% countercyclical "
+    "buffer. A filled column is always named as such here; every other year above is its own edition's.\n"
+    "FY2016-FY2020 are BLANK, and for a different reason again: the UK KM1 template arrived with the "
+    "Disclosure (CRR) Part of the PRA Rulebook on 1 January 2022, no edition before FY2022 prints one, and no "
+    "edition anywhere prints a comparative column for any of those five dates. Blank here therefore means the "
+    "Bank has never published these figures on this template, on any basis, in any edition.\n\n"
+    "UNIT. The key-metrics table itself carries no unit caption - the Bank simply prints the column headers "
+    "'Group' and 'Bank' over the year. The amounts are £'000: the same documents' own Pillar 1 credit-risk "
+    "tables are headed \"Pillar 1 £'000s\" at both Group and HTB level, and every amount below ties to the "
+    "Annual Report's £'000 statements. Each amount row carries the unit explicitly.\n\n"
+    "SDDT NOTE: the PRA waivers register records a modification for HTB of rule 2.1(9) of the SDDT Regime - "
+    "General Application Part (07/05/2026-07/05/2029). That is an ELIGIBILITY criterion, not the rule 3.1 "
+    "opt-in that removes the Pillar 3 disclosure duty, so it does not affect anything on this sheet; HTB "
+    "published a full Pillar 3 with a KM1 for FY2025 as usual. Its FY2025 edition states its disclosure "
+    "requirements are set out in Article 433b of the PRA Rulebook as a 'small and non-complex institution'.\n"
+    "LATEST-EDITION CHECK 2026-09-17: htb.co.uk's own uploads directory was checked for a newer edition. The "
+    "newest Pillar 3 published is 'HTB Pillar 3 Disclosures 2025' (uploaded 2026/04) and the newest Annual "
+    "Report is 'HTB Annual Report 2025' (uploaded 2026/04) - both already the newest year in this workbook. "
+    "Nothing newer exists."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts) — Bank (solo) basis", {}),
+    ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'000)", {
+        "FY2025": 397694, "FY2024": 300589, "FY2023": 243719, "FY2022": 180193, "FY2021": 174913,
+    }),
+    ("DATA", "2 Tier 1 capital (£'000)", {
+        "FY2025": 414725, "FY2024": 317619, "FY2023": 260749, "FY2022": 197223, "FY2021": 174913,
+    }),
+    ("DATA", "3 Total capital (£'000)", {
+        "FY2025": 494725, "FY2024": 362750, "FY2023": 311890, "FY2022": 227223, "FY2021": 204913,
+    }),
+    ("SECTION", "Risk-weighted exposure amounts — Bank (solo) basis", {}),
+    ("DATA", "4 Total risk-weighted exposure amount (£'000)", {
+        "FY2025": 2949233, "FY2024": 2207947, "FY2023": 1830864, "FY2022": 1310125, "FY2021": 922921,
+    }),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5 Common Equity Tier 1 ratio (%)", {
+        "FY2025": "13.5%", "FY2024": "13.6%", "FY2023": "13.3%", "FY2022": "13.8%", "FY2021": "18.9%",
+    }),
+    ("DATA", "6 Tier 1 ratio (%)", {
+        "FY2025": "14.1%", "FY2024": "14.4%", "FY2023": "14.2%", "FY2022": "15.1%", "FY2021": "18.9%",
+    }),
+    ("DATA", "7 Total capital ratio (%)", {
+        "FY2025": "16.8%", "FY2024": "16.4%", "FY2023": "17.0%", "FY2022": "17.4%", "FY2021": "22.2%",
+    }),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {
+        "FY2025": "0.39%", "FY2024": "0.39%", "FY2023": "0.39%", "FY2022": "0.95%", "FY2021": "0.95%",
+    }),
+    ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {
+        "FY2025": "0.13%", "FY2024": "0.13%", "FY2023": "0.13%", "FY2022": "0.32%", "FY2021": "0.32%",
+    }),
+    ("DATA", "UK 7c Additional T2 SREP requirements (%)", {
+        "FY2025": "0.18%", "FY2024": "0.18%", "FY2023": "0.18%", "FY2022": "0.42%", "FY2021": "0.42%",
+    }),
+    ("DATA", "UK 7d Total SREP own funds requirements (%) *", {
+        "FY2025": "8.70%", "FY2024": "8.70%", "FY2023": "8.70%", "FY2022": "9.69%", "FY2021": "9.69%",
+    }),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8 Capital conservation buffer (%)", {
+        "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%",
+    }),
+    ("DATA", "9 Institution specific countercyclical capital buffer (%)", {
+        "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "0.0%",
+    }),
+    ("DATA", "11 Combined buffer requirement (%)", {
+        "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%",
+    }),
+    ("DATA", "UK 11a Overall capital requirements (%)", {
+        "FY2025": "13.20%", "FY2024": "13.20%", "FY2023": "13.20%", "FY2022": "13.19%", "FY2021": "12.19%",
+    }),
+    ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {
+        "FY2025": "7.54%", "FY2024": "7.73%", "FY2023": "7.72%", "FY2022": "7.65%", "FY2021": "11.68%",
+    }),
+    ("SECTION", "Leverage ratio — Bank (solo) basis", {}),
+    ("DATA", "13 Leverage ratio total exposure measure (£'000)", {
+        "FY2025": 5497075, "FY2024": 3925344, "FY2023": 3491694, "FY2022": 2148245, "FY2021": 2190634,
+    }),
+    ("DATA", "14 Leverage ratio (%)", {
+        "FY2025": "7.5%", "FY2024": "8.1%", "FY2023": "7.5%", "FY2022": "9.2%", "FY2021": "8.0%",
+    }),
+    ("SECTION", "Liquidity Coverage Ratio * — GROUP (consolidated) basis, the only basis the Bank reports "
+                "liquidity on (Domestic Liquidity Sub-Group)", {}),
+    ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {
+        "FY2025": 1458361, "FY2024": 1014062, "FY2023": 570667, "FY2022": 479543, "FY2021": 199339,
+    }),
+    ("DATA", "UK 16a Cash outflows - Total weighted value (£'000)", {
+        "FY2025": 475658, "FY2024": 315664, "FY2023": 201820, "FY2022": 167124, "FY2021": 84833,
+    }),
+    ("DATA", "UK 16b Cash inflows - Total weighted value (£'000)", {
+        "FY2025": 55236, "FY2024": 56385, "FY2023": 54956, "FY2022": 43179, "FY2021": 21508,
+    }),
+    ("DATA", "16 Total net cash outflows (adjusted value) (£'000)", {
+        "FY2025": 420422, "FY2024": 259279, "FY2023": 146864, "FY2022": 123945, "FY2021": 63325,
+    }),
+    ("DATA", "17 Liquidity coverage ratio (%)", {
+        "FY2025": "346.9%", "FY2024": "391.1%", "FY2023": "388.6%", "FY2022": "386.9%", "FY2021": "314.8%",
+    }),
+    ("SECTION", "Net Stable Funding Ratio * — GROUP (consolidated) basis, same reason as the LCR block above", {}),
+    ("DATA", "18 Total available stable funding (£'000)", {
+        "FY2025": 5182100, "FY2024": 4312061, "FY2023": 3377489, "FY2022": 2782040, "FY2021": 1418721,
+    }),
+    ("DATA", "19 Total required stable funding (£'000)", {
+        "FY2025": 3260472, "FY2024": 2639910, "FY2023": 2287273, "FY2022": 1824815, "FY2021": 1177441,
+    }),
+    ("DATA", "20 NSFR ratio (%)", {
+        "FY2025": "158.9%", "FY2024": "163.3%", "FY2023": "147.7%", "FY2022": "152.5%", "FY2021": "120.5%",
+    }),
+]
+
+bw.add_km1_sheet(
+    title="Hampshire Trust Bank Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published UK KM1 key-metrics template, reproduced in its own row order, with its own "
+             "template row numbers, labels and printed precision. Rows 1-14 are the BANK (solo) column; rows 15-20 "
+             "are the GROUP column, because HTB reports liquidity only on a consolidated Domestic Liquidity "
+             "Sub-Group basis - see the source note. Amounts in £'000, ratios as printed. FY2021 is the FY2022 "
+             "edition's comparative column (that year's own edition prints no template at all); FY2016-FY2020 are "
+             "blank because the template pre-dates them and no edition carries a comparative for those dates.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=66,
+    source_height=380,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {

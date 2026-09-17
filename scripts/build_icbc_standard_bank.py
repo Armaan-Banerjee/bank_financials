@@ -478,6 +478,121 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Consolidated basis, {unit}" if unit else "Consolidated basis",
                          rows_data, sources_text, note=note, first_col_width=48, source_height=100)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (the bank's own UK KM1 template, reproduced whole).
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital.
+# ---------------------------------------------------------------
+# KM1-017: the 2022 and 2024 editions were NOT in this script's URL list before
+# this ticket. They were found on ICBCS's own downloads index
+# (www.icbcstandard.com/en/column/1438058492186738749.html), which lists every
+# Pillar 3 edition 2015-2025. Both are own-year editions, so FY2022 and FY2024
+# are transcribed from them rather than from a later edition's comparative.
+P3_24_URL = "https://v.icbc.com.cn/userfiles/resources/icbc/haiwai/standardbank/download/2023/2024pillar3.pdf"
+P3_22_URL = "https://v.icbc.com.cn/userfiles/resources/icbc/haiwai/standardbank/download/2023/2022pillar3re-publish.pdf"
+
+KM1_SOURCES = (
+    "Sources — ICBC Standard Bank Plc's own 'UK KM1 - Key metrics template', reproduced as published. "
+    "ICBCS Group (consolidated basis), USD millions, the presentation currency of the template itself.\n"
+    f"FY2025 & FY2024 column-header years 2025/2024: Pillar 3 Disclosures 2025, p.5 (Table: UK KM1 - Key "
+    f"metrics template, in section 'Key metrics and overview of risk-weighted exposure amounts') — {P3_25_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, p.5 (UK KM1), its OWN reporting year — {P3_24_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, p.5 (UK KM1), its OWN reporting year — {P3_23_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, p.5 (UK KM1), its OWN reporting year — {P3_22_URL}\n"
+    f"FY2021: NOT from a FY2021 KM1 — the Pillar 3 Disclosures 2021 document prints NO UK KM1 template at all "
+    f"(see the sheet note). The FY2021 column here is the 2022 edition's own '31.12.2021' COMPARATIVE column, "
+    f"p.5 — {P3_22_URL}\n"
+    "Each of FY2025/FY2024/FY2023/FY2022 is taken from the edition in which that year is the REPORTING year, "
+    "not from a later edition's comparative. Where both were available they were compared and agree digit for "
+    "digit (e.g. the 2025 edition's 2024 comparative reproduces the 2024 edition's own 2024 column exactly, and "
+    "the same holds for 2023 in the 2024 edition and 2022 in the 2023 edition).\n"
+    "Column-header style is the bank's own and changes between editions (the 2022 edition heads its columns "
+    "'31.12.2022 / 31.12.2021'; the 2023, 2024 and 2025 editions use bare years). Every row number, row label, "
+    "row order and printed precision below is the bank's own."
+)
+
+KM1_NOTE = (
+    "FY2020 AND EARLIER ARE BLANK BECAUSE THE TEMPLATE DOES NOT EXIST IN THOSE EDITIONS, not because it was "
+    "not found. All eleven ICBC Standard Bank Pillar 3 editions 2015-2025 were downloaded and searched this "
+    "session. The 2015-2021 editions print no UK KM1 template: what they do print is 'Table 9: IFRS9 "
+    "Transitionals', a DIFFERENT prescribed template (the IFRS9-FL transitional-arrangements disclosure). It "
+    "carries seventeen of its own row numbers covering CET1/Tier 1/Total capital, RWAs, the three capital "
+    "ratios and the leverage ratio, each also shown 'as if IFRS 9 transitional arrangements had not been "
+    "applied' — but it has NO SREP rows, no buffer rows, no LCR rows and no NSFR rows. On the row-set test it "
+    "is not the KM1 template, and mapping its rows onto KM1 row numbers would invent a correspondence the bank "
+    "never published. Those years' figures are on the eleven single-metric sheets instead, sourced from that "
+    "table and from Table 5 (Capital Resources), as each of those sheets' own notes records.\n\n"
+    "FY2021 IS FILLED FROM A COMPARATIVE, AND IS THE ONLY COLUMN ON THIS SHEET THAT IS. The FY2021 edition "
+    "prints no KM1 at all (above), so there is no own-edition table for that year to displace; the column is "
+    "the 2022 edition's own 31.12.2021 comparative. It is independently corroborated by the 2021 edition's own "
+    "Table 9, which prints the same CET1 capital (1,148.4), Tier 1 capital (1,308.4), Total capital (1,558.4), "
+    "RWAs (8,526.3) and leverage exposure measure (25,679.8) to the same decimal.\n\n"
+    "PRECISION DIFFERS BETWEEN THE TWO FY2021 SOURCES AND IS REPRODUCED, NOT RECONCILED. The 2021 edition's "
+    "Table 9 prints the FY2021 ratios to two decimals (CET1 13.47%, Tier 1 15.35%, Total capital 18.28%, "
+    "leverage 5.09%) while the 2022 edition's KM1 comparative rounds the same ratios to one (13.5%, 15.4%, "
+    "18.3%, 5.1%). This sheet shows the KM1 comparative as the KM1 template printed it; the single-metric "
+    "sheets show the 2021 edition's own two-decimal figures. Both are the bank's own numbers at different "
+    "printed precision, and each is left exactly as the document that carries it printed it.\n\n"
+    "SOURCE DEFECT RECORDED, NOT CORRECTED: the NSFR sheet in this workbook states that no FY2021 NSFR figure "
+    "is available because the UK NSFR regime only took effect on 1 January 2022. The 2022 edition's KM1 "
+    "nevertheless prints a 31.12.2021 NSFR comparative (121.8%, with available/required stable funding of "
+    "8,474.8 / 6,955.7). Both statements are the bank's own; the comparative is reproduced here as printed and "
+    "the NSFR sheet is left as it stands rather than being edited to agree.\n\n"
+    "Rows UK 8a, UK 9a, 10 and UK 10a are printed as an explicit '0.0%' in every edition from 2022 onward, not "
+    "as a dash, so they are recorded as zeros. Rows UK 14a-14e are absent from every edition: each one states "
+    "in a footnote that they 'have not been disclosed as these are only applicable to LREQ firms', and the 2025 "
+    "edition adds that ICBCS is out of scope of the PRA's binding leverage ratio requirement by way of a "
+    "modification by consent. That is a stated exclusion, not a gap."
+)
+
+bw.add_km1_sheet(
+    title="ICBC Standard Bank Plc — UK KM1 Key Metrics Template",
+    subtitle="ICBCS Group (consolidated basis), as published. Amounts in USD millions; ratios as printed.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital ($m)", {"FY2025": 1819.5, "FY2024": 1676.1, "FY2023": 1629.1, "FY2022": 1454.6, "FY2021": 1148.4}),
+        ("DATA", "2 Tier 1 capital ($m)", {"FY2025": 1979.5, "FY2024": 1836.1, "FY2023": 1789.1, "FY2022": 1614.6, "FY2021": 1308.4}),
+        ("DATA", "3 Total capital ($m)", {"FY2025": 2229.5, "FY2024": 2086.1, "FY2023": 2039.1, "FY2022": 1864.6, "FY2021": 1558.4}),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted exposure amount ($m)", {"FY2025": 14902.7, "FY2024": 11500.1, "FY2023": 9653.2, "FY2022": 9251.0, "FY2021": 8526.3}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2025": "12.2%", "FY2024": "14.6%", "FY2023": "16.9%", "FY2022": "15.7%", "FY2021": "13.5%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2025": "13.3%", "FY2024": "16.0%", "FY2023": "18.5%", "FY2022": "17.5%", "FY2021": "15.4%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2025": "15.0%", "FY2024": "18.1%", "FY2023": "21.1%", "FY2022": "20.2%", "FY2021": "18.3%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2025": "1.3%", "FY2024": "1.7%", "FY2023": "1.7%", "FY2022": "1.9%", "FY2021": "1.9%"}),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {"FY2025": "0.4%", "FY2024": "0.6%", "FY2023": "0.6%", "FY2022": "0.6%", "FY2021": "0.6%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2025": "0.6%", "FY2024": "0.8%", "FY2023": "0.8%", "FY2022": "0.8%", "FY2021": "0.8%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2025": "10.3%", "FY2024": "11.0%", "FY2023": "11.0%", "FY2022": "11.3%", "FY2021": "11.3%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+        ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {"FY2025": "0.0%", "FY2024": "0.0%", "FY2023": "0.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2025": "0.5%", "FY2024": "0.5%", "FY2023": "0.4%", "FY2022": "0.2%", "FY2021": "0.1%"}),
+        ("DATA", "UK 9a Systemic risk buffer (%)", {"FY2025": "0.0%", "FY2024": "0.0%", "FY2023": "0.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+        ("DATA", "10 Global Systemically Important Institution buffer (%)", {"FY2025": "0.0%", "FY2024": "0.0%", "FY2023": "0.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+        ("DATA", "UK 10a Other Systemically Important Institution buffer", {"FY2025": "0.0%", "FY2024": "0.0%", "FY2023": "0.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2025": "3.0%", "FY2024": "3.0%", "FY2023": "2.9%", "FY2022": "2.7%", "FY2021": "2.6%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2025": "13.3%", "FY2024": "14.0%", "FY2023": "13.9%", "FY2022": "14.1%", "FY2021": "13.9%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2025": "4.3%", "FY2024": "7.2%", "FY2023": "10.7%", "FY2022": "9.4%", "FY2021": "7.1%"}),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks ($m)", {"FY2025": 35294.7, "FY2024": 26624.0, "FY2023": 23301.0, "FY2022": 20958.2, "FY2021": 25679.8}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2025": "5.6%", "FY2024": "6.9%", "FY2023": "7.7%", "FY2022": "7.7%", "FY2021": "5.1%"}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) ($m)", {"FY2025": 5294.2, "FY2024": 5216.2, "FY2023": 5704.2, "FY2022": 6280.5, "FY2021": 5026.7}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value ($m)", {"FY2025": 11109.0, "FY2024": 8275.1, "FY2023": 8049.2, "FY2022": 8343.0, "FY2021": 9199.3}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value ($m)", {"FY2025": 9539.9, "FY2024": 6036.4, "FY2023": 4559.5, "FY2022": 5656.9, "FY2021": 7290.9}),
+        ("DATA", "16 Total net cash outflows (adjusted value) ($m)", {"FY2025": 2777.2, "FY2024": 2422.5, "FY2023": 3561.5, "FY2022": 2926.2, "FY2021": 2425.2}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2025": "197.3%", "FY2024": "226.7%", "FY2023": "165.3%", "FY2022": "206.0%", "FY2021": "207.3%"}),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18 Total available stable funding ($m)", {"FY2025": 9393.0, "FY2024": 8348.6, "FY2023": 7963.4, "FY2022": 8417.6, "FY2021": 8474.8}),
+        ("DATA", "19 Total required stable funding ($m)", {"FY2025": 7736.7, "FY2024": 6118.4, "FY2023": 4462.0, "FY2022": 5266.3, "FY2021": 6955.7}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%", "FY2021": "121.8%"}),
+    ],
+    sources_text=KM1_SOURCES + "\n\n" + KM1_NOTE,
+    first_col_width=96,
+    source_height=330,
+)
+
 metric(
     "CET1 Capital", "$m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2025": 1819.5, "FY2024": 1676.1, "FY2023": 1629.1, "FY2022": 1454.6, "FY2021": 1148.4, "FY2020": 1072.9, "FY2019": 948.3, "FY2018": 1204.0, "FY2017": 1229.5, "FY2016": 928.6, "FY2015": 1051.0})],
@@ -622,10 +737,25 @@ metric(
     [
         ("Total available stable funding ($m)", {"FY2025": 9393.0, "FY2024": 8348.6, "FY2023": 7963.4, "FY2022": 8417.6}),
         ("Total required stable funding ($m)", {"FY2025": 7736.7, "FY2024": 6118.4, "FY2023": 4462.0, "FY2022": 5266.3}),
-        ("Net Stable Funding Ratio (%)", {y: "Not disclosed" for y in YEARS if y not in ("FY2025", "FY2024", "FY2023", "FY2022")}),
+        ("Net Stable Funding Ratio (%)", {
+            **{"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%"},
+            **{y: "Not disclosed" for y in YEARS if y not in ("FY2025", "FY2024", "FY2023", "FY2022")},
+        }),
     ],
     p3_sources(include_pre2021=False),
-    note="NSFR was not a UK Pillar 3 disclosure requirement until 1 January 2022 (the UK NSFR regime's effective "
+    note="OMISSION CORRECTED 2026-09-17 (KM1-017): the four NSFR percentages for FY2025-FY2022 were MISSING "
+         "from this sheet until this ticket. The available and required stable funding amounts were present "
+         "for those four years but the ratio row carried no value for any of them - it was built from a "
+         "comprehension that assigned 'Not disclosed' to every year EXCEPT FY2025-FY2022, and then never "
+         "assigned those four anything at all, so they rendered blank. The bank does disclose them: they are "
+         "row 20 of its own UK KM1 template in each year's edition (FY2025 122.8%, FY2024 136.4%, FY2023 "
+         "183.3%, FY2022 163.8%), the same table this workbook's KM1 Key Metrics sheet reproduces and the same "
+         "table the stable-funding amounts on the rows above already came from. Nothing was re-derived: each "
+         "figure is transcribed from the edition in which that year is the reporting year. The omission came to "
+         "light on 2026-09-17, when this workbook gained a KM1 Key Metrics sheet reproducing row 20 of the same "
+         "table for the same years and so placed a second, independent transcription of each of those four "
+         "figures beside this sheet's.\n"
+         "NSFR was not a UK Pillar 3 disclosure requirement until 1 January 2022 (the UK NSFR regime's effective "
          "date), so no FY2015-FY2021 figures are available in any of the eleven ICBC Standard Bank Pillar 3 "
          "Disclosures reports reviewed (2015-2025). FY2015's own Pillar 3 document explicitly notes 'the NSFR is "
          "expected to go live in January 2018' (an EU timeline later superseded by the UK's own 1 January 2022 "

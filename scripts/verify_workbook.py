@@ -360,8 +360,18 @@ def _year_key(label):
 # because the word boundary lands after "mil", not after "m". The abbreviation
 # is the bank's choice and the checker has to read all of them - rewording a
 # delivered sheet to suit the parser would be normalising the source.
-_MILLION_RE = r"[£$€]\s*'?m(?:n|m|il|illion)?s?\b|\bmillions?\b"
-_THOUSAND_RE = r"[£$€]\s*'?k\b|\bthousands?\b"
+# A bank may name its currency with an ISO code instead of a symbol, and then
+# abbreviate the scale: Itau BBA writes "Group/consolidated basis, USD m" on
+# its metric sheets while its KM1 rows read "(USD'000)". The "'000" branch
+# below caught the KM1 side, nothing caught the "USD m" side, so the metric
+# sheet silently fell back to scale 1.0 and twelve amount cells were compared
+# across a 1000x gap. Only USD, EUR and GBP appear in ISO form in this corpus
+# (forms seen: "USD m", "USDm", "USD million", "GBP'm", "GBP m", "GBPm",
+# "EURm", "EUR m", "EUR million"); the "million" spellings already parsed via
+# the \bmillions?\b branch, the abbreviated ones did not.
+_CCY_RE = r"(?:[£$€]|\b(?:usd|eur|gbp))"
+_MILLION_RE = _CCY_RE + r"\s*'?m(?:n|m|il|illion)?s?\b|\bmillions?\b"
+_THOUSAND_RE = _CCY_RE + r"\s*'?k\b|\bthousands?\b"
 
 
 def _unit_scale(label):
@@ -380,7 +390,22 @@ def _unit_scale(label):
     # "£m", "£'m", "$ m", "£ mil", "£ million", "(amounts, £ million)".
     if re.search(_MILLION_RE, low):
         return 1e6
-    if "'000" in low or "000s" in low or re.search(_THOUSAND_RE, low):
+    # A bare "£000" is the same declaration as "£'000" without the apostrophe.
+    # National Bank of Egypt (UK) heads every metric sheet "£000", which no
+    # branch above reads, so those sheets fell back to scale 1.0 while the KM1
+    # rows ("(£000s)") read 1e3 - 14 amount cells were compared across a 1000x
+    # gap and reported as disagreeing while printing the SAME number on both
+    # sides ("KM1 row 1 FY2025: 172460 disagrees with 'CET1 Capital'
+    # [172460]"). Deliberately NOT mirrored into _distinct_unit_tokens: Brown
+    # Shipley labels rows "printed in £m under a £000 header", which is one
+    # unit plus a description of the header it is printed under, and counting
+    # two there would skip 4 rows that currently check.
+    if (
+        "'000" in low
+        or "000s" in low
+        or re.search(_THOUSAND_RE, low)
+        or re.search(_CCY_RE + r"\s*000\b", low)
+    ):
         return 1e3
     # An EXPLICIT bare-currency declaration means as-printed, and is different
     # from saying nothing at all. Plain pounds has no scale token, so without
@@ -529,7 +554,30 @@ KM1_LABEL_TO_METRIC_SHEET = [
     ("nsfr ratio", "NSFR"),
     # Griffin and GTBank UK spell row 20 out in full instead of "NSFR ratio".
     ("net stable funding ratio", "NSFR"),
+    # Wordings found by the rollout that resolved to NOTHING and so were never
+    # cross-checked at all (KM1-037). A silent skip looks exactly like a pass,
+    # which is why these cost nine years of Habib Bank Zurich's table and the
+    # whole of GB Bank's CET1 row before anyone noticed.
+    ("tier 1 capital ratio", "Tier 1 Ratio"),       # LHV; was hitting "tier 1 capital"
+    ("total own funds", "Total Capital"),           # Habib's real total-capital row
+    ("total risk-weighted assets", "Total RWAs"),   # Habib
+    # GB Bank's word order. Deliberately NOT the bare "common equity tier 1
+    # capital": that prefix also swallows a BUILD-UP row - Habib prints
+    # "Common Equity Tier 1 Capital: instruments and reserves", the figure
+    # BEFORE regulatory deductions - and comparing it against the
+    # post-deduction CET1 Capital sheet manufactures a disagreement out of two
+    # correct numbers. Tried, measured, four false positives, reverted. Match
+    # the specific wordings instead.
+    ("common equity tier 1 capital (cet1)", "CET1 Capital"),
+    ("common equity tier 1 capital after deductions", "CET1 Capital"),
 ]
+
+# Rows that are a REQUIREMENT or a BUFFER are not the bank's own metric, so no
+# single-metric sheet carries them. They must resolve to nothing rather than to
+# the sheet their opening words happen to name: LHV's "Total capital requirement
+# and combined buffers (%)" was being compared against the Total Capital AMOUNT
+# sheet, a percentage against a £ figure.
+KM1_LABEL_NEVER_MATCHES = re.compile(r"\brequirements?\b|\bbuffers?\b")
 
 
 def _normalise_km1_label(label):
@@ -556,6 +604,8 @@ def _metric_sheet_for(label):
     # carry, and HSBC UK prints four of them, so matching them to the plain
     # sheet manufactures a disagreement out of two correct numbers.
     if re.search(r"as if|had not been applied|fully[- ]loaded|pre[- ]ifrs", low):
+        return None
+    if KM1_LABEL_NEVER_MATCHES.search(low):
         return None
     parts = label.split()
     if parts:
@@ -624,6 +674,7 @@ def check_km1_against_metric_sheets(wb):
     print("\n=== KM1 vs Pillar 3 metric sheets ===")
     checks = mismatches = 0
     skipped_mixed_unit = []
+    unmatched = []
     for r in range(hr + 1, ws.max_row + 1):
         label = ws.cell(row=r, column=1).value
         if not isinstance(label, str):
@@ -631,6 +682,17 @@ def check_km1_against_metric_sheets(wb):
         rownum = label.split()[0] if label.split() else ""
         sheet_name = _metric_sheet_for(label)
         if sheet_name is None or sheet_name not in wb.sheetnames:
+            # A row carrying figures that resolves to no metric sheet is not
+            # cross-checked, and nothing used to say so - a silent skip is
+            # indistinguishable from a passing check. Habib Bank Zurich's RWA,
+            # CET1-ratio, leverage and LCR rows all vanished this way while the
+            # summary reported a healthy cell count, and the two rows that DID
+            # match were the two the bank mislabels. Count them (KM1-037).
+            if any(
+                _numeric(ws.cell(row=r, column=c).value) is not None
+                for c in km1_years
+            ):
+                unmatched.append(label.strip().split("[")[0].strip()[:56])
             continue
         # Per-COLUMN units (Cynergy: FY2023 in £'000, FY2022/FY2021 in plain
         # pounds) can't be resolved by a single row scale. Say so and move on,
@@ -688,11 +750,17 @@ def check_km1_against_metric_sheets(wb):
                 )
                 if km1_ccy and m_ccy and km1_ccy != m_ccy:
                     continue
+            # Keep each candidate's PRINTED value beside its numeric one: the
+            # ratio tolerance below is derived per-candidate, and deriving it
+            # from the pooled set is what made some checks unfalsifiable.
             candidates = []
             for mr in m_rows:
-                mv = _numeric(mws.cell(row=mr, column=mc).value)
+                printed_m = mws.cell(row=mr, column=mc).value
+                mv = _numeric(printed_m)
                 if mv is not None:
-                    candidates.append(mv if is_ratio else mv * m_scale)
+                    candidates.append(
+                        (mv if is_ratio else mv * m_scale, printed_m)
+                    )
             if not candidates:
                 continue
             checks += 1
@@ -703,16 +771,50 @@ def check_km1_against_metric_sheets(wb):
                 # "14.2%" in the FY2023 report and "14.15%" restated in the
                 # FY2024 one). Allow half a unit of the coarser printing, so
                 # rounding differences pass and digit slips still fire.
-                printed = [ws.cell(row=r, column=c).value] + [
-                    mws.cell(row=mr, column=mc).value for mr in m_rows
-                ]
-                dps = [
-                    _decimals(p) for p in printed if _numeric(p) is not None
-                ]
-                tol = 0.5 * (10 ** -min(dps)) if dps else 0.005
+                #
+                # THE TOLERANCE IS PER-CANDIDATE, NOT POOLED, and that is the
+                # whole point. `m_rows` can match MORE than the ratio row: a
+                # Leverage Ratio sheet also carries "Leverage ratio total
+                # exposure measure", an amount printed to zero decimals. Taking
+                # min() across the pooled set let that 0 set the tolerance for
+                # the RATIO comparison too - 0.5 * 10**0 = half a percentage
+                # point - so Cambridge & Counties' KM1 row 14 FY2021 (12.83%)
+                # passed against a Leverage Ratio sheet reading 12.90%. The
+                # check existed, counted towards the corpus total, and could
+                # not fail. A row's own printed precision is the only thing
+                # that says anything about how coarsely IT was rounded.
+                k_dp = _decimals(ws.cell(row=r, column=c).value)
+
+                def _ratio_tol(printed_m):
+                    # +1e-9 absorbs float representation error. Charity Bank's
+                    # 8.385% vs 8.39% differ by 0.005000000000000782 against a
+                    # tolerance of exactly 0.005 - the same disclosed figure at
+                    # two printed precisions, failing by 7.8e-16. Which side of
+                    # an exact tolerance a value lands on should not be decided
+                    # by binary floating point.
+                    return 0.5 * (10 ** -min(k_dp, _decimals(printed_m))) + 1e-9
+
+                ok = any(
+                    abs(target - cand) <= _ratio_tol(printed_m)
+                    for cand, printed_m in candidates
+                )
             else:
-                tol = max(abs(target) * 0.001, 1.0)
-            if not any(abs(target - cand) <= tol for cand in candidates):
+                # AMOUNTS need the same "half a unit of the coarser printing"
+                # allowance the ratio branch above gets, and for the same
+                # reason. A metric sheet in GBPm prints 299 for what the KM1
+                # prints as 299,412 in GBP'000: both are correct, and the
+                # implied rounding is +/- 0.5m. A flat 0.1% of value is only
+                # ~299k there, so a legitimate rounding difference was reported
+                # as a disagreement - Credit Suisse UK fired six times on rows
+                # 1 and 2 for exactly this. The coarser of the two declared
+                # scales is what sets the rounding, so half of it is the floor.
+                # This does NOT swallow real gaps: the same bank's row 4 FY2021
+                # (1,335,858 against 1,340) differs by 4.1m against a 0.5m
+                # floor and still fires, correctly.
+                coarser_scale = max(km1_scale, m_scale)
+                tol = max(abs(target) * 0.001, 1.0, 0.5 * coarser_scale)
+                ok = any(abs(target - cand) <= tol for cand, _ in candidates)
+            if not ok:
                 mismatches += 1
                 # Unnumbered templates have no row number to quote, so name
                 # the row by its label instead.
@@ -730,6 +832,27 @@ def check_km1_against_metric_sheets(wb):
             "A different disclosed basis (e.g. leverage including central bank claims, "
             "point-in-time vs average LCR) is a legitimate reason; a digit slip is not."
         )
+    # COVERAGE, not just agreement. "All agree" over half a table reads exactly
+    # like "all agree" over the whole of it, so say how much was not looked at.
+    # A high count here is not necessarily a fault - many KM1 rows (SREP blocks,
+    # buffer rows, HQLA build-ups) have no single-metric sheet by design - but
+    # it must be VISIBLE, because the one thing that must never happen silently
+    # is a row dropping out of the check.
+    if unmatched:
+        # Most of these are correct: a KM1 carries share capital, buffer rows,
+        # HQLA build-ups and SREP lines that no single-metric sheet holds. The
+        # number is not a fault to drive to zero - it is there so that a row
+        # which SHOULD be checked and silently is not becomes visible.
+        shown = unmatched[:8]
+        more = len(unmatched) - len(shown)
+        print(
+            f"  {len(unmatched)} further row(s) carried figures but matched no "
+            f"metric sheet, so were not cross-checked:"
+        )
+        for lbl in shown:
+            print(f"     - {lbl!r}")
+        if more:
+            print(f"     ... and {more} more")
     if skipped_mixed_unit:
         print(
             f"  {len(skipped_mixed_unit)} row(s) NOT cross-checked - the row declares more "

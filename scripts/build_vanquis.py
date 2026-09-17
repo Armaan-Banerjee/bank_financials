@@ -57,6 +57,14 @@ AR2019_URL = f"{CH_BASE}/MzI1OTkzNjY4M2FkaXF6a2N4/document?format=pdf&download=0
 AR2020_URL = f"{CH_BASE}/MzMxMjg4NDQzM2FkaXF6a2N4/document?format=pdf&download=0"
 
 P3_2021_URL = "https://www.vanquis.com/wp-content/uploads/2025/05/Provident_Financial_plc_Pillar_3_Disclosures_2021.pdf"
+# FOUND 2026-09-17 (KM1-030). The FY2022 annual Pillar 3 is published and live on
+# vanquis.com, and this script had never cited it - every FY2022 Pillar 3 figure
+# here was taken from the FY2023 document's own 31-Dec-22 comparative column
+# instead. Verified live today: HTTP 200, Content-Type application/pdf, %PDF magic
+# bytes, 165,626 bytes, 14 pages, document title "Vanquis Banking Group plc
+# Pillar 3 Disclosures 2022". It carries a full "2.2 UK KM1 - Key metrics
+# template" across printed pp.4-5.
+P3_2022_URL = "https://www.vanquis.com/wp-content/uploads/2025/05/12-04-23_Pillar-3-Disclosures-2022.pdf"
 P3_2023_URL = "https://www.vanquis.com/wp-content/uploads/2025/05/04-04-24_Pillar-3-Disclosures-2023.pdf"
 P3_2024_URL = "https://www.vanquis.com/wp-content/uploads/2025/05/Vanquis_Banking_Group_plc_Pillar_3_Disclosures_2024.pdf"
 P3_2025_URL = "https://www.vanquis.com/wp-content/uploads/2026/02/DEC25_VANQ_Pillar-3-Disclosure_Annual_FINAL.pdf"
@@ -227,6 +235,18 @@ def p3_sources(doc_label, doc_url, page_km1_1, page_km1_2=None):
     if page_km1_2:
         lines.append(f"(liquidity metrics on p.{page_km1_2} of the same document)")
     return "\n".join(lines)
+
+
+P3_2022_EDITION_NOTE = (
+    "FY2022 SOURCE CORRECTED 2026-09-17 (KM1-030): the Group's OWN FY2022 Pillar 3 Disclosures document exists "
+    "and is live on vanquis.com (" + P3_2022_URL + "); until now every FY2022 Pillar 3 figure in this workbook "
+    "was taken from the FY2023 document's 31-Dec-22 comparative column instead. All 28 rows of the two UK KM1 "
+    "columns were compared row by row and they are IDENTICAL except the three net stable funding ratio rows - "
+    "the FY2022 edition's own column prints available stable funding 2,322.9, required stable funding 1,652.3 "
+    "and NSFR 140.6%, against 2,198.0 / 1,565.7 / 140.4% in the FY2023 edition's comparative. Per the "
+    "use-each-year's-own-edition rule those three cells now come from the FY2022 edition; every other FY2022 "
+    "Pillar 3 figure in this workbook is unchanged and is now independently confirmed by its own edition."
+)
 
 
 def p3_sources_pfg(doc_label, doc_url, page):
@@ -773,6 +793,260 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Group's own published key-metrics table, reproduced
+# whole. Called BEFORE the first add_metric_sheet() so the sheet lands
+# immediately after Asset Quality and immediately before CET1 Capital.
+#
+# ENTITY: GROUP, in every year, same as every other Pillar 3 sheet in this
+# workbook. Read off the COLUMN HEADERS and the basis sections, not the cover
+# pages: the FY2022-FY2025 tables sit in documents titled "Vanquis Banking
+# Group plc Pillar 3 Disclosures" whose section 1.4 says "The results of
+# Vanquis Banking Group plc and all subsidiary undertakings have been
+# included"; the FY2021 table sits in "Provident Financial plc Pillar 3
+# Disclosures" whose section 1.1 says "the consolidated Provident Financial plc
+# Pillar 3 disclosures". Column headers are dates only (31 Dec 25 | 30 Jun 25 |
+# 31 Dec 24) and there is no Vanquis Bank Limited solo or sub-consolidated
+# column anywhere in any edition - see ENTITY_NOTE.
+#
+# TWO BLOCKS, because two different tables are being reproduced:
+#   1. "UK KM1 - Key metrics template", FY2022-FY2025 editions. Same row
+#      numbering in all four, so one block with the union of rows is right
+#      here; rows 14a-14e and 18-20 drift between editions and the drift is
+#      shown rather than smoothed.
+#   2. "Table 1: Summary of key metrics", FY2021 edition only - UNNUMBERED, and
+#      no row numbers are attached here because Provident Financial printed
+#      none. FY2020 is that table's own comparative column.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "BLOCK 1 - 'UK KM1 - Key metrics template' as printed in the FY2022-FY2025 editions "
+                "(Vanquis Banking Group plc, consolidated)", {}),
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 341.3, "FY2024": 344.3, "FY2023": 409.0, "FY2022": 478.8}),
+    ("DATA", "2    Tier 1 capital (£m)",
+     {"FY2025": 400.0, "FY2024": 344.3, "FY2023": 409.0, "FY2022": 478.8}),
+    ("DATA", "3    Total capital (£m)",
+     {"FY2025": 541.5, "FY2024": 544.3, "FY2023": 609.0, "FY2022": 678.8}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£m)",
+     {"FY2025": 2073.2, "FY2024": 1834.8, "FY2023": 1990.6, "FY2022": 1810.8}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "16.5%", "FY2024": "18.8%", "FY2023": "20.5%", "FY2022": "26.4%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "19.3%", "FY2024": "18.8%", "FY2023": "20.5%", "FY2022": "26.4%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "26.1%", "FY2024": "29.7%", "FY2023": "30.6%", "FY2022": "37.5%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.3%", "FY2024": "2.2%", "FY2023": "2.2%", "FY2022": "5.8%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.8%", "FY2024": "0.7%", "FY2023": "0.7%", "FY2022": "1.9%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "1.0%", "FY2024": "1.0%", "FY2023": "1.0%", "FY2022": "2.6%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "12.1%", "FY2024": "11.9%", "FY2023": "11.9%", "FY2022": "18.3%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    # Printed as a hyphen in every edition and every column - left BLANK, not zero.
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
+             "member state (%)", {}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global systemically important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other systemically important Institution buffer", {}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "16.6%", "FY2024": "16.4%", "FY2023": "16.4%", "FY2022": "21.8%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "9.7%", "FY2024": "12.1%", "FY2023": "13.8%", "FY2022": "16.1%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 3299.2, "FY2024": 2482.6, "FY2023": 2489.5, "FY2022": 2284.8}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "12.1%", "FY2024": "13.9%", "FY2023": "16.4%", "FY2022": "21.0%"}),
+    # Rows 14a-14e are printed as the literal string "n/a" in the FY2022, FY2023
+    # and FY2024 editions (only LREQ firms complete them, and the Group is not
+    # one) and are ABSENT ALTOGETHER from the FY2025 edition, which says so in
+    # its own footnote 2. Two different states, both preserved: "n/a" as
+    # published, and blank where the row was not printed at all.
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)",
+     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)",
+     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)",
+     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (weighted value - average) (£m)",
+     {"FY2025": 930.0, "FY2024": 802.0, "FY2023": 512.0, "FY2022": 383.2}),
+    ("DATA", "UK 16a    Cash outflows - total weighted value (£m)",
+     {"FY2025": 322.1, "FY2024": 194.8, "FY2023": 154.9, "FY2022": 110.7}),
+    ("DATA", "UK 16b    Cash inflows - total weighted value (£m)",
+     {"FY2025": 72.7, "FY2024": 78.3, "FY2023": 80.3, "FY2022": 65.5}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 249.4, "FY2024": 116.4, "FY2023": 74.7, "FY2022": 48.0}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%"}),
+    # FY2024 prints an em dash on all three rows and FY2025 omits the block
+    # entirely - both because the Group became an SDDT consolidation entity in
+    # March 2024 and the NSFR requirement was formally disapplied. A dash is not
+    # a zero, so these stay BLANK; the reason is a formal exclusion, stated in
+    # each edition's own footnote, not a gap in this transcription.
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "18    Total available stable funding (£m)", {"FY2023": 2611.7, "FY2022": 2322.9}),
+    ("DATA", "19    Total required stable funding (£m)", {"FY2023": 1828.1, "FY2022": 1652.3}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2023": "142.8%", "FY2022": "140.6%"}),
+
+    ("SECTION", "BLOCK 2 - 'Table 1: Summary of key metrics' as printed in the FY2021 edition (Provident "
+                "Financial plc, consolidated - the same continuous listed entity, renamed Vanquis Banking Group "
+                "plc in 2021). UNNUMBERED: no row numbers are shown below because the Group printed none, and "
+                "attaching the UK template's numbers would assert a correspondence it never published. This "
+                "table carries no SREP block, no buffer-detail beyond two rows, no HQLA/cash-flow components and "
+                "no NSFR. FY2020 is this same table's own 31-Dec-20 comparative column.", {}),
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£m)", {"FY2021": 506.5, "FY2020": 674.8}),
+    ("DATA", "Tier 1 capital (£m)", {"FY2021": 506.5, "FY2020": 674.8}),
+    ("DATA", "Total capital (£m)", {"FY2021": 706.5, "FY2020": 674.8}),
+    ("SECTION", "Risk weighted exposure amounts", {}),
+    ("DATA", "Total risk weighted exposure amount (£m)", {"FY2021": 1740.6, "FY2020": 1973.5}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)", {"FY2021": "29.1%", "FY2020": "34.2%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2021": "29.1%", "FY2020": "34.2%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2021": "40.6%", "FY2020": "34.2%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2021": "2.5%", "FY2020": "2.5%"}),
+    # Printed zeros, not dashes - kept as the zeros the Group published.
+    ("DATA", "Countercyclical capital buffer (%)", {"FY2021": "0.0%", "FY2020": "0.0%"}),
+    ("DATA", "Total of CET1 specific buffer requirements (%)", {"FY2021": "2.5%", "FY2020": "2.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure (£m)", {"FY2021": 2798.0, "FY2020": 3236.7}),
+    ("DATA", "Leverage ratio", {"FY2021": "18.1%", "FY2020": "20.8%"}),
+    ("SECTION", "Liquidity coverage ratio (LCR)", {}),
+    ("DATA", "Liquidity coverage ratio", {"FY2021": "2,073%", "FY2020": "2,830%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - the Group's own published key-metrics table, one edition per year, each year taken from the "
+    "edition in which it is the REPORTING year. Printed folio numbers as stated in each document's own page "
+    "footer - NOTE THE OFFSET FROM THE PDF SHEET INDEX IS NOT CONSTANT (-2 in the FY2021-FY2024 editions, 0 in "
+    "the FY2025 one), so these are the printed folios, not PDF page numbers:\n"
+    f"FY2025: Vanquis Banking Group plc Pillar 3 Disclosures - 31 December 2025, 'UK KM1 - Key metrics "
+    f"template', printed p.7 (31 Dec 25 column) - {P3_2025_URL}\n"
+    f"FY2024: Vanquis Banking Group plc Pillar 3 Disclosures - 31 December 2024, section 2.2 'UK KM1 - Key "
+    f"metrics template', printed pp.5-6 (31 Dec 24 column; the table breaks across two pages, liquidity and "
+    f"NSFR rows continue on p.6) - {P3_2024_URL}\n"
+    f"FY2023: Vanquis Banking Group plc Pillar 3 Disclosures - 31 December 2023, section 2.2, printed pp.4-5 "
+    f"(31 Dec 23 column) - {P3_2023_URL}\n"
+    f"FY2022: Vanquis Banking Group plc Pillar 3 Disclosures - 31 December 2022, section 2.2, printed pp.4-5 "
+    f"(31 Dec 22 column) - {P3_2022_URL}\n"
+    f"FY2021: Provident Financial plc Pillar 3 Disclosures - 31 December 2021, section 1.6 'Table 1: Summary of "
+    f"key metrics', printed p.2 (2021 column) - {P3_2021_URL}\n"
+    f"FY2020: the SAME Table 1, printed p.2 of the FY2021 edition, taken from its 2020 COMPARATIVE column - "
+    f"{P3_2021_URL}. The Group's own FY2020 Pillar 3 document publishes no key-metrics table of any kind (see "
+    "below), so there is no original to displace; the column is filled from the only place the Group has ever "
+    "published these figures together, and is flagged here as a comparative rather than an own-edition column. "
+    "Both columns of that table are Provident Financial plc consolidated, so no entity boundary is crossed.\n"
+    "FY2019, FY2018, FY2017, FY2016, FY2015, FY2014: BLANK - no key-metrics table exists for these dates in any "
+    "edition, on any basis. Not a sourcing gap; see the evidence below.\n\n"
+    "THREE COLUMNS PER EDITION, ONE USED. Each UK KM1 edition prints three columns - the year-end, the "
+    "preceding 30 June, and the prior year-end (e.g. '31 Dec 25 | 30 Jun 25 | 31 Dec 24'). Only the year-end "
+    "column of each edition's OWN reporting date is taken. The half-year columns are not reproduced (this "
+    "workbook has no Interim Pillar 3 sheet), and the prior-year columns are not used because each of those "
+    "years has its own edition here.\n\n"
+    + P3_2022_EDITION_NOTE + "\n\n"
+    "WHY FY2019 AND EARLIER ARE BLANK - POSITIVE EVIDENCE, NOT A FAILED SEARCH. The FY2021 edition states in "
+    "its own section 1.4 that the 'summary of key metrics' table is one of 'four new tables within this "
+    "document compared to the prior year Pillar 3 disclosures' - i.e. the Group introduced it in FY2021, and "
+    "the UK KM1 template proper arrived with the FY2022 edition under the PRA Rulebook. Corroborated by reading "
+    "the documents: the FY2014, FY2015, FY2017, FY2018, FY2019 and FY2020 editions were each searched "
+    "case-insensitively and contain ZERO occurrences of 'KM1' and ZERO of 'key metric', while the same "
+    "extractions are rich in neighbouring terms (capital 130-182 hits, ratio 38-108, leverage 12-31, buffer "
+    "31-50 per edition) - so the zeros are facts about the documents, not about the search. `pdfimages -list` "
+    "over all six returns no embedded raster larger than 300x200 anywhere, so no table is hiding inside a "
+    "bitmap either. FY2016's own document could not be read - its only Wayback capture is truncated at exactly "
+    "1,048,576 bytes (re-verified 2026-09-17; the two alternative paths in the archive's index return a 404 and "
+    "a 94-byte HTML stub) - so FY2016 is bracketed by the direct reads of FY2015 and FY2017 rather than read "
+    "itself. CORRECTION TO THE SURVEY INVENTORY: research/km1_inventory.jsonl records the FY2019 edition as "
+    "KM1_PRESENT on the strength of a header block reading '- - EU14a'. It is not a KM1. Those EU14a/EU-15a/"
+    "EU-19a tokens are rows of the EU LRCom leverage-ratio common disclosure template ('EU-14a Derogation for "
+    "SFTs...', 'Total leverage ratio exposures (sum of lines 3, 11, 16, 19, EU-19a and EU-19b)'), which the "
+    "FY2018, FY2019 and FY2020 editions all print.\n\n"
+    "ZERO GLYPHS AND 'n/a' - THREE DIFFERENT STATES, ALL PRESERVED. A HYPHEN IS NOT A ZERO: rows UK 8a, UK 9a, "
+    "10 and UK 10a are printed as '-' in every column of every UK KM1 edition and are left BLANK here. The "
+    "literal string 'n/a' is what the FY2022, FY2023 and FY2024 editions print on rows 14a-14e, and it is "
+    "reproduced as that string rather than blanked - those editions say 'cells not required have been left "
+    "blank or indicated as not applicable' and that only LREQ firms complete rows 14a-14e. The FY2025 edition "
+    "instead OMITS rows 14a-14e altogether, which is a different fact again and is shown as a blank. Printed "
+    "zeros are kept as zeros: the FY2021 edition's countercyclical capital buffer reads '0.0%' for both 2021 "
+    "and 2020.\n\n"
+    "NSFR ROWS 18-20: A FORMAL EXCLUSION, NOT AN ABSENCE. The FY2024 edition prints an em dash on all three "
+    "rows for 31 Dec 24 and 30 Jun 24 and explains why in its own footnote 3: 'In March 2024, the Group "
+    "received confirmation that it is now a Small Domestic Deposit Taker consolidation entity. As a result, the "
+    "Group is not required to report the NSFR from the 30 June 2024 reporting date onwards.' The FY2025 edition "
+    "drops the block entirely and cites the rule: 'With effect from 1 July 2024, paragraph 447(g) of the "
+    "Rulebook is disapplied for SDDTs and SDDT consolidation entities by Chapter 5 of the Liquidity (CRR).' "
+    "Both are consistent with the PRA waivers-register evidence already recorded on the NSFR sheet (FRN 221156, "
+    "Rule 3.1, start date 13/03/2024).\n\n"
+    "THE 1 JANUARY 2022 LEVERAGE BASIS BREAK (why Block 2's leverage rows must never be read across to Block "
+    "1's rows 13/14). Block 2's 'Leverage ratio' is the pre-2022 CRR Article 429 measure INCLUDING claims on "
+    "central banks - 506.5 / 2,798.0 = 18.1% for 2021, which foots. Block 1's rows 13/14 are the UK basis "
+    "EXCLUDING claims on central banks. A SOURCE DEFECT WORTH KNOWING ABOUT, recorded and not used: the FY2022 "
+    "edition's own 31-Dec-21 comparative column claims to have 'recalculated' that year onto the new basis and "
+    "prints row 14 = 21.3%, while leaving row 13 at the unchanged 2,798.0 - and 506.5 / 2,798.0 cannot produce "
+    "21.3%. That comparative column is internally inconsistent; FY2021 here comes from its own edition, which "
+    "is not.\n\n"
+    "A KNOWN AND DELIBERATE DISAGREEMENT WITH THE LCR SHEET, FY2020 - DO NOT RECONCILE IT. Block 2's FY2020 LCR "
+    "reads 2,830%, which is the figure the FY2020 edition itself states in prose ('The Group's LCR at 31 "
+    "December 2020 was 2,830%') and which the FY2021 edition's Table 1 then reproduces as its 2020 comparative. "
+    "The LCR sheet in this workbook carries 1,756% for FY2020, which is the Q4 2020 figure from that same "
+    "FY2020 document's quarterly table - explicitly 'the average of the 12 months preceding the quarter end "
+    "stated', with liquidity buffer GBP842m and net cash outflows GBP64m, the two figures the LCR sheet's other "
+    "rows carry. Point-in-time against 12-month average: two bases, both published by the same document, "
+    "neither wrong. The cross-check in verify_workbook.py reports this pair as a disagreement; it is a real "
+    "basis divergence and is recorded here rather than smoothed away.\n\n"
+    "INDEPENDENT CONFIRMATION OF THE FY2025 COLUMN AT NO COST. The Group's 1H26 half-year Pillar 3 "
+    "(https://www.vanquis.com/wp-content/uploads/2026/07/Vanquis-Banking-Group-PLC-Pillar-3-Disclosures-1H26.pdf, "
+    "printed p.3) reproduces the whole 31-Dec-25 column as its own comparative, row for row and digit for "
+    "digit, against the FY2025 annual edition transcribed above. That half-year edition is not otherwise used "
+    "in this workbook, which carries no Interim Pillar 3 sheet.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17 against the Group's own website (not Wayback, not previously cited URLs). "
+    "vanquis.com's home page returns HTTP 403 behind a WAF, so the document index was reached via "
+    "vanquis.com/robots.txt -> sitemap_index.xml -> page-sitemap.xml -> /investors/results-reports-"
+    "presentations/, which is static HTML and carries the document links. Newest ANNUAL Pillar 3 published = "
+    "31 December 2025 (already cited above); newest Group Annual Report = 2025; newest Vanquis Bank Limited "
+    "statutory accounts = 2025 (already cited on the Cash Flow Statement sheet). Nothing newer exists on any "
+    "document type. A 1H26 half-year Pillar 3 has been published since this workbook was last extended, but it "
+    "adds no new financial year.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Vanquis Bank Limited — KM1 Key Metrics",
+    subtitle="VANQUIS BANKING GROUP PLC CONSOLIDATED BASIS, £m - the same Group basis as every other Pillar 3 "
+             "sheet in this workbook, and NOT the Vanquis Bank Limited entity basis used on the Balance Sheet, "
+             "Profit & Loss, Statement of Changes in Equity, Cash Flow Statement and Asset Quality sheets. No "
+             "Bank-level key-metrics table is published in any year. Reproduced whole in the Group's own row "
+             "order, row numbering, labels and printed precision, as TWO BLOCKS: the UK KM1 template "
+             "(FY2022-FY2025 editions) and the earlier unnumbered 'Table 1: Summary of key metrics' (FY2021 "
+             "edition, Provident Financial plc, with FY2020 from its comparative column). FY2019 and earlier "
+             "publish no key-metrics table at all. See the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    years=PILLAR3_YEARS,
+    first_col_width=96,
+    source_height=900,
+)
+
+
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Vanquis Banking Group consolidated basis, {unit}" if unit else "Vanquis Banking Group consolidated basis",
                          rows_data, sources_text, note=note, first_col_width=44, source_height=120, years=PILLAR3_YEARS)
@@ -1014,13 +1288,19 @@ metric(
 metric(
     "NSFR", "£m / %",
     [
-        ("Total available stable funding", {"FY2023": 2611.7, "FY2022": 2198.0}),
-        ("Total required stable funding", {"FY2023": 1828.1, "FY2022": 1565.7}),
-        ("NSFR ratio (%)", {"FY2025": "Not required", "FY2024": "Not required", "FY2023": "142.8%", "FY2022": "140.4%", "FY2021": "Not required", "FY2020": "Not required", "FY2019": "Not required", "FY2018": "Not required", "FY2017": "Not required", "FY2016": "Not required", "FY2015": "Not required", "FY2014": "Not required"}),
+        ("Total available stable funding", {"FY2023": 2611.7, "FY2022": 2322.9}),
+        ("Total required stable funding", {"FY2023": 1828.1, "FY2022": 1652.3}),
+        ("NSFR ratio (%)", {"FY2025": "Not required", "FY2024": "Not required", "FY2023": "142.8%", "FY2022": "140.6%", "FY2021": "Not required", "FY2020": "Not required", "FY2019": "Not required", "FY2018": "Not required", "FY2017": "Not required", "FY2016": "Not required", "FY2015": "Not required", "FY2014": "Not required"}),
     ],
-    p3_sources("FY2023 & FY2022: Pillar 3 Disclosures 2023", P3_2023_URL, "4", "5") + "\n"
+    p3_sources("FY2023: Pillar 3 Disclosures 2023", P3_2023_URL, "4", "5") + "\n"
+    + p3_sources("FY2022: Pillar 3 Disclosures 2022 (the Group's OWN FY2022 edition - see note)", P3_2022_URL, "4", "5") + "\n"
     + p3_sources("FY2024/FY2025 and FY2021 basis note", P3_2024_URL, "6"),
-    note="Not required for FY2021 and earlier (NSFR only became binding in the UK from 1 January 2022) - this "
+    note=P3_2022_EDITION_NOTE + " THIS SHEET IS THE ONE PLACE THAT CHANGED: FY2022's available stable funding, "
+         "required stable funding and NSFR ratio were previously 2,198.0 / 1,565.7 / 140.4% (the FY2023 "
+         "edition's restated 31-Dec-22 comparative) and now read 2,322.9 / 1,652.3 / 140.6% as the FY2022 "
+         "edition itself published them. Both sets are genuine; the difference is a restatement between "
+         "editions, not an error in either.\n"
+         "Not required for FY2021 and earlier (NSFR only became binding in the UK from 1 January 2022) - this "
          "applies uniformly across FY2014-FY2021, consistent with the pre-existing FY2021 treatment. Not required "
          "from the 30 June 2024 reporting date onward: in March 2024 the Group was confirmed as a Small Domestic "
          "Deposit Taker consolidation entity, exempting it from NSFR reporting - so no FY2024 or FY2025 figures "
@@ -1098,7 +1378,7 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2025": "26.1%", "FY2024": "29.7%", "FY2023": "30.6%", "FY2022": "37.5%", "FY2021": "40.6%", "FY2020": "34.2%", "FY2019": "31.1%", "FY2018": "28.2%", "FY2017": "14.5%", "FY2016": "21.7%", "FY2015": "21.5%", "FY2014": "20.0%"}),
         ("Leverage Ratio", {"FY2025": "12.1%", "FY2024": "13.9%", "FY2023": "16.4%", "FY2022": "21.0%", "FY2021": "18.1%", "FY2020": "20.8%", "FY2019": "22.8%", "FY2018": "20.3%", "FY2017": "10.8%", "FY2016": "16.7%", "FY2015": "16.5%", "FY2014": "15.5%"}),
         ("LCR", {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%", "FY2021": "2,073%", "FY2020": "1,756%", "FY2019": "578%", "FY2018": "490%", "FY2017": "242%", "FY2016": "207%", "FY2015": "Not required", "FY2014": "Not required"}),
-        ("NSFR", {"FY2023": "142.8%", "FY2022": "140.4%"}),
+        ("NSFR", {"FY2023": "142.8%", "FY2022": "140.6%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. IMPORTANT: the Cash Flow Summary above is Vanquis Bank "

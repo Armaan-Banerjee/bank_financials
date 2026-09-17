@@ -536,6 +536,70 @@ CAPITAL_NOTE = ("FY2021 is Total Tier One Capital (Share Capital + Reserves) as 
                  "Regulatory Capital (Total Tier One Capital less Deductions from Capital). No "
                  "AT1/T2 capital is disclosed in any year, so CET1 = Tier 1 = Total Capital.")
 
+bw.add_km1_sheet(
+    title="Havin Bank Limited — KM1 Key Metrics",
+    subtitle="Not applicable — the Bank publishes no Pillar 3 disclosure at all for any year in this workbook "
+             "(FY2021-FY2025), so there is no UK KM1 key-metrics template to reproduce. This is the Bank's own "
+             "stated policy rather than a document this project failed to find; the evidence is set out in the "
+             "source note below.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template", {
+            y: "No Pillar 3 published for this year" for y in YEARS
+        }),
+    ],
+    sources_text=(
+        "Sources and evidence - four independent findings, each affirmative rather than a failed search:\n\n"
+        "1. THE BANK'S OWN DOCUMENT INDEX SAYS SO. Havin Bank Limited's website publishes a plain document "
+        "index at http://www.hib.uk.com/annrep.html (the homepage obfuscates its links through a "
+        "document.write() of a URL-escaped string; decoding that escaping exposes the index). Re-read "
+        "2026-09-17, it lists Pillar 3 Disclosures for 2010 through 2019 and NOTHING after 2019, alongside "
+        "Annual Reports up to 2024, and states in its own words: \"The Annual Report for 2024 is available. The "
+        "Pillar 3 Disclosure and Country by Country report are available upon request. The Pillar 3 Disclosure "
+        "for 2019 is now available online via this website.\" The Bank is therefore stating directly that 2019 "
+        "was the last edition it put online and that later ones are supplied privately on request.\n\n"
+        "2. THE ANNUAL REPORTS SAY THE SAME THING, VERBATIM, EVERY YEAR. Under the headings 'Pillar 3 "
+        "disclosures' and 'Country by country disclosures' the Directors' report reads \"Full disclosures are "
+        "available on request\" - unchanged in the newest filing.\n\n"
+        "3. NO KM1-SHAPED CONTENT EXISTS IN THE ACCOUNTS EITHER, AND THAT WAS CHECKED ON PHRASES RATHER THAN "
+        "ON A HIT COUNT. The Bank's own native-text FY2024 Annual Report (http://www.hib.uk.com/hibacc2024.pdf, "
+        "151,281 characters, re-fetched and re-read 2026-09-17 rather than relying on the scanned Companies "
+        "House image filings) contains zero occurrences of 'risk-weighted', 'own funds', 'total exposure "
+        "measure', 'combined buffer', 'countercyclical', 'Leverage ratio', 'Key metric' and 'KM1'. The single "
+        "hit for 'risk weighted' is prose (\"All capital and Risk Weighted Assets (RWA) calculations reflect "
+        "the Bank's interpretation of the current rules\") with no figure attached; the single hit for 'Pillar "
+        "3' is the 'available on request' sentence itself; and the only liquidity sentence is a compliance "
+        "assertion with no percentage (\"the Bank complies with requirements in respect of Liquidity Coverage "
+        "Ratio and Net Stable Funding Ratio laid down by the Prudential Regulation Authority\"). Nothing was "
+        "back-filled from the statutory accounts' Note 23 'Capital', which is a different basis and carries no "
+        "RWA and no CRR ratio in any year.\n\n"
+        "4. NO PARENT DISCLOSURE CARRIES THIS ENTITY EITHER. Havin Bank Limited's majority and ultimate "
+        "controlling shareholder is Banco Central de Cuba (95.6%), with Banco Popular de Ahorro and Banco de "
+        "Credito y Comercio (2.2% each), all Cuban state banks. There is no UK or EU holding company above the "
+        "Bank and therefore no parent that owes a UK Article 433 or EU Article 13(1) disclosure in which a "
+        "Havin block could appear - so the absence here is not the 'look in the parent's Pillar 3' case. The "
+        "Bank's own FY2019 edition confirms it is the top of its own UK disclosure scope: \"As the Bank does "
+        "not have any subsidiaries the disclosures are made on a solo basis.\" That FY2019 edition is a "
+        "BIPRU-basis document reporting FY2019/FY2018 only - it pre-dates the UK KM1 template entirely, "
+        "contains no KM1, and none of its figures fall in this workbook's FY2021-FY2025 window.\n\n"
+        "NOT AN SDDT CASE, CHECKED AND RULED OUT: the PRA's consolidated waivers register (checked 2026-09-17) "
+        "records only one modification for Havin Bank Ltd (FRN 204481) - CRR Article 26(3), from 23/08/2017. "
+        "There is no SDDT Regime - General Application Rule 3.1 modification, which is the opt-in that removes "
+        "the Pillar 3 disclosure duty. So the Bank's non-publication is a choice about the channel of "
+        "publication, not a regulatory exemption.\n\n"
+        "USER-ACTIONABLE, UNCHANGED: for FY2021-FY2025 this bank's non-disclosure is a POLICY choice, not a "
+        "dead link or a blocked website. The Bank states it will supply full Pillar 3 and country-by-country "
+        "disclosures ON REQUEST, so a direct written request to Havin Bank Limited is the only realistic route "
+        "to a KM1 for these years. The site has been enumerated rather than guessed at, so further online "
+        "searching is not expected to surface one.\n\n"
+        "LATEST-EDITION CHECK 2026-09-17: the Bank's own index page (above) was read directly rather than "
+        "relying on this project's cited URLs. Newest Pillar 3 published online: 2019. Newest Annual Report "
+        "listed: 2024, with the FY2025 statutory accounts already held here from Companies House. Nothing "
+        "newer exists on the Bank's own site."
+    ),
+    first_col_width=48,
+    source_height=420,
+)
+
 metric("CET1 Capital", "£", [("Common Equity Tier 1 (CET1) capital", dict(CAPITAL_VALUES))],
        p3_sources(), note=CAPITAL_NOTE)
 bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources())

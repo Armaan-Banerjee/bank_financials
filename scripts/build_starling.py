@@ -551,6 +551,153 @@ bw.add_asset_quality_sheet(
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, P3_SOURCES_ALL, note=note, first_col_width=52, source_height=150)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Starling's own published key-metrics template.
+#
+# Starling prints the template UNNUMBERED and heads it "4.1 Key metrics"
+# rather than "KM1" - the string "KM1" appears nowhere in any edition. It is
+# nonetheless the template: the full UK row set is there, in template order,
+# from own funds through SREP, buffers, leverage, LCR and NSFR. Rows are
+# therefore reproduced with the bank's own labels and no row numbers invented.
+#
+# FY2026-FY2022 come from their own editions. FY2021 is filled from the
+# FY2022 edition's 31 March 2021 comparative column - the FY2021 edition
+# pre-dates the template and prints capital, leverage and liquidity in three
+# separate bespoke sections instead. FY2020-FY2017 are blank: no Pillar 3
+# report exists for those years (Starling's Pillar 3 series begins with 2021).
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2026": 1123255, "FY2025": 1000231, "FY2024": 870769, "FY2023": 710614, "FY2022": 397502, "FY2021": 136769}),
+    ("DATA", "Tier 1 capital (£'000)",
+     {"FY2026": 1123255, "FY2025": 1000231, "FY2024": 870769, "FY2023": 710614, "FY2022": 397502, "FY2021": 136769}),
+    ("DATA", "Total capital (£'000)",
+     {"FY2026": 1123255, "FY2025": 1000231, "FY2024": 870769, "FY2023": 710614, "FY2022": 397502, "FY2021": 136769}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)",
+     {"FY2026": 3930308, "FY2025": 3170032, "FY2024": 2675477, "FY2023": 1894758, "FY2022": 994828, "FY2021": 285689}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio (%)",
+     {"FY2026": "28.58 %", "FY2025": "31.55%", "FY2024": "32.55%", "FY2023": "37.50%", "FY2022": "39.96%", "FY2021": "47.90%"}),
+    ("DATA", "Tier 1 ratio (%)",
+     {"FY2026": "28.58 %", "FY2025": "31.55%", "FY2024": "32.55%", "FY2023": "37.50%", "FY2022": "39.96%", "FY2021": "47.90%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2026": "28.58 %", "FY2025": "31.55%", "FY2024": "32.55%", "FY2023": "37.50%", "FY2022": "39.96%", "FY2021": "47.90%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)",
+     {"FY2026": "1.40 %", "FY2025": "2.94%", "FY2024": "2.94%", "FY2023": "2.94%", "FY2022": "0%", "FY2021": "5.33%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)",
+     {"FY2026": "0.46 %", "FY2025": "0.97%", "FY2024": "0.97%", "FY2023": "0.97%", "FY2022": "0%", "FY2021": "1.78%"}),
+    ("DATA", "Additional T2 SREP requirements (%)",
+     {"FY2026": "0.62 %", "FY2025": "1.31%", "FY2024": "1.31%", "FY2023": "1.31%", "FY2022": "0%", "FY2021": "2.37%"}),
+    ("DATA", "Total SREP own funds requirements (%)",
+     {"FY2026": "10.48 %", "FY2025": "13.22%", "FY2024": "13.22%", "FY2023": "13.22%", "FY2022": "8.00%", "FY2021": "17.47%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2026": "2.50 %", "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.5%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2026": "2.00 %", "FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "1%", "FY2022": "0%", "FY2021": "0%"}),
+    ("DATA", "Combined buffer requirement (%)",
+     {"FY2026": "4.50 %", "FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "3.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "Overall capital requirements (%)",
+     {"FY2026": "14.98 %", "FY2025": "17.72%", "FY2024": "17.72%", "FY2023": "16.72%", "FY2022": "10.50%", "FY2021": "19.97%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2026": "22.68 %", "FY2025": "24.12%", "FY2024": "25.11%", "FY2023": "30.07%", "FY2022": 293045, "FY2021": 79716}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2026": 12608384, "FY2025": 8976790, "FY2024": 8383435, "FY2023": 7641617, "FY2022": 5063481, "FY2021": 2546904}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2026": "8.91 %", "FY2025": "11.14%", "FY2024": "10.39%", "FY2023": "9.30%", "FY2022": "7.85%", "FY2021": "5.37%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total HQLA (average weighted value) (£'000)",
+     {"FY2026": 7038393, "FY2025": 6812037, "FY2024": 6510731, "FY2023": 6413925, "FY2022": 5128346, "FY2021": 2402238}),
+    ("DATA", "Cash outflows (total weighted value) (£'000)",
+     {"FY2026": 1326072, "FY2025": 1477094, "FY2024": 1891560, "FY2023": 1711200, "FY2022": 1211430, "FY2021": 531222}),
+    ("DATA", "Cash inflows (total weighted value) (£'000)",
+     {"FY2026": 89112, "FY2025": 156237, "FY2024": 446533, "FY2023": 311926, "FY2022": 209396, "FY2021": 41655}),
+    ("DATA", "Total net cash outflows (adjusted value) (£'000)",
+     {"FY2026": 1236960, "FY2025": 1320857, "FY2024": 1445027, "FY2023": 1399274, "FY2022": 1002034, "FY2021": 489567}),
+    ("DATA", "Liquidity Coverage Ratio (%)",
+     {"FY2026": "569.01 %", "FY2025": "515.73%", "FY2024": "450.56%", "FY2023": "460%", "FY2022": "515%", "FY2021": "522%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "Total available stable funding (£'000)",
+     {"FY2026": 14206855, "FY2025": 13448876, "FY2024": 12578157, "FY2023": 11944952, "FY2022": 10660584}),
+    ("DATA", "Total required stable funding (£'000)",
+     {"FY2026": 5754691, "FY2025": 5555204, "FY2024": 5646537, "FY2023": 4870012, "FY2022": 4088546}),
+    ("DATA", "Net stable funding ratio (%)",
+     {"FY2026": "246.87 %", "FY2025": "242.10%", "FY2024": "222.76%", "FY2023": "245%", "FY2022": "261%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Starling's own key-metrics template (section 4.1 Key metrics), £'000 and % as printed:\n"
+    f"FY2026: Starling Group Pillar 3 report 2026, as at 31 March 2026, p.22-23 - {P3_26_URL}\n"
+    f"FY2025: Starling Bank Limited Pillar 3 report 2025, as at 31 March 2025, p.22-23 - {P3_25_URL}\n"
+    f"FY2024: Starling Bank Limited Pillar 3 report 2024, as at 31 March 2024, p.23-24 - {P3_24_URL}\n"
+    f"FY2023: Starling Bank Limited Pillar 3 Report 2023, as at 31 March 2023, p.21 - {P3_23_URL}\n"
+    f"FY2022: Starling Bank Ltd Pillar 3 Report 2022, as at 31 March 2022, p.19 - {P3_22_URL}\n"
+    f"FY2021: the FY2022 report's 31 March 2021 comparative column, p.19 - {P3_22_URL}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-17: starlingbank.com's investor page refuses this project's automated "
+    "fetcher (HTTP 403 with a bot-protection HTML body) - that is a statement about our reach, NOT about what "
+    "Starling has published, so it is recorded as blocked rather than as an absence. The documents themselves "
+    "fetch normally with a browser user-agent, and were probed directly: Pillar3-2026.pdf returns a 12MB file "
+    "with %PDF magic bytes (year ended 31 March 2026, the newest edition and already held here); "
+    "Pillar3-2027.pdf does not exist, and is not due. Checked, none newer.\n\n"
+    "WHY THIS IS THE KM1 TEMPLATE EVEN THOUGH IT SAYS 'KEY METRICS'. Starling never writes 'KM1' and never "
+    "prints the template's row numbers. The test applied here is the ROW SET, not the title or the numbering: "
+    "the table carries own funds, risk-weighted exposure amounts, the three capital ratios, the four SREP rows, "
+    "the combined-buffer block, the leverage block and the full LCR and NSFR blocks, in template order. Row "
+    "numbers have deliberately NOT been added, because the bank did not print them.\n\n"
+    "ENTITY: FY2026 is Starling Group Holdings Limited's Regulatory Group (SGHL, SIHL, SBL, SFSSL and Ember), "
+    "the basis on which prudential figures are now published following the June 2025 group restructuring - the "
+    "same basis as this workbook's other FY2026 Pillar 3 columns, and the reason the FY2026 header carries the "
+    "SGHL marker. FY2025-FY2021 are Starling Bank Limited. See the entity note on the Cash Flow Statement "
+    "sheet; Starling's own cross-check confirmed the restructuring made no difference to the FY2025 capital "
+    "figures, so the series is continuous.\n\n"
+    "WHY FY2021 IS FILLED FROM THE FY2022 EDITION: the Pillar 3 Disclosures for 31 March 2021 pre-date the "
+    "template and print no key-metrics table at all - capital resources, leverage and liquidity appear in three "
+    "separate bespoke sections (5, 5.2 and 12). The FY2022 report prints a full 31 March 2021 comparative "
+    "column, which is the only place this table exists for that date, so the FY2021 column here is that "
+    "comparative and is labelled as such.\n\n"
+    "SOURCE DEFECT, REPRODUCED NOT CORRECTED: in the FY2022 edition the row 'CET1 available after meeting the "
+    "total SREP own funds requirements (%)' is captioned as a percentage but printed as a £'000 AMOUNT - "
+    "293,045 for 2022 and 79,716 for 2021. The FY2023 edition prints the same two dates as 30.07% and 29.46%. "
+    "Both columns here are the FY2022 edition's own figures, as published; the later edition's percentages have "
+    "not been substituted, and the amounts have not been converted into percentages.\n\n"
+    "CROSS-EDITION DIFFERENCES WORTH KNOWING (each year is its own edition's figure):\n"
+    "- FY2023 CET1/Tier 1/Total capital read 710,614 in the FY2023 edition and 710,616 in the FY2024 edition's "
+    "comparative. The FY2023 edition's own figure is used, as it is on the metric sheets.\n"
+    "- FY2021's LCR reads 522% in the FY2022 edition's comparative (used here) against 506% in the FY2021 "
+    "edition's own liquidity section (used on the LCR metric sheet, since that is the figure Starling published "
+    "for the year at the time). The same pair of editions differ on the FY2021 HQLA and net-outflow amounts "
+    "(2,402,238 / 489,567 here against 3,410,070 / 674,460 on the metric sheet). This is a genuine restatement "
+    "between two Starling documents, not a transcription difference, and neither figure has been altered to "
+    "match the other.\n"
+    "- FY2023's LCR and NSFR are printed to whole percents in their own edition ('460%', '245%') and to two "
+    "decimals in the FY2024 edition's comparative. The bank's own precision for the year is kept.\n\n"
+    "PRINTED-FORM NOTE: the FY2026 edition puts a space before the per-cent sign ('28.58 %') where earlier "
+    "editions do not ('31.55%'). Reproduced as published.\n\n"
+    "ROWS LEFT BLANK: FY2021's three NSFR rows are printed as 'n/a' in the FY2022 edition, with its own "
+    "footnote explaining that 'NSFR is a new requirement introduced in 2022 as part of CRR 2, thus the Bank "
+    "does not provide comparative information for the prior period'. FY2020-FY2017 are blank because Starling "
+    "published no Pillar 3 report for those years at all - its series begins with the 31 March 2021 document."
+)
+
+bw.add_km1_sheet(
+    title="Starling Bank Limited — KM1 Key Metrics",
+    subtitle="Starling's own published key-metrics template (its section 4.1), reproduced whole in the bank's "
+             "row order, labels and printed precision. Starling prints the template UNNUMBERED and never uses "
+             "the string 'KM1', so no row numbers have been added - it is the template on the row-set test. "
+             "Amounts in £'000, ratios as printed. FY2026-FY2022 come from their own editions; FY2021 is the "
+             "FY2022 edition's comparative column (that year's own report pre-dates the template). FY2026 is "
+             "the SGHL Regulatory Group basis - see the source note. FY2020-FY2017 are blank: no Pillar 3 "
+             "report exists for those years.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=460,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {"FY2026": 1123255, "FY2025": 1000231, "FY2024": 870769, "FY2023": 710614, "FY2022": 397502, "FY2021": 136769})],

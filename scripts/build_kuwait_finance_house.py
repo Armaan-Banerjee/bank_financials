@@ -527,6 +527,82 @@ def metric(name, unit, rows_data, note=None):
                          source_height=280)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (wayfinder/km1/map.md) - NOT APPLICABLE for this bank, on
+# affirmative evidence from the documents themselves rather than a failed
+# search. Called BEFORE the first add_metric_sheet() so the sheet still
+# lands in its locked position, immediately after Asset Quality and
+# immediately before CET1 Capital.
+#
+# The finding is the middle one of the map's three-way taxonomy: NOT "no
+# Pillar 3 is published" (one is, every year, as a signed appendix to the
+# Annual Report) but "Pillar 3 IS published and the KM1 template is NOT
+# used". The appendix's own "Key Metrics" block is five ratio rows, which
+# fails the row-set test of map rule 8 the same way ABC International Bank's
+# ten-row "Table 3 Key Regulatory Metrics" does.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "NOT APPLICABLE - Kuwait Finance House Plc does not use the UK KM1 key-metrics template in any year. "
+    "This is an affirmative finding read off the documents, not the result of a search that failed to find a "
+    "table.\n\n"
+    "WHAT THE BANK DOES PUBLISH. A Pillar 3 disclosure exists for every year in this workbook, but not as a "
+    "standalone document: it is printed as a signed appendix inside the Annual Report and Financial "
+    "Statements filed at Companies House, headed 'APPENDIX : PILLAR 3 DISCLOSURES (UNAUDITED)' and dated at "
+    "the top of each page. Verified page by page in the FY2025 filing (printed folios 83-85) and, under the "
+    "bank's former name Ahli United Bank (UK) PLC, in the FY2022 filing (printed folio 72).\n\n"
+    "WHY IT IS NOT THE TEMPLATE (map rule 8, the ROW-SET TEST). The appendix opens with a block headed 'Key "
+    "Metrics - Key capital and liquidity metrics at 31 December are:' and that block is FIVE ROWS, all of "
+    "them ratios, in this order: Total Capital ratio, Common Equity Tier 1 (CET1) Capital Ratio, Leverage "
+    "Ratio, Liquidity Coverage Ratio, Net Stable Funding Ratio. It carries two columns (the reporting year "
+    "and the prior year) and no row numbers. Everything else the UK KM1 template requires is simply absent: "
+    "no CET1, Tier 1 or Total capital AMOUNT rows, no total risk-weighted exposure amount, no Tier 1 ratio, "
+    "none of the UK 7a-7d SREP rows, no capital conservation or countercyclical buffer rows, no combined "
+    "buffer requirement, no leverage exposure measure, and no LCR or NSFR component build-ups (rows 15-16, "
+    "UK 16a/16b, 18-19). A five-row ratio summary is a different and shorter table, not an unnumbered KM1, "
+    "and mapping it onto template row numbers would invent a correspondence the bank never published.\n\n"
+    "WHAT IS ADJACENT TO IT, and why it still is not KM1. The same appendix does print a 'Capital Structure "
+    "and Own Funds' table (a CET1 build-up ending in Own Funds) and an 'Own Funds requirements' table (the "
+    "minimum Pillar 1 capital requirement by risk category). Those are CC1-like and OV1-like disclosures, and "
+    "this workbook already uses them - they are the source for the CET1 Capital, Tier 1 Capital, Total "
+    "Capital and RWA Breakdown sheets. They are not the KM1 template and are not reproduced here as one.\n\n"
+    "THE FIVE RATIOS THEMSELVES ARE ALREADY IN THIS WORKBOOK, on the CET1 Ratio, Total Capital Ratio, "
+    "Leverage Ratio, LCR and NSFR sheets, each with its own citation. Nothing is lost by this sheet carrying "
+    "no rows.\n\n"
+    "AN EXTRACTION CAVEAT WORTH RECORDING (map rules 13 and 15). Every Companies House filing for this "
+    "company is a whole-document scan: pdftotext returns 91 characters for the entire 91-page FY2025 filing, "
+    "and pdfimages confirms one full-page CCITT bitmap per page. Any keyword search over these documents "
+    "therefore returns zero for everything, and a zero from that instrument says nothing whatever about the "
+    "bank. The finding above was made by RENDERING the appendix pages at 150dpi and reading them by eye, "
+    "which is the only instrument that works on this filing set.\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17. The bank's own web presence, "
+    "kfhuk.com, is a single-page holding site: its robots.txt points at /sitemap.xml, and that sitemap "
+    "contains exactly one URL (/lander). There is no investor, results or regulatory-disclosures section to "
+    "check, and no Pillar 3 document is published on the bank's website at all - which is consistent with, "
+    "and explains, the disclosure living inside the Companies House filing. The newest filing available is "
+    "the Annual Report and Financial Statements 2025 (FY2025), which is already this workbook's most recent "
+    "year. NONE NEWER EXISTS; this workbook is not an edition behind.\n\n"
+    "NOTE ON kfh.co.uk, recorded so a later session does not repeat the mistake: that domain is NOT this "
+    "bank. It belongs to Kinleigh Folkard & Hayward, a London estate agency, and it resolves and serves a "
+    "normal site - so an automated check that assumed the obvious domain would have read an unrelated "
+    "company's pages as this bank's.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Kuwait Finance House Plc — KM1 Key Metrics",
+    subtitle="Not applicable - this bank publishes Pillar 3 disclosures every year (as a signed appendix "
+             "inside its Annual Report and Financial Statements) but does not use the UK KM1 key-metrics "
+             "template in any of them. Its own 'Key Metrics' block is a five-row ratio summary, which fails "
+             "the template's row-set test. See the source note for the full evidence and for what the bank "
+             "does disclose instead.",
+    rows=[("DATA", "Not applicable - the UK KM1 key-metrics template is not used in any year (see note below)",
+           {y: "" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=86,
+    source_height=460,
+)
+
+
 CET1_CAPITAL = {"FY2025": 325.3, "FY2024": 316.7, "FY2023": 323.2, "FY2022": 304.5, "FY2021": 319.0}
 TIER1_CAPITAL = CET1_CAPITAL  # no AT1 disclosed any year
 TOTAL_CAPITAL = {"FY2025": 325.3, "FY2024": 316.7, "FY2023": 323.2, "FY2022": 304.5, "FY2021": 319.8}

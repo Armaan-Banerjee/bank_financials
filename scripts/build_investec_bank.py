@@ -648,6 +648,144 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"Consolidated basis, {unit}" if unit else "Consolidated basis",
                          rows_data, sources_text, note=note, first_col_width=48, source_height=140)
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (IBP's own UK KM1 template, reproduced whole).
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources — Investec Bank plc's OWN 'Table 44: Key metrics (UK KM1)', which sits in Appendix A of each "
+    "annual Pillar 3 disclosure report. Amounts in £'million, as the template prints them.\n"
+    f"FY2026 (31 March 2026) and its 31 March 2025 comparative: Investec plc Group and Investec Bank plc "
+    f"Pillar 3 annual disclosure report 2026, p.86 (Table 44, Appendix A) — {ANNUAL_P3_2026_URL}\n"
+    f"FY2025 (31 March 2025): Investec plc Group and Investec Bank plc Pillar 3 annual disclosure report 2025, "
+    f"p.85 (Table 44, Appendix A), its OWN reporting year — {ANNUAL_P3_2025_URL}\n"
+    f"FY2024 (31 March 2024): Investec plc Group and Investec Bank plc Pillar 3 annual disclosure report 2024, "
+    f"p.85 (Table 44, Appendix A), its OWN reporting year — {ANNUAL_P3_2024_URL}\n"
+    f"FY2023 (31 March 2023): the 2024 report's own 31 March 2023 COMPARATIVE column, p.85 — "
+    f"{ANNUAL_P3_2024_URL}. No standalone annual Pillar 3 report for the 31 March 2023 period-end was ever "
+    f"published, so there is no own-edition table for that year (see the sheet note). The same figures appear "
+    f"independently as the 31 March 2023 comparative of Table 30 in the 30 September 2023 semi-annual report, "
+    f"p.43-44 — {INTERIM_2023_URL}\n"
+    "ENTITY: every column on this sheet is INVESTEC BANK PLC on its own individual (solo-consolidated) basis, "
+    "NOT the Investec plc Group. Appendix A is headed 'Investec Bank plc individual disclosure tables' and "
+    "states that IBP applies the Article 9 solo-consolidation waiver (including Investec Investments (UK) "
+    "Limited in the solo-consolidation), that the disclosures are published at individual level under Article "
+    "13 as a significant subsidiary of the Group, and it carries its own attestation signed by the IBP Finance "
+    "Director and the IBP Risk Officer. Note that page numbers are the PRINTED folios and the folio moves "
+    "between editions — Table 44 is on p.85 in the 2024 and 2025 reports and on p.86 in the 2026 report, per "
+    "each report's own list of tables."
+)
+
+KM1_NOTE = (
+    "THIS SHEET IS ON A DIFFERENT ENTITY BASIS FROM THE CAPITAL AND RWA SHEETS IN THIS WORKBOOK, AND THE "
+    "DIFFERENCE IS REAL RATHER THAN A TRANSCRIPTION ERROR. The eleven single-metric sheets and the RWA "
+    "Breakdown sheet take their capital, RWA and leverage figures from Investec Bank plc's Annual Financial "
+    "Statements, which report IBP GROUP on a consolidated basis (FY2026: CET1 £2,681m, RWAs £20,177m, CET1 "
+    "ratio 13.3%). This sheet reproduces IBP's regulatory KM1 template, which is published on the INDIVIDUAL "
+    "(solo-consolidated) basis (FY2026: CET1 £2,126m, RWAs £16,256m, CET1 ratio 13.1%). Both are Investec Bank "
+    "plc's own published figures for the same date on two different consolidation bases, and neither has been "
+    "adjusted toward the other. Rows 1-7 and 13-14 of this sheet will therefore not match the correspondingly "
+    "named single-metric sheets in any year: that gap is the distance between the individual and the "
+    "consolidated basis, both published by the bank, and not an error in either set of figures. Rows 17 and 20 "
+    "DO match, because the LCR and NSFR sheets are already sourced from this same Table 44.\n\n"
+    "ROWS 17 AND 20 ARE AVERAGES, NOT POINT-IN-TIME RATIOS, AND THE REPORT SAYS SO IN ITS OWN WORDS. The 2026 "
+    "report states at p.8 that 'The LCR disclosed in the table below reflects the 12-month average ratio and "
+    "the NSFR reflects the trailing 4-quarter average ratio', and Table 44's own footnote ** repeats it "
+    "against row 17 ('The LCR disclosed in this table is the 12-month average ratio'). The row labels on this "
+    "sheet are the bank's printed labels — 'Liquidity coverage ratio (%)' and 'NSFR ratio (%)' — so the "
+    "averaging basis is recorded here rather than added to them. This matters because the same report also "
+    "quotes point-in-time ratios in its narrative (a 349% point-in-time LCR for the Group at 31 March 2026 "
+    "against the 361% 12-month average in Table 44), and the two measures are not interchangeable. A third basis exists and is deliberately NOT "
+    "used here: Table 1 at the front of the same document is the Investec plc GROUP KM1 (FY2026: CET1 £2,571m, "
+    "RWAs £20,380m) across five quarterly columns — a different legal entity from the subject of this "
+    "workbook.\n\n"
+    "FY2023 IS FILLED FROM A COMPARATIVE COLUMN. Investec published no standalone annual Pillar 3 report for "
+    "the 31 March 2023 period-end, so no own-edition KM1 exists for FY2023 and there is nothing for the "
+    "comparative to displace. The column is the 2024 report's own 31 March 2023 comparative, corroborated "
+    "independently by the 30 September 2023 semi-annual report's Table 30 comparative for the same date.\n\n"
+    "FY2022 IS BLANK AS AN UNKNOWN, NOT AS A FINDING — the document almost certainly exists and could not be "
+    "retrieved this session. The 30 September 2022 interim report states in its own words that "
+    "'Significant subsidiary disclosures will continue to be published annually. The sub-set of Pillar 3 "
+    "disclosures for Investec Bank plc as at 31 March 2022 are included in Appendix A of the Investec plc "
+    "Group and Investec Bank plc Pillar 3 disclosure report 2022.' That report was not located: investec.com's "
+    "HTML pages returned Cloudflare 'Just a moment...' interstitials (HTTP 403) to every request this session, "
+    "including the regulatory-disclosures listing page and the en_gb sitemap, so the document index could not "
+    "be read; the content/dam PDF paths themselves do serve normally, but four constructed candidate paths for "
+    "a March-2022 report all returned 404, which is evidence about those guesses and not about the bank. "
+    "A blocked index is an unknown. Do not record FY2022 as 'not published'.\n\n"
+    "FY2021 AND EARLIER ARE BLANK BECAUSE THE TEMPLATE DOES NOT APPEAR IN THOSE EDITIONS. The standalone "
+    "Investec Bank plc Pillar 3 annual disclosure reports for 2021, 2020, 2019 and 2018 were downloaded and "
+    "searched directly. None contains the string 'KM1' or 'Key metrics' anywhere, while the same documents "
+    "return healthy counts on neighbouring prudential terms (2021: own funds 15, Common Equity Tier 1 17, "
+    "countercyclical 8, total exposure measure 3; 2020 similar), so the zeros are facts about the documents "
+    "rather than about the search. The UK KM1 template arrived with the Disclosure (CRR) Part of the PRA "
+    "Rulebook, which took effect on 1 January 2022; these editions legitimately predate it.\n\n"
+    "THE SUPPRESSED ROWS ARE A STATED EXCLUSION, NOT A GAP. Rows UK 8a, UK 9a, 10, UK 10a and UK 14a-14e do "
+    "not appear in this bank's template. Each edition footnotes the reason directly beneath the table: 'The "
+    "references identify the lines prescribed in the PRA template. Only applicable lines with assigned values "
+    "are reported. All other lines have been suppressed.' Investec plc is separately noted in the same "
+    "documents as not being a LREQ firm. The unnumbered 'as if IFRS 9 or analogous ECLs transitional "
+    "arrangements had not been applied' memorandum rows ARE part of the bank's own printed row set and are "
+    "reproduced here in their printed positions. Effective 1 April 2025 all ratios and requirements are fully "
+    "loaded with the IFRS 9 impact fully phased in, which is why the FY2026 memorandum rows equal their parent "
+    "rows exactly. Row 20's FY2023 value is printed as '136 %' with a space in the 2024 report and is recorded "
+    "as 136%. Row 12 is defined by the bank's own footnote as row 5 minus row UK 7d; row 17 is the 12-month "
+    "average LCR and row 20 the trailing four-quarter average NSFR, per the same footnotes."
+)
+
+bw.add_km1_sheet(
+    title="Investec Bank plc — UK KM1 Key Metrics Template",
+    subtitle="Investec Bank plc INDIVIDUAL (solo-consolidated) basis — Appendix A, Table 44. Amounts in £'million; ratios as printed.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (£m)", {"FY2026": 2126, "FY2025": 2006, "FY2024": 1880, "FY2023": 1764}),
+        ("DATA", "Common Equity Tier 1 (CET1) capital as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£m)", {"FY2026": 2126, "FY2025": 2004, "FY2024": 1865, "FY2023": 1725}),
+        ("DATA", "2 Tier 1 capital (£m)", {"FY2026": 2476, "FY2025": 2356, "FY2024": 2338, "FY2023": 2014}),
+        ("DATA", "Tier 1 capital as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£m)", {"FY2026": 2476, "FY2025": 2354, "FY2024": 2323, "FY2023": 1975}),
+        ("DATA", "3 Total capital (£m)", {"FY2026": 3178, "FY2025": 3051, "FY2024": 3033, "FY2023": 2778}),
+        ("DATA", "Total capital as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£m)", {"FY2026": 3178, "FY2025": 3050, "FY2024": 3019, "FY2023": 2739}),
+        ("SECTION", "Risk weighted exposure amounts", {}),
+        ("DATA", "4 Total risk weighted assets (£m)", {"FY2026": 16256, "FY2025": 15234, "FY2024": 14888, "FY2023": 14087}),
+        ("DATA", "Total risk weighted exposure amount as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£m)", {"FY2026": 16256, "FY2025": 15232, "FY2024": 14873, "FY2023": 14047}),
+        ("SECTION", "Capital ratios", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2026": "13.1%", "FY2025": "13.2%", "FY2024": "12.6%", "FY2023": "12.5%"}),
+        ("DATA", "Common Equity Tier 1 ratio (%) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied", {"FY2026": "13.1%", "FY2025": "13.2%", "FY2024": "12.5%", "FY2023": "12.3%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2026": "15.2%", "FY2025": "15.5%", "FY2024": "15.7%", "FY2023": "14.3%"}),
+        ("DATA", "Tier 1 ratio (%) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied", {"FY2026": "15.2%", "FY2025": "15.5%", "FY2024": "15.6%", "FY2023": "14.1%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2026": "19.5%", "FY2025": "20.0%", "FY2024": "20.4%", "FY2023": "19.7%"}),
+        ("DATA", "Total capital ratio (%) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied", {"FY2026": "19.5%", "FY2025": "20.0%", "FY2024": "20.3%", "FY2023": "19.5%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk weighted exposure amounts)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirement (%)", {"FY2026": "0.3%", "FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%"}),
+        ("DATA", "UK 7b Additional AT1 SREP requirement (%)", {"FY2026": "0.1%", "FY2025": "0.1%", "FY2024": "0.1%", "FY2023": "0.1%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2026": "0.2%", "FY2025": "0.1%", "FY2024": "0.1%", "FY2023": "0.1%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2026": "8.6%", "FY2025": "8.6%", "FY2024": "8.5%", "FY2023": "8.5%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%"}),
+        ("DATA", "9 Institution-specific countercyclical capital buffer (%)", {"FY2026": "1.4%", "FY2025": "1.3%", "FY2024": "1.2%", "FY2023": "0.6%"}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2026": "3.9%", "FY2025": "3.8%", "FY2024": "3.7%", "FY2023": "3.1%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2026": "12.5%", "FY2025": "12.4%", "FY2024": "12.2%", "FY2023": "11.6%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2026": "4.5%", "FY2025": "4.6%", "FY2024": "4.1%", "FY2023": "4.0%"}),
+        ("SECTION", "Leverage ratio (calculated on an end-quarter basis, UK leverage ratio framework from 1 January 2022)", {}),
+        ("DATA", "13 Leverage ratio total exposure measure (£m)", {"FY2026": 25306, "FY2025": 22173, "FY2024": 21281, "FY2023": 20218}),
+        ("DATA", "14 Leverage ratio (%)", {"FY2026": "9.8%", "FY2025": "10.6%", "FY2024": "11.0%", "FY2023": "10.0%"}),
+        ("DATA", "Leverage ratio as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (%)", {"FY2026": "9.8%", "FY2025": "10.6%", "FY2024": "10.9%", "FY2023": "9.8%"}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value-average) (£m)", {"FY2026": 6195, "FY2025": 7082, "FY2024": 6084, "FY2023": 5530}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (£m)", {"FY2026": 3358, "FY2025": 3010, "FY2024": 2783, "FY2023": 2828}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (£m)", {"FY2026": 1636, "FY2025": 1468, "FY2024": 1408, "FY2023": 1503}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£m)", {"FY2026": 1723, "FY2025": 1542, "FY2024": 1375, "FY2023": 1325}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2026": "361%", "FY2025": "465%", "FY2024": "446%", "FY2023": "431%"}),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18 Total available stable funding (£m)", {"FY2026": 21355, "FY2025": 21780, "FY2024": 21234, "FY2023": 19678}),
+        ("DATA", "19 Total required stable funding (£m)", {"FY2026": 15201, "FY2025": 14989, "FY2024": 15355, "FY2023": 14526}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2026": "141%", "FY2025": "145%", "FY2024": "138%", "FY2023": "136%"}),
+    ],
+    sources_text=KM1_SOURCES + "\n\n" + KM1_NOTE,
+    first_col_width=110,
+    source_height=400,
+)
+
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital", {"FY2026": 2681, "FY2025": 2570, "FY2024": 2409, "FY2023": 2195, "FY2022": 1982, "FY2021": 1868, "FY2020": 1819, "FY2019": 1643, "FY2018": 1621})],
@@ -736,7 +874,11 @@ LCR_NSFR_SOURCES = (
     "Sources — Investec Bank plc (IBP) solo-entity liquidity disclosures, Table 44 'Key metrics (UK KM1)', "
     "Appendix A (IBP's own Pillar 3 disclosures, signed by the IBP Finance Director and IBP Risk Officer):\n"
     f"FY2026 (31 March 2026): Investec plc Group and Investec Bank plc Pillar 3 annual disclosure report 2026, "
-    f"p.85, UK KM1 row 17 (LCR) / row 20 (NSFR) — {ANNUAL_P3_2026_URL}\n"
+    f"p.86, UK KM1 row 17 (LCR) / row 20 (NSFR) — {ANNUAL_P3_2026_URL}\n"
+    "(Folio corrected from p.85 to p.86 for the FY2026 report on 2026-09-17: Table 44 moved a page between "
+    "editions. Each report's own list of tables is the authority — it reads '44 Key metrics (UK KM1) 85' in "
+    "the 2024 and 2025 reports and '44 Key metrics (UK KM1) 86' in the 2026 report, and the printed folio "
+    "beneath the table agrees. The p.85 shown for FY2025 and FY2024 below is correct and is unchanged.)\n"
     f"FY2025 (31 March 2025): Investec plc Group and Investec Bank plc Pillar 3 annual disclosure report 2025, "
     f"p.85, UK KM1 row 17 / row 20 — {ANNUAL_P3_2025_URL}\n"
     f"FY2024 (31 March 2024): Investec plc Group and Investec Bank plc Pillar 3 annual disclosure report 2024, "

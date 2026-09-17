@@ -475,6 +475,70 @@ SOLO_BASIS_NOTE = (
     "Company column - do not divide figures across the two bases."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - NOT APPLICABLE for this entity, on affirmative evidence.
+#
+# The only UK KM1 template in the Standard Chartered document set belongs to
+# Standard Chartered PLC, the listed GROUP, and that is a different and much
+# larger entity: Table 1 of the FY2025 edition shows group RWEA of 258,031 $m
+# against 130,608 $m on this entity's solo-consolidated basis. Substituting it
+# would put a parent's consolidated figures in a subsidiary's workbook, which
+# this project does not do.
+#
+# The solo-consolidation annex that DOES cover this entity publishes 18 UK
+# templates, enumerated in the source note below, and KM1 is not among them.
+# That is an absence established by reading what the annex contains, not by a
+# failed search.
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - none for this entity. Standard Chartered Bank does not publish the UK KM1 key-metrics template "
+    "on any basis, and the Standard Chartered PLC group KM1 has NOT been substituted for it.\n\n"
+    "LATEST-EDITION CHECK, 2026-09-17: sc.com's own investor financial-results pages were read directly (HTTP "
+    "200). The newest annual Pillar 3 is the Standard Chartered PLC Full Year 2025 Pillar 3 Disclosure, which "
+    "this workbook already uses; a half-year 2026 Pillar 3 also exists and carries no solo KM1 either. Checked, "
+    "none newer.\n\n"
+    "WHAT WAS READ. The FY2025, FY2024, FY2023 and FY2022 editions were downloaded from sc.com and verified by "
+    "HTTP status, Content-Type and %PDF magic bytes, as was the FY2021 edition. Each edition from FY2022 onward "
+    "carries a solo-consolidation annex disclosing THIS entity under the UK templates: CC1, CC2, CCyB1, CCyB2, "
+    "LR1, LR2, LR3, CR1, CR1-A, CR2, CQ1, CQ3, CQ4, CQ5, CR3, CR4, LIQ1, LIQ2 and the REM1-REM5 remuneration "
+    "templates. UK KM1 is not among them in any of the four editions. The FY2021 edition has no solo-"
+    "consolidation section at all - the section was introduced in the FY2022 edition - which is why this "
+    "workbook's FY2021 metric figures come from the FY2022 edition's comparative column.\n\n"
+    "WHY THE GROUP'S KM1 IS NOT USED. Each edition states its own scope in section 1.1: 'This report presents "
+    "the annual Pillar 3 disclosures of Standard Chartered PLC (the Group)'. Its Table 1 UK KM1 is therefore the "
+    "listed group's, on the consolidated basis: total RWEA 258,031 $m at 31 December 2025, against 130,608 $m "
+    "for Standard Chartered Bank on the solo-consolidated basis on which the PRA actually sets this entity's "
+    "capital requirements. The two are different entities and the gap between them is the proof - see "
+    "SOLO_BASIS_NOTE on the metric sheets for the perimeter this workbook does use.\n\n"
+    "THE NEAREST THING TO A KM1 FOR THIS ENTITY FAILS THE ROW-SET TEST. The group Pillar 3 does print a 'Capital "
+    "resources of significant subsidiaries' table (Table 108 in the FY2025 edition) with a Standard Chartered "
+    "solo-consolidation column, and this workbook takes its capital figures from that family of tables. But it "
+    "is a short summary - own funds, RWAs and the three capital ratios - with no SREP rows (UK 7a-7d), no "
+    "combined buffer block, no UK 11a overall capital requirement row, no leverage exposure measure and no LCR "
+    "or NSFR rows. Mapping it onto KM1 row numbers would assert a correspondence Standard Chartered never "
+    "published, so it is not done here. Every figure this workbook takes from those tables is on the individual "
+    "Pillar 3 metric sheets and the RWA Breakdown sheet, where it belongs.\n\n"
+    "This is therefore 'Pillar 3 is published but the template is not used at this entity level', not 'no "
+    "Pillar 3 is published' and not a failed fetch."
+)
+
+bw.add_km1_sheet(
+    title="Standard Chartered Bank — KM1 Key Metrics",
+    subtitle="Not applicable — Standard Chartered Bank does not publish the UK KM1 key-metrics template on any "
+             "basis. The solo-consolidation annex of Standard Chartered PLC's Pillar 3 reports, which is where "
+             "this entity's own regulatory figures are disclosed, publishes 18 UK templates and KM1 is not one "
+             "of them; the only KM1 in the document set is Standard Chartered PLC GROUP's, a different and much "
+             "larger entity (258,031 $m of RWEA at 31 December 2025 against 130,608 $m here), and it has not "
+             "been substituted. See the source note for what was read and for the entity evidence.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not published at this entity level" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=48,
+    source_height=320,
+)
+
 for _metric, _unit in [
     ("CET1 Capital", "$million"), ("CET1 Ratio", "% of RWA"),
     ("Tier 1 Capital", "$million"), ("Tier 1 Ratio", "% of RWA"),

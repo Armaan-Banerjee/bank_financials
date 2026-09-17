@@ -74,14 +74,20 @@ P3_SOURCES = (
     f"Financial Statements 2021, p.9 - {AR2021_URL}. Both filings are scanned image PDFs with no text "
     "layer; retrieved from Companies House and read by OCR plus direct visual verification of the "
     "capital table on each page.\n"
-    "ACCESS NOTE (re-verified 2026-09-12): no JPMEL standalone annual-solo Pillar 3 KM1 could be "
-    "obtained for FY2021 or FY2022. JPMorgan's investor-relations host actively blocks automated "
-    "retrieval - the Pillar 3 UK archive page returns a connection failure (curl exit/HTTP 000) and "
-    "even the already-cited FY2024 static-file URL returns HTTP 403 - and the Wayback Machine holds "
-    "only a single snapshot of that archive page (4 Jan 2022), which renders its document list via "
-    "JavaScript and so archives no document links. This is an ACCESS limitation, not a confirmed "
-    "non-publication: a JPMEL solo KM1 for these years may well exist behind that block. Group and "
-    "other-entity disclosures are deliberately not substituted.\n"
+    "SETTLED 2026-09-17 - FY2021 TO FY2023 ARE A FORMAL NON-OBLIGATION, NOT AN ACCESS GAP. This "
+    "supersedes the 2026-09-12 access note that used to stand here, which said a JPMEL solo KM1 for "
+    "FY2021/FY2022 'may well exist behind that block'. It does not, and the documents say so "
+    "affirmatively. Under 'Level of Application', the FY2022 and FY2023 editions each state: \"There "
+    "are no other legal entities within the consolidated JPMCHL group which qualify as a large "
+    "subsidiary and require public disclosure\" - JPMS plc being the only one named. The FY2024 "
+    "edition then states: \"For 2024, the scope of disclosure has been broadened to include JPMEL, as "
+    "it has now met the criteria for a large subsidiary.\" So J.P. Morgan Europe Limited owed no "
+    "Pillar 3 disclosure at all before FY2024, and the FY2021-FY2023 absence is the documented "
+    "consequence of the PRA Rulebook's large-subsidiary threshold rather than anything hidden behind "
+    "a fetch failure. (JPMorgan's investor-relations host IS blocked to automated retrieval - Akamai "
+    "HTTP 403 even with a full browser User-Agent - but that is a fact about our reach and is no "
+    "longer doing any work in this note.) Group and other-entity disclosures remain deliberately not "
+    "substituted.\n"
     "MANUAL-RETRIEVAL FOLLOW-UP (2026-09-15) - CHECKED AND RULED OUT, do not re-chase these two "
     "documents: the access block above was worked around by retrieving the FY2021 and FY2022 "
     "JPMorgan UK annual Pillar 3 PDFs by hand (browser download, bypassing the HTTP 403). Both were "
@@ -95,7 +101,8 @@ P3_SOURCES = (
     "Securities plc (\"JPMS plc\")\", with zero occurrences of JPMEL anywhere. These are sibling-entity "
     "disclosures relevant to the separate J.P. Morgan Securities workbook, NOT to JPMEL; substituting "
     "their figures here would breach this project's entity-basis rule. JPMEL's own FY2021/FY2022 "
-    "annual-solo Pillar 3 KM1 therefore remains unobtained.\n"
+    "annual-solo Pillar 3 KM1 was therefore never published - see the 2026-09-17 finding above for "
+    "the documents' own explanation of why.\n"
     f"Official JPMorgan UK Pillar 3 archive - {P3_ARCHIVE_URL}\n"
     + ENTITY_NOTE
 )
@@ -365,8 +372,11 @@ GAP_NOTE = (
     "disclosure's own JPMEL comparative column).\n"
     "FY2021/FY2022 ADDED 2026-09-12 (independent disclosure audit) - these were previously blank. "
     "They are on a DIFFERENT SOURCE BASIS from FY2023-FY2025: no standalone JPMEL Pillar 3 KM1 "
-    "could be obtained for either year (JPMorgan's investor-relations host blocks automated access "
-    "- see the source note), so both are taken from the Company's own audited 'Capital risk' note "
+    "exists for either year - the FY2022 and FY2023 Pillar 3 editions both state that JPMS plc is "
+    "the only large subsidiary of JPMCHL required to disclose, and the FY2024 edition records that "
+    "JPMEL was added 'as it has now met the criteria for a large subsidiary' (settled 2026-09-17 "
+    "from the documents; see the source note) - so both are taken from the Company's own audited "
+    "'Capital risk' note "
     "in the FY2022 Annual Report (p.10), which states CET1/Total Capital Resources, Risk Weighted "
     "Assets and the Total Capital (CET1 capital) ratio for FY2022 and FY2021 side by side in £'000. "
     "Both years are internally consistent (1,417,816/322,372 = 440%; 1,559,552/632,037 = 247%). "
@@ -376,13 +386,151 @@ GAP_NOTE = (
     "it gives a Pillar 1 capital requirement of $67,624k but no RWA figure at all, so the £ "
     "comparative is both the consistent and the more complete source).\n"
     "Leverage Ratio, LCR and NSFR remain genuinely unpopulated for FY2021/FY2022: the Annual Report "
-    "capital note carries none of them, and the Pillar 3 documents that would are access-blocked. "
-    "Consolidated or other-entity values are never substituted.\n"
+    "capital note carries none of them, and no JPMEL Pillar 3 exists for those years - the Bank was "
+    "not yet a large subsidiary of JPMCHL and owed no disclosure (settled 2026-09-17 from the "
+    "FY2022/FY2023/FY2024 editions' own 'Level of Application' sections). Consolidated or "
+    "other-entity values are never substituted.\n"
     "2026-09-15: the FY2021 and FY2022 JPMorgan UK annual Pillar 3 PDFs were obtained manually "
     "(bypassing the HTTP 403) and read in full - both cover J.P. Morgan Securities plc (and, in "
     "FY2021, J.P. Morgan Markets Limited), NOT JPMEL, which appears in them only as an unused "
     "glossary acronym. They cannot fill these three rows. See the sheet's source note for the "
     "documents' own verbatim scope statements."
+)
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - JPMEL's own published UK KM1 template, reproduced whole.
+# Called BEFORE the first add_metric_sheet() so the sheet lands at index 6,
+# immediately after Asset Quality and immediately before CET1 Capital.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'mm)",
+     {"FY2025": 2594, "FY2024": 2327, "FY2023": 1429}),
+    ("DATA", "2    Tier 1 capital (£'mm)",
+     {"FY2025": 2594, "FY2024": 2327, "FY2023": 1429}),
+    ("DATA", "3    Total capital (£'mm)",
+     {"FY2025": 2594, "FY2024": 2327, "FY2023": 1429}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£'mm)",
+     {"FY2025": 1041, "FY2024": 628, "FY2023": 440}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2025": "249.23%", "FY2024": "370.56%", "FY2023": "325.00%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2025": "249.23%", "FY2024": "370.56%", "FY2023": "325.00%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2025": "249.23%", "FY2024": "370.56%", "FY2023": "325.00%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2025": "59.39%", "FY2024": "59.39%", "FY2023": "6.20%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2025": "19.80%", "FY2024": "19.80%", "FY2023": "2.07%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2025": "26.40%", "FY2024": "26.40%", "FY2023": "2.76%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2025": "113.58%", "FY2024": "113.58%", "FY2023": "19.03%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.93%", "FY2024": "1.97%", "FY2023": "0.01%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "4.43%", "FY2024": "4.47%", "FY2023": "2.51%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2025": "118.01%", "FY2024": "118.05%", "FY2023": "21.54%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "135.65%", "FY2024": "295.56%", "FY2023": "249.72%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£'mm)",
+     {"FY2025": 2756, "FY2024": 2357, "FY2023": 2173}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "94.12%", "FY2024": "98.73%", "FY2023": "65.05%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average) (£'mm)",
+     {"FY2025": 2186, "FY2024": 1905, "FY2023": 1761}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value (£'mm)",
+     {"FY2025": 3663, "FY2024": 3337, "FY2023": 2548}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£'mm)",
+     {"FY2025": 7161, "FY2024": 6862, "FY2023": 7078}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£'mm)",
+     {"FY2025": 916, "FY2024": 834, "FY2023": 637}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2025": "241.17%", "FY2024": "230.90%", "FY2023": "276.70%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (£'mm)",
+     {"FY2025": 23205, "FY2024": 20626, "FY2023": 16437}),
+    ("DATA", "19    Total required stable funding (£'mm)",
+     {"FY2025": 14932, "FY2024": 13035, "FY2023": 9116}),
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "155.44%", "FY2024": "158.44%", "FY2023": "180.37%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - J.P. Morgan Europe Limited's own published UK KM1 key-metrics template, reproduced as "
+    "printed, in £'mm (the Bank's own unit on this table - the statement sheets in this workbook are "
+    "in £'000, so read the scale on each sheet).\n"
+    "ONE DOCUMENT, TWO ENTITIES, TWO KM1 TABLES. JPMorgan publishes a single annual UK Pillar 3 report "
+    "covering its large UK subsidiaries, and from FY2024 that report carries two separate key-metrics "
+    "templates on consecutive pages: Table 1 \"UK KM1 - Key metrics template for JPMS plc\" in US$'mm, "
+    "and Table 2 \"UK KM1 - Key metrics template for JPMEL\" in £'mm. ONLY TABLE 2 IS USED HERE. Taking "
+    "the first KM1 an anchor finds would give J.P. Morgan Securities plc's dollars in place of this "
+    "entity's pounds; Table 1 belongs to the separate JP MORGAN SECURITIES workbook.\n"
+    f"FY2025: Annual Pillar 3 Disclosure 2025 (\"Main Disclosure 2025 - Large Subsidiaries\"), Table 2, "
+    f"printed Page 9, Q4 2025 column - {P3_2025_URL}\n"
+    f"FY2024: Annual Pillar 3 Disclosure 2024, Table 2, printed Page 9, Q4 2024 column - {P3_2024_URL}\n"
+    f"FY2023: Annual Pillar 3 Disclosure 2024, Table 2, printed Page 9, Q4 2023 COMPARATIVE column - "
+    f"{P3_2024_URL}. See RULE 28 NOTE below.\n"
+    "Printed folios verified 2026-09-17 against each page's own running header (\"Annual Pillar 3 "
+    "Disclosure <year> ... Page N\", read at full page width) AND against that edition's own List of "
+    "Tables; the two agree and the offset from the PDF sheet index is zero in both editions.\n\n"
+    "RULE 28 NOTE - WHY FY2023 COMES FROM THE FY2024 EDITION, AND WHY FY2022/FY2021 ARE BLANK. JPMEL "
+    "published no Pillar 3 disclosure of any kind before FY2024, so there is no FY2023 edition of this "
+    "template to take FY2023 from. That is a formal non-obligation stated in the documents themselves, "
+    "not a gap in our sourcing: under \"Level of Application\", the FY2022 and FY2023 editions each say "
+    "\"There are no other legal entities within the consolidated JPMCHL group which qualify as a large "
+    "subsidiary and require public disclosure\" (naming J.P. Morgan Securities plc as the only one), and "
+    "the FY2024 edition says \"For 2024, the scope of disclosure has been broadened to include JPMEL, as "
+    "it has now met the criteria for a large subsidiary.\" Because the FY2024 edition prints a full Q4 "
+    "2023 comparative column for JPMEL, FY2023 is filled from that comparative and the source edition "
+    "is named above. FY2022 and FY2021 stay BLANK because no edition anywhere prints a JPMEL "
+    "key-metrics column for those dates - the FY2022 edition covers JPMS plc alone and the FY2021 "
+    "edition covers JPMS plc and J.P. Morgan Markets Limited. A blank on this sheet therefore means "
+    "the figure has never been published on this basis in any edition. The FY2021/FY2022 figures the "
+    "CET1 Capital, CET1 Ratio and Total RWAs sheets DO carry come from the Company's own audited "
+    "\"Capital risk\" note in its Annual Report, a different basis, and are deliberately not brought "
+    "onto this sheet.\n\n"
+    "RESTATEMENT - ROW 12, AND FY2024 USES ITS OWN EDITION'S FIGURE. Row 12 \"CET1 available after "
+    "meeting the total SREP own funds requirements\" for Q4 2024 reads 295.56% in the FY2024 edition's "
+    "own reporting column but 256.98% in the FY2025 edition's Q4 2024 comparative. This sheet shows "
+    "295.56%, because each year is taken from the edition in which it is the reporting year. No other "
+    "row of this table differs between the two editions on the overlapping date.\n\n"
+    "ROW SET - REPRODUCED, NOT NORMALISED. JPMEL's template carries NO \"Additional leverage ratio "
+    "disclosure requirements\" block: there are no rows 14a, 14b, 14c, 14d or 14e in either edition, "
+    "where J.P. Morgan Securities plc's Table 1 in the same document does print them. Those rows are "
+    "not carried across from the sibling table. Rows UK 8a, UK 9a, 10 and UK 10a are likewise absent "
+    "from JPMEL's own table and are not shown.\n\n"
+    "ACCESS (rule 9 - a fact about our reach, not about the bank). jpmorganchaseco.gcs-web.com returns "
+    "an Akamai HTTP 403 to automated requests even with a full browser User-Agent, Referer and "
+    "Sec-Fetch headers. The FY2024 and FY2025 editions used above were retrieved from the Internet "
+    "Archive (HTTP 200, application/pdf, %PDF magic bytes, complete %%EOF). The disclosures page itself "
+    "was read on 2026-09-17 through a reader proxy: its newest annual item is \"Main Disclosure 2025 - "
+    "Large Subsidiaries\", i.e. the FY2025 edition already cited above, so this workbook is not an "
+    "edition behind. The block is never recorded as a non-publication.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="J.P. Morgan Europe Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published \"UK KM1 - Key metrics template for JPMEL\" (Table 2 of JPMorgan's annual "
+             "UK Pillar 3 report), reproduced in its own row order, row numbers, labels and printed precision. "
+             "Amounts in £'mm as published; ratios as printed. JPMEL's table carries NO rows 14a–14e, unlike the "
+             "J.P. Morgan Securities plc table printed on the facing page. FY2023 is the FY2024 edition's own "
+             "JPMEL comparative column; FY2022 and FY2021 are blank because JPMEL was not yet a large subsidiary "
+             "of JPMCHL and published no Pillar 3 at all — see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=82,
+    source_height=700,
 )
 
 metric("CET1 Capital", "£m", "Common Equity Tier 1 (CET1) capital", CAPITAL, GAP_NOTE)

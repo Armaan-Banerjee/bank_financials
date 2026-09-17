@@ -615,6 +615,168 @@ AR2025_BANK_BASIS = (
     "UK KM1 template is next published."
 )
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Shawbrook Bank Limited's OWN published UK KM1 template.
+#
+# ENTITY: every edition from FY2022 onward is a joint Shawbrook Group plc /
+# Shawbrook Bank Limited document that prints the template TWICE - once for
+# the Group in section 2 and once for the BANK in the "Disclosures for
+# Shawbrook Bank Limited" section. Only the BANK table is reproduced here,
+# matching every other Pillar 3 sheet in this workbook. The two differ
+# materially (FY2024 Group RWEA 10,146.4 against the Bank's 9,952.2).
+#
+# YEARS: FY2024/FY2023/FY2022 come from their own editions. FY2021 is filled
+# from the FY2022 edition's 31 Dec 2021 comparative column, which is the only
+# place a Bank-level KM1 for that date is printed at all (the FY2021 edition
+# pre-dates the template). FY2025 is BLANK on entity grounds: the FY2025
+# Pillar 3 is Shawbrook Group plc-only, with no Bank section to reproduce -
+# the same reason FY2025 is blank on the RWA Breakdown sheet. FY2020 and
+# earlier print a short bespoke "Key risk metrics" table that fails the
+# row-set test (no SREP block, no buffer block, no LCR/NSFR rows).
+#
+# FY2022 IS THE BANK'S OWN ORIGINALLY-PUBLISHED COLUMN, NOT THE RESTATEMENT.
+# The FY2023 edition restated 31 Dec 2022 RWEA upward by £80.6m; the metric
+# sheets below carry the restated figures and this sheet carries what the
+# FY2022 edition itself printed. Both are correct, and the gap is the
+# restatement - see the sheet note.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2024": 1297.0, "FY2023": 1122.7, "FY2022": 951.5, "FY2021": 775.7}),
+    ("DATA", "2    Tier 1 capital (£m)",
+     {"FY2024": 1422.0, "FY2023": 1247.7, "FY2022": 1076.5, "FY2021": 900.7}),
+    ("DATA", "3    Total capital (£m)",
+     {"FY2024": 1586.2, "FY2023": 1431.7, "FY2022": 1171.5, "FY2021": 995.7}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£m)",
+     {"FY2024": 9952.2, "FY2023": 8707.3, "FY2022": 7385.7, "FY2021": 6134.0}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)",
+     {"FY2024": "13.0", "FY2023": "12.9%", "FY2022": "12.9%", "FY2021": "12.6%"}),
+    ("DATA", "6    Tier 1 ratio (%)",
+     {"FY2024": "14.3", "FY2023": "14.3%", "FY2022": "14.6%", "FY2021": "14.7%"}),
+    ("DATA", "7    Total capital ratio (%)",
+     {"FY2024": "15.9", "FY2023": "16.4%", "FY2022": "15.9%", "FY2021": "16.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
+     {"FY2024": "0.7", "FY2023": "0.6%", "FY2022": "0.6%", "FY2021": "0.6%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+     {"FY2024": "0.2", "FY2023": "0.2%", "FY2022": "0.2%", "FY2021": "0.2%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
+     {"FY2024": "0.3", "FY2023": "0.3%", "FY2022": "0.3%", "FY2021": "0.3%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)",
+     {"FY2024": "9.2", "FY2023": "9.1%", "FY2022": "9.1%", "FY2021": "9.1%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)",
+     {"FY2024": "2.5", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)",
+     {"FY2024": "2.0", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2024": "4.5", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)",
+     {"FY2024": "13.7", "FY2023": "13.6%", "FY2022": "12.6%", "FY2021": "11.6%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "7.8", "FY2023": "8.4%", "FY2022": "7.8%", "FY2021": "7.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£m)",
+     {"FY2024": 17506.0, "FY2023": 15171.9, "FY2022": 12227.1}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "8.1", "FY2023": "8.2%", "FY2022": "8.8%"}),
+    ("DATA", "Total exposure measure (pre-1 Jan 2022) (£m)", {"FY2021": 11263.4}),
+    ("DATA", "Leverage ratio (pre-1 Jan 2022) (%)", {"FY2021": "8.0%"}),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average) (£m)",
+     {"FY2024": 3480.5, "FY2023": 2738.6, "FY2022": 2162.5}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value (£m)",
+     {"FY2024": 1556.3, "FY2023": 1091.4, "FY2022": 881.3}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£m)",
+     {"FY2024": 242.9, "FY2023": 210.4, "FY2022": 136.5}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£m)",
+     {"FY2024": 1313.4, "FY2023": 881.0, "FY2022": 744.8}),
+    ("DATA", "17    Liquidity coverage ratio (%)",
+     {"FY2024": "265.0", "FY2023": "310.9%", "FY2022": "290.3%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18    Total available stable funding (£m)", {"FY2024": 17182.0, "FY2023": 15956.1}),
+    ("DATA", "19    Total required stable funding (£m)", {"FY2024": 12770.5, "FY2023": 10945.9}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2024": "134.5", "FY2023": "145.8%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Shawbrook Bank Limited's own UK KM1 key-metrics template, BANK column, £m and % as printed:\n"
+    f"FY2024: Pillar 3 Disclosures 2024, 'Disclosures for Shawbrook Bank Limited (the Bank)', Table 12: UK KM1 - "
+    f"Key metrics table, BANK column (a), pp.16-17 - {P3['FY2024']}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, same section, Table 15: UK KM1 - Key metrics table, BANK column (a), "
+    f"pp.19-20 - {P3['FY2023']}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, same section, Table 15: UK KM1 - Key metrics table, BANK column (a), "
+    f"pp.18-19 - {P3['FY2022']}\n"
+    f"FY2021: the FY2022 edition's 31 Dec 2021 comparative column (e) of that same Table 15, pp.18-19 - "
+    f"{P3['FY2022']}\n\n"
+    "LATEST-EDITION CHECK, 2026-09-17: shawbrook.co.uk's own results centre "
+    "(/about-us/investors/results-centre/) was read directly (HTTP 200). The newest Pillar 3 document is "
+    "Pillar 3 Disclosures 2025, which this workbook already holds. Checked, none newer.\n\n"
+    "WHY FY2025 IS BLANK (ENTITY, NOT ABSENCE): the Pillar 3 Disclosures 2025 is a Shawbrook Group plc "
+    "document. Its contents list carries a single reporting section, 'Disclosures for Shawbrook Group plc (the "
+    "Group)', and it prints Template 1: UK KM1 once, for the Group. There is no 'Disclosures for Shawbrook Bank "
+    "Limited' section in it, so there is no Bank-level KM1 for 31 December 2025 to reproduce. The Group's table "
+    "is a different entity and has NOT been substituted - the same convention this workbook applies on the RWA "
+    "Breakdown and LCR sheets. The Bank's own Annual Report and Accounts 2025 states capital and leverage "
+    "figures but does not print the template.\n\n"
+    "WHY FY2021 IS FILLED FROM A LATER EDITION: the Pillar 3 Disclosures 2021 pre-dates the UK KM1 template "
+    "(the template first appears in Shawbrook's FY2022 edition). The FY2022 edition prints a full 31 Dec 2021 "
+    "comparative column for the Bank, which is the only Bank-level KM1 ever published for that date, so the "
+    "FY2021 column here is that comparative. It is labelled as such rather than shown as an own-edition column.\n\n"
+    "FY2022 IS THE ORIGINALLY-PUBLISHED COLUMN AND DIFFERS FROM THE METRIC SHEETS BY THE RESTATEMENT. The "
+    "FY2022 edition printed 31 Dec 2022 RWEA as 7,385.7 and ratios of 12.9% / 14.6% / 15.9%. The FY2023 edition "
+    "restated that date - its footnote 1 reads 'risk-weighted assets have increased by £80.6 million from "
+    "£7,385.8 million to £7,466.4 million' following a credit valuation adjustment and counterparty credit risk "
+    "adjustment on the Bank's structured entities' interest rate swap derivatives - giving 7,466.4 and 12.7% / "
+    "14.4% / 15.7%, and restating the leverage exposure measure from 12,227.1 to 12,264.7. This sheet reproduces "
+    "the FY2022 edition's own column; the Total RWAs, CET1 Ratio, Tier 1 Ratio and Total Capital Ratio sheets in "
+    "this workbook carry the restated figures. The two therefore disagree for FY2022 by exactly the restatement, "
+    "which is a fact about the two editions rather than a transcription difference, and neither has been changed "
+    "to match the other. Note also that the FY2023 edition's footnote gives the pre-restatement figure as "
+    "£7,385.8m while the FY2022 edition itself printed 7,385.7 in both its KM1 (Table 15) and its RWA table "
+    "(Table 14, row 29) - a 0.1 discrepancy introduced by the later edition, reproduced here as published.\n\n"
+    "ROWS THE BANK DID NOT PRINT ARE BLANK, NOT ZERO:\n"
+    "- FY2022 rows 18-20 (NSFR): the FY2022 edition prints a note in place of the rows - 'Disclosures for the "
+    "net stable funding ratio (Rows 18-20 of the template) are not applicable until 1 January 2023, as set out "
+    "by the PRA in PS22/21 Implementation of Basel standards: Final rules'. The FY2023 edition does print 31 Dec "
+    "2022 comparatives for those three rows (12,972.3 / 8,890.8 / 145.9%), but a row the year's own edition "
+    "never printed is left blank here rather than back-filled from a later comparative.\n"
+    "- FY2021 row 9 (countercyclical buffer): printed as an en-dash '–' in the FY2022 edition's 2021 column, so "
+    "the cell is blank. A dash is not a zero.\n"
+    "- FY2021 rows 13-17: printed as 'N/a' in the FY2022 edition's 2021 column, because the UK leverage "
+    "framework's 'excluding claims on central banks' basis and the averaged LCR build-up both begin on "
+    "1 January 2022. The two unnumbered rows beneath row 14 are the FY2022 edition's own pre-1 Jan 2022 "
+    "leverage captions, which it prints for 2021 alongside 'N/a' in rows 13/14 - the basis break is kept as two "
+    "separate captions and the series is not merged.\n\n"
+    "PRINTED-FORM NOTE: the FY2024 edition prints every percentage WITHOUT a '%' glyph (its column reads '13.0' "
+    "under the caption 'Common Equity Tier 1 ratio (%)'), while the FY2023 and FY2022 editions print '12.9%' "
+    "with the glyph. Both are reproduced as published, which is why one row can show '13.0' beside '12.9%'.\n\n"
+    "FY2020 AND EARLIER - THE TEMPLATE IS NOT USED. Those editions do carry a Bank-level appendix ('Key risk "
+    "metrics for Shawbrook Bank Limited', Appendix 1), but it is a short bespoke table: capital amounts, RWAs "
+    "and ratios only, with no SREP block (UK 7a-7d), no combined buffer block, no leverage exposure measure and "
+    "no LCR or NSFR rows. On this project's row-set test that is a different and shorter table, not an "
+    "unnumbered template, so those years are blank here rather than mapped onto template row numbers. The "
+    "figures those tables do disclose are on the individual metric sheets in this workbook."
+)
+
+b.add_km1_sheet(
+    title="Shawbrook Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published UK KM1 template, reproduced whole in Shawbrook's row order with its own "
+             "row numbers, labels and printed precision. BANK column only - every edition prints the template "
+             "twice, once for Shawbrook Group plc and once for Shawbrook Bank Limited, and the Group table is "
+             "not substituted anywhere. Amounts in £m, ratios as printed. FY2024-FY2022 come from their own "
+             "editions; FY2021 is the FY2022 edition's comparative column (no Bank KM1 was published for that "
+             "date in any other document). FY2025 is blank because the FY2025 Pillar 3 is Group-only, and "
+             "FY2020 and earlier pre-date the template - see the source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=460,
+)
+
 m("CET1 Capital","£m",d([1495.7,1297.0,1122.7,951.5,775.7,663.8,594.4,514.4,431.4,367.6,308.6,168.4]),AR2025_BANK_BASIS.strip())
 m("CET1 Ratio","%",d(["12.4%","13.0%","12.9%","12.7%","12.6%","12.6%","12.0%",None,None,None,"14.2%","11.5%"]),AR2025_BANK_BASIS+" FY2018-FY2016 blank: no Bank-level Total RWA is available those years (see Total RWAs note), so a CET1 ratio cannot be computed without a Group proxy. FY2015/FY2014 CET1 ratio equals the Bank's disclosed Tier 1 capital ratio, since CET1 = Tier 1 capital in both years (no Additional Tier 1 issued until FY2017).")
 m("Tier 1 Capital","£m",d([1620.7,1422.0,1247.7,1076.5,900.7,788.8,719.4,639.4,556.4,367.6,308.6,168.4]),AR2025_BANK_BASIS.strip())

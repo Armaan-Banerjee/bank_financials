@@ -464,6 +464,102 @@ km1 = {
 _NO_KM1 = (None,) * 13
 def col(i): return {y: km1.get(y, _NO_KM1)[i] for y in YEARS}
 P3_SOURCES_WITH_FY2021 = P3_SOURCES + "\n\n" + P3_21_SOURCES
+
+P3_25_URL = "https://recognisebank.co.uk/wp-content/uploads/Pillar-3-disclosure-March-2025.pdf"
+
+KM1_SOURCES = (
+    "Sources - Recognise Bank Limited's own Pillar 3 disclosures, 'Table 1 - UK KM1 - Key Metrics', bank/entity "
+    "basis, £000's, 31 March year-end. Each year's column is that year's OWN edition, and in every edition the "
+    "whole table sits on printed p.3:\n"
+    f"FY2026 (Mar-26): Pillar 3 disclosure 2026, printed p.3 - {P3_26_URL}\n"
+    f"FY2025 (Mar-25): Pillar 3 disclosure March 2025, printed p.3 - {P3_25_URL}\n"
+    f"FY2024 (Mar-24): Pillar 3 disclosure March 2024, printed p.3 - {P3_24_URL}\n"
+    f"FY2023 (Mar-23): Pillar 3 disclosure March 2023, printed p.3 - {P3_23_URL}\n"
+    f"FY2022 (Mar-22) and FY2021 (Mar-21): FILLED FROM A LATER EDITION'S COMPARATIVE - the Mar-22 and Mar-21 "
+    f"columns of the March 2023 edition, printed p.3 - {P3_23_URL}. Recognise published no Pillar 3 disclosure for "
+    "either year (the bank's own investor index lists Pillar 3 for 2023, 2024, 2025 and 2026 only), so there is no "
+    "own edition to displace and the nearest edition that prints those dates is used.\n"
+    "FY2020, FY2019 and FY2018 are blank on this sheet: Recognise held no PRA authorisation of any kind at those "
+    "year-ends, so no KM1 obligation, table or comparative exists anywhere. The other Pillar 3 sheets in this "
+    "workbook say 'Not applicable' for those years; nothing is written into the template here, because the bank "
+    "printed nothing.\n\n"
+    "THE MARCH 2025 EDITION WAS NOT PREVIOUSLY CITED IN THIS SCRIPT and was found on 2026-09-17 through the "
+    "bank's own WordPress media index (uploaded 14 August 2025). It is FY2025's own edition, and its Mar-25 column "
+    "reproduces every FY2025 figure this workbook already carried from the 2026 edition's comparative - CET1 "
+    "66,988, RWAs 220,421, ratios 30.4%, leverage 329,206 and 20.3%, LCR 212,180/44,148/5,456/38,692/548.4%, NSFR "
+    "480,437/211,608/227.0% - so it confirms rather than changes the FY2025 column.\n\n"
+    "DASHES AND 'n/a' ARE THE BANK'S OWN GLYPHS. Rows UK 8a, UK 9a, 10 and UK 10a are printed as '-' in every "
+    "edition and are left BLANK here; row 9 is printed '-' for Mar-22 and Mar-21 and is likewise blank, while the "
+    "2.0% and 1.0% entries from Mar-23 onward are real figures. Rows 13, 14, 18, 19 and 20 are printed 'n/a' for "
+    "Mar-21 (the exclusion of central bank claims and the NSFR were both new requirements for 2022, per the "
+    "table's own footnotes (a) and (b)), and 'n/a' is reproduced as printed.\n\n"
+    "TWO PRINTINGS THAT DIFFER, RECORDED NOT RECONCILED:\n"
+    "- Row 12 for Mar-22 is 27.5% in the March 2023, 2024 and 2025 editions (used here, from the March 2023 "
+    "edition) and 7.5% in the 2026 edition.\n"
+    "- The Mar-21 column of this template prints CET1, Tier 1 and total capital as 26,934 and the ratio as 78.9%, "
+    "while the CET1/Tier 1/Total Capital metric sheets carry 26,396 and 78.92% from the FY2021 Annual Report's own "
+    "capital-adequacy note (£26,395,924, 78.92%). The two are different disclosures of the same date - a "
+    "Group-basis capital-adequacy note in the statutory accounts against the bank-basis KM1 comparative published "
+    "two years later - and both are reproduced as published, with neither moved towards the other. The KM1 "
+    "comparative also supplies Mar-21 figures the metric sheets do not carry at all (RWAs 33,449; HQLA 12,767; net "
+    "cash outflows 832; LCR 1,534.1%).\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: the bank's own site was queried directly (WordPress media index, searches "
+    "for 'pillar' and 'annual'). The newest Pillar 3 disclosure is the March 2026 edition (uploaded 23 July 2026) "
+    "and the newest annual report is the 2026 Annual Report (uploaded 21 July 2026); both are already in this "
+    "workbook, which runs to FY2026. Recognise's year-end is 31 March, so FY2027 had not closed."
+)
+
+bw.add_km1_sheet(
+    title="Recognise Bank Limited — KM1 Key Metrics",
+    subtitle="Table 1 - UK KM1 - Key Metrics, as published in Recognise Bank Limited's own Pillar 3 disclosures "
+             "(bank basis, £000's, 31 March year-end). Reproduced in the bank's own row order, row numbering, "
+             "labels and precision. FY2023-FY2026 are each year's own edition; FY2022 and FY2021 are the March "
+             "2023 edition's comparative columns, no Pillar 3 having been published for those years. FY2018-FY2020 "
+             "predate any PRA authorisation - see the source note.",
+    rows=[
+        ("SECTION", "Available own funds (amounts)", {}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'000)", {"FY2026": 74617, "FY2025": 66988, "FY2024": 52617, "FY2023": 57482, "FY2022": 37411, "FY2021": 26934}),
+        ("DATA", "2 Tier 1 capital (£'000)", {"FY2026": 74617, "FY2025": 66988, "FY2024": 52617, "FY2023": 57482, "FY2022": 37411, "FY2021": 26934}),
+        ("DATA", "3 Total capital (£'000)", {"FY2026": 74617, "FY2025": 66988, "FY2024": 52617, "FY2023": 57482, "FY2022": 37411, "FY2021": 26934}),
+        ("SECTION", "Risk-weighted exposure amounts", {}),
+        ("DATA", "4 Total risk-weighted exposure amount (£'000)", {"FY2026": 356376, "FY2025": 220421, "FY2024": 200213, "FY2023": 88249, "FY2022": 87216, "FY2021": 33449}),
+        ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2026": "20.9%", "FY2025": "30.4%", "FY2024": "26.3%", "FY2023": "65.1%", "FY2022": "42.9%", "FY2021": "78.9%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2026": "20.9%", "FY2025": "30.4%", "FY2024": "26.3%", "FY2023": "65.1%", "FY2022": "42.9%", "FY2021": "78.9%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2026": "20.9%", "FY2025": "30.4%", "FY2024": "26.3%", "FY2023": "65.1%", "FY2022": "42.9%", "FY2021": "78.9%"}),
+        ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2026": "2.7%", "FY2025": "4.8%", "FY2024": "4.8%", "FY2023": "4.2%", "FY2022": "4.2%", "FY2021": "2.6%"}),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {"FY2026": "0.9%", "FY2025": "1.6%", "FY2024": "1.6%", "FY2023": "1.4%", "FY2022": "1.4%", "FY2021": "0.9%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2026": "1.2%", "FY2025": "2.2%", "FY2024": "2.2%", "FY2023": "1.8%", "FY2022": "1.8%", "FY2021": "1.2%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2026": "12.8%", "FY2025": "16.6%", "FY2024": "16.6%", "FY2023": "15.4%", "FY2022": "15.4%", "FY2021": "12.7%"}),
+        ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+        ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2026": "2.0%", "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "1.0%"}),
+        ("DATA", "UK 9a Systemic risk buffer (%)", {}),
+        ("DATA", "10 Global Systemically Important Institution buffer (%)", {}),
+        ("DATA", "UK 10a Other Systemically Important Institution buffer", {}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2026": "4.5%", "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "3.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2026": "17.3%", "FY2025": "21.1%", "FY2024": "21.1%", "FY2023": "18.9%", "FY2022": "17.9%", "FY2021": "15.2%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2026": "8.1%", "FY2025": "13.8%", "FY2024": "9.7%", "FY2023": "49.7%", "FY2022": "27.5%", "FY2021": "66.2%"}),
+        ("SECTION", "Leverage ratio", {}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£'000)", {"FY2026": 509006, "FY2025": 329206, "FY2024": 316246, "FY2023": 134402, "FY2022": 109158, "FY2021": "n/a"}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2026": "14.7%", "FY2025": "20.3%", "FY2024": "16.6%", "FY2023": "42.8%", "FY2022": "34.3%", "FY2021": "n/a"}),
+        ("SECTION", "Liquidity Coverage Ratio", {}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {"FY2026": 220955, "FY2025": 212180, "FY2024": 149255, "FY2023": 71930, "FY2022": 20648, "FY2021": 12767}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (£'000)", {"FY2026": 82309, "FY2025": 44148, "FY2024": 39271, "FY2023": 18358, "FY2022": 13379, "FY2021": 3329}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (£'000)", {"FY2026": 8630, "FY2025": 5456, "FY2024": 10380, "FY2023": 9363, "FY2022": 8079, "FY2021": 2497}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (£'000)", {"FY2026": 73679, "FY2025": 38692, "FY2024": 28891, "FY2023": 8996, "FY2022": 5300, "FY2021": 832}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2026": "299.9%", "FY2025": "548.4%", "FY2024": "516.6%", "FY2023": "799.6%", "FY2022": "389.6%", "FY2021": "1,534.1%"}),
+        ("SECTION", "Net Stable Funding Ratio", {}),
+        ("DATA", "18 Total available stable funding (£'000)", {"FY2026": 520393, "FY2025": 480437, "FY2024": 440424, "FY2023": 247010, "FY2022": 128630, "FY2021": "n/a"}),
+        ("DATA", "19 Total required stable funding (£'000)", {"FY2026": 295089, "FY2025": 211608, "FY2024": 213351, "FY2023": 93289, "FY2022": 78103, "FY2021": "n/a"}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2026": "176.4%", "FY2025": "227.0%", "FY2024": "206.4%", "FY2023": "264.8%", "FY2022": "164.7%", "FY2021": "n/a"}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=80,
+    source_height=440,
+)
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", col(0))], sources=P3_SOURCES_WITH_FY2021)
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 (CET1) ratio", col(2))], sources=P3_SOURCES_WITH_FY2021)
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", col(0))], sources=P3_SOURCES_WITH_FY2021)

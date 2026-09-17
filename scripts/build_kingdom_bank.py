@@ -1061,6 +1061,178 @@ def metric(name, unit, rows_data, note=None):
                          years=PILLAR3_YEARS)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (wayfinder/km1/map.md) - the Bank's own published
+# "Template UK KM1 - Key metrics template", reproduced whole in its own row
+# order, row numbers, labels and printed precision. Called BEFORE the first
+# add_metric_sheet() so the sheet lands immediately after Asset Quality and
+# immediately before CET1 Capital: sheet order follows call order.
+#
+# COLUMN PROVENANCE, which differs by year and is stated on the sheet:
+#   FY2021 - from its OWN edition (the Pillar 3 approved 9 June 2022), whose
+#            KM1 is headed with a "31 December 2021" column (map rule 1).
+#   FY2020 - from that same FY2021 edition's "31 December 2020" COMPARATIVE
+#            column, because the FY2020 edition prints NO key-metrics table
+#            at all - its contents page runs Introduction / Risk management /
+#            Board and committee structure / Own funds / Exposure amounts /
+#            Credit risk / Remuneration / Conclusion, with no key-metrics
+#            section anywhere. Whole table missing, so this is map rule 28
+#            (fill from the later edition's comparative) and NOT map rule 20.
+#   Every other year - BLANK, for two different reasons, both set out in the
+#            sheet note: FY2019 and earlier have no comparative anywhere, and
+#            FY2022 onward have no obtainable edition.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (£'000)", {}),
+    ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)", {"FY2021": 6892, "FY2020": 6594}),
+    ("DATA", "2    Tier 1 capital (£'000)", {"FY2021": 6892, "FY2020": 6594}),
+    ("DATA", "3    Total capital (£'000)", {"FY2021": 7653, "FY2020": 7448}),
+    ("SECTION", "Risk-weighted exposure amounts (£'000)", {}),
+    ("DATA", "4    Total risk-weighted exposure amount (£'000)", {"FY2021": 40617, "FY2020": 39632}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5    Common Equity Tier 1 ratio (%)", {"FY2021": "16.97%", "FY2020": "16.64%"}),
+    ("DATA", "6    Tier 1 ratio (%)", {"FY2021": "16.97%", "FY2020": "16.64%"}),
+    ("DATA", "7    Total capital ratio (%)", {"FY2021": "18.84%", "FY2020": "18.79%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)", {"FY2021": "2.50%", "FY2020": "2.22%"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {"FY2021": "0.84%", "FY2020": "0.78%"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {"FY2021": "1.11%", "FY2020": "1.00%"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {"FY2021": "12.45%", "FY2020": "12.00%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8    Capital conservation buffer (%)", {"FY2021": "2.50%", "FY2020": "2.50%"}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
+             "Member State (%)", {"FY2021": "0.56%", "FY2020": "0.56%"}),
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)", {}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)", {}),
+    ("DATA", "11    Combined buffer requirement (%)", {"FY2021": "3.06%", "FY2020": "3.06%"}),
+    ("DATA", "UK 11a    Overall capital requirements (%)", {"FY2021": "15.51%", "FY2020": "15.06%"}),
+    ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2021": "4.52%", "FY2020": "4.64%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13    Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2021": 66250, "FY2020": 63697}),
+    ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
+     {"FY2021": "10.40%", "FY2020": "10.35%"}),
+    ("SECTION", "Liquidity Coverage Ratio — average based on end-of-the-month observations over the preceding 12 "
+                "months, for each year shown (printed by the Bank as a separate table below the capital table)", {}),
+    ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value-average) (£'000)",
+     {"FY2021": 8840, "FY2020": 6580}),
+    ("DATA", "UK 16a    Cash outflows - Total weighted value (£'000)", {"FY2021": 2558, "FY2020": 2637}),
+    ("DATA", "UK 16b    Cash inflows - Total weighted value (£'000)", {"FY2021": 8241, "FY2020": 7799}),
+    ("DATA", "16    Total net cash outflows (adjusted value) (£'000)", {"FY2021": 640, "FY2020": 659}),
+    ("DATA", "17    Liquidity coverage ratio (%)", {"FY2021": "1,382.23%", "FY2020": "998.00%"}),
+    ("SECTION", "Net Stable Funding Ratio — average based on end-of-the-quarter observations over the preceding "
+                "four quarters, for each year shown; the Bank footnotes the whole block '*based on estimated "
+                "data (first NSFR return submitted to the PRA for reference point 31 March 2022 under CRR II)'", {}),
+    ("DATA", "18    Total available stable funding (£'000)", {"FY2021": 68868, "FY2020": 60757}),
+    ("DATA", "19    Total required stable funding (£'000)", {"FY2021": 42862, "FY2020": 40085}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2021": "160.67%", "FY2020": "151.57%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Kingdom Bank Limited's own Pillar 3 Disclosures, 'Template UK KM1 - Key metrics template', "
+    "£'000 and % exactly as printed:\n"
+    f"FY2021: Pillar 3 Disclosures 2021 (approved 9 June 2022), section 4 'Key metrics', printed p.14 for the "
+    f"capital table and p.15 for the liquidity and NSFR tables, column '31 December 2021'. Original URL "
+    f"{P3_FY2021_DEAD_URL} now returns a hard HTTP 404; read from the Wayback capture {P3_FY2021_URL}, "
+    f"confirmed to begin with the %PDF magic bytes.\n"
+    f"FY2020: the '31 December 2020' COMPARATIVE column of that same FY2021 edition - see the provenance note "
+    f"below, which explains why this column is not from its own edition.\n\n"
+    "WHY FY2020 COMES FROM THE FY2021 EDITION'S COMPARATIVE (map rule 28, decided by the project owner "
+    "2026-09-17). The FY2020 edition exists and was read in full (Pillar 3 Disclosures approved 3 June 2021, "
+    f"{P3_FY2020_URL}), and it contains NO key-metrics table of any kind. Its own contents page lists eight "
+    "sections - 1 Introduction, 1.1 COVID-19, 2 Risk management objectives and policies, 3 Board and "
+    "committee structure, 4 Own funds, 5 Exposure amounts under the standardised approach, 6 Credit risk and "
+    "provisioning, 7 Remuneration policies and practices, 8 Conclusion - and there is no key-metrics section "
+    "among them. Its section 4 'Own funds' is a capital build-up table (permanent share capital, profit and "
+    "loss account, revaluation reserve, deductions, Tier 2), which is a CC1-style disclosure and not this "
+    "template. The FY2021 edition is the first to add a 'Key metrics' section, and it is that edition which "
+    "introduced the template to this bank. Because the whole table is missing from FY2020's own edition "
+    "rather than a row being dashed inside a table that exists, this is map rule 28 and not map rule 20, and "
+    "the column is FILLED from the later edition's comparative and labelled as such here.\n\n"
+    "VERIFIED THE WAY THE MAP REQUIRES, not by a keyword count. The absence above was established by reading "
+    "the FY2020 edition's own table of contents and its section 4, then confirming with whole-word searches "
+    "whose every hit was inspected individually: 'KM1' returns zero hits in that edition, 'combined buffer' "
+    "zero, 'total exposure measure' zero, and the single 'key metrics' hit is a sentence in the introduction "
+    "about the disclosure regime for small and non-complex firms, not a table heading. The same is true of "
+    "the FY2019 edition.\n\n"
+    "WHY EVERY OTHER COLUMN IS BLANK - two different reasons, and neither is 'the bank does not publish "
+    "Pillar 3':\n"
+    "• FY2019 AND EARLIER: no comparative exists anywhere. The FY2019 edition (approved 14 May 2020) has the "
+    "same eight-section structure as FY2020 and no key-metrics table, and the FY2020 edition, which would be "
+    "the only place a 31 December 2019 comparative could appear, has no such table to carry one. So map rule "
+    "28(c) applies and the column stays empty. This is also the expected shape: the UK KM1 template arrived "
+    "with the Disclosure (CRR) Part of the PRA Rulebook and genuinely post-dates those editions (map rule "
+    "25).\n"
+    "• FY2022 ONWARD: the editions are NOT OBTAINABLE, which is a statement about our reach and not about the "
+    "bank (map rule 9). Kingdom Bank DID publish a Pillar 3 document for FY2022 and for FY2023 - the FY2024 "
+    "Annual Report confirms the FY2023 one was reviewed by the Board in March 2024 - but the whole series has "
+    "rotted off www.kingdom.bank. Re-checked 2026-09-17: the FY2022 URL "
+    f"({P3_FY2022_DEAD_URL}) returns a hard HTTP 404 with an HTML body, and the single Wayback capture of it "
+    "is not the PDF but a 1,489-byte WAF interstitial reading 'One moment, please... Please wait while your "
+    "request is being verified', served with HTTP 200. The FY2023 edition was never archived at all. NOTHING "
+    "HERE LICENSES AN INFERENCE THAT THE ROWS WERE NOT PUBLISHED; they are simply out of reach, and a future "
+    "session that obtains either document should fill these columns.\n"
+    "• A NOTE ON SDDT, so it is not misapplied to those blanks. Kingdom Bank holds the Small Domestic Deposit "
+    "Taker opt-in that removes the Pillar 3 disclosure duty: the Bank of England consolidated waivers "
+    "register carries one row for FRN 400972, 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 "
+    "of the SDDT Regime - General Application Part', sub rule 'Ru 3.1', waiver reference A00009930P.pdf, "
+    f"START DATE 20/02/2025, no end date ({PRA_WAIVERS_URL}). Date-fitted against this bank's 31 December "
+    "accounting reference date, that start date falls AFTER the FY2022, FY2023 and FY2024 year-ends, so the "
+    "waiver explains NONE of those three blanks - they are link rot, as described above. It is capable of "
+    "explaining a genuine absence from FY2025 onward, but the exemption permits a firm to stop disclosing "
+    "rather than compelling it to, so an FY2025 absence should still be investigated on its own facts.\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17 against the bank's OWN website. "
+    "www.kingdom.bank serves no Pillar 3 document today and has no regulatory-disclosures page: the site's own "
+    "sitemap index (wp-sitemap.xml) lists seven section sitemaps, and the page sitemap enumerates twenty "
+    "pages - home, privacy, complaints, fraud awareness, cookies, useful documents, the About and product "
+    "sections, terms - with no Pillar 3, results or investor page among them. The 'Useful documents' page, "
+    "the only document library on the site, carries seventeen PDFs and all of them are customer forms "
+    "(deposit slips, change of address, ISA transfer authority, mandates, savings conditions). A Wayback "
+    "CDX sweep of the whole kingdom.bank domain returns one Pillar 3 page capture, from 2017. So the newest "
+    "KM1-bearing edition obtainable anywhere remains the FY2021 one used above. The bank's registered domain "
+    "www.kingdombank.co.uk is an unrelated parked domain and is not this bank.\n\n"
+    "DASHES ARE REPRODUCED AS BLANKS, NOT ZEROS (map rule 2). Rows 9, UK 9a, 10 and UK 10a are printed '-' in "
+    "both columns of the FY2021 edition - the Bank had no countercyclical, systemic risk, G-SII or O-SII "
+    "buffer requirement - and a dash is left blank here rather than recorded as a zero. The rows themselves "
+    "are kept so a reader can see the Bank printed them and what it printed in them.\n\n"
+    "PRECISION IS THE BANK'S OWN. Kingdom prints its ratios to two decimal places throughout, including an "
+    "LCR of 1,382.23% and an NSFR of 160.67%. Those very large liquidity ratios are genuine for a bank of "
+    "this size and shape - total net cash outflows of £640k against £8,840k of high-quality liquid assets - "
+    "and are reproduced as printed rather than rounded.\n\n"
+    "A SOURCE CAVEAT THE BANK ITSELF FLAGS (map rule 7). The NSFR block carries the Bank's own footnote: "
+    "'*based on estimated data (first NSFR return submitted to the PRA for reference point 31 March 2022 "
+    "under CRR II)'. Both NSFR columns above are therefore the Bank's own estimate rather than a submitted "
+    "regulatory return, which is a basis qualification carried here rather than dropped.\n\n"
+    "TWO SERIES, NEVER MERGED - see also the individual Pillar 3 metric sheets in this workbook. This "
+    "workbook's metric sheets carry BOTH a Pillar 3-basis row and an Annual Report KPI-table row for CET1 "
+    "Ratio, Leverage Ratio and LCR, because the two disagree on basis (regulatory own funds excluding "
+    "unapproved profits against accounting shareholders' funds; leverage excluding against including central "
+    "bank claims; a 12-month average LCR against the Annual Report's own measure). Every figure on THIS sheet "
+    "is the Pillar 3 series, and it ties to those sheets' Pillar 3 rows exactly: CET1 £6,892k/£6,594k, CET1 "
+    "ratio 16.97%/16.64%, total RWEA £40,617k/£39,632k and leverage 10.40%/10.35%.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Kingdom Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published 'Template UK KM1 - Key metrics template', reproduced whole in its own "
+             "row order, row numbers, labels and printed precision. Bank/solo basis. Amounts in £'000, ratios "
+             "as printed. Only FY2021 and FY2020 carry figures: FY2021 from its own edition, FY2020 from that "
+             "edition's comparative column because the FY2020 edition prints no key-metrics table at all. "
+             "Earlier years have no comparative anywhere and pre-date the template; FY2022 onward are years "
+             "whose editions are no longer obtainable (link rot), NOT years the Bank failed to publish. Rows "
+             "9, UK 9a, 10 and UK 10a are printed as dashes by the Bank and are left blank, not zero. See the "
+             "source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=88,
+    source_height=560,
+    years=PILLAR3_YEARS,
+)
+
 CET1_VALUES = {
     "FY2025": 15808, "FY2024": 15512, "FY2023": 9876, "FY2022": 9353, "FY2021": 7451,
     "FY2020": 6771, "FY2019": 6145, "FY2018": 5908, "FY2017": 5778, "FY2016": 5667, "FY2015": 5631, "FY2014": 4960,

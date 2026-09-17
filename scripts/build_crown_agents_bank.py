@@ -463,6 +463,136 @@ LIQUIDITY_BASIS_NOTE = (
     "flagged as likely not directly comparable to FY2022-onward's KM1-basis figures."
 )
 
+KM1_SOURCES = (
+    "Sources - Crown Agents Bank Limited's own published 'UK KM1 - Key Metrics' template, Bank-solo basis, "
+    "reproduced whole in the Bank's own row order, row numbers, labels and precision. Amounts in £'000, "
+    "ratios exactly as printed:\n"
+    f"FY2025: Pillar 3 Disclosures - 31 December 2025, p.9 ('UK KM1 - Key Metrics', 31 Dec 2025 column) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures - 31 December 2024, p.9 (31 Dec 2024 column) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures - 31 December 2023, p.8 (31 Dec 2023 column) - {P3_2023_URL}\n"
+    f"FY2022: THE FY2022 EDITION PRINTS NO KM1 TABLE AT ALL - it carries only a short bespoke 'Summary of Key "
+    f"Ratios' table (p.9: seven rows - RWA, CET1 ratio, Total capital ratio, Leverage ratio, HQLA, LCR, NSFR - "
+    f"with no row numbers, no SREP rows, no buffer rows and no HQLA/cash-flow build-up), which is NOT the "
+    f"template. The FY2022 column here is therefore taken from the FY2023 edition's own '31 Dec 2022' "
+    f"COMPARATIVE COLUMN (p.8) - {P3_2023_URL}. The FY2022 edition itself is at {P3_2022_URL}.\n"
+    "FY2021: BLANK, and this is a genuine absence rather than a gap in our searching. The FY2021 edition "
+    "likewise prints only the short 'Summary of Key Ratios' table (p.7), the FY2020 edition contains no "
+    "occurrence of 'KM1' at all, and no later edition anywhere carries a 31 December 2021 comparative column "
+    "(the FY2023 edition's oldest column is 31 Dec 2022). FY2021 also predates the UK CRR/KM1 regime, which "
+    "took effect from 1 January 2022 per the FY2022 document's own Introduction.\n\n"
+    "ROW-NUMBERING DRIFT BETWEEN EDITIONS (reproduced, not normalised): the FY2023 edition numbers the three "
+    "liquidity build-up rows '16a', 'UK 16b' and 'UK 16', while the FY2024 and FY2025 editions number the same "
+    "three rows 'UK 16a', 'UK 16b' and '16'. The row numbers shown on this sheet are the FY2025 edition's; the "
+    "FY2023 edition's own variants are recorded here rather than silently harmonised.\n"
+    "Rows UK 8a, UK 9a, 10, UK 10a and 14a-14e do not appear in any Crown Agents edition. Every edition states "
+    "in a footnote that 'Rows 14a-14e have been removed as only LREQ firms are required to disclose this "
+    "information' - a formal exclusion, not a data gap. The remaining absent rows are simply not printed.\n"
+    "Each edition's LCR is a 12-month average and its NSFR a 4-quarter average, per each document's own "
+    "footnotes. UK 7a moves from 4.4% (FY2022/FY2023) to 2.5% (FY2024/FY2025) - a real change in the Bank's "
+    "SREP requirement, reproduced as printed.\n"
+    "CROSS-EDITION DIVERGENCE ON THE FY2022 COLUMN, documented rather than reconciled: the Bank's HY-2023 "
+    "interim Pillar 3 (30 June 2023) also prints a 31 Dec 2022 comparative, and it disagrees with the FY2023 "
+    "annual edition on three rows - leverage ratio 7.0% vs 6.9%, NSFR 215% vs 206.6%, and 'CET1 available after "
+    "meeting the total SREP own funds requirements' 26.4% vs 22.0%. The FY2023 annual edition's figures are "
+    "used here; the interim's are recorded for reference. The interim is internally inconsistent on that "
+    "column, which is why the annual edition is preferred rather than merely chosen: the interim prints "
+    "available stable funding of £191m against required stable funding of £92m, a ratio of 207.6%, yet prints "
+    "215% on its own NSFR row, whereas the FY2023 annual edition's 191,001 / 92,449 does give the 206.6% it "
+    "prints. The two editions also differ on row 13, total exposure measure: £1,292m in the interim against "
+    "£1,298,776 thousand in the annual edition. No figure here is derived from those components - they are "
+    "cited only to show which edition is self-consistent.\n"
+    "INDEPENDENT CONFIRMATION OF THE FY2024 COLUMN: Crown Agents has published semi-annually since H1 2023, "
+    "and the HY-2025 interim Pillar 3 (30 June 2025, p.2) prints its own 31 December 2024 comparative column. "
+    "It reproduces the FY2024 annual edition exactly on every row transcribed here - CET1/Tier 1/Total capital "
+    "126,265; RWA 627,016; rows 5/6/7 all 20.1%; UK 7a 2.5%; UK 7d 12.4%; buffers 2.5%, 0.4% and 2.9%; "
+    "UK 11a 15.2%; row 12 13.2%; row 13 1,695,874; row 14 7.4%; row 15 1,111,440; UK 16a 989,420; UK 16b "
+    "174,615; row 16 814,805; row 17 136.4%. Two independent editions agreeing row-for-row is the strongest "
+    "check available on a transcribed column.\n\n"
+    "LATEST-EDITION CHECK (2026-09-17): crownagentsbank.com's own WordPress media index was enumerated in full. "
+    "The newest Crown Agents Bank Limited Pillar 3 is the 31 December 2025 edition used here (uploaded "
+    "2026-04-02) and the newest Bank Annual Report is the 2025 one (uploaded 2026-04-01), so this workbook is "
+    "current. NOTE THE ENTITY TRAP: the same website hosts a PARALLEL Pillar 3 series for the listed parent, "
+    "CAB Payments Holdings plc ('cab_payments_*', 'cab_ph_*', 'CAB-PH-*' filenames), including a half-year "
+    "2026 edition that is newer than anything above. Those are the GROUP's consolidated disclosures and are "
+    "deliberately NOT used anywhere in this workbook, which is Bank-solo throughout.\n\n"
+    + ENTITY_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871}),
+    ("DATA", "2  Tier 1 capital (£'000)",
+     {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871}),
+    ("DATA", "3  Total capital (£'000)",
+     {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 89871}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 619414, "FY2024": 627016, "FY2023": 436220, "FY2022": 269258}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "4.4%", "FY2022": "4.4%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "12.4%", "FY2024": "12.4%", "FY2023": "12.4%", "FY2022": "12.4%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "0.5%", "FY2024": "0.4%", "FY2023": "0.2%", "FY2022": "0.2%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "3.0%", "FY2024": "2.9%", "FY2023": "2.7%", "FY2022": "2.7%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "15.3%", "FY2024": "15.2%", "FY2023": "15.1%", "FY2022": "15.0%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "15.9%", "FY2024": "13.2%", "FY2023": "19.5%", "FY2022": "22.0%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 1493971, "FY2024": 1695874, "FY2023": 1584105, "FY2022": 1298776}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "9.5%", "FY2024": "7.4%", "FY2023": "7.3%", "FY2022": "6.9%"}),
+    ("SECTION", "Liquidity Coverage Ratio (12-month average, per each edition's own footnote)", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)",
+     {"FY2025": 1126209, "FY2024": 1111440, "FY2023": 1114654, "FY2022": 1065155}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)  [numbered '16a' in the FY2023 edition]",
+     {"FY2025": 1050882, "FY2024": 989420, "FY2023": 877292, "FY2022": 863205}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)",
+     {"FY2025": 214871, "FY2024": 174615, "FY2023": 132613, "FY2022": 119636}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)  [numbered 'UK 16' in the FY2023 edition]",
+     {"FY2025": 836012, "FY2024": 814805, "FY2023": 744678, "FY2022": 743569}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "134.7%", "FY2024": "136.4%", "FY2023": "149.7%", "FY2022": "143.2%"}),
+    ("SECTION", "Net Stable Funding Ratio (4-quarter average, per each edition's own footnote)", {}),
+    ("DATA", "18  Total available stable funding (£'000)",
+     {"FY2025": 212942, "FY2024": 210991, "FY2023": 214380, "FY2022": 191001}),
+    ("DATA", "19  Total required stable funding (£'000)",
+     {"FY2025": 163739, "FY2024": 161171, "FY2023": 134472, "FY2022": 92449}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "130.0%", "FY2024": "130.9%", "FY2023": "159.4%", "FY2022": "206.6%"}),
+]
+
+bw.add_km1_sheet(
+    title="Crown Agents Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's own published 'UK KM1 - Key Metrics' template (Bank-solo), reproduced whole in its own "
+             "row order, row numbers, labels and precision. Amounts in £'000, ratios as printed. FY2025-FY2023 "
+             "are each from that year's OWN edition; FY2022 is the FY2023 edition's comparative column, because "
+             "the FY2022 edition prints no KM1 table at all. FY2021 is blank - no edition anywhere publishes a "
+             "KM1 for it. See source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=300,
+)
+
+# ---------------------------------------------------------------
+# Pillar 3 metric sheets
+# ---------------------------------------------------------------
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)],
        p3_sources(), note=CET1_CAPITAL_NOTE)
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RATIO)], p3_sources())

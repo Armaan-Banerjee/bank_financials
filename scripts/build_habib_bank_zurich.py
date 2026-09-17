@@ -1030,6 +1030,274 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=44, source_height=140)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (the Bank's own published key-metrics template)
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - Habib Bank Zurich Plc's own 'Key metrics' section, transcribed from the edition in which each "
+    "year is the REPORTING year (never a later edition's comparative), except FY2017 - see below. Page numbers "
+    "are the folios printed on the pages themselves, each confirmed twice: against the document's own table of "
+    "contents and against the number printed in the page footer.\n"
+    f"FY2025: Pillar 3 Disclosures 2025, section 2 'Key metrics', p.4 - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosure 2024, section 2 'Key metrics (KM1)', p.4 - {P3_2024_URL}\n"
+    f"FY2023: UK Pillar 3 Disclosure 2023, section 2 'Key metrics', p.4 - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, section 2 'Key metrics', p.5 - {P3_2022_URL}\n"
+    f"FY2021: Pillar 3 Disclosures 2021, section 3 'Key Metrics', p.14 - {P3_2021_URL}\n"
+    f"FY2020: Pillar 3 Disclosures 2020, section 3 'Key Metrics', p.12 - {P3_2020_URL}\n"
+    f"FY2019: Pillar 3 Disclosures 2019, section 3 'Key Metrics', p.8 - {P3_2019_URL}\n"
+    f"FY2018: Pillar 3 Disclosures 2018, section 3 'Key Metrics', pp.7-8 (the table breaks across two pages - "
+    f"own funds, RWA and capital ratios on p.7; buffers, leverage, LCR and NSFR on p.8) - {P3_2018_URL}\n"
+    f"FY2017: NOT from a FY2017 KM1 - the FY2017 edition contains no key-metrics table at all - but from the "
+    f"FY2018 edition's own 2017 comparative column, pp.7-8 - {P3_2018_URL}\n\n"
+    "WHY THIS COUNTS AS THE TEMPLATE (the row-set test). The Bank prints no row numbers and, before its FY2024 "
+    "edition, never writes 'KM1' - that edition titles the section '2. Key metrics (KM1)', the others just 'Key "
+    "metrics'. Neither fact decides it. What decides it is that the table carries the UK KM1 row set, in the "
+    "template's own order and under the template's own section headings: available own funds, then "
+    "risk-weighted exposure amounts, then capital ratios, then CET1 buffer requirements, then the leverage "
+    "ratio and its exposure measure, then LCR (HQLA, net outflow, ratio), then NSFR (ASF, RSF, ratio). Two "
+    "departures are worth naming rather than smoothing over: the Bank prepends a CC1-style own-funds build-up "
+    "(share capital, retained earnings, reserve, regulatory deductions) ahead of row 1, and it never prints the "
+    "SREP block (UK 7a-7d) or the UK 16a/16b inflow-outflow split in any edition. Because the Bank prints no "
+    "row numbers, NONE ARE ADDED HERE: mapping its rows onto template numbers would invent a correspondence it "
+    "never published. Its own labels are reproduced verbatim instead.\n\n"
+    "ENTITY BASIS: solo. The Bank's own editions state it - \"The Bank is a single entity in the UK and no "
+    "consolidation is performed\" (FY2025 edition, Overview) - and its capital section presents \"the "
+    "composition of regulatory capital for the Bank on a solo basis\". Habib Bank Zurich plc is a 100%-owned "
+    "subsidiary of Habib Bank AG Zurich (Switzerland), which is a third-country parent; no figure from the "
+    "Swiss parent's disclosures is used anywhere on this sheet, and there is no intermediate UK holding company "
+    "above the Bank.\n\n"
+    "TWO UNITS, DELIBERATELY NOT MERGED (and this is why some rows appear twice). The FY2018 edition prints "
+    "this table in SINGLE POUNDS (share capital 60,000,000; RWA 387,179,103). Every other edition prints it in "
+    "£'000. FY2018 and FY2017 both come from that FY2018 edition, so their amounts are in single pounds while "
+    "FY2019-FY2025 are in £'000. Amount rows therefore appear as two separate caption blocks, one per unit, "
+    "each row carrying its own unit explicitly; restating one edition's amounts into the other's unit would be "
+    "normalising a published disclosure. Ratio rows are unit-free and stay single.\n\n"
+    "FY2017 IS A FILLED COLUMN; FY2016 IS BLANK. The FY2017 edition has no key-metrics table - its own table of "
+    "contents runs Overview / Governance Framework / Risk Management Framework / Significant Risks / Liquidity "
+    "Risk / Capital Management and Capital Adequacy / ICAAP / Leverage Ratio / Impairment Provisions / Asset "
+    "Encumbrance / Employee Remuneration Policy, with no Key Metrics section, and the section first appears in "
+    "the FY2018 edition. FY2017 is therefore taken from the FY2018 edition's own 2017 comparative column. "
+    "FY2016 stays blank: its own edition likewise has no key-metrics section (same contents-page check), and no "
+    "edition anywhere prints a 2016 column - the FY2018 edition, the earliest that prints the table at all, "
+    "carries 2018 and 2017 only. Blank here therefore means the Bank has never published these figures on this "
+    "table, in any edition.\n\n"
+    "A PRINTED DEFECT, REPRODUCED NOT CORRECTED (rule: record a source defect, do not fix it). The FY2021 "
+    "edition prints Total Own Funds for 2021 as '1066,687' - a typesetting slip for 106,687, which is what the "
+    "FY2022 and FY2023 editions both print for that same date. The cell below reads '1066,687 (as printed; the "
+    "FY2022 and FY2023 editions print 106,687 for this date)' rather than silently carrying either number.\n\n"
+    "THE BANK RESTATES HEAVILY BETWEEN EDITIONS, AND EACH YEAR HERE KEEPS ITS OWN EDITION'S FIGURES. This is "
+    "the single most important thing to know before comparing this sheet with anything else, including the "
+    "single-metric Pillar 3 sheets in this same workbook, several of which were built from the latest edition "
+    "to state a year rather than from that year's own edition. Documented, not reconciled:\n"
+    "- FY2024 CET1 after deductions: 115,427 (FY2024 edition, used here) against 109,883 (FY2025 edition); "
+    "CET1 ratio 17.36% against 16.53%.\n"
+    "- FY2023 CET1: 103,077 (FY2023 edition, used here - that edition prints no deductions block at all) "
+    "against 97,919 (FY2024 edition) and 93,777 (FY2025 edition); CET1 ratio 14.99% against 16.67% and 15.96%.\n"
+    "- FY2022 CET1: 81,361 (FY2022 edition, used here) against 90,610 (FY2023 edition) and 86,426 (FY2024 "
+    "edition); CET1 ratio 14.14% against 15.03%; total capital ratio 16.43% against 16.76%.\n"
+    "- FY2021 CET1: 86,301 (FY2021 edition, used here) against 81,824 (FY2022 edition); total capital ratio "
+    "15.75% against 15.17% (FY2022 edition); Capital Adequacy Ratio 19.47% against 18.65% (FY2022 and FY2023 "
+    "editions).\n"
+    "- FY2019 HQLA: 91,624 (FY2019 edition, used here) against 91,637 (FY2020 and FY2021 editions). FY2019 "
+    "leverage ratio: 10.03% (FY2019 edition, used here) against 9.03% (FY2020 and FY2021 editions).\n"
+    "- FY2018 CET1: £70,229,002 (FY2018 edition, used here) against £69,683k (FY2019 edition) - a restatement "
+    "as well as a unit change. FY2017 CET1: £67,432,075 (FY2018 edition, used here) against £67,109k (FY2019, "
+    "FY2020 and FY2021 editions).\n\n"
+    "TWO ROWS THE BANK MISLABELS. Both are reproduced with the Bank's own wording exactly as printed. Neither is "
+    "a transcription error and neither may be edited to agree with anything:\n"
+    "- 'Total Capital (CET 1 + Tier 1)' is, by its own parenthetical, TIER 1 CAPITAL - it excludes Tier 2. The "
+    "workbook's Total Capital sheet correctly holds the Bank's 'Total Own Funds (CET 1 + Tier 1 + tier 2)' row "
+    "instead (FY2025: 137,764 against this row's 117,764).\n"
+    "- 'Total capital ratio (%)' is likewise the TIER 1 ratio, not the total capital ratio; the Bank's real "
+    "CRR total capital ratio is the row it calls 'Capital Adequacy Ratio (CET 1 + Tier 1 + Tier 2)', which is "
+    "what the Total Capital Ratio sheet carries (FY2025: 17.81% against this row's 15.22%).\n"
+    "So this sheet and the Total Capital / Total Capital Ratio sheets hold DIFFERENT ROWS by design, and their "
+    "figures differ by design. A reader comparing the two should expect the difference and read it here, not "
+    "treat it as an error in either.\n\n"
+    "CROSS-EDITION WORDING DRIFT. Recorded here rather than in the row labels themselves, because a row label "
+    "reproduces what the Bank printed and carries nothing beyond the unit:\n"
+    "- The row shown here as 'Total capital ratio (%)' is printed as 'Total capital ratio (%) - (CET 1 + "
+    "Tier 1)' in the FY2024 and FY2025 editions, and as plain 'Total capital ratio (%)' in FY2019-FY2023.\n"
+    "- The row shown here as 'Capital Adequacy Ratio (CET 1 + Tier 1 + Tier 2) (%)' is printed as plain "
+    "'Capital Adequacy Ratio' in the FY2019-FY2023 editions.\n"
+    "The Bank's NSFR row agrees with the NSFR sheet in every year it prints one.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: habibbank.com/gb/about-us/ - the Bank's own disclosures page - was read "
+    "directly and its full document list enumerated, rather than relying on this project's cited URLs. Newest "
+    "Pillar 3 published: Pillar 3 Disclosures 2025 (uploaded under /2026/09/). Newest Annual Report published: "
+    "Annual Report 2025 (same directory). Both are already the newest year in this workbook; nothing newer "
+    "exists. (The WordPress REST media endpoint on this host returns 403 to anonymous callers, so the page's "
+    "own links were enumerated instead - a blocked API is not an absence of documents.)"
+)
+
+km1_rows = [
+    ("SECTION", "Available Funds — amounts in £'000, as printed in the FY2019-FY2025 editions", {}),
+    ("DATA", "Share capital (£'000)", {
+        "FY2025": 80000, "FY2024": 80000, "FY2023": 70000, "FY2022": 70000, "FY2021": 70000,
+        "FY2020": 60000, "FY2019": 60000,
+    }),
+    ("DATA", "Retained earnings (£'000)", {
+        "FY2025": 44501, "FY2024": 40022, "FY2023": 33077, "FY2022": 14822, "FY2021": 16301,
+        "FY2020": 11826, "FY2019": 11226,
+    }),
+    ("DATA", "Fair value through other comprehensive income reserve (£'000)", {
+        "FY2025": 86, "FY2024": -126,
+    }),
+    ("DATA", "Common Equity Tier 1 Capital: instruments and reserves (£'000)", {
+        "FY2025": 124587, "FY2024": 119896, "FY2023": 103077, "FY2022": 81361, "FY2021": 86301,
+        "FY2020": 71826, "FY2019": 71226,
+    }),
+    ("DATA", "Regulatory Deductions: Deferred tax assets on carried forward losses (£'000)", {
+        "FY2025": -3426, "FY2024": -4307,
+    }),
+    ("DATA", "Regulatory Deductions: Proposed dividend for the year (£'000)", {
+        "FY2025": -3341,
+    }),
+    ("DATA", "Regulatory Deductions: Other deductions (£'000)", {
+        "FY2025": -56, "FY2024": -162,
+    }),
+    ("DATA", "Common Equity Tier 1 Capital after deductions (£'000)", {
+        "FY2025": 117764, "FY2024": 115427,
+    }),
+    ("DATA", "Additional Tier 1 Capital (£'000)", {}),
+    ("DATA", "Total Capital (CET 1 + Tier 1) (£'000)", {
+        "FY2025": 117764, "FY2024": 115427, "FY2023": 103077, "FY2022": 81361, "FY2021": 86301,
+        "FY2020": 71826, "FY2019": 71226,
+    }),
+    ("DATA", "Tier 2 Capital – Subordinated liabilities (£'000)", {
+        "FY2025": 20000, "FY2024": 20296, "FY2023": 20340, "FY2022": 20579, "FY2021": 20386,
+        "FY2020": 20540, "FY2019": 20426,
+    }),
+    ("DATA", "Total Own Funds (CET 1 + Tier 1 + tier 2) (£'000)", {
+        "FY2025": 137764, "FY2024": 135723, "FY2023": 123417, "FY2022": 101940,
+        "FY2021": "1066,687 (as printed; the FY2022 and FY2023 editions print 106,687 for this date)",
+        "FY2020": 92366, "FY2019": 91652,
+    }),
+    ("DATA", "Total Risk-Weighted Assets (£'000)", {
+        "FY2025": 773493, "FY2024": 664889, "FY2023": 587448, "FY2022": 575205, "FY2021": 547938,
+        "FY2020": 513951, "FY2019": 442493,
+    }),
+    ("SECTION", "Available Funds — amounts in £, single pounds as printed. The FY2018 edition prints this "
+                "table in whole pounds and is the source for both columns below", {}),
+    ("DATA", "Share capital (£, single pounds as printed)", {
+        "FY2018": 60000000, "FY2017": 60000000,
+    }),
+    ("DATA", "Retained earnings (£, single pounds as printed)", {
+        "FY2018": 10229002, "FY2017": 7432075,
+    }),
+    ("DATA", "Common Equity Tier 1 Capital: instruments and reserves (£, single pounds as printed)", {
+        "FY2018": 70229002, "FY2017": 67432075,
+    }),
+    ("DATA", "Additional Tier 1 Capital (£, single pounds as printed)", {}),
+    ("DATA", "Total Capital (CET 1 + Tier 1) (£, single pounds as printed)", {
+        "FY2018": 70229002, "FY2017": 67432075,
+    }),
+    ("DATA", "Total Risk-Weighted Assets (£, single pounds as printed)", {
+        "FY2018": 387179103, "FY2017": 359940986,
+    }),
+    ("SECTION", "Risk-based capital ratios as percentage of RWA", {}),
+    ("DATA", "CET 1 ratio (%)", {
+        "FY2025": "15.22%", "FY2024": "17.36%", "FY2023": "14.99%", "FY2022": "14.14%", "FY2021": "15.75%",
+        "FY2020": "13.98%", "FY2019": "16.10%", "FY2018": "18.14%", "FY2017": "18.73%",
+    }),
+    ("DATA", "Tier 1 (%)", {
+        "FY2023": "14.99%", "FY2022": "14.14%", "FY2021": "15.75%",
+        "FY2020": "13.98%", "FY2019": "16.10%", "FY2018": "18.14%", "FY2017": "18.73%",
+    }),
+    ("DATA", "Total capital ratio (%)", {
+        "FY2025": "15.22%", "FY2024": "17.36%", "FY2023": "17.43%", "FY2022": "16.43%", "FY2021": "15.75%",
+        "FY2020": "13.98%", "FY2019": "16.10%", "FY2018": "18.14%", "FY2017": "18.73%",
+    }),
+    ("DATA", "Capital Adequacy Ratio (CET 1 + Tier 1 + Tier 2) (%)", {
+        "FY2025": "17.81%", "FY2024": "20.41%", "FY2023": "18.39%", "FY2022": "17.72%", "FY2021": "19.47%",
+        "FY2020": "17.97%", "FY2019": "20.71%",
+    }),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer (CCoB) requirement (%)", {
+        "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.5%",
+        "FY2020": "2.50%", "FY2019": "2.50%", "FY2018": "1.875%", "FY2017": "1.250%",
+    }),
+    ("DATA", "Countercyclical capital buffer (CCyB) requirement (%)", {
+        "FY2025": "1.50%", "FY2024": "2.00%", "FY2023": "2%", "FY2022": "1%",
+        "FY2019": "1.00%", "FY2018": "1.00%", "FY2017": "0.500%",
+    }),
+    ("DATA", "Total of bank CET 1 specific buffer Requirement (%)", {
+        "FY2025": "4.00%", "FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.5%", "FY2021": "2.5%",
+        "FY2020": "2.50%", "FY2019": "3.50%", "FY2018": "2.875%", "FY2017": "1.750%",
+    }),
+    ("DATA", "CET 1 available after meeting the bank's minimum capital requirements (%)", {
+        "FY2018": "13.64%", "FY2017": "14.23%",
+    }),
+    ("SECTION", "Basel III leverage ratio", {}),
+    ("DATA", "Total Basel III leverage ratio exposure measure (£'000)", {
+        "FY2025": 1272426, "FY2024": 1133461, "FY2023": 999212, "FY2022": 931009, "FY2021": 948055,
+        "FY2020": 803637, "FY2019": 714163,
+    }),
+    ("DATA", "Total Basel III leverage ratio exposure measure (£, single pounds as printed)", {
+        "FY2018": 627604463, "FY2017": 635316590,
+    }),
+    ("DATA", "Basel III leverage ratio (%)", {
+        "FY2024": "10.18%", "FY2023": "8.81%", "FY2022": "8.74%", "FY2021": "8.63%",
+        "FY2020": "8.97%", "FY2019": "10.03%", "FY2018": "10.62%", "FY2017": "9.92%",
+    }),
+    ("DATA", "Basel III leverage ratio excluding claims on central banks (%)", {
+        "FY2025": "9.26%",
+    }),
+    ("SECTION", "Liquidity coverage ratio (LCR)", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (£'000)", {
+        "FY2025": 306567, "FY2024": 224688, "FY2023": 183751, "FY2022": 108775, "FY2021": 107915,
+        "FY2020": 117491, "FY2019": 91624,
+    }),
+    ("DATA", "Total high-quality liquid assets (HQLA) (£, single pounds as printed)", {
+        "FY2018": 122555336, "FY2017": 141876074,
+    }),
+    ("DATA", "Total net cash outflow (£'000)", {
+        "FY2025": 170300, "FY2024": 89737, "FY2023": 64332, "FY2022": 26883, "FY2021": 70335,
+        "FY2020": 51796, "FY2019": 57333,
+    }),
+    ("DATA", "Total net cash outflow (£, single pounds as printed)", {
+        "FY2018": 61884045, "FY2017": 60162568,
+    }),
+    ("DATA", "LCR ratio (%)", {
+        "FY2025": "180%", "FY2024": "243%", "FY2023": "286%", "FY2022": "405%", "FY2021": "153%",
+        "FY2020": "226.83%", "FY2019": "159.81%", "FY2018": "198.04%", "FY2017": "235.82%",
+    }),
+    ("SECTION", "Net stable funding ratio (NSFR)", {}),
+    ("DATA", "Total available stable funding (£'000)", {
+        "FY2025": 966189, "FY2024": 904473, "FY2023": 830973, "FY2022": 729215, "FY2021": 664541,
+        "FY2020": 614210, "FY2019": 575074,
+    }),
+    ("DATA", "Total available stable funding (£, single pounds as printed)", {
+        "FY2018": 530876872, "FY2017": 506952186,
+    }),
+    ("DATA", "Total required stable funding (£'000)", {
+        "FY2025": 728485, "FY2024": 660742, "FY2023": 608890, "FY2022": 573467, "FY2021": 510571,
+        "FY2020": 457718, "FY2019": 423583,
+    }),
+    ("DATA", "Total required stable funding (£, single pounds as printed)", {
+        "FY2018": 388363098, "FY2017": 362939198,
+    }),
+    ("DATA", "NSFR ratio", {
+        "FY2025": "133%", "FY2024": "137%", "FY2023": "136%", "FY2022": "127%", "FY2021": "130.16%",
+        "FY2020": "134.19%", "FY2019": "135.76%", "FY2018": "136.70%", "FY2017": "139.68%",
+    }),
+]
+
+bw.add_km1_sheet(
+    title="Habib Bank Zurich Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published key-metrics table (the UK KM1 row set, printed unnumbered - see the "
+             "row-set test in the source note), reproduced in its own row order with its own labels and printed "
+             "precision. Solo basis - the Bank is a single UK entity and performs no consolidation. Amounts are "
+             "in £'000 for FY2019-FY2025 and in single pounds for FY2018/FY2017, which is how the Bank printed "
+             "them; the two are kept in separate caption blocks rather than restated into one unit. FY2017 is "
+             "the FY2018 edition's comparative column (FY2017's own edition prints no such table); FY2016 is "
+             "blank because no edition prints a 2016 column at all.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=520,
+)
+
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital, after regulatory deductions", {

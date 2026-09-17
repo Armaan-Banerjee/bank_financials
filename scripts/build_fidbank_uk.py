@@ -480,6 +480,130 @@ LEVERAGE_RATIO = {"FY2024": "19.45%", "FY2023": "29.83%", "FY2022": "35.78%"}
 P3_LCR = {"FY2024": "243.39%", "FY2023": "233.04%", "FY2022": "379.92%"}
 NSFR = {"FY2024": "211.78%", "FY2023": "335.67%", "FY2022": "363.79%"}
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own UK KM1 template, reproduced whole
+# ---------------------------------------------------------------
+KM1_NOTE = (
+    "\n\nKM1 KEY METRICS SHEET - WHAT THIS IS AND HOW IT WAS BUILT\n"
+    "This is FidBank UK's own UK KM1 key-metrics template, with the Bank's own row numbers, labels and "
+    "precision. The Bank prints its ratio rows as bare numbers under headings that state they are "
+    "percentages; they are reproduced as printed, without a percent sign added.\n"
+    "\n"
+    "THE CURRENCY CAPTION IS DEFECTIVE IN THE SOURCE AND IS RECORDED, NOT SILENTLY FIXED. The FY2023 "
+    "edition heads the two columns of this table \"31/12/2023  £000's\" and \"31/12/2022  £000's\". The "
+    "FY2024 edition heads the identical digits for 31/12/2023 - CET1 capital 57,034, total risk-weighted "
+    "exposure amount 60,485, and every other value in the column - as \"$000's\". The same figures cannot "
+    "be simultaneously sterling and dollars, so one caption is simply wrong. THE AMOUNTS ARE US DOLLARS, on "
+    "three independent grounds: (a) the digits are byte-identical across the two editions, which could not "
+    "happen if the presentation currency had changed between them; (b) every other table in both editions "
+    "is captioned (USD'000); and (c) the rest of this workbook treats these as dollars and converts them to "
+    "sterling. The rows below are therefore labelled $'000 and NO DIGIT HAS BEEN ALTERED - only the "
+    "mislabelled caption is set aside, and it is set aside here in writing rather than quietly.\n"
+    "\n"
+    "WHY THE AMOUNT ROWS ARE NOT CROSS-CHECKED against this workbook's metric sheets: this sheet is left in "
+    "the Bank's own reporting currency (US dollars) while the metric sheets are converted to sterling, so "
+    "a cell-for-cell comparison of amounts would compare two different currencies. The ratio rows are "
+    "currency-free and ARE cross-checked.\n"
+    "\n"
+    "FY2022 IS A COMPARATIVE COLUMN, NOT AN OWN EDITION. The FY2022 Pillar 3 edition exists but contains no "
+    "key-metrics table of any kind - confirmed by reading its full text layer (about 76,000 characters, so "
+    "not an extraction failure) and finding zero occurrences of 'Available own funds', 'Total SREP own "
+    "funds', 'Additional CET1 SREP', 'risk-weighted exposure amount', 'Combined buffer requirement', 'Net "
+    "Stable Funding', 'Key Metrics' or 'Leverage ratio'. The FY2022 column here is therefore the FY2023 "
+    "edition's own 31/12/2022 comparative column, reproduced in that edition's row structure and flagged so "
+    "it is never mistaken for a FY2022-edition disclosure.\n"
+    "\n"
+    "ROW 18 DIVERGES BETWEEN EDITIONS AND THE OWN-EDITION FIGURE IS THE ONE SHOWN. For FY2023, total "
+    "available stable funding is printed as 96,213 in the FY2023 edition and as 96,123 in the FY2024 "
+    "edition's comparative column - a transposed pair of digits somewhere, but the source does not say "
+    "which edition is wrong and it is not this workbook's place to decide. 96,213 is carried here because "
+    "each year comes from its own edition. The divergence is recorded rather than reconciled.\n"
+    "\n"
+    "ROW 12 IS PRINTED WITH NO VALUES in both editions - the row exists in the table and its cells are "
+    "empty. It is reproduced as a present-but-blank row, not dropped and not filled with a zero.\n"
+    "\n"
+    "ROW 10 PRINTS 'N.A.' and is reproduced verbatim as text. 'N.A.' is the Bank's own statement that the "
+    "requirement does not apply to it; it is not a blank and it is certainly not a zero.\n"
+    "\n"
+    "FY2025 AND FY2021 ARE BLANK. No FY2025 Pillar 3 edition has been published. The FY2021 edition "
+    "predates the Bank's adoption of the template and carries no key-metrics table, and no later edition "
+    "reaches back to 2021 with a comparative column, so there is nothing to transcribe and nothing is "
+    "inferred from the CET1 ratio and RWA figures that the metric sheets carry for that year.\n"
+    "\n"
+    "ENTITY BASIS. The Bank states in its own Pillar 3 that it is a single entity and that no prudential "
+    "consolidation is performed, so these are the UK entity's own figures on the only basis it reports."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital ($'000)",
+     {"FY2024": 55029, "FY2023": 57034, "FY2022": 35045}),
+    ("DATA", "2  Tier 1 capital ($'000)",
+     {"FY2024": 55029, "FY2023": 57034, "FY2022": 35045}),
+    ("DATA", "3  Total capital ($'000)",
+     {"FY2024": 55029, "FY2023": 57034, "FY2022": 35045}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount ($'000)",
+     {"FY2024": 133310, "FY2023": 60485, "FY2022": 65571}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": 41.28, "FY2023": 94.29, "FY2022": 53.45}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2024": 41.28, "FY2023": 94.29, "FY2022": 53.45}),
+    ("DATA", "7  Total capital ratio (%)", {"FY2024": 41.28, "FY2023": 94.29, "FY2022": 53.45}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2024": 4.83, "FY2023": 4.41, "FY2022": 4.41}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2024": 2.5, "FY2023": 2.5, "FY2022": 2.5}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2024": 0.87, "FY2023": 0.44, "FY2022": 0.12}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)",
+     {"FY2024": "N.A.", "FY2023": "N.A.", "FY2022": "N.A."}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2024": 3.37, "FY2023": 2.94, "FY2022": 2.62}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": 16.20, "FY2023": 15.35, "FY2022": 15.03}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%) [printed with no values]", {}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Leverage ratio total exposure measure ($'000)",
+     {"FY2024": 282725, "FY2023": 191191, "FY2022": 99083}),
+    ("DATA", "14  Leverage ratio (%)", {"FY2024": 19.45, "FY2023": 29.83, "FY2022": 35.78}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value -average) ($'000)",
+     {"FY2024": 47549, "FY2023": 42026, "FY2022": 18123}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value ($'000)",
+     {"FY2024": 78145, "FY2023": 72135, "FY2022": 19081}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value ($'000)",
+     {"FY2024": 58609, "FY2023": 54101, "FY2022": 14311}),
+    ("DATA", "16  Total net cash outflows (adjusted value) ($'000)",
+     {"FY2024": 19536, "FY2023": 18034, "FY2022": 4770}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2024": 243.39, "FY2023": 233.04, "FY2022": 379.92}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding ($'000)",
+     {"FY2024": 139028, "FY2023": 96213, "FY2022": 69583}),
+    ("DATA", "19  Total required stable funding ($'000)",
+     {"FY2024": 65648, "FY2023": 28663, "FY2022": 19127}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2024": 211.78, "FY2023": 335.67, "FY2022": 363.79}),
+]
+
+bw.add_km1_sheet(
+    title="FidBank UK Limited — KM1 Key Metrics",
+    subtitle="The Bank's own UK KM1 key-metrics template (single entity - no prudential consolidation is "
+             "performed), reproduced in its own row order, row numbers, labels and precision. Amounts in "
+             "US$'000 as reported; ratios as printed, without a percent sign, which is how the Bank prints "
+             "them. FY2024 and FY2023 come from their own editions; FY2022 is the FY2023 edition's "
+             "comparative column (the FY2022 edition carries no key-metrics table at all). The FY2023 "
+             "edition mislabels this table's currency as £000's - see the note.",
+    rows=km1_rows,
+    sources_text=p3_sources(
+        "KM1 key-metrics table, section 1.4 'Key Metrics', by edition (printed folios, not PDF sheet "
+        "indices): FY2024 = 2024 Pillar 3 Disclosures, folio 'Page 9 of 32' ($000's). FY2023 = 2023 Pillar "
+        "3 Disclosures, folio 'Page 9 of 31' (captioned £000's, which is a source error - see the note). "
+        "FY2022 = the 31/12/2022 comparative column of that same 2023 edition. LATEST-EDITION CHECK "
+        "(2026-09-17): the Bank's regulatory-information page was fetched live; the newest Pillar 3 edition "
+        "published is the 2024 one, so FY2025 is blank because no edition exists, not because none was "
+        "sought."
+    ) + KM1_NOTE,
+    first_col_width=78,
+    source_height=860,
+)
+
 metric("CET1 Capital", "£'000 (conv. from USD)", [("CET1 Capital (= Total Regulatory Capital)", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 

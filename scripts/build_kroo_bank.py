@@ -384,6 +384,162 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=48, source_height=150)
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics (wayfinder/km1/map.md) - the Bank's own "Table 3 Key
+# metrics", reproduced whole in its own row order, labels and precision.
+# Called BEFORE the first add_metric_sheet() so the sheet lands immediately
+# after Asset Quality and immediately before CET1 Capital: sheet order
+# follows call order.
+#
+# COLUMN PROVENANCE, which differs by year and is stated on the sheet:
+#   FY2024, FY2023 - each from its OWN edition's Table 3 (map rule 1).
+#   FY2022         - from the FY2023 edition's '31 Dec 2022' comparative
+#                    column, because the FY2022 edition prints NO key-metrics
+#                    table at all (map rule 28, not rule 20 - the whole table
+#                    is missing, rather than a row being dashed inside a
+#                    table that exists).
+#   FY2021         - BLANK. Its own edition prints no key-metrics table
+#                    either, and no later edition anywhere carries a
+#                    31 Dec 2021 comparative, so map rule 28(c) applies.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds", {}),
+    ("DATA", "Common equity tier 1 (CET1) (£, single pounds as printed)",
+     {"FY2024": 7327982, "FY2023": 14288553, "FY2022": 22428333}),
+    ("DATA", "Tier 1 capital (£, single pounds as printed)",
+     {"FY2024": 7327982, "FY2023": 14288553, "FY2022": 22428333}),
+    ("DATA", "Total capital (£, single pounds as printed)",
+     {"FY2024": 7327982, "FY2023": 14288553, "FY2022": 22428333}),
+    ("SECTION", "Risk weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£, single pounds as printed)",
+     {"FY2024": 30590678, "FY2023": 30694218, "FY2022": 24070601}),
+    ("SECTION", "Capital ratios (as a percentage of risk weighted exposure amounts)", {}),
+    ("DATA", "Common equity tier 1 ratio (%)", {"FY2024": "24.0%", "FY2023": "46.6%", "FY2022": "93.2%"}),
+    ("DATA", "Tier 1 ratio (%)", {"FY2024": "24.0%", "FY2023": "46.6%", "FY2022": "93.2%"}),
+    ("DATA", "Total capital ratio (%)", {"FY2024": "24.0%", "FY2023": "46.6%", "FY2022": "93.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional CET1 SREP requirements (%)", {"FY2024": "1.63%", "FY2023": "2.69%", "FY2022": "2.69%"}),
+    ("DATA", "Additional AT1 SREP requirements (%)", {"FY2024": "0.54%", "FY2023": "0.89%", "FY2022": "0.89%"}),
+    ("DATA", "Additional T2 SREP requirements (%)", {"FY2024": "0.72%", "FY2023": "1.19%", "FY2022": "1.19%"}),
+    ("DATA", "Total SREP own funds requirements (%)", {"FY2024": "10.89%", "FY2023": "12.77%", "FY2022": "12.77%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer (%)", {"FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
+    ("DATA", "Institution specific countercyclical capital buffer (%)",
+     {"FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1.00%"}),
+    ("DATA", "Combined buffer requirement (%)", {"FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.50%"}),
+    ("DATA", "Overall capital requirements (%)", {"FY2024": "15.39%", "FY2023": "17.27%", "FY2022": "16.27%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "5.90%", "FY2023": "27.93%", "FY2022": "71.26%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Total exposure measure excluding claims on central banks (£, single pounds as printed)",
+     {"FY2024": 34574564, "FY2023": 25698472, "FY2022": 22434969}),
+    ("DATA", "Leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "21.2%", "FY2023": "55.6%", "FY2022": "100.0%"}),
+    ("SECTION", "Liquidity coverage ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (£, single pounds as printed)",
+     {"FY2024": 935559813, "FY2023": 841232729, "FY2022": 18404383}),
+    ("DATA", "Cash outflows - Total weighted value (£, single pounds as printed)",
+     {"FY2024": 140540012, "FY2023": 125025307, "FY2022": 189842}),
+    ("DATA", "Cash inflows - Total weighted value (£, single pounds as printed)",
+     {"FY2024": 17037587, "FY2023": 19802995, "FY2022": 1900810}),
+    ("DATA", "Total net cash outflows (adjusted value) (£, single pounds as printed)",
+     {"FY2024": 123502425, "FY2023": 19802995, "FY2022": 142381}),
+    ("DATA", "Liquidity coverage ratio (%)", {"FY2024": "758%", "FY2023": "4248%", "FY2022": "12926%"}),
+    ("SECTION", "Net stable funding ratio", {}),
+    ("DATA", "Total available stable funding (£, single pounds as printed)",
+     {"FY2024": 813112171, "FY2023": 785009254, "FY2022": 23575372}),
+    ("DATA", "Total required stable funding (£, single pounds as printed)",
+     {"FY2024": 17979876, "FY2023": 14888848, "FY2022": 4786632}),
+    ("DATA", "NSFR ratio (%)", {"FY2024": "4522%", "FY2023": "5272%", "FY2022": "493%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Kroo Bank Ltd's own Pillar 3 Disclosures, 'Table 3 Key metrics', in plain single pounds and % "
+    "exactly as printed:\n"
+    "FY2024: Pillar 3 Disclosures 2024, 'Table 3 - Key metrics', printed p.17, column '31 DEC 2024' - "
+    + P3_2024_URL + "\n"
+    "FY2023: Pillar 3 Disclosures 2023, 'Table 3 Key metrics', printed p.18, column '31 Dec 2023' - "
+    + P3_2023_URL + "\n"
+    "FY2022: the '31 Dec 2022' COMPARATIVE column of the FY2023 edition above - see the provenance note "
+    "below, which explains why this one column is not from its own edition.\n"
+    "FY2021: blank. Not a row we failed to find - see below.\n\n"
+    "IS THIS THE KM1 TEMPLATE? YES, ON THE ROW-SET TEST (map rule 8). Kroo heads the table 'Table 3 Key "
+    "metrics', prints no template row numbers and never writes the token 'KM1', so no presence test keyed on "
+    "the token or on the numbering would find it. The row set is the template's, and in full: available own "
+    "funds (CET1/Tier 1/Total), total risk-weighted exposure amount, the three capital ratios, the four SREP "
+    "additional own funds requirement rows, the capital conservation and countercyclical buffers with the "
+    "combined buffer requirement, overall capital requirements, CET1 available after meeting the total SREP "
+    "requirement, the leverage exposure measure and ratio, the full four-row LCR build-up, and the three-row "
+    "NSFR build-up. This is the template printed unnumbered, not a short summary table.\n\n"
+    "WHY FY2022 COMES FROM THE FY2023 EDITION'S COMPARATIVE (map rule 28, decided by the project owner "
+    "2026-09-17). Kroo's FY2022 edition contains NO key-metrics table of any kind. Its contents page lists "
+    "twelve tables and they are a different, older set - Table 3 'Capital resources', Table 4 'Risk weighted "
+    "assets', Table 5 'Pillar 1 capital surplus', Table 6 'Leverage ratio', Table 9 'Liquidity coverage ratio "
+    "(average)' and so on. Verified 2026-09-17 by reading that edition's own table of contents and its table "
+    "captions in full, not by a keyword count: searches for 'Key metrics' and 'combined buffer' return zero "
+    "hits, and every hit for 'own funds', 'countercyclical', 'stable funding', 'risk-weighted' and 'total "
+    "exposure measure' was inspected individually and is narrative prose or a row of one of those older "
+    "tables. Because the whole table is missing rather than a row being dashed inside a table that exists, "
+    "this is map rule 28 and not map rule 20, and the column is FILLED from the later edition's comparative "
+    "and labelled as such here.\n\n"
+    "WHY FY2021 IS NEVERTHELESS BLANK (map rule 28(c)). Filling is only possible where a later edition "
+    "actually prints the year. Kroo's FY2021 edition prints the same older table set as FY2022 and no "
+    "key-metrics table; the FY2022 edition, which would be the only place a 31 Dec 2021 comparative could "
+    "appear, has no key-metrics table to carry one. No edition anywhere therefore carries these rows for "
+    "31 December 2021, so the column stays empty. Kroo's separate older tables DO give FY2021 capital, RWA, "
+    "leverage and LCR figures, and those are on this workbook's individual Pillar 3 metric sheets - but they "
+    "are a different table on a different template, and mapping them onto these rows would invent a "
+    "correspondence Kroo never published.\n\n"
+    "RESTATEMENTS - FY2023 IS PRINTED TWICE AND THE TWO DISAGREE MATERIALLY. FY2023's own edition (used here) "
+    "gives CET1/Tier 1/Total capital of £14,288,553 and capital ratios of 46.6%; the FY2024 edition's own "
+    "31 Dec 2023 comparative restates those to £13,429,696 and 43.8%, and its LCR comparative to 799% against "
+    "the 4,248% FY2023 itself published. The FY2024 edition states the cause in its own words: 'Total assets "
+    "and equity for 31 December 2023 differ from those disclosed in the 2023 Pillar 3 report due to a prior "
+    "year adjustment. Details of this are set out in note 1 of the Bank's 2024 annual report.' Each year's own "
+    "edition is used here (map rule 1), so this sheet carries the originally published FY2023 figures and the "
+    "restated ones are recorded here rather than substituted.\n\n"
+    "SOURCE DEFECT, REPRODUCED NOT CORRECTED (map rule 7). In the FY2023 edition's own Table 3, the row "
+    "'Total net cash outflows (adjusted value)' for 31 Dec 2023 is printed as 19,802,995 - the identical "
+    "figure printed one row above it as 'Cash inflows - Total weighted value'. It is not consistent with that "
+    "column's own LCR of 4,248% (841,232,729 / 19,802,995 would be about 4,248%, so the two are internally "
+    "consistent with each other, but the FY2024 edition's comparative for the same date prints net outflows of "
+    "105,222,312 and an LCR of 799%). The figure is reproduced above exactly as the FY2023 edition printed it "
+    "and the divergence is flagged here rather than silently reconciled.\n\n"
+    "CAPTION DRIFT ALONG THE HQLA ROW. The FY2024 edition captions it 'Total high-quality liquid assets (HQLA) "
+    "(Weighted value -average)'; the FY2023 edition captions the same row 'Total high-quality liquid assets "
+    "(HQLA) (Weighted value)', without the word average. The FY2024 wording is used for the row label and the "
+    "drift is recorded here.\n\n"
+    "PRECISION IS THE BANK'S OWN AND VARIES ACROSS THIS SHEET - two decimals on the SREP and buffer rows, one "
+    "on the capital ratios, none on the LCR and NSFR percentages. That is Kroo's house style, not an "
+    "inconsistency to tidy. Note also that the FY2022 capital ratios read 93.2% here, as the FY2023 edition's "
+    "comparative prints them, while this workbook's CET1 Ratio metric sheet carries 93.18% from Kroo's own "
+    "FY2022-edition capital-resources table - the same ratio at two different printed precisions from two "
+    "different tables, not a disagreement about the number. The same applies to the FY2022 leverage ratio "
+    "(100.0% here against 99.97% on the Leverage Ratio sheet).\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17 against the Bank's OWN website: "
+    "kroo.com/pillar-3-disclosures lists exactly four Pillar 3 documents - 2021, 2022, 2023 and 2024 - which "
+    "are the four already cited in this build script, and kroo.com/annual-reports likewise carries FY2021 "
+    "through FY2024. The newest Pillar 3 edition published is the 2024 one. NONE NEWER EXISTS; no FY2025 "
+    "Annual Report or Pillar 3 disclosure has been published yet.\n\n"
+    + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Kroo Bank Ltd — KM1 Key Metrics",
+    subtitle="The Bank's own published 'Table 3 Key metrics', reproduced whole in its own row order, labels and "
+             "printed precision. Bank-only basis. Amounts in plain single pounds exactly as printed (Kroo does "
+             "not report in £'000 or £m), ratios as printed. Kroo prints the template unnumbered and never uses "
+             "the token 'KM1'; the row set is what identifies it. FY2024 and FY2023 come from their own "
+             "editions; FY2022 is the FY2023 edition's comparative column because the FY2022 edition prints no "
+             "key-metrics table at all; FY2021 is blank because no edition anywhere prints these rows for that "
+             "date. See the source note for all of this, and for a reproduced source defect on the FY2023 net "
+             "cash outflows row.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=520,
+)
+
 metric(
     "CET1 Capital", "£",
     [("Common Equity Tier 1 (CET1) capital", {

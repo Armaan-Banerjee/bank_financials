@@ -588,6 +588,146 @@ CALC_NOTE_2025 = (
     "anywhere in the source. FY2021-FY2024 are directly disclosed, not calculated."
 )
 
+KM1_YEARS = ["FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - Cambridge & Counties Bank Limited Pillar 3 Disclosures, 'Table 1: Key metrics' (the UK KM1 "
+    "template), Bank-only basis, GBP'000. Each year is transcribed from the edition in which it is the "
+    "REPORTING year, never from a later edition's comparative column (map rule 1):\n"
+    f"FY2024: Pillar 3 Disclosures 2024, 'Table 1: Key metrics' (31-Dec-24 column) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 2023, 'Table 1: Key metrics' (31-Dec-23 column) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 2022, 'Table 1: Key metrics', p.18 (31-Dec-22 column) - {P3_2022_URL}\n\n"
+    "THE TABLE IS A BITMAP, NOT TEXT - transcribed visually and twice (map rule 13). None of these tables "
+    "extracts as text, and neither the PDF nor the .docx gives any sign of that: the FY2022 PDF is otherwise "
+    "fully text-native, and the FY2023/FY2024 documents are .docx files containing ZERO w:tbl elements - not a "
+    "single Word table in either - with every table pasted as a picture (10 embedded images in the FY2024 file, "
+    "carrying Word's own auto-generated alt-text 'A screenshot of a spreadsheet'). A text-extraction pass over "
+    "these documents returns the 'Key metrics' heading and the paragraph beneath it and nothing in between, "
+    "which reads exactly like a bank that publishes only a short narrative. It is not. FY2022 was read from two "
+    "independent renderings - the page rendered at 150dpi with pdftoppm, and the embedded JPEG extracted at "
+    "native resolution with pdfimages - and the two agree digit for digit across all 23 rows and both columns. "
+    "FY2023 and FY2024 were read from the native PNGs and cross-checked against the adjacent edition's "
+    "comparative column, which agrees on every row except the two source defects recorded below.\n\n"
+    "LEVERAGE ROWS KEEP THE BANK'S OWN PRE-2022 CAPTIONS (map rule 5). All three editions print row 13 as "
+    "'Leverage ratio total exposure measure' and row 14 as 'Leverage ratio', without the 'excluding claims on "
+    "central banks' qualifier that the post-1-January-2022 template uses. The captions are reproduced as "
+    "printed and are NOT silently relabelled to the newer wording.\n\n"
+    "TWO SOURCE DEFECTS IN THE FY2023 EDITION, recorded and not corrected (map rule 7). Both are in its "
+    "COMPARATIVE column and neither affects a cell on this sheet, because every year here comes from its own "
+    "edition.\n"
+    "  (a) Row 4, 31-Dec-22 comparative: the FY2023 edition prints 728,379, which is the FY2021 figure. "
+    "FY2022's own edition prints 787,621. The FY2023 edition contradicts itself here - the same comparative "
+    "column prints a CET1 ratio of 20.70%, and 163,071 / 787,621 = 20.70% exactly while 163,071 / 728,379 "
+    "would be 22.39%. Three independent sources agree on 787,621: the FY2022 edition's own column, the "
+    "FY2024 edition's chain, and this workbook's RWA Breakdown total.\n"
+    "  (b) Rows UK 16b and 16, 31-Dec-23 (its OWN year): the FY2023 edition prints cash inflows 21,215 and "
+    "total net cash outflows 47,570, which do not tie to each other (81,724 - 21,215 = 60,509) nor to its own "
+    "row 17 (296,975 / 47,570 = 624%, but 519% is printed). The FY2024 edition's 31-Dec-23 comparative prints "
+    "24,496 and 57,228, which tie both ways: 81,724 - 24,496 = 57,228 and 296,975 / 57,228 = 519%. This sheet "
+    "shows 21,215 and 47,570 for FY2023 because that is what the year's own edition published; the figures "
+    "that reconcile are the later edition's and are recorded here rather than substituted. FY2022 and FY2024 "
+    "are internally consistent on every one of these rows.\n\n"
+    "FY2021 AND EARLIER - BLANK, AND NOT FOR WANT OF LOOKING. The FY2021 and FY2020 Pillar 3 documents (70 and "
+    "61 pages) carry no KM1 template at all. They use the PRE-2022 EU template set as separate tables: the "
+    "own-funds composition template ('Own Funds - Regulatory disclosure template', rows 1/2/3/6/8/10/20c/28/29/"
+    "45/59/60/61 per the EBA ITS on Disclosure for Own Funds), leverage as 'Table LRSum' and 'Table LRCom' with "
+    "rows 1-8, 17-24 and EU-23/EU-24, and liquidity as a standalone three-row table numbered 21/22/23 "
+    "('Liquidity Buffer - HQLA', 'Total Net Cash Outflows', 'Liquidity Coverage Ratio'). Those are LR and LIQ "
+    "row numbers, not KM1 rows 13-17, and mapping them onto template row numbers would invent a correspondence "
+    "the Bank never published (map rule 8). Checked for hidden bitmaps too, since this bank is a rule-13 case: "
+    "pdfimages lists images only on pages 1, 10, 13 and 17 of those files, all small decorative ones (a "
+    "2293x248 header band, 187x106 icons), none on the pages where the capital, leverage and liquidity tables "
+    "sit (pp.30, 40, 51, 60).\n"
+    "FY2021 IS THEREFORE THE FY2022 EDITION'S 31-DEC-21 COMPARATIVE COLUMN, filled under map rule 28: the "
+    "FY2021 edition prints no key-metrics table at all, so there is no own-edition table for a later one to "
+    "displace and rule 1 has nothing to bite on. This is rule 28's whole-missing-table case, not rule 20's "
+    f"dashed-row case. Source for every FY2021 cell here: Pillar 3 Disclosures 2022, 'Table 1: Key metrics', "
+    f"p.18, 31-Dec-21 column - {P3_2022_URL} . The three NSFR rows are left EMPTY by the Bank in that "
+    "comparative column (the UK NSFR requirement took effect only from 1 January 2022) and stay empty here - "
+    "filling a column from a comparative does not license inventing the cells the comparative leaves blank.\n"
+    "FY2020 AND EARLIER REMAIN BLANK under rule 28's condition (c): no edition of any year prints a KM1 "
+    "comparative reaching back that far, so there is no comparative to fill from.\n"
+    "TWO EXPECTED DISAGREEMENTS WITH THE SINGLE-METRIC SHEETS, BOTH FY2021, BOTH GENUINE - predicted before "
+    "this sheet was first built rather than explained afterwards. The metric sheets source FY2021 from that "
+    "year's OWN pre-2022 templates, while this KM1 column is now the FY2022 edition's comparative, and the two "
+    "editions do not agree: (i) row 14 leverage ratio, 12.83% here against 12.90% on the Leverage Ratio sheet "
+    "(from the FY2021 edition's own Table LRCom); and (ii) row 17 liquidity coverage ratio, 283% here against "
+    "287% on the LCR sheet (from the FY2021 edition's own 21/22/23 LCR table). Row 13's exposure measure "
+    "differs too - 1,298,284 here against 1,298,463 there - but by 0.01%, inside the checker's amount "
+    "tolerance. Both divergences are cross-edition restatements by the Bank, not transcription errors, and "
+    "neither figure is edited to match the other.\n\n"
+    "INVENTORY CORRECTION. research/km1_inventory.jsonl records the FY2020 and FY2021 editions as KM1_PRESENT. "
+    "Both are FALSE POSITIVES on the evidence above - those editions carry CC1/LRSum/LRCom/LCR, not the key-"
+    "metrics template. The same file records the FY2022 edition as NO_KM1_FOUND, which is a false NEGATIVE, "
+    "since that edition does carry the full template as a bitmap. It has no row at all for the FY2023 and "
+    "FY2024 editions, which are .docx and were never crawled. Recorded here so a later pass does not trust "
+    "those verdicts in either direction.\n\n"
+    "FY2025 - BLANK, WITH A DATE-FITTED EXPLANATION. No Pillar 3 document has been published for FY2025 and "
+    "none will be. Bank of England consolidated waivers register (downloaded 2026-09-16): FRN 579415, "
+    "'Cambridge & Counties Bank Limited', 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the "
+    "SDDT Regime - General Application Part', sub rule 'Ru 3.1', ref A00009927P.pdf, START DATE 20/02/2025, no "
+    "end date. DATE FIT: the Bank's year-end is 31 December, so the opt-in precedes the whole of FY2025 and "
+    "explains its absence. It does NOT explain anything earlier - FY2022, FY2023 and FY2024 all postdate "
+    "nothing relevant and all carry a full template, and the FY2024 edition was itself published on 14 May "
+    "2025, after the opt-in. Only a Rule 3.1 row removes the disclosure obligation; this is the SDDT DISCLOSURE "
+    "exemption in force now, not the SDDT CAPITAL regime beginning 1 January 2027.\n\n"
+    "LATEST-EDITION CHECK, 16 September 2026: ccbank.co.uk's own media library lists eleven Pillar 3 documents, "
+    "the newest being Pillar-3-report-CCB-2024.docx uploaded 14 May 2025. Newest edition published: FY2024, "
+    "which this sheet holds. None newer. Also confirmed that Pillar-3-report-CCB-2024.docx and "
+    "Pillar-3-report-Cambridge-Counties-Bank-2024.docx, uploaded the same day, are BYTE-IDENTICAL (both md5 "
+    "ebe7d0191a3c5cbb4035a11e1213c7e7, both 506,357 bytes) - one document under two URLs, not two editions and "
+    "not a second entity basis (map rule 11's inverse case)."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2024": 213247, "FY2023": 190817, "FY2022": 163071, "FY2021": 144655}),
+    ("DATA", "2  Tier 1 capital (£'000)", {"FY2024": 236147, "FY2023": 213717, "FY2022": 185972, "FY2021": 167555}),
+    ("DATA", "3  Total capital (£'000)", {"FY2024": 241147, "FY2023": 218717, "FY2022": 185972, "FY2021": 167555}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2024": 980319, "FY2023": 841556, "FY2022": 787621, "FY2021": 728379}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": "21.75%", "FY2023": "22.67%", "FY2022": "20.70%", "FY2021": "19.86%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2024": "24.09%", "FY2023": "25.40%", "FY2022": "23.61%", "FY2021": "23.00%"}),
+    ("DATA", "7  Total capital ratio (%)", {"FY2024": "24.60%", "FY2023": "25.99%", "FY2022": "23.61%", "FY2021": "23.00%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2024": "5.19%", "FY2023": "5.19%", "FY2022": "5.19%", "FY2021": "3.10%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2024": "13.19%", "FY2023": "13.19%", "FY2022": "13.19%", "FY2021": "11.10%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2024": "2.00%", "FY2023": "2.00%", "FY2022": "1.00%", "FY2021": "0.00%"}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2024": "4.50%", "FY2023": "4.50%", "FY2022": "3.50%", "FY2021": "2.50%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": "17.69%", "FY2023": "17.69%", "FY2022": "16.69%", "FY2021": "13.60%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {"FY2024": "8.56%", "FY2023": "9.48%", "FY2022": "7.51%", "FY2021": "7.41%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Leverage ratio total exposure measure (£'000)", {"FY2024": 1605041, "FY2023": 1435897, "FY2022": 1335869, "FY2021": 1298284}),
+    ("DATA", "14  Leverage ratio (%)", {"FY2024": "14.71%", "FY2023": "14.88%", "FY2022": "13.92%", "FY2021": "12.83%"}),
+    ("SECTION", "Liquidity Coverage Ratio (average of 12 months, per the Bank's own footnote)", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Total Weighted value) (£'000)", {"FY2024": 345604, "FY2023": 296975, "FY2022": 265556, "FY2021": 255526}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2024": 78028, "FY2023": 81724, "FY2022": 97431, "FY2021": 99787}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2024": 20891, "FY2023": 21215, "FY2022": 13037, "FY2021": 9625}),
+    ("DATA", "16  Total net cash outflows (£'000)", {"FY2024": 57137, "FY2023": 47570, "FY2022": 84394, "FY2021": 90162}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2024": "605%", "FY2023": "519%", "FY2022": "315%", "FY2021": "283%"}),
+    ("SECTION", "Net Stable Funding Ratio (FY2022 footnoted 'Average of submitted returns post implementation of CRR II'; FY2023-FY2024 'Average of 12 months')", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2024": 1303092, "FY2023": 1190919, "FY2022": 1104235}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2024": 960390, "FY2023": 873031, "FY2022": 842391}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2024": "136%", "FY2023": "136%", "FY2022": "131%"}),
+]
+
+bw.add_km1_sheet(
+    title="Cambridge & Counties Bank Limited - KM1 Key Metrics",
+    subtitle="'Table 1: Key metrics' as published (the UK KM1 template), Bank-only basis, GBP'000. FY2022-"
+             "FY2024 are own-edition years; FY2021 is the FY2022 edition's 31-Dec-21 comparative column (map "
+             "rule 28). FY2020 and earlier predate the template entirely (those editions use the EU LR/LIQ "
+             "set) and no comparative reaches them; no FY2025 Pillar 3 exists (SDDT, PRA Rule 3.1 from "
+             "20/02/2025) - see source note",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=84,
+    source_height=760,
+    years=KM1_YEARS,
+)
+
 metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL)], p3_sources(), note=CALC_NOTE_2025)
 metric("CET1 Ratio", "%", [("Common Equity Tier 1 ratio", CET1_RATIO)], p3_sources())
 metric("Tier 1 Capital", "£'000", [("Tier 1 capital", TIER1_CAPITAL)], p3_sources(), note=CALC_NOTE_2025)

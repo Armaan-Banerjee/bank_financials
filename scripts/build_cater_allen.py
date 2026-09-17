@@ -386,6 +386,62 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, CAPITAL_SOURCES, note=note, first_col_width=52, source_height=220)
 
 
+KM1_SOURCES = (
+    "Sources - UK KM1 'Key metrics' template, Cater Allen Limited (FRN 178737, company 00383032):\n"
+    "NOT APPLICABLE AT THIS ENTITY LEVEL. Cater Allen publishes no Pillar 3 document of its own, and its "
+    "parent's group disclosure carries no Cater Allen capital block. Established 2026-09-16 (KM1-009) on "
+    "affirmative evidence from three independent directions, not on a failed search.\n\n"
+    "1. THE ENTITY'S OWN REPORT. Cater Allen Limited's Annual Report and Financial Statements 2024 "
+    "(42 pages, text-native) contains ZERO occurrences of 'Pillar 3'. Richness control on the same extraction: "
+    "'capital' 76 hits, 'capital ratio' 3, 'leverage' 6, so the zero is a fact about the document rather than "
+    "about the extraction (map rule 15). There is no KM1 template, and no table carrying the template's row "
+    "set under another name (map rule 8).\n\n"
+    "2. THE PARENT'S DISCLOSURE - map rule 18, checked and answered. Santander UK publishes no document titled "
+    "'Pillar 3'; its equivalent is the Additional Capital and Risk Management Disclosures (ACRMD). Three "
+    "editions were read in full - FY2023, FY2024 and FY2025, each 80 pages, 'capital' richness 258 / 252 / 286. "
+    "Each mentions Cater Allen exactly TWICE, and in all three it is the same single sentence, about liquidity "
+    "rather than capital: Santander UK plc 'and its subsidiary Cater Allen Limited form the RFB Domestic "
+    "Liquidity Sub-group (the RFB DoLSub), which allows the entities to collectively meet' their liquidity "
+    "requirements. No Cater Allen CET1, Tier 1, total capital, RWA, leverage, LCR or NSFR figure appears in any "
+    "edition. Documents: 2025SantanderUKACRMD.pdf, 'ACRMD FINAL_Dec 24.pdf' and santander_uk_acrmd_2023.pdf, "
+    "all under https://assets.santandermedia.com/ , listed from Santander UK's own investor-relations page for "
+    "Santander UK Group Holdings plc.\n\n"
+    "3. WHICH REGIME THE PARENT FILES UNDER. The ACRMD states its own scope: 'This document contains "
+    "disclosures required under UK CRR for the Company as a large subsidiary of an EU parent undertaking' - "
+    "i.e. Santander UK Group Holdings plc consolidated, as a large subsidiary of Banco Santander SA. That duty "
+    "attaches to the UK holding company, not to each ring-fenced subsidiary beneath it, so no Cater Allen block "
+    "is required and none is published. This is the same shape as AIB Group (UK): the parent's regime decides "
+    "whether an absence is a finding or a gap, and here it is a finding.\n\n"
+    "LIQUIDITY IS SUBSUMED, NOT OMITTED. The DoLSub sentence above is corroborated by the Bank of England "
+    "consolidated waivers register (downloaded 2026-09-16), which carries for FRN 178737 a 'DoLSub Permission / "
+    "Requirements in relation to liquidity / Ru 2.2' running 01/01/2022-01/02/2027. Cater Allen's LCR and NSFR "
+    "are therefore managed and reported at RFB DoLSub level, which explains the absence of KM1 rows 15-20 at "
+    "this entity rather than merely recording it.\n\n"
+    "SDDT - EXPLICIT NEGATIVE, AND A TRAP WORTH NAMING. Cater Allen holds NO SDDT waiver. The register does "
+    "list a row for FRN 178737 whose sub-rule number reads 'Ru 3.1(1), 4.1(1)', but its rule description is "
+    "'Requirements to carry out adequate assessment of resolution preparations' - a RESOLUTION rule 3.1, not "
+    "Rule 3.1 of the SDDT Regime - General Application Part. Matching on the sub-rule number alone would "
+    "manufacture an exemption this firm does not have. Its other rows are ring-fenced-bodies rules 4.1/4.2/4.4/"
+    "5.4/6.4/8.1 (01/01/2024-31/12/2026), Core Large Exposures (Ar 113(6), Ar 429a(1)) and an IRB model "
+    "permission from 01/05/2026. The absence of a KM1 is not an SDDT exemption.\n\n"
+    "ENTITY BASIS. Santander UK Group Holdings plc consolidated figures are deliberately NOT substituted for "
+    "Cater Allen Limited. A group consolidated KM1 covers Santander UK plc and every other subsidiary; "
+    "presenting it as this entity's own key metrics would be false at the entity level.\n\n"
+    "Also recorded: Cater Allen is absent entirely from research/km1_inventory.jsonl - it has no slug among the "
+    "114 in that file, so the survey never reached it and no inventory verdict exists for this bank either way."
+)
+
+bw.add_km1_sheet(
+    title="Cater Allen Limited - KM1 Key Metrics",
+    subtitle="Not applicable - the Bank publishes no Pillar 3 of its own, and Santander UK's group ACRMD "
+             "carries no Cater Allen capital block (liquidity is reported at RFB DoLSub level)",
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    sources_text=KM1_SOURCES,
+    first_col_width=76,
+    source_height=560,
+    years=YEARS,
+)
+
 metric("CET1 Capital", "£'000", [("Total Capital Resources (= CET1 Capital)", CET1_CAPITAL)])
 metric("CET1 Ratio", "%", [("CET1 capital ratio", CET1_RATIO)])
 metric("Tier 1 Capital", "£'000 (= CET1 Capital; no AT1 instruments)", [("Total Tier 1 Capital Resources", CET1_CAPITAL)])

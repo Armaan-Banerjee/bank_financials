@@ -825,6 +825,191 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=44, source_height=130)
 
 
+# ---------------------------------------------------------------
+# Sheet: KM1 Key Metrics (the Bank's own published UK KM1 template)
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "Sources - Hampden & Co Plc's own 'Key Metrics' section, which its own text names as the UK KM1 template: "
+    "\"The following table (UK KM1), provides a summary of the Bank's main prudential regulatory ratios and "
+    "measures, disclosed in accordance with points (a) to (g) of Article 447 of the Disclosure (CRR) part of "
+    "the PRA Rulebook.\" Single entity - the Bank has no subsidiaries and the template is printed once, on one "
+    "basis, in each edition:\n"
+    f"FY2023: Pillar 3 Disclosures for the year ended 31 December 2023, pp.5-6 (the table breaks across two "
+    f"pages - capital and buffers on p.5, leverage/LCR/NSFR on p.6) - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures for the year ended 31 December 2022, pp.5-6 (same two-page break) - {P3_2022_URL}\n"
+    f"FY2021: NOT from a FY2021 KM1 - the FY2021 edition contains no key-metrics template at all (see below) - "
+    f"but from the FY2022 edition's own Dec-21 comparative column, pp.5-6 - {P3_2022_URL}\n\n"
+    "FY2021 IS A FILLED COLUMN, AND THIS IS WHY. The FY2021 Pillar 3 edition has no key-metrics template: its "
+    "own contents page lists Overview / Governance and Risk Management / Capital / (no Key Metrics section), "
+    "and the phrases 'Available own funds', 'Key metric' and 'KM1' appear zero times across the whole 37-page "
+    "document. That zero is a fact about the document rather than about the search: the same extraction is rich "
+    "in capital content, including a full 'Appendix 1: Own funds disclosure template' (CC1, pp.33-37, carrying "
+    "2021 and 2020 columns) and a capital-resources section on p.14. A CC1 own-funds composition table is a "
+    "different template from KM1. The FY2022 edition's Dec-21 comparative column is therefore used for FY2021, "
+    "as printed and in full - including its 0.00% countercyclical buffer (a printed zero, kept as a zero) and "
+    "its 'N/A' leverage and NSFR cells (reproduced as 'N/A', which is what the Bank printed, and which its own "
+    "footnotes explain: the leverage rules excluding central bank claims and the PRA's NSFR requirement both "
+    "took effect 1 January 2022, and \"Disclosure of data for previous periods is not required when data is "
+    "disclosed for the first time\").\n"
+    "FY2020 and earlier are BLANK for the same structural reason and with no fallback available: the FY2020 "
+    "edition (retrieved from the Wayback Machine, the live URL having rotted) and the FY2019 edition likewise "
+    "print no key-metrics template - zero hits on 'Available own funds', 'Key metric' and 'KM1' in both - and "
+    "no edition anywhere prints a comparative column for 31 December 2020 or earlier. The UK KM1 template "
+    "arrived with the Disclosure (CRR) Part of the PRA Rulebook on 1 January 2022, so FY2016-FY2020 pre-date "
+    "it entirely.\n\n"
+    "FY2024 AND FY2025 ARE BLANK FOR A DIFFERENT AND MUCH STRONGER REASON - THE BANK NO LONGER OWES THIS "
+    "DISCLOSURE. Hampden & Co Plc (FRN 606934) holds a PRA modification by consent of Rule 3.1 of the SDDT "
+    "Regime - General Application Part of the PRA Rulebook, granted 25/04/2024 with no end date (waiver "
+    "reference A00007791P.pdf on the PRA's consolidated waivers register). Rule 3.1 is the Small Domestic "
+    "Deposit Taker opt-in that removes the Pillar 3 disclosure duty - not one of the eligibility criteria such "
+    "as 1.2 or 2.1(9), which do not. Consistent with that, the Bank's own investor and shareholder-information "
+    "pages list the 2023 Pillar 3 Disclosures as the newest and most recent edition, with no 2024 or 2025 "
+    "edition, while continuing to publish Annual Reports for both years. So these two columns are not a "
+    "research gap: there is no KM1 to find, and a later edition that would carry them as comparatives will not "
+    "exist either.\n\n"
+    "ONE CROSS-CHECK DISAGREEMENT, EXPECTED AND CORRECT ON BOTH SIDES. verify_workbook.py reports row 17 for "
+    "FY2021 (262%/213%/234% here) as disagreeing with this workbook's LCR sheet, which carries 180% for "
+    "FY2021. Both figures are the Bank's own and they are on DIFFERENT BASES, so neither is wrong and neither "
+    "has been adjusted. The 234% above is the 12-month-average LCR printed in the FY2022 edition's Dec-21 "
+    "comparative column, on the basis that edition states in its own footnote: \"The LCR balances are "
+    "calculated as the simple averages of month end positions over the 12 months preceding the end of the "
+    "reporting period.\" The 180% on the LCR sheet is the FY2021 edition's own point-in-time figure, which "
+    "pre-dates the UK KM1 format and states no averaging basis - which is why that sheet keeps it on a "
+    "separate row captioned 'point-in-time, FY2018-FY2021 basis' rather than merging it with the later "
+    "average-basis series. The same split explains why row 14's FY2021 cell reads 'N/A' here while the "
+    "Leverage Ratio sheet carries 7% for FY2021 from the FY2021 edition's own pre-KM1 disclosure.\n\n"
+    "LATEST-EDITION CHECK 2026-09-17: checked against the Bank's own site (hampdenbank.com/investors and "
+    "/about-us/shareholder-information) rather than against this project's cited URLs, and its full sitemap was "
+    "enumerated (sitemap.xml -> five section sitemaps). Newest Pillar 3 published: 2023 (the file already cited "
+    "above). Newest Annual Report published: Hampden Bank Annual Report 2025. Both are already the newest "
+    "editions this workbook holds; nothing newer exists."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'000)", {
+        "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
+    }),
+    ("DATA", "2 Tier 1 capital (£'000)", {
+        "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
+    }),
+    ("DATA", "3 Total capital (£'000)", {
+        "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
+    }),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4 Total risk-weighted exposure amount (£'000)", {
+        "FY2023": 361317, "FY2022": 316422, "FY2021": 285422,
+    }),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5 Common Equity Tier 1 ratio (%)", {
+        "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19.36%",
+    }),
+    ("DATA", "6 Tier 1 ratio (%)", {
+        "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19.36%",
+    }),
+    ("DATA", "7 Total capital ratio (%)", {
+        "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19.36%",
+    }),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {
+        "FY2023": "1.65%", "FY2022": "2.26%", "FY2021": "2.51%",
+    }),
+    ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {
+        "FY2023": "0.55%", "FY2022": "0.76%", "FY2021": "0.84%",
+    }),
+    ("DATA", "UK 7c Additional T2 SREP requirements (%)", {
+        "FY2023": "0.73%", "FY2022": "1.00%", "FY2021": "1.11%",
+    }),
+    ("DATA", "UK 7d Total SREP own funds requirements (%)", {
+        "FY2023": "10.93%", "FY2022": "12.02%", "FY2021": "12.46%",
+    }),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8 Capital conservation buffer (%)", {
+        "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%",
+    }),
+    ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
+             "Member State (%)", {}),
+    ("DATA", "9 Institution specific countercyclical capital buffer (%)", {
+        "FY2023": "1.98%", "FY2022": "0.98%", "FY2021": "0.00%",
+    }),
+    ("DATA", "UK 9a Systemic risk buffer (%)", {}),
+    ("DATA", "10 Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a Other Systemically Important Institution buffer", {}),
+    ("DATA", "11 Combined buffer requirement (%)", {
+        "FY2023": "4.48%", "FY2022": "3.48%", "FY2021": "2.50%",
+    }),
+    ("DATA", "UK 11a Overall capital requirements (%)", {
+        "FY2023": "15.41%", "FY2022": "15.50%", "FY2021": "14.96%",
+    }),
+    ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {
+        "FY2023": "12.33%", "FY2022": "11.75%", "FY2021": "10.01%",
+    }),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13 Total exposure measure excluding claims on central banks (£'000)", {
+        "FY2023": 887505, "FY2022": 753996, "FY2021": "N/A",
+    }),
+    ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {
+        "FY2023": "8.36%", "FY2022": "8.72%", "FY2021": "N/A",
+    }),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {
+        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+    }),
+    ("DATA", "14b Leverage ratio including claims on central banks (%)", {
+        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+    }),
+    ("DATA", "14c Average leverage ratio excluding claims on central banks (%)", {
+        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+    }),
+    ("DATA", "14d Average leverage ratio including claims on central banks (%)", {
+        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+    }),
+    ("DATA", "14e Countercyclical leverage ratio buffer (%)", {
+        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+    }),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {
+        "FY2023": 231356, "FY2022": 214700, "FY2021": 166719,
+    }),
+    ("DATA", "UK 16a Cash outflows - Total weighted value (£'000)", {
+        "FY2023": 169411, "FY2022": 165723, "FY2021": 114255,
+    }),
+    ("DATA", "UK 16b Cash inflows - Total weighted value (£'000)", {
+        "FY2023": 80955, "FY2022": 64805, "FY2021": 43120,
+    }),
+    ("DATA", "16 Total net cash outflows (adjusted value) (£'000)", {
+        "FY2023": 88456, "FY2022": 100918, "FY2021": 71135,
+    }),
+    ("DATA", "17 Liquidity coverage ratio (%)", {
+        "FY2023": "262%", "FY2022": "213%", "FY2021": "234%",
+    }),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18 Total available stable funding (£'000)", {
+        "FY2023": 669587, "FY2022": 602633, "FY2021": "N/A",
+    }),
+    ("DATA", "19 Total required stable funding (£'000)", {
+        "FY2023": 360891, "FY2022": 324684, "FY2021": "N/A",
+    }),
+    ("DATA", "20 NSFR ratio (%)", {
+        "FY2023": "186%", "FY2022": "186%", "FY2021": "N/A",
+    }),
+]
+
+bw.add_km1_sheet(
+    title="Hampden & Co Plc — KM1 Key Metrics",
+    subtitle="The Bank's own published UK KM1 key-metrics template, reproduced in its own row order with its own "
+             "template row numbers, labels and printed precision. Single entity (the Bank has no subsidiaries), "
+             "amounts in £'000, ratios as printed. Blank cells are rows the Bank did not print; 'N/A' is "
+             "reproduced where the Bank printed it. FY2021 is the FY2022 edition's Dec-21 comparative column - "
+             "that year's own edition prints no template at all. FY2024 and FY2025 are blank because the Bank has "
+             "held a PRA SDDT Rule 3.1 modification since 25 April 2024 and no longer publishes Pillar 3 - see the "
+             "source note.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=360,
+)
+
 metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital", {
