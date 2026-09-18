@@ -517,6 +517,139 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Oxbury's own published UK KM1 template, reproduced whole,
+# placed immediately after Asset Quality and immediately before CET1 Capital.
+#
+# YEARS: FY2022-FY2025 only. Oxbury's first Pillar 3 edition is December 2023,
+# so FY2018-FY2021 have no KM1 on any basis in any edition and carry NO COLUMN
+# AT ALL rather than an empty one (there is nothing for a header to head).
+# FY2022 is the December 2023 edition's own comparative column - that year has
+# no edition of its own, which is the narrow case where filling from a later
+# edition's comparative is correct, and the source edition is named below.
+#
+# The table BREAKS ACROSS TWO PAGES in the December 2023 edition (p.10 carries
+# capital through the LCR outflow rows, p.11 carries the LCR ratio and all
+# three NSFR rows); the 2024 and 2025 editions print it whole on p.11.
+#
+# Oxbury prints NO row numbers in any edition, so none are shown here - adding
+# them would invent a correspondence to the template that the Bank never
+# published. Its own labels are reproduced verbatim, with only the unit
+# appended in brackets.
+# ---------------------------------------------------------------
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022"]
+
+KM1_SOURCES = (
+    "Sources - Oxbury Bank Plc, 'Capital Resources (UK KM1 - Key Metrics)', entity/Company basis, £'000. "
+    "Each year is taken from the edition in which it is the REPORTING year, except FY2022 (see below):\n"
+    f"FY2025: Pillar 3 Disclosures December 2025, section 4.3, p.11 (printed folio 11) - {P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures December 2024, section 4.3, p.11 (printed folio 11) - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures December 2023, section 4.3, pp.10-11 (printed folios 10-11; the table breaks "
+    f"across the two pages - the LCR ratio row and the three NSFR rows are on p.11) - {P3_2023_URL}\n"
+    f"FY2022: the December 2023 edition's own 2022 COMPARATIVE column, same table, pp.10-11 - {P3_2023_URL}. "
+    "Oxbury published no Pillar 3 disclosure for FY2022 itself (its first edition is December 2023), so this "
+    "column is filled from the earliest edition that prints the year rather than left blank.\n\n"
+    "FY2018-FY2021 are absent from this sheet entirely, not blank: no Pillar 3 edition reaches those years, and "
+    "the UK KM1 template post-dates them. FY2021's Annual Report capital note is narrative only.\n\n"
+    "CROSS-EDITION AGREEMENT AND ONE DIVERGENCE. Every FY2024 figure in the December 2024 edition is reproduced "
+    "identically as the December 2025 edition's comparative, and every FY2023 figure agrees between the December "
+    "2023 and December 2024 editions EXCEPT the LCR ratio: the December 2023 edition prints 545.2% for 2023 and "
+    "the December 2024 edition's 2023 comparative prints 529.9%. This sheet carries 545.2%, that year's own "
+    "edition, and the divergence is recorded here rather than reconciled.\n\n" + ENTITY_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available capital (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (£'000)",
+     {"FY2025": 192855, "FY2024": 142312, "FY2023": 68026, "FY2022": 45557}),
+    ("DATA", "Tier 1 capital (£'000)",
+     {"FY2025": 192855, "FY2024": 142312, "FY2023": 68026, "FY2022": 45557}),
+    ("DATA", "Total capital (£'000)",
+     {"FY2025": 192855, "FY2024": 142312, "FY2023": 68026, "FY2022": 45557}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 1168300, "FY2024": 684357, "FY2023": 426705, "FY2022": 282001}),
+    ("DATA", "Risk-based capital ratios as a percentage of RWA",
+     {"FY2025": "16.51%", "FY2024": "20.79%", "FY2023": "15.94%", "FY2022": "16.16%"}),
+    ("DATA", "Total capital ratio (%)",
+     {"FY2025": "19.39%", "FY2024": "23.35%", "FY2023": "19.27%", "FY2022": "18.81%"}),
+    ("SECTION", "Total Capital requirement (TCR) as set by the PRA (as a percentage of risk-weighted exposure "
+                "amount) - Pillar 1 + Pillar 2A", {}),
+    ("DATA", "Pillar 1 + Pillar 2A",
+     {"FY2025": "11.65%", "FY2024": "11.65%", "FY2023": "13.30%", "FY2022": "12.19%"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+    ("DATA", "Countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
+    ("DATA", "Combined buffer requirement",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%"}),
+    ("DATA", "Overall capital requirement (%)",
+     {"FY2025": "16.15%", "FY2024": "16.15%", "FY2023": "17.80%", "FY2022": "15.69%"}),
+    ("SECTION", "Surplus over requirements (Pillar + Pillar 2A)", {}),
+    ("DATA", "CET1 available after meeting the bank's minimum capital requirement (%)",
+     {"FY2025": "4.86%", "FY2024": "9.14%", "FY2023": "2.64%", "FY2022": "3.97%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 2050662, "FY2024": 1077236, "FY2023": 636500, "FY2022": 374370}),
+    ("DATA", "Leverage ratio (%)",
+     {"FY2025": "9.40%", "FY2024": "12.66%", "FY2023": "10.69%", "FY2022": "12.17%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value-average) (£'000)",
+     {"FY2025": 1512803, "FY2024": 1510275, "FY2023": 525527, "FY2022": 107106}),
+    ("DATA", "Cash outflows - Total weighted value (3 months) (£'000)",
+     {"FY2025": 484006, "FY2024": 353181, "FY2023": 117034, "FY2022": 18196}),
+    ("DATA", "Cash inflows - Total weighted value (3 months) (£'000)",
+     {"FY2025": 39179, "FY2024": 28590, "FY2023": 17872, "FY2022": 9310}),
+    ("DATA", "Total net cash outflow (£'000)",
+     {"FY2025": 444827, "FY2024": 324591, "FY2023": 99162, "FY2022": 8886}),
+    ("DATA", "LCR ratio (%)",
+     {"FY2025": "340.1%", "FY2024": "465.3%", "FY2023": "545.2%", "FY2022": "2,132%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "Total available stable funding (£'000)",
+     {"FY2025": 2947068, "FY2024": 2272844, "FY2023": 1038478, "FY2022": 450684}),
+    ("DATA", "Total required stable funding (£'000)",
+     {"FY2025": 1835204, "FY2024": 865058, "FY2023": 516484, "FY2022": 302338}),
+    ("DATA", "NSFR ratio (%)",
+     {"FY2025": "160.6%", "FY2024": "262.7%", "FY2023": "201.1%", "FY2022": "149.1%"}),
+]
+
+bw.add_km1_sheet(
+    title="Oxbury Bank Plc — KM1 Key Metrics",
+    subtitle="Oxbury Bank Plc's own published 'Capital Resources (UK KM1 - Key Metrics)' table, reproduced in "
+             "its own row order, labels and precision. Amounts in £'000, ratios as printed. Oxbury prints no "
+             "row numbers in any edition, so none are shown. FY2018-FY2021 are not shown at all: no Pillar 3 "
+             "edition reaches those years.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES + (
+        "\n\nTHE 'Total capital' ROW IS DEFECTIVE IN EVERY EDITION AND IS REPRODUCED, NOT CORRECTED. Oxbury prints "
+        "Total capital equal to Common Equity Tier 1 in all four years (192,855 / 142,312 / 68,026 / 45,557), "
+        "omitting Tier 2 altogether, even though the same documents' CC1 table states Total regulatory capital "
+        "of 226,552 / 159,812 / 82,214 / 53,057 and a Total Tier 2 (subordinated debt) component of 33,697 / "
+        "17,500 / 14,188 / 7,500. The Bank's own printed Total capital ratio settles which figure is the real "
+        "one: 226,552/1,168,300 = 19.39% and 159,812/684,357 = 23.35%, both matching the percentages printed on "
+        "the row below, whereas the KM1 numerators do not. The Total Capital metric sheet therefore carries the "
+        "CC1 figure while this sheet carries what KM1 printed, and the two disagree BY DESIGN - this is a defect "
+        "in the source disclosure, recorded here, and neither figure is to be altered to make them agree.\n\n"
+        "ROWS NOT CROSS-CHECKED, AND WHY THAT IS CORRECT. Because Oxbury prints no row numbers and words several "
+        "rows its own way, the 'Common Equity Tier 1', 'Leverage ratio (%)' and 'LCR ratio (%)' rows, and the "
+        "'Risk-based capital ratios as a percentage of RWA' row, do not resolve to a single-metric sheet and are "
+        "not automatically compared against one. Their figures are correct and agree with the corresponding "
+        "metric sheets by eye (CET1 192,855; leverage 9.40%; LCR 340.1%; CET1 ratio 16.51% for FY2025). The "
+        "labels are left exactly as the Bank printed them rather than annotated to make them match: the sheet "
+        "reproduces a disclosure, and relabelling it to suit a checker would be normalising the source.\n\n"
+        "'Risk-based capital ratios as a percentage of RWA' IS THE CET1 RATIO ROW. Oxbury prints what is "
+        "elsewhere a section caption as a data row carrying the CET1 ratio figures, in every edition. "
+        "Reproduced as published.\n\n"
+        "FY2022 IS A FILLED COLUMN - it comes from the December 2023 edition's own 2022 comparative, because "
+        "Oxbury published no Pillar 3 for FY2022. Every other column is that year's own edition."
+    ),
+    first_col_width=66,
+    source_height=430,
+    years=KM1_YEARS,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=180)
 

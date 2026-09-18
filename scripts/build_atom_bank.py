@@ -510,7 +510,21 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
+# GAP-FILL (2026-09-18): FY2023-FY2026 previously carried NO cell at all, so four
+# year columns were blank both to a reader and to audit_gaps.py, even though the
+# finding was already complete and quoted in the note below. The exemption now
+# appears IN the columns, one cell per year - the same treatment already applied
+# to ABC International Bank and ICICI Bank UK. No column is suppressed; all four
+# are still printed and now say something. Re-verified 2026-09-18 against each
+# year's OWN filing (all four are image-only scans, ~1 char/page extracted, so
+# each was OCR'd before the exemption wording could be read at all):
+#   FY2026 PDF p.60, FY2025 PDF p.57, FY2024 PDF p.57, FY2023 PDF p.56.
+CF_EXEMPT_YEARS = ["FY2026", "FY2025", "FY2024", "FY2023"]
 rows = [
+    ("SECTION", "FY2023-FY2026: no Statement of Cash Flows is published - FRS 101 exemption (see note below)", {}),
+    ("DATA", "Statement of Cash Flows",
+     {y: "Not published - FRS 101 reduced disclosure framework; exemption from IAS 7 taken from FY2023 onward"
+      for y in CF_EXEMPT_YEARS}),
     ("SECTION", "Operating activities", {}),
     ("DATA", "Loss for the year", {"FY2022": -11927, "FY2021": -62379, "FY2020": -63945, "FY2019": -79857, "FY2018": -52680, "FY2017": -42169, "FY2016": -22515}),
     ("DATA", "Depreciation and amortisation", {"FY2022": 10531, "FY2021": 10442, "FY2020": 7156, "FY2019": 12416, "FY2018": 5717, "FY2017": 3417, "FY2016": 604}),
@@ -559,7 +573,8 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="Atom Bank Plc — Statement of Cash Flows",
-    subtitle="Bank (solo) basis, £'000. FY2023-FY2026 blank - see source note at bottom (FRS 101 cash-flow exemption).",
+    subtitle="Bank (solo) basis, £'000. FY2023-FY2026 state the FRS 101 cash-flow exemption in place of figures - "
+             "see source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=74,
@@ -770,6 +785,16 @@ KM1_SOURCES = (
     "which this workbook does not currently carry an Interim Pillar 3 sheet for; recorded here as a known, "
     "deliberate gap rather than an absence.\n\n"
     + ENTITY_NOTE
+    + "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2024 - READ FROM THE DOCUMENT ON 2026-09-18 AND RECORDED HERE "
+    "SO THE QUESTION IS NOT RE-OPENED. The Atom Holdco Limited Pillar 3 Disclosures 2024 prints 347.3 on rows 1, "
+    "2 and 3 in its FY24 Bank column. Atom states the reason: 'All of Atom's capital is Common Equity Tier 1 "
+    "(CET1). The Group may explore opportunities, subject to market conditions, to raise Tier 2 capital in the "
+    "near term to further strengthen its capital base.' The FY23 columns of that same table are DISTINCT - Bank "
+    "241.3 on rows 1 and 2 against 248.5 on row 3 - which is the Tier 2 that had been in issue a year earlier, so "
+    "the identical FY2024 column reflects a real change in the capital stack rather than a repeated cell. ENTITY: "
+    "the table prints FOUR columns, FY24 Group, FY24 Bank, FY23 Group and FY23 Bank; this sheet is the BANK "
+    "series.\n"
 )
 
 km1_rows = [

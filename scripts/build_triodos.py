@@ -17,6 +17,12 @@ P3_2023_URL = "https://www.triodos.co.uk/binaries/content/assets/tbuk/press-and-
 P3_2022_URL = "https://www.triodos.co.uk/binaries/content/assets/tbuk/press-and-media-page/triodos-bank-uk-2022-pillar-3-report.pdf"
 P3_2021_URL = "https://www.triodos.co.uk/downloads/triodos-bank-uk-2021-pillar-3-report?id=9efebf75e4f1"
 P3_2020_URL = "https://www.triodos.co.uk/binaries/content/assets/tbuk/press-and-media-page/triodos-bank-uk-2020-pillar-3-report.pdf"
+# ADDED 2026-09-18 (leading-gap pass). The SAME FY2025 Annual Report as AR2025_URL, but the
+# Bank's OWN website copy, which HAS A TEXT LAYER - the Companies House filing is a 108-page
+# image-only scan that had to be OCR'd. Found by enumerating the press-and-media page's real
+# hrefs rather than by guessing a filename. Use this copy for anything that needs searching;
+# note its page numbers are the printed ones and do NOT match the Companies House filing's.
+AR2025_SITE_URL = "https://www.triodos.co.uk/binaries/content/assets/tbuk/press-and-media-page/triodos-bank-uk-limited---annual-report-2025.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Triodos Bank UK Limited (TBUK, company number 11379025, FRN 817008) is a wholly owned "
@@ -732,6 +738,18 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2019 Pillar 3 report exists (see p3_sources note) - {P3_2020_URL}\n"
     "FY2025: no standalone Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE) as of this workbook's build date - blank, "
     "consistent with every other Pillar 3 sheet in this workbook.\n"
+    "FY2025 RE-CHECKED 2026-09-18, TWO WAYS, AND STILL EMPTY. (1) The Bank's press-and-media page - its real "
+    "document index - was fetched (HTTP 200, text/html, 81,539 bytes) and every href extracted: it links "
+    "exactly three Pillar 3 reports, 2022, 2023 and 2024, and two Annual Reports, 2024 and 2025. There is no "
+    "2025 Pillar 3 file linked, which matches the SDDT exemption rather than a publication lag. (2) The FY2025 "
+    "ANNUAL REPORT was searched properly for the first time. The Companies House filing is image-only, so the "
+    f"Bank's own TEXT-LAYER copy of the same report was used instead - {AR2025_SITE_URL}, 9,669,520 bytes, "
+    "619,857 characters of extracted text. It contains NO RWA breakdown of any kind and in fact no "
+    "risk-weighted-asset AMOUNT at all: the only occurrence of 'Risk Weighted Assets' in the whole document is "
+    "a narrative aside ('in line with the Risk Weighted Assets (RWA) growth'), and there is no own-funds "
+    "requirement table. That search DID find a leverage ratio the earlier pass had missed - see the Leverage "
+    "Ratio sheet - so the extraction demonstrably works on this document and this negative is a fact about the "
+    "report, not about the tool.\n"
     "PRESENTATION NOTE: FY2019-FY2021's own Pillar 3 Reports all combine Credit risk and Counterparty Credit risk "
     "into a single exposure-class table (no separate CCR line existed as a distinct category in these earlier "
     "report vintages; the split first appears in the FY2022 Pillar 3 Report) - kept as a single combined row "
@@ -743,7 +761,30 @@ RWA_BREAKDOWN_SOURCES = (
     + ENTITY_NOTE
 )
 
+# THE FY2025 COLUMN NOW SAYS SO IN THE CELL (2026-09-18, remaining-gap round).
+# The finding below was already established and is set out in RWA_BREAKDOWN_SOURCES,
+# but it lived only in prose and the FY2025 column sat EMPTY, which `audit_gaps.py`
+# cannot tell apart from a year nobody has looked at. Re-verified the same day, not
+# carried on trust: the PRA consolidated waivers register was re-downloaded (2,899
+# rows) and matched on BOTH conjuncts - Rule Description 'SDDT Regime - General
+# Application' AND Sub Rule Number 'Ru 3.1' - giving FRN 817008, 'Triodos Bank UK
+# Limited', ref A00010060P.pdf, start 11/03/2025, NO end date. THAT IS THE ROW TO
+# USE. The Bank ALSO holds a second SDDT-described row five days earlier - sub-rule
+# 'Ru 1.2, 2.1(9)', ref A00010046P.pdf, 06/03/2025-06/03/2028 - which modifies the
+# ELIGIBILITY CRITERIA only and removes no disclosure duty; reading that date as the
+# effective one is a live mistake on this project and is deliberately avoided here.
+# Year end 31 December, so the FY2025 reporting date of 31 December 2025 falls after
+# 11 March 2025. The Bank's press-and-media page (its real document index) was
+# re-fetched live the same day over HTTP/1.1 with a browser UA (HTTP 200, text/html,
+# 81,539 bytes): it links Pillar 3 reports for 2022, 2023 and 2024 only, alongside
+# Annual Reports for 2024 and 2025 - so the Bank published into the window and added
+# no Pillar 3. Outcome 2 (never published), not outcome 3 (unreached today).
+TRIODOS_FY2025_NO_P3_RWA = ("Not published - no FY2025 Pillar 3 (SDDT Rule 3.1 from 11/03/2025); "
+                            "AR 2025 prints no RWA amount")
+
 rwa_breakdown_rows = [
+    ("DATA", "Pillar 3 edition status for this year (see source note)",
+     {"FY2025": TRIODOS_FY2025_NO_P3_RWA}),
     ("DATA", "Credit risk RWA", {"FY2024": 806870, "FY2023": 799630, "FY2022": 799316}),
     ("DATA", "Credit and Counterparty Credit risk RWA (combined, FY2019-FY2021 basis)", {"FY2021": 780882, "FY2020": 709757, "FY2019": 782823}),
     ("DATA", "Counterparty Credit risk RWA", {"FY2024": 0, "FY2023": 0, "FY2022": 0}),
@@ -759,8 +800,14 @@ bw.add_rwa_breakdown_sheet(
               "for every year with a Pillar 3 report. FY2019-FY2021's Credit and Counterparty Credit risk are "
               "combined as those years' own reports presented them (see source note); FY2019/FY2020 also carry "
               "an 'Amounts below thresholds for deduction' line not present in later years. No FY2025 Pillar 3 "
-              "report exists, nor will one (SDDT exemption - see ENTITY NOTE) (re-confirmed 2026-09-12: only the FY2022-FY2024 reports are linked from the "
-              "bank's press-and-media page), consistent with the rest of this workbook's Pillar 3 sheets.",
+              "report exists, nor will one (SDDT Rule 3.1 modification effective 11 March 2025, no end date, "
+              "preceding the 31 December 2025 year-end; the separate Ru 1.2/2.1(9) row of 06/03/2025 is an "
+              "eligibility modification and is NOT the instrument relied on). The FY2025 column stays visible "
+              "and now carries that statement explicitly on its status row rather than sitting blank "
+              "(2026-09-18) (re-confirmed the same day: the "
+              "bank's press-and-media page still links only the FY2022-FY2024 Pillar 3 reports, and the FY2025 "
+              "Annual Report's text layer carries no risk-weighted-asset amount at all - see the source note), "
+              "consistent with the rest of this workbook's Pillar 3 sheets.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=68,
@@ -773,18 +820,37 @@ metric(
     [
         ("Tier 1 capital after deductions", {"FY2024": 193258, "FY2023": 192544, "FY2022": 185772, "FY2021": 177905, "FY2020": 174426, "FY2019": 170452}),
         ("Leverage ratio exposure measure", {"FY2024": 1715067, "FY2023": 1664149, "FY2022": 1583516, "FY2021": 1910203, "FY2020": 1728069, "FY2019": 1460566}),
-        ("Leverage ratio (%)", {"FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
+        ("Leverage ratio (%)", {"FY2025": "10.5%", "FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
     ],
-    p3_sources(),
-    note="TBUK is below the £50bn deposit threshold that triggers a binding UK leverage ratio requirement (PRA "
+    p3_sources() +
+    f"\nFY2025 (ratio row only): Triodos Bank UK Limited Annual Report 2025, printed p.14, 'Key performance "
+    f"indicators' table, row 'Leverage ratio', column '2025' - {AR2025_SITE_URL}\n",
+    note="FY2025 CORRECTION, 18 September 2026. This note previously read 'No FY2025 figure: not disclosed in "
+         "the Annual Report and no FY2025 Pillar 3 report exists'. The second half is still true; THE FIRST HALF "
+         "WAS FALSE. TBUK's FY2025 Annual Report prints a leverage ratio of 10.5% (against 11.3% for 2024) in "
+         "its 'Key performance indicators' table on printed p.14, alongside the CET1 ratio, total capital ratio "
+         "and the 446% LCR this workbook was already taking from that report. The earlier miss is explained by "
+         "the source used: the Companies House filing is a 108-page image-only scan with no text layer, and the "
+         "OCR pass over it did not surface this table. The Bank's OWN website hosts a text-layer copy of the "
+         "same Annual Report (AR2025_SITE_URL above), reached by reading the real hrefs on its press-and-media "
+         "page, and the table is plainly present there.\n"
+         "WHAT IS AND IS NOT FILLED. Only the RATIO row carries FY2025. The Annual Report's KPI table is a "
+         "percentage-only table: it prints no Tier 1 capital amount and no leverage exposure measure, so those "
+         "two rows stay blank rather than being back-solved from the ratio. THE FY2025 RATIO IS ALSO ON A "
+         "COARSER PRECISION than the Pillar-3-sourced years (one decimal place against two) because that is how "
+         "the Annual Report prints it. Basis cross-check: the same table's 2024 column prints 11.3%, which is "
+         "the FY2024 Pillar 3 Report's 11.27% rounded to one decimal - so the Annual Report's KPI leverage ratio "
+         "is the same measure on the same 'excluding claims on central banks' basis, not a different statistic, "
+         "and the FY2025 column can sit in the same row as the Pillar 3 years. The Pillar-3 figure is retained "
+         "for FY2024 because it is the more precise printing of the same disclosure.\n"
+         "TBUK is below the £50bn deposit threshold that triggers a binding UK leverage ratio requirement (PRA "
          "expectation only, minimum 3.25%). FY2022 onward uses the 'excluding claims on central banks' exposure "
          "basis (introduced in the 2022 Pillar 3 Report); FY2019-FY2021 all used a broader, non-comparable CRR2 "
          "full-exposure basis (including central bank claims) - shown here exactly as each of those years' own "
          "reports stated it, NOT a later report's restated comparative, consistent with this project's practice "
          "of not blending non-comparable methodology vintages. FY2020's figures are directly stated in TBUK's own "
          "FY2020 Pillar 3 Report (Table 14/15); FY2019's are that same report's own audited FY2019 comparative "
-         "column (no standalone FY2019 Pillar 3 report exists - see p3_sources note). No FY2025 figure: not "
-         "disclosed in the Annual Report and no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE).",
+         "column (no standalone FY2019 Pillar 3 report exists - see p3_sources note).",
 )
 
 metric(
@@ -824,7 +890,10 @@ metric(
     [
         ("Available stable funding", {"FY2024": 1731150, "FY2022": 1637537}),
         ("Required stable funding", {"FY2024": 866978, "FY2022": 903741}),
-        ("Net Stable Funding Ratio (%)", {"FY2024": "206%", "FY2023": "188%", "FY2022": "181%"}),
+        ("Net Stable Funding Ratio (%)", {
+            "FY2025": ("Not disclosed - no FY2025 Pillar 3 (SDDT Rule 3.1 from 11/03/2025); "
+                       "AR 2025 names NSFR but prints no value"),
+            "FY2024": "206%", "FY2023": "188%", "FY2022": "181%"}),
     ],
     p3_sources(),
     note="FY2024 and FY2022 are year-end point-in-time NSFR (FY2024 Pillar 3 Report states '206%' directly in "
@@ -837,7 +906,16 @@ metric(
          "part of that era's disclosure - both reports' full contents pages were reviewed to confirm this). "
          "FY2019: no standalone Pillar 3 report exists for FY2019 at all (see p3_sources note), and AR2019 gives "
          "no NSFR figure either. FY2025: not disclosed - no FY2025 Pillar 3 report exists, nor will one (SDDT exemption - see ENTITY NOTE) and the Annual "
-         "Report gives no NSFR percentage (only confirms the ratio is monitored).",
+         "Report gives no NSFR percentage (only confirms the ratio is monitored). THAT LAST POINT WAS "
+         "RE-ESTABLISHED PROPERLY ON 2026-09-18 rather than left resting on an OCR pass: the Bank's own "
+         "text-layer copy of the FY2025 Annual Report (AR2025_SITE_URL on the Leverage Ratio sheet; 619,857 "
+         "characters extracted) mentions the NSFR exactly once, in the Risk Overview's liquidity-risk block on "
+         "printed p.42 - 'the Bank uses other key regulatory measures including Liquidity Coverage Ratio (LCR) "
+         "and Net Stable Funding Ratio (NSFR)' - with no value beside it, and the Key performance indicators "
+         "table on printed p.14 lists the LCR but no NSFR row. The same search of the same file DID turn up an "
+         "FY2025 leverage ratio that an earlier pass had reported as absent, which is the positive control that "
+         "makes this zero a finding rather than a failed read. Nothing is derived from the SDDT regime's "
+         "simplified retail deposit ratio, which the Bank does not publish either.",
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -885,14 +963,17 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "21.3%", "FY2024": "22.1%", "FY2023": "22.36%", "FY2022": "21.57%", "FY2021": "21.2%", "FY2020": "22.6%", "FY2019": "20.3%"}),
         ("Tier 1 Ratio", {"FY2025": "21.3%", "FY2024": "22.1%", "FY2023": "22.36%", "FY2022": "21.57%", "FY2021": "21.2%", "FY2020": "22.6%", "FY2019": "20.3%"}),
         ("Total Capital Ratio", {"FY2025": "21.3%", "FY2024": "22.7%", "FY2023": "23.02%", "FY2022": "22.20%", "FY2021": "21.8%", "FY2020": "23.4%", "FY2019": "20.3%"}),
-        ("Leverage Ratio", {"FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
+        ("Leverage Ratio", {"FY2025": "10.5%", "FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
         ("LCR", {"FY2025": "446%", "FY2024": "471.1%", "FY2023": "420.8%", "FY2022": "442.7%", "FY2021": "413.6%", "FY2020": "414.1%", "FY2019": "505.6%"}),
         ("NSFR", {"FY2024": "206%", "FY2023": "188%", "FY2022": "181%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. No FY2025 Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE), so Leverage "
-         "Ratio and NSFR are blank for FY2025 (Total RWAs on that sheet is a calculated figure for FY2025 - see "
-         "its own note). TBUK does not take the FRS 101/102 cash-flow exemption used by several other single-"
+         "citation for the underlying document/page. No FY2025 Pillar 3 report has been published, and none will be (the Bank is an SDDT, exempt from the Pillar 3 disclosure obligation - see ENTITY NOTE), so NSFR "
+         "is blank for FY2025 (Total RWAs on that sheet is a calculated figure for FY2025 - see "
+         "its own note). FY2025's Leverage Ratio of 10.5% does NOT come from a Pillar 3 report: it is the "
+         "Annual Report's own 'Key performance indicators' table (printed p.14), the same place this workbook's "
+         "FY2025 CET1 ratio, total capital ratio and LCR come from, and it is printed to one decimal place "
+         "where the Pillar-3-sourced years carry two - see the Leverage Ratio sheet's own note. TBUK does not take the FRS 101/102 cash-flow exemption used by several other single-"
          "parent foreign subsidiary banks in this project - a full Statement of Cash Flows exists for all 7 years "
          "(FY2019-FY2025). FY2019 covers only 8 months of trading (see ENTITY_NOTE, and the Cash Flow sheet's own "
          "one-off Part VII transfer items) - not comparable run-rate to other years. FY2019's 'Opening equity' "

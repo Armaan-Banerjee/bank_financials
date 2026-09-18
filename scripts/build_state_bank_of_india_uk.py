@@ -70,13 +70,48 @@ P3_PENDING_NOTE = (
     "FY2026 PILLAR 3 NOT YET PUBLISHED: SBI UK's FY2026 (year ended 31 March 2026) statutory "
     "accounts were filed at Companies House on 9 September 2026 and are the source for this "
     "workbook's FY2026 Balance Sheet, Profit & Loss and Statement of Changes in Equity. Its FY2026 "
-    "Pillar 3 disclosure had not been published as of 15 September 2026 - the Bank publishes each "
-    "year's Pillar 3 document several months after the accounts (FY2025's went up 29 December 2025, "
-    "FY2024's 28 October 2024), and no FY2026 document appears on sbiuk.statebank or in the Internet "
-    "Archive. FY2026 is therefore blank on the Asset Quality and RWA Breakdown sheets and on the "
-    "Total RWAs metric, and the FY2026 capital/leverage/NSFR figures that ARE shown come from the "
-    "Annual Report's own disclosures rather than from a KM1 table - see each sheet's own note."
+    "Pillar 3 disclosure had still not been published as of 18 September 2026, re-verified that day "
+    "against the Bank's OWN index page rather than by guessing paths. That page is titled 'Annual report "
+    "and Pillar 3' and lives at https://sbiuk.statebank/-/pilla-1 (it is reachable only from the site "
+    "footer - it is absent from the main navigation, from the HTML sitemap at /sitemap and from "
+    "/sitemap.xml, and /regulatory-disclosures is a 404, which is why an earlier check could not find it). "
+    "Its newest two entries are 'Disclosure Statement Basel III - FY 24-25' and 'Annual Financial 2025'; "
+    "there is no FY 25-26 entry. A Wayback CDX listing of sbiuk.statebank/documents* (656 distinct URLs, "
+    "run with an unfiltered control query first to prove the instrument was answering) shows no 2026 "
+    "Pillar 3 capture either. The timing is consistent with the Bank's own habit of publishing each "
+    "year's Pillar 3 several months after the accounts - the FY2025 edition was uploaded 29 December 2025 "
+    "and FY2024's 28 October 2024 - so an FY2026 edition would be expected around October-December 2026. "
+    "NOT PUBLISHED, as distinct from not reachable: the FY2025 Pillar 3 and FY2025 Annual Report PDFs both "
+    "still fetch cleanly from the same host on a plain curl, so the route works.\n"
+    "WHAT THIS LEAVES WITHOUT A FIGURE, AS OF 18 SEPTEMBER 2026: the Total RWAs metric, the RWA Breakdown "
+    "sheet and the KM1 Key Metrics sheet. Those FY2026 cells now carry an explicit 'Not published' statement "
+    "rather than sitting empty, so the finding is visible in the column and not only in this note. The "
+    "FY2026 Annual Report cannot substitute for any of the three. HOW THAT WAS ESTABLISHED, AND A CORRECTION "
+    "TO AN EARLIER WORDING IN THIS NOTE: the Companies House FY2026 filing is a pure CCITT G4 IMAGE SCAN - "
+    "`pdffonts` lists no font and `pdftotext` returns 68 bytes for 68 pages - so the 'full text search of all "
+    "68 pages' this note previously claimed could not have read anything, and any negative drawn from it was "
+    "a fact about the extractor rather than about the document. Re-established 18 September 2026 by rendering "
+    "all 68 pages at 300 dpi (`pdftoppm -r 300 -gray`) and OCRing each with tesseract, giving a rich text "
+    "layer (1,190 occurrences of 'the', 73 of 'capital', 93 of 'ratio'). On THAT text: 'risk-weighted' occurs "
+    "twice, both in the definitional footnotes on p.7 explaining what the CET1 and capital adequacy ratios "
+    "are measured against; the seven apparent 'rwa' hits are every one of them the substring inside "
+    "'forward'; 'own funds', 'CET1' and 'KM1' return zero. No risk-weighted exposure AMOUNT appears anywhere "
+    "in the document, and its 'Regulatory Capital resources' table (p.61) stops at Total Tier 1 capital "
+    "(GBP 278,469k FY2026 against GBP 276,997k FY2025). The "
+    "Asset Quality sheet is NO LONGER blank for FY2026: the Annual Report prints the same maximum-exposure "
+    "and collateral tables in its own note 6.3, and that sheet's note sets out the route and its limits. "
+    "The FY2026 capital/leverage/NSFR figures that ARE shown come from the Annual Report's own disclosures "
+    "rather than from a KM1 table - see each sheet's own note."
 )
+
+
+# GA gap-fill round, 2026-09-18. The FY2026 absence of a Pillar 3 disclosure was
+# already established and written into the sheet NOTES, but the FY2026 cells on
+# Total RWAs, RWA Breakdown and KM1 Key Metrics were left EMPTY - which is
+# indistinguishable, to a reader and to scripts/audit_gaps.py, from a year nobody
+# has looked at. The finding now appears IN the column. Deliberately digit-free
+# so audit_gaps.py's shape test cannot read it as a figure.
+P3_NOT_YET = "Not published - no Pillar III edition for this year yet, and no RWA amount in the Annual Report"
 
 
 def sources():
@@ -207,8 +242,39 @@ ASSET_QUALITY_SOURCES = (
     "Sources - State Bank of India (UK) Limited Pillar 3 credit risk exposures (loans and advances to "
     "customers, maximum exposure by degree of risk of financial loss), £m:\n"
     + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {AQ_PAGES[y]} - {P3[y]}" for y in YEARS if y in P3)
-    + "\nFY2026: no Pillar 3 disclosure published yet - see note below."
-    + "\n\nEach year's Total maximum exposure figure reconciles to the source table's own total (FY2022's "
+    + f"\nFY2026: NOT from a Pillar 3 - none exists for the year ended 31 March 2026 (see note below). FY2026 "
+      f"comes instead from the Annual Report and Financial Statements for the year ended 31 March 2026 "
+      f"(Companies House filing, full accounts made up to 31 March 2026, filed 9 September 2026; image-only "
+      f"scan with no text layer, read visually from pages rendered at 300 dpi), note 6.3 'Credit risk', "
+      f"maximum-exposure and collateral tables p.63 and forbearance-policy paragraph p.64 - {FS2026}"
+    + "\n\nFY2026 ADDED 2026-09-18, AND THE ROUTE IS DELIBERATE. The Bank prints the SAME maximum-exposure "
+      "and collateral tables in its Annual Report note 6.3 as in its Pillar 3, so the FY2026 column here is "
+      "on the same basis as every earlier year even though its document differs. The positive control is "
+      "exact: the FY2026 Annual Report's own 2025 comparative column reproduces this workbook's "
+      "Pillar 3-sourced FY2025 figures to the pound - 1,537,459 / 19,933 / 37,887 / total 1,595,279 "
+      "(GBP'000), collateral 1,288,583 against gross 1,537,459, and '3 business customers, total exposure "
+      "of GBP4.60m' - so no basis break is being papered over.\n"
+      "THE ANNUAL REPORT'S VERSION OF THE TABLE IS ABRIDGED, and the two rows it drops are left BLANK for "
+      "FY2026 rather than carried forward as zero: 'Past due beyond 90 days, but not impaired' and "
+      "'Repossessions' are not printed at all in the Annual Report table, for either the 2026 or the 2025 "
+      "column, whereas the Pillar 3 version prints them and it is from there that FY2019-FY2025 carry zeros. "
+      "A row that is not printed is a different finding from a row printed as nil. (The Annual Report does "
+      "state separately, in prose on p.65, that loans and advances 'past due but not impaired' were GBP13m "
+      "at 31 March 2026 against GBP57m at 31 March 2025. That is NOT the same measure as the blank row - it "
+      "has no 90-day qualifier, and it cannot be, since this workbook's FY2025 90-day figure is nil - so it "
+      "is recorded here and not written into the sheet.)\n"
+      "FY2026 IMPAIRED is GBP378k, the first non-nil impaired balance since FY2024; the Annual Report prints "
+      "a literal dash in its 2025 column for that row.\n"
+      "FY2026 FORBEARANCE is split by the Bank for the first time: '3 business customers and 2 BTL, total "
+      "exposure of GBP7.17.m' (the stray second full stop is the document's own typo). The business count "
+      "keeps its existing row and a new buy-to-let count row carries the 2; earlier years are blank on that "
+      "row because the Bank did not split the disclosure, not because the count was zero.\n"
+      "FY2026 PRECISION: the Annual Report prints this table in GBP'000, so FY2026 is shown to three "
+      "decimals of GBP m (1,663.295m), the same treatment already given to FY2020 and FY2019, which also "
+      "came from a GBP'000-denominated source. FY2021-FY2025 are 2dp because their Pillar 3 documents print "
+      "GBP m to 2dp. The FY2026 collateral coverage ratio is computed the same way as every other year "
+      "(1,438.338 / 1,663.673 = 86.46%) and is not a figure the Bank publishes.\n"
+    + "\nEach year's Total maximum exposure figure reconciles to the source table's own total (FY2022's "
     "reconciles to within £0.01m of its own reported total; FY2019's within £0.06m - a source rounding "
     "artifact, not an error in this workbook). This Total does not tie to the Balance Sheet's narrower "
     "'Loans and advances to customers' line (a net, on-balance-sheet figure), since it also includes "
@@ -226,7 +292,9 @@ ASSET_QUALITY_SOURCES = (
 RWA_BREAKDOWN_SOURCES = (
     "Sources - State Bank of India (UK) Limited UK OV1 (Overview of risk-weighted exposure amounts), £m:\n"
     + "\n".join(f"{y}: SBI UK Pillar 3 disclosure, pp. {RWA_PAGES[y]} - {P3[y]}" for y in YEARS if y in P3)
-    + "\nFY2026: no Pillar 3 disclosure published yet - see note below."
+    + "\nFY2026: no Pillar 3 disclosure published yet - every FY2026 cell on this sheet therefore carries an "
+    "explicit 'Not published' statement rather than sitting empty, so an established negative is "
+    "distinguishable from an unexamined year. See note below."
     + "\n\nEach year's category rows sum to that year's own reported Total, except FY2025: 1,216.73 + "
     "7.60 + 95.33 = 1,319.66m against a reported Total of 1,320.25m, a genuine ~£0.59m gap present in the "
     "source document's own UK OV1 table (confirmed by direct visual inspection of the source PDF page, "
@@ -387,24 +455,26 @@ bw.add_cash_flow_sheet(
 
 bw.add_asset_quality_sheet(
     title="State Bank of India (UK) Limited — Asset Quality",
-    subtitle="Pillar 3 credit risk exposures, £m. Not IFRS 9-staged (FRS 102 entity) — categorised by degree "
-              "of risk of financial loss. See source note at bottom.",
+    subtitle="Credit risk exposures, £m. Not IFRS 9-staged (FRS 102 entity) — categorised by degree of risk "
+              "of financial loss. FY2019-FY2025 from each year's Pillar 3; FY2026 from the Annual Report's "
+              "own copy of the same table (no FY2026 Pillar 3 yet). See source note at bottom.",
     rows=[
         ("SECTION", "Loan book by risk of financial loss (Pillar 3 credit risk exposures)", {}),
-        ("DATA", "Neither past due beyond 90 days nor impaired", {"FY2025": 1537.46, "FY2024": 1420.37, "FY2023": 1408.07, "FY2022": 1205.40, "FY2021": 1142.58, "FY2020": 1101.735, "FY2019": 1046.264}),
+        ("DATA", "Neither past due beyond 90 days nor impaired", {"FY2026": 1663.295, "FY2025": 1537.46, "FY2024": 1420.37, "FY2023": 1408.07, "FY2022": 1205.40, "FY2021": 1142.58, "FY2020": 1101.735, "FY2019": 1046.264}),
         ("DATA", "Past due beyond 90 days, but not impaired", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0, "FY2019": 0}),
-        ("DATA", "Impaired", {"FY2025": 0, "FY2024": 2.19, "FY2023": 5.32, "FY2022": 5.03, "FY2021": 4.61, "FY2020": 4.565, "FY2019": 0}),
+        ("DATA", "Impaired", {"FY2026": 0.378, "FY2025": 0, "FY2024": 2.19, "FY2023": 5.32, "FY2022": 5.03, "FY2021": 4.61, "FY2020": 4.565, "FY2019": 0}),
         ("DATA", "Repossessions", {"FY2025": 0, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": 0, "FY2019": 0}),
-        ("DATA", "Unutilised overdraft commitments", {"FY2025": 19.93, "FY2024": 34.79, "FY2023": 25.45, "FY2022": 6.52, "FY2021": 8.51, "FY2020": 10.115, "FY2019": 8.253}),
-        ("DATA", "Pipeline loans", {"FY2025": 37.89, "FY2024": 10.67, "FY2023": 15.71, "FY2022": 69.29, "FY2021": 86.83, "FY2020": 72.036, "FY2019": 12.927}),
-        ("TOTAL", "Total maximum exposure of loans and advances to customers", {"FY2025": 1595.28, "FY2024": 1468.02, "FY2023": 1454.55, "FY2022": 1286.23, "FY2021": 1242.53, "FY2020": 1188.451, "FY2019": 1067.444}),
+        ("DATA", "Unutilised overdraft commitments", {"FY2026": 12.123, "FY2025": 19.93, "FY2024": 34.79, "FY2023": 25.45, "FY2022": 6.52, "FY2021": 8.51, "FY2020": 10.115, "FY2019": 8.253}),
+        ("DATA", "Pipeline loans", {"FY2026": 30.488, "FY2025": 37.89, "FY2024": 10.67, "FY2023": 15.71, "FY2022": 69.29, "FY2021": 86.83, "FY2020": 72.036, "FY2019": 12.927}),
+        ("TOTAL", "Total maximum exposure of loans and advances to customers", {"FY2026": 1706.284, "FY2025": 1595.28, "FY2024": 1468.02, "FY2023": 1454.55, "FY2022": 1286.23, "FY2021": 1242.53, "FY2020": 1188.451, "FY2019": 1067.444}),
         ("SECTION", "Collateral", {}),
-        ("DATA", "Collateral value", {"FY2025": 1288.58, "FY2024": 1149.26, "FY2023": 1048.50, "FY2022": 770.94, "FY2021": 596.94, "FY2020": 509.338, "FY2019": 417.850}),
-        ("DATA", "Gross loans and advances", {"FY2025": 1537.45, "FY2024": 1422.56, "FY2023": 1413.39, "FY2022": 1210.42, "FY2021": 1147.19, "FY2020": 1106.300, "FY2019": 1046.264}),
-        ("DATA", "Collateral coverage (% of gross loans and advances)", {"FY2025": "83.81%", "FY2024": "80.79%", "FY2023": "74.18%", "FY2022": "63.69%", "FY2021": "52.03%", "FY2020": "46.04%", "FY2019": "39.94%"}),
+        ("DATA", "Collateral value", {"FY2026": 1438.338, "FY2025": 1288.58, "FY2024": 1149.26, "FY2023": 1048.50, "FY2022": 770.94, "FY2021": 596.94, "FY2020": 509.338, "FY2019": 417.850}),
+        ("DATA", "Gross loans and advances", {"FY2026": 1663.673, "FY2025": 1537.45, "FY2024": 1422.56, "FY2023": 1413.39, "FY2022": 1210.42, "FY2021": 1147.19, "FY2020": 1106.300, "FY2019": 1046.264}),
+        ("DATA", "Collateral coverage (% of gross loans and advances)", {"FY2026": "86.46%", "FY2025": "83.81%", "FY2024": "80.79%", "FY2023": "74.18%", "FY2022": "63.69%", "FY2021": "52.03%", "FY2020": "46.04%", "FY2019": "39.94%"}),
         ("SECTION", "Forbearance", {}),
-        ("DATA", "Business customers granted forbearance (count)", {"FY2025": 3, "FY2024": 4, "FY2023": 3, "FY2022": 7, "FY2021": 8, "FY2020": 0, "FY2019": 0}),
-        ("DATA", "Total forbearance exposure, £m", {"FY2025": 4.60, "FY2024": 6.13, "FY2023": 6.71, "FY2022": 83, "FY2021": 82, "FY2020": 0, "FY2019": 0}),
+        ("DATA", "Business customers granted forbearance (count)", {"FY2026": 3, "FY2025": 3, "FY2024": 4, "FY2023": 3, "FY2022": 7, "FY2021": 8, "FY2020": 0, "FY2019": 0}),
+        ("DATA", "Buy-to-let customers granted forbearance (count)", {"FY2026": 2}),
+        ("DATA", "Total forbearance exposure, £m", {"FY2026": 7.17, "FY2025": 4.60, "FY2024": 6.13, "FY2023": 6.71, "FY2022": 83, "FY2021": 82, "FY2020": 0, "FY2019": 0}),
     ],
     sources_text=ASSET_QUALITY_SOURCES,
     first_col_width=66,
@@ -430,6 +500,16 @@ bw.add_asset_quality_sheet(
 # comparative anywhere to fill from.
 # ---------------------------------------------------------------
 km1_rows = [
+    # A STATEMENT ROW, NOT A TEMPLATE ROW (GA gap-fill round, 2026-09-18). FY2026
+    # held no cell at all, so a reader saw a blank column and audit_gaps.py scored
+    # it as an unexamined gap even though the absence was already established and
+    # written into KM1_SOURCES. The finding now appears IN the column. Labelled in
+    # square brackets so verify_workbook.py's _metric_sheet_for resolves it to no
+    # metric sheet - nothing on the template itself is computed, reordered or
+    # restated by this row, which is the same shape Chetwood, Gulf International
+    # and ABC International already use.
+    ("DATA", "[No UK KM1 published for this year - see note below]",
+     {"FY2026": "Not published - no Pillar III edition for the year ended March, index re-read"}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "Common Equity Tier 1 (CET1) capital (£m)",
      {"FY2025": 277.00, "FY2024": 271.82, "FY2023": 259.67, "FY2022": 249.19, "FY2021": 243.50}),
@@ -513,11 +593,22 @@ KM1_SOURCES = (
     "/regulatory-disclosures path returns 404 and the site's own sitemap carries no Pillar 3 links). No FY2026 "
     "Pillar 3 document is published, consistent with the Bank's pattern of publishing each year's disclosure "
     "several months after the accounts (FY2025's went up 29 December 2025, FY2024's 28 October 2024). Checked, "
-    "none newer than FY2025.\n\n"
-    "WHY FY2026 IS BLANK: no Pillar 3 disclosure exists for the year ended 31 March 2026 yet, so there is no "
-    "KM1 table to reproduce. The FY2026 capital and ratio figures that DO appear on the metric sheets come from "
-    "the FY2026 Annual Report's own Regulatory Capital resources table, which is not this template and is not "
-    "mapped onto it here.\n\n"
+    "none newer than FY2025.\n"
+    "RE-CHECKED INDEPENDENTLY 2026-09-18, by fetching the Bank's own index page as HTML rather than guessing "
+    "a path: https://sbiuk.statebank/-/pilla-1 returns HTTP 200 / text/html and lists Financial Reports blocks "
+    "for 2024-25 back to 2018-19, newest entries 'Disclosure Statement Basel III - FY 24-25' and 'Annual "
+    "Financial 2025'. There is no FY 25-26 block. The same page links 2026-dated PDFs in other sections (Tax "
+    "Strategy 31.03.2026, Website Terms and Conditions 2026, Payment Cut Off Timings May26), so the page is "
+    "maintained and the missing FY 25-26 entry is an absence rather than a stale render. Still none newer "
+    "than FY2025.\n\n"
+    "WHY FY2026 CARRIES A STATEMENT AND NOT A TABLE: no Pillar 3 disclosure exists for the year ended 31 March "
+    "2026 yet, so there is no KM1 table to reproduce. The column is not left empty - the first row of this "
+    "sheet is a STATEMENT row, '[No UK KM1 published for this year - see note below]', carrying that finding in "
+    "the FY2026 cell, so a reader and the gap census can both tell an established negative from a year nobody "
+    "has examined. It is a statement row and not a template row: nothing on the template itself is computed, "
+    "reordered or restated by it. The FY2026 capital and ratio figures that DO appear on the metric sheets come "
+    "from the FY2026 Annual Report's own Regulatory Capital resources table, which is not this template and is "
+    "not mapped onto it here.\n\n"
     "WHY FY2021 IS FILLED FROM THE FY2022 EDITION, AND WHY FY2020/FY2019 ARE NOT FILLED AT ALL. The FY2021, "
     "FY2020 and FY2019 disclosures pre-date the Bank's adoption of the template: each prints a short bespoke "
     "capital table (capital resources, RWAs and ratios, with headline LCR and NSFR percentages quoted in a "
@@ -531,6 +622,20 @@ KM1_SOURCES = (
     "document - so the FY2021 cells are blank rather than carried across from the Bank's older financial-ratios "
     "presentation, which is a different basis. The headline FY2021 LCR (156%) and NSFR (124%) that the FY2021 "
     "edition does quote remain on the LCR and NSFR metric sheets.\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL EXCEPT IN FY2021, AND THAT IS WHAT THE BANK PRINTS. CET1 capital, Tier 1 capital "
+    "and Total capital carry the same figure in FY2025-FY2022 because SBI UK has no Additional Tier 1 and, from "
+    "FY2022, no Tier 2 in issue. FY2021 is the exception and is the proof that these are three separately-read "
+    "rows rather than one value copied three times: the FY2022 edition prints 243.50 / 243.50 / 247.76 for 2021, "
+    "the £4.26m difference being the residual Tier 2 subordinated debt left after most of it was converted to "
+    "CET1 share capital in October 2020. Both figures reconcile against the bank's own ratio rows - "
+    "243.50 / 1,357.75 = 17.93% and 247.76 / 1,357.75 = 18.25%, exactly the printed CET1 and total capital "
+    "ratios. Verified directly in the FY2025 and FY2022 PDFs on 18 September 2026.\n\n"
+    "YEAR COLUMNS SHOWN: this sheet carries FY2026-FY2021 only. FY2020 and FY2019 are omitted from the header "
+    "rather than shown as empty columns - those editions pre-date the Bank's adoption of the template and no "
+    "edition anywhere prints a comparative for them in template form, so there is no KM1 for those years on any "
+    "basis. FY2026 IS shown, and now carries an explicit statement rather than an empty column, because that is "
+    "a document not yet published rather than a table that does not exist, and the other sheets in this "
+    "workbook do carry FY2026.\n\n"
     "SOURCE DEFECTS, REPRODUCED NOT CORRECTED:\n"
     "- The FY2025 edition's narrative above the table says 'the capital adequacy ratio remained strong at "
     "20.99%, with a Tier 1 capital ratio of 20.99%' while the table itself prints 20.98% in all three ratio "
@@ -554,12 +659,16 @@ bw.add_km1_sheet(
              "labels and printed precision. SBI UK prints the template unnumbered and splits it across three "
              "consecutive tables (capital/SREP/buffers/leverage, LCR, NSFR), which are shown here in template "
              "order. Amounts in £m, ratios as printed. FY2025-FY2022 come from their own editions; FY2021 is "
-             "the FY2022 edition's comparative column. FY2026 is blank because no FY2026 Pillar 3 has been "
-             "published, and FY2020/FY2019 pre-date the Bank's adoption of the template - see the source note.",
+             "the FY2022 edition's comparative column. FY2026 carries a 'Not published' statement on the first "
+             "row because no FY2026 Pillar 3 has been published. FY2020 and FY2019 are not shown at all: they "
+             "pre-date the Bank's adoption of the "
+             "template and no edition prints a comparative for them, so those columns are omitted rather than "
+             "printed empty - see the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=72,
-    source_height=460,
+    source_height=520,
+    years=["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
 )
 
 
@@ -576,7 +685,7 @@ metric("Total Capital", "£m", [("Total capital", {"FY2026": 278.47, "FY2025": 2
     "states a common Tier 1 capital ratio of 19.6% and a total capital adequacy ratio of 19.6%, i.e. "
     "no Tier 2, and its Regulatory Capital resources table (p.61) shows Tier 1 capital only. " + "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2026": "19.6%", "FY2025": "20.98%", "FY2024": "22.41%", "FY2023": "21.16%", "FY2022": "19.52%", "FY2021": "18.25%", "FY2020": "17.4%", "FY2019": "17.5%"})], "FY2026 SOURCE DIFFERS: SBI UK's FY2026 Pillar 3 disclosure is not yet published (see the source note), so the FY2026 figure here is the one printed in the FY2026 Annual Report itself - the 'Regulatory Capital resources' table (p.61) for capital amounts and the financial-ratios summary (p.7) for ratios. That table is the same basis as the Pillar 3 KM1: the Annual Report's FY2025 comparatives (Total Tier 1 capital GBP 276,997k, CET1 and total capital adequacy ratio 21.0%) reproduce this workbook's Pillar 3-sourced FY2025 figures (GBP 277.00m, 20.98%) exactly, differing only in the Annual Report's 1-decimal rounding. The ratios are therefore shown to 1 decimal place for FY2026 and 2 for earlier years - a source-precision difference, not a basis change.")
-metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4})], "FY2026 is blank: SBI UK's FY2026 Pillar 3 disclosure - the only source that publishes a total risk-weighted exposure amount - is not yet out, and the FY2026 Annual Report discloses capital ratios and capital amounts but no RWA figure. It has deliberately NOT been back-solved from Tier 1 capital divided by the 19.6% ratio: that ratio is rounded to one decimal place, so the implied RWA would be a derived estimate spanning roughly GBP 1,417-1,424m, not a disclosed figure. See the source note.")
+metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", {"FY2026": P3_NOT_YET, "FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4})], "FY2026 carries a 'Not published' statement rather than a figure, and that is the finding rather than an unexamined gap: SBI UK's FY2026 Pillar 3 disclosure - the only source that publishes a total risk-weighted exposure amount - is not yet out, and the FY2026 Annual Report discloses capital ratios and capital amounts but no RWA figure. The Bank's own index page ('Annual report and Pillar 3', https://sbiuk.statebank/-/pilla-1) was read as HTML again on 18 September 2026 and its newest Financial Reports block is still 'Financial Reports for 2024-25'; the same page carries 2026-dated documents in other sections (Tax Strategy 31.03.2026, Website Terms and Conditions 2026), so the page itself is current and the FY 25-26 entry is genuinely absent rather than a stale render. The RWA absence in the Annual Report was re-established from a 300 dpi OCR of that image-only filing, not from a text search of a document with no text layer - see the source note. It has deliberately NOT been back-solved from Tier 1 capital divided by the 19.6% ratio: that ratio is rounded to one decimal place, so the implied RWA would be a derived estimate spanning roughly GBP 1,417-1,424m, not a disclosed figure.")
 
 bw.add_rwa_breakdown_sheet(
     title="State Bank of India (UK) Limited — RWA Breakdown",
@@ -584,12 +693,12 @@ bw.add_rwa_breakdown_sheet(
               "categorised Pillar 1 RWA table - see source note at bottom.",
     rows=[
         ("SECTION", "UK OV1 — Overview of risk-weighted exposure amounts", {}),
-        ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1216.73, "FY2024": 1115.26, "FY2023": 1138.84, "FY2022": 1201.92, "FY2021": 1286.62}),
-        ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 7.60, "FY2024": 9.05, "FY2023": 16.89, "FY2022": 17.00, "FY2021": 18.47}),
+        ("DATA", "Credit risk (excluding CCR)", {"FY2026": P3_NOT_YET, "FY2025": 1216.73, "FY2024": 1115.26, "FY2023": 1138.84, "FY2022": 1201.92, "FY2021": 1286.62}),
+        ("DATA", "Counterparty credit risk (CCR)", {"FY2026": P3_NOT_YET, "FY2025": 7.60, "FY2024": 9.05, "FY2023": 16.89, "FY2022": 17.00, "FY2021": 18.47}),
         ("DATA", "Credit risk incl. CVA & CCR-for-forex-swap (FY2019-FY2020 Pillar 1 categorisation, see note)", {"FY2020": 1324.7, "FY2019": 1277.2}),
         ("DATA", "Market risk (FY2019-FY2020 only, see note)", {"FY2020": 0, "FY2019": 1.1}),
-        ("DATA", "Operational risk", {"FY2025": 95.33, "FY2024": 88.71, "FY2023": 71.30, "FY2022": 57.76, "FY2021": 52.66, "FY2020": 50.4, "FY2019": 61.0}),
-        ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4}),
+        ("DATA", "Operational risk", {"FY2026": P3_NOT_YET, "FY2025": 95.33, "FY2024": 88.71, "FY2023": 71.30, "FY2022": 57.76, "FY2021": 52.66, "FY2020": 50.4, "FY2019": 61.0}),
+        ("TOTAL", "Total risk-weighted exposure amount", {"FY2026": P3_NOT_YET, "FY2025": 1320.25, "FY2024": 1213.02, "FY2023": 1227.04, "FY2022": 1276.68, "FY2021": 1357.75, "FY2020": 1375.0, "FY2019": 1339.4}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=54,
@@ -655,8 +764,10 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2026": "130%", "FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
     ],
     note="FY2026 ADDED 2026-09-15 from the Companies House filing of the year-ended-31-March-2026 accounts "
-         "(filed 9 September 2026). SBI UK's FY2026 Pillar 3 disclosure is NOT yet published, so FY2026 is "
-         "blank on Asset Quality, RWA Breakdown and Total RWAs, and the FY2026 capital, leverage and NSFR "
+         "(filed 9 September 2026). SBI UK's FY2026 Pillar 3 disclosure is NOT yet published (index page "
+         "re-read as HTML on 2026-09-18), so FY2026 reads 'Not published' on RWA Breakdown, Total RWAs and the "
+         "KM1 Key Metrics sheet - those cells were empty until 2026-09-18, which no reader or census could "
+         "tell apart from an unexamined year - and the FY2026 capital, leverage and NSFR "
          "figures shown come from the Annual Report's own Regulatory Capital resources table and "
          "financial-ratios summary (a basis the Annual Report's FY2025 comparatives confirm matches the "
          "Pillar 3 KM1, to 1 decimal place). The LCR trend row above is deliberately blank for FY2026: the "

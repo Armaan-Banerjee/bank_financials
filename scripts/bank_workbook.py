@@ -215,6 +215,159 @@ class BankWorkbook:
             return ws
         return self.wb.create_sheet(title=name[:31])
 
+    @staticmethod
+    def _has_value(v):
+        """True if a cell would print something a reader can read.
+
+        A dash counts. The user's decision of 2026-09-18 is that a printed
+        dash stays on the sheet as a literal "-", because it is the bank
+        SAYING something ("this row does not apply to us") and is a different
+        statement from silence. So a year whose only content is dashes is a
+        year the bank published, and must keep its column.
+        """
+        if v is None:
+            return False
+        return not (isinstance(v, str) and not v.strip())
+
+    def _trim_trailing_empty_years(self, years, value_dicts):
+        """Drop year columns off the OLDEST end that no row on this sheet fills.
+
+        The user's instruction of 2026-09-17 (`bank_probs.txt` general point 1,
+        naming Alrayan's KM1, which printed FY2021 and FY2020 headers over two
+        entirely empty columns):
+
+            If no Km1 for 2021 and earlier, please dont put header for them in
+            spreadsheet
+
+        and the scope decision of 2026-09-18: **trailing only, and on every
+        sheet, not only KM1.** The reason a column is empty at the old end is
+        the same on every sheet - the disclosure did not exist that far back -
+        so the treatment is the same on every sheet.
+
+        TRAILING ONLY IS THE WHOLE POINT, AND THE ASYMMETRY IS DELIBERATE.
+        An empty column at the NEWEST end means something completely
+        different: the bank has very probably published and we have not
+        transcribed it yet. Suppressing that would hide a real gap behind a
+        tidy sheet, which is the opposite of what the reader needs - see
+        `wayfinder/gaps/map.md`, where the corpus split 662 leading
+        sheet-years (real gaps to chase) against 1,881 trailing ones (correct
+        as they are). Leading empties keep their headers so they stay visible.
+
+        A sheet where EVERY year is empty is left alone. Such a sheet is all
+        leading and all trailing at once, and the honest reading is that it is
+        a data gap rather than a presentation problem, so it keeps its columns
+        and stays visible. Trimming it would leave a one-column sheet.
+
+        Per-sheet, not per-workbook: year columns may therefore stop at
+        different places on different sheets of one workbook. That is intended
+        - every column carries its own year label, and no sheet should print a
+        header it cannot fill.
+        """
+        dicts = [d for d in value_dicts if d]
+        trimmed = list(years)
+        while trimmed:
+            if any(self._has_value(d.get(trimmed[-1])) for d in dicts):
+                break
+            trimmed.pop()
+        return trimmed if trimmed else list(years)
+
+    def patch_year_column(self, sheet_name, year, values_by_label, header_row=3):
+        """Write one year's values into an ALREADY-BUILT sheet, by row label.
+
+        Three scripts supply a year out-of-band rather than in `rows` - Bank of
+        Beirut UK, Gatehouse and National Bank of Egypt UK all carry an FY2017
+        block bolted on after the sheet is built, because that year comes from a
+        different source than the rest. Each used to compute its target column
+        as `1 + YEARS.index(year) + 1`.
+
+        THAT BROKE THE MOMENT COLUMN TRIMMING LANDED, and it broke SILENTLY,
+        which is the part worth remembering. `_trim_trailing_empty_years` looks
+        at `rows`; a year supplied afterwards is invisible to it, so the column
+        was trimmed away and the patch then wrote its values into the cell
+        position the year USED to occupy - past the end of the header. The
+        figures were still in the file, in a column with no year above them: 98
+        cells across the three banks, present, plausible, and unlabelled.
+
+        An index computed from one list and applied to another is only correct
+        while nothing can change either list. Resolve the column from the sheet
+        as it actually is, and if the year is not there, put it there.
+        """
+        ws = self.wb[sheet_name]
+        headers = [ws.cell(row=header_row, column=c).value
+                   for c in range(1, ws.max_column + 1)]
+        want = self.year_label.get(year, year)
+        col = None
+        for i, h in enumerate(headers, start=1):
+            # the header may carry a unit suffix - "FY2017 (£'000)" - so match
+            # on the label being present rather than on equality
+            if h is not None and str(want) in str(h):
+                col = i
+                break
+        if col is None:
+            # the year was trimmed (or never built): re-create the column,
+            # copying the unit suffix from the neighbouring header so the new
+            # one reads the same way as the rest of the row
+            col = len(headers) + 1
+            suffix = ""
+            for h in reversed(headers):
+                if h is None:
+                    continue
+                m = re.search(r"\((.*)\)\s*$", str(h))
+                if m:
+                    suffix = f" ({m.group(1)})"
+                break
+            ws.cell(row=header_row, column=col, value=f"{want}{suffix}")
+            # reuse the sheet's own header styling rather than re-deriving it,
+            # so a restored column is indistinguishable from an original one
+            self._style_header(ws, header_row, col)
+            ws.cell(row=header_row, column=col).border = BORDER
+
+        labels = {str(ws.cell(row=r, column=1).value).strip(): r
+                  for r in range(header_row + 1, ws.max_row + 1)}
+        written = 0
+        for label, value in values_by_label.items():
+            r = labels.get(str(label).strip())
+            if r is not None:
+                ws.cell(row=r, column=col, value=value)
+                ws.cell(row=r, column=col).border = BORDER
+                written += 1
+        return written
+
+    def _assert_no_orphan_columns(self):
+        """Refuse to save a sheet holding data in a column with no header.
+
+        The failure this exists for wrote real figures into unlabelled columns
+        and nothing complained: not `verify_workbook.py`, which reads headers
+        out to `max_column` and simply reported `None` where a year should be;
+        not `check_builds_current.py`, which only compares timestamps; not
+        `audit_gaps.py`, which counts cells under headers it can name and so
+        never saw them at all. A silent orphan beats every instrument in this
+        repo, so the check belongs at the point of writing.
+        """
+        for ws in self.wb.worksheets:
+            if ws.max_row < 4:
+                continue
+            headers = [ws.cell(row=3, column=c).value
+                       for c in range(1, ws.max_column + 1)]
+            if not headers or headers[0] is None:
+                continue  # not a header-row-3 sheet (Overview, equity roll-forward)
+            for c in range(len(headers), 0, -1):
+                if headers[c - 1] is not None:
+                    break
+                orphans = [ws.cell(row=r, column=c).value
+                           for r in range(4, ws.max_row + 1)]
+                orphans = [v for v in orphans
+                           if v is not None and str(v).strip() != ""]
+                if orphans:
+                    raise ValueError(
+                        f"{self.bank_name}: sheet {ws.title!r} holds "
+                        f"{len(orphans)} value(s) in column {c}, which has no "
+                        f"header. A year column was almost certainly trimmed "
+                        f"after something computed this column's index from an "
+                        f"untrimmed year list - use patch_year_column() instead "
+                        f"of an index into YEARS. First value: {orphans[0]!r}"
+                    )
+
     # -- public API -----------------------------------------------------------
     def _add_statement_sheet(
         self,
@@ -240,6 +393,9 @@ class BankWorkbook:
             Asset Quality / RWA Breakdown at the project-wide floor).
         """
         years = years if years is not None else self.years
+        years = self._trim_trailing_empty_years(
+            years, (values for _kind, _label, values in rows)
+        )
         ws = self._next_sheet(sheet_name)
         ws.freeze_panes = "B4"
         ws["A1"] = title
@@ -556,6 +712,9 @@ class BankWorkbook:
         years: optional per-sheet override - see _add_statement_sheet.
         """
         years = years if years is not None else self.years
+        years = self._trim_trailing_empty_years(
+            years, (values for _label, values in rows_data)
+        )
         ws = self.wb.create_sheet(title=name[:31])
         ncols = 1 + len(years)
         ws["A1"] = f"{self.bank_name} — {name}"
@@ -1132,6 +1291,7 @@ class BankWorkbook:
             )
 
     def save(self, path):
+        self._assert_no_orphan_columns()
         self.wb.save(path)
         print("Saved workbook with sheets:", self.wb.sheetnames)
         return path

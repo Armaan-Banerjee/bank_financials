@@ -485,9 +485,37 @@ bw.add_km1_sheet(
              "Bank Limited appears only in EU LI3 as a consolidated entity, and the Group's EU KM1 is a "
              "Group-only template in DKK with quarterly date columns - no Northern Bank block anywhere. The "
              "Annual Report's own five-row \"Capital and leverage position\" table is not the template and is "
-             "not reshaped into it.",
-    rows=[("DATA", "Not applicable — the Bank publishes no individual Pillar 3 disclosure, and no UK KM1 "
-                   "template for this entity exists in any document, its parent's included", {})],
+             "not reshaped into it. WHERE THE OTHER SHEETS COME FROM, since this one says the Bank publishes no "
+             "Pillar 3: the eleven single-metric sheets and the RWA Breakdown sheet are transcribed from the "
+             "Bank's own Annual Report capital and liquidity tables, at the pages each of those sheets cites. "
+             "None of them is sourced from a Pillar 3 document, because none exists.",
+    # GA-009 (2026-09-18): EVERY YEAR CELL CARRIES THE STATEMENT, not just the
+    # row label. Until now this row was built with an empty dict, so the sheet
+    # rendered as six year headers above six blank cells - the only KM1 sheet
+    # shape that says nothing at all, and indistinguishable to a reader from
+    # "nobody has looked yet". Same one-line defect fixed in Nomura under GA-005
+    # and in Melli under GA-006. Each cell is scoped to what was actually
+    # established for THAT year: the Note 40/43 declaration first appears in the
+    # FY2022 report, the 79-template Group sweep was run on the Q4 2025 workbook,
+    # and FY2020-FY2021 predate the UK template entirely.
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not published for this entity" for y in YEARS}),
+        ("DATA", "Published by the Bank itself",
+         {"FY2025": "No Pillar 3 — Note 40 of that year's accounts declares it",
+          "FY2024": "No Pillar 3 — Note 40 of that year's accounts declares it",
+          "FY2023": "No Pillar 3 — Note 40 of that year's accounts declares it",
+          "FY2022": "No Pillar 3 — Note 43 of that year's accounts declares it",
+          "FY2021": "No Pillar 3 — that year's accounts do not mention Pillar 3 at all",
+          "FY2020": "No Pillar 3 — that year's accounts do not mention Pillar 3 at all"}),
+        ("DATA", "Published for the Bank in its Danish parent's Pillar 3 (Danske Bank A/S)",
+         {"FY2025": "Not disclosed — all 79 Q4 2025 Group templates searched; the Bank appears only in EU LI3",
+          "FY2024": "Not disclosed — the parent files an EU KM1 for the Group, not a UK KM1 for this entity",
+          "FY2023": "Not disclosed — the parent files an EU KM1 for the Group, not a UK KM1 for this entity",
+          "FY2022": "Not disclosed — the parent files an EU KM1 for the Group, not a UK KM1 for this entity",
+          "FY2021": "Not applicable — the UK KM1 template did not exist until 1 January 2022",
+          "FY2020": "Not applicable — the UK KM1 template did not exist until 1 January 2022"}),
+    ],
     sources_text=KM1_SOURCES,
     first_col_width=92,
     source_height=1500,

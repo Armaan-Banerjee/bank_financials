@@ -125,6 +125,26 @@ P3_2023_URL = "https://www.aldermore.co.uk/media/ynohqczi/pillar-3-2023.pdf"
 P3_2022_URL = "https://www.aldermore.co.uk/media/hnhpw03l/pillar-3-2022_0.pdf"
 P3_2019_URL = "https://www.aldermore.co.uk/media/2prbumkj/aldermore-group-plc-pillar-3-disclosure-document-at-30-june-2019.pdf"
 P3_2015_URL = "https://www.aldermore.co.uk/media/ot5axgnp/pillar-3-disclosure-dec-2015.pdf"
+# ---------------------------------------------------------------
+# 2026-09-18 INTERIOR-GAP PASS - THREE "MISSING" PILLAR 3 EDITIONS THAT WERE NEVER MISSING.
+# Every version of this script before today asserted that no Pillar 3 document exists for
+# FY2016, FY2020 or FY2012. All three exist and all three are below. See P3_RECOVERY_NOTE
+# for how each was found and what it changed; the short version is that a gap in our
+# citation list was being reported as a gap in the public record.
+# ---------------------------------------------------------------
+# FY2020 (y/e 30 June 2020): live on Aldermore's own investor index the whole time. A note
+# added to this script on 2026-09-16 even recorded having FOUND it, and dismissed it as
+# printing "no key-metrics table of any kind" - true of UK KM1, and irrelevant to the
+# 10-page Bank-only Appendix 1 it does carry.
+P3_2020_URL = "https://www.aldermore.co.uk/media/axcpvnoo/aldermore-group-plc-pillar-3-disclosures-year-ended-30-june-2020_1.pdf"
+# FY2016 (31 December 2016): Aldermore Group PLC's own edition, whose filename carries NO
+# year at all ("pillar_3_disclosures.pdf") - which is why every year-pattern search missed
+# it. Recovered by enumerating the whole archived host with the Wayback CDX API rather than
+# guessing filenames.
+P3_2016_URL = "https://web.archive.org/web/2023id_/https://www.investors.aldermore.co.uk/system/files/uploads/financialdocs/pillar_3_disclosures.pdf"
+# FY2012 (31 December 2012): sits under the identical /financialdocs/ path as the 2011 and
+# 2013 editions this script has cited since 2026-09-15.
+P3_2012_URL = "https://web.archive.org/web/2023id_/https://www.investors.aldermore.co.uk/system/files/uploads/financialdocs/pillar_3_disclosure_2012_0.pdf"
 # Recovered from the Internet Archive 2026-09-15; both are Aldermore Bank PLC's own
 # standalone Basel II-era Pillar 3 disclosures, no longer linked from any live page.
 P3_2013_URL = "https://web.archive.org/web/20230811224731id_/https://www.investors.aldermore.co.uk/system/files/uploads/financialdocs/pillar_3_disclosure_2013_0.pdf"
@@ -191,12 +211,31 @@ HIST_P3_NOTE = (
     "  - Pillar 1 CAPITAL requirement by exposure class (p.12): total exposure value £1,647,406k against total "
     "credit-risk Pillar 1 capital of £68,091k. Operational risk Pillar 1 charge (basic indicator approach): "
     "£1.9m.\n"
-    "FY2012 (year ended 31 December 2012): NO PILLAR 3 EDITION LOCATED. Neither the Internet Archive capture "
-    "of the Bank's investor document library (which holds the 2011 and 2013 editions under the same "
-    "/system/files/uploads/financialdocs/ path) nor the live site carries a 2012 edition, and neither the 2011 "
-    "nor the 2013 edition prints a prior-year comparative column from which FY2012 could be recovered — both "
-    "are single-period documents. Its column is therefore blank throughout, deliberately, rather than being "
-    "omitted so that the 2013-to-2011 jump looks continuous.\n"
+    f"FY2012 (year ended 31 DECEMBER 2012): RECOVERED 2026-09-18 — Aldermore Bank PLC — Pillar 3 Disclosures "
+    f"31 December 2012, Section 4 'Capital Resources', p.10, Section 5.1 'Credit Risk Exposures', p.11, and "
+    f"Section 9 (operational risk), p.18 — {P3_2012_URL}\n"
+    "  *** THE PREVIOUS VERSION OF THIS NOTE SAID 'NO PILLAR 3 EDITION LOCATED' AND WAS WRONG. *** It stated "
+    "that neither the Internet Archive capture of the Bank's investor document library nor the live site "
+    "carried a 2012 edition. The edition sits on that library's identical "
+    "/system/files/uploads/financialdocs/ path, named pillar_3_disclosure_2012_0.pdf, one character different "
+    "from the 2011 and 2013 filenames already cited above. See P3_RECOVERY_NOTE.\n"
+    "  - Capital composition table (£'000): Share capital 3,300; Share premium 171,823; Profit and loss "
+    "reserve (4,192); Total Core Tier 1 capital 170,931; Total Tier 2 capital 36,207; TOTAL CAPITAL 207,138; "
+    "less deductions — Intangible Assets (7,467); TOTAL CAPITAL LESS DEDUCTIONS 199,671. The narrative on the "
+    "same page states the post-deduction split directly: 'the Bank's capital base was made up of £163.5m of "
+    "Tier 1 capital and £36.2m of Tier 2 capital', Tier 1 being ordinary shares and audited reserves only "
+    "(GENPRU 2.2.83 R), Tier 2 subordinated loan notes and general provisions, and no Tier 3.\n"
+    "  - Pillar 1 CAPITAL requirement by exposure class (p.11, 'Exposure value / Pillar 1 Capital (8% x Risk "
+    "Weight)'): total exposure value £2,844,633k against total credit-risk Pillar 1 capital of £110,063k. "
+    "Operational risk Pillar 1 charge (basic indicator approach, p.18): £3.8m.\n"
+    "  *** THIS EDITION SETTLES WHAT BASIS THE BASEL II NARRATIVE SPLITS ARE ON, WHICH MATTERS FOR FY2013. *** "
+    "The 2012 narrative's £163.5m + £36.2m sums to £199.7m, which is exactly that edition's printed 'Total "
+    "capital less deductions' of £199,671k — so the narrative pair is stated AFTER deductions. The 2013 "
+    "edition uses the identical sentence ('made up of £250.4 million of Tier 1 capital and £39.3 million of "
+    "Tier 2 capital') and prints no table at all. That makes £289.7m the near-certain FY2013 total capital "
+    "after deductions — but it is still an addition performed here rather than a figure the 2013 document "
+    "prints, so it stays in this note and out of the Total Capital cell. Both FY2013 components are on their "
+    "own rows of the Total Capital sheet instead, exactly as printed.\n"
     "BASIS CAVEATS FOR ALL THREE COLUMNS. (1) These are Basel II / CRD documents predating CRD IV, so the CET1 "
     "concept did not formally exist; the figures recorded on the CET1 sheets are each document's own Core "
     "Tier 1 / Tier 1 measure, which in both years comprised ordinary shares and audited reserves with no AT1 "
@@ -218,6 +257,47 @@ HIST_P3_NOTE = (
 )
 
 
+P3_RECOVERY_NOTE = (
+    "*** PILLAR 3 RECOVERY, 2026-09-18 — FY2016, FY2020 AND FY2012 WERE NEVER MISSING. READ THIS BEFORE "
+    "TRUSTING ANY 'NO DOCUMENT EXISTS' CLAIM IN THIS WORKBOOK ***\n"
+    "Until today this workbook stated, in five separate sheet notes, that no Pillar 3 disclosure document "
+    "could be located for FY2016 or FY2020 'despite real effort (the Bank's own site, Wayback Machine CDX "
+    "search, and web search)', and that FY2012 had 'NO PILLAR 3 EDITION LOCATED'. All three exist. All three "
+    "were found on 2026-09-18 in under ten minutes, and the two reasons they had been missed are worth "
+    "recording because they generalise:\n"
+    "  (1) THE FY2016 EDITION'S FILENAME CONTAINS NO YEAR. It is 'pillar_3_disclosures.pdf' — every sibling "
+    "edition is 'pillar_3_disclosure_2011_0.pdf', 'pillar-3-2022_0.pdf', "
+    "'...-at-30-june-2019.pdf' and so on. Any search keyed on the year pattern skips straight past it. It was "
+    "found by enumerating the ENTIRE archived host (Wayback CDX, url=investors.aldermore.co.uk/*, ~10,000 "
+    "rows) and reading the 13 results whose path contained 'pillar' — not by guessing a URL. Opening it "
+    "shows a cover page reading 'Aldermore Group PLC / Pillar 3 Disclosures / 31 December 2016'. The FY2012 "
+    "edition turned up in the same listing, on the identical /financialdocs/ path as the 2011 and 2013 "
+    "editions this script already cited.\n"
+    "  (2) THE FY2020 EDITION WAS NEVER LOST AT ALL — it is linked from Aldermore's live investor index "
+    "today. A comment added to this script on 2026-09-16 records having found it and set it aside because it "
+    "'prints no key-metrics table of any kind'. That was true and beside the point: UK KM1 did not apply "
+    "before 1 January 2022, but the edition carries a ten-page 'Appendix 1: Disclosures for Aldermore Bank "
+    "PLC' with the Bank's full capital composition, RWA split and leverage tables. A document was judged on "
+    "one absent template rather than opened.\n"
+    "WHAT THIS CHANGED: FY2016 and FY2020 now have CET1/Tier 1/Total capital, all three capital ratios, total "
+    "RWAs, an RWA split and a leverage ratio — on the Bank-solo basis every other column on these sheets uses "
+    "— and FY2012 has its Basel II capital and Pillar 1 capital requirement. Nothing was estimated.\n"
+    "VALIDATION, AND IT IS STRONG. Each recovered edition prints a prior-year comparative, and every one of "
+    "those comparatives reproduces a column this workbook already held, to the £0.1m. The FY2016 edition's 31 "
+    "December 2015 column: CET1 433.2, Tier 1 507.5, total capital 556.1, RWA 3,687.5 (credit 3,480.6 / "
+    "market 0.1 / operational 205.5 / CVA 1.3), leverage exposure 7,095.9 and ratio 7.2% — identical to this "
+    "workbook's existing FY2015 figures, which came from a different document. The FY2020 edition's 30 June "
+    "2019 column: CET1 781.6, Tier 1 855.9, total capital 1,015.9, RWA 6,179.0 (credit 5,643.3 / market 0.3 / "
+    "operational 533.3 / CVA 2.1) — again identical to the existing FY2019 column. And the FY2016 edition's "
+    "own Bank CET1 ratio of 11.4% and the FY2020 edition's 13.4% are exactly the two figures this workbook "
+    "had already taken from the Annual Report highlights, which is what confirms the highlight ratios were "
+    "Bank-basis rather than Group (the same tables show Group at 11.5% and 13.3%).\n"
+    "ONE FIGURE NOT REPRODUCED, RECORDED NOT RECONCILED: the FY2020 edition's 30 June 2019 leverage exposure "
+    "is £12,582.8m, where the FY2019 edition itself printed £12,671.6m for that date. The FY2019 column here "
+    "keeps its own edition's £12,671.6m, per this project's convention; the ratio is 6.8% on both."
+)
+
+
 def p3_sources(page_25="4", page_24="4", page_22="4", page_26="6"):
     return (
         "Sources — Aldermore Bank PLC solo figures from the 'Key metrics'/capital-composition tables (Bank "
@@ -233,15 +313,26 @@ def p3_sources(page_25="4", page_24="4", page_22="4", page_26="6"):
         f"ratio) — {P3_2019_URL}\n"
         f"FY2015 & FY2014: Pillar 3 Disclosures 31 December 2015, p.58-61 (Appendix 1, Disclosures for Aldermore "
         f"Bank PLC — Total minimum Pillar 1 capital requirement, Capital composition, Leverage ratio) — {P3_2015_URL}\n"
-        "FY2016 and FY2020: no standalone Pillar 3 disclosure document could be located for these two years "
-        "specifically (checked the Bank's own site, Wayback Machine CDX search, and web search) — only the "
-        "single headline CET1 ratio survives, from each year's own Annual Report 'Financial highlights' page "
-        "(FY2016: Full accounts for the year ended 31 December 2016, p.4; FY2020: Full accounts for the year "
-        "ended 30 June 2020, p.4). Other Pillar 3 metrics (Tier 1/Total capital, RWAs, leverage) are left blank "
-        "for FY2016 and FY2020 rather than estimated.\n"
-        "FY2017 has no standalone Pillar 3 disclosure at all (see YEARS comment above — no 12-month FY2017 "
-        "period exists in the Bank's disclosures); FY2018's column reflects the 18-month transition period.\n"
-        + HIST_P3_NOTE + "\n"
+        f"FY2020: Aldermore Group PLC Pillar 3 Disclosures, year ended 30 June 2020, p.61-62 (Appendix 1, Table "
+        f"34 Total minimum Pillar 1 capital requirement (Bank only) and Table 35 Capital composition (Bank "
+        f"only)) and p.64-65 (Tables 38/39, Leverage ratio (Bank only)) — {P3_2020_URL}\n"
+        f"FY2016: Aldermore Group PLC Pillar 3 Disclosures 31 December 2016, p.58-59 (Appendix 1, Table 34 Total "
+        f"minimum Pillar 1 capital requirement (Bank only) and Table 35 Capital composition (Bank only)) and "
+        f"p.61-62 (Tables 38/39, Leverage ratio (Bank only)) — {P3_2016_URL}\n"
+        f"FY2012: Aldermore Bank PLC — Pillar 3 Disclosures 31 December 2012, p.10 (Capital Resources), p.11 "
+        f"(Credit Risk Exposures) and p.18 (operational risk charge) — {P3_2012_URL}\n"
+        "FY2017 has no standalone Pillar 3 disclosure at all, and this is STRUCTURAL rather than a sourcing "
+        "failure: the FY2018 edition states that the Group moved to \"an 18 month reporting period to 30 June "
+        "2018 for both the ARA and Pillar 3 documents\", so no 31 December 2017 reporting date exists to "
+        "disclose against. Companies House shows the same shape on the statutory side — Aldermore Bank PLC "
+        "accounts for the year ended 31 December 2016, then the 18-month period to 30 June 2018, with nothing "
+        "in between (filing history enumerated in full on 2026-09-18). FY2018's column reflects that 18-month "
+        "transition period. THE ONE 31 DECEMBER 2017 CAPITAL DATA POINT THAT DOES EXIST is deliberately not "
+        "used: Aldermore Group PLC's unaudited interim results press release of 19 March 2018 gives a CET1 "
+        "ratio of 12.2% and a total capital ratio of 15.2% at 31 December 2017 — but those are GROUP figures, "
+        "unaudited, and every column on these sheets is Aldermore Bank PLC solo. Putting them here would break "
+        "the entity basis silently. They are recorded in this note instead.\n"
+        + HIST_P3_NOTE + "\n" + P3_RECOVERY_NOTE + "\n"
         "FY2026 columns cover the Pillar 3 metric sheets and RWA Breakdown only. The statutory sheets (Balance "
         "Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement) and Asset Quality have no "
         "FY2026 column: Aldermore Bank PLC's own FY2026 statutory accounts have not been filed at Companies "
@@ -310,6 +401,8 @@ BALANCE_SHEET_SOURCES = (
     "contribution (see the Statement of Changes in Equity sheet's source note)."
 )
 
+NO_FY2017 = "No 31 Dec 2017 period exists (18-month transition)"
+
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central banks", {"FY2025": 1182.3, "FY2024": 2172.2, "FY2023": 1923.4, "FY2022": 838.3, "FY2021": 688.5, "FY2020": 542.4, "FY2019": 482.9, "FY2018": 508.8, "FY2016": 116.4, "FY2015": 105.3, "FY2014": 79.6, "FY2013": 192.8, "FY2012": 1.7, "FY2011": 0.1}),
@@ -354,6 +447,8 @@ balance_sheet_rows = [
     ("DATA", "Retained earnings", {"FY2025": 1158.8, "FY2024": 1000.7, "FY2023": 843.9, "FY2022": 719.9, "FY2021": 607.0, "FY2020": 522.9, "FY2019": 467.6, "FY2018": 380.4, "FY2016": 225.5, "FY2015": 139.7, "FY2014": 59.3, "FY2013": 18.2, "FY2012": -5.2, "FY2011": -7.3, "FY2010": -6.4, "FY2009": 2.4}),
     ("TOTAL", "Total equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1, "FY2020": 896.2, "FY2019": 853.2, "FY2018": 766.7, "FY2016": 619.4, "FY2015": 527.3, "FY2014": 374.8, "FY2013": 257.4, "FY2012": 172.3, "FY2011": 166.1, "FY2010": 91.6, "FY2009": 53.1}),
     ("TOTAL", "Total liabilities and equity", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0, "FY2020": 15000.7, "FY2019": 12471.9, "FY2018": 10467.4, "FY2016": 8396.5, "FY2015": 7021.4, "FY2014": 5583.2, "FY2013": 4194.3, "FY2012": 2519.6, "FY2011": 1554.1, "FY2010": 752.3, "FY2009": 294.7}),
+    ("SECTION", "FY2017 - no 31 December 2017 reporting date exists. Aldermore changed its accounting reference date and ran an 18-month transition period from 1 January 2017 to 30 June 2018, reported in the FY2018 column. There is no FY2017 edition to open and no FY2017 figure that could be found; the Companies House filing history runs 31 Dec 2016 straight to 30 Jun 2018. Stated explicitly so the column does not read as an unclosed gap", {}),
+    ("DATA", "Period covered by this column", {"FY2017": NO_FY2017}),
 ]
 
 bw.add_balance_sheet_sheet(
@@ -441,6 +536,8 @@ income_statement_rows = [
     ("DATA", "Taxation on other comprehensive income", {"FY2025": 1.4, "FY2024": 1.3, "FY2023": 1.3, "FY2022": 1.0, "FY2021": -2.8, "FY2020": -0.3, "FY2019": 0.3, "FY2018": None, "FY2016": -1.0, "FY2015": 0.6, "FY2014": -0.2}),
     ("TOTAL", "Total other comprehensive (expense)/income", {"FY2025": -4.3, "FY2024": -4.0, "FY2023": -3.6, "FY2022": -1.4, "FY2021": 6.8, "FY2020": 1.0, "FY2019": -0.7, "FY2018": -0.7, "FY2016": 2.8, "FY2015": -2.4, "FY2014": 0.8, "FY2013": 0, "FY2012": 0, "FY2011": 0, "FY2010": 0, "FY2009": 0}),
     ("TOTAL", "Total comprehensive income attributable to equity holders of the Bank", {"FY2025": 158.9, "FY2024": 158.1, "FY2023": 125.7, "FY2022": 116.6, "FY2021": 96.1, "FY2020": 65.2, "FY2019": 101.5, "FY2018": 155.2, "FY2016": 95.1, "FY2015": 77.7, "FY2014": 40.5, "FY2013": 23.4, "FY2012": 1.5, "FY2011": -0.9, "FY2010": -8.8, "FY2009": -13.0}),
+    ("SECTION", "FY2017 - no 31 December 2017 reporting date exists. Aldermore changed its accounting reference date and ran an 18-month transition period from 1 January 2017 to 30 June 2018, reported in the FY2018 column. There is no FY2017 edition to open and no FY2017 figure that could be found; the Companies House filing history runs 31 Dec 2016 straight to 30 Jun 2018. Stated explicitly so the column does not read as an unclosed gap", {}),
+    ("DATA", "Period covered by this column", {"FY2017": NO_FY2017}),
 ]
 
 bw.add_income_statement_sheet(
@@ -657,6 +754,8 @@ rows = [
     ("TOTAL", "Net (decrease)/increase in cash and cash equivalents", {"FY2025": -1002.9, "FY2024": 320.2, "FY2023": 1083.8, "FY2022": 141.2, "FY2021": 131.4, "FY2020": 38.6, "FY2019": -35.3, "FY2018": 411.2, "FY2016": -2.0, "FY2015": 15.9, "FY2014": -301.0}),
     ("DATA", "Cash and cash equivalents at start of the period", {"FY2025": 2219.6, "FY2024": 1899.4, "FY2023": 815.1, "FY2022": 674.0, "FY2021": 542.6, "FY2020": 504.0, "FY2019": 539.3, "FY2018": 128.1, "FY2016": 130.1, "FY2015": 114.2, "FY2014": 415.2}),
     ("TOTAL", "Cash and cash equivalents at end of the period", {"FY2025": 1216.7, "FY2024": 2219.6, "FY2023": 1899.4, "FY2022": 815.2, "FY2021": 674.0, "FY2020": 542.6, "FY2019": 504.0, "FY2018": 539.3, "FY2016": 128.1, "FY2015": 130.1, "FY2014": 114.2}),
+    ("SECTION", "FY2017 - no 31 December 2017 reporting date exists. Aldermore changed its accounting reference date and ran an 18-month transition period from 1 January 2017 to 30 June 2018, reported in the FY2018 column. There is no FY2017 edition to open and no FY2017 figure that could be found; the Companies House filing history runs 31 Dec 2016 straight to 30 Jun 2018. Stated explicitly so the column does not read as an unclosed gap", {}),
+    ("DATA", "Period covered by this column", {"FY2017": NO_FY2017}),
 ]
 
 bw.add_cash_flow_sheet(
@@ -672,6 +771,7 @@ bw.add_cash_flow_sheet(
 # ---------------------------------------------------------------
 # Sheet: Asset Quality / Credit Risk Disclosures
 # ---------------------------------------------------------------
+
 ASSET_QUALITY_PRESENTATION_NOTE = (
     "PRESENTATION NOTE: figures are from each year's own full statutory accounts' 'Analysis of gross loans "
     "and advances' and 'Analysis of loss allowances' notes (IFRS 9 stage roll-forward tables), Bank solo "
@@ -684,16 +784,39 @@ ASSET_QUALITY_PRESENTATION_NOTE = (
     "customers' figure (11,416.3 net + 133.0 allowance = 11,549.3) — consistent; both are transcribed as "
     "disclosed.\n\n"
     "HD-047 extension (FY2014-FY2020): IFRS 9 (the source of the Stage 1/2/3 framework above) only took "
-    "effect for the Bank from 1 July 2018, so FY2014-FY2016 report credit quality on the older IAS 39 "
-    "'individually impaired vs collectively assessed' basis instead — a separate section below carries that "
-    "basis for the two years (FY2015, FY2014) where the full impairment-coverage note was reviewed; it is not "
-    "mechanically comparable to the IFRS 9 Stage 1/2/3 rows above (different recognition trigger and no forward-"
-    "looking ECL overlay). FY2016's own 'by-product' and impairment-coverage note detail, and FY2018/FY2019/"
-    "FY2020's IFRS 9 stage-level note detail, were not extracted in this session (the Companies House filings "
-    "for these years are scanned images with no text layer, so locating and transcribing note-level tables "
-    "requires page-by-page visual review beyond this session's budget) — those three years are therefore left "
-    "blank on this sheet. Balance Sheet gross exposure (via 'Loans and advances to customers', net of "
-    "allowance) is unaffected and is populated for FY2016/FY2018/FY2019/FY2020 on the Balance Sheet sheet."
+    "effect for the Bank from 1 July 2018, so FY2014-FY2018 report credit quality on the older IAS 39 "
+    "'individually impaired vs collectively assessed' basis instead, in the separate section below. The two "
+    "bases are NOT mechanically comparable (different recognition trigger, and no forward-looking ECL overlay "
+    "under IAS 39), so they are kept in separate sections and never merged into one series.\n\n"
+    "GAP CLOSURE 2026-09-18 — the four interior blanks FY2016, FY2018, FY2019 and FY2020 are now FILLED. A "
+    "previous session left them blank and recorded the reason as 'the Companies House filings for these years "
+    "are scanned images with no text layer, so locating and transcribing note-level tables requires page-by-"
+    "page visual review beyond this session's budget'. That was a statement about the effort available, not "
+    "about the documents: all four filings were retrieved from Companies House, OCR'd at 200-300 dpi with "
+    "ocrmypdf --force-ocr, and every figure below was then confirmed against the rendered page image before "
+    "being transcribed. The OCR step is not optional and the visual check is not ceremony — FY2016's Asset "
+    "Finance balance OCR'd as 1,873.4 and the page image reads 1,573.4; only 1,573.4 foots to the printed "
+    "segment total of 7,477.3.\n\n"
+    "SEGMENT TABLE IS NET, NOT GROSS. The 'by product' section was previously headed 'Gross loans and "
+    "advances to customers, by product'. It is not gross: the Bank's own 'Credit concentration by segment' "
+    "table is struck after impairment allowances. FY2016 proves it arithmetically — gross loans 7,504.7 less "
+    "the 27.4 total allowance is 7,477.3, exactly the printed segment total — and FY2018 ties the same way "
+    "(9,015.7 - 25.2 = 8,990.5). The section label has been corrected accordingly. The FY2015/FY2014 rows "
+    "were already on this net basis and are unchanged in value; only the label they sit under is now "
+    "accurate.\n\n"
+    "FY2017 IS NOT A GAP. Aldermore changed its accounting reference date, running an 18-month transition "
+    "period from 1 January 2017 to 30 June 2018. No 31 December 2017 reporting date exists, so there is no "
+    "FY2017 edition to open and no FY2017 figure that could ever be found; the Companies House filing history "
+    "runs 31 Dec 2016 straight to 30 Jun 2018. That year is marked with an explicit statement rather than "
+    "left blank, because a blank would read as an unclosed gap.\n\n"
+    "FY2020/FY2019 UNDRAWN-FACILITY MEMO ROWS. Those two editions' stage tables carry an 'undrawn loan "
+    "facilities' column alongside drawn balances. It is reproduced as a memo row and deliberately excluded "
+    "from the totals and from every ratio, so the stage series stays on one definition across all seven "
+    "years. Two printed oddities in those tables are transcribed as printed and flagged, not corrected: the "
+    "FY2019 edition prints a 10.0% coverage ratio against undrawn facilities where 0.8/687.5 is 0.1%, and the "
+    "FY2020 Bank-only accounts head their coverage table 'Group impairment coverage ratio' although its 30 "
+    "June 2019 comparative column reproduces the FY2019 Bank accounts' 'Bank impairment coverage ratio' "
+    "figures exactly — an apparent heading error in the Bank's own document."
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -707,9 +830,22 @@ ASSET_QUALITY_SOURCES = (
     f"27 Oct 2023, p.84 (Note 13, Analysis of gross loans and advances / Analysis of loss allowances) — {CH_2023_URL}\n"
     f"FY2021 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2021, filed 04 Nov "
     f"2021, p.90-91 (Note 18, Analysis of gross loans and advances / Analysis of loss allowances) — {CH_2021_URL}\n"
-    f"FY2015 & FY2014 (by product; impaired loans and coverage, IAS 39 basis): Full accounts for the year "
+    f"FY2020 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2020, printed p.39 "
+    f"(Analysis of gross loans and advances / loss allowances by stage) — {CH_2020_URL}\n"
+    f"FY2020 (net lending by segment): same filing, printed p.35 (Credit concentration by segment) — {CH_2020_URL}\n"
+    f"FY2019 (by IFRS 9 stage, gross and allowance): Full accounts made up to 30 June 2019, printed p.30 "
+    f"(Analysis of gross loans and advances / loss allowances by stage) — {CH_2019_URL}\n"
+    f"FY2019 (net lending by segment): same filing, printed p.26 (Credit concentration by segment) — {CH_2019_URL}\n"
+    f"FY2018 (impaired loans and coverage, IAS 39 basis): Full accounts for the 18-month period ended 30 June "
+    f"2018, printed p.92 (Impaired loan analysis / Impairment coverage ratio) — {CH_2018_URL}\n"
+    f"FY2018 (net lending by segment): same filing, printed p.87 (Credit concentration by segment) — {CH_2018_URL}\n"
+    f"FY2016 (impaired loans and coverage, IAS 39 basis): Full accounts for the year ended 31 December 2016, "
+    f"printed p.79 (Impaired loan analysis / Impairment coverage ratio) — {CH_2016_URL}\n"
+    f"FY2016 (net lending by segment): same filing, printed p.82 (Credit concentration by segment) — {CH_2016_URL}\n"
+    f"FY2015 & FY2014 (by segment; impaired loans and coverage, IAS 39 basis): Full accounts for the year "
     f"ended 31 December 2015, filed 23 May 2016, p.55-58 (Risk Management — Impaired loan analysis, "
-    f"Impairment coverage ratio, Credit concentration by product) — {CH_2015_URL}\n\n"
+    f"Impairment coverage ratio, Credit concentration by product) — {CH_2015_URL}\n"
+    f"FY2017: no such reporting date exists — see the presentation note below.\n\n"
     + ASSET_QUALITY_PRESENTATION_NOTE
 )
 
@@ -719,31 +855,39 @@ asset_quality_rows = [
     ("DATA", "Property Finance", {"FY2025": 8728.4, "FY2024": 7832.5}),
     ("TOTAL", "Total gross loans and advances (by product)", {"FY2025": 12632.2, "FY2024": 11549.2}),
     ("SECTION", "Gross loans and advances to customers, by IFRS 9 stage", {}),
-    ("DATA", "Stage 1 (performing)", {"FY2025": 11395.2, "FY2024": 10466.4, "FY2023": 10211.2, "FY2022": 9591.1, "FY2021": 9209.1}),
-    ("DATA", "Stage 2 (underperforming)", {"FY2025": 814.8, "FY2024": 716.4, "FY2023": 664.9, "FY2022": 1026.0, "FY2021": 956.6}),
-    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": 422.2, "FY2024": 366.4, "FY2023": 287.3, "FY2022": 277.1, "FY2021": 343.9}),
-    ("TOTAL", "Total gross loans and advances (by stage)", {"FY2025": 12632.2, "FY2024": 11549.3, "FY2023": 11163.4, "FY2022": 10894.2, "FY2021": 10509.6}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": 11395.2, "FY2024": 10466.4, "FY2023": 10211.2, "FY2022": 9591.1, "FY2021": 9209.1, "FY2020": 9249.0, "FY2019": 9068.5}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": 814.8, "FY2024": 716.4, "FY2023": 664.9, "FY2022": 1026.0, "FY2021": 956.6, "FY2020": 1234.1, "FY2019": 1082.6}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": 422.2, "FY2024": 366.4, "FY2023": 287.3, "FY2022": 277.1, "FY2021": 343.9, "FY2020": 224.0, "FY2019": 128.6}),
+    ("TOTAL", "Total gross loans and advances (by stage)", {"FY2025": 12632.2, "FY2024": 11549.3, "FY2023": 11163.4, "FY2022": 10894.2, "FY2021": 10509.6, "FY2020": 10707.1, "FY2019": 10279.7}),
+    ("DATA", "Memo: undrawn loan facilities, gross carrying amount (FY2020/FY2019 source table only — NOT included in the total above)", {"FY2020": 301.7, "FY2019": 687.5}),
     ("SECTION", "Allowance for impairment losses, by IFRS 9 stage", {}),
-    ("DATA", "Stage 1 (performing)", {"FY2025": -34.2, "FY2024": -50.2, "FY2023": -91.4, "FY2022": -48.3, "FY2021": -32.8}),
-    ("DATA", "Stage 2 (underperforming)", {"FY2025": -22.6, "FY2024": -25.6, "FY2023": -25.2, "FY2022": -19.8, "FY2021": -24.1}),
-    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": -52.0, "FY2024": -57.2, "FY2023": -48.0, "FY2022": -48.7, "FY2021": -59.1}),
-    ("TOTAL", "Total allowance for impairment losses", {"FY2025": -108.8, "FY2024": -133.0, "FY2023": -164.6, "FY2022": -116.8, "FY2021": -116.0}),
+    ("DATA", "Stage 1 (performing)", {"FY2025": -34.2, "FY2024": -50.2, "FY2023": -91.4, "FY2022": -48.3, "FY2021": -32.8, "FY2020": -33.7, "FY2019": -16.8}),
+    ("DATA", "Stage 2 (underperforming)", {"FY2025": -22.6, "FY2024": -25.6, "FY2023": -25.2, "FY2022": -19.8, "FY2021": -24.1, "FY2020": -29.6, "FY2019": -8.8}),
+    ("DATA", "Stage 3 (credit-impaired)", {"FY2025": -52.0, "FY2024": -57.2, "FY2023": -48.0, "FY2022": -48.7, "FY2021": -59.1, "FY2020": -41.6, "FY2019": -23.8}),
+    ("TOTAL", "Total allowance for impairment losses", {"FY2025": -108.8, "FY2024": -133.0, "FY2023": -164.6, "FY2022": -116.8, "FY2021": -116.0, "FY2020": -104.9, "FY2019": -49.4}),
+    ("DATA", "Memo: provision against undrawn loan facilities (FY2020/FY2019 source table only — NOT included in the total above)", {"FY2020": -0.6, "FY2019": -0.8}),
     ("SECTION", "Asset quality ratios", {}),
-    ("DATA", "ECL coverage ratio (Total allowance / Total gross loans)", {"FY2025": "0.86%", "FY2024": "1.15%", "FY2023": "1.47%", "FY2022": "1.07%", "FY2021": "1.10%"}),
-    ("DATA", "Stage 3 (NPL) ratio (Stage 3 gross loans / Total gross loans)", {"FY2025": "3.34%", "FY2024": "3.17%", "FY2023": "2.57%", "FY2022": "2.54%", "FY2021": "3.27%"}),
-    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross loans)", {"FY2025": "12.32%", "FY2024": "15.61%", "FY2023": "16.71%", "FY2022": "17.58%", "FY2021": "17.18%"}),
-    ("SECTION", "Gross loans and advances to customers, by product (IAS 39 basis, pre-IFRS 9)", {}),
-    ("DATA", "Asset Finance", {"FY2015": 1346.7, "FY2014": 1044.3}),
-    ("DATA", "Invoice Finance", {"FY2015": 160.8, "FY2014": 180.6}),
-    ("DATA", "SME Commercial Mortgages", {"FY2015": 829.2, "FY2014": 552.4}),
-    ("DATA", "Buy-to-Let", {"FY2015": 2417.9, "FY2014": 2044.1}),
-    ("DATA", "Residential Mortgages", {"FY2015": 1390.2, "FY2014": 979.7}),
-    ("TOTAL", "Total gross loans and advances (by product, IAS 39 basis)", {"FY2015": 6144.8, "FY2014": 4801.1}),
-    ("SECTION", "Impaired loans and coverage (IAS 39 basis, pre-IFRS 9)", {}),
-    ("DATA", "Individually impaired loans (all products)", {"FY2015": 22.8, "FY2014": 20.8}),
-    ("DATA", "Allowance for losses — individual provisions", {"FY2015": -10.2, "FY2014": -14.0}),
-    ("DATA", "Individually impaired loans as a % of gross loans and advances", {"FY2015": "0.37%", "FY2014": "0.43%"}),
-    ("DATA", "Coverage ratio (individual provisions / individually impaired loans)", {"FY2015": "44.74%", "FY2014": "67.40%"}),
+    ("DATA", "ECL coverage ratio (Total allowance / Total gross loans)", {"FY2025": "0.86%", "FY2024": "1.15%", "FY2023": "1.47%", "FY2022": "1.07%", "FY2021": "1.10%", "FY2020": "0.98%", "FY2019": "0.48%"}),
+    ("DATA", "Stage 3 (NPL) ratio (Stage 3 gross loans / Total gross loans)", {"FY2025": "3.34%", "FY2024": "3.17%", "FY2023": "2.57%", "FY2022": "2.54%", "FY2021": "3.27%", "FY2020": "2.09%", "FY2019": "1.25%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross loans)", {"FY2025": "12.32%", "FY2024": "15.61%", "FY2023": "16.71%", "FY2022": "17.58%", "FY2021": "17.18%", "FY2020": "18.57%", "FY2019": "18.51%"}),
+    ("SECTION", "Net lending to customers, by product — the Bank's own 'Credit concentration by segment' table (IAS 39 basis to FY2018, IFRS 9 thereafter). NET of impairment allowances, NOT gross: FY2016 7,477.3 = gross 7,504.7 less the 27.4 allowance, and every other year ties the same way", {}),
+    ("DATA", "Asset Finance", {"FY2020": 1857.9, "FY2019": 2017.7, "FY2018": 1841.7, "FY2016": 1573.4, "FY2015": 1346.7, "FY2014": 1044.3}),
+    ("DATA", "Invoice Finance", {"FY2020": 278.7, "FY2019": 400.4, "FY2018": 265.2, "FY2016": 154.1, "FY2015": 160.8, "FY2014": 180.6}),
+    ("DATA", "SME Commercial Mortgages", {"FY2020": 1139.1, "FY2019": 1020.6, "FY2018": 965.9, "FY2016": 929.9, "FY2015": 829.2, "FY2014": 552.4}),
+    ("DATA", "Buy-to-Let", {"FY2020": 5246.9, "FY2019": 5043.7, "FY2018": 4436.8, "FY2016": 3326.0, "FY2015": 2417.9, "FY2014": 2044.1}),
+    ("DATA", "Residential Mortgages", {"FY2020": 2079.6, "FY2019": 1747.9, "FY2018": 1480.9, "FY2016": 1493.9, "FY2015": 1390.2, "FY2014": 979.7}),
+    ("TOTAL", "Total net lending to customers (by product)", {"FY2020": 10602.2, "FY2019": 10230.3, "FY2018": 8990.5, "FY2016": 7477.3, "FY2015": 6144.8, "FY2014": 4801.1}),
+    ("SECTION", "Impaired loans and coverage (IAS 39 basis, pre-IFRS 9 — the Bank adopted IFRS 9 on 1 July 2018, so this basis runs to the 30 June 2018 period end and stops)", {}),
+    ("DATA", "Gross loans and advances to customers", {"FY2018": 9015.7, "FY2016": 7504.7}),
+    ("DATA", "Individually impaired loans (all products)", {"FY2018": 33.9, "FY2016": 35.6, "FY2015": 22.8, "FY2014": 20.8}),
+    ("SECTION", "Impairment allowance components (IAS 39 basis)", {}),
+    ("DATA", "Allowance for losses — individual provisions", {"FY2018": -7.8, "FY2016": -14.3, "FY2015": -10.2, "FY2014": -14.0}),
+    ("DATA", "Allowance for losses — collective provisions", {"FY2018": -17.4, "FY2016": -13.1}),
+    ("TOTAL", "Total impairment allowance (individual + collective)", {"FY2018": -25.2, "FY2016": -27.4}),
+    ("DATA", "Individually impaired loans as a % of gross loans and advances", {"FY2018": "0.38%", "FY2016": "0.47%", "FY2015": "0.37%", "FY2014": "0.43%"}),
+    ("DATA", "Coverage ratio (individual provisions / individually impaired loans)", {"FY2018": "23.09%", "FY2016": "40.17%", "FY2015": "44.74%", "FY2014": "67.40%"}),
+    ("SECTION", "FY2017 — no 31 December 2017 reporting date exists (18-month transition period 1 Jan 2017 to 30 Jun 2018, reported in the FY2018 column)", {}),
+    ("DATA", "Credit quality disclosures", {"FY2017": NO_FY2017}),
 ]
 
 bw.add_asset_quality_sheet(
@@ -918,43 +1062,70 @@ def metric(name, unit, rows_data, sources_text, note=None):
                          rows_data, sources_text, note=note, first_col_width=46, source_height=110,
                          years=P3_DISCLOSURE_YEARS)
 
+# FY2017: no 31 December 2017 reporting date exists (18-month transition period, see YEARS
+# comment and p3_sources). Marked explicitly on every Pillar 3 sheet rather than left blank,
+# so the distinction between "structurally impossible" and "not yet researched" survives in
+# the sheet itself.
+
 metric(
     "CET1 Capital", "£m",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2026": 1450.9, "FY2025": 1337.8, "FY2024": 1321.5, "FY2023": 1203.8, "FY2022": 1065.9, "FY2021": 947.0, "FY2019": 781.6, "FY2018": 682.2, "FY2015": 433.2, "FY2014": 280.7, "FY2013": 250.4, "FY2011": 158.2})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2026": 1450.9, "FY2025": 1337.8, "FY2024": 1321.5, "FY2023": 1203.8, "FY2022": 1065.9, "FY2021": 947.0, "FY2020": 860.9, "FY2019": 781.6, "FY2018": 682.2, "FY2017": NO_FY2017, "FY2016": 522.2, "FY2015": 433.2, "FY2014": 280.7, "FY2013": 250.4, "FY2012": 163.5, "FY2011": 158.2})],
     p3_sources(),
-    note="FY2016 and FY2020: no CET1 capital £m figure survives outside a full Pillar 3 document (only the CET1 "
-         "ratio % does, from each year's own Annual Report highlights) — see the CET1 Ratio sheet.\n"
-         "FY2013 and FY2011 ARE BASEL II CORE TIER 1, NOT A CRD IV CET1 CALCULATION. CET1 as a defined measure "
+    note="FY2020 (860.9) and FY2016 (522.2) ADDED 2026-09-18 from the Bank-only Appendix 1 capital-composition "
+         "table of each year's own Pillar 3 edition — editions this workbook previously asserted did not "
+         "exist. Both reconcile: 860.9 is the FY2020 edition's own build-up (share capital 3.3 + share premium "
+         "307.5 + FVOCI 1.5 + retained earnings 522.9 + IFRS 9 transitional add back 33.4 − intangibles 7.7) "
+         "and 522.2 the FY2016 edition's (3.3 + 307.6 + capital contribution reserve 6.9 + AFS reserve 1.8 + "
+         "retained earnings 225.5 − intangibles 21.9 − indirect CET1 holding 0.9 − prudent valuation 0.1). See "
+         "the Pillar 3 recovery note in the sources below.\n"
+         "FY2012 163.5 ADDED 2026-09-18 and is Basel II Core Tier 1 after deductions, on the same basis and "
+         "from the same kind of narrative statement as FY2013's 250.4 and FY2011's 158.2 — see the paragraph "
+         "below and the historical-editions note in the sources.\n"
+         "FY2013, FY2012 and FY2011 ARE BASEL II CORE TIER 1, NOT A CRD IV CET1 CALCULATION. CET1 as a defined measure "
          "did not exist before CRD IV took effect on 1 January 2014, and neither recovered edition uses the term. "
          "What each does state is that its Tier 1 capital consisted solely of fully issued ordinary shares and "
          "audited reserves, with no AT1, hybrid or Tier 3 instrument at all — so the Core Tier 1 measure is placed "
          "here on the same no-AT1 convention used elsewhere in this workbook, with the basis flagged rather than "
          "presented as a like-for-like CET1. FY2013 250.4 is the figure stated in that edition's own narrative; "
          "FY2011 158.2 is likewise stated in narrative and is the £166,143k Total Core Tier 1 capital of the same "
-         "page's table less that table's own £7,915k intangible-assets deduction. FY2012 is blank: no 2012 edition "
-         "exists in the archive and neither adjacent edition carries a comparative column. See sources.",
+         "page's table less that table's own £7,915k intangible-assets deduction; FY2012 163.5 is stated in the "
+         "recovered 2012 edition's narrative and is likewise that edition's table's £170,931k Total Core Tier 1 "
+         "less its own £7,467k intangible-assets deduction. The prior version of this note said FY2012 was blank "
+         "because no 2012 edition exists in the archive — it does; see the Pillar 3 recovery note in the sources.",
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 ratio", {"FY2026": "17.7%", "FY2025": "18.4%", "FY2024": "19.2%", "FY2023": "18.5%", "FY2022": "17.0%", "FY2021": "15.9%", "FY2020": "13.4%", "FY2019": "12.6%", "FY2018": "12.5%", "FY2016": "11.4%", "FY2015": "11.7%", "FY2014": "10.3%"})],
+    [("Common Equity Tier 1 ratio", {"FY2026": "17.7%", "FY2025": "18.4%", "FY2024": "19.2%", "FY2023": "18.5%", "FY2022": "17.0%", "FY2021": "15.9%", "FY2020": "13.4%", "FY2019": "12.6%", "FY2018": "12.5%", "FY2017": NO_FY2017, "FY2016": "11.4%", "FY2015": "11.7%", "FY2014": "10.3%"})],
     p3_sources(),
-    note="FY2020 and FY2016 CET1 ratios are sourced from the Bank's own Annual Report 'Financial highlights' "
-         "page (no standalone Pillar 3 document survives for those two years — see p3_sources note above), not "
-         "from a Pillar 3 Key metrics table as for every other year on this sheet.\n"
+    note="FY2020 (13.4%) and FY2016 (11.4%) WERE sourced from the Bank's own Annual Report 'Financial "
+         "highlights' page on the stated grounds that no Pillar 3 document survived for those years. Both "
+         "editions were recovered on 2026-09-18 and each prints exactly the same ratio in its Bank-only "
+         "Appendix 1 capital-composition table, so the figures are unchanged and are now independently "
+         "corroborated. That corroboration also settles a question the earlier sourcing left open: the same "
+         "tables give the GROUP ratios as 11.5% (FY2016) and 13.3% (FY2020), so the Annual Report highlight "
+         "figures were indeed Bank-basis and did not quietly mix an entity into this series. See the Pillar 3 "
+         "recovery note in the sources below.\n"
          "FY2013, FY2012 and FY2011 are blank by design, not unresearched. The two recovered Basel II editions "
          "(31 Dec 2013 and 31 Dec 2011) disclose no risk-weighted-asset figure and no capital ratio of any kind — "
          "they publish the Pillar 1 CAPITAL requirement (8% x risk weight) instead — so there is no denominator to "
          "state and no ratio to transcribe. Deriving one by grossing the capital requirement up by 12.5 would be "
-         "back-solving a figure neither document states, and is deliberately not done. FY2012 has no edition at all. "
-         "See sources.",
+         "back-solving a figure neither document states, and is deliberately not done. The recovered FY2012 "
+         "edition (see the Pillar 3 recovery note in the sources) behaves identically: capital requirement, no "
+         "RWA, no ratio. The prior version of this note said FY2012 had no edition at all — it has one; what it "
+         "does not have is a ratio.",
 )
 
 metric(
     "Tier 1 Capital", "£m",
-    [("Tier 1 capital", {"FY2026": 1500.9, "FY2025": 1387.8, "FY2024": 1382.5, "FY2023": 1264.8, "FY2022": 1126.6, "FY2021": 1008.0, "FY2019": 855.9, "FY2018": 756.5, "FY2015": 507.5, "FY2014": 355.0, "FY2013": 250.4, "FY2011": 158.2})],
+    [("Tier 1 capital", {"FY2026": 1500.9, "FY2025": 1387.8, "FY2024": 1382.5, "FY2023": 1264.8, "FY2022": 1126.6, "FY2021": 1008.0, "FY2020": 921.9, "FY2019": 855.9, "FY2018": 756.5, "FY2017": NO_FY2017, "FY2016": 596.5, "FY2015": 507.5, "FY2014": 355.0, "FY2013": 250.4, "FY2012": 163.5, "FY2011": 158.2})],
     p3_sources(),
-    note="FY2013 250.4 and FY2011 158.2 are each recovered Basel II edition's own stated Tier 1 capital, after "
+    note="FY2020 921.9 (CET1 860.9 + AT1 perpetual loan 61.0) and FY2016 596.5 (CET1 522.2 + AT1 perpetual loan "
+         "74.3) ADDED 2026-09-18 from the recovered Bank-only Appendix 1 tables; both are printed totals, not "
+         "sums computed here — the components are quoted only to show the shape. FY2012 163.5 is Basel II Core "
+         "Tier 1 after deductions and equals this sheet's CET1 figure for the same reason FY2013 and FY2011 do. "
+         "See the Pillar 3 recovery note in the sources.\n"
+         "FY2013 250.4 and FY2011 158.2 are each recovered Basel II edition's own stated Tier 1 capital, after "
          "deductions, and are identical to the CET1 Capital sheet's figures for those years because neither year's "
          "Tier 1 contained any AT1 or hybrid instrument — each document states expressly that Tier 1 consisted of "
          "fully issued ordinary shares and audited reserves and that no Tier 3 capital was held. That is a real "
@@ -964,47 +1135,79 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2026": "18.3%", "FY2025": "19.1%", "FY2024": "20.1%", "FY2023": "19.4%", "FY2022": "18.0%", "FY2021": "16.9%", "FY2019": "13.9%", "FY2018": "13.9%", "FY2015": "13.8%", "FY2014": "13.1%"})],
+    [("Tier 1 ratio", {"FY2026": "18.3%", "FY2025": "19.1%", "FY2024": "20.1%", "FY2023": "19.4%", "FY2022": "18.0%", "FY2021": "16.9%", "FY2020": "14.4%", "FY2019": "13.9%", "FY2018": "13.9%", "FY2017": NO_FY2017, "FY2016": "13.0%", "FY2015": "13.8%", "FY2014": "13.1%"})],
     p3_sources(),
-    note="FY2013, FY2012 and FY2011 are blank by design: the two recovered Basel II editions publish no RWA figure "
-         "and no capital ratio, only the Pillar 1 capital requirement, so no ratio can be transcribed and none is "
-         "derived; FY2012 has no edition at all. See the CET1 Ratio sheet's note and sources.",
+    note="FY2020 14.4% and FY2016 13.0% ADDED 2026-09-18, both printed in the 'Capital ratios' block of the "
+         "recovered Bank-only Appendix 1 table for that year — not derived from the capital and RWA rows above "
+         "them. (The FY2020 edition's own summary Table 1 prints 14.4% for the Bank too; note that its 30 June "
+         "2019 comparative there reads 13.8% against the 13.9% printed in Appendix 1 and held on this sheet "
+         "from the FY2019 edition — a 0.1pp rounding difference inside one document, recorded, not "
+         "reconciled.)\n"
+         "FY2013, FY2012 and FY2011 are blank by design: all three recovered Basel II editions publish a Pillar 1 "
+         "capital requirement and no RWA figure and no capital ratio, so no ratio can be transcribed and none is "
+         "derived. The prior version of this note said FY2012 had no edition at all; it does — see the Pillar 3 "
+         "recovery note in the sources.",
 )
 
 metric(
     "Total Capital", "£m",
-    [("Total capital", {"FY2026": 1800.9, "FY2025": 1487.8, "FY2024": 1482.5, "FY2023": 1364.8, "FY2022": 1226.6, "FY2021": 1168.0, "FY2019": 1015.9, "FY2018": 833.9, "FY2015": 556.1, "FY2014": 400.3, "FY2011": 159.6})],
+    [
+        ("Total capital", {"FY2026": 1800.9, "FY2025": 1487.8, "FY2024": 1482.5, "FY2023": 1364.8, "FY2022": 1226.6, "FY2021": 1168.0, "FY2020": 1081.9, "FY2019": 1015.9, "FY2018": 833.9, "FY2017": NO_FY2017, "FY2016": 709.6, "FY2015": 556.1, "FY2014": 400.3, "FY2012": 199.7, "FY2011": 159.6}),
+        ("Basel II editions' own narrative components, where the edition prints no total (FY2013 only): Tier 1 capital after deductions", {"FY2013": 250.4}),
+        ("Basel II editions' own narrative components, where the edition prints no total (FY2013 only): Tier 2 capital", {"FY2013": 39.3}),
+    ],
     p3_sources(),
-    note="FY2011 159.6 is the recovered 31 December 2011 edition's own printed 'Total capital less deductions' line "
-         "(£159,602k) — a stated total, not a sum computed here.\n"
-         "FY2013 IS DELIBERATELY BLANK EVEN THOUGH BOTH ITS COMPONENTS ARE KNOWN. That edition states £250.4m of "
-         "Tier 1 capital and £39.3m of Tier 2 capital but never prints a total capital figure, and it does not say "
-         "whether either component is stated before or after deductions — which matters, because the 2011 edition "
-         "shows the same Bank's total moving from £167.5m before deductions to £159.6m after them. Adding 250.4 and "
-         "39.3 to publish £289.7m would be presenting a derived number as a disclosed one, so it is not done. The "
-         "two components are recorded in this sheet's source note instead. See sources.",
+    note="FY2020 1,081.9 and FY2016 709.6 ADDED 2026-09-18 — each is the printed 'Total regulatory capital "
+         "resources' line of that year's recovered Bank-only Appendix 1 capital-composition table (FY2020: CET1 "
+         "860.9 + AT1 61.0 + Tier 2 160.0; FY2016: CET1 522.2 + AT1 74.3 + Tier 2 113.1). FY2012 199.7 is the "
+         "recovered 2012 edition's own printed 'Total capital less deductions' line (£199,671k). All three are "
+         "stated totals, not sums computed here. See the Pillar 3 recovery note in the sources.\n"
+         "FY2011 159.6 is the recovered 31 December 2011 edition's own printed 'Total capital less deductions' line "
+         "(£159,602k) — likewise a stated total.\n"
+         "FY2013 STILL HAS NO FIGURE ON THE TOTAL CAPITAL ROW, AND THE TWO ROWS BENEATH IT ARE WHY. That edition "
+         "states £250.4m of Tier 1 capital and £39.3m of Tier 2 capital and never prints a total. The earlier "
+         "reason for leaving it blank was that the edition does not say whether those components are before or "
+         "after deductions. The recovered 2012 edition now answers that: its identical narrative sentence gives "
+         "£163.5m + £36.2m = £199.7m, which is exactly its own printed post-deduction total — so the narrative "
+         "pair is an after-deductions pair, and FY2013's total capital after deductions is almost certainly "
+         "£289.7m. ALMOST CERTAINLY IS NOT DISCLOSED. The addition is still ours, not the document's, so the "
+         "total row stays empty and the two components the 2013 edition does print sit on their own rows above, "
+         "verbatim. A reader who wants the total can add them and will know exactly what they did.",
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2026": "22.0%", "FY2025": "20.5%", "FY2024": "21.6%", "FY2023": "21.0%", "FY2022": "19.6%", "FY2021": "19.6%", "FY2019": "16.4%", "FY2018": "15.3%", "FY2015": "15.1%", "FY2014": "14.7%"})],
+    [("Total capital ratio", {"FY2026": "22.0%", "FY2025": "20.5%", "FY2024": "21.6%", "FY2023": "21.0%", "FY2022": "19.6%", "FY2021": "19.6%", "FY2020": "16.9%", "FY2019": "16.4%", "FY2018": "15.3%", "FY2017": NO_FY2017, "FY2016": "15.5%", "FY2015": "15.1%", "FY2014": "14.7%"})],
     p3_sources(),
-    note="FY2013, FY2012 and FY2011 are blank by design: no RWA denominator and no capital ratio is published in "
-         "either recovered Basel II edition, and none is derived. See the CET1 Ratio sheet's note and sources.",
+    note="FY2020 16.9% and FY2016 15.5% ADDED 2026-09-18, both printed in the 'Capital ratios' block of the "
+         "recovered Bank-only Appendix 1 table for that year; nothing is derived. Note that FY2016's 15.5% is "
+         "ABOVE FY2015's 15.1% while the CET1 ratio fell over the same year (11.7% to 11.4%) — that is the "
+         "Bank's own disclosure, driven by a £60m subordinated loan from Aldermore Group PLC taking Tier 2 from "
+         "£48.6m to £113.1m, and is not a transcription slip. See the Pillar 3 recovery note in the sources.\n"
+         "FY2013, FY2012 and FY2011 are blank by design: no RWA denominator and no capital ratio is published in "
+         "any of the three recovered Basel II editions, and none is derived. See the CET1 Ratio sheet's note and "
+         "sources.",
 )
 
 metric(
     "Total RWAs", "£m",
-    [("Total risk-weighted assets (RWA)", {"FY2026": 8203.7, "FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1, "FY2019": 6179.0, "FY2018": 5451.0, "FY2015": 3687.5, "FY2014": 2719.5})],
+    [("Total risk-weighted assets (RWA)", {"FY2026": 8203.7, "FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1, "FY2020": 6406.3, "FY2019": 6179.0, "FY2018": 5451.0, "FY2017": NO_FY2017, "FY2016": 4572.7, "FY2015": 3687.5, "FY2014": 2719.5})],
     p3_sources(),
-    note="FY2013, FY2012 and FY2011 are blank by design, and this is the single most important gap to understand in "
-         "the recovered historical columns. The 31 December 2013 and 31 December 2011 editions disclose the Pillar 1 "
-         "CAPITAL requirement by exposure class (8% x risk weight) — £165,031k and £68,091k of credit-risk capital "
-         "respectively, plus operational-risk charges of £6.5m and £1.9m — but no risk-weighted-asset amount "
+    note="FY2020 6,406.3 and FY2016 4,572.7 ADDED 2026-09-18 from the recovered Bank-only 'Total minimum Pillar 1 "
+         "capital requirement' table of each year's own Pillar 3 edition. Both foot exactly to their own "
+         "components (FY2020: 5,818.3 + 0.2 + 586.7 + 1.1; FY2016: 4,264.1 + 0.2 + 307.2 + 1.2) and both "
+         "reproduce the printed ratios against the capital figures on the neighbouring sheets. See the Pillar 3 "
+         "recovery note in the sources.\n"
+         "FY2013, FY2012 and FY2011 are blank by design, and this is the single most important gap to understand in "
+         "the recovered historical columns. The 31 December 2013, 2012 and 2011 editions disclose the Pillar 1 "
+         "CAPITAL requirement by exposure class (8% x risk weight) — £165,031k, £110,063k and £68,091k of "
+         "credit-risk capital respectively, plus operational-risk charges of £6.5m, £3.8m and £1.9m — but no "
+         "risk-weighted-asset amount "
          "anywhere, and no total against which a ratio could be quoted. Multiplying those capital requirements by "
          "12.5 would produce a plausible-looking RWA that no document states, so it is not done; the capital "
-         "requirements are instead shown as capital, on clearly labelled rows of the RWA Breakdown sheet. FY2012 has "
-         "no edition at all. See sources.",
+         "requirements are instead shown as capital, on clearly labelled rows of the RWA Breakdown sheet. The "
+         "prior version of this note said FY2012 had no edition at all — it does; see the Pillar 3 recovery note "
+         "in the sources.",
 )
 
 # ---------------------------------------------------------------
@@ -1016,9 +1219,15 @@ RWA_BREAKDOWN_PRESENTATION_NOTE = (
     "solo (not Group) column, where a full Pillar 3 document is available. FY2019/FY2018 and FY2015/FY2014 use "
     "the simpler 'Total minimum Pillar 1 capital requirement' table instead (credit risk / market risk / "
     "operational risk / CVA only — no separate counterparty-credit-risk or securitisation RWA line existed in "
-    "that disclosure format), so those two rows are blank for those years rather than estimated. FY2016 and "
-    "FY2020 have no RWA breakdown at all (no standalone Pillar 3 document survives — see the Total RWAs sheet's "
-    "note). This sheet's Total row ties out exactly to the Total RWAs sheet for every year with data.\n\n"
+    "that disclosure format). THE TWO TEMPLATES ARE SHOWN AS SEPARATE SECTIONS, each with its own rows and its "
+    "own total, so no row carries figures from both: the category sets differ, and a row read straight across "
+    "would change meaning partway along. Nothing is merged, re-labelled or estimated across the break — the "
+    "'(excluding CCR)' qualifier in particular belongs only to the UK OV1 block, because the older table draws "
+    "no such distinction. FY2016 AND FY2020 WERE ADDED TO THE OLDER TABLE'S SECTION ON 2026-09-18, replacing "
+    "the previous claim that they 'have no RWA breakdown at all (no standalone Pillar 3 document survives)'. "
+    "Both editions exist and both print the Bank-only version of exactly that table — see the Pillar 3 "
+    "recovery note in the sources. FY2012 was added to the Basel II capital-requirement section for the same "
+    "reason. This sheet's Total row ties out exactly to the Total RWAs sheet for every year with data.\n\n"
     "FY2026: the UK OV1 template in the FY2026 report has no market-risk row at all, so that row is left "
     "blank for FY2026 rather than written as zero. FY2026 rows sum exactly to the 8,203.7 total (7,291.1 + "
     "4.7 + 2.8 + 22.5 + 882.6), which ties to UK KM1 row 4. Note the FY2026 report re-presents the FY2025 "
@@ -1059,10 +1268,17 @@ RWA_BREAKDOWN_SOURCES = (
     f"FY2023 comparative) — {P3_2024_URL}\n"
     f"FY2022 & FY2021: Pillar 3 Disclosures for the year ended 30 June 2022, p.7 (Overview of RWA, Bank "
     f"column) — {P3_2022_URL}\n"
+    f"FY2020: Pillar 3 Disclosures for the year ended 30 June 2020, p.61 (Appendix 1, Table 34 — Total minimum "
+    f"Pillar 1 capital requirement, Bank only) — {P3_2020_URL}\n"
     f"FY2019 & FY2018: Pillar 3 Disclosures for the year ended 30 June 2019, p.57 (Appendix 1, Table 34 — "
     f"Total minimum Pillar 1 capital requirement, Bank only) — {P3_2019_URL}\n"
+    f"FY2016: Pillar 3 Disclosures 31 December 2016, p.58 (Appendix 1, Table 34 — Total minimum Pillar 1 "
+    f"capital requirement, Bank only) — {P3_2016_URL}\n"
     f"FY2015 & FY2014: Pillar 3 Disclosures 31 December 2015, p.58 (Appendix 1, Table 31 — Total minimum "
     f"Pillar 1 capital requirement, Bank only) — {P3_2015_URL}\n"
+    f"FY2012 (CAPITAL requirement rows only, not RWA): Aldermore Bank PLC — Pillar 3 Disclosures 31 December "
+    f"2012, p.11 (Credit Risk Exposures, 'Pillar 1 Capital (8% x Risk Weight)' column) and p.18 (operational "
+    f"risk charge) — {P3_2012_URL}\n"
     f"FY2013 (CAPITAL requirement rows only, not RWA): Aldermore Bank PLC — Pillar 3 Disclosures 31 December "
     f"2013, p.11 (Credit risk exposure by exposure class, 'Pillar 1 Capital (8% x Risk Weight)' column) and "
     f"Section 9 (operational risk charge) — {P3_2013_URL}\n"
@@ -1072,17 +1288,26 @@ RWA_BREAKDOWN_SOURCES = (
 )
 
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding CCR)", {"FY2026": 7291.1, "FY2025": 6410.7, "FY2024": 6071.2, "FY2023": 5802.1, "FY2022": 5624.9, "FY2021": 5338.2, "FY2019": 5643.3, "FY2018": 4950.6, "FY2015": 3480.6, "FY2014": 2592.5}),
+    ("SECTION", "UK OV1 / 'Overview of RWA' template — Aldermore Group PLC Pillar 3 Disclosures, Bank solo column (FY2026-FY2021)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2026": 7291.1, "FY2025": 6410.7, "FY2024": 6071.2, "FY2023": 5802.1, "FY2022": 5624.9, "FY2021": 5338.2}),
     ("DATA", "Counterparty credit risk (CCR)", {"FY2026": 4.7, "FY2025": 4.8, "FY2024": 20.9, "FY2023": 37.1, "FY2022": 0.9, "FY2021": 0.9}),
     ("DATA", "Securitisation exposures in the non-trading book", {"FY2026": 22.5, "FY2025": 25.5, "FY2024": 40.0, "FY2023": 22.5, "FY2022": 29.2, "FY2021": 23.1}),
-    ("DATA", "Position, foreign exchange and commodities risks (market risk)", {"FY2025": 0, "FY2024": 0.1, "FY2023": 1.8, "FY2022": 0.4, "FY2021": 0.1, "FY2019": 0.3, "FY2018": 0.4, "FY2015": 0.1, "FY2014": 0.3}),
-    ("DATA", "Credit valuation adjustment (CVA)", {"FY2026": 2.8, "FY2019": 2.1, "FY2018": 1.0, "FY2015": 1.3, "FY2014": 1.6}),
-    ("DATA", "Operational risk", {"FY2026": 882.6, "FY2025": 830.6, "FY2024": 743.4, "FY2023": 641.4, "FY2022": 604.7, "FY2021": 601.8, "FY2019": 533.3, "FY2018": 499.0, "FY2015": 205.5, "FY2014": 125.1}),
-    ("TOTAL", "Total risk-weighted assets (RWA)", {"FY2026": 8203.7, "FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1, "FY2019": 6179.0, "FY2018": 5451.0, "FY2015": 3687.5, "FY2014": 2719.5}),
-    ("SECTION", "Pillar 1 CAPITAL requirement, Basel II editions FY2013 and FY2011 (£m of CAPITAL, not RWA — deliberately NOT multiplied by 12.5; do not read down the same column as the RWA rows above)", {}),
-    ("DATA", "Capital requirement — credit risk (standardised, 8% x risk weight, all exposure classes)", {"FY2013": 165.0, "FY2011": 68.1}),
-    ("DATA", "Capital requirement — operational risk (basic indicator approach)", {"FY2013": 6.5, "FY2011": 1.9}),
-    ("DATA", "Memo: total credit risk exposure value after provisions, incl. off-balance-sheet (£m — an exposure measure, not an RWA)", {"FY2013": 4746.6, "FY2011": 1647.4}),
+    ("DATA", "Position, foreign exchange and commodities risks (market risk)", {"FY2025": 0, "FY2024": 0.1, "FY2023": 1.8, "FY2022": 0.4, "FY2021": 0.1}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2026": 2.8}),
+    ("DATA", "Operational risk", {"FY2026": 882.6, "FY2025": 830.6, "FY2024": 743.4, "FY2023": 641.4, "FY2022": 604.7, "FY2021": 601.8}),
+    ("TOTAL", "Total risk-weighted assets (RWA)", {"FY2026": 8203.7, "FY2025": 7271.6, "FY2024": 6875.6, "FY2023": 6504.9, "FY2022": 6260.1, "FY2021": 5964.1}),
+    ("SECTION", "'Total minimum Pillar 1 capital requirement' table — Pillar 3 Disclosures y/e 30 Jun 2020 (Appendix 1, Table 34), y/e 30 Jun 2019 (Appendix 1, Table 34), 31 Dec 2016 (Appendix 1, Table 34) and 31 Dec 2015 (Appendix 1, Table 31), Bank only (FY2020, FY2019, FY2018, FY2016, FY2015, FY2014)", {}),
+    ("DATA", "Credit risk", {"FY2020": 5818.3, "FY2019": 5643.3, "FY2018": 4950.6, "FY2016": 4264.1, "FY2015": 3480.6, "FY2014": 2592.5}),
+    ("DATA", "Market risk", {"FY2020": 0.2, "FY2019": 0.3, "FY2018": 0.4, "FY2016": 0.2, "FY2015": 0.1, "FY2014": 0.3}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 1.1, "FY2019": 2.1, "FY2018": 1.0, "FY2016": 1.2, "FY2015": 1.3, "FY2014": 1.6}),
+    ("DATA", "Operational risk", {"FY2020": 586.7, "FY2019": 533.3, "FY2018": 499.0, "FY2016": 307.2, "FY2015": 205.5, "FY2014": 125.1}),
+    ("TOTAL", "Total risk-weighted assets (RWA)", {"FY2020": 6406.3, "FY2019": 6179.0, "FY2018": 5451.0, "FY2016": 4572.7, "FY2015": 3687.5, "FY2014": 2719.5}),
+    ("SECTION", "Pillar 1 CAPITAL requirement, Basel II editions FY2013, FY2012 and FY2011 (£m of CAPITAL, not RWA — deliberately NOT multiplied by 12.5; do not read down the same column as the RWA rows above)", {}),
+    ("DATA", "Capital requirement — credit risk (standardised, 8% x risk weight, all exposure classes)", {"FY2013": 165.0, "FY2012": 110.1, "FY2011": 68.1}),
+    ("DATA", "Capital requirement — operational risk (basic indicator approach)", {"FY2013": 6.5, "FY2012": 3.8, "FY2011": 1.9}),
+    ("DATA", "Memo: total credit risk exposure value after provisions, incl. off-balance-sheet (£m — an exposure measure, not an RWA)", {"FY2013": 4746.6, "FY2012": 2844.6, "FY2011": 1647.4}),
+    ("SECTION", "FY2017 — no 31 December 2017 reporting date exists (18-month transition period to 30 June 2018); the FY2018 column covers 1 Jan 2017 to 30 Jun 2018", {}),
+    ("DATA", "Total risk-weighted assets (RWA)", {"FY2017": NO_FY2017}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -1098,17 +1323,28 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
-        ("Total exposure measure excluding claims on central banks (£m)", {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3, "FY2021": "n/a", "FY2019": 12671.6, "FY2018": 10585.1, "FY2015": 7095.9, "FY2014": 5630.4, "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2021": "n/a", "FY2019": "6.8%", "FY2018": "7.1%", "FY2015": "7.2%", "FY2014": "6.3%", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total exposure measure excluding claims on central banks (£m)", {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3, "FY2021": "n/a", "FY2020": 15132.5, "FY2019": 12671.6, "FY2018": 10585.1, "FY2017": NO_FY2017, "FY2016": 8562.9, "FY2015": 7095.9, "FY2014": 5630.4, "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2021": "n/a", "FY2020": "6.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2017": NO_FY2017, "FY2016": "7.0%", "FY2015": "7.2%", "FY2014": "6.3%", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
     ],
     p3_sources(),
-    note="FY2021 leverage ratio disclosure basis was introduced from 1 January 2022; the FY2022 Pillar 3 report explicitly "
+    note="FY2020 (exposure 15,132.5, ratio 6.1%) and FY2016 (exposure 8,562.9, ratio 7.0%) ADDED 2026-09-18 from "
+         "row 21/row 22 of the 'Leverage ratio common disclosure (Bank only)' table of each year's own recovered "
+         "Pillar 3 edition (FY2020 p.65, FY2016 p.62). Both are on the same pre-2022 all-exposures basis as the "
+         "FY2019/FY2018/FY2015/FY2014 figures beside them, not the 'excluding claims on central banks' variant "
+         "the row label carries for FY2022 onward — see the basis paragraph below. Note that the summary "
+         "reconciliation table on the facing page of each edition gives a slightly different exposure (FY2020 "
+         "15,132.5 both ways; FY2016 8,591.4 on the reconciliation against 8,562.9 on the common-disclosure "
+         "template, a £28.5m difference inside one document); the common-disclosure row 21 figure is used, being "
+         "the one the printed ratio is struck on. See the Pillar 3 recovery note in the sources.\n"
+         "FY2021 leverage ratio disclosure basis was introduced from 1 January 2022; the FY2022 Pillar 3 report explicitly "
          "marks FY2021 as 'n/a' with no comparative provided under the new template. FY2019/FY2018 and FY2015/FY2014 "
          "figures are each year's own pre-2022 leverage ratio disclosure basis (both are the CRR Part Eight / EBA "
          "Implementing Technical Standard leverage ratio, but the 'excluding claims on central banks' variant used from "
          "FY2022 onward did not exist as a separate disclosure before then, so these earlier figures are the Bank's "
-         "then-current all-exposures leverage ratio, not a like-for-like restatement) — FY2016 and FY2020 have no "
-         "leverage ratio figure at all (no standalone Pillar 3 document survives for either year). FY2013, FY2012 "
+         "then-current all-exposures leverage ratio, not a like-for-like restatement), and the same applies to the "
+         "newly added FY2016 and FY2020 — the previous version of this note said those two years 'have no "
+         "leverage ratio figure at all (no standalone Pillar 3 document survives for either year)', which was "
+         "wrong on both counts. FY2013, FY2012 "
          "and FY2011 are 'n/a' for a structural reason rather than a sourcing one: no leverage ratio existed as a UK "
          "regulatory measure or disclosure at 31 December 2011 or 31 December 2013 (the CRR leverage ratio arrived "
          "with CRD IV from 2014), and neither recovered Basel II edition contains one in any form.\n"
@@ -1123,16 +1359,21 @@ metric(
 metric(
     "LCR", "£m / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value average (£m)", {"FY2026": 3725.9, "FY2025": 3723.1, "FY2024": 4208.6, "FY2023": 3280.6, "FY2022": 2838.5, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Total net cash outflows, adjusted value (£m)", {"FY2026": 2263.1, "FY2025": 1968.3, "FY2024": 1959.4, "FY2023": 1686.4, "FY2022": 772.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Liquidity Coverage Ratio (%)", {"FY2026": "164.6%", "FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total high-quality liquid assets (HQLA), weighted value average (£m)", {"FY2026": 3725.9, "FY2025": 3723.1, "FY2024": 4208.6, "FY2023": 3280.6, "FY2022": 2838.5, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total net cash outflows, adjusted value (£m)", {"FY2026": 2263.1, "FY2025": 1968.3, "FY2024": 1959.4, "FY2023": 1686.4, "FY2022": 772.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2026": "164.6%", "FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
     ],
     p3_sources(),
     note="LCR is computed as a 12-month average to the period end. FY2021 and earlier are all 'n/a' — the Bank-solo "
          "LCR disclosure template used on this sheet was introduced from 1 January 2022 (see FY2022 Pillar 3 report); "
          "no comparable Bank-solo LCR figure was located for FY2014-FY2020 in the documents reviewed for this "
          "extension (the Basel LCR standard itself phased in nationally from 2015, but the Bank's own Pillar 3 "
-         "reports for those years did not publish a Bank-solo LCR figure in the format used here). FY2013 and "
+         "reports for those years did not publish a Bank-solo LCR figure in the format used here — re-checked "
+         "2026-09-18 against the FY2016 and FY2020 editions recovered that day, which is worth stating "
+         "explicitly: those two documents DO exist and DO carry a full Bank-only appendix, and they still print "
+         "no LCR, so 'n/a' for FY2016 and FY2020 is now a statement about the disclosure rather than about our "
+         "reach). FY2017 reads 'No 31 Dec 2017 period exists' rather than 'n/a' because nothing could have been "
+         "disclosed at that date at all. FY2013 and "
          "FY2011 are 'n/a' on firmer ground still: the LCR did not exist as a UK requirement or disclosure at "
          "either date (it was introduced by CRD IV/CRR and phased in from October 2015), and neither recovered "
          "Basel II edition contains any liquidity ratio - each describes liquidity risk narratively and by the "
@@ -1142,16 +1383,20 @@ metric(
 metric(
     "NSFR", "£m / %",
     [
-        ("Total available stable funding (£m)", {"FY2026": 16701.9, "FY2025": 15972.4, "FY2024": 16133.4, "FY2023": 15490.2, "FY2022": 15667.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Total required stable funding (£m)", {"FY2026": 13318.4, "FY2025": 12166.9, "FY2024": 11778.0, "FY2023": 12161.3, "FY2022": 12169.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Net Stable Funding Ratio (%)", {"FY2026": "125.4%", "FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total available stable funding (£m)", {"FY2026": 16701.9, "FY2025": 15972.4, "FY2024": 16133.4, "FY2023": 15490.2, "FY2022": 15667.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total required stable funding (£m)", {"FY2026": 13318.4, "FY2025": 12166.9, "FY2024": 11778.0, "FY2023": 12161.3, "FY2022": 12169.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Net Stable Funding Ratio (%)", {"FY2026": "125.4%", "FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
     ],
     p3_sources(),
     note="NSFR is computed as a 4-quarter average to the period end. FY2021 and earlier are all 'n/a' — the UK NSFR "
          "requirement did not take effect until 1 January 2022 (see FY2022 Pillar 3 report), so no NSFR figure exists "
-         "for FY2014-FY2020 at all. The same applies with more force to FY2013 and FY2011, which predate even the "
-         "Basel III NSFR observation period; neither recovered Basel II edition contains an NSFR. FY2012 has no "
-         "edition at all.",
+         "for FY2014-FY2020 at all. This is the one metric on this workbook where recovering the FY2016 and "
+         "FY2020 Pillar 3 editions (see the Pillar 3 recovery note in the sources) changed nothing and could not "
+         "have: there was no NSFR to disclose in either year. The same applies with more force to FY2013, FY2012 "
+         "and FY2011, which predate even the "
+         "Basel III NSFR observation period; none of the three recovered Basel II editions contains an NSFR. "
+         "FY2017 reads 'No 31 Dec 2017 period exists' rather than 'n/a' because no reporting date existed there "
+         "at all.",
 )
 
 metric(
@@ -1286,9 +1531,9 @@ bw.add_overview_sheet(
     cash_flow_unit="£m",
     ratios=[
         ("CET1 Ratio", {"FY2025": "18.4%", "FY2024": "19.2%", "FY2023": "18.5%", "FY2022": "17.0%", "FY2021": "15.9%", "FY2020": "13.4%", "FY2019": "12.6%", "FY2018": "12.5%", "FY2016": "11.4%", "FY2015": "11.7%", "FY2014": "10.3%"}),
-        ("Tier 1 Ratio", {"FY2025": "19.1%", "FY2024": "20.1%", "FY2023": "19.4%", "FY2022": "18.0%", "FY2021": "16.9%", "FY2019": "13.9%", "FY2018": "13.9%", "FY2015": "13.8%", "FY2014": "13.1%"}),
-        ("Total Capital Ratio", {"FY2025": "20.5%", "FY2024": "21.6%", "FY2023": "21.0%", "FY2022": "19.6%", "FY2021": "19.6%", "FY2019": "16.4%", "FY2018": "15.3%", "FY2015": "15.1%", "FY2014": "14.7%"}),
-        ("Leverage Ratio", {"FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2015": "7.2%", "FY2014": "6.3%"}),
+        ("Tier 1 Ratio", {"FY2025": "19.1%", "FY2024": "20.1%", "FY2023": "19.4%", "FY2022": "18.0%", "FY2021": "16.9%", "FY2020": "14.4%", "FY2019": "13.9%", "FY2018": "13.9%", "FY2016": "13.0%", "FY2015": "13.8%", "FY2014": "13.1%"}),
+        ("Total Capital Ratio", {"FY2025": "20.5%", "FY2024": "21.6%", "FY2023": "21.0%", "FY2022": "19.6%", "FY2021": "19.6%", "FY2020": "16.9%", "FY2019": "16.4%", "FY2018": "15.3%", "FY2016": "15.5%", "FY2015": "15.1%", "FY2014": "14.7%"}),
+        ("Leverage Ratio", {"FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2020": "6.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2016": "7.0%", "FY2015": "7.2%", "FY2014": "6.3%"}),
         ("LCR", {"FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%"}),
         ("NSFR", {"FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%"}),
     ],
@@ -1297,13 +1542,20 @@ bw.add_overview_sheet(
          "Bank's accounting reference date changed following its 2018 acquisition by FirstRand). Balance Sheet, "
          "Profit & Loss, Statement of Changes in Equity and Cash Flow figures are all Bank-solo; Pillar 3 ratios use "
          "the Bank-solo columns of Aldermore Group PLC's Pillar 3 disclosures (the only level at which Pillar 3 is "
-         "published), except CET1 Ratio for FY2016/FY2020 which is sourced from the Bank's own Annual Report "
-         "highlights (no standalone Pillar 3 document survives for those two years). "
+         "published). "
+         "FY2016 and FY2020 UPDATED 2026-09-18: this note previously said the FY2016/FY2020 CET1 Ratio came from "
+         "the Bank's Annual Report highlights because 'no standalone Pillar 3 document survives for those two "
+         "years', and Tier 1 Ratio, Total Capital Ratio and Leverage Ratio were blank in both years for the same "
+         "stated reason. Both Pillar 3 editions were recovered on 2026-09-18 (FY2020 from Aldermore's own live "
+         "investor index; FY2016 from the Wayback Machine, findable only by enumerating the whole host because its "
+         "filename carries no year). Every ratio here for those two years is now the Bank-solo column of the "
+         "recovered edition, and the two CET1 figures are unchanged from the Annual Report highlights — the "
+         "documents corroborate each other. "
          "'Other equity movements, net' combines Additional Tier 1 capital issuance/redemption, AT1 coupon "
          "payments, and (FY2015/FY2014) the Aldermore Group PLC IPO share issue proceeds and warrant exercise. "
          "Leverage/LCR/NSFR have no FY2021 figure; LCR/NSFR have no figure at all before FY2022 (disclosure "
-         "templates introduced from 1 Jan 2022) and Leverage Ratio has none for FY2016/FY2020 — see the Leverage "
-         "Ratio/LCR/NSFR sheets for the disclosure-template basis note. FY2017 has no standalone 12-month period "
+         "templates introduced from 1 Jan 2022) — see the Leverage Ratio/LCR/NSFR sheets for the "
+         "disclosure-template basis note. FY2017 has no standalone 12-month period "
          "at all (see the Balance Sheet sheet's source note) and FY2018's column is an 18-month, not 12-month, "
          "period — both are omitted or flagged accordingly rather than estimated.",
 )

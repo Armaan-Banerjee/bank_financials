@@ -818,10 +818,13 @@ RWA_BREAKDOWN_SOURCES = (
 )
 
 rwa_breakdown_rows = [
+    ("SECTION", "No category breakdown published (FY2025-FY2018) — the Annual Report's 'Capital management' section discloses the aggregate total risk weighted assets only, with no risk-type table; re-verified against all five FY2021-FY2025 Annual Reports on 2026-09-12, see sources note", {}),
     ("DATA", "Category breakdown (credit risk / market risk / operational risk)", {"FY2025": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed"}),
+    ("TOTAL", "Total risk weighted assets", {"FY2025": 8180, "FY2024": 7767, "FY2023": 7939, "FY2022": 7699, "FY2021": 8686, "FY2020": 10780, "FY2019": 10971, "FY2018": 10550}),
+    ("SECTION", "Pillar 1 capital requirements RWA breakdown (Credit and counterparty risk / Operational risk, Basel III / CRD IV standardised approach) — each year's own Annual Report (FY2017-FY2014). Two categories only: this table has no separate market-risk or CVA line, and its 'Credit and counterparty risk' row COMBINES what UK OV1 would split, so it is not comparable line-for-line with a later OV1 breakdown", {}),
     ("DATA", "Credit and counterparty risk", {"FY2017": 9475, "FY2016": 9255, "FY2015": 9151, "FY2014": 9105}),
     ("DATA", "Operational risk", {"FY2017": 756, "FY2016": 779, "FY2015": 746, "FY2014": 642}),
-    ("TOTAL", "Total risk weighted assets", {"FY2025": 8180, "FY2024": 7767, "FY2023": 7939, "FY2022": 7699, "FY2021": 8686, "FY2020": 10780, "FY2019": 10971, "FY2018": 10550, "FY2017": 10231, "FY2016": 10034, "FY2015": 9897, "FY2014": 9747}),
+    ("TOTAL", "Total risk weighted assets", {"FY2017": 10231, "FY2016": 10034, "FY2015": 9897, "FY2014": 9747}),
 ]
 
 bw.add_rwa_breakdown_sheet(

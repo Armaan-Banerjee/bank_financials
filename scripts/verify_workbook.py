@@ -17,8 +17,11 @@ Checks performed:
        Changes in Equity, Asset Quality, RWA Breakdown - see
        wayfinder/statements/map.md, now complete for all 145 banks), plus 1
        for an auxiliary "Interim Pillar 3" sheet where the bank publishes a
-       half-year Pillar 3 (13 banks do), plus 1 for a "KM1 Key Metrics" sheet
-       (the KM1- rollout, still in progress). A workbook may therefore
+       half-year Pillar 3 (16 carry one as at 2026-09-18; the count moves as
+       sheets are added, so COUNT IT from the workbooks rather than quoting
+       a figure from here), plus 1 for a "KM1 Key Metrics" sheet (the KM1-
+       rollout, complete - all 145 workbooks carry one). A workbook may
+       therefore
        legitimately have anywhere from 18 to 20 sheets today. Also asserts
        the KM1 sheet's locked placement: immediately before "CET1 Capital".
     2. Overview sheet chart count - expected is derived the same way: 1 bar
@@ -118,7 +121,9 @@ def main():
     ]
     st_sheets_present = [n for n in st_sheet_names if n in wb.sheetnames]
     # KM1 rollout (see wayfinder/km1/map.md): the bank's own published UK KM1
-    # template, optional per bank while the rollout is in progress.
+    # template. The rollout is complete - all 145 workbooks carry one - but the
+    # count stays DERIVED rather than asserted, so this checker keeps working
+    # on a workbook built before the rollout or rebuilt from an older script.
     has_km1 = "KM1 Key Metrics" in wb.sheetnames
     expected_sheets = (
         13 + len(st_sheets_present) + (1 if has_interim else 0) + (1 if has_km1 else 0)
@@ -194,6 +199,18 @@ def main():
                 interim.cell(row=4, column=c).value
                 for c in range(1, interim.max_column + 1)
             ]
+            # Trailing empties here are an artifact of THIS function, not of
+            # the sheet. The long-format probe above reads row 4 columns 1-8,
+            # and openpyxl CREATES a cell on access, so max_column is at least
+            # 8 on every wide sheet no matter how many periods it really
+            # holds - making the reported period_count max(real, 5). Display
+            # only, no figure was ever compared against it, and it never
+            # surfaced because every interim sheet built so far has had more
+            # than five periods. But a two-period sheet reporting five is a
+            # checker claiming more than it saw, which is the failure this
+            # file's other comments exist to record.
+            while wide_headers and wide_headers[-1] in (None, ""):
+                wide_headers.pop()
             if len(wide_headers) < 4 or wide_headers[:3] != ["Metric", "Unit", "Basis"]:
                 print(f"Headers: {headers}")
                 print(
@@ -518,6 +535,25 @@ def _km1_row_scale(ws, row, col, header_row):
     return 1.0
 
 
+_NIL_DASHES = {"-", "‐", "‑", "‒", "–", "—", "−"}
+
+
+def _nil_dash(v):
+    """A cell holding nothing but a dash is the source printing nil, so read
+    it as 0. Everything else is returned untouched.
+
+    The workbooks keep the dash as a literal string rather than converting it
+    to 0, deliberately: a dash the bank printed and a zero it printed are
+    different statements, and the sheet must show what the source showed. That
+    makes the cell a string, and the reconciliation loop abandons any column
+    holding a string - so a single nil cell used to silence the check for the
+    whole column. Read it as nil HERE, in the checker, without touching what
+    the sheet displays."""
+    if isinstance(v, str) and v.strip() in _NIL_DASHES:
+        return 0
+    return v
+
+
 def _numeric(v):
     """Coerce a cell to a float for comparison. Ratios are stored as printed
     strings ('15.45%', '14.5 %', '1,057.8%'); text like 'Not publicly
@@ -570,6 +606,20 @@ KM1_LABEL_TO_METRIC_SHEET = [
     # the specific wordings instead.
     ("common equity tier 1 capital (cet1)", "CET1 Capital"),
     ("common equity tier 1 capital after deductions", "CET1 Capital"),
+    # The template's own row-1 wording with NO trailing "capital" at all, which
+    # is what the UK KM1 actually prints ("1  Common Equity Tier 1 (CET1)") and
+    # what the banks that reproduce it unnumbered therefore carry. It matched
+    # nothing, so row 1 was not cross-checked on SEVEN workbooks - TSB (twice,
+    # once per template era), Jordan International, Julian Hodge, Kroo, Mizuho
+    # International and Unity Trust. Safe against the two rows that must NOT
+    # match it: the "as if IFRS 9 ... had not been applied" twins are excluded
+    # earlier in _metric_sheet_for, and "Common Equity Tier 1 (CET1) ratio" and
+    # "... capital: instruments and reserves" both keep their own LONGER
+    # prefixes, which win. Blast radius measured 2026-09-18 by running this
+    # module twice against the same corpus with only this entry backed out:
+    # those seven workbooks gain cross-checked cells (TSB 60 -> 69) and NO new
+    # disagreement appears in any of them.
+    ("common equity tier 1 (cet1)", "CET1 Capital"),
 ]
 
 # Rows that are a REQUIREMENT or a BUFFER are not the bank's own metric, so no
@@ -811,6 +861,17 @@ def check_km1_against_metric_sheets(wb):
                 # This does NOT swallow real gaps: the same bank's row 4 FY2021
                 # (1,335,858 against 1,340) differs by 4.1m against a 0.5m
                 # floor and still fires, correctly.
+                # KNOWN BLIND SPOT, corpus-wide (found by KM1-025 as a
+                # prediction that deliberately FAILED to fire, 2026-09-18):
+                # on a four-digit GBPm row the 0.1%-of-value term is already
+                # larger than one unit, so a one-unit divergence can never be
+                # reported. RBC Europe's documented 1,349-vs-1,348 gap is
+                # invisible here because 0.1% of 1,349m is 1.3m. A clean
+                # result on a GBPm KM1 row is therefore NOT evidence that the
+                # two sides agree to the unit. Deliberately not "fixed" by
+                # lowering the floor: at GBP'000 the same change would fire on
+                # every legitimate rounding. The divergence is real and
+                # belongs in the sheet note, not in the tolerance.
                 coarser_scale = max(km1_scale, m_scale)
                 tol = max(abs(target) * 0.001, 1.0, 0.5 * coarser_scale)
                 ok = any(abs(target - cand) <= tol for cand, _ in candidates)
@@ -906,6 +967,10 @@ def check_statement_sheet(ws, sheet_name):
     run = []  # pending DATA rows since the last SECTION/TOTAL
     checks_run = 0
     checks_passed = 0
+    cols_checked = 0
+    cols_skipped_text = 0
+    blocks_wholly_skipped = []
+    blocks_placeholder = []
     for r in range(header_row + 1, last_row + 1):
         kind = row_kind(r)
         label = ws.cell(row=r, column=1).value
@@ -921,28 +986,68 @@ def check_statement_sheet(ws, sheet_name):
                 checks_run += 1
                 ok = True
                 mismatches = []
+                block_cols = 0
+                block_skipped = 0
                 for ci, y in enumerate(years, start=2):
+                    if y in (None, ""):
+                        continue
+                    block_cols += 1
                     total_v = ws.cell(row=r, column=ci).value
                     col_vals = [ws.cell(row=dr, column=ci).value for dr in run]
-                    # Text cells ("Not publicly disclosed", "n/a", a ratio
-                    # printed as a string) are legitimate values, not numbers
-                    # to add up. A column carrying any of them - in the block
-                    # or in the TOTAL row - simply isn't reconcilable, so skip
-                    # it rather than crash or report a bogus mismatch.
+                    # A nil cell is printed as a literal dash, which arrives
+                    # here as a string. It MEANS zero, so read it as zero
+                    # rather than abandoning the column: skipping it let Bank
+                    # Mandiri Europe's FY2016 Total Risk Exposure sit
+                    # unreconciled (and, as it turns out, disagreeing by 1).
+                    total_v = _nil_dash(total_v)
+                    col_vals = [_nil_dash(v) for v in col_vals]
+                    # Other text cells ("Not publicly disclosed", "n/a", a
+                    # ratio printed as a string) are legitimate values, not
+                    # numbers to add up. A column carrying any of them - in
+                    # the block or in the TOTAL row - simply isn't
+                    # reconcilable, so skip it rather than crash or report a
+                    # bogus mismatch. COUNT the skip: a silent skip looks
+                    # exactly like a pass, which is the same failure the KM1
+                    # cross-check was carrying (see KM1-037 above).
                     if isinstance(total_v, str) or any(
                         isinstance(v, str) for v in col_vals
                     ):
+                        cols_skipped_text += 1
+                        block_skipped += 1
                         continue
                     # A wholly blank block under a disclosed TOTAL is the
                     # bank disclosing the total but not the split (e.g.
                     # Allica's FY2020 ECL: total 40, no IFRS 9 stage
                     # breakdown published). Nothing to reconcile against.
                     if all(v is None for v in col_vals):
+                        block_skipped += 1
                         continue
+                    cols_checked += 1
                     data_sum = sum((v or 0) for v in col_vals)
                     if total_v is not None and abs((total_v or 0) - data_sum) > 0.05:
                         ok = False
                         mismatches.append((y, data_sum, total_v))
+                if block_cols and block_skipped == block_cols:
+                    # Distinguish the two reasons a block can go wholly
+                    # unchecked. A block whose DATA rows hold nothing but text
+                    # markers ("Not publicly disclosed") is a deliberate
+                    # placeholder under a disclosed total - there are no
+                    # figures to add up, and flagging it every run would
+                    # train the reader to ignore the flag. Anything else is
+                    # genuinely unexamined and must be said out loud.
+                    populated = [
+                        ws.cell(row=dr, column=ci).value
+                        for dr in run
+                        for ci in range(2, ncols + 1)
+                        if ws.cell(row=dr, column=ci).value is not None
+                    ]
+                    if populated and all(
+                        isinstance(v, str) and _numeric(v) is None
+                        for v in populated
+                    ):
+                        blocks_placeholder.append(f"row {r} {str(label)[:48]!r}")
+                    else:
+                        blocks_wholly_skipped.append(f"row {r} {str(label)[:48]!r}")
                 if ok:
                     checks_passed += 1
                 else:
@@ -956,6 +1061,25 @@ def check_statement_sheet(ws, sheet_name):
         f"{checks_passed}/{checks_run} DATA-block -> TOTAL checks passed"
         f"{' (all clean)' if checks_passed == checks_run else '  !! see mismatches above'}"
     )
+    # A check is counted per TOTAL row but performed per year-column, so
+    # "3/3 passed" can hide a block where every column was skipped. Print
+    # what was actually compared.
+    print(
+        f"  ({cols_checked} year-column(s) actually compared; "
+        f"{cols_skipped_text} skipped for a text cell)"
+    )
+    if blocks_placeholder:
+        print(
+            f"  ({len(blocks_placeholder)} block(s) are a text placeholder "
+            "under a disclosed total - no figures to reconcile: "
+            + "; ".join(blocks_placeholder) + ")"
+        )
+    if blocks_wholly_skipped:
+        print(
+            f"  !! {len(blocks_wholly_skipped)} block(s) counted as passing "
+            "were not compared in ANY column - check by eye: "
+            + "; ".join(blocks_wholly_skipped)
+        )
     print(
         "\nReview the TOTAL rows above by eye for the tail chain (net change / "
         "opening / closing, incl. any FX or other adjustment lines) - that part "

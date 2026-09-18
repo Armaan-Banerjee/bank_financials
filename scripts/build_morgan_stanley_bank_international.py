@@ -454,11 +454,42 @@ asset_quality_rows = [
 
 # The Company explicitly takes the FRS 101 exemption from presenting a cash-flow
 # statement. Retain the standard tab and document the structural limitation.
+#
+# GA-006 (2026-09-18): the exemption was stated only in the subtitle and in the
+# row LABEL, with an empty values dict, so all 17 year columns read as blank to a
+# reader and audit_gaps.py scored this sheet as 17 empty year-columns - every one
+# of this bank's "leading gaps". The statement now appears in each year column.
+# The FRS 101 attribution was also re-verified against the source this time rather
+# than carried forward: see CASH_FLOW_EXEMPTION_NOTE below.
+CASH_FLOW_EXEMPTION_NOTE = (
+    "FRS 101 CASH-FLOW EXEMPTION, VERIFIED AGAINST THE SOURCE 2026-09-18 (GA-006). Morgan Stanley Bank "
+    "International Limited prepares its accounts under UK GAAP including Financial Reporting Standard 101 "
+    "'Reduced Disclosure Framework', and takes the exemption from presenting a cash-flow statement. This "
+    "is quoted rather than inferred. The FY2025 Annual Report, note 2 'Basis of preparation', printed "
+    "p.47, reads: 'The Company ... is a Financial Institution as defined in FRS 101 Reduced Disclosure "
+    "Framework. The Company has taken advantage of certain disclosure exemptions under FRS 101 in relation "
+    "to share-based payments, fair value measurement (as applicable to assets and liabilities other than "
+    "financial instruments), revenue from contracts with customers, presentation of comparative information "
+    "in respect of certain assets and shares outstanding, PRESENTATION OF A CASH-FLOW STATEMENT, accounting "
+    "standards not yet effective, related party transactions, and leases.' The qualifying-entity condition "
+    "is stated in the same note: 'The results of the Company are included within the financial statements "
+    "of Morgan Stanley, which has prepared consolidated financial statements for the year ended 31 December "
+    "2025.'\n"
+    "So these 17 blanks are a formal exemption the Company is entitled to and states, not a sourcing gap "
+    "and not a failed search - there is no cash-flow statement to find, in any year. No parent-group cash "
+    "flows are substituted in its place.\n"
+    "EXTRACTION NOTE: the Companies House filing is a go-tiff2pdf image scan with no text layer (98 pages, "
+    "pdftotext returns zero characters), so the wording above was read from 250/300dpi renderings. A "
+    "whole-document grep of that PDF returns zero hits for 'FRS 101' and would be meaningless - it returns "
+    "zero for every term, the document having no text at all."
+)
+
 bw.add_cash_flow_sheet(
     "Morgan Stanley Bank International Limited — Statement of Cash Flows",
-    "Standalone Company basis; cash-flow statement not presented under the FRS 101 reduced-disclosure exemption",
-    [("DATA", "Cash-flow statement not separately disclosed under FRS 101", {})],
-    annual_sources() + "\n\n" + HD073_SOURCING_NOTE,
+    "Not presented — the Company takes the FRS 101 reduced-disclosure exemption from presenting a cash-flow statement, in every year covered. Standalone Company basis. Every year column carries that statement rather than being left blank.",
+    [("DATA", "Statement of Cash Flows",
+      {y: "Not applicable - FRS 101 cash-flow-statement exemption" for y in YEARS})],
+    CASH_FLOW_EXEMPTION_NOTE + "\n\n" + annual_sources() + "\n\n" + HD073_SOURCING_NOTE,
     first_col_width=72,
     source_height=220,
     unit_suffix=" (£'000)",

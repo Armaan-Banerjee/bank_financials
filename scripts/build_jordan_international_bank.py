@@ -147,7 +147,19 @@ def p3_sources():
         "2016-2024 only, while already carrying the FY2025 company accounts, and a Wayback CDX "
         "sweep of the whole jordanbank.co.uk domain for 'pillar' URLs returns nothing later than "
         "the FY2024 report (first archived 10 December 2025). JIB publishes its Pillar 3 around "
-        "November/December, so the FY2025 edition is expected ~December 2026. The FY2025 accounts "
+        "November/December, so the FY2025 edition is expected ~December 2026. "
+        "RE-CHECKED 2026-09-18 (separate session, prior verdict treated as unproven) - UNCHANGED: "
+        "the Annual Report and Accounts page was re-fetched and every document link parsed out of "
+        "it, and it still carries JIB Pillar 3 2016 through 2024 and nothing later, beside a "
+        "'Company Accounts 2025' entry (/media/tlihy44n/company_accounts_2025.pdf, fetched and "
+        "confirmed HTTP 200, application/pdf, first bytes '%PDF', 323,166 bytes) - so the index is "
+        "demonstrably current for FY2025 and the Pillar 3 is simply behind it. Worth recording WHY "
+        "no URL-probing was attempted here, because the usual fallback does not exist on this site: "
+        "jordanbank.co.uk serves documents from opaque Umbraco media identifiers "
+        "(/media/tlihy44n/, /media/n0xn5hx1/, /media/1266/) that carry no year and follow no "
+        "derivable pattern, so a FY2025 filename cannot be constructed even in principle. This "
+        "index is the only route to the document, and re-fetching it is the only check that can "
+        "close this gap. The FY2025 accounts "
         "themselves state the detail 'will be provided in the Bank's Pillar 3 Report' and disclose "
         "no ratios, so CET1 Ratio, Tier 1 Ratio, Total Capital Ratio, Total RWAs, Leverage Ratio, "
         "LCR and NSFR are all genuinely undisclosed for FY2025 and are left blank rather than "
@@ -194,6 +206,13 @@ def p3_sources():
         "reports."
     )
 
+
+# Pre-2022 UK regime: the Bank's own FY2022 Pillar 3 Report, Section 7 "Liquidity
+# risk", p.Thirty Two, states "From 1st January 2022, the new UK Net Stable Funding
+# Ratio (NSFR) was adopted". Each of the FY2017-FY2021 Pillar 3 Reports was
+# downloaded and searched on 2026-09-18: every one returns zero hits for "NSFR" and
+# for "Net Stable Funding" against 845-1,095 hits for "the" in the same text layer.
+NSFR_PRE2022 = "Not disclosed - no NSFR row in that year's own Pillar 3; UK NSFR regime began 1 Jan 2022"
 
 bw = BankWorkbook(bank_name="Jordan International Bank Plc", years=YEARS, year_label=YEAR_LABEL, header_color="8B1A1A")
 
@@ -700,7 +719,15 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # FY2025 is blank because no FY2025 Pillar 3 Report exists yet - see the
 # latest-edition check in the source note.
 # ---------------------------------------------------------------
+# GA- gap-fill round (2026-09-18): the FY2025 column held no cell at all, so the
+# year read as an untouched gap in the census even though the reason was already
+# established and written into the sources note below. It now appears IN the
+# column too, on a bracketed statement row labelled so that verify_workbook's
+# _metric_sheet_for resolves it to no metric sheet - a statement row, not a
+# template row. Nothing on the template is computed, reordered or restated.
 km1_rows = [
+    ("DATA", "[No UK KM1 published for this year - see note below]",
+     {"FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026"}),
     ("SECTION", "Available own funds (amounts, £m)", {}),
     ("DATA", "Common Equity Tier 1 (CET1)", {"FY2024": 94, "FY2023": 89, "FY2022": 83.8}),
     ("DATA", "Tier 1", {"FY2024": 94, "FY2023": 89, "FY2022": 83.8}),
@@ -822,6 +849,7 @@ metric(
 metric(
     "CET1 Ratio", "%",
     [("CET1 ratio", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%", "FY2021": "22.9%",
         "FY2020": "22.7%", "FY2019": "22.35%", "FY2018": "22.05%", "FY2017": "21.15%", "FY2016": "20.44%",
     })],
@@ -839,6 +867,7 @@ metric(
 metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 ratio", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%", "FY2021": "22.9%",
         "FY2020": "22.7%", "FY2019": "22.35%", "FY2018": "22.05%", "FY2017": "21.15%", "FY2016": "20.44%",
     })],
@@ -856,6 +885,7 @@ metric(
 metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "19.9%", "FY2023": "19.8%", "FY2022": "19.3%", "FY2021": "22.9%",
         "FY2020": "22.7%", "FY2019": "22.35%", "FY2018": "22.05%", "FY2017": "21.15%", "FY2016": "20.44%",
     })],
@@ -864,6 +894,7 @@ metric(
 metric(
     "Total RWAs", "£m",
     [("Total risk-weighted exposure amount (RWA)", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": 473, "FY2023": 449, "FY2022": 435.3, "FY2021": 407.5,
         "FY2020": 401.6, "FY2019": 397.8, "FY2018": 383.1, "FY2017": 392.6, "FY2016": 391.8,
     })],
@@ -874,6 +905,7 @@ bw.add_rwa_breakdown_sheet(
     title="Jordan International Bank Plc - RWA Breakdown",
     subtitle="Solo basis throughout (per Pillar 3 disclosures). £'000, except FY2021/FY2020 derived from £m (see source note).",
     rows=[
+        ("DATA", "[No FY2025 RWA breakdown published - see note below]", {"FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026"}),
         ("DATA", "Credit risk (excluding CCR)", {"FY2024": 418080, "FY2023": 402263, "FY2022": 388850, "FY2021": 361250, "FY2020": 356250, "FY2019": 352400, "FY2018": 335400, "FY2017": 348500, "FY2016": 350000}),
         ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 1582, "FY2023": 648, "FY2022": 4.8, "FY2018": 200, "FY2017": 200, "FY2016": 100}),
         ("DATA", "Market risk", {"FY2024": 21275, "FY2023": 19460, "FY2022": 23073, "FY2021": 23750, "FY2020": 22500, "FY2019": 22100, "FY2018": 23300, "FY2017": 19800, "FY2016": 20700}),
@@ -927,6 +959,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Basel III leverage ratio", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "19.3%", "FY2023": "19.7%", "FY2022": "19.3%", "FY2021": "23.4%",
         "FY2020": "24.2%", "FY2019": "22.85%", "FY2018": "21.53%", "FY2017": "20.93%", "FY2016": "19.32%",
     })],
@@ -935,6 +968,7 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (LCR)", {
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "490%", "FY2023": "343%", "FY2022": "330%", "FY2021": "428%",
         "FY2020": "509%", "FY2019": "373.86%", "FY2018": "223.56%", "FY2017": "525.38%", "FY2016": "660%",
     })],
@@ -943,7 +977,11 @@ metric(
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (NSFR)", {
-        "FY2024": "129%", "FY2023": "125.1%", "FY2022": "129%", "FY2016": "123%",
+        "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
+        "FY2024": "129%", "FY2023": "125.1%", "FY2022": "129%",
+        "FY2021": NSFR_PRE2022, "FY2020": NSFR_PRE2022, "FY2019": NSFR_PRE2022,
+        "FY2018": NSFR_PRE2022, "FY2017": NSFR_PRE2022,
+        "FY2016": "123%",
     })],
     p3_sources(),
     note="Not disclosed for FY2017-FY2021 - genuinely absent from every one of those years' own "
@@ -953,13 +991,33 @@ metric(
          "reappears from the FY2022 KM1 template onward. This matches the UK regime: there was no "
          "NSFR requirement or NSFR disclosure template in the UK until PRA PS17/21 / PS22/21 took "
          "effect on 1 January 2022, so any FY2021-or-earlier NSFR - including this Bank's FY2016 "
-         "one - was voluntary.",
+         "one - was voluntary. PRIMARY SOURCE for that commencement date, added 2026-09-18, is the "
+         "Bank's OWN words rather than a regulator page: Pillar 3 Report 2022, Section 7 'Liquidity "
+         "risk (continued)', printed p.Thirty Two - 'Net Stable Funding Ratio (NSFR) is designed to "
+         "measure the amount of longer term, stable sources of funding relative to assets funded... "
+         "From 1st January 2022, the new UK Net Stable Funding Ratio (NSFR) was adopted as shown in "
+         "the table below.' Each FY2017-FY2021 edition was re-downloaded on 2026-09-18 and searched "
+         "in full: zero hits for 'NSFR' and zero for 'Net Stable Funding' in every one, against a "
+         "richness control of 1,095 / 1,079 / 1,002 / 845 / 877 hits for the word 'the' in the "
+         "FY2017 / FY2018 / FY2019 / FY2020 / FY2021 text layers respectively - so the absence is "
+         "the Bank's, not the instrument's. Those five year cells now carry that statement "
+         "in-column rather than only here. FY2025 likewise carries an in-column statement: no "
+         "FY2025 Pillar 3 Report exists as at 18 September 2026.",
 )
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
     per_note={
         "MREL Ratio": "Not disclosed in any year - Jordan International Bank Plc is not "
-                      "identified as a UK resolution entity in these reports.",
+                      "identified as a UK resolution entity in these reports. POSITIVE RECORD ADDED "
+                      "18 September 2026 (KM1-032): that was an inference from the reports' silence, "
+                      "unlike this bank's other, evidenced sheets. It is now sourced independently. The "
+                      "Bank of England's own 'External minimum requirements for own funds and eligible "
+                      "liabilities (MRELs)' disclosures (2023, 2024, 2025 and 2026 editions, at "
+                      "bankofengland.co.uk/financial-stability/resolution/mrels-<year>) contain 'all firms "
+                      "with a resolution entity incorporated in the UK for which an MREL above MCR has "
+                      "been communicated', in the BoE's own words. Jordan International Bank Plc appears "
+                      "in none of the four editions. The BoE publishes the requirement, not the ratio, so "
+                      "nothing from that table is transcribed here.",
     },
 )
 

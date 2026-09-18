@@ -12,6 +12,10 @@ AR22_URL = "https://recognisebank.co.uk/wp-content/uploads/2023/10/2022-Annual-R
 P3_26_URL = "https://recognisebank.co.uk/wp-content/uploads/Pillar-3-disclosure-March-2026-RBL-v1.1-To-BAC-updated_-1-1.pdf"
 P3_24_URL = "https://recognisebank.co.uk/wp-content/uploads/Pillar-3-disclosure-March-2024-RBL.pdf"
 P3_23_URL = "http://web.archive.org/web/20231210004904id_/https://www.recognisebank.co.uk/wp-content/uploads/2023/10/Pillar-3-disclosures-March-2023-RBL.pdf"
+# Live copy of the same March 2023 edition, re-uploaded under a 2024/03 path.
+# The 2023/10 path of the SAME filename now serves a Smallpdf advertisement
+# (200, application/pdf, real %PDF, 58,257 bytes) - see RWA_SOURCES.
+P3_23_LIVE_URL = "https://recognisebank.co.uk/wp-content/uploads/2024/03/Pillar-3-disclosures-March-2023-RBL.pdf"
 
 # Historical years FY2018-FY2021: sourced from Companies House filing history for
 # Recognise Bank Limited (co. no. 10603119; filed under its earlier names Echo
@@ -192,7 +196,19 @@ RWA_SOURCES = (
     f"FY2026 & FY2025: Pillar 3 Disclosure March 2026, Table 2 UK OV1, printed p.4 - {P3_26_URL}\n"
     f"FY2024 & FY2023: Pillar 3 Disclosure March 2024, Table 2 UK OV1, printed p.4 - {P3_24_URL}\n"
     f"FY2023 & FY2022: Pillar 3 Disclosure March 2023, Table 2 UK OV1, printed p.4 (Wayback Machine archive, "
-    f"capture 2023-12-10; not linked from the bank's current site) - {P3_23_URL}\n\n"
+    f"capture 2023-12-10; not linked from the bank's current site) - {P3_23_URL}\n"
+    f"   LIVE COPY OF THE SAME DOCUMENT, AND A TRAP AT THE OLDER PATH (checked 2026-09-18). "
+    f"{P3_23_LIVE_URL} serves the real March 2023 edition - 353,559 bytes, byte-identical extracted "
+    f"text to the Wayback capture above. The 2023/10/ path of the SAME filename does NOT: it returns "
+    f"HTTP 200, Content-Type application/pdf, genuine %PDF magic bytes and 58,257 bytes of a SMALLPDF "
+    f"ADVERTISEMENT ('Welcome to Smallpdf'), not a Recognise document at all. Magic bytes and "
+    f"Content-Type alone would have passed it. Do not cite the 2023/10/ path.\n"
+    f"   FY2021 ENUMERATED NEGATIVE (2026-09-18): the WordPress media REST endpoint "
+    f"(/wp-json/wp/v2/media?search=pillar&per_page=100) returns EVERY Pillar 3 upload Recognise holds - "
+    f"seven files, the earliest being this March 2023 edition. There is no March 2021 or March 2022 "
+    f"edition to hold an OV1 for Mar-21, and the March 2023 edition's own OV1 (read at source) carries "
+    f"only Mar-23 and Mar-22 columns while its KM1 on the previous page carries three. So the Mar-21 "
+    f"total RWA is published and its category split is not.\n\n"
     "Counterparty credit risk (CCR) is only disclosed as a separate category from FY2025 (Recognise did not have "
     "material CCR exposure, or did not break it out, in FY2022-FY2024's OV1 tables - blank, not zero, for those "
     "years). All years shown tie exactly to the Total risk-weighted exposure amount already on file in the "
@@ -240,16 +256,48 @@ ENUMERATED_NEGATIVE_NOTE = (
 )
 
 P3_21_SOURCES = (
-    f"Source - Recognise Bank Limited FY2021 Annual Report, Strategic Report, 'Capital' section capital-"
-    f"adequacy note, printed p.43 - {CH21_URL}\n"
-    "No standalone Pillar 3 document was published for FY2021 (Recognise was Authorised with Restrictions, not "
-    "yet fully mobilised, at its 31 March 2021 year-end); this note is a Group-basis capital-adequacy disclosure "
-    "in the Annual Report itself, not a UK KM1 table, and only CET1/Tier 1/Total Capital and their ratios were "
-    "given (Total RWAs, Leverage Ratio, LCR, NSFR and MREL Ratio were not disclosed anywhere in the FY2021 "
-    "report - self-skipped for FY2021). The note states CET1 Capital after deductions = Own Funds = "
-    "£26,395,924, and CET1 Capital Ratio = Total Capital Ratio = 78.92%, implying no AT1/T2 instruments beyond "
-    "CET1 at that stage (Tier 1 Capital, Tier 1 Ratio, and Total Capital/Total Capital Ratio are therefore the "
-    "same figures)."
+    "FY2021 (year ended 31 March 2021) has TWO sources, and the workbook uses both:\n"
+    f"(1) Recognise Bank Limited FY2021 Annual Report, Strategic Report, 'Capital' section capital-adequacy "
+    f"note, printed p.43 - {CH21_URL}. It states CET1 Capital after deductions = Own Funds = £26,395,924 and "
+    "CET1 Capital Ratio = Total Capital Ratio = 78.92%, implying no AT1/T2 instruments beyond CET1 at that "
+    "stage (Tier 1 Capital, Tier 1 Ratio and Total Capital/Total Capital Ratio are therefore the same "
+    "figures). It states NOTHING else of regulatory relevance - re-tested 2026-09-18 because that filing is "
+    "an IMAGE-ONLY SCAN whose text layer is 62 characters long, so a text search of it can only ever return "
+    "nothing. All 62 pages were rendered at 200 dpi and OCR'd: the strings 'risk weighted', 'RWA', "
+    "'leverage', 'liquidity coverage', 'LCR', 'NSFR' and 'Pillar 3' appear nowhere in the document, and the "
+    "p.43 capital table itself has exactly six lines (CET1 instruments 27,424,078; intangible deduction "
+    "(1,028,154); CET1 after deductions 26,395,924; Own Funds 26,395,924; CET1 ratio 78.92%; Total capital "
+    "ratio 78.92%) plus 'Prior year comparison not shown since the Bank began trading in financial year "
+    "ended March 2021'.\n"
+    f"(2) ADDED 2026-09-18 - the Mar-21 comparative column of the 'Pillar 3 disclosures March 2023', Table 1 "
+    f"UK KM1, printed p.3 - {P3_23_URL}. THIS IS WHAT CORRECTS THIS NOTE. It used to say that 'Total RWAs, "
+    "Leverage Ratio, LCR, NSFR and MREL Ratio were not disclosed anywhere in the FY2021 report - "
+    "self-skipped for FY2021'. The first half is true and now demonstrated by OCR; the conclusion drawn from "
+    "it was not, because the FY2021 report is not the only document that prints Mar-21 figures. Recognise's "
+    "first Pillar 3 edition publishes a THREE-column KM1 - Mar-23, Mar-22 and Mar-21 - and its Mar-21 column "
+    "gives Total RWA £33,449k, HQLA £12,767k, cash outflows £3,329k, cash inflows £2,497k, net cash outflows "
+    "£832k and an LCR of 1,534.1%. Those cells are now populated. The same column prints the literal 'n/a' "
+    "for the leverage exposure measure, the leverage ratio and all three NSFR rows, with the Bank's own "
+    "footnotes explaining why: '(a) Exclusion of certain central bank claims was a new requirement for 2022' "
+    "and '(b) NSFR was a new requirement for 2022'. Those cells therefore carry 'n/a' as printed - a "
+    "disclosed non-disclosure, not an empty cell and not a zero.\n"
+    "NOT AN SDDT MATTER, recorded so the question is not reopened on the wrong footing: nothing about "
+    "FY2021's gaps is explained by the Small Domestic Deposit Taker regime. Recognise's row in the PRA's "
+    "consolidated waivers register is an SDDT-described row under the eligibility sub-rules, NOT a "
+    "modification by consent under Rule 3.1 of 'SDDT Regime - General Application', which is the only "
+    "instrument that removes the Pillar 3 disclosure duty; and in any case every SDDT consent in that "
+    "register begins in 2024 or later, so none of them could excuse a 31 March 2021 reporting date. The "
+    "FY2021 position is simply that Recognise published its first Pillar 3 in 2023 and that edition reached "
+    "back two years.\n"
+    "NO STANDALONE FY2021 PILLAR 3 EDITION EXISTS, and the strength of that claim is stated honestly. The "
+    "Bank's WordPress media library was enumerated in full on 2026-09-18 (1,017 items, all 11 pages of "
+    "/wp-json/wp/v2/media): the only Pillar 3 files are March 2023, 2024, 2025 and 2026 editions. But that "
+    "library's OLDEST item of any kind is dated 30 May 2023 - the site was rebuilt that year - so it cannot "
+    "see a 2021-era upload and its silence about FY2021 is not evidence. The Wayback Machine, which could "
+    "settle it for the pre-2023 site, was serving its global 'Temporarily Offline' page on every attempt "
+    "that day. So: FY2021's figures come from a later edition's comparative because that is the only place "
+    "they are printed, and whether a contemporaneous FY2021 edition also existed is UNRESOLVED rather than "
+    "answered."
 )
 
 bw = BankWorkbook(bank_name="Recognise Bank Limited", years=YEARS, header_color="51158C")
@@ -459,7 +507,32 @@ km1 = {
     "FY2024": (52617, 200213, "26.3%", 316246, "16.6%", 149255, 39271, 10380, 28891, "516.6%", 440424, 213351, "206.4%"),
     "FY2023": (57482, 88249, "65.1%", 134402, "42.8%", 71930, 18358, 9363, 8996, "799.6%", 247010, 93289, "264.8%"),
     "FY2022": (37411, 87216, "42.9%", 109158, "34.3%", 20648, 13379, 8079, 5300, "389.6%", 128630, 78103, "164.7%"),
-    "FY2021": (26396, None, "78.92%", None, None, None, None, None, None, None, None, None, None),
+    # FY2021 REBUILT 2026-09-18 (interior-gap sweep). This row was (26396, None,
+    # "78.92%", None x10): CET1 and the ratio from the FY2021 Annual Report's
+    # capital-adequacy note, and ten blanks. The blanks were never a fact about
+    # Recognise - the March 2023 Pillar 3's UK KM1 table has THREE columns,
+    # Mar-23 / Mar-22 / Mar-21, and the Mar-21 column was already transcribed
+    # onto this workbook's KM1 Key Metrics sheet. It had simply never been fed
+    # into the single-metric sheets, so the KM1 sheet and the Total RWAs / LCR /
+    # Leverage / NSFR sheets disagreed about whether FY2021 existed at all.
+    #
+    # Position 0 (CET1) DELIBERATELY KEEPS THE ANNUAL REPORT'S 26,396, and does
+    # not adopt the Pillar 3's Mar-21 CET1 of 26,934. The two differ by £538k and
+    # the Annual Report's figure is the one that reconciles: 26,395,924 / 78.92%
+    # = £33.45m, which is the Pillar 3's own printed Mar-21 RWA of 33,449 to
+    # within 0.01%, whereas the Pillar 3's own 26,934 over its own 33,449 gives
+    # 80.5%, not the 78.9% it prints two rows below. The comparative column
+    # contradicts itself on that one cell; both figures are reproduced in this
+    # workbook (26,396 here and on the CET1/Tier 1/Total Capital sheets, 26,934
+    # on the KM1 sheet as the template prints it) and neither is edited toward
+    # the other.
+    #
+    # "n/a" at positions 3, 4, 10, 11 and 12 is the literal string the Bank
+    # prints in those Mar-21 cells, with its own footnotes giving the reason:
+    # "(a) Exclusion of certain central bank claims was a new requirement for
+    # 2022" and "(b) NSFR was a new requirement for 2022". It is not a blank and
+    # not a zero.
+    "FY2021": (26396, 33449, "78.92%", "n/a", "n/a", 12767, 3329, 2497, 832, "1,534.1%", "n/a", "n/a", "n/a"),
 }
 _NO_KM1 = (None,) * 13
 def col(i): return {y: km1.get(y, _NO_KM1)[i] for y in YEARS}
@@ -506,16 +579,54 @@ KM1_SOURCES = (
     "LATEST-EDITION CHECK 2026-09-17: the bank's own site was queried directly (WordPress media index, searches "
     "for 'pillar' and 'annual'). The newest Pillar 3 disclosure is the March 2026 edition (uploaded 23 July 2026) "
     "and the newest annual report is the 2026 Annual Report (uploaded 21 July 2026); both are already in this "
-    "workbook, which runs to FY2026. Recognise's year-end is 31 March, so FY2027 had not closed."
+    "workbook, which runs to FY2026. Recognise's year-end is 31 March, so FY2027 had not closed.\n\n"
+    "LATEST-EDITION RE-CHECK 2026-09-18: repeated a day later against both the investor index and the WordPress "
+    "media index. The newest Pillar 3 remains the March 2026 edition (uploaded 23 July 2026) and the newest "
+    "annual report the 2026 Annual Report (uploaded 21 July 2026); neither index lists anything later. With a "
+    "31 March year-end an FY2027 edition could not exist yet, so nothing is outstanding.\n\n"
+    "ROWS 1, 2 AND 3 ARE IDENTICAL IN EVERY YEAR, AND THAT IS WHAT THE BANK PRINTS. Checked 2026-09-18 against "
+    "the DOCUMENTS rather than against this workbook's own metric sheets, because those sheets are generated from "
+    "the same transcription and would have agreed with it whether or not it was right. CET1 capital, Tier 1 "
+    "capital and total capital carry the same figure in all six years because Recognise has neither Additional "
+    "Tier 1 nor Tier 2 capital in issue - which is also why rows 5, 6 and 7 print one ratio three times over. "
+    "Verified in two independent primary editions: the March 2026 edition's Table 1 prints 74,617 / 66,988 / "
+    "52,617 / 57,482 / 37,411 across Mar-26 to Mar-22 on each of rows 1, 2 and 3, and the March 2023 edition's "
+    "Table 1 prints 57,482 / 37,411 / 26,934 across Mar-23 to Mar-21 on each of those rows. One value repeated "
+    "down three rows is indistinguishable from a transcription slip until someone opens the document; this one is "
+    "not a slip.\n\n"
+    "FY2024 IS LOWER THAN FY2023 ON ROWS 1-3 (52,617 against 57,482) AND THAT IS ALSO AS PRINTED. The March 2026 "
+    "edition's Mar-24 column carries 52,617, and the fall is consistent with the bank's own accounts, which show "
+    "a loss for the year of GBP9,259k in FY2024 - a loss reduces retained earnings and so reduces CET1. It is a "
+    "real movement, not a misaligned column.\n\n"
+    "SDDT STATUS, RECORDED SO IT IS NOT MISREAD AS AN EXEMPTION. The March 2026 edition states that 'Recognise "
+    "Bank intends to become a Small Domestic Deposit Taker (SDDT) firm and therefore would no longer be required "
+    "to make Pillar 3 disclosures under CRR Article 433b' - an intention, not a completed change. The Bank of "
+    "England consolidated waivers register, read 2026-09-18, shows Recognise Bank Limited (FRN 849404) holding "
+    "only a modification of the criterion in rule 2.1(9) of the SDDT Regime - General Application Part, running "
+    "27/02/2026 to 27/02/2029. Rule 2.1(9) is an ELIGIBILITY CRITERION and removes no disclosure duty; only a "
+    "rule 3.1 modification does that, and Recognise holds none. The FY2026 duty was therefore intact, which is "
+    "consistent with the March 2026 edition having been published at all.\n\n"
+    "YEARS NOT SHOWN AS COLUMNS ON THIS SHEET (2026-09-18). FY2020, FY2019 and FY2018 previously carried empty "
+    "columns under printed year headers and are now omitted from this sheet entirely - Recognise held no PRA "
+    "authorisation of any kind at those year-ends, so no KM1 table, obligation or comparative exists anywhere to "
+    "fill them. Those years remain in full on every other sheet in this workbook, where the Pillar 3 metric "
+    "sheets show them as 'Not applicable' rather than blank."
 )
 
+# Recognise held no PRA authorisation of any kind at the FY2018, FY2019 and
+# FY2020 year-ends, so no KM1 obligation, table or comparative exists anywhere for
+# them and they would otherwise be three year headers over three empty columns.
+# Those trailing empty columns are dropped by the shared library from the row data
+# itself, deliberately NOT by a hardcoded year list here: a hardcoded list
+# silently swallows a new column the day someone adds a year to the rows below and
+# forgets to widen it.
 bw.add_km1_sheet(
     title="Recognise Bank Limited — KM1 Key Metrics",
     subtitle="Table 1 - UK KM1 - Key Metrics, as published in Recognise Bank Limited's own Pillar 3 disclosures "
              "(bank basis, £000's, 31 March year-end). Reproduced in the bank's own row order, row numbering, "
              "labels and precision. FY2023-FY2026 are each year's own edition; FY2022 and FY2021 are the March "
              "2023 edition's comparative columns, no Pillar 3 having been published for those years. FY2018-FY2020 "
-             "predate any PRA authorisation - see the source note.",
+             "predate any PRA authorisation and carry no column on this sheet - see the source note.",
     rows=[
         ("SECTION", "Available own funds (amounts)", {}),
         ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'000)", {"FY2026": 74617, "FY2025": 66988, "FY2024": 52617, "FY2023": 57482, "FY2022": 37411, "FY2021": 26934}),
@@ -566,17 +677,27 @@ metric("Tier 1 Capital", "£'000", [("Tier 1 capital", col(0))], sources=P3_SOUR
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", col(2))], sources=P3_SOURCES_WITH_FY2021)
 metric("Total Capital", "£'000", [("Total capital", col(0))], sources=P3_SOURCES_WITH_FY2021)
 metric("Total Capital Ratio", "%", [("Total capital ratio", col(2))], sources=P3_SOURCES_WITH_FY2021)
-metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", col(1))])
+metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", col(1))], sources=P3_SOURCES_WITH_FY2021)
 
 bw.add_rwa_breakdown_sheet(
     title="Recognise Bank Limited - RWA Breakdown",
-    subtitle="UK OV1 Overview of risk-weighted exposure amounts, £'000; FY2022-FY2026 (31 March year-end). No standalone Pillar 3 OV1 disclosure exists for FY2018-FY2021 (self-skipped).",
+    subtitle="UK OV1 Overview of risk-weighted exposure amounts, £'000; FY2022-FY2026 (31 March year-end). FY2021 is blank for a checked reason, not an unchecked one: the March 2023 edition's KM1 table reaches back three columns to Mar-21, but its OV1 table on the next page has only two, Mar-23 and Mar-22, so the Mar-21 RWA total on the Total RWAs sheet (£33,449k) has no published category split anywhere. FY2018-FY2020 predate authorisation entirely.",
     rows=[
         ("SECTION", "Risk-weighted exposure amounts by category", {}),
         ("DATA", "Credit risk (excluding CCR)", {"FY2026": 325441, "FY2025": 198530, "FY2024": 187320, "FY2023": 83185, "FY2022": 81924}),
         ("DATA", "Counterparty credit risk (CCR)", {"FY2026": 61, "FY2025": 91}),
         ("DATA", "Operational risk", {"FY2026": 30874, "FY2025": 21800, "FY2024": 12893, "FY2023": 5065, "FY2022": 5292}),
         ("TOTAL", "Total risk-weighted exposure amount", {"FY2026": 356376, "FY2025": 220421, "FY2024": 200213, "FY2023": 88249, "FY2022": 87216}),
+        # Gap-fill round 2026-09-18: FY2021 held no cell at all, so a reader saw a
+        # blank year column and the census scored it as an untouched gap even
+        # though the subtitle and source note both explain it. It now appears IN
+        # the column. Recognise's Mar-21 TOTAL RWA is known (£33,449k, from the
+        # March 2023 edition's KM1 comparative) but no document anywhere splits
+        # it by risk category, so nothing is derived here. NOT closed on a
+        # waiver: Recognise holds only SDDT ELIGIBILITY (Ru 1.2 / 2.1(9)), never
+        # the Rule 3.1 opt-in, so a waiver could not excuse this year in any case.
+        ("DATA", "[No OV1 category split published for this year - see note below]",
+         {"FY2021": "Not published - the only edition reaching this date splits no categories"}),
         ("SECTION", "Not applicable - entity held no PRA authorisation in these years", {}),
         ("DATA", "Not applicable (no banking licence, and no authorisation of any kind, held at these year-ends)", {
             "FY2020": "Not applicable",
@@ -590,9 +711,24 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 
-metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", col(3)), ("Leverage ratio excluding claims on central banks", col(4))])
-metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", col(5)), ("Cash outflows - total weighted value", col(6)), ("Cash inflows - total weighted value", col(7)), ("Total net cash outflows (adjusted value)", col(8)), ("Liquidity coverage ratio", col(9))])
-metric("NSFR", "£'000 / %", [("Total available stable funding", col(10)), ("Total required stable funding", col(11)), ("NSFR ratio", col(12))])
+FY2021_NA_NOTE = (
+    "FY2021 reads 'n/a' on every row of this sheet, and that is the Bank's own printed word, not a blank we "
+    "could not fill. The Mar-21 comparative column of the March 2023 Pillar 3's UK KM1 table (printed p.3) "
+    "prints 'n/a' in these cells and footnotes the reason on the same page: '(a) Exclusion of certain central "
+    "bank claims was a new requirement for 2022' and '(b) NSFR was a new requirement for 2022'. Recognise was "
+    "therefore not calculating these measures on the current basis at 31 March 2021 and said so. Added "
+    "2026-09-18, replacing an empty column - see the FY2021 paragraphs in the source note."
+)
+metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", col(3)), ("Leverage ratio excluding claims on central banks", col(4))], note=FY2021_NA_NOTE, sources=P3_SOURCES_WITH_FY2021)
+metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", col(5)), ("Cash outflows - total weighted value", col(6)), ("Cash inflows - total weighted value", col(7)), ("Total net cash outflows (adjusted value)", col(8)), ("Liquidity coverage ratio", col(9))],
+       note="FY2021 ADDED 2026-09-18 from the Mar-21 comparative column of the March 2023 Pillar 3's UK KM1 "
+            "table (printed p.3), which carries the full LCR block for that date: HQLA £12,767k, cash outflows "
+            "£3,329k, cash inflows £2,497k, net cash outflows £832k, LCR 1,534.1%. Unlike the leverage and NSFR "
+            "rows, the Bank prints no 'n/a' here - the LCR was in force and reported at 31 March 2021. The very "
+            "high ratio reflects a bank that had just begun trading, holding £12.8m of HQLA against £0.8m of "
+            "net outflows.",
+       sources=P3_SOURCES_WITH_FY2021)
+metric("NSFR", "£'000 / %", [("Total available stable funding", col(10)), ("Total required stable funding", col(11)), ("NSFR ratio", col(12))], note=FY2021_NA_NOTE, sources=P3_SOURCES_WITH_FY2021)
 metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS if y not in PRE_AUTHORISATION_YEARS})], "No quantitative MREL ratio was located in the official Recognise Bank annual reports or Pillar 3 disclosures reviewed. The March 2023, 2024, 2025 and 2026 Pillar 3 disclosures contain no MREL row in their UK KM1 tables at all (the 2026 edition was re-read in full on 2026-09-15 to confirm). FY2018-FY2020 read 'Not applicable' rather than 'Not publicly disclosed' because the entity was not PRA-authorised in those years.")
 
 def row_values(label, rows_list=rows):

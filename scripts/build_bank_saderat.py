@@ -542,15 +542,25 @@ LCR_ALL_CCY = {"FY2025": "477%", "FY2024": "331%", "FY2023": "334%", "FY2022": "
 # or Tier 2 ("The Bank does not hold any Tier 2 or Tier 3 Capital"), so CET1 =
 # Tier 1 = Total Capital and one printed ratio serves all three sheets - the
 # FY2021 Pillar 3 states this explicitly by printing all three at 83.57%.
-# FY2024 is blank: no Pillar 3 edition exists for it and its Annual Report gives
-# only the Capital Cover chart.
+# FY2024 CORRECTED 2026-09-18. This block previously said FY2024 was blank because
+# "its Annual Report gives only the Capital Cover chart". That was WRONG, and the
+# reason it went unnoticed is instructive: the FY2024 Annual Report is an image-only
+# scan (61 pages, 61 characters extractable - one form feed per page and no text
+# layer), so every text search of it returns zero and an earlier pass reasonably but
+# mistakenly read that zero as "the document does not say it". After OCR the report
+# states, in the Strategic Report at PDF p.12 of 60 under "Share capital and
+# regulatory capital base" (confirmed by reading a 200 DPI render of that page, not
+# by trusting the OCR): "The CET1 capital ratio to the total risk exposure is
+# 92.33%." That is the same sentence, in the same section, that already sources
+# FY2025's 88.70%. FY2024 is therefore populated on the same basis as FY2025.
+# This does NOT give FY2024 a total risk exposure amount - see the Total RWAs sheet.
 # FY2019 and FY2020 added 2026-09-15 from the 2019 and 2020 Pillar 3 editions
 # on the same archive page (the earlier pass read only the 2021-2023 files).
 # FY2020 prints all three ratios at 83.44%, like FY2021-FY2023. FY2019 is the
 # one year where the three DIVERGE - see FY2019_RATIO_NOTE - so the three ratio
 # sheets take three separate dicts rather than one shared CRR_RATIO.
-CRR_RATIO = {"FY2025": "88.70%", "FY2023": "86.62%", "FY2022": "90.31%", "FY2021": "83.57%",
-             "FY2020": "83.44%"}
+CRR_RATIO = {"FY2025": "88.70%", "FY2024": "92.33%", "FY2023": "86.62%", "FY2022": "90.31%",
+             "FY2021": "83.57%", "FY2020": "83.44%"}
 CRR_RATIO_CET1 = dict(CRR_RATIO, **{"FY2019": "81.0%"})
 CRR_RATIO_TIER1 = dict(CRR_RATIO, **{"FY2019": "84.4%"})
 CRR_RATIO_TOTAL = dict(CRR_RATIO, **{"FY2019": "84.4%"})
@@ -580,8 +590,23 @@ CAPITAL_COVER_NOTE = (
     "against that same document's own capital and total-risk-exposure figures: FY2023 194,469/224,516 = 86.62%, "
     "FY2021 192,598/230,466 = 83.57% and FY2020 191,794/229,855 = 83.44% reproduce the printed values exactly, "
     "FY2022 193,221/213,927 = 90.32% against a printed 90.31% (a 0.01pp rounding difference inside the Bank's "
-    "own figures; the printed value is carried, nothing is back-solved). FY2024 is blank because no Pillar 3 "
-    "edition exists for it and its Annual Report gives only the Capital Cover chart - it is NOT zero.\n"
+    "own figures; the printed value is carried, nothing is back-solved). FY2024 was blank here until "
+    "2026-09-18 and is now 92.33%, taken from the FY2024 Annual Report's own narrative ('The CET1 capital "
+    "ratio to the total risk exposure is 92.33%', Strategic Report, PDF p.12 of 60) - the identical sentence "
+    "in the identical section that already sources FY2025. It had been missed because that report is an "
+    "image-only scan with no text layer, so every text search of it returned zero; the sentence is legible "
+    "only after OCR, and was confirmed against a 200 DPI render of the page rather than trusted from OCR. "
+    "There is still NO Pillar 3 edition for FY2024, so this ratio has no published denominator to tie to - "
+    "see the Total RWAs sheet.\n"
+    "THE FY2024 REPORT PRINTS CAPITAL COVER THREE TIMES, AT THREE DIFFERENT VALUES, AND THAT IS THE BANK'S "
+    "OWN INCONSISTENCY, NOT A TRANSCRIPTION CHOICE: the Capital Cover chart on PDF p.13 reads 349%, the "
+    "narrative beneath it says the cover 'has increased from 325% in 2023 to 347% in the year 2024', and the "
+    "Strategic Report on p.12 says 'a capital cover of 346.77%'. Row 2 carries 349%, the CHART value, because "
+    "the chart is the series every other year on this sheet is transcribed from (FY2023 325%, FY2022 339%, "
+    "and so on) - so the row stays internally comparable across years. The other two values are recorded here "
+    "rather than reconciled away. The same report likewise prints two different capital bases - EUR196,091,098 "
+    "as shareholders' funds and net assets, and EUR196,287,187 as 'the Bank's capital base' - and the CET1 "
+    "Capital sheet carries the latter, which is the one the Bank labels as its capital base.\n"
     "FY2019 IS THE ONE YEAR WHERE THE THREE RATIO SHEETS DIFFER, AND THAT IS AS PRINTED. The 2019 Pillar 3's "
     "ratio table gives a CET1 capital ratio of 81.0% but a Tier 1 capital ratio and total capital ratio of "
     "84.4%, even though the same table shows Tier 2 capital as nil - so on the CRR definitions all three should "
@@ -769,8 +794,50 @@ metric("Total Capital Ratio", "%",
         ("Capital Cover (Bank's own metric - NOT a CRR ratio)", CAPITAL_COVER)],
        note=CAPITAL_COVER_NOTE)
 
+# GAP-FILL (2026-09-18): FY2024 and FY2025 previously carried NO cell on the Total
+# RWAs or RWA Breakdown sheets, so four sheet-years read as blank to audit_gaps.py.
+# The finding is now stated IN the columns. Separate display dicts are used so the
+# numeric series feeding other sheets stays numeric.
+# THE NEGATIVE WAS RE-ESTABLISHED FROM TWO INDEPENDENT SIDES ON 2026-09-18:
+#   (1) No Pillar 3 edition exists for FY2024 or FY2025. The Bank's OWN live index,
+#       https://www.saderat-plc.com/Basel_Disclosures.htm, was fetched today and
+#       lists Pillar 3 editions for 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016,
+#       2015, 2013, 2011 and 2010 - the newest is 2023. Wayback CDX agrees. NOTE THE
+#       FETCH: plain curl and curl --http1.1 both returned HTTP 403; only a browser
+#       User-Agent PLUS an Accept header got HTTP 200. A 403 here is a live host
+#       refusing the client, NOT evidence that the page or the documents are absent,
+#       and an earlier pass that stopped at the 403 would have recorded the wrong
+#       reason for the same gap.
+#   (2) Neither Annual Report prints a risk-weighted-asset amount. Both are
+#       image-only scans (FY2024 61pp/61 chars, FY2025 63pp/63 chars - i.e. one
+#       form feed per page and NO text layer at all), so they were OCR'd before
+#       being searched; a text search of the raw PDFs returns zero for every term
+#       including ones known to be present, which is an instrument limit and not a
+#       fact about the documents. After OCR, each report gives only a capital
+#       amount, a Capital Cover percentage and a CET1-to-total-risk-exposure ratio.
+# DELIBERATELY NOT BACK-SOLVED. FY2024 prints CET1 of EUR196,091,098 and a CET1
+# ratio of 92.33%; FY2025 prints EUR196,228,824 and 88.70%. Dividing one by the
+# other would manufacture a total risk exposure amount for both years. That is
+# exactly the derivation this project forbids, and the resulting figure would be
+# indistinguishable in the sheet from one the Bank actually published.
+RWA_NOT_PUBLISHED = ("Not published - no Pillar 3 edition for this year; the Annual Report prints no risk "
+                     "exposure amount (not derived from capital/ratio)")
+RWA_TOTAL_DISPLAY = dict(gbp_m_spot(P3_RWA_TOTAL_EUR),
+                         **{"FY2025": RWA_NOT_PUBLISHED, "FY2024": RWA_NOT_PUBLISHED})
+RWA_CREDIT_DISPLAY = dict(gbp_m_spot(P3_RWA_CREDIT_EUR),
+                          **{"FY2025": RWA_NOT_PUBLISHED, "FY2024": RWA_NOT_PUBLISHED})
+# Every component row carries the statement, not just credit risk and the total.
+# A column where only some rows speak would read as though the silent rows were a
+# separate finding - e.g. that FX risk specifically was nil or not applicable in
+# FY2024/FY2025 - when in fact the whole three-way split is missing for the one
+# reason: there is no Pillar 3 edition for either year to split.
+RWA_FX_DISPLAY = dict(gbp_m_spot(P3_RWA_FX_EUR),
+                      **{"FY2025": RWA_NOT_PUBLISHED, "FY2024": RWA_NOT_PUBLISHED})
+RWA_OP_DISPLAY = dict(gbp_m_spot(P3_RWA_OP_EUR),
+                      **{"FY2025": RWA_NOT_PUBLISHED, "FY2024": RWA_NOT_PUBLISHED})
+
 metric("Total RWAs", "£m (converted from €'000 at each year's own period-end spot rate)",
-       [("Total risk exposure amount", gbp_m_spot(P3_RWA_TOTAL_EUR))],
+       [("Total risk exposure amount", RWA_TOTAL_DISPLAY)],
        note="FY2019-FY2023 are the total risk exposure amount printed in each year's own standalone Pillar 3 "
             "disclosure (EUR '000, converted to £m at that year's period-end spot rate per this workbook's FX "
             "convention): FY2023 EUR224,516k, FY2022 EUR213,927k, FY2021 EUR230,466k, FY2020 EUR229,855k, "
@@ -780,20 +847,26 @@ metric("Total RWAs", "£m (converted from €'000 at each year's own period-end 
             "these are the same entity and basis. FY2019 and FY2020 were added 2026-09-15 from the 2019 and "
             "2020 Pillar 3 editions, which the earlier pass on this bank had recorded as non-existent; they are "
             "linked from the same archive page as the others (see the RWA Breakdown sheet's note). FY2024 and "
-            "FY2025 remain blank because the archive genuinely stops at the 2023 edition and the Annual Reports "
-            "disclose no risk exposure amount. NOT back-solved from the FY2025 Annual Report's 88.70% ratio, "
-            "even though the capital base for that year is known.")
+            "FY2025 carry an explicit statement in place of a figure, re-verified 2026-09-18 from both sides: "
+            "the Bank's OWN live Basel disclosures index (fetched that day - plain curl returns HTTP 403, only "
+            "a browser User-Agent plus an Accept header returns 200, so a 403 here means a host refusing the "
+            "client and NOT a missing page) still lists nothing newer than the 2023 edition; and both Annual "
+            "Reports, which are image-only scans with no text layer and had to be OCR'd before they could be "
+            "searched at all, disclose no risk exposure amount anywhere. NOT back-solved from the printed CET1 "
+            "ratios (FY2024 92.33% on CET1 of EUR196,091,098; FY2025 88.70% on EUR196,228,824), even though "
+            "dividing one by the other would yield a number for both years - a derived denominator would sit in "
+            "this column indistinguishable from one the Bank actually published.")
 
 bw.add_rwa_breakdown_sheet(
     title="Bank Saderat Plc — RWA Breakdown",
     subtitle="FY2019-FY2023 from each year's own Pillar 3 disclosure (EUR '000 converted to £m at period-end "
-             "spot). FY2024/FY2025 not disclosed - no Pillar 3 edition published. See note below.",
+             "spot). FY2024/FY2025 state the reason for the absence in place of figures - see note below.",
     rows=[
         ("SECTION", "Risk exposure amount by risk type (Bank's own Pillar 3 presentation)", {}),
-        ("DATA", "Credit risk (risk weighted assets)", gbp_m_spot(P3_RWA_CREDIT_EUR)),
-        ("DATA", "Foreign exchange (FX) risk", gbp_m_spot(P3_RWA_FX_EUR)),
-        ("DATA", "Operational risk", gbp_m_spot(P3_RWA_OP_EUR)),
-        ("TOTAL", "Total risk exposure amount", gbp_m_spot(P3_RWA_TOTAL_EUR)),
+        ("DATA", "Credit risk (risk weighted assets)", RWA_CREDIT_DISPLAY),
+        ("DATA", "Foreign exchange (FX) risk", RWA_FX_DISPLAY),
+        ("DATA", "Operational risk", RWA_OP_DISPLAY),
+        ("TOTAL", "Total risk exposure amount", RWA_TOTAL_DISPLAY),
     ],
     sources_text=p3_sources(RATIO_PAGES) + "\n\n" + P3_SOURCES_NOTE,
     first_col_width=54,

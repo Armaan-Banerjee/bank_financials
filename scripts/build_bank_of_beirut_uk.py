@@ -761,12 +761,11 @@ _fy17 = {
     },
 }
 for _sheet, _values in _fy17.items():
-    _ws = bw.wb[_sheet]
-    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
-    _col = 1 + YEARS.index("FY2017") + 1
-    for _label, _value in _values.items():
-        if _label in _labels:
-            _ws.cell(_labels[_label], _col, _value)
+    # Resolve the column from the sheet's own header, never from an index into
+    # YEARS: column trimming cannot see a year supplied out-of-band like this,
+    # so `YEARS.index(...)` silently pointed past the end of the header and
+    # wrote these figures into an unlabelled column. See patch_year_column.
+    bw.patch_year_column(_sheet, "FY2017", _values)
 
 bw.save("/Users/armaan/code/katalysis/banks/BANK OF BEIRUT UK FINANCIALS.xlsx")
 print("Saved.")

@@ -14,6 +14,7 @@ AR2025_URL = "https://www.zemplerbank.com/media/5qxdezfu/annual-report-2025-fina
 AR2023_URL = "https://www.zemplerbank.com/media/x5sbu2bc/annual-report-2023-010923.pdf"
 
 P3_2026_URL = "https://www.zemplerbank.com/media/hfllow3d/pillar-3-fy2025-26-final.pdf"
+P3_2025_URL = "https://www.zemplerbank.com/media/qfkj5cpa/pillar-3-fy2024-25-final.pdf"
 P3_2024_URL = "https://www.zemplerbank.com/media/mszljzed/pillar-3-fy2023-24.pdf"
 P3_2023_URL = "https://www.zemplerbank.com/media/f3vjwqov/pillar-3-fy2022-23.pdf"
 
@@ -68,7 +69,7 @@ CASH_FLOW_SOURCES = (
 
 P3_SOURCE_LINES = {
     "FY2026": f"FY2026: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2026, p.53-54 - {P3_2026_URL}",
-    "FY2025": f"FY2025: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2026 (FY2025 comparative column), p.53-54 - {P3_2026_URL}",
+    "FY2025": f"FY2025: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2025, p.51-52 - {P3_2025_URL}",
     "FY2024": f"FY2024: Zempler Bank Pillar 3 Disclosures for the year ended 31 March 2024, p.51-52 - {P3_2024_URL}",
     "FY2023": f"FY2023: Pillar 3 Disclosures for the year ended 31 March 2023 (Cashplus Bank), p.40 - {P3_2023_URL}",
     "FY2022": f"FY2022: Pillar 3 Disclosures for the year ended 31 March 2023 (Cashplus Bank, FY2022 comparative column), p.40 - {P3_2023_URL}",
@@ -344,6 +345,65 @@ bw.add_asset_quality_sheet(
     first_col_width=64,
     source_height=240,
     unit_suffix=" (£'000)",
+)
+
+KM1_SOURCES = (
+    "Sources — Zempler Bank Limited's own Table 14: Key Metrics (KM1), £'000; printed page references:\n"
+    f"FY2026: FY2026 Pillar 3, pp.53-54 — {P3_2026_URL}\n"
+    f"FY2025: FY2025 Pillar 3, pp.51-52 — {P3_2025_URL}\n"
+    f"FY2024: FY2024 Pillar 3, pp.51-52 — {P3_2024_URL}\n"
+    f"FY2023: FY2024 Pillar 3, FY2023 comparative column, pp.51-52 — {P3_2024_URL}\n"
+    f"FY2022: FY2023 Pillar 3 checked through its appendices — {P3_2023_URL}\n\n"
+    "Each year uses its own edition where that edition contains KM1. FY2023 is taken from the following "
+    "edition's printed comparative because the FY2023 report instead contains a differently scoped IFRS 9 "
+    "transitional table, not the formal KM1 row set. No published formal KM1 column was found for FY2022, so "
+    "that column is blank rather than reconstructed from the older table. Zempler states that blank template "
+    "cells were removed; this sheet therefore reproduces the rows it actually printed, in its order. The "
+    "Bank's live investor-information page was checked on 17 September 2026 and FY2026 remains the newest edition."
+)
+
+km1_rows = [
+    ("SECTION", "Available Own Funds", {}),
+    ("DATA", "1 Common Equity Tier 1 capital (£'000)", {"FY2026": 30728, "FY2025": 24728, "FY2024": 19877, "FY2023": 17672}),
+    ("DATA", "2 Tier 1 Capital (£'000)", {"FY2026": 30728, "FY2025": 24728, "FY2024": 19877, "FY2023": 17672}),
+    ("DATA", "3 Total Capital (£'000)", {"FY2026": 31755, "FY2025": 26354, "FY2024": 22103, "FY2023": 20466}),
+    ("SECTION", "Risk Weighted Assets (RWAs)", {}),
+    ("DATA", "4 Total Risk Weighted Assets (£'000)", {"FY2026": 141317, "FY2025": 127987, "FY2024": 127670, "FY2023": 97282}),
+    ("SECTION", "Capital ratios (as a % of RWAs)", {}),
+    ("DATA", "5 Common Equity Tier 1 ratio", {"FY2026": "21.74%", "FY2025": "19.32%", "FY2024": "15.57%", "FY2023": "18.17%"}),
+    ("DATA", "6 Tier 1 ratio", {"FY2026": "21.74%", "FY2025": "19.32%", "FY2024": "15.57%", "FY2023": "18.17%"}),
+    ("DATA", "7 Total capital ratio", {"FY2026": "22.47%", "FY2025": "20.59%", "FY2024": "17.31%", "FY2023": "21.04%"}),
+    ("DATA", "7a Additional CET1 SREP requirements", {"FY2026": "1.96%", "FY2025": "1.96%", "FY2024": "1.96%", "FY2023": "1.96%"}),
+    ("DATA", "7b Additional AT1 SREP requirements", {"FY2026": "0.65%", "FY2025": "0.65%", "FY2024": "0.65%", "FY2023": "0.65%"}),
+    ("DATA", "7c Additional T2 SREP requirements", {"FY2026": "0.87%", "FY2025": "0.87%", "FY2024": "0.87%", "FY2023": "0.87%"}),
+    ("DATA", "7d Total SREP own funds requirements", {"FY2026": "12.04%", "FY2025": "12.54%", "FY2024": "11.49%", "FY2023": "11.49%"}),
+    ("SECTION", "Combined buffer requirement (% of RWAs)", {}),
+    ("DATA", "8 Capital conservation buffer", {"FY2026": "2.50%", "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%"}),
+    ("DATA", "9 Institution specific countercyclical capital buffer", {"FY2026": "2.00%", "FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "1.00%"}),
+    ("DATA", "11 Combined buffer requirement", {"FY2026": "4.50%", "FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "3.50%"}),
+    ("DATA", "11a Overall capital requirements", {"FY2026": "16.54%", "FY2025": "17.04%", "FY2024": "15.99%", "FY2023": "14.99%"}),
+    ("DATA", "12 CET1 available after meeting SREP own funds requirements", {"FY2026": "9.70%", "FY2025": "6.78%", "FY2024": "4.08%", "FY2023": "6.68%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13 Leverage ratio total exposure measure (£'000)", {"FY2026": 383737, "FY2025": 310657, "FY2024": 238194, "FY2023": 181803}),
+    ("DATA", "14 Leverage ratio", {"FY2026": "7.99%", "FY2025": "7.96%", "FY2024": "8.34%", "FY2023": "9.72%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15 Total high-quality liquid assets (HQLA) (£'000)", {"FY2026": 672041, "FY2025": 593599, "FY2024": 499336, "FY2023": 465257}),
+    ("DATA", "16a Cash outflows (£'000)", {"FY2026": 66865, "FY2025": 75205, "FY2024": 73375, "FY2023": 63375}),
+    ("DATA", "16b Cash inflows (£'000)", {"FY2026": 6230, "FY2025": 6559, "FY2024": 17467, "FY2023": 10373}),
+    ("DATA", "16 Total net cash outflows (£'000)", {"FY2026": 60635, "FY2025": 68646, "FY2024": 55908, "FY2023": 53002}),
+    ("DATA", "17 Liquidity coverage ratio (%)", {"FY2026": "1108%", "FY2025": "865%", "FY2024": "893%", "FY2023": "878%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18 Total available stable funding (£'000)", {"FY2026": 700696, "FY2025": 606213, "FY2024": 539411, "FY2023": 498682}),
+    ("DATA", "19 Total required stable funding (£'000)", {"FY2026": 84273, "FY2025": 75978, "FY2024": 67565, "FY2023": 45238}),
+    ("DATA", "20 NSFR ratio (%)", {"FY2026": "831%", "FY2025": "798%", "FY2024": "798%", "FY2023": "1102%"}),
+]
+
+bw.add_km1_sheet(
+    title="Zempler Bank Limited — KM1 Key Metrics",
+    subtitle="The Bank's published Table 14, reproduced in its own row order and precision. Amount rows are £'000; ratios are as printed. FY2022 is blank because no formal KM1 column was published.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    source_height=250,
 )
 
 # ---------------------------------------------------------------

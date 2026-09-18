@@ -577,7 +577,21 @@ KM1_SOURCES = (
     "quarterly 'RBC Europe Limited Quarterly Pillar 3 Disclosures, 31st January 2026', which covers leverage only "
     "(its contents page lists Overview and Leverage Ratio, and it contains no KM1). No April 2026 semi-annual "
     "edition was published at the date of this check. RBC Europe's year-end is 31 October, so FY2026 had not "
-    "closed.\n\n" + ENTITY_NOTE
+    "closed.\n\n"
+    "LATEST-EDITION RE-CHECK 2026-09-18: repeated a day later against rbc.com's Basel/Pillar III disclosure index "
+    "(https://www.rbc.com/regulatory-information/basel-disclosures.html), which is where the RBC Europe Limited "
+    "documents are listed - the investor-relations regulatory page carries the Royal Bank of Canada GROUP series "
+    "instead, a different entity that must not be substituted here. Nothing newer than the 31 October 2025 annual "
+    "edition has appeared. The newest RBCEL document of any kind remains the quarterly edition for 31 January "
+    "2026, confirmed again to contain no KM1 table; no 30 April 2026 semi-annual edition is listed. Note the "
+    "index is actively maintained (the January 2026 file was uploaded 26 June 2026) and the RBC group series runs "
+    "to Q3 2026, so RBCEL genuinely lags its parent rather than the page being stale.\n\n"
+    "YEARS NOT SHOWN AS COLUMNS ON THIS SHEET (2026-09-18). FY2020 back to FY2014 previously carried an empty "
+    "column under a printed year header; they are now omitted from this sheet entirely. RBC Europe published no "
+    "key-metrics table in any of those years and no later edition prints a comparative reaching them, so there "
+    "was nothing the columns could ever hold. A column appears here only where the bank printed the template for "
+    "that date, or a later edition printed it as a comparative. Those years remain in full on every other sheet "
+    "in this workbook, which runs back to FY2014.\n\n" + ENTITY_NOTE
 )
 
 
@@ -586,13 +600,20 @@ def _km1v(fy2025=None, fy2024=None, fy2023=None, fy2022=None, fy2021=None):
     return {k: v for k, v in vals.items() if v is not None}
 
 
+# RBC Europe published no key-metrics table before its FY2021 edition, so
+# FY2020-FY2014 would otherwise be seven year headers over seven empty columns.
+# Those trailing empty columns are dropped by the shared library from the row
+# data itself, deliberately NOT by a hardcoded year list here: a hardcoded list
+# silently swallows a new column the day someone adds a year to the rows below
+# and forgets to widen it, which is the kind of failure nothing in the workbook
+# would reveal.
 bw.add_km1_sheet(
     title="RBC Europe Limited — KM1 Key Metrics",
     subtitle="UK KM1 - Key Metrics, as published in RBC Europe Limited's own annual Pillar III disclosures "
              "(Company/RBCEL basis, £m, 31 October year-end). Reproduced in the bank's own row order, row "
              "numbering, labels and precision. FY2022-FY2025 are each year's own edition; FY2021 is the FY2022 "
              "edition's restated Oct-21 comparative (that year's own edition prints no key-metrics table at all). "
-             "FY2020-FY2014 predate the template entirely - see the source note.",
+             "FY2020-FY2014 predate the template entirely and carry no column on this sheet - see the source note.",
     rows=[
         ("SECTION", "Available own funds (amounts)", {}),
         ("DATA", "1 Common Equity Tier 1 (CET1) capital (£m)", _km1v(1773, 1454, 1439, 1377, 1349)),

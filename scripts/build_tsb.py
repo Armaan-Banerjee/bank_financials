@@ -29,11 +29,24 @@ P3_23_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/rn
 P3_22_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/rns/TSB-Large-subsidiary-Disclosure-2022.pdf"
 P3_21_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/rns/TSB-Large-Subsidiary-Disclosure-2021.pdf"
 P3_20_URL = "https://www.tsb.co.uk/content/dam/tsb-public/documents/investors/rns/TSB-Significant-Subsidiary-Disclosure-2020.pdf"
-# FY2017/FY2018: TSB published no standalone Pillar 3/Significant Subsidiary Disclosure
-# document (the Annual Report itself states minimum Pillar 3 disclosure requirements are
-# "Disclosed in the Sabadell Pillar 3 report", which had "not been approved" as at each
-# report's own publication date) - so FY2017/FY2018 capital metrics are sourced from the
-# TSB Banking Group plc Annual Report's own "Capital resources"/"Sources of funding" section.
+# CORRECTION 2026-09-18 (this comment block previously asserted that TSB published no
+# standalone Pillar 3/Significant Subsidiary Disclosure document for FY2017 and FY2018,
+# and that FY2017/FY2018 capital metrics therefore had to come from the Annual Report's
+# "Capital resources" table). THAT WAS FALSE. TSB Banking Group plc published a
+# Significant Subsidiary Disclosures document for FY2017, FY2018 AND FY2019, each with a
+# full "Table 1: Key metrics (KM1 / IFRS 9-FL)". All three were found by a Wayback CDX
+# domain sweep of tsb.co.uk on 2026-09-18; TSB's own site no longer serves any of them
+# (every candidate path returns HTTP 404 with Content-Type text/html - re-checked
+# 2026-09-18), so the archived "id_" snapshots below are the working sources. Each was
+# verified on fetch: begins "%PDF", served as application/pdf, and opens with the page
+# count stated. FY2017/FY2018/FY2019 Pillar 3 figures are now sourced from those three
+# documents rather than from the Annual Report - see P3_17_18_19_RECOVERY_NOTE.
+ORIG_P3_19_URL = "https://www.tsb.co.uk/investors/tsb-significant-subsidiary-disclosure-2019.pdf"
+P3_19_URL = "https://web.archive.org/web/20230807234216id_/" + ORIG_P3_19_URL
+ORIG_P3_18_URL = "https://www.tsb.co.uk/investors/tsb-significant-subsidiary-disclosure.pdf"
+P3_18_URL = "https://web.archive.org/web/20230807142122id_/" + ORIG_P3_18_URL
+ORIG_P3_17_URL = "https://www.tsb.co.uk/significant-subsidiary-disclosures.pdf"
+P3_17_URL = "https://web.archive.org/web/20230807174501id_/" + ORIG_P3_17_URL
 # FY2016 and FY2014 URLs re-checked 2026-09-16: both still LIVE (HTTP 200,
 # Content-Type application/pdf, 1,101,787 and 1,078,676 bytes) and so are
 # deliberately left pointing at the publisher rather than at an archive.
@@ -86,6 +99,51 @@ P3_15_DEAD_URL_NOTE = (
     "different series and must never be merged into one row, the same discipline applied to point-in-time vs "
     "12-month-average LCR elsewhere in this project. The 5.2%/5.8% figures are preserved here on the record "
     "rather than written into the sheet."
+)
+
+P3_17_18_19_RECOVERY_NOTE = (
+    "FY2017-FY2019 PILLAR 3 RECOVERY AND CORRECTION (2026-09-18). An earlier revision of this workbook stated "
+    "that TSB published no standalone Pillar 3/Significant Subsidiary Disclosure document for FY2017 and "
+    "FY2018, and sourced those two years' capital metrics from the TSB Banking Group plc Annual Report's own "
+    "'Capital resources' table instead. THAT STATEMENT WAS FALSE and has been withdrawn. TSB Banking Group "
+    "plc published a Significant Subsidiary Disclosures document for FY2017 (48pp), FY2018 (46pp) and FY2019 "
+    "(52pp), and each of the three prints a full 'Table 1: Key metrics (KM1 / IFRS 9-FL)'. The FY2019 "
+    "document had likewise never been used here: FY2019 figures were being taken from the FY2020 edition's "
+    "comparative column, and now come from FY2019's own edition.\n"
+    "HOW THEY WERE FOUND, AND WHY THE URLS ARE ARCHIVE URLS. None of the three is linked from any page of "
+    "tsb.co.uk today, and every plausible live path returns HTTP 404 with Content-Type text/html (the "
+    "investors index, the regulatory-news-service index and the DAM document paths were all checked on "
+    "2026-09-18). A Wayback CDX domain sweep of tsb.co.uk filtered on '(pillar|subsidiary)' listed all three "
+    "in one call. The citations therefore give the 'id_' snapshot form, which returns the original archived "
+    "bytes rather than the Wayback viewer page, and each was verified on fetch by status, Content-Type and "
+    "'%PDF' magic bytes. TSB's own dead URLs are recorded above beside each snapshot so the original "
+    "provenance stays readable.\n"
+    "WHAT CHANGED IN THE FIGURES, AND WHY. The Annual Report table these years used to be sourced from is "
+    "captioned 'fully loaded' - it prints TSB's IFRS 9 FULLY-LOADED capital, RWAs and leverage exposure, "
+    "which is the second line of each pair in the Pillar 3 key-metrics table, not the headline. Every other "
+    "year on these sheets carries the headline (IFRS 9 transitional) figure, so FY2018 sat on a different "
+    "basis from its neighbours with nothing saying so. FY2018 now reads CET1/Tier 1 1,821,180 (was 1,805,500, "
+    "the fully-loaded figure as rounded by the Annual Report to £1,805.5m), total capital 2,205,528 (was "
+    "2,196,100), RWAs 9,257,644 (was 9,271,000) and the capital ratios 19.7%/19.7%/23.8% (were "
+    "19.5%/19.5%/23.7%) - in every case the transitional figure printed by the FY2018 edition's own Table 1. "
+    "FY2017 predates IFRS 9, so no transitional/fully-loaded split exists for it and the amounts barely move; "
+    "they are now exact £'000 figures from the FY2017 edition's own Table 1 (Own Funds, OFD2) rather than the "
+    "Annual Report's £0.1m roundings: CET1/Tier 1 1,898,142 (was 1,898,100), total capital 2,282,212 (was "
+    "2,282,200), RWAs 9,490,710 (was 9,490,700).\n"
+    "THE LEVERAGE EXPOSURE MEASURE MOVES FOR A DIFFERENT REASON, and both printings are real. TSB's Pillar 3 "
+    "documents print a 31-Dec-2018 leverage exposure of 41,466,642 and a 31-Dec-2017 exposure of 42,626,131 "
+    "(FY2018 edition Table 1 and Table 26 LRSum; FY2017 edition Table 27 LRSum). The Annual Report's "
+    "'Total exposures' line for the same two dates reads 41,445.9m and 42,668.6m, under a 'Total Tier 1 "
+    "Capital for leverage ratio (fully loaded)' heading. The Pillar 3 figures are used here, because every "
+    "other year on the Leverage Ratio sheet comes from a Pillar 3 document; the Annual Report figures are "
+    "recorded here rather than discarded. The leverage RATIO is 4.4% (2018) and 4.5% (2017) in both sources.\n"
+    "FY2017 IS THE ONE YEAR IN THIS RANGE WITH NO KM1 OF ITS OWN. The FY2017 edition publishes OFD2/OFD3, "
+    "LRSum/LRCom and the full credit-risk template set, but no key-metrics template - its Executive Summary "
+    "carries a bespoke ten-line 'Key metrics' summary (CET1 £1.9bn, CET1 ratio 20.0%, Total Capital £2.3bn, "
+    "Total Capital ratio 24.0%, credit-risk EAD, credit/operational RWAs, Basel III leverage 4.5%, UK "
+    "leverage 5.4%) which carries no Tier 1 row, no SREP rows, no buffer block, no LCR and no NSFR, and so is "
+    "a different and shorter table rather than an unnumbered template. The KM1 Key Metrics sheet's FY2017 "
+    "column is therefore filled from the FY2018 edition's own 31-Dec-2017 comparative column, and says so."
 )
 
 ENTITY_NOTE = (
@@ -179,14 +237,26 @@ def p3_sources(page_km1, table_km1="Table 1: Key metrics (KM1)"):
         f"- {P3_23_URL}\n"
         f"FY2022: TSB Banking Group plc Large Subsidiary Disclosures 2022, p.6 (Table 1a: Key metrics (KM1)) "
         f"- {P3_22_URL}\n"
-        f"FY2021: TSB Banking Group plc Large Subsidiary Disclosures 2021, p.5 (Table 1: Key metrics (KM1 / IFRS "
-        f"9-FL)) - {P3_21_URL}\n"
-        f"FY2020 & FY2019: TSB Banking Group plc Significant Subsidiary Disclosures 2020, p.5 (Table 1: Key "
-        f"metrics (KM1 / IFRS 9-FL)) - {P3_20_URL}\n"
-        f"FY2018: TSB Banking Group plc Annual Report and Accounts 2018, p.11 ('Capital resources' table within "
-        f"'Sources of funding') - {BG_AR18_URL}\n"
-        f"FY2017: TSB Banking Group plc Annual Report and Accounts 2017, p.16 ('Capital ratios' table within "
-        f"'Sources of funding') - {BG_AR17_URL}\n"
+        f"FY2021: TSB Banking Group plc Large Subsidiary Disclosures 2021, pp.5-6 (Table 1: Key metrics (KM1 / "
+        f"IFRS 9-FL); the table BREAKS ACROSS TWO PAGES - capital, ratios, SREP, buffers and leverage on p.5, "
+        f"the LCR and NSFR blocks on p.6 under 'Table 1 ... (continued)') - {P3_21_URL}\n"
+        f"FY2020: TSB Banking Group plc Significant Subsidiary Disclosures 2020, p.6 (Table 1: Key metrics "
+        f"(KM1 / IFRS 9-FL)) - {P3_20_URL}\n"
+        f"FY2019: TSB Banking Group plc Significant Subsidiary Disclosures 2019, p.6 (Table 1: Key metrics "
+        f"(KM1/IFRS 9-FL)) - {P3_19_URL} (TSB's own published URL for this document, "
+        + ORIG_P3_19_URL
+        + ", is DEAD as at 2026-09-18 and returns HTTP 404; the Wayback 'id_' snapshot cited here is the "
+        f"working replacement - see the FY2017-FY2019 recovery note below)\n"
+        f"FY2018: TSB Banking Group plc Significant Subsidiary Disclosures 2018, p.5 (Table 1: Key metrics "
+        f"(KM1/IFRS 9-FL)) - {P3_18_URL} (TSB's own published URL for this document, "
+        + ORIG_P3_18_URL
+        + ", is DEAD as at 2026-09-18 and returns HTTP 404)\n"
+        f"FY2017: TSB Banking Group plc Significant Subsidiary Disclosures 2017, p.7 (Table 1: Own Funds (OFD2)), "
+        f"p.11 (Table 5: Total amount of risk weighted assets and minimum own funds requirements) and p.33 "
+        f"(Table 27: LRSum) - this edition publishes no key-metrics template - {P3_17_URL} (TSB's own published "
+        f"URL for this document, "
+        + ORIG_P3_17_URL
+        + ", is DEAD as at 2026-09-18 and returns HTTP 404)\n"
         f"FY2016: TSB Banking Group plc Material Subsidiary Pillar 3 Disclosures 2016, p.4 (Table 1: Own funds) "
         f"- {P3_16_URL}\n"
         f"FY2015: TSB Banking Group plc Pillar 3 Disclosures 2015 (cover title 'Significant Subsidiary "
@@ -194,11 +264,16 @@ def p3_sources(page_km1, table_km1="Table 1: Key metrics (KM1)"):
         f"this document is DEAD as at 2026-09-16 and returns HTTP 404; the Wayback 'id_' snapshot cited here is "
         f"the working replacement - see the dead source URL register below)\n"
         f"FY2014: TSB Banking Group plc Pillar 3 Disclosures 2014, p.17 (Table 6: Own funds) - {P3_14_URL}\n\n"
-        "NOTE (FY2017/FY2018): TSB published no standalone Pillar 3/Significant Subsidiary Disclosure document "
-        "for these two years - see ENTITY NOTE on the Cash Flow Statement sheet. Figures are sourced from the "
-        "capital summary within the Banking Group's own Annual Report instead, which discloses CET1/Tier 1/Total "
-        "capital, RWAs, and capital ratios on the same fully-loaded CRD IV basis as the standalone Pillar 3 "
-        "documents used for adjacent years.\n\n"
+        "LATEST-EDITION CHECK, 2026-09-18: TSB's own investor pages (tsb.co.uk/investors/results-reports.html "
+        "and tsb.co.uk/investors/regulatory-news-service.html, both fetched directly as static HTML with real "
+        "document hrefs - not Wayback and not the URLs already cited here) list the Large Subsidiary "
+        "Disclosures for 31 December 2025 as the newest ANNUAL edition and the TSB Bank plc / TSB Banking "
+        "Group plc Annual Report and Accounts 2025 as the newest annual report. Both are already carried in "
+        "this workbook, so: checked, none newer. TSB also publishes quarterly Pillar 3 disclosures (the "
+        "newest listed being Q1 2026 and the Q2 2026 Large Subsidiary Disclosure); they report interim dates "
+        "rather than a further financial year and are not used here.\n\n"
+        + P3_17_18_19_RECOVERY_NOTE
+        + "\n\n"
         + P3_15_DEAD_URL_NOTE
     )
 
@@ -662,6 +737,316 @@ bw.add_asset_quality_sheet(
 
 
 # ---------------------------------------------------------------
+# KM1 Key Metrics - TSB's own published key-metrics template, reproduced
+# whole. Called BEFORE the first add_metric_sheet() so the sheet lands
+# immediately after Asset Quality and immediately before CET1 Capital.
+#
+# TSB prints the template UNNUMBERED in every edition, so no row numbers
+# appear here - inventing them would assert a correspondence TSB never
+# published. The series crosses the 2022 template change, so the sheet
+# carries TWO caption blocks and nothing is merged across them.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "PRE-2022 BASEL TEMPLATE - 'Table 1: Key metrics (KM1 / IFRS 9-FL)', as printed in the FY2017, FY2018, FY2019 and FY2020 editions", {}),
+    ("SECTION", "Available capital (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) (£'000)",
+     {"FY2020": 1630434, "FY2019": 1837943, "FY2018": 1821180, "FY2017": 1898142}),
+    ("DATA", "CET1 as if IFRS 9 or analogous Expected Credit Losses (ECLs) transitional arrangements had not been applied (£'000)",
+     {"FY2020": 1581426, "FY2019": 1823450, "FY2018": 1805472, "FY2017": "n/a"}),
+    ("DATA", "Tier 1 capital (£'000)",
+     {"FY2020": 1630434, "FY2019": 1837943, "FY2018": 1821180, "FY2017": 1898142}),
+    ("DATA", "Tier 1 capital as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£'000)",
+     {"FY2020": 1581426, "FY2019": 1823450, "FY2018": 1805472, "FY2017": "n/a"}),
+    ("DATA", "Total capital (£'000)",
+     {"FY2020": 2015339, "FY2019": 2222569, "FY2018": 2205528, "FY2017": 2282211}),
+    ("DATA", "Total capital as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£'000)",
+     {"FY2020": 2014227, "FY2019": 2216937, "FY2018": 2196027, "FY2017": "n/a"}),
+    ("SECTION", "Risk-weighted assets (amounts)", {}),
+    ("DATA", "Total Risk-weighted assets (RWA) (£'000)",
+     {"FY2020": 10644263, "FY2019": 8841425, "FY2018": 9257644, "FY2017": 9490710}),
+    ("DATA", "Total Risk-weighted assets as if IFRS 9 or analogous ECLs transitional arrangements had not been applied (£'000)",
+     {"FY2020": 10685144, "FY2019": 8853794, "FY2018": 9271050, "FY2017": "n/a"}),
+    ("SECTION", "Risk-based capital ratios as a percentage of RWA", {}),
+    ("DATA", "CET1 (as a percentage of risk exposure amount)",
+     {"FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.7%", "FY2017": "20.0%"}),
+    ("DATA", "CET1 ratio (as a percentage of risk exposure amount) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2020": "14.8%", "FY2019": "20.6%", "FY2018": "19.5%", "FY2017": "n/a"}),
+    ("DATA", "Tier 1 capital ratio (as a percentage of risk exposure amount)",
+     {"FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.7%", "FY2017": "20.0%"}),
+    ("DATA", "Tier 1 capital ratio (as a percentage of risk exposure amount) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2020": "14.8%", "FY2019": "20.6%", "FY2018": "19.5%", "FY2017": "n/a"}),
+    ("DATA", "Total capital ratio (as a percentage of risk exposure amount)",
+     {"FY2020": "18.9%", "FY2019": "25.1%", "FY2018": "23.8%", "FY2017": "24.0%"}),
+    ("DATA", "Total capital ratio (as a percentage of risk exposure amount) as if IFRS 9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2020": "18.9%", "FY2019": "25.0%", "FY2018": "23.7%", "FY2017": "n/a"}),
+    ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
+    ("DATA", "Capital conservation buffer requirement",
+     {"FY2020": "2.5%", "FY2019": "2.5%", "FY2018": "1.88%", "FY2017": "1.25%"}),
+    ("DATA", "Countercyclical buffer requirement",
+     {"FY2020": "0.0%", "FY2019": "1.0%", "FY2018": "1.00%", "FY2017": "0.00%"}),
+    ("DATA", "Bank G-SIB and/or D-SIB additional requirement",
+     {"FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": "n/a"}),
+    ("DATA", "Total CET1 specific buffer requirements",
+     {"FY2020": "2.5%", "FY2019": "3.5%", "FY2018": "2.88%", "FY2017": "1.25%"}),
+    ("DATA", "CET1 available after meeting minimum capital requirements",
+     {"FY2020": "10.8%", "FY2019": "16.3%", "FY2018": "15.2%", "FY2017": "15.5%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "Leverage ratio exposure measure (£'000)",
+     {"FY2020": 42933969, "FY2019": 39889242, "FY2018": 41466642, "FY2017": 42626131}),
+    ("DATA", "Leverage ratio",
+     {"FY2020": "3.8%", "FY2019": "4.6%", "FY2018": "4.4%", "FY2017": "4.5%"}),
+    ("DATA", "Leverage ratio as if IFRS 9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2020": "3.7%", "FY2019": "4.6%", "FY2018": "4.4%", "FY2017": "n/a"}),
+
+    ("SECTION", "UK TEMPLATE - 'Table 1/1a: Key metrics (KM1)', as printed in the FY2021, FY2022, FY2023, FY2024 and FY2025 editions", {}),
+    ("SECTION", "Available capital (amounts)", {}),
+    ("DATA", "Common Equity Tier 1 (CET1) (£000)",
+     {"FY2025": 1949276, "FY2024": 1738133, "FY2023": 1842646, "FY2022": 1791545, "FY2021": 1724002}),
+    ("DATA", "Common Equity Tier 1 (CET1) as if IFRS9 or analogous ECLs transitional arrangements had not been applied (£000)",
+     {"FY2021": 1712550}),
+    ("DATA", "Tier 1 capital (£000)",
+     {"FY2025": 2198973, "FY2024": 1987837, "FY2023": 1842646, "FY2022": 1791545, "FY2021": 1724002}),
+    ("DATA", "Tier 1 capital as if IFRS9 or analogous ECLs transitional arrangements had not been applied (£000)",
+     {"FY2021": 1712550}),
+    ("DATA", "Total capital (£000)",
+     {"FY2025": 2498973, "FY2024": 2287837, "FY2023": 2167829, "FY2022": 2109761, "FY2021": 2024002}),
+    ("DATA", "Total capital as if IFRS9 or analogous ECLs transitional arrangements had not been applied (£000)",
+     {"FY2021": 2018430}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "Total risk-weighted exposure amount (£000)",
+     {"FY2025": 11646331, "FY2024": 11250820, "FY2023": 11052751, "FY2022": 10442066, "FY2021": 10851867}),
+    ("DATA", "Total risk-weighted exposure amount as if IFRS9 or analogous ECLs transitional arrangements had not been applied (£000)",
+     {"FY2021": 10855618}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Common Equity Tier 1 ratio",
+     {"FY2025": "16.74%", "FY2024": "15.45%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%"}),
+    ("DATA", "Common Equity Tier 1 ratio (%) as if IFRS9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2021": "15.8%"}),
+    ("DATA", "Tier 1 ratio",
+     {"FY2025": "18.88%", "FY2024": "17.67%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%"}),
+    ("DATA", "Tier 1 ratio (%) as if IFRS9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2021": "15.8%"}),
+    ("DATA", "Total capital ratio",
+     {"FY2025": "21.46%", "FY2024": "20.33%", "FY2023": "19.6%", "FY2022": "20.2%", "FY2021": "18.7%"}),
+    ("DATA", "Total capital ratio (%) as if IFRS9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2021": "18.6%"}),
+    ("SECTION", "Additional own funds requirements to address risks other than the risk of excessive leverage (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Additional own funds requirements to address risks other than the risk of excessive leverage",
+     {"FY2025": "2.60%", "FY2024": "2.85%", "FY2023": "2.2%", "FY2022": "1.8%", "FY2021": "1.8%"}),
+    ("DATA", "Of which: to be made up of CET1 capital",
+     {"FY2025": "1.46%", "FY2024": "1.60%", "FY2023": "1.2%", "FY2022": "1.0%", "FY2021": "1.0%"}),
+    ("DATA", "Of which: to be made up of Tier 1 capital",
+     {"FY2025": "1.95%", "FY2024": "2.14%", "FY2023": "1.7%", "FY2022": "1.4%", "FY2021": "1.4%"}),
+    ("DATA", "Total SREP own funds requirements",
+     {"FY2025": "10.60%", "FY2024": "10.85%", "FY2023": "10.2%", "FY2022": "9.8%", "FY2021": "9.8%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "Capital conservation buffer",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member state",
+     {"FY2022": "0.0%", "FY2021": "0.0%"}),
+    ("DATA", "Institutional specific countercyclical capital buffer",
+     {"FY2025": "2.00%", "FY2024": "2.00%", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "n/a"}),
+    ("DATA", "Systemic buffer (%)", {"FY2021": "n/a"}),
+    ("DATA", "Global Systemically important institution buffer (%)", {"FY2021": "n/a"}),
+    ("DATA", "Other systemically important institution buffer", {"FY2021": "n/a"}),
+    ("DATA", "Combined buffer requirement",
+     {"FY2025": "4.50%", "FY2024": "4.50%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "Overall capital requirements",
+     {"FY2025": "15.10%", "FY2024": "15.35%", "FY2023": "14.7%", "FY2022": "13.3%", "FY2021": "12.3%"}),
+    ("DATA", "CET1 available after meeting the total SREP own funds requirements",
+     {"FY2025": "10.77%", "FY2024": "9.30%", "FY2023": "9.0%", "FY2022": "9.8%", "FY2021": "8.5%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "Leverage ratio total exposure measure (£000)",
+     {"FY2025": 40220383, "FY2024": 40126116, "FY2023": 40338726, "FY2022": 42544451, "FY2021": 47412008}),
+    ("DATA", "Leverage ratio",
+     {"FY2025": "5.47%", "FY2024": "4.95%", "FY2023": "4.6%", "FY2022": "4.2%", "FY2021": "3.6%"}),
+    ("DATA", "Leverage ratio as if IFRS9 or analogous ECLs transitional arrangements had not been applied",
+     {"FY2021": "3.6%"}),
+    ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount)", {}),
+    ("DATA", "Additional own funds requirements to address the risk of the excessive leverage (%)", {"FY2021": "0.0%"}),
+    ("DATA", "Of which: they will be composed of Common Equity Tier 1 capital (%)", {"FY2021": "0.0%"}),
+    ("DATA", "Total SREP leverage ratio requirements (%)", {"FY2021": "0.0%"}),
+    ("SECTION", "Leverage ratio buffer and overall leverage ratio requirement (as a percentage of the total exposure amount)", {}),
+    ("DATA", "Leverage ratio buffer requirement (%)", {"FY2021": "0.0%"}),
+    ("DATA", "Overall leverage ratio requirement (%)", {"FY2021": "0.0%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (£000)",
+     {"FY2025": 6476199, "FY2024": 6921589, "FY2023": 7371627, "FY2022": 6788964, "FY2021": 7513828}),
+    ("DATA", "Cash outflows - Total weighted value (£000)",
+     {"FY2025": 3765659, "FY2024": 4056488, "FY2023": 4134068, "FY2022": 4326960, "FY2021": 4077424}),
+    ("DATA", "Cash inflows - Total weighted value (£000)",
+     {"FY2025": 250510, "FY2024": 230451, "FY2023": 218878, "FY2022": 260513, "FY2021": 213669}),
+    ("DATA", "Total net cash outflows (adjusted value) (£000)",
+     {"FY2025": 3515149, "FY2024": 3826038, "FY2023": 3915190, "FY2022": 4066447, "FY2021": 3863755}),
+    ("DATA", "Liquidity coverage ratio",
+     {"FY2025": "185%", "FY2024": "182%", "FY2023": "188%", "FY2022": "168%", "FY2021": "194%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    ("DATA", "Total available stable funding (£000)",
+     {"FY2025": 40945691, "FY2024": 42119435, "FY2023": 42368266, "FY2022": 42774578, "FY2021": 42912975}),
+    ("DATA", "Total required stable funding (£000)",
+     {"FY2025": "26,999.917", "FY2024": 27582817, "FY2023": 27601540, "FY2022": 28845131, "FY2021": 28710989}),
+    ("DATA", "NSFR ratio",
+     {"FY2025": "152%", "FY2024": "153%", "FY2023": "154%", "FY2022": "148%", "FY2021": "149%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - TSB Banking Group plc consolidated Pillar 3/capital disclosure basis. Each column is taken from "
+    "the edition in which that date is the REPORTING date, never from a later edition's comparative, with the "
+    "one exception stated for FY2017 below.\n"
+    f"FY2025: Large Subsidiary Disclosures, as at 31 December 2025, p.6 (Table 1: Key metrics (KM1), '31 "
+    f"December 2025' column) - {P3_25_URL}\n"
+    f"FY2024: Large Subsidiary Disclosures, as at 31 December 2024, p.6 (Table 1a: Key metrics (KM1), '31 "
+    f"December 2024' column) - {P3_24_URL}\n"
+    f"FY2023: Large Subsidiary Disclosures 2023, p.6 (Table 1a: Key metrics (KM1), '31 December 2023' column) "
+    f"- {P3_23_URL}\n"
+    f"FY2022: Large Subsidiary Disclosures 2022, p.6 (Table 1a: Key metrics (KM1), '31 December 2022' column) "
+    f"- {P3_22_URL}\n"
+    f"FY2021: Large Subsidiary Disclosures 2021, pp.5-6 (Table 1: Key metrics (KM1 / IFRS 9-FL), '2021' "
+    f"column). THIS EDITION'S TABLE BREAKS ACROSS TWO PAGES: capital, ratios, SREP, buffers and the leverage "
+    f"blocks on p.5, then the LCR and NSFR blocks on p.6 under 'Table 1 ... (continued)' - {P3_21_URL}\n"
+    f"FY2020: Significant Subsidiary Disclosures 2020, p.6 (Table 1: Key metrics (KM1 / IFRS 9-FL), '2020' "
+    f"column) - {P3_20_URL}\n"
+    f"FY2019: Significant Subsidiary Disclosures 2019, p.6 (Table 1: Key metrics (KM1/IFRS 9-FL), '2019' "
+    f"column) - {P3_19_URL}\n"
+    f"FY2018: Significant Subsidiary Disclosures 2018, p.5 (Table 1: Key metrics (KM1/IFRS 9-FL), '2018' "
+    f"column) - {P3_18_URL}\n"
+    f"FY2017: the FY2018 edition's own '2017' COMPARATIVE column, p.5 of {P3_18_URL} - see the next paragraph "
+    f"for why this one column is a comparative.\n"
+    "\n"
+    "WHY FY2017 IS FILLED FROM A COMPARATIVE. TSB's FY2017 Significant Subsidiary Disclosures publishes no "
+    "key-metrics template at all. It carries OFD2/OFD3 own-funds tables, the LRSum/LRCom leverage templates "
+    "and the full credit-risk template set, and its Executive Summary carries a bespoke ten-line 'Key metrics' "
+    "summary - CET1 £1.9bn, CET1 ratio 20.0%, Total Capital £2.3bn, Total Capital ratio 24.0%, credit-risk "
+    "exposure at default, credit and operational RWAs, Basel III leverage 4.5%, UK leverage 5.4% - with no "
+    "Tier 1 row, no SREP rows, no buffer block, no LCR and no NSFR. That is a different and shorter table, not "
+    "an unnumbered template, so it is not transcribed as one. Where a year's own edition prints no template "
+    "and a later edition prints a comparative for it, the column is filled from that comparative and labelled "
+    "as such; that is what has been done here.\n"
+    "\n"
+    "FY2014-FY2016 CARRY NO COLUMN AND THE SHEET SHOWS NONE. TSB's Pillar 3 documents for 31 December 2014, "
+    "2015 and 2016 were each fetched from TSB's own site (the 2015 edition from the Wayback snapshot noted "
+    "below), verified as PDFs and read on 2026-09-18. Each prints the same bespoke eight- to ten-line 'Key "
+    "metrics' summary in its Executive Summary - CET1, CET1 ratio, Total Capital, Total Capital ratio, "
+    "credit-risk exposure at default, credit and operational RWAs, Total RWAs and the Basel III leverage "
+    "ratio, in £bn to one decimal - with no Tier 1 row, no SREP rows, no buffer block, no LCR and no NSFR. "
+    "That is the same short table the FY2017 edition prints, and it is a different and shorter table rather "
+    "than an unnumbered template, so none of these three years is transcribed as one. The string 'KM1' does "
+    "not occur in any of the three (0 matches each), against 16-19 matches for 'own funds', 18-28 for "
+    "'leverage ratio' and 22-48 for 'risk-weighted' in the same documents - so the zero is a fact about the "
+    "documents and not about the search. No later edition carries a 31-Dec-2016 or earlier comparative in a "
+    "key-metrics template either: the FY2017 edition, which would be the only candidate, publishes no "
+    "template at all. Those years are genuinely absent rather than unresearched.\n"
+    "\n"
+    "TSB PRINTS THIS TEMPLATE UNNUMBERED IN EVERY EDITION, so no row numbers appear on this sheet. None of the "
+    "nine editions prints 'UK 7a', '8', 'UK 9a' or any other template row reference anywhere in the table; "
+    "attaching numbers here would assert a row correspondence TSB never published. The rows are in TSB's own "
+    "printed order within each of the two blocks.\n"
+    "\n"
+    "WHY THERE ARE TWO BLOCKS, AND WHY NOTHING IS MERGED ACROSS THEM. The FY2017-FY2020 editions print the "
+    "PRE-2022 Basel 'Table KM1' and the FY2021-FY2025 editions print the UK template, and the two are not the "
+    "same table with different wording. The older one has no SREP block at all, expresses buffers as "
+    "'Additional CET1 buffer requirements' ending in 'Total CET1 specific buffer requirements', and footnotes "
+    "'CET1 available after meeting minimum capital requirements' as 'CET1 less Pillar 1 requirement of 4.5%' - "
+    "whereas the UK template's similarly-named row is measured after Pillar 1 AND Pillar 2A ('the minimum CET1 "
+    "requirement is equivalent to 4.5% (Pillar 1) plus additional CET1 SREP requirement (56% of Pillar 2A)', "
+    "FY2025 edition footnote 1). It also has no LCR and no NSFR block. Reading the two blocks as one series "
+    "would splice two different measures under one heading.\n"
+    "\n"
+    "THE LEVERAGE SERIES ALSO BREAKS, WITHIN THE SECOND BLOCK, AND TSB SAYS SO ITSELF. From the PRA Rulebook "
+    "change effective January 2022 the exposure measure excludes qualifying claims on central banks. TSB's "
+    "caption does not change, so the break is not visible in the row label: the FY2021 edition prints "
+    "47,412,008 / 3.6% on the pre-2022 basis, and the FY2022 edition's footnote 1 states 'Leverage ratio "
+    "exposure and leverage ratio % have been calculated as defined in the PRA Rulebook introduced with effect "
+    "from January 2022. December 2021 information has been restated for consistency excluding exposures to "
+    "Central Banks', printing 42,569,754 / 4.0% for that same date. FY2021 is shown here on its OWN edition's "
+    "basis (47,412,008 / 3.6%); the restated pair is on the Leverage Ratio metric sheet, which carries both.\n"
+    "\n"
+    "THE FY2021 LCR ROW IS POINT-IN-TIME, NOT THE TWELVE-MONTH AVERAGE THE OTHER YEARS CARRY. The FY2021 "
+    "edition's key-metrics table prints HQLA 7,513,828, net outflows 3,863,755 and an LCR of 194%, and that "
+    "edition's own narrative is explicit: 'As at 31 December 2021, TSB's LCR was 194% (December 2020: 201%). "
+    "The table below reflects the trailing 12 month-end average LCR balances at the applicable quarter end "
+    "dates. The trailing 12 month-end average LCR to 31 December 2021 was 165%'. The FY2022-FY2025 columns "
+    "here are all twelve-month averages (each edition footnotes them as such). The LCR metric sheet carries "
+    "the AVERAGE for FY2021 (165%, from that same edition's LIQ1 template on p.39), so the two sheets "
+    "deliberately differ on that one row and each is captioned with the basis it is on. Neither figure is a "
+    "restatement of the other.\n"
+    "THE FY2021 NSFR ROW IS LIKEWISE POINT-IN-TIME AND ON THE EU CRR2 BASIS: 'The TSB NSFR was 149% as at 31 "
+    "December 2021 ... note this is based on the CRR2 regulation which became applicable in the EU from June "
+    "2021 and UK from January 2022' (FY2021 edition, p.40). The FY2022 edition prints no 31-Dec-2021 NSFR "
+    "comparative at all and says why - 'Comparative have not been reported as the average calculation "
+    "methodology was introduced by the PRA at 1 January 2022'.\n"
+    "\n"
+    "GLYPHS AND BLANK CELLS. Cells reading 'n/a' are TSB's own printed glyph and are reproduced as printed - "
+    "they are TSB stating the row does not apply to it, which is a different statement from silence. They "
+    "occur on the G-SIB/D-SIB row in all four pre-2022 editions; on the FY2017 comparative of every 'as if "
+    "IFRS 9 ... had not been applied' row (IFRS 9 was not yet in force at 31 December 2017); and on the "
+    "FY2021 systemic-buffer, G-SII, O-SII and institution-specific countercyclical buffer rows. A cell left "
+    "BLANK means that edition did not print that row at all - which is why the 'as if IFRS9' rows carry only "
+    "FY2021 in the second block (the FY2022-FY2025 editions move those rows out of the key-metrics table into "
+    "a separate 'Table 1b: Comparison between institutions own funds capital ratios and leverage ratios with "
+    "and without applying the transitional arrangements of IFRS9', which is a different template), and why "
+    "the 'Conservation buffer due to macro-prudential or systemic risk' row carries a printed 0.0% for FY2021 "
+    "and FY2022 and nothing afterwards.\n"
+    "\n"
+    "THREE SOURCE DEFECTS, REPRODUCED AS PUBLISHED AND NOT CORRECTED.\n"
+    "1. The FY2025 edition prints required stable funding as '26,999.917' - a decimal point where the "
+    "thousands separator belongs. It is shown here exactly as printed. The intended figure is £26,999,917 "
+    "thousand: that is what the same row's own NSFR ratio of 152% implies against available stable funding of "
+    "£40,945,691 thousand, and it is the figure the NSFR metric sheet carries. The two adjacent columns in "
+    "the same row are printed correctly (27,182,866 and 27,582,817).\n"
+    "2. The FY2022 edition prints 'Total risk-weighted exposure amount' TWICE - once in its proper place under "
+    "the 'Risk-weighted exposure amounts' heading, and once stranded inside the 'Available capital (amounts)' "
+    "block between the Tier 1 capital and Total capital rows, with identical figures in all three columns. "
+    "The row appears once on this sheet, in its proper place; the duplicate is recorded here rather than "
+    "reproduced, because a sheet cannot carry the same row label twice within one block.\n"
+    "3. Every edition from FY2020 onward renders 'Leverage ratio total exposure measure' with a subsetted "
+    "font whose 'asu' glyphs carry no Unicode mapping, so text extraction returns 'exposure me re'. The page "
+    "was rendered at 150dpi and read to confirm the printed label is 'measure'; the FY2019 and earlier "
+    "editions extract the word normally.\n"
+    "\n"
+    "LABEL DRIFT BETWEEN EDITIONS, KEYED BY ROW. The label shown is the one the most recent edition in that "
+    "block prints. (a) 'Capital conservation buffer requirement' reads 'Capital conservation buffer "
+    "requirement (2.5% from 2019)' in the FY2018 edition only. (b) The FY2021 edition suffixes '(%)' to every "
+    "ratio row it prints ('Common Equity Tier 1 ratio (%)', 'Tier 1 ratio (%)', 'Total capital ratio (%)', "
+    "'Liquidity coverage ratio (%)', 'NSFR ratio (%)'); the FY2022-FY2025 editions drop it. (c) The FY2022 "
+    "edition indents 'Of which: to be made up of CET1 capital' one level further than FY2023 onward. None of "
+    "these changes the row's identity.\n"
+    "\n"
+    "PRECISION IS TSB'S OWN AND IS NOT NORMALISED. The FY2024 and FY2025 editions print capital and buffer "
+    "ratios to two decimal places; the FY2021, FY2022 and FY2023 editions print the same rows to one. The "
+    "FY2018 edition prints its buffer rows to two decimals (1.88%, 1.00%, 2.88%) while the FY2019 and FY2020 "
+    "editions print them to one (2.5%, 1.0%). One consequence worth naming: this sheet's FY2023 leverage "
+    "ratio reads 4.6%, which is what the FY2023 edition printed, while the Leverage Ratio metric sheet reads "
+    "4.57% from the FY2024 edition's more precise comparative for the same date.\n"
+    "\n"
+    "ONE KNOWN CROSS-SHEET DIFFERENCE OF £1 THOUSAND, ON FY2017 TOTAL CAPITAL. This sheet shows 2,282,211, "
+    "which is what the FY2018 edition's 2017 comparative prints. The Total Capital metric sheet shows "
+    "2,282,212, which is what the FY2017 edition's own Table 1 (Own Funds, OFD2) prints. Both are reproduced "
+    "from their own documents and neither is adjusted to the other.\n"
+    "\n"
+    "ENTITY. Every column is TSB Banking Group plc consolidated, the basis named in each document's own title "
+    "and running header. No edition prints a second entity's columns beside it and no edition prints the "
+    "template twice, so there is no entity ambiguity to resolve - see the ENTITY NOTE on the Cash Flow "
+    "Statement sheet for why that sub-group basis is the banking entity in this workbook.\n"
+    "\n"
+    + P3_17_18_19_RECOVERY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="TSB Bank plc — KM1 Key Metrics",
+    subtitle="TSB Banking Group plc's own published key-metrics template, reproduced whole in its own row "
+             "order, labels and precision. TSB prints it UNNUMBERED in every edition, so no row numbers are "
+             "shown. Two caption blocks: the pre-2022 Basel 'Table KM1 / IFRS 9-FL' printed in the "
+             "FY2017-FY2020 editions, and the UK template printed from FY2021 - nothing is merged across "
+             "them. Amounts as labelled, ratios as printed. FY2014-FY2016 carry no column: no edition "
+             "publishes the template for those years.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=78,
+    source_height=420,
+)
+
+# ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
 def metric(name, unit, rows_data, sources_text, note=None):
@@ -690,8 +1075,8 @@ metric(
                 "FY2021": 1724002,
                 "FY2020": 1630434,
                 "FY2019": 1837943,
-                "FY2018": 1805500,
-                "FY2017": 1898100,
+                "FY2018": 1821180,
+                "FY2017": 1898142,
                 "FY2016": 1785437,
                 "FY2015": 1672458,
                 "FY2014": 1593000,
@@ -715,7 +1100,7 @@ metric(
                 "FY2021": "15.9%",
                 "FY2020": "15.3%",
                 "FY2019": "20.8%",
-                "FY2018": "19.5%",
+                "FY2018": "19.7%",
                 "FY2017": "20.0%",
                 "FY2016": "18.5%",
                 "FY2015": "17.8%",
@@ -740,8 +1125,8 @@ metric(
                 "FY2021": 1724002,
                 "FY2020": 1630434,
                 "FY2019": 1837943,
-                "FY2018": 1805500,
-                "FY2017": 1898100,
+                "FY2018": 1821180,
+                "FY2017": 1898142,
                 "FY2016": 1785437,
                 "FY2015": 1672458,
                 "FY2014": 1593000,
@@ -768,7 +1153,7 @@ metric(
                 "FY2021": "15.9%",
                 "FY2020": "15.3%",
                 "FY2019": "20.8%",
-                "FY2018": "19.5%",
+                "FY2018": "19.7%",
                 "FY2017": "20.0%",
                 "FY2016": "18.5%",
                 "FY2015": "17.8%",
@@ -793,8 +1178,8 @@ metric(
                 "FY2021": 2024002,
                 "FY2020": 2015339,
                 "FY2019": 2222569,
-                "FY2018": 2196100,
-                "FY2017": 2282200,
+                "FY2018": 2205528,
+                "FY2017": 2282212,
                 "FY2016": 2169371,
                 "FY2015": 2055971,
                 "FY2014": 1977300,
@@ -818,7 +1203,7 @@ metric(
                 "FY2021": "18.7%",
                 "FY2020": "18.9%",
                 "FY2019": "25.1%",
-                "FY2018": "23.7%",
+                "FY2018": "23.8%",
                 "FY2017": "24.0%",
                 "FY2016": "22.4%",
                 "FY2015": "21.9%",
@@ -843,8 +1228,8 @@ metric(
                 "FY2021": 10851867,
                 "FY2020": 10644263,
                 "FY2019": 8841425,
-                "FY2018": 9271000,
-                "FY2017": 9490700,
+                "FY2018": 9257644,
+                "FY2017": 9490710,
                 "FY2016": 9674544,
                 "FY2015": 9402364,
                 "FY2014": 6930200,
@@ -867,24 +1252,27 @@ rwa_breakdown_rows = [
     ("DATA", "Counterparty credit risk (CCR, incl. CVA)", {"FY2025": 34637, "FY2024": 44008, "FY2023": 47113, "FY2022": 107036, "FY2021": 17276, "FY2020": 17452, "FY2019": 48287, "FY2016": 206645, "FY2015": 52017}),
     ("DATA", "Operational risk", {"FY2025": 1725340, "FY2024": 1710925, "FY2023": 1633140, "FY2022": 1475213, "FY2021": 1400010, "FY2020": 1400392, "FY2019": 1484429, "FY2016": 1400642, "FY2015": 1416377}),
     ("DATA", "Amounts below the thresholds for deduction (subject to 250% risk weight)", {"FY2025": 84247, "FY2024": 78792, "FY2023": 87477, "FY2022": 77895, "FY2021": 58980, "FY2020": 50591, "FY2019": 127628, "FY2016": 270565, "FY2015": 315891}),
-    ("DATA", "Credit risk, Standardised approach (FY2017-FY2018 presentation, incl. CCR)", {"FY2018": 7673500, "FY2017": 7907400}),
-    ("DATA", "Counterparty credit risk (FY2017-FY2018 presentation, memo only - already included above)", {"FY2018": 109900, "FY2017": 119600}),
-    ("DATA", "Operational risk (FY2017-FY2018 presentation)", {"FY2018": 1487600, "FY2017": 1463700}),
+    ("DATA", "Other risk exposure amounts", {"FY2020": 1591558}),
+    ("DATA", "Credit risk, standardised approach (FY2017-FY2018 presentation)", {"FY2018": 1627797, "FY2017": 1866265}),
+    ("DATA", "Credit risk, internal ratings-based approach (FY2017-FY2018 presentation)", {"FY2018": 6099522, "FY2017": 6095155}),
+    ("DATA", "Contribution to default guarantee fund of a CCP (FY2017-FY2018 presentation)", {"FY2018": 2618, "FY2017": 4634}),
+    ("DATA", "Operational risk (FY2017-FY2018 presentation)", {"FY2018": 1487617, "FY2017": 1463693}),
+    ("DATA", "Credit valuation adjustment risk (FY2017-FY2018 presentation)", {"FY2018": 40090, "FY2017": 60963}),
     ("DATA", "Credit risk (IRB approach, FY2014 presentation)", {"FY2014": 3187300}),
     ("DATA", "Credit risk (Standardised approach, FY2014 presentation)", {"FY2014": 2285400}),
     ("DATA", "Credit risk (CCP contribution, FY2014 presentation)", {"FY2014": 1000}),
     ("DATA", "Counterparty credit risk (FY2014 presentation, memo only - already included above)", {"FY2014": 4300}),
     ("DATA", "Credit valuation adjustment (CVA) risk (FY2014 presentation)", {"FY2014": 700}),
     ("DATA", "Operational risk (FY2014 presentation)", {"FY2014": 1451500}),
-    ("TOTAL", "Total RWAs", {"FY2025": 11646331, "FY2024": 11250820, "FY2023": 11052751, "FY2022": 10442066, "FY2021": 10851867, "FY2020": 10644263, "FY2019": 8841425, "FY2018": 9271000, "FY2017": 9490700, "FY2016": 9674544, "FY2015": 9402364, "FY2014": 6930200}),
+    ("TOTAL", "Total RWAs", {"FY2025": 11646331, "FY2024": 11250820, "FY2023": 11052751, "FY2022": 10442066, "FY2021": 10851867, "FY2020": 10644263, "FY2019": 8841425, "FY2018": 9257644, "FY2017": 9490710, "FY2016": 9674544, "FY2015": 9402364, "FY2014": 6930200}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="TSB Bank plc — RWA Breakdown",
     subtitle="TSB Banking Group plc consolidated Pillar 3 basis, £'000. FY2019-FY2025 and FY2015-FY2016 use the "
               "standard 4-row UK OV1 template, which sums exactly to Total RWAs; FY2017-FY2018 and FY2014 are shown "
-              "on each year's own as-published, non-OV1-template category structure (memo rows do not double-count "
-              "into the total - see PRESENTATION NOTE below).",
+              "on each year's own as-published, non-OV1-template category structure (FY2017-FY2018's five rows sum "
+              "exactly to the total; FY2014's memo rows do not double-count into it - see PRESENTATION NOTE below).",
     rows=rwa_breakdown_rows,
     sources_text=(
         "Sources - TSB Banking Group plc consolidated Pillar 3 basis, UK OV1: Overview of risk-weighted exposure "
@@ -900,10 +1288,13 @@ bw.add_rwa_breakdown_sheet(
         f"FY2021: TSB Banking Group plc Large Subsidiary Disclosures 2021, p.11 (Table 5: OV1; independently "
         f"cross-checked against the 2022 disclosure's own FY2021 comparative column, which agrees exactly) "
         f"- {P3_21_URL}\n"
-        f"FY2020/FY2019: TSB Banking Group plc Large Subsidiary Disclosures, as at 31 December 2020, OV1 table "
-        f"(FY2019 as its own comparative column) - {P3_20_URL}\n"
-        f"FY2018: TSB Banking Group plc Annual Report and Accounts 2018, 'Capital resources' section - {BG_AR18_URL}\n"
-        f"FY2017: TSB Banking Group plc Annual Report and Accounts 2017, 'Capital resources' section - {BG_AR17_URL}\n"
+        f"FY2020/FY2019: TSB Banking Group plc Significant Subsidiary Disclosures 2020, p.12 (Table 5: Overview "
+        f"of RWAs (EU OV1); FY2019 as its own comparative column) - {P3_20_URL}\n"
+        f"FY2018: TSB Banking Group plc Significant Subsidiary Disclosures 2018, p.11 (Table 6: Total amount of "
+        f"risk weighted assets and minimum own funds requirements) - {P3_18_URL}\n"
+        f"FY2017: TSB Banking Group plc Significant Subsidiary Disclosures 2017, p.11 (Table 5: Total amount of "
+        f"risk weighted assets and minimum own funds requirements; independently cross-checked against the "
+        f"FY2018 edition's own 31-Dec-2017 comparative column, which agrees exactly on every row) - {P3_17_URL}\n"
         f"FY2016: TSB Banking Group plc Large Subsidiary Disclosures, as at 31 December 2016, OV1 table (also "
         f"gives FY2015 as its own comparative column, used for the FY2015 figures here) - {P3_16_URL}\n"
         f"FY2015: as above (FY2016 disclosure's own FY2015 comparative column) - {P3_16_URL}\n"
@@ -911,12 +1302,31 @@ bw.add_rwa_breakdown_sheet(
         f"operational risk breakdown) - {P3_14_URL}\n\n"
         "PRESENTATION NOTE (FY2014, FY2017, FY2018): these three years predate the standardised UK OV1 template's "
         "4-category structure and are instead shown using each year's own as-published risk-category breakdown "
-        "(FY2017/FY2018: Standardised-approach credit risk, CCR memo, operational risk from the Banking Group "
-        "Annual Report's own 'Capital resources' table; FY2014: IRB + Standardised + CCP credit risk components, "
-        "CCR memo, CVA risk, and operational risk from the Pillar 3 disclosure's own Table 3). In each of these "
-        "three years the 'memo only' CCR row is already included within the adjacent credit-risk row(s) above it "
-        "(exactly as each source document presents it) and is shown separately purely for transparency - it does "
-        "not double count into Total RWAs, which still ties exactly to the Total RWAs metric sheet for every year."
+        "(FY2017/FY2018: standardised-approach credit risk, IRB credit risk, CCP default-guarantee-fund "
+        "contribution, operational risk and CVA risk, which are the five top-level lines of that year's own "
+        "Pillar 3 RWA table and which sum exactly to Total RWAs; FY2014: IRB + Standardised + CCP credit risk "
+        "components, CCR memo, CVA risk, and operational risk from the Pillar 3 disclosure's own Table 3). The "
+        "FY2014 'memo only' CCR row is already included within the adjacent credit-risk row(s) above it (exactly "
+        "as that source document presents it) and is shown separately purely for transparency - it does not "
+        "double count into Total RWAs, which ties exactly to the Total RWAs metric sheet for every year.\n"
+        "CORRECTION 2026-09-18 (FY2020). This sheet was missing the FY2020 OV1's 'Other risk exposure amounts' "
+        "row entirely, so the FY2020 column's four rows summed to 9,052,705 against a printed total of "
+        "10,644,263 - a gap of exactly the 1,591,558 that row carries. The row is now shown. The FY2020 "
+        "edition explains it in its own footnote 3: 'RWAs reported in Other risk exposure amounts relate to "
+        "new secured rating system applied to mortgage franchise IRB and associated IFRS 9 transitional "
+        "adjustment from change in expected loss'. It is a FY2020-only row; the FY2019 comparative column in "
+        "the same table prints nothing against it, and no other year's OV1 carries it.\n"
+        "CORRECTION 2026-09-18 (FY2017/FY2018). These two years previously carried three rows taken from the "
+        "Banking Group Annual Report's 'Capital resources' table - standardised credit risk 7,673,500/7,907,400 "
+        "labelled as including counterparty credit risk, a CCR memo row 109,900/119,600 labelled as already "
+        "included in it, and operational risk 1,487,600/1,463,700. Those rows did not sum to the year's total: "
+        "the CCR row was in fact ADDITIVE, not a memo, so the label contradicted the arithmetic (7,673.5 + "
+        "1,487.6 = 9,161.1 against a total of 9,271.0, a gap of exactly the 109.9 CCR row). They also sat on the "
+        "IFRS 9 fully-loaded RWA total. Both years are now taken from TSB's own Pillar 3 documents, at full "
+        "£'000 precision and on the same IFRS 9 transitional basis as every other year here, and the five rows "
+        "sum exactly to the printed total (1,627,797 + 6,099,522 + 2,618 + 1,487,617 + 40,090 = 9,257,644 for "
+        "FY2018; 1,866,265 + 6,095,155 + 4,634 + 1,463,693 + 60,963 = 9,490,710 for FY2017). See the "
+        "FY2017-FY2019 recovery note on the Pillar 3 metric sheets for how those documents were found."
     ),
     first_col_width=64,
     source_height=340,
@@ -960,8 +1370,8 @@ metric(
             {
                 "FY2020": 42933969,
                 "FY2019": 39889242,
-                "FY2018": 41445900,
-                "FY2017": 42668600,
+                "FY2018": 41466642,
+                "FY2017": 42626131,
                 "FY2016": 37525812,
                 "FY2015": 32026192,
             },
@@ -1048,11 +1458,22 @@ metric(
         ),
     ],
     p3_sources("6"),
-    note="LCR is a twelve-month simple average per TSB's disclosed methodology. Not disclosed for FY2014-FY2020: "
-    "TSB's Pillar 3/large-subsidiary disclosures and TSB Banking Group plc's Annual Reports for these years do "
-    "not include a KM1/LIQ1-style LCR breakdown (confirmed by searching each source document used elsewhere on "
-    "this sheet - TSB's earliest disclosed LCR breakdown of this granularity is FY2021's). Left blank rather "
-    "than estimated.",
+    note="LCR is a twelve-month simple average of month-end ratios per TSB's disclosed methodology.\n"
+    "THE FY2021 FIGURES COME FROM THE LIQ1 TEMPLATE, NOT FROM THAT EDITION'S KM1 ROW, AND THE TWO ARE ON "
+    "DIFFERENT BASES. TSB's FY2021 Large Subsidiary Disclosures print an LCR of 194% in the key-metrics table "
+    "on p.6 (HQLA £7,513,828k over net outflows £3,863,755k) and 165% in the LIQ1 template on p.39 (HQLA "
+    "£6,441,563k over net outflows £3,921,140k). Both are that edition's own figures and neither is wrong: the "
+    "edition's own narrative says 'As at 31 December 2021, TSB's LCR was 194% (December 2020: 201%). The table "
+    "below reflects the trailing 12 month-end average LCR balances ... The trailing 12 month-end average LCR to "
+    "31 December 2021 was 165%'. The AVERAGE is used on this sheet, because that is the basis every other year "
+    "here is on; the point-in-time 194% is reproduced on the KM1 Key Metrics sheet, where the template row "
+    "carries it. The FY2022 edition's own 31-Dec-2021 comparative column reproduces the average figures "
+    "exactly (6,441,563 / 4,123,393 / 202,253 / 3,921,140 / 165%), which is what confirms the reading.\n"
+    "FY2014-FY2020 are blank because no LCR is published for those years. The FY2017, FY2018, FY2019 and "
+    "FY2020 Significant Subsidiary Disclosures were each searched in full on 2026-09-18 and return ZERO "
+    "matches for 'liquidity coverage', 'LCR' and 'high-quality liquid assets', against 29-31 matches for 'own "
+    "funds' and 36-41 for 'leverage ratio' in the same documents - the zeroes are a fact about the documents, "
+    "which carry no liquidity section at all, and not about the search. Left blank rather than estimated.",
 )
 
 metric(
@@ -1066,6 +1487,7 @@ metric(
                 "FY2024": 42119435,
                 "FY2023": 42368266,
                 "FY2022": 42774578,
+                "FY2021": 42912975,
             },
         ),
         (
@@ -1075,6 +1497,7 @@ metric(
                 "FY2024": 27582817,
                 "FY2023": 27601540,
                 "FY2022": 28845131,
+                "FY2021": 28710989,
             },
         ),
         (
@@ -1084,19 +1507,36 @@ metric(
                 "FY2024": "153%",
                 "FY2023": "154%",
                 "FY2022": "148%",
-                "FY2021": "Not disclosed",
+                "FY2021": "149%",
             },
         ),
     ],
     p3_sources("6"),
-    note="NSFR is a four-quarter simple average per TSB's disclosed methodology. Not disclosed for FY2021: the "
-    "PRA's averaging methodology for NSFR was only introduced from 1 January 2022, so no FY2021 comparative "
-    "was reported (confirmed explicitly in the FY2022 disclosure). Separately, the FY2024 disclosure's own "
-    "FY2023 comparator shows NSFR as 153% rather than the 154% in TSB's own FY2023 disclosure used here - a "
-    "1 percentage point drift, most likely rounding/methodology refinement between report vintages rather "
-    "than an error; both are reproduced faithfully from their respective source documents. Not disclosed for "
-    "FY2014-FY2020 for the same reason as FY2021 above (PRA averaging methodology only from 1 January 2022) - "
-    "no NSFR breakdown of this kind appears in any of TSB's disclosures for these years.",
+    note="FY2022 onward is a four-quarter simple average per TSB's disclosed methodology.\n"
+    "FY2021 IS A DIFFERENT BASIS AND IS NOT AN AVERAGE. TSB's own FY2021 Large Subsidiary Disclosures print "
+    "an NSFR of 149% at 31 December 2021, with available stable funding of £42,912,975k and required stable "
+    "funding of £28,710,989k, in the KM1 key-metrics table on p.6 and again in the LIQ2 template on p.40. That "
+    "edition states the basis in its own words: 'The TSB NSFR was 149% as at 31 December 2021 ... note this is "
+    "based on the CRR2 regulation which became applicable in the EU from June 2021 and UK from January 2022' - "
+    "so it is a point-in-time ratio on the EU CRR2 basis, not the four-quarter average the UK template carries "
+    "from FY2022. It is shown here on that basis rather than blanked.\n"
+    "CORRECTION 2026-09-18: FY2021 previously read 'Not disclosed' on this sheet, on the reasoning that the "
+    "PRA's averaging methodology began only on 1 January 2022 and that the FY2022 disclosure prints no FY2021 "
+    "comparative. The second half of that is true and is TSB's own stated reason for the missing comparative "
+    "('Comparative have not been reported as the average calculation methodology was introduced by the PRA at "
+    "1 January 2022'); the conclusion drawn from it was not, because TSB's own FY2021 edition discloses the "
+    "ratio directly. The absence was a property of the FY2022 edition's comparative column, not of TSB's "
+    "FY2021 disclosure.\n"
+    "Separately, the FY2024 disclosure's own FY2023 comparator shows NSFR as 153% rather than the 154% in "
+    "TSB's own FY2023 disclosure used here - a 1 percentage point drift, most likely rounding/methodology "
+    "refinement between report vintages rather than an error; both are reproduced faithfully from their "
+    "respective source documents.\n"
+    "FY2014-FY2020 are blank because no NSFR of any kind is published for those years. The FY2017, FY2018, "
+    "FY2019 and FY2020 Significant Subsidiary Disclosures were each searched in full on 2026-09-18 and return "
+    "ZERO matches for 'NSFR', 'net stable funding', 'LCR', 'liquidity coverage' and 'high-quality liquid "
+    "assets', against 29-31 matches for 'own funds' and 36-41 for 'leverage ratio' in the same documents - so "
+    "the zeroes are a fact about the documents and not about the search. Those editions carry no liquidity "
+    "section at all.",
 )
 
 MREL_SOURCES = (
@@ -1181,12 +1621,12 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£m",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "16.74%", "FY2024": "15.45%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%", "FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.5%", "FY2017": "20.0%", "FY2016": "18.5%", "FY2015": "17.8%", "FY2014": "23.0%"}),
-        ("Tier 1 Ratio", {"FY2025": "18.88%", "FY2024": "17.67%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%", "FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.5%", "FY2017": "20.0%", "FY2016": "18.5%", "FY2015": "17.8%", "FY2014": "23.0%"}),
-        ("Total Capital Ratio", {"FY2025": "21.46%", "FY2024": "20.33%", "FY2023": "19.6%", "FY2022": "20.2%", "FY2021": "18.7%", "FY2020": "18.9%", "FY2019": "25.1%", "FY2018": "23.7%", "FY2017": "24.0%", "FY2016": "22.4%", "FY2015": "21.9%", "FY2014": "28.5%"}),
+        ("CET1 Ratio", {"FY2025": "16.74%", "FY2024": "15.45%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%", "FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.7%", "FY2017": "20.0%", "FY2016": "18.5%", "FY2015": "17.8%", "FY2014": "23.0%"}),
+        ("Tier 1 Ratio", {"FY2025": "18.88%", "FY2024": "17.67%", "FY2023": "16.7%", "FY2022": "17.2%", "FY2021": "15.9%", "FY2020": "15.3%", "FY2019": "20.8%", "FY2018": "19.7%", "FY2017": "20.0%", "FY2016": "18.5%", "FY2015": "17.8%", "FY2014": "23.0%"}),
+        ("Total Capital Ratio", {"FY2025": "21.46%", "FY2024": "20.33%", "FY2023": "19.6%", "FY2022": "20.2%", "FY2021": "18.7%", "FY2020": "18.9%", "FY2019": "25.1%", "FY2018": "23.8%", "FY2017": "24.0%", "FY2016": "22.4%", "FY2015": "21.9%", "FY2014": "28.5%"}),
         ("Leverage Ratio", {"FY2025": "5.47%", "FY2024": "4.95%", "FY2023": "4.57%", "FY2022": "4.2%", "FY2021": "4.0%", "FY2020": "3.8%", "FY2019": "4.6%", "FY2018": "4.4%", "FY2017": "4.5%", "FY2016": "4.8%", "FY2015": "5.2%", "FY2014": "5.8%"}),
         ("LCR", {"FY2025": "185%", "FY2024": "182%", "FY2023": "188%", "FY2022": "168%", "FY2021": "165%", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed", "FY2014": "Not disclosed"}),
-        ("NSFR", {"FY2025": "152%", "FY2024": "153%", "FY2023": "154%", "FY2022": "148%", "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed", "FY2014": "Not disclosed"}),
+        ("NSFR", {"FY2025": "152%", "FY2024": "153%", "FY2023": "154%", "FY2022": "148%", "FY2021": "149%", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed", "FY2014": "Not disclosed"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
     "citation for the underlying document/page. Tier 1 capital first exceeds CET1 from FY2024 onward following "

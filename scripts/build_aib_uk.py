@@ -460,6 +460,17 @@ bw.add_equity_changes_sheet(
 # Sheet: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
+    # GA-018 (2026-09-18): FY2025 and FY2024 previously left every cell on this
+    # sheet EMPTY, which a reader cannot distinguish from "nobody has looked
+    # yet". The absence is evidenced, dated and quoted (see
+    # CASH_FLOW_EXEMPTION_NOTE), so it is now STATED in the cells rather than
+    # implied by their emptiness. Same treatment as the Leverage Ratio sheet
+    # and the NOT_DISCLOSED_BY_YEAR pattern used in
+    # scripts/build_nomura_bank_international.py.
+    ("SECTION", "FY2025 and FY2024 — no Statement of Cash Flows was published for either year", {}),
+    ("DATA", "Statement of Cash Flows for the year",
+     {"FY2025": "Not published — FRS 101 cash-flow exemption taken",
+      "FY2024": "Not published — FRS 101 cash-flow exemption taken"}),
     ("SECTION", "Operating activities", {}),
     ("DATA", "Profit before taxation for the year", {"FY2023": 337, "FY2022": 138, "FY2021": 89}),
     ("DATA", "Non-cash items", {"FY2023": -29, "FY2022": 67, "FY2021": 27}),
@@ -812,9 +823,24 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2021": "11.26%"})],
+    [("Leverage ratio", {"FY2025": "Not published — outside UK LREQ scope from 1 January 2022",
+                         "FY2024": "Not published — outside UK LREQ scope from 1 January 2022",
+                         "FY2023": "Not published — outside UK LREQ scope from 1 January 2022",
+                         "FY2022": "Not published — outside UK LREQ scope from 1 January 2022",
+                         "FY2021": "11.26%"})],
     p3_sources(),
-    note="Only FY2021 is disclosed - a one-off figure mentioned in the FY2022 Annual Financial Report's "
+    note="GA-018 (2026-09-18): FY2022-FY2025 now STATE the absence in the cell instead of leaving it empty. "
+         "Nothing about the finding changed - the evidence below was already here - but an empty cell and an "
+         "evidenced absence had been made to look identical, and only one of them is safe to read as a finding. "
+         "The absence was re-confirmed first-hand on 2026-09-18 by full-text search of all four FY2022-FY2025 "
+         "Annual Financial Reports: the phrase 'leverage ratio' occurs ZERO times in the FY2023, FY2024 and "
+         "FY2025 reports, and in FY2022 only inside the 'Regulatory changes' note quoted below. The word "
+         "'leverage' does occur in all four (1, 3, 4 and 3 times respectively) and every occurrence was read "
+         "individually - all are unrelated prose ('leverages AIB Group's cyber capabilities', 'Leverage "
+         "features', 'deleveraged through a portfolio sale'). Richness control on the same extractions, so the "
+         "zeroes are facts about the documents and not about the search: 'capital' and 'ratio' return healthy "
+         "counts in every edition and the reports' capital sections were read directly.\n"
+         "Only FY2021 is disclosed - a one-off figure mentioned in the FY2022 Annual Financial Report's "
          "'Regulatory changes' note ('...significantly increased the Bank's leverage ratio from 11.26% in "
          "December 2021 to 20.22% in March 2022' following a PRA leverage-framework methodology change, PRA "
          "Policy Statement 21/21). No FY2022-FY2025 year-end leverage ratio figure appears anywhere in any of the "

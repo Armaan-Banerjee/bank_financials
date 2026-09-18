@@ -49,8 +49,47 @@ def p3_sources(extra=""):
         "(no standalone Pillar 3 document or KM1 template found at this entity level; the "
         "Directors' Report explicitly refers readers to \"the OSBG annual report and accounts\" "
         "for further capital/risk detail):\n"
-        f"FY2025/FY2024: Full accounts to 31 Dec 2025, p.44 (KPIs table, CET1 only) - {AR2025_URL}\n"
-        f"FY2023/FY2022: Full accounts to 31 Dec 2023, p.19 (Solvency Risk narrative) - {AR2023_URL}\n"
+        f"FY2025: Full accounts to 31 Dec 2025 - printed p.8 ('Risk Key Performance Indicators') and "
+        f"printed p.37 (Principal risks and uncertainties: 'Solvency risk' and 'Liquidity and funding "
+        f"risk') - {AR2025_URL}\n"
+        f"FY2024: Full accounts to 31 Dec 2024 - printed pp.9-10 ('Risk Key Performance Indicators') and "
+        f"printed p.35 ('Solvency Risk' / 'Liquidity and Funding Risk') - {AR2024_URL}\n"
+        f"FY2023: Full accounts to 31 Dec 2023 - printed pp.8-9 ('Risk Key Performance Indicators') and "
+        f"printed pp.19-20 ('Solvency Risk' / liquidity narrative) - {AR2023_URL}\n"
+        f"FY2022: the same FY2023 accounts' own comparative figures in those sections - {AR2023_URL}\n"
+        "CORRECTION 2026-09-18 - THE LATER EDITIONS DO DISCLOSE MORE THAN CET1, AND THIS NOTE USED TO SAY "
+        "OTHERWISE. Several sheets in this workbook carried the line 'the later KPI table format only carries "
+        "CET1' as the reason FY2025 and FY2024 were blank for Total Capital Ratio and Leverage Ratio, and the "
+        "LCR sheet was blank for FY2025, FY2024 and FY2023 on the separate ground that OSB Group's Pillar 3 "
+        "stopped splitting out a CCFSL solo LCR. BOTH OF THOSE BLANKS WERE WRONG, for the same reason: the "
+        "search had been aimed at the KPI table and at OSB's Pillar 3, and never at the Company's own "
+        "'Principal risks and uncertainties' section, which states all four ratios in prose every year. Every "
+        "CCFSL filing is a fully scanned, image-only PDF with a ZERO-character text layer (FY2025: 145 pages, "
+        "0 characters), so no text search of any kind could ever have found them; the three FY2023-FY2025 "
+        "filings were rendered at 200dpi and OCR'd page-by-page on 2026-09-18 (FY2025 yielding 326,287 "
+        "characters), and the figures came straight out. The two decisive sentences read, in the FY2025 "
+        "edition: \"The Company's CET1 and total capital ratios reduced as forecasted to 16.2% and 20.3% "
+        "respectively as at 31 December 2025 (2024: 17.8% and 21.5%, respectively) ... The Company's leverage "
+        "ratio was 6.0% as at 31 December 2025 (2024: 7.4%).\" and \"As at 31 December 2025, the Company had a "
+        "LCR of 189% (2024: 231%)\". Both were additionally read back off the rendered page IMAGE, not trusted "
+        "to OCR alone, because a mis-OCR'd digit in a ratio is silent.\n"
+        "THESE ARE CCFSL SOLO (ENTITY) FIGURES, WHICH IS THE WHOLE POINT. They are the Company's own statutory "
+        "accounts describing the Company, not OSB Group consolidated figures, so they satisfy the entity-basis "
+        "rule that made the Group Pillar 3's numbers unusable. Each year is taken from its OWN edition, and "
+        "the overlap is the cross-check: FY2024's CET1 17.8% / total capital 21.5% and FY2023's 15.8% / 19.2% "
+        "each appear identically in their own edition and in the next edition's comparative, and FY2023's LCR "
+        "of 139% and FY2022's 148% likewise. CCFSL's FY2022 LCR of 148% read from the FY2023 accounts also "
+        "reproduces EXACTLY the 148% that OSB Group's 2022 Pillar 3 attributes to CCFSL - two independent "
+        "documents, one on each basis-check, agreeing to the point.\n"
+        "ONE GENUINE INTER-EDITION DIVERGENCE, RECORDED AND NOT RECONCILED - FY2024 LEVERAGE RATIO. The FY2024 "
+        "accounts state, in their own Solvency Risk paragraph on printed p.35, \"The Company's leverage ratio "
+        "was 6.4% as at 31 December 2024 (2023: 6.9%)\". The FY2025 accounts' comparative for the same date "
+        "says 7.4%. That is a full 1.0 percentage point, far too large to be rounding, and neither document "
+        "explains it or marks the comparative as restated. Both readings were confirmed visually from the "
+        "rendered page images at 300dpi, so neither is an OCR artefact. THIS WORKBOOK CARRIES 6.4%, the "
+        "FY2024 edition's own originally-published figure, per this project's standing convention - the same "
+        "convention already applied to this entity's FY2021 cash flow. The 7.4% is recorded here so that a "
+        "later reader who opens the FY2025 accounts first is not left thinking this sheet is wrong.\n"
         "RE-VERIFIED 2026-09-12 (independent disclosure audit): OSB Group's own Pillar 3 disclosures were "
         "searched for Charter Court entity-level data, since CCFSL is one of the group's two PRA-regulated "
         "banking entities and the OSB Group Pillar 3 confirms it must calculate and maintain capital on an "
@@ -423,11 +462,17 @@ bw.add_not_disclosed_metric_sheets(
 
 metric(
     "Total Capital Ratio", "%",
-    [("Total capital ratio, under CRD IV", {"FY2023": "19.2%", "FY2022": "20.2%"})],
-    note=NOT_DISCLOSED_NOTE + " FY2023/FY2022 are the exception, from the Strategic Report's own "
-         "Solvency Risk narrative (FY2022 shown as FY2023's report's own comparative). FY2025/FY2024/"
-         "FY2021 not found - the later KPI table format only carries CET1, and FY2021 wasn't located "
-         "within this build's research budget.",
+    [("Total capital ratio, under CRD IV", {"FY2025": "20.3%", "FY2024": "21.5%", "FY2023": "19.2%", "FY2022": "20.2%"})],
+    note="FY2025 AND FY2024 ADDED 2026-09-18 - see the source note above for how they were missed and how "
+         "they were found. They are NOT 'not publicly disclosed': each year's own accounts state the total "
+         "capital ratio twice, in the 'Risk Key Performance Indicators' list and again in the Solvency Risk "
+         "paragraph of 'Principal risks and uncertainties', and the two agree within each edition. Every year "
+         "here is read from its OWN edition except FY2022, which is the FY2023 accounts' own comparative "
+         "(no separate FY2022-edition read was needed since the FY2023 edition states it directly). FY2024's "
+         "21.5% appears identically in the FY2024 edition's own columns and in the FY2025 edition's "
+         "comparative, and FY2023's 19.2% likewise in the FY2023 and FY2024 editions - no restatement "
+         "anywhere in this row. FY2021 remains blank: not located within this build's research budget, and "
+         "not established absent. " + NOT_DISCLOSED_NOTE,
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -445,23 +490,55 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio, under CRD IV", {"FY2023": "6.9%", "FY2022": "7.9%"})],
-    note=NOT_DISCLOSED_NOTE + " FY2023/FY2022 are the exception, from the Strategic Report's own "
-         "Solvency Risk narrative (FY2022 shown as FY2023's report's own comparative). FY2025/FY2024/"
-         "FY2021 not found within this build's research budget.",
+    [("Leverage ratio, under CRD IV", {"FY2025": "6.0%", "FY2024": "6.4%", "FY2023": "6.9%", "FY2022": "7.9%"})],
+    note="FY2025 AND FY2024 ADDED 2026-09-18 - see the source note above. Each figure is the Solvency Risk "
+         "paragraph of that year's OWN accounts ('The Company's leverage ratio was X% as at 31 December Y'). "
+         "FY2022 is the FY2023 edition's own comparative.\n"
+         "READ THIS BEFORE COMPARING FY2024 WITH ANYTHING: the FY2024 figure of 6.4% is what the FY2024 "
+         "accounts themselves print, but the FY2025 accounts' comparative for the very same date prints "
+         "7.4%. A 1.0 percentage point gap, unexplained in both documents and not marked as a restatement, "
+         "and confirmed visually at 300dpi on both pages so it is not an OCR slip. This workbook uses each "
+         "year's own originally-published figure, so 6.4% stands here; the divergence is recorded rather "
+         "than averaged, reconciled or silently switched. FY2023's 6.9% and FY2022's 7.9% show no such "
+         "problem - each appears identically in its own edition and in the following edition's comparative.\n"
+         "FY2021 remains blank: not located within this build's research budget, and not established absent. "
+         + NOT_DISCLOSED_NOTE,
 )
 
 metric(
     "LCR", "%",
     [("Liquidity coverage ratio, CCFSL solo (entity) basis",
-      {"FY2022": "148%", "FY2021": "158%"})],
-    note="RECOVERED 2026-09-12. These are Charter Court's OWN solo entity ratios, not OSB Group figures: "
+      {"FY2025": "189%", "FY2024": "231%", "FY2023": "139%", "FY2022": "148%", "FY2021": "158%"})],
+    note="FY2025, FY2024 AND FY2023 ADDED 2026-09-18, FROM A SOURCE THE EARLIER SEARCHES NEVER LOOKED AT. "
+         "The note below is kept in full because its findings about OSB Group's Pillar 3 are all still true - "
+         "OSB really did stop splitting out a CCFSL solo LCR from its FY2023 edition onward, and that really "
+         "was verified across three year-end editions. The error was in the conclusion drawn from it: 'OSB "
+         "stopped publishing it' was treated as 'it does not exist', when CCFSL's OWN statutory accounts "
+         "state it in prose every single year, in the liquidity paragraph of 'Principal risks and "
+         "uncertainties' and again in the 'Risk Key Performance Indicators' list. Both places agree within "
+         "each edition. The reason no text search found it is that every CCFSL filing is a fully scanned, "
+         "image-only PDF with a zero-character text layer; the FY2023, FY2024 and FY2025 filings were "
+         "rendered at 200dpi and OCR'd page by page to read them, and the figures were then confirmed "
+         "against the page images. Each year is from its own edition: FY2025 189% (own accounts, printed p.8 "
+         "and p.37), FY2024 231% (own accounts, printed p.9 and p.35), FY2023 139% (own accounts, printed "
+         "p.8 and p.20). The comparatives corroborate rather than conflict - the FY2025 edition gives FY2024 "
+         "as 231% and the FY2024 edition gives FY2023 as 139%, matching their own editions exactly.\n"
+         "THE JOIN BETWEEN THE TWO SOURCES IS CLEAN, which is what makes the series safe to read as one row. "
+         "FY2022 sits on both sides of it: OSB Group's 2022 Pillar 3 attributes 148% to CCFSL, and CCFSL's "
+         "own FY2023 accounts print 148% for 31 December 2022. Two independent documents, two different "
+         "reporting frameworks, the same figure - so the FY2021/FY2022 cells sourced from OSB and the "
+         "FY2023-FY2025 cells sourced from CCFSL's own accounts are on the same basis, a point-in-time "
+         "year-end LCR. They are not 12-month averages; the OSB GROUP figures quoted below (197.1%, 188.0%, "
+         "169.5%) ARE 12-month averages and are still not used here, for that reason as well as the entity "
+         "one.\n"
+         "ORIGINAL NOTE, RETAINED: RECOVERED 2026-09-12. These are Charter Court's OWN solo entity ratios, not OSB Group figures: "
          "the OSB Group Pillar 3 states them separately for each of the group's two banking entities "
          "(\"OSB had a Liquidity Coverage Ratio (LCR) of 229% and CCFSL 148% (31 December 2021: 240% and "
          "158%, respectively) and the Group LCR was 185%\"). The same document confirms CCFSL is required "
          "to calculate and maintain capital and liquidity on an individual as well as consolidated basis, "
-         "and that liquidity risk management is carried out at solo bank level. FY2025/FY2024/FY2023 are "
-         "blank because OSB Group changed its presentation from the FY2023 edition onward to disclose only "
+         "and that liquidity risk management is carried out at solo bank level. FY2025/FY2024/FY2023 carry "
+         "no OSB-SOURCED figure (they are now filled from CCFSL's own accounts instead, see above) because "
+         "OSB Group changed its presentation from the FY2023 edition onward to disclose only "
          "a single Group 12-month-average LCR (197.1% FY2023, 188.0% FY2024, 169.5% FY2025) with no CCFSL "
          "solo split - verified directly in the Q4 2023, Q4 2024 and Q4 2025 editions. Those Group figures "
          "are NOT substituted here: the entity-basis rule applies.",
@@ -483,7 +560,16 @@ metric(
         "Every LCR figure is explicitly Group: 'The Group had a 12-month average Liquidity Coverage Ratio "
         "(LCR) of 169.5% as at 31 December 2025' (Q4 2025), 188.0% (Q4 2024), 197.1% (Q4 2023). The "
         "presentation change from the FY2023 edition onward is therefore confirmed on three independent "
-        "year-end documents, and FY2023-FY2025 CCFSL solo LCR does not exist to be found."
+        "year-end documents.\n"
+        "THE FINAL CLAUSE OF THAT PARAGRAPH USED TO READ '... and FY2023-FY2025 CCFSL solo LCR does not "
+        "exist to be found', AND IT WAS WRONG (corrected 2026-09-18). Everything before it stands: OSB's "
+        "Pillar 3 genuinely does not carry a CCFSL solo LCR for those years. But the search was confined to "
+        "OSB's shelf, and the ratio was sitting in CCFSL's own statutory accounts the whole time - stated in "
+        "prose in the liquidity paragraph of 'Principal risks and uncertainties' and listed again under "
+        "'Risk Key Performance Indicators', in every edition. It was invisible to any text search because "
+        "those filings have no text layer at all; OCR of the rendered pages found it immediately. The "
+        "lesson worth keeping is the general one: exhausting one publisher's shelf establishes a fact about "
+        "that publisher, never about the figure."
     ),
 )
 
@@ -525,13 +611,23 @@ bw.add_overview_sheet(
     cash_flow_unit="£m",
     ratios=[
         ("CET1 Ratio", {"FY2025": "16.2%", "FY2024": "17.8%", "FY2023": "15.8%", "FY2022": "18.8%"}),
-        ("Total Capital Ratio", {"FY2023": "19.2%", "FY2022": "20.2%"}),
-        ("Leverage Ratio", {"FY2023": "6.9%", "FY2022": "7.9%"}),
+        ("Total Capital Ratio", {"FY2025": "20.3%", "FY2024": "21.5%", "FY2023": "19.2%", "FY2022": "20.2%"}),
+        ("Leverage Ratio", {"FY2025": "6.0%", "FY2024": "6.4%", "FY2023": "6.9%", "FY2022": "7.9%"}),
+        ("LCR", {"FY2025": "189%", "FY2024": "231%", "FY2023": "139%", "FY2022": "148%", "FY2021": "158%"}),
     ],
-    note="LCR/NSFR/MREL/Tier 1 metrics omitted from this chart - not disclosed at this entity level "
-         "in any year (see the individual sheets). Figures are duplicated from the detail sheets for "
-         "at-a-glance trend viewing; see each sheet's own source citation for the underlying "
-         "document/page.",
+    note="UPDATED 2026-09-18: Total Capital Ratio and Leverage Ratio now run FY2022-FY2025 and the LCR is "
+         "charted for the first time, all from CCFSL's own image-only statutory accounts, which were OCR'd "
+         "to read them - see the individual sheets for the full account of how they had been missed. NSFR, "
+         "MREL and the Tier 1 metrics remain omitted from this chart: those really are not disclosed at "
+         "this entity level in any year. TWO THINGS TO KNOW BEFORE READING THE LINES. (1) The FY2024 "
+         "leverage point of 6.4% is the FY2024 accounts' own figure; the FY2025 accounts restate the same "
+         "date to 7.4% without explanation, so the FY2024-FY2025 leverage step shown here is the one implied "
+         "by each year's own edition, not by the FY2025 edition alone. (2) The LCR line changes source "
+         "midway - FY2021 and FY2022 come from OSB Group's 2022 Pillar 3, which attributes a solo figure to "
+         "CCFSL, and FY2023 onward from CCFSL's own accounts. The two agree exactly on FY2022 (148% from "
+         "both), which is what establishes they are the same point-in-time measure. Figures are duplicated "
+         "from the detail sheets for at-a-glance trend viewing; see each sheet's own source citation for the "
+         "underlying document/page.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/CHARTER COURT FINANCIAL SERVICES FINANCIALS.xlsx")

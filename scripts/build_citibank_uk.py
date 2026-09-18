@@ -472,12 +472,16 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
-    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2025": "1.9%", "FY2024": "1.7%", "FY2023": "1.0%", "FY2022": "0.13%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2025": "4.4%", "FY2024": "4.2%", "FY2023": "3.5%", "FY2022": "2.6%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -490,11 +494,15 @@ km1_rows = [
     ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
      {"FY2025": "78.2%", "FY2024": "76.8%", "FY2023": "16.7%", "FY2022": "9.9%"}),
     ("SECTION", "Additional leverage ratio disclosure requirements (CUKL is not an LREQ company — see note)", {}),
-    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
-    ("DATA", "14b    Leverage ratio including claims on central banks (%)", {}),
-    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {}),
-    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {}),
-    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {}),
+    # The FY2022 edition PRINTS these five rows and dashes them (folio 5, read
+    # off a 150dpi render - that edition has no text layer). The FY2023-FY2025
+    # editions print nothing at all in them, so those years stay BLANK. One row
+    # set, both treatments, because the bank changed what it printed.
+    ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {"FY2022": "-"}),
+    ("DATA", "14b    Leverage ratio including claims on central banks (%)", {"FY2022": "-"}),
+    ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)", {"FY2022": "-"}),
+    ("DATA", "14d    Average leverage ratio including claims on central banks (%)", {"FY2022": "-"}),
+    ("DATA", "14e    Countercyclical leverage ratio buffer (%)", {"FY2022": "-"}),
     ("SECTION", "Liquidity Coverage Ratio (£ million / %)", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
      {"FY2025": 400.7, "FY2024": 1344.0, "FY2023": 2988.6, "FY2022": 4476.6}),
@@ -536,7 +544,8 @@ km1_rows = [
      {"FY2021": "2.50%", "FY2020": "2.50%", "FY2019": "2.5%"}),
     ("DATA", "9    Countercyclical buffer requirement (%)",
      {"FY2021": "0.04%", "FY2020": "0.02%", "FY2019": "0.49%"}),
-    ("DATA", "10    Bank G-SIB and/or D-SIB additional requirements (%)  [FY2019 edition: 'Bank G-SIB additional requirements (%)']", {}),
+    ("DATA", "10    Bank G-SIB and/or D-SIB additional requirements (%)  [FY2019 edition: 'Bank G-SIB additional requirements (%)']",
+     {"FY2021": "-", "FY2020": "-", "FY2019": "-"}),
     ("DATA", "11    Total of bank CET1 specific buffer requirements (%)  [FY2019 edition adds '(row 8 + row 9 + row 10)']",
      {"FY2021": "2.54%", "FY2020": "2.52%", "FY2019": "2.99%"}),
     ("DATA", "12    CET1 available after meeting the bank's minimum capital requirements (%)",
@@ -601,10 +610,16 @@ KM1_SOURCES = (
     "bank's minimum capital requirements\" has been modified. CET1 ratio does not include CRD IV buffers for "
     "both current and prior periods.' Both figures are CUKL's; the one shown is the one published for FY2019 as "
     "FY2019's own reporting year.\n\n"
-    "DASH vs BLANK. Rows UK 8a, UK 9a, 10 and UK 10a print an em dash '—' in every UK KM1 edition, and row 10 "
-    "prints '-' in every Basel III edition; all are left BLANK here, since the dash means the requirement does "
-    "not apply, not that it is measured at zero. Rows 14a-14e are printed with NOTHING at all in the "
-    "FY2023-FY2025 editions and with '-' in the FY2022 edition; both are blank here, and the reason is a "
+    "DASH vs BLANK, AND THIS SHEET SHOWS BOTH. Rows UK 8a, UK 9a, 10 and UK 10a print an em dash in every UK "
+    "KM1 edition - confirmed in the FY2025, FY2024 and FY2023 PDFs, and for FY2022 by RENDERING folio 5 at "
+    "150 dpi, because that edition carries no text layer at all (41 pages, 2,364 extractable characters, zero "
+    "hits for 'capital', 'ratio' or 'buffer'; the table is an image). Basel III row 10, 'Bank G-SIB and/or "
+    "D-SIB additional requirements', likewise prints '-' in the FY2021, FY2020 and FY2019 editions. Every one "
+    "of those cells now carries a literal '-': the dash is CUKL stating that the requirement does not apply "
+    "to it, which is a different statement from silence and from a measured zero. Rows 14a-14e print '-' in "
+    "the FY2022 edition and carry a dash for that year, but are printed with NOTHING AT ALL in the "
+    "FY2023-FY2025 editions and stay BLANK there - one row set, two treatments, because the bank changed what "
+    "it printed. The reason is a "
     "positive one the bank states in a footnote to the table: 'CUKL is not a UK Leverage Ratio Capital "
     "Requirement (\"LREQ\") Company... and in line with instructions included in Annex II of the PS 21/21 these "
     "rows are left blank.'\n\n"
@@ -616,6 +631,13 @@ KM1_SOURCES = (
     "LATEST-EDITION CHECK, 2026-09-16: performed against Citi's own regulatory-filings index, which is how the "
     "FY2025 Pillar 3 and the previously-missed FY2024 Pillar 3 were found. See the other Pillar 3 sheets' "
     "source note for the full correction."
+    "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2025 AND FY2024 - READ FROM THE DOCUMENTS ON 2026-09-18 AND "
+    "RECORDED HERE SO THE QUESTION IS NOT RE-OPENED. The Pillar 3 Disclosures 2025 prints 268.6 on rows 1, 2 and "
+    "3 for 2025 and 514.5 for 2024, and the Pillar 3 Disclosures 2024 prints 514.5 the same way. The Bank states "
+    "the reason itself: 'CUKL's total capital resources comprise only of CET1', and its CC1 prints row 51, Tier 2 "
+    "capital before regulatory adjustments, as a dash in both years. FY2023 is DISTINCT in the source (418.0 / "
+    "470.0 / 522.0) and is held that way here.\n"
 )
 
 bw.add_km1_sheet(

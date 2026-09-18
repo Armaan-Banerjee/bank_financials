@@ -9,7 +9,13 @@ YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "
 YEAR_LABEL = {y: y for y in YEARS}
 
 AR2025_URL = "https://redwoodbank.co.uk/media/howpdnen/2025-annual-report-and-accounts_redwood-bank-signed-150426.pdf"
-AR2024_URL = "https://redwoodbank.co.uk/media/0h5hp3ku/2024-redwood-bank-annual-report-and-accounts.pdf"
+# Re-pointed 2026-09-18 from the /media/0h5hp3ku/ path to /media/af4mbfwq/. Both
+# return HTTP 200 with identical bytes (md5 20b96e9238ef0da6bd7e5bcd09c77279,
+# 18,391,320 bytes, verified on both paths the same day), but af4mbfwq is the one
+# the bank's own performance-summary page actually links; 0h5hp3ku is an unlinked
+# CMS alias, and this script has already been bitten once by an alias path dying
+# in a CMS migration (see the FY2021 /getmedia/ URL in PILLAR3_DISCOVERY_NOTE).
+AR2024_URL = "https://redwoodbank.co.uk/media/af4mbfwq/2024-redwood-bank-annual-report-and-accounts.pdf"
 AR2023_URL = "https://redwoodbank.co.uk/media/zrjnifqm/redwood-year-end-annual-report-and-accounts-2023-1.pdf"
 CH_URL = "https://find-and-update.company-information.service.gov.uk/company/09872265/filing-history"
 CH2022_URL = "https://find-and-update.company-information.service.gov.uk/company/09872265/filing-history/MzM4NjEzNjAwN2FkaXF6a2N4/document?download=0&format=pdf"
@@ -124,14 +130,30 @@ PILLAR3_DISCOVERY_NOTE = (
     "Reports. The FY2022 edition's own FY2021 comparative column independently reproduces the FY2021 edition's "
     "CET1 39,399,478 / Total capital 49,909,754 / RWA 233,133,033 / CET1 ratio 16.9% / total capital ratio 21.4% "
     "to the pound and the decimal place.\n"
-    "WHY THE SERIES STOPS AT FY2023 - it is not an access gap. The Bank of England consolidated waivers list "
-    "(downloaded 2026-09-15) carries a Rule 3.1 SDDT row for FRN 755924, 'REDWOOD BANK LIMITED': 'Modification by "
-    "Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application Part', START DATE "
-    "26/07/2024, no end date. Rule 3.1 REMOVES the Pillar 3 disclosure obligation outright. Redwood's accounting "
-    "reference date is 31 December, so FY2024 (year-end 31 Dec 2024) and FY2025 both fall AFTER the opt-in and are "
-    "structurally exempt, while FY2023 (31 Dec 2023) predates it - which is exactly why an FY2023 Pillar 3 exists "
-    "and no FY2024 or FY2025 edition does. A further Wayback sweep of all post-2025 captures confirms no Pillar 3 "
-    "document later than the FY2023 edition has ever appeared on the domain.\n"
+    "WHY THE SERIES STOPS AT FY2023 - it is not an access gap. Two separate things establish this, and the order "
+    "matters, because an exemption alone would NOT be enough (a bank that no longer owes a disclosure may still "
+    "publish one - Castle Trust opted in and published afterwards anyway).\n"
+    "  (1) THE ABSENCE IS DEMONSTRATED FROM THE PUBLISHER'S OWN INDEX, re-established 2026-09-18. Redwood's "
+    "performance-summary page (redwoodbank.co.uk/inside-redwood/performance-summary) is the index that carries "
+    "these documents, and it lists six items - the 2023, 2024 and 2025 Annual Reports, a June 2024 half-year "
+    "performance report and two earlier performance summaries - and no Pillar 3 at all. That this is the right "
+    "index, rather than a page that never held them, is shown by its own history: the February 2025 capture of "
+    "the same page listed the complete FY2017-FY2023 Pillar 3 series, and by the April 2026 capture the section "
+    "had been removed. A domain-wide sweep of every PDF captured since 1 January 2025 (105 unique files) contains "
+    "no Pillar 3 later than the FY2023 edition under any filename. So the absence is enumerated, not assumed.\n"
+    "  (2) THE WAIVER EXPLAINS WHY THE DUTY ENDED, and it date-fits. The Bank of England consolidated waivers "
+    "register (downloaded 2026-09-15, re-read 2026-09-18) carries, for FRN 755924 'REDWOOD BANK LIMITED', a "
+    "'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - General Application "
+    "Part' (rule description 'SDDT Regime - General Application', sub-rule 'Ru 3.1', waiver ref A00008317P.pdf), "
+    "start date 26/07/2024, no end date. Rule 3.1 is the opt-in that removes the Pillar 3 disclosure obligation "
+    "itself - as distinct from rules 1.2, 2.1(9) and 3.2, which modify the regime's ELIGIBILITY CRITERIA and "
+    "remove no duty at all. Redwood's accounting reference date is 31 December, so the FY2024 (31 Dec 2024) and "
+    "FY2025 (31 Dec 2025) year-ends both fall after 26/07/2024 while FY2023 (31 Dec 2023) precedes it. The "
+    "modification therefore reaches FY2024 and FY2025 and reaches back to neither FY2023 nor anything earlier, "
+    "which is why the earlier years still carry a full template.\n"
+    "  Note also that the SDDT CAPITAL regime is a different instrument on a different timetable - the FY2025 "
+    "Annual Report (p.27) describes that as commencing 1 January 2027. Only the rule 3.1 disclosure modification "
+    "above bears on whether a Pillar 3 was owed for FY2024 and FY2025.\n"
 )
 
 P3_SOURCES = (
@@ -495,7 +517,34 @@ KM1_SOURCES = (
     "reports/), which listed the FY2017-FY2022 Pillar 3 PDFs when it was archived in March 2024, now returns HTTP "
     "404, and the current site navigation carries no reports or disclosures page at all; its performance-summary "
     "page links the 2023, 2024 and 2025 Annual Reports and no Pillar 3 document. The FY2023 edition is the last "
-    "one published.\n\n"
+    "one published.\n"
+    "RE-VERIFIED 2026-09-18, and the evidence is now stronger than 'the page carries none'. All seven Pillar 3 "
+    "editions FY2017-FY2023 were re-fetched live (HTTP 200, Content-Type application/pdf, %PDF magic bytes on "
+    "every one). The current index at redwoodbank.co.uk/inside-redwood/performance-summary lists six documents "
+    "and no Pillar 3; the SAME page listed the full FY2017-FY2023 series when captured in February 2025, and had "
+    "dropped the section by the April 2026 capture - so the series was withdrawn from a page that demonstrably "
+    "used to carry it, rather than never having been indexed there. A domain-wide sweep of every PDF captured "
+    "since 1 January 2025 (105 unique files) turns up nothing named or dated later than the FY2023 edition.\n\n"
+    "WHY ROWS 1 AND 2 ARE EQUAL WHILE ROW 3 BREAKS HIGHER, in both template blocks - confirmed against the "
+    "printed editions 2026-09-18 so it need not be re-opened. Redwood has no Additional Tier 1 capital in issue "
+    "in any year, so CET1 capital equals Tier 1 capital exactly; total capital then breaks higher because of "
+    "Tier 2 subordinated debt. Read from the FY2023 edition's Table 1: 46,764,475 / 46,764,475 / 56,888,551 for "
+    "2023 and 41,430,663 / 41,430,663 / 51,320,588 for 2022. Read from the FY2021 edition's Table 1: 39,399,478 / "
+    "39,399,478 / 49,909,754 for 2021 and 27,396,631 / 27,396,631 / 36,528,841 for 2020. The equality holds in "
+    "every year of both blocks. FY2017 is the one year where rows 1 and 3 nearly coincide - 9,142,139 against "
+    "9,142,150 - because the Bank held just GBP11 of Tier 2 at that date, which is a real (if trivial) Tier 2 "
+    "balance rather than a transcription artefact. The Annual Reports corroborate the same structure: the FY2025 "
+    "own-funds table prints Total Tier 1 48,846,803 against Total Tier 2 9,659,129, and the FY2024 table Total "
+    "Tier 1 48,365,248 against Total Tier 2 10,066,643.\n\n"
+    "THE FY2025 AND FY2024 COLUMNS ARE KEPT ON PURPOSE, AND NOW STATE THEIR NEGATIVE IN THE CELLS RATHER THAN "
+    "SITTING BLANK (2026-09-18). It would be tidier "
+    "to drop them, and that would be the wrong call: an empty column at the NEWEST end of a sheet is not the "
+    "same kind of thing as an empty column at the oldest end. An old empty column means the disclosure did not "
+    "exist yet and never will; a recent one means a reader should ask whether something has been published that "
+    "this workbook has not picked up. Keeping these two visible is what lets that question be asked - and it is "
+    "the question the user actually raised about this bank. The answer, for now, is the sourced negative set out "
+    "above: no FY2024 or FY2025 Pillar 3 exists, enumerated from the bank's own index. The capital and liquidity "
+    "figures the Annual Reports DO disclose for those two years are on the single-metric sheets.\n\n"
     "THE PRINTED ROW 4 IS WRONG IN THE THREE OLDEST EDITIONS, AND IS REPRODUCED ANYWAY. For FY2019, FY2018 and "
     "FY2017 the key-metrics row 4 carries the CREDIT-RISK subtotal rather than total Pillar 1 risk-weighted "
     "assets: 114,001,332 + operational risk 14,611,306 = 128,612,638 (FY2019); 52,495,810 + 13,398,025 = "
@@ -537,14 +586,58 @@ KM1_SOURCES = (
     + ENTITY_NOTE
 )
 
+# LEADING-GAPS QUEUE, 2026-09-18. The FY2025 and FY2024 columns on the KM1,
+# Tier 1 Ratio, Total RWAs, RWA Breakdown, Leverage Ratio and NSFR sheets were
+# entirely EMPTY - twelve sheet-years. Each sheet's note already carried the
+# sourced negative, but a blank cell asserts nothing by itself, so the finding
+# is now stated in the cells as well as in the prose.
+#
+# THIS IS A NEVER_PUBLISHED CLOSURE, NOT AN UNREACHED ONE, and the two legs are
+# independent:
+#   (1) THE ABSENCE IS ENUMERATED from the publisher's own index, which
+#       demonstrably used to list the FY2017-FY2023 series (February 2025
+#       capture) and had dropped the section by April 2026; a domain-wide sweep
+#       of all 105 PDFs captured since 1 January 2025 turns up nothing later
+#       than the FY2023 edition.
+#   (2) THE DUTY ENDED under a dated instrument - BoE consolidated waivers
+#       register, FRN 755924 REDWOOD BANK LIMITED, matched on BOTH conjuncts:
+#       rule description 'SDDT Regime - General Application' AND sub-rule
+#       'Ru 3.1'. The description alone is not sufficient, since it also spans
+#       eligibility-criteria rules ('Ru 1.2 & 2.1(9)', 'Ru 2.1(9)', 'Ru 3.2')
+#       that remove no disclosure duty; ref A00008317P, start 26/07/2024, no end
+#       date. Redwood's year-end is 31 December, so FY2024 and FY2025 both fall
+#       after it and FY2023 precedes it - exactly the pattern the documents show.
+# A waiver removes the DUTY, not the POSSIBILITY, which is why leg (1) is
+# required and is not inferred from leg (2).
+#
+# RE-ESTABLISHED INDEPENDENTLY 2026-09-18 with a richness control on the two
+# Annual Reports, rather than accepting the existing note: 'capital' 101/96 hits
+# and 'ratio' 145/135 in the FY2025/FY2024 extractions, against 'leverage' 0/0,
+# 'NSFR' 0/0, 'risk-weighted' 0/0, 'RWA' 0/0 and 'Pillar 3' 0/0. The extraction
+# is demonstrably alive, so those zeros are a fact about the documents.
+REDWOOD_P3_STATUS = {
+    "FY2025": "Not published - SDDT Rule 3.1 opt-in from 26/07/2024",
+    "FY2024": "Not published - SDDT Rule 3.1 opt-in from 26/07/2024",
+}
+
+# FY2025 AND FY2024 KEEP THEIR (EMPTY) COLUMNS ON THIS SHEET, DELIBERATELY.
+# They are empty at the NEWEST end, which means something different from an empty
+# column at the oldest end: a leading gap is the one a reader should be able to
+# see and chase. Suppressing these two would hide exactly what the user asked
+# about ("Redwood - No RWA breakdown 2025, 2024") behind a tidy sheet. The
+# trailing/leading asymmetry is handled in the shared library; nothing is passed
+# here to override it.
 bw.add_km1_sheet(
     title="Redwood Bank Limited — KM1 Key Metrics",
     subtitle="The bank's own published key-metrics template, Bank basis, amounts in single pounds as printed. "
              "FY2022-FY2023 are the UK KM1 template; FY2017-FY2021 are the earlier Basel III 'Overview of "
              "prudential metrics' template, kept as a separate block because it reuses the same row numbers for "
-             "different metrics. Every column is that year's own edition. FY2024 and FY2025 are blank: Redwood "
-             "became an SDDT on 26 July 2024 and publishes no Pillar 3 for those years - see the source note.",
+             "different metrics. Every column is that year's own edition. The FY2025 and FY2024 columns stay "
+             "visible on purpose and now carry an explicit stated negative rather than a blank: Redwood "
+             "published no Pillar 3 for those two years, established from the publisher's own index and "
+             "backed by a dated SDDT Rule 3.1 modification from 26/07/2024 - see the source note.",
     rows=[
+        ("DATA", "Pillar 3 edition status for this year (see source note)", REDWOOD_P3_STATUS),
         ("SECTION", "FY2022-FY2023 editions - UK KM1 template", {}),
         ("SECTION", "Available own funds (amounts)", {}),
         ("DATA", "1 Common Equity Tier 1 (CET1) capital (£, single pounds as printed)", {"FY2023": 46764475, "FY2022": 41430663}),
@@ -619,7 +712,7 @@ bw.add_km1_sheet(
 metric("CET1 Capital", "£", [("Common Equity Tier 1 capital (rounded as reported)", {"FY2025": 48900000, "FY2024": 48400000, "FY2023": 46800000, "FY2022": 41400000, "FY2021": 39400000, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052747, "FY2017": 9142150})], "The annual reports state CET1 capital rounded to £m; these values preserve that stated precision and are not presented as inferred exact amounts. FY2020-FY2017 use the Total Tier 1 capital figure from each year's own regulatory capital note (no AT1 capital is disclosed in any year, so Tier 1 = CET1).")
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 ratio", {"FY2025": "16.6%", "FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"})], "FY2019 AND FY2018 REPLACED 2026-09-15 (second pass) WITH THE BANK'S OWN DIRECTLY-PRINTED FIGURES. These cells previously read 20.3% and 23.18%, values NOT disclosed as CET1 ratios at all - they were each year's Annual Report total capital ratio, copied across on the strength of the Bank's narrative that capital resources were '100% CET1'. Row 5 of the KM1 table in the Bank's own Pillar 3 disclosures prints the CET1 ratio directly for all three of these years: FY2019 20.08% and FY2018 22.83% (FY2019 edition, Table 4, p.16, and reconfirmed by the FY2020 edition's comparative), FY2017 59.78% (FY2017 edition, row 5 - which happens to equal the previously-carried value, so that cell is unchanged). A directly printed figure supersedes a derived equivalence, so the derivation is retired. The replacements reconcile: 25,830,817/128,612,638 = 20.08% and 15,052,746/65,893,829 = 22.84% against a printed 22.83%. On the FY2018 figure specifically, the Annual Report's 23.18% is not a rounding difference from 22.83% but a different measure - total EQUITY of 15,274,275 divided by RWA of 65,893,829 gives exactly 23.18%, where the regulatory ratio uses CET1 own funds of 15,052,746. FY2020 FILLED 2026-09-15: this cell previously read 'Not publicly disclosed', on the ground that from FY2020 the Bank moved to a 75% CET1 / 25% Tier 2 structure 'with no separate CET1 ratio disclosed anywhere in the report'. That was true of the ANNUAL REPORT but not of the Bank's Pillar 3 disclosure, which was not consulted at the time - row 5 of the FY2020 edition's KM1 table states the CET1 ratio as 13.34% (2019: 20.08%) directly. The FY2021 edition restates it as 13.3%, a rounding difference only. This is a disclosed figure, not a derivation. See the PILLAR 3 DISCOVERY NOTE in the source citation.")
 metric("Tier 1 Capital", "£", [("Total Tier 1 capital", {"FY2025": 48846803, "FY2024": 48365248, "FY2023": 46764475, "FY2022": 41430663, "FY2021": 39399478, "FY2020": 27396631, "FY2019": 25830817, "FY2018": 15052747, "FY2017": 9142150})])
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"})],
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", dict(REDWOOD_P3_STATUS, **{"FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}))],
        "RECOVERED 2026-09-15 - this sheet previously read 'Not publicly disclosed' for every year, on the stated ground that 'no separate Tier 1 ratio is stated in the public Redwood reports'. That was wrong: row 6 of the KM1 table in each of the Bank's own Pillar 3 disclosures states it directly. FY2023/FY2022 from the FY2023 edition (Table 1, p.4); FY2021/FY2020 from the FY2021 edition (Table 1, pp.4-5); FY2019 from the FY2019 edition's own Table 4 (and reconfirmed by the FY2020 edition's comparative); FY2018 and FY2017 added on a second pass the same day from the FY2019 and FY2017 editions' own row 6. In every year Tier 1 ratio equals the CET1 ratio, which is consistent with the Bank disclosing no AT1 capital in any year - note this is the source's own printed row 6, NOT a value copied across from row 5. FY2025/FY2024 are blank because the Bank became an SDDT on 26/07/2024 and publishes no Pillar 3 for those years; the Annual Reports state only a CET1 ratio and a total capital ratio, not a Tier 1 ratio. See the PILLAR 3 DISCOVERY NOTE in the source citation.")
 metric("Total Capital", "£", [("Total regulatory capital / own funds", {"FY2025": 58505932, "FY2024": 58431891, "FY2023": 56888551, "FY2022": 51320588, "FY2021": 49909754, "FY2020": 36528841, "FY2019": 26211691, "FY2018": 15147621, "FY2017": 9142150})])
 metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2025": "19.8%", "FY2024": "18.3%", "FY2023": "19.4%", "FY2022": "19.0%", "FY2021": "21.4%", "FY2020": "17.8%", "FY2019": "20.38%", "FY2018": "22.99%", "FY2017": "59.78%"})],
@@ -635,7 +728,7 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2025": "1
        "the FY2021 edition restates both to 36,528,841 and 17.8% with the footnote 'Restated due to the "
        "correction of total regulatory capital and its ratio and leverage ratio'; the restated value is carried "
        "and the superseded one recorded here. FY2025-FY2021 are unchanged.")
-metric("Total RWAs", "£", [("Total risk-weighted assets (RWA)", {"FY2023": 294050082, "FY2022": 269415717, "FY2021": 233133033, "FY2020": 205441523, "FY2019": 128612638, "FY2018": 65893829, "FY2017": 15293832})],
+metric("Total RWAs", "£", [("Total risk-weighted assets (RWA)", dict(REDWOOD_P3_STATUS, **{"FY2023": 294050082, "FY2022": 269415717, "FY2021": 233133033, "FY2020": 205441523, "FY2019": 128612638, "FY2018": 65893829, "FY2017": 15293832}))],
        "RECOVERED 2026-09-15 - previously 'Not publicly disclosed' for every year. FY2023/FY2022 from the FY2023 "
        "edition's KM1 (Table 1, p.4); FY2021/FY2020 from the FY2021 edition's KM1 (Table 1, p.4). Cross-checked: "
        "the FY2022 edition's own FY2021 comparative reproduces 233,133,033 exactly.\n"
@@ -662,8 +755,10 @@ bw.add_rwa_breakdown_sheet(
     title="Redwood Bank Limited — RWA Breakdown",
     subtitle="Pillar 1 risk-weighted assets by standardised exposure class, £, FY2017-FY2023 (every year the Bank "
              "published a Pillar 3). Recovered 2026-09-15 from the Bank's own Pillar 3 disclosures; previously "
-             "recorded as not publicly disclosed. FY2025/FY2024 blank - SDDT, no Pillar 3 published.",
+             "recorded as not publicly disclosed. FY2025/FY2024 carry a stated negative, not a blank - SDDT "
+             "Rule 3.1 from 26/07/2024, no Pillar 3 published.",
     rows=[
+        ("DATA", "Pillar 3 edition status for this year (see source note)", REDWOOD_P3_STATUS),
         ("SECTION", "Credit risk - standardised approach, by exposure class", {}),
         ("DATA", "Institutions", {"FY2023": 583047, "FY2022": 946102, "FY2021": 626025, "FY2020": 508930, "FY2019": 425199, "FY2018": 334991, "FY2017": 838261}),
         ("DATA", "Secured by mortgages on residential property", {"FY2023": 70065294, "FY2022": 27562520, "FY2021": 68247424, "FY2020": 57320883, "FY2019": 26921059, "FY2018": 13274257, "FY2017": 1194463}),
@@ -718,8 +813,19 @@ bw.add_rwa_breakdown_sheet(
         "collective investment undertakings. These are omitted above rather than written as zero, since the "
         "source leaves them blank. MARKET RISK is structurally nil and is stated as such: 'The Bank is not "
         "exposed to market risk as it does not operate a trading book.'\n"
-        "FY2025 AND FY2024: no Pillar 3 exists - the Bank became an SDDT on 26/07/2024 (see below), and neither "
-        "Annual Report contains an RWA breakdown.\n\n"
+        "FY2025 AND FY2024 - THE USER ASKED ABOUT THESE TWO YEARS SPECIFICALLY, AND THEY ARE A SOURCED NEGATIVE. "
+        "No Pillar 3 disclosure exists for either year: that is established by enumerating the bank's own "
+        "publications index (see PILLAR3_DISCOVERY_NOTE below), not merely inferred from the Bank's SDDT status, "
+        "which explains why the duty ended but could never on its own prove nothing was published. Neither Annual "
+        "Report fills the gap: both were re-read on 2026-09-18 and neither prints a total RWA figure or any "
+        "breakdown by exposure class, their only mention of RWAs being the narrative line that 'the Bank must set "
+        "aside 8% of total risk weighted assets to cover its Pillar 1 capital requirements' (FY2025 p.26, FY2024 "
+        "p.67). What they do print is own funds and ratios - FY2025 CET1 16.6% and total capital 19.8% on own "
+        "funds of 58,505,932; FY2024 15.1% and 18.3% on own funds of 58,431,891. A total RWA figure could be "
+        "BACK-SOLVED from those two numbers, and deliberately is not: a derived denominator presented in a "
+        "disclosure-shaped sheet reads as a disclosure. These cells therefore carry no figure - and since "
+        "2026-09-18 they state that finding explicitly rather than sitting blank, so a reader meets the "
+        "sourced negative in the cell itself and not only in this note.\n\n"
         + PILLAR3_DISCOVERY_NOTE
     ),
     first_col_width=54,
@@ -728,7 +834,7 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%",
-       [("Leverage ratio excluding claims on central banks (UK KM1 row 14)", {"FY2023": "9.3%", "FY2022": "8.8%", "FY2021": "8.6%"}),
+       [("Leverage ratio excluding claims on central banks (UK KM1 row 14)", dict(REDWOOD_P3_STATUS, **{"FY2023": "9.3%", "FY2022": "8.8%", "FY2021": "8.6%"})),
         ("Basel III leverage ratio, Tier 1 / total exposure incl. central bank claims (row 2 / row 13)", {"FY2021": "7.4%", "FY2020": "6.11%", "FY2019": "9.76%", "FY2018": "10.51%", "FY2017": "26.19%"})],
        "RECOVERED 2026-09-15 - previously 'Not publicly disclosed' for every year. TWO CLEARLY-SEPARATED BASES, deliberately not merged into one row: the Bank changed its leverage definition between the FY2021 and FY2022 editions, and the two are not like-for-like. The FY2022 and FY2023 editions report row 14 as 'Leverage ratio excluding claims on central banks'; the FY2021 and FY2020 editions report a Basel III leverage ratio computed as Tier 1 over a total exposure measure that INCLUDES central bank claims. FY2021 appears on both rows because both documents state it - 8.6% on the newer basis (FY2022 edition's own comparative column) and 7.4% on the older (FY2021 edition, Table 1 row 14) - which quantifies the gap at ~1.2pp and is exactly why they are kept apart. Splicing these into a single series would manufacture a false trend. FY2020's 6.11% and FY2019's 9.76% are from the FY2020 edition (Table 1, row 14); FY2018's 10.51% and FY2017's 26.19% were added on a second pass the same day from the FY2019 and FY2017 editions' own row 14, and the FY2018 edition's own comparative column independently reproduces both. Every year on this row uses the pre-FY2022 Basel III definition, so FY2017-FY2021 read as a single consistent series. NOTE the FY2021 edition restates FY2020's leverage ratio to 6.1% with the footnote 'Restated due to the correction of total regulatory capital and its ratio and leverage ratio'; the FY2020 edition's own originally-published 6.11% is shown here per this project's own-year convention, with the restatement recorded. FY2025/FY2024 blank - SDDT exempt from 26/07/2024, and no leverage ratio appears in either Annual Report. See the PILLAR 3 DISCOVERY NOTE in the source citation.")
 metric("LCR", "%",
@@ -736,7 +842,7 @@ metric("LCR", "%",
         ("Liquidity coverage ratio - Pillar 3 KM1 row 17, average of preceding 12 months", {"FY2023": "504%", "FY2022": "394%", "FY2021": "500%"}),
         ("Liquidity coverage ratio - Pillar 3, point-in-time at 31 December", {"FY2021": "970.3%", "FY2020": "485.5%", "FY2019": "541.05%", "FY2018": "391.32%", "FY2017": "622.78%"})],
        "SPLIT INTO SEPARATE BASES 2026-09-15. The single row previously carried here was silently mixed, and the Bank's own Pillar 3 disclosures prove it. The FY2022 and FY2023 editions footnote row 17 as '* Average of preceding 12 months' and give 394% and 504%; the FY2021 and FY2020 editions instead print a point-in-time ratio (HQLA 111,539,577 / net outflows 11,495,946 = 970.3% at 31 December 2021, and 485.5% at 31 December 2020). The previously-carried row took FY2021 and FY2020 from the point-in-time basis (970%, 485%) but FY2022 and FY2023 from the Annual Report (352%, 481%) - three different bases in one series. Most starkly, FY2021 is 970.3% point-in-time but 500% as the FY2022 edition's own 12-month-average comparative: a 470pp gap on the SAME year and the SAME entity, purely from the averaging convention. All three rows are kept, each labelled, and none is deleted - following the treatment applied to Access Bank and Zenith Bank in this workbook set. DO NOT read a trend across rows. FY2019, FY2018 and FY2017 were added to the point-in-time row on a second pass the same day, from row 17 of each year's own KM1 plus the matching narrative ('The Bank's LCR as at the 31st December 2019 was 541.05% (2018: 391.32%)'; the FY2017 edition states 622.78%). FY2018's 391.32% and FY2017's 339% vs 622.78% are worth contrasting: FY2018 shows the Annual Report and the Pillar 3 agreeing to the decimal on the same point-in-time basis, while FY2019 (557% vs 541.05%) and FY2017 (339% vs 622.78%) show them diverging materially - which is why the two rows stay separate rather than being merged into one 'LCR' series.")
-metric("NSFR", "%", [("Net stable funding ratio", {"FY2023": "148%", "FY2022": "144%", "FY2021": "148.9%", "FY2020": "150.5%", "FY2019": "170.9%", "FY2018": "193.38%"})],
+metric("NSFR", "%", [("Net stable funding ratio", dict(REDWOOD_P3_STATUS, **{"FY2023": "148%", "FY2022": "144%", "FY2021": "148.9%", "FY2020": "150.5%", "FY2019": "170.9%", "FY2018": "193.38%"}))],
        "RECOVERED 2026-09-15 - previously 'Not publicly disclosed' for every year. Row 20 of the KM1 table in the Bank's own Pillar 3 disclosures, stated as an average of the preceding four quarters. FY2023/FY2022 from the FY2023 edition (Table 1, p.5); FY2021/FY2020 from the FY2021 edition, which states in narrative form 'NSFR as at 31 December 2021 is 148.9% (2020: 150.5%), against a regulatory requirement of 100%' and backs it with full Tables 17 and 18. FY2019 AND FY2018 ADDED on a second pass the same day: the FY2019 edition states 'the NSFR as at 31 December 2019 is 170.9% (2018: 193.38%)' in narrative and prints 170.9% as row 34 of its full NSFR template (Table 15), and 170.9% also appears as row 18 of its KM1. FY2017 stays blank - the FY2017 edition's KM1 stops at row 17 (LCR) and carries no NSFR row or template, so the Bank simply had not begun disclosing it. NOTE FY2021, FY2020, FY2019 and FY2018 all PREDATE the UK NSFR requirement, which took effect only on 1 January 2022 under PRA PS17/21 - Redwood therefore disclosed these voluntarily, and they are genuine disclosed figures rather than a regulatory-template obligation. Minor basis nuance: the FY2022 edition's own FY2021 comparative shows 148% against the FY2021 edition's own 148.9%, a rounding/averaging difference between two of the Bank's own documents; each year's own report is used. FY2025/FY2024 blank - SDDT exempt from 26/07/2024. See the PILLAR 3 DISCOVERY NOTE in the source citation.")
 metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})])
 

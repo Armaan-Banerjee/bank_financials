@@ -9,8 +9,13 @@ from bank_workbook import BankWorkbook
 # Flow Statement and related notes; ..." No Statement of Cash Flows exists in any year's accounts.
 # Pillar 3 / capital disclosures are rich for FY2021-FY2023 (full UK KM1-format Key Regulatory
 # Metrics tables, standalone Pillar 3 documents), but FY2024-FY2025 have no standalone Pillar 3
-# document published - only a brief unaudited "Capital risk management" note inside each year's
-# own Annual Report giving CET1/RWA/ratios (no Leverage/LCR/NSFR for those two years). Follows the
+# document published. For those two years the Annual Report carries the figures in TWO separate
+# places, and both are used: the unaudited "Capital risk management" note gives CET1/RWA/ratios,
+# and the Chief Finance Officer's Report (printed folio 13 in both editions) gives the LCR and
+# the Leverage Ratio. NSFR is the only one of the three genuinely absent for FY2024-FY2025.
+# (Corrected 2026-09-18, GA-005: this comment and several sheet notes previously asserted that
+# the Annual Report carried "no Leverage/LCR/NSFR for those two years". That was true of the
+# capital NOTE and false of the REPORT, and it had blanked four real published figures.) Follows the
 # BNY Mellon International / ABC International Bank precedent: standard 13-sheet structure, but
 # the Cash Flow Statement sheet documents the exemption instead of line items, and the Overview
 # sheet omits the cash-flow chart.
@@ -160,11 +165,14 @@ PILLAR3_URL_NOTE = (
     "jhb-pillar3-<year>.pdf across 2008-2023 (2008, 2009 and 2019-2023 honestly 404 under that name); "
     "the WordPress REST media API, whose library was walked in full (66 items over 2 pages, complete) "
     "and which is what surfaced the five irregularly-named editions that permutation can never find; "
-    "and a Wayback CDX sweep of hodgebank.co.uk and julianhodgebank.co.uk which was BLOCKED (HTTP "
-    "503/504, 'Internet Archive services are temporarily offline') and is therefore recorded as "
-    "unknown, not as an absence - worth re-running, though the media API is already a complete "
-    "listing of the WP library. Result: a continuous FY2010-FY2023 run of 14 editions, no FY2009, no "
-    "FY2024, no FY2025.\n"
+    "and a Wayback CDX sweep of hodgebank.co.uk and julianhodgebank.co.uk which was BLOCKED on "
+    "2026-09-16 (HTTP 503/504, 'Internet Archive services are temporarily offline') and was "
+    "recorded as unknown rather than as an absence. THAT SWEEP WAS RE-RUN SUCCESSFULLY ON "
+    "2026-09-18 and is no longer an open item - it completed over all three domains and found "
+    "nothing newer than the FY2023 edition; see the full account in BASIS_NOTE. Result, now "
+    "confirmed from three independent directions (filename permutation, the WordPress media API, "
+    "and the archive): a continuous FY2010-FY2023 run of 14 editions, no FY2009, no FY2024, no "
+    "FY2025.\n"
     "FILENAME NEVER EQUALS PERIOD ON THIS SITE. Hodge-pillar-3-19.06.23.pdf is a 2023 PUBLICATION "
     "date on the FY2022 edition, and Hodge-pillar-3-11.03.24.pdf is a 2024 publication date on the "
     "FY2023 edition. The cover page is the only trustworthy source of the period, and every period "
@@ -230,7 +238,13 @@ EXEMPTION_NOTE = (
     "report and financial statements sourced for HD-074 (e.g. FY2010, FY2011, FY2013 reports, each Note 1) - see "
     "HD074_NOTE below. No Statement of Cash Flows exists in any of the entity's published accounts for any year "
     "FY2009-FY2025 - a standing structural feature spanning both the old-UK-GAAP and FRS101 eras, not a one-off or "
-    "data gap. Per the project's established policy for this exemption (see The Bank of New York Mellon "
+    "data gap. RE-VERIFIED 2026-09-18 (GA-005) directly against both of the two newest editions, which is why "
+    "this sheet's seventeen empty year columns are a documented 'never published' and not an open gap: the "
+    "FY2025 Annual Report prints, on printed folio 42, 'In these financial statements, the Bank has applied the "
+    "exemptions available under FRS 101 in respect of the following disclosures: * A Cash Flow Statement and "
+    "related notes;', and the FY2024 Annual Report prints the same sentence with the same first bullet, "
+    "lower-cased as '* A cash flow statement and related notes.' - the Bank's own casing, reproduced rather than "
+    "harmonised. Per the project's established policy for this exemption (see The Bank of New York Mellon "
     "(International) Limited / ABC International Bank plc), this workbook is built as a PILLAR-3-ONLY variant: "
     "all 11 Pillar 3 metric sheets are populated below, but no cash flow figures exist to show. See the Overview "
     "sheet for the equivalent treatment there."
@@ -246,14 +260,40 @@ BASIS_NOTE = (
     "transcribable from them), FY2016-FY2023 are CRD IV.\n"
     "FY2021-FY2023: full UK KM1-format 'Key Regulatory Metrics' table from each year's own standalone Pillar 3 "
     "Disclosures document. FY2024-FY2025: no standalone Pillar 3 document exists (the bank's financial "
-    "information page lists a Pillar 3 disclosure link for FY2018-FY2023 only) - CET1/RWA/ratio figures instead "
-    "come from each year's own Annual Report 'Capital risk management (unaudited)' note, which does not include "
-    "Leverage Ratio, LCR, or NSFR. For FY2025 those 3 metrics are NOT APPLICABLE (structurally exempt, see "
-    "below); for FY2024 they are an ordinary open gap - genuinely not located, not assumed absent.\n"
-    "SDDT EXEMPTION - REASON FOR THE FY2025 CESSATION, established 2026-09-15 (cross-bank SDDT pass). Julian "
-    "Hodge Bank is a Small Domestic Deposit Taker (SDDT) and is therefore not required to publish Pillar 3 "
-    "disclosures, so the FY2025 absence is an EVIDENCED STRUCTURAL EXEMPTION and no FY2025 Pillar 3 document "
-    "will ever appear. Evidence - the PRA's own firm-level register, the Bank of England consolidated list of "
+    "information page lists a Pillar 3 disclosure link for FY2018-FY2023 only), but the Annual Report still "
+    "carries much of the content, in TWO SEPARATE PLACES, and both are used here:\n"
+    "  (i) the unaudited 'Capital risk management' note in the financial statements - CET1 capital, total "
+    "risk-weighted assets, CET1 ratio, total own funds and total capital ratio (FY2025 note 34, printed folio "
+    "77; FY2024 note 32, printed folio 74);\n"
+    "  (ii) the Chief Finance Officer's Report in the Strategic Report, printed folio 13 in BOTH editions - the "
+    "year-end LIQUIDITY COVERAGE RATIO and the year-end LEVERAGE RATIO, each stated in the running prose rather "
+    "than in a table.\n"
+    "CORRECTION OF RECORD, 2026-09-18 (GA-005). This note previously said the Annual Report's capital note "
+    "'does not include Leverage Ratio, LCR, or NSFR', and the LCR and Leverage Ratio sheets carried FY2025 as "
+    "'NOT APPLICABLE - no such disclosure will ever exist' on the strength of the SDDT modification below. That "
+    "was wrong in both directions and four real published figures were blank because of it: the statement was "
+    "true of the capital NOTE and false of the REPORT, which discloses both metrics for both years. The SDDT "
+    "modification ended the bank's PILLAR 3 duty; it did not stop the bank publishing, and the bank did in fact "
+    "publish. FY2025 LCR 310.7% and leverage ratio 8.1%, FY2024 LCR 274.0% and leverage ratio 8.4%, each read "
+    "from that year's OWN Annual Report. The figures are now on their sheets.\n"
+    "WHAT REMAINS ABSENT FOR FY2024-FY2025, and how that was established. The NSFR is genuinely not disclosed: "
+    "'NSFR' and 'Net Stable Funding' each return ZERO hits in the full text of both Annual Reports, against a "
+    "richness control run on the same extractions in which 'credit risk' returns 76 hits (FY2025) and 72 "
+    "(FY2024), 'operational risk' 16 and 15, 'CET1' 4 and 3, and 'LCR' 3 and 2 - so the zero is a fact about "
+    "the documents, not about the extraction. No Simplified Retail Deposit Ratio value is published either, so "
+    "nothing succeeds the NSFR series. Also absent: the LEVERAGE EXPOSURE MEASURE ('total exposure measure' "
+    "likewise zero hits) - the ratio is stated without its denominator, and the denominator is NOT back-solved "
+    "from it; the LCR's HQLA and net-outflow build-up; any category-level RWA breakdown; and any MREL figure "
+    "('MREL', 'minimum requirement for own funds' and 'loss-absorbing' all zero hits in both editions).\n"
+    "SDDT EXEMPTION - REASON FOR THE FY2025 CESSATION OF THE PILLAR 3 DOCUMENT, established 2026-09-15 "
+    "(cross-bank SDDT pass) and re-verified against the register 2026-09-18. Julian Hodge Bank is a Small "
+    "Domestic Deposit Taker (SDDT) and is therefore not required to publish Pillar 3 disclosures, so the "
+    "absence of an FY2025 Pillar 3 DOCUMENT is an EVIDENCED STRUCTURAL EXEMPTION. READ THE SCOPE OF THAT "
+    "CAREFULLY: it explains why no FY2025 Pillar 3 document appears, and it explains NOTHING about whether any "
+    "individual metric is published. Opting in removes a duty to publish; it does not stop a firm publishing, "
+    "and this firm went on to publish its FY2025 LCR and leverage ratio in its Annual Report. A metric is "
+    "blanked here only where it has been shown absent from the documents that do exist - never on the strength "
+    "of this modification. Evidence - the PRA's own firm-level register, the Bank of England consolidated list of "
     "waivers and modifications granted to PRA-authorised firms (downloaded 2026-09-15, "
     "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/"
     "waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv), which carries TWO SDDT rows for "
@@ -329,9 +369,16 @@ def p3_sources(extra=""):
         f"FY2010: Julian Hodge Bank Limited Pillar 3 disclosures - as at 31 October 2010 (Basel II), section 4 "
         f"\"Capital resources\", PDF p.13 of 27, and section 5.1 \"Pillar 1 capital requirement\", PDF p.15 - {P3_2010_URL}\n"
         f"FY2024: Julian Hodge Bank Limited Annual Report 2024, Note 32 'Capital risk management (unaudited)', "
-        f"p.73 - {AR2024_URL}\n"
+        f"printed folio 74 (CET1 capital, total RWA, CET1 ratio, total own funds, total capital ratio); and the "
+        f"Chief Finance Officer's Report, printed folio 13, section 'Liquidity' / 'Capital and Leverage' (LCR "
+        f"and Leverage Ratio, stated in prose) - {AR2024_URL}\n"
         f"FY2025: Julian Hodge Bank Limited Annual Report 2025, Note 34 'Capital risk management (unaudited)', "
-        f"p.76 - {AR2025_URL}\n"
+        f"printed folio 77 (same five figures); and the Chief Finance Officer's Report, printed folio 13, "
+        f"same two sections (LCR and Leverage Ratio) - {AR2025_URL}\n"
+        "  [Folios corrected 2026-09-18: the capital note was previously cited as p.73 (FY2024) and p.76 "
+        "(FY2025), each one short. Both documents run at a zero offset between the pdftotext sheet index and "
+        "the printed folio, and each page's own footer reads 'Hodge Annual Report 20XX ... 74' / '... 77'. The "
+        "folio-13 citations are new with this pass.]\n"
         "Wayback fallbacks for the FY2020-FY2014 documents, retained and never to be deleted (each is "
         "byte-identical to the live file now cited above):\n"
         f"  FY2020 - {P3_2020_URL_ARCHIVE}\n"
@@ -742,7 +789,10 @@ def metric(name, unit, rows_data, sources_text, note=None, first_col_width=52, s
 #
 # FY2024 and FY2025 have NO Pillar 3 document at all: FY2024 is an ordinary
 # gap, FY2025 is covered by the bank's SDDT modification (PRA Rule 3.1,
-# effective 18 February 2025), so no FY2025 KM1 will ever exist. FY2017 and
+# effective 18 February 2025), so no FY2025 KM1 TABLE will ever exist. Read
+# that as a statement about the table and not about the figures - several of
+# them are published in each year's own Annual Report and are on the
+# single-metric sheets, they are simply not this template. FY2017 and
 # earlier are blank because those editions print no key-metrics table of any
 # kind - FY2017's figures exist only as the FY2018 edition's comparative.
 # ---------------------------------------------------------------
@@ -818,6 +868,26 @@ km1_rows = [
     ("DATA", "Total available stable funding", {"FY2021": 1551.0, "FY2020": 1226.2}),
     ("DATA", "Total required stable funding", {"FY2021": 922.7, "FY2020": 793.3}),
     ("DATA", "NSFR", {"FY2021": "168.1%", "FY2020": "154.6%"}),
+
+    # GA-018 (2026-09-18): FY2025 and FY2024 were wholly EMPTY columns on this
+    # sheet, which audit_gaps.py cannot tell apart from a year nobody has
+    # examined. The reasoning in KM1_SOURCES below was already correct and is
+    # unchanged; only its VISIBILITY changes - the statement now sits in the
+    # cells instead of in a note a reader may never open.
+    #
+    # This block is deliberately placed AFTER every reproduced template block
+    # and carries no template row number, so nothing about the reproduction is
+    # reordered, merged or added to (km1/map.md standing lens, and rules 8 and
+    # 32(a): no row label here begins with a template row's wording, so no
+    # cross-checked row's `startswith` match is disturbed). The figures Hodge
+    # DOES publish for these two years stay on the single-metric sheets and are
+    # still NOT back-filled into this template - see the note.
+    ("SECTION", "FY2025 and FY2024 - no key-metrics table was published for either year "
+                "(this sheet reproduces a table; see the source note)", {}),
+    ("DATA", "Key-metrics template published for this reporting year",
+     {"FY2025": "Not published - SDDT modification (PRA Rule 3.1) effective 18 February 2025, before the "
+                "30 September 2025 year-end",
+      "FY2024": "Not published - no Pillar 3 document for the year ended 30 September 2024"}),
 ]
 
 KM1_SOURCES = (
@@ -883,22 +953,51 @@ KM1_SOURCES = (
     "LCR related metrics whereas detailed analysis at LIQ1 reports average values as defined in the "
     "table\", so rows 15-17 are point-in-time, not the 12-month average most filers print. The "
     "asterisk is kept on the section heading.\n"
-    "• FY2024 AND FY2025 ARE BLANK FOR DIFFERENT REASONS. FY2024 is an ordinary gap: no Pillar 3 "
-    "document was published for the year ended 30 September 2024, and its capital figures on the "
-    "metric sheets come from Note 32 of the FY2024 Annual Report, which is a statutory source and "
-    "is deliberately NOT back-filled into this template. FY2025 is NOT APPLICABLE rather than "
-    "missing: the Bank's SDDT modification (PRA Disclosure Rule 3.1, effective 18 February 2025) "
-    "removed its Pillar 3 duty before the 30 September 2025 year-end, so no FY2025 KM1 will ever "
-    "exist. FY2017 and earlier are blank because no edition before FY2018 prints a key-metrics "
+    "• FY2024 AND FY2025 ARE BLANK FOR DIFFERENT REASONS, AND THE REASON IS ABOUT THE TEMPLATE, "
+    "NOT ABOUT THE FIGURES. Neither year has a Pillar 3 document, so neither year has a "
+    "key-metrics TABLE, and this sheet reproduces a table. FY2024 is an ordinary gap: no Pillar 3 "
+    "document was published for the year ended 30 September 2024. FY2025 additionally has a reason "
+    "no such document can appear - the Bank's SDDT modification (PRA Rule 3.1, effective 18 "
+    "February 2025) removed its Pillar 3 duty before the 30 September 2025 year-end.\n"
+    "  Both years' figures DO partly exist, in each year's own Annual Report, and they are on the "
+    "single-metric sheets: CET1 capital, total RWA and the three ratios from the 'Capital risk "
+    "management (unaudited)' note, and the LCR and leverage ratio from the Chief Finance Officer's "
+    "Report at printed folio 13. They are deliberately NOT back-filled into this template. A "
+    "statutory report is not the UK KM1, its rows are not that template's rows, and mapping prose "
+    "onto template row numbers would assert a correspondence Hodge never published - the same "
+    "row-set reasoning that keeps the two template generations above apart. A blank on THIS sheet "
+    "means 'the Bank printed no key-metrics table for this year', and for FY2024 and FY2025 it "
+    "should not be read as 'the Bank published nothing'. (Clarified 2026-09-18, GA-005, after the "
+    "LCR and Leverage Ratio sheets were found to have made exactly that misreading.) "
+    "FY2017 and earlier are blank because no edition before FY2018 prints a key-metrics "
     "table of any kind; FY2017's figures survive only as the FY2018 edition's comparative column "
     "and are not transcribed here.\n"
-    "• LATEST-EDITION CHECK, 2026-09-16: Hodge's own Financial Information page "
-    "(https://hodgebank.co.uk/hodge/financial-information/) was fetched directly and read in full. "
-    "Newest Pillar 3 listed = \"Pillar 3 Disclosure 2023\" (the FY2023 document already cited "
-    "here); newest Annual Report listed = \"Annual Report and Financial Statements, 30 September "
-    "2025\" (Hodge-AR-28.01.26.pdf), which this workbook already carries as its FY2025 source. "
-    "The page lists an unbroken Pillar 3 series 2010-2023 and simply stops - consistent with the "
-    "SDDT modification above. None newer."
+    "• LATEST-EDITION CHECK, RE-RUN 2026-09-18 (GA-005); previous run 2026-09-16, same result. "
+    "Hodge's own Financial Information page (https://hodgebank.co.uk/hodge/financial-information/) "
+    "was fetched directly and read in full. Newest Pillar 3 listed = \"Pillar 3 Disclosure 2023\" "
+    "(the FY2023 document already cited here); newest Annual Report listed = \"Annual Report and "
+    "Financial Statements, 30 September 2025\" (Hodge-AR-28.01.26.pdf), which this workbook "
+    "already carries as its FY2025 source. The page lists an unbroken Pillar 3 series 2010-2023 "
+    "and simply stops - consistent with the SDDT modification above. NONE NEWER, and none can be "
+    "for a while: the year-end is 30 September, so FY2026 had not closed at the date of this "
+    "check. Note that the page is behind Cloudflare and returns HTTP 403 to a bare "
+    "curl -A \"Mozilla/5.0\"; it serves normally to a full browser header set. A 403 here is the "
+    "edge, not the bank.\n"
+    "• WAYBACK CDX SWEEP, COMPLETED 2026-09-18 - this REPLACES the \"BLOCKED ... recorded as "
+    "unknown, not as an absence\" status left by the 2026-09-16 pass, whose CDX calls returned "
+    "HTTP 503/504. The sweep ran clean this time, over hodgebank.co.uk, julianhodgebank.co.uk and "
+    "julianhodgebank.com, on the patterns .*pillar.*, .*annual.*, .*disclosure.*, .*p3.*, "
+    ".*capital.*, .*key-metric.* and .*km1.*. Findings: the newest Pillar 3 captured under any "
+    "filename on any of the three domains is Hodge-pillar-3-11.03.24.pdf, the FY2023 edition "
+    "already cited; NO Pillar 3 was ever uploaded to a 2025/ or 2026/ path. The legacy domain "
+    "julianhodgebank.com carries only jhb-pillar3-2010 to -2015 under /downloads/ and no annual "
+    "reports; julianhodgebank.co.uk has no captures at all. COVERAGE CONTROL, so the two negatives "
+    "above are facts about the site and not about the archive's reach: a listing of everything "
+    "captured under /wp-content/uploads/2026/ returns 26 items with capture timestamps running to "
+    "July 2026, and the only PDF among them from 2026/02/ is the FY2025 Annual Report itself. The "
+    "archive was looking, and there was no Pillar 3 to find. Together with the live page listing "
+    "above, the FY2024 and FY2025 Pillar 3 documents are now recorded as ABSENT rather than "
+    "unlocated."
 )
 
 bw.add_km1_sheet(
@@ -1034,25 +1133,66 @@ metric(
 # figure (already shown on that sheet), not a category split.
 # ---------------------------------------------------------------
 rwa_breakdown_rows = [
-    ("SECTION", "Risk type breakdown (as disclosed) - Pillar 3 \"Risk Type Breakdown\"/\"Overview of RWA\" table", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 629.2, "FY2022": 644, "FY2021": 639.9, "FY2020": 627.3, "FY2019": 626.8, "FY2018": 699.4, "FY2017": 661.5}),
-    ("DATA", "Counterparty credit risk (CCR) - includes CVA memo below for FY2023/FY2022 (this year's own template "
-             "shows CVA as a memo item within CCR, not a separately additive line); FY2021-FY2017's own templates "
-             "show CVA as its own separately additive line instead (see next-but-one row)",
-     {"FY2023": 2.7, "FY2022": 1, "FY2021": 4.6, "FY2020": 4.2, "FY2019": 2.1, "FY2018": 4.0, "FY2017": 4.3}),
-    ("DATA", "Of which: Credit valuation adjustment (CVA) - memo only for FY2023/FY2022, already included in CCR above, not separately additive",
+    # GA-002: the FY2023-FY2017 run previously sat under ONE divider, so its rows
+    # crossed two separate breaks - a change of table title (FY2021/FY2020) and a
+    # change in how CVA is treated (FY2022/FY2021). Each source now has its own
+    # block and its own TOTAL, and the cross-template explanations that had been
+    # crammed into row labels have moved onto the dividers that own them
+    # (km1/map.md rule 32(c)). No figure changed.
+    ("SECTION", "\"Risk Type Breakdown\" table - Hodge Bank Pillar 3 Disclosures, period ended 30 September 2023 "
+                "p.14 and period ended 30 September 2022 p.17 (FY2023, FY2022). In these two editions the "
+                "template shows credit valuation adjustment as a MEMO item inside the counterparty-credit-risk "
+                "line, not as a separately additive risk type: the 'Of which: CVA' row below is already included "
+                "in the CCR row above it and must not be added again", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2023": 629.2, "FY2022": 644}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2023": 2.7, "FY2022": 1}),
+    ("DATA", "Of which: Credit valuation adjustment (CVA) - memo only, already included in CCR above, not separately additive",
      {"FY2023": 0.2, "FY2022": 0}),
-    ("DATA", "Credit valuation adjustment (CVA) - shown as its own separately additive risk type in FY2021-FY2017's own Pillar 3 templates "
-             "(unlike the FY2023/FY2022 memo treatment above); Market risk is a separate nil/blank line in the FY2020-FY2017 source tables "
-             "and is not shown as its own row here since it is nil in every disclosed year",
-     {"FY2021": 0.8, "FY2020": 2.3, "FY2019": 2.5, "FY2018": 5.0, "FY2017": 5.7}),
-    ("DATA", "Operational risk", {"FY2023": 58.9, "FY2022": 44, "FY2021": 36.5, "FY2020": 36.2, "FY2019": 34.0, "FY2018": 29.9, "FY2017": 16.5}),
-    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2023": 13.9, "FY2022": 16, "FY2021": 29.2, "FY2020": 23.8, "FY2019": 16.5, "FY2018": 16.3, "FY2017": 18.3}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 704.7, "FY2022": 705, "FY2021": 711.0, "FY2020": 693.8, "FY2019": 681.9, "FY2018": 754.6, "FY2017": 706.3}),
+    ("DATA", "Operational risk", {"FY2023": 58.9, "FY2022": 44}),
+    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2023": 13.9, "FY2022": 16}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2023": 704.7, "FY2022": 705}),
+
+    ("SECTION", "\"Risk Type Breakdown\" table - Hodge Bank Pillar 3 Disclosures, period ended 30 September 2021, "
+                "p.21 (FY2021). Same table title as the block above, but NOT the same treatment: this edition "
+                "shows credit valuation adjustment as its own separately additive risk type, so its CVA row is a "
+                "component of the total rather than a memo", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2021": 639.9}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2021": 4.6}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2021": 0.8}),
+    ("DATA", "Operational risk", {"FY2021": 36.5}),
+    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2021": 29.2}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2021": 711.0}),
+
+    ("SECTION", "\"Overview of RWA\" table - Julian Hodge Bank Limited Pillar 3 Disclosures, period ended 30 "
+                "September 2020 p.23, period ended 31 October 2019 p.14 and period ended 31 October 2018 p.14, "
+                "each read from its own year's column, with FY2017 taken from the 31 October 2018 edition's "
+                "FY2017 comparator column because FY2017's own document discloses no risk-type RWA split "
+                "(FY2020-FY2017). CVA is a separately additive risk type in these editions. Market risk is a "
+                "separate nil/blank line in these source tables and is not reproduced as a row here, being nil "
+                "in every disclosed year", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2020": 627.3, "FY2019": 626.8, "FY2018": 699.4, "FY2017": 661.5}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2020": 4.2, "FY2019": 2.1, "FY2018": 4.0, "FY2017": 4.3}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 2.3, "FY2019": 2.5, "FY2018": 5.0, "FY2017": 5.7}),
+    ("DATA", "Operational risk", {"FY2020": 36.2, "FY2019": 34.0, "FY2018": 29.9, "FY2017": 16.5}),
+    ("DATA", "Amounts below the threshold for deduction (250% risk weight)", {"FY2020": 23.8, "FY2019": 16.5, "FY2018": 16.3, "FY2017": 18.3}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2020": 693.8, "FY2019": 681.9, "FY2018": 754.6, "FY2017": 706.3}),
+
     ("SECTION", "Pillar 1 capital requirement x 12.5 (derived from disclosed capital requirement - see sources note)", {}),
     ("DATA", "Credit risk (including CCR/CVA - not separately itemised in this year's own document)", {"FY2016": 661.25}),
     ("DATA", "Operational risk", {"FY2016": 11.25}),
     ("TOTAL", "Total risk-weighted exposure amount (derived)", {"FY2016": 672.5}),
+
+    # GA-018 (2026-09-18): FY2025 and FY2024 were left as wholly EMPTY columns,
+    # which audit_gaps.py cannot distinguish from a year nobody has worked. The
+    # absence is established (see the sources note and the KM1 sheet), so it is
+    # now STATED. Deliberately NOT a figure: the Annual Report's "Capital risk
+    # management (unaudited)" note gives only the aggregate Total RWAs, which is
+    # already on the Total RWAs sheet, and splitting it by risk type would
+    # invent a breakdown Hodge never printed.
+    ("SECTION", "FY2025 and FY2024 - no risk-type RWA breakdown was published for either year", {}),
+    ("DATA", "Risk-type breakdown of total risk-weighted exposure amount",
+     {"FY2025": "Not disclosed - no Pillar 3; the Annual Report gives only the aggregate total",
+      "FY2024": "Not disclosed - no Pillar 3; the Annual Report gives only the aggregate total"}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -1128,7 +1268,7 @@ metric(
          {"FY2023": 1803.7, "FY2022": 1852, "FY2021": 1732.2, "FY2020": 1423.5, "FY2019": 1393.2, "FY2018": 1412.2, "FY2017": 1309.5, "FY2016": 1359.3}),
         ("Leverage ratio INCLUDING claims on central banks (%) (UK LRCom row UK-25c for FY2022-FY2023; "
          "the Basel III/CRR leverage ratio as originally reported FY2016-FY2021)",
-         {"FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
+         {"FY2025": "8.1%", "FY2024": "8.4%", "FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
     ],
     p3_sources(LEVERAGE_BASIS_SOURCES),
     first_col_width=96,
@@ -1152,11 +1292,33 @@ metric(
          "the FY2023 edition's comparative restates it, a rounding-level difference recorded rather than "
          "reconciled; the own-year figure is the one shown. FY2021's including-basis exposure is 1,732.2 per "
          "FY2021's own report and 1,731 per the FY2022 edition's comparative - same, to rounding. "
-         "FY2025 is NOT APPLICABLE rather than undisclosed - the SDDT modification (PRA Rule 3.1, effective 18 "
-         "February 2025) removed the Pillar 3 duty before the 30 September 2025 year-end, so no FY2025 leverage "
-         "disclosure will ever exist; FY2024 is an ordinary open gap, its year having ended before that "
-         "modification took effect, and the Annual Report's brief 'Capital risk management' note carries no "
-         "leverage ratio. FY2015-FY2010 not available - no Basel III leverage ratio existed as a UK disclosure "
+         "FY2025 AND FY2024 ARE DISCLOSED, AND WERE WRONGLY BLANK UNTIL 2026-09-18. This note previously read "
+         "'FY2025 is NOT APPLICABLE rather than undisclosed ... no FY2025 leverage disclosure will ever exist', "
+         "reasoning from the Bank's SDDT modification (PRA Rule 3.1, effective 18 February 2025). That "
+         "modification ended the Bank's PILLAR 3 duty and nothing more, and the Bank went on to publish. The "
+         "earlier note was also looking in the wrong part of the Annual Report: it is true that the brief "
+         "'Capital risk management' note carries no leverage ratio, but the CHIEF FINANCE OFFICER'S REPORT, "
+         "printed folio 13 of each edition, does. FY2025, from its own edition: 'The Leverage Ratio at 30 "
+         "September 2025 was 8.1% (2024: 8.4%).' FY2024, from its own edition: 'The Leverage Ratio at 30 "
+         "September 2024 was 8.4% (2023: 9.6%).'\n"
+         "WHICH ROW THEY BELONG ON, SETTLED TWO WAYS. (1) The FY2024 edition's own 2023 comparative reads 9.6%, "
+         "which is exactly this sheet's INCLUDING-claims-on-central-banks figure for FY2023 (the excluding "
+         "figure is 10.5%), so the Annual Report's measure is the including one. (2) The same paragraph says so "
+         "in substance: 'We are not captured under the Financial Policy Committee's Leverage Ratio Framework "
+         "which became a binding requirement from 1 January 2022 for institutions with over £50bn of retail "
+         "deposits' - the Bank is outside the scope of the framework that permits claims on central banks to be "
+         "excluded, so its headline is necessarily the full exposure measure. The two new cells therefore sit "
+         "on the including row, and the EXCLUDING row stays blank for both years: the Bank published no "
+         "excluding-basis figure for either, and none is derived.\n"
+         "THE EXPOSURE MEASURE STAYS BLANK for FY2025 and FY2024. The Annual Report gives the ratio without its "
+         "denominator ('total exposure measure' returns zero hits in both editions), and a denominator is NOT "
+         "backed out of the ratio and the CET1 figure, arithmetically possible though that is.\n"
+         "AVERAGE LEVERAGE RATIO, PUBLISHED BUT NOT A ROW HERE, for the same reason as the LCR sheet's average: "
+         "the FY2025 edition adds 'The average leverage ratio throughout the financial year was 8.6% (2024 "
+         "9.7%)', a different basis, recorded in prose so it cannot be read as continuous with the year-end "
+         "rows. The FY2024 edition prints no average of its own, so 9.7% exists only as the FY2025 "
+         "comparative.\n"
+         "FY2015-FY2010 not available - no Basel III leverage ratio existed as a UK disclosure "
          "requirement under the Basel II regime those six years used. Those years belong on NEITHER of the two "
          "rows above: the excluding-/including-claims-on-central-banks distinction is a UK framework change "
          "effective 1 January 2022 and is meaningless applied to a Basel II year. The FY2013 document mentions a "
@@ -1170,14 +1332,31 @@ metric(
     [
         ("Total HQLA after haircuts (£m)", {"FY2023": 230.4, "FY2022": 334, "FY2021": 479.5, "FY2020": 196.4, "FY2019": 346.4, "FY2018": 245.2}),
         ("Total net cash outflow, adjusted value (£m)", {"FY2023": 130.2, "FY2022": 133, "FY2021": 137.1, "FY2020": 72.0, "FY2019": 67.0, "FY2018": 103.5}),
-        ("Liquidity Coverage Ratio (%)", {"FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "310.7%", "FY2024": "274.0%", "FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
     ],
     p3_sources(),
-    note="FY2025 is NOT APPLICABLE, not merely undisclosed - the SDDT modification (PRA Rule 3.1, effective 18 "
-         "February 2025) removed this bank's Pillar 3 duty before its 30 September 2025 year-end, so no FY2025 "
-         "LCR disclosure will ever exist. FY2024 is an ordinary open gap: its year ended 30 September 2024, "
-         "BEFORE that modification took effect, so the exemption does not cover it and no document was found. "
-         "The distinction is deliberate - see BASIS_NOTE. Year-end (point-in-time) values shown, per each source "
+    note="FY2025 AND FY2024 ARE DISCLOSED, AND WERE WRONGLY BLANK UNTIL 2026-09-18. This sheet previously read "
+         "'FY2025 is NOT APPLICABLE ... no FY2025 LCR disclosure will ever exist', reasoning from the Bank's "
+         "SDDT modification (PRA Rule 3.1, effective 18 February 2025). The modification ended the Bank's "
+         "PILLAR 3 duty and nothing more: the Bank went on to state its LCR for both years in the Chief Finance "
+         "Officer's Report of each year's own Annual Report, printed folio 13. FY2025: 'The Bank's LCR at 30 "
+         "September 2025 was above the regulatory minimum of 100% at 310.7% (2024: 274.0%).' FY2024, from its "
+         "own edition: 'The Bank's LCR as at 30 September 2024 was above the regulatory minimum of 100% at "
+         "274.0% (2023: 176.9%).' Each year is taken from its own edition, never the later comparative.\n"
+         "BASIS CONFIRMED, NOT ASSUMED. The FY2024 Annual Report's own 2023 comparative reads 176.9%, which is "
+         "exactly the figure this sheet already carried for FY2023 from the FY2023 Pillar 3 document's UK KM1 "
+         "row 17. The Annual Report's LCR is therefore the same year-end (point-in-time) measure as the rest of "
+         "this row, from an independent document family - so the two new cells extend the series rather than "
+         "splicing a second basis onto it.\n"
+         "HQLA AND NET CASH OUTFLOW STAY BLANK for FY2025 and FY2024: the Annual Report states the ratio only, "
+         "with no build-up, and neither component is derived from the other two.\n"
+         "AVERAGE LCR, PUBLISHED BUT DELIBERATELY NOT A ROW HERE. The FY2025 Annual Report also gives a "
+         "12-month average - 'The Bank's average LCR throughout the financial year was 331.3% (2024: 234.0%)' - "
+         "a different basis that must never be merged with the year-end row above. It is recorded in prose "
+         "rather than as a row, the same treatment this script already gives the Basel II Tier 1 figures on the "
+         "Tier 1 Capital sheet. Note that 234.0% for FY2024 appears ONLY as the FY2025 edition's comparative; "
+         "the FY2024 Annual Report prints no average of its own.\n"
+         "Year-end (point-in-time) values shown, per each source "
          "document's own basis ('year end value for LCR related metrics'); these are NOT the 12-month averages a "
          "UK KM1 template prints elsewhere, and the two bases are never merged. FY2017/FY2016 Pillar 3 documents "
          "were reviewed in full but contain no LCR disclosure (UK LCR reporting for this class of firm phased in "
@@ -1191,13 +1370,26 @@ metric(
     [
         ("Total available stable funding (£m)", {"FY2023": 1721.9, "FY2022": 1549, "FY2021": 1551.0, "FY2020": 1226.2}),
         ("Total required stable funding (£m)", {"FY2023": 1144.2, "FY2022": 1085, "FY2021": 922.7, "FY2020": 793.3}),
-        ("Net Stable Funding Ratio (%)", {"FY2023": "150.5%", "FY2022": "143%", "FY2021": "168.1%", "FY2020": "154.6%", "FY2019": "217.6%"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "Not disclosed — no Pillar 3, and absent from the Annual Report",
+                                          "FY2024": "Not disclosed — no Pillar 3, and absent from the Annual Report",
+                                          "FY2023": "150.5%", "FY2022": "143%", "FY2021": "168.1%", "FY2020": "154.6%", "FY2019": "217.6%"}),
     ],
     p3_sources(),
-    note="FY2025 is NOT APPLICABLE, not merely undisclosed - see the LCR sheet note; the SDDT modification "
-         "(effective 18 February 2025) also replaces the full NSFR with a Simplified Retail Deposit Ratio going "
-         "forward, and no SRDR value is disclosed either, so nothing succeeds this series. FY2024 is an ordinary "
-         "open gap (year ended before the modification took effect). FY2019's own Pillar 3 document gives the "
+    note="FY2025 AND FY2024 ARE GENUINELY NOT DISCLOSED, AND THE NSFR IS THE ONLY ONE OF THE THREE LIQUIDITY/"
+         "LEVERAGE METRICS OF WHICH THAT IS TRUE. Establishing it took a positive search rather than an "
+         "inference from the SDDT modification, because that inference proved wrong on the neighbouring sheets: "
+         "the LCR and Leverage Ratio sheets were blank for these two years until 2026-09-18 on exactly such an "
+         "inference, and both years of both metrics turned out to be published in the Annual Report. So for the "
+         "NSFR: the full text of both Annual Reports was extracted and searched, and 'NSFR' and 'Net Stable "
+         "Funding' each return ZERO hits in each edition. RICHNESS CONTROL on the same extractions, so that the "
+         "zero is a fact about the documents rather than about the search: 'credit risk' 76 hits (FY2025) and "
+         "72 (FY2024), 'operational risk' 16 and 15, 'CET1' 4 and 3, 'LCR' 3 and 2, 'Liquidity Coverage Ratio' "
+         "1 and 0 - and every LCR and leverage hit was read individually, which is how the two new figures on "
+         "those sheets were found. The SDDT modification (effective 18 February 2025) also replaces the full "
+         "NSFR with a Simplified Retail Deposit Ratio going forward, and no SRDR value is disclosed either "
+         "('Simplified Retail Deposit' and 'SRDR' both zero hits), so nothing succeeds this series. Note that "
+         "the modification is offered here as CONTEXT for the cessation, not as the evidence for it - the "
+         "evidence is the searched absence above. FY2019's own Pillar 3 document gives the "
          "ratio only (217.6%), with no ASF/RSF breakdown; the breakdown shown for FY2020 comes from FY2020's own "
          "report. FY2018/FY2017/FY2016 Pillar 3 documents were reviewed in full but contain no NSFR disclosure "
          "(UK NSFR reporting phased in later than LCR for this class of firm - FY2019 is this bank's first year "
@@ -1211,9 +1403,16 @@ metric(
     p3_sources(),
     note="FY2025 reads 'Not applicable', every other year 'Not publicly disclosed', and the difference is "
          "deliberate and load-bearing. 'Not publicly disclosed' asserts a figure may exist that was not found; "
-         "'Not applicable' means no such disclosure can exist. FY2025 is the latter: the SDDT modification (PRA "
-         "Rule 3.1, FRN 204439, effective 18 February 2025) removed this bank's Pillar 3 disclosure duty before "
-         "its 30 September 2025 year-end, so no FY2025 Pillar 3 document will ever be published. FY2024 stays "
+         "'Not applicable' means no such disclosure can exist. FY2025 is the latter, but the reasoning was "
+         "TIGHTENED on 2026-09-18 and the earlier version of it should not be reused. It is not enough that the "
+         "SDDT modification (PRA Rule 3.1, FRN 204439, effective 18 February 2025) removed this bank's Pillar 3 "
+         "duty before its 30 September 2025 year-end so that no FY2025 Pillar 3 document will ever be "
+         "published: that argument was also made for the FY2025 LCR and leverage ratio on their own sheets, and "
+         "it was wrong there, because the Bank published both in its Annual Report instead. What carries "
+         "'Not applicable' here is the Annual Report having been searched too and found silent - 'MREL', "
+         "'minimum requirement for own funds' and 'loss-absorbing' each return zero hits in the FY2025 and "
+         "FY2024 editions, against a richness control on the same extraction of 76 and 72 hits for 'credit "
+         "risk'. No Pillar 3 document can exist AND the statutory report does not carry it. FY2024 stays "
          "'Not publicly disclosed' because its year ended 30 September 2024, BEFORE the modification took "
          "effect - it is an ordinary negative, not a structural exemption (see BASIS_NOTE for why that is left "
          "as NOT ESTABLISHED rather than claimed). For FY2023-FY2010, no MREL figure (numeric or qualitative) "
@@ -1254,8 +1453,8 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"}),
         ("Tier 1 Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.1%", "FY2016": "19.2%"}),
         ("Total Capital Ratio", {"FY2025": "17.5%", "FY2024": "19.8%", "FY2023": "24.5%", "FY2022": "25.2%", "FY2021": "20.2%", "FY2020": "19.7%", "FY2019": "23.0%", "FY2018": "22.3%", "FY2017": "21.2%", "FY2016": "19.2%"}),
-        ("Leverage Ratio (incl. claims on central banks - the only basis comparable across all years; see note)", {"FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
-        ("LCR", {"FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
+        ("Leverage Ratio (incl. claims on central banks - the only basis comparable across all years; see note)", {"FY2025": "8.1%", "FY2024": "8.4%", "FY2023": "9.6%", "FY2022": "9.6%", "FY2021": "8.3%", "FY2020": "9.6%", "FY2019": "11.2%", "FY2018": "11.9%", "FY2017": "11.4%", "FY2016": "9.5%"}),
+        ("LCR", {"FY2025": "310.7%", "FY2024": "274.0%", "FY2023": "176.9%", "FY2022": "252%", "FY2021": "349.6%", "FY2020": "272.9%", "FY2019": "516.9%", "FY2018": "236.9%"}),
         ("NSFR", {"FY2023": "150.5%", "FY2022": "143%", "FY2021": "168.1%", "FY2020": "154.6%", "FY2019": "217.6%"}),
     ],
     note="This entity takes the FRS 101/FRS 1 cash-flow-statement exemption every year FY2014-FY2025 (see the Cash "
@@ -1267,10 +1466,17 @@ bw.add_overview_sheet(
          "disclose 'Total capital resources' but no risk-weighted assets, no CET1 and no capital ratio of any "
          "kind - every other pre-FY2016 cell is blank BY DESIGN and well-sourced, never back-solved. The Asset "
          "Quality and RWA Breakdown sheets deliberately stop at FY2014, where their content genuinely stops. "
-         "FY2025's Pillar 3 cells read 'Not applicable' rather than 'Not publicly disclosed': the SDDT "
-         "modification (PRA Rule 3.1, effective 18 February 2025) ended the disclosure duty before that "
-         "year-end, so the figures cannot exist. FY2024 is an ordinary open gap, its year having ended before "
-         "the modification took effect. "
+         "FY2025 AND FY2024 PILLAR 3 COVERAGE, CORRECTED 2026-09-18 (GA-005). Neither year has a Pillar 3 "
+         "document - the SDDT modification (PRA Rule 3.1, effective 18 February 2025) ended the disclosure duty "
+         "before the FY2025 year-end, and FY2024's year ended before the modification took effect. But that is "
+         "a fact about the DOCUMENT, not about the metrics, and this workbook previously confused the two: the "
+         "LCR and Leverage Ratio were blank for both years and captioned 'Not applicable - the figures cannot "
+         "exist', when in fact the Bank states both in the Chief Finance Officer's Report of each year's own "
+         "Annual Report (printed folio 13). LCR 310.7% (FY2025) and 274.0% (FY2024); leverage ratio, on the "
+         "including-claims-on-central-banks basis charted above, 8.1% and 8.4%. Both rows above now carry them. "
+         "What remains genuinely absent for the two years is the NSFR, the leverage EXPOSURE MEASURE, the LCR "
+         "build-up, the category-level RWA breakdown, the KM1 template itself and MREL - each established by a "
+         "full-text search of both Annual Reports with a richness control, not inferred from the modification. "
          "Leverage/LCR/NSFR availability varies by year - see each Pillar 3 sheet's own source citation for detail "
          "(pre-CRD IV FY2015-FY2010 have none of the three; LCR/NSFR were phased in for this bank in FY2018/FY2019 "
          "respectively). LEVERAGE RATIO BASIS, stated here because this sheet is a standalone copy and the chart "

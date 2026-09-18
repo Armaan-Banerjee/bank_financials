@@ -39,25 +39,48 @@ ENTITY_NOTE = (
     "only from the FY2018 Annual Report onward) - FY2017's KPI-style figures (RWA, CET1 ratio, Leverage "
     "Ratio, CET1 Capital) were sourced from the FY2018 report's own FY2017 comparative column; no such "
     "comparative exists anywhere for FY2016, so FY2016's RWA, CET1/Tier1 Ratio, Leverage Ratio, LCR and "
-    "NSFR are self-skipped as genuinely undisclosed in any filing obtained (confirmed via a Wayback CDX "
-    "search of credit-suisse.com for a standalone Pillar 3 document, which returned no CSUK-specific hit "
-    "before the search was judged uneconomical to keep pursuing) - FY2016 CET1/Tier 1 Capital (the £ amount) "
+    "NSFR are self-skipped as undisclosed in any filing obtained. QUALIFIED 18 September 2026 (KM1-032): "
+    "the parenthetical here used to read 'confirmed via a Wayback CDX search of credit-suisse.com for a "
+    "standalone Pillar 3 document, which returned no CSUK-specific hit before the search was judged "
+    "uneconomical to keep pursuing', and the word 'confirmed' was doing work the search cannot support. A "
+    "CDX search that was abandoned for cost is not an enumeration, and an archive scan can never see a "
+    "live-only document in any case. The correct status of the FY2016 standalone Pillar 3 is UNPROVEN, not "
+    "absent - and note that CSUK's standalone Pillar 3 documents for later years demonstrably DO exist and "
+    "are used on the KM1 and capital sheets of this workbook, so the premise that CSUK published none is "
+    "already known to be false for other years. "
+    "SETTLED IN PART, 18 September 2026 (interior-gap sweep): a 2016 CSUK Pillar 3 edition DOES exist and "
+    "is listed by name on the UBS-hosted Credit Suisse legal-entity ARCHIVE index, which was successfully "
+    "enumerated that day at https://www.ubs.com/global/en/investor-relations/complementary-financial-"
+    "information/disclosure-legal-entities/archive-credit-suisse.html (plain curl clears the 403 that a "
+    "browser User-Agent triggers). That index lists a CSUK edition for every year 2014-2023. "
+    "The 2016 edition was NOT opened in that pass, which was scoped to interior gaps only, so FY2016 stays "
+    "blank as an UNCHECKED LEAD - a document known to exist and not yet read - rather than as anything "
+    "resembling an absence. FY2016 CET1/Tier 1 Capital (the £ amount) "
     "IS available, from the Capital adequacy note's Own Funds table.\n"
-    "- Leverage Ratio is disclosed only in the FY2017/FY2018 KPI tables (6.3%/7.8%) - absent from FY2016 "
+    "- Leverage Ratio is disclosed only in the FY2017/FY2018 KPI TABLES (6.3%/7.8%) - absent from FY2016 "
     "(no KPI table) and from FY2019/FY2020's own KPI tables (which dropped the 'Statement of Financial "
-    "Position' KPI section entirely), consistent with the already-known gap before it reappears in FY2024/"
-    "FY2025. Average LCR is disclosed only in the FY2018 KPI table (154%) - FY2017's KPI table explicitly "
-    "shows 'n/a', and FY2019/FY2020 KPI tables carry no LCR figure at all (only a Liquidity Buffer £ "
-    "amount), consistent with the already-known gap before LCR reappears from FY2022. NSFR is not found "
-    "disclosed anywhere in FY2016-FY2020.\n"
+    "Position' KPI section entirely). Average LCR is disclosed only in the FY2018 KPI table (154%) - "
+    "FY2017's KPI table explicitly shows 'n/a', and FY2019/FY2020 KPI tables carry no LCR figure at all "
+    "(only a Liquidity Buffer £ amount). NSFR is not found in any FY2016-FY2020 KPI table.\n"
+    "  CORRECTED 18 September 2026: every sentence in the paragraph above is about ONE DOCUMENT TYPE, the "
+    "Annual Report KPI table, and it is still accurate about that document. What it used to do, and no "
+    "longer does, is finish each clause with 'consistent with the already-known gap' - reading an absence "
+    "from the KPI table as an absence from the Bank's disclosure. It is not. CSUK published a leverage "
+    "ratio for FY2019, FY2020, FY2021, FY2022 AND FY2023, and an LCR for all five, in its own standalone "
+    "Pillar 3 editions for those years; all five leverage figures and a full seven-year average-basis LCR "
+    "series are now on the Leverage Ratio and LCR sheets. See those sheets' notes for document, printed "
+    "folio and the cross-edition restatements that are recorded but not applied.\n"
     "- Total Capital / Total Capital Ratio: a Capital adequacy note ('Own Funds' table: Total Tier 1/CET1 "
     "capital + Total Tier 2 capital = Own Funds) exists in every FY2016-FY2020 filing and gives a genuine, "
     "directly disclosed Total Capital (£ Own Funds) figure each year - populated on this sheet for FY2016-"
-    "FY2020 only. This contradicts the existing FY2021-FY2025 columns' 'not directly disclosed' claim on "
-    "the same sheet (that claim was based on the KPI table alone, which never carried a Total Capital line "
-    "in any year checked) - flagged here as a likely correctness gap for a future audit-only ticket to "
-    "resolve for FY2021-FY2025, but deliberately NOT fixed in this ticket (out of scope: this ticket only "
-    "extends the year window). No Total Capital RATIO (%) was found disclosed in any year FY2016-FY2020 "
+    "FY2020 only. The contradiction this paragraph used to flag - that the FY2021-FY2025 columns carried a "
+    "'not directly disclosed' claim on the same sheet - was referred to 'a future audit-only ticket'. THAT "
+    "TICKET WAS KM1-032 AND THE CONTRADICTION IS NOW RESOLVED (18 September 2026): Total Capital IS "
+    "directly disclosed for FY2021-FY2025, as row 3 of CSUK's own KM1 template and row 59 of its CC1, in "
+    "the standalone Pillar 3 editions this workbook already cites. Both the Total Capital and Total Capital "
+    "Ratio sheets now carry those years and name that source. The original claim was true only of the KPI "
+    "table, which never carried a Total Capital line - a statement about ONE document read as a statement "
+    "about the bank's disclosure. No Total Capital RATIO (%) was found disclosed in any year FY2016-FY2020 "
     "either (only the £ Own Funds figure), so that row stays blank for the new years too.\n"
     "- Asset Quality's loan-book note uses the SAME UK/Foreign x Commercial/Consumer borrower-type format "
     "in every FY2016-FY2020 filing checked as the format already used on this sheet for FY2021-FY2023 - no "
@@ -702,10 +725,33 @@ def metric(name, unit, rows_data, sources_text, note=None):
 def p3_sources(page_note=""):
     return (
         "Sources - Credit Suisse (UK) Limited's own Annual Report 'Key Performance Indicators (KPIs)' "
-        "table (no standalone Pillar 3 document was located for CSUK; the FY2025 Annual Report's own "
-        "Strategic Report states 'Pillar 3 disclosures can be found separately at "
-        "https://www.ubs.com/global/en/investor-relations', but a CSUK-specific document was not "
-        "identified there within budget - WebSearch quota was already exhausted):\n"
+        "table.\n"
+        "CORRECTED 18 September 2026 (KM1-032). This citation previously read '(no standalone Pillar 3 "
+        "document was located for CSUK; the FY2025 Annual Report's own Strategic Report states \"Pillar 3 "
+        "disclosures can be found separately at https://www.ubs.com/global/en/investor-relations\", but a "
+        "CSUK-specific document was not identified there within budget - WebSearch quota was already "
+        "exhausted)'. THAT WAS FALSE, and it is the clearest example in this workbook of a limit on our "
+        "REACH being written down as a fact about the BANK: the sentence recorded that a search had run out "
+        "of budget, and then read as though the document did not exist. Because p3_sources() is attached to "
+        "every metric sheet, that one sentence shipped the claim across the whole workbook.\n"
+        "CSUK publishes standalone, entity-level Pillar 3 disclosures, and THIS WORKBOOK ALREADY USES THEM: "
+        "the KM1 Key Metrics sheet reproduces CSUK's own 'KM1 - Key metrics' template from the Pillar 3 "
+        "Disclosures editions for 2022, 2023, 2024 and 2025 (see that sheet's citation, which names each "
+        "edition, its printed folio and the filename trap whereby the 2025 edition is published as "
+        "'csuk-pillar-3-disclosures-2026.pdf'), and the Total Capital and Total Capital Ratio sheets are "
+        "sourced from those same editions' own-funds tables. The editions are reached from the Credit Suisse "
+        "legal-entity disclosure index at " + CSUK_P3_INDEX_URL + " .\n"
+        "THE UBS HOST IS REACHABLE - a correction to this note's own previous paragraph, recorded because "
+        "it is the same class of error as the sentence above. That paragraph said that on 18 September "
+        "2026 'both routes to those documents were unavailable to this session', the UBS host returning "
+        "HTTP 403 with a 483-byte AkamaiGHost 'Access Denied' body 'which an ordinary browser User-Agent "
+        "does not clear'. The observation was accurate; the inference was backwards. The 403 is caused BY "
+        "the browser User-Agent, not cured by it. Later the same day, PLAIN curl with no added headers "
+        "returned HTTP 200 and the full index page, and every CSUK Pillar 3 PDF then downloaded cleanly "
+        "(Content-Type application/pdf, %PDF magic bytes). The lowest rung of the fetching ladder passes "
+        "an edge rule that the highest rung trips. Five editions - 2019, 2020, 2021, 2022 and 2023 - were "
+        "downloaded and read on that basis and now source the Leverage Ratio and LCR sheets.\n"
+        "Sources by year:\n"
         "FY2025/FY2024: FY2025 Annual Report, KPI table p.6 - " + AR2025_URL + "\n"
         "FY2023/FY2022: FY2023 Annual Report, KPI table p.7 - " + AR2023_URL + "\n"
         "FY2021: FY2021 Annual Report, KPI table p.8 - " + AR2021_URL + "\n"
@@ -723,6 +769,13 @@ def p3_sources(page_note=""):
         "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/disclosure-legal-entities/archive-credit-suisse.html\n"
         "FY2024-FY2025: CSUK official Pillar 3 disclosures hosted by UBS (KM1 / capital composition tables) - "
         "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/other-subsidiaries.html\n"
+        "FY2019-FY2023: CSUK standalone Pillar 3 editions, reached from the UBS-hosted Credit Suisse "
+        "legal-entity ARCHIVE index - https://www.ubs.com/global/en/investor-relations/complementary-"
+        "financial-information/disclosure-legal-entities/archive-credit-suisse.html - which lists one CSUK "
+        "edition per year for 2014-2023. Each edition's own title carries the fiscal year ('Pillar 3 "
+        "Disclosures 2019', '2020 Pillar 3 Disclosures', and so on), so the filename-year trap that "
+        "affects the FY2025 edition does not arise for these. Editions 2014-2018 are listed on the same "
+        "index and have NOT been opened by this workbook - a standing lead, not an absence.\n"
         + page_note
     )
 
@@ -733,8 +786,26 @@ CET1_TIER1_RATIO = {"FY2025": "191%", "FY2024": "45%", "FY2023": "29.15%", "FY20
                      "FY2020": "22%", "FY2019": "21.9%", "FY2018": "22.5%", "FY2017": "17.2%"}
 RWA = {"FY2025": 160, "FY2024": 672, "FY2023": 1000, "FY2022": 1124, "FY2021": 1340,
        "FY2020": 1338, "FY2019": 1371, "FY2018": 1225, "FY2017": 1241}
-LEVERAGE_RATIO = {"FY2025": "87%", "FY2024": "17%", "FY2018": "7.8%", "FY2017": "6.3%"}
-LCR = {"FY2025": "1,154%", "FY2024": "451%", "FY2023": "554.67%", "FY2022": "216.40%", "FY2018": "154%"}
+# FY2023-FY2019 added 2026-09-18 (interior-gap sweep, GA- series). Each year is
+# the figure printed by THAT year's OWN CSUK standalone Pillar 3 edition - see
+# LEVERAGE_INTERIOR_NOTE for the document, printed folio and the cross-edition
+# restatements that are deliberately NOT applied.
+LEVERAGE_RATIO = {"FY2025": "87%", "FY2024": "17%", "FY2023": "12.09%", "FY2022": "11.40%",
+                  "FY2021": "9.30%", "FY2020": "8.07%", "FY2019": "8.47%",
+                  "FY2018": "7.8%", "FY2017": "6.3%"}
+# FY2021 added 2026-09-18 on the SPOT basis this row uses - see LCR_INTERIOR_NOTE.
+LCR = {"FY2025": "1,154%", "FY2024": "451%", "FY2023": "554.67%", "FY2022": "216.40%",
+       "FY2021": "216%", "FY2018": "154%"}
+# Second, separately-labelled row on the LCR sheet: CSUK's own Pillar 3 12-month
+# average LCR. NOT merged into the row above - the two are different measures and
+# the Bank says so itself (2020 edition, p.21 footnote: "For the purpose of
+# Pillar 3, the values are calculated as the simple average of the month-end
+# observations over the preceding twelve months. The HQLA and LCR reported as at
+# 31 December 2020 in CSUK Annual Report represents the spot value as of the
+# reporting date."). This row is what fills FY2020 and FY2019, which have no
+# published spot figure anywhere located.
+LCR_P3_AVERAGE = {"FY2025": "4860.58%", "FY2024": "539.19%", "FY2023": "729.77%", "FY2022": "229.60%",
+                  "FY2021": "230%", "FY2020": "300%", "FY2019": "246%"}
 NSFR = {"FY2025": "3,600%", "FY2024": "167%", "FY2023": "129.25%", "FY2022": "131.72%"}
 
 COMBINED_NOTE = (
@@ -746,6 +817,45 @@ COMBINED_NOTE = (
 
 CSUK_P3_INDEX_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
                      "other-subsidiaries.html")
+
+# ---------------------------------------------------------------
+# UBS-hosted Credit Suisse legal-entity ARCHIVE index, and the CSUK standalone
+# Pillar 3 editions reached from it. Enumerated directly on 2026-09-18 (interior-
+# gap sweep) - the index's own table links, not guessed slugs. It lists a CSUK
+# Pillar 3 edition for EVERY year 2014-2023 inclusive.
+#
+# FETCHING-LADDER NOTE, recorded because it inverts what this file previously
+# said. On 2026-09-18 an earlier session recorded the UBS host as returning an
+# AkamaiGHost 403 "Access Denied" and concluded the documents were unreachable.
+# That is true ONLY of the browser-User-Agent rung: sending a Chrome UA (with or
+# without --http1.1) still returns 403/530 bytes, while PLAIN `curl` with no
+# added headers at all returns HTTP 200 and the full 552,569-byte index page,
+# and each PDF below then downloads clean (HTTP 200, Content-Type
+# application/pdf, %PDF magic bytes, 0.5-8 MB). The edge rule is evidently
+# UA-based and the lower rung of the ladder passes it. Rung 1 (plain curl) is
+# the one that works here; do not start at rung 4.
+CSUK_P3_ARCHIVE_INDEX_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-"
+                             "information/disclosure-legal-entities/archive-credit-suisse.html")
+_UBS_DAM = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
+            "disclosure-legal-entities/archive-credit-suisse/_jcr_content/root/contentarea/mainpar/"
+            "toplevelgrid_1145414446/col_1/accordionbox/")
+P3_2019_URL = (_UBS_DAM + "accordionsplit_ba44/table.1211843275.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMv"
+               "Y2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAx"
+               "OS8yMDE5LWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2019-csuk-pillar-3-disclosures.pdf")
+P3_2020_URL = (_UBS_DAM + "accordionsplit/table.670434488.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2Mv"
+               "aW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMC8y"
+               "MDIwLWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2020-csuk-pillar-3-disclosures.pdf")
+P3_2021_URL = (_UBS_DAM + "accordionsplit_794647952/table_1735174296.1230522569.file/dGFibGVUZXh0PS9jb250ZW50"
+               "L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9u"
+               "L2FyY2hpdmUvMjAyMS8yMDIxLWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2021-csuk-pillar-3-"
+               "disclosures.pdf")
+P3_2022_URL = (_UBS_DAM + "accordionsplit_1343042181/innergrid/col_1/table.1831372465.file/dGFibGVUZXh0PS9jb"
+               "250ZW50L2RhbS9hc3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9y"
+               "bWF0aW9uL2FyY2hpdmUvMjAyMi9jc3VrLXBpbGxhci0zLWRpc2Nsb3N1cmVzLTIwMjIucGRm/csuk-pillar-3-"
+               "disclosures-2022.pdf")
+P3_2023_URL = (_UBS_DAM + "accordionsplit_485894160/table.1454258810.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc"
+               "3NldHMvY2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hp"
+               "dmUvMjAyMy8yMDIzLWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2023-csuk-pillar-3-disclosures.pdf")
 
 KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
 
@@ -815,16 +925,45 @@ KM1_SOURCES = (
     "  - Rows 5/6/14 for FY2024 differ in the source documents only by the Annual Report's rounding to "
     "whole percentages (KM1 44.58% and 16.56% against the sheets' '45%' and '17%'); those now fall inside "
     "tolerance and no longer register.\n"
-    "ELEVEN cells differ in total, and every one falls into a class above: four from the averaged-versus-"
-    "spot LCR on row 17 (FY2025-FY2022), three from the restated FY2021 comparative on rows 5/6/7, two from "
-    "the averaged-versus-spot NSFR on row 20 (FY2023 and FY2022), one from the restated FY2021 RWA on row 4, "
-    "and one from rounding on row 20 FY2025. Rows 1, 2, 3, 13 and 14 agree throughout - including row 3 "
+    "SEVEN cells differ in total, and every one falls into a class above: three from the restated FY2021 "
+    "comparative on rows 5/6/7, two from the averaged-versus-spot NSFR on row 20 (FY2023 and FY2022), one "
+    "from the restated FY2021 RWA on row 4, and one from rounding on row 20 FY2025. "
+    "IT WAS ELEVEN UNTIL 18 SEPTEMBER 2026, and the four that went were the row 17 LCR cells for "
+    "FY2025-FY2022. They did not go because a figure changed - none did - but because the LCR sheet now "
+    "carries the Bank's Pillar 3 12-month-average LCR as its own second row alongside the Annual Report's "
+    "spot row, so the template's row 17 has a same-basis counterpart to be checked against and matches it "
+    "exactly. The basis difference that produced those four disagreements is unchanged and is still "
+    "described above; it is simply now represented on both sheets instead of only one. "
+    "Rows 1, 2, 3, 13 and 14 agree throughout - including row 3 "
     "FY2024, which is the figure corrected from 299 to 347 under this ticket. Rows 1 and 2 formerly "
     "registered as well, on FY2024/FY2023/FY2022, but that was a tolerance artefact of comparing a whole-£m "
     "sheet against a £'000 template and was resolved in verify_workbook.py on 2026-09-17; no figure changed.\n"
     "These are recorded here deliberately. A verifier disagreement on any of these rows is the expected "
     "consequence of two genuinely different published bases and must not be removed by editing a figure.\n\n"
-    "LATEST-EDITION CHECK (2026-09-17): the UBS-hosted Credit Suisse legal-entity disclosure index was "
+    "ROWS 1, 2 AND 3 ARE EQUAL FOR FY2025 IN THE SOURCE - READ FROM THE DOCUMENT ON 2026-09-18, NOT "
+    "INFERRED FROM THE OTHER SHEETS. The 'Pillar 3 Disclosures 2025' edition prints 305,801 on row 1 "
+    "(CET1 capital), row 2 (Tier 1 capital) AND row 3 (Total capital) on printed folio 16, and prints "
+    "191.10% on rows 5, 6 and 7. The three coincide because CSUK had NO Additional Tier 1 and NO Tier 2 "
+    "in issue at 31 December 2025. The same edition says so three ways: its CC1 prints row 29 CET1 "
+    "305,801 and row 59 Total capital 305,801 with no AT1 or Tier 2 amount row populated at all (the only "
+    "Tier 2 line is row 77, a CAP on the inclusion of credit risk adjustments, 62); its balance-sheet "
+    "reconciliation prints 'Long term debt -' and 'of which: Subordinated debt -', with total "
+    "shareholders' equity of 305,801, equal to CET1 to the pound; and its Article 437 narrative states "
+    "'CSUK's CET1 comprises permanent share capital of ordinary shares and reserves.' The Tier 2 of "
+    "47,430 that stood at end-2024 (346,842 - 299,412) had been redeemed. CSUK is in run-off following "
+    "the UBS acquisition, which is also why RWA falls from 671,676 to 160,021 while CET1 holds flat.\n"
+    "Rows UK 7a/7b/7c/7d repeat FY2024's 3.32% / 1.11% / 1.48% / 13.91% exactly. That was confirmed in "
+    "the FY2025 edition itself rather than carried over, because a repeated block is also what a copied "
+    "column looks like.\n\n"
+    "THE FY2025 EDITION'S OWN 2024 COMPARATIVE COLUMN IS DEFECTIVE, and is recorded rather than "
+    "corrected, the same treatment as the row 13 divergence above. That column prints rows 1, 2 and 3 "
+    "all as 299,412 - repeating CET1 into the Total capital slot - while printing row 7 for the same "
+    "column as 51.64%, a percentage which against its own row 4 of 671,676 is 346,842. The edition "
+    "contradicts itself, and FY2024's own edition prints 346,842. FY2024 on this sheet therefore stays "
+    "346,842 under rule 1 and must not be 'corrected' toward this later comparative. This is very likely "
+    "the origin of the FY2024 error corrected on 2026-09-17: the duplication was printed by the Bank "
+    "first, in the edition a transcriber would reach for last.\n\n"
+    "LATEST-EDITION CHECK (2026-09-17, re-confirmed 2026-09-18): the UBS-hosted Credit Suisse legal-entity disclosure index was "
     "enumerated directly. The newest CSUK Pillar 3 is the 'Pillar 3 Disclosures 2025' edition used above for "
     "FY2025, so this workbook is current; no FY2026 edition exists yet.\n"
 )
@@ -973,21 +1112,87 @@ bw.add_rwa_breakdown_sheet(
     source_height=340,
 )
 
-metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(
-    "\nLeverage Ratio reappears in the KPI table format used from the FY2025 Annual Report onward. It was "
-    "also disclosed in the FY2017/FY2018 KPI tables (6.3%/7.8%, under a 'Statement of Financial Position' "
-    "KPI section) - but that section was dropped from the KPI table format used in the FY2019 and FY2020 "
-    "Annual Reports, and FY2023/FY2022/FY2021's KPI tables (a further later format) don't include this "
-    "metric either. FY2016 has no KPI table at all. Confirmed genuinely absent for FY2016/FY2019-FY2023, "
-    "not omitted by search."))
+LEVERAGE_INTERIOR_NOTE = (
+    "\nFY2023-FY2019 FILLED 2026-09-18 (interior-gap sweep). This row previously jumped from FY2018 to "
+    "FY2024 with five blank years between - the classic interior hole, and it was ours, not the Bank's. "
+    "The sentence it replaces read that the metric was 'confirmed genuinely absent for FY2016/FY2019-"
+    "FY2023, not omitted by search'. That was a true statement about ONE document - the Annual Report KPI "
+    "table, which really does drop the 'Statement of Financial Position' KPI section for those years - "
+    "written down as a statement about the BANK. CSUK published a leverage ratio in every one of those "
+    "five years, in its own standalone Pillar 3 disclosure, and each figure below is from THAT YEAR'S OWN "
+    "EDITION (no comparative columns used):\n"
+    f"  FY2023 12.09% - 'Pillar 3 Disclosures 2023', KM1 row 14 'Leverage ratio excluding claims on central "
+    f"banks (%)', printed folio 20, and repeated in that edition's Leverage Ratio narrative ('CSUK's "
+    f"leverage ratio increased to 12.09% as at 31 December 2023 from 11.40% as at 31 December 2022') - "
+    f"{P3_2023_URL}\n"
+    f"  FY2022 11.40% - 'Pillar 3 Disclosures 2022', KM1 row 14, printed folio 19, and repeated in that "
+    f"edition's narrative ('CSUK's leverage ratio increased to 11.40% as at 31 December 2022 from 9.30% as "
+    f"at 31 December 2021') - {P3_2022_URL}\n"
+    f"  FY2021 9.30% - '2021 Pillar 3 Disclosures', 'Leverage Ratio Common Disclosure' table, final row, "
+    f"printed folio 33 ('Leverage Ratio 9.30 %') - {P3_2021_URL}\n"
+    f"  FY2020 8.07% - '2020 Pillar 3 Disclosures', 'Leverage Ratio Common Disclosure' table, printed folio "
+    f"24 ('Leverage Ratio 8.07%'; Tier 1 Capital 295,460 / Total Exposures 3,659,748) - {P3_2020_URL}\n"
+    f"  FY2019 8.47% - 'Pillar 3 Disclosures 2019', 'Leverage Ratio Common Disclosure' table, printed folio "
+    f"22 ('Leverage Ratio 8.47%'; Tier 1 Capital 300,176 / Total Exposures 3,544,752) - {P3_2019_URL}\n"
+    "CROSS-EDITION RESTATEMENTS, DOCUMENTED AND DELIBERATELY NOT APPLIED. Two of these years are restated "
+    "by the NEXT edition's narrative comparative, and the own-year figure is kept in both cases per this "
+    "project's own-edition rule: the 2020 edition says the ratio 'increased to 8.07% as at 31 December "
+    "2020 from 7.74% as at 31 December 2019', against the 2019 edition's own 8.47%; and the 2021 edition "
+    "says it 'increased to 9.30% as at 31 December 2021 from 8.57% as at 31 December 2020', against the "
+    "2020 edition's own 8.07%. CSUK never explains either movement. Do not reconcile them.\n"
+    "BASIS BREAK, stated rather than smoothed: FY2019-FY2021 are the CRR / Commission Delegated Act "
+    "leverage ratio (Tier 1 capital over total exposures) as each of those editions defines it, whereas "
+    "FY2022 onward are captioned 'excluding claims on central banks' under the UK leverage framework. The "
+    "two coincide at the FY2021/FY2022 join - the FY2022 edition's own 2021 comparative on the UK-captioned "
+    "row prints exactly the 9.30% the 2021 edition printed on the CRR row - but that is the Bank's own "
+    "arithmetic, not an equivalence asserted here.\n"
+    "FY2016 remains blank: that year has no KPI table and its standalone Pillar 3 was not opened in this "
+    "pass (an edition for 2016 IS listed on the UBS archive index - see the reach note in the sources "
+    "above - so the FY2016 blank is an UNCHECKED lead, not a demonstrated absence)."
+)
+metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(LEVERAGE_INTERIOR_NOTE))
 
-metric("LCR", "%", [("Liquidity Coverage Ratio (LCR)", LCR)], p3_sources(
-    "\nFY2021's KPI table (earliest format checked before this ticket) discloses only a 'Liquidity Buffer "
-    "(£m)' figure, no LCR% - confirmed genuinely absent for that year, not omitted by search. FY2018's KPI "
-    "table is the only other year with an LCR figure (an 'Average Liquidity Coverage Ratio' of 154%, itself "
-    "flagged there as a new disclosure that year); FY2017's own comparative column explicitly states 'n/a' "
-    "for this metric; FY2019/FY2020's KPI tables carry only a Liquidity Buffer figure again, no LCR%; FY2016 "
-    "has no KPI table at all."))
+LCR_INTERIOR_NOTE = (
+    "\nTWO ROWS, TWO DIFFERENT MEASURES - read the labels. The Bank publishes an LCR on two bases and says "
+    "so itself, so they are kept as separate rows and neither is adjusted toward the other. The Pillar 3 "
+    "2020 edition, printed folio 21, footnotes its own table: 'For the purpose of Pillar 3, the values are "
+    "calculated as the simple average of the month-end observations over the preceding twelve months. The "
+    "HQLA and LCR reported as at 31 December 2020 in CSUK Annual Report represents the spot value as of the "
+    "reporting date.'\n"
+    "ROW 1 (spot, year-end) is the Annual Report basis. FY2021 ADDED 2026-09-18: 216%, stated by CSUK "
+    f"itself in the '2021 Pillar 3 Disclosures', printed folio 29, footnote to the LCR table - 'the HQLA "
+    f"and LCR reported as at 31 December 2021 in CSUK Annual Report represents the spot value of 216% as "
+    f"of the reporting date' - {P3_2021_URL}. It is a spot figure quoted from the Annual Report by the "
+    "Bank's own Pillar 3, so it belongs on this row and not the average row. FY2020 and FY2019 have NO "
+    "published spot LCR anywhere located: the 2020 edition's footnote names the Annual Report's spot "
+    "value without printing it, the 2019 edition carries no such footnote at all, and those years' KPI "
+    "tables give only a Liquidity Buffer £ amount. Those two cells stay blank on this row. FY2018's 154% "
+    "is itself captioned 'Average Liquidity Coverage Ratio' in that year's KPI table - a pre-existing "
+    "basis inconsistency on this row, flagged here rather than silently corrected. FY2017's own "
+    "comparative column explicitly states 'n/a'; FY2016 has no KPI table at all.\n"
+    "ROW 2 (Pillar 3, 12-month average) ADDED 2026-09-18. This is the row that fills FY2020 and FY2019, "
+    "and every figure is the reporting-year column of that year's OWN edition:\n"
+    f"  FY2019 246% - 'Pillar 3 Disclosures 2019', LCR table, printed folio 19, 'Quarter ending on "
+    f"31/12/2019' column (Liquidity Buffer £1,010m / Total Net Cash Outflows £462m) - {P3_2019_URL}\n"
+    f"  FY2020 300% - '2020 Pillar 3 Disclosures', LCR table, printed folio 21, 'Quarter ending on "
+    f"31/12/2020' column (£938m / £365m) - {P3_2020_URL}\n"
+    f"  FY2021 230% - '2021 Pillar 3 Disclosures', LCR table, printed folio 29, 'Quarter ending on "
+    f"31/12/2021' column (£1,085m / £479m), printed as '230 %' - {P3_2021_URL}. The FY2022 edition's own "
+    "2021 KM1 comparative prints this to two decimals as 230.07%; the own-edition figure is used here and "
+    "the KM1 Key Metrics sheet keeps the comparative's 230.07% on its own row, so the workbook shows both.\n"
+    f"  FY2022 229.60% and FY2023 729.77% - KM1 row 17 of the 2022 and 2023 editions, printed folios 19 "
+    f"and 20 - {P3_2022_URL} / {P3_2023_URL}\n"
+    "  FY2024 539.19% and FY2025 4860.58% - KM1 row 17 of the 2024 and 2025 editions, as already "
+    "reproduced on the KM1 Key Metrics sheet (see that sheet's note on FY2025's failure to reconcile with "
+    "its own rows 15/16 - reproduced as published, not corrected).\n"
+    "WHAT THIS REPLACES: this note used to say FY2019/FY2020/FY2021 were 'confirmed genuinely absent for "
+    "that year, not omitted by search'. They were absent from the Annual Report KPI table, which is the "
+    "only document that sentence had actually looked at."
+)
+metric("LCR", "%", [("Liquidity Coverage Ratio (LCR) - spot, year-end basis (Annual Report)", LCR),
+                    ("Liquidity Coverage Ratio (LCR) - Pillar 3 basis, 12-month average of month-end "
+                     "observations", LCR_P3_AVERAGE)],
+       p3_sources(LCR_INTERIOR_NOTE))
 
 metric("NSFR", "%", [("Net Stable Funding Ratio (NSFR)", NSFR)], p3_sources(
     "\nFY2021's KPI table (earliest format checked before this ticket) discloses only a 'Liquidity Buffer "

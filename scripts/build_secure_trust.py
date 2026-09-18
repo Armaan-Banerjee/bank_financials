@@ -467,6 +467,19 @@ bw.add_asset_quality_sheet(
 # the FY2022 column is the FY2022 edition's own 31 December 2022 figures, NOT
 # the "Restated" 31 December 2022 comparative column the FY2023 edition prints.
 KM1_ROWS = [
+    # Gap-fill round 2026-09-18: FY2021/FY2020/FY2019 held no cell at all, so a
+    # reader saw three blank year columns and the census scored them as untouched
+    # gaps - even though the negative was already sourced in KM1_SOURCES below.
+    # It now appears IN the columns. A statement row, not a template row: nothing
+    # from those editions' short unnumbered 'Key Prudential Metrics' summary, nor
+    # from their CC1/OV1/LRCom tables, is written into a KM1 row here.
+    # Re-confirmed at source 2026-09-18: all three PDFs fetched on rung 2
+    # (curl -L), 200 application/pdf, %PDF magic, 512KB/596KB/760KB; text layer
+    # returns 960/975/583 hits on 'the' (richness control) and ZERO on 'KM1'.
+    ("DATA", "[No key-metrics template published for this year - see note below]",
+     {"FY2021": "Not published - this edition prints only a short unnumbered summary",
+      "FY2020": "Not published - this edition prints only a short unnumbered summary",
+      "FY2019": "Not published - this edition prints only a short unnumbered summary"}),
     ("SECTION", "UK KM1 (FY2025-FY2022 editions) - Available own funds (amounts) (£m)", {}),
     ("DATA", "1    Common Equity Tier 1 (CET 1) capital",
      {"FY2025": 364.8, "FY2024": 351.4, "FY2023": 337.9, "FY2022": 327.4}),
@@ -546,20 +559,26 @@ KM1_ROWS = [
      "never back-filled from that summary or from the statutory accounts.", {}),
     ("SECTION", "EARLIER EU/BASEL KM1 (FY2018 and FY2017 editions, column a = year end) - Available capital (amounts) (£m)", {}),
     ("DATA", "1    Common Equity Tier 1 (CET1)", {"FY2018": 251.8, "FY2017": 238.9}),
-    ("DATA", "1a    Fully loaded ECL accounting model CET1", {"FY2018": 227.3}),
+    # FY2017 prints a literal "-" on every fully-loaded twin (1a/2a/3a/5a/6a/7a/14a):
+    # the Group had not yet made the IFRS 9 transitional election, so the fully-loaded
+    # measure did not apply to it. Read 2026-09-18 from the FY2017 edition's own
+    # section 2.2 "Key Metrics", printed page 5, column a (31-Dec-17). Note the
+    # contrast in that SAME table: rows 9 and 10 print "0.0%", a measured zero, and
+    # they stay numeric. One table, both glyphs - do not tidy either into the other.
+    ("DATA", "1a    Fully loaded ECL accounting model CET1", {"FY2018": 227.3, "FY2017": "-"}),
     ("DATA", "2    Tier 1 capital", {"FY2018": 251.8, "FY2017": 238.9}),
-    ("DATA", "2a    Fully loaded ECL accounting model Tier 1", {"FY2018": 227.3}),
+    ("DATA", "2a    Fully loaded ECL accounting model Tier 1", {"FY2018": 227.3, "FY2017": "-"}),
     ("DATA", "3    Total capital", {"FY2018": 297.5, "FY2017": 243.3}),
-    ("DATA", "3a    Fully loaded ECL accounting model total capital", {"FY2018": 273.0}),
+    ("DATA", "3a    Fully loaded ECL accounting model total capital", {"FY2018": 273.0, "FY2017": "-"}),
     ("SECTION", "Risk weighted assets (amount) (£m)", {}),
     ("DATA", "4    Total risk weighted assets (RWA)", {"FY2018": 1824.6, "FY2017": 1446.1}),
     ("SECTION", "Risk based capital ratios as a percentage of RWA", {}),
     ("DATA", "5    Common Equity Tier 1 (CET1) ratio (%)", {"FY2018": "13.8%", "FY2017": "16.5%"}),
-    ("DATA", "5a    Fully loaded ECL accounting model CET1 (%)", {"FY2018": "12.5%"}),
+    ("DATA", "5a    Fully loaded ECL accounting model CET1 (%)", {"FY2018": "12.5%", "FY2017": "-"}),
     ("DATA", "6    Tier 1 ratio (%)", {"FY2018": "13.8%", "FY2017": "16.5%"}),
-    ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2018": "12.5%"}),
+    ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)", {"FY2018": "12.5%", "FY2017": "-"}),
     ("DATA", "7    Total capital ratio (%)", {"FY2018": "16.3%", "FY2017": "16.8%"}),
-    ("DATA", "7a    Fully loaded ECL accounting model total capital ratio (%)", {"FY2018": "15.0%"}),
+    ("DATA", "7a    Fully loaded ECL accounting model total capital ratio (%)", {"FY2018": "15.0%", "FY2017": "-"}),
     ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
     ("DATA", "8    Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2018": "1.9%", "FY2017": "1.3%"}),
     ("DATA", "9    Countercyclical buffer requirement (%)", {"FY2018": "1.0%", "FY2017": "0.0%"}),
@@ -569,7 +588,7 @@ KM1_ROWS = [
     ("SECTION", "Basel III leverage ratio (£m / %)", {}),
     ("DATA", "13    Total Basel III leverage ratio exposure measure", {"FY2018": 2432.8, "FY2017": 1942.7}),
     ("DATA", "14    Basel III leverage ratio (%) (row 2/row 13)", {"FY2018": "10.4%", "FY2017": "12.3%"}),
-    ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%) (row 2a/row 13)", {"FY2018": "9.3%"}),
+    ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%) (row 2a/row 13)", {"FY2018": "9.3%", "FY2017": "-"}),
     ("SECTION", "Liquidity Coverage Ratio (£m / %)", {}),
     ("DATA", "15    Total HQLA", {"FY2018": 211.2, "FY2017": 218.7}),
     ("DATA", "16    Total net cash outflow", {"FY2018": 33.9, "FY2017": 29.7}),
@@ -620,7 +639,11 @@ KM1_SOURCES = (
     "transcribed, because only column a is that edition's reporting date. The FY2018 edition's column e therefore repeats "
     "31-Dec-17 and the FY2017 edition's column e carries 31-Dec-16, and neither is used.\n\n"
     "DASHES AND ABSENT ROWS. In the FY2017 edition the fully-loaded twins 1a/2a/3a/5a/6a/7a/14a are printed as '-' (the Group "
-    "had not yet made the IFRS 9 transitional election); a dash is reproduced as an empty cell, never as a zero. Rows 18-20 are "
+    "had not yet made the IFRS 9 transitional election), and those cells CARRY that dash rather than being blanked: the Group "
+    "printed something there, and what it printed means 'this does not apply to us', which is a different statement from never "
+    "having disclosed the row at all. A dash is still never turned into a zero, and - just as importantly - a zero is never "
+    "turned into a dash: rows 9 and 10 of that same FY2017 table print '0.0%' and are kept as the measured zeros they are. "
+    "Re-read at source 2026-09-18, section 2.2 'Key Metrics', printed page 5, column a. Rows 18-20 are "
     "not printed at all in the FY2017 edition - the FY2018 edition explains why: 'The Net Stable Funding Ratio (NSFR) is "
     "required to be disclosed from 30 June 2018 onwards.' The FY2024 and FY2025 editions likewise print no rows 18-20, because "
     "the Group joined the SDDT regime in H2 2024 and moved to the reduced SDDT template (FRN 204550 holds PRA Disclosure (CRR) "
@@ -703,8 +726,11 @@ RWA_SOURCES = (
     f"FY2017: Pillar 3 disclosures for the year ended 31 December 2017, Section 2.7 table OV1 'Overview of Risk Weighted Assets', p.10, column a (31/12/17) - {P3_URLS['FY2017']}\n\n"
     + ENTITY_NOTE
     + " FY2017 and FY2018 use the pre-UK (EU) OV1 template, whose line 1 is 'Credit Risk (excluding counterparty credit risk) CCR' and line 19 'Operational "
-    "risk'; both years report counterparty credit risk, market risk, securitisation and the 250%-risk-weight threshold line as nil ('-'), so the nil CCR cells "
-    "below are the documents' own nil, not a gap. FY2018's operational risk moved from the Basic Indicator Approach (FY2017, OV1 row 20) to the Standardised "
+    "risk'; both years print a literal '-' against counterparty credit risk, market risk, securitisation and the 250%-risk-weight threshold line, and the "
+    "CCR and threshold cells on this sheet now REPRODUCE that dash. They previously held 0.0, which was wrong in a way worth naming: a zero asserts the Group "
+    "measured those exposures and found none, whereas the dash the documents actually print says the line did not apply to it. Corrected 2026-09-18 with both "
+    "editions open, each year taken from its own edition (FY2018 section 2.5, printed page 7; FY2017 section 2.7, printed page 10). Market risk and "
+    "securitisation have no rows on this sheet at all, so nothing is asserted about them either way. FY2018's operational risk moved from the Basic Indicator Approach (FY2017, OV1 row 20) to the Standardised "
     "Approach (FY2018, OV1 row 21); the total is unaffected. FY2019 and FY2020 disclose the same information as an exposure-class table (Institutions, "
     "Corporates, Retail, Secured on Immovable Property, Exposures in default, Other) that already carries its own 'Credit Risk (Standardised Approach)' "
     "subtotal alongside separate counterparty credit risk and operational risk lines; those published subtotals are used directly and nothing is re-added. "
@@ -717,10 +743,22 @@ RWA_SOURCES = (
 
 RWA_ROWS = [
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 2521.0, "FY2024": 2561.0, "FY2023": 2368.8, "FY2022": 2062.4, "FY2021": 1826.6, "FY2020": 1758.1, "FY2019": 1905.0, "FY2018": 1653.5, "FY2017": 1278.6}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 0.8, "FY2024": 10.7, "FY2023": 12.1, "FY2022": 8.1, "FY2021": 2.3, "FY2020": 2.6, "FY2019": 1.7, "FY2018": 0.0, "FY2017": 0.0}),
+    # FY2018 and FY2017 previously carried 0.0 here, but neither document prints a
+    # zero: both print a literal "-" on OV1 row 4. Corrected 2026-09-18 with both
+    # editions in hand, each year read from its OWN edition - FY2018 from the FY2018
+    # edition's section 2.5 "Overview of Risk Weighted Assets", printed page 7, and
+    # FY2017 from the FY2017 edition's section 2.7 OV1, printed page 10, column a in
+    # each case. A fabricated zero asserts the Group measured counterparty credit
+    # risk and found none; the dash says the line did not apply to it. The footing
+    # still reconciles because a lone dash reads as nil to the checker.
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 0.8, "FY2024": 10.7, "FY2023": 12.1, "FY2022": 8.1, "FY2021": 2.3, "FY2020": 2.6, "FY2019": 1.7, "FY2018": "-", "FY2017": "-"}),
     ("DATA", "Operational risk", {"FY2025": 305.7, "FY2024": 284.0, "FY2023": 272.5, "FY2022": 264.5, "FY2021": 258.5, "FY2020": 240.8, "FY2019": 211.4, "FY2018": 171.1, "FY2017": 167.5}),
     ("TOTAL", "Total RWEAs", {"FY2025": 2827.5, "FY2024": 2855.7, "FY2023": 2653.4, "FY2022": 2335.0, "FY2021": 2087.4, "FY2020": 2001.5, "FY2019": 2118.1, "FY2018": 1824.6, "FY2017": 1446.1}),
-    ("DATA", "Memo: amounts below thresholds for deduction (not summed into Total)", {"FY2025": 8.9, "FY2024": 8.3, "FY2023": 10.7, "FY2022": 4.0}),
+    # FY2018 and FY2017 carry a printed "-" on OV1 row 23 in their own editions
+    # (pp.7 and 10 respectively), so those two cells hold the dash. FY2021-FY2019
+    # stay BLANK: those editions were not read for this, and an unread year is not
+    # evidence of a dash. The row's position is unchanged - see the GA-012 note.
+    ("DATA", "Memo: amounts below thresholds for deduction (not summed into Total)", {"FY2025": 8.9, "FY2024": 8.3, "FY2023": 10.7, "FY2022": 4.0, "FY2018": "-", "FY2017": "-"}),
 ]
 
 bw.add_rwa_breakdown_sheet(

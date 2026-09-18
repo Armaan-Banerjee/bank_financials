@@ -756,9 +756,40 @@ bw.add_rwa_breakdown_sheet(
                              part_label_21="Table 8: OV1 - Overview of risk weighted assets by risk type and capital requirements", page_21="12-13",
                              part_label_20="Table 8: OV1 - Overview of risk weighted assets by risk type and capital requirements", page_20="11",
                              part_label_19="Table 8: OV1 - Overview of risk weighted assets by risk type and capital requirements", page_19="11")
-    + "\nFY2018: not available - Barclays Bank UK PLC did not publish a standalone Pillar 3 report for FY2018 (see "
-      "note above), and the FY2018 Annual Report's capital risk section discloses only the total RWA figure "
-      "(£75,327m), not a by-risk-type breakdown.",
+    + "\nFY2018: CORRECTED 18 September 2026 (KM1-032). This note previously read 'not available - Barclays Bank "
+      "UK PLC did not publish a standalone Pillar 3 report for FY2018, and the FY2018 Annual Report's capital "
+      "risk section discloses only the total RWA figure (£75,327m), not a by-risk-type breakdown'. The first "
+      "half is true; the second half was FALSE, and it was false because only the SUBSIDIARY's own documents "
+      "had been searched. A by-risk-type breakdown for Barclays Bank UK PLC is published - in the PARENT's "
+      "report, which had never been opened: 'Barclays PLC Pillar 3 Report 2018', Table 12a 'Risk weighted "
+      "assets by significant subsidiaries', printed p.27, which states on p.9 that 'Significant subsidiaries "
+      "disclosures are included in this report for Barclays Bank PLC and Barclays Bank UK PLC'. Its Barclays "
+      "Bank UK PLC row, as at 31.12.18, £m: Credit risk Std 3,985; Credit risk A-IRB 59,484; Counterparty "
+      "credit risk Std 266; CCR A-IRB '-'; Settlement risk '-'; CVA 11; Market risk Std 63; Market risk IMA "
+      "'-'; Operational risk 11,518; Total RWAs 75,327. Those sum exactly to the 75,327 already carried on the "
+      "Total RWAs sheet from the Annual Report, which is the control that confirms the row is the right "
+      "entity's.\n"
+      "WHY THE COLUMN IS STILL LEFT EMPTY HERE, deliberately and not for want of a source: Table 12a's "
+      "categories are not this sheet's categories. Because its two credit-risk columns sum with CCR, market "
+      "and operational risk to the full 75,327, they necessarily SUBSUME the securitisation exposures and the "
+      "below-threshold 250%-risk-weight amounts that FY2019-FY2025 report on their own rows here. Spreading "
+      "3,985 + 59,484 into this sheet's 'Credit risk (excluding CCR)' row would therefore print a figure "
+      "defined differently from every other year in the same row, which is a worse defect than an empty "
+      "column - the reproduce-don't-normalise rule. The figures are recorded above so a reader has them.\n"
+      "BASIS BREAK, also recorded rather than reconciled: Table 12a is Barclays Bank UK PLC on the INDIVIDUAL "
+      "(PRA solo) basis, whereas this sheet is headed Barclays Bank UK Group consolidated. The parent's own "
+      "scope-of-consolidation section (printed p.9) gives the reason, and it is also the affirmative "
+      "explanation for the absence of an FY2018 entity Pillar 3: 'Throughout 2018, Barclays Bank UK PLC (BBUK "
+      "PLC) was regulated by the Prudential Regulation Authority (PRA) on an individual basis... BBUK PLC "
+      "Group became regulated by the PRA from 1 January 2019.' The FY2019 first edition is therefore the "
+      "first year the consolidated basis existed, not merely the first year a document was found.\n"
+      "TRAP RECORDED FOR ANY LATER PASS: Table 12 on the same printed page is 'RWAs by risk type and "
+      "BUSINESS' and its 'Barclays UK' row reads 75,181 - the business segment, not the legal entity. The "
+      "entity figure is 75,327 in Table 12a. The two are adjacent, differ by 146, and the wrong one is "
+      "entirely plausible.\n"
+      "Source: https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/"
+      "annual-reports/2018/Barclays%20PLC%20Pillar%203%20Report%202018.pdf (re-verified 2026-09-18: HTTP 200, "
+      "application/pdf, %PDF-1.6, 2,174,817 bytes).",
     first_col_width=64,
     source_height=200,
     unit_suffix=" (£m)",

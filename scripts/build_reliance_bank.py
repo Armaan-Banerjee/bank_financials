@@ -197,27 +197,66 @@ AQ_SOURCES = "Sources - Reliance Bank Limited entity loan book, £:\n" + "\n".jo
     "customers (gross of impairment provision, i.e. before the deduction shown on the Balance Sheet). Coverage "
     "ratio = impairment provision / non-performing loans and advances before provisions. Both are derived from "
     "disclosed figures, not themselves separately labelled ratios in the source. \"Loans\" was relabelled \"SME "
-    "Loans\" in the FY2026 Annual Report - same underlying product line."
+    "Loans\" in the FY2026 Annual Report - same underlying product line.\n\n"
+    "FY2021, FY2020 AND FY2019 ADDED 2026-09-18 (GA-005). This sheet previously ran FY2026-FY2022 only, leaving "
+    "three OLDEST-END year columns empty on a sheet whose Balance Sheet, Profit & Loss and Cash Flow siblings all "
+    "carried those years. That was a transcription gap, not a disclosure gap: the Bank publishes the same loan-book "
+    "note in every edition. FY2021 comes from the FY2021 Annual Report's OWN note 9(a)/9(b) (pp.42-43); FY2020 and "
+    "FY2019 from the FY2020 Annual Report's OWN note 9(a)/9(b) (pp.37-38), each year read from the edition in which "
+    "it is the reporting year, not from a later comparative. Both documents were taken from the Bank's own website "
+    "and verified before reading (HTTP 200, Content-Type application/pdf, %PDF magic bytes). NOTE FOR A LATER "
+    "SESSION: both website copies carry a CLEAN TEXT LAYER (184,939 and 162,198 characters extracted) and were read "
+    "by exact text extraction, NOT by OCR - the entity note's statement that the Companies House filings are "
+    "image-only scans remains true of those filings, but it does not apply to these two website copies.\n"
+    "TWO SOURCE FEATURES RECORDED RATHER THAN RECONCILED.\n"
+    "(1) THE BANK CHANGED WHAT THE PROVISION LINE MEANS BETWEEN CONSECUTIVE EDITIONS. In the FY2020 edition the "
+    "maturity table's deduction is captioned 'Collective impairment provision' and is 137,846, while note 9(b)'s "
+    "total provision for the same date is 193,192 - the 55,346 difference being the specific provision held against "
+    "that year's non-performing loans. In the FY2021 edition the same line is captioned simply 'Impairment "
+    "provision' and equals note 9(b)'s total of 154,363, i.e. it now INCLUDES the specific element. FY2019 has no "
+    "specific provision at all, so its two figures coincide at 103,887. The 'Impairment provision' row above "
+    "reproduces each edition's own maturity-table line as printed. The consequence is that the derived Coverage "
+    "ratio is not on one basis across the FY2021/FY2020 boundary: FY2021's 50.30% is total-provision-over-NPL and "
+    "FY2020's 30.05% is collective-provision-over-NPL. The figures are reproduced and the basis break is stated "
+    "here rather than being smoothed away.\n"
+    "(2) TWO MOVEMENT ROWS WERE ADDED TO MAKE THE ROLL-FORWARD FOOT, AND THEY ARE THE BANK'S OWN LINES. Note 9(b) "
+    "prints two movement lines this sheet previously had no row for: 'Amounts Written Off' (FY2020 1,161; FY2019 "
+    "2,045; printed as a dash in FY2021) and 'Recovery on Amounts Written Off' (FY2019 727). Without them the "
+    "roll-forward failed to reconcile - FY2020's 103,887 + 90,466 reached 194,353 against a printed close of "
+    "193,192 - so they are carried as their own rows rather than netted into a neighbouring line or left as an "
+    "unexplained difference. THEY ARE BLANK FOR FY2026-FY2022 AND THAT BLANK IS ESTABLISHED, NOT UNKNOWN: each of "
+    "those five years' opening provision plus its single movement equals its printed closing provision to the "
+    "pound (e.g. FY2023 137,981 + 221,018 = 358,999; FY2026 461,764 + 230,821 = 692,585), so there was nothing "
+    "written off or recovered in any of them. The arithmetic that shows this uses only figures already on this "
+    "sheet; no later edition was consulted for it.\n"
+    "DASHES ARE REPRODUCED AS DASHES (project rule, 2026-09-18): the FY2020 edition prints '-' for FY2019's "
+    "non-performing loans, before and after provisions, and for the opening provision at 1 April 2018. A dash is "
+    "the Bank stating the line is not applicable to it, which is a different statement from silence, so those cells "
+    "carry the dash rather than a blank or a zero. The two Derived ratios rows are left BLANK for FY2019 because "
+    "they are computed rows, not reproduced disclosures: with no NPL figure there is nothing to divide, and "
+    "printing 0.00% would invent a result the arithmetic does not support."
 )
 aq_rows = [
     ("SECTION", "Loan book by product", {}),
-    ("DATA", "Overdrafts (recoverable on demand)", {"FY2026": 15167, "FY2025": 1591, "FY2024": 446798, "FY2023": 327417, "FY2022": 458905}),
-    ("DATA", "Mortgages", {"FY2026": 44833297, "FY2025": 61413123, "FY2024": 63859773, "FY2023": 60906781, "FY2022": 47009328}),
-    ("DATA", "Loans / SME Loans", {"FY2026": 101847611, "FY2025": 80625283, "FY2024": 61442178, "FY2023": 57584138, "FY2022": 49054178}),
-    ("DATA", "Impairment provision", {"FY2026": -692585, "FY2025": -461764, "FY2024": -368454, "FY2023": -358999, "FY2022": -137981}),
-    ("TOTAL", "Total loans and advances to customers", {"FY2026": 146696075, "FY2025": 142039997, "FY2024": 125748749, "FY2023": 118818336, "FY2022": 96522411}),
+    ("DATA", "Overdrafts (recoverable on demand)", {"FY2026": 15167, "FY2025": 1591, "FY2024": 446798, "FY2023": 327417, "FY2022": 458905, "FY2021": 286910, "FY2020": 1115381, "FY2019": 1601806}),
+    ("DATA", "Mortgages", {"FY2026": 44833297, "FY2025": 61413123, "FY2024": 63859773, "FY2023": 60906781, "FY2022": 47009328, "FY2021": 38614735, "FY2020": 24503975, "FY2019": 23219850}),
+    ("DATA", "Loans / SME Loans", {"FY2026": 101847611, "FY2025": 80625283, "FY2024": 61442178, "FY2023": 57584138, "FY2022": 49054178, "FY2021": 38604328, "FY2020": 27585522, "FY2019": 22398574}),
+    ("DATA", "Impairment provision", {"FY2026": -692585, "FY2025": -461764, "FY2024": -368454, "FY2023": -358999, "FY2022": -137981, "FY2021": -154363, "FY2020": -137846, "FY2019": -103887}),
+    ("TOTAL", "Total loans and advances to customers", {"FY2026": 146696075, "FY2025": 142039997, "FY2024": 125748749, "FY2023": 118818336, "FY2022": 96522411, "FY2021": 77505973, "FY2020": 53204878, "FY2019": 47220230}),
     ("SECTION", "Impairment provision roll-forward", {}),
-    ("DATA", "Provision at 1 April", {"FY2026": 461764, "FY2025": 368454, "FY2024": 358999, "FY2023": 137981, "FY2022": 154363}),
-    ("DATA", "Increase in impairment provision", {"FY2026": 230821, "FY2025": 93310, "FY2024": 9455, "FY2023": 221018}),
-    ("DATA", "Release of impairment provision", {"FY2022": -16382}),
-    ("TOTAL", "Provision at 31 March", {"FY2026": 692585, "FY2025": 461764, "FY2024": 368454, "FY2023": 358999, "FY2022": 137981}),
+    ("DATA", "Provision at 1 April", {"FY2026": 461764, "FY2025": 368454, "FY2024": 358999, "FY2023": 137981, "FY2022": 154363, "FY2021": 193192, "FY2020": 103887, "FY2019": "-"}),
+    ("DATA", "Increase in impairment provision", {"FY2026": 230821, "FY2025": 93310, "FY2024": 9455, "FY2023": 221018, "FY2020": 90466, "FY2019": 105205}),
+    ("DATA", "Release of impairment provision", {"FY2022": -16382, "FY2021": -38829}),
+    ("DATA", "Amounts written off", {"FY2021": "-", "FY2020": -1161, "FY2019": -2045}),
+    ("DATA", "Recovery on amounts written off", {"FY2019": 727}),
+    ("TOTAL", "Provision at 31 March", {"FY2026": 692585, "FY2025": 461764, "FY2024": 368454, "FY2023": 358999, "FY2022": 137981, "FY2021": 154363, "FY2020": 193192, "FY2019": 103887}),
     ("SECTION", "Non-performing loans and advances to customers", {}),
-    ("DATA", "Before provisions", {"FY2026": 2906004, "FY2025": 614575, "FY2024": 2153227, "FY2023": 1857399, "FY2022": 277279}),
-    ("DATA", "Specific provision applied", {"FY2026": -543921, "FY2025": -361305, "FY2024": -168000, "FY2023": -106376, "FY2022": -2289}),
-    ("TOTAL", "After provisions", {"FY2026": 2362083, "FY2025": 253270, "FY2024": 1985227, "FY2023": 1751023, "FY2022": 274990}),
+    ("DATA", "Before provisions", {"FY2026": 2906004, "FY2025": 614575, "FY2024": 2153227, "FY2023": 1857399, "FY2022": 277279, "FY2021": 306897, "FY2020": 458738, "FY2019": "-"}),
+    ("DATA", "Specific provision applied", {"FY2026": -543921, "FY2025": -361305, "FY2024": -168000, "FY2023": -106376, "FY2022": -2289, "FY2021": -13610, "FY2020": -55346}),
+    ("TOTAL", "After provisions", {"FY2026": 2362083, "FY2025": 253270, "FY2024": 1985227, "FY2023": 1751023, "FY2022": 274990, "FY2021": 293287, "FY2020": 403392, "FY2019": "-"}),
     ("SECTION", "Derived ratios", {}),
-    ("DATA", "NPL ratio (before provisions / gross loans)", {"FY2026": "1.98%", "FY2025": "0.43%", "FY2024": "1.71%", "FY2023": "1.56%", "FY2022": "0.29%"}),
-    ("DATA", "Coverage ratio (provision / NPL before provisions)", {"FY2026": "23.84%", "FY2025": "75.13%", "FY2024": "17.11%", "FY2023": "19.33%", "FY2022": "49.76%"}),
+    ("DATA", "NPL ratio (before provisions / gross loans)", {"FY2026": "1.98%", "FY2025": "0.43%", "FY2024": "1.71%", "FY2023": "1.56%", "FY2022": "0.29%", "FY2021": "0.40%", "FY2020": "0.86%"}),
+    ("DATA", "Coverage ratio (provision / NPL before provisions)", {"FY2026": "23.84%", "FY2025": "75.13%", "FY2024": "17.11%", "FY2023": "19.33%", "FY2022": "49.76%", "FY2021": "50.30%", "FY2020": "30.05%"}),
 ]
 
 RWA_SOURCES = (
@@ -246,8 +285,14 @@ RWA_SOURCES = (
     "exactly and discloses no covered bonds.\n"
     "No standalone Pillar 3 disclosure document for 31 March 2024, 2025 or 2026 was found on the Bank's website, "
     "in Companies House filings, or via the Wayback Machine (URL guesses against the FY2023 document's naming "
-    "pattern also failed) - FY2024-FY2026 are left as an honest access gap, not a confirmed non-disclosure, "
-    "queued for follow-up.\n"
+    "pattern also failed).\n"
+    "[SUPERSEDED CLAIM CORRECTED 2026-09-18, GA-005. This paragraph used to end '- FY2024-FY2026 are left as an "
+    "honest access gap, not a confirmed non-disclosure, queued for follow-up.' That was true when written and "
+    "became false on 2026-09-15, when the three Annual Reports were searched on clean text layers and found to "
+    "contain no such figures; the correction was recorded further down this same note and on the Pillar 3 sheets "
+    "but the superseded sentence was left standing here and was still being cross-referenced by four metric "
+    "sheets. FY2024-FY2026 are a CONFIRMED NON-DISCLOSURE, not an access gap - the documents exist, are fully "
+    "machine-readable, and do not contain the figures.]\n"
     "SDDT DATE TEST (checked 2026-09-15) - this SPLITS those three years into two different categories. The "
     "PRA's 'Consolidated Waivers list for PRA-regulated firms - as of 1 July 2026' (bankofengland.co.uk/"
     "prudential-regulation/authorisations/waivers-and-modifications-of-rules) records that RELIANCE BANK LIMITED "
@@ -260,9 +305,24 @@ RWA_SOURCES = (
     "are STRUCTURALLY EXEMPT. The absence of a Pillar 3 document for those years is expected rather than a "
     "sourcing failure, and is consistent with the FY2026 Annual Report's own reference to the simplified SDDT "
     "regime.\n"
-    "  - FY2024 (y/e 31 March 2024) ends FIVE DAYS BEFORE the 05/04/2024 start date, so it PREDATES the relief "
-    "and remains a GENUINE gap - the Bank was still subject to the disclosure obligation for that year. FY2024 is "
-    "the only one of the three still worth chasing.\n"
+    "  - FY2024 (y/e 31 March 2024) ends FIVE DAYS BEFORE the 05/04/2024 start date, so the REPORTING DATE "
+    "predates the relief.\n"
+    "  FY2024 RE-EXAMINED 2026-09-18 (GA-005), AND THE DATE FIT IS LESS CLEAN THAN A YEAR-END COMPARISON MAKES IT "
+    "LOOK. The waivers register was re-downloaded and re-read that day and the row is confirmed exactly as "
+    "described above, matched on the Rule Description column ('SDDT Regime - General Application') rather than on "
+    "the sub-rule number: FRN 204537, waiver ref A00007716P, start 05/04/2024, no end date. What the five-day gap "
+    "does NOT settle is when the FY2024 disclosure would have been MADE. This Bank's own publication lag is long "
+    "and documented by its own upload dates: the 31 March 2023 edition was published 30 October 2023, seven months "
+    "after that year-end, and the 31 March 2022 edition in April 2023, twelve months after. An FY2024 edition on "
+    "either lag would have fallen due between roughly October 2024 and April 2025 - six to twelve months AFTER the "
+    "modification took effect. So the honest statement is that the reporting date predates the relief while the "
+    "publication date would not have, and this workbook does not assert which of those the obligation turned on. "
+    "What can be said without interpretation is that no FY2024 edition exists to be found: the Bank's own media "
+    "library holds four Pillar 3 PDFs ending at 31 March 2023, a Wayback CDX sweep of the ENTIRE domain (covering "
+    "both the current WordPress path and the earlier Drupal /sites/default/files/ path) returns the same four and "
+    "nothing later, and the FY2024 Annual Report itself was searched on a clean text layer and contains no RWA, "
+    "own-funds or capital-resources amount. FY2024 is therefore recorded as NOT PUBLISHED on the evidence, with "
+    "the regulatory reason left open rather than guessed at.\n"
     "Re-checked 2026-09-04 (ST-031 follow-up): a full Wayback Machine CDX crawl of every "
     "reliancebankltd.com/wp-content/uploads/* URL ever archived (2021-2026, 640+ files) turned up no Pillar 3 "
     "document later than 31 March 2023, and the FY2024, FY2025 and FY2026 Annual Report and Accounts (both the "
@@ -270,7 +330,16 @@ RWA_SOURCES = (
     "amounts and found to disclose none - the Strategic Report gives only the total capital requirement/TCR as a "
     "percentage, not an RWA or capital amount in £. Figures converted from the source's £'000 to £ for consistency "
     "with the rest of this workbook. Standardised approach to credit risk only - the Bank does not disclose market "
-    "or operational risk RWA components separately, consistent with its stated minimal market risk exposure."
+    "or operational risk RWA components separately, consistent with its stated minimal market risk exposure.\n"
+    "FY2024-FY2026 CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass). Those three year columns previously held "
+    "NOTHING AT ALL on this sheet, while everything above in this note already established them as a confirmed "
+    "non-disclosure. An empty column and an unsearched column look identical in a spreadsheet, so a trailing row "
+    "now states the finding in the cells themselves: 'Not publicly disclosed', with FY2025 and FY2026 qualified "
+    "'(SDDT exempt)' for the Rule 3.1 modification effective 05/04/2024 and FY2024 left unqualified because its "
+    "year-end precedes that date by five days and this workbook does not assert which date the obligation turned "
+    "on. The three columns are RETAINED rather than trimmed - they are newest-end columns, where an empty column "
+    "is a real finding that must stay visible, not oldest-end columns where the disclosure simply did not yet "
+    "exist. No category figure has been derived, apportioned or carried across from any other year or document."
 )
 rwa_rows = [
     ("SECTION", "Standardised approach to credit risk - exposure and risk-weighted exposure", {}),
@@ -284,17 +353,27 @@ rwa_rows = [
     ("DATA", "Other items", {"FY2023": 5736000, "FY2022": 6012000, "FY2021": 6194000, "FY2020": 3667000}),
     ("DATA", "Particularly high risk items (development loans)", {"FY2023": 3321000, "FY2022": 5429000, "FY2021": 5379000, "FY2020": 4208000}),
     ("TOTAL", "Total risk-weighted assets", {"FY2023": 83146000, "FY2022": 71782000, "FY2021": 71451000, "FY2020": 60971000}),
+    # GA-005, 2026-09-18. FY2024-FY2026 previously left this sheet's three newest
+    # columns wholly EMPTY while the source note below already established, at
+    # length, that they are a confirmed non-disclosure. This row makes the cells
+    # say so. It is placed AFTER the TOTAL row deliberately: inserting a text row
+    # into the category block above would make verify_workbook.py skip those
+    # columns as "text cells" and would silently SUPPRESS the documented FY2021
+    # source arithmetic defect (70,708 summed vs 71,451 printed) that the block
+    # currently surfaces. A trailing DATA row with no TOTAL after it is not
+    # reconciled against anything, so nothing is hidden and no new break appears.
+    ("DATA", "Category breakdown, FY2024-FY2026 (no Pillar 3 edition published after 31 March 2023)", {"FY2026": "Not publicly disclosed (SDDT exempt)", "FY2025": "Not publicly disclosed (SDDT exempt)", "FY2024": "Not publicly disclosed"}),
 ]
 
 bw = BankWorkbook(bank_name="Reliance Bank Limited", years=YEARS, header_color="0F5B78")
 bw.add_balance_sheet_sheet(
     title="Reliance Bank Limited - Entity Balance Sheet",
-    subtitle="Entity basis, £; five latest available financial years FY2026-FY2022. See source note.",
+    subtitle="Entity basis, £; eight financial years FY2026-FY2019. See source note.",
     rows=bs_rows, sources_text=bw_bs_sources, first_col_width=70, source_height=220, unit_suffix=" (£)",
 )
 bw.add_income_statement_sheet(
     title="Reliance Bank Limited - Entity Income Statement",
-    subtitle="Entity basis, £; five latest available financial years FY2026-FY2022. See source note.",
+    subtitle="Entity basis, £; eight financial years FY2026-FY2019. See source note.",
     rows=pl_rows, sources_text=PL_SOURCES, first_col_width=70, source_height=240, unit_suffix=" (£)",
 )
 bw.add_equity_changes_sheet(
@@ -338,12 +417,12 @@ rows = [
 ]
 bw.add_cash_flow_sheet(
     title="Reliance Bank Limited - Entity Cash Flow Statement",
-    subtitle="Entity basis, £; five latest available financial years FY2026-FY2022. See source note.",
+    subtitle="Entity basis, £; eight financial years FY2026-FY2019. See source note.",
     rows=rows, sources_text=CASH_SOURCES, first_col_width=70, source_height=220, unit_suffix=" (£)",
 )
 bw.add_asset_quality_sheet(
     title="Reliance Bank Limited - Asset Quality",
-    subtitle="Entity basis, £; five latest available financial years FY2026-FY2022. See source note.",
+    subtitle="Entity basis, £; eight financial years FY2026-FY2019. See source note.",
     rows=aq_rows, sources_text=AQ_SOURCES, first_col_width=64, source_height=200, unit_suffix=" (£)",
 )
 
@@ -361,8 +440,10 @@ P3_SOURCES = (
     + "; ".join(f"{y} {AR_WEBSITE_URLS[y]}" for y in ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022"]) + "\n"
     "Blank cells mean the metric was not explicitly disclosed; no capital amount, RWA, NSFR or MREL figure has been inferred. "
     "No standalone Pillar 3 disclosure document for 31 March 2024, 2025 or 2026 was found (Bank website, Companies House, "
-    "Wayback Machine, and URL-pattern guesses all came up empty) - CET1 Capital/Total Capital/Total RWAs for those years are "
-    "an honest access gap, not confirmed non-disclosure. Re-checked 2026-09-04 (ST-031 follow-up): a full Wayback Machine "
+    "Wayback Machine, and URL-pattern guesses all came up empty). [SUPERSEDED CLAIM CORRECTED 2026-09-18, GA-005: this "
+    "sentence used to continue '- CET1 Capital/Total Capital/Total RWAs for those years are an honest access gap, not "
+    "confirmed non-disclosure', which the 2026-09-15 clean-text-layer re-check immediately below already overturned. It is a "
+    "confirmed non-disclosure.] Re-checked 2026-09-04 (ST-031 follow-up): a full Wayback Machine "
     "CDX crawl of the Bank's entire wp-content/uploads history (2021-2026) found no later Pillar 3 document, and the FY2024, "
     "FY2025 and FY2026 Annual Reports (website copies with a text layer for FY2024/FY2025; the FY2026 Companies House scan "
     "OCR'd) were checked directly for Tier 1 Capital, Total Capital, Total RWAs, NSFR and MREL Ratio figures - none of these "
@@ -474,7 +555,22 @@ KM1_SOURCES = (
     "LATEST-EDITION CHECK 2026-09-16: reliancebankltd.com's own About Us > Our Performance page and its complete "
     "media library were both checked directly (not Wayback, not this project's cited URLs). Newest Pillar 3 "
     "published: 31 March 2023. Newest Annual Report and Accounts: 31 March 2026, already held in this workbook. "
-    "Nothing newer exists on either front."
+    "Nothing newer exists on either front.\n"
+    "RE-CHECKED 2026-09-18 (GA-005), INDEPENDENTLY AND BY A SECOND INSTRUMENT. The Bank's WordPress media library "
+    "was re-enumerated in full (832 PDF entries across 9 pages of /wp-json/wp/v2/media) and still holds exactly "
+    "four Pillar 3 PDFs - the 31 March 2020 edition twice, plus 31 March 2021, 31 March 2022 and 31 March 2023 - "
+    "with the newest Annual Report being RBL-Annual-Accounts-31st-March-2026.pdf, uploaded August 2026 and already "
+    "held here. So on the Bank's own site: newest Pillar 3 = 31 March 2023; newest Annual Report = 31 March 2026; "
+    "nothing newer on either front, and with a 31 March year-end there is no FY2027 to look for yet.\n"
+    "A WAYBACK CDX DOMAIN SWEEP WAS ALSO RUN FOR THE FIRST TIME ON THIS BANK, and it matters because it reaches "
+    "somewhere the media-library enumeration structurally cannot. Querying the whole domain rather than the "
+    "wp-content/uploads path (cdx/search/cdx?url=reliancebankltd.com&matchType=domain, filtered on 'pillar' and "
+    "separately on 'disclosur') returned four Pillar 3 captures - and one of them sits at "
+    "/sites/default/files/2020-12/, a DRUPAL-era path from the Bank's previous website that no WordPress media "
+    "query can ever return. That older path holds only a second copy of the 31 March 2020 edition. The point is "
+    "that the site migrated platforms, the earlier enumeration could only see the post-migration half, and the "
+    "domain sweep covers both: on the union of the two, the newest Pillar 3 the Bank has ever published anywhere "
+    "on its domain remains the 31 March 2023 edition."
 )
 
 bw.add_km1_sheet(
@@ -490,9 +586,21 @@ bw.add_km1_sheet(
     source_height=260,
 )
 
-metric("CET1 Capital", "£", [("CET1 capital", {"FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000, "FY2020": 11652000})], "£20,965,000 (FY2023) and £13,952,000 (FY2022) per the Pillar 3 Summary of Key Metrics table. FY2021 £11,799,000 and FY2020 £11,652,000 each come from that year's OWN Pillar 3 edition, located 2026-09-16 (KM1-026): FY2021 from the 31 March 2021 edition, section 2 'Summary of Key Metrics', p.3, line 'Common Equity Tier 1 (CET1) Resources'; FY2020 from the 31 March 2020 edition, section 2 'Capital Resources', p.2, line 'Total Common Equity Tier 1 Capital'. Both are printed figures, not derivations. CORRECTION: an earlier version of this note said the Bank published no Pillar 3 as at 31 March 2021 and cited the FY2022 edition's comparative column instead - that claim was false and both older editions exist; the FY2021 value is unchanged because the two editions agree digit for digit. FY2024-FY2026: not published - see RWA Breakdown sheet's SDDT note.")
-metric("CET1 Ratio", "% of RWA", [("CET1 ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.1%", "FY2022": "18.2%", "FY2021": "15.7%", "FY2020": "17.7%", "FY2019": "20.2%"})])
-metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000})],
+metric("CET1 Capital", "£", [("CET1 capital", {"FY2026": "Not publicly disclosed (SDDT exempt)", "FY2025": "Not publicly disclosed (SDDT exempt)", "FY2024": "Not publicly disclosed", "FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000, "FY2020": 11652000})], "£20,965,000 (FY2023) and £13,952,000 (FY2022) per the Pillar 3 Summary of Key Metrics table. FY2021 £11,799,000 and FY2020 £11,652,000 each come from that year's OWN Pillar 3 edition, located 2026-09-16 (KM1-026): FY2021 from the 31 March 2021 edition, section 2 'Summary of Key Metrics', p.3, line 'Common Equity Tier 1 (CET1) Resources'; FY2020 from the 31 March 2020 edition, section 2 'Capital Resources', p.2, line 'Total Common Equity Tier 1 Capital'. Both are printed figures, not derivations. CORRECTION: an earlier version of this note said the Bank published no Pillar 3 as at 31 March 2021 and cited the FY2022 edition's comparative column instead - that claim was false and both older editions exist; the FY2021 value is unchanged because the two editions agree digit for digit. FY2024-FY2026: not published - see RWA Breakdown sheet's SDDT note. CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass): these three years now STATE the non-disclosure in the cell instead of sitting empty. An empty cell is indistinguishable from a year nobody searched; all three were searched on clean text layers (see the source panel) and no CET1 capital amount exists in any of them, so the cell says so. FY2025/FY2026 carry '(SDDT exempt)' because the Bank's Rule 3.1 SDDT modification, effective 05/04/2024 with no end date, removes the Pillar 3 obligation for those year-ends; FY2024's year-end falls five days before that date and is recorded as not published ON THE EVIDENCE, with the regulatory reason deliberately left open. No figure was derived or carried across.")
+metric("CET1 Ratio", "% of RWA", [("CET1 ratio", {"FY2026": "21.8%", "FY2025": "19.9%", "FY2024": "20.7%", "FY2023": "23.1%", "FY2022": "18.2%", "FY2021": "15.7%", "FY2020": "17.7%", "FY2019": "20.2%"})],
+       "Annual Report Strategic Report figures, each read from the edition in which that year is the reporting year.\n"
+       "FY2024 - THE SOURCE DOCUMENT CONTRADICTS ITSELF, and 20.7% is the figure carried here. Recorded 2026-09-18 so "
+       "that a later pass does not 'correct' this cell to 21.2%. The FY2024 Annual Report states its own CET1 ratio "
+       "twice and disagrees with itself: the Strategic Report narrative says 'For the year 2024, this, remains at "
+       "21.2% (2023: 23.1%)', while the Capital bullets on printed folio 11 say 'CET1 ratio for the year was 20.7% "
+       "(2023: 23.1%) exceeding regulatory requirements'. The two agree on 2023 and differ by 0.5pp on 2024. THE "
+       "FY2025 EDITION THEN REPRODUCES BOTH HALVES OF THE CONTRADICTION rather than settling it - its narrative reads "
+       "'The Bank's CET1 ratio declined to 19.9% (2024: 21.2%)' while its own Capital bullets read 'CET1 ratio for "
+       "the year was 19.9% (2024: 20.7%)'. The bullet-list value is used here because it is the one the Bank repeats "
+       "in the same structural position in every edition FY2024-FY2026 and the one its leverage/capital commentary "
+       "sits beside; the narrative figure is recorded here rather than discarded. Neither figure has been adjusted "
+       "and no attempt is made to reconcile them - the Bank published an inconsistent pair.")
+metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2026": "Not publicly disclosed (SDDT exempt)", "FY2025": "Not publicly disclosed (SDDT exempt)", "FY2024": "Not publicly disclosed", "FY2023": 20965000, "FY2022": 13952000, "FY2021": 11799000})],
        "Added 2026-09-12. Not labelled 'Tier 1' anywhere in the source: Reliance Bank's Pillar 3 uses its own "
        "'Summary of Key Metrics' table rather than the UK KM1 template, and that table has no Tier 1 row. The "
        "figure shown is the disclosed CET1 Resources amount, carried across because the Bank's own Pillar 3 "
@@ -501,7 +609,14 @@ metric("Tier 1 Capital", "£", [("Tier 1 capital", {"FY2023": 20965000, "FY2022"
        "p.2) and 'All of Reliance Bank's capital resources are currently Common Equity Tier 1 capital' (section "
        "on TCR composition, p.6). With no AT1 in issue, Tier 1 = CET1 by definition - the same treatment applied "
        "to other all-CET1 banks in this workbook set, and a disclosed fact rather than an estimate. FY2024-FY2026: "
-       "not found - see RWA Breakdown sheet's access-gap note. "
+       "not published - see the RWA Breakdown sheet's confirmed-non-disclosure and SDDT date-test notes. "
+       "CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass): those three years now STATE the non-disclosure in the "
+       "cell rather than sitting empty, FY2025/FY2026 marked '(SDDT exempt)' for the Rule 3.1 modification effective "
+       "05/04/2024 and FY2024 left unqualified because its year-end predates that date by five days. NOTE WHAT WAS "
+       "NOT DONE: the no-AT1 carry-across that produced the FY2023-FY2021 figures on this sheet was NOT extended to "
+       "FY2024-FY2026. It cannot be, because there is no disclosed CET1 capital amount in those years to carry - and "
+       "separately, the FY2024-FY2026 reports describe Tier 2 regulatory adjustments that end the all-CET1 basis the "
+       "carry-across rests on (see the Total Capital Ratio sheet). "
        "FY2021 £11,799,000 comes from the Bank's OWN 31 March 2021 edition, section 2 'Summary of Key Metrics', "
        "p.3. CORRECTION 2026-09-16 (KM1-026): an earlier version of this note cited the FY2022 edition's "
        "comparative column 'there being no 31 March 2021 edition'. That was false - the FY2021 edition exists "
@@ -520,7 +635,7 @@ metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "21.8%", "FY2025
        "precision and, for FY2022, on a slightly different year-end capital basis. Each sheet keeps its own "
        "source's figure rather than being force-reconciled. "
        "FY2024-FY2026 added 2026-09-15: no Pillar 3 disclosure exists for those years (the Bank's last published "
-       "edition is the one as at 31 March 2023 - see the RWA Breakdown sheet's access-gap note, and note the "
+       "edition is the one as at 31 March 2023 - see the RWA Breakdown sheet's confirmed-non-disclosure and SDDT date-test notes, and note the "
        "FY2026 Annual Report's reference to the simplified SDDT regime), so these three years mirror the CET1 "
        "Ratio sheet's Annual-Report figures on the no-AT1 basis set out on the Tier 1 Capital sheet: with no AT1 "
        "in issue, Tier 1 Ratio is CET1 Ratio by definition. They are therefore Annual-Report-sourced and stated "
@@ -532,10 +647,73 @@ metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {"FY2026": "21.8%", "FY2025
        "exists and both print 15.45%. The no-AT1 basis for FY2021 is evidenced from that "
        "edition's section 3 Capital Resources table, which lists CET1 components only (see the Tier 1 Capital sheet). "
        "It sits on this sheet's Pillar 3 series at 2 d.p. and is deliberately NOT reconciled with the CET1 Ratio "
-       "sheet's Annual-Report FY2021 value of 15.7%.")
-metric("Total Capital", "£", [("Total capital", {"FY2023": 21218000, "FY2022": 14137000, "FY2021": 11953000})], "£21,218,000 (FY2023) and £14,137,000 (FY2022) per the Pillar 3 Capital Resources table (CET1 capital prior to adjustments less CRR adjustments). FY2021 £11,953,000: printed as the 'Total Capital' line of the 31 March 2021 edition's OWN column, section 3 'Capital Resources', p.3 (12,192 CET1 capital prior to adjustments less (239) CRR adjustments). CORRECTION 2026-09-16 (KM1-026): an earlier version of this note said 'There is no 31 March 2021 edition' and cited the FY2022 edition's comparative column. That was false - the FY2021 edition exists and is now cited above; the value is unchanged, the two editions printing 11,953 identically. FY2020 is left blank deliberately: the 31 March 2020 edition prints only a line captioned 'Total Common Equity Tier 1 Capital' (11,652) and no 'Total Capital' line at all, so filling it would be a caption inference rather than a disclosure. It exceeds the FY2021 CET1 Resources figure of £11,799,000 on the CET1 Capital sheet by £154,000, mirroring the same £185,000 gap in FY2022 between the Bank's two tables - the two are kept on separate sheets and deliberately not reconciled. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
-metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2023": "25.5%", "FY2022": "19.7%", "FY2021": "15.9%", "FY2020": "17.9%", "FY2019": "20.2%"})], "FY2023/FY2022 are derived from disclosed Pillar 3 capital and RWAs; FY2021-FY2019 are directly disclosed in the annual-report Strategic Report (FY2021: 15.9%; FY2020: 17.9%; FY2019: 20.2%). The accounts also disclose total capital requirement (TCR), a distinct figure not substituted here. FY2024-FY2026: not found.")
-metric("Total RWAs", "£", [("Total risk-weighted assets", {"FY2023": 83146000, "FY2022": 71782000, "FY2021": 71451000, "FY2020": 60971000})], "£83,146,000 (FY2023) and £71,782,000 (FY2022) per the Pillar 3 Summary of Key Metrics table; ties to the RWA Breakdown sheet's standardised-approach total. FY2021 £71,451,000 and FY2020 £60,971,000 each come from that year's OWN edition, located 2026-09-16 (KM1-026): FY2021 from the 31 March 2021 edition's section 2 'Summary of Key Metrics' (p.3, line 'Risk Weighted Assets') and section 7.1 credit-risk table (p.8), which agree at 71,451; FY2020 from the 31 March 2020 edition's section 5.1 credit-risk table (p.3, 'Total' Risk Weighted Exposure column) - that edition prints no summary key-metrics table at all, so the credit-risk total is the only RWA figure it discloses. CORRECTION: an earlier version of this note said 'No 31 March 2021 edition exists' and cited the FY2022 comparative column - false, and the FY2021 value is unchanged either way. BASIS CAVEAT, checked explicitly rather than assumed: the Bank's 'Risk Weighted Assets' line is the STANDARDISED CREDIT-RISK total only. The FY2022 edition's section 7.1 credit-risk table (p.9) totals exactly 71,782 for 31 March 2022, matching the section 2 line digit for digit, and the same edition discloses market risk (section 8) and operational risk outside it. Consistent with that, the Bank's own printed CET1 ratios do NOT reproduce from these figures - 13,952/71,782 = 19.44% against a printed 18.05%, and 11,799/71,451 = 16.51% against a printed 15.45% - because the ratio denominator includes operational and market risk (implied roughly 5,514 and 4,918 respectively). Those implied amounts are NOT recorded anywhere in this workbook: they are back-solved and the Bank does not print them. FY2021 is placed on the same credit-risk-total basis as FY2022/FY2023 so the series is internally consistent. FY2024-FY2026: not found - see RWA Breakdown sheet's access-gap note.")
+       "sheet's Annual-Report FY2021 value of 15.7%.\n"
+       "GA-016 RESOLVED HERE 2026-09-18, AND THE ANSWER IS THAT THERE IS NO INCONSISTENCY TO FIX. The ratio-tie "
+       "checker flagged this workbook for printing a TIER 1 RATIO BELOW ITS OWN CET1 RATIO on identical capital in "
+       "FY2021, FY2022 and FY2023 (15.45% vs 15.7%, 18.05% vs 18.2%, 23.07% vs 23.1%) - which is impossible as "
+       "printed, since Tier 1 capital includes CET1. All four Pillar 3 editions were re-read on clean text layers to "
+       "settle it. RELIANCE HAS NEVER PRINTED A TIER 1 RATIO AT ALL. Its 'Summary of Key Metrics' table (section 2, "
+       "p.3) carries exactly one capital-ratio line, captioned 'Common Equity Tier 1 ratio (%)', reading 23.07% "
+       "(FY2023), 18.05% (FY2022), 15.45% (FY2021) and 17.74% (FY2020 comparative) above 'Common Equity Tier 1 (CET1) "
+       "Resources' and 'Risk Weighted Assets'. There is no Tier 1 ratio row and no total capital ratio row in any "
+       "edition - the same row-set finding the KM1 sheet records at length.\n"
+       "SO THE BREAK IS AN ARTEFACT OF COMPARING TWO SHEETS SOURCED FROM TWO DIFFERENT DOCUMENTS, not of the Bank "
+       "printing an inconsistent set and not of a transcription error. This sheet carries the PILLAR 3 edition's CET1 "
+       "ratio at 2 d.p. (on the no-AT1 basis set out above, under which Tier 1 = CET1); the CET1 Ratio sheet carries "
+       "the ANNUAL REPORT Strategic Report's figure for the same metric at 1 d.p. Both transcriptions are correct "
+       "against their own source. The apparent 0.03-0.25pp 'impossibility' is the gap between the two documents' "
+       "stated precision for one and the same ratio, and it is documented rather than reconciled, per this project's "
+       "standing rule. NO FIGURE WAS ADJUSTED TO MAKE THE RATIO TIE.")
+metric("Total Capital", "£", [("Total capital", {"FY2026": "Not publicly disclosed (SDDT exempt)", "FY2025": "Not publicly disclosed (SDDT exempt)", "FY2024": "Not publicly disclosed", "FY2023": 21218000, "FY2022": 14137000, "FY2021": 11953000})], "£21,218,000 (FY2023) and £14,137,000 (FY2022) per the Pillar 3 Capital Resources table (CET1 capital prior to adjustments less CRR adjustments). FY2021 £11,953,000: printed as the 'Total Capital' line of the 31 March 2021 edition's OWN column, section 3 'Capital Resources', p.3 (12,192 CET1 capital prior to adjustments less (239) CRR adjustments). CORRECTION 2026-09-16 (KM1-026): an earlier version of this note said 'There is no 31 March 2021 edition' and cited the FY2022 edition's comparative column. That was false - the FY2021 edition exists and is now cited above; the value is unchanged, the two editions printing 11,953 identically. FY2020 is left blank deliberately: the 31 March 2020 edition prints only a line captioned 'Total Common Equity Tier 1 Capital' (11,652) and no 'Total Capital' line at all, so filling it would be a caption inference rather than a disclosure. It exceeds the FY2021 CET1 Resources figure of £11,799,000 on the CET1 Capital sheet by £154,000, mirroring the same £185,000 gap in FY2022 between the Bank's two tables - the two are kept on separate sheets and deliberately not reconciled. FY2024-FY2026: not published - see the RWA Breakdown sheet's confirmed-non-disclosure and SDDT date-test notes. CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass): those three years now STATE the non-disclosure in the cell rather than sitting empty, FY2025/FY2026 marked '(SDDT exempt)' for the Rule 3.1 modification effective 05/04/2024, FY2024 unqualified because its year-end predates that date by five days. The FY2024-FY2026 Annual Reports contain no 'own funds', 'capital resources of' or total-capital amount at all on clean text layers, so there is nothing to transcribe and nothing has been derived.")
+metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {"FY2026": "Not publicly disclosed (SDDT exempt; CET1 ratio not equivalent)", "FY2025": "Not publicly disclosed (SDDT exempt; CET1 ratio not equivalent)", "FY2024": "Not publicly disclosed (CET1 ratio not equivalent)", "FY2023": "25.5%", "FY2022": "19.7%", "FY2021": "15.9%", "FY2020": "17.9%", "FY2019": "20.2%"})], "FY2023/FY2022 are derived from disclosed Pillar 3 capital and RWAs; FY2021-FY2019 are directly disclosed in the annual-report Strategic Report (FY2021: 15.9%; FY2020: 17.9%; FY2019: 20.2%). The accounts also disclose total capital requirement (TCR), a distinct figure not substituted here.\n"
+ "FY2024-FY2026 ESTABLISHED AS A CONFIRMED NON-DISCLOSURE 2026-09-18 (GA-005 leading-gap pass), replacing the "
+ "previous bare 'FY2024-FY2026: not found'. That phrasing could not be told apart from an unsearched gap, which is "
+ "precisely the conflation that created ticket GA-013, so it is replaced here with what was actually read.\n"
+ "THE BANK CHANGED WHAT IT SAYS ABOUT ITS OWN CAPITAL, and that change is the finding. Through FY2023 the Strategic "
+ "Report's KPI table carried a row captioned 'Core Tier 1 Capital Ratio' whose commentary read, verbatim, 'Core Tier "
+ "1 Capital as a % of total risk weighted assets. As all of the Bank's Capital is Core Tier 1 Capital, this equates "
+ "to the Bank's Total Capital Ratio' (FY2023 report p.12, FY2022 report p.12, FY2021 report p.11) - and the FY2021 "
+ "Strategic Report stated one outright: 'a CET1 Ratio ... of 15.7% (2020: 17.7%), and a Total Capital Ratio of 15.9% "
+ "(2020: 17.9%)'. THAT ROW IS ABSENT FROM THE FY2024, FY2025 AND FY2026 REPORTS. A case-insensitive search of all "
+ "three text layers for 'Core Tier 1 Capital Ratio' and for 'Total Capital Ratio' returns nothing, and the phrase "
+ "'equates to' survives in those editions only in the unrelated HQLA-to-total-assets sentence.\n"
+ "AND THE NEW WORDING STATES THE OPPOSITE OF THE OLD EQUIVALENCE, so the CET1 ratio may not simply be carried across "
+ "to this sheet for those years the way the Tier 1 Ratio sheet carries it. The FY2024 and FY2025 Capital bullets read "
+ "'The Bank has a simple capital structure, and all capital resources qualify as Common Equity Tier 1 (CET1). There "
+ "are small amounts of regulatory adjustments to capital in Tier 2 relating to the add back of general provisions and "
+ "deduction of intangible assets', and FY2026's reads 'The Bank maintains a simple and high-quality capital "
+ "structure, with the majority of its capital resources comprising CET1. Limited regulatory adjustments are made'. A "
+ "capital base that is only a MAJORITY CET1, carrying Tier 2 adjustments, cannot have its CET1 ratio relabelled as a "
+ "total capital ratio. No total capital amount and no RWA amount is printed in any of the three years either, so "
+ "there is nothing to strike a ratio from - and striking one would be the back-solve this project forbids. The TCR "
+ "figures those reports do give (13.1% as at 31 March 2024 and 31 March 2025, against 9.7% for 2023) are the Total "
+ "Capital REQUIREMENT, a regulatory minimum, not a ratio of held capital, and are deliberately not substituted here.\n"
+ "COVERAGE, so the next reviewer knows what was and was not tested. All three Annual Reports were read from the "
+ "Bank's own website copies on clean text layers (229,728 / 187,503 / 197,464 characters extracted), not OCR. No "
+ "Pillar 3 document exists for any of the three years: the Bank's WordPress media library was re-enumerated in full "
+ "on 2026-09-18 (9 pages, 832 PDF entries) and holds exactly four Pillar 3 PDFs, the newest as at 31 March 2023. A "
+ "filetype-restricted web search was NOT run as a further cross-check because this session's web-search budget was "
+ "exhausted; that is a limit of today's session, not a further negative about the Bank.\n"
+ "A CAVEAT ON THE FY2023 AND FY2022 CELLS ABOVE, recorded rather than acted on. Those two values are DERIVED "
+ "(21,218,000/83,146,000 = 25.52%; 14,137,000/71,782,000 = 19.69%), and the Bank's own FY2023 and FY2022 KPI "
+ "commentary quoted above asserts instead that its total capital ratio EQUATES TO its printed Core Tier 1 Capital "
+ "Ratio of 23.1% and 18.2%. The printed figure and the derived figure therefore disagree by about 2.4pp and 1.5pp. "
+ "Nothing has been changed here - resolving it means deciding whether the Bank's equivalence claim or its own "
+ "capital-and-RWA tables govern, which is a question for a dedicated ticket, not for a leading-gap pass.\n"
+ "CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass). The FY2024-FY2026 cells previously sat EMPTY while this note "
+ "already established the non-disclosure at length - an empty cell states nothing and reads identically to a year "
+ "nobody looked at. They now read 'Not publicly disclosed', FY2025/FY2026 qualified '(SDDT exempt)' for the Rule 3.1 "
+ "modification effective 05/04/2024 and FY2024 left unqualified because its year-end precedes that date by five days.\n"
+ "THE '(CET1 RATIO NOT EQUIVALENT)' QUALIFIER ON ALL THREE CELLS IS LOAD-BEARING AND IS THE POINT OF THIS SHEET'S "
+ "DIVERGENCE FROM THE TIER 1 RATIO SHEET. That sheet legitimately carries the Annual Report's CET1 ratio across to "
+ "FY2024-FY2026 on the Bank's own 'no AT1 in issue' statement. THIS SHEET MUST NOT, and the qualifier is there so a "
+ "later pass does not 'complete' these cells with 21.8% / 19.9% / 20.7% by analogy. The reason is set out above: the "
+ "FY2024 and FY2025 reports state there are 'small amounts of regulatory adjustments to capital in Tier 2', and "
+ "FY2026's says only a MAJORITY of capital resources is CET1 - which is the Bank withdrawing the very equivalence "
+ "('this equates to the Bank's Total Capital Ratio') that its pre-FY2024 KPI commentary asserted. With the "
+ "equivalence gone, no total capital amount printed and no RWA amount printed, there is nothing to carry across and "
+ "nothing to divide; striking a ratio would be the back-solve this project forbids.")
+metric("Total RWAs", "£", [("Total risk-weighted assets", {"FY2026": "Not publicly disclosed (SDDT exempt)", "FY2025": "Not publicly disclosed (SDDT exempt)", "FY2024": "Not publicly disclosed", "FY2023": 83146000, "FY2022": 71782000, "FY2021": 71451000, "FY2020": 60971000})], "£83,146,000 (FY2023) and £71,782,000 (FY2022) per the Pillar 3 Summary of Key Metrics table; ties to the RWA Breakdown sheet's standardised-approach total. FY2021 £71,451,000 and FY2020 £60,971,000 each come from that year's OWN edition, located 2026-09-16 (KM1-026): FY2021 from the 31 March 2021 edition's section 2 'Summary of Key Metrics' (p.3, line 'Risk Weighted Assets') and section 7.1 credit-risk table (p.8), which agree at 71,451; FY2020 from the 31 March 2020 edition's section 5.1 credit-risk table (p.3, 'Total' Risk Weighted Exposure column) - that edition prints no summary key-metrics table at all, so the credit-risk total is the only RWA figure it discloses. CORRECTION: an earlier version of this note said 'No 31 March 2021 edition exists' and cited the FY2022 comparative column - false, and the FY2021 value is unchanged either way. BASIS CAVEAT, checked explicitly rather than assumed: the Bank's 'Risk Weighted Assets' line is the STANDARDISED CREDIT-RISK total only. The FY2022 edition's section 7.1 credit-risk table (p.9) totals exactly 71,782 for 31 March 2022, matching the section 2 line digit for digit, and the same edition discloses market risk (section 8) and operational risk outside it. Consistent with that, the Bank's own printed CET1 ratios do NOT reproduce from these figures - 13,952/71,782 = 19.44% against a printed 18.05%, and 11,799/71,451 = 16.51% against a printed 15.45% - because the ratio denominator includes operational and market risk (implied roughly 5,514 and 4,918 respectively). Those implied amounts are NOT recorded anywhere in this workbook: they are back-solved and the Bank does not print them. FY2021 is placed on the same credit-risk-total basis as FY2022/FY2023 so the series is internally consistent. FY2024-FY2026: not published - see the RWA Breakdown sheet's confirmed-non-disclosure and SDDT date-test notes. CELLS UPDATED 2026-09-18 (GA-005 leading-gap pass): those three years now STATE the non-disclosure in the cell rather than sitting empty, FY2025/FY2026 marked '(SDDT exempt)' for the Rule 3.1 modification effective 05/04/2024, FY2024 unqualified because its year-end predates it by five days. Searching all three Annual Reports' clean text layers for 'risk weighted' returns only the total capital REQUIREMENT expressed as a percentage (11.74% of risk weighted assets) with no RWA amount anywhere to apply it to. Deriving an RWA from CET1 capital / CET1 ratio is the back-solve this project forbids and is doubly impossible here, since CET1 capital is itself undisclosed in those years.")
 bw.add_rwa_breakdown_sheet(
     title="Reliance Bank Limited - RWA Breakdown",
     subtitle="Entity basis, £; standardised approach to credit risk, FY2023-FY2020 (the four Pillar 3 editions the Bank has published). See source note.",

@@ -960,34 +960,34 @@ bw.add_cash_flow_sheet(
 # items, not gaps.
 AQ_GROSS = {
     "Stage 1": {"FY2026": 1093759, "FY2025": 883431, "FY2024": 718452, "FY2023": 786625, "FY2022": 723702,
-                "FY2020": 546951, "FY2019": 680867},
+                "FY2021": 600457, "FY2020": 546951, "FY2019": 680867},
     "Stage 2": {"FY2026": 62543, "FY2025": 39431, "FY2024": 34493, "FY2023": 362, "FY2022": 40577,
-                "FY2020": 57217, "FY2019": 86509},
+                "FY2021": 45537, "FY2020": 57217, "FY2019": 86509},
     "Stage 3": {"FY2026": 95862, "FY2025": 129209, "FY2024": 255526, "FY2023": 284217, "FY2022": 308877,
-                "FY2020": 371763, "FY2019": 406259},
+                "FY2021": 373633, "FY2020": 371763, "FY2019": 406259},
 }
 AQ_GROSS_TOTAL = {"FY2026": 1252164, "FY2025": 1051071, "FY2024": 1008471, "FY2023": 1071204, "FY2022": 1073156,
-                   "FY2020": 975931, "FY2019": 1173635}
+                   "FY2021": 1019627, "FY2020": 975931, "FY2019": 1173635}
 AQ_IMPAIR = {
     "Stage 1": {"FY2026": 667, "FY2025": 521, "FY2024": 506, "FY2023": 3068, "FY2022": 1747,
-                "FY2020": 2085, "FY2019": 3130},
+                "FY2021": 1797, "FY2020": 2085, "FY2019": 3130},
     "Stage 2": {"FY2026": 20, "FY2025": 10, "FY2024": 2, "FY2023": 1, "FY2022": 147,
-                "FY2020": 501, "FY2019": 962},
+                "FY2021": 188, "FY2020": 501, "FY2019": 962},
     "Stage 3": {"FY2026": 55666, "FY2025": 70262, "FY2024": 160233, "FY2023": 176961, "FY2022": 193340,
-                "FY2020": 240273, "FY2019": 262067},
+                "FY2021": 238199, "FY2020": 240273, "FY2019": 262067},
 }
 AQ_IMPAIR_TOTAL = {"FY2026": 56353, "FY2025": 70793, "FY2024": 160741, "FY2023": 180030, "FY2022": 195234,
-                    "FY2020": 242859, "FY2019": 266159}
+                    "FY2021": 240184, "FY2020": 242859, "FY2019": 266159}
 AQ_NET = {
     "Stage 1": {"FY2026": 1093092, "FY2025": 882911, "FY2024": 717947, "FY2023": 783557, "FY2022": 721955,
-                "FY2020": 544866, "FY2019": 677737},
+                "FY2021": 598660, "FY2020": 544866, "FY2019": 677737},
     "Stage 2": {"FY2026": 62523, "FY2025": 39422, "FY2024": 34491, "FY2023": 361, "FY2022": 40430,
-                "FY2020": 56716, "FY2019": 85546},
+                "FY2021": 45349, "FY2020": 56716, "FY2019": 85546},
     "Stage 3": {"FY2026": 40196, "FY2025": 58947, "FY2024": 95293, "FY2023": 107256, "FY2022": 115537,
-                "FY2020": 131490, "FY2019": 144192},
+                "FY2021": 135434, "FY2020": 131490, "FY2019": 144192},
 }
 AQ_NET_TOTAL = {"FY2026": 1195811, "FY2025": 981280, "FY2024": 847731, "FY2023": 891174, "FY2022": 877922,
-                "FY2020": 733072, "FY2019": 907475}
+                "FY2021": 779443, "FY2020": 733072, "FY2019": 907475}
 AQ_NPL_RATIO = {y: f"{AQ_GROSS['Stage 3'][y] / AQ_GROSS_TOTAL[y] * 100:.2f}%" for y in AQ_GROSS_TOTAL}
 AQ_COVERAGE_RATIO = {y: f"{AQ_IMPAIR_TOTAL[y] / AQ_GROSS_TOTAL[y] * 100:.2f}%" for y in AQ_GROSS_TOTAL}
 
@@ -1040,8 +1040,33 @@ bw.add_asset_quality_sheet(
     sources_text=STATEMENTS_SOURCES + (
         "\n\nFY2026: Note 19, printed p.80 - " + AR_URL["FY2026"] + "; FY2025: Note 19, printed p.77 - "
         + AR_URL["FY2025"] + " (FY2024 comparative also sourced here); FY2023: Note 19, printed p.67 - "
-        + AR_URL["FY2023"] + " (FY2022 comparative also sourced here); FY2020: Note 25, printed pp.60-61 - "
+        + AR_URL["FY2023"] + " (FY2022 comparative also sourced here); FY2021: Note 24 'Allowance for Expected "
+        "Credit Losses (continued)', printed p.55 / PDF p.56 - " + AR_URL["FY2021"] + "; FY2020: Note 25, printed pp.60-61 - "
         + AR_URL["FY2020"] + " (FY2019 comparative also sourced here, printed p.61).\n\n"
+        "FY2021 ADDED 2026-09-18 - IT WAS AN UNTRANSCRIBED TABLE, NOT AN UNDISCLOSED YEAR. FY2021 was the only "
+        "blank column between FY2019/FY2020 and FY2022 on this sheet, and the Bank's own 2021 Annual Report "
+        "(already cited on this workbook's Cash Flow Statement sheet) carries the identical 'breakdown of loans & "
+        "advances at amortised cost by product' table on printed p.55, in exactly the format used for every other "
+        "year. Stage 2 is the trap in this table and is handled the same way here as in every other column: the "
+        "Bank prints Stage 2 as TWO sub-rows, 'Not past due' and '> 30 <= 90 days', and this sheet's Stage 2 line "
+        "is their sum. FY2021's second sub-row is non-zero (gross 6,984, impairment nil, net 6,984), so Stage 2 "
+        "gross is 38,553 + 6,984 = 45,537, impairment 188 + 0 = 188, net 38,365 + 6,984 = 45,349 - taking only "
+        "the 'Not past due' row would have understated the stage by $6,984k. The convention is verified against a "
+        "year already in the workbook: AR2023 prints FY2022 Stage 2 as 27,489 + 13,088 gross and 130 + 17 "
+        "impairment, which is exactly this workbook's existing FY2022 40,577 / 147. The FY2021 column foots "
+        "internally (net = gross - impairment on every stage, and 1,019,627 - 240,184 = 779,443), and the same "
+        "page's 31 March 2020 comparative column reproduces this workbook's existing FY2020 figures cell-for-cell "
+        "(546,951 / 57,217 / 371,763 gross; 2,085 / 501 / 240,273 impairment; 544,866 / 56,716 / 131,490 net), "
+        "confirming both the scope and the transcription. The separate FVOCI investment-securities table on the "
+        "following page is excluded, as it is for every other year. Fetched on rung 1 (plain curl -L): HTTP 200, "
+        "Content-Type application/pdf, %PDF magic bytes, 1,567,660 bytes, native text layer (no OCR needed).\n\n"
+        "GBP-CONVERSION ROUNDING (applies to every column, not just FY2021): the Bank reports in US$'000 and every "
+        "cell on this sheet is converted individually at that year's 31 March spot rate and then rounded to one "
+        "decimal place, so a column's three stage rows can sum to £0.1k more or less than the separately-converted "
+        "printed total. FY2021's total impairment allowance is one such case (stages sum to 174,096.9, the "
+        "converted printed total is 174,096.8), exactly like the FY2026 and FY2020 columns already on this sheet. "
+        "In the Bank's own native US$'000 every column foots exactly (FY2021: 1,797 + 188 + 238,199 = 240,184). "
+        "This is an artefact of presenting a dollar disclosure in pounds; no figure has been adjusted to hide it.\n\n"
         "A large, steadily-declining Stage 3/impaired-loan book is genuinely disclosed every year (34.34% of gross "
         "loans in FY2017, rising to 37.92% in FY2018, then 28.79% by FY2022, down to 7.66% by FY2026) - not a "
         "transcription artefact; the Bank's own Annual Reports discuss legacy non-performing exposures, mostly "
@@ -1165,8 +1190,9 @@ NSFR = {"FY2026": "118%", "FY2025": "121%", "FY2024": "130%", "FY2023": "135%", 
 # THE FILLED COLUMN GOES IN BLOCK B (pre-2022 Basel), never block A, because
 # that is the template the FY2019 edition prints it in - see the row-number
 # collision above. Seven rows of it (1a/2a/3a/5a/6a/7a/14a) are printed as
-# dashes and stay BLANK (map rule 2), so FY2018 carries 16 figures and 7
-# blanks. The same document's own "Key metrics" summary strip, printed under
+# dashes and CARRY THE DASH (map rule 2 as decided 2026-09-18) - six of them
+# "-" and row 3a "--" - so FY2018 carries 16 figures and 7 dashes, and no
+# blanks at all. The same document's own "Key metrics" summary strip, printed under
 # the table, independently reproduces five of them on its "Mar 2018" line
 # (15.8% / 26.2% / 12.9% / 1027% / $906.2mn) - map rule 23.
 # FY2017 and earlier stay blank: no edition anywhere prints them.
@@ -1214,12 +1240,19 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
-    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2026": "1.7%", "FY2025": "1.6%", "FY2024": "1.4%", "FY2023": "0.7%", "FY2022": "0.0%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    # Dashed in all five UK-template editions - each year read in its OWN
+    # edition (FY2026, FY2025, FY2024, FY2023 and FY2022 PDFs, re-fetched and
+    # re-read 2026-09-18), never from a later edition's comparative.
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2026": "4.2%", "FY2025": "4.1%", "FY2024": "3.9%", "FY2023": "3.1%", "FY2022": "2.5%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -1257,15 +1290,19 @@ km1_rows = [
     ("DATA", "1    Common equity tier 1 (CET 1)",
      {"FY2021": 134.4, "FY2020": 146.1, "FY2019": 150.4, "FY2018": 142.8}),
     ("DATA", "1a    Fully loaded ECL accounting model",
-     {"FY2021": 132.9, "FY2020": 144.3, "FY2019": 146.4}),
+     {"FY2021": 132.9, "FY2020": 144.3, "FY2019": 146.4, "FY2018": "-"}),
     ("DATA", "2    Tier 1",
      {"FY2021": 179.4, "FY2020": 191.1, "FY2019": 195.4, "FY2018": 187.8}),
     ("DATA", "2a    Fully loaded ECL accounting model Tier 1",
-     {"FY2021": 177.9, "FY2020": 189.3, "FY2019": 191.4}),
+     {"FY2021": 177.9, "FY2020": 189.3, "FY2019": 191.4, "FY2018": "-"}),
     ("DATA", "3    Total Capital",
      {"FY2021": 206.6, "FY2020": 225.7, "FY2019": 236.3, "FY2018": 237.2}),
+    # FY2018 is "--" (two glyphs), not "-". The FY2019 edition prints a double
+    # dash on this one row and a single dash on the other six. Reproduced as
+    # printed rather than flattened to a common glyph: normalising the two
+    # together would assert they mean the same thing, which PNBIL never said.
     ("DATA", "3a    Fully loaded ECL accounting model total capital",
-     {"FY2021": 205.1, "FY2020": 223.9, "FY2019": 232.3}),
+     {"FY2021": 205.1, "FY2020": 223.9, "FY2019": 232.3, "FY2018": "--"}),
     ("SECTION", "Risk weighted assets (RWA) ($ million)", {}),
     ("DATA", "4    Total RWA",
      {"FY2021": 784.6, "FY2020": 755.9, "FY2019": 797.6, "FY2018": 906.2}),
@@ -1273,15 +1310,15 @@ km1_rows = [
     ("DATA", "5    Common equity tier 1 ratio (%)",
      {"FY2021": "17.1%", "FY2020": "19.3%", "FY2019": "18.9%", "FY2018": "15.8%"}),
     ("DATA", "5a    Fully loaded ECL accounting model Common equity tier 1 ratio (%)",
-     {"FY2021": "17.0%", "FY2020": "19.1%", "FY2019": "18.4%"}),
+     {"FY2021": "17.0%", "FY2020": "19.1%", "FY2019": "18.4%", "FY2018": "-"}),
     ("DATA", "6    Tier 1 ratio (%)",
      {"FY2021": "22.9%", "FY2020": "25.3%", "FY2019": "24.5%", "FY2018": "20.7%"}),
     ("DATA", "6a    Fully loaded ECL accounting model Tier 1 ratio (%)",
-     {"FY2021": "22.7%", "FY2020": "25.0%", "FY2019": "24.0%"}),
+     {"FY2021": "22.7%", "FY2020": "25.0%", "FY2019": "24.0%", "FY2018": "-"}),
     ("DATA", "7    Total capital ratio (%)",
      {"FY2021": "26.3%", "FY2020": "29.9%", "FY2019": "29.6%", "FY2018": "26.2%"}),
     ("DATA", "7a    Fully loaded ECL accounting model Total capital ratio (%)",
-     {"FY2021": "26.1%", "FY2020": "29.6%", "FY2019": "29.1%"}),
+     {"FY2021": "26.1%", "FY2020": "29.6%", "FY2019": "29.1%", "FY2018": "-"}),
     ("SECTION", "Additional CET 1 buffer requirements as a % of RWA", {}),
     ("DATA", "8    Capital conservation buffer requirement (%)",
      {"FY2021": "2.5%", "FY2020": "2.50%", "FY2019": "2.9%", "FY2018": "1.88%"}),
@@ -1297,7 +1334,7 @@ km1_rows = [
     ("DATA", "14    Basel III leverage ratio (%)",
      {"FY2021": "17.3%", "FY2020": "20.4%", "FY2019": "15.1%", "FY2018": "12.9%"}),
     ("DATA", "14a    Fully loaded ECL accounting model Basel III leverage ratio (%)",
-     {"FY2021": "17.2%", "FY2020": "20.2%", "FY2019": "14.8%"}),
+     {"FY2021": "17.2%", "FY2020": "20.2%", "FY2019": "14.8%", "FY2018": "-"}),
     ("SECTION", "Liquidity coverage ratio ($ million / %)", {}),
     ("DATA", "15    Total HQLA",
      {"FY2021": 239.4, "FY2020": 102.3, "FY2019": 75.9, "FY2018": 167.0}),
@@ -1374,10 +1411,14 @@ KM1_SOURCES = (
     "PRE-2022 BASEL BLOCK below, never in the UK block, because that is the template it is printed in - "
     "putting it anywhere else would map one template's row numbers onto the other's and invent a "
     "correspondence PNBIL never published.\n"
-    "SEVEN ROWS OF THAT COLUMN ARE PRINTED AS DASHES AND STAY BLANK (map rule 2): the fully-loaded ECL rows "
-    "1a, 2a, 5a, 6a, 7a and 14a are printed '-', and row 3a is printed '--'. Two different missing-value "
-    "glyphs in one column; both are dashes, neither is a zero, and neither is filled. So FY2018 carries 16 "
-    "figures and 7 blanks, exactly as the Bank printed it.\n"
+    "SEVEN ROWS OF THAT COLUMN ARE PRINTED AS DASHES AND CARRY THE DASH: the fully-loaded ECL rows 1a, 2a, "
+    "5a, 6a, 7a and 14a are printed '-', and row 3a is printed '--'. Two different missing-value glyphs in "
+    "one column, and the sheet shows each as printed rather than flattening them together - normalising the "
+    "two would assert they mean the same thing, which PNBIL never said. Neither is a zero and neither is "
+    "derived. So FY2018 carries 16 figures and 7 dashes, exactly as the Bank printed it. The dash is PNBIL "
+    "saying the fully-loaded twin does not apply to it (it had not made the IFRS 9 transitional election, "
+    "so there was no separate fully-loaded figure to report), which is a different statement from having "
+    "published nothing at all.\n"
     "A SECOND TABLE IN THE SAME DOCUMENT CORROBORATES FIVE OF THEM (map rule 23). Immediately beneath the "
     "template, the FY2019 edition prints its own 'Key metrics' summary strip, each tile carrying a 'Mar "
     "2018' line: CET 1 ratio 15.8%, Total capital ratio 26.2%, Leverage ratio 12.9%, LCR 1027%, Total RWA "
@@ -1392,10 +1433,12 @@ KM1_SOURCES = (
     "FY2017 AND EARLIER REMAIN BLANK for exactly that reason - no edition anywhere prints them in either "
     "template's form, the FY2018 edition (which would have been the only possible source of a 2017 "
     "comparative) printing no key-metrics table at all.\n\n"
-    "DASHES ARE BLANK, PRINTED ZEROES ARE KEPT (and a later edition's zero does not fill an earlier "
+    "A DASH IS A DASH AND A PRINTED ZERO IS A ZERO (and a later edition's zero does not fill an earlier "
     "edition's missing row). Rows UK 8a, UK 9a, 10 and UK 10a are printed '-' in every FY2022-FY2026 "
-    "edition, so they are blank here. Row 9 is a printed '0.0%' for FY2022 and a printed '0.02%'/'0.01%' for "
-    "FY2020/FY2019 - disclosed zeroes and near-zeroes, kept as printed.\n\n"
+    "edition and carry that dash here. Each of the five years was read in its OWN edition - the FY2026, "
+    "FY2025, FY2024, FY2023 and FY2022 PDFs were each re-fetched and re-read on 2026-09-18 - never from a "
+    "later edition's comparative column. Row 9 is a printed '0.0%' for FY2022 and a printed '0.02%'/'0.01%' "
+    "for FY2020/FY2019 - disclosed zeroes and near-zeroes, kept as printed and never tidied into dashes.\n\n"
     "PRECISION IS THE BANK'S OWN AND DRIFTS BETWEEN EDITIONS (rule: keep it). The FY2022 edition prints "
     "LCR 405.1% and NSFR 128.2%; the FY2023 edition rounds the same 2022 figures to 405% and 128%. The "
     "FY2021 edition prints the conservation buffer as '2.5%' where the FY2020 edition prints '2.50%'. Each "
@@ -1440,7 +1483,7 @@ bw.add_km1_sheet(
              "blocks: the UK KM1 (FY2022-FY2026) and the pre-2022 Basel III Table KM1 (FY2019-FY2021), whose row "
              "numbers collide but do NOT mean the same things. FY2018 sits in the Basel block and is the FY2019 "
              "edition's comparative column, because PNBIL's own FY2018 edition publishes no key-metrics table "
-             "at all; its seven fully-loaded ECL rows are printed as dashes there and stay blank. FY2017 and "
+             "at all; its seven fully-loaded ECL rows are printed as dashes there and carry them. FY2017 and "
              "earlier are blank because no edition prints them. See the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,

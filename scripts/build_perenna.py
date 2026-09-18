@@ -375,6 +375,71 @@ bw.add_asset_quality_sheet(
 PRE_LICENCE_YEARS = ["FY2021"]
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - "Not applicable". Perenna has never published a Pillar 3
+# disclosure of any kind, so there is no UK KM1 template to reproduce. This is
+# an affirmative, evidenced non-disclosure, not a gap in our sourcing, and it
+# is NOT back-filled from the statutory accounts (a different basis).
+# ---------------------------------------------------------------
+KM1_SOURCES = (
+    "NOT APPLICABLE - Perenna Bank PLC publishes no Pillar 3 disclosure, and therefore no UK KM1 key-metrics "
+    "template, for any year FY2021-FY2025. This is an evidenced absence, established on positive evidence and "
+    "re-confirmed 2026-09-18, not an unchecked blank or a failed fetch.\n\n"
+    "WHAT WAS CHECKED, AND WHAT EACH CHECK RETURNED:\n"
+    "1. perenna.com runs WordPress, so its media library was enumerated directly through the REST API rather "
+    "than by guessing filenames: /wp-json/wp/v2/media?mime_type=application/pdf returns an EMPTY ARRAY "
+    "(re-run 2026-09-18). The site hosts no PDF of any kind. A keyword search endpoint "
+    "(/wp-json/wp/v2/search?search=pillar) likewise returns an empty array.\n"
+    "2. The site's own sitemap index (perenna.com/sitemap_index.xml, named in its robots.txt) lists a single "
+    "page sitemap of 22 URLs. There is no investor-relations, regulatory-disclosures or legal page among them "
+    "- the set is product, complaints, privacy, careers and help pages (re-checked 2026-09-18).\n"
+    "3. A SIBLING HOST carrying every Perenna PDF was found and probed: static.perenna.com. A full Wayback CDX "
+    "sweep of that domain (1,095 archived URLs) lists 13 PDFs, all product, broker, complaints and tariff "
+    "documents, with zero matches for pillar/disclos/regulat/capital/prudent across the whole archived set. "
+    "Live probes for Pillar 3 filename permutations all return HTTP 404 against a KNOWN-GOOD CONTROL on the "
+    "same host (tariff_of_mortgage_charges.pdf, HTTP 200, re-confirmed 2026-09-18) - so the 404s are real "
+    "absences on a reachable host, not a blanket block.\n"
+    "4. The FY2024 and FY2025 Annual Reports were downloaded from Companies House and OCR'd IN FULL (90 and 76 "
+    "scanned pages respectively, no text layer). The ONLY regulatory metrics anywhere in either document are "
+    "the two ratios on the Key Performance Indicators table at p.1. No risk-weighted-asset figure, no capital "
+    "amount, no LCR and no NSFR appears in any note.\n\n"
+    "WHY THE DUTY DOES NOT APPLY GOING FORWARD, WITH THE DATE FIT STATED. The Bank of England's consolidated "
+    "register of waivers and modifications granted to PRA-authorised firms carries one SDDT row for FRN 956138, "
+    "'Perenna Bank PLC': 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT Regime - "
+    "General Application Part', waiver ref A00010865P.pdf, START DATE 10/06/2025, no end date. Rule 3.1 is the "
+    "operative opt-in and REMOVES the Pillar 3 disclosure obligation outright (unlike rules 1.2, 2.1(9) and "
+    "2.6, which modify the regime's ELIGIBILITY CRITERIA and remove no duty; Perenna holds none of those). "
+    "DATE FIT: Perenna's accounting reference date is 31 December, so the 10 June 2025 start date falls inside "
+    "FY2025 and explains that year forward. IT EXPLAINS NONE OF FY2021-FY2024, every one of which predates it "
+    "- a modification cannot explain a gap that precedes it.\n\n"
+    "FY2021-FY2023 HAVE A SEPARATE AND STRONGER EXPLANATION: Perenna held no banking licence during the period "
+    "ended 31 December 2021 (restricted licence August 2022, full licence 2023), so no Pillar 3 obligation "
+    "existed at all to be exempted from. FY2024 is the one year with a live duty and no located disclosure; "
+    "the searches above are the evidence for that, and the Bank's small-and-non-complex status under Article "
+    "433b reduces the required disclosure to an annual subset rather than removing it.\n\n"
+    "CONSEQUENCE, RECORDED SO A LATER SESSION DOES NOT REPEAT THE SEARCH: from 10 June 2025 Perenna is an "
+    "SDDT, so no standalone Pillar 3 or KM1 document will be published for FY2025 or later, and the Annual "
+    "Report KPI table will remain the only source for this workbook's ratio sheets. The same evidence is why "
+    "the RWA Breakdown sheet and most Pillar 3 metric sheets read 'Not publicly disclosed': those are genuine "
+    "non-disclosures by this bank, not omissions in this workbook.\n\n" + ENTITY_NOTE
+)
+
+bw.add_km1_sheet(
+    title="Perenna Bank PLC — KM1 Key Metrics",
+    subtitle="Not applicable — Perenna publishes no Pillar 3 disclosure of any kind, in any year, so there is "
+             "no UK KM1 key-metrics template to reproduce. See the source note below for the searches that "
+             "establish this and for the dated PRA modification that removes the duty from 10 June 2025. "
+             "Nothing here is back-filled from the statutory accounts, which are a different basis.",
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "No Pillar 3 disclosure published" for y in YEARS}),
+    ],
+    sources_text=KM1_SOURCES,
+    first_col_width=48,
+    source_height=460,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
                  for label, values in rows_data]

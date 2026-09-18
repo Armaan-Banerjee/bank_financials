@@ -13,10 +13,23 @@ AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2019_URL = AR2020_URL
 AR2018_URL = AR2020_URL
 AR2017_URL = AR2020_URL
+# SLUG NAMING ON THIS HOST IS LOAD-BEARING, AND IT IS NOT THE RULE WE FIRST
+# WROTE DOWN. The full-year edition's slug carries a DOUBLE dash before "iii"
+# and the half-year's a single one; the dash after the YEAR varies and cannot
+# be predicted (FY2024 full-year is "2024--pillar--iii" but FY2025 full-year is
+# "2025-pillar--iii"). Guessing the wrong combination does not 404: on
+# 2026-09-18 ".../2025/2025--pillar--iii" returned HTTP 200 with
+# "text/html; charset=utf-8" and a 96,461-byte body - the site's own index page
+# served as a soft-404. Only the Content-Type and the %PDF magic separate it
+# from a hit, which is why both are checked and recorded below.
+# NOTE: P3_2025_URL is the 31 MARCH 2025 HALF-YEAR document despite its name -
+# the full-year FY2025 edition is P3_FY2025_URL.
+P3_FY2025_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar--iii"
 P3_2025_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar-iii"
 P3_2024_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2024/2024--pillar--iii"
 P3_2022_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2022_pillar_iii_disclosures"
 P3_2021_URL = "https://www.paragonbank.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2021_pillar_iii_disclosures"
+INTERIM_2026_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2026/2026-pillar-iii"
 INTERIM_2025_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar-iii"
 INTERIM_2024_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2024/2024-pillar-iii"
 INTERIM_2023_URL = "https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2023/paragonbankinggroup_hy_pillar-3_2023"
@@ -26,9 +39,11 @@ ENTITY_NOTE = (
     "ENTITY/BASIS NOTE: Paragon Bank PLC (Companies House 05390593, FRN 604551; formerly Paragon Mortgages (No.24) PLC) "
     "is the regulated UK bank. Cash flows are the Bank's own statutory statement, £m, for years ended 30 September. "
     "Pillar 3 capital/liquidity figures are for the Paragon Bank regulatory group, including subsidiary entities, as stated "
-    "in the 2025 accounts and Pillar 3 reports. FY2025 full-year Pillar 3 was announced on 23 January 2026, but the "
-    "accessible 2025 URL is the half-year document; FY2025 capital metrics therefore use audited Annual Report note 38 "
-    "and FY2025 LCR/NSFR use its strategic-report disclosures. MREL is not disclosed in reviewed reports. "
+    "in the 2025 accounts and Pillar 3 reports. CORRECTED 18 September 2026 (KM1-032): this note used to say that "
+    "'the accessible 2025 URL is the half-year document', and that FY2025 capital metrics therefore used Annual "
+    "Report note 38. The full-year FY2025 Pillar III is accessible - it sits at a different slug on the same host "
+    "and was retrieved on 18 September 2026 - so FY2025 now comes from it, on the same basis as every other year. "
+    "MREL is not disclosed in reviewed reports. "
     "FY2020-FY2017 source retrieval was checked against the Paragon Bank PLC Companies House filing history "
     "(company 05390593); historical cells remain blank where the older filing presentation could not be transcribed reliably."
 )
@@ -80,23 +95,56 @@ rows = [
 ]
 P3_SOURCES = (
  "Sources - Pillar 3 / regulatory-group metrics (capital amounts and RWEAs £m; ratios %):\n"
- f"FY2025: Annual Report 2025, note 38 pp.116-120 (capital, RWEA, leverage, LCR and NSFR) - {AR2025_URL}; "
- f"half-year Pillar 3 UK KM1 pp.3-4 (cross-check) - {P3_2025_URL}\n"
- f"FY2024 and FY2023: Pillar III Disclosures 30 September 2024, UK KM1 pp.7-10 - {P3_2024_URL}\n"
+ f"FY2025: Pillar III Disclosures - 30 September 2025, UK KM1 printed pp.8-9, column a '30 Sep 25' - "
+ f"{P3_FY2025_URL} (retrieved 18 September 2026: HTTP 200, 'application/pdf', %PDF-1.6, 1,234,294 bytes, "
+ f"104 pages)\n"
+ f"FY2024 and FY2023: Pillar III Disclosures - 30 September 2024, UK KM1 printed pp.8-9 - {P3_2024_URL} "
+ f"(retrieved 18 September 2026: HTTP 200, 'application/pdf', %PDF-1.7, 1,591,886 bytes, 107 pages)\n"
  f"FY2022 and FY2021: Pillar III Disclosures 30 September 2022, UK KM1 pp.7-10 - {P3_2022_URL}; "
- f"FY2021 own-funds/LCR appendix pp.89-98 - {P3_2021_URL}\n" + ENTITY_NOTE
+ f"FY2021 own-funds/LCR appendix pp.89-98 - {P3_2021_URL}\n\n"
+ "FY2025 WAS REPOINTED ON 18 SEPTEMBER 2026, AND THE OLD FIGURES ARE RECORDED HERE RATHER THAN DISCARDED "
+ "(KM1-032). Until today FY2025 on these sheets came from Paragon Bank PLC's Annual Report 2025 note 38, "
+ "because the FY2025 Pillar III was recorded as unobtainable. It was obtainable, and the two sources are "
+ "not the same entity: note 38 reports PARAGON BANK PLC's own regulatory consolidation, whereas FY2024 back "
+ "to FY2021 on these sheets - and the KM1 sheet throughout - report PARAGON BANKING GROUP PLC's regulatory "
+ "group. The series therefore changed legal entity in its newest column without saying so. FY2025 now comes "
+ "from the Group Pillar III like every other year. For completeness, note 38's Paragon Bank PLC figures at "
+ "30 September 2025 were: CET1 and Tier 1 capital £1,085.1m, total regulatory capital £1,235.1m, total risk "
+ "exposure £8,613.2m, CET1 ratio 12.6%, total capital ratio 14.3%, leverage ratio 6.2% on a total leverage "
+ "exposure of £17,621.9m (Annual Report and Accounts - 30 September 2025, printed pp.116, 118 and 120; the "
+ "capital tables there are marked 'not subject to audit' apart from the equity reconciliation). Those are "
+ "the Bank's own audited-entity numbers and they are NOT substituted into any sheet.\n"
+ "FY2024's NSFR was shown as 139.5% and has been corrected to 138.2%. Both the FY2024 and the FY2025 "
+ "editions print 138.2% for 30 September 2024 on UK KM1 row 20; no document printing 139.5% was found, so "
+ "the old value matched no source rather than a different one.\n" + ENTITY_NOTE
 )
-capital={"FY2025":1085.1,"FY2024":1177.9,"FY2023":1188.9,"FY2022":1221.8,"FY2021":1055.8}
-total={"FY2025":1235.1,"FY2024":1327.9,"FY2023":1338.9,"FY2022":1371.8,"FY2021":1205.8}
-rwa={"FY2025":8613.2,"FY2024":8278.7,"FY2023":7668.7,"FY2022":7515.0,"FY2021":6836.8}
-cetr={"FY2025":"12.6%","FY2024":"14.2%","FY2023":"15.5%","FY2022":"16.3%","FY2021":"15.4%"}
-tcr={"FY2025":"14.3%","FY2024":"16.0%","FY2023":"17.5%","FY2022":"18.3%","FY2021":"17.6%"}
-lev={"FY2025":"6.2%","FY2024":"7.0%","FY2023":"7.6%"}
+# FY2025 REPOINTED AND FY2024 NSFR CORRECTED, 18 September 2026 (KM1-032).
+# Until today FY2025 was the only year in these series NOT taken from the
+# Group's Pillar 3 - it came from Paragon Bank PLC's own Annual Report note 38,
+# because the FY2025 Pillar III was believed unobtainable. It was obtainable,
+# and the substitution was not like-for-like: AR note 38 reports PARAGON BANK
+# PLC's regulatory consolidation, while every other year here reports PARAGON
+# BANKING GROUP PLC's regulatory group. So the five-year series silently
+# changed legal entity in its newest column. It no longer does. The Bank-PLC
+# figures are not lost - they are recorded in P3_SOURCES below, unsubstituted.
+# FY2024's NSFR was 139.5%, which matches no edition: both the FY2024 and the
+# FY2025 Pillar III print 138.2% for 30 September 2024. Corrected to 138.2%.
+capital={"FY2025":1172.4,"FY2024":1177.9,"FY2023":1188.9,"FY2022":1221.8,"FY2021":1055.8}
+total={"FY2025":1322.4,"FY2024":1327.9,"FY2023":1338.9,"FY2022":1371.8,"FY2021":1205.8}
+rwa={"FY2025":8630.7,"FY2024":8278.7,"FY2023":7668.7,"FY2022":7515.0,"FY2021":6836.8}
+cetr={"FY2025":"13.6%","FY2024":"14.2%","FY2023":"15.5%","FY2022":"16.3%","FY2021":"15.4%"}
+tcr={"FY2025":"15.3%","FY2024":"16.0%","FY2023":"17.5%","FY2022":"18.3%","FY2021":"17.6%"}
+lev={"FY2025":"6.6%","FY2024":"7.0%","FY2023":"7.6%"}
 lcr={"FY2025":"154.0%","FY2024":"211.5%","FY2023":"193.8%","FY2022":"146.3%","FY2021":"164.9%"}
-nsfr={"FY2025":"135.0%","FY2024":"139.5%","FY2023":"128.0%","FY2022":"121.5%","FY2021":"118.9%"}
+nsfr={"FY2025":"138.7%","FY2024":"138.2%","FY2023":"128.0%","FY2022":"121.5%","FY2021":"118.9%"}
 
 INTERIM_BASIS = "Paragon Bank regulatory group; consolidated Paragon Banking Group PLC disclosure including all entities"
 INTERIM_PERIODS = {
+    # 31 March 2026 added 18 September 2026 (KM1-032): the newest disclosure
+    # Paragon has published, retrieved live the day the Cloudflare block was
+    # solved. It is not a year-end date and therefore cannot sit in an annual
+    # column - Paragon's FY2026 ends 30 September 2026, which has not happened.
+    "31 Mar 2026": (INTERIM_2026_URL, "3-4", "UK KM1 key metrics table"),
     "31 Mar 2025": (INTERIM_2025_URL, "3", "UK KM1 key metrics table"),
     "31 Mar 2024": (INTERIM_2024_URL, "3-4", "UK KM1 key metrics table"),
     "31 Mar 2023": (INTERIM_2023_URL, "3-4", "UK KM1 key metrics table"),
@@ -104,6 +152,17 @@ INTERIM_PERIODS = {
     "31 Mar 2021": (INTERIM_2022_URL, "3-4", "UK KM1 comparative column in 31 March 2022 report"),
 }
 INTERIM_VALUES = {
+    # 31 Mar 2026 is the first period in this series where Tier 1 exceeds CET1:
+    # the Group issued AT1 in the half-year, so rows 2 and 3 step up while row 1
+    # does not. Read from the 31 March 2026 half-year report, printed pp.3-4,
+    # column "31 Mar 2026" (HTTP 200, application/pdf, %PDF, 326,403 bytes,
+    # 6 pages, retrieved 18 September 2026).
+    "31 Mar 2026": {
+        "CET1 capital": (1171.3, "£m"), "Tier 1 capital": (1319.7, "£m"), "Total capital": (1469.7, "£m"),
+        "Total risk-weighted exposure amount": (8685.7, "£m"), "CET1 ratio": (13.5, "%"),
+        "Tier 1 ratio": (15.2, "%"), "Total capital ratio": (16.9, "%"), "Leverage ratio excluding claims on central banks": (7.2, "%"),
+        "Liquidity coverage ratio": (145.6, "%"), "NSFR ratio": (134.9, "%"),
+    },
     "31 Mar 2025": {
         "CET1 capital": (1193.2, "£m"), "Tier 1 capital": (1193.2, "£m"), "Total capital": (1343.2, "£m"),
         "Total risk-weighted exposure amount": (8385.2, "£m"), "CET1 ratio": (14.2, "%"),
@@ -388,6 +447,267 @@ bw.add_asset_quality_sheet(
     source_height=300,
     unit_suffix=" (£m)",
 )
+# ---------------------------------------------------------------
+# KM1 Key Metrics - Paragon's own published UK KM1 template, reproduced whole,
+# placed immediately after Asset Quality and immediately before CET1 Capital.
+#
+# YEARS: FY2021-FY2025. FY2017-FY2020 carry NO COLUMN AT ALL - the UK KM1
+# template post-dates those editions and none of them prints one.
+#
+# FY2025 AND FY2024 ARE BLANK FOR A REACH REASON, NOT AN ABSENCE REASON, and
+# those two columns are deliberately kept visible so the gap is not hidden.
+# Paragon publishes a full-year Pillar III every year and both editions exist;
+# neither could be retrieved this session. See KM1_SOURCES for the evidence.
+#
+# COLUMN SELECTION. Paragon's KM1 prints three columns per edition (a / c / e =
+# the reporting date, six months earlier, twelve months earlier). Only column a
+# of each full-year edition is taken here, except FY2021 - see below.
+# ---------------------------------------------------------------
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_P3_2023_ARCHIVE = (
+    "https://web.archive.org/web/20240830064955/https://www.paragonbankinggroup.co.uk/resources/"
+    "paragon-group/documents/reports-presentations/2023/2023-pillar-iii"
+)
+KM1_P3_2022_ARCHIVE = (
+    "https://web.archive.org/web/20240830044143/https://www.paragonbankinggroup.co.uk/resources/"
+    "paragon-group/documents/reports-presentations/2022/pbg_2022_pillar_iii_disclosures"
+)
+KM1_P3_2021_ARCHIVE = (
+    "https://web.archive.org/web/20240713140930/https://www.paragonbank.co.uk/resources/"
+    "paragon-group/documents/reports-presentations/2022/pbg_2021_pillar_iii_disclosures"
+)
+
+KM1_SOURCES = (
+    "Sources - Paragon Banking Group PLC, 'UK KM1 - Key metrics template', regulatory-group "
+    "basis, £m, all years ended 30 September. Each year is read from the edition for which it is the "
+    "REPORTING year, except FY2021 - see below. FY2025 and FY2024 come from the Group's live website; "
+    "FY2023-FY2021 are Wayback Machine captures taken when the live host was refusing us:\n"
+    f"FY2025: Pillar III Disclosures - 30 September 2025, section 2.1 'UK KM1 - Key metrics template', "
+    f"printed pp.8-9 (rows 1-17 on p.8, rows 18-20 on p.9), column a '30 Sep 25' - {P3_FY2025_URL}\n"
+    f"FY2024: Pillar III Disclosures - 30 September 2024, section 2.1, printed pp.8-9 (rows 1-11 on p.8, "
+    f"rows UK 11a-20 on p.9), column a '30 Sept 24' - {P3_2024_URL}\n"
+    f"FY2023: Pillar III Disclosures 30 September 2023, section 2.2, pp.8-10 (printed folios 8-10; the table "
+    f"spans three pages), column a '30 Sept 23' - {KM1_P3_2023_ARCHIVE}\n"
+    f"FY2022: Pillar III Disclosures 30 September 2022, section 2.2, pp.8-10, column a '30 Sept 22' - "
+    f"{KM1_P3_2022_ARCHIVE}\n"
+    f"FY2021: the SAME FY2022 edition's own column e '30 Sept 21', pp.8-10 - {KM1_P3_2022_ARCHIVE}. The "
+    f"FY2021 edition itself contains no key-metrics template of any kind (see below), so this column is filled "
+    f"from the earliest edition that prints the year rather than left blank. That edition is at "
+    f"{KM1_P3_2021_ARCHIVE}\n\n"
+    "THE FY2021 EDITION PRINTS NO KM1, ON POSITIVE EVIDENCE. Its contents page runs Introduction / Governance "
+    "/ Risk management / Capital resources / Credit risk / Asset encumbrance / Counterparty credit risk / "
+    "Interest rate risk / Liquidity risk / Securitisation / Remuneration / Glossary - there is no key-metrics "
+    "section. Searching its extracted text returns zero occurrences of 'KM1', zero of 'Key metrics template' "
+    "and zero of 'combined buffer', while the SAME extraction is rich on neighbouring regulatory language - 7 "
+    "occurrences of 'own funds', 6 of 'SREP', 5 of 'Total exposure measure', 5 of 'countercyclical' and 4 of "
+    "'risk-weighted'. The zeros are therefore a fact about the document, not about the extraction. This is "
+    "consistent with the Group's own statement that the template is required from the 1 January 2022 UK "
+    "regime; the FY2022 edition is its first.\n\n"
+    "FY2025 AND FY2024 WERE EMPTY UNTIL 18 SEPTEMBER 2026, AND THE REASON GIVEN WAS WRONG (KM1-032). Until "
+    "today this sheet said the two columns were blank because 'neither edition could be retrieved' - the "
+    "Group's site 403ing us and the single archived capture refusing to replay. The retrieval failure was "
+    "real; the conclusion drawn from it was not, and the cells stayed empty for want of a document that was "
+    "sitting on the Group's own website the whole time. BOTH EDITIONS WERE RETRIEVED TODAY AND THE COLUMNS "
+    "ARE NOW FILLED FROM THEM: Pillar III Disclosures - 30 September 2025 (HTTP 200, 'application/pdf', "
+    "%PDF-1.6, 1,234,294 bytes, 104 pages, cover reading 'Paragon Banking Group PLC / Pillar III Disclosures "
+    "- 30 September 2025') and Pillar III Disclosures - 30 September 2024 (HTTP 200, 'application/pdf', "
+    "%PDF-1.7, 1,591,886 bytes, 107 pages). Both read 18 September 2026.\n"
+    "WHAT ACTUALLY UNBLOCKED IT, recorded because it is reusable and was not obvious: the Cloudflare 403 on "
+    "this host is triggered by the HTTP/2 request, not by the User-Agent, the headers, cookies or the path. "
+    "The identical request sent over HTTP/1.1 (curl --http1.1) returns the PDF. A full browser header set "
+    "over HTTP/2 is still refused; a bare User-Agent over HTTP/1.1 succeeds. Every previous attempt on this "
+    "bank had varied the headers while leaving the protocol alone, so the block looked absolute and adaptive "
+    "when it was neither. The earlier note's own words - 'the block is adaptive rather than fixed' - were an "
+    "inference from repeated failure, and they were wrong.\n"
+    "The Group does publish the template every year, as its half-year report states: 'Full Pillar 3 "
+    "disclosures for the Group are required only at year end ... published annually at approximately the same "
+    "time as the Group's report and accounts'. That sentence was already on this sheet, and it was already "
+    "enough to know the documents existed.\n\n"
+    "THE TWO EDITIONS DISAGREE WITH EACH OTHER ABOUT 30 SEPTEMBER 2024, ON ROWS 8 AND 9, AND BOTH READINGS "
+    "ARE PRINTED HERE. The FY2024 edition's column a gives capital conservation buffer 2.5% and institution "
+    "specific countercyclical buffer 2.0%. The FY2025 edition's '30 Sep 24' comparative column gives the same "
+    "two numbers the other way round, 2.0% and 2.5%, and carries that reversal through all three of its "
+    "columns. This sheet takes each year from its own edition, so FY2024 reads 2.5%/2.0% and FY2025 reads "
+    "2.0%/2.5% - which on the face of the sheet looks like the two buffers swapping places between "
+    "consecutive years. They are NOT reconciled and neither is corrected. For the reader's judgement rather "
+    "than as an amendment: the UK capital conservation buffer has stood at 2.5% throughout, and the UK "
+    "countercyclical buffer rate has been 2.0% since 5 July 2023, which fits the FY2024 edition's labelling "
+    "and not the FY2025 edition's. Two further documents were checked and both agree with the FY2024 "
+    "edition - the 31 March 2025 half-year report prints 2.5%/2.0% for its own '30 Sep 2024' column, and "
+    "the 31 March 2026 half-year report prints 2.5%/2.0% for its '30 Sep 2025' column, which is the very "
+    "date the FY2025 annual labels 2.0%/2.5%. So the FY2025 annual edition is the outlier among four "
+    "documents, and on the face of it has the two row labels transposed. It is still reproduced exactly as "
+    "printed, because this sheet reproduces a prescribed template rather than corrects one. Row 11 is 4.5% "
+    "in every document, so whichever way the two are labelled the combined requirement is unaffected.\n\n"
+    "ROW 4 DISAGREES WITH THE SAME DOCUMENT'S OWN UK OV1 BY 0.1, FOR FY2025. KM1 row 4 prints 8,630.7 and "
+    "UK OV1 row 29 'Total' prints 8,630.6, two pages later in the same edition. This workbook carries each "
+    "figure on the sheet that reproduces the template it was printed in - 8,630.7 here, 8,630.6 on the RWA "
+    "Breakdown sheet - so the two sheets do not tie for FY2025, by design. It is component rounding, it is "
+    "the Group's own, and silently aligning them would erase a real feature of the disclosure.\n\n"
+    "LABEL SPELLING ON ROW UK 8a: the FY2022 and FY2023 editions print 'Conversation buffer', which is the "
+    "Group's own typo for 'Conservation' and is kept as the reproduced label. The FY2024 and FY2025 editions "
+    "spell it correctly. The row label is shared by all five columns, so it cannot show both; it keeps the "
+    "older spelling and the correction is recorded here rather than applied silently.\n\n"
+    "DASHES, 'N/A' AND BLANKS ARE THREE DIFFERENT THINGS ON THIS SHEET. Rows UK 8a, UK 9a, 10 and UK 10a are "
+    "dashed in every edition, footnoted [a] 'These buffers are not currently applicable to the Group', and "
+    "they now CARRY that dash for the three years a readable edition covers - FY2023 from the FY2023 "
+    "edition's column a '30 Sept 23', FY2022 from the FY2022 edition's column a '30 Sept 22', and FY2021 "
+    "from that same FY2022 edition's column e '30 Sept 21'. Rows 14a-14e are NOT "
+    "dashed: they print the literal 'N/A', footnoted [b] 'These lines are only required for LREQ banks, as "
+    "defined by the PRA Rulebook. The Group's balance sheet size is too small to be classified as an LREQ "
+    "bank.' That is the Group's own word, not a dash, and it is deliberately NOT converted into one; those "
+    "cells remain blank pending a corpus-wide decision on how a printed 'N/A' should be shown. Row 9 by "
+    "contrast prints a real 0.0 for FY2022 and FY2021, and that disclosed zero is kept as a zero - it is a "
+    "measured value, and tidying it into a dash would destroy the very distinction this sheet now draws. "
+    "FY2025 and FY2024 now carry the same dashes on rows UK 8a, UK 9a, 10 and UK 10a, read from their own "
+    "editions, which print them dashed and footnoted [a] exactly as the earlier years do; and FY2025 adds two "
+    "more printed zeros, on rows 7b and 7c, kept as zeros on the same reasoning. Rows 14a-14e print 'N/A' in "
+    "those two editions as well, so they stay blank.\n\n"
+    "BASIS FOOTNOTES CARRIED BY THE SOURCE, which matter when comparing rows: the LCR block (rows 15, UK 16a, "
+    "UK 16b, 16) is 'based on a 12 month rolling average of month end positions', row 17 likewise and "
+    "'therefore cannot be derived from the values given above it', and the NSFR block (rows 18-20) is 'based "
+    "on a 4 quarter rolling average of quarter end positions'.\n\n"
+    "LATEST-EDITION CHECK 2026-09-18, COMPLETED. The Group's own results/reports index was read live "
+    "(HTTP 200, 96,467 bytes) and the newest FULL-YEAR edition it lists is Pillar III Disclosures - "
+    "30 September 2025, which is the newest this sheet could carry in any case: Paragon's year-end is "
+    "30 September, so FY2026 has not ended. The newest disclosure of any kind is the half-year Pillar 3 for "
+    "the six months ended 31 March 2026 (HTTP 200, 'application/pdf', %PDF, 326,403 bytes, 6 pages, read "
+    "18 September 2026). That is not a year-end date and does not belong in an annual column; it belongs on "
+    "the Interim Pillar 3 sheet, which is where the half-year series is kept.\n\n" + ENTITY_NOTE
+)
+
+km1_rows = [
+    # FY2025 and FY2024 added 18 September 2026 (KM1-032), each read from the
+    # edition for which it is the REPORTING year (map rule 1), never from the
+    # other's comparative column:
+    #   FY2025 <- Pillar III Disclosures - 30 September 2025, section 2.1,
+    #             printed p.8 (rows 1-17) and p.9 (rows 18-20), column a
+    #             "30 Sep 25".
+    #   FY2024 <- Pillar III Disclosures - 30 September 2024, section 2.1,
+    #             printed p.8 (rows 1-11) and p.9 (rows UK 11a-20), column a
+    #             "30 Sept 24".
+    # Both retrieved live from paragonbankinggroup.co.uk on 2026-09-18 over
+    # HTTP/1.1 - see the source note for why the protocol is load-bearing.
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 ('CET1') Capital (£m)",
+     {"FY2025": 1172.4, "FY2024": 1177.9, "FY2023": 1188.9, "FY2022": 1221.8, "FY2021": 1055.8}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2025": 1172.4, "FY2024": 1177.9, "FY2023": 1188.9, "FY2022": 1221.8, "FY2021": 1055.8}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2025": 1322.4, "FY2024": 1327.9, "FY2023": 1338.9, "FY2022": 1371.8, "FY2021": 1205.8}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    # FY2025: the FY2025 edition prints 8,630.7 here and 8,630.6 as its own
+    # UK OV1 row 29 total, two pages later. Both are kept where they were
+    # printed - this sheet 8,630.7, the RWA Breakdown sheet 8,630.6 - and the
+    # 0.1 is not reconciled away. It is component rounding inside one document.
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2025": 8630.7, "FY2024": 8278.7, "FY2023": 7668.7, "FY2022": 7515.0, "FY2021": 6836.8}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "13.6%", "FY2024": "14.2%", "FY2023": "15.5%", "FY2022": "16.3%", "FY2021": "15.4%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "13.6%", "FY2024": "14.2%", "FY2023": "15.5%", "FY2022": "16.3%", "FY2021": "15.4%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "15.3%", "FY2024": "16.0%", "FY2023": "17.5%", "FY2022": "18.3%", "FY2021": "17.6%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure "
+                "amount)", {}),
+    ("DATA", "7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "0.1%", "FY2024": "0.4%", "FY2023": "0.4%", "FY2022": "0.4%", "FY2021": "0.4%"}),
+    # FY2025 prints a real 0.0 on rows 7b and 7c - a disclosed zero, kept as a
+    # zero and not blanked, on the same reasoning as row 9's FY2022/FY2021.
+    ("DATA", "7b  Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.0%", "FY2024": "0.1%", "FY2023": "0.2%", "FY2022": "0.2%", "FY2021": "0.2%"}),
+    ("DATA", "7c  Additional T2 SREP requirements (%)",
+     {"FY2025": "0.0%", "FY2024": "0.2%", "FY2023": "0.2%", "FY2022": "0.2%", "FY2021": "0.2%"}),
+    ("DATA", "7d  Total SREP own funds requirements (%)",
+     {"FY2025": "8.1%", "FY2024": "8.7%", "FY2023": "8.8%", "FY2022": "8.8%", "FY2021": "8.8%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    # ROWS 8 AND 9 CARRY A CROSS-EDITION CONTRADICTION ON ONE YEAR. For 30
+    # September 2024 the FY2024 edition prints conservation 2.5 / countercyclical
+    # 2.0, and the FY2025 edition's own "30 Sep 24" comparative prints the two
+    # the other way round, 2.0 / 2.5. Each year here is taken from its own
+    # edition, so FY2024 shows 2.5/2.0 and FY2025 shows 2.0/2.5 - which makes
+    # the two columns look like a swap between consecutive years. It is not a
+    # transcription error and it is deliberately NOT reconciled; see the source
+    # note, which also records which reading the published UK buffer rates fit.
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    # Dashed in every edition - "not currently applicable to the Group".
+    # "Conversation" is the Group's own typo for "Conservation" in the FY2022
+    # and FY2023 editions and is kept as the reproduced label; the FY2024 and
+    # FY2025 editions spell it correctly, which is recorded in the source note
+    # rather than silently applied to a row label the older columns also use.
+    ("DATA", "UK 8a  Conversation buffer due to macro-prudential or systemic risk identified at the level of "
+             "a Member State (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    # A disclosed 0.0 for FY2022 and FY2021 - a printed zero, kept as a zero.
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "0.0%", "FY2021": "0.0%"}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "10  Global systemically important institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "12.6%", "FY2024": "13.2%", "FY2023": "13.3%", "FY2022": "11.3%", "FY2021": "11.3%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.2%", "FY2024": "7.3%", "FY2023": "6.7%", "FY2022": "8.8%", "FY2021": "8.8%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 17651.1, "FY2024": 16807.9, "FY2023": 15579.3, "FY2022": 15387.5, "FY2021": 14123.2}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "6.6%", "FY2024": "7.0%", "FY2023": "7.6%", "FY2022": "7.9%", "FY2021": "7.5%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    # Rows 14a-14e print the literal "N/A" in every edition - LREQ-bank-only
+    # lines that do not apply to the Group. Left blank, never zero. The FY2025
+    # and FY2024 editions print "N/A" on these rows too, so adding those two
+    # years changes nothing here.
+    ("DATA", "14a  Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14b  Leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14c  Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d  Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e  Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets ('HQLA') (Weighted value -average) (£m)",
+     {"FY2025": 2439.5, "FY2024": 3049.1, "FY2023": 2082.1, "FY2022": 1296.7, "FY2021": 1393.5}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£m)",
+     {"FY2025": 1931.2, "FY2024": 1785.5, "FY2023": 1397.8, "FY2022": 1152.8, "FY2021": 1166.2}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£m)",
+     {"FY2025": 347.8, "FY2024": 332.9, "FY2023": 321.1, "FY2022": 265.4, "FY2021": 289.2}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 1583.5, "FY2024": 1452.6, "FY2023": 1076.7, "FY2022": 887.4, "FY2021": 877.1}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "154.0%", "FY2024": "211.5%", "FY2023": "193.8%", "FY2022": "146.3%", "FY2021": "164.9%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£m)",
+     {"FY2025": 18036.8, "FY2024": 19506.0, "FY2023": 17543.6, "FY2022": 16596.2, "FY2021": 15452.9}),
+    ("DATA", "19  Total required stable funding (£m)",
+     {"FY2025": 13007.8, "FY2024": 14120.8, "FY2023": 13706.8, "FY2022": 13660.0, "FY2021": 12994.4}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "138.7%", "FY2024": "138.2%", "FY2023": "128.0%", "FY2022": "121.5%", "FY2021": "118.9%"}),
+]
+
+bw.add_km1_sheet(
+    title="Paragon Bank Plc — KM1 Key Metrics",
+    subtitle="Paragon Banking Group PLC's own published 'UK KM1 - Key metrics template', reproduced in its own "
+             "row order, row numbering, labels and precision. Amounts in £m, ratios as printed; all years "
+             "ended 30 September. REGULATORY-GROUP BASIS, not Paragon Bank PLC statutory solo - see the entity "
+             "note. FY2025 and FY2024 were added on 18 September 2026 from their own editions, both retrieved "
+             "live from the Group's website; they had been empty on the mistaken ground that the editions "
+             "could not be obtained - see the source note. FY2017-FY2020 are not shown at all: the template "
+             "post-dates those editions.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=72,
+    source_height=520,
+    years=KM1_YEARS,
+)
+
+
 def metric(name, unit, label, values, note=None):
     bw.add_metric_sheet(name, unit, [(label, values)], P3_SOURCES, note=note, first_col_width=52, source_height=180)
 metric("CET1 Capital","£m","Common Equity Tier 1 (CET1) capital",capital)
@@ -404,7 +724,8 @@ metric("Total RWAs","£m","Total risk-weighted exposure amount",rwa,
        "document's UK OV1 total of £7,645.8m is the outlier and the FY2023 edition restates the FY2022 "
        "category split to tie to £7,515.0m. The RWA Breakdown sheet deliberately keeps the "
        "originally-published OV1 figures, so its Total row does not equal this sheet for FY2022 (nor for "
-       "FY2025, a separate Annual-Report-vs-Pillar-3 difference) - see that sheet's note. Do not reconcile.")
+       "FY2025, where the same FY2025 edition prints 8,630.7 on KM1 row 4 and 8,630.6 on UK OV1 row 29) - "
+       "see that sheet's note. Do not reconcile.")
 
 # ---------------------------------------------------------------
 # RWA Breakdown - Pillar 3 UK OV1 template risk-type category split, placed
@@ -416,13 +737,52 @@ metric("Total RWAs","£m","Total risk-weighted exposure amount",rwa,
 # ---------------------------------------------------------------
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Paragon Banking Group PLC Pillar III Disclosures, UK OV1 'Overview of risk weighted "
-    "exposure amounts' table, £m, regulatory-group basis (all recovered via Wayback Machine archives "
-    "since paragonbankinggroup.co.uk blocks automated access):\n"
-    "FY2025: Pillar III Disclosures 30 September 2025 (published ~23 Jan 2026), UK OV1 pp.9-10 - "
-    "https://web.archive.org/web/20260203152658/https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2025/2025-pillar--iii\n"
-    "FY2024: FY2025 Pillar III Disclosures' own 30 September 2024 comparative column, UK OV1 pp.9-10 "
-    "(no standalone full-year FY2024 Pillar 3 document was locatable - only a half-year 31 March 2024 "
-    "report exists at that URL slug) - same document as FY2025 above\n"
+    "exposure amounts' table (section 2.2), £m, regulatory-group basis. FY2025 and FY2024 come from the "
+    "Group's live website; the older years are Wayback Machine captures taken when the live host was "
+    "refusing us:\n"
+    "FY2025: Pillar III Disclosures - 30 September 2025, UK OV1 printed pp.9-10, column a '30 Sep 25' - "
+    + P3_FY2025_URL + " (retrieved 18 September 2026: HTTP 200, 'application/pdf', %PDF-1.6, 1,234,294 "
+    "bytes). These figures were previously transcribed from the Wayback capture at "
+    "https://web.archive.org/web/20260203152658/... of the same document; every one of them was re-checked "
+    "against the live PDF today and they agree exactly, which is worth recording because the archived copy "
+    "had been unreplayable and the transcription therefore unconfirmable.\n"
+    "FY2024: Pillar III Disclosures - 30 September 2024, UK OV1 printed pp.10-11, column a '30 Sept 24' - "
+    + P3_2024_URL + " (retrieved 18 September 2026: HTTP 200, 'application/pdf', %PDF-1.7, 1,591,886 "
+    "bytes). REPOINTED 18 September 2026 from the FY2025 edition's comparative column b to FY2024's own "
+    "edition, per the standing rule that a year is read from the edition for which it is the reporting "
+    "year. The figures are identical either way (7,351.1 / 79.6 / 848.0 / 8,278.7), so this changes the "
+    "provenance and not the data - and the agreement itself is a check: the later edition did not restate "
+    "the year.\n"
+    "  CLAIM WITHDRAWN 18 September 2026 (KM1-032). This citation used to add '(no standalone full-year "
+    "FY2024 Pillar 3 document was locatable - only a half-year 31 March 2024 report exists at that URL "
+    "slug)'. That was a failed fetch written down as a fact about the Group, and it is wrong twice over. "
+    "(i) A standalone full-year edition IS published and is listed on the Group's own "
+    "results-reports-and-presentations index: 'Paragon Banking Group PLC / Pillar III Disclosures - "
+    "30 September 2024', retrieved once during this ticket on 2026-09-18 at HTTP 200, application/pdf, "
+    "%PDF-, 1,591,886 bytes. A FY2025 full-year edition and a 31 March 2026 half-year edition are listed "
+    "too. (ii) The sub-claim about the URL slug was literally true and still produced a false conclusion, "
+    "because THE SLUG NAMING IS LOAD-BEARING: the full-year edition's slug carries a DOUBLE dash before "
+    "'iii' and the half-year's a single one. Probing the half-year slug and finding a half-year report "
+    "proves nothing about the full-year one sitting beside it.\n"
+    "  THAT SLUG RULE WAS ITSELF OVERSTATED, AND IS NARROWED HERE (18 September 2026). It was written as "
+    "'2024--pillar--iii' vs '2024-pillar-iii', i.e. as though BOTH dashes doubled for a full-year edition. "
+    "Only the dash before 'iii' is reliable: the FY2025 full-year edition is '2025-pillar--iii', with a "
+    "single dash after the year. Guessing '2025--pillar--iii' by analogy with 2024 does not fail cleanly - "
+    "it returns HTTP 200 with 'text/html; charset=utf-8' and a 96,461-byte body, the site's own index page "
+    "served as a soft-404. A status-code check would have read that as a hit. A pattern inferred from one "
+    "year is the same shape of error this whole correction is about, committed one paragraph later.\n"
+    "  NO LONGER BLOCKED - RESOLVED LATER THE SAME DAY. This entry recorded, hours earlier, that "
+    "paragonbankinggroup.co.uk returned HTTP 403 from Cloudflare to every request including its own index "
+    "page, that a full browser header set and a cookie-jar-plus-Referer retry were both refused, and that "
+    "'the block is adaptive rather than fixed'. That last part was an inference from repeated failure and "
+    "it was wrong. THE TRIGGER IS THE HTTP VERSION, NOT THE HEADERS: the same request sent over HTTP/1.1 "
+    "returns the document, while HTTP/2 is refused no matter how the headers are dressed. Every attempt on "
+    "this bank, across several sessions, had varied the headers and left the protocol alone. Both full-year "
+    "editions and the Group's own index page were retrieved on 18 September 2026 by that route, each "
+    "verified by Content-Type and %PDF magic rather than by status code, and the FY2025 and FY2024 columns "
+    "on this sheet and on the KM1 sheet are transcribed from them. Recorded at length because it generalises: "
+    "a 403 that survives every header permutation is worth one attempt at a different protocol before it is "
+    "written down as a block.\n"
     "FY2023: Pillar III Disclosures 30 September 2023, UK OV1 pp.7-8 - "
     "https://web.archive.org/web/20240830064955/https://www.paragonbankinggroup.co.uk/resources/paragon-group/documents/reports-presentations/2023/2023-pillar-iii\n"
     "FY2022: Pillar III Disclosures 30 September 2022, UK OV1 pp.7-8 - "
@@ -432,9 +792,13 @@ RWA_BREAKDOWN_SOURCES = (
     "https://web.archive.org/web/20240713140930/https://www.paragonbank.co.uk/resources/paragon-group/documents/reports-presentations/2022/pbg_2021_pillar_iii_disclosures\n\n"
     + ENTITY_NOTE +
     "\n\nDATA QUALITY NOTE (genuine, not transcription errors): FY2025's OV1 total (£8,630.6m) is "
-    "close to but doesn't exactly match the pre-existing Total RWAs sheet's figure (£8,613.2m, sourced "
-    "from the FY2025 Annual Report's own Note 38) - both are the Bank's own disclosed figures, just "
-    "from two different contemporaneous documents. FY2022's OV1 total as originally published in the "
+    "0.1 below the Total RWAs and KM1 sheets' figure (£8,630.7m). UPDATED 18 September 2026: that gap "
+    "used to be £17.5m, because the Total RWAs sheet then carried £8,613.2m from Paragon Bank PLC's "
+    "Annual Report note 38 - a different legal entity from this sheet's regulatory group. FY2025 now "
+    "comes from the Group Pillar III on both sheets, and what remains is the 0.1 by which that single "
+    "document's own KM1 row 4 (8,630.7) exceeds its own UK OV1 row 29 total (8,630.6), two pages apart. "
+    "Each figure is kept on the sheet reproducing the template it was printed in; component rounding "
+    "inside one document is not something to reconcile away. FY2022's OV1 total as originally published in the "
     "FY2022 Pillar 3 document (£7,645.8m, shown below) likewise doesn't match the Total RWAs sheet's "
     "KM1-sourced figure (£7,515.0m) - but the FY2023 Pillar 3 document's own FY2022 comparative column "
     "restates the FY2022 category breakdown (Credit risk £6,632.5m, CCR £249.4m, Operational risk "
@@ -484,8 +848,15 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio","%","Leverage ratio",lev,"FY2022 and FY2021 are not shown in the selected modern leverage-ratio series; no comparable figure was used.")
-metric("LCR","%","Liquidity Coverage Ratio",lcr,"FY2025 is the 12-month average disclosed in the Annual Report; FY2024-FY2021 are applicable-average figures in the Pillar 3 disclosures.")
+metric("Leverage Ratio","%","Leverage ratio",lev,"FY2022 and FY2021 are not shown in the selected modern leverage-ratio series; no comparable figure was "
+       "used - but both years ARE on the KM1 sheet (rows 13 and 14), read from the FY2022 edition. FY2025 was "
+       "6.2% here until 18 September 2026, which was Paragon Bank PLC's own fully loaded ratio from Annual "
+       "Report note 38; it is now 6.6%, the Group regulatory-group ratio from UK KM1 row 14, on the same basis "
+       "as FY2024 and FY2023. The two are different entities, not different measures of one.")
+metric("LCR","%","Liquidity Coverage Ratio",lcr,"All five years are the Pillar 3 UK KM1 row 17 figure, which the editions footnote as 'based on a "
+       "12 month rolling average of month end positions' and note 'cannot be derived from the values given "
+       "above it'. FY2025 previously cited the Annual Report instead; the figure was the same 154.0%, but the "
+       "citation now names the document the number is actually printed in.")
 metric("NSFR","%","Net Stable Funding Ratio",nsfr)
 metric("MREL Ratio","%","MREL ratio",{y:"Not publicly disclosed" for y in YEARS},"No MREL figure was located in the reviewed Paragon Annual Reports or Pillar 3 disclosures.")
 bw.add_wide_interim_sheet(
@@ -494,10 +865,21 @@ bw.add_wide_interim_sheet(
     hyperlink_cells={(i, 6): row[6] for i, row in enumerate(INTERIM_ROWS)},
     title="Paragon Bank Plc — Interim Pillar 3 Disclosures",
     subtitle="Half-year UK KM1 key metrics; regulatory-group basis, including all entities",
-    note=("Coverage: 31 March 2021–31 March 2025. Standalone half-year reports are available for 2022–2025. "
+    note=("Coverage: 31 March 2021–31 March 2026. Standalone half-year reports are available for 2022–2026. "
           "31 March 2021 is included only as the comparative column in the official 31 March 2022 half-year report; "
           "no separate 2021 half-year Pillar 3 document was located. The disclosures are consolidated for the Paragon "
-          "Bank regulatory group rather than Paragon Bank PLC statutory solo accounts. No MREL figure is reported."),
+          "Bank regulatory group rather than Paragon Bank PLC statutory solo accounts. No MREL figure is reported.\n"
+          "31 MARCH 2026 ADDED 18 September 2026. It is the newest Pillar 3 disclosure Paragon has published and is "
+          "the newest this workbook can hold: the Group's year-end is 30 September, so there is no FY2026 annual "
+          "column to be had. Tier 1 capital (£1,319.7m) exceeds CET1 (£1,171.3m) for the first time in this series, "
+          "the Group having issued AT1 during the half-year; every earlier period has the two equal.\n"
+          "TWO CROSS-EDITION RESTATEMENTS ARE VISIBLE HERE AND ARE NOT RECONCILED. (i) Each period's figures are "
+          "read from its own half-year report, so 31 March 2025 shows £8,385.2m of RWEAs as that report printed "
+          "them; the FY2025 annual Pillar III later prints £8,383.2m for the same date, a £2.0m restatement. "
+          "(ii) The 31 March 2026 report restates leverage comparatives after a change in the treatment of IAS 39 "
+          "fair value hedging adjustments - its own footnote says so - giving 31 March 2025 a total exposure "
+          "measure of £17,117.1m against the £17,192.0m printed at the time. Each figure stays with the edition "
+          "that printed it."),
 )
 bw.add_overview_sheet(
  balance_sheet_totals=[

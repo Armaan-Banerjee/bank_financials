@@ -115,6 +115,17 @@ def p3_sources(page, extra=""):
         f"same eight Pillar 3 documents and no 2025 one. So FY2025 is a live access gap that may simply close "
         f"on its own when the Bank publishes; it is worth re-checking this index before requesting the "
         f"document. The same index is what exposed the FY2017 disclosure this project had been missing.\n"
+        f"RE-CHECKED 2026-09-18 (separate session, prior verdict treated as unproven) - UNCHANGED. The "
+        f"publications index was re-fetched and every document link parsed out: it still lists Pillar III "
+        f"Disclosures for 2017, 2018, 2019, 2020, 2021, 2022, 2023 and 2024 and no 2025 edition, alongside "
+        f"the Annual Report 2025. Two FY2025 filenames were then probed directly on the CDN that serves "
+        f"every prior year (Gatehouse-Bank-Pillar-III-Disclosure-2025-FINAL.pdf and "
+        f"Gatehouse-Bank-Pillar-III-Disclosure-2025.pdf); both returned HTTP 404 while a control fetch of "
+        f"the FY2024 filename on the same host returned HTTP 200, Content-Type application/pdf, first "
+        f"bytes '%PDF', 617,672 bytes. That control matters: the alternative gatehousebank.com/downloads/ "
+        f"route 404s even for the FY2024 document, so probing FY2025 on that route alone would have "
+        f"manufactured a false negative. The Annual Report 2025 was also re-read in full text this date "
+        f"and independently reproduces the AMOUNTS/RATIOS split described below.\n"
         f"FY2025 is therefore populated ONLY where the Annual Report 2025 prints a figure that is provably "
         f"on the same basis as the Pillar 3 series. That is true of the capital AMOUNTS and false of the "
         f"RATIOS, so they are treated differently:\n"
@@ -663,9 +674,13 @@ KM1_NOTE = (
     "(T-4) column, reproduced in that edition's row structure and flagged so it is never mistaken for a "
     "FY2021-edition disclosure.\n"
     "\n"
-    "ROWS 18, 19 AND 20 ARE BLANK FOR FY2021 BECAUSE THE SOURCE PRINTS A DASH. The FY2022 edition's NSFR "
-    "block prints '-' in its 31 December 2021 column: the CRR2 NSFR requirement took effect on 1 January "
-    "2022 and there is no 2021 figure to state. A dash is reproduced as a blank cell, never as a zero.\n"
+    "ROWS 18, 19 AND 20 CARRY A DASH FOR FY2021 BECAUSE THAT IS WHAT THE SOURCE PRINTS. The FY2022 "
+    "edition's NSFR block prints '-' in its 31 December 2021 column - re-read off folio 33 of that "
+    "edition on 2026-09-18 - so those three cells carry a literal '-'. The CRR2 NSFR requirement took "
+    "effect on 1 January 2022, so the Bank is stating that the ratio did not apply to it at that date "
+    "rather than failing to publish a figure. That is a different statement from a BLANK cell on this "
+    "sheet, which means the Bank printed nothing at all; and it is a different statement again from a "
+    "printed zero, which would be a measured nil.\n"
     "\n"
     "ROWS THE BANK DOES NOT PRINT ARE ABSENT, NOT ZERO. Rows 10, 11, 12, UK 7c and UK 14a-14f do not appear "
     "in any edition of this table. The Bank states in its own appendices that blank cells have been removed "
@@ -728,11 +743,11 @@ km1_rows = [
      {"FY2024": 447.6, "FY2023": 691.6, "FY2022": 350.7, "FY2021": 365.4}),
     ("SECTION", "Net Stable Funding Ratio (FY2021 prints '-' in the source: the CRR2 requirement took effect 1 January 2022)", {}),
     ("DATA", "18  Total available stable funding (£'m)",
-     {"FY2024": 1331.2, "FY2023": 1370.4, "FY2022": 1201.5}),
+     {"FY2024": 1331.2, "FY2023": 1370.4, "FY2022": 1201.5, "FY2021": "-"}),
     ("DATA", "19  Total required stable funding (£'m)",
-     {"FY2024": 866.9, "FY2023": 906.8, "FY2022": 797.9}),
+     {"FY2024": 866.9, "FY2023": 906.8, "FY2022": 797.9, "FY2021": "-"}),
     ("DATA", "20  NSFR ratio (%)",
-     {"FY2024": 153.5, "FY2023": 151.1, "FY2022": 150.6}),
+     {"FY2024": 153.5, "FY2023": 151.1, "FY2022": 150.6, "FY2021": "-"}),
 ]
 
 bw.add_km1_sheet(
@@ -853,8 +868,21 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "32", note=NSFR_NOTE +
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),
-    per_note={"MREL Ratio": "Not publicly disclosed any year, no exemption stated - consistent with a "
-                             "small deposit taker below MREL-setting thresholds."},
+    per_note={"MREL Ratio": "Not publicly disclosed any year, and no exemption is stated in the Bank's own "
+                             "documents. POSITIVE RECORD ADDED 18 September 2026 (KM1-032): this note "
+                             "previously explained the absence as 'consistent with a small deposit taker "
+                             "below MREL-setting thresholds', which was a plausibility argument rather than "
+                             "evidence. The Bank of England's own 'External minimum requirements for own "
+                             "funds and eligible liabilities (MRELs)' disclosures - the 2023, 2024, 2025 and "
+                             "2026 editions at bankofengland.co.uk/financial-stability/resolution/mrels-<year> "
+                             "- contain, in the BoE's own words, 'all firms with a resolution entity "
+                             "incorporated in the UK for which an MREL above MCR has been communicated'. "
+                             "Gatehouse Bank plc is named in none of the four editions (18 firms at most in "
+                             "any one of them). So the absence has an affirmative reason: the firm has either "
+                             "no MREL above its minimum capital requirement, or no UK-incorporated resolution "
+                             "entity. Note the BoE publishes the REQUIREMENT, not the ratio a bank holds "
+                             "against it, so nothing from that table is or could be transcribed onto this "
+                             "sheet - it establishes that there was nothing for the Bank to disclose."},
 )
 
 # ---------------------------------------------------------------
@@ -987,12 +1015,11 @@ _FY2017 = {
         "Cash and cash equivalents at beginning of year": 8406,
     },
 }
-for _sheet, _rows in _FY2017.items():
-    _ws = bw.wb[_sheet]
-    _labels = {str(_ws.cell(r, 1).value).strip(): r for r in range(4, _ws.max_row + 1)}
-    _col = 1 + YEARS.index("FY2017") + 1
-    for _label, _value in _rows.items():
-        if _label in _labels:
-            _ws.cell(_labels[_label], _col, _value)
+for _sheet, _values in _FY2017.items():
+    # Resolve the column from the sheet's own header, never from an index into
+    # YEARS: column trimming cannot see a year supplied out-of-band like this,
+    # so `YEARS.index(...)` silently pointed past the end of the header and
+    # wrote these figures into an unlabelled column. See patch_year_column.
+    bw.patch_year_column(_sheet, "FY2017", _values)
 
 bw.save("/Users/armaan/code/katalysis/banks/GATEHOUSE BANK FINANCIALS.xlsx")

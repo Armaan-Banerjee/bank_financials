@@ -686,6 +686,17 @@ KM1_SOURCES = (
     "outage and not a blocked fetch. cafonline.org also no longer serves a sitemap (its /sitemap.xml is "
     "itself a 404) and its governance pages now 301/404, so the file-level probe against a live control "
     "is the strongest available check.\n"
+    "   (a2) THE BANK'S OWN PILLAR 3 INDEX PAGE, READ 2026-09-18 - the check (a) above was missing, and this "
+    "supplies it. Check (a) probed FILENAMES under two folders, which is a guess-set and not an enumeration (the "
+    "same error that hid Arbuthnot Banking Group's FY2025 annual Pillar 3 for a week). The real index is "
+    "https://www.cafonline.org/home/caf-bank/about-us/legal-information/pillar-3-disclosure (HTTP 200, "
+    "text/html, 42,404 bytes, reached with a browser user-agent over HTTP/1.1 after following redirects). It "
+    "carries NO document links of any kind - zero hrefs to any .pdf, its only 'pillar' href being its own "
+    "canonical self-link - and its entire body text under 'Legal information' reads: 'CAF Bank has become part "
+    "of the PRA's SDDT (\"Small Domestic Deposit Taker\") regime under which, as a non-listed institution, the "
+    "Bank is not required to publish a Pillar 3 report.' That is the bank stating the absence itself, on the "
+    "page whose job is to host the document, and it is far stronger evidence than any filename probe. It still "
+    "does not date the change, so the FY2025 date test below is UNCHANGED and still unresolved.\n"
     "   (b) ANNUAL REPORT. Companies House filing history for CAF Bank Limited (01837656) was read in "
     "full on 2026-09-16: the newest accounts filing is 'Full accounts made up to 30 April 2025', filed 10 "
     "Feb 2026, 51 pages - which this workbook already cites. There is NO FY2026 filing (year ending 30 "
@@ -723,6 +734,12 @@ KM1_SOURCES = (
     "template arrived on 1 January 2022, CAF Bank's year-end is 30 April, and the template duly first "
     "appears in FY2022 - the first year to END after that date.\n\n"
     + ENTITY_NOTE
+    + "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2023 - READ FROM THE DOCUMENT ON 2026-09-18 AND RECORDED HERE "
+    "SO THE QUESTION IS NOT RE-OPENED. The Pillar 3 disclosure for the year ended 30 April 2023 prints 45,140 on "
+    "rows 1, 2 and 3 for 2023, with no Additional Tier 1 or Tier 2 line populated. The 2022 column of that same "
+    "table is the control and is DISTINCT - CET1 27,253 against Tier 1 and Total capital of 38,253 - so this Bank "
+    "prints the rows apart when they are apart, and they are held apart on this sheet.\n"
 )
 
 bw.add_km1_sheet(

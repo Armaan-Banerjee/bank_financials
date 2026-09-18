@@ -17,7 +17,43 @@ P3_2024_URL = ("http://web.archive.org/web/20260218212243/"
                "https://hblbankuk.com/wp-content/uploads/2025/05/Pillar-III-Disclosure-2024.pdf")
 P3_2022_URL = ("http://web.archive.org/web/20240807115829/"
                "https://hblbankuk.com/wp-content/uploads/2023/06/HBL-UK-2022-Pillar-III-Disclosure-V1.pdf")
+P3_2023_URL = "https://hblbankuk.com/wp-content/uploads/2020/03/HBL-UK-2023-Pillar-III-Disclosure.pdf"
 P3_2021_URL = "https://hblbankuk.com/wp-content/uploads/2022/06/Pillar-III-Disclosures-2021.pdf"
+# Surfaced by the same CDX sweep that recovered P3_2023_URL, both live on the bank's own server
+# (verified 2026-09-18: HTTP 200, application/pdf, %PDF-1.7, 590,397 and 444,979 bytes). This
+# workbook covers FY2021-FY2025 so neither is cited by a sheet yet; they are recorded here so a
+# future pass that extends the year range does not have to re-find them.
+P3_2019_URL = "https://hblbankuk.com/wp-content/uploads/2020/09/HBL-UK-2019-Pillar-III-Disclosures-FINAL.pdf"
+P3_2020_URL = "https://hblbankuk.com/wp-content/uploads/2021/06/HBL-UK-2020-Pillar-III-Disclosures-Final.pdf"
+
+# Shared correction/calibration text. Referenced from p3_sources(), KM1_SOURCES and RWA_SOURCES,
+# all three of which previously carried the withdrawn claim.
+FY2023_RECOVERY_NOTE = (
+    "CORRECTION, 2026-09-18 - WITHDRAWN CLAIM: this workbook previously stated, on the Pillar 3 "
+    "metric sheets, the KM1 sheet and the RWA Breakdown sheet, that \"no standalone FY2023 Pillar 3 "
+    "document is reachable\" / that \"FY2023's own standalone Pillar 3 document could not be fetched "
+    "this session - the only available Wayback Machine capture is truncated to exactly 1,048,576 "
+    "bytes with an unrecoverable cross-reference table, and repeated CDX lookups for an alternate "
+    "snapshot were rate-limited for the remainder of the session\". THAT CLAIM WAS FALSE. The "
+    "document has been on HBL Bank UK's own live server the whole time, at "
+    f"{P3_2023_URL} - re-verified 2026-09-18 with a browser user-agent: HTTP 200, Content-Type "
+    "application/pdf, %PDF-1.7 magic bytes, 1,286,862 bytes, 41 pages with a real text layer. The "
+    "claim was wrong because it rested entirely on a truncated Wayback Machine capture and never "
+    "tried the origin server. The document is NOT linked from hblbankuk.com/pdf-downloads/, which "
+    "lists only the 2025 edition; the URL came from a CDX sweep and then resolved live.\n"
+    "CALIBRATION FINDING (generalises beyond this bank): the SAME file returns exactly 1,048,576 "
+    "bytes from the Wayback Machine and 1,286,862 bytes from the origin, while a 7.2 MB PDF returns "
+    "from Wayback intact. The 1 MiB cut is therefore imposed at CRAWL time by particular crawl jobs, "
+    "not by the archive's serving layer and not by anything about the document. A 1,048,576-byte "
+    "response is evidence about one crawl and is NEVER evidence that a document is unavailable, "
+    "unrecoverable or non-existent. The Wayback 'id_' raw form does not bypass it.\n"
+    "FOR A FUTURE PASS: the same CDX sweep surfaced two further editions live on the bank's own "
+    "server that this workbook does not cite, because its year range starts at FY2021 - the FY2019 "
+    f"edition at {P3_2019_URL} and the FY2020 edition at {P3_2020_URL} (both verified 2026-09-18: "
+    "HTTP 200, application/pdf, %PDF-1.7). Recorded here so extending the range does not require "
+    "re-finding them."
+)
+
 
 CASH_FLOW_NOTE = (
     "DATA NOTE - FY2021 has no primary Cash Flow Statement in its own Annual Report: the "
@@ -66,12 +102,16 @@ def p3_sources():
         f"FY2025 Pillar 3 document's FY2024 comparative restates the leverage exposure measure "
         f"from £532,088k/11.85% to £599,922k/11.56%, a genuine cross-report restatement not "
         f"reflected here) - {P3_2024_URL}\n"
-        f"FY2023: FY2023 comparative column of the FY2024 Pillar III Disclosure, section 2 p.4 "
-        f"and Leverage/LCR/NSFR table p.5 (FY2023's own standalone Pillar 3 document could not "
-        f"be fetched this session - the only available Wayback Machine capture is truncated to "
-        f"exactly 1,048,576 bytes with an unrecoverable cross-reference table, and repeated CDX "
-        f"lookups for an alternate snapshot were rate-limited for the remainder of the session) "
-        f"- {P3_2024_URL}\n"
+        f"FY2023: Pillar III Disclosure - 31 December 2023, section 2 'Key Metrics', printed p.5 "
+        f"(£'000, columns 2023 / 2022) - {P3_2023_URL}\n"
+        f"        The FY2023 figures on these sheets were originally taken from the FY2024 "
+        f"edition's FY2023 comparative column ({P3_2024_URL}). Having now read FY2023's own "
+        f"standalone document, every one of them is CONFIRMED identical to it - RWAs 273,837; "
+        f"AT1 9,786; Tier 1 58,635; Tier 2 11,501; Total Capital 70,136; CET1/T1/Total ratios "
+        f"17.84%/21.41%/25.61%; leverage exposure 409,798 and ratio 13.42%; HQLA 154,579, net "
+        f"outflow 22,021, LCR 702%; ASF 387,842, RSF 209,372, NSFR 185% - with ONE exception, the "
+        f"CET1 Capital figure, documented on the CET1 Capital sheet. A confirmed negative is worth "
+        f"recording: the comparative-column sourcing was not producing wrong numbers.\n"
         f"FY2022: Pillar III Disclosure - 31 December 2022, section 2 'Key Metrics' p.7 "
         f"(FY2022's own originally-published figures used) - {P3_2022_URL}\n"
         f"FY2021: Pillar III Disclosures - 31 December 2021, section 2 'Key Metrics' p.4 and "
@@ -82,7 +122,8 @@ def p3_sources():
         f"column - a £1k rounding-level difference, left unchanged pending further review) - "
         f"{P3_2021_URL}\n"
         "No MREL Ratio is disclosed in any year's Pillar 3 document (not identified as a UK "
-        "resolution entity)."
+        "resolution entity).\n\n"
+        + FY2023_RECOVERY_NOTE
     )
 
 
@@ -600,18 +641,21 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 KM1_SOURCES = (
     "Sources - every Pillar 3 disclosure HBL Bank UK Limited makes available was downloaded "
-    "and read in full for this check (all four verified by HTTP 200, Content-Type "
-    "application/pdf and %PDF magic bytes; none was a blocked fetch or a soft-404):\n"
+    "and read in full for this check (all five verified by HTTP 200, Content-Type "
+    "application/pdf and %PDF magic bytes; none was a blocked fetch or a soft-404). This note "
+    "previously said 'all four', because the FY2023 edition was wrongly believed unreachable:\n"
     f"FY2025: Pillar III Disclosures 2025 - section 2 'Key Metrics', p.4-5 - {P3_2025_URL}\n"
     f"FY2024: Pillar III Disclosure 2024 - section 2 'Key Metrics', p.4-5 - {P3_2024_URL}\n"
     f"FY2022: Pillar III Disclosure - 31 December 2022 - section 2 'Key Metrics', p.6-7 - "
     f"{P3_2022_URL}\n"
     f"FY2021: Pillar III Disclosures - 31 December 2021 - section 2 'Key Metrics', p.4-5 - "
     f"{P3_2021_URL}\n"
-    "FY2023: no standalone FY2023 Pillar 3 document is reachable (see the p3_sources() note on "
-    "the metric sheets); FY2023's figures elsewhere in this workbook come from the FY2024 "
-    "edition's comparative column, which is itself one of the three bespoke tables described "
-    "below, not a KM1.\n\n"
+    f"FY2023: Pillar III Disclosure - 31 December 2023 - section 2 'Key Metrics', printed p.5 - "
+    f"{P3_2023_URL}\n"
+    "  This line previously read \"FY2023: no standalone FY2023 Pillar 3 document is reachable\". "
+    "That was FALSE - see the correction at the foot of this note. The FY2023 edition has now been "
+    "read in full, and it does not change this sheet's verdict: its section 2 is the same bespoke "
+    "three-table layout as every other edition, not a UK KM1 template.\n\n"
     "LATEST-EDITION CHECK, 2026-09-16: checked HBL Bank UK's own website rather than this "
     "project's cited URLs. hblbankuk.com/regulatory-disclosures/ returns HTTP 404 - the bank "
     "has no dedicated regulatory-disclosures page; its documents are published on the general "
@@ -645,7 +689,8 @@ KM1_SOURCES = (
     "Nothing on this sheet has been back-filled from the statutory accounts, and the three "
     "bespoke tables have NOT been re-labelled into template row numbers, which would invent a "
     "correspondence the bank never published. The eleven single-metric Pillar 3 sheets in this "
-    "workbook are built directly from those bespoke tables and remain fully populated."
+    "workbook are built directly from those bespoke tables and remain fully populated.\n\n"
+    + FY2023_RECOVERY_NOTE
 )
 
 bw.add_km1_sheet(
@@ -666,7 +711,7 @@ bw.add_km1_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None, source_height=190):
+def metric(name, unit, rows_data, sources_text, note=None, source_height=560):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
                          rows_data, sources_text, note=note, first_col_width=44, source_height=source_height)
 
@@ -677,6 +722,22 @@ metric(
         "FY2025": 59210, "FY2024": 55598, "FY2023": 48949, "FY2022": 44784, "FY2021": 41624,
     })],
     p3_sources(),
+    note="DOCUMENTED CROSS-EDITION DIVERGENCE, FY2023 CET1 - RECORDED, NOT RECONCILED (2026-09-18). "
+         "The two editions print different figures for the same year: HBL's FY2023 Pillar III "
+         "Disclosure states CET1 at 31 December 2023 as £48,849k (section 2 'Key Metrics', printed "
+         "p.5), while the FY2024 Pillar III Disclosure's FY2023 comparative column states £48,949k. "
+         "The £48,949k from the FY2024 edition is what this sheet carries and it has been LEFT "
+         "UNCHANGED - both figures were read from their own published source and neither is "
+         "adjusted to fit the other.\n"
+         "Recorded so a later pass does not 'fix' this without the evidence: the arithmetic inside "
+         "the FY2024 edition itself favours £48,849k. That same comparative column prints Tier 1 of "
+         "£58,635k and AT1 of £9,786k (58,635 - 9,786 = 48,849), and a CET1 ratio of 17.84%, which "
+         "against the disclosed RWAs of £273,837k implies £48,849k (£48,949k would give 17.87%). "
+         "The FY2023 edition is internally consistent on all three. This looks like a one-digit "
+         "transcription slip in the FY2024 edition's comparative, but that is an inference about "
+         "the bank's own document, not a disclosure, so the printed figure stands as printed.\n"
+         "Every OTHER FY2023 figure in this workbook was checked against the FY2023 standalone "
+         "document and is identical to the comparative column - see the source note below.",
 )
 metric(
     "CET1 Ratio", "%",
@@ -746,9 +807,14 @@ RWA_SOURCES = (
     f"FY2025: Pillar III Disclosure - 31 December 2025, section 5 'Capital Requirements', p.11 - {P3_2025_URL}\n"
     f"FY2024: Pillar III Disclosure - 31 December 2024, 'Capital Requirement under PRA Rulebook', "
     f"p.11 (FY2024's own originally-published figures used) - {P3_2024_URL}\n"
-    f"FY2023: FY2023 comparative column of the FY2024 Pillar III Disclosure, p.11 (FY2023's own "
-    f"standalone Pillar 3 document could not be fetched this session, same reason as noted on the "
-    f"Pillar 3 ratio sheets) - {P3_2024_URL}\n"
+    f"FY2023: Pillar III Disclosure - 31 December 2023, section 7.1 'Capital Requirement under PRA "
+    f"Rulebook (CRR Part)', printed p.27 - {P3_2023_URL}\n"
+    f"        This line previously read 'FY2023 comparative column of the FY2024 Pillar III "
+    f"Disclosure, p.11 (FY2023's own standalone Pillar 3 document could not be fetched this "
+    f"session...)'. The standalone document has now been read, and every FY2023 figure on this "
+    f"sheet is CONFIRMED unchanged by it: 4,969 / 30,035 / 67,448 / 3,122 / 126,694 / 4,683 / "
+    f"4,468, total credit risk RWA 241,419, operational-risk charge 2,581, market risk 0, CVA 12. "
+    f"No cell was edited as a result.\n"
     f"FY2022: Pillar III Disclosure - 31 December 2022, section 7.1, p.26 (FY2022's own originally-"
     f"published figures used) - {P3_2022_URL}\n"
     f"FY2021: Pillar III Disclosures - 31 December 2021, section 7.1 'Capital Requirement under "
@@ -756,10 +822,14 @@ RWA_SOURCES = (
     f"confirmed identical to the FY2022 Pillar III Disclosure's FY2021 comparative column for "
     f"every row) - {P3_2021_URL}\n"
     "Derived Total RWA (sum of the rows below) is within rounding of the disclosed Total RWAs sheet "
-    "for FY2025/FY2024/FY2022/FY2021 (differences of a few hundred £'000, from the 8% capital-charge "
-    "rounding in the source documents), and £5,500k below it for FY2023 (FY2023's own standalone "
-    "Pillar 3 document could not be fetched this session - see note above) - reproduced as derived, "
-    "not force-reconciled to the disclosed Total RWAs figure."
+    "in every year (differences of a few £'000 up to a few hundred £'000, from the 8% capital-charge "
+    "rounding in the source documents) - reproduced as derived, not force-reconciled to the "
+    "disclosed Total RWAs figure. CORRECTION 2026-09-18: this sentence previously singled FY2023 out "
+    "as '£5,500k below' the disclosed total and blamed the unreachable FY2023 document. Both halves "
+    "were wrong. The gap is 5 units of £'000 - i.e. £5,000, not £5.5m - since derived 273,832 "
+    "against disclosed 273,837; and it has nothing to do with sourcing, being purely the 8% "
+    "capital-charge rounding, exactly as in the other four years.\n\n"
+    + FY2023_RECOVERY_NOTE
 )
 
 rwa_breakdown_rows = [
@@ -833,8 +903,19 @@ metric(
          "FY2021 comparative is £546,542k / 9.41%, i.e. identical to FY2021's own report: no restatement. The "
          "ratio therefore rose because Tier 1 capital rose roughly 37%, not because the denominator changed.\n"
          "FY2024 uses FY2024's own originally-published figure (11.85%); the FY2025 Pillar 3 "
-         "document's FY2024 comparative restates this to 11.56% - see the source citation.",
-    source_height=250,
+         "document's FY2024 comparative restates this to 11.56% - see the source citation.\n"
+         "DOCUMENTED CROSS-EDITION DIVERGENCE, FY2022 (added 2026-09-18, RECORDED NOT RECONCILED): "
+         "this sheet carries 13.01% for FY2022, read from FY2022's own Pillar 3 document "
+         "(exposure £543,633k). The FY2023 Pillar III Disclosure, recovered 2026-09-18 and now "
+         "cited below, prints a DIFFERENT FY2022 comparative on its own printed p.5 - exposure "
+         "£419,520k and ratio 12.82%. Both were read from their own primary source; neither has "
+         "been adjusted, averaged or restated to match the other, and no cell was changed. The "
+         "exposure measure moves by £124m between the two editions, so this is a re-basing of the "
+         "denominator in the FY2023 edition rather than a rounding difference; the FY2023 document "
+         "gives no reconciliation of it. Note that the FY2023 edition's own FY2023 figures "
+         "(£409,798k / 13.42%) agree exactly with the FY2024 edition's FY2023 comparative, so the "
+         "divergence is confined to the FY2022 column.",
+    source_height=700,
 )
 
 metric(

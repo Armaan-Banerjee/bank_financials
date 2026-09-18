@@ -310,11 +310,32 @@ bw.add_asset_quality_sheet(
 PAGES = {"FY2021": 10, "FY2022": 9, "FY2023": 9, "FY2024": 10, "FY2025": 12}
 
 
-def metric(name, unit, rows_data, detail, note=None):
+# GA-009 (2026-09-18). A reader opening this workbook saw the KM1 sheet assert
+# that the Entity publishes no Pillar 3 while the eleven Pillar 3 metric sheets
+# sat there populated - two statements that cannot both be true of the same
+# source. They are both true of DIFFERENT sources, and that is now said on the
+# face of every one of those sheets rather than only in the KM1 sheet's note:
+# the figures come from the Entity's own Annual Report capital table, and no
+# Pillar 3 document is their source because none exists.
+PROVENANCE_NOTE = (
+    "SOURCED FROM THE ENTITY'S OWN ANNUAL REPORT, NOT FROM A PILLAR 3 DISCLOSURE. Marks and Spencer Financial "
+    "Services plc publishes no Pillar 3 document in any year covered by this workbook: every edition's Capital "
+    "management section states that 'Separate Pillar 3 disclosures are not required for the Entity as the Entity "
+    "is included in the consolidated Pillar 3 disclosures of HSBC UK Bank plc', and HSBC UK Bank plc's own Pillar 3 "
+    "carries no entity-level KM1, column or block for this Entity (read in full 2026-09-18 - see the KM1 Key "
+    "Metrics sheet for that check). The figures on this sheet are transcribed from the 'Calculation of actual "
+    "capital' table in the Capital management section of the Report of the Directors. In that table the Entity "
+    "marks its risk-weighted-asset and capital-ratio rows '(Unaudited)'; the capital amounts above them are "
+    "audited. Nothing here is taken from, or reshaped out of, HSBC UK group figures."
+)
+
+
+def metric(name, unit, rows_data, detail, note=PROVENANCE_NOTE):
     sources = "Sources - entity-only capital management disclosures:\n" + "\n".join(
         source(year, PAGES[year], "Capital management / calculation of actual capital") for year in YEARS
     ) + "\n\n" + ENTITY_NOTE
-    bw.add_metric_sheet(name, unit, rows_data, sources, note=note, first_col_width=48, source_height=170)
+    bw.add_metric_sheet(name, unit, rows_data, sources, note=note, first_col_width=48, source_height=170,
+                        note_height=150)
 
 
 # ---------------------------------------------------------------
@@ -381,6 +402,18 @@ KM1_SOURCES = (
     "undertakings); 'M&S' here is a brand partnership under a tripartite Relationship Agreement with M&S plc, not "
     "ownership. The Lloyds Banking Group Financial Downloads page, checked the same day, carries no Marks and "
     "Spencer document of any kind - correctly, since the Entity has never been an LBG company.\n"
+    "• THE PARENT'S PILLAR 3 WAS READ, NOT ASSUMED (2026-09-18). HSBC UK Bank plc's own Pillar 3 disclosures at "
+    "31 December 2025 were downloaded and searched in full (4.3 MB, %PDF magic bytes, Content-Type "
+    "application/pdf, text-native - 674 KB of extracted text). 'Marks and Spencer Financial Services plc' appears "
+    "EXACTLY ONCE in the whole document, in the liquidity section's scope paragraph: 'As at the 31 December 2025, "
+    "the HSBC UK Bank Domestic Liquidity Sub-group comprises: HSBC UK Bank plc, Marks and Spencer Financial "
+    "Services plc, HSBC Innovation Bank Limited and HSBC Private Bank (UK) Limited.' The only other 'M&S' hits "
+    "are the M&S credit-card IRB model rows in the model-performance tables. THERE IS NO M&S KM1, NO M&S COLUMN "
+    "AND NO M&S BLOCK ANYWHERE IN IT. So the Entity's own sentence - that it 'is included in the consolidated "
+    "Pillar 3 disclosures of HSBC UK Bank plc' - is literally true and yields no entity-level template: the "
+    "Entity is inside the consolidation, not a separately-disclosed subsidiary within it. That sentence also "
+    "explains this workbook's LCR and NSFR sheets: the Entity's liquidity is measured and disclosed at HSBC UK "
+    "Domestic Liquidity Sub-group level, so those metrics are SUBSUMED rather than simply omitted.\n"
     "• HSBC UK BANK PLC'S GROUP KM1 IS DELIBERATELY NOT SUBSTITUTED. A parent's Pillar 3 is not the subsidiary's. "
     "HBUK's KM1 is a ring-fenced-bank consolidation two orders of magnitude larger than this Entity (whose own "
     "total RWAs are £3.20bn at FY2025); mapping group rows onto an entity sheet would fabricate a disclosure the "
@@ -409,9 +442,24 @@ bw.add_km1_sheet(
              "accounts: it is included in the consolidated Pillar 3 disclosures of its parent, HSBC UK Bank plc. "
              "With no Pillar 3 document there is no KM1 template to reproduce. See the source note below for the "
              "verbatim wording, the publication-side check, and why neither HSBC UK's group KM1 nor the Entity's "
-             "own capital-management table is substituted here.",
-    rows=[("DATA", "Not applicable — the Entity publishes no Pillar 3 disclosures, and therefore no KM1 template, "
-                   "in any year covered by this workbook", {})],
+             "own capital-management table is substituted here. WHERE THE OTHER SHEETS COME FROM, since this one "
+             "says the Entity publishes no Pillar 3: the CET1/Tier 1/Total Capital, ratio, Total RWAs and RWA "
+             "Breakdown sheets are transcribed from the Entity's own Annual Report 'Calculation of actual capital' "
+             "table, and the Leverage/LCR/NSFR/MREL sheets record a non-disclosure. None of the eleven is sourced "
+             "from a Pillar 3 document, and each of them now says so on its own face.",
+    # GA-009 (2026-09-18): EVERY YEAR CELL CARRIES THE STATEMENT, not just the
+    # row label. Until now this row was built with an empty dict, so the sheet
+    # rendered as five year headers above five blank cells - the only KM1 sheet
+    # shape that says nothing at all, and indistinguishable to a reader from
+    # "nobody has looked yet". Same one-line defect fixed in Nomura under GA-005.
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not published for this Entity" for y in YEARS}),
+        ("DATA", "Pillar 3 disclosures published by the Entity itself",
+         {y: "No Pillar 3 document — none required, per the accounts" for y in YEARS}),
+        ("DATA", "Published for the Entity in its parent's Pillar 3 (HSBC UK Bank plc)",
+         {y: "Not disclosed — no entity-level KM1, column or block" for y in YEARS}),
+    ],
     sources_text=KM1_SOURCES,
     first_col_width=88,
     source_height=420,
@@ -465,13 +513,39 @@ NOT_DISCLOSED_SOURCES = (
     + "\n\nThe entity's accounts do not disclose a standalone leverage ratio, LCR, NSFR or MREL ratio. "
       "HSBC UK Bank plc consolidated Pillar 3 disclosures are not substituted because they are group-level figures."
 )
+
+# GA-009 (2026-09-18): the liquidity pair is a SUBSUMED metric, not merely an
+# absent one, and that is a stronger and more useful statement. HSBC UK Bank
+# plc's FY2025 Pillar 3 names this Entity exactly once, in the LIQ1 scope
+# paragraph, as a member of the HSBC UK Bank Domestic Liquidity Sub-group - so
+# the Entity's LCR and NSFR are measured and disclosed one level up, by design,
+# rather than not measured at all.
+SUBSUMED_LIQUIDITY_NOTE = (
+    "NOT DISCLOSED AT ENTITY LEVEL BECAUSE IT IS MEASURED ONE LEVEL UP - subsumed, not omitted. HSBC UK Bank plc's "
+    "Pillar 3 disclosures at 31 December 2025 state: 'As at the 31 December 2025, the HSBC UK Bank Domestic "
+    "Liquidity Sub-group comprises: HSBC UK Bank plc, Marks and Spencer Financial Services plc, HSBC Innovation "
+    "Bank Limited and HSBC Private Bank (UK) Limited', and present the LCR and NSFR tables on that sub-group "
+    "basis, 'reflecting the way we manage liquidity within HSBC UK as a single operating entity, in line with the "
+    "application of UK liquidity regulation as agreed with the PRA'. That sub-group ratio is NOT substituted here: "
+    "it is a four-entity figure, not this Entity's. Read live 2026-09-18."
+)
+PER_NOT_DISCLOSED_NOTE = {
+    "LCR": SUBSUMED_LIQUIDITY_NOTE,
+    "NSFR": SUBSUMED_LIQUIDITY_NOTE,
+}
+DEFAULT_NOT_DISCLOSED_NOTE = (
+    "Not separately disclosed for Marks and Spencer Financial Services plc. The Entity publishes no Pillar 3 "
+    "document of its own (see the KM1 Key Metrics sheet), and HSBC UK Bank plc's consolidated Pillar 3 figures are "
+    "group-level, so they are not substituted here."
+)
 for name in not_disclosed:
     bw.add_metric_sheet(
         name,
         None,
         [(name, {y: "Not publicly disclosed" for y in YEARS})],
         NOT_DISCLOSED_SOURCES,
-        note="Not separately disclosed for Marks and Spencer Financial Services plc; HSBC UK consolidated Pillar 3 figures are not entity-level.",
+        note=PER_NOT_DISCLOSED_NOTE.get(name, DEFAULT_NOT_DISCLOSED_NOTE),
+        note_height=150,
     )
 
 

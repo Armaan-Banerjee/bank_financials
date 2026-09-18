@@ -87,6 +87,8 @@ def _ch_doc(transaction_id):
 AR2023_URL = _ch_doc("MzQyNDgzNzM4N2FkaXF6a2N4")  # Report and Financial Statements, year ended 31 Dec 2023 (filed 14 Jun 2024)
 AR2021_URL = _ch_doc("MzMzODgzMDAxNmFkaXF6a2N4")  # year ended 31 Dec 2021 (filed 13 May 2022)
 AR2019_URL = _ch_doc("MzI3MjAzNDU5MmFkaXF6a2N4")  # year ended 31 Dec 2019 (filed 07 Jul 2020)
+AR2018_URL = _ch_doc("MzIzNDA3OTI2MmFkaXF6a2N4")  # year ended 31 Dec 2018 (filed 10 May 2019)
+AR2022_URL = _ch_doc("MzM3NzY3NTU1MGFkaXF6a2N4")  # year ended 31 Dec 2022 (filed 02 May 2023)
 AR2017_URL = _ch_doc("MzIwMzkwNDM4NGFkaXF6a2N4")  # year ended 31 Dec 2017 (filed 01 May 2018)
 AR2015_URL = _ch_doc("MzE1MDIzMzM5NWFkaXF6a2N4")  # year ended 31 Dec 2015 (filed 10 Jun 2016)
 
@@ -159,6 +161,13 @@ P3_SOURCES = (
     f"Machine (snapshot 2024-07-12) - {P3_2017_URL}\n"
     f"FY2016: Pillar 3 Disclosures for 31 December 2016 (April 2017), pp.5-9 - {P3_2016_URL}\n"
     f"FY2015: Pillar 3 Disclosures for 31 December 2015 (April 2016), pp.5-8 - {P3_2015_URL}\n"
+    f"FY2018 (Tier 1 Capital and Total Capital ONLY - no Pillar 3 document for this year is "
+    f"reachable, see the note on the sheet): Report and Financial Statements for the year ended 31 "
+    f"December 2018, Note 17 'Capital management', printed p.35 / PDF p.36 - Companies House "
+    f"02939223, filed 10 May 2019 - {AR2018_URL}\n"
+    f"FY2022 (Tier 1 Capital and Total Capital, corroborated from the year's own filing 2026-09-18): "
+    f"Report and Financial Statements for the year ended 31 December 2022, Note 18 'Risk "
+    f"management' / 'Capital management', printed p.37 / PDF p.39 - {AR2022_URL}\n"
     f"Entity identity and accounts filing history: Companies House - {CH_PROFILE_URL}; {CH_ACCOUNTS_URL}\n"
     "SDDT - EXPLICIT NEGATIVE, recorded 2026-09-15 (cross-bank SDDT date-fit pass) so that a future pass does "
     "not wrongly apply the Small Domestic Deposit Taker exemption to this workbook's gap years. PNBE DOES hold "
@@ -555,6 +564,10 @@ def metric(name, unit, rows, note=None):
 
 # FY2015 uses the older Basel II/BIPRU disclosure convention: only Tier 1/Total Capital is reported.
 # FY2018, FY2020, FY2021 and FY2022 remain self-skipped after the renewed Wayback/live-host search.
+# UPDATED 2026-09-18 (interior-gap pass): FY2018 is no longer wholly blank - see AR_CAPITAL below.
+# It now carries Tier 1 Capital and Total Capital from the Bank's own FY2018 statutory accounts, on
+# exactly the same footing as FY2022. Its CET1 Capital, its three ratios and its Total RWAs stay
+# blank because that source discloses none of them.
 CET1_FUNDS = {"FY2025": 10344, "FY2024": 10467, "FY2023": 10341, "FY2021": 9996, "FY2020": 9879,
               "FY2019": 10145, "FY2017": 10747, "FY2016": 11228}
 # FY2022/FY2021/FY2020 were first recovered 2026-09-12 from the Bank's OWN statutory accounts (the
@@ -571,7 +584,28 @@ CET1_FUNDS = {"FY2025": 10344, "FY2024": 10467, "FY2023": 10341, "FY2021": 9996,
 # FY2022 is unchanged and remains statutory-accounts-only: no FY2022 Pillar 3 document survives, the
 # accounts never use the CET1 label, and inferring it would go beyond what that source states - so
 # FY2022 still populates Tier 1 Capital and Total Capital but NOT CET1 Capital or any ratio.
-AR_CAPITAL = {"FY2022": 10147, "FY2021": 9996, "FY2020": 9879}
+#
+# ADDED 2026-09-18 - FY2018, from the Bank's OWN FY2018 statutory accounts, read this pass. FY2018
+# had been an INTERIOR hole (FY2017 and FY2019 both populated on every capital sheet), which is the
+# one shape that cannot be explained by "the Bank had not started disclosing yet". It was not: the
+# Report and Financial Statements for the year ended 31 December 2018 (Companies House 02939223,
+# filed 10 May 2019) carries the same "Capital management" table as every other year, at Note 17,
+# printed p.35 / PDF p.36, reading "Tier 1 Capital 10,369 / Total capital 10,369" against a 2017
+# (restated) comparative of 10,661. The filing is an image-only scan with a zero-character text
+# layer - pdftotext returns 39 bytes for the whole 39-page document - so it was rasterised at 300
+# dpi and OCR'd, and the figures were then confirmed against the rendered page image itself.
+# Treated exactly as FY2022 is: Tier 1 Capital and Total Capital only. NOT populated from it are
+# CET1 Capital (the accounts never use the CET1 label), the three ratios, and Total RWAs (the note
+# gives no RWA; the "external regulatory capital requirements of GBP5,136k set by the PRA" it does
+# give is a capital REQUIREMENT and must not be converted into an RWA by dividing by 8%).
+# Cross-check, not a derivation: 10,369 is also this workbook's FY2018 Balance Sheet Total equity,
+# the same identity that holds in every year where both are known.
+# NOTE ON THE 2017 COMPARATIVE, deliberately not used: that same table's 2017 (restated) column
+# reads 10,661, whereas this workbook's FY2017 figure is 10,747 from the FY2017 Pillar 3 document.
+# Each year is taken from its own edition, so FY2017 is left as its own year's source states it;
+# the GBP86k difference is the FY2018 restatement already documented in RESTATEMENT_NOTE territory
+# and is recorded here rather than reconciled.
+AR_CAPITAL = {"FY2022": 10147, "FY2021": 9996, "FY2020": 9879, "FY2018": 10369}
 TIER1_FUNDS = {**CET1_FUNDS, "FY2015": 11197, **AR_CAPITAL}
 CAPITAL_RATIO = {"FY2025": "127.55%", "FY2024": "136.95%", "FY2023": "121.95%", "FY2021": "124.45%",
                  "FY2020": "95.80%", "FY2019": "96.76%", "FY2017": "96.63%", "FY2016": "92.23%"}
@@ -627,7 +661,48 @@ PILLAR3_SKIP_NOTE = ("CORRECTED 2026-09-15 - THE FY2021 AND FY2020 PILLAR 3 DOCU
                      "(GBP10,341k) comes from that year's Pillar 3 document. The GBP37k difference is a "
                      "genuine source-basis difference, left as each document states it rather than "
                      "reconciled; the Pillar 3 figure is retained for FY2023 because it is the like-for-"
-                     "like source used for every other Pillar-3-sourced year.")
+                     "like source used for every other Pillar-3-sourced year.\n"
+                     "FY2018 RECOVERED 2026-09-18 (interior-gap pass) - Tier 1 Capital and Total Capital "
+                     "only. FY2018 had been blank on every capital sheet while FY2017 and FY2019 either "
+                     "side were populated, which is the one gap shape that cannot be explained by 'the "
+                     "disclosure did not exist yet'. The Bank's own Report and Financial Statements for "
+                     "the year ended 31 December 2018 (Companies House 02939223, filed 10 May 2019 - "
+                     + AR2018_URL + ") carries the same 'Capital management' table as every other year, at "
+                     "Note 17, printed p.35 / PDF p.36: 'Tier 1 Capital 10,369 / Total capital 10,369', "
+                     "against a 2017 (restated) comparative of 10,661. The filing is an IMAGE-ONLY SCAN "
+                     "with a zero-character text layer (pdftotext returns 39 bytes for all 39 pages), so a "
+                     "text search of it returns nothing and proves nothing; it was rasterised at 300 dpi, "
+                     "OCR'd, and the two figures confirmed against the rendered page image. "
+                     "WHAT IS STILL BLANK FOR FY2018 AND WHY: CET1 Capital (the accounts never use the "
+                     "CET1 label - the same reason FY2022 has no CET1 figure), all three ratios, Total "
+                     "RWAs and the RWA breakdown. The note gives no RWA at all; the 'external regulatory "
+                     "capital requirements of GBP5,136k set by the PRA' that it does give is a capital "
+                     "REQUIREMENT, not an RWA, and must not be converted into one by dividing by 8%. "
+                     "The FY2018 Pillar 3 document itself remains UNREACHED, and that is an access "
+                     "statement, not a finding about the Bank: on 2026-09-18 the full fetching ladder "
+                     "(plain curl; curl -L; curl --http1.1 -L; browser User-Agent with Accept and Referer "
+                     "headers; a cookie warm-up against pnb.com.ph; and plain http://) returned HTTP 403 "
+                     "with the same 463-byte text/html body on every rung, and pnbeurope.com - which does "
+                     "resolve, to 195.8.66.1, contrary to an older note in this project claiming it times "
+                     "out - simply 301-redirects to that same blocked host and serves no HTTPS at all. "
+                     "Two things ARE enumerated rather than assumed. (i) On the S3 bucket, "
+                     "Pillar3_Disclosures_for_2018.pdf returns AccessDenied while the identical filename "
+                     "pattern for 2020 and 2021 returns HTTP 200 with '%PDF' magic bytes - a positive "
+                     "control on the same host in the same request, so the 2018 failure is absence rather "
+                     "than blocking. (ii) A Wayback CDX prefix sweep of the whole "
+                     "www.pnb.com.ph/europe/images/stories/docs/ directory lists every file ever archived "
+                     "there, and the only Pillar 3 documents in it are the 2017 and 2019 editions already "
+                     "cited above; the same sweep run against pnbeurope.com returns customer forms and no "
+                     "Pillar 3 document in any year.\n"
+                     "FY2022 RE-CHECKED 2026-09-18 from its OWN accounts, which had not been opened "
+                     "directly before (the FY2022 figures in this workbook came from the FY2023 filing's "
+                     "comparative). The FY2022 Report and Financial Statements (" + AR2022_URL + ") Note 18 "
+                     "'Risk management', printed p.37 / PDF p.39, reads 'Tier 1 Capital 10,147 / Total "
+                     "Capital 10,147' with a 2021 comparative of 9,996 - reproducing this workbook's "
+                     "existing figures exactly from the year's own edition - and, importantly, disclosing "
+                     "NOTHING further: no CET1 figure, no RWA, no ratio. So FY2022's remaining blanks are "
+                     "now evidenced from that year's own document rather than inferred from the following "
+                     "year's.")
 
 # ---------------------------------------------------------------
 # KM1 Key Metrics - NOT APPLICABLE. KM1-024, 16 September 2026.

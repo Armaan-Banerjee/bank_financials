@@ -26,6 +26,14 @@ AR2021_URL = f"{CH_BASE}/MzM0NzY3MjI5MmFkaXF6a2N4/document?format=pdf&download=0
 # sundry policy PDFs), which is why earlier passes concluded no such document
 # existed. The PDF is live and directly fetchable on the Bank's own domain.
 P3_2024_URL = "https://brownshipley.com/media/o4tl2pod/pillar-3-disclosure-2024-final-draft_cleanv2.pdf"
+# FOUND 2026-09-18 (leading-gap pass). The 2023 edition, which this script previously and
+# wrongly recorded as non-existent - see PILLAR3_DOC_NOTE. Also an unlinked Umbraco media
+# asset under an opaque key, so it was never reachable by site navigation, by sitemap crawl
+# or by any filename extrapolation from the 2024 file (which carries a "-final-draft_cleanv2"
+# suffix this one does not). It surfaced from a general web index queried for
+# 'filetype:pdf' rather than from the domain itself. Verified live: HTTP 200,
+# application/pdf, %PDF magic bytes, 780,992 bytes, 36 pages, PDF creation date 9 Sep 2024.
+P3_2023_URL = "https://brownshipley.com/media/vvchobxc/pillar-3-disclosure-2023.pdf"
 
 ENTITY_NOTE = (
     "ENTITY NOTE: Brown Shipley & Co. Limited (Companies House 00398426, FRN 124548) is a UK-authorised private "
@@ -57,8 +65,14 @@ ENTITY_NOTE = (
     "fetchable; it is simply unlinked from every current page of that site (the 'Important information > Annual "
     "report' page lists only the TCFD report, the Quintet/PlusPlus group annual report and policy PDFs), so site "
     "navigation alone will never reach it. That report supplies Total Capital, Total Capital Ratio, Leverage "
-    "Ratio and NSFR - see those sheets. Only MREL Ratio is now 'Not publicly disclosed' in every year, and "
-    "Leverage Ratio/NSFR remain blank for FY2022 and FY2021 (no Pillar 3 report of those years exists)."
+    "Ratio and NSFR - see those sheets. Only MREL Ratio is now 'Not publicly disclosed' in every year. THIRD "
+    "CORRECTION (2026-09-18, leading-gap pass): the sentence that stood here - 'Leverage Ratio/NSFR remain blank "
+    "for FY2022 and FY2021 (no Pillar 3 report of those years exists)' - was half right. No 2022 or 2021 EDITION "
+    "exists, but a 2023 edition does (this script previously recorded that one as non-existent too), and its "
+    "s.1.1 summary table carries 2022 and 2021 comparative columns. Leverage Ratio and NSFR are therefore now "
+    "populated for FY2022 and FY2021 from those comparatives, labelled as comparatives. FY2025 remains blank on "
+    "both sheets: the FY2025 statutory accounts disclose neither metric (established by OCR of the whole "
+    "filing, not by a failed text search) and no FY2025 Pillar 3 edition could be located."
 )
 
 CASH_FLOW_SOURCES = (
@@ -139,12 +153,36 @@ PILLAR3_DOC_NOTE = (
     "consolidated basis for the Brown Shipley group, which the report itself states is the same reporting "
     "perimeter as the Company because 'all its subsidiaries were dormant in the year') is the Bank's own "
     "entity-level Pillar 3 report - NOT a Quintet group document. It carries the full UK templates KM1 (key "
-    "metrics), OV1, LR1/LR2/LR3 (leverage), LIQ1 (LCR) and LIQ2 (NSFR). Only the 2024 edition is retrievable: no "
-    "2021, 2022 or 2023 edition appears anywhere on brownshipley.com or in that domain's full Wayback Machine URL "
-    "index (7,140 archived URLs checked on 2026-09-15; 'pillar-3-disclosure-2024-final-draft_cleanv2.pdf' is the "
-    "only Pillar 3 document of any year), nor on quintet.com (11,645 archived URLs checked - that domain holds "
-    "only Quintet GROUP Pillar 3 reports, which are consolidated Luxembourg-group disclosures and are therefore "
-    "not usable here).\n"
+    "metrics), OV1, LR1/LR2/LR3 (leverage), LIQ1 (LCR) and LIQ2 (NSFR).\n"
+    "CORRECTION 2026-09-18 - A SECOND EDITION EXISTS. This note previously read: 'Only the 2024 edition is "
+    "retrievable: no 2021, 2022 or 2023 edition appears anywhere on brownshipley.com or in that domain's full "
+    "Wayback Machine URL index (7,140 archived URLs checked on 2026-09-15 ...), nor on quintet.com (11,645 "
+    "archived URLs checked ...)'. THE 2023 EDITION EXISTS AND IS LIVE: 'Brown Shipley & Co. Limited - Pillar 3 "
+    f"Disclosures for the year ended 31 December 2023', 36pp, {P3_2023_URL}. The Quintet half of the old claim "
+    "still stands - quintet.com holds only consolidated GROUP reports, which are not usable here.\n"
+    "WHY THE EARLIER SWEEP MISSED IT, recorded so the next one does not repeat the method. Both editions are "
+    "UNLINKED assets in the site's Umbraco media store, addressed by an opaque random key "
+    "(/media/vvchobxc/ and /media/o4tl2pod/), so: site navigation cannot reach them; the 544-URL sitemap does "
+    "not list them; the on-site search does not index media and robots.txt disallows its endpoint; and the two "
+    "filenames share no pattern to extrapolate between ('pillar-3-disclosure-2023.pdf' against "
+    "'pillar-3-disclosure-2024-final-draft_cleanv2.pdf'), so reaching one tells you nothing about the other's "
+    "address. A Wayback CDX sweep of the domain on 2026-09-18 returned 352 archived PDFs and still lists only "
+    "the 2024 file - the archive simply never captured the 2023 one, which is why a CDX negative cannot stand "
+    "as evidence against a live host. What did find it was a general web index queried with a filetype "
+    "restriction, i.e. an instrument that had crawled the file directly.\n"
+    "WHAT THE 2023 EDITION ADDS, recorded here as a KNOWN, UNWORKED IMPROVEMENT rather than silently left out. "
+    "(a) Its Appendix 15.1 carries a COMPLETE and CLEANLY-PRINTED template UK KM1 for 31/12/2023, in proper "
+    "£000 throughout, with none of the four unit/population defects the 2024 edition's KM1 has - CET1 90,200, "
+    "Tier 1 100,200, Total capital 100,200, RWEA 405,524, CET1 ratio 22.24%, Tier 1 and total capital ratio "
+    "24.71%, UK 7a-7d 1.13/0.64/0.85/9.13%, buffers 2.50/0.00/1.82/0.00/0.00/0.00%, combined buffer 4.32%, UK "
+    "11a 13.45%, row 12 11.38% (the 2024 edition leaves row 12 empty), leverage exposure 1,006,193 and leverage "
+    "ratio 9.96%, HQLA 631,011, outflows 269,069, inflows 38,514, net outflows 230,555, LCR 273.69%, ASF "
+    "1,027,781, RSF 567,629, NSFR 181.07%. The KM1 SHEET IN THIS WORKBOOK STILL SHOWS ONLY FY2024, because "
+    "adding this column crosses a printed-unit break between the two editions (2023 in £000 as declared, 2024 "
+    "in £m and £1 under a £000 header) and the KM1 transcription rules govern how that must be presented - that "
+    "is a deliberate deferral to a KM1-rules pass, not an oversight. (b) Its s.1.1 'Key Prudential Risk Ratios' "
+    "table carries 2022 and 2021 comparative columns, which is what now allows the Leverage Ratio and NSFR "
+    "sheets to show those two years at all - see those sheets.\n"
     "THE PARENT'S PILLAR 3 WAS READ, NOT JUST SEARCHED FOR - ALL FIVE YEAR-END EDITIONS (checked 2026-09-16, "
     "extending an earlier check that had covered only the 2021 edition). This matters because a UK subsidiary's "
     "figures are NORMALLY published inside its parent's Pillar 3 - as a column of the parent's own table, or as "
@@ -187,11 +225,15 @@ def pillar3_report_sources(extra=""):
         "Sources - Brown Shipley & Co. Limited's own standalone Pillar 3 Disclosures report:\n"
         f"FY2024: Pillar 3 Disclosures 2024, Appendix 15.1 (Template UK KM1 - Key metrics template), p.31, "
         f"cross-checked against s.1.1 'Key Prudential Risk Ratios' (p.4) - {P3_2024_URL}\n"
-        f"FY2023: Pillar 3 Disclosures 2024, s.1.1 'Key Prudential Risk Ratios' prior-year comparative column "
-        f"(p.4), cross-checked against Template UK LR2 row 25's own 2023 comparative (p.32) - {P3_2024_URL}\n"
-        "FY2022 and FY2021: no Brown Shipley Pillar 3 report for those years could be retrieved (see Pillar 3 "
-        "document note below), and the Bank's own statutory accounts for those years disclose neither metric - "
-        "left blank rather than filled from a group-level source.\n"
+        f"FY2023: Pillar 3 Disclosures 2023 - the year's OWN edition, found 2026-09-18 - s.1.1 'Key Prudential "
+        f"Risk Ratios' (p.3) and Appendix 15.1 Template UK KM1 (p.28) - {P3_2023_URL}\n"
+        f"FY2022 and FY2021: Pillar 3 Disclosures 2023, s.1.1 'Key Prudential Risk Ratios' (p.3), its 2022 and "
+        f"2021 COMPARATIVE columns - {P3_2023_URL}. No 2022 or 2021 edition of the document itself is known to "
+        f"exist, so these are the only figures Brown Shipley has published for those dates and they are "
+        f"comparatives by necessity; nothing is filled from a Quintet group-level source.\n"
+        "FY2025: no figure. The FY2025 statutory accounts disclose neither metric (OCR'd in full 2026-09-18), "
+        "and no FY2025 edition of the Pillar 3 report could be located - see the latest-edition check on the "
+        "KM1 sheet for exactly what was and was not searched.\n"
         + (extra + "\n" if extra else "")
         + "\n" + PILLAR3_DOC_NOTE + "\n\n" + ENTITY_NOTE
     )
@@ -594,8 +636,12 @@ TOTAL_CAPITAL_RATIO = {"FY2025": "21.6%", "FY2024": "23.86%", "FY2023": "24.7%",
 # Leverage Ratio and NSFR - FY2024 and FY2023 only, from the Pillar 3 2024
 # report (the Bank's statutory accounts disclose neither in any year, which is
 # why FY2022 and FY2021 stay blank).
-LEVERAGE_RATIO = {"FY2024": "11.23%", "FY2023": "9.96%"}
-NSFR_RATIO = {"FY2024": "162%", "FY2023": "181%"}
+LEVERAGE_RATIO = {"FY2024": "11.23%", "FY2023": "9.96%", "FY2022": "9.1%"}
+# FY2021 is held on its own row: the UK "excluding claims on central banks" basis only took
+# effect 1 January 2022, so the 2021 figure in the 2023 report's summary table cannot be
+# assumed to be that measure, and the report does not say which basis it is on.
+LEVERAGE_RATIO_2021 = {"FY2021": "8.6%"}
+NSFR_RATIO = {"FY2024": "162%", "FY2023": "181%", "FY2022": "165%", "FY2021": "121%"}
 
 # Pillar 1 CAPITAL REQUIREMENT by risk type, as literally disclosed (not RWA itself -
 # see the RWA Breakdown sheet's own note for how RWA-by-category is derived from these).
@@ -688,8 +734,16 @@ KM1_SOURCES = (
     "Sources - Brown Shipley & Co. Limited, \"Template UK KM1 - Key metrics template\", Appendix 15.1 of its own "
     "Pillar 3 Disclosures 2024, p.31, reproduced exactly as printed:\n"
     f"FY2024: Pillar 3 Disclosures 2024, Appendix 15.1, p.31 (single 31/12/2024 column) - {P3_2024_URL}\n"
-    "FY2025, FY2023, FY2022, FY2021: blank. Only ONE edition of this document exists - see the Pillar 3 document "
-    "note below - and its KM1 prints a single reporting-year column with no comparative of any kind.\n\n"
+    "FY2025, FY2022, FY2021: blank. The 2024 edition's KM1 prints a single reporting-year column with no "
+    "comparative of any kind; no 2022 or 2021 edition exists; and no 2025 edition could be located (see the "
+    "latest-edition check below).\n"
+    "FY2023: BLANK HERE BUT NOT BECAUSE NOTHING WAS FOUND - a complete, cleanly-printed 31/12/2023 KM1 exists "
+    "in the Pillar 3 Disclosures 2023 edition discovered 2026-09-18, and every figure in it is transcribed into "
+    "the Pillar 3 document note below so nothing has to be re-hunted. It is not shown as a column on this sheet "
+    "because the two editions print the template in DIFFERENT UNITS - 2023 in the £000 its header declares, "
+    "2024 in £m (rows 1-3) and single pounds (row 13) under the same £000 header - and putting them side by "
+    "side in one row is exactly the merge-across-a-basis-break that the KM1 transcription rules forbid without "
+    "a deliberate presentation decision. That decision belongs to a KM1-rules pass, not to a gap-filling one.\n\n"
     "KM1 presentation notes:\n"
     "• BASIS: prepared on a consolidated basis for the Brown Shipley group, which the report itself states is the "
     "same reporting perimeter as the Company, because all five subsidiaries were dormant throughout the year.\n"
@@ -730,7 +784,29 @@ KM1_SOURCES = (
     "the same report's narrative ss.11.3-11.4 and its templates UK LIQ1/LIQ2 instead give LCR 216% and NSFR 157%, "
     "off a different total required stable funding (547,524 against KM1 row 19's 514,666). The KM1 values are "
     "what this sheet reproduces, being what this template printed.\n\n"
-    "LATEST-EDITION CHECK 2026-09-16 - AND AN HONEST LIMIT ON IT. Brown Shipley publishes no regulatory-"
+    "LATEST-EDITION CHECK RE-RUN 2026-09-18, WITH THE ARCHIVE AND SEARCH ENGINES BACK. The 2026-09-16 check "
+    "below could not reach the Internet Archive or any general web index and honestly recorded that it could "
+    "settle nothing about a 2025 edition. Both instruments worked on 2026-09-18 and were used:\n"
+    "   (a) WAYBACK CDX, domain-wide: 352 archived PDFs under brownshipley.com, captured as recently as 9 June "
+    "2026. Filtering for 'pillar' returns exactly one document, the 2024 edition (first capture 15 March 2026). "
+    "No 2025 edition, but ALSO no 2023 edition - and the 2023 edition demonstrably exists (see the Pillar 3 "
+    "document note). So this instrument is now KNOWN to under-report this domain's Pillar 3 shelf and its "
+    "silence about a 2025 edition proves nothing either way.\n"
+    "   (b) GENERAL WEB INDEX, filetype-restricted. This is what found the 2023 edition, so it demonstrably "
+    "reaches unlinked media on this host - the positive control that makes its negative meaningful. Queried for "
+    "Brown Shipley Pillar 3 documents it returns the 2023 and 2024 editions and NOTHING for 2025 or 2026.\n"
+    "   (c) THE SITE ITSELF, again: sitemap.xml (544 URLs), the 'Important information' and 'Important "
+    "information > Annual report' pages, and the on-site search endpoint. No Pillar 3 link of any year, which "
+    "is expected - even the two editions that DO exist are unlinked.\n"
+    "   (d) THE FY2025 STATUTORY ACCOUNTS, OCR'd page-by-page at 200dpi (89 pages, 279,646 characters, with the "
+    "Note 38 'Capital' table recovered intact as the positive control). No KM1, no leverage ratio, no NSFR.\n"
+    "   PUBLICATION CADENCE, which is the most useful thing this check produced: the PDF creation timestamps "
+    "are 9 September 2024 for the 2023 edition and 3 September 2025 for the 2024 edition. Brown Shipley "
+    "publishes this document in early September, roughly eight months after the year-end it covers. A 2025 "
+    "edition would therefore be due within days of this check. THE CONCLUSION IS 'NOT FOUND TODAY, AND DUE "
+    "ABOUT NOW' - NOT 'NEVER PUBLISHED'. Re-check in a few weeks, and query a general web index with a "
+    "filetype restriction rather than crawling the site, because site navigation will never reach this file.\n\n"
+    "PREVIOUS CHECK, 2026-09-16 - AND AN HONEST LIMIT ON IT. Brown Shipley publishes no regulatory-"
     "disclosures index of any kind. Its Pillar 3 report is an UNLINKED asset in the site's Umbraco media store, "
     "reachable only by its opaque media key (/media/o4tl2pod/...), and it is not referenced from any page in the "
     "site's own sitemap.xml (all 544 URLs were crawled and grepped for a Pillar-3-shaped media link; the only "
@@ -851,15 +927,32 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("UK leverage ratio (excluding claims on central banks)", LEVERAGE_RATIO)],
+    [("UK leverage ratio (excluding claims on central banks)", LEVERAGE_RATIO),
+     ("Leverage ratio as printed in the 2023 report's summary table, basis not stated (FY2021 only)", LEVERAGE_RATIO_2021)],
     pillar3_report_sources(
-        "FY2024 11.23% and FY2023 9.96% are template UK LR2 row 25 ('Leverage ratio excluding claims on central "
-        "banks'), which agrees with s.6.1's narrative ('Brown Shipley's leverage ratio stands at 11.23% as at 31 "
-        "December 2024') and with the front summary table's rounded 11.2%/10.0%. The same report also discloses "
-        "row UK-25c 'Leverage ratio including claims on central banks' at 8.55% (2023: 6.53%); the excluding-"
-        "central-banks measure is the UK's binding definition and is the one used here. The Bank's statutory "
-        "accounts disclose no leverage ratio in any year - each year's own 'Capital' note and 'Financial Risk "
-        "Management' note were read in full and neither mentions one."),
+        "FY2024 11.23% is the 2024 report's template UK LR2 row 25 ('Leverage ratio excluding claims on central "
+        "banks'), which agrees with its s.6.1 narrative ('Brown Shipley's leverage ratio stands at 11.23% as at "
+        "31 December 2024') and with its front summary table's rounded 11.2%. That report also discloses row "
+        "UK-25c 'Leverage ratio including claims on central banks' at 8.55%; the excluding-central-banks measure "
+        "is the UK's binding definition and is the one used here.\n"
+        "FY2023 RE-SOURCED and FY2022/FY2021 NEWLY ADDED, 2026-09-18, from the 2023 edition found that day (see "
+        "the Pillar 3 document note). FY2023's 9.96% previously came from the 2024 report's comparative column; "
+        "it now comes from the 2023 report's OWN template UK LR2 row 25, per the standing rule that a year is "
+        "read from its own edition. THE FIGURE IS UNCHANGED TO THE LAST DIGIT, which is the cross-check that the "
+        "comparative was being read correctly. FY2022's 9.1% is the 2023 report's s.1.1 'Key Prudential Risk "
+        "Ratios' 2022 COMPARATIVE column, and is corroborated by that report's own template UK LR2 row 25 "
+        "comparative of 9.12% on the same excluding-central-banks basis - so FY2022 sits in the same row as the "
+        "other years, at the summary table's one-decimal precision. Its row UK-25c 2022 comparative is 6.34%.\n"
+        "FY2021 IS DELIBERATELY ON A SEPARATE ROW. The 2023 report's s.1.1 table prints 8.6% against 2021 under "
+        "the bare heading 'Leverage Ratio', but the UK 'excluding claims on central banks' basis only took "
+        "effect on 1 January 2022, its LR2 template carries no 2021 column to corroborate against, and the "
+        "report never states which basis the 2021 figure is on. Putting it in the row above would assert a "
+        "comparability the source does not, so it is reproduced on its own labelled row instead.\n"
+        "The Bank's statutory accounts disclose no leverage ratio in ANY year including FY2025 - each year's own "
+        "'Capital' note and 'Financial Risk Management' note were read in full and neither mentions one, and the "
+        "FY2025 accounts were OCR'd whole on 2026-09-18 (279,646 characters) with the same result: the only "
+        "occurrences of 'leverage' in that document are narrative uses of the ordinary English word in the "
+        "climate-risk sections."),
 )
 
 metric(
@@ -872,13 +965,25 @@ metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (NSFR)", NSFR_RATIO)],
     pillar3_report_sources(
-        "FY2024 162% and FY2023 181% are the report's own front summary table (s.1.1) figures, which agree with "
-        "template UK KM1 row 20 (162%) and with KM1's own rows 18-19 (available stable funding 832,003 / required "
-        "stable funding 514,666 = 161.7%). See the inconsistency paragraph below on the 157% that the same "
-        "report's narrative s.11.4 and template UK LIQ2 row 34 print instead. The Bank's statutory accounts "
-        "disclose no NSFR in any year - each year's own 'Capital' and 'Financial Risk Management'/'Liquidity "
-        "risk' notes were read in full and LCR is the only liquidity metric given. FY2021 additionally predates "
-        "the UK NSFR requirement, which became binding on 1 January 2022 (PRA PS17/21)."),
+        "FY2024's 162% is the 2024 report's own front summary table (s.1.1), which agrees with its template UK "
+        "KM1 row 20 (162%) and with KM1's own rows 18-19 (available stable funding 832,003 / required stable "
+        "funding 514,666 = 161.7%). See the inconsistency paragraph below on the 157% that the same report's "
+        "narrative s.11.4 and template UK LIQ2 row 34 print instead.\n"
+        "FY2023 RE-SOURCED and FY2022/FY2021 NEWLY ADDED, 2026-09-18, from the 2023 edition found that day (see "
+        "the Pillar 3 document note). FY2023's 181% previously came from the 2024 report's comparative; it now "
+        "comes from the 2023 report's OWN s.1.1 table, UNCHANGED, and that report's own template UK KM1 row 20 "
+        "prints the same figure at full precision as 181.07%. FY2022's 165% and FY2021's 121% are the 2023 "
+        "report's s.1.1 COMPARATIVE columns - the only NSFR figures Brown Shipley has ever published for those "
+        "two dates, since no 2022 or 2021 edition of this document is known to exist. They are comparatives, not "
+        "own-edition figures, and are labelled as such here.\n"
+        "NOTE ON FY2021 IN PARTICULAR: the UK NSFR requirement became binding on 1 January 2022 (PRA PS17/21), "
+        "so a 31 December 2021 NSFR was not a required disclosure at the time. The Bank nonetheless printed one "
+        "retrospectively in its 2023 report, and 121% is reproduced from that table as printed. It is a large "
+        "step below the later years and is not smoothed or queried here.\n"
+        "The Bank's statutory accounts disclose no NSFR in any year including FY2025 - each year's own 'Capital' "
+        "and 'Financial Risk Management'/'Liquidity risk' notes were read in full and LCR is the only liquidity "
+        "metric given; the FY2025 accounts were OCR'd whole on 2026-09-18 (279,646 characters) and contain no "
+        "occurrence of 'NSFR' or 'stable funding' at all."),
 )
 
 bw.add_not_disclosed_metric_sheets(

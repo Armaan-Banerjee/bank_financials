@@ -22,6 +22,62 @@ AR2024_DOC_URL = "https://find-and-update.company-information.service.gov.uk/com
 AR2023_DOC_URL = "https://find-and-update.company-information.service.gov.uk/company/12546585/filing-history/MzQyMTMzNzQ4OGFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_DOC_URL = "https://find-and-update.company-information.service.gov.uk/company/12546585/filing-history/MzM5NzEzNzM5MWFkaXF6a2N4/document?format=pdf&download=0"
 P3_2022_URL = "https://www.hsbcinnovationbanking.com/-/media/hinv/pdf/regulations/pillar-3-report-2022.pdf"
+HINV_LEGAL_URL = "https://www.hsbcinnovationbanking.com/gb/en/legal-information"
+
+# Leading-gap closure, 2026-09-18. The KM1, LCR, NSFR and RWA Breakdown sheets
+# carried EMPTY cells for FY2023-FY2025. An empty cell states nothing; these
+# years are a documented NON-PUBLICATION and now say so on the face of the
+# sheet. The evidence is in NOT_PUBLISHED_EVIDENCE below.
+NOT_PUBLISHED = "Not publicly disclosed at entity level"
+NOT_PUBLISHED_YEARS = {"FY2025": NOT_PUBLISHED, "FY2024": NOT_PUBLISHED, "FY2023": NOT_PUBLISHED}
+
+NOT_PUBLISHED_EVIDENCE = (
+    "WHY FY2023-FY2025 CARRY A STATEMENT RATHER THAN A FIGURE - re-established from the documents on "
+    "2026-09-18, and NOT resting on any exemption.\n"
+    "NO EXEMPTION IS CLAIMED, AND AN EARLIER CLAIM THAT ONE EXISTED WAS WRONG. HSBC Innovation Bank "
+    "Limited (FRN 543146) holds NO Modification by Consent under Rule 3.1 of the 'SDDT Regime - General "
+    "Application' Part of the PRA Rulebook. Its only 'Ru 3.1' row in the Bank of England's consolidated "
+    "waivers register is a REMUNERATION rule ('Requirements in relation to remuneration', start "
+    "04/12/2025), which has nothing to do with disclosure - matching on the sub-rule number alone, "
+    "without reading which Rulebook Part it belongs to, is what produced the false reading. A Pillar 3 "
+    "disclosure duty therefore STANDS for FY2023, FY2024 and FY2025, and these cells record a "
+    "non-publication, never a permission not to publish.\n"
+    f"1. THE BANK'S OWN DISCLOSURES PAGE, re-fetched 2026-09-18: {HINV_LEGAL_URL} (HTTP 200, text/html, "
+    "80,557 bytes). Every PDF link on it was extracted - 15 documents - and exactly ONE is a Pillar 3 "
+    "item: 'Pillar 3 report - 2022'. The page is demonstrably CURRENT rather than a stale archive: it "
+    "also links an Open Banking performance and availability report for Q2 2026 and a UK board diversity "
+    "policy statement dated April 2026.\n"
+    "2. CONSTRUCTED LATER-EDITION URLS ARE SOFT-404s, NOT DOCUMENTS. pillar-3-report-2023.pdf and the "
+    "2024 and 2025 equivalents on the same media path return HTTP 200 but redirect to /notfound-404 with "
+    "Content-Type text/html, a 45,951-byte HTML body and no %PDF magic bytes. A status-code-only check "
+    "would have reported all three as published. Recorded as a probe about a guessed filename, never as "
+    "evidence about the bank.\n"
+    "3. WAYBACK CDX over the bank's own /-/media/hinv/pdf/regulations/ folder returned 100 archived "
+    "documents, of which exactly one is a Pillar 3: pillar-3-report-2022.pdf. This CORROBORATES strand 1 "
+    "rather than standing on its own - a CDX negative is not by itself reliable evidence of absence.\n"
+    "4. THE ANNUAL REPORTS THEMSELVES WERE READ IN FULL, not keyword-sampled. The FY2023, FY2024 and "
+    "FY2025 Companies House filings are SCANNED PDFs with no text layer (pdftotext returns 69, 57 and 57 "
+    "characters - about one per page), so all 183 pages were rendered at 250 dpi and OCR'd. Controls "
+    "confirm the extraction is rich: 'capital' 98/105/105 hits and 'Tier 1' 18/20/15. Against that, "
+    "'NSFR' and 'net stable funding' occur ZERO times in all three editions, and 'Pillar 3' occurs ZERO "
+    "times in all three - believable zeroes, not a failed search.\n"
+    "5. THE ONE LCR IN THOSE DOCUMENTS IS NOT THIS ENTITY'S, AND IS DELIBERATELY NOT BORROWED. Each "
+    "annual report mentions a Liquidity Coverage Ratio exactly once, and every time it is the HSBC UK "
+    "DoLSub's, said so explicitly: 'The HSBC UK DoLSub held a significant balance of High Quality Liquid "
+    "Assets (HQLA) throughout 2023 of GBP94.8bn (calculated on an average basis) and maintained an "
+    "average Liquidity Coverage Ratio (LCR) of 201%' (AR2023, printed p.5); the FY2024 edition gives "
+    "GBP91.35bn and 190% (printed p.4) and the FY2025 edition GBP93.7bn and 175% (printed p.4). Those "
+    "are a liquidity SUB-GROUP's averages, not HSBC Innovation Bank Limited's own ratio, and "
+    "substituting one for the other would misstate the entity. They are quoted here as context and are "
+    "NOT written into any cell.\n"
+    "6. NOTHING AT HINV ENTITY LEVEL EXISTS IN THE PARENT'S PILLAR 3 EITHER. HSBC UK Bank plc's own "
+    "FY2023, FY2024 and FY2025 Pillar 3 disclosures were fetched and read (84/84/81 pages): each prints "
+    "exactly one key-metrics template and it is HSBC UK Bank plc's own. There is no HINV column, no HINV "
+    "KM1 and no HINV entity-level template anywhere in them.\n"
+    "WHAT WOULD CHANGE THIS: a standalone HINV Pillar 3 for any of these years appearing on the bank's "
+    "own disclosures page, or a future HSBC UK edition carrying an HINV entity column. Neither existed "
+    "as at 2026-09-18."
+)
 
 ENTITY_NOTE = (
     "\nENTITY HISTORY: HSBC Innovation Bank Limited (company 12546585) was incorporated on 3 April 2020 as "
@@ -96,6 +152,15 @@ def p3_sources(extra=""):
         "Domestic Liquidity Sub-group (DoLSub) level via HSBC UK's own ILAAP, not published at this solo "
         "entity level (same pattern as RBS plc/Coutts & Company and Bank of Scotland plc elsewhere in this "
         "project). MREL is likewise not disclosed at this subsidiary level in any year.\n"
+        "RE-ESTABLISHED FROM THE DOCUMENTS 2026-09-18, and the FY2023-FY2025 cells on the KM1, LCR, NSFR "
+        "and RWA Breakdown sheets now SAY SO rather than sitting empty - an empty cell states nothing, "
+        "and these years are a documented non-publication. Note that this rests on the documents and NOT "
+        "on any exemption: the claim that this bank holds an SDDT Rule 3.1 waiver removing its Pillar 3 "
+        "duty is FALSE and is withdrawn - its only 'Ru 3.1' entry in the PRA waivers register is a "
+        "REMUNERATION rule. A Pillar 3 duty stands in all three years; the bank simply did not publish "
+        "one. Full evidence, including the full-document OCR of all three annual reports and the "
+        "entity-basis check against HSBC UK Bank plc's own Pillar 3, is reproduced on the KM1, LCR, NSFR "
+        "and RWA Breakdown sheets.\n"
         "RESTATEMENT NOTE: FY2023's own Annual Report reported RWA of GBP8,430,014k and CET1/Tier1/Total "
         "Capital ratios of 16.1%/16.1%/16.9% and a 13.2% leverage ratio. The FY2024 Annual Report's own "
         "footnote states December 2023 RWA was later restated down by GBP539m to GBP7,890,931m 'following an "
@@ -421,8 +486,14 @@ bw.add_asset_quality_sheet(
 # HSBC UK Bank plc's Pillar 3 and NOT HSBC Bank plc's - three separate entities,
 # three separate documents.
 #
-# WHY FY2023-FY2025 ARE BLANK - no standalone Pillar 3 is published for this
-# entity in those years, and the evidence is positive on three fronts:
+# WHY FY2023-FY2025 READ "Not publicly disclosed at entity level" RATHER THAN
+# SITTING EMPTY - no standalone Pillar 3 is published for this entity in those
+# years, and the evidence is positive on three fronts below, to which a fourth,
+# fifth and sixth were added on 2026-09-18 (the annual reports OCR'd in full;
+# the only LCR in them shown to be the HSBC UK DoLSub's, not this entity's; and
+# the parent's own Pillar 3 confirmed to carry no HINV entity block). The full
+# statement, including the withdrawal of a false SDDT-waiver claim, is in
+# NOT_PUBLISHED_EVIDENCE at the top of this script.
 #   1. HINV's own UK regulatory-disclosures list at
 #      hsbcinnovationbanking.com/gb/en/legal-information lists exactly one Pillar
 #      3 item, "Pillar 3 report - 2022". That page is demonstrably CURRENT, not a
@@ -443,6 +514,11 @@ bw.add_asset_quality_sheet(
 #      Bank Limited (HSBC Innovation Bank Limited is included from 31 March 2023
 #      reporting)". HINV's prudential disclosure is met at the HSBC UK group
 #      level from that point.
+#      CORRECTED 2026-09-18 (KM1-032): that is the FY2023 wording and is cited to
+#      FY2023. The membership CHANGED - the FY2025 edition names four entities,
+#      not five, dropping HSBC Trust Company (UK) Limited; HSBC Innovation Bank
+#      Limited is still among them, so the conclusion holds. See the KM1 sheet
+#      note for the verbatim FY2025 sentence and the control counts.
 # FY2023-FY2025 figures elsewhere in this workbook come from those years' Annual
 # Reports' capital tables - a different source, not a KM1 - so they are NOT
 # back-filled onto this sheet.
@@ -488,6 +564,16 @@ km1_rows = [
     ("DATA", "NSFR ratio (%) (adjusted value)", {"FY2022": "203"}),
 ]
 
+# FY2023-FY2025 now carry an explicit non-publication statement on every DATA
+# row instead of an empty cell. SECTION dividers are deliberately untouched: a
+# divider holds no value in any year, so a statement there would be noise.
+# Nothing is computed, reordered or re-rounded by this - the FY2022 column
+# remains exactly as transcribed from the bank's own printed table.
+km1_rows = [
+    (kind, label, ({**values, **NOT_PUBLISHED_YEARS} if kind != "SECTION" else values))
+    for kind, label, values in km1_rows
+]
+
 KM1_SOURCES = (
     "Sources - HSBC Innovation Bank Limited (formerly Silicon Valley Bank UK Limited), Pillar 3 "
     f"Report 2022, 'Key Metrics' table, p.4 - {P3_2022_URL}. Verified for this ticket by HTTP "
@@ -526,8 +612,9 @@ KM1_SOURCES = (
     "August', and the NSFR values are a 2-quarter rather than the prescribed 4-quarter average, "
     "for the same reason. FY2022's 150% LCR and 203% NSFR are therefore NOT on a like-for-like "
     "basis with a full-year average.\n\n"
-    "WHY FY2023-FY2025 ARE BLANK - no standalone Pillar 3 exists for this entity in those years. "
-    "Three independent strands of positive evidence:\n"
+    "WHY FY2023-FY2025 READ 'Not publicly disclosed at entity level' RATHER THAN SITTING EMPTY - no "
+    "standalone Pillar 3 exists for this entity in those years, and an empty cell would have stated "
+    "nothing at all. Three independent strands of positive evidence:\n"
     "  1. The bank's own current disclosures list (above) shows only the 2022 report.\n"
     "  2. Constructed later-edition URLs on the same media path - "
     "/-/media/hinv/pdf/regulations/pillar-3-report-2023.pdf and the 2024 and 2025 equivalents, "
@@ -540,14 +627,32 @@ KM1_SOURCES = (
     "that 'The HSBC UK Bank Domestic Liquidity Sub-group comprises: HSBC UK Bank plc, Marks and "
     "Spencer Financial Services plc, HSBC Trust Company (UK) Limited, HSBC Private Bank (UK) "
     "Limited and HSBC Innovation Bank Limited (HSBC Innovation Bank Limited is included from 31 "
-    "March 2023 reporting)' - the same statement recurs in the FY2024 and FY2025 editions. "
-    "HINV's prudential disclosure is met at the HSBC UK group level from that point on.\n"
+    "March 2023 reporting)'. HINV's prudential disclosure is met at the HSBC UK group level from "
+    "that point on.\n"
+    "  CORRECTED 18 September 2026 (KM1-032): that quotation is accurate for the FY2023 edition it "
+    "is cited to, but this note used to add '- the same statement recurs in the FY2024 and FY2025 "
+    "editions', and THAT IS FALSE. The membership changed. HSBC UK Bank plc's Pillar 3 disclosures "
+    "at 31 December 2025 (hsbc.com, re-read 2026-09-18: HTTP 200, application/pdf, %PDF-1, "
+    "4,269,390 bytes) state: 'As at the 31 December 2025, the HSBC UK Bank Domestic Liquidity "
+    "Sub-group comprises: HSBC UK Bank plc, Marks and Spencer Financial Services plc, HSBC "
+    "Innovation Bank Limited and HSBC Private Bank (UK) Limited.' That is FOUR entities, not five: "
+    "HSBC Trust Company (UK) Limited is gone, and the string 'Trust Company' occurs ZERO times in "
+    "the whole FY2025 document - a believable zero, since the same extraction returns 249 hits for "
+    "'capital', 83 for 'leverage', 24 for 'CET1' and 14 for 'KM1'. HSBC Innovation Bank Limited "
+    "remains a member, so the conclusion this note draws is unchanged; only the recurrence claim "
+    "was wrong.\n"
+    "  The general point, worth more than the correction: A NOTE THAT DESCRIBES A DOCUMENT STAYS "
+    "TRUE FOREVER, WHILE A NOTE ASSERTING THAT A STATEMENT RECURS ACROSS EDITIONS GOES STALE "
+    "SILENTLY - and this one went stale into a contradiction with a sibling script, "
+    "build_marks_and_spencer_financial_services.py, which carries the FY2025 four-entity wording "
+    "correctly. Each edition is now cited to its own year.\n"
     "The FY2023-FY2025 capital figures shown on the single-metric sheets in this workbook come "
     "from those years' Annual Reports' own capital tables. They are a different source on a "
     "different basis and have deliberately NOT been back-filled onto this sheet.\n\n"
     "WHY FY2021 AND FY2020 ARE BLANK - a different reason again: the entity was a dormant / "
     "pre-authorisation shell with no banking operations in either year and so had no Pillar 3 "
-    "disclosure obligation at all. See the entity-history note on the other sheets."
+    "disclosure obligation at all. See the entity-history note on the other sheets.\n\n"
+    + NOT_PUBLISHED_EVIDENCE
 )
 
 bw.add_km1_sheet(
@@ -559,15 +664,20 @@ bw.add_km1_sheet(
              "disclosure is made at HSBC UK group level instead. See the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
-    source_height=380,
+    source_height=700,
 )
 
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, source_height=170):
+    # source_height is an override rather than a constant because the merged
+    # citation cell has a FIXED height and silently CLIPS anything that
+    # overflows it - so a sheet carrying a long evidence block (LCR, NSFR)
+    # must raise it or the evidence is invisible in the delivered workbook.
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
-                         rows_data, sources_text, note=note, first_col_width=44, source_height=170)
+                         rows_data, sources_text, note=note, first_col_width=44,
+                         source_height=source_height)
 
 
 metric(
@@ -615,12 +725,18 @@ metric(
 # ---------------------------------------------------------------
 # Sheet: RWA Breakdown
 # ---------------------------------------------------------------
+# THE CATEGORY ROWS AND THE TOTAL ROW TAKE DIFFERENT TREATMENTS FOR FY2023-FY2025,
+# and the difference is the whole point of this block. The category SPLIT was never
+# published for those years, so those cells carry the non-publication statement. The
+# AGGREGATE was published - it is printed in each year's own Annual Report - so the
+# TOTAL row carries the figure. Writing "not disclosed" across the total as well
+# would have been a FALSE statement about a document that plainly prints it.
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding CCR) - standardised approach", {"FY2022": 6997168}),
-    ("DATA", "Counterparty credit risk (CCR) - standardised approach", {"FY2022": 192328}),
-    ("DATA", "Counterparty credit risk - credit valuation adjustment (CVA)", {"FY2022": 37929}),
-    ("DATA", "Operational risk - basic indicator approach", {"FY2022": 268713}),
-    ("TOTAL", "Total RWAs", {"FY2022": 7496138}),
+    ("DATA", "Credit risk (excluding CCR) - standardised approach", {"FY2022": 6997168, **NOT_PUBLISHED_YEARS}),
+    ("DATA", "Counterparty credit risk (CCR) - standardised approach", {"FY2022": 192328, **NOT_PUBLISHED_YEARS}),
+    ("DATA", "Counterparty credit risk - credit valuation adjustment (CVA)", {"FY2022": 37929, **NOT_PUBLISHED_YEARS}),
+    ("DATA", "Operational risk - basic indicator approach", {"FY2022": 268713, **NOT_PUBLISHED_YEARS}),
+    ("TOTAL", "Total RWAs", {"FY2025": 9150116, "FY2024": 8276902, "FY2023": 8430014, "FY2022": 7496138}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -628,8 +744,10 @@ bw.add_rwa_breakdown_sheet(
     subtitle="FY2022 is the only year this entity has published a standalone Pillar 3 report with a "
               "UK OV1-style RWA-by-category breakdown - confirmed by the bank's own regulatory-disclosures "
               "page and a Wayback Machine CDX search finding no other year archived (see p3_sources note "
-              "on the Pillar 3 metric sheets). FY2023-FY2025 are 'Not publicly disclosed' at category "
-              "level - only the aggregate Total RWAs figure appears in those years' Annual Reports.",
+              "on the Pillar 3 metric sheets). For FY2023-FY2025 the category rows read 'Not publicly "
+              "disclosed at entity level' because the split was never published, while the Total RWAs row "
+              "CARRIES A FIGURE, because the aggregate was published - each year's own Annual Report "
+              "prints it. Read the two treatments as the different statements they are.",
     rows=rwa_breakdown_rows,
     sources_text=(
         f"Sources - HSBC Innovation Bank Limited Pillar 3 Report 2022, p.6 ('Overview of RWA' table), "
@@ -660,8 +778,19 @@ bw.add_rwa_breakdown_sheet(
         "8,276,902, so no data value changed. Note also that p.11 shows the FY2023 comparative as "
         "7,890,931 - the restated figure - against the 8,430,014 as-originally-reported figure carried "
         "on the Total RWAs sheet for FY2023; the £539m restatement is explained in that report's own "
-        "footnote 3."
+        "footnote 3.\n\n"
+        "FY2023-FY2025 TOTAL ROW - SOURCE AND BASIS, added 2026-09-18 when this sheet's leading gap was "
+        "closed. The three aggregates on the Total RWAs row are each transcribed from that year's OWN "
+        "Annual Report, re-read from the scanned filings by full-document OCR on 2026-09-18: FY2023 "
+        "8,430,014 (AR2023, printed p.17, 'Risk weighted assets (£'000) - Pillar 1'); FY2024 8,276,902 "
+        "(AR2024, printed p.11); FY2025 9,150,116 (AR2025, printed p.11). They match the Total RWAs "
+        "metric sheet exactly and are NOT derived from the category rows, which do not exist for those "
+        "years. Per this project's own-edition convention FY2023 is the 8,430,014 as ORIGINALLY "
+        "published, not the 7,890,931 the FY2024 report restates it to; that restatement is described in "
+        "the note above and is deliberately not substituted here.\n\n"
+        + NOT_PUBLISHED_EVIDENCE
     ),
+    source_height=760,
 )
 
 metric(
@@ -672,27 +801,49 @@ metric(
 
 metric(
     "LCR", "%",
-    [("Liquidity Coverage Ratio (adjusted value)", {"FY2022": "150%"})],
+    [("Liquidity Coverage Ratio (adjusted value)", {"FY2022": "150%", **NOT_PUBLISHED_YEARS})],
     p3_sources(
         extra="FY2022's 150% is a 5-month (not 12-month) weighted average, since banking operations only "
               "commenced 1 August 2022, leaving 5 observable month-ends - per the Pillar 3 report's own "
-              "footnote, not a like-for-like basis with a full 12-month average."
+              "footnote, not a like-for-like basis with a full 12-month average.\n\n"
+              "FY2023-FY2025: THE ONE LCR PRINTED IN THOSE ANNUAL REPORTS IS NOT THIS ENTITY'S AND IS "
+              "DELIBERATELY NOT BORROWED. Each edition mentions a Liquidity Coverage Ratio exactly once "
+              "and attributes it explicitly to the HSBC UK Domestic Liquidity Sub-group: 201% for 2023 "
+              "(AR2023, printed p.5), 190% for 2024 (AR2024, printed p.4) and 175% for 2025 (AR2025, "
+              "printed p.4), each alongside the DoLSub's average HQLA balance (GBP94.8bn / GBP91.35bn / "
+              "GBP93.7bn). A sub-group average is not HSBC Innovation Bank Limited's own ratio; putting "
+              "one in this column would misstate the entity, so the column records the absence instead. "
+              "The figures are named here so a reader can see exactly what was found and why it was not "
+              "used.\n\n"
+              + NOT_PUBLISHED_EVIDENCE
     ),
-    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not "
-         "applicable FY2020-FY2021 (dormant/pre-authorisation shell, no banking operations) and not "
-         "publicly disclosed at this entity level FY2023-FY2025 (see source note).",
+    note="FY2022 is the only year this entity has published its OWN LCR (the only year with a standalone "
+         "Pillar 3 report). FY2020-FY2021 are not applicable (dormant/pre-authorisation shell, no banking "
+         "operations). FY2023-FY2025 read 'Not publicly disclosed at entity level': the entity's liquidity "
+         "is managed and reported within the HSBC UK DoLSub from the March 2023 acquisition, and the only "
+         "LCR its annual reports print is the DoLSub's, which is NOT substituted here. See the source note.",
+    source_height=620,
 )
 
 metric(
     "NSFR", "%",
-    [("Net Stable Funding Ratio (adjusted value)", {"FY2022": "203%"})],
+    [("Net Stable Funding Ratio (adjusted value)", {"FY2022": "203%", **NOT_PUBLISHED_YEARS})],
     p3_sources(
         extra="FY2022's 203% is a 2-quarter (not 4-quarter) average, for the same reason as LCR above - per "
-              "the Pillar 3 report's own footnote."
+              "the Pillar 3 report's own footnote.\n\n"
+              "FY2023-FY2025: NO NSFR APPEARS ANYWHERE, ON ANY BASIS. Unlike LCR - where the annual "
+              "reports at least print the HSBC UK DoLSub's ratio, which this project declines to "
+              "substitute - the strings 'NSFR' and 'net stable funding' occur ZERO times in the FY2023, "
+              "FY2024 and FY2025 annual reports. That zero is believable rather than a failed search: the "
+              "same full-document OCR of all 183 pages returns 98/105/105 hits for 'capital' and 18/20/15 "
+              "for 'Tier 1'. So there is no entity figure AND no group figure to decline.\n\n"
+              + NOT_PUBLISHED_EVIDENCE
     ),
-    note="Only disclosed for FY2022 (the only year with a standalone Pillar 3 report) - not "
-         "applicable FY2020-FY2021 (dormant/pre-authorisation shell, no banking operations) and not "
-         "publicly disclosed at this entity level FY2023-FY2025 (see source note).",
+    note="FY2022 is the only year this entity has published an NSFR (the only year with a standalone "
+         "Pillar 3 report). FY2020-FY2021 are not applicable (dormant/pre-authorisation shell, no banking "
+         "operations). FY2023-FY2025 read 'Not publicly disclosed at entity level': no NSFR is printed in "
+         "those years' annual reports at entity level or at any other level. See the source note.",
+    source_height=620,
 )
 
 bw.add_not_disclosed_metric_sheets(

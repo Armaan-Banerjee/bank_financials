@@ -420,7 +420,7 @@ bw.add_asset_quality_sheet(
 
 # ---------------------------------------------------------------------------
 # KM1 Key Metrics (wayfinder KM1-022, 2026-09-16) - "Not applicable", on
-# positive evidence from thirteen documents, not on a failed search.
+# positive evidence from sixteen documents, not on a failed search.
 #
 # Called BEFORE the first add_metric_sheet() so the sheet lands immediately
 # after Asset Quality and immediately before CET1 Capital.
@@ -432,10 +432,21 @@ NEH_SA_21_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/up
 NEH_SA_22_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-semi-annual-pillar-3-disclosures-300922.pdf"
 NEH_SA_23_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/nomura-europe-holdings-plc-semi-annual-pillar-3-disclosures-300923.pdf"
 
+# FOUND 2026-09-18 (GA-005). From the 31 March 2025 edition onward the parent
+# INSERTED "Group-" INTO THE FILENAME and switched to Title-Case. Three editions
+# newer than anything this project held were recovered by probing that pattern;
+# all three were verified HTTP 200 / Content-Type application/pdf / %PDF magic
+# bytes. See the KM1 sheet's source note for why the earlier "these editions do
+# not exist" conclusion was wrong.
+NEH_P3_25_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/Nomura-Europe-Holdings-plc-Group-Annual-Pillar-3-Disclosures-310325.pdf"
+NEH_SA_25_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/Nomura-Europe-Holdings-plc-Group-Semi-Annual-Pillar-3-Disclosures-300925.pdf"
+NEH_Q_DEC25_URL = "https://www.nomuranow.com/portal/site/public/en-gb/resources/upload/Nomura-Europe-Holdings-plc-Group-Quarterly-Pillar-3-Disclosures-311225.pdf"
+
 KM1_SOURCES = (
     "KM1 Key Metrics - NOT APPLICABLE. Nomura Bank International plc has never published a UK KM1 template, "
     "and no UK KM1 template for this entity exists in any document, its parent's included. That is a finding "
-    "from thirteen documents read for this purpose on 2026-09-16, not the residue of a failed search.\n\n"
+    "from sixteen documents - six of the Bank's own annual reports and ten of its parent's Pillar 3 editions - "
+    "read for this purpose on 2026-09-16 and 2026-09-18, not the residue of a failed search.\n\n"
     "LATEST-EDITION CHECK, 2026-09-16. The Bank's own disclosure host is nomuranow.com, whose index pages are "
     "BLOCKED to an automated fetch - `/portal/site/public/en-gb/` returns HTTP 403 and every "
     "regulatory-disclosures path tried returns HTTP 404 - so the index could not be browsed, and NOTHING below "
@@ -445,6 +456,15 @@ KM1_SOURCES = (
     "read live: the newest accounts filed are \"Full accounts made up to 31 March 2026\", filed 6 August 2026, "
     "87 pages - which is the FY2026 edition this workbook already holds. NBI's year-end is 31 March, so FY2027 "
     "is not yet a reporting year. NEWEST EDITION = FY2026, ALREADY HELD; no year was added.\n\n"
+    "LATEST-EDITION CHECK RE-RUN 2026-09-18 (GA-005), and it changed one of the three findings below. "
+    "NEWEST NBI ANNUAL REPORT = year ended 31 March 2026, already held - re-verified live at "
+    + AR26_URL + " (HTTP 200 / application/pdf / %PDF, 87 pages), and NBI-Annual-Report-310327.pdf returns 404 "
+    "as expected, since 31 March 2027 is not yet a reporting date. NEWEST PARENT PILLAR 3 OF ANY FREQUENCY = "
+    "the 31 December 2025 quarterly edition (Last-Modified 24 Apr 2026). NEWEST PARENT ANNUAL PILLAR 3 = the "
+    "31 March 2025 edition (Last-Modified 25 Sep 2025), WHICH THIS PROJECT HAD PREVIOUSLY RECORDED AS NOT "
+    "EXISTING - see point 3 below for the filename-convention change that caused that error and for the "
+    "stronger evidence the recovered editions supply. No figure changed as a result: all three recovered "
+    "editions exclude NBI by name.\n\n"
     "WHY THIS IS NOT APPLICABLE RATHER THAN NOT FOUND - three independent findings.\n\n"
     "1. NBI'S OWN ANNUAL REPORTS CONTAIN NO PILLAR 3 AND NO KM1. All six editions in this workbook "
     "(FY2021-FY2026) were searched. Zero occurrences of \"KM1\"; zero of \"Pillar 3\" in the FY2025 and FY2026 "
@@ -460,9 +480,9 @@ KM1_SOURCES = (
     "Capital and Total Capital sheets of this workbook.\n\n"
     "2. THE PARENT'S PILLAR 3 WAS CHECKED FIRST, NOT LAST (map rule 18), AND IT IS WHERE NBI'S NUMBERS DO "
     "LIVE - but they are not a KM1. UK Disclosure (CRR) subsidiary reporting makes the consolidating parent's "
-    "Pillar 3 the normal home for a subsidiary's figures, so all seven located editions of Nomura Europe "
-    "Holdings plc's Pillar 3 were read - four annual (31 Mar 2021, 2022, 2023, 2024) and three semi-annual "
-    "(30 Sep 2021, 2022, 2023):\n"
+    "Pillar 3 the normal home for a subsidiary's figures, so all ten located editions of Nomura Europe "
+    "Holdings plc's Pillar 3 were read - five annual (31 Mar 2021, 2022, 2023, 2024, 2025), four semi-annual "
+    "(30 Sep 2021, 2022, 2023, 2025) and one quarterly (31 Dec 2025):\n"
     "   - The 31 MARCH 2021 annual edition and the 30 SEPTEMBER 2021 semi-annual edition each carry a "
     "dedicated NBI COLUMN - exactly the rule-19 shape, one template with the subsidiary as a column rather "
     "than as a separate document - in template CC1 \"Composition of Regulatory Capital\", headed \"The Group, "
@@ -492,19 +512,54 @@ KM1_SOURCES = (
     "FY2023 and FY2024 editions' sole appendix is a \"CRR Compliance\" article-to-page mapping table. A full "
     "grep for \"KM1\" across all four annual editions returns the two Group/NIP template headings, their two "
     "contents-page entries and the CRR-compliance cross-references, and nothing else.\n\n"
-    "3. NO LATER PARENT EDITION EXISTS TO CHECK, AND THAT WAS ESTABLISHED WITH A WORKING INSTRUMENT. The "
-    "31 March 2025 and 31 March 2026 annual editions and the 30 September 2024 and 30 September 2025 "
-    "semi-annual editions all return HTTP 404 at the stable naming convention that serves every other edition "
-    "- tested 2026-09-16 with the same browser User-Agent, on the same path, in the same run in which "
-    "-310324.pdf, -300921.pdf, -300922.pdf and -300923.pdf each returned HTTP 200 / application/pdf / %PDF. "
-    "The probe demonstrably works, so the 404s are a fact about publication at those addresses, not about "
-    "reach (map rules 9 and 15). (The Internet Archive was unavailable on 2026-09-16 - it served its "
-    "\"Temporarily Offline\" page - so no Wayback fallback could be run; that is recorded as a tool outage and "
-    "nothing here depends on it.)\n\n"
+    "3. THE LATER PARENT EDITIONS DO EXIST, AND THEY CONFIRM THE EXCLUSION EXPLICITLY. CORRECTION MADE "
+    "2026-09-18: a previous revision of this note stated that the 31 March 2025 and 31 March 2026 annual "
+    "editions and the 30 September 2024 and 30 September 2025 semi-annual editions \"all return HTTP 404 at "
+    "the stable naming convention\", and concluded that no later parent edition existed to check. THAT "
+    "CONCLUSION WAS WRONG, and the reason is worth recording: from the 31 March 2025 edition onward the "
+    "parent CHANGED ITS FILENAME CONVENTION, inserting \"Group-\" and switching to Title-Case "
+    "(Nomura-Europe-Holdings-plc-Group-Annual-Pillar-3-Disclosures-310325.pdf). The 404s were therefore "
+    "evidence about the GUESSED PATH, not about the bank - the standing trap that a guessed path's 404 tells "
+    "you about the guess. Probing the corrected pattern on 2026-09-18 recovered three editions newer than "
+    "anything this project held, each verified HTTP 200 / Content-Type application/pdf / %PDF magic bytes:\n"
+    "   - 31 MARCH 2025 ANNUAL (119pp, Last-Modified 25 Sep 2025). Its Scope of Application, printed p.5 "
+    "(PDF p.6), names NBI in terms: \"Other regulated subsidiaries of the Group are not considered to be "
+    "large subsidiaries as of 31st March 2025 and are therefore not disclosed in this document. This "
+    "includes Nomura Bank International Plc (‘NBI’)...\". It prints exactly two UK KM1 templates, for the "
+    "Group (printed p.9) and for NIP (printed p.10). No NBI KM1, and no NBI column anywhere.\n"
+    "   - 30 SEPTEMBER 2025 SEMI-ANNUAL (42pp, Last-Modified 9 Feb 2026). Same exclusion wording at 30 "
+    "September 2025, Scope of Application printed p.3; UK KM1 for the Group printed p.4, for NIP printed "
+    "p.5.\n"
+    "   - 31 DECEMBER 2025 QUARTERLY (Last-Modified 24 Apr 2026) - the NEWEST parent Pillar 3 of any "
+    "frequency. Same exclusion wording, Scope of Application printed p.2; a single UK KM1, for the Group, "
+    "printed p.3.\n"
+    "THIS STRENGTHENS THE FINDING RATHER THAN WEAKENING IT. The FY2025 and FY2026 blanks previously rested on "
+    "an ENUMERATED negative (no document found at an address), which is the weakest kind. They now rest on an "
+    "AFFIRMATIVE, DATED EXCLUSION in which the parent names Nomura Bank International Plc and says it is not "
+    "disclosed - the same class of evidence as a formal Article 432 excluded-templates statement, and much "
+    "stronger than not finding a table. Each edition's richness control is healthy, so the absence of an NBI "
+    "KM1 is a fact about the documents and not about the extraction: the 31 March 2025 edition returns 80 "
+    "hits for \"own funds\", 27 for \"risk-weighted\" and 24 for \"CET1\", and its only four \"KM1\" hits are "
+    "the two template headings and their two contents-page entries.\n"
+    "THE 31 MARCH 2026 ANNUAL EDITION IS NOT YET PUBLISHED, and that is date-fitted rather than assumed: "
+    "twelve filename variants were probed on 2026-09-18 under both the /portal/site/public/ and "
+    "/portal/site/login/ prefixes, including the corrected \"Group-\" convention, and all returned 404 in the "
+    "same run in which -310325.pdf, -300925.pdf and -311225.pdf each returned 200. The 31 March 2025 annual "
+    "edition was itself published around 25 September 2025 - roughly six months after its year-end - so a "
+    "31 March 2026 annual edition would be due at about the date of this check and had not appeared. This is "
+    "an open, dated expectation, not a finding of absence; it is the one item on this bank a later session "
+    "should re-probe.\n"
+    "A Wayback CDX domain sweep of nomuranow.com was also run on 2026-09-18 (the Internet Archive had been "
+    "offline on 2026-09-16, so the earlier pass could not run one). It returned no capture of any 31 March "
+    "2025 or 31 March 2026 Pillar 3 edition, which is a fact about what the Archive crawled and NOT evidence "
+    "of non-publication - the 31 March 2025 edition is live on the publisher's own site and uncaptured. The "
+    "sweep's actual value here was the opposite of a negative: it surfaced the "
+    "\"...-Group-Quarterly-Pillar-3-Disclosures-311223.pdf\" filename, which is what exposed the \"Group-\" "
+    "convention change and broke the dead end.\n\n"
     "THE ULTIMATE JAPANESE PARENT IS NOT A SUBSTITUTE, and the reason is stated rather than assumed: Nomura "
     "Holdings, Inc. reports under Japanese FSA Basel III rules and its Pillar 3 carries neither the UK "
     "template set nor a UK KM1 for a UK subsidiary. NBI's UK disclosure obligation sits with the UK "
-    "consolidation group, Nomura Europe Holdings plc, whose seven editions are enumerated above. A parent's "
+    "consolidation group, Nomura Europe Holdings plc, whose ten editions are enumerated above. A parent's "
     "disclosure is not the subsidiary's, and a Japanese parent's is not even the same template.\n\n"
     "NOTHING IS BACK-FILLED FROM THE STATUTORY ACCOUNTS (map rule 22). Note 15's Tier 1 capital and Total "
     "capital resources are an accounts-based capital note, a different basis from a Pillar 3 return - as this "
@@ -527,6 +582,20 @@ KM1_SOURCES = (
     f"Group\" printed p.6 - {NEH_SA_22_URL}\n"
     f"- ... 30 September 2023 (43pp): UK KM1 for the Group printed p.4, for NIP printed p.5; CC1 \"for the "
     f"Group\" printed p.7 - {NEH_SA_23_URL}\n"
+    f"- Nomura Europe Holdings plc, GROUP Annual Pillar 3 Disclosures 31 March 2025 (119pp, Last-Modified "
+    f"25 Sep 2025; recovered 2026-09-18): Scope of Application excluding NBI by name printed p.5; UK KM1 for "
+    f"the Group printed p.9, for NIP printed p.10 - {NEH_P3_25_URL}\n"
+    f"- Nomura Europe Holdings plc, GROUP Semi-Annual Pillar 3 Disclosures 30 September 2025 (42pp, "
+    f"Last-Modified 9 Feb 2026; recovered 2026-09-18): Scope of Application printed p.3; UK KM1 for the Group "
+    f"printed p.4, for NIP printed p.5 - {NEH_SA_25_URL}\n"
+    f"- Nomura Europe Holdings plc, GROUP Quarterly Pillar 3 Disclosures 31 December 2025 (Last-Modified "
+    f"24 Apr 2026; recovered 2026-09-18, the newest parent edition of any frequency): Scope of Application "
+    f"printed p.2; a single UK KM1, for the Group, printed p.3 - {NEH_Q_DEC25_URL}\n"
+    "- Bank of England consolidated waivers register, read live 2026-09-18: Nomura Bank International Plc "
+    "(FRN 204419) holds seven modifications, and NONE of them is an \"SDDT Regime - General Application\" "
+    "Rule 3.1 opt-in. So no waiver removes this entity's Pillar 3 disclosure duty, and none is offered here "
+    "as an explanation for any blank. The absence of an NBI KM1 is explained by the parent's large-subsidiary "
+    "assessment quoted above, not by an exemption.\n"
     "- Companies House filing history, company 01981122, read live 2026-09-16.\n\n"
     + ENTITY_NOTE
 )
@@ -540,10 +609,27 @@ bw.add_km1_sheet(
              "the Group and for NIP (Nomura International plc, a different UK legal entity), and from its "
              "31 March 2022 edition it states that NBI \"is therefore not disclosed in this document\". The "
              "NBI column that the 2021 editions do carry sits in template CC1, an own-funds composition table, "
-             "not in KM1. Seven parent editions and six of NBI's own annual reports were read; the source note "
+             "not in KM1. Ten parent editions and six of NBI's own annual reports were read; the source note "
              "below names every one.",
-    rows=[("DATA", "Not applicable — no UK KM1 template has ever been published for this entity, by the Bank "
-                   "or by its parent, in any year covered by this workbook", {})],
+    # EVERY YEAR CELL CARRIES THE STATEMENT, not just the row label. Until
+    # 2026-09-18 this row was built with an empty dict, so the sheet rendered
+    # with six year headers above six blank cells - the only KM1 sheet shape
+    # that says nothing at all. A reader could not tell "never published" from
+    # "nobody has looked yet", which is precisely the distinction this sheet
+    # exists to record.
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not published for this entity" for y in YEARS}),
+        ("DATA", "Published by the Bank itself",
+         {y: "No Pillar 3 document" for y in YEARS}),
+        ("DATA", "Published for the Bank in its parent's Pillar 3 (Nomura Europe Holdings plc)",
+         {"FY2026": "Not disclosed — no parent edition published yet",
+          "FY2025": "Not disclosed — NBI expressly excluded by name",
+          "FY2024": "Not disclosed — NBI expressly excluded by name",
+          "FY2023": "Not disclosed — NBI expressly excluded by name",
+          "FY2022": "Not disclosed — NBI expressly excluded by name",
+          "FY2021": "Not applicable — NBI appears in own-funds table CC1, not in KM1"}),
+    ],
     sources_text=KM1_SOURCES,
     first_col_width=92,
     source_height=1500,
@@ -583,14 +669,28 @@ NEH_NOTE = (
     "and Nomura Bank Switzerland Ltd ('NBS'). They are not considered to be large subsidiaries as at 31st March 2024 and are "
     "therefore not disclosed in this document.\" Its CC1 is likewise headed \"...for the Group and NIP\" (PDF p.16). The "
     "31 March 2023 edition (" + NEH_P3_23_URL + ") carries the equivalent wording for 31st March 2023.\n"
-    "- The FY2025 and FY2026 editions are not published at the expected addresses at all: "
-    "nomura-europe-holdings-plc-annual-pillar-3-disclosures-310325.pdf and -310326.pdf both return HTTP 404 under BOTH the "
-    "/portal/site/public/ and /portal/site/login/ path prefixes (all four combinations tested 2026-09-15). So for FY2025 and "
-    "FY2026 there is not even a group document to exclude NBI from.\n"
-    "NET EFFECT: the NEHS significant-subsidiary route yields NBI figures for FY2021 and for FY2021 only. FY2022 through FY2024 "
-    "are a SOURCED structural negative (the group report exists, names NBI, and says in terms that it is not disclosing it); "
-    "FY2025 and FY2026 are an enumerated negative (no group report at those addresses). Neither is an access problem, and "
-    "neither should be re-chased."
+    "- FY2025 CORRECTED 2026-09-18 (GA-005). A previous revision of this note said the FY2025 and FY2026 editions were \"not "
+    "published at the expected addresses at all\", on the strength of 404s for "
+    "nomura-europe-holdings-plc-annual-pillar-3-disclosures-310325.pdf and -310326.pdf, and concluded that for those two years "
+    "\"there is not even a group document to exclude NBI from\". That was wrong for FY2025. The parent changed its filename "
+    "convention from the 31 March 2025 edition onward, inserting \"Group-\" and switching to Title-Case, so the 404s were "
+    "evidence about the guessed path rather than about the bank. The FY2025 edition is live at " + NEH_P3_25_URL + " "
+    "(119 pages, Last-Modified 25 Sep 2025, verified HTTP 200 / application/pdf / %PDF). Its Scope of Application, printed p.5, "
+    "states: \"Other regulated subsidiaries of the Group are not considered to be large subsidiaries as of 31st March 2025 and "
+    "are therefore not disclosed in this document. This includes Nomura Bank International Plc ('NBI')...\". It prints UK KM1 "
+    "for the Group (printed p.9) and for NIP (printed p.10) only, and carries no NBI column. The 30 September 2025 semi-annual "
+    "(" + NEH_SA_25_URL + ") and the 31 December 2025 quarterly (" + NEH_Q_DEC25_URL + ", the newest parent edition of any "
+    "frequency, Last-Modified 24 Apr 2026) carry the same exclusion wording at their own dates.\n"
+    "- The 31 MARCH 2026 annual edition had not been published as at 2026-09-18: twelve filename variants, including the "
+    "corrected \"Group-\" convention, were probed under both the /portal/site/public/ and /portal/site/login/ prefixes and all "
+    "returned 404 in the same run in which the FY2025 annual, the Sep-2025 semi-annual and the Dec-2025 quarterly each returned "
+    "200. The FY2025 annual appeared about six months after its year-end, so a FY2026 annual would be due at about the date of "
+    "this check. That is a dated expectation, not a finding of absence, and it is the one item here worth re-probing.\n"
+    "NET EFFECT: the NEHS significant-subsidiary route yields NBI figures for FY2021 and for FY2021 only. FY2022 through FY2025 "
+    "are now a SOURCED structural negative across the board - for each of those years the group report exists, names NBI, and "
+    "says in terms that it is not disclosing it. FY2026 has no parent edition yet. None of this is an access problem. The "
+    "FY2022-FY2025 blanks should not be re-chased; the FY2026 parent edition should be re-probed once published, though on "
+    "four consecutive years of identical exclusion wording it is not expected to disclose NBI either."
 )
 
 # WHY CET1 IS LEFT BLANK FOR FY2022-FY2026 EVEN THOUGH TIER 1 IS KNOWN.
@@ -614,24 +714,83 @@ CET1_DERIVATION_REFUSAL = (
     "something that no document says."
 )
 
-metric("CET1 Capital", "$'000", [("Common Equity Tier 1 capital", {"FY2021": 267000})],
+CONF_BLANK = (
+    "FY2026-FY2022 carry an explicit non-disclosure statement rather than an empty cell. The parent ceased disclosing NBI from its 31 March 2022 Pillar 3 edition onward, and every parent edition from then to the newest (31 December 2025) names NBI and states it is not disclosed; no ratio appears in NBI's own accounts in any year. The 31 March 2025 parent edition was recovered 2026-09-18 and confirms this for FY2025; no 31 March 2026 parent edition is published yet. See source note."
+)
+
+# INDEPENDENTLY RE-VERIFIED 2026-09-18 (GA leading-gaps sweep), documents
+# re-downloaded and re-read rather than taken on trust from the notes above.
+RECHECK_2026_09_18 = (
+    "\n\nRE-VERIFIED 2026-09-18, THIRD INDEPENDENT PASS - every document below was re-fetched and re-read for this "
+    "check, and all five years were re-tested rather than the conclusion being carried forward.\n"
+    "1. NBI'S OWN ACCOUNTS, ALL FIVE EDITIONS. AR2022, AR2023, AR2024, AR2025 and AR2026 were re-downloaded from "
+    "their stable addresses (each verified HTTP 200 / Content-Type application/pdf / %PDF magic bytes) and each one's "
+    "'UK Regulatory Capital' note was read in full. In every edition the table has exactly TWO rows - 'Tier 1 "
+    "capital' and 'Total capital resources' - over two dated columns. There is no CET1 row, no capital ratio of any "
+    "kind and no RWA figure in any of the five. A richness-controlled term census over the same extractions makes "
+    "those zeroes facts about the documents rather than about the extraction: 'CET1' returns 0 hits and 'Common "
+    "Equity' returns 0 hits in all five editions, while the SAME extraction of the SAME files returns 'capital' "
+    "52/57/58/56/63 times and 'tier' 7/7/7/7/9 times respectively. The only 'risk-weighted' hits (2-3 per edition) "
+    "sit in the NEHS climate-scenario narrative and refer to the Group, never to an NBI RWA.\n"
+    "2. REPORTING DATES READ FROM THE DOCUMENTS, NOT INFERRED FROM THE FY LABEL. NBI is a 31-MARCH filer, so an "
+    "FY2026 annual column is possible here where it would be impossible for a 31-December filer. Each edition's own "
+    "capital table prints its column headers as dates and confirms the mapping: AR2022 '31 March 2022 / 31 March "
+    "2021' through to AR2026 '31 March 2026 / 31 March 2025'. FY2026 is therefore a genuine completed year-end, and "
+    "no half-year or quarterly period has been placed in any annual FY column - the September interim observations "
+    "stay on the Interim Pillar 3 sheet with their own dates.\n"
+    "3. THE PARENT ROUTE, RE-READ EDITION BY EDITION. The 31 Mar 2022, 31 Mar 2023, 31 Mar 2024 and 31 Mar 2025 "
+    "annual editions and the 31 Dec 2025 quarterly edition were each re-fetched and their Scope of Application read. "
+    "All four annual editions head their own-funds template 'Template UK CC1 - Composition of regulatory own funds "
+    "for the GROUP AND NIP' - the NBI column carried by the 31 March 2021 edition is absent from every one of them - "
+    "and each prints UK KM1 for the Group and for NIP only. NIP is Nomura International Plc (FRN 124422), a "
+    "DIFFERENT UK legal entity, and its figures are not NBI's and are not used.\n"
+    "4. NO PARENT EDITION NEWER THAN 31 DECEMBER 2025 EXISTS AS AT 2026-09-18. Four candidate addresses were probed "
+    "under the corrected 'Group-' Title-Case convention - the 31 Mar 2026 annual, a 31 Mar 2026 quarterly, a 30 Jun "
+    "2026 quarterly and a 30 Sep 2026 semi-annual - and all four returned a GENUINE HTTP 404 (Content-Type "
+    "text/html, a 3,378-byte error body, no %PDF), in the SAME curl run in which the verbatim 31 Dec 2025 quarterly "
+    "URL and the verbatim NBI AR2026 URL each returned 200 / application/pdf / %PDF. The 404s are therefore evidence "
+    "about those addresses in a run whose positive controls passed. This remains a dated expectation rather than a "
+    "finding of absence, and it is still the one item on this bank worth re-probing later.\n"
+    "5. NO WAIVER IS OFFERED OR AVAILABLE AS AN EXPLANATION. The Bank of England consolidated waivers register was "
+    "re-read live 2026-09-18 (2,900 rows). Nomura Bank International Plc (FRN 204419) holds six modifications - "
+    "Ar 329(1), two Core Large Exposures rows, a Capital Buffers 5.1-5.3 consent, an LCR Art 10/11 consent and two "
+    "Non Core Large Exposures rows - and NONE of them is an 'SDDT Regime - General Application' Rule 3.1 opt-in. NBI "
+    "appears in zero of the register's 91 SDDT rows. A Pillar 3 duty therefore stands for this entity in all five "
+    "years, and these blanks are explained by the parent's large-subsidiary assessment quoted above, not by any "
+    "exemption."
+)
+
+# Written into the FY2022-FY2026 cells of the four sheets whose only disclosed
+# year is FY2021, so the sheet STATES the finding instead of showing an empty
+# column a reader cannot distinguish from unworked. Same treatment already
+# applied to this workbook's KM1 sheet on 2026-09-18, and the same reasoning:
+# "not disclosed" and "nobody has looked yet" must not look identical.
+# The two reasons are genuinely different and are NOT collapsed into one
+# string - FY2022-FY2025 have a parent edition that names NBI and excludes it,
+# whereas FY2026 has no parent edition in existence yet.
+NOT_DISCLOSED_BY_YEAR = {
+    "FY2026": "Not disclosed — no parent Pillar 3 edition published yet",
+    "FY2025": "Not disclosed — NBI excluded by name in parent's Pillar 3",
+    "FY2024": "Not disclosed — NBI excluded by name in parent's Pillar 3",
+    "FY2023": "Not disclosed — NBI excluded by name in parent's Pillar 3",
+    "FY2022": "Not disclosed — NBI excluded by name in parent's Pillar 3",
+}
+
+metric("CET1 Capital", "$'000",
+       [("Common Equity Tier 1 capital", dict(NOT_DISCLOSED_BY_YEAR, **{"FY2021": 267000}))],
        note="FY2021 recovered 2026-09-12 from the parent's Pillar 3 CC1 table, NBI's own column (reported "
             "in $m, shown here as $'000: $267m). NOTE A GENUINE BASIS DIFFERENCE, not a transcription "
             "error: the Annual Report's own Note 15 states Tier 1 capital of $276,772k for the same date, "
             "$9.8m higher, because the regulatory CC1 figure applies prudential filters and deductions "
             "(prudent valuation, deferred tax, own-credit adjustment) that the accounts-based note does "
-            "not. Both are reproduced as their own source states them rather than reconciled. FY2025-"
-            "FY2022 are blank because the parent's Pillar 3 stopped disclosing NBI from its 31 March 2022 "
-            "edition onward, and NBI's own Annual Report never discloses a CET1 figure - a genuine end of "
-            "disclosure, confirmed 2026-09-15 against the later editions themselves. See the source note.\n\n"
+            "not. Both are reproduced as their own source states them rather than reconciled. " + CONF_BLANK + "\n\n"
             + CET1_DERIVATION_REFUSAL,
        extra_source=NEH_SOURCE)
-metric("CET1 Ratio", "%", [("Common Equity Tier 1 ratio", {"FY2021": "279.68%"})],
+metric("CET1 Ratio", "%",
+       [("Common Equity Tier 1 ratio", dict(NOT_DISCLOSED_BY_YEAR, **{"FY2021": "279.68%"}))],
        note="FY2021 as directly disclosed in the parent's Pillar 3 CC1 table, NBI column. The very high "
             "ratio is consistent with that document's own statement that NBI's risk-weighted assets are "
-            "immaterial to the Group. FY2025-FY2022 blank because the parent ceased disclosing NBI from "
-            "its 31 March 2022 Pillar 3 edition onward (confirmed 2026-09-15 by reading those editions) "
-            "and no ratio appears in NBI's own accounts - see source note.",
+            "immaterial to the Group. " + CONF_BLANK,
        extra_source=NEH_SOURCE)
 TIER1_AR_NOTE = (
     "All six years come from the Bank's OWN annual reports - entity basis throughout, no parent figure substituted - in the "
@@ -650,12 +809,11 @@ TIER1_AR_NOTE = (
 )
 
 metric("Tier 1 Capital", "$'000", [("Tier 1 capital", {"FY2026": 281438, "FY2025": 281414, "FY2024": 281296, "FY2023": 280841, "FY2022": 287698, "FY2021": 276772})], note=TIER1_AR_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 capital ratio", {"FY2021": "279.68%"})],
+metric("Tier 1 Ratio", "%",
+       [("Tier 1 capital ratio", dict(NOT_DISCLOSED_BY_YEAR, **{"FY2021": "279.68%"}))],
        note="FY2021 equals the CET1 ratio: the parent's Pillar 3 CC1 table states in its own footnote 6 "
             "that \"Tier 1 capital ratio is equal to the Common Equity Tier 1 ratio\", and NBI holds no "
-            "Additional Tier 1 instrument. FY2025-FY2022 blank because the parent ceased disclosing NBI "
-            "from its 31 March 2022 Pillar 3 edition onward (confirmed 2026-09-15 by reading those "
-            "editions) and no ratio appears in NBI's own accounts - see source note.",
+            "Additional Tier 1 instrument. " + CONF_BLANK,
        extra_source=NEH_SOURCE)
 metric("Total Capital", "$'000", [("Total capital resources", {"FY2026": 281438, "FY2025": 281414, "FY2024": 281296, "FY2023": 280841, "FY2022": 287698, "FY2021": 276772})], note=(
     "These are NOT derived from the Tier 1 sheet. Each year's 'UK Regulatory Capital' table prints 'Tier 1 capital' and "
@@ -664,13 +822,11 @@ metric("Total Capital", "$'000", [("Total capital resources", {"FY2026": 281438,
     "capital'. That statement supports this equality and nothing further - in particular it does NOT license setting CET1 equal "
     "to Tier 1, since it says nothing about Additional Tier 1; see the CET1 Capital sheet's note.\n\n" + TIER1_AR_NOTE))
 metric("Total Capital Ratio", "%",
-       [("Total capital as a percentage of total risk exposure amounts", {"FY2021": "279.68%"})],
+       [("Total capital as a percentage of total risk exposure amounts",
+         dict(NOT_DISCLOSED_BY_YEAR, **{"FY2021": "279.68%"}))],
        note="FY2021 as directly disclosed in the parent's Pillar 3 CC1 table, NBI column; equal to the "
             "CET1 ratio because NBI holds no Tier 2 capital (the CC1 table shows a dash on NBI's Tier 2 "
-            "row, consistent with the Annual Report's own statement). FY2025-FY2022 blank because the "
-            "parent ceased disclosing NBI from its 31 March 2022 Pillar 3 edition onward (confirmed "
-            "2026-09-15 by reading those editions) and no ratio appears in NBI's own accounts - see "
-            "source note.",
+            "row, consistent with the Annual Report's own statement). " + CONF_BLANK,
        extra_source=NEH_SOURCE)
 bw.add_not_disclosed_metric_sheets(
     ["Total RWAs"],
@@ -689,6 +845,14 @@ bw.add_rwa_breakdown_sheet(
     sources_text=p3_sources("Total RWAs itself is not numerically disclosed in the five entity-level annual reports checked (confirmed by reading each report's capital management/regulatory capital note, e.g. Note 15 at AR2025 p.79), so no category-level RWA Breakdown exists to transcribe; no values are inferred from group-level Nomura Europe disclosures."),
     first_col_width=90,
     source_height=220,
+    # CURRENCY LABEL CORRECTED 2026-09-18 (GA-005). add_rwa_breakdown_sheet
+    # defaults unit_suffix to " (£'000)", and this script had never overridden
+    # it, so this sheet's six year headers read "(£'000)" on a bank that
+    # reports in US dollars and whose every other sheet reads "($'000)". No
+    # figure was affected - every cell on this sheet is a non-disclosure
+    # statement - but the header was wrong, and would have become actively
+    # misleading the moment an RWA figure was ever added.
+    unit_suffix=" ($'000)",
 )
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
@@ -751,7 +915,16 @@ bw.add_wide_interim_sheet(
     note=(
         "The September 2021 Nomura Europe Holdings plc Pillar 3 report separately disclosed NBI as a material subsidiary. "
         "The 2022–2025 NBI interim reports are entity-level financial statements but do not contain a standalone Pillar 3 KM1 table; "
-        "these interim financial-statement metrics are included for completeness, while later standalone Pillar 3 gaps are explicitly recorded."
+        "these interim financial-statement metrics are included for completeness, while later standalone Pillar 3 gaps are explicitly recorded.\n"
+        "SEP-2025 UPGRADED FROM ASSERTION TO SOURCED FINDING, 2026-09-18 (GA-005). The five \"Pillar 3 — not separately disclosed\" "
+        "rows for Sep-2025 previously rested on the absence of a standalone NBI interim Pillar 3. The parent's own 30 September 2025 "
+        "semi-annual Pillar 3 has since been recovered (" + NEH_SA_25_URL + ", 42 pages, Last-Modified 9 Feb 2026, verified HTTP 200 / "
+        "application/pdf / %PDF) and read. Its Scope of Application, printed p.3, states that the Group's other regulated subsidiaries "
+        "\"are not considered to be large subsidiaries as of 30th September 2025 and are therefore not disclosed in this document. This "
+        "includes Nomura Bank International Plc ('NBI')\". It prints UK KM1 for the Group (printed p.4) and for NIP (printed p.5) only, "
+        "with no NBI column anywhere. So the Sep-2025 non-disclosure is now an affirmative, dated statement by the parent rather than an "
+        "inference from an absent document. The same wording appears in the 31 December 2025 quarterly edition, the newest parent "
+        "edition of any frequency."
     ),
 )
 

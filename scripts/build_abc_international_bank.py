@@ -122,7 +122,32 @@ EXEMPTION_NOTE = (
     "any year), but no cash flow figures exist to show. See the Overview sheet for the equivalent treatment there."
 )
 
-CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE
+FY2025_EXEMPTION_CONTROL = (
+    "FY2025 CONTROL, ADDED 2026-09-18 (GA-006) - the exemption above was evidenced from the FY2024 and "
+    "FY2014 editions, so the newest year on this workbook rested on neither end of that range. Re-"
+    "established against the FY2025 accounts themselves (Companies House 02564490, 'Full accounts made up "
+    "to 31 December 2025', filed 17 March 2026, 84 pages).\n"
+    "THAT FILING IS AN IMAGE SCAN AND A GREP OF IT IS WORTHLESS - pdftotext returns 84 CHARACTERS across "
+    "all 84 pages, so 'statement of cash flows' returns zero, and so does 'cash flow', 'FRS 101', "
+    "'exemption' and every other term. That zero is an instrument failure and looks identical to a "
+    "finding. It was read by rendering at 250 dpi and OCR-ing instead, and two independent pages settle "
+    "it decisively rather than statistically:\n"
+    "  (a) the CONTENTS page lists the primary statements as Income Statement, Statement of Comprehensive "
+    "Income, Statement of Financial Position, Statement of Changes in Equity, Notes to the Accounts - and "
+    "NO Statement of Cash Flows;\n"
+    "  (b) the INDEPENDENT AUDITOR'S REPORT enumerates what it audited: 'the financial statements of ABC "
+    "International Bank plc for the year ended 31 December 2025 which comprise the Income Statement, the "
+    "Statement of Comprehensive Income, the Statement of Financial Position, the Statement of Changes in "
+    "Equity and the related notes 1 to 39 ... The financial reporting framework that has been applied in "
+    "their preparation is applicable law and United Kingdom Accounting Standards including FRS 101 "
+    "\"Reduced Disclosure Framework\"'. An auditor's own enumeration of the statements is the strongest "
+    "available evidence that a fifth statement does not exist, and it names the framework in the same "
+    "sentence.\n"
+    "So the exemption holds at FY2014 (own note 1.2), FY2024 (own note 1.2) and FY2025 (the above) - the "
+    "two ends of the workbook and a point in between."
+)
+
+CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE + "\n\n" + FY2025_EXEMPTION_CONTROL
 
 BASIS_NOTE = (
     "FY2023-FY2025 shown on a CONSOLIDATED basis (ABCIB Pillar 3 Disclosures, UK KM1 template); FY2014-FY2022 on "
@@ -550,8 +575,17 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement (exemption note in place of line items)
 # ---------------------------------------------------------------
+# GA-006 (2026-09-18): both rows below carried an EMPTY values dict, so all twelve
+# year columns were blank to a reader and to audit_gaps.py even though the finding
+# is complete and quoted in the note - the exact defect found on ICICI Bank UK,
+# Melli Bank, Morgan Stanley Bank International and Mizuho International in this
+# same ticket. The statement now appears IN the columns, one cell per year. No
+# column is suppressed (GA-001); they are all still printed and now say something.
+CF_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020",
+            "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]
 rows = [
     ("SECTION", "No Statement of Cash Flows is published by this entity in any year", {}),
+    ("DATA", "Statement of Cash Flows", {y: "Not published - FRS 101 disclosure exemption taken every year" for y in CF_YEARS}),
     ("DATA", "See the note below for the FRS 101 exemption this entity relies on every year, and why this "
              "workbook is built as a Pillar-3-only variant.", {}),
 ]
@@ -643,6 +677,15 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # exactly. Amounts are in £'000 as published - this sheet is NOT converted to
 # the £m used by the single-metric sheets.
 km1_rows = [
+    # GA-006 (2026-09-18): FY2023, FY2022 and FY2021 held no cell at all, so three
+    # year columns were blank. The reason is established and is in the sources note;
+    # it now appears IN the columns too. Labelled so verify_workbook's
+    # _metric_sheet_for resolves it to no metric sheet - a statement row, not a
+    # template row. Nothing on the template is computed, reordered or restated.
+    ("DATA", "[No UK KM1 published for this year - see note below]",
+     {"FY2023": "Not published - bespoke 'Key Regulatory Metrics' table only",
+      "FY2022": "Not published - bespoke 'Key Regulatory Metrics' table only",
+      "FY2021": "Not published - bespoke 'Key Regulatory Metrics' table only"}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2025": 579993, "FY2024": 564579}),
     ("DATA", "2  Tier 1 capital (£'000)", {"FY2025": 579993, "FY2024": 564579}),
@@ -744,14 +787,43 @@ KM1_SOURCES = (
     "LATEST-EDITION CHECK: ABCIB's own disclosures index "
     "(https://www.bank-abc.com/en/CountrySites/Europe/London/Financial-Info/Basel Pillars/) checked 2026-09-16 "
     "- newest Pillar 3 is the Pillar 3 Report 2025 (year ended 31 December 2025), already carried here and "
-    "already cited by this script. None newer."
+    "already cited by this script. None newer.\n"
+    "\n"
+    "RE-CHECKED 2026-09-18 (GA-006), both halves, live:\n"
+    "* PILLAR 3. The FY2025 report was re-downloaded directly and is live (HTTP 200, application/pdf, "
+    "%PDF-, 8.02 MB). ABCIB's year-end is 31 December, so FY2025 is the newest edition that can exist. "
+    "None newer, and none possible before the FY2026 report. Note the Pillar 3 landing page itself is a "
+    "SharePoint page that renders its document list in script: a plain href scrape of it returns exactly "
+    "ONE pdf, and that one is a Vendor Code of Conduct. Anyone enumerating that page the obvious way will "
+    "conclude the bank publishes no Pillar 3 at all. The documents are reached by their direct "
+    "/Basel%20Pillars/ paths, which is how this script cites them.\n"
+    "* STATUTORY ACCOUNTS. Companies House filing history for 02564490 read live: the newest accounts "
+    "filing is 'Full accounts made up to 31 December 2025', filed 17 March 2026 (84 pages) - the edition "
+    "already carried here. Richness control on that page: 11 'accounts' matches, 10 '2026'. None newer.\n"
+    "\n"
+    "WHAT THE FY2021-FY2023 EDITIONS ACTUALLY PRINT, re-read in full on 2026-09-18 rather than taken from "
+    "this note's own earlier claim. Searching those three editions for the TEMPLATE's vocabulary is "
+    "misleading on its own: 'KM1' returns 0, 'UK KM' returns 0 and 'Total risk exposure' returns 0 in "
+    "all three - but 'Key metrics' returns 4, 3 and 3, because ABCIB has always had a key-metrics table, "
+    "just not this one. What it prints, under section 4.1, is 'Table 3: Key Regulatory Metrics': a "
+    "nine-row table with Solo and Consolidated columns for a single year-end, giving CET1, Tier 1, Total "
+    "Tier 1, Tier 2, Total regulatory capital, RWAs, the Tier 1 and Total capital ratios, and the leverage "
+    "exposure measure and ratio. It has no SREP block, no buffer block, no LCR block and no NSFR block, "
+    "and it is not the UK KM1 template. It is therefore NOT reshaped into one here (map rule 8) - but its "
+    "figures are not lost either: they are on the individual Pillar 3 metric sheets in this workbook, "
+    "which is where the FY2023 consolidated CET1 of 547,665, RWAs of 3,104,763 and leverage ratio of "
+    "10.62% come from. So the FY2021-FY2023 blanks on THIS sheet are 'the bank published a different "
+    "table', not 'the figures were not found', and the cells now say so."
 )
 
 bw.add_km1_sheet(
     title="ABC International Bank plc - KM1 Key Metrics",
     subtitle="The 'ABCIB CONSOLIDATED' UK KM1 - Key metrics template, reproduced in the bank's own row order, "
              "row numbers, labels and precision. Amounts in £'000 as published; ratios as printed. FY2023 and "
-             "earlier are blank because ABCIB did not publish this template before its FY2024 report - see the "
+             "earlier carry a statement rather than figures because ABCIB did not publish this template "
+             "before its FY2024 report - what those editions print instead is a bespoke nine-row 'Table 3: "
+             "Key Regulatory Metrics', re-read in full on 2026-09-18 and deliberately NOT reshaped into the "
+             "template; its figures are on the individual metric sheets. See the "
              "sources note, which also records a printed-separator defect in FY2025 row 3.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,

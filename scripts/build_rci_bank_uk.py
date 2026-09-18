@@ -472,16 +472,52 @@ KM1_SOURCES = (
     "LATEST-EDITION CHECK 2026-09-17: the bank's own publications index at "
     f"{FACTS_URL} was read directly. It lists exactly two Pillar III disclosures, FY2023 and FY2024 (the FY2024 "
     "file sits under a 2025-12 upload path), and no FY2025 edition has been published. The FY2024 edition is "
-    "therefore the newest, and this workbook already runs to FY2024.\n\n" + ENTITY_NOTE
+    "therefore the newest, and this workbook already runs to FY2024.\n\n"
+    "LATEST-EDITION RE-CHECK 2026-09-18, ON BOTH AXES, because an FY2024 baseline is the kind that goes stale "
+    "silently. (i) Pillar 3: the publications index above was re-read in full and still links exactly two Pillar "
+    "III disclosures. Beware the caption - the newer link reads '2024/2025', which is the bank's publication-year "
+    "styling and NOT an FY2025 report: the file is named FY 2024 and its KM1 columns are 31st December 2024 and "
+    "31st December 2023. (ii) Statutory accounts: Companies House for company 11429127 shows the newest accounts "
+    "filing to be 'Group of companies' accounts made up to 31 December 2024', filed 07 October 2025, and the "
+    "company profile states 'Next accounts made up to 31 December 2025 due by 30 September 2026'. So no FY2025 "
+    "document of either kind exists yet and the FY2025 accounts are not yet overdue. FY2024 is this bank's "
+    "genuine latest edition, not a stale baseline. On the bank's own past cadence (FY2024 accounts filed October "
+    "2025, FY2024 Pillar 3 uploaded December 2025) the FY2025 pair should appear around October and December "
+    "2026.\n\n"
+    "A TRAP ON THAT SAME INDEX PAGE, EXPLICITLY REJECTED: its headline statistics ('Basel III Core Tier 1 "
+    "solvency ratio 16.05%', 'All figures correct at year end 2025') are RCI Banque / Mobilize Financial Services "
+    "GROUP figures for the French parent, not RCI Bank UK Limited. They look exactly like the FY2025 data this "
+    "workbook lacks and must never be used to fill it.\n\n"
+    "WHY ROWS 1 AND 2 ARE EQUAL WHILE ROW 3 BREAKS HIGHER - CONFIRMED FROM THE SAME DOCUMENT 2026-09-18 so it "
+    "need not be re-opened. The FY2024 edition's own UK CC1 table prints row 45 'Tier 1 capital (T1 = CET1 + "
+    "AT1)' with no AT1 instrument row above it, so the bank has no Additional Tier 1 in issue and CET1 equals "
+    "Tier 1 exactly. Total capital breaks higher because of Tier 2: CC1 row 46 gives Tier 2 capital instruments "
+    "of GBP100m (the subordinated debt), row 50 adds GBP3m of credit risk adjustments, row 58 totals Tier 2 at "
+    "GBP103m and row 59 gives total capital of GBP809m. The entire KM1 block above was re-read against the "
+    "printed table the same day and agrees digit for digit, row set included.\n\n"
+    "A ROUNDING DIFFERENCE BETWEEN THE BANK'S OWN TWO TABLES, RECORDED NOT RECONCILED: the FY2024 CC1 prints CET1 "
+    "capital (row 29) and Tier 1 capital (row 45) as GBP706m, while KM1 rows 1 and 2 print GBP707m for the same "
+    "date and the same entity. Both are as published; neither has been moved towards the other.\n\n"
+    "YEARS NOT SHOWN AS COLUMNS ON THIS SHEET (2026-09-18). FY2022, FY2021, FY2020 and FY2019 previously carried "
+    "empty columns under printed year headers and are now omitted from this sheet entirely. Nothing is lost by "
+    "it: the bank published no Pillar 3 for those years and no later edition prints a comparative reaching them, "
+    "as the sourced-negative section above establishes. Those years remain in full on every other sheet in this "
+    "workbook, and the capital RATIOS they do disclose are on the single-metric sheets.\n\n" + ENTITY_NOTE
 )
 
+# RCI Bank UK has published exactly two Pillar 3 disclosures, FY2023 and FY2024,
+# and neither carries a comparative reaching further back, so FY2022-FY2019 would
+# otherwise be four year headers over four empty columns. Those trailing empty
+# columns are dropped by the shared library from the row data itself, deliberately
+# NOT by a hardcoded year list here: a hardcoded list silently swallows a new
+# column the day someone adds a year to the rows below and forgets to widen it.
 bw.add_km1_sheet(
     title="RCI Bank UK Limited — KM1 Key Metrics",
     subtitle="UK KM1 - Key metrics template, as published in RCI Bank UK Limited / Mobilize Financial Services UK "
              "Pillar III Disclosures. Reproduced in the bank's own row order, row numbering, labels and precision, "
              "and in the bank's own unit of £'million. FY2023 and FY2024 are each that year's own edition; no "
              "Pillar 3 disclosure exists for FY2022 or earlier and no later edition carries a comparative for "
-             "those years - see the source note.",
+             "those years, so FY2022-FY2019 carry no column on this sheet - see the source note.",
     rows=[
         ("SECTION", "Available own funds (amounts)", {}),
         ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'million)", {"FY2024": 707, "FY2023": 669}),

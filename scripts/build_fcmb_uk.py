@@ -635,8 +635,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=170)
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52,
+                        source_height=170, note_height=note_height)
 
 
 CET1_USD = {"FY2025": 54656000, "FY2024": 57951000, "FY2023": 50032000, "FY2022": 40321000, "FY2021": 42915000, "FY2020": 43266000}
@@ -653,14 +654,108 @@ LEVERAGE_RATIO = {"FY2025": "8.81%", "FY2024": "14.73%", "FY2023": "10.29%", "FY
 LCR_RATIO = {"FY2025": "273%", "FY2024": "333%", "FY2023": "729%", "FY2022": "513%", "FY2021": "371%"}
 NSFR_RATIO = {"FY2025": "157%", "FY2024": "166%", "FY2023": "174%", "FY2022": "179%", "FY2021": "206%"}
 
+# CORRECTED 2026-09-18 (leading-gaps queue / GA-016). The previous note asserted
+# that "FY2021 onward is not publicly disclosed as a separate line". All six
+# editions FYE2020-FYE2025 were re-fetched live and read in full this date, and
+# that claim is FALSE of the Tier 1 RATIO - every edition prints a "Tier 1
+# capital ratio" row. It remains TRUE of the Tier 1 CAPITAL AMOUNT, and then
+# only for FY2021-FY2023. The old claim is corrected below rather than deleted.
 TIER1_NOTE = (
-    "FY2021 onward is not publicly disclosed as a separate line - the Bank's 'Key Regulatory Metrics' table only gives "
-    "Common Equity Tier 1 (CET1) Capital and Total Capital, with no separate Tier 1 breakdown. Total "
-    "Capital exceeds CET1 in every year shown (e.g. FY2025: $64,256k vs $54,656k), confirming some "
-    "Additional Tier 1 and/or Tier 2 capital exists, but it isn't broken out - NOT assumed equal to CET1."
+    "WHERE THE BANK'S OWN CAPITAL TABLE PRINTS A TIER 1 SUBTOTAL, AND WHERE IT DOES NOT. All six editions "
+    "FYE2020-FYE2025 were re-fetched live on 2026-09-18 (HTTP 200, Content-Type application/pdf, %PDF magic "
+    "bytes on every one) and read in full. The Bank's capital table - 'Total Available Capital', section 3.2 "
+    "in the FY2020-FY2023 editions and section 4.2 from FY2024 - changes shape between the FY2023 and FY2024 "
+    "editions:\n"
+    "- FY2024 AND FY2025 EDITIONS: the table gained an explicit 'Total Tier 1 capital' subtotal row, printed "
+    "under a 'Tier 1 capital (T1)' block heading. Those two years' amounts are transcribed from that printed "
+    "row.\n"
+    "- FY2020 THROUGH FY2023 EDITIONS: no Tier 1 subtotal row of any kind is printed. The table lists the "
+    "components (share capital, retained earnings, AFS/OCI reserves, intangible assets, other capital "
+    "adjustments), then Tier 2 capital, then 'Total regulatory capital (CAR)'. FY2023, FY2022 and FY2021 are "
+    "therefore recorded above as not disclosed - NOT summed from the components, and NOT back-solved from "
+    "the printed ratio times RWA. The arithmetic is available and is deliberately not used: the FY2023 "
+    "column's components foot exactly to 50,032, which is also what the FY2024 edition's comparative column "
+    "prints, but a figure the Bank did not print is not manufactured here and a later edition's comparative "
+    "is not this project's source for an own year.\n"
+    "\n"
+    "WHAT THE SUPERSEDED NOTE GOT RIGHT AND WHAT IT GOT WRONG. It said the 'Key Regulatory Metrics' table "
+    "gives only CET1 and Total Capital with no separate Tier 1 breakdown. That is correct, and it is why the "
+    "Tier 1 amount cannot be read off THAT table. It then generalised to 'FY2021 onward is not publicly "
+    "disclosed as a separate line', which read as covering the Tier 1 RATIO too. It does not: the "
+    "capital-adequacy table in every edition FY2020-FY2025 prints a 'Tier 1 capital ratio' row, and all six "
+    "years are now carried on the Tier 1 Ratio sheet from their own editions.\n"
+    "\n"
+    "TIER 1 IS STILL NOT ASSUMED EQUAL TO CET1. Total Capital exceeds CET1 in every year (e.g. FY2025 "
+    "$64,256k against $54,656k), the difference being $9,600k of subordinated loans the Bank labels Tier 2. "
+    "Where the Bank does print a Tier 1 subtotal it happens to equal CET1 (FY2024: 57,951 on both the "
+    "capital table's 'Total Tier 1 capital' row and the Key Regulatory Metrics CET1 row) - but that is the "
+    "Bank's own printing for those years, not an equivalence applied on its behalf to the years it left "
+    "blank.\n"
+    "\n"
+    "FY2020 - A CORRECTION TO THIS WORKBOOK'S OWN EARLIER WORDING. The superseded note described FY2020's "
+    "$43,266k as 'explicitly disclosed in the old-format Pillar 3 table'. It is not printed as a row. The "
+    "FYE2020 edition's section 3.2 table prints share capital 48,900, retained earnings (5,200), AFS "
+    "reserves '-' and intangible assets (434) in its 2020 column and no Tier 1 subtotal; 48,900 - 5,200 - "
+    "434 = 43,266. The figure is left in place because it is the value this workbook has carried and it "
+    "agrees with the CET1 Capital sheet, but it is a COMPONENT SUM and is labelled as one here so a future "
+    "session can decide whether it belongs on a disclosure sheet at all. Flagged rather than silently kept "
+    "or silently removed."
 )
-TIER1_USD = {"FY2020": 43266000}
-TIER1_RATIO = {"FY2020": "25%"}
+TIER1_FY2025_CONTRADICTION_NOTE = (
+    "THE FY2025 EDITION PRINTS A TIER 1 AMOUNT THAT ITS OWN TABLE CONTRADICTS, AND IT IS REPRODUCED AS "
+    "PRINTED. In the FYE2025 edition's section 4.2 table the 'Total Tier 1 capital' row reads 57,951 in "
+    "BOTH the 31/12/2025 and the 31/12/2024 columns; 57,951 is the FY2024 figure. Three separate numbers in "
+    "that same table disagree with it for 2025: (a) the 31/12/2025 column's own components foot to 54,657 "
+    "(53,900 + 1,819 + 1 - 527 - 536); (b) the table's Total capital 64,256 less its Tier 2 subordinated "
+    "loans 9,600 leaves 54,656; (c) the table's own 'Tier 1 capital ratio' of 14.8% against its own risk "
+    "weighted assets of 368,569 implies 54,656, where 57,951/368,569 would be 15.72%. The Key Regulatory "
+    "Metrics table on p.3 of the same document prints CET1 of 54,656. The printed 57,951 therefore reads as "
+    "a cell carried forward from the prior-year column. It is transcribed exactly as the Bank printed it "
+    "and the disagreement is documented, per this project's rule that a figure is never adjusted to make a "
+    "set tie - the same treatment as Bank of Africa UK's FY2019 table (GA-016). A reader who needs an "
+    "internally consistent 2025 Tier 1 amount should use the CET1 Capital sheet, which carries the Bank's "
+    "own printed 54,656."
+)
+TIER1_RATIO_SOURCE_NOTE = (
+    "ALL SIX YEARS ARE PRINTED FIGURES FROM THAT YEAR'S OWN EDITION - nothing on this sheet is calculated "
+    "and nothing is taken from a later edition's comparative column. Each is the capital-adequacy table's "
+    "'Tier 1 capital ratio' row: FY2025 14.8% and FY2024 16.5% from section 4.2 of their own editions; "
+    "FY2023 17%, FY2022 17% and FY2021 17% from section 3.2 of theirs; FY2020 25% from section 3.2 of the "
+    "FYE2020 edition. FY2021-FY2025 were added 2026-09-18, closing five leading gaps that existed only "
+    "because an earlier pass read the 'Key Regulatory Metrics' table and not the capital-adequacy table in "
+    "the same documents.\n"
+    "\n"
+    "TWO DIFFERENT DENOMINATORS LIVE IN ONE DOCUMENT, and that is what makes these printed ratios "
+    "reconcile. The capital-adequacy table carries its own 'Risk weighted assets' row, which in the "
+    "FY2021-FY2023 editions is SMALLER than the Total Risk-Weighted exposure amount (TREA) printed in the "
+    "same document's Key Regulatory Metrics table. The printed Tier 1 ratios reconcile against TREA, not "
+    "against the capital table's own RWA row: FY2023 50,032/287,662 = 17.39% (TREA) against 50,032/257,090 "
+    "= 19.46% (cap-table RWA), for a printed 17%; FY2022 40,321/237,643 = 16.97% against 40,321/214,632 = "
+    "18.79%, for a printed 17%; FY2021 42,915/248,258 = 17.29% against 42,915/225,003 = 19.07%, for a "
+    "printed 17%. From FY2024 the two rows agree (350,177 and 368,569) and the question falls away. Both "
+    "figures are the Bank's own and neither is adjusted here.\n"
+    "\n"
+    "FY2020 - THE GA-016 'IMPOSSIBLE' TRIPLE, RESOLVED WITHOUT EDITING ANY FIGURE (2026-09-18). GA-016 "
+    "flagged FY2020 as a Tier 1 ratio BELOW the CET1 ratio, which cannot happen when Tier 1 contains CET1. "
+    "There is nothing to fix, because the two sides are not measurements of the same thing: the Tier 1 "
+    "ratio is PRINTED (25%) and the CET1 ratio is CALCULATED by this workbook (43,266/158,682 = 27.27%, and "
+    "the CET1 Ratio sheet says on its face that it is calculated). The FYE2020 edition prints a 'Tier 1 "
+    "capital ratio' of 25% and a 'Total capital ratio' of 26% and NO CET1 ratio row at all - confirmed by "
+    "reading that edition in full on 2026-09-18. FY2020 is further the one year whose printed ratios "
+    "reconcile against nothing in its own table: the printed total capital ratio of 26% sits against "
+    "46,266/158,682 = 29.16%. The Bank's own FY2020 set is internally inconsistent. Recorded, not "
+    "reconciled, and no figure changed."
+)
+TIER1_CAP_NOT_DISCLOSED = {
+    "FY2023": "Not disclosed - this edition prints no Tier 1 subtotal row",
+    "FY2022": "Not disclosed - this edition prints no Tier 1 subtotal row",
+    "FY2021": "Not disclosed - this edition prints no Tier 1 subtotal row",
+}
+TIER1_USD = {"FY2025": 57951000, "FY2024": 57951000, "FY2020": 43266000}
+TIER1_RATIO = {
+    "FY2025": "14.8%", "FY2024": "16.5%", "FY2023": "17%",
+    "FY2022": "17%", "FY2021": "17%", "FY2020": "25%",
+}
 MREL_NOTE = (
     "Not publicly disclosed in any of the 5 years' Pillar 3 Disclosures reviewed - no MREL figure or "
     "exemption statement found."
@@ -724,10 +819,11 @@ metric("CET1 Ratio", "% of TREA (calculated - see note)", [("CET1 Ratio", CET1_R
        note="CALCULATED as CET1 Capital / Total Risk-Weighted exposure amount (TREA) for each year - "
             "neither the Bank's Annual Report nor its Pillar 3 Disclosures state a CET1 ratio % directly, "
             "only the underlying £/$ amounts (see CET1 Capital and Total RWAs sheets).")
-metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 Capital", stock(TIER1_USD))], p3_sources(),
-       note="FY2020 is explicitly disclosed in the old-format Pillar 3 table ($43,266k: issued capital + retained earnings less intangibles). " + TIER1_NOTE)
+metric("Tier 1 Capital", "£'000 (conv. from USD)",
+       [("Tier 1 Capital", dict(TIER1_CAP_NOT_DISCLOSED, **stock(TIER1_USD)))], p3_sources(),
+       note=TIER1_NOTE + "\n\n" + TIER1_FY2025_CONTRADICTION_NOTE, note_height=560)
 metric("Tier 1 Ratio", "%", [("Tier 1 Capital ratio", TIER1_RATIO)], p3_sources(),
-       note="FY2020 is explicitly disclosed in the old-format Pillar 3 table. " + TIER1_NOTE)
+       note=TIER1_RATIO_SOURCE_NOTE + "\n\n" + TIER1_NOTE, note_height=560)
 metric("Total Capital", "£'000 (conv. from USD)", [("Total Capital", stock(TOTALCAP_USD))], p3_sources())
 metric("Total Capital Ratio", "% of TREA (calculated - see note)", [("Total Capital Ratio", TOTALCAP_RATIO)], p3_sources(),
        note="CALCULATED as Total Capital / Total Risk-Weighted exposure amount (TREA) for each year - "

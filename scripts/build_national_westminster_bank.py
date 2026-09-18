@@ -76,6 +76,11 @@ P3_2025_Q3_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/r
 P3_2024_Q3_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/12112024/nwb-plc-pillar-3-q3-2024.pdf"
 P3_2023_Q3_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13-11-2023/natwest-bank-plc-pillar-3-q3-2023.pdf"
 P3_2022_Q3_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/nwb-plc-pillar-3-report.pdf"
+# 2026 interim editions.  NWB Plc has a 31 December year-end, so there is no
+# FY2026 annual edition yet; these are the Q1 and half-year Pillar 3 reports and
+# they belong on the Interim Pillar 3 sheet, never in an annual year column.
+P3_2026_Q1_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13052026/nwb-plc-pillar-3-q1-2026.pdf"
+P3_2026_HY_URL = "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/12082026/nwb-plc-pillar-3-hy-2026.pdf"
 CH_COMPANY_URL = "https://find-and-update.company-information.service.gov.uk/company/00929027"
 
 ENTITY_NOTE = (
@@ -1051,6 +1056,8 @@ INTERIM_PERIODS = [
     ("31 March 2025", "Q1 2025", P3_2025_Q3_URL, "p.6"),
     ("30 June 2025", "H1 2025", P3_2025_Q3_URL, "p.6"),
     ("30 September 2025", "Q3 2025", P3_2025_Q3_URL, "p.6"),
+    ("31 March 2026", "Q1 2026", P3_2026_Q1_URL, "p.5"),
+    ("30 June 2026", "H1 2026", P3_2026_HY_URL, "p.5"),
 ]
 
 INTERIM_VALUES = {
@@ -1066,6 +1073,8 @@ INTERIM_VALUES = {
     "31 March 2025": [15271, 18848, 23064, 127480, "12.0%", "14.8%", "18.1%", 397065, "4.7%"],
     "30 June 2025": [14828, 18346, 22104, 130712, "11.3%", "14.0%", "16.9%", 411371, "4.5%"],
     "30 September 2025": [16128, 20147, 23937, 130496, "12.4%", "15.4%", "18.3%", 413717, "4.9%"],
+    "31 March 2026": [16253, 19194, 23533, 136280, "11.9%", "14.1%", "17.3%", 432245, "4.4%"],
+    "30 June 2026": [15656, 19097, 23433, 139256, "11.2%", "13.7%", "16.8%", 436753, "4.4%"],
 }
 
 interim_metric_specs = [
@@ -1093,11 +1102,23 @@ bw.add_wide_interim_sheet(
     rows=interim_rows,
     hyperlink_cells={(i, 6): row[6] for i, row in enumerate(interim_rows)},
     title="National Westminster Bank Plc — Interim Pillar 3",
-    subtitle="Quarterly UK KM1 key metrics, March 2022 to September 2025. Capital and leverage figures are NWB Plc entity-level disclosures in £m or percentages.",
+    subtitle="Quarterly UK KM1 key metrics, March 2022 to June 2026. Capital and leverage figures are NWB Plc entity-level disclosures in £m or percentages.",
     note=(
-        "Sources are the official NWB Plc Q3 Pillar 3 reports for 2022-2025, whose UK KM1 tables include the current quarter and prior Q1/Q2 comparatives. "
+        "Sources for March 2022 to September 2025 are the official NWB Plc Q3 Pillar 3 reports for 2022-2025, whose UK KM1 tables include the current quarter and prior Q1/Q2 comparatives. "
         "The NWB Plc UK Domestic Liquidity Sub-Group waiver means LCR and NSFR are managed and disclosed at UK DoLSub level rather than entity level; they are therefore not inserted here. "
-        "No separate NWB Plc interim UK KM1 report was located for March-June-September 2021 in the reviewed official archive, so those periods are explicitly not represented rather than estimated."
+        "No separate NWB Plc interim UK KM1 report was located for March-June-September 2021 in the reviewed official archive, so those periods are explicitly not represented rather than estimated.\n\n"
+        "2026 periods (added 18 September 2026). 31 March 2026 comes from NWB Plc Pillar 3 - Q1 2026 (published 13 May 2026) and 30 June 2026 from NWB Plc Pillar 3 - H1 2026 (published 12 August 2026), "
+        "each taken from the edition in which that date is the reporting date rather than from a later edition's comparative column. "
+        "THERE IS NO FY2026 COLUMN ON ANY ANNUAL SHEET IN THIS WORKBOOK AND THERE CANNOT YET BE ONE: NWB Plc has a 31 December year-end, so the FY2026 reporting date (31 December 2026) had not been reached when this workbook was built, "
+        "and no FY2026 Annual Report or annual Pillar 3 report exists. These two 2026 observations are a first-quarter and a half-year reporting date and are deliberately held here, dated, rather than placed in a year-end column - "
+        "a 30 June measurement and a 31 December measurement are not the same thing. The 30 September 2026 quarter had not ended, so no Q3 2026 edition exists yet; that is an absence in the publication calendar, not a document that could not be obtained. "
+        "Note that these two are the bank's Q1 and half-year editions, not Q3 editions like the earlier periods on this sheet, which is why their KM1 sits on printed page 5 rather than page 6.\n\n"
+        "Restatement check. Both 2026 editions reprint 31 December 2025 and the 2025 quarter-ends as comparatives, and all of them are printed identically to the figures this workbook already holds - "
+        "31 December 2025: CET1 £14,968m, tier 1 £17,910m, total capital £21,701m, RWEA £133,749m, 11.2% / 13.4% / 16.2%, leverage exposure £424,554m, leverage ratio 4.2% (matching the annual metric sheets); "
+        "and 31 March, 30 June and 30 September 2025 each matching the columns already on this sheet. No restatement of any previously held figure was found, so nothing was overwritten. "
+        "Both 2026 editions also agree digit-for-digit with each other on 31 March 2026. "
+        "Consistent with the DoLSub waiver, rows 15-20 (LCR and NSFR) are printed EMPTY in both 2026 editions, with the bank's own footnote 3 stating that NWB Plc liquidity and funding are managed and disclosed at sub-group level rather than entity level - "
+        "an explanation of where those figures live, not a gap in this transcription. Both editions also footnote that rows UK8a, UK9a, 10 and UK10a are omitted as not applicable."
     ),
 )
 

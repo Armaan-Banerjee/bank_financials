@@ -5,6 +5,24 @@ from bank_workbook import BankWorkbook
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
 
+# The FY2025 statutory statements are a FOURTH outcome, distinct from all three
+# this project's gap vocabulary carries: the accounts EXIST and are AUDITED,
+# they are simply not public yet, and are not overdue. That is neither "never
+# published" nor "unreached today".
+#
+# It was already established and written up in STATEMENTS_SOURCES below - but a
+# finding recorded only in a source note is invisible to `audit_gaps.py`, so
+# all four FY2025 columns still scored as untouched gaps (GA-020). This row
+# puts the statement where a reader and the census both see it.
+#
+# The wording deliberately opens with "Not published" so it matches
+# `NOT_DISCLOSED_RE`, which is tested BEFORE the digit rule - otherwise the
+# dates and the company number in it would classify the cell as a figure.
+FY2025_STATEMENTS_PENDING = (
+    "Not published yet - FY2025 accounts audited (Forvis Mazars) but not public; "
+    "Companies House 05969821 next due 30 Sep 2026, not overdue. Checked 2026-09-18."
+)
+
 AR2024_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzQ2NTE3NTM2NmFkaXF6a2N4/document?format=pdf&download=0"
 AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzQwNjA2NDkyOGFkaXF6a2N4/document?format=pdf&download=0"
 AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company/05969821/filing-history/MzM3MzI3NjAyMmFkaXF6a2N4/document?format=pdf&download=0"
@@ -25,12 +43,36 @@ ENTITY_NOTE = (
     "Holding Company Plc (GTCO). Unlike several other Nigerian-bank-owned UK subsidiaries in this project\n"
     "(Zenith Bank UK, UBA UK, FCMB UK, FidBank UK), this entity reports in GBP throughout - no FX\n"
     "conversion is required.\n\n"
-    "FY2025 STATUS (re-verified 2026-09-15): the FY2025 statutory accounts (year ended 31 Dec 2025) still had\n"
-    "NOT been filed with Companies House - the company's own filing history shows its most recent accounts\n"
-    "filing is 'Full accounts made up to 31 December 2024', filed 6 May 2025, and Companies House records the\n"
-    "FY2025 accounts as next due 30 September 2026 (i.e. not yet overdue, just not filed). Every statutory-\n"
-    "statement sheet in this workbook (Balance Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow\n"
-    "Statement, Asset Quality) is therefore genuinely blank for FY2025.\n"
+    "FY2025 STATUS (re-verified 2026-09-18, unchanged): the FY2025 statutory accounts (year ended 31 Dec 2025)\n"
+    "still had NOT been published anywhere. Two independent routes were checked on that date and both are\n"
+    "negative. (1) Companies House filing history for 05969821 lists exactly five accounts filings, the most\n"
+    "recent being 'Full accounts made up to 31 December 2024', filed 6 May 2025 (the others 25 Jun 2024,\n"
+    "9 Jan 2024, 22 Mar 2023 and 1 Mar 2022); Companies House records the FY2025 accounts as next due\n"
+    "30 September 2026, i.e. not yet overdue, just not filed. (2) The Bank's own document page,\n"
+    "https://www.gtbankuk.com/about-gtbank-uk/our-company, links exactly two financial documents - the\n"
+    "'GTBank-UK-Annual-Report-and-Financial-Statement-2024.pdf' and the 'GTBank-UK-Pillar-3-Disclosure-2025.pdf'\n"
+    "- and its own in-page anchor is still literally #section-gt-bank-uk-annual-report-and-financial-statement-2024.\n"
+    "Every statutory-statement sheet in this workbook (Balance Sheet, Profit & Loss, Statement of Changes in\n"
+    "Equity, Cash Flow Statement, Asset Quality) is therefore genuinely blank for FY2025 - NOT PUBLISHED, as\n"
+    "distinct from not reachable.\n"
+    "THE FY2025 ACCOUNTS DO EXIST AND ARE AUDITED, they are simply not public. The FY2025 Pillar 3 says so\n"
+    "directly (section 5.1): its Table 1 'Financial Performance (GBP 000)' figures are 'as quoted in the Bank's\n"
+    "Financial Statements (Accounts) and, as such have been audited by the Bank's external auditors, Forvis\n"
+    "Mazars LLP', referring the reader to 'the Annual Report and Financial Statements (the Accounts) FYE 31st\n"
+    "December 2025'. That table prints six FY2025 aggregates, in GBP'000: net interest income 16,811,\n"
+    "operating income 24,325, profit before taxation 9,058, taxation charge (2,304), profit after taxation\n"
+    "6,754, total comprehensive income 6,738. They are recorded here rather than written into the Profit &\n"
+    "Loss sheet, DELIBERATELY: that sheet is denominated in pounds to the penny (FY2024 profit after tax is\n"
+    "8,638,639, not 8,639,000), so posting a GBP'000-rounded aggregate into it would invent three digits of\n"
+    "precision, and the six lines cover only 6 of the sheet's 20 rows in any case. When the accounts are filed\n"
+    "the FY2025 column should be transcribed from them in full, and these six figures used as a cross-check.\n"
+    "ASSET QUALITY, likewise not filled from the Pillar 3, for a different and sharper reason. Section 8.8 of\n"
+    "the FY2025 Pillar 3 states the Bank 'had allocated GBP198,514 (31st December 2024: GBP100,281) for\n"
+    "expected losses under IFRS 9'. The FY2024 comparative in that sentence, 100,281, is NOT the FY2024 total\n"
+    "ECL allowance in this workbook's Asset Quality sheet (100,281 + 25,605 = 125,886); it equals the loans-\n"
+    "and-advances-to-BANKS ECL alone. The scope of the FY2025 figure is therefore unresolved on the face of the\n"
+    "document, and it is not attributable to any single row of that sheet. It is recorded here instead of being\n"
+    "guessed into place.\n"
     "The Pillar 3 sheets are NOT blank for FY2025: the Bank published its own standalone 'Pillar 3 Disclosure\n"
     "2025' (as at 31 December 2025, PDF created 23 July 2026, linked from its own site at\n"
     "https://www.gtbankuk.com/about-gtbank-uk/our-company), and every Pillar 3 metric below is transcribed\n"
@@ -225,6 +267,11 @@ bw.add_balance_sheet_sheet(
         ("TOTAL", "Total liabilities and shareholders' funds", {
             "FY2024": 583445887, "FY2023": 470783450, "FY2022": 626844615, "FY2021": 490836145,
         }),
+        # Trailing SECTION + DATA, deliberately AFTER the last TOTAL: a run of
+        # DATA rows not terminated by a TOTAL is never reconciled, so this
+        # cannot disturb any block's arithmetic.
+        ("SECTION", "FY2025 status", {}),
+        ("DATA", "FY2025 column", {"FY2025": FY2025_STATEMENTS_PENDING}),
     ],
     sources_text=(
         "The Bank's own Statement of financial position labels the cash line 'Cash and money market funds'\n"
@@ -309,6 +356,8 @@ bw.add_income_statement_sheet(
         ("TOTAL", "Total comprehensive income/(loss) for the year, net of tax", {
             "FY2024": 8684386, "FY2023": 11046615, "FY2022": 3254737, "FY2021": -8346007,
         }),
+        ("SECTION", "FY2025 status", {}),
+        ("DATA", "FY2025 column", {"FY2025": FY2025_STATEMENTS_PENDING}),
     ],
     sources_text=STATEMENTS_SOURCES,
     first_col_width=68,
@@ -452,6 +501,8 @@ rows = [
     ("TOTAL", "Cash and cash equivalents at the end of the year", {
         "FY2024": 308066190, "FY2023": 238999407, "FY2022": 380408788, "FY2021": 116275570,
     }),
+    ("SECTION", "FY2025 status", {}),
+    ("DATA", "FY2025 column", {"FY2025": FY2025_STATEMENTS_PENDING}),
 ]
 
 bw.add_cash_flow_sheet(
@@ -514,6 +565,13 @@ bw.add_asset_quality_sheet(
         ("DATA", "ECL coverage - loans and advances to customers (ECL / gross carrying amount)", {
             "FY2024": "0.04%", "FY2023": "0.04%", "FY2022": "0.18%", "FY2021": "0.00%",
         }),
+        ("SECTION", "FY2025 status", {}),
+        # The FY2025 Pillar 3 s.8.8 DOES print a GBP198,514 IFRS 9 allowance,
+        # and it is deliberately not used: its own FY2024 comparative (100,281)
+        # equals this workbook's loans-to-BANKS ECL alone, not the FY2024 total
+        # (100,281 + 25,605 = 125,886), so the figure's scope is unresolved on
+        # the face of the document and it belongs to no row of this sheet.
+        ("DATA", "FY2025 column", {"FY2025": FY2025_STATEMENTS_PENDING}),
     ],
     sources_text=(
         "Sources - Notes 12 (Loans and advances to banks) and 13 (Loans and advances to customers) of each "
@@ -541,6 +599,48 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # exists yet to give the exact pound amount; see p3_sources() note (2). FY2021-FY2024
 # are exact to the pound, from each year's own Annual Report Note 23.8(a).
 REG_CAPITAL = {"FY2025": 54604000, "FY2024": 48075379, "FY2023": 39390993, "FY2022": 28344378, "FY2021": 25089641}
+
+# SAME FIGURES, RENDERED IN GBP'000 (GA-019, 2026-09-18).
+#
+# Until today the three capital sheets were published in POUNDS while this
+# workbook's `Total RWAs`, `RWA Breakdown` and `KM1 Key Metrics` sheets are all
+# in GBP'000. Every sheet declared its own unit correctly and every figure was
+# faithful to its source, so nothing here was mis-transcribed - but a reader (or
+# a tool) dividing Total Capital by Total RWAs landed 1,000x out. GTBank UK was
+# the ONLY workbook in the 145 where that happened; the corpus sweep that
+# established this is recorded in GA-019.
+#
+# NOTHING IS RESCALED OR RECOMPUTED. These are the same Annual Report figures
+# written in thousands with their pence retained, so every transcribed digit
+# survives: 48,075,379 pounds IS 48,075.379 thousand. The pound values stay
+# above in REG_CAPITAL and are still quoted in the sheet notes.
+REG_CAPITAL_000 = {"FY2025": 54604.000, "FY2024": 48075.379, "FY2023": 39390.993,
+                   "FY2022": 28344.378, "FY2021": 25089.641}
+
+# The Bank's OWN printed GBP'000 capital figures, from the Pillar 3 Key Metrics
+# table (the same row this workbook's KM1 sheet reproduces). Carried as a second
+# labelled row rather than merged, because for FY2022 the two sources DISAGREE:
+# the Annual Report gives 28,344,378 (= 28,344.378 thousand) while the Pillar 3
+# prints 28,345. That is a real ~GBP 622 divergence and not a rounding of one
+# into the other - FY2024 and FY2023 round exactly (48,075.379 -> 48,075;
+# 39,390.993 -> 39,391), FY2022 does not. FY2022 is also the one year whose KM1
+# figure comes from the FY2023 edition's COMPARATIVE column rather than from its
+# own edition, which is the likeliest source of the difference. Both are
+# transcribed; neither overwrites the other (rule 1).
+P3_CAPITAL_000 = {"FY2025": 54604, "FY2024": 48075, "FY2023": 39391, "FY2022": 28345}
+
+CAPITAL_UNIT_NOTE = (
+    "UNIT (changed 2026-09-18). This sheet is in GBP'000, matching the Total RWAs, RWA Breakdown and KM1 "
+    "sheets of this workbook. It was previously published in pounds, which was correctly labelled and "
+    "correctly transcribed but left this figure 1,000x out of scale against the RWA sheet a reader would "
+    "divide it by. No figure was rescaled to achieve this: row 1 is the Annual Report amount with its pence "
+    "retained (FY2024's 48,075,379 exactly, written as 48,075.379), so no precision was lost.\n\n"
+    "ROW 2 is the Bank's own printed GBP'000 figure from the Pillar 3 Key Metrics table. It is shown "
+    "separately rather than merged because the two sources DISAGREE at FY2022: the Annual Report gives "
+    "28,344.378 and the Pillar 3 prints 28,345, a difference of about GBP 622. FY2024 and FY2023 round "
+    "exactly to the printed figure; FY2022 does not. FY2022 is also the only year taken from the FY2023 "
+    "edition's comparative column rather than from its own edition. Neither figure is corrected to the other."
+)
 # FY2023 = 32.34%, the figure printed in the FY2023 Pillar 3 report's OWN Key Metrics table
 # (obtained and read as a primary source 2026-09-15). The 32.30% previously carried here is the
 # FY2024 edition's restated FY2023 comparative, kept on its own labelled row below.
@@ -762,29 +862,34 @@ bw.add_km1_sheet(
 )
 
 metric(
-    "CET1 Capital", "£",
-    [("Common Equity Tier 1 (CET1) capital", REG_CAPITAL)],
-    p3_sources(),
+    "CET1 Capital", "£'000",
+    [("Common Equity Tier 1 (CET1) capital - Annual Report Note 23.8(a), exact to the pound", REG_CAPITAL_000),
+     ("Common Equity Tier 1 (CET1) capital - as printed in the Pillar 3 Key Metrics table", P3_CAPITAL_000)],
+    p3_sources(), note=CAPITAL_UNIT_NOTE,
 )
 metric("CET1 Ratio", "%",
        [("CET1 ratio (as first published)", CAPITAL_RATIO),
         ("CET1 ratio - FY2023 as restated in the FY2024 Pillar 3 edition", RESTATED_2023_RATIO)],
        p3_sources(), note=RATIO_RESTATEMENT_NOTE)
 metric(
-    "Tier 1 Capital", "£",
-    [("Tier 1 capital", REG_CAPITAL)],
+    "Tier 1 Capital", "£'000",
+    [("Tier 1 capital - Annual Report Note 23.8(a), exact to the pound", REG_CAPITAL_000),
+     ("Tier 1 capital - as printed in the Pillar 3 Key Metrics table", P3_CAPITAL_000)],
     p3_sources(),
-    note="The Bank has no Additional Tier 1 capital, so Tier 1 capital equals CET1 capital.",
+    note="The Bank has no Additional Tier 1 capital, so Tier 1 capital equals CET1 capital.\n\n"
+         + CAPITAL_UNIT_NOTE,
 )
 metric("Tier 1 Ratio", "%",
        [("Tier 1 ratio (as first published)", CAPITAL_RATIO),
         ("Tier 1 ratio - FY2023 as restated in the FY2024 Pillar 3 edition", RESTATED_2023_RATIO)],
        p3_sources(), note=RATIO_RESTATEMENT_NOTE)
 metric(
-    "Total Capital", "£",
-    [("Total regulatory capital (unaudited)", REG_CAPITAL)],
+    "Total Capital", "£'000",
+    [("Total regulatory capital (unaudited) - Annual Report Note 23.8(a), exact to the pound", REG_CAPITAL_000),
+     ("Total regulatory capital - as printed in the Pillar 3 Key Metrics table", P3_CAPITAL_000)],
     p3_sources(),
-    note="The Bank has no Tier 2 capital, so Total Capital equals Tier 1 capital equals CET1 capital.",
+    note="The Bank has no Tier 2 capital, so Total Capital equals Tier 1 capital equals CET1 capital.\n\n"
+         + CAPITAL_UNIT_NOTE,
 )
 
 metric("Total Capital Ratio", "%",
@@ -838,6 +943,27 @@ RWA_BREAKDOWN_SOURCES = (
     f"convention exists to avoid; and (b) no FY2023 figure in either edition is a disclosed RWA. If a future pass "
     f"decides the derived basis is acceptable for FY2023, it must add the row under the restated total, label it "
     f"as such, and not reconcile it against 105,275.\n"
+    "    FY2023 ADDED 2026-09-18, ON EXACTLY THOSE TERMS. The paragraph above set the conditions and they are "
+    "met here, so FY2023 now carries its own SEPARATE section rather than being merged into the FY2025/FY2024 "
+    "derived block: the figures are the FY2024 edition's RESTATED FY2023 capital requirements x 12.5 (Credit "
+    "6,037 -> 75,462.5; Market 13 -> 162.5; Operational 2,621 -> 32,762.5; total 108,387.5), every row label "
+    "says 'restated basis', and the derived total is checked against that same edition's own restated FY2023 "
+    "Total Risk-Weighted Exposure Amount of 108,387 - a gap of 0.5, pure GBP'000 rounding. It is deliberately "
+    "NOT checked against the as-first-published 105,275, which remains the primary FY2023 row on the Total RWAs "
+    "sheet and belongs to a different basis. The two sit in different sections of this sheet for that reason; a "
+    "reader must not add a figure from the restated block to one from the as-disclosed block. Nothing about the "
+    "underlying finding has changed: the Bank still publishes no FY2023 RWA split by risk type in any document, "
+    "and every figure in this section is derived, never disclosed.\n"
+    "(2026-09-18 FOURTH check, this time OUTSIDE the Pillar 3 series - the one place the three prior "
+    "verifications had not looked. The Bank's own FY2023 ANNUAL REPORT AND FINANCIAL STATEMENTS (Companies "
+    "House company 05969821, accounts made up to 31 December 2023, filed 25 June 2024) contains no risk-weighted "
+    "asset amount at all, let alone a split: its note 23.8(a) 'Regulatory capital (unaudited)' prints only Tier 1 "
+    "capital components and Total regulatory capital (39,390,993, against 28,344,378 for 2022), and its KPI table "
+    "gives the CET1 ratio as a percentage (32.3%, 2022: 24.6%) with no denominator. The report is an IMAGE-ONLY "
+    "SCAN (go-tiff2pdf, 71 pages, every page an image, zero-character text layer), so it was read by full-"
+    "document OCR; positive control on the OCR output, 70 occurrences of 'capital' and 112 of 'ratio' against 0 "
+    "of '105,275', 0 of '108,387' and 0 of any 'risk weighted assets' table. This closes the last plausible "
+    "primary source: the FY2023 split does not exist in the Annual Report either.)\n"
     "(2026-09-12 independent re-verification: re-fetched this exact document and re-read section 5.2 'Key "
     "Prudential Metrics' [Total Risk-Weighted Exposure Amount 105,275, single aggregate figure, no category "
     "split] and section 7.3 'Minimum Capital Requirement - Pillar 1' [Credit Risk 5,712 / Market Risk 13 / "
@@ -867,8 +993,9 @@ RWA_BREAKDOWN_SOURCES = (
 bw.add_rwa_breakdown_sheet(
     title="Guaranty Trust Bank (UK) Limited — RWA Breakdown",
     subtitle="Standalone Pillar 3 disclosures, £'000. FY2022/FY2021 as directly disclosed; FY2025/FY2024 derived "
-             "from disclosed Pillar 1 capital requirement x 12.5 - see the two SECTION blocks below and the sources "
-             "note. FY2023: no reliable risk-type breakdown recoverable - see sources note.",
+             "from disclosed Pillar 1 capital requirement x 12.5; FY2023 likewise derived but on the FY2024 "
+             "edition's RESTATED FY2023 basis, in its own separate block - the Bank publishes no FY2023 risk-type "
+             "split anywhere. Do not mix figures across the three blocks - see the sources note.",
     rows=[
         ("SECTION", "Standalone Pillar 3 — risk-weighted assets, as disclosed", {}),
         ("DATA", "Credit risk RWA", {"FY2022": 166793, "FY2021": 77962}),
@@ -880,6 +1007,12 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Market risk RWA (derived)", {"FY2025": 275, "FY2024": 175}),
         ("DATA", "Operational risk RWA (derived)", {"FY2025": 50337.5, "FY2024": 44187.5}),
         ("TOTAL", "Total RWA (derived)", {"FY2025": 148825, "FY2024": 157375}),
+        ("SECTION", "FY2023 only — Pillar 1 capital requirement × 12.5 on the FY2024 edition's RESTATED FY2023 "
+                    "basis (108,387), NOT the as-first-published 105,275 — see sources note", {}),
+        ("DATA", "Credit risk RWA (derived, FY2023 restated basis)", {"FY2023": 75462.5}),
+        ("DATA", "Market risk RWA (derived, FY2023 restated basis)", {"FY2023": 162.5}),
+        ("DATA", "Operational risk RWA (derived, FY2023 restated basis)", {"FY2023": 32762.5}),
+        ("TOTAL", "Total RWA (derived, FY2023 restated basis)", {"FY2023": 108387.5}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=54,

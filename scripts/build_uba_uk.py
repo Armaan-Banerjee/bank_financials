@@ -66,6 +66,12 @@ AR2020_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/UBA-UK-F
 AR2018_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2019/07/UBA-UK-Ltd-Report-and-Accounts-31-Dec-2018.pdf"
 
 P3_2024_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2026/05/UBA-UK-Pillar-3-Disclosures-31-Dec-2024.pdf"
+# Added 2026-09-18: the FY2023 edition, found on the Bank's own financial-reports index during the
+# KM1 latest-edition check. It had not been cited anywhere in this workbook - FY2023 figures were
+# being taken from the FY2024 edition's comparative column instead. Every one of the 24 key-metrics
+# rows agrees exactly between the two, so no figure changes; the citations now name the edition in
+# which 31 December 2023 is the reporting date.
+P3_2023_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2024/08/Pillar-3-Disclosures-\u2013-31-Dec-2023.pdf"
 P3_2022_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2023/08/UBA-UK-Pillar-3-Disclosures-31-Dec-2022_final-clean-trotter-comments.1-1.pdf"
 P3_2020_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2018/10/uba-uk-pillar-3-disclosures-31-dec-2020.pdf"
 P3_2018_URL = "https://www.ubauk.com/wp-content/uploads/sites/29/2019/11/UBA-UK-Pillar-3-Disclosures-31-Dec-2018-3.pdf"
@@ -361,14 +367,22 @@ def p3_sources(page_24="10", page_22="9"):
         "Sources - United Bank for Africa (UK) Limited Pillar 3 Disclosures, converted from "
         "USD to £ where a $ amount (see FX conversion note on the Cash Flow Statement sheet; % ratios are "
         "unconverted):\n"
-        f"FY2024 & FY2023: Pillar 3 Disclosures - 31 Dec 2024, p.{page_24} (Section 4, Key Metrics) - {P3_2024_URL}\n"
-        f"FY2022 & FY2021: Pillar 3 Disclosures - 31 Dec 2022, p.{page_22} (Section 4, Key Metrics) - {P3_2022_URL}\n"
+        f"FY2024: Pillar 3 Disclosures - 31 Dec 2024, p.{page_24} (Section 4, Key Metrics) - {P3_2024_URL}\n"
+        f"FY2023: Pillar 3 Disclosures - 31 Dec 2023, p.9 (Section 04, Key Metrics) - {P3_2023_URL} (this "
+        f"edition was added to the workbook on 2026-09-18; the FY2024 edition's own 2023 comparative column "
+        f"reproduces all 24 of its key-metrics rows identically, so no figure changed)\n"
+        f"FY2022: Pillar 3 Disclosures - 31 Dec 2022, p.{page_22} (Section 4, Key Metrics) - {P3_2022_URL}\n"
+        f"FY2021: the FY2022 edition's own 2021 comparative column, p.{page_22} - {P3_2022_URL}. The FY2021 "
+        f"edition itself publishes no key-metrics table: its own contents page runs '3. Capital Resources / "
+        f"3.1 Leverage Ratio / 4. Capital Adequacy' with no Key Metrics section, which first appears in the "
+        f"FY2022 edition\n"
         f"FY2020 & FY2019: Pillar 3 Disclosures - 31 Dec 2020, p.9 (Capital Resources), p.10 (Leverage Ratio), "
         f"p.12 (Pillar 1 Minimum Capital Requirement / RWA), p.17 (Liquidity ratios) - {P3_2020_URL}\n"
         f"FY2018: Pillar 3 Disclosures - 31 Dec 2018, p.7 (Capital Resources), p.8 (Leverage Ratio), p.9 (Pillar 1 "
         f"Minimum Capital Requirement / RWA), p.15 (Liquidity ratios) - {P3_2018_URL}\n\n"
-        "PRE-2021 FORMAT NOTE: FY2018/FY2019/FY2020's Pillar 3 reports pre-date the current 'Key Metrics' (UK "
-        "KM1) template introduced from FY2021 onward - they instead disclose capital resources, the leverage "
+        "PRE-2022 FORMAT NOTE: FY2018/FY2019/FY2020/FY2021's Pillar 3 reports pre-date the current 'Key Metrics' "
+        "(UK KM1) template, which the Bank first publishes in its FY2022 edition (with a 2021 comparative "
+        "column) - they instead disclose capital resources, the leverage "
         "ratio, and liquidity ratios as separate narrative tables under Basel III / CRR headings. The leverage "
         "ratio methodology also genuinely differs: FY2018-FY2020 disclose a single 'Exposure value of assets' "
         "figure that INCLUDES central government and central bank claims, where FY2021 onward's UK KM1 template "
@@ -729,6 +743,158 @@ RATIO_PRE2021 = {
     "FY2019": f"{CET1_TIER1_TOTAL_USD['FY2019'] / RWA_USD['FY2019'] * 100:.2f}%",
     "FY2018": f"{CET1_TIER1_TOTAL_USD['FY2018'] / RWA_USD['FY2018'] * 100:.2f}%",
 }
+
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own "Key metrics" UK KM1 template,
+# reproduced whole and IN ITS PUBLISHED CURRENCY (US dollars, as printed in
+# single dollars). Every other Pillar 3 sheet in this workbook is converted
+# to sterling; this one is not, because it reproduces a disclosure rather
+# than deriving a view. Called BEFORE the first add_metric_sheet() so the
+# sheet lands immediately after Asset Quality and before CET1 Capital.
+# ---------------------------------------------------------------
+USD = " ($, single dollars as printed)"
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital" + USD,
+     {"FY2024": 78168563, "FY2023": 60900368, "FY2022": 36513246, "FY2021": 38317917}),
+    ("DATA", "2  Tier 1 capital" + USD,
+     {"FY2024": 78168563, "FY2023": 60900368, "FY2022": 36513246, "FY2021": 38317917}),
+    ("DATA", "3  Total capital" + USD,
+     {"FY2024": 78168563, "FY2023": 60900368, "FY2022": 36513246, "FY2021": 38317917}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount" + USD,
+     {"FY2024": 159390258, "FY2023": 127932133, "FY2022": 137833765, "FY2021": 93272286}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2024": "49.04", "FY2023": "47.60", "FY2022": "23.27", "FY2021": "33.56"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2024": "49.04", "FY2023": "47.60", "FY2022": "23.27", "FY2021": "33.56"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2024": "49.04", "FY2023": "47.60", "FY2022": "23.27", "FY2021": "33.56"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2024": "8.06", "FY2023": "8.06", "FY2022": "5.12", "FY2021": "5.12"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2024": "16.06", "FY2023": "16.06", "FY2022": "13.12", "FY2021": "13.12"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2024": "2.50", "FY2023": "2.50", "FY2022": "2.50", "FY2021": "2.50"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2024": "0.50", "FY2023": "0.20", "FY2022": "0.04", "FY2021": "0.00"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2024": "3.00", "FY2023": "2.70", "FY2022": "2.54", "FY2021": "2.50"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2024": "20.39", "FY2023": "21.17", "FY2022": "16.26", "FY2021": "16.22"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2024": "32.98", "FY2023": "31.54", "FY2022": "10.15", "FY2021": "20.44"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks" + USD,
+     {"FY2024": 483630135, "FY2023": 626525876, "FY2022": 613889918, "FY2021": 573663805}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2024": "16.16", "FY2023": "9.72", "FY2022": "6", "FY2021": "7"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value -average)" + USD,
+     {"FY2024": 110851365, "FY2023": 100502936, "FY2022": 91179217, "FY2021": 92773320}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value" + USD,
+     {"FY2024": 125691341, "FY2023": 175678323, "FY2022": 162714060, "FY2021": 102670481}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value" + USD,
+     {"FY2024": 94268506, "FY2023": 131758742, "FY2022": 122035545, "FY2021": 77002861}),
+    ("DATA", "16  Total net cash outflows (adjusted value)" + USD,
+     {"FY2024": 31422835, "FY2023": 43919581, "FY2022": 40678515, "FY2021": 25667620}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2024": "352.77", "FY2023": "228.83", "FY2022": "224.15", "FY2021": "361.44"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding" + USD,
+     {"FY2024": 122954356, "FY2023": 138256344, "FY2022": 167040341, "FY2021": 152043116}),
+    ("DATA", "19  Total required stable funding" + USD,
+     {"FY2024": 67305335, "FY2023": 90321851, "FY2022": 92117147, "FY2021": 102891413}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2024": "182.68", "FY2023": "153.07", "FY2022": "181.33", "FY2021": "147.77"}),
+]
+
+KM1_SOURCES = (
+    "Sources - United Bank for Africa (UK) Limited, entity-level basis, the Bank's own 'Key metrics' UK KM1 "
+    "template. Each column comes from the edition in which that date is the reporting date, except FY2021 - "
+    "see below.\n"
+    f"FY2024: Pillar 3 Disclosures - 31 Dec 2024, p.10 (section 4 Key Metrics), '2024' column - {P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures - 31 Dec 2023, p.9 (section 04 Key Metrics), '2023' column - {P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures - 31 Dec 2022, p.9 (section 4 Key Metrics), '2022' column - {P3_2022_URL}\n"
+    f"FY2021: the FY2022 edition's own '2021' COMPARATIVE column, p.9 of {P3_2022_URL} - see below for why.\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-18: the Bank's own financial-reports index "
+    "(https://www.ubauk.com/financial-reports/) was fetched directly as static HTML and every PDF href "
+    "extracted - not Wayback, not the URLs already cited here. The newest Pillar 3 Disclosures listed is the "
+    "31 December 2024 edition and the newest Annual Report is the 31 December 2024 one, both already carried "
+    "in this workbook. No FY2025 document of either kind is published. Checked, none newer.\n"
+    "\n"
+    "THIS SHEET IS IN US DOLLARS, UNCONVERTED, AND THE REST OF THIS WORKBOOK IS NOT. The Bank reports in USD "
+    "and every other Pillar 3 sheet here is converted to sterling at the rates set out in this workbook's FX "
+    "note. A KM1 sheet reproduces a published disclosure rather than deriving a view from it, so it stays in "
+    "the currency and the units the Bank printed. Those units are SINGLE DOLLARS, not thousands: the template "
+    "prints CET1 as '78,168,563' where the same edition's own Capital Resources table on the next page is "
+    "headed $'000. Read the amount rows as dollars and the ratio rows as percentages.\n"
+    "\n"
+    "WHY FY2021 IS A COMPARATIVE AND WHY FY2020, FY2019 AND FY2018 CARRY NO COLUMN. The Key Metrics section "
+    "does not exist before the FY2022 edition. The FY2018, FY2019, FY2020 and FY2021 editions were each "
+    "downloaded and opened on 2026-09-18, and each one's OWN table of contents runs '2.3 Three Lines of "
+    "Defence / 3. Capital Resources / 3.1 Leverage Ratio / 4. Capital Adequacy' - there is no key-metrics "
+    "section to find. The section first appears as '4. Key Metrics' in the FY2022 edition. FY2021 is "
+    "therefore filled from the FY2022 edition's comparative column, which is the only published printing of "
+    "that year's template. FY2020, FY2019 and FY2018 stay empty: no edition prints a template for them, and "
+    "the FY2022 edition's earliest column is 2021, so no comparative exists either. Those years' capital, "
+    "leverage and liquidity figures on the metric sheets come from the older editions' own differently-shaped "
+    "capital-resources and ratio disclosures, which are not this template and are deliberately not mapped "
+    "onto its row numbers.\n"
+    "\n"
+    "THE FY2022 EDITION'S TABLE IS A BITMAP, AND THE INVENTORY'S 'NO KM1 FOUND' VERDICT FOR IT WAS WRONG. "
+    "That edition's section 4 extracts as a heading, a sentence and nothing else, because the whole table is "
+    "an embedded image on the page (confirmed with pdfimages: two image objects on that page and no table "
+    "text between the heading and the page number). It was transcribed TWICE from two independent "
+    "renderings - the full page rasterised at 300dpi, and the embedded image extracted at its native "
+    "resolution and enlarged - and the two agree digit for digit on all 48 cells. The FY2023 edition is also "
+    "image-based with an OCR text layer; its figures were likewise confirmed against a 200dpi rendering of "
+    "the page, and independently again by the FY2024 edition's own 2023 comparative column, which reproduces "
+    "every one of the 24 rows identically.\n"
+    "\n"
+    "THREE SOURCE DEFECTS, REPRODUCED OR RECORDED, NOT CORRECTED.\n"
+    "1. The FY2023 edition misprints row 1 as 'Common Equity Tier 1 (CH1) capital' - CH1 for CET1. This is "
+    "not an extraction artefact: the rendered page shows 'CH1' in the published document. The FY2022 and "
+    "FY2024 editions both print 'CET1' and that is the label used on this sheet.\n"
+    "2. The FY2023 edition also misprints row 14 as 'Leverage ratio excuding claims on central banks (%)' "
+    "and appends a stray comma to row UK 11a, 'Overall capital requirements (%),'. Both confirmed on the "
+    "rendered page.\n"
+    "3. Row 14 is printed to a DIFFERENT PRECISION in different editions for the same date, and this sheet "
+    "keeps each year's own. The FY2022 edition prints whole numbers - '6' for 2022 and '7' for 2021 - while "
+    "the FY2023 edition's comparative prints 5.95 for that same 2022 date. 36,513,246 over 613,889,918 is "
+    "5.95%, so the '6' is the Bank's own rounding in its own edition, not a different measure. The same "
+    "applies to the 2021 column's '7' against a computed 6.68%. Nothing is recomputed here.\n"
+    "\n"
+    "ROWS THE BANK DOES NOT PRINT. All three editions print the same 24 rows and omit the rest of the "
+    "template entirely - UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a, 14a, 14b, 14c, 14d and 14e never appear, in "
+    "any edition, in any column. They are absent from this sheet rather than shown blank, because the Bank "
+    "prints no such rows at all; the rows it does print, it fills in every column.\n"
+    "\n"
+    "ENTITY. United Bank for Africa (UK) Limited on its own, unconsolidated - the document prints one "
+    "entity's columns and the Bank has no subsidiaries. Its parent, United Bank for Africa Plc (Nigeria), is "
+    "not a UK or EU CRR filer and publishes no UK KM1 for this subsidiary. See the entity note elsewhere in "
+    "this workbook."
+)
+
+bw.add_km1_sheet(
+    title="United Bank for Africa (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own 'Key metrics' UK KM1 template, reproduced whole in its own row order, row "
+             "numbers, labels and precision. IN US DOLLARS AS PUBLISHED, in single dollars - unlike every "
+             "other Pillar 3 sheet in this workbook, which is converted to sterling. FY2024, FY2023 and "
+             "FY2022 come from their own editions; FY2021 from the FY2022 edition's comparative, the only "
+             "printing of that year. FY2020 and earlier carry no column - the Key Metrics section does not "
+             "exist before the FY2022 edition.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=66,
+    source_height=330,
+)
+
 
 metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", stock(CET1_TIER1_TOTAL_USD))], p3_sources())
 metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", {"FY2024": "49.04%", "FY2023": "47.60%", "FY2022": "23.27%", "FY2021": "33.56%", **RATIO_PRE2021})], p3_sources())

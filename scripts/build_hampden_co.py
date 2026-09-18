@@ -235,7 +235,78 @@ def p3_sources():
         "elsewhere: the 2019, 2021 and 2022 Pillar 3 editions are still served with HTTP 200 by both live "
         "hosts even though NEITHER index page links them any more. Absence from an index page is therefore "
         "not evidence that a document has been withdrawn at this bank - which is precisely why the FY2024/"
-        "FY2025 conclusion rests on the 404s and the Rule 3.1 date test rather than on the index alone."
+        "FY2025 conclusion rests on the 404s and the Rule 3.1 date test rather than on the index alone.\n"
+        "INDEPENDENTLY RE-ESTABLISHED 2026-09-18, treating every finding above as unproven and re-deriving it "
+        "from primary sources. Four things are now settled that were not fully settled before.\n"
+        "  (a) THE WAIVER, read from the register itself rather than quoted. The Bank of England consolidated "
+        "waivers register was downloaded and parsed on the Rule Description column (not the sub-rule number, "
+        "which several unrelated PRA rulebooks also number '3.1'). HAMPDEN & CO PLC, FRN 606934, holds exactly "
+        "one row whose Rule Description is 'SDDT Regime - General Application': sub-rule 'Ru 3.1', waiver ref "
+        "A00007791P.pdf, start date 25/04/2024, NO end date. That is the modification that removes the Pillar 3 "
+        "disclosure duty outright. The same firm's three other rows are not it and must not be mistaken for it - "
+        "two Capital Requirements Regulation 'Ar 26(3)' rows from March/April 2016, and a Capital Buffers "
+        "modification (CA.BU.5.1-5.3) from 24/06/2024 which concerns buffers, not disclosure.\n"
+        "  (b) THE DATE FIT, against the year-end taken from Companies House rather than assumed. Company "
+        "SC386922's accounting reference date is 31 December and has not moved: the filing history shows full "
+        "accounts made up to 31 December 2022, 2023, 2024 and 2025, and the register records the next accounts "
+        "as made up to 31 December 2026 and not due until 30 June 2027. So FY2023 (y/e 31 December 2023) closed "
+        "sixteen months BEFORE the modification took effect and a Pillar 3 was still owed for it - which is "
+        "exactly why the 2023 edition exists and is the last one that does. FY2024 (y/e 31 December 2024) and "
+        "FY2025 (y/e 31 December 2025) both closed AFTER it, and no Pillar 3 was owed for either.\n"
+        "  (c) THE ABSENCE ITSELF, shown before the waiver was allowed to explain it. Opting in to the SDDT "
+        "regime ends a duty; it does not stop a bank publishing anyway, so the waiver is only an explanation "
+        "once the documents are shown to be missing. A Wayback Machine CDX domain sweep was run against the NEW "
+        "domain hampdenbank.com - the check the 2026-09-15 session wanted and could not make, archive.org having "
+        "been returning HTTP 503 that day - and against hampdenandco.com alongside it, filtering on 'pillar', "
+        "'annual' and 'disclosure'. Across BOTH domains and the whole of their capture history the complete set "
+        "of Pillar 3 documents ever archived is five: the 2019, 2020, 2021, 2022 and 2023 editions. There is no "
+        "capture of a 2024 or 2025 edition on either domain, under any filename. Both live index pages were "
+        "re-scraped the same day and again yield 16 PDFs with exactly one Pillar 3 among them, the 2023 edition. "
+        "(Unrelated 2003-2006 captures of 'hampdenbank.com/Assets/Annual_Report2003.pdf' belong to a former US "
+        "holder of that domain name and are not this entity - a trap worth naming, since a domain sweep on a "
+        "rebranded bank can surface another company's documents entirely.)\n"
+        "  (d) THE ANNUAL REPORTS RE-READ FOR THE COMPONENTS, not just for the ratio. Because the Total Capital "
+        "Ratio sheet carries FY2025 and FY2024 while every other Pillar 3 sheet is blank for those years, the "
+        "document that supplied it was re-read in full for every other metric it might carry. It supplies none. "
+        "Both Annual Reports were re-extracted with layout preserved at full page width and searched on whole "
+        "phrases that cannot be substrings: 'risk-weighted', 'risk weighted', 'own funds', 'total exposure "
+        "measure', 'combined buffer', 'countercyclical', 'liquidity coverage', 'net stable funding', 'MREL' and "
+        "'CET1' all return ZERO in both documents. The zeros are facts about the documents rather than about the "
+        "search, because the same extraction returns 62 and 60 hits for 'capital' and 133 and 132 for 'ratio' - "
+        "and because the entire Balance Sheet, Profit & Loss, Cash Flow and Asset Quality series on this workbook "
+        "were transcribed from these very files, so their text layers are demonstrably readable. One apparent "
+        "counter-signal is a substring artifact and is recorded here so it is not re-discovered as evidence: a "
+        "bare search for 'rwa' returns 26 hits in the FY2025 report and 24 in the FY2024 report, and every single "
+        "one is the middle of 'forward', 'forward-looking', 'FX forward' or 'losses carried forward'. Not one is "
+        "a risk-weighted asset. Likewise the single 'leverage' hit in each report is the IFRS 9 SPPI test's "
+        "'leverage features', and the single 'Pillar 3' hit in each is the narrative sentence in Note 31 that "
+        "describes what Pillar 3 is. Note 31 'Capital management policy' is narrative in both editions and "
+        "contains no amount in GBP and no ratio.\n"
+        "A THIRD-PARTY DOCUMENT ON THE BANK'S OWN INDEX CARRIES FY2025 CAPITAL AND LIQUIDITY RATIOS AND IS "
+        "DELIBERATELY NOT USED. This is recorded because it is live, it is linked from the Bank's own "
+        "shareholder pages, it looks authoritative, and the next person to sweep this bank will find it. "
+        "'Hampden_Bank_-_Jun_26.pdf' is a two-page 'Counterparty Due-Diligence Assessment' produced and "
+        "copyrighted by Your Treasurer Ltd, last updated 29/05/2026, whose stated 'Financial Information Source' "
+        "is the Bank's own Annual Financial Statements as at 31 December 2025. It prints a CET1 Capital Ratio of "
+        "17.2%, a Tier 1 Capital Ratio of 17.2%, a Total Capital Ratio of 17.2%, a 'Regulated Leverage Ratio' of "
+        "6.2%, a separate 'Leverage Ratio (Shareholder Funds / Total Assets)' of 7.5%, an LCR of 256% and an "
+        "'RWAs / Total Assets' of 35%. None of it is transcribed, for three independent reasons, any one of which "
+        "would be sufficient. FIRST, these are a third party's computed indicators, not the Bank's disclosure: "
+        "the Bank's own published figure for the same date is the KPI table's 17%, and 17.2% is not it. SECOND, "
+        "the sheet mixes bases within itself - it prints two different leverage ratios under two different "
+        "definitions, one of which is its own shareholder-funds-over-assets formula, and marks several rows "
+        "'(Estimate)'; its NSFR row reads '0%' captioned '(Not Yet Applicable)', which is a scoring convention "
+        "and not a disclosure of zero. THIRD, the only RWA information in it is a ratio to total assets, so "
+        "putting an RWA figure on the Total RWAs sheet from this document would mean multiplying it out - a "
+        "derivation from a third party's rounded ratio, which this project does not do. The document is "
+        "nonetheless useful in one respect, as corroboration rather than as a source: its institution "
+        "description independently states that the Bank 'is regulated as an unlisted UK Small Domestic Deposit "
+        "Taker (SDDT)', which agrees with the Rule 3.1 modification found in the register at (a) above.\n"
+        "SCOPE, so that no parent is left unchecked: the FY2023 Pillar 3's own section 1.3 'Scope of disclosure' "
+        "states that the disclosures 'are for the single legal entity Hampden & Co plc (company registration "
+        "number SC386922)'. There is no consolidating parent and no group Pillar 3 in which these metrics could "
+        "instead be reported. The Bank is owned by five substantial minority shareholders, none of which "
+        "consolidates it for disclosure purposes."
     )
 
 
@@ -820,6 +891,57 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# THE FY2024/FY2025 FINDING, WRITTEN WHERE A READER AND A TOOL CAN SEE IT.
+# Added 2026-09-18 (remaining-gap round). The exemption below was established by
+# earlier sessions and is documented at length in p3_sources() and KM1_SOURCES,
+# but it lived ONLY in prose: the FY2024 and FY2025 year columns of eleven
+# Pillar 3 sheets sat EMPTY, and an empty cell is indistinguishable from a year
+# nobody has looked at. `audit_gaps.py` scored 22 sheet-years here as
+# unexplained gaps for exactly that reason. The statement now goes in the CELL;
+# the evidence stays in the source notes.
+#
+# RE-VERIFIED INDEPENDENTLY 2026-09-18, not carried over on trust:
+#   * PRA consolidated waivers register downloaded fresh that day (2,899 rows)
+#     and matched on BOTH conjuncts - Rule Description 'SDDT Regime - General
+#     Application' AND Sub Rule Number 'Ru 3.1'. Matching either column alone is
+#     wrong in a different direction (the sub-rule number is reused by unrelated
+#     Rulebook Parts; the description also spans eligibility-criteria rules that
+#     remove no duty). The row: FRN 606934, 'HAMPDEN & CO PLC', ref
+#     A00007791P.pdf, start 25/04/2024, NO end date. The Bank's other register
+#     rows - two Capital Requirements Regulation Ar 26(3) permissions from 2016
+#     and a Permissions and Waivers (CRR Firms) CA.BU.5.1-5.3 direction of
+#     24/06/2024 - are not disclosure exemptions and are not relied on.
+#   * The Bank's own index, https://www.hampdenbank.com/about-us/
+#     shareholder-information/, fetched live the same day over HTTP/1.1 with a
+#     browser UA (HTTP 200, text/html, 240,927 bytes - not a block, not an
+#     interstitial). Its single "PILLAR 3 DISCLOSURES" link still points at
+#     Hampden-Co-plc-2023-Pillar-3-Disclosures.pdf, while the Annual Report list
+#     runs 2017-2025 and includes Hampden_Bank_Annual_Report_2025.pdf. So the
+#     Bank kept publishing statutory documents right through the window in which
+#     FY2024 and FY2025 editions would have been due, and added no Pillar 3.
+#
+# DATE FIT, STATED PER YEAR because a modification cannot excuse a reporting
+# date that precedes it. Company SC386922's accounting reference date is 31
+# December and has not moved:
+#   FY2024 reporting date 31 December 2024 - AFTER 25 April 2024. Covered.
+#   FY2025 reporting date 31 December 2025 - AFTER. Covered.
+# FY2023 (31 December 2023) PRECEDES the modification, which is exactly why the
+# 2023 edition exists and is the last one that does. Nothing here reaches back
+# past FY2023, and it says nothing about FY2016/FY2017.
+#
+# This is outcome 2 (never published), not outcome 3 (unreached today): a dated
+# instrument removed the duty, so no FY2024 or FY2025 Pillar 3 document exists
+# anywhere to be fetched. The Total Capital Ratio sheet is the one Pillar 3
+# sheet that still carries figures for these two years, because the Annual
+# Report KPI table prints a ratio (17%/17%) and nothing else - which is why its
+# cells are untouched here.
+HAMPDEN_P3_STATUS = {
+    "FY2025": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
+    "FY2024": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
+}
+
+
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
                          rows_data, sources_text, note=note, first_col_width=44, source_height=130)
@@ -886,6 +1008,12 @@ KM1_SOURCES = (
 )
 
 km1_rows = [
+    # Not a template row - a status row, carried FIRST so the two newest columns
+    # say what happened to them instead of sitting blank. It is deliberately NOT
+    # given a KM1 row number and does not begin with any of the Bank's printed
+    # wording, so verify_workbook.py's startswith-matching cannot mistake it for
+    # a template row (KM1 map rule 32a). Nothing below it is altered.
+    ("DATA", "Pillar 3 edition status for this year (see source note)", HAMPDEN_P3_STATUS),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1 Common Equity Tier 1 (CET1) capital (£'000)", {
         "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
@@ -1002,8 +1130,9 @@ bw.add_km1_sheet(
              "amounts in £'000, ratios as printed. Blank cells are rows the Bank did not print; 'N/A' is "
              "reproduced where the Bank printed it. FY2021 is the FY2022 edition's Dec-21 comparative column - "
              "that year's own edition prints no template at all. FY2024 and FY2025 are blank because the Bank has "
-             "held a PRA SDDT Rule 3.1 modification since 25 April 2024 and no longer publishes Pillar 3 - see the "
-             "source note.",
+             "held a PRA SDDT Rule 3.1 modification since 25 April 2024 and no longer publishes Pillar 3. Both "
+             "columns now carry that statement explicitly on the status row rather than sitting blank (2026-09-18) "
+             "- see the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=72,
@@ -1012,61 +1141,67 @@ bw.add_km1_sheet(
 
 metric(
     "CET1 Capital", "£'000",
-    [("Common Equity Tier 1 (CET1) capital", {
+    [("Common Equity Tier 1 (CET1) capital", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
         "FY2020": 49587, "FY2019": 42522, "FY2018": 36942,
-    })],
+    }))],
     p3_sources(),
     note="No Additional Tier 1 or Tier 2 capital any year - CET1 = Tier 1 = Total Capital throughout. FY2018 sourced "
          "from the FY2019 Pillar 3 document's own comparative column (no standalone FY2018 document exists). "
-         "Not disclosed for FY2024/FY2025 (no standalone Pillar 3 document located for either year) or FY2016/FY2017 "
-         "(no Pillar 3 document exists at all for either year, confirmed via a full domain Wayback CDX search).",
+         "FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year, confirmed via a full domain Wayback "
+         "CDX search.",
 )
 
 metric(
     "CET1 Ratio", "%",
-    [("Common Equity Tier 1 (CET1) ratio", {
+    [("Common Equity Tier 1 (CET1) ratio", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19%",
         "FY2020": "20.2%", "FY2019": "26.1%", "FY2018": "41%",
-    })],
+    }))],
     p3_sources(),
     note="FY2018 sourced from the FY2019 Pillar 3 document's own comparative column as a rounded whole percentage "
-         "(that document does not carry a KM1-style appendix for its comparative year). Not disclosed for "
-         "FY2024/FY2025 (no standalone Pillar 3 document located for either year) or FY2016/FY2017 (no Pillar 3 "
-         "document exists at all for either year).",
+         "(that document does not carry a KM1-style appendix for its comparative year). "
+         "FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {
+    [("Tier 1 capital", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
         "FY2020": 49587, "FY2019": 42522, "FY2018": 36942,
-    })],
+    }))],
     p3_sources(),
     note="No AT1 capital any year - Tier 1 = CET1 = Total Capital throughout. FY2018 sourced from the FY2019 Pillar 3 "
-         "document's own comparative column. Not disclosed for FY2024/FY2025 or FY2016/FY2017.",
+         "document's own comparative column. FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. FY2016/FY2017: no Pillar 3 document exists at all.",
 )
 
 metric(
     "Tier 1 Ratio", "%",
-    [("Tier 1 ratio", {
+    [("Tier 1 ratio", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": "20.53%", "FY2022": "20.77%", "FY2021": "19%",
         "FY2020": "20.2%", "FY2019": "26.1%", "FY2018": "41%",
-    })],
+    }))],
     p3_sources(),
-    note="Not disclosed for FY2024/FY2025 (no standalone Pillar 3 document located for either year) or FY2016/FY2017 "
-         "(no Pillar 3 document exists at all for either year).",
+    note="FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
 metric(
     "Total Capital", "£'000",
     [("Total capital", {
+        "FY2025": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024; AR KPI table prints a ratio only",
+        "FY2024": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024; AR KPI table prints a ratio only",
         "FY2023": 74173, "FY2022": 65731, "FY2021": 55264,
         "FY2020": 49587, "FY2019": 42522, "FY2018": 36942,
     })],
     p3_sources(),
-    note="Not disclosed in £'000 terms for FY2024/FY2025 - only the ratio (below) is given. Not disclosed at all for "
-         "FY2016/FY2017.",
+    note="FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18). No "
+         "capital AMOUNT exists for either year: the Bank holds a PRA SDDT Rule 3.1 modification effective "
+         "25/04/2024 with no end date, which removed its Pillar 3 duty before both reporting dates, and the only "
+         "capital metric either Annual Report prints is the KPI-table total capital RATIO (17%/17%), carried on "
+         "the Total Capital Ratio sheet. Nothing is back-solved from it. Not disclosed at all for FY2016/FY2017.",
 )
 
 metric(
@@ -1084,22 +1219,30 @@ metric(
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {
+    [("Total risk-weighted exposure amount", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": 361317, "FY2022": 316422, "FY2021": 285422,
         "FY2020": 245595, "FY2019": 163065, "FY2018": 91188,
-    })],
+    }))],
     p3_sources(),
     note="FY2020/FY2019 figures are directly disclosed (the FY2020 Pillar 3 document's own KM1-style appendix). "
          "FY2018 is derived (not directly disclosed) as that year's own disclosed Pillar 1 capital requirement "
-         "(GBP7,295k, per the FY2019 Pillar 3 document's comparative column) divided by 8%, since only the capital "
-         "requirement - not the RWA total itself - is stated under that document's pre-KM1 format for its "
-         "comparative year. Not disclosed for FY2024/FY2025 or FY2016/FY2017.",
+         "(GBP7,295k, per the FY2019 Pillar 3 document's comparative column, printed folio 16) divided by 8%, since "
+         "only the capital requirement - not the RWA total itself - is stated under that document's pre-KM1 format "
+         "for its comparative year. FY2018 READS 91,188 HERE AND 91,192 ON THE RWA BREAKDOWN SHEET, AND BOTH ARE "
+         "CORRECT AS PRINTED: the Bank published no FY2018 total RWA at all, so each sheet derives one by a "
+         "different route - this sheet from the aggregate capital requirement (7,295 / 8%), the breakdown from the "
+         "credit-risk RWA the Bank did print (87,630) plus the operational leg (285 / 8%). The GBP4k gap is the "
+         "rounding of 87,630 x 8% = 7,010.4 down to the printed 7,010. Neither figure has been adjusted to match "
+         "the other; see the RWA Breakdown sheet's sources note for the full derivation. "
+         "FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
 rwa_rows = [
+    ("DATA", "Pillar 3 edition status for this year (see source note)", HAMPDEN_P3_STATUS),
+    ("SECTION", "Table UK OV1 'Overview of risk weighted exposure amounts' — Pillar 3 Disclosures for the year ended 31 December 2023, p.16 (FY2023, with the FY2022 comparative column)", {}),
     ("DATA", "Credit risk (excluding CCR)", {
-        "FY2023": 317736, "FY2022": 284658, "FY2021": 269622,
-        "FY2020": 233745, "FY2019": 155627, "FY2018": 87630,
+        "FY2023": 317736, "FY2022": 284658,
     }),
     ("DATA", "Counterparty credit risk (CCR)", {
         "FY2023": 1549, "FY2022": 2826,
@@ -1110,22 +1253,33 @@ rwa_rows = [
     ("DATA", "Of which other CCR", {
         "FY2023": 811, "FY2022": 1076,
     }),
+    ("DATA", "Operational risk", {
+        "FY2023": 42032, "FY2022": 28938,
+    }),
+    ("TOTAL", "Total risk-weighted exposure amount", {
+        "FY2023": 361317, "FY2022": 316422,
+    }),
+    ("SECTION", "Table 6 'Pillar 1 capital requirement' and Table 7 'Risk weighted assets and Pillar 1 credit risk capital requirement by exposure class' — each year's own Pillar 3 Disclosures (FY2021 p.16; FY2018 from the FY2019 edition's comparative column, p.15-16). This pre-UK-OV1 pair of tables has no counterparty-credit-risk or CVA line at all, and the operational-risk RWA is DERIVED from the disclosed capital requirement rather than published as an RWA (FY2021-FY2018)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {
+        "FY2021": 269622, "FY2020": 233745, "FY2019": 155627, "FY2018": 87630,
+    }),
     ("DATA", "Market risk (FX)", {
         "FY2021": 0, "FY2020": 0, "FY2019": 0,
     }),
     ("DATA", "Operational risk", {
-        "FY2023": 42032, "FY2022": 28938, "FY2021": 15800,
-        "FY2020": 11850, "FY2019": 7438, "FY2018": 3562,
+        "FY2021": 15800, "FY2020": 11850, "FY2019": 7438, "FY2018": 3562,
     }),
     ("TOTAL", "Total risk-weighted exposure amount", {
-        "FY2023": 361317, "FY2022": 316422, "FY2021": 285422,
-        "FY2020": 245595, "FY2019": 163065, "FY2018": 91192,
+        "FY2021": 285422, "FY2020": 245595, "FY2019": 163065, "FY2018": 91192,
     }),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Hampden & Co Plc — RWA Breakdown",
-    subtitle="Pillar 1 risk weighted exposure amounts by risk category",
+    subtitle="Pillar 1 risk weighted exposure amounts by risk category. The FY2025 and FY2024 columns stay "
+             "visible and now carry an explicit stated negative on the status row rather than sitting blank: the "
+             "Bank holds a PRA SDDT Rule 3.1 modification effective 25 April 2024 with no end date, preceding "
+             "both reporting dates, so no Pillar 3 edition exists for either year.",
     rows=rwa_rows,
     sources_text=(
         "Sources - Hampden & Co Plc Pillar 3 Disclosures:\n"
@@ -1147,12 +1301,22 @@ bw.add_rwa_breakdown_sheet(
         f"FY2018: Table 6 'Pillar 1 capital requirement' and Table 7 credit risk breakdown, Pillar 3 Disclosures "
         f"for the year ended 31 December 2019 (FY2018 comparative column), p.15-16 - {P3_2019_URL}. Credit risk RWA "
         "(87,630) is directly disclosed; Operational risk RWA (3,562) is derived from the disclosed capital "
-        "requirement (285) divided by 8%. This breakdown's own component sum (91,192) differs by GBP4k from the "
-        "Total RWAs metric sheet's own FY2018 figure (91,188, derived from the aggregate Pillar 1 capital "
-        "requirement of 7,295 divided by 8%) - both are derivations from disclosed capital requirements rounded at "
-        "different stages, and the GBP4k gap is not forced to reconcile.\n"
-        "Not disclosed for FY2024/FY2025 (no standalone Pillar 3 document located for either year, consistent "
-        "with the pre-existing Total RWAs sheet) or FY2016/FY2017 (no Pillar 3 document exists at all for either "
+        "requirement (285) divided by 8%. FY2018 TOTAL RWA FIGURES - WHY TWO EXIST AND WHY NEITHER IS CORRECTED: "
+        "the Bank prints NO total RWA figure for FY2018 anywhere. On printed folio 16 of that edition it prints, in "
+        "the Dec-18 comparative column, a Pillar 1 CAPITAL REQUIREMENT build-up (Market Risk '-', Credit Risk 7,010, "
+        "Operational Risk 285, total 7,295) and, separately, a credit-risk-by-exposure-class table whose RWAs column "
+        "totals 87,630. Both workbook figures are therefore derivations of an unprinted quantity, by two different "
+        "rounding paths. This breakdown's component sum is 91,192 = 87,630 (the RWA the Bank actually printed) + "
+        "3,562 (285 / 8%). The Total RWAs metric sheet's 91,188 = 7,295 / 8%, which back-solves the credit leg from "
+        "the ROUNDED capital requirement: 87,630 x 8% = 7,010.4, printed as 7,010, and dividing 7,010 back out gives "
+        "87,625, five short of the 87,630 the Bank printed. That 5, less 0.5 on the operational leg (3,562.5 carried "
+        "as 3,562), is the whole GBP4k gap. Both are legitimate readings of the same disclosure and NEITHER is "
+        "edited to match the other; the breakdown's 91,192 rests on a printed RWA, while 91,188 rests on a printed "
+        "capital-requirement total, and forcing either to the other would discard a figure the Bank published.\n"
+        "FY2024/FY2025 now STATE the non-publication on the status row rather than sitting empty (2026-09-18): "
+        "the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, preceding both "
+        "the 31 December 2024 and 31 December 2025 reporting dates, so no Pillar 3 edition - and therefore no "
+        "UK OV1 breakdown - exists for either year. FY2016/FY2017: no Pillar 3 document exists at all for either "
         "year). Every year's Total ties exactly to the pre-existing Total RWAs metric sheet, except FY2018 as "
         "noted above."
     ),
@@ -1163,9 +1327,9 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio (excluding claims on central banks, FY2022-FY2023)", {
+    [("Leverage ratio (excluding claims on central banks, FY2022-FY2023)", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": "8.36%", "FY2022": "8.72%",
-    }),
+    })),
      ("Leverage ratio (FY2021 basis, as originally disclosed)", {
         "FY2021": "7%",
     }),
@@ -1182,28 +1346,32 @@ metric(
          "document's own main-text narrative rounds these to 8%/9%, and the FY2019 Pillar 3 document's own contemporaneous "
          "figure for FY2019 was also rounded to 9% - the more precise comparative figure is preferred here. FY2018 is "
          "only available as a rounded whole percentage (11%), from the FY2019 Pillar 3 document's own comparative "
-         "column (no KM1-style appendix exists for that comparative year). Not disclosed for FY2024/FY2025 or "
-         "FY2016/FY2017.",
+         "column (no KM1-style appendix exists for that comparative year). "
+         "FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
 metric(
     "LCR", "%",
-    [("Liquidity Coverage Ratio (12-month average)", {
+    [("Liquidity Coverage Ratio (12-month average)", dict(HAMPDEN_P3_STATUS, **{
         "FY2023": "262%", "FY2022": "213%",
-    }),
+    })),
      ("Liquidity Coverage Ratio (point-in-time, FY2018-FY2021 basis)", {
         "FY2021": "180%", "FY2020": "286%", "FY2019": "467%", "FY2018": "509%",
     })],
     p3_sources(),
     note="FY2018-FY2021's disclosures predate the UK KM1 format and do not state an averaging basis (later years "
          "use a 12-month average per KM1) - shown on its own row rather than assumed equivalent. FY2018 sourced "
-         "from the FY2019 Pillar 3 document's own comparative column. Not disclosed for FY2024/FY2025 or "
-         "FY2016/FY2017.",
+         "from the FY2019 Pillar 3 document's own comparative column. "
+         "FY2024/FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): the Bank holds a PRA SDDT Rule 3.1 modification effective 25/04/2024 with no end date, which removed its Pillar 3 duty before both the 31 December 2024 and 31 December 2025 reporting dates, so no edition exists for either year. "
+         "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (4-quarter average)", {
+        "FY2025": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
+        "FY2024": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
         "FY2023": "186%", "FY2022": "186%",
         "FY2021": "Not applicable", "FY2020": "Not applicable", "FY2019": "Not applicable",
         "FY2018": "Not applicable", "FY2017": "Not applicable", "FY2016": "Not applicable",
@@ -1218,10 +1386,13 @@ metric(
          "none either. The distinction matters for coverage measurement: an empty cell is indistinguishable "
          "from a metric that was never chased, and these six will never yield a figure however often they are "
          "re-chased.\n"
-         "FY2024/FY2025 are a DIFFERENT case and are deliberately left blank rather than marked 'Not "
-         "applicable'. The metric existed and applied in both years; the Bank simply has no duty to publish "
-         "it, having held a PRA Rule 3.1 SDDT modification since 25/04/2024 (see the Sources note). That is a "
-         "genuine disclosure limitation, so it stays counted as a gap - unlike the six structural years above.",
+         "FY2024/FY2025 are a DIFFERENT case and are deliberately NOT marked 'Not applicable'. The metric existed "
+         "and applied in both years; what the Bank lost is the DUTY TO PUBLISH, having held a PRA Rule 3.1 SDDT "
+         "modification since 25/04/2024 with no end date (see the Sources note), which precedes both the 31 "
+         "December 2024 and 31 December 2025 reporting dates. Changed 2026-09-18: those two cells previously sat "
+         "empty and now state that non-publication explicitly, because an empty cell is indistinguishable from a "
+         "year nobody searched. It is a disclosure limitation, not a structural non-applicability like the six "
+         "years above.",
 )
 
 bw.add_not_disclosed_metric_sheets(

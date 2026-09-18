@@ -67,6 +67,8 @@ CH_FY2010 = "https://find-and-update.company-information.service.gov.uk/company/
 CH_FY2011 = "https://find-and-update.company-information.service.gov.uk/company/06419578/filing-history/MzA2MDE4MDA3NWFkaXF6a2N4/document?format=pdf&download=0"
 CH_FY2012 = "https://find-and-update.company-information.service.gov.uk/company/06419578/filing-history/MzA3OTE2MjcwMGFkaXF6a2N4/document?format=pdf&download=0"
 CH_FY2013 = "https://find-and-update.company-information.service.gov.uk/company/06419578/filing-history/MzEwMzEwOTEwMGFkaXF6a2N4/document?format=pdf&download=0"
+CH_FY2024 = "https://find-and-update.company-information.service.gov.uk/company/06419578/filing-history/MzQ2NzY4OTg1OGFkaXF6a2N4/document?format=pdf&download=0"
+CH_FY2025 = "https://find-and-update.company-information.service.gov.uk/company/06419578/filing-history/MzUzODAzNTg0NWFkaXF6a2N4/document?format=pdf&download=0"
 
 # 2026-09-15: historical Pillar 3 editions recovered from the Wayback Machine.
 # Metro Bank's own live IR site hosts nothing older than the FY2016 edition, so
@@ -108,9 +110,9 @@ ENTITY_NOTE = (
     "a genuine basis change WITHIN this workbook's Pillar 3 series and is labelled on every affected sheet rather "
     "than being presented as one continuous entity. It is also why the FY2023 regulatory total assets of 22,245 "
     "differ from Metro Bank PLC's own AR2023 balance sheet total of 22,257. "
-    "\n\nFY2024-FY2025 standalone Metro "
-    "Bank PLC accounts/cash flows were not located in the reviewed official archive and "
-    "are left blank rather than substituted with Holdings figures."
+    "\n\nFY2024-FY2025 Metro Bank PLC Company/standalone balance sheets and cash flows are "
+    "taken from the Bank's own statutory accounts filed at Companies House, rather than "
+    "substituting Metro Bank Holdings PLC figures."
     "\n\nHD-049 EXTENSION (2026-09-06): FY2014-FY2020 added, capped at FY2014 by explicit project-wide user "
     "decision (real Metro Bank archive extends to FY2010, but pre-CRD IV/Basel III Pillar 3 disclosures aren't "
     "comparable). Balance Sheet/Cash Flow/Statement of Changes in Equity for FY2014-FY2020 are shown on a "
@@ -172,6 +174,8 @@ CASH_SOURCES = (
     "summing the independently-rounded component rows can be off by £1m from the total in a few years (FY2014, "
     "FY2016, FY2017) - this is a rounding artifact of the conversion, not a data error.\n\n"
     "Sources - Metro Bank PLC Company/standalone cash flows, £m:\n"
+    f"FY2025 & FY2024: Metro Bank PLC Annual Report and Accounts 2025, Company cash flow statement, p.155 - {CH_FY2025}\n"
+    f"FY2024: Metro Bank PLC Annual Report and Accounts 2024, Company cash flow statement, p.147 - {CH_FY2024}\n"
     f"FY2023 & FY2022: Metro Bank PLC Annual Report 2023, p.147 (Company cash flow statement) - {AR_2023}\n"
     f"FY2022 & FY2021: Metro Bank PLC Annual Report and Accounts 2022, p.185 (Company column) - {AR_2022}\n"
     f"FY2021: Metro Bank PLC Annual Report and Accounts 2021, p.165 (Company column) - {AR_2021}\n"
@@ -181,6 +185,10 @@ CASH_SOURCES = (
     f"FY2010 (16m): Metro Bank PLC Financial Statements, period ended 31 December 2010, Cash flow statement, p.10 - {CH_FY2010}\n\n"
     + ENTITY_NOTE
     + "\n\n" + HD074_EXTENSION_NOTE
+    + "\n\nFY2024 SOURCE-QUALITY NOTE: the filed Company statement gives the exact net operating total (\u00a31,383m), "
+    "but the accessible text rendition dropped the six FY2024 operating-reconciliation component values. Those "
+    "cells remain blank; no consolidated figures were substituted. The FY2024 investing, financing and cash "
+    "reconciliation figures are directly reported and populated."
 )
 
 HIST_P3_NOTE = (
@@ -303,6 +311,8 @@ bw = BankWorkbook(bank_name="Metro Bank PLC", years=YEARS, year_label=YEAR_LABEL
 
 STATEMENTS_SOURCES = (
     "Sources - Metro Bank PLC statements, £m:\n"
+    f"FY2025 & FY2024 (Company/standalone balance sheet): Metro Bank PLC Annual Report and Accounts 2025, p.153 - {CH_FY2025}\n"
+    f"FY2024 (Company/standalone statements): Metro Bank PLC Annual Report and Accounts 2024, p.145-147 - {CH_FY2024}\n"
     f"FY2020: Metro Bank PLC Annual Report and Accounts 2020, Consolidated statement of comprehensive income/balance sheet/statement of changes in equity/cash flow statement, p.163-167 - {AR_2020}\n"
     f"FY2019: Metro Bank PLC Annual Report and Accounts 2019, same statements, p.119-123 - {AR_2019}\n"
     f"FY2018: Metro Bank Plc Annual report and accounts 2018, same statements, p.104-107 - {AR_2018}\n"
@@ -316,14 +326,11 @@ STATEMENTS_SOURCES = (
     f"FY2022: Metro Bank PLC Annual Report and Accounts 2022, Consolidated and company statement of comprehensive income/balance sheets/statements of changes in equity, p.181-184 - {AR_2022}\n"
     f"FY2021: Metro Bank PLC Annual Report & Accounts 2021, Consolidated statement of comprehensive income/Consolidated and company balance sheets/statements of changes in equity, p.162-165 - {AR_2021}\n\n"
     + ENTITY_NOTE
-    + "\n\nBASIS NOTE: Balance Sheet and Statement of Changes in Equity are shown on the same Company/standalone Metro "
-    "Bank PLC basis as the Cash Flow Statement for FY2021-FY2023, and left blank for FY2024-FY2025 for the same reason "
-    "(no standalone Metro Bank PLC accounts were located for those years - the 'Company' balance sheet published in the "
-    "FY2024/FY2025 Annual Reports is Metro Bank Holdings PLC's own shell-company balance sheet, an investment-holding "
-    "entity with ~£1.8bn/£1.9bn total assets dominated by 'Investment in subsidiaries', a fundamentally different entity "
-    "from the ~£17-22bn banking entity Metro Bank PLC and not a defensible substitute; confirmed via Companies House "
-    "filing history for Metro Bank PLC (06419578), which lists only 'Group of companies' accounts' for FY2024/FY2025, "
-    "no standalone individual accounts). Profit & Loss is shown on a Group/consolidated basis for all 5 years, because "
+    + "\n\nBASIS NOTE: Balance Sheet and Cash Flow Statement are shown on a Company/standalone Metro Bank PLC basis "
+    "for FY2021-FY2025. The FY2024/FY2025 Bank company statements were located inside Metro Bank PLC's own 'Group of "
+    "companies' statutory accounts filings at Companies House; that filing label does not mean the document lacks "
+    "separate Company statements. Metro Bank Holdings PLC's shell-company balance sheet is not used. Profit & Loss is "
+    "shown on a Group/consolidated basis for all 5 years, because "
     "Metro Bank PLC does not publish its own standalone income statement in any year reviewed (s.408 Companies Act 2006 "
     "exemption, available where consolidated accounts are also presented) - only a Company balance sheet, statement of "
     "changes in equity, and cash flow statement.\n\n"
@@ -347,7 +354,7 @@ STATEMENTS_SOURCES = (
 
 cash_rows = [
     ("SECTION", "Reconciliation of profit/(loss) before tax to net cash flows from operating activities", {}),
-    ("DATA", "Profit/(loss) before tax", {"FY2023": 46, "FY2022": -71, "FY2021": -245,
+    ("DATA", "Profit/(loss) before tax", {"FY2025": 94, "FY2023": 46, "FY2022": -71, "FY2021": -245,
         "FY2020": -311, "FY2019": -131, "FY2018": 41, "FY2017": 19, "FY2016": -17, "FY2015": -57, "FY2014": -49,
         "FY2013": -52.2, "FY2012": -45.7, "FY2011": -33.1, "FY2010": -23.4}),
     ("DATA", "Impairment and write-offs of property, plant, equipment and intangible assets", {
@@ -367,78 +374,80 @@ cash_rows = [
     ("DATA", "Accrued interest on and amortisation of investment securities", {
         "FY2020": 3, "FY2019": -8, "FY2018": -7, "FY2017": 2, "FY2016": -4, "FY2015": 9, "FY2014": -4,
         "FY2013": -4.4, "FY2012": -4.1}),
-    ("DATA", "Adjustments for non-cash items", {"FY2023": -376, "FY2022": -259, "FY2021": -132}),
-    ("DATA", "Interest received", {"FY2023": 834, "FY2022": 538, "FY2021": 394}),
-    ("DATA", "Interest paid", {"FY2023": -370, "FY2022": -124, "FY2021": -126}),
+    ("DATA", "Adjustments for non-cash items", {"FY2025": -401, "FY2023": -376, "FY2022": -259, "FY2021": -132}),
+    ("DATA", "Interest received", {"FY2025": 748, "FY2023": 834, "FY2022": 538, "FY2021": 394}),
+    ("DATA", "Interest paid", {"FY2025": -319, "FY2023": -370, "FY2022": -124, "FY2021": -126}),
     ("DATA", "Changes in loans and advances to customers", {"FY2020": 2591, "FY2019": -445}),
     ("DATA", "Changes in deposits from customers", {"FY2020": 1595, "FY2019": -1184}),
-    ("DATA", "Changes in other operating assets", {"FY2023": 729, "FY2022": -842, "FY2021": 2613,
+    ("DATA", "Changes in other operating assets", {"FY2025": 96, "FY2023": 729, "FY2022": -842, "FY2021": 2613,
         "FY2020": -2820, "FY2019": -26, "FY2018": -4651, "FY2017": -3755, "FY2016": -2341, "FY2015": -1971, "FY2014": -856,
         "FY2013": -591.9, "FY2012": -129.9, "FY2011": -44.6, "FY2010": -1.6}),
-    ("DATA", "Changes in other operating liabilities", {"FY2023": -251, "FY2022": -409, "FY2021": 370,
+    ("DATA", "Changes in other operating liabilities", {"FY2025": -1323, "FY2023": -251, "FY2022": -409, "FY2021": 370,
         "FY2020": -64, "FY2019": -31, "FY2018": 4726, "FY2017": 5994, "FY2016": 3512, "FY2015": 2543, "FY2014": 1709,
         "FY2013": 893.6, "FY2012": 430.6, "FY2011": 140.0, "FY2010": 17.0}),
-    ("TOTAL", "Net cash inflows/(outflows) from operating activities", {"FY2023": 612, "FY2022": -1167, "FY2021": 2874,
+    ("TOTAL", "Net cash inflows/(outflows) from operating activities", {"FY2025": -1105, "FY2024": -1383, "FY2023": 612, "FY2022": -1167, "FY2021": 2874,
         "FY2020": 1041, "FY2019": -1655, "FY2018": 153, "FY2017": 2294, "FY2016": 1169, "FY2015": 546, "FY2014": 810,
         "FY2013": 249.3, "FY2012": 255.8, "FY2011": 63.7, "FY2010": -6.5}),
     ("SECTION", "Cash flows from investing activities", {}),
-    ("DATA", "Sales of investment securities", {"FY2023": 1870, "FY2022": 857, "FY2021": 1269,
+    ("DATA", "Sales of investment securities", {"FY2025": 1154, "FY2024": 1017, "FY2023": 1870, "FY2022": 857, "FY2021": 1269,
         "FY2020": 615, "FY2019": 2193, "FY2018": 1522, "FY2017": 309, "FY2016": 2197, "FY2015": 911, "FY2014": 474,
         "FY2013": 368.1}),
-    ("DATA", "Purchase of investment securities", {"FY2023": -816, "FY2022": -1206, "FY2021": -3438,
+    ("DATA", "Purchase of investment securities", {"FY2025": -816, "FY2024": -630, "FY2023": -816, "FY2022": -1206, "FY2021": -3438,
         "FY2020": -1460, "FY2019": -618, "FY2018": -1740, "FY2017": -997, "FY2016": -3403, "FY2015": -1311, "FY2014": -1376,
         "FY2013": -638.5, "FY2012": -335.7, "FY2011": -38.7, "FY2010": -40.3}),
-    ("DATA", "Purchase of property, plant and equipment", {"FY2023": -12, "FY2022": -29, "FY2021": -41,
+    ("DATA", "Purchase of property, plant and equipment", {"FY2025": -34, "FY2024": -41, "FY2023": -12, "FY2022": -29, "FY2021": -41,
         "FY2020": -29, "FY2019": -120, "FY2018": -150, "FY2017": -100, "FY2016": -98, "FY2015": -50, "FY2014": -41,
         "FY2013": -60.0, "FY2012": -26.8, "FY2011": -17.8, "FY2010": -15.3}),
     ("DATA", "Proceeds from sale of property, plant and equipment and intangible assets", {"FY2017": 0, "FY2016": 0}),
-    ("DATA", "Purchase and development of intangible assets", {"FY2023": -26, "FY2022": -24, "FY2021": -64,
+    ("DATA", "Purchase and development of intangible assets", {"FY2025": -48, "FY2024": -19, "FY2023": -26, "FY2022": -24, "FY2021": -64,
         "FY2020": -81, "FY2019": -79, "FY2018": -75, "FY2017": -70, "FY2016": -45, "FY2015": -30, "FY2014": -13,
         "FY2013": -14.2, "FY2012": -2.9, "FY2011": -2.7, "FY2010": -6.4}),
     ("DATA", "Acquisition of subsidiary, net of cash acquired", {"FY2020": -1}),
     ("DATA", "Dividends received from subsidiaries", {"FY2023": 12}),
-    ("TOTAL", "Net cash inflows/(outflows) from investing activities", {"FY2023": 1028, "FY2022": -402, "FY2021": -2274,
+    ("TOTAL", "Net cash inflows/(outflows) from investing activities", {"FY2025": 256, "FY2024": 327, "FY2023": 1028, "FY2022": -402, "FY2021": -2274,
         "FY2020": -956, "FY2019": 1376, "FY2018": -443, "FY2017": -858, "FY2016": -1349, "FY2015": -480, "FY2014": -957,
         "FY2013": -344.6, "FY2012": -365.3, "FY2011": -59.1, "FY2010": -62.0}),
     ("SECTION", "Cash flows from financing activities", {}),
     ("DATA", "Repayment of preference shares", {"FY2010": -0.1}),
-    ("DATA", "Repayment of capital elements of leases", {"FY2023": -23, "FY2022": -25, "FY2021": -27,
+    ("DATA", "Repayment of capital elements of leases", {"FY2025": -19, "FY2024": -22, "FY2023": -23, "FY2022": -25, "FY2021": -27,
         "FY2020": -31, "FY2019": -25}),
     ("DATA", "Issuance of new shares", {"FY2023": 144,
         "FY2019": 375, "FY2018": 304, "FY2017": 279, "FY2016": 404, "FY2014": 99,
         "FY2013": 284.3, "FY2012": 126.0, "FY2010": 120.1}),
     ("DATA", "Cost of share/debt issues", {
         "FY2019": -16, "FY2018": -3, "FY2017": -3, "FY2016": -5, "FY2014": -1}),
+    ("DATA", "Issuance of shares and other equity instruments", {"FY2025": 250, "FY2024": "-"}),
+    ("DATA", "Distributions on other equity instruments", {"FY2025": -17, "FY2024": "-"}),
     ("DATA", "Issuance of medium-term notes/subordinated debt (net of costs)", {"FY2023": 175, "FY2019": 350, "FY2018": 250}),
     ("DATA", "Cost of debt issued", {"FY2019": -8, "FY2018": -1}),
     ("DATA", "Grant (repaid)/received", {"FY2020": -50, "FY2019": 120}),
-    ("TOTAL", "Net cash inflows/(outflows) from financing activities", {"FY2023": 296, "FY2022": -25, "FY2021": -27,
+    ("TOTAL", "Net cash inflows/(outflows) from financing activities", {"FY2025": 214, "FY2024": -22, "FY2023": 296, "FY2022": -25, "FY2021": -27,
         "FY2020": -81, "FY2019": 796, "FY2018": 550, "FY2017": 276, "FY2016": 398, "FY2015": 0, "FY2014": 99,
         "FY2013": 284.3, "FY2012": 126.0, "FY2011": 0, "FY2010": 120.1}),
-    ("TOTAL", "Net increase/(decrease) in cash and cash equivalents", {"FY2023": 1936, "FY2022": -1594, "FY2021": 573,
+    ("TOTAL", "Net increase/(decrease) in cash and cash equivalents", {"FY2025": -635, "FY2024": -1078, "FY2023": 1936, "FY2022": -1594, "FY2021": 573,
         "FY2020": 4, "FY2019": 517, "FY2018": 260, "FY2017": 1712, "FY2016": 218, "FY2015": 66, "FY2014": -47,
         "FY2013": 189.1, "FY2012": 16.5, "FY2011": 4.7, "FY2010": 51.6}),
-    ("DATA", "Cash and cash equivalents at start of year", {"FY2023": 1953, "FY2022": 3547, "FY2021": 2974,
+    ("DATA", "Cash and cash equivalents at start of year", {"FY2025": 2811, "FY2024": 3889, "FY2023": 1953, "FY2022": 3547, "FY2021": 2974,
         "FY2020": 2989, "FY2019": 2472, "FY2018": 2212, "FY2017": 500, "FY2016": 282, "FY2015": 216, "FY2014": 263,
         "FY2013": 74.1, "FY2012": 57.6, "FY2011": 52.9, "FY2010": 1.3}),
-    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2023": 3889, "FY2022": 1953, "FY2021": 3547,
+    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 2176, "FY2024": 2811, "FY2023": 3889, "FY2022": 1953, "FY2021": 3547,
         "FY2020": 2993, "FY2019": 2989, "FY2018": 2472, "FY2017": 2212, "FY2016": 500, "FY2015": 282, "FY2014": 216,
         "FY2013": 263.2, "FY2012": 74.1, "FY2011": 57.6, "FY2010": 52.9}),
 ]
 
 bs_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances with the Bank of England", {"FY2023": 3889, "FY2022": 1953, "FY2021": 3547,
+    ("DATA", "Cash and balances with the Bank of England", {"FY2025": 2176, "FY2024": 2811, "FY2023": 3889, "FY2022": 1953, "FY2021": 3547,
         "FY2020": 2993, "FY2019": 2989, "FY2018": 2286, "FY2017": 2112, "FY2016": 435, "FY2015": 218, "FY2014": 181,
         "FY2013": 239.0, "FY2012": 46.7, "FY2011": 35.3, "FY2010": 48.4}),
     ("DATA", "Loans and advances to banks", {"FY2018": 186, "FY2017": 100, "FY2016": 66, "FY2015": 64, "FY2014": 35,
         "FY2013": 24.2, "FY2012": 27.4, "FY2011": 22.2, "FY2010": 4.5}),
-    ("DATA", "Loans and advances to customers", {"FY2023": 11844, "FY2022": 12698, "FY2021": 11976,
+    ("DATA", "Loans and advances to customers", {"FY2025": 8040, "FY2024": 8472, "FY2023": 11844, "FY2022": 12698, "FY2021": 11976,
         "FY2020": 12090, "FY2019": 14681, "FY2018": 14235, "FY2017": 9620, "FY2016": 5865, "FY2015": 3543, "FY2014": 1590,
         "FY2013": 751.1, "FY2012": 167.8, "FY2011": 42.1, "FY2010": 0.1}),
-    ("DATA", "Investment securities held at FVOCI", {"FY2023": 476, "FY2022": 571, "FY2021": 798,
+    ("DATA", "Investment securities held at FVOCI", {"FY2025": 218, "FY2024": 377, "FY2023": 476, "FY2022": 571, "FY2021": 798,
         "FY2020": 773, "FY2019": 411, "FY2018": 674}),
-    ("DATA", "Investment securities held at amortised cost", {"FY2023": 4403, "FY2022": 5343, "FY2021": 4776,
+    ("DATA", "Investment securities held at amortised cost", {"FY2025": 3942, "FY2024": 4113, "FY2023": 4403, "FY2022": 5343, "FY2021": 4776,
         "FY2020": 2640, "FY2019": 2154, "FY2018": 3458}),
     ("DATA", "Available-for-sale investment securities (pre-IFRS 9)", {"FY2017": 361, "FY2016": 604, "FY2015": 364, "FY2014": 1304}),
     ("DATA", "Held-to-maturity investment securities (pre-IFRS 9)", {"FY2017": 3554, "FY2016": 2623, "FY2015": 1636, "FY2014": 307,
@@ -446,63 +455,64 @@ bs_rows = [
     ("DATA", "Investment securities (undifferentiated basis, HD-074: FY2011-FY2013 note-level AFS/HTM split not sourced this session)", {
         "FY2013": 696.4, "FY2012": 431.2, "FY2011": 81.3}),
     ("DATA", "Financial assets held at fair value through profit and loss", {"FY2022": 1, "FY2021": 3, "FY2020": 30}),
-    ("DATA", "Derivative financial assets", {"FY2023": 36, "FY2022": 23}),
-    ("DATA", "Property, plant and equipment", {"FY2023": 723, "FY2022": 748, "FY2021": 765,
+    ("DATA", "Derivative financial assets", {"FY2025": 23, "FY2024": 16, "FY2023": 36, "FY2022": 23}),
+    ("DATA", "Property, plant and equipment", {"FY2025": 705, "FY2024": 711, "FY2023": 723, "FY2022": 748, "FY2021": 765,
         "FY2020": 806, "FY2019": 856, "FY2018": 454, "FY2017": 328, "FY2016": 247, "FY2015": 165, "FY2014": 132,
         "FY2013": 104.5, "FY2012": 53.6, "FY2011": 32.3, "FY2010": 17.3}),
-    ("DATA", "Investment in subsidiaries", {"FY2023": 15, "FY2022": 31, "FY2021": 31}),
-    ("DATA", "Intangible assets", {"FY2023": 188, "FY2022": 204, "FY2021": 231,
+    ("DATA", "Investment in subsidiaries", {"FY2025": 15, "FY2024": 15, "FY2023": 15, "FY2022": 31, "FY2021": 31}),
+    ("DATA", "Intangible assets", {"FY2025": 138, "FY2024": 121, "FY2023": 188, "FY2022": 204, "FY2021": 231,
         "FY2020": 254, "FY2019": 168, "FY2018": 197, "FY2017": 148, "FY2016": 93, "FY2015": 54, "FY2014": 35,
         "FY2013": 23.8, "FY2012": 10.9, "FY2011": 8.8, "FY2010": 7.0}),
-    ("DATA", "Deferred tax asset", {"FY2018": 41, "FY2017": 54, "FY2016": 56, "FY2015": 53, "FY2014": 44,
+    ("DATA", "Deferred tax asset", {"FY2025": 225, "FY2024": 237, "FY2018": 41, "FY2017": 54, "FY2016": 56, "FY2015": 53, "FY2014": 44,
         "FY2013": 35.8, "FY2012": 25.3, "FY2011": 14.1}),
-    ("DATA", "Prepayments and accrued income", {"FY2023": 111, "FY2022": 80, "FY2021": 64,
+    ("DATA", "Prepayments and accrued income", {"FY2025": 70, "FY2024": 84, "FY2023": 111, "FY2022": 80, "FY2021": 64,
         "FY2020": 77, "FY2019": 66, "FY2018": 66, "FY2017": 53, "FY2016": 43, "FY2015": 30, "FY2014": 19,
         "FY2013": 5.0, "FY2012": 1.9, "FY2011": 0.8, "FY2010": 0.4}),
     ("DATA", "Assets classified as held for sale", {"FY2022": 1, "FY2020": 295}),
-    ("DATA", "Other assets", {"FY2023": 572, "FY2022": 473, "FY2021": 392,
+    ("DATA", "Other assets", {"FY2025": 949, "FY2024": 640, "FY2023": 572, "FY2022": 473, "FY2021": 392,
         "FY2020": 2621, "FY2019": 75, "FY2018": 50, "FY2017": 26, "FY2016": 26, "FY2015": 21, "FY2014": 14,
         "FY2013": 11.8, "FY2012": 6.4, "FY2011": 3.3, "FY2010": 1.0}),
-    ("TOTAL", "Total assets", {"FY2023": 22257, "FY2022": 22126, "FY2021": 22583,
+    ("TOTAL", "Total assets", {"FY2025": 16501, "FY2024": 17597, "FY2023": 22257, "FY2022": 22126, "FY2021": 22583,
         "FY2020": 22579, "FY2019": 21400, "FY2018": 21647, "FY2017": 16355, "FY2016": 10057, "FY2015": 6148, "FY2014": 3661,
         "FY2013": 1891.6, "FY2012": 771.2, "FY2011": 240.3, "FY2010": 119.1}),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Deposits from customers", {"FY2023": 15623, "FY2022": 16014, "FY2021": 16448,
+    ("DATA", "Deposits from customers", {"FY2025": 13445, "FY2024": 14458, "FY2023": 15623, "FY2022": 16014, "FY2021": 16448,
         "FY2020": 16072, "FY2019": 14477, "FY2018": 15661, "FY2017": 11669, "FY2016": 7951, "FY2015": 5108, "FY2014": 2867,
         "FY2013": 1315.4, "FY2012": 576.3, "FY2011": 151.6, "FY2010": 17.9}),
-    ("DATA", "Deposits from central banks", {"FY2023": 3050, "FY2022": 3800, "FY2021": 3800,
+    ("DATA", "Deposits from central banks", {"FY2025": 400, "FY2024": 400, "FY2023": 3050, "FY2022": 3800, "FY2021": 3800,
         "FY2020": 3808, "FY2019": 3801, "FY2018": 3801, "FY2017": 3321, "FY2016": 543}),
-    ("DATA", "Debt securities", {"FY2023": 699, "FY2022": 571, "FY2021": 588,
+    ("DATA", "Debt securities", {"FY2025": 688, "FY2024": 679, "FY2023": 699, "FY2022": 571, "FY2021": 588,
         "FY2020": 600, "FY2019": 591, "FY2018": 249}),
     ("DATA", "Financial liabilities held at fair value through profit and loss", {"FY2020": 30}),
-    ("DATA", "Repurchase agreements", {"FY2023": 1191, "FY2022": 238, "FY2021": 169,
+    ("DATA", "Repurchase agreements", {"FY2025": 73, "FY2024": 391, "FY2023": 1191, "FY2022": 238, "FY2021": 169,
         "FY2020": 196, "FY2019": 250, "FY2018": 344, "FY2017": 122, "FY2016": 653, "FY2015": 562, "FY2014": 283}),
-    ("DATA", "Derivative financial liabilities", {"FY2022": 26, "FY2021": 10, "FY2020": 8, "FY2019": 8}),
-    ("DATA", "Lease liabilities", {"FY2023": 234, "FY2022": 248, "FY2021": 269, "FY2020": 327, "FY2019": 341}),
-    ("DATA", "Deferred grants", {"FY2023": 16, "FY2022": 17, "FY2021": 19, "FY2020": 28, "FY2019": 50}),
-    ("DATA", "Provisions", {"FY2023": 23, "FY2022": 7, "FY2021": 15, "FY2020": 11, "FY2019": 17}),
+    ("DATA", "Derivative financial liabilities", {"FY2025": 0, "FY2024": 1, "FY2022": 26, "FY2021": 10, "FY2020": 8, "FY2019": 8}),
+    ("DATA", "Lease liabilities", {"FY2025": 185, "FY2024": 205, "FY2023": 234, "FY2022": 248, "FY2021": 269, "FY2020": 327, "FY2019": 341}),
+    ("DATA", "Deferred grants", {"FY2025": 10, "FY2024": 13, "FY2023": 16, "FY2022": 17, "FY2021": 19, "FY2020": 28, "FY2019": 50}),
+    ("DATA", "Provisions", {"FY2025": 6, "FY2024": 11, "FY2023": 23, "FY2022": 7, "FY2021": 15, "FY2020": 11, "FY2019": 17}),
     ("DATA", "Deferred tax liability", {"FY2023": 13, "FY2022": 12, "FY2021": 12, "FY2020": 12, "FY2019": 15}),
-    ("DATA", "Other liabilities", {"FY2023": 256, "FY2022": 236, "FY2021": 217,
+    ("DATA", "Other liabilities", {"FY2025": 181, "FY2024": 237, "FY2023": 256, "FY2022": 236, "FY2021": 217,
         "FY2020": 198, "FY2019": 267, "FY2018": 189, "FY2017": 148, "FY2016": 106, "FY2015": 71, "FY2014": 49,
         "FY2013": 171.2, "FY2012": 16.7, "FY2011": 10.7, "FY2010": 4.5}),
-    ("TOTAL", "Total liabilities", {"FY2023": 21105, "FY2022": 21169, "FY2021": 21547,
+    ("TOTAL", "Total liabilities", {"FY2025": 14988, "FY2024": 16395, "FY2023": 21105, "FY2022": 21169, "FY2021": 21547,
         "FY2020": 21290, "FY2019": 19817, "FY2018": 20244, "FY2017": 15259, "FY2016": 9253, "FY2015": 5741, "FY2014": 3198,
         "FY2013": 1486.6, "FY2012": 593.0, "FY2011": 162.3, "FY2010": 22.3}),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called-up share capital", {}),
-    ("DATA", "Share premium", {"FY2023": 144, "FY2022": 1964, "FY2021": 1964,
+    ("DATA", "Called-up share capital", {"FY2025": 0, "FY2024": 0}),
+    ("DATA", "Share premium", {"FY2025": 144, "FY2024": 144, "FY2023": 144, "FY2022": 1964, "FY2021": 1964,
         "FY2020": 1964, "FY2019": 1964, "FY2018": 1605, "FY2017": 1304, "FY2016": 1028, "FY2015": 629, "FY2014": 629,
         "FY2013": 530.5, "FY2012": 246.2, "FY2011": 120.1, "FY2010": 120.1}),
-    ("DATA", "Retained earnings/(losses)", {"FY2023": 996, "FY2022": -1014, "FY2021": -941,
+    ("DATA", "Retained earnings/(losses)", {"FY2025": 1096, "FY2024": 1040, "FY2023": 996, "FY2022": -1014, "FY2021": -941,
         "FY2020": -694, "FY2019": -392, "FY2018": -209, "FY2017": -219, "FY2016": -230, "FY2015": -213, "FY2014": -164,
         "FY2013": -118.7, "FY2012": -76.9, "FY2011": -42.3, "FY2010": -23.3}),
-    ("DATA", "Other reserves", {"FY2023": 12, "FY2022": 7, "FY2021": 13,
+    ("DATA", "Other equity instruments", {"FY2025": 250, "FY2024": "-"}),
+    ("DATA", "Other reserves", {"FY2025": 23, "FY2024": 18, "FY2023": 12, "FY2022": 7, "FY2021": 13,
         "FY2020": 19, "FY2019": 11, "FY2018": 7, "FY2017": 12, "FY2016": 7, "FY2015": -9, "FY2014": -3,
         "FY2013": -6.8, "FY2012": 8.9, "FY2011": 0.2}),
-    ("TOTAL", "Total equity", {"FY2023": 1152, "FY2022": 957, "FY2021": 1036,
+    ("TOTAL", "Total equity", {"FY2025": 1513, "FY2024": 1202, "FY2023": 1152, "FY2022": 957, "FY2021": 1036,
         "FY2020": 1289, "FY2019": 1583, "FY2018": 1403, "FY2017": 1096, "FY2016": 805, "FY2015": 407, "FY2014": 462,
         "FY2013": 405.0, "FY2012": 178.2, "FY2011": 78.0, "FY2010": 96.8}),
-    ("TOTAL", "Total equity and liabilities", {"FY2023": 22257, "FY2022": 22126, "FY2021": 22583,
+    ("TOTAL", "Total equity and liabilities", {"FY2025": 16501, "FY2024": 17597, "FY2023": 22257, "FY2022": 22126, "FY2021": 22583,
         "FY2020": 22579, "FY2019": 21400, "FY2018": 21647, "FY2017": 16355, "FY2016": 10057, "FY2015": 6148, "FY2014": 3661,
         "FY2013": 1891.6, "FY2012": 771.2, "FY2011": 240.3, "FY2010": 119.1}),
 ]
@@ -511,7 +521,12 @@ bw.add_balance_sheet_sheet(
     title="Metro Bank PLC - Balance Sheet",
     subtitle="Company/standalone basis, £m; 31 December year-end (FY2013-FY2020 shown on a Group/consolidated "
               "basis instead - see HD-049/HD-074 notes). FY2010 is a 16-month first accounting period. "
-              "FY2024-FY2025 not located (see source note) - same basis and gap as the Cash Flow Statement.",
+              "FY2024-FY2025 are from Metro Bank PLC's filed Company statements. 'Other equity instruments' is "
+              "a row Metro Bank PLC first printed in its FY2025 Company balance sheet (£250m of AT1 securities, "
+              "FY2024 nil); it is reproduced here in the bank's own position, between Retained earnings and Other "
+              "reserves. Note that Metro Bank Holdings PLC's consolidated balance sheet carries the same "
+              "instrument at £242m, net of issuance costs borne at the holding-company level - the two figures "
+              "are different entities' presentations, not a discrepancy.",
     rows=bs_rows, sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_EXTENSION_NOTE, first_col_width=72, source_height=340, unit_suffix=" (£m)",
 )
 
@@ -592,26 +607,27 @@ bw.add_income_statement_sheet(
 )
 
 equity_headers = ["Called-up share capital", "Share premium", "Retained earnings/(losses)", "FVOCI reserve",
-                   "Share option reserve", "Deemed capital contribution", "Total equity"]
+                   "Share option reserve", "Deemed capital contribution", "Other equity instruments",
+                   "Total equity"]
 equity_rows = [
-    ("TOTAL", "Balance at 19 September 2009 (opening, Company basis - conversion to PLC)", (0.1, 0, 0.0, None, None, None, 0.1)),
-    ("DATA", "Net loss for the period (16 months to 31 December 2010)", (None, None, -23.4, None, None, None, -23.4)),
-    ("DATA", "Issue of new ordinary shares", (None, 120.1, None, None, None, None, 120.1)),
-    ("DATA", "Repayment of preference shares", (-0.1, None, None, None, None, None, -0.1)),
-    ("TOTAL", "Balance as at 31 December 2010 (FY2010 closing, 16-month first accounts, Company basis)", (0, 120.1, -23.3, None, None, None, 96.8)),
-    ("DATA", "Net loss for the year", (None, None, -19.0, None, None, None, -19.0)),
-    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 0.1, None, None, 0.1)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 0.1, None, 0.1)),
-    ("TOTAL", "Balance as at 31 December 2011 (FY2011 closing, Company basis)", (0, 120.1, -42.3, 0.1, 0.1, None, 78.0)),
-    ("DATA", "Share issue", (None, 126.0, None, None, None, None, 126.0)),
-    ("DATA", "Net loss for the year", (None, None, -34.6, None, None, None, -34.6)),
-    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 8.5, None, None, 8.5)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 0.3, None, 0.3)),
-    ("TOTAL", "Balance as at 31 December 2012 (FY2012 closing, Company basis)", (0, 246.2, -76.9, 8.6, 0.4, None, 178.2)),
-    ("DATA", "Share issue", (None, 284.3, None, None, None, None, 284.3)),
-    ("DATA", "Net loss for the year", (None, None, -41.8, None, None, None, -41.8)),
-    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -16.1, None, None, -16.1)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 0.4, None, 0.4)),
+    ("TOTAL", "Balance at 19 September 2009 (opening, Company basis - conversion to PLC)", (0.1, 0, 0.0, None, None, None, None, 0.1)),
+    ("DATA", "Net loss for the period (16 months to 31 December 2010)", (None, None, -23.4, None, None, None, None, -23.4)),
+    ("DATA", "Issue of new ordinary shares", (None, 120.1, None, None, None, None, None, 120.1)),
+    ("DATA", "Repayment of preference shares", (-0.1, None, None, None, None, None, None, -0.1)),
+    ("TOTAL", "Balance as at 31 December 2010 (FY2010 closing, 16-month first accounts, Company basis)", (0, 120.1, -23.3, None, None, None, None, 96.8)),
+    ("DATA", "Net loss for the year", (None, None, -19.0, None, None, None, None, -19.0)),
+    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 0.1, None, None, None, 0.1)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 0.1, None, None, 0.1)),
+    ("TOTAL", "Balance as at 31 December 2011 (FY2011 closing, Company basis)", (0, 120.1, -42.3, 0.1, 0.1, None, None, 78.0)),
+    ("DATA", "Share issue", (None, 126.0, None, None, None, None, None, 126.0)),
+    ("DATA", "Net loss for the year", (None, None, -34.6, None, None, None, None, -34.6)),
+    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 8.5, None, None, None, 8.5)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 0.3, None, None, 0.3)),
+    ("TOTAL", "Balance as at 31 December 2012 (FY2012 closing, Company basis)", (0, 246.2, -76.9, 8.6, 0.4, None, None, 178.2)),
+    ("DATA", "Share issue", (None, 284.3, None, None, None, None, None, 284.3)),
+    ("DATA", "Net loss for the year", (None, None, -41.8, None, None, None, None, -41.8)),
+    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -16.1, None, None, None, -16.1)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 0.4, None, None, 0.4)),
     # HD-074: this genuine FY2013 closing (Group basis, own contemporaneous
     # figures) does not tie to the pre-existing "FY2014 opening, restated"
     # row immediately below (share premium 530.5 vs 530, retained earnings
@@ -622,61 +638,72 @@ equity_rows = [
     # This is a genuine restatement discontinuity at the FY2013/FY2014
     # boundary, flagged rather than silently blended - consistent with how
     # this sheet already flags the FY2020/FY2021 Group/Company basis change.
-    ("TOTAL", "Balance as at 31 December 2013 (FY2013 closing, own contemporaneous figures, Group basis)", (0, 530.5, -118.7, -7.5, 0.8, None, 405.0)),
-    ("TOTAL", "At 1 January 2014 (FY2014 opening, restated, Group basis)", (0, 530, -123, -8, 1, None, 401)),
-    ("DATA", "Loss for the year", (None, None, -41, None, None, None, -41)),
-    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 3, None, None, 3)),
-    ("DATA", "Share issue", (None, 99, None, None, None, None, 99)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 1, None, 1)),
-    ("TOTAL", "At 31 December 2014 (FY2014 closing, restated)", (0, 629, -164, -4, 2, None, 462)),
-    ("DATA", "Loss for the year", (None, None, -49, None, None, None, -49)),
-    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -8, None, None, -8)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 2, None, 2)),
-    ("TOTAL", "At 31 December 2015 (FY2015 closing)", (0, 629, -213, -12, 3, None, 407)),
-    ("DATA", "Loss for the year", (None, None, -17, None, None, None, -17)),
-    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 9, None, None, 9)),
-    ("DATA", "Share issue", (None, 404, None, None, None, None, 404)),
-    ("DATA", "Cost of share issue", (None, -5, None, None, None, None, -5)),
-    ("DATA", "Share options at fair value", (None, None, None, None, 7, None, 7)),
-    ("TOTAL", "At 31 December 2016 (FY2016 closing)", (0, 1028, -230, -3, 11, None, 805)),
-    ("DATA", "Profit for the year", (None, None, 11, None, None, None, 11)),
-    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -1, None, None, -1)),
-    ("DATA", "Share issue", (None, 279, None, None, None, None, 279)),
-    ("DATA", "Cost of share issue", (None, -3, None, None, None, None, -3)),
-    ("DATA", "Net share option movements", (None, None, None, None, 6, None, 6)),
-    ("TOTAL", "At 31 December 2017 (FY2017 closing)", (0, 1304, -219, -4, 16, None, 1096)),
-    ("DATA", "IFRS 9 transition adjustment, net of tax (AFS reserve replaced by FVOCI reserve)", (None, None, -17, 5, None, None, -12)),
-    ("DATA", "Profit for the year", (None, None, 27, None, None, None, 27)),
-    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -4, None, None, -4)),
-    ("DATA", "Shares issued", (None, 304, None, None, None, None, 304)),
-    ("DATA", "Cost of shares issued", (None, -3, None, None, None, None, -3)),
-    ("DATA", "Net share option movements", (None, None, None, None, -6, None, -6)),
-    ("TOTAL", "At 31 December 2018 (FY2018 closing)", (0, 1605, -209, -3, 10, None, 1403)),
-    ("DATA", "Loss for the year", (None, None, -183, None, None, None, -183)),
-    ("DATA", "Shares issued", (None, 375, None, None, None, None, 375)),
-    ("DATA", "Cost of shares issued", (None, -16, None, None, None, None, -16)),
-    ("DATA", "Net share option movements", (None, None, None, None, 4, None, 4)),
-    ("TOTAL", "At 31 December 2019 (FY2019 closing)", (0, 1964, -392, -3, 14, None, 1583)),
-    ("DATA", "Loss for the year", (None, None, -302, None, None, None, -302)),
-    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 6, None, None, 6)),
-    ("DATA", "Net share option movements", (None, None, None, None, 2, None, 2)),
-    ("TOTAL", "At 31 December 2020 (FY2020 closing, Group basis)", (0, 1964, -694, 3, 16, None, 1289)),
-    ("TOTAL", "At 1 January 2021 (FY2021 opening)", (0, 1964, -689, 3, 16, None, 1294)),
-    ("DATA", "Loss for the year", (None, None, -252, None, None, None, -252)),
-    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -8, None, None, -8)),
-    ("DATA", "Net share option movements", (None, None, None, None, 2, None, 2)),
-    ("TOTAL", "At 31 December 2021 (FY2021 closing)", (0, 1964, -941, -5, 18, None, 1036)),
-    ("DATA", "Loss for the year", (None, None, -73, None, None, None, -73)),
-    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -8, None, None, -8)),
-    ("DATA", "Net share option movements", (None, None, None, None, 2, None, 2)),
-    ("TOTAL", "At 31 December 2022 (FY2022 closing)", (0, 1964, -1014, -13, 20, None, 957)),
-    ("DATA", "Profit for the year", (None, None, 46, None, None, None, 46)),
-    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 2, None, None, 2)),
-    ("DATA", "Net share option movements", (None, None, None, None, 3, None, 3)),
-    ("DATA", "Transfer of share option reserve upon insertion of new holding company", (None, None, None, None, -23, 23, 0)),
-    ("DATA", "Cancellation of Metro Bank PLC share capital and share premium", (None, -1964, 1964, None, None, None, 0)),
-    ("DATA", "Shares issued", (None, 144, None, None, None, None, 144)),
-    ("TOTAL", "At 31 December 2023 (FY2023 closing)", (0, 144, 996, -11, 0, 23, 1152)),
+    ("TOTAL", "Balance as at 31 December 2013 (FY2013 closing, own contemporaneous figures, Group basis)", (0, 530.5, -118.7, -7.5, 0.8, None, None, 405.0)),
+    ("TOTAL", "At 1 January 2014 (FY2014 opening, restated, Group basis)", (0, 530, -123, -8, 1, None, None, 401)),
+    ("DATA", "Loss for the year", (None, None, -41, None, None, None, None, -41)),
+    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 3, None, None, None, 3)),
+    ("DATA", "Share issue", (None, 99, None, None, None, None, None, 99)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 1, None, None, 1)),
+    ("TOTAL", "At 31 December 2014 (FY2014 closing, restated)", (0, 629, -164, -4, 2, None, None, 462)),
+    ("DATA", "Loss for the year", (None, None, -49, None, None, None, None, -49)),
+    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -8, None, None, None, -8)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 2, None, None, 2)),
+    ("TOTAL", "At 31 December 2015 (FY2015 closing)", (0, 629, -213, -12, 3, None, None, 407)),
+    ("DATA", "Loss for the year", (None, None, -17, None, None, None, None, -17)),
+    ("DATA", "Other comprehensive income relating to available-for-sale investments, net of tax", (None, None, None, 9, None, None, None, 9)),
+    ("DATA", "Share issue", (None, 404, None, None, None, None, None, 404)),
+    ("DATA", "Cost of share issue", (None, -5, None, None, None, None, None, -5)),
+    ("DATA", "Share options at fair value", (None, None, None, None, 7, None, None, 7)),
+    ("TOTAL", "At 31 December 2016 (FY2016 closing)", (0, 1028, -230, -3, 11, None, None, 805)),
+    ("DATA", "Profit for the year", (None, None, 11, None, None, None, None, 11)),
+    ("DATA", "Other comprehensive expense relating to available-for-sale investments, net of tax", (None, None, None, -1, None, None, None, -1)),
+    ("DATA", "Share issue", (None, 279, None, None, None, None, None, 279)),
+    ("DATA", "Cost of share issue", (None, -3, None, None, None, None, None, -3)),
+    ("DATA", "Net share option movements", (None, None, None, None, 6, None, None, 6)),
+    ("TOTAL", "At 31 December 2017 (FY2017 closing)", (0, 1304, -219, -4, 16, None, None, 1096)),
+    ("DATA", "IFRS 9 transition adjustment, net of tax (AFS reserve replaced by FVOCI reserve)", (None, None, -17, 5, None, None, None, -12)),
+    ("DATA", "Profit for the year", (None, None, 27, None, None, None, None, 27)),
+    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -4, None, None, None, -4)),
+    ("DATA", "Shares issued", (None, 304, None, None, None, None, None, 304)),
+    ("DATA", "Cost of shares issued", (None, -3, None, None, None, None, None, -3)),
+    ("DATA", "Net share option movements", (None, None, None, None, -6, None, None, -6)),
+    ("TOTAL", "At 31 December 2018 (FY2018 closing)", (0, 1605, -209, -3, 10, None, None, 1403)),
+    ("DATA", "Loss for the year", (None, None, -183, None, None, None, None, -183)),
+    ("DATA", "Shares issued", (None, 375, None, None, None, None, None, 375)),
+    ("DATA", "Cost of shares issued", (None, -16, None, None, None, None, None, -16)),
+    ("DATA", "Net share option movements", (None, None, None, None, 4, None, None, 4)),
+    ("TOTAL", "At 31 December 2019 (FY2019 closing)", (0, 1964, -392, -3, 14, None, None, 1583)),
+    ("DATA", "Loss for the year", (None, None, -302, None, None, None, None, -302)),
+    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 6, None, None, None, 6)),
+    ("DATA", "Net share option movements", (None, None, None, None, 2, None, None, 2)),
+    ("TOTAL", "At 31 December 2020 (FY2020 closing, Group basis)", (0, 1964, -694, 3, 16, None, None, 1289)),
+    ("TOTAL", "At 1 January 2021 (FY2021 opening)", (0, 1964, -689, 3, 16, None, None, 1294)),
+    ("DATA", "Loss for the year", (None, None, -252, None, None, None, None, -252)),
+    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -8, None, None, None, -8)),
+    ("DATA", "Net share option movements", (None, None, None, None, 2, None, None, 2)),
+    ("TOTAL", "At 31 December 2021 (FY2021 closing)", (0, 1964, -941, -5, 18, None, None, 1036)),
+    ("DATA", "Loss for the year", (None, None, -73, None, None, None, None, -73)),
+    ("DATA", "Other comprehensive expense relating to investment securities designated at FVOCI, net of tax", (None, None, None, -8, None, None, None, -8)),
+    ("DATA", "Net share option movements", (None, None, None, None, 2, None, None, 2)),
+    ("TOTAL", "At 31 December 2022 (FY2022 closing)", (0, 1964, -1014, -13, 20, None, None, 957)),
+    ("DATA", "Profit for the year", (None, None, 46, None, None, None, None, 46)),
+    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 2, None, None, None, 2)),
+    ("DATA", "Net share option movements", (None, None, None, None, 3, None, None, 3)),
+    ("DATA", "Transfer of share option reserve upon insertion of new holding company", (None, None, None, None, -23, 23, None, 0)),
+    ("DATA", "Cancellation of Metro Bank PLC share capital and share premium", (None, -1964, 1964, None, None, None, None, 0)),
+    ("DATA", "Shares issued", (None, 144, None, None, None, None, None, 144)),
+    ("TOTAL", "At 31 December 2023 (FY2023 closing)", (0, 144, 996, -11, 0, 23, None, 1152)),
+    ("DATA", "Profit for the year", (None, None, 44, None, None, None, None, 44)),
+    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 4, None, None, None, 4)),
+    ("DATA", "Equity-settled share-based payment charges", (None, None, None, None, None, 2, None, 2)),
+    ("TOTAL", "At 31 December 2024 (FY2024 closing)", (0, 144, 1040, -7, 0, 25, None, 1202)),
+    ("DATA", "Profit for the year", (None, None, 55, None, None, None, 17, 72)),
+    ("DATA", "Other comprehensive income relating to investment securities designated at FVOCI, net of tax", (None, None, None, 4, None, None, None, 4)),
+    ("DATA", "Issuance of other equity instruments", (None, None, None, None, None, None, 250, 250)),
+    ("DATA", "Equity-settled share-based payment charges", (None, None, None, None, None, 3, None, 3)),
+    ("DATA", "Distributions on other equity instruments", (None, None, None, None, None, None, -17, -17)),
+    ("DATA", "Other movements in share option charges", (None, None, 1, None, None, -2, None, -1)),
+    ("TOTAL", "At 31 December 2025 (FY2025 closing)", (0, 144, 1096, -3, 0, 26, 250, 1513)),
 ]
 
 bw.add_equity_changes_sheet(
@@ -684,8 +711,11 @@ bw.add_equity_changes_sheet(
     subtitle="Chronological roll-forward, oldest to newest, £m. FY2010-FY2013 are Company basis (HD-074; FY2010 "
               "is a 16-month first accounting period); FY2013's closing is nonetheless Group/consolidated, Metro "
               "Bank's first subsidiary having been acquired that July - see HD-074 note. FY2014-FY2020 are "
-              "Group/consolidated basis; FY2021-FY2023 are Company/standalone basis (see HD-049 basis note); "
-              "FY2024-FY2025 not located - same gap as the Balance Sheet and Cash Flow Statement. Equity "
+              "Group/consolidated basis; FY2021-FY2025 are Company/standalone basis (see HD-049 basis note). "
+              "FY2024 and FY2025 were added 2026-09-18 (GA-006) from Metro Bank PLC's own FY2025 Company "
+              "statement of changes in equity, which is also the source of the new 'Other equity instruments' "
+              "column - a component the bank first reported in FY2025 and which is blank, not zero, for every "
+              "earlier year because it did not exist. Equity "
               "reconciliation ladder confirmed: each year's own closing balance ties exactly to both the next "
               "year's own opening balance and that year's own Balance Sheet Total equity within each basis, EXCEPT "
               "at the FY2013/FY2014 boundary, where the pre-existing FY2014 opening row uses the FY2015 Annual "
@@ -700,7 +730,18 @@ bw.add_equity_changes_sheet(
               "underlying reserve, renamed on IFRS 9 adoption 1 January 2018 - see the transition adjustment row).",
     headers=equity_headers,
     rows=equity_rows,
-    sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_EXTENSION_NOTE,
+    sources_text=STATEMENTS_SOURCES + "\n\n" + HD074_EXTENSION_NOTE + (
+        "\n\nFY2024/FY2025 SOURCE-QUALITY NOTE: Metro Bank PLC's FY2025 Companies House filing (06419578) is a "
+        "scanned image PDF with no text layer, so its Company statement of changes in equity (printed p.154) was "
+        "read from rendered page images. Two cells were read inconsistently across two independent renderings - "
+        "FY2025 profit for the year attributable to ordinary shareholders, and the retained-earnings element of "
+        "total comprehensive income. Both were settled against figures that do not depend on that page at all: "
+        "retained earnings of 1,040 opening + 55 + 1 = 1,096 closing, the closing figure being independently "
+        "printed on the Company balance sheet (p.153), and 55 + 17 attributable to other equity holders = the "
+        "72 total. Every other column ties the same way (deemed capital contribution 25 + 3 - 2 = 26; FVOCI (7) "
+        "+ 4 = (3); other equity instruments 17 + 250 - 17 = 250), so the block is arithmetically closed on its "
+        "own closing balances rather than on the image read alone."
+    ),
     first_col_width=46,
 )
 
@@ -709,8 +750,8 @@ bw.add_cash_flow_sheet(
     subtitle="£m; 31 December year-end. FY2010-FY2012 are Company (own, pre-subsidiary); FY2013 is Group "
               "(HD-074); FY2014-FY2020 are Group/consolidated (as reported, itemized adjustments); "
               "FY2021-FY2023 are Company/standalone (as reported, collapsed to 'Adjustments for non-cash items' "
-              "plus memo interest received/paid) - see HD-049 basis note. FY2024-FY2025 standalone accounts not "
-              "located.",
+              "plus memo interest received/paid) - see HD-049 basis note. FY2024-FY2025 are Company/standalone "
+              "figures from Metro Bank PLC's statutory accounts.",
     rows=cash_rows, sources_text=CASH_SOURCES + (
         "\n\nHD-049: FY2014-FY2020 reproduce each year's own Consolidated Cash Flow Statement line items "
         "(impairment/write-offs, D&A, share option charge, gain on sale, accrued interest, lease interest, grant "
@@ -718,6 +759,13 @@ bw.add_cash_flow_sheet(
         "Company statement does for FY2021-FY2023 - both presentations are as-reported, not reclassified by this "
         "workbook.\n\nHD-074: FY2010-FY2013 similarly reproduce each year's own reported line items - see the "
         "HD-074 note above for the net-vs-gross investment-securities purchase distinction across these years."
+        "\n\nFY2025 FINANCING ROWS: the FY2025 Company cash flow statement prints two rows no earlier edition "
+        "carries - 'Issuance of shares and other equity instruments' (£250m) and 'Distributions on other equity "
+        "instruments' (£17m outflow) - and both are reproduced here under the bank's own FY2025 captions rather "
+        "than folded into the 'Issuance of new shares' row that earlier editions use for share issuances. "
+        "FY2025's £250m is entirely the AT1 issuance: the Company statement of changes in equity shows nil "
+        "issuance of shares under existing employee schemes that year. With these rows present the section foots "
+        "as published: -19 + 250 - 17 = 214."
     ), first_col_width=72, source_height=260, unit_suffix=" (£m)",
 )
 
@@ -755,6 +803,25 @@ asset_quality_rows = [
         "FY2020": 258, "FY2019": 77, "FY2018": 21}),
     ("DATA", "Total NPL ratio", {"FY2025": "5.14%", "FY2024": "5.48%", "FY2023": "3.11%", "FY2022": "2.65%", "FY2021": "3.71%",
         "FY2020": "2.10%", "FY2019": "0.53%", "FY2018": "0.15%", "FY2017": "0.27%"}),
+    # FY2016/FY2015 recovered 2026-09-18 (interior-gap pass). These two years were
+    # an interior hole - FY2017's NPL ratio above them, the Basel II block below.
+    # They are IAS 39 INCURRED-loss figures, so they get their own section and must
+    # never be read as a continuation of the IFRS 9 ECL rows above; equally they are
+    # NOT the same measure as the Basel II Pillar 3 general doubtful-debt provision
+    # in the block below, which is a regulatory rather than an accounting number.
+    # Group basis throughout, matching the rest of this sheet. Source: Metro Bank PLC
+    # Annual Report and Accounts 2016, Note 10 "Loans and advances to customers and
+    # banks", printed pp.91-92, which prints Group 2016 and Group 2015 side by side.
+    ("SECTION", "IAS 39 incurred-loss loan book and impairment allowance (FY2016-FY2015) - separate basis, NOT comparable with the IFRS 9 ECL rows above and NOT the same measure as the Basel II Pillar 3 provision rows below. Group basis, from Note 10 of the Annual Report and Accounts 2016 (printed pp.91-92), which prints Group 2016 and Group 2015 side by side", {}),
+    ("DATA", "Gross loans and advances to customers (IAS 39)", {"FY2016": 5872.9, "FY2015": 3549.3}),
+    ("DATA", "Allowance for impairment (IAS 39)", {"FY2016": -7.5, "FY2015": -6.8}),
+    ("TOTAL", "Net loans and advances to customers (IAS 39)", {"FY2016": 5865.4, "FY2015": 3542.5}),
+    ("DATA", "Credit quality - neither past due nor impaired", {"FY2016": 5762.7, "FY2015": 3473.9}),
+    ("DATA", "Credit quality - past due but not impaired", {"FY2016": 88.8, "FY2015": 60.0}),
+    ("DATA", "Credit quality - individually impaired", {"FY2016": 6.6, "FY2015": 4.6}),
+    ("DATA", "Credit quality - portfolio impaired (predominantly retail loans 90 days or more past due)", {"FY2016": 14.8, "FY2015": 10.9}),
+    ("DATA", "Allowance for impairment held against individually impaired loans", {"FY2016": -1.8, "FY2015": -3.3}),
+    ("DATA", "Allowance for impairment held collectively", {"FY2016": -5.7, "FY2015": -3.5}),
     # 2026-09-15 historical Pillar 3 recovery. Kept in its own section because
     # a Basel II general doubtful-debt provision is an INCURRED-loss measure and
     # is not the same thing as the IFRS 9 expected-credit-loss allowance rows
@@ -793,6 +860,29 @@ bw.add_asset_quality_sheet(
         "comparable format were not located), and FY2018-FY2020's portfolio-level gross/ECL tables were not "
         "extracted this session (only the Group Balance Sheet's single net loans and advances to customers figure "
         "and the NPL table above were sourced) - left blank rather than estimated.\n\n"
+        "FY2016/FY2015 BLOCK ADDED 2026-09-18 (interior-gap pass). These two years were an interior hole on this "
+        "sheet - FY2017's Total NPL ratio sat above them and the FY2010-FY2014 Basel II block below them - so the "
+        "blanks could not be explained by the data not yet existing. Source: Metro Bank PLC Annual Report and "
+        "Accounts 2016, Note 10 'Loans and advances to customers and banks', printed pp.91-92 (PDF pp.95-96) - "
+        + AR_2016 + " - which prints Group 2016, Group 2015, Company 2016 and Company 2015 as four columns. The "
+        "GROUP columns are used, consistent with the rest of this sheet, and no Company figure appears here (they "
+        "differ materially: the Company allowance for impairment is 6,610 for 2016 and 3,580 for 2015 against the "
+        "Group's 7,494 and 6,783). Converted from the source GBP'000 to GBP'm at one decimal place. FY2015 is a "
+        "COMPARATIVE COLUMN, taken from the following year's edition; it is used because the FY2015 Annual Report's "
+        "own Note 33 was read this pass and carries a Tier 1 capital build-up only, with no loan-book credit-quality "
+        "table of this shape. WHY THIS BLOCK IS SEPARATE, three ways: (i) these are IAS 39 INCURRED-loss figures, so "
+        "'allowance for impairment' is not the IFRS 9 expected-credit-loss allowance in the rows above and the two "
+        "must never be read as one series; (ii) equally they are not the Basel II Pillar 3 general doubtful-debt "
+        "provision in the block below, which is a regulatory measure - though note the two agree for FY2016: the "
+        "Pillar 3 Disclosure 2016 states 'the group held a collective impairment provision of GBP 5.7 million, and "
+        "provision of GBP 1.8 million against individual loan exposures', reproducing Note 10's 5,669 and 1,825 to "
+        "the GBP 0.1m; (iii) IAS 39's credit-quality categories (neither past due nor impaired / past due but not "
+        "impaired / individually impaired / portfolio impaired) are not IFRS 9 stages and are not mapped onto them. "
+        "ROUNDING: the four FY2015 credit-quality rows sum to 3,549.4 as displayed against the 3,549.3 gross figure "
+        "above them, because the source's GBP'000 components (3,473,856 + 60,033 + 4,562 + 10,880 = 3,549,331) foot "
+        "exactly but round independently - a display artefact of the GBP'm conversion, not a data error, and the "
+        "reason those four rows are deliberately left without a TOTAL row of their own. The FY2016 equivalents "
+        "(5,762,719 + 88,811 + 6,555 + 14,779 = 5,872,864) foot exactly at one decimal place.\n\n"
         "2026-09-15 (Pillar 3 2019 pass): FY2019/FY2018 Total ECL allowance (-34 both years) is now sourced from the "
         "Pillar 3 2019's own narrative under Table 16 (p.39) and Table 18 Loss allowance under IFRS 9 (p.41). The "
         "FY2019/FY2018 Stage 1/2/3 gross carrying amounts remain blank on purpose: Table 18 discloses loss allowance "
@@ -1101,12 +1191,15 @@ metric("Total Capital Ratio", "%", [("Total capital ratio", vals(dict({"FY2025":
        "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (see CET1 Capital sheet's note). HD-049: FY2014-FY2017 Total capital ratio = CET1 ratio (no Tier 2 disclosed).")
 metric("Total RWAs", "£m", [
     ("Total risk-weighted exposure amount", vals(dict({"FY2025": 6711, "FY2024": 6442, "FY2023": 7533, "FY2022": 7990, "FY2021": 7454,
-       "FY2020": 7957, "FY2019": 9147, "FY2018": 8936, "FY2017": 5882, "FY2016": 3590}, **{"FY2014": ND_BASEL2}, **hist_nd()))),
+       "FY2020": 7957, "FY2019": 9147, "FY2018": 8936, "FY2017": 5882, "FY2016": 3590, "FY2015": 2261.2},
+       **{"FY2014": ND_BASEL2}, **hist_nd()))),
     ("Credit risk RWA only, Basel II standardised approach - the sole RWA figure these editions disclose (NOT a total RWA)", vals(BASEL2_CREDIT_RWA)),
 ], note="SECOND ROW ADDED 2026-09-15. The recovered Basel II editions each print an RWA column in their credit-risk exposure table, totalled on the bottom row (captioned 'TOTAL Risk Weighted Assets' in FY2011/FY2013, 'TOTAL' in FY2014, and sitting on the 'Total assets' row in FY2010). Despite the FY2011/FY2013 caption, that figure is NOT a total RWA: the table covers credit-risk exposures only, and each edition states that operational risk is measured under the Basic Indicator Approach without ever quantifying the resulting RWA. It is therefore carried on its own row and never added to, or continued into, the CRR total above. "
        "FY2010-FY2013 read 'Not publicly disclosed' on the first row rather than 'Not applicable': a total Pillar 1 RWA (credit plus market plus operational) WAS a defined Basel II concept, so this is a genuine disclosure gap in those editions, not a structurally inapplicable metric. "
-       "FY2014's cell now reads 'Not publicly disclosed' rather than being left blank: the FY2014 Pillar 3 has now been read cover to cover and confirms no total RWA exists to find, which closes that cell instead of leaving it to be re-chased. FY2015 stays blank - no FY2015 Pillar 3 edition has been located and the point has not been settled for that year. "
-       "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (e.g. FY2024 was 7239, the 30 June 2024 figure - the year-end figure is 6442, confirmed against both the KM1 Key metrics table and the OV1 RWA-by-risk-type table, and against the RWA Breakdown sheet's own total). FY2021-FY2022 were already correct. HD-049: FY2014/FY2015 RWAs were not disclosed in the Annual Report (only capital and ratios) and are left blank rather than derived by dividing capital by the ratio.")
+       "FY2014's cell now reads 'Not publicly disclosed' rather than being left blank: the FY2014 Pillar 3 has now been read cover to cover and confirms no total RWA exists to find, which closes that cell instead of leaving it to be re-chased. "
+       "FY2015 POPULATED 2026-09-18 (interior-gap pass) AT 2,261.2 - and the sentence it replaces, which said 'FY2015 stays blank', was correct only about the Pillar 3. FY2015 was an interior hole with FY2016 above it and FY2014 below it settled, so it could not be explained by the metric not yet existing. It does exist, in a document already cited on this sheet: Metro Bank PLC's own ANNUAL REPORT AND ACCOUNTS 2016, Strategic Report, 'Capital structure' table, printed p.23, which prints a two-column comparison headed 2016 and 2015 and gives 'Risk weighted assets (RWAs)' as 3,590.4 (2016) and 2,261.2 (2015), alongside the CET1 capital, CET1 ratio and leverage ratio figures this workbook ALREADY takes from that same table for FY2015. The RWA row was simply not transcribed when the others were. The note lower down on this sheet previously asserted that 'FY2014/FY2015 RWAs were not disclosed in the Annual Report (only capital and ratios)'; that is wrong for FY2015 and has been corrected. FY2015 is therefore a COMPARATIVE-COLUMN figure, from the following year's edition, because FY2015's own Annual Report (Note 33 Capital management, printed p.76, read this pass) discloses only the Tier 1 capital build-up - no RWA, no ratio - and no FY2015 Pillar 3 edition exists to check: a Wayback CDX enumeration of the whole metrobankonline.co.uk domain returned 1,078 archived PDFs, whose only Pillar 3 editions are FY2010, FY2011, FY2013, FY2014 and FY2016 onward, and the recurring 'Pillar 3 Disclosure.pdf' URL has exactly three captures (2014-09-15 = the FY2013 edition, a 2015-06-26 revisit of the identical digest, and 2015-12-30 = the FY2014 edition) with nothing in 2016 that could be the FY2015 edition. "
+       "RATIO TIE, RECORDED NOT RECONCILED: the same table's FY2015 CET1 ratio of 13.1% does not tie to its own FY2015 CET1 capital and RWAs - 299.9 / 2,261.2 = 13.26%, a 0.2pp break - whereas the FY2016 column ties exactly (651.4 / 3,590.4 = 18.14% against the printed 18.1%). Both FY2015 figures are reproduced as printed and neither is adjusted to make the ratio tie. "
+       "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (e.g. FY2024 was 7239, the 30 June 2024 figure - the year-end figure is 6442, confirmed against both the KM1 Key metrics table and the OV1 RWA-by-risk-type table, and against the RWA Breakdown sheet's own total). FY2021-FY2022 were already correct. HD-049, PARTLY SUPERSEDED 2026-09-18: this read 'FY2014/FY2015 RWAs were not disclosed in the Annual Report (only capital and ratios) and are left blank rather than derived by dividing capital by the ratio.' That is still true of FY2014 but was WRONG for FY2015 - the Annual Report and Accounts 2016's 'Capital structure' table (printed p.23) discloses the FY2015 RWA directly, as 2,261.2, and it is now carried. Nothing has been derived by dividing capital by a ratio here or anywhere else on this sheet.")
 
 rwa_breakdown_rows = [
     ("DATA", "Credit risk (excluding counterparty credit risk)", vals({"FY2025": 5793, "FY2024": 5572, "FY2023": 6667, "FY2022": 7071, "FY2021": 6444,
@@ -1128,6 +1221,21 @@ rwa_breakdown_rows = [
     # the OV1 total, because these are Basel II standardised-approach exposure
     # classes, not UK/EU OV1 risk types - the two must not be read as one
     # series. Every figure below is printed in the source; none is derived.
+    # FY2015 recovered 2026-09-18 (interior-gap pass). It sits in its own section
+    # because it is the CRD IV-era "Standardised Credit Risk" exposure-class table
+    # the FY2016 Pillar 3 prints with a 2015 comparative column - a different
+    # template from both the UK/EU OV1 rows above and the Basel II block below, and
+    # credit risk only. No FY2015 Pillar 3 edition exists to take it from directly.
+    ("SECTION", "CRD IV standardised credit-risk exposure classes, credit risk only (FY2015) - the 2015 COMPARATIVE COLUMN of the Pillar 3 Disclosure 2016's 'Standardised Credit Risk' table (section 7.1, p.16 of the PDF). A third, separate template: neither a UK/EU OV1 breakdown nor the Basel II table below, and it excludes operational risk entirely. Its rows sum to 2,262 against the 2,261 the table itself prints on its Total line - a GBP 1m rounding break in the bank's own arithmetic, present in its 2016 column too (rows sum to 3,455 against a printed 3,454), reproduced rather than smoothed", {}),
+    ("DATA", "Cash and balances with the Bank of England (0% risk weight)", vals({"FY2015": 0})),
+    ("DATA", "Loans and advances to banks (20% risk weight)", vals({"FY2015": 13})),
+    ("DATA", "Investments (10%-100% risk weight)", vals({"FY2015": 601})),
+    ("DATA", "Retail and Business Lending (35%-150% risk weight)", vals({"FY2015": 1362})),
+    ("DATA", "Fixed and other assets (100% risk weight)", vals({"FY2015": 219})),
+    ("DATA", "Past Due >20% impaired secured (50% risk weight)", vals({"FY2015": 4})),
+    ("DATA", "Secured and unsecured lending facilities (20%-100% risk weight)", vals({"FY2015": 63})),
+    ("TOTAL", "Total credit risk RWA, CRD IV standardised approach (as printed; excludes operational risk)", vals({"FY2015": 2261})),
+
     ("SECTION", "Basel II standardised approach, credit risk only (FY2010-FY2014) - separate basis, NOT part of the UK/EU OV1 total above", {}),
     ("DATA", "Loans and advances to banks (20% risk weight)", vals({"FY2014": 6.8, "FY2013": 5.0, "FY2011": 5.7, "FY2010": 1.1})),
     ("DATA", "Investments (10%-100% risk weight)", vals({"FY2014": 406.3, "FY2013": 155.3, "FY2011": 7.8})),
@@ -1178,6 +1286,23 @@ bw.add_rwa_breakdown_sheet(
         "used it. FY2010's table has no securities/investments RWA line because its gilt and held-to-maturity "
         "holdings are 0% risk weighted; the 0% rows are recorded as a stated 0, since the source prints an "
         "explicit zero or dash for them.\n\n"
+        "2026-09-18 FY2015 BLOCK (interior-gap pass): FY2015 had been blank on this sheet while FY2016 above and "
+        "FY2014 below were populated - an interior hole, which cannot be explained by the template not yet "
+        "existing. No FY2015 Pillar 3 edition exists (see the Total RWAs sheet note for the Wayback enumeration "
+        "that establishes this), but the FY2016 edition prints its 'Standardised Credit Risk' exposure table with "
+        "a full 2015 comparative column of exposure values and RWAs - section 7.1, p.16 of "
+        + P3_2016 + " - and that column is what the FY2015 rows reproduce. It is kept in its own section because "
+        "it is a THIRD template, distinct from both the UK/EU OV1 rows and the Basel II rows: CRD IV-era exposure "
+        "classes, credit risk only, no operational-risk line at all. Consequently FY2015's 2,261 here is NOT the "
+        "same quantity as FY2015's 2,261.2 on the Total RWAs sheet, which comes from the Annual Report and "
+        "Accounts 2016's 'Capital structure' table - they happen to be equal to the nearest GBP 0.1m, and that "
+        "coincidence is left standing as each document states it rather than being asserted as an identity. "
+        "SOURCE-FOOTING BREAK, REPRODUCED NOT SMOOTHED: the seven FY2015 rows sum to 2,262 against the 2,261 the "
+        "table prints on its own Total line. The same table's 2016 column has the same GBP 1m break (rows sum to "
+        "3,455 against a printed 3,454), so this is the bank's own rounding, not a transcription slip. The printed "
+        "total is what the TOTAL row carries and no row has been adjusted to close the gap; the workbook "
+        "verifier's reconciliation check reports this block as a mismatch for exactly that reason, and that report "
+        "is correct and expected.\n\n"
         "ROUNDING AND SOURCE-FOOTING NOTE for that block: converting independently-rounded GBP'000 components to "
         "GBP'm makes the displayed rows sum to up to GBP 0.1m away from the stated total (FY2010 18.9 vs 19.0; "
         "FY2011 93.3 vs 93.2) - a conversion artifact, not a data error. Separately, the FY2011 and FY2014 source "
@@ -1206,20 +1331,31 @@ metric("LCR", "£m / %", [
     ("Total net cash outflows, adjusted value", vals({"FY2025": 1773, "FY2024": 1854, "FY2023": 2079, "FY2022": 2465, "FY2021": 2169,
         "FY2019": 1708, "FY2018": 2506})),
     ("Liquidity Coverage Ratio", vals(dict({"FY2025": "314%", "FY2024": "444%", "FY2023": "244%", "FY2022": "246%", "FY2021": "281%",
-        "FY2020": "187%", "FY2019": "197%", "FY2018": "139%", "FY2017": "141%", "FY2016": "136%"}, **hist_na()))),
+        "FY2020": "187%", "FY2019": "197%", "FY2018": "139%", "FY2017": "141%", "FY2016": "136%",
+        "FY2015": "Not disclosed in any located FY2015/FY2016 document",
+        "FY2014": "Not applicable (pre-dates the 1 October 2015 UK LCR requirement)"}, **hist_na()))),
 ], note="FY2010-FY2013 'Not applicable (Basel II)' (2026-09-15): the LCR only became a UK requirement on 1 October 2015. The recovered FY2010/FY2011/FY2013 Pillar 3 editions discuss liquidity risk qualitatively under the pre-LCR Individual Liquidity Adequacy Assessment (ILAA) regime and contain no occurrence of 'LCR' or 'liquidity coverage'; they disclose no quantitative liquidity metric of any kind. "
-       "The source tables disclose HQLA/net outflow components on different reporting bases across years; the headline ratios are reproduced as reported. Basis changes after the holding-company insertion are described on the Cash Flow Statement and source note. CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end. HD-049: FY2020 and FY2014/FY2015 absolute HQLA/net outflow £m were not located (Pillar 3 2020 discloses only the ratio in the executive summary reviewed this session; FY2014/FY2015 have no LCR disclosure at all) and are left blank rather than estimated. BASIS FLAG (2026-09-15): the FY2019/FY2018 HQLA, net-outflow and ratio figures come from Table 26 EU LIQ1 of the Pillar 3 2019 (p.46), which is captioned 'as at 31 December' - a POINT-IN-TIME figure, not the 12-month average that the later UK KM1 rows on this sheet report. The 'average' wording in the first two row labels therefore does not apply to FY2018/FY2019. Flagged rather than merged: the two bases are different series and are not directly comparable year-on-year across the FY2019/FY2021 boundary.")
+       "The source tables disclose HQLA/net outflow components on different reporting bases across years; the headline ratios are reproduced as reported. Basis changes after the holding-company insertion are described on the Cash Flow Statement and source note. CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end. FY2015 AND FY2014 CLOSED 2026-09-18 (interior-gap pass) - the ratio cells now carry an explicit statement instead of a blank, so the two years read as settled rather than as outstanding gaps, and the HQLA/net-outflow rows stay blank because no such figures exist to put in them. FY2014 is marked STRUCTURALLY INAPPLICABLE for the same reason FY2010-FY2013 are: the LCR only became a UK requirement on 1 October 2015, nine months after that year-end, and the FY2014 Pillar 3 edition contains no occurrence of 'LCR' or 'liquidity coverage' anywhere in its 21 pages. FY2015 is a different finding and is deliberately worded differently: its year-end falls three months AFTER the LCR took effect, so a disclosure was possible - it simply was not made in anything that can be read. Enumerated rather than assumed, on 2026-09-18: 'LCR'/'liquidity coverage' appears ZERO times in the Annual Report and Accounts 2015 (86pp), ZERO times in the Annual Report and Accounts 2016 (118pp) and ZERO times in the Pillar 3 Disclosure 2016 (25pp) - and the earliest Metro LCR figure that exists anywhere is 136% for FY2016, which appears only as a prior-year comparative inside the FY2017 documents ('remaining strong at 141% (2016: 136%)', Pillar 3 Disclosure 2017 and Annual Report and Accounts 2017). No FY2015 Pillar 3 edition exists to check (see the Total RWAs sheet note for the Wayback enumeration), and the FY2016 edition states 'There have been no material changes in disclosure since the Pillar 3 report for 2015' while itself disclosing no LCR - consistent with the FY2015 edition having disclosed none either, though that last step is an inference and is flagged as one. The same grep run over the Pillar 3 Disclosure 2022 returns many LCR hits, so the search instrument is known to work on these documents. HD-049: FY2020 absolute HQLA/net outflow £m were not located (Pillar 3 2020 discloses only the ratio in the executive summary reviewed this session) and are left blank rather than estimated. BASIS FLAG (2026-09-15): the FY2019/FY2018 HQLA, net-outflow and ratio figures come from Table 26 EU LIQ1 of the Pillar 3 2019 (p.46), which is captioned 'as at 31 December' - a POINT-IN-TIME figure, not the 12-month average that the later UK KM1 rows on this sheet report. The 'average' wording in the first two row labels therefore does not apply to FY2018/FY2019. Flagged rather than merged: the two bases are different series and are not directly comparable year-on-year across the FY2019/FY2021 boundary.")
 metric("NSFR", "£m / %", [
     ("Total available stable funding", vals({"FY2025": 13965, "FY2024": 16676, "FY2023": 18277, "FY2022": 18903})),
     ("Total required stable funding", vals({"FY2025": 8448, "FY2024": 10475, "FY2023": 13442, "FY2022": 13225})),
     ("Net stable funding ratio", vals(dict({"FY2025": "165%", "FY2024": "160%", "FY2023": "136%", "FY2022": "143%"},
+        **{y: "Not applicable (pre-dates the UK NSFR requirement)"
+           for y in ["FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]},
         **{y: "Not applicable" for y in HIST_P3_YEARS}))),
-], note="FY2010-FY2013 marked 'Not applicable' (2026-09-15): the NSFR did not exist as a UK requirement until 2022, so those years are structurally inapplicable, not gaps. (They are marked 'Not applicable' rather than 'Not applicable (Basel II)' used elsewhere on these sheets, because the NSFR post-dates CRD IV as well as Basel II.) NSFR disclosures were required from 1 January 2023; FY2014-FY2021 are blank (not yet a UK/EU disclosure requirement). FY2023-FY2025 are Holdings Group figures after the restructure. CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end.")
-metric("MREL Ratio", "%", [("MREL ratio", vals({"FY2021": "20.5%", "FY2022": "Not disclosed", "FY2023": "Not disclosed", "FY2024": "Not disclosed", "FY2025": "Not disclosed",
+], note="FY2010-FY2013 marked 'Not applicable' (2026-09-15): the NSFR did not exist as a UK requirement until 2022, so those years are structurally inapplicable, not gaps. (They are marked 'Not applicable' rather than 'Not applicable (Basel II)' used elsewhere on these sheets, because the NSFR post-dates CRD IV as well as Basel II.) "
+       "FY2014-FY2021 CLOSED 2026-09-18 (interior-gap pass): these eight years previously stood BLANK with the prose note alone saying they were not yet a requirement, which made them read as eight outstanding gaps sitting between a populated FY2022 and eight 'Not applicable' cells below. They are now marked on the face of the sheet, on the same footing as FY2010-FY2013 and for the same reason - the NSFR became a binding UK requirement only on 1 January 2022, so no year ending on or before 31 December 2021 could have one. THIS IS ENUMERATED, NOT ASSUMED. Every Metro Bank Pillar 3 edition that exists for those years was fetched on 2026-09-18 and searched for 'NSFR' and 'net stable funding': FY2014 (21pp), FY2016 (25pp), FY2017, FY2018, FY2019, FY2020 and FY2021 (80pp) return ZERO occurrences each; so do the Annual Report and Accounts for 2015, 2016 and 2017. FY2015 has no Pillar 3 edition at all (see the Total RWAs sheet note for the Wayback enumeration), and its own Annual Report likewise has none. POSITIVE CONTROL, so that the zeros are known to mean something: the identical search over the Pillar 3 Disclosure 2022 returns 12 occurrences, including 'Table 16 UK LIQ2 Net Stable Funding Ratio' and the quantitative row this sheet's FY2022 column is taken from. The instrument works; these years genuinely have no NSFR. "
+       "FY2023-FY2025 are Holdings Group figures after the restructure. CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end.")
+metric("MREL Ratio", "%", [("MREL ratio", vals({"FY2021": "20.5%", "FY2022": "17.7%", "FY2023": "22.0%", "FY2024": "23.0%", "FY2025": "26.1%",
        "FY2020": "22.4% (total capital plus MREL ratio)", "FY2019": "22.1% (total capital plus MREL ratio)", "FY2018": "Not disclosed (pre-dates MREL requirement)", "FY2017": "Not disclosed (pre-dates MREL requirement)", "FY2016": "Not disclosed (pre-dates MREL requirement)", "FY2015": "Not disclosed (pre-dates MREL requirement)", "FY2014": "Not disclosed (pre-dates MREL requirement)",
        **{y: "Not applicable (pre-dates MREL requirement)" for y in HIST_P3_YEARS}}))],
        "FY2010-FY2013 marked 'Not applicable (pre-dates MREL requirement)' (2026-09-15): MREL was introduced by BRRD and did not exist as a UK requirement in those years; the recovered Basel II Pillar 3 editions contain no occurrence of 'MREL'. This is the same reasoning already applied to FY2014-FY2018 above, simply extended back over the newly-covered years. "
-       "The 2021 Pillar 3 report discloses 20.5%. No quantitative MREL ratio was located in the later KM1 tables reviewed; the 2022-2025 cells are therefore not publicly disclosed rather than zero. HD-049: FY2019/FY2020 Pillar 3 disclosures report a 'Total capital plus MREL ratio' (22.1%/22.4%) rather than a standalone MREL ratio - a different (broader) metric than the FY2021 '20.5%', reproduced as-disclosed and labelled accordingly rather than treated as directly comparable. FY2014-FY2018 pre-date the interim MREL requirement referenced in the FY2019 disclosure. LABEL NOTE (2026-09-15): the FY2019 document uses two captions for the same 22.1% - 'Total capital plus MREL ratio' in Table 2 Key Ratios (p.4), and 'Metro Bank's interim MREL ratio' in section 3 (p.25), against a Bank of England interim MREL requirement of 18% of RWAs plus buffers effective 1 January 2020. Both captions are recorded here; the cell keeps the broader Table 2 wording so it is never silently treated as equivalent to the FY2021 standalone 20.5%.")
+       "FY2022-FY2025 CORRECTED 18 September 2026 (KM1-032). These four cells previously read 'Not disclosed', on the recorded ground that 'no quantitative MREL ratio was located in the later KM1 tables reviewed'. THE CLAIM WAS FALSE, and the sentence names its own error: the search was of KM1, and Metro does not publish MREL in KM1. It publishes it in UK KM2 - Key metrics: MREL, a separate template, present as Table 4 or Table 5 of every edition from FY2022 on. "
+       "A SECOND failure compounded the first and is worth recording, because a text search cannot detect it: in the FY2023, FY2024 and FY2025 editions the KM2 table's VALUE COLUMNS DO NOT EXTRACT under pdftotext at all - the row labels come out, the numbers come out empty, and the table renders perfectly on screen. So a text-based sweep of those documents sees the table caption and no figures, and reports 'searched, found nothing' with complete confidence. Every figure below was read from a 150-160dpi page render of the printed table, and each was then cross-checked against the adjacent edition's comparative column, which reproduces it exactly. "
+       "Sources, each year from its OWN edition (rows 5 of UK KM2, Total MREL resources as a percentage of total risk-weighted assets): FY2025 26.1% - Pillar 3 2025, printed p.11, Table 5, column '31 December 2025' (MREL resources GBP 1,754m / RWAs GBP 6,711m). FY2024 23.0% - Pillar 3 2024, printed p.13, Table 5, column '31 December 2024' (1,479 / 6,442). FY2023 22.0% - Pillar 3 2023, printed p.13, Table 5, column '31 December 2023' (1,655 / 7,533). FY2022 17.7% - Pillar 3 2022, printed p.12, Table 4, column '31 December 2022' (1,416 / 7,990). FY2021 20.5% - Pillar 3 2022, printed p.12, Table 4, comparative column '31 December 2021' (1,527 / 7,454), which independently confirms the figure already carried here. The corresponding leverage-exposure-basis ratios (KM2 row 7), recorded but not used on this sheet because this sheet reports the RWA basis: 12.7% / 10.3% / 9.0% / 7.3% / 8.5%. "
+       "ENTITY AND BASIS BREAK AT FY2023, recorded rather than merged: the FY2022 edition's running head reads 'Metro Bank PLC Pillar 3 2022', while the FY2023, FY2024 and FY2025 editions read 'Metro Bank Holdings PLC | Pillar 3 20XX'. FY2021 and FY2022 are therefore Metro Bank PLC and FY2023 onwards are Metro Bank Holdings PLC consolidated - the holding-company insertion of 19 May 2023 already described on the Cash Flow Statement sheet. The FY2023 edition confirms the holdco is the resolution entity ('MREL-eligible debt is exclusively provided from Metro Bank Holdings PLC'). "
+       "The FY2021 cell's 20.5% is a standalone UK KM2 MREL ratio on the RWA basis, so the 'total capital plus MREL ratio' caveat recorded below for FY2019/FY2020 does NOT apply to it. "
+       "WHY THE SERIES STOPS AFTER FY2025, stated in the Bank's own words (Pillar 3 2025, section 8, printed p.28): 'In December, the Bank of England confirmed that the Bank will be treated as a transfer firm under its MREL-related resolution framework, effective 1 January 2026.' Metro's external MREL consequently falls to its minimum capital requirement, which is also why it appears in the Bank of England's published external-MREL tables for 2023, 2024 and 2025 and not in the 2026 edition. HD-049: FY2019/FY2020 Pillar 3 disclosures report a 'Total capital plus MREL ratio' (22.1%/22.4%) rather than a standalone MREL ratio - a different (broader) metric than the FY2021 '20.5%', reproduced as-disclosed and labelled accordingly rather than treated as directly comparable. FY2014-FY2018 pre-date the interim MREL requirement referenced in the FY2019 disclosure. LABEL NOTE (2026-09-15): the FY2019 document uses two captions for the same 22.1% - 'Total capital plus MREL ratio' in Table 2 Key Ratios (p.4), and 'Metro Bank's interim MREL ratio' in section 3 (p.25), against a Bank of England interim MREL requirement of 18% of RWAs plus buffers effective 1 January 2020. Both captions are recorded here; the cell keeps the broader Table 2 wording so it is never silently treated as equivalent to the FY2021 standalone 20.5%.")
 
 
 INTERIM_HEADERS = ["Period", "Disclosure type", "Metric", "Value", "Unit", "Basis", "Source document", "Page / table"]
@@ -1323,10 +1459,10 @@ bw.add_overview_sheet(
             "FY2020": "187%", "FY2019": "197%", "FY2018": "139%", "FY2017": "141%", "FY2016": "136%"})),
         ("NSFR", vals({"FY2025": "165%", "FY2024": "160%", "FY2023": "136%", "FY2022": "143%"})),
     ],
-    note="Metro Bank PLC entity basis. Balance Sheet/Equity Changes summaries are Company/standalone (FY2024-FY2025 "
-         "blank - no standalone Metro Bank PLC accounts located); Profit & Loss summary is Group/consolidated "
-         "(Metro Bank PLC does not publish its own income statement); cash-flow is Company/standalone with the same "
-         "FY2024-FY2025 gap. Regulatory ratios change from Metro Bank PLC consolidated basis to Holdings Group basis "
+    note="Metro Bank PLC entity basis. Balance Sheet and cash-flow summaries are Company/standalone through FY2025; "
+         "Profit & Loss summary is Group/consolidated (Metro Bank PLC does not publish its own income statement). "
+         "The Equity Changes summary remains through FY2023 because adding FY2024-FY2025 roll-forward rows would "
+         "change the existing worksheet structure. Regulatory ratios change from Metro Bank PLC consolidated basis to Holdings Group basis "
          "after the 19 May 2023 restructure; see the metric and interim-sheet notes. Regulatory figures for "
          "FY2023-FY2025 were corrected 2026-09-03 (ST-026) - see the Total RWAs sheet's note. HD-049: FY2014-FY2020 "
          "added, capped at FY2014 (see ENTITY/BASIS NOTE on the Balance Sheet/Cash Flow/Equity sheets for the "

@@ -382,6 +382,29 @@ def p3_sources():
         f"FY2016 (own) & FY2015 (comparative): Annual Report & Accounts 2016, p.3-4 (Capital and KPI table) "
         "- " + FY2016_URL + "\n"
         f"FY2014: Annual Report & Accounts 2014, p.2 (Capital, narrative only - no KPI table) - " + FY2014_URL + "\n"
+        "(1b) ANNUAL REPORT NOTE 29(j) 'CAPITAL MANAGEMENT' - added 2026-09-18 (GA-006), and the source "
+        "for the Total RWAs and Total Capital Ratio sheets' FY2022-FY2025 rows. This is a different part "
+        "of the same documents from the KPI table cited in (1) above: it sits in the notes to the "
+        "financial statements, not the Strategic Report, and prints a shareholders'-funds-to-regulatory-"
+        "capital reconciliation ending in 'Total Risk Exposure amount (unaudited)' plus a capital-ratio "
+        "block. Each year is cited to its OWN edition, at the printed folio:\n"
+        f"FY2025 (own) & FY2024 (comparative): Annual Report & Accounts 2025, note 29(j), printed p.73 - "
+        + FY2025_URL + " (also live on the bank's own site as "
+        "https://www.kingdom.bank/wp-content/uploads/KBL-Statutory-Accounts-2025.pdf, verified 2026-09-18: "
+        "HTTP 200, Content-Type application/pdf, %PDF-1.7 magic bytes)\n"
+        f"FY2024 (own) & FY2023 (comparative): Annual Report & Accounts 2024, note 29(j), printed p.75 - "
+        + FY2024_URL + " (also live at "
+        "https://www.kingdom.bank/wp-content/uploads/KBL-Statutory-Accounts-2024.pdf, same verification)\n"
+        f"FY2023 (own) & FY2022 (comparative): Annual Report & Accounts 2023, note 29(j), printed p.76 - "
+        + FY2023_URL + "\n"
+        f"FY2022 (own) & FY2021 (comparative): Annual Report & Accounts 2022, note 29(j), printed p.82 - "
+        + FY2022_URL + "\n"
+        "EXTRACTION NOTE: the FY2024 and FY2025 editions are text-native (the bank's own site hosts both, "
+        "and pdftotext reads them directly), which corrects the blanket 'all fully scanned' description in "
+        "(1) above - that remains true of the FY2023 and earlier Companies House filings. The FY2023 and "
+        "FY2022 figures were therefore read from rendered page images (pdftoppm at 300dpi and 450dpi, two "
+        "independent renderings agreeing digit-for-digit) and then confirmed a second time against the "
+        "following year's comparative column, which is text-native for FY2023.\n"
         + "(2) STANDALONE PILLAR 3 DISCLOSURE DOCUMENTS (recovered 2026-09-15 - this CORRECTS an earlier claim "
         "in this workbook that no such document exists for any reported year). Kingdom Bank published an "
         "annual Pillar 3 disclosure document for FY2019, FY2020, FY2021, FY2022 and FY2023. Three of the "
@@ -510,10 +533,30 @@ PARTIAL_DISCLOSURE_NOTE = (
     "Modification by Consent of Rule 3.1 of the SDDT Regime (General Application) for FRN 400972, waiver "
     "ref A00009930P.pdf, START DATE 20/02/2025, no end date, and Rule 3.1 removes the Pillar 3 disclosure "
     "obligation outright; Kingdom Bank's year-end is 31 December, so FY2025 (year-end 31 December 2025) "
-    "is the only year whose own year-end falls after that date. FY2024 and earlier PREDATE the "
-    "modification and are NOT explained by it.\n\n"
+    "is the only year whose own year-end falls after that date. FY2024 PREDATES the modification and is "
+    "therefore not explained by the register entry alone.\n\n"
+    "BUT THE BANK ITSELF EXPLAINS FY2024, IN WORDS, AND THAT SETTLES IT (added 2026-09-18, GA-006). The "
+    "Annual Report & Accounts 2024, in the Board Remuneration Committee section, states: 'The annual "
+    "Pillar 3 disclosure document was reviewed by the Board in March 2024 and contained the enhanced "
+    "remuneration disclosures required by CRD V. Due to the SDDT regime the Pillar 3 disclosure document "
+    "will not be required in future years.' The document reviewed in March 2024 is the FY2023 edition, so "
+    "the bank is stating that FY2023 was its LAST Pillar 3 and that none follows. The Annual Report & "
+    "Accounts 2025 dates the approval precisely - 'On 19 February 2025 the PRA approved the Bank's "
+    "modification by consent to become an SDDT firm' - which matches the register's 20/02/2025 start to "
+    "the day. So FY2024 and FY2025 are NOT a failed search and NOT merely an unexplained blank: they are "
+    "an affirmative, dated statement by the bank that no such document exists. FY2022 and FY2023 are a "
+    "different case entirely - both were published and neither can be retrieved - and the two must not be "
+    "read as the same kind of gap.\n\n"
     + ARCHIVE_PROVENANCE_NOTE + "\n\n"
     + EARLY_EDITIONS_NOTE
+)
+
+# GA-006 (2026-09-18): the Total RWAs and Total Capital Ratio sheets now carry
+# an Annual Report note 29(j) series for FY2022-FY2025 as well, so on those two
+# sheets the note above describes the PILLAR 3 series only, not the sheet.
+PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY = (
+    "On the Pillar 3 series specifically (the Annual Report note 29(j) series above covers "
+    "FY2022-FY2025 and is unaffected by everything that follows): " + PARTIAL_DISCLOSURE_NOTE
 )
 
 TIER1_NOTE = (
@@ -1082,7 +1125,43 @@ def metric(name, unit, rows_data, note=None):
 #            sheet note: FY2019 and earlier have no comparative anywhere, and
 #            FY2022 onward have no obtainable edition.
 # ---------------------------------------------------------------
+# LEADING-GAPS QUEUE, 2026-09-18. The FY2022-FY2025 columns on this sheet, on
+# RWA Breakdown and on NSFR were entirely EMPTY. The notes below already
+# explained why, but an empty cell states nothing on its own: a reader sees a
+# blank and cannot tell a gap in OUR REACH from a gap in the BANK'S PUBLISHING.
+# These cells now carry that statement explicitly, and the two kinds are
+# deliberately worded differently because they are different findings:
+#
+#   FY2022 / FY2023 - "Not available today". The bank DID publish for these
+#     years; its own FY2024 Annual Report says the annual Pillar 3 document was
+#     reviewed by the Board in March 2024, which is the FY2023 edition. The
+#     documents have rotted off www.kingdom.bank (the FY2022 URL returns a hard
+#     404; the FY2023 edition was never archived). That is a limit on our reach
+#     and must NEVER be recorded as a non-publication.
+#
+#   FY2024 / FY2025 - "Not published". The bank states in its own words that no
+#     further Pillar 3 is required, and FY2025 is additionally covered by the
+#     dated SDDT modification. These are genuine non-publications.
+#
+# THE WAIVER REACHES FY2025 ONLY, AND MUST NOT BE SPREAD BACKWARDS. BoE
+# consolidated waivers register, FRN 400972 KINGDOM BANK LIMITED, matched on
+# BOTH conjuncts - rule description 'SDDT Regime - General Application' AND
+# sub-rule 'Ru 3.1' (the description alone also covers eligibility-criteria
+# rules such as 'Ru 1.2 & 2.1(9)' and 'Ru 3.2', which remove no disclosure duty
+# at all) - waiver ref A00009930P, START DATE 20/02/2025, no end date. Kingdom's
+# accounting reference date is 31 December, so only FY2025's year-end falls
+# after that date. FY2022, FY2023 and FY2024 are NOT excused by it. Closing all
+# four on the waiver would be a false negative dressed up as a regulatory fact.
+KINGDOM_P3_STATUS = {
+    "FY2025": "Not published - SDDT Rule 3.1 opt-in from 20/02/2025",
+    "FY2024": "Not published - Bank states none required after FY2023",
+    "FY2023": "Not available today - published, no copy retrievable",
+    "FY2022": "Not available today - published, no copy retrievable",
+}
+
 km1_rows = [
+    ("DATA", "Pillar 3 edition status for this year (see source note - 'not available' and "
+             "'not published' are different findings and are not interchangeable)", KINGDOM_P3_STATUS),
     ("SECTION", "Available own funds (£'000)", {}),
     ("DATA", "1    Common Equity Tier 1 (CET1) capital (£'000)", {"FY2021": 6892, "FY2020": 6594}),
     ("DATA", "2    Tier 1 capital (£'000)", {"FY2021": 6892, "FY2020": 6594}),
@@ -1102,10 +1181,14 @@ km1_rows = [
     ("DATA", "8    Capital conservation buffer (%)", {"FY2021": "2.50%", "FY2020": "2.50%"}),
     ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
              "Member State (%)", {"FY2021": "0.56%", "FY2020": "0.56%"}),
-    ("DATA", "9    Institution specific countercyclical capital buffer (%)", {}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)", {}),
+    # All four are printed '-' by the Bank in BOTH columns of the FY2021
+    # edition - re-read off that PDF on 2026-09-18, where UK 8a immediately
+    # above prints a real 0.56 in both columns. The dash is the Bank saying the
+    # buffer does not apply to it; it is not a blank and it is not a zero.
+    ("DATA", "9    Institution specific countercyclical capital buffer (%)", {"FY2021": "-", "FY2020": "-"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {"FY2021": "-", "FY2020": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {"FY2021": "-", "FY2020": "-"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer (%)", {"FY2021": "-", "FY2020": "-"}),
     ("DATA", "11    Combined buffer requirement (%)", {"FY2021": "3.06%", "FY2020": "3.06%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)", {"FY2021": "15.51%", "FY2020": "15.06%"}),
     ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
@@ -1222,8 +1305,11 @@ bw.add_km1_sheet(
              "row order, row numbers, labels and printed precision. Bank/solo basis. Amounts in £'000, ratios "
              "as printed. Only FY2021 and FY2020 carry figures: FY2021 from its own edition, FY2020 from that "
              "edition's comparative column because the FY2020 edition prints no key-metrics table at all. "
-             "Earlier years have no comparative anywhere and pre-date the template; FY2022 onward are years "
-             "whose editions are no longer obtainable (link rot), NOT years the Bank failed to publish. Rows "
+             "Earlier years have no comparative anywhere and pre-date the template. FY2022-FY2025 now carry a "
+             "STATED status rather than a blank, and the four are NOT one finding: FY2022 and FY2023 were "
+             "published by the Bank and are simply not obtainable today (link rot), whereas FY2024 and FY2025 "
+             "were not published at all - the Bank says so in its own words and FY2025 is additionally covered "
+             "by the dated SDDT Rule 3.1 modification. Do not read the waiver back onto FY2022-FY2024. Rows "
              "9, UK 9a, 10 and UK 10a are printed as dashes by the Bank and are left blank, not zero. See the "
              "source note.",
     rows=km1_rows,
@@ -1269,6 +1355,22 @@ P3_DEDUCTIONS = {"FY2020": -165}
 P3_CET1_RATIO_VALUES = {"FY2021": "16.97%", "FY2020": "16.64%"}   # UK KM1 rows 5/6
 P3_TOTAL_CAPITAL_RATIO_VALUES = {"FY2021": "18.84%", "FY2020": "18.79%"}  # UK KM1 row 7
 P3_TOTAL_RWA_VALUES = {"FY2021": 40617, "FY2020": 39632}          # UK KM1 row 4 / UK OV1 row 29
+
+# GA-006 (2026-09-18): a THIRD source set, found by reading the Annual Reports
+# to the end rather than stopping at the Strategic Report's KPI table. Note 29
+# "Financial instruments", sub-note (j) "Capital management", prints a
+# shareholders'-funds-to-regulatory-capital reconciliation ending in "Total
+# Risk Exposure amount (unaudited)" and a three-line capital-ratio block. The
+# earlier finding recorded on these two sheets - that the Annual Report "has
+# never carried" a Total Capital ratio or a Total RWAs figure - was true of
+# the KPI TABLE and false of the Annual Report, which is where the four
+# FY2022-FY2025 gaps were sitting the whole time. Each year is taken from its
+# OWN edition (map rule 1); every adjacent edition's comparative agrees
+# exactly, which is recorded on the sheets as a control.
+AR_TOTAL_RWA_VALUES = {"FY2025": 82630, "FY2024": 68191, "FY2023": 53182, "FY2022": 43648}
+AR_TOTAL_CAPITAL_RATIO_VALUES = {
+    "FY2025": "18.96%", "FY2024": "22.70%", "FY2023": "18.16%", "FY2022": "22.12%",
+}
 P3_LEVERAGE_EXPOSURE_VALUES = {"FY2021": 66250, "FY2020": 63697}  # UK KM1 row 13
 P3_LEVERAGE_RATIO_EXCL_CB = {"FY2021": "10.40%", "FY2020": "10.35%"}  # UK KM1 row 14
 
@@ -1405,25 +1507,59 @@ metric(
 
 metric(
     "Total Capital Ratio", "%",
-    [("Total capital ratio - per Pillar 3 (Template UK KM1 row 7)", P3_TOTAL_CAPITAL_RATIO_VALUES)],
-    note="Kingdom Bank's Annual Report KPI table has never carried a Total Capital ratio in any year, so "
-         "unlike the CET1 Ratio sheet there is no second series here to compare against. "
-         + PARTIAL_DISCLOSURE_NOTE,
+    [
+        ("Total capital ratio - per Annual Report note 29(j) Capital management",
+         AR_TOTAL_CAPITAL_RATIO_VALUES),
+        ("Total capital ratio - per Pillar 3 (Template UK KM1 row 7)", P3_TOTAL_CAPITAL_RATIO_VALUES),
+    ],
+    note="CORRECTED 2026-09-18 (GA-006). This sheet previously said the Annual Report 'has never carried a "
+         "Total Capital ratio in any year' and left FY2022-FY2025 blank. That was true of the Strategic "
+         "Report's KPI table, which is where the other sheets' Annual Report series comes from, and false "
+         "of the Annual Report itself: note 29 'Financial instruments', sub-note (j) 'Capital management', "
+         "prints the ratio every year. FY2022-FY2025 are now filled from each year's OWN edition.\n\n"
+         "THE TWO SERIES ARE ON DIFFERENT BASES AND ARE NOT MERGED. At FY2021, the one year both sources "
+         "cover, they DISAGREE: the Pillar 3 UK KM1 gives 18.84% and the Annual Report note 29(j) gives "
+         "17.93%. The cause is the numerator, not the denominator - both put total risk exposure at "
+         "40,617, but Pillar 3 total capital is 7,653 against the Annual Report's 7,283, the Annual Report "
+         "excluding current-year profits until the audit completes (its own reconciliation carries an "
+         "explicit 'Less: current year profits (included after audit is completed)' line). 7,653/40,617 = "
+         "18.84% and 7,283/40,617 = 17.93%, so each ratio is internally consistent with its own source. "
+         "Neither overwrites the other.\n\n"
+         "CONTROL: every adjacent edition's comparative agrees exactly with the own-edition figure used "
+         "here - FY2022 22.12% appears in both the FY2022 and FY2023 editions, FY2023 18.16% in both the "
+         "FY2023 and FY2024 editions, FY2024 22.70% in both the FY2024 and FY2025 editions.\n\n"
+         + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
 metric(
     "Total RWAs", "£'000",
     [
+        ("Total Risk Exposure amount - per Annual Report note 29(j) Capital management",
+         AR_TOTAL_RWA_VALUES),
         ("Total risk-weighted exposure amount - per Pillar 3 (UK KM1 row 4 / UK OV1 row 29)",
          P3_TOTAL_RWA_VALUES),
     ],
-    note="Kingdom Bank's Annual Report KPI table has never carried a Total RWAs figure in any year. The "
+    note="CORRECTED 2026-09-18 (GA-006). FY2022-FY2025 were blank here because this sheet looked only at "
+         "the Strategic Report's KPI table, which indeed carries no RWA figure in any year. The Annual "
+         "Report does: note 29 'Financial instruments', sub-note (j) 'Capital management', ends its "
+         "regulatory-capital reconciliation with a 'Total Risk Exposure amount (unaudited)' line every "
+         "year. Each of the four years is taken from its own edition.\n\n"
+         "UNLIKE THE TOTAL CAPITAL RATIO SHEET, THE TWO SERIES HERE COINCIDE. At FY2021, the one year both "
+         "sources cover, the Pillar 3 UK KM1 row 4 and the Annual Report note 29(j) both give 40,617 - the "
+         "bases differ on regulatory own funds (see the Total Capital Ratio sheet) but not on the risk "
+         "exposure denominator. The rows are still kept separate rather than run together, because a "
+         "reader should be able to see which document each cell came from. 'Total Risk Exposure amount' is "
+         "the bank's own caption and is the CRR term for the same quantity the Pillar 3 row calls total "
+         "risk-weighted exposure amount.\n\n"
+         "CONTROL: FY2022 43,648, FY2023 53,182 and FY2024 68,191 each appear identically in their own "
+         "edition and in the following year's comparative column.\n\n"
+         "On the Pillar 3 series: the "
          "FY2020 and FY2019 Pillar 3 editions predate the UK OV1 template and disclose only a credit-risk "
          "risk-weighted exposure subtotal plus a separate operational-risk capital requirement, with no "
          "total risk-weighted exposure amount stated anywhere - so no FY2019 total is shown here, and the "
          "FY2020 total above is taken from the FY2021 edition's UK OV1 comparative column (where it IS "
          "stated directly) rather than being summed or back-solved. See the RWA Breakdown sheet for the "
-         "components. " + PARTIAL_DISCLOSURE_NOTE,
+         "components. " + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
 # RWA Breakdown - placed immediately after Total RWAs, before Leverage
@@ -1431,6 +1567,8 @@ metric(
 # recovered Pillar 3 Disclosures 2021 (Template UK OV1 and the
 # credit-risk-by-exposure-class table beneath it).
 rwa_rows = [
+    ("DATA", "Pillar 3 edition status for this year (see source note - 'not available' and "
+             "'not published' are different findings and are not interchangeable)", KINGDOM_P3_STATUS),
     ("SECTION", "Template UK OV1 - Overview of risk weighted exposure amounts", {}),
     ("DATA", "Credit risk (excluding CCR)", {"FY2021": 36472, "FY2020": 35487}),
     ("DATA", "Of which: the standardised approach", {"FY2021": 36472, "FY2020": 35487}),
@@ -1556,7 +1694,7 @@ metric(
     "NSFR", "%",
     [
         ("NSFR ratio, 4-quarter average of end-of-quarter observations - per Pillar 3 (UK KM1 row 20)",
-         P3_NSFR_RATIO),
+         dict(KINGDOM_P3_STATUS, **P3_NSFR_RATIO)),
         ("Total available stable funding (£'000) - per Pillar 3 (UK KM1 row 18)", P3_NSFR_ASF),
         ("Total required stable funding (£'000) - per Pillar 3 (UK KM1 row 19)", P3_NSFR_RSF),
     ],
@@ -1564,8 +1702,21 @@ metric(
          "footnotes its NSFR block '*based on estimated data (first NSFR return submitted to the PRA for "
          "reference point 31 March 2022 under CRR II)'. That is consistent with the project-wide "
          "structural position on NSFR: the PRA requirement began 1 January 2022 (PS17/21), so a FY2021 or "
-         "FY2020 NSFR is a voluntary pre-requirement estimate, not a regulatory return. Kingdom Bank's "
-         "Annual Report KPI table has never carried an NSFR in any year. " + PARTIAL_DISCLOSURE_NOTE,
+         "FY2020 NSFR is a voluntary pre-requirement estimate, not a regulatory return.\n\n"
+         "FY2022-FY2025 CHECKED AND CONFIRMED ABSENT FROM THE ANNUAL REPORTS (GA-006, 2026-09-18). The "
+         "FY2022-FY2025 blanks here are NOT the same kind of blank as the ones on the Total RWAs and Total "
+         "Capital Ratio sheets, which were filled on this date from Annual Report note 29(j). That note "
+         "carries capital only; the Annual Report discloses no NSFR anywhere. Searched whole-document on "
+         "the text-native FY2024 and FY2025 editions for 'NSFR', 'net stable' and 'stable funding': zero "
+         "hits each, against a richness control of 30 hits for 'liquidity' and 121/126 for 'capital' in "
+         "the same extraction, so the zero is a fact about the documents and not about the search. The "
+         "FY2023 edition is a scan and was checked the same way over its Strategic Report and KPI-table "
+         "pages via OCR - again zero for all three terms, against 12 'liquidity' and 23 'ratio' hits. In "
+         "every edition the only liquidity metric the bank publishes is the Liquidity Coverage "
+         "Requirement ratio, which is why the LCR sheet has a continuous series and this one does not. "
+         "These four years are therefore not a sourcing gap in the Annual Reports; they are a gap that "
+         "only a Pillar 3 document could close, and the Pillar 3 position for those years is below.\n\n"
+         + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
 bw.add_not_disclosed_metric_sheets(

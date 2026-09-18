@@ -8,6 +8,16 @@ AR2025_URL = "https://www.ghanabank.co.uk/app/uploads/2026/04/GHIB-ANNUAL-REPORT
 AR2024_URL = "https://www.ghanabank.co.uk/app/uploads/2025/04/GHIB-ANNUAL-REPORT-2024.pdf"
 AR2022_URL = "https://www.ghanabank.co.uk/app/uploads/2023/03/GHIB-Annual-Report-and-Financial-Statements-2022-.pdf"
 
+# FY2025 edition located 2026-09-18, the DAY IT WAS UPLOADED (the Bank's own
+# WordPress media index dates it 2026-09-18T14:45:36; the PDF's own CreationDate
+# is 18 September 2026 11:27 BST). Found by querying that media endpoint, not by
+# guessing a path - GHIB's /legal-documents/ and homepage still linked only the
+# FY2024 edition at the time. It arrives ~2 months EARLIER in the year than the
+# ~November cadence this script previously projected. It is also the FIRST GHIB
+# edition whose key-metrics table is LIVE TEXT rather than a pasted bitmap
+# (Creator: Adobe Illustrator 29.8), so unlike FY2019-FY2024 it did not have to
+# be read visually.
+P3_2025_URL = "https://www.ghanabank.co.uk/app/uploads/2026/09/GHIB-2025-Pillar-3-Disclosures.pdf"
 P3_2024_URL = "https://www.ghanabank.co.uk/app/uploads/2025/11/GHIB-2024-Pillar-3-Disclosures.pdf"
 P3_2023_URL = "https://www.ghanabank.co.uk/app/uploads/2024/11/GHIB-2023-Pillar-3-Disclosures.pdf"
 P3_2022_URL = "https://www.ghanabank.co.uk/app/uploads/2023/09/GHIB-2022-Pillar-3-Disclosures.pdf"
@@ -86,7 +96,8 @@ CASH_FLOW_SOURCES = (
 def p3_sources(page="4-5"):
     return (
         "Sources - Ghana International Bank Plc Pillar 3 Disclosures, Table 1: Key Metrics ratios:\n"
-        f"FY2025: NOT from Pillar 3 - see FY2025 note below - {AR2025_URL}\n"
+        f"FY2025: Pillar 3 Disclosures 31 December 2025, p.14 printed (PDF p.13), \"Table1: Key Metrics "
+        f"ratios as at 31 December 2025\" - {P3_2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures 31 December 2024, p.{page} - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures 31 December 2023, p.5 - {P3_2023_URL}\n"
         f"FY2022: Pillar 3 Disclosures 31 December 2022, p.4 - {P3_2022_URL}\n"
@@ -120,24 +131,46 @@ def p3_sources(page="4-5"):
 # vs 22.37%), and the AR2024's own year-end LCR of 256% matches the FY2024
 # Pillar 3 LCR of 256.31%.
 FY2025_SOURCE_NOTE = (
-    "FY2025: Pillar 3 Disclosures for FY2025 NOT YET PUBLISHED as at 15 September 2026 (GHIB's website "
-    "still lists the FY2024 edition as the latest; FY2025 expected ~November 2026 on the historical "
-    "~7-month lag after the Annual Report). FY2025 capital figures are therefore taken from the "
-    "ANNUAL REPORT, not Pillar 3:\n"
-    "  - CET1 Capital: Annual Report and Financial Statements 2025, Note 37 'Capital management', p.116 "
-    "(\"resulted in £161.7m CET1 at 31 December 2025 (2024: £156.7m)\") - note this is stated to £0.1m, "
-    "so 161,700 carries less precision than the Pillar 3-sourced years.\n"
-    "  - CET1 / Tier 1 / Total Capital ratios: Annual Report and Financial Statements 2025, Directors' "
-    "Report, pp.52-53 (\"GHIB recorded a CRD IV capital adequacy ratio of 21.5% (2024: 22.4%) with a core "
-    "tier 1 capital ratio of 21.5% (2024: 22.4%)\") - all three ratios are stated as equal.\n"
-    "  - LCR: Annual Report and Financial Statements 2025, Directors' Report, pp.52-53 (\"The Liquidity "
-    "Coverage Ratio (LCR) as at 31 December 2025 was 213%\"), also headlined on pp.14-15.\n"
-    "  - Total RWAs, Leverage Ratio and NSFR are NOT stated anywhere in the FY2025 Annual Report - the "
-    "Directors' Report defers them to the Pillar 3 disclosures. Left blank rather than derived; in "
-    "particular Total RWAs has deliberately NOT been back-solved from CET1 / 21.5%.\n"
+    "FY2025 NOW COMES FROM ITS OWN PILLAR 3, FOUND 2026-09-18 - THIS SHEET'S FY2025 SOURCE CHANGED ON "
+    "THAT DATE. Until 18 September 2026 this workbook recorded that no FY2025 Pillar 3 existed and filled "
+    "FY2025 from the Annual Report instead. That was correct when written: GHIB's homepage and "
+    "/legal-documents/ still linked only the FY2024 edition, and the projected publication date was "
+    "~November 2026 on the historical ~7-month lag after the Annual Report. The FY2025 edition was in "
+    "fact uploaded on 18 September 2026 - the Bank's own WordPress media index "
+    "(/wp-json/wp/v2/media?search=pillar) dates it 2026-09-18T14:45:36 and the PDF's own CreationDate is "
+    "18 September 2026 11:27 BST - two months ahead of that projection, and before any page on the site "
+    "linked to it. It was found by querying that media index, not by guessing a filename.\n"
+    "WHAT CHANGED AS A RESULT. Total RWAs (751,519), the Leverage Ratio (14.17%), the NSFR (181.39%), the "
+    "full RWA Breakdown and the whole KM1 FY2025 column were BLANK and are now populated. CET1/Tier 1/"
+    "Total Capital moved from the Annual Report's rounded \"£161.7m\" to the Pillar 3's 161,750; the three "
+    "capital ratios from \"21.5%\" to 21.52%; and the LCR from \"213%\" to 213.49%. Those five are the SAME "
+    "figures at higher precision, not different ones, so the change is an upgrade and not a conflict - "
+    "which is also the validation gate this workbook applied when the FY2020/FY2019 editions were found.\n"
+    "The superseded Annual Report citations, kept for traceability: CET1 capital from Annual Report and "
+    "Financial Statements 2025, Note 37 'Capital management', p.116 (\"resulted in £161.7m CET1 at 31 "
+    "December 2025 (2024: £156.7m)\"); the ratios from its Directors' Report, pp.52-53 (\"GHIB recorded a "
+    "CRD IV capital adequacy ratio of 21.5% (2024: 22.4%) with a core tier 1 capital ratio of 21.5% "
+    "(2024: 22.4%)\" and \"The Liquidity Coverage Ratio (LCR) as at 31 December 2025 was 213%\").\n"
     "BASIS CHECK: the AR and Pillar 3 bases agree for this bank - AR2025's FY2024 comparatives reproduce "
     "the Pillar 3 FY2024 figures (£156.7m vs 156,657; 22.4% vs 22.37%), and AR2024's year-end LCR of 256% "
-    "matches the FY2024 Pillar 3 LCR of 256.31%."
+    "matches the FY2024 Pillar 3 LCR of 256.31%.\n"
+    "TWO FY2025 INTERNAL INCONSISTENCIES IN THE BANK'S OWN FY2025 EDITION, recorded and NOT reconciled - "
+    "both are the same defect this workbook already documents for FY2024:\n"
+    "  (a) LEVERAGE RATIO. The KM1 row 14 and the section 1.6 narrative both say 14.17% (\"The leverage "
+    "ratio as at 31 December 2025 was 14.17%\", p.14 printed), while section 5.14 'Risk of Excessive "
+    "Leverage' (p.39 printed, PDF p.38) says \"The Bank's leverage ratio as at 31st of December 2025 was "
+    "12.79%\". The Leverage Ratio sheet carries 14.17%, the figure the KM1 and the capital narrative "
+    "agree on. The FY2024 edition has exactly the same split (14.66% in KM1/narrative vs 13.9% in its own "
+    "section 5.14), and section 5.14 of every GHIB edition captions its ratio as struck on a TRANSITIONAL "
+    "definition of Tier 1 capital - see the KM1 sheet's long note for the evidence on this divergence.\n"
+    "  (b) PRECISION - AND THIS ONE IS NEW IN FY2025, so verify_workbook.py reports it. KM1 row 17 prints "
+    "the LCR as 213.4% and row 20 the NSFR as 181.4%, while Table 13 (p.37 printed) and the section 5.4 "
+    "narrative print 213.49% and 181.39%. Each sheet carries the figure appropriate to it: the KM1 sheet "
+    "reproduces the template exactly as printed, the LCR and NSFR metric sheets carry the fuller "
+    "2dp figures. In FY2024 and earlier the FY-edition KM1 itself printed 2dp (256.31%, 255.98%) so the "
+    "two sides agreed and nothing was reported; the FY2025 edition rounds its own KM1 row 17 and row 20 "
+    "to 1dp for the 2025 and 2024 columns while leaving 2dp in the 2023/2022/2021 columns. Neither side "
+    "has been edited to make the check pass - both are GHIB's own printed figures from the same PDF."
 )
 
 
@@ -586,12 +619,15 @@ def metric(name, unit, rows_data, note=None, page="4-5"):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(page), note=note, first_col_width=48, source_height=170)
 
 
-# FY2025 values are Annual Report-sourced, not Pillar 3 - see FY2025_SOURCE_NOTE.
-# Total RWAs, Leverage Ratio and NSFR have no FY2025 entry because the FY2025
-# Annual Report does not state them and the FY2025 Pillar 3 is not yet published.
-CET1_CAPITAL = {"FY2025": 161700, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301,
+# FY2025 values came from the Annual Report until 2026-09-18 and now come from
+# the FY2025 Pillar 3, published that day - see FY2025_SOURCE_NOTE for the full
+# before/after and for the two internal inconsistencies in that edition.
+# FY2025 UPGRADED 2026-09-18 from the Annual Report's rounded "£161.7m" to the
+# 161,750 printed in row 1 of the FY2025 Pillar 3's own KM1 - same figure, now to
+# £'000 rather than £0.1m, and from the source every other year on this sheet uses.
+CET1_CAPITAL = {"FY2025": 161750, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301,
                 "FY2020": 131539, "FY2019": 137828}
-TOTAL_RWA = {"FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231,
+TOTAL_RWA = {"FY2025": 751519, "FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231,
              "FY2020": 372287, "FY2019": 329256}
 # FY2019 CORRECTED 2026-09-16 from 329,260 to 329,256. The old figure was rounded off
 # the FY2020 edition's narrative ("£329.26m"); 329,256 is printed directly as row 4 of
@@ -601,13 +637,18 @@ TOTAL_RWA = {"FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450
 # demonstrably the CREDIT-RISK SUBTOTAL rather than total RWAs - see TOTAL_RWA_NOTE.
 # Kept on its own labelled row rather than discarded or silently substituted.
 TOTAL_RWA_AS_PRINTED_FY2019 = {"FY2019": 281553}
-CET1_RATIO = {"FY2025": "21.5%", "FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%",
+# FY2025 ratios UPGRADED 2026-09-18 from the Annual Report's rounded statements
+# ("21.5%", "213%") to the FY2025 Pillar 3's own figures, per the standing rule
+# that each year comes from its own edition and this workbook's convention that a
+# ratio takes the most precise figure that edition prints.
+CET1_RATIO = {"FY2025": "21.52%", "FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%",
               "FY2020": "35.33%", "FY2019": "41.86%"}
-LEVERAGE_RATIO = {"FY2024": "14.66%", "FY2023": "25.88%", "FY2022": "23.86%", "FY2021": "15.20%",
+LEVERAGE_RATIO = {"FY2025": "14.17%", "FY2024": "14.66%", "FY2023": "25.88%", "FY2022": "23.86%", "FY2021": "15.20%",
                   "FY2020": "17.14%", "FY2019": "20.06%"}
-LCR = {"FY2025": "213%", "FY2024": "256.31%", "FY2023": "370.09%", "FY2022": "409.87%", "FY2021": "378.34%",
+LCR = {"FY2025": "213.49%", "FY2024": "256.31%", "FY2023": "370.09%", "FY2022": "409.87%", "FY2021": "378.34%",
        "FY2020": "310.06%", "FY2019": "278.41%"}
-NSFR = {"FY2024": "255.98%", "FY2023": "273.27%", "FY2022": "292.79%", "FY2021": "195%", "FY2020": "198%",
+NSFR = {"FY2025": "181.39%", "FY2024": "255.98%", "FY2023": "273.27%", "FY2022": "292.79%", "FY2021": "195%",
+        "FY2020": "198%",
         "FY2019": "Not disclosed (no NSFR row in the FY2019 Pillar 3's Table 1)"}
 
 TOTAL_RWA_NOTE = (
@@ -633,12 +674,12 @@ TOTAL_RWA_NOTE = (
 )
 
 FY2025_AR_BASIS_NOTE = (
-    "FY2025 is sourced from the Annual Report and Financial Statements 2025, NOT from a Pillar 3 "
-    "disclosure (the FY2025 Pillar 3 was not yet published as at 15 September 2026). The two bases "
-    "agree for this bank - see the source note below."
+    "FY2025 IS NOW PILLAR 3-SOURCED. It was Annual Report-sourced until 18 September 2026, when GHIB "
+    "published its FY2025 Pillar 3 Disclosures; the Pillar 3 figure is the same value at higher "
+    "precision, never a different one. See the source note below for the full before/after."
 )
 
-CET1_CAP_NOTE = FY2025_AR_BASIS_NOTE + " FY2025 is stated only to £0.1m (\"£161.7m\"), so it carries less precision than the Pillar 3-sourced years."
+CET1_CAP_NOTE = FY2025_AR_BASIS_NOTE + " FY2025 now carries the Pillar 3's 161,750; the Annual Report stated the same figure only to £0.1m (\"£161.7m\")."
 NO_AT1_FY2025_NOTE = NO_AT1_NOTE + " " + FY2025_AR_BASIS_NOTE
 
 # ---------------------------------------------------------------
@@ -682,82 +723,82 @@ NO_AT1_FY2025_NOTE = NO_AT1_NOTE + " " + FY2025_AR_BASIS_NOTE
 km1_rows = [
     ("SECTION", "Available own funds (amounts) — £'000", {}),
     ("DATA", "1    Common Equity Tier 1 (CET1) capital",
-     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+     {"FY2025": 161750, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
       "FY2019": 137827.8}),
     ("DATA", "2    Tier 1 capital",
-     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+     {"FY2025": 161750, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
       "FY2019": 137827.8}),
     ("DATA", "3    Total capital",
-     {"FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
+     {"FY2025": 161750, "FY2024": 156657, "FY2023": 153053, "FY2022": 152019, "FY2021": 120301, "FY2020": 131539,
       "FY2019": 137827.8}),
     ("SECTION", "Risk-weighted exposure amounts — £'000", {}),
     ("DATA", "4    Total risk-weighted exposure amount",
-     {"FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231, "FY2020": 372287,
+     {"FY2025": 751519, "FY2024": 700374, "FY2023": 493080, "FY2022": 537708, "FY2021": 450231, "FY2020": 372287,
       "FY2019": 329256}),
     ("SECTION", "Capital ratios  (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "5    Common Equity Tier 1 ratio (%)",
-     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+     {"FY2025": "21.52%", "FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
       "FY2019": "41.86%"}),
     ("DATA", "6    Tier 1 ratio (%)",
-     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+     {"FY2025": "21.52%", "FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
       "FY2019": "41.86%"}),
     ("DATA", "7    Total capital ratio (%)",
-     {"FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
+     {"FY2025": "21.52%", "FY2024": "22.37%", "FY2023": "31.04%", "FY2022": "28.27%", "FY2021": "26.72%", "FY2020": "35.33%",
       "FY2019": "41.86%"}),
     ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
                 "exposure amount) pillar 2A", {}),
     ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
-     {"FY2024": "5.85%", "FY2023": "5.85%", "FY2022": "7.37%", "FY2021": "7.37%", "FY2020": "7.37%",
+     {"FY2025": "5.85%", "FY2024": "5.85%", "FY2023": "5.85%", "FY2022": "7.37%", "FY2021": "7.37%", "FY2020": "7.37%",
       "FY2019": "5.80%"}),
     ("DATA", "UK 7d    Total SREP own funds requirements (%)",
-     {"FY2024": "13.85%", "FY2023": "13.85%", "FY2022": "15.37%", "FY2021": "15.37%", "FY2020": "15.37%",
+     {"FY2025": "13.85%", "FY2024": "13.85%", "FY2023": "13.85%", "FY2022": "15.37%", "FY2021": "15.37%", "FY2020": "15.37%",
       "FY2019": "13.80%"}),
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
-     {"FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%", "FY2020": "2.50%",
+     {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%", "FY2020": "2.50%",
       "FY2019": "2.50%"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
-     {"FY2024": "0.32%", "FY2023": "0.17%", "FY2022": "0.05%", "FY2021": "0.00%", "FY2020": "0.00%",
+     {"FY2025": "0.26%", "FY2024": "0.32%", "FY2023": "0.17%", "FY2022": "0.05%", "FY2021": "0.00%", "FY2020": "0.00%",
       "FY2019": "0.01%"}),
     ("DATA", "11    Combined buffer requirement (%)",
-     {"FY2024": "2.82%", "FY2023": "2.67%", "FY2022": "2.55%", "FY2021": "2.50%", "FY2020": "2.50%",
+     {"FY2025": "2.76%", "FY2024": "2.82%", "FY2023": "2.67%", "FY2022": "2.55%", "FY2021": "2.50%", "FY2020": "2.50%",
       "FY2019": "2.51%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
-     {"FY2024": "16.67%", "FY2023": "16.52%", "FY2022": "17.92%", "FY2021": "17.87%", "FY2020": "17.87%",
+     {"FY2025": "16.61%", "FY2024": "16.67%", "FY2023": "16.52%", "FY2022": "17.92%", "FY2021": "17.87%", "FY2020": "17.87%",
       "FY2019": "16.31%"}),
     ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
-     {"FY2024": "8.52%", "FY2023": "17.19%", "FY2022": "12.90%", "FY2021": "11.35%", "FY2020": "19.96%",
+     {"FY2025": "7.67%", "FY2024": "8.52%", "FY2023": "17.19%", "FY2022": "12.90%", "FY2021": "11.35%", "FY2020": "19.96%",
       "FY2019": "28.06%"}),
     ("SECTION", "Leverage ratio — £'000 / %", {}),
     ("DATA", "13    Total exposure measure excluding claims on central banks",
-     {"FY2024": 1071784, "FY2023": 591309, "FY2022": 637251, "FY2021": 791289, "FY2020": 767198,
+     {"FY2025": 1141156, "FY2024": 1071784, "FY2023": 591309, "FY2022": 637251, "FY2021": 791289, "FY2020": 767198,
       "FY2019": 686553}),
     ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
-     {"FY2024": "14.66%", "FY2023": "25.88%", "FY2022": "23.86%", "FY2021": "15.18%", "FY2020": "17.10%",
+     {"FY2025": "14.17%", "FY2024": "14.66%", "FY2023": "25.88%", "FY2022": "23.86%", "FY2021": "15.18%", "FY2020": "17.10%",
       "FY2019": "19.99%"}),
     ("SECTION", "Liquidity Coverage Ratio — £'000 / %", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
-     {"FY2024": 428070, "FY2023": 263896, "FY2022": 306067, "FY2021": 236427, "FY2020": 199128,
+     {"FY2025": 447862, "FY2024": 428070, "FY2023": 263896, "FY2022": 306067, "FY2021": 236427, "FY2020": 199128,
       "FY2019": 206996}),
     ("DATA", "UK 16a    Cash outflows - Total weighted value",
-     {"FY2024": 466537, "FY2023": 285221, "FY2022": 298700, "FY2021": 249962, "FY2020": 256894,
+     {"FY2025": 451692, "FY2024": 466537, "FY2023": 285221, "FY2022": 298700, "FY2021": 249962, "FY2020": 256894,
       "FY2019": 221049}),
     ("DATA", "UK 16b    Cash inflows - Total weighted value",
-     {"FY2024": 299522, "FY2023": 275604, "FY2022": 345041, "FY2021": 249320, "FY2020": 248271,
+     {"FY2025": 241912, "FY2024": 299522, "FY2023": 275604, "FY2022": 345041, "FY2021": 249320, "FY2020": 248271,
       "FY2019": 146701}),
     ("DATA", "16    Total net cash outflows (adjusted value)",
-     {"FY2024": 167015, "FY2023": 71305, "FY2022": 74675, "FY2021": 62491, "FY2020": 64224,
+     {"FY2025": 209779, "FY2024": 167015, "FY2023": 71305, "FY2022": 74675, "FY2021": 62491, "FY2020": 64224,
       "FY2019": 74348}),
     ("DATA", "17    Liquidity coverage ratio (%)",
-     {"FY2024": "256.31%", "FY2023": "370.09%", "FY2022": "409.87%", "FY2021": "378.34%",
+     {"FY2025": "213.4%", "FY2024": "256.31%", "FY2023": "370.09%", "FY2022": "409.87%", "FY2021": "378.34%",
       "FY2020": "310.06%", "FY2019": "278.41%"}),
     ("SECTION", "Net Stable Funding Ratio* — £'000 / %", {}),
     ("DATA", "18    Total available stable funding",
-     {"FY2024": 391313, "FY2023": 317974, "FY2022": 370817}),
+     {"FY2025": 483227, "FY2024": 391313, "FY2023": 317974, "FY2022": 370817}),
     ("DATA", "19    Total required stable funding",
-     {"FY2024": 152868, "FY2023": 116361, "FY2022": 126647}),
+     {"FY2025": 266394, "FY2024": 152868, "FY2023": 116361, "FY2022": 126647}),
     ("DATA", "20    NSFR ratio (%)",
-     {"FY2024": "255.98%", "FY2023": "273.27%", "FY2022": "292.79%"}),
+     {"FY2025": "181.4%", "FY2024": "255.98%", "FY2023": "273.27%", "FY2022": "292.79%"}),
     ("DATA", "* Comparable figures for other periods are not available because the new NSFR rules from "
              "CRR2 only commenced in 2022 (GHIB's own footnote to the table)", {}),
 ]
@@ -765,6 +806,8 @@ km1_rows = [
 KM1_SOURCES = (
     "Sources - Ghana International Bank Plc's own key-metrics (UK KM1) template, £'000 and percentages as "
     "printed, entity basis (GHIB plc is a single entity with no consolidated group):\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, p.14 printed (PDF p.13), \"Table1: Key Metrics "
+    f"ratios as at 31 December 2025\" - {P3_2025_URL}\n"
     f"FY2024: Pillar 3 Disclosures 31 December 2024, p.5, \"Table1: Key Metrics ratios as at 31 December "
     f"2024\" - {P3_2024_URL}\n"
     f"FY2023: Pillar 3 Disclosures 31 December 2023, p.5, \"Table1: Key Metrics ratios as at 31 December "
@@ -774,7 +817,8 @@ KM1_SOURCES = (
     f"FY2021, FY2020 and FY2019: the comparative columns of that same FY2022 edition (see the note on "
     f"edition choice below) - {P3_2022_URL}\n"
     "\n"
-    "THE TABLE IS AN IMAGE IN EVERY EDITION - A SOURCE DEFECT, RECORDED NOT HIDDEN. In all six GHIB Pillar 3 "
+    "THE TABLE IS AN IMAGE IN EVERY EDITION UP TO FY2024 - A SOURCE DEFECT, RECORDED NOT HIDDEN (the FY2025 "
+    "edition finally breaks the pattern; see below). In all six of those GHIB Pillar 3 "
     "PDFs the key-metrics table is a pasted picture, not live text, even though the surrounding document "
     "extracts perfectly (pdfimages confirms one embedded bitmap on each of those pages: 940x665 px in the "
     "FY2024 edition, 915x668 in FY2023, 597x630 in FY2022). A text search of these PDFs returns the caption "
@@ -795,14 +839,26 @@ KM1_SOURCES = (
     "split. That is not the KM1 template, so it is not reproduced here; those three columns come from the "
     "FY2022 edition, the earliest edition that carries them inside the template.\n"
     "\n"
-    "FY2025 IS BLANK, NOT MISSING. No FY2025 Pillar 3 has been published. Checked 16 September 2026 "
-    "against the Bank's OWN index rather than against this script's citation list: GHIB's WordPress media "
-    "endpoint (/wp-json/wp/v2/media?search=pillar) enumerates exactly six Pillar 3 PDFs ever uploaded, the "
-    "newest being GHIB-2024-Pillar-3-Disclosures.pdf uploaded 12 November 2025. GHIB publishes its Pillar 3 "
-    "roughly seven months after the Annual Report, so the FY2025 edition is expected around November 2026. "
-    "The FY2025 figures on the metric sheets come from the Annual Report and are deliberately NOT "
-    "reassembled into a KM1 shape: a table built from statutory accounts would look like the template "
-    "without being it.\n"
+    "FY2025 IS NOW POPULATED, AND THE ROUTE MATTERS. This sheet said \"FY2025 is blank, not missing\" as "
+    "recently as 16 September 2026, on the strength of the same WordPress media endpoint used here: at "
+    "that date /wp-json/wp/v2/media?search=pillar enumerated exactly six Pillar 3 PDFs ever uploaded, the "
+    "newest being GHIB-2024-Pillar-3-Disclosures.pdf (12 November 2025). Re-queried on 18 September 2026 "
+    "the same endpoint returns SEVEN, the new one being GHIB-2025-Pillar-3-Disclosures.pdf, uploaded that "
+    "same day at 14:45:36 (the PDF's own CreationDate is 18 September 2026 11:27 BST). The earlier "
+    "negative was therefore correct at the time and simply expired - which is the argument for re-testing "
+    "a leading-edge negative against the bank's own index rather than treating it as settled. Note also "
+    "that on 18 September the Bank's homepage and /legal-documents/ page still linked only the FY2024 "
+    "edition, so following links alone would have missed it; the media index is the enumerating source "
+    "for this bank.\n"
+    "THE FY2025 TABLE IS LIVE TEXT, THE FIRST GHIB EDITION THAT IS. Unlike FY2019-FY2024, where the "
+    "key-metrics table is a pasted bitmap and every figure had to be read visually from two independent "
+    "renderings, the FY2025 edition was produced in Adobe Illustrator 29.8 with the table as selectable "
+    "text, and pdftotext -layout extracts every cell. The FY2025 column above is a text transcription, "
+    "not a visual read. Two artefacts of that extraction were resolved against the rendered page and are "
+    "noted here rather than silently fixed: row 13's FY2025 value wraps across two lines as \"1,141,15\" / "
+    "\"6\" (it is 1,141,156), and row 1's FY2022 COMPARATIVE prints as \"152, 19\" where rows 2 and 3 print "
+    "152,019 - a typo in the Bank's own FY2025 table, which costs this workbook nothing because FY2022 is "
+    "taken from the FY2022 edition, not from this comparative.\n"
     "\n"
     "ROW SET. GHIB prints rows 1-9, 11, UK 7a, UK 7d, UK 11a, 12-17, UK 16a, UK 16b and 18-20 and no "
     "others. UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a and the 14a-14e additional-leverage block appear in no "
@@ -867,6 +923,13 @@ KM1_SOURCES = (
     "split normally lives), so it is offered as the best available explanation and not as a sourced fact. "
     "Nothing above was recomputed or adjusted on the strength of it - both sides keep the figures their "
     "own sources print.\n"
+    "• LCR, FY2025 - A ROUNDING DIFFERENCE WITHIN ONE DOCUMENT, NEW IN THE FY2025 EDITION. Row 17 here "
+    "prints 213.4% and row 20 prints 181.4%; the LCR and NSFR metric sheets carry 213.49% and 181.39% "
+    "from that same edition's Table 13 (p.37 printed) and section 5.4 narrative. The FY2025 edition "
+    "rounds its own KM1 rows 17 and 20 to 1dp in the 2025 and 2024 columns while printing 2dp in the "
+    "2023/2022/2021 columns of the very same rows; earlier editions printed 2dp throughout, which is why "
+    "this disagreement appears for the first time in FY2025. Both figures are GHIB's own and neither has "
+    "been adjusted.\n"
     "• NSFR, FY2021 and FY2020: rows 18-20 are blank here because GHIB's KM1 leaves them blank, while the "
     "NSFR sheet carries 195% (FY2021) and 198% (FY2020) from those years' own bespoke tables, with "
     "available/required stable funding of 318,949/163,592 and 293,588/148,293 respectively. The KM1 "
@@ -885,8 +948,9 @@ bw.add_km1_sheet(
     subtitle="The Bank's own published UK key-metrics (KM1) template, reproduced in GHIB's row order with "
              "its own template row numbers, labels and printed precision. Amounts in £'000, ratios as "
              "printed. Entity basis. The table is an IMAGE in every GHIB Pillar 3 PDF and was read visually "
-             "from the rendered page. FY2025 is blank because no FY2025 Pillar 3 exists yet; FY2021-FY2019 "
-             "come from the FY2022 edition because GHIB published no KM1 template before it.",
+             "from the rendered page for FY2024 and earlier; the FY2025 edition is the first with a live-text "
+             "table. FY2021-FY2019 come from the FY2022 edition because GHIB published no KM1 template "
+             "before it.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=76,
@@ -903,9 +967,12 @@ metric("Total RWAs", "£'000",
        [("Total risk-weighted exposure amount", TOTAL_RWA),
         ("FY2019 only — as printed in the FY2019 Pillar 3's Table 1 (credit-risk subtotal, see note)",
          TOTAL_RWA_AS_PRINTED_FY2019)],
-       note="FY2025 blank: the FY2025 Annual Report does not state RWAs and the FY2025 Pillar 3 is not "
-            "yet published (as at 15 September 2026). Deliberately NOT back-solved from CET1 / 21.5%. "
-            + TOTAL_RWA_NOTE)
+       note="FY2025 FILLED 2026-09-18 with 751,519, printed directly as row 4 of the FY2025 Pillar 3's own "
+            "KM1 (p.14 printed). It had been blank because the FY2025 Annual Report states no RWA figure "
+            "and was deliberately NOT back-solved from CET1 / 21.5% - the document has now supplied it, so "
+            "nothing was ever derived. The Bank's own narrative corroborates it (\"an increase of 7% in risk "
+            "weighted assets (£700.37m in 2024 to £751.51m in 2025)\"), and 161,750/751,519 = 21.522%, "
+            "reproducing the printed 21.52% CET1 ratio. " + TOTAL_RWA_NOTE)
 
 # ---------------------------------------------------------------
 # RWA Breakdown: Table 2 "Breakdown of the Bank's Regulatory Capital
@@ -918,28 +985,34 @@ metric("Total RWAs", "£'000",
 # disclosed).
 # ---------------------------------------------------------------
 RWA_CATEGORIES = {
-    "Central Gov/Central Banks": {"FY2024": 27645, "FY2023": 27361, "FY2022": 35066, "FY2021": 43896,
-                                  "FY2020": 21860, "FY2019": 33795},
-    "Corporates": {"FY2024": 475975, "FY2023": 283530, "FY2022": 274893, "FY2021": 201102,
-                   "FY2020": 151082, "FY2019": 148056},
-    "Institutions": {"FY2024": 64563, "FY2023": 80749, "FY2022": 125314, "FY2021": 92530,
-                     "FY2020": 99623, "FY2019": 60002},
-    "Other Items": {"FY2024": 18447, "FY2023": 20363, "FY2022": 20893, "FY2021": 21987,
-                    "FY2020": 9577, "FY2019": 3452},
-    "Public Sector Entities": {"FY2024": 55699, "FY2023": 32940, "FY2022": 37618, "FY2021": 46854,
-                               "FY2020": 43483, "FY2019": 34593},
-    "Retail": {"FY2024": 148, "FY2023": 5870, "FY2022": 133, "FY2021": 1226,
+    "Central Gov/Central Banks": {"FY2025": 66628, "FY2024": 27645, "FY2023": 27361, "FY2022": 35066,
+                                  "FY2021": 43896, "FY2020": 21860, "FY2019": 33795},
+    "Corporates": {"FY2025": 502959, "FY2024": 475975, "FY2023": 283530, "FY2022": 274893,
+                   "FY2021": 201102, "FY2020": 151082, "FY2019": 148056},
+    "Institutions": {"FY2025": 58742, "FY2024": 64563, "FY2023": 80749, "FY2022": 125314,
+                     "FY2021": 92530, "FY2020": 99623, "FY2019": 60002},
+    "Other Items": {"FY2025": 14082, "FY2024": 18447, "FY2023": 20363, "FY2022": 20893,
+                    "FY2021": 21987, "FY2020": 9577, "FY2019": 3452},
+    "Public Sector Entities": {"FY2025": 32952, "FY2024": 55699, "FY2023": 32940, "FY2022": 37618,
+                               "FY2021": 46854, "FY2020": 43483, "FY2019": 34593},
+    "Retail": {"FY2025": 139, "FY2024": 148, "FY2023": 5870, "FY2022": 133, "FY2021": 1226,
                "FY2020": 184, "FY2019": 234},
-    "Multilateral Development Banks": {"FY2024": 0, "FY2019": 0},
-    "Covered bonds": {"FY2024": 2020},
+    # FY2025 prints an em-dash for Multilateral Development Banks in BOTH the
+    # capital-requirement and RWA columns (the class still carries a 34,369 EAD).
+    # Kept as the literal dash the Bank printed, NOT converted to 0 - which is a
+    # different statement, and is what the FY2024/FY2019 tables actually print.
+    "Multilateral Development Banks": {"FY2025": "-", "FY2024": 0, "FY2019": 0},
+    "Covered bonds": {"FY2025": 3030, "FY2024": 2020},
+    # An exposure class that appears for the first time in the FY2025 table.
+    "Claims on inst & corp with CR assessment": {"FY2025": 1193},
     # An "Exposures in Default" exposure class appears only in the FY2019 table.
     "Exposures in Default": {"FY2019": 1421},
 }
-RWA_CREDIT_TOTAL = {"FY2024": 644497, "FY2023": 450813, "FY2022": 493919, "FY2021": 407595,
+RWA_CREDIT_TOTAL = {"FY2025": 679725, "FY2024": 644497, "FY2023": 450813, "FY2022": 493919, "FY2021": 407595,
                     "FY2020": 325809, "FY2019": 281553}
-RWA_OPRISK_CAPREQ = {"FY2024": 4147, "FY2023": 2963, "FY2022": 2690, "FY2021": 3173,
+RWA_OPRISK_CAPREQ = {"FY2025": 5723, "FY2024": 4147, "FY2023": 2963, "FY2022": 2690, "FY2021": 3173,
                      "FY2020": 3665, "FY2019": 3731}
-RWA_MARKET_CAPREQ = {"FY2024": 323, "FY2023": 418, "FY2022": 813, "FY2021": 237,
+RWA_MARKET_CAPREQ = {"FY2025": 20, "FY2024": 323, "FY2023": 418, "FY2022": 813, "FY2021": 237,
                      "FY2020": 54, "FY2019": 85}
 RWA_OPRISK = {y: round(v / 0.08) for y, v in RWA_OPRISK_CAPREQ.items()}
 RWA_MARKET = {y: round(v / 0.08) for y, v in RWA_MARKET_CAPREQ.items()}
@@ -955,6 +1028,8 @@ rwa_rows = [
     ("DATA", "Retail", RWA_CATEGORIES["Retail"]),
     ("DATA", "Multilateral Development Banks", RWA_CATEGORIES["Multilateral Development Banks"]),
     ("DATA", "Covered bonds", RWA_CATEGORIES["Covered bonds"]),
+    ("DATA", "Claims on inst & corp with CR assessment (a separate class in the FY2025 table only)",
+     RWA_CATEGORIES["Claims on inst & corp with CR assessment"]),
     ("DATA", "Exposures in Default (a separate class in the FY2019 table only)", RWA_CATEGORIES["Exposures in Default"]),
     ("TOTAL", "Total credit and counterparty risk RWA", RWA_CREDIT_TOTAL),
     ("SECTION", "Other risk types (RWA calculated as Capital Requirement / 8% - see source note)", {}),
@@ -965,13 +1040,22 @@ rwa_rows = [
 
 bw.add_rwa_breakdown_sheet(
     title="Ghana International Bank Plc — RWA Breakdown",
-    subtitle="£'000, FY2019-FY2024. Credit risk RWA directly disclosed by exposure class; Operational/Market "
-             "risk RWA calculated from disclosed capital requirements - see source note. FY2025 not yet published.",
+    subtitle="£'000, FY2019-FY2025. Credit risk RWA directly disclosed by exposure class; Operational/Market "
+             "risk RWA calculated from disclosed capital requirements - see source note.",
     rows=rwa_rows,
     sources_text=p3_sources(page="7") + "\n\nRWA BREAKDOWN NOTE: sourced from Table 2 'Breakdown of the "
         "Bank's Regulatory Capital Requirement' in each year's own Pillar 3 Disclosures (Central Gov/Central "
         "Banks, Corporates, Institutions, Other Items, Public Sector Entities, and Retail columns give RWA "
-        "directly; Multilateral Development Banks and Covered bonds are new categories introduced FY2024). "
+        "directly; Multilateral Development Banks and Covered bonds are new categories introduced FY2024, "
+        "and 'Claims on inst & corp with CR assessment' is a further new class introduced FY2025). "
+        "FY2025 ADDED 2026-09-18 from the FY2025 Pillar 3's Table 2, p.16 printed (PDF p.15) - the first "
+        "GHIB edition in which this table is live text rather than a bitmap, so it is a text "
+        "transcription rather than a visual read. The cross-check that this sheet applies to every other "
+        "year passes for FY2025 too: 679,725 credit + 71,538 operational + 250 market = 751,513 against "
+        "the 751,519 that edition's own KM1 row 4 discloses, a 6 (0.0008%) rounding difference of the "
+        "same order as FY2024's 1. THE FY2025 MULTILATERAL DEVELOPMENT BANKS CELL IS A PRINTED DASH and "
+        "is reproduced as the literal \"-\" the Bank printed, NOT as 0: that class still carries a 34,369 "
+        "exposure at default in the same table, so a dash and a zero are not interchangeable here. "
         "Operational risk and Market risk RWA are CALCULATED as (Capital Requirement / 8%), since the table "
         "states only their capital requirement, not RWA directly - independently cross-checked against each "
         "year's own disclosed Total RWAs figure (Total RWAs sheet), matching within rounding for every year "
@@ -991,8 +1075,14 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)],
-       note="FY2025 blank: not stated in the FY2025 Annual Report, and the FY2025 Pillar 3 is not yet "
-            "published (as at 15 September 2026). FY2019 (20.06%) and FY2020 (17.14%) FILLED 2026-09-15 "
+       note="FY2025 FILLED 2026-09-18 with 14.17%, from row 14 of the FY2025 Pillar 3's KM1, which its own "
+            "section 1.6 narrative repeats verbatim (\"The leverage ratio as at 31 December 2025 was "
+            "14.17%\", p.14 printed). THE SAME DOCUMENT ALSO SAYS 12.79%, in section 5.14 'Risk of "
+            "Excessive Leverage' (p.39 printed). Recorded, not reconciled: 14.17% is carried here because "
+            "two independent places in the document agree on it and because section 5.14 of EVERY GHIB "
+            "edition is struck on a transitional Tier 1 definition and diverges the same way (FY2024: "
+            "14.66% in the KM1 versus 13.9% in its own section 5.14). No figure was adjusted to make the "
+            "two agree. FY2019 (20.06%) and FY2020 (17.14%) FILLED 2026-09-15 "
             "from the newly-located editions of those years. BASIS CAVEAT for those two years only: the "
             "FY2019/FY2020 Table 1 labels this line 'Total Basel III leverage ratio exposure measure (%)' "
             "- which is itself a mislabel by the Bank, since the value is plainly the ratio and not an "
@@ -1021,7 +1111,14 @@ metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central bank
             "FY2020 and FY2019 - see the KM1 Key Metrics sheet's note for the arithmetic behind that "
             "reading, and note that it is an inference rather than something the Bank states.")
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)],
-       note=FY2025_AR_BASIS_NOTE + " The AR and Pillar 3 LCR bases agree for this bank: the FY2024 "
+       note=FY2025_AR_BASIS_NOTE + " FY2025 UPGRADED 2026-09-18 from the Annual Report's \"213%\" to "
+            "213.49%, printed in the FY2025 Pillar 3's Table 13 (p.37 printed) and repeated in its "
+            "section 5.4 narrative, with components HQLA 447,861,842 / net liquidity outflow "
+            "209,779,358. Its KM1 row 17 prints the same ratio to 1dp as 213.4%, which is what the KM1 "
+            "sheet reproduces as printed - so verify_workbook.py reports a KM1-vs-this-sheet "
+            "disagreement for FY2025 that is a rounding difference inside one document, not a "
+            "transcription slip, and neither side has been changed to silence it. The AR and Pillar 3 "
+            "LCR bases agree for this bank: the FY2024 "
             "Annual Report's year-end LCR of 256% matches the FY2024 Pillar 3 LCR of 256.31%. FY2019 "
             "(278.41%) FILLED and FY2020 UPGRADED 2026-09-15: FY2020 previously read '310%' from the "
             "Annual Report and now reads 310.06% from the FY2020 Pillar 3's own Table 1, which also "
@@ -1031,8 +1128,12 @@ metric("LCR", "%", [("Liquidity coverage ratio", LCR)],
             "rest of this row - none of GHIB's editions report a 12-month-average LCR, so there is no "
             "average-vs-point-in-time mixing on this sheet.")
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)],
-       note=NSFR_NOTE + " FY2025 blank: not stated in the FY2025 Annual Report, and the FY2025 Pillar 3 "
-            "is not yet published (as at 15 September 2026). FY2020 FILLED 2026-09-15 with 198%, a real "
+       note=NSFR_NOTE + " FY2025 FILLED 2026-09-18 with 181.39%, from the FY2025 Pillar 3's section 5.4 "
+            "narrative (available stable funding 483,227 / required stable funding 266,394, KM1 rows "
+            "18-19). Its KM1 row 20 prints the same ratio to 1dp as 181.4%, which is what the KM1 sheet "
+            "reproduces as printed; the FY2025 edition rounds this row where its FY2024 predecessor "
+            "printed 2dp. FY2020 FILLED "
+            "2026-09-15 with 198%, a real "
             "disclosure from the FY2020 Pillar 3's Table 1 (available stable funding 293,588 / required "
             "stable funding 148,293), which the Bank published voluntarily well before the UK NSFR "
             "requirement began on 1 January 2022 - so this project's default assumption that pre-FY2022 "

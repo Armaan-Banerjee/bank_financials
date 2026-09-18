@@ -101,7 +101,20 @@ P3_SOURCES = (
     "SGKH_2025_P3_disclosures.pdf, UBP_UK_2025-P3-disclosures.pdf) all "
     "returned HTTP 404 against a known-good HTTP 200 control on the FY2024 "
     "filename. So FY2025 is a genuine not-yet-published, not a sourcing gap "
-    "and not a year-end mix-up.\n\n"
+    "and not a year-end mix-up.\n"
+    "RE-CHECKED 2026-09-18 (independent session, both axes re-tested from the "
+    "primary sources rather than from this note): (1) the UBP UK Pillar 3 "
+    "archive page was re-fetched and its document links re-enumerated out of "
+    "the page's own data-js-download-select-options attributes - it still "
+    "offers exactly three files (SGKH_2024-P3-disclosures.pdf, "
+    "UBP_2023_P3_disclosures.pdf, UBP_2022_P3_disclosures.pdf) and no FY2025 "
+    "edition; (2) Companies House's company record for 00964058 still reads "
+    "'Next accounts made up to 31 December 2025 due by 30 September 2026. "
+    "Last accounts made up to 31 December 2024', so the FY2025 statutory "
+    "accounts are still unfiled and are not yet late (that second point is "
+    "what keeps the Balance Sheet, Profit & Loss and Asset Quality sheets "
+    "blank for FY2025 too - see their own source note). Both blanks remain "
+    "not-yet-published rather than unreached.\n\n"
     "FY2014-FY2020: left blank throughout every Pillar 3 metric sheet and the "
     "RWA Breakdown sheet - no numeric capital/RWA/liquidity Pillar 3 "
     "disclosure could be found for the entity for these years, under any of "
@@ -223,7 +236,11 @@ STATEMENTS_SOURCES = (
     "FY1978-FY1979: no standalone filing was present in the supplied Companies House archive batch; these two years remain blank pending retrieval of the relevant pre-1995 bundled archive/document.\n\n"
     "FY2025 is blank throughout the Balance Sheet, Profit & Loss, Statement of Changes in Equity and "
     "Asset Quality sheets: no FY2025 statutory accounts have been filed at Companies House as of this "
-    "workbook's build date (the FY2024 filing is the most recent).\n\n"
+    "workbook's build date (the FY2024 filing is the most recent). RE-CHECKED 2026-09-18 directly "
+    "against Companies House's own company record for 00964058, which still reads 'Next accounts made "
+    "up to 31 December 2025 due by 30 September 2026. Last accounts made up to 31 December 2024'. The "
+    "FY2025 accounts are therefore not merely unfound but not yet filed, and are not yet late; this "
+    "blank is expected to close once the filing is made.\n\n"
     + ENTITY_NOTE
     + "\n\nSTATEMENT STRUCTURE NOTE: the FY2024/FY2023 Statement of Profit and Loss uses a "
     "Revenue/Cost-of-Revenue-style presentation (Total operating income before administrative "
@@ -597,6 +614,171 @@ bw.add_asset_quality_sheet(
     first_col_width=90,
     source_height=340,
     unit_suffix=" (£'000)",
+)
+
+
+# --- KM1 Key Metrics -------------------------------------------------------
+# The bank's own "Table UK KM1 - Key Metrics", reproduced whole. It must sit
+# BEFORE the first add_metric_sheet() call because sheet order follows call
+# order, and the standard shape puts KM1 at index 6 (after Asset Quality,
+# before CET1 Capital).
+#
+# Row numbers, row order, row labels, units and precision are the bank's own.
+# The three editions print an IDENTICAL row set, so one set of rows carries
+# all four years. The bank prints only columns "a" (the reporting date) and
+# "e" (four quarters earlier) - the correct annual-frequency use of the UK
+# template's five quarterly columns, not an omission.
+km1_rows = [
+    ("SECTION", "Available Own Funds (Amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) Capital (£'000)", {"FY2024": 291256, "FY2023": 356795, "FY2022": 426529, "FY2021": 461392}),
+    ("DATA", "2  Tier 1 Capital (£'000)", {"FY2024": 291256, "FY2023": 356795, "FY2022": 426529, "FY2021": 461392}),
+    ("DATA", "3  Total Capital (£'000)", {"FY2024": 291256, "FY2023": 356795, "FY2022": 426529, "FY2021": 461392}),
+    ("SECTION", "Risk-Weighted Exposure Amounts", {}),
+    ("DATA", "4  Total Risk-Weighted Exposure Amounts (£'000)", {"FY2024": 1373096, "FY2023": 1450014, "FY2022": 1830761, "FY2021": 1951543}),
+    ("SECTION", "Capital Ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": "21.2%", "FY2023": "24.6%", "FY2022": "23.3%", "FY2021": "23.6%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2024": "21.2%", "FY2023": "24.6%", "FY2022": "23.3%", "FY2021": "23.6%"}),
+    ("DATA", "7  Total Capital ratio (%)", {"FY2024": "21.2%", "FY2023": "24.6%", "FY2022": "23.3%", "FY2021": "23.6%"}),
+    ("SECTION", "Additional Own Funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2024": "1.8%", "FY2023": "0.8%", "FY2022": "0.8%", "FY2021": "0.8%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2024": "0.6%", "FY2023": "0.3%", "FY2022": "0.3%", "FY2021": "0.3%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2024": "0.8%", "FY2023": "0.4%", "FY2022": "0.4%", "FY2021": "0.4%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2024": "11.2%", "FY2023": "9.5%", "FY2022": "9.5%", "FY2021": "9.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2024": "1.2%", "FY2023": "1.2%", "FY2022": "0.6%", "FY2021": "0.0%"}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2024": "3.7%", "FY2023": "3.7%", "FY2022": "3.1%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": "14.9%", "FY2023": "13.2%", "FY2022": "12.6%", "FY2021": "12.0%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {"FY2024": "10.0%", "FY2023": "15.1%", "FY2022": "13.8%", "FY2021": "14.2%"}),
+    ("SECTION", "Leverage Ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£'000)", {"FY2024": 4407957, "FY2023": 4161978, "FY2022": 4707494, "FY2021": 5203049}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)", {"FY2024": "6.6%", "FY2023": "8.6%", "FY2022": "9.1%", "FY2021": "8.9%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)", {"FY2024": 2565121, "FY2023": 2191986, "FY2022": 2372431, "FY2021": 2319358}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2024": 1167142, "FY2023": 971156, "FY2022": 1029869, "FY2021": 1079986}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2024": 135972, "FY2023": 103495, "FY2022": 208111, "FY2021": 301570}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2024": 1031169, "FY2023": 867661, "FY2022": 821759, "FY2021": 778416}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2024": "248.8%", "FY2023": "252.6%", "FY2022": "288.7%", "FY2021": "298.0%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2024": 3202089, "FY2023": 3140112, "FY2022": 3765621, "FY2021": 3792308}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2024": 1265791, "FY2023": 1441162, "FY2022": 1698754, "FY2021": 2108413}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2024": "253%", "FY2023": "217.9%", "FY2022": "221.7%", "FY2021": "179.9%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - the bank's own 'Table UK KM1 - Key Metrics', transcribed as "
+    "printed. Amounts are in £'000 as the template's own column stub declares "
+    "(\"£'000s\"); they are NOT converted to £m here, unlike the single-metric "
+    "sheets. Ratios keep the bank's own precision exactly as printed, "
+    "including FY2024 row 20 ('253%', printed with no decimal place where "
+    "every other year carries one) and FY2021 row 9 ('0.0%').\n"
+    f"FY2024 and FY2023: SGKH Pillar 3 Disclosure 31 December 2024, section "
+    f"'2.2. Table UK KM1 - Key Metrics', printed page 10 (PDF sheet 11), "
+    f"columns a (Dec 31 2024) and e (Dec 31 2023) - {P3_2024_URL}\n"
+    f"FY2023 and FY2022: SGKH Pillar 3 Disclosure 31 December 2023, section "
+    f"'2.2. Table UK KM1 - Key Metrics', printed page 10 (PDF sheet 11), "
+    f"columns a (Dec 31 2023) and e (Dec 31 2022) - {P3_2023_URL}\n"
+    f"FY2022 and FY2021: SGKH Pillar 3 Disclosure 31 December 2022, section "
+    f"'2.2. Table UK KM1 - Key Metrics', printed page 10 (PDF sheet 11), "
+    f"columns a (Dec 31 2022) and e (31 Dec 2021) - {P3_2022_URL}\n"
+    f"Official UBP UK Pillar 3 archive page - {P3_ARCHIVE_URL}\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-18: performed against the bank's OWN "
+    "disclosures page (not the Wayback Machine and not the URLs already cited "
+    "here). ubp.com/en/legal-aspects/union-bancaire-privee-uk-limited/"
+    "pillar-3-disclosure returns HTTP 200; its download links are rendered by "
+    "JavaScript, so the page's visible text was read instead, and it "
+    "enumerates exactly three editions - 'SGKH Pillar 3 Disclosure - 31 "
+    "December 2024', '- 31 December 2023' and '- 31 December 2022'. There is "
+    "NO 31 December 2025 edition as at that date, so FY2025 is blank rather "
+    "than filled. Cross-checked against Companies House for company 00964058: "
+    "the most recent accounts filing is 'Full accounts made up to 31 December "
+    "2024', filed 01 Oct 2025 - no FY2025 accounts either. This is a "
+    "'checked, none newer' finding, not an unchecked one.\n"
+    "\n"
+    "WHY FY2021 COMES FROM A COMPARATIVE COLUMN. There is no 31 December 2021 "
+    "Pillar 3 edition to take it from. The bank's own page lists none; a "
+    "Wayback CDX sweep of ubp.com surfaced none; and a CDX sweep of the "
+    "predecessor site kleinworthambros.com surfaced only one 2021-dated "
+    "candidate, '2021_KH_Pillar_3_Disclosure.pdf', which on retrieval is a "
+    "3-page 2021 REMUNERATION CODE DISCLOSURE TABLE and carries no key-metrics "
+    "template at all (richness control on that document: 'Remuneration' 37 "
+    "occurrences and 'Code Staff' 4, against 0 each for 'Key Metrics', 'KM1', "
+    "'Tier 1', 'Risk-Weighted' and 'Liquidity coverage' - so the zero is a "
+    "fact about the document, not about the search). FY2021 is therefore "
+    "filled from the 31 December 2022 edition's own comparative column, which "
+    "is named above.\n"
+    "\n"
+    "CROSS-EDITION AGREEMENT. Every year that appears in two editions was "
+    "compared cell by cell and the two editions agree exactly: the 2024 "
+    "edition's column e matches the 2023 edition's column a for all 26 FY2023 "
+    "rows, and the 2023 edition's column e matches the 2022 edition's column a "
+    "for all 26 FY2022 rows. Nothing has been restated between editions, so no "
+    "year on this sheet needed a restatement note.\n"
+    "\n"
+    "FOOTNOTE MARKERS ON THE FY2021 COLUMN. In the 2022 edition four FY2021 "
+    "cells carry superscript footnote markers that a text extraction glues on "
+    "to the number: row 13 prints '5,203,049' with footnote 1, and rows 18, 19 "
+    "and 20 print '3,792,308', '2,108,413' and '179.9%' with footnote 3. The "
+    "page was rendered at 200 dpi and read as an image to confirm these are "
+    "markers and not digits. Footnote 1 states that the PRA leverage templates "
+    "became effective on 1 January 2022 under CRR2 and that 31 December 2021 "
+    "has been re-presented on the new basis; footnote 3 states the same for "
+    "the NSFR, computed with CRR2's pre-determined weightings. Both FY2021 "
+    "figures are therefore already on the post-CRR2 basis used by FY2022-"
+    "FY2024, so this sheet carries no leverage or NSFR basis break.\n"
+    "\n"
+    "ROWS THE BANK DOES NOT PRINT. The template rows 10, UK 8a, UK 9a, UK 10a "
+    "and 14a-14e do not appear in any of the three editions, so they are not "
+    "shown here - a row absent from the source is not the same as a row the "
+    "source left blank, and none of these was printed blank. The bank gives "
+    "its own reason for the 14a-14e group in a footnote: 'Rows 14a - 14e are "
+    "not applicable as SGKH doesn't meet the threshold to be a LREQ firm "
+    "(retail deposit >= £50 billion).' There are no dashes, blanks or 'N/A' "
+    "cells anywhere in this table; every printed cell carries a figure.\n"
+    "\n"
+    "ENTITY. All three editions are published by SG Kleinwort Hambros Bank "
+    "Ltd on the UK Consolidation Group basis, and every column in all three is "
+    "that same entity and basis - there is no mixed-entity column. SG "
+    "Kleinwort Hambros Bank Limited was acquired by Union Bancaire Privee, UBP "
+    "SA on 1 April 2025 and renamed Union Bancaire Privee (UK) Limited; it is "
+    "the same legal person and the same Companies House number (00964058) "
+    "throughout, which is why pre-acquisition SGKH disclosures are this "
+    "workbook's own history and not another bank's. See the ENTITY/BASIS NOTE "
+    "on the statement sheets. The 2024 edition states the acquisition "
+    "explicitly and adds that the disclosure 'reflects the views of SG "
+    "Kleinwort Hambros Bank Limited, prior to the acquisition'.\n"
+    "\n"
+    "SOURCE DEFECT, RECORDED NOT CORRECTED. In the 2023 and 2024 editions the "
+    "running header above this table reads 'ANNEX III - DISCLOSURE OF RISK "
+    "MGMT OBJECTIVES AND GOVERNANCE POLICIES', although the table is section "
+    "2.2 of Annex I and both documents' own contents pages place it under '2. "
+    "ANNEX I - DISCLOSURE OF KEY METRICS AND OVERVIEW OF RISK'. The 2022 "
+    "edition prints the correct 'ANNEX I' header in the same position. The "
+    "page citation above is the PRINTED folio (10), which the footer confirms; "
+    "it is PDF sheet 11 in all three files.\n"
+    "\n"
+    "RELATIONSHIP TO THE SINGLE-METRIC SHEETS. Those sheets restate the same "
+    "figures in £m, so a cross-check compares £'000 here against £m there and "
+    "the two must agree after scaling. One presentational difference is "
+    "deliberate: the NSFR sheet shows FY2024 as '253.0%' where the template "
+    "prints '253%'. The value is identical; this sheet keeps the bank's "
+    "printed form."
+)
+
+bw.add_km1_sheet(
+    title="Union Bancaire Privée (UK) Limited — KM1 Key Metrics",
+    subtitle=(
+        "Table UK KM1 - Key Metrics, as published by SG Kleinwort Hambros Bank Ltd "
+        "(now Union Bancaire Privée (UK) Limited) on the UK Consolidation Group basis. "
+        "Amounts in £'000 as printed; row numbers, row order, labels and precision are "
+        "the bank's own. FY2021 is the 31 December 2022 edition's comparative column - "
+        "no 31 December 2021 Pillar 3 edition exists."
+    ),
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=74,
+    source_height=460,
 )
 
 

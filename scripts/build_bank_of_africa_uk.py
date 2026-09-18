@@ -22,6 +22,15 @@ AR2017_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2016_URL = "https://find-and-update.company-information.service.gov.uk/company/05321714/filing-history/MzE3NDg0MjU5MGFkaXF6a2N4/document?format=pdf&download=0"
 AR2014_URL = "https://find-and-update.company-information.service.gov.uk/company/05321714/filing-history/MzEyMjYyNzE2M2FkaXF6a2N4/document?format=pdf&download=0"
 
+# GA-013 (2026-09-18): the Bank's OWN-SITE copies of the FY2019 and FY2020
+# Annual Reports. These are the documents the FY2019/FY2020 capital figures on
+# the Pillar 3 metric sheets are read from - NOT the Companies House filings
+# above, which are image-only scans of the same accounts. Both verified on
+# 2026-09-18: HTTP 200, Content-Type application/pdf, %PDF magic bytes;
+# FY2019 2,433,097 bytes / 82pp, FY2020 28,440,522 bytes / 89pp.
+AR2020_OWNSITE_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BOAUK_Annual_report_and_audited_financial_statements_2020.pdf"
+AR2019_OWNSITE_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BBI_Annual_report_and_audited_financial_2019.pdf"
+
 # Standalone Pillar 3 disclosures, found on the Bank's own site
 # (bankofafricaunitedkingdom.co.uk/finances.html) - text-native PDFs, no OCR
 # needed. No FY2021 or FY2025 edition exists (site's earliest is FY2022; FY2025
@@ -148,6 +157,110 @@ CASH_FLOW_SOURCES = (
 )
 
 
+# GA-013 (2026-09-18). This note REPLACES an earlier one that read: "FY2018-
+# FY2020: no standalone Pillar 3 document found anywhere in the Wayback Machine
+# archive of either bankofafricaunitedkingdom.co.uk or its earlier
+# bmcebankint.com domain - a genuine archive gap, left blank rather than
+# guessed." The standalone-document half of that was, and remains, TRUE. The
+# conclusion drawn from it - that the figures were therefore unobtainable - was
+# FALSE, and it left 14 cells blank across seven sheets for two years.
+FY1820_CAPITAL_NOTE = (
+    "FY2018-FY2020 - NO STANDALONE PILLAR 3, BUT THE CAPITAL FIGURES ARE PUBLISHED (corrected "
+    "2026-09-18, GA-013). Two separate statements, and an earlier revision of this note ran them "
+    "together:\n"
+    "(1) THE STANDALONE-DOCUMENT NEGATIVE STANDS. No standalone Pillar 3 document exists for "
+    "FY2018, FY2019 or FY2020. This is now established against THREE domains, not the two the "
+    "earlier pass searched. The Bank's own live index (finances.html, HTTP 200, unblocked, "
+    "re-read 2026-09-18) lists 16 PDFs, of which the Pillar 3 entries are 2015, 2017, 2022, 2023 "
+    "and 2024 only - the standalone series genuinely skips 2016 and 2018-2021.\n"
+    "(2) BUT THE CAPITAL FIGURES WERE NEVER MISSING. They are printed in the ANNUAL REPORT, in a "
+    "Strategic Report table headed 'Capital management' - FY2019 on printed folio p.15, FY2020 on "
+    "printed folio p.16. Each table gives Tier 1 Capital, Subordinated debt (principal), Own "
+    "funds, Required capital, Surplus capital, Risk weighted assets, Tier 1 capital ratio and "
+    "Solvency ratio. Both foot exactly (FY2020 69,581 + 15,853 = 85,434; FY2019 65,965 + 15,051 = "
+    "81,016), and the FY2020 narrative independently ties to FY2019 ('a reduction in CAR from "
+    "17.36% to 16.89%', 'total available capital also improved by GBP4.4m to GBP85.4m').\n"
+    "THIS SCRIPT ALREADY KNEW THAT SHAPE EXISTED, which is what makes the miss instructive rather "
+    "than unlucky: the FY2014 citation on this very sheet reads '...also independently "
+    "cross-checked against the FY2014 Annual Report's own Part III Pillar 3 Disclosures, p.64'. "
+    "The search looked for a standalone PDF and stopped; the Annual Report was never re-read for "
+    "the capital table.\n"
+    "WHY THE EARLIER SWEEP COULD NOT HAVE FOUND THE DOCUMENT IT LOOKED FOR: the FY2019 Annual "
+    "Report states the Pillar 3 disclosures 'will be published on the Bank's website ... at "
+    "http://www.bmce-intl.co.uk/finance' - a THIRD domain that the recorded CDX sweep "
+    "(bankofafricaunitedkingdom.co.uk and bmcebankint.com) never covered. Checked 2026-09-18: "
+    "bmce-intl.co.uk is now dead to a live fetch (connection timed out at 25s, recorded as NOT "
+    "ESTABLISHED, not as an absence), and a Wayback CDX sweep of bmce-intl.co.uk* returns 260 "
+    "captured URLs of which exactly two match 'pillar' - both the 2017 edition. So the third "
+    "domain does not rescue FY2018-FY2020 either, and point (1) now rests on three domains.\n"
+    "CET1 = TIER 1 FOR THESE TWO YEARS ON THE BANK'S OWN STATEMENT, not by derivation: both "
+    "reports' Capital management sections read 'Tier 1 capital (all qualifies as Common Equity "
+    "Tier 1 (CET1) capital)'. This matches how every other year in this workbook is presented.\n"
+    "READ THESE FIGURES FROM A PAGE RENDER, NOT FROM pdftotext (map rule 22). The FY2020 PDF's "
+    "text layer is a poor OCR: it renders 13.76% as '13.760/o' and misreads Subordinated debt as "
+    "15,953 where the page prints 15,853 - one figure in eight wrong. Every figure above was read "
+    "from a 150-dpi render of the printed page. A later pass re-extracting with the faster tool "
+    "WILL get different numbers; the render is authoritative.\n"
+    "FY2019 SOURCE DEFECT - THE TABLE DISAGREES WITH ITSELF. REPRODUCED, NOT RECONCILED (map rule "
+    "7). Re-read at 400 dpi on 2026-09-18 after a tie-check flagged it: BOTH figures this workbook "
+    "carries are correct transcriptions of what is printed, and the document is internally "
+    "inconsistent. The FY2019 Capital management table (printed folio p.15) contains TWO "
+    "irreconcilable totals for own funds:\n"
+    "  - 'Own funds' prints 81,016, and that TIES to its own components: Tier 1 Capital 65,965 + "
+    "Subordinated debt (principal) 15,051 = 81,016 exactly.\n"
+    "  - 'Required capital' 69,046 + 'Surplus capital' 12,506 = 81,552, which is 536 HIGHER, and "
+    "it is THAT figure the printed ratio is struck on: 81,552 / 469,702 = 17.362%, i.e. the "
+    "printed 'Solvency ratio 17.36%'. The printed Own funds over the printed RWAs gives 17.25%, "
+    "which is NOT what the table prints.\n"
+    "So 81,016 (Total Capital sheet) and 17.36% (Total Capital Ratio sheet) DO NOT TIE TO EACH "
+    "OTHER, and that is a property of the source, not of this transcription. Both are kept as "
+    "printed. Nothing is recomputed, and no third number is invented to make them agree.\n"
+    "The same ~540 gap appears a second time in the same report, which is why it reads as a basis "
+    "difference rather than a typo: the narrative on that page says 'a core tier 1 capital ratio "
+    "of 14.16%', which implies Tier 1 of 66,510 - some 545 above the 65,965 the table prints, "
+    "whose own ratio (14.044%) matches the table's printed 14.04%. RECORDED AS AN OBSERVATION AND "
+    "NOT AS A FINDING: the ratios and the narrative look to be struck on a capital base about "
+    "GBP540k higher than the Own funds and Tier 1 rows printed beside them, but the report does "
+    "not say so and the cause is unknown. Do not resolve it by picking a side.\n"
+    "FY2020 IS CLEAN ON THE SAME CHECK and was verified rather than assumed: 69,581 + 15,853 = "
+    "85,434 = printed Own funds; Required 68,942 + Surplus 16,491 = 85,433 (GBP1 rounding); "
+    "85,434 / 505,809 = 16.891% = printed 16.89%; 69,581 / 505,809 = 13.756% = printed 13.76%. "
+    "All four tie, so the FY2019 break is specific to that edition.\n"
+    "FY2018 IS NOW ESTABLISHED FROM ITS OWN EDITION (closed 2026-09-18, interior-gap pass; this "
+    "paragraph REPLACES one that read 'FY2018 REMAINS UNESTABLISHED AND IS DELIBERATELY LEFT "
+    "BLANK ... that read is still outstanding'). The outstanding read has now been done. Source: "
+    "Annual Report and Financial Statements 2018 (Companies House, company 05321714, AR2018_URL), "
+    "Note 42 'Capital management', section D, printed folio p.85 / PDF p.86. The table prints, in "
+    "GBP'000: Tier 1 capital 61,796; Subordinated debt (principal) 15,912; Own funds 77,708; "
+    "Required capital 69,763; Surplus Capital 7,945; Risk weighted assets 456,561; Tier 1 capital "
+    "ratio 13,5%; Solvency ratio 17,0% (the source uses a comma decimal separator). It is a "
+    "2018-only column - the table carries NO comparative, so nothing here is a prior-year figure.\n"
+    "  METHOD, because the instrument matters here (map rule 22): the Companies House filing is a "
+    "FULLY SCANNED, IMAGE-ONLY PDF - pdftotext returns roughly one character per page, so a text "
+    "search against it proves nothing whatsoever. The page was rendered with pdftoppm at 150 dpi, "
+    "OCR'd, and then EVERY FIGURE ABOVE WAS CONFIRMED VISUALLY AGAINST THE PAGE IMAGE. Anyone "
+    "re-deriving these from a text extraction will get nothing and must not read that as absence.\n"
+    "  THE TWO BARRED ROUTES WERE STILL NOT USED, and that is the point of recording them: the "
+    "FY2019/FY2020 reports' 'Solvency ratio Evolution' BAR CHART (FY2018 17.0%, FY2017 19.0%) and "
+    "the FY2019 narrative's FY2018 comparatives (RWA GBP456,561k, CAR 17.0%, core tier 1 13.5%) "
+    "both remain barred - chart-reading is the GA-011 error class and a later edition's "
+    "comparative is barred by map rule 1. That they happen to AGREE with the table is a "
+    "confirmation after the fact, not the provenance; the figures above come from the FY2018 "
+    "table alone.\n"
+    "  INTERNAL CHECKS, all passing: 61,796 + 15,912 = 77,708 = printed Own funds; 61,796 / "
+    "456,561 = 13.535% = printed 13,5%; 77,708 / 456,561 = 17.020% = printed 17,0%. FY2018 "
+    "therefore does NOT carry the FY2019 edition's self-disagreement described above.\n"
+    "  CET1 = TIER 1 ON THE BANK'S OWN STATEMENT for this year too, not by derivation: section A "
+    "of the same note reads 'Tier 1 capital (all qualifies as Common Equity Tier 1 (CET1) "
+    "capital)'.\n"
+    "FY2021 IS NOT ESTABLISHED EITHER, AND FOR AN INSTRUMENT REASON RATHER THAN A DOCUMENT ONE: "
+    "the own-site FY2021 Annual Report yields 977 characters across 88 pages (an image-only scan "
+    "with no usable text layer), so every keyword probe against it returns zero and none of those "
+    "zeros is evidence about the document. FY2021's Pillar 3 figures come from the FY2022 "
+    "edition's own comparative column, as cited above.\n"
+)
+
+
 def p3_sources(extra=""):
     return (
         "Sources - Bank of Africa United Kingdom Plc, own entity-level Pillar 3 disclosures "
@@ -157,6 +270,13 @@ def p3_sources(extra=""):
         f"FY2022: Pillar 3 Disclosures 2022, p.17 (composition of capital resources table, as originally published) - {P3_2022_URL}\n"
         f"FY2021: Pillar 3 Disclosures 2022, p.17 (composition of capital resources table, FY2021 comparative column) - {P3_2022_URL}\n"
         f"FY2025: no Pillar 3 edition published yet (as of this build) - Annual Report and Financial Statements 2025, p.23 (Capital Management) - {AR2025_URL}\n"
+        f"   FY2025 RE-CONFIRMED 2026-09-18 FROM THE INDEX PAGE ITSELF, not from a filename guess. "
+        f"{BOA_FINANCES_URL} was fetched (HTTP 200, text/html, 57,611 bytes, browser user-agent over "
+        f"HTTP/1.1) and EVERY .pdf href on it extracted - 16 documents. Exactly five are Pillar 3 editions: "
+        f"2015, 2017, 2022, 2023 and 2024. There is no 2025 edition listed, and the page's newest Annual "
+        f"Report is the 2024 one, so the site as a whole has not yet been updated for the 2025 year-end. "
+        f"This is an enumeration of the Bank's own document index, which is stronger than the filename "
+        f"permutations recorded on the Leverage Ratio sheet and reaches the same conclusion.\n"
         f"FY2017: Pillar III Disclosures 2017, p.13 (Own Funds/Solvency ratio table) - {P3_2017_URL}\n"
         f"FY2016: Pillar III Disclosures 2017, p.13 (Own Funds/Solvency ratio table, FY2016 comparative column) - {P3_2017_URL}\n"
         f"FY2015: Pillar 3 Disclosures 2015, p.2 (Ratios table) - {P3_2015_URL}\n"
@@ -171,11 +291,13 @@ def p3_sources(extra=""):
         f"at exactly 1,048,576 bytes (the Wayback 1 MiB per-capture limit) in every playback form "
         f"- bare, if_ and id_ alike - so it is recorded as provenance only and must not be "
         f"promoted back to the primary citation; use the live URL.\n"
-        f"FY2018-FY2020: no standalone Pillar 3 document found anywhere in the Wayback Machine "
-        "archive of either bankofafricaunitedkingdom.co.uk or its earlier bmcebankint.com "
-        "domain (re-confirmed via a fresh CDX search during the HD-017 extension, consistent "
-        "with HD-002's earlier finding) - a genuine archive gap, left blank rather than "
-        "guessed."
+        f"FY2020: Annual Report and Financial Statements 2020, printed folio p.16 (Strategic Report, "
+        f"'Capital management' table) - {AR2020_OWNSITE_URL}\n"
+        f"FY2019: Annual Report and Financial Statements 2019, printed folio p.15 (Strategic Report, "
+        f"'Capital management' table) - {AR2019_OWNSITE_URL}\n"
+        f"FY2018: Annual Report and Financial Statements 2018, Note 42 'Capital management' section D, "
+        f"printed folio p.85 / PDF p.86 (2018-only column, no comparative) - {AR2018_URL}\n"
+        + FY1820_CAPITAL_NOTE
         + extra
     )
 
@@ -503,6 +625,57 @@ ASSET_QUALITY_PRESENTATION_NOTE = (
     "estimate of the gross loan book, since no total-gross-book figure is separately stated "
     "pre-IFRS 9) - not comparable to the IFRS 9 stage-based ratios above it."
 )
+FY1920_ASSET_QUALITY_NOTE = (
+    "FY2019 AND FY2020 FILLED 2026-09-18 (interior-gap pass). These two years sat blank between a "
+    "populated FY2018 and a populated FY2021, which is the signature of a miss on our side rather "
+    "than a non-disclosure - and it was one. Both years' stage tables exist, in each year's OWN "
+    "edition, in the credit-risk note rather than in the loans note this sheet's header names "
+    "(Note 36 in FY2019, Note 33 in FY2020, section I in both). That is why an earlier pass "
+    "looking only at the Loans and advances note found nothing.\n"
+    "  TIES, checked rather than assumed: FY2019 221,175 - 5,123 = 216,052 and FY2020 179,138 - "
+    "5,965 = 173,173. Each equals the carrying amount on the face of ITS OWN report's statement "
+    "of financial position (AR2019 note 18 line: 216,052 / 211,596; AR2020: 173,173), and the "
+    "FY2020 narrative independently states 'loans to customers decreased by GBP42,879k to "
+    "GBP173,173k (2019: GBP216,052k)'.\n"
+    "  DELIBERATE DIVERGENCE FROM THIS WORKBOOK'S BALANCE SHEET SHEET, FY2019 ONLY - FLAGGED, NOT "
+    "RECONCILED. This sheet's FY2019 carrying amount is 216,052; the Balance Sheet sheet's FY2019 "
+    "column reads 215,391, a difference of 661. Neither is wrong. The two sheets are sourced "
+    "differently on purpose and each says so in its own citation block: the Balance Sheet sheet "
+    "uses the FY2020 report's RESTATED FY2019 comparative as its primary FY2019 column (its "
+    "source note has said so since the HD-017 extension), while this Asset Quality sheet takes "
+    "each year from its own edition. The restatement is visible in the stage detail - AR2019 "
+    "prints Stage 1 gross 187,518 / carrying 187,086, AR2020's FY2019 comparative prints the same "
+    "Stage 2 (12,681) and Stage 3 (16,285) carrying amounts but a Stage 1 carrying amount 661 "
+    "lower, with gross restated from 221,175 to 220,514. The FY2020 report is itself of two minds "
+    "about it: its restated comparative column says 215,391 while its own narrative on the "
+    "Strategic Report page says '(2019: GBP216,052k)'. Reproduced on both sheets as each source "
+    "prints it; no third figure is invented and neither sheet is edited to match the other.\n"
+    "  METHOD: the FY2020 own-site PDF has a corrupt text layer (it renders percent signs as "
+    "'0/o' and mangles words), so its page was read from a 200-dpi render; FY2019's text layer is "
+    "sound and was cross-read against its own render.\n"
+    "  SOURCE DEFECT, REPRODUCED AND NOT RECONCILED (map rule 7). The FY2019 report states the "
+    "closing loss allowance TWICE and the two statements disagree. Section I (the credit-quality "
+    "table used here, PDF p.69) gives Stage 1 (432) / Stage 2 (636) / Stage 3 (4,055) = (5,123). "
+    "Section J, the ECL movement table on PDF p.70, closes the same year at Stage 1 (173) / Stage "
+    "2 (1,391) / Stage 3 (3,559) = (5,122) - a different stage allocation AND a GBP1k different "
+    "total. Section I is used because it is the credit-quality table proper and because its total "
+    "is the one that ties to the Balance Sheet carrying amount; section J is recorded here so the "
+    "disagreement is visible. A THIRD variant of the same year sits in section E ('Credit quality "
+    "per class of financial assets', PDF p.61), which prints Loans and advances to customers as "
+    "gross 221,174 / impaired allowance (5,122) / carrying 216,052 - i.e. it agrees with section "
+    "J's GBP1k-lower allowance while still arriving at the same 216,052. All three are printed in "
+    "one report. Nothing is averaged, adjusted or back-solved.\n"
+    "  RELATED, AND THE SAME TREATMENT: section J's OPENING allowance for 2019 is Stage 1 (516) / "
+    "Stage 2 (1,475) / Stage 3 (2,340) = (4,331), whereas the FY2018 column on this sheet - taken "
+    "from the FY2018 report's own note - reads (503) / (1,475) / (2,354) = (4,331). The totals "
+    "agree; the stage split does not. FY2018 keeps its own edition's split.\n"
+    "  A SECOND REASON EACH YEAR IS TAKEN FROM ITS OWN EDITION: the FY2020 report's FY2019 "
+    "COMPARATIVE for Due from banks (85,930 gross / (437) allowance / 85,493 net) does not match "
+    "what the FY2019 report itself prints for the same year (86,038 / (437) / 85,601). The "
+    "comparative columns in this bank's reports are not reliably identical to the original "
+    "columns, so none is used as a primary source."
+)
+
 ASSET_QUALITY_SOURCES = (
     "Sources - Bank of Africa United Kingdom Plc's own Loans and advances to customers note "
     "(Note 16, or Note 19 in the FY2018 Annual Report), GBP'000:\n"
@@ -510,30 +683,35 @@ ASSET_QUALITY_SOURCES = (
     f"FY2023: Annual Report and Financial Statements 2023, p.67 - {AR2023_URL}\n"
     f"FY2022 (originally reported, used as primary column): Annual Report and Financial Statements 2022, p.66 - {AR2022_URL}\n"
     f"FY2021: Annual Report and Financial Statements 2022, p.66 (FY2021 comparative column) - {AR2022_URL}\n"
+    f"FY2020: Annual Report and Financial Statements 2020, Note 33 'Credit risk' section I ('Credit quality - "
+    f"IFRS 9 expected loss model'), printed folio p.73, Loans and advances to customers block - {AR2020_OWNSITE_URL}\n"
+    f"FY2019: Annual Report and Financial Statements 2019, Note 36 'Credit risk' section I ('Credit quality - "
+    f"IFRS 9 expected loss model'), PDF p.69, Loans and advances to customers block - {AR2019_OWNSITE_URL}\n"
     f"FY2018: Annual Report and Financial Statements 2018, p.50 (Note 19) - {AR2018_URL}\n"
     f"FY2017: Annual Report and Financial Statements 2017, p.45 (Note 16) - {AR2017_URL}\n"
     f"FY2016 (& FY2015 comparative, used as primary column): Annual Report and Financial Statements 2016, p.42 (Note 16) - {AR2016_URL}\n"
     f"FY2014: Annual Report and Financial Statements 2014, p.39 (Note 17) - {AR2014_URL}\n\n"
+    + FY1920_ASSET_QUALITY_NOTE + "\n\n"
     + ASSET_QUALITY_PRESENTATION_NOTE + "\n\n" + ENTITY_NOTE
 )
 
 asset_quality_rows = [
     ("SECTION", "Loans and advances to customers by IFRS 9 stage - gross carrying amount", {}),
-    ("DATA", "Stage 1 - 12 months ECL", {"FY2025": 39023, "FY2024": 25334, "FY2023": 20047, "FY2022": 138815, "FY2021": 152521, "FY2018": 172960}),
-    ("DATA", "Stage 2 - Lifetime ECL", {"FY2025": 678, "FY2024": 3938, "FY2023": 6350, "FY2022": 7799, "FY2021": 0, "FY2018": 37903}),
-    ("DATA", "Stage 3 - Non performing - Lifetime ECL", {"FY2025": 2739, "FY2024": 4896, "FY2023": 7348, "FY2022": 8291, "FY2021": 15751, "FY2018": 5065}),
-    ("TOTAL", "Total gross carrying amount", {"FY2025": 42440, "FY2024": 34168, "FY2023": 33745, "FY2022": 154905, "FY2021": 168272, "FY2018": 215927}),
+    ("DATA", "Stage 1 - 12 months ECL", {"FY2025": 39023, "FY2024": 25334, "FY2023": 20047, "FY2022": 138815, "FY2021": 152521, "FY2020": 156736, "FY2019": 187518, "FY2018": 172960}),
+    ("DATA", "Stage 2 - Lifetime ECL", {"FY2025": 678, "FY2024": 3938, "FY2023": 6350, "FY2022": 7799, "FY2021": 0, "FY2020": 6734, "FY2019": 13317, "FY2018": 37903}),
+    ("DATA", "Stage 3 - Non performing - Lifetime ECL", {"FY2025": 2739, "FY2024": 4896, "FY2023": 7348, "FY2022": 8291, "FY2021": 15751, "FY2020": 15668, "FY2019": 20340, "FY2018": 5065}),
+    ("TOTAL", "Total gross carrying amount", {"FY2025": 42440, "FY2024": 34168, "FY2023": 33745, "FY2022": 154905, "FY2021": 168272, "FY2020": 179138, "FY2019": 221175, "FY2018": 215927}),
     ("SECTION", "Loss allowance by IFRS 9 stage", {}),
-    ("DATA", "Stage 1 - 12 months ECL", {"FY2025": -49, "FY2024": -51, "FY2023": -106, "FY2022": -568, "FY2021": -837, "FY2018": -503}),
-    ("DATA", "Stage 2 - Lifetime ECL", {"FY2025": -29, "FY2024": -236, "FY2023": -114, "FY2022": -127, "FY2021": 0, "FY2018": -1475}),
-    ("DATA", "Stage 3 - Non performing - Lifetime ECL", {"FY2025": -410, "FY2024": -4896, "FY2023": -5193, "FY2022": -5925, "FY2021": -5419, "FY2018": -2354}),
-    ("TOTAL", "Total loss allowance", {"FY2025": -488, "FY2024": -5183, "FY2023": -5413, "FY2022": -6620, "FY2021": -6256, "FY2018": -4331}),
+    ("DATA", "Stage 1 - 12 months ECL", {"FY2025": -49, "FY2024": -51, "FY2023": -106, "FY2022": -568, "FY2021": -837, "FY2020": -950, "FY2019": -432, "FY2018": -503}),
+    ("DATA", "Stage 2 - Lifetime ECL", {"FY2025": -29, "FY2024": -236, "FY2023": -114, "FY2022": -127, "FY2021": 0, "FY2020": -70, "FY2019": -636, "FY2018": -1475}),
+    ("DATA", "Stage 3 - Non performing - Lifetime ECL", {"FY2025": -410, "FY2024": -4896, "FY2023": -5193, "FY2022": -5925, "FY2021": -5419, "FY2020": -4945, "FY2019": -4055, "FY2018": -2354}),
+    ("TOTAL", "Total loss allowance", {"FY2025": -488, "FY2024": -5183, "FY2023": -5413, "FY2022": -6620, "FY2021": -6256, "FY2020": -5965, "FY2019": -5123, "FY2018": -4331}),
     ("SECTION", "Carrying amount", {}),
-    ("TOTAL", "Loans and advances to customers (carrying amount)", {"FY2025": 41952, "FY2024": 28985, "FY2023": 28332, "FY2022": 148285, "FY2021": 162016, "FY2018": 211596}),
+    ("TOTAL", "Loans and advances to customers (carrying amount)", {"FY2025": 41952, "FY2024": 28985, "FY2023": 28332, "FY2022": 148285, "FY2021": 162016, "FY2020": 173173, "FY2019": 216052, "FY2018": 211596}),
     ("SECTION", "Derived ratios (IFRS 9 stage basis)", {}),
-    ("DATA", "ECL coverage ratio (total loss allowance / total gross)", {"FY2025": "1.15%", "FY2024": "15.17%", "FY2023": "16.04%", "FY2022": "4.27%", "FY2021": "3.72%", "FY2018": "2.01%"}),
-    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross)", {"FY2025": "6.45%", "FY2024": "14.33%", "FY2023": "21.78%", "FY2022": "5.35%", "FY2021": "9.36%", "FY2018": "2.35%"}),
-    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross)", {"FY2025": "14.97%", "FY2024": "100.00%", "FY2023": "70.68%", "FY2022": "71.46%", "FY2021": "34.40%", "FY2018": "46.48%"}),
+    ("DATA", "ECL coverage ratio (total loss allowance / total gross)", {"FY2025": "1.15%", "FY2024": "15.17%", "FY2023": "16.04%", "FY2022": "4.27%", "FY2021": "3.72%", "FY2020": "3.33%", "FY2019": "2.32%", "FY2018": "2.01%"}),
+    ("DATA", "Stage 3 / NPL ratio (Stage 3 gross / total gross)", {"FY2025": "6.45%", "FY2024": "14.33%", "FY2023": "21.78%", "FY2022": "5.35%", "FY2021": "9.36%", "FY2020": "8.75%", "FY2019": "9.20%", "FY2018": "2.35%"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 allowance / Stage 3 gross)", {"FY2025": "14.97%", "FY2024": "100.00%", "FY2023": "70.68%", "FY2022": "71.46%", "FY2021": "34.40%", "FY2020": "31.56%", "FY2019": "19.94%", "FY2018": "46.48%"}),
     ("SECTION", "Pre-IFRS 9 (IAS 39) loan quality metrics - FY2014-FY2017 (individual-impairment basis, no stage split exists)", {}),
     ("DATA", "Loans and advances to customers (net carrying amount)", {"FY2017": 207964, "FY2016": 175945, "FY2015": 167713, "FY2014": 149257}),
     ("DATA", "Individual impairment provision (period-end balance)", {"FY2017": 3023, "FY2016": 1581, "FY2015": 597, "FY2014": 1785}),
@@ -572,8 +750,11 @@ RESTATEMENT_NOTE = (
 EARLY_YEARS_NOTE = (
     "FY2014-FY2017 (HD-017 extension): see this workbook's entity-level source note for the "
     "Basel III/CET1-terminology and 'Tier 2 capital' source-labelling caveats that apply to "
-    "these four years' Pillar 3 figures. FY2018-FY2020 have no Pillar 3 disclosure at all "
-    "(genuine archive gap) - left blank on this sheet."
+    "these four years' Pillar 3 figures. FY2018-FY2020 have no STANDALONE Pillar 3 document at "
+    "all (a genuine archive gap in the document series), but all three years ARE populated on "
+    "this sheet: the capital figures are printed in each year's own Annual Report - FY2020 and "
+    "FY2019 in the Strategic Report 'Capital management' table, FY2018 in Note 42 'Capital "
+    "management' - and are cited individually above. The document gap is not a data gap."
 )
 
 # ---------------------------------------------------------------
@@ -655,6 +836,7 @@ metric(
     "CET1 Capital", "£'000",
     [("Common Equity Tier 1 (CET1) capital (= Tier 1 capital; wholly CET1, no AT1 instruments)",
       {"FY2025": 41047, "FY2024": 45680, "FY2023": 44826, "FY2022": 55465, "FY2021": 59466,
+       "FY2020": 69581, "FY2019": 65965, "FY2018": 61796,
        "FY2017": 60536, "FY2016": 51512, "FY2015": 45544, "FY2014": 40825})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -663,6 +845,7 @@ metric(
     "CET1 Ratio", "%",
     [("CET1 Ratio (= Tier 1 Capital Ratio)",
       {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%",
+       "FY2020": "13.76%", "FY2019": "14.04%", "FY2018": "13.5%",
        "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -671,6 +854,7 @@ metric(
     "Tier 1 Capital", "£'000",
     [("Tier 1 Capital",
       {"FY2025": 41047, "FY2024": 45680, "FY2023": 44826, "FY2022": 55465, "FY2021": 59466,
+       "FY2020": 69581, "FY2019": 65965, "FY2018": 61796,
        "FY2017": 60536, "FY2016": 51512, "FY2015": 45544, "FY2014": 40825})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -679,6 +863,7 @@ metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 Capital Ratio",
       {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%",
+       "FY2020": "13.76%", "FY2019": "14.04%", "FY2018": "13.5%",
        "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -687,6 +872,7 @@ metric(
     "Total Capital", "£'000",
     [("Total Capital / Own Funds (Tier 1 + Tier 2)",
       {"FY2025": 56485, "FY2024": 60323, "FY2023": 60197, "FY2022": 71130, "FY2021": 74498,
+       "FY2020": 85434, "FY2019": 81016, "FY2018": 77708,
        "FY2017": 76231, "FY2016": 66652, "FY2015": 58545, "FY2014": 54600})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -695,6 +881,7 @@ metric(
     "Total Capital Ratio", "%",
     [("Total Capital Ratio (Solvency Ratio)",
       {"FY2025": "24.03%", "FY2024": "25.95%", "FY2023": "23.83%", "FY2022": "15.70%", "FY2021": "15.49%",
+       "FY2020": "16.89%", "FY2019": "17.36%", "FY2018": "17.0%",
        "FY2017": "19.0%", "FY2016": "16.9%", "FY2015": "16.2%", "FY2014": "17.9%"})],
     p3_sources(), note=RESTATEMENT_NOTE + "\n\n" + EARLY_YEARS_NOTE,
 )
@@ -703,6 +890,7 @@ metric(
     "Total RWAs", "£'000",
     [("Total Risk Weighted Assets (Credit RWA)",
       {"FY2025": 235076, "FY2024": 232412, "FY2023": 252608, "FY2022": 453124, "FY2021": 480918,
+       "FY2020": 505809, "FY2019": 469702, "FY2018": 456561,
        "FY2017": 401388, "FY2016": 395244, "FY2015": 360523, "FY2014": 305024})],
     p3_sources(), note=EARLY_YEARS_NOTE,
 )
@@ -724,7 +912,21 @@ RWA_BREAKDOWN_PRESENTATION_NOTE = (
     "the Total RWAs sheet. FY2014/FY2015's Pillar 3 documents disclose Pillar 1 capital "
     "requirements by exposure class (sovereign/institution/corporate/retail/other), not by "
     "risk type (credit/market/operational) - not the same breakdown shape as this sheet, so "
-    "not included here; FY2018-FY2020 have no Pillar 3 disclosure at all (see entity note)."
+    "not included here.\n\n"
+    "FY2018-FY2020 - NO RISK-TYPE BREAKDOWN IS PUBLISHED, AND THE ONE NEAR-MISS IS DELIBERATELY "
+    "REFUSED (interior-gap pass, 2026-09-18). These three years have no standalone Pillar 3 "
+    "document (see the entity note), and the TOTAL RWA for each year IS known and IS carried on "
+    "the Total RWAs sheet, read from each year's own Annual Report capital table (FY2020 505,809; "
+    "FY2019 469,702; FY2018 456,561). What no document in those years prints is the split by risk "
+    "type, which is what this sheet holds - so the category rows stay empty rather than being "
+    "manufactured, and the totals are not repeated here without components.\n"
+    "  THE REFUSED SOURCE, recorded so a later pass does not 'find' it and think it is a win: the "
+    "FY2020 Annual Report, printed folio p.11, carries a PIE CHART headed 'Capital Requirements "
+    "(Per Risk Type)' reading Credit 65%, Market 28%, Operational 7%. It is NOT used. Three "
+    "separate reasons, any one sufficient: it is a chart rather than a table (the GA-011 "
+    "fabricated-figure error class); it states CAPITAL REQUIREMENTS, not RWAs, which are a "
+    "different quantity; and turning percentages into GBP'000 would be derivation from a total, "
+    "which map rule 6 forbids. FY2019 and FY2018 do not even have that much."
 )
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Bank of Africa United Kingdom Plc's own Pillar 3 Disclosures, 'Overview of Risk "
@@ -737,6 +939,18 @@ RWA_BREAKDOWN_SOURCES = (
 )
 
 rwa_breakdown_rows = [
+    # Gap-fill round 2026-09-18: FY2025 and FY2018-FY2020 held no cell at all, so
+    # a reader saw four blank year columns and the census scored them as
+    # untouched gaps - even though both findings were already established and
+    # written up in RWA_BREAKDOWN_PRESENTATION_NOTE below. They now appear IN the
+    # columns. This is a statement row, not a risk category: nothing is computed,
+    # and in particular the FY2020 Annual Report's 'Capital Requirements (Per
+    # Risk Type)' PIE CHART stays refused, for the three reasons in the note.
+    ("DATA", "[No risk-type RWA breakdown published for this year - see note below]",
+     {"FY2025": "Not published - no Pillar III edition for this year",
+      "FY2020": "Not disclosed - no risk-type split in the Annual Report",
+      "FY2019": "Not disclosed - no risk-type split in the Annual Report",
+      "FY2018": "Not disclosed - no risk-type split in the Annual Report"}),
     ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2024": 194090, "FY2023": 167168, "FY2022": 345166, "FY2021": 238172, "FY2017": 292139, "FY2016": 277878}),
     ("DATA", "Counterparty credit risk (of which CVA)", {"FY2024": 1442, "FY2023": 447, "FY2022": 246, "FY2021": 350, "FY2017": 225, "FY2016": 226}),
     ("DATA", "Market risk", {"FY2024": 7152, "FY2023": 45736, "FY2022": 67257, "FY2021": 206395, "FY2017": 77898, "FY2016": 90900}),
@@ -755,7 +969,11 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Leverage Ratio",
-      {"FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%",
+      {"FY2025": "Not disclosed - no Pillar III edition; absent from the Annual Report",
+       "FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%",
+       "FY2020": "Not disclosed in the FY2020 Annual Report",
+       "FY2019": "Not disclosed in the FY2019 Annual Report",
+       "FY2018": "Not disclosed in the FY2018 Annual Report",
        "FY2017": "12.08%", "FY2016": "9.62%"})],
     p3_sources(
         "\n\nFY2025 leverage ratio not found - left blank rather than guessed. Re-verified "
@@ -774,7 +992,19 @@ metric(
         "derivable either. FY2015/FY2014: leverage ratio not disclosed in either year's "
         "Pillar 3 document - plausible, since the UK leverage ratio framework (and its "
         "public disclosure requirement) only phased in from 2016 onward; left blank rather "
-        "than guessed. FY2018-FY2020: no Pillar 3 disclosure at all (see entity note)."
+        "than guessed.\n\n"
+        "FY2018-FY2020 (interior-gap pass, 2026-09-18) - NOT DISCLOSED, and established against "
+        "the Annual Reports, not merely against the absent Pillar 3 documents. Each of the three "
+        "reports was searched for 'leverage' with a whitespace-tolerant pattern (the OCR'd and "
+        "corrupt text layers in these files insert spaces inside words, so a plain substring "
+        "search would under-report): FY2020 and FY2019 return ZERO hits anywhere in the document; "
+        "FY2018's OCR returns one hit and it is not the metric ('this IT system continuous to be "
+        "our leverage'). The FY2020 Strategic Report KPI section was additionally read visually "
+        "from a page render and lists only Return on Equity, Return on Assets, LCR and Capital "
+        "Adequacy Ratio - no leverage ratio. Nor is one derivable: none of the three reports "
+        "prints a leverage exposure measure. So these are stated non-disclosures, not unchecked "
+        "blanks - and note that FY2021 onward and FY2016/FY2017 DO carry the ratio, which is what "
+        "made this an interior gap worth chasing."
     ),
     note="No FY2025 figure - a confirmed disclosure gap, not an unchecked one. See the source note for the "
          "three-way verification (site index, filename permutations against a live control file, and a full "
@@ -785,6 +1015,9 @@ metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio",
       {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%",
+       "FY2020": "179% (average through the year, not point-in-time - see basis note)",
+       "FY2019": "Not disclosed in the FY2019 Annual Report (qualitative statement only)",
+       "FY2018": "Not disclosed in the FY2018 Annual Report (qualitative statement only)",
        "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"})],
     p3_sources(
         "\n\nBASIS NOTE: FY2021-FY2024 are point-in-time (31 December) LCR from each year's "
@@ -799,12 +1032,30 @@ metric(
         "FY2017/FY2016/FY2015 come from the FY2017 Pillar 3 document's own 3-year bar chart "
         "(basis not separately stated in that document - not confirmed spot vs. average). "
         "FY2014: not disclosed - plausible, since the EU LCR requirement only phased in from "
-        "October 2015; left blank rather than guessed. FY2018-FY2020: no Pillar 3 disclosure "
-        "at all (see entity note)."
+        "October 2015; left blank rather than guessed.\n\n"
+        "FY2018-FY2020 (interior-gap pass, 2026-09-18). There is no standalone Pillar 3 for these "
+        "three years (see the entity note), but the Annual Reports were read for the ratio rather "
+        "than the document being treated as the whole world, and the three years give three "
+        "different answers:\n"
+        "  FY2020 - FOUND. The FY2020 Annual Report's Strategic Report KPI section, printed folio "
+        "p.17, states: 'The Bank maintained an LCR ratio of average of 179% throughout the year, "
+        "which is above the regulatory requirement of 100%.' This is an AVERAGE THROUGH THE YEAR, "
+        "NOT a 31 December point-in-time figure, and the cell says so; it is on the same basis as "
+        "the FY2025 cell and NOT on the same basis as FY2021-FY2024. Read from a 200-dpi page "
+        "render because this PDF's text layer is corrupt (it renders the sentence with mangled "
+        "characters); confirmed visually against the page image.\n"
+        "  FY2019 and FY2018 - NOT DISCLOSED, established from the documents themselves rather "
+        "than from a failed search. The FY2019 Annual Report (printed folio p.15) and the FY2018 "
+        "Annual Report (printed folio p.14) each carry only the boilerplate sentence that the Bank "
+        "is 'committed to meet strong level of regulatory requirements both LCR and NSFR' - the "
+        "acronym appears, the figure does not. Each page was read in full; no LCR percentage is "
+        "printed anywhere in either report."
     ),
-    note="FY2025 is an average-throughout-year figure (Annual Report); FY2021-FY2024 are "
-         "point-in-time at 31 December (Pillar 3 KM1); FY2015-FY2017's own basis is not "
-         "stated in their source document - see source note.",
+    note="MIXED BASIS ROW - read the cell labels. FY2025 and FY2020 are average-throughout-year "
+         "figures taken from the Annual Report; FY2021-FY2024 are point-in-time at 31 December "
+         "(Pillar 3 KM1); FY2015-FY2017's own basis is not stated in their source document. "
+         "FY2019 and FY2018 are stated non-disclosures, evidenced from those years' own Annual "
+         "Reports (see source note), not blanks left by an unfinished search.",
 )
 
 metric(
@@ -867,18 +1118,23 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%", "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"}),
-        ("Total Capital Ratio", {"FY2025": "24.03%", "FY2024": "25.95%", "FY2023": "23.83%", "FY2022": "15.70%", "FY2021": "15.49%", "FY2017": "19.0%", "FY2016": "16.9%", "FY2015": "16.2%", "FY2014": "17.9%"}),
+        ("CET1 Ratio", {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%", "FY2020": "13.76%", "FY2019": "14.04%", "FY2018": "13.5%", "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"}),
+        ("Total Capital Ratio", {"FY2025": "24.03%", "FY2024": "25.95%", "FY2023": "23.83%", "FY2022": "15.70%", "FY2021": "15.49%", "FY2020": "16.89%", "FY2019": "17.36%", "FY2018": "17.0%", "FY2017": "19.0%", "FY2016": "16.9%", "FY2015": "16.2%", "FY2014": "17.9%"}),
         ("Leverage Ratio", {"FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%", "FY2017": "12.08%", "FY2016": "9.62%"}),
-        ("LCR", {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%", "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"}),
+        ("LCR", {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%", "FY2020": "179%", "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page, and the Cash Flow Statement / Statement of "
          "Changes in Equity sheets' source notes for the several genuine restatements affecting this "
          "workbook (FY2022, FY2017, and a further FY2020/FY2021 break - see entity note). FY2018-FY2020 "
-         "have no Pillar 3 ratios (genuine archive gap, confirmed during the HD-017 historical-depth "
-         "extension); FY2014-FY2020 Balance Sheet/P&L/Cash Flow/Equity figures were added in that same "
-         "extension.",
+         "have no standalone Pillar 3 DOCUMENT (a genuine gap in that document series), but their capital "
+         "ratios and LCR are published in each year's own Annual Report and are carried on the detail "
+         "sheets and here; only the leverage ratio is genuinely absent for those three years. "
+         "FY2014-FY2020 Balance Sheet/P&L/Cash Flow/Equity figures were added in the HD-017 "
+         "historical-depth extension. NOTE THE FY2019 LOANS FIGURE differs between the Balance Sheet "
+         "block above (215,391, the FY2020 report's restated comparative) and the Asset Quality sheet "
+         "(216,052, the FY2019 report's own figure) - a real restatement, explained on the Asset Quality "
+         "sheet's source note and deliberately not reconciled.",
 )
 
 # ---------------------------------------------------------------

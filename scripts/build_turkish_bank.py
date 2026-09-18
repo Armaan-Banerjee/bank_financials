@@ -610,6 +610,137 @@ AR_CAPITAL_BASIS_NOTE = (
 def ar_capital_row():
     return (AR_CAPITAL_ROW_LABEL, dict(AR_TOTAL_REG_CAPITAL))
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - the Bank's own "Appendix 1: Key Metrics" UK KM1
+# template, reproduced whole. Called BEFORE the first add_metric_sheet() so
+# the sheet lands immediately after Asset Quality and before CET1 Capital.
+# ---------------------------------------------------------------
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)", {"FY2024": 28884, "FY2023": 28099}),
+    ("DATA", "2  Tier 1 capital (£'000)", {"FY2024": 28884, "FY2023": 28099}),
+    ("DATA", "3  Total capital (£'000)", {"FY2024": 28884, "FY2023": 28099}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2024": 111235, "FY2023": 99516}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
+    ("DATA", "6  Tier 1 ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
+    ("DATA", "7  Total Capital ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirement (%)", {}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2024": "1.49%", "FY2023": "1.49%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)", {"FY2024": "2.50%", "FY2023": "2.50%"}),
+    ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "9  Institution specific countercyclical buffer (%)", {"FY2024": "0.99%", "FY2023": "1.65%"}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+    ("DATA", "11  Combined buffer requirement (%)", {"FY2024": "3.49%", "FY2023": "4.15%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)", {}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure (£'000)", {"FY2024": 181556, "FY2023": 185406}),
+    ("DATA", "14  Leverage ratio", {"FY2024": "15.9%", "FY2023": "15.2%"}),
+    ("SECTION", "Additional leverage ratio disclosure requirements", {}),
+    ("DATA", "14a  Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "1b  Leverage ratio including claims on central banks (%)", {"FY2024": "15.9%", "FY2023": "15.2%"}),
+    ("DATA", "14c  Average leverage ratio excluding claims on central banks (%)", {}),
+    ("DATA", "14d  Average leverage ratio including claims on central banks (%)", {}),
+    ("DATA", "14e  Countercyclical leverage ratio buffer (%)", {}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (£'000)", {"FY2024": 30533, "FY2023": 45106}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)", {"FY2024": 20131, "FY2023": 24411}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)", {"FY2024": 15098, "FY2023": 18309}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2024": 5033, "FY2023": 6103}),
+    ("DATA", "17  Liquidity coverage ratio (%)", {"FY2024": "606%", "FY2023": "739%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2024": 158883, "FY2023": 147611}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2024": 81335, "FY2023": 76650}),
+    ("DATA", "20  NSFR ratio", {"FY2024": "195.34%", "FY2023": "192.58%"}),
+]
+
+KM1_SOURCES = (
+    "Sources - Turkish Bank (UK) Limited, entity-level (unconsolidated) basis, the Bank's own 'Appendix 1: Key "
+    "Metrics' UK KM1 template:\n"
+    f"FY2024: Pillar 3 Disclosure, reference date 31 December 2024 (published Feb 2026), p.31 (section 9 "
+    f"Appendix, 'Appendix 1: Key Metrics'), column headed 'T - Current Year / 31 Dec 24' - {P3_2024_URL}\n"
+    f"FY2023: the same table's 'Prior Year / 31 Dec 23' COMPARATIVE column, p.31 of the same document "
+    f"- {P3_2024_URL}\n"
+    "\n"
+    "LATEST-EDITION CHECK, 2026-09-18: the Bank's own reports index (turkishbank.co.uk/reports/) was fetched "
+    "directly as static HTML and every PDF href extracted - not Wayback, not the URLs already cited here. It "
+    "carries exactly ONE Pillar 3 item, the file cited above, alongside the Annual Reports back to 2007. The "
+    "newest Annual Report listed is the one already used here for FY2025. The document behind that single "
+    "Pillar 3 URL was re-downloaded on 2026-09-18 and its cover still reads 'As of 31 December 2024 (the "
+    "\"Reference Date\")', so it has not been silently replaced with a later edition since it was first read. "
+    "Checked, none newer.\n"
+    "STRENGTHENED THE SAME DAY by an enumeration that does not depend on the index page linking anything. The "
+    "site is WordPress, so its whole media library was listed through the REST API - "
+    "/wp-json/wp/v2/media?per_page=100&mime_type=application/pdf&orderby=date&order=desc, HTTP 200, "
+    "application/json, 662,958 bytes - which returned ALL 77 PDFs the Bank has ever uploaded, including any "
+    "that are unlinked or withdrawn from navigation. Exactly ONE of the 77 is a Pillar 3 document: "
+    ".../2026/02/PILLAR-3-DISCLOSURE.pdf, uploaded 13 February 2026, the FY2024 edition already cited. The "
+    "newest upload of any kind is dated 24 July 2026. So the FY2025 Pillar 3 is absent from the media library "
+    "itself, not merely unlinked from the reports page - which is the difference between 'we could not find "
+    "the link' and 'the file was never published'.\n"
+    "\n"
+    "WHY FY2023 IS A COMPARATIVE COLUMN AND WHY THE OTHER THREE YEARS ARE EMPTY. The Bank publishes a single "
+    "Pillar 3 Disclosure and it is the only edition that has ever existed on its site or in the Internet "
+    "Archive: a Wayback CDX domain sweep of turkishbank.co.uk filtered on '(pillar|disclos)' on 2026-09-18 "
+    "returned exactly one capture, of this same file. There is therefore no FY2023 edition of its own to "
+    "prefer over this comparative, and no FY2021, FY2022 or FY2025 edition at all - those three columns are "
+    "empty because no key-metrics template exists for them on any basis, not because one was not found. See "
+    "the Pillar 3 coverage note on the metric sheets for the full enumerated negative, including the Annual "
+    "Reports' own capital tables, which are a different and broader basis and are deliberately not used to "
+    "back-fill this template.\n"
+    "\n"
+    "BLANK CELLS ARE THE BANK'S OWN BLANKS. Fourteen template rows are printed with a row number and a label "
+    "and NO figure in either column - UK 7a, UK 7b, UK 7c, UK 8a, UK 9a, 10, UK 10a, UK 11a, 12, 14a, 14c, "
+    "14d and 14e. They are reproduced here as printed rows with empty cells rather than dropped, because a "
+    "dropped row is indistinguishable from a row that was never found. The document prints no dash, no "
+    "'n/a' and no zero in any of them: the cells are genuinely empty, confirmed in both the layout-preserving "
+    "and the raw text extraction of p.31.\n"
+    "\n"
+    "THREE SOURCE DEFECTS, REPRODUCED AS PUBLISHED AND NOT CORRECTED.\n"
+    "1. The comparative column is headed 'T-4 - Prior Year' above the date '31 Dec 23'. The prior year of a "
+    "31 December 2024 reference date is T-1, and the date printed underneath is unambiguous, so the '-4' is a "
+    "typo in the column header rather than a four-year-old column. The FY2023 figures are consistent with "
+    "31 December 2023 throughout - the Annual Report's own Note 38 risk-weighted assets total for that date "
+    "is the 99,516 this table prints on row 4.\n"
+    "2. Row 14b is numbered '1b'. The row sits between 14a and 14c, is captioned 'Leverage ratio including "
+    "claims on central banks (%)', and carries the same 15.9%/15.2% as row 14 - the UK template's 14b. The "
+    "number is printed as '1b' and is shown that way here.\n"
+    "3. Rows UK 7a, UK 7b and UK 7c are blank while row UK 7d prints a total SREP own funds requirement of "
+    "1.49%, so the components of a figure the Bank does disclose are withheld. Nothing is derived to fill "
+    "them.\n"
+    "\n"
+    "UNITS AND PRESENTATION. The table's column header reads £'000 and the amount rows additionally carry a "
+    "'£' inside each cell ('£28,884'); the unit is carried in the row label here and the currency symbol is "
+    "not repeated per cell. The Bank prints its capital ratios to two decimal places, its leverage ratio to "
+    "one, its LCR to none and its NSFR to two - that mixture is the Bank's own and is kept.\n"
+    "\n"
+    "ENTITY. Turkish Bank (UK) Limited on an entity-level, unconsolidated basis - the Bank has no "
+    "subsidiaries and the document prints one entity's columns only. See the ENTITY NOTE on the Cash Flow "
+    "Statement sheet."
+)
+
+bw.add_km1_sheet(
+    title="Turkish Bank (UK) Limited — KM1 Key Metrics",
+    subtitle="The Bank's own 'Appendix 1: Key Metrics' UK KM1 template, reproduced whole in its own row order, "
+             "row numbers, labels and precision. Amounts in £'000, ratios as printed. FY2024 is the sole Pillar "
+             "3 edition's own reference date and FY2023 is that same table's comparative column; FY2025, FY2022 "
+             "and FY2021 carry no column because no key-metrics template exists for them in any document.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=300,
+)
+
+
+
 
 metric(
     "CET1 Capital", "£'000",

@@ -13,6 +13,10 @@ CH2017_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2017_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Report_and_Accounts_Final_2017.pdf"
 
 P3_H1_2026_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG-Pillar-3-Disclosures-2026-Interim.pdf"
+# ADDED 2026-09-18 (KM1-032). The FY2025 ANNUAL edition, previously recorded as non-existent.
+# Note the "-Final" suffix: FY2024's file is "...december-24.pdf" with no suffix and the
+# interims are "...YYYY-Interim.pdf", which is why every filename guess missed this one.
+P3_2025_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG-Pillar-3-Disclosures-December-25-Final.pdf"
 P3_2024_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/abg-pillar-3-disclosures-december-24.pdf"
 P3_2023_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2023_Final.pdf"
 P3_2022_URL = "https://www.arbuthnotlatham.co.uk/sites/default/files/documents/ABG_Pillar_3_Disclosures_2022_Final.pdf"
@@ -70,27 +74,47 @@ CASH_FLOW_SOURCES = (
 )
 
 
-def p3_sources(page_24="6", page_23="6", page_22="6", page_21="31", page_h1_26="4"):
+def p3_sources(page_24="6", page_23="6", page_22="6", page_21="31", page_h1_26="4",
+               page_25="5", table_25="Template UK KM1", col_25="column a '31-Dec-25*'"):
     return (
         "Sources - Arbuthnot Banking Group PLC Pillar 3 disclosures (UK KM1 Key Metrics template; FY2021 uses the "
         "pre-KM1 'Key Regulatory Metrics' template), £'000 unless stated:\n"
-        f"FY2025: Pillar 3 disclosures for the six months ended 30 June 2026, p.{page_h1_26} (Template UK KM1), "
-        f"column c '31-Dec-25' - {P3_H1_2026_URL}\n"
+        f"FY2025: Pillar 3 disclosures for the year ended 31 December 2025, printed p.{page_25} ({table_25}), "
+        f"{col_25} - {P3_2025_URL}\n"
         f"FY2024 & FY2023 comparative: Pillar 3 disclosures for the year ended 31 December 2024, p.{page_24} (Template UK KM1) - {P3_2024_URL}\n"
         f"FY2023 (own year) & FY2022 comparative: Pillar 3 disclosures for the year ended 31 December 2023, p.{page_23} (Template UK KM1) - {P3_2023_URL}\n"
         f"FY2022 (own year) & FY2021 comparative: Pillar 3 disclosures for the year ended 31 December 2022, p.{page_22} (Template UK KM1) - {P3_2022_URL}\n"
         f"FY2021 (own year): Pillar 3 disclosures for the year ended 31 December 2021, p.{page_21} (Key Regulatory Metrics) - {P3_2021_URL}\n"
-        "FY2025 sourcing note: ABG has not published a standalone FY2025 ANNUAL Pillar 3 report (every plausible "
-        "filename under the site's prior-year patterns returns 404, and the Wayback CDX index for the domain lists "
-        "no 2025 annual document). The 31 December 2025 figures here are instead taken from the 30 June 2026 "
-        "INTERIM Pillar 3 report, whose UK KM1 template carries 31-Dec-25 as its column c comparative. That "
-        "document footnotes the column '* Includes year end verified reserves', i.e. it is the audited year-end "
-        "position rather than an interim estimate. The same document's 30-Jun-25 column and the equivalent 30 June "
-        "2025 interim report's 31-Dec-24 column were used to verify the reading: every FY2024 figure recovered that "
-        "way (CET1 £234,477k, Total capital £272,459k, RWAs £1,782,645k, CET1/Tier 1 ratio 13.15%, Total capital "
-        "ratio 15.28%, leverage exposure £3,828,489k / 6.12%, LCR HQLA £1,275,612k / net outflows £730,580k / 175%, "
-        "NSFR ASF £2,995,437k / RSF £2,274,318k / 132%) matches the FY2024 annual report's own figures exactly, so "
-        "the interim KM1 is on an identical basis, not a different one.\n"
+        "FY2025 SOURCING CORRECTED 18 September 2026 (KM1-032). This note previously read: 'ABG has not published "
+        "a standalone FY2025 ANNUAL Pillar 3 report (every plausible filename under the site's prior-year patterns "
+        "returns 404, and the Wayback CDX index for the domain lists no 2025 annual document)', and the 31 December "
+        "2025 column was taken from the 30 June 2026 INTERIM report's comparative. THE CLAIM WAS FALSE. ABG's "
+        "FY2025 annual Pillar 3 is live and is now the source for this column, so the sheet obeys the standing "
+        "rule that a year is read from its OWN edition rather than a later edition's comparative.\n"
+        "Why the earlier search missed it, recorded so the next one does not repeat it: (1) the filenames are not "
+        "patterned - FY2024 is 'abg-pillar-3-disclosures-december-24.pdf' and FY2025 is "
+        "'ABG-Pillar-3-Disclosures-December-25-Final.pdf', with a '-Final' suffix no prior year uses, so no "
+        "extrapolation from prior-year patterns could reach it; (2) the IR DOCUMENTS page lists 100+ PDFs and zero "
+        "Pillar 3 files - the Pillar 3 index is the IR ANNOUNCEMENTS page, which lists 14 editions covering "
+        "2017-2026; (3) an unfiltered CDX sweep of the domain (11,695 rows) lists neither the FY2025 annual nor the "
+        "2026 interim, because the archive simply lags this host - a CDX negative is not evidence against a "
+        "REACHABLE site. Controls confirm the host serves true 404s (an invented filename and three plausible "
+        "FY2025 guesses all return HTTP 200-less 404s with byte-identical bodies, sha e0406d8e4648), so the "
+        "original observations were each individually accurate; the error was treating a guess-set as an "
+        "enumeration.\n"
+        "The figures themselves are UNCHANGED by this correction - the annual edition's column a agrees with the "
+        "interim edition's column c to the last digit, which is the cross-check that the previous sourcing was at "
+        "least reading the right position. Retained from that earlier verification, and still true: the FY2024 "
+        "figures recovered from the interim series (CET1 GBP 234,477k, Total capital GBP 272,459k, RWAs GBP "
+        "1,782,645k, CET1/Tier 1 ratio 13.15%, Total capital ratio 15.28%, leverage exposure GBP 3,828,489k / "
+        "6.12%, LCR HQLA GBP 1,275,612k / net outflows GBP 730,580k / 175%, NSFR ASF GBP 2,995,437k / RSF GBP "
+        "2,274,318k / 132%) match the FY2024 annual report exactly, so the interim and annual KM1s are on an "
+        "identical basis. The '*' on the 31-Dec-25 column header carries the document's own footnote 'Includes "
+        "year end verified reserves'.\n"
+        "Also now available from the annual edition and not from the interim: Template UK OV1 (own funds "
+        "requirement and RWEA by risk type) and Template UK REM1. And the document states that ABG is an SDDT and "
+        "publishes a Pillar 3 notwithstanding - worth knowing, since elsewhere in this project SDDT status is "
+        "cited as a reason a bank publishes none.\n"
         + ENTITY_NOTE
     )
 
@@ -475,10 +499,11 @@ def metric(name, unit, rows_data, sources_text, note=None):
 #     p3_sources() above for how that reading was verified against the FY2024
 #     annual report.
 #
-#   * A DASH IS NOT A ZERO. Rows UK 8a, UK 9a, 10 and UK 10a print "-" in
+#   * A DASH IS A DASH. Rows UK 8a, UK 9a, 10 and UK 10a print "-" in
 #     every column of every edition: the requirement does not apply to ABG,
-#     which is not the same statement as "the buffer is measured at zero".
-#     Those cells are left BLANK.
+#     which is not the same statement as "the buffer is measured at zero" -
+#     and not the same statement as silence either. Those cells CARRY the
+#     dash. Rows 14a-14e look similar but are NOT dashes; see the note.
 #
 #   * THE 1 JANUARY 2022 BASIS BREAK. In the FY2022 edition the Dec-21
 #     column of rows 13 and 14 carries, instead of a figure, "NA: For ABG the
@@ -529,12 +554,21 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.5%"}),
-    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2025": "1.92%", "FY2024": "1.91%", "FY2023": "1.88%", "FY2022": "0.88%", "FY2021": "0.02%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
+    # Dashed in EVERY column of EVERY edition. Each year taken from the column
+    # that is its own year-end: FY2025 from the 31-Dec-25 column of the 30 June
+    # 2026 interim, FY2024/FY2023/FY2022 from column a of their own annual
+    # editions, FY2021 from the 31-Dec-21 column of the FY2022 edition (ABG's
+    # own FY2021 annual Pillar 3 prints no UK KM1 template at all - rule 28).
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2025": "4.42%", "FY2024": "4.41%", "FY2023": "4.38%", "FY2022": "3.38%", "FY2021": "2.52%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -579,9 +613,16 @@ KM1_SOURCES = p3_sources() + (
     "(FY2025 = \"31-Dec-25*\" column c of the 30 June 2026 interim report; FY2024/FY2023/FY2022 = column a "
     "of their own annual reports; FY2021 = the \"Dec - 21*\" column e of the FY2022 report). The 30-Jun-xx "
     "columns are half-year positions and are deliberately not shown in a workbook of financial years.\n"
-    "• A DASH IS NOT A ZERO. Rows UK 8a, UK 9a, 10 and UK 10a print \"-\" in every column of every "
-    "edition, meaning the requirement does not apply to ABG. Those cells are left blank rather than "
-    "written as 0%, which would assert a measured value of zero.\n"
+    "• A DASH IS A DASH - NOT A ZERO, AND NOT A BLANK. Rows UK 8a, UK 9a, 10 and UK 10a print \"-\" in "
+    "every column of every edition, meaning the requirement does not apply to ABG, and each cell carries "
+    "that dash. Writing 0% would assert a measured value of zero; leaving the cell empty would say ABG "
+    "never published the row, and it plainly did. Re-read at source on 2026-09-18 in all four editions: "
+    "the 31-Dec-25 column of the 30 June 2026 interim, and the 31-Dec-24, 31-Dec-23 and 31-Dec-22 columns "
+    "of their own annual editions, plus the 31-Dec-21 column of the FY2022 edition.\n"
+    "• ROWS 14a-14e ARE NOT DASHED, AND STAY BLANK. Those five rows carry one sentence printed across all "
+    "of them: \"NA: Only LREQ firms shall disclose values in rows UK KM1;14a to UK KM1;14e\". That is "
+    "ABG's own \"NA\", not a dash, and it says which firms the rows apply to rather than giving a value. "
+    "The cells stay empty and are deliberately NOT converted to \"-\".\n"
     "• \"NA\" IN FY2021 IS THE BANK'S OWN WORD, in five cells, and marks the 1 January 2022 basis break "
     "rather than missing data. Rows 13 and 14 print \"NA: For ABG the Leverage Ratio rules which exclude "
     "claims on central banks were effective from 1 January 2022\"; rows 18, 19 and 20 print \"NA: The "
@@ -661,21 +702,30 @@ metric(
 
 rwa_breakdown_rows = [
     ("SECTION", "Risk weighted exposure amounts (Template UK OV1)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2024": 1525678, "FY2023": 1511071, "FY2022": 1333060, "FY2021": 1257789}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2024": 741, "FY2023": 2250, "FY2022": 13540, "FY2021": 2911}),
-    ("DATA", "Market risk (position, FX and commodities)", {"FY2024": 1376, "FY2023": 3727, "FY2022": 3753, "FY2021": 7527}),
-    ("DATA", "Operational risk", {"FY2024": 254850, "FY2023": 196098, "FY2022": 165788, "FY2021": 159498}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427725}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 1511849, "FY2024": 1525678, "FY2023": 1511071, "FY2022": 1333060, "FY2021": 1257789}),
+    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 410, "FY2024": 741, "FY2023": 2250, "FY2022": 13540, "FY2021": 2911}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 418, "FY2024": 1376, "FY2023": 3727, "FY2022": 3753, "FY2021": 7527}),
+    ("DATA", "Operational risk", {"FY2025": 309874, "FY2024": 254850, "FY2023": 196098, "FY2022": 165788, "FY2021": 159498}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 1822551, "FY2024": 1782645, "FY2023": 1713146, "FY2022": 1516141, "FY2021": 1427725}),
 ]
 
 RWA_BREAKDOWN_SOURCES = (
-    p3_sources(page_24="7", page_23="15", page_22="16", page_21="6") +
-    "\nFY2025 is blank on this sheet even though the Total RWAs sheet carries an FY2025 figure. This is a real "
-    "scope difference, not a missing transcription: ABG discloses as an SDDT, and the 30 June 2026 interim Pillar "
-    "3 report (the source of the FY2025 KM1 headline) states in its own scope section that the Article 438(d) "
-    "'Own Funds Requirements and Risk-Weighted Exposure Amounts' template (UK OV1) is disclosed only 'On an annual "
-    "basis'. The interim report therefore contains KM1 but no OV1, and no FY2025 annual Pillar 3 report has been "
-    "published. The FY2025 RWA split will only become available with that annual document.\n"
+    p3_sources(page_24="7", page_23="15", page_22="16", page_21="6",
+               page_25="7", table_25="Template UK OV1 - Overview of risk weighted exposure amounts",
+               col_25="column a '31-Dec-25' (PDF p.9)") +
+    "\nFY2025 FILLED 18 September 2026 (GA- leading-gap pass). This sheet previously left FY2025 blank with the "
+    "explanation that ABG had published no FY2025 ANNUAL Pillar 3 and that the 30 June 2026 interim carries KM1 "
+    "but not the annual-only OV1. The second half of that statement is still true of the interim; the first half "
+    "was false, and the FY2025 annual edition (found under KM1-032) does carry Template UK OV1 on printed p.7. "
+    "Its column a '31-Dec-25' is the source for the FY2025 column here, and its column b '31-Dec-24' reproduces "
+    "the FY2024 figures already transcribed from the FY2024 annual edition exactly (credit risk 1,525,678; CCR "
+    "741; market risk 1,376; operational risk 254,850; total 1,782,645), which is the cross-check that the two "
+    "editions are on one basis. The FY2025 total (£1,822,551k) also ties exactly to the Total RWAs sheet's FY2025 "
+    "KM1 figure. Sub-rows the FY2025 edition prints and this sheet does not carry, recorded so they are not "
+    "re-hunted: 'Of which the standardised approach' 1,511,849 (credit risk), 'Of which credit valuation "
+    "adjustment - CVA' 133 and 'Of which other CCR' 277 (both within CCR 410), 'Of which the standardised "
+    "approach' 418 (market risk), 'Of which basic indicator approach' 309,874 (operational risk), and a column c "
+    "'Total own funds requirements' of 145,804.\n"
     "FY2021's Total row (£1,427,725k) is £1k higher than the Total RWAs sheet's own FY2021 figure "
     "(£1,427,724k) - both are read directly off their respective source tables (the OV1 breakdown here vs. the "
     "KM1 headline total there); an immaterial rounding gap between the two templates in ABG's own Pillar 3 "

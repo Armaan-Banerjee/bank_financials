@@ -595,8 +595,21 @@ bw.add_km1_sheet(
              "template in any of them. Its own 'Key Metrics' block is a five-row ratio summary, which fails "
              "the template's row-set test. See the source note for the full evidence and for what the bank "
              "does disclose instead.",
-    rows=[("DATA", "Not applicable - the UK KM1 key-metrics template is not used in any year (see note below)",
-           {y: "" for y in YEARS})],
+    # GA-009 (2026-09-18): EVERY YEAR CELL CARRIES THE STATEMENT. Until now this
+    # row was built as {y: "" for y in YEARS} - a dict of EMPTY STRINGS, which
+    # renders exactly like the empty dict that produced the same defect in
+    # Nomura (GA-005) and Melli (GA-006): five year headers above five blank
+    # cells, saying nothing at all where the sheet means to say "this bank
+    # publishes a Pillar 3 but does not use this template".
+    rows=[
+        ("DATA", "UK KM1 key-metrics template",
+         {y: "Not published — the template is not used" for y in YEARS}),
+        ("DATA", "Pillar 3 disclosures published by the Bank (signed Appendix inside each Annual Report)",
+         {y: "Published every year, but contain no KM1" for y in YEARS}),
+        ("DATA", "The Bank's own five-row 'Key Metrics' block (Total Capital ratio, CET1 ratio, Leverage "
+                 "Ratio, LCR, NSFR), printed in its place",
+         {y: "Not applicable as a KM1 — fails the row-set test" for y in YEARS}),
+    ],
     sources_text=KM1_SOURCES,
     first_col_width=86,
     source_height=460,
@@ -625,8 +638,23 @@ NO_AT1_NOTE = ("No Additional Tier 1 instruments disclosed any year - Tier 1 cap
                "capital throughout. A small Tier 2 balance ($799k) exists only in FY2021 (see Total "
                "Capital), fully amortised/repaid by FY2022 onward.")
 RWA_NOTE = (
-    "NOT PUBLICLY DISCLOSED. Kuwait Finance House Plc does not publish a total risk-weighted "
-    "exposure amount. The Pillar 3 appendix gives ratios and Own Funds only.\n\n"
+    "NOT PUBLICLY DISCLOSED, AND THE RWA BREAKDOWN SHEET'S TOTAL IS NOT A CONTRADICTION OF THAT - it is "
+    "a derivation, and this note says exactly what the Bank does and does not print.\n\n"
+    "WHAT THE BANK PRINTS, re-read end to end 2026-09-18 from the FY2025 Annual Report's own Appendix: "
+    "Pillar 3 Disclosures (unaudited), printed folios 83-89. (i) A five-row 'Key Metrics' block on "
+    "printed p.83: Total Capital ratio, CET1 Capital Ratio, Leverage Ratio, Liquidity Coverage Ratio, "
+    "Net Stable Funding Ratio. No RWA row. (ii) A 'Capital Structure and Own Funds' table on the same "
+    "page: a CET1 component build-up ending in Own Funds. No RWA row. (iii) 'The minimum capital "
+    "requirements under Pillar 1' on printed p.84: CAPITAL REQUIREMENTS by risk category, footing to a "
+    "Total Pillar 1 capital requirement of US$129,413k (2025) and US$131,855k (2024). Again no RWA. "
+    "(iv) Credit-quality-step exposure tables, counterparty credit risk, impaired exposures, asset "
+    "encumbrance and remuneration across printed pp.85-89 - none of which states an RWA either.\n"
+    "THE ZERO IS A FACT ABOUT THE DOCUMENT, NOT ABOUT THE EXTRACTION. These filings are whole-document "
+    "image scans (go-tiff2pdf, no text layer at all), so the appendix was rendered at 200dpi and read. "
+    "The phrases 'risk weighted' and 'risk-weighted' occur ZERO times across all seven appendix pages, "
+    "while the same extraction returns the appendix's 'Risk Weight' column headers, its capital-"
+    "requirement tables in full, and every narrative section named above. The Bank's vocabulary for "
+    "this concept is 'capital requirement' and 'Risk Weight'; it never states a risk-weighted total.\n\n"
     "WITHDRAWAL RECORD (2026-09-16). This sheet previously carried FY2025 1,618.4; FY2024 1,649.3; "
     "FY2023 1,666.0; FY2022 1,530.2; FY2021 1,421.3 (USD m), each back-solved as Own Funds divided "
     "by that year's Total Capital ratio. They were withdrawn on the project owner's decision: the "
@@ -649,8 +677,15 @@ metric("Tier 1 Capital", "USD m", [("Tier 1 capital", TIER1_CAPITAL)], note=NO_A
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], note=NO_AT1_NOTE)
 metric("Total Capital", "USD m", [("Total capital / Own Funds", TOTAL_CAPITAL)])
 metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)])
+# GA-009 (2026-09-18): the cell used to read a bare "Not publicly disclosed"
+# while the very next sheet printed a Total RWAs row - a reader flipping between
+# the two saw the workbook contradict itself. Both sheets are correct (the Bank
+# discloses no total RWA; the breakdown's total is a x12.5 derivation of
+# disclosed capital requirements), and the cell now SAYS that instead of leaving
+# the reader to reconcile two sheets from a source note.
 metric("Total RWAs", "USD m",
-       [("Total risk-weighted exposure amount", {y: "Not publicly disclosed" for y in YEARS})],
+       [("Total risk-weighted exposure amount",
+         {y: "Not publicly disclosed — see RWA Breakdown (derived x12.5)" for y in YEARS})],
        note=RWA_NOTE)
 
 # ---------------------------------------------------------------
@@ -670,15 +705,21 @@ rwa_breakdown_rows = [
      {"FY2025": 5500, "FY2024": 26900, "FY2023": 31313, "FY2022": 39650, "FY2021": 3750}),
     ("DATA", "Operational risk RWA (Basic Indicator Approach)",
      {"FY2025": 165975, "FY2024": 162913, "FY2023": 118550, "FY2022": 120875, "FY2021": 138150}),
-    ("TOTAL", "Total RWAs (derived from disclosed Pillar 1 capital requirement components)",
+    # GA-009 (2026-09-18): the label now says DERIVED and says the Bank does not
+    # publish this total, so a reader who reaches this row before the Total RWAs
+    # sheet's note cannot read it as a disclosure.
+    ("TOTAL", "Total RWAs - DERIVED here (x12.5) from the disclosed Pillar 1 capital requirement "
+              "components above; the Bank publishes no total RWA figure of its own",
      {"FY2025": 1617663, "FY2024": 1648188, "FY2023": 1664325, "FY2022": 1527425, "FY2021": 1423413}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Kuwait Finance House Plc — RWA Breakdown",
-    subtitle="Derived (x12.5) from the Pillar 3 appendix's own 'minimum capital requirements under "
-              "Pillar 1' table by risk category - RWAs are not directly disclosed as a category-level "
-              "figure, but the underlying capital requirement components are. USD'000.",
+    subtitle="DERIVED, NOT DISCLOSED. The Bank publishes no RWA figure - neither by category nor in "
+              "total (appendix re-read end to end 2026-09-18; see the Total RWAs sheet's note). Every "
+              "figure on this sheet is the Pillar 3 appendix's own disclosed 'minimum capital "
+              "requirements under Pillar 1' by risk category, multiplied by 12.5 to state it as an "
+              "RWA-equivalent. USD'000.",
     rows=rwa_breakdown_rows,
     sources_text=p3_sources(
         "83-84",
@@ -707,8 +748,20 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),
-    per_note={"MREL Ratio": "Not publicly disclosed any year - consistent with a small UK bank "
-                             "subsidiary that is not itself a resolution entity."},
+    per_note={"MREL Ratio": "Not publicly disclosed any year. POSITIVE RECORD ADDED 18 September 2026 "
+                             "(KM1-032): this note previously read 'consistent with a small UK bank "
+                             "subsidiary that is not itself a resolution entity' - a plausibility argument "
+                             "rather than evidence. The Bank of England's own 'External minimum requirements "
+                             "for own funds and eligible liabilities (MRELs)' disclosures - the 2023, 2024, "
+                             "2025 and 2026 editions at bankofengland.co.uk/financial-stability/resolution/"
+                             "mrels-<year> - contain, in the BoE's own words, 'all firms with a resolution "
+                             "entity incorporated in the UK for which an MREL above MCR has been "
+                             "communicated'. KFH is named in none of the four editions. As a UK subsidiary "
+                             "of Kuwait Finance House K.S.C.P., whose resolution entity is not incorporated "
+                             "in the UK, that absence is exactly what the scope sentence predicts, and the "
+                             "reasoning in this note is now sourced rather than assumed. The BoE publishes "
+                             "the REQUIREMENT, not the ratio, so nothing from that table is transcribed "
+                             "here - it establishes that there was nothing for the Bank to disclose."},
 )
 
 # ---------------------------------------------------------------

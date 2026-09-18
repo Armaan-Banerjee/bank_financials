@@ -285,7 +285,27 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
+# GAP-FILL (2026-09-18): FY2023-FY2025 previously carried NO cell at all, so three
+# year columns were blank both to a reader and to audit_gaps.py, even though the
+# finding was already complete and quoted in the note below. The exemption now
+# appears IN the columns, one cell per year - the same treatment already applied
+# to ABC International Bank and ICICI Bank UK. No column is suppressed.
+# Re-verified 2026-09-18 against each year's OWN filing (all three are image-only
+# scans, ~1 char/page extracted, so each was OCR'd before the wording was legible):
+#   FY2025 PDF p.29 (printed p.27), FY2024 PDF p.35 (printed p.33),
+#   FY2023 PDF p.36 (printed p.35).
+# NOTE THE WORDING CHANGE: FY2024 and FY2025 cite 'FRS 102 Section 7 and paragraph
+# 3.17(d)' by number, but FY2023 states the same exemption WITHOUT the paragraph
+# reference - 'the disclosure exemptions allowing a cash flow statement and
+# remuneration of key management personnel to not be presented'. A search of the
+# FY2023 report for '3.17(d)' therefore returns zero; that is a wording artefact,
+# NOT evidence that the exemption is absent in that year.
+CF_EXEMPT_YEARS = ["FY2025", "FY2024", "FY2023"]
 rows = [
+    ("SECTION", "FY2023-FY2025: no Statement of Cash Flows is published - FRS 102 exemption (see note below)", {}),
+    ("DATA", "Statement of Cash Flows",
+     {y: "Not published - qualifying entity under FRS 102; Section 7 / para 3.17(d) exemption taken from FY2023 onward"
+      for y in CF_EXEMPT_YEARS}),
     ("SECTION", "Operating activities", {}),
     ("DATA", "Loss on operating activities before tax", {"FY2022": -6933, "FY2021": -18030}),
     ("DATA", "Non-cash items included in loss on operating activities before tax", {"FY2022": 11707, "FY2021": 2173}),
@@ -304,7 +324,8 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="Tandem Bank Limited — Statement of Cash Flows",
-    subtitle="Bank (Company-only) basis, £'000. FY2023-FY2025 blank - see source note at bottom (FRS 102 cash-flow exemption).",
+    subtitle="Bank (Company-only) basis, £'000. FY2023-FY2025 state the FRS 102 cash-flow exemption in place of "
+             "figures - see source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=72,
@@ -665,7 +686,16 @@ bw.add_not_disclosed_metric_sheets(
                        "(FY2023 Pillar 3 Disclosures, Overview) that it qualifies as a 'small, non-complex' "
                        "institution under UK CRR Article 4(145) and follows the reduced Pillar 3 disclosure regime "
                        "of Article 433(b) - consistent with, though not an explicit stated reason for, the absence "
-                       "of any MREL figure.",
+                       "of any MREL figure. POSITIVE RECORD ADDED 18 September 2026 (KM1-032): the missing "
+                       "stated reason is now supplied from outside the bank's own documents. The Bank of "
+                       "England's 'External minimum requirements for own funds and eligible liabilities "
+                       "(MRELs)' disclosures (2023, 2024, 2025 and 2026 editions, at bankofengland.co.uk/"
+                       "financial-stability/resolution/mrels-<year>) contain 'all firms with a resolution "
+                       "entity incorporated in the UK for which an MREL above MCR has been communicated', in "
+                       "the BoE's own words, and Tandem is named in none of them. So the absence of an MREL "
+                       "figure reflects there being no MREL above minimum capital requirement to report, not "
+                       "a gap in the reduced Article 433(b) disclosure set. The BoE publishes the "
+                       "requirement, not the ratio, so nothing from that table is transcribed here.",
     },
 )
 

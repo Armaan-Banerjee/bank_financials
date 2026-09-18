@@ -97,7 +97,22 @@ ENTITY_NOTE = (
     "of the SDDT capital framework in 2027' - that is the separate, later simplified CAPITAL regime, NOT the "
     "disclosure exemption, which the register shows already in force from February 2025; the two must not be "
     "conflated. Neither Annual Report discusses Pillar 3 disclosure obligations at all. No Simplified Retail "
-    "Deposit Ratio value is disclosed, so nothing replaces the NSFR series."
+    "Deposit Ratio value is disclosed, so nothing replaces the NSFR series.\n"
+    "THE ABSENCE WAS ALSO ESTABLISHED DIRECTLY, NOT ONLY INFERRED FROM THE REGISTER (2026-09-18). The register "
+    "row says the Bank is EXEMPT; it does not by itself say the Bank stopped. ccbank.co.uk runs on WordPress, "
+    "so its media library was enumerated through the REST API - /wp-json/wp/v2/media?per_page=100&search=pillar "
+    "(HTTP 200, application/json) - which lists uploads whether or not any page links them. It returns ELEVEN "
+    "Pillar 3 files and the newest is 'Pillar-3-report-CCB-2024.docx', uploaded 14 May 2025. There is no 2025 "
+    "or 2026 edition in the library at all. The Bank's habit is to publish in May-July of the following year, "
+    "so an FY2025 edition would have appeared around May 2026 and has not - which is what the exemption "
+    "predicts. Exempt AND demonstrably stopped, established two independent ways.\n"
+    "THE FY2025 ANNUAL REPORT WAS ALSO SEARCHED FOR THE MISSING METRICS RATHER THAN ASSUMED EMPTY "
+    "(2026-09-18, text layer, 490,500 characters extracted). Its 'Capital' table on printed p.23 gives Total "
+    "Shareholders' Funds £248,643k, Risk weighted assets £1,138m, CET1 19.2%, Tier 1 21.3% and Total capital "
+    "21.7% - a TOTAL RWA only, with no split by risk type, so the RWA Breakdown sheet's FY2025 column stays "
+    "empty. The word 'leverage' occurs exactly ONCE in the whole document, in the Viability statement's "
+    "narrative ('Key capital and leverage ratios have been forecast'), with no value anywhere, and 'NSFR' and "
+    "'net stable funding' do not occur at all. Both blanks are therefore facts about the document."
 )
 
 RWA_RESTATEMENT_NOTE = (

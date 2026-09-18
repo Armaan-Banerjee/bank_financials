@@ -48,8 +48,10 @@ ENTITY_NOTE = (
     "immaterial rounding artifact in the source document itself, kept as printed. The bank stopped publishing "
     "Pillar 3 disclosures entirely after FY2025: its Financial Report 2026 records that it was approved under "
     "the PRA's Small Domestic Deposit Taking (SDDT) regime in December 2025 and 'no longer prepares Pillar III "
-    "disclosures'. FY2026 Pillar 3 figures here therefore come from the Annual Report's own capital note "
-    "instead, and the metrics that note does not print are blank rather than estimated.\n"
+    "disclosures'. FY2026 Pillar 3 figures here therefore come from the Annual Report instead - the capital "
+    "amounts and the CET1/total capital ratios from its Directors' Report capital note (p.32), and the Tier 1 "
+    "ratio from its Strategic Report KPI panel (printed folio 7) - and the metrics the Annual Report prints "
+    "nowhere (leverage ratio, LCR, NSFR) are blank rather than estimated.\n"
     "SDDT DATE TEST (independently corroborated 2026-09-15): the PRA's 'Consolidated Waivers list for "
     "PRA-regulated firms - as of 1 July 2026' (bankofengland.co.uk/prudential-regulation/authorisations/"
     "waivers-and-modifications-of-rules) records that C. HOARE & CO. (FRN 122093) holds a 'Modification by "
@@ -126,9 +128,28 @@ def p3_sources(page):
         "its own 2025 comparative column (CET1 and Tier 1 capital GBP526,455k, total regulatory capital "
         "GBP531,333k, RWAs GBP2,289,414k) matches the Pillar 3 Disclosures 2025 KM1 rows 1-4 exactly. The "
         "note prints capital amounts and the CET1 and total capital ratios only - it carries no leverage "
-        "ratio, LCR or NSFR, and no separately-labelled Tier 1 ratio row, so those sheets stay blank for "
-        "FY2026 rather than being derived. Note also that the capital note rounds ratios to 1dp (22.7%, "
-        "22.9%) where the Pillar 3 KM1 used 2dp; both are shown as printed.\n"
+        "ratio, LCR or NSFR, and no separately-labelled Tier 1 ratio row. Note also that the capital note "
+        "rounds ratios to 1dp (22.7%, 22.9%) where the Pillar 3 KM1 used 2dp; both are shown as printed.\n"
+        "FY2026 TIER 1 RATIO - SOURCE FOUND ELSEWHERE IN THE SAME REPORT (2026-09-18). A previous revision of "
+        "this note said the Tier 1 ratio sheet stays blank for FY2026 because the capital note has no Tier 1 "
+        "row. That was true of the capital note but not of the document: the Financial Report 2026's Strategic "
+        "Report KPI panel, 'Financial Performance Review and the Market Environment' (printed folio 7, PDF "
+        "p.11), prints a panel captioned 'TIER 1 RATIO' giving 22.7 for 2025/26 against 23 for 2024/25 "
+        f"(movement -0.3, -1.3%) - {AR2026_URL}. FY2026's Tier 1 Ratio is populated from there.\n"
+        "The leverage ratio, LCR and NSFR sheets DO stay blank for FY2026, and that was re-tested against the "
+        "whole FY2026 Annual Report on the same date rather than assumed: the document contains no numeric "
+        "leverage ratio, no numeric LCR, and no occurrence of 'net stable funding' or 'NSFR' anywhere. It "
+        "discusses capital and leverage ratios only qualitatively ('The bank's regulatory capital and leverage "
+        "ratios are monitored closely', p.30) and liquidity only through the ILAAP narrative. Those three are "
+        "blank because the bank stopped printing them, not because nothing was looked for.\n"
+        "FY2026 PILLAR 3 RE-TESTED 2026-09-18: the live /financial-reports index was fetched and its 'Further "
+        "reading' block lists Pillar 3 Disclosure 2025, 2024, 2023, 2022 and 2021 and stops there, while the "
+        "same page's main block already carries Financial Report 2026 - so the 2026 annual accounts are "
+        "published and no 2026 Pillar 3 accompanies them. Two direct-fetch probes of the exact filename "
+        "pattern that works for every other year (/files/2026-06/ and /files/2026-07/Pillar_3_Disclosure_2026"
+        ".pdf) return honest 404s, and a Wayback CDX domain sweep of hoaresbank.co.uk filtered on 'pillar' "
+        "returns only three pre-migration 2010-2012 captures. Consistent with the SDDT exit, not with a late "
+        "document.\n"
         + ENTITY_NOTE
     )
 
@@ -695,7 +716,68 @@ bw.add_asset_quality_sheet(
 KM1_THOUSANDS = " (£'000)"          # FY2023, FY2024, FY2025 editions
 KM1_POUNDS = " (£, single pounds as printed)"   # FY2022 edition
 
+# ---------------------------------------------------------------------------
+# THE FY2026 FINDING, WRITTEN WHERE A READER AND A TOOL CAN SEE IT.
+# Added 2026-09-18 (remaining-gap round). The bank's exit from the Pillar 3
+# regime was established earlier and is documented at length in ENTITY_NOTE and
+# p3_sources(), but on five sheets it lived ONLY in prose: the FY2026 columns of
+# KM1 Key Metrics, RWA Breakdown, Leverage Ratio, LCR and NSFR sat EMPTY, and an
+# empty cell is indistinguishable from a year nobody has looked at.
+# `audit_gaps.py` scored all five as unexplained gaps for exactly that reason.
+#
+# RE-VERIFIED INDEPENDENTLY 2026-09-18, not carried over on trust:
+#   * THE BANK'S OWN WORDS. Financial Report 2026 re-downloaded that day (HTTP
+#     200, application/pdf, 21,538,692 bytes, begins `%PDF-1.7`), text-extracted
+#     to 390,844 characters, section 4 'Capital Adequacy Requirements': "In
+#     addition to Pillar I and Pillar II, the bank has historically also prepared
+#     and published Pillar III disclosures. In December 2025 the bank was
+#     approved under the Small Domestic Deposit Taking regime by the PRA and, as
+#     such, it no longer prepares Pillar III disclosures."
+#   * THE REGISTER AGREES TO THE MONTH. PRA consolidated waivers register
+#     re-downloaded the same day (2,899 rows), matched on BOTH conjuncts - Rule
+#     Description 'SDDT Regime - General Application' AND Sub Rule Number
+#     'Ru 3.1'; either column alone gives a wrong answer. The row: FRN 122093,
+#     'C. HOARE & CO.', ref A00011325P.pdf, start 09/12/2025, NO end date -
+#     matching the bank's own "December 2025" exactly. (Its other two register
+#     rows, a Capital Requirements Regulation Ar 9 permission of 26/03/2018 and a
+#     Permissions and Waivers (CRR Firms) CA.BU 5.1-5.3 direction of 27/11/2024,
+#     are not disclosure exemptions and are not relied on.)
+#   * DATE FIT against this bank's 31 MARCH year-end: FY2026's reporting date of
+#     31 March 2026 falls AFTER 9 December 2025. Covered. FY2025 (31 March 2025)
+#     PRECEDES it, which is why Pillar 3 Disclosure 2025 exists and is the last
+#     edition. Nothing here reaches back past FY2025.
+#   * THE INDEX CONFIRMS IT FROM THE PUBLISHING SIDE. https://www.hoaresbank.co.uk/
+#     financial-reports fetched live the same day over HTTP/1.1 with a browser UA
+#     (HTTP 200, text/html, 98,855 bytes - not a block). It carries
+#     Financial_Report_2026.pdf and a Gender Pay Gap Report 2026, so the bank is
+#     publishing normally into the window; its newest Pillar 3 link is still
+#     Pillar_3_Disclosure_2025.pdf. A late document, not an absent one, would
+#     look different from this.
+#   * WHAT THE ANNUAL REPORT DOES AND DOES NOT REPLACE, re-tested on the same
+#     extraction with a RICHNESS CONTROL first so the zeros indict the document
+#     rather than the instrument: 3,013 hits for 'the', 118 for 'capital', 111
+#     for 'ratio'. Against that: 'liquidity coverage' 0, 'LCR' 0, 'net stable
+#     funding' 0, 'NSFR' 0, 'exposure measure' 0, 'high-quality liquid' 0. Both
+#     'leverage' hits are narrative ("The bank's regulatory capital and leverage
+#     ratios are monitored closely" and an unrelated use of the verb), and the
+#     one 'HQLA' hit is a sentence about central bank reserves, not a figure. The
+#     capital note (p.32) prints capital amounts, a single TOTAL risk-weighted
+#     assets figure (2,499,834 against 2,289,414) and two ratios - no exposure-
+#     class split, so there is no OV1 breakdown to transcribe either.
+# Those five metrics are therefore outcome 2 (never published), not outcome 3
+# (unreached today), and nothing is estimated or back-solved.
+HOARE_FY2026_NO_P3 = "Not published - no Pillar III prepared (SDDT, PRA Rule 3.1 from 09/12/2025)"
+HOARE_FY2026_NO_P3_NO_AR = ("Not published - no Pillar III prepared (SDDT, PRA Rule 3.1 from 09/12/2025); "
+                            "AR 2026 prints no such figure")
+
+
 km1_rows = [
+    # Not a template row - a status row, carried FIRST so the newest column says
+    # what happened to it instead of sitting blank. Deliberately given no KM1 row
+    # number and it does not begin with any of the bank's printed wording, so
+    # verify_workbook.py's startswith-matching cannot mistake it for a template
+    # row (KM1 map rule 32a). Nothing below it is altered.
+    ("DATA", "Pillar 3 edition status for this year (see source note)", {"FY2026": HOARE_FY2026_NO_P3}),
     # --- Available own funds (amounts) -------------------------------
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1    Common Equity Tier 1 (CET1) capital" + KM1_THOUSANDS,
@@ -926,8 +1008,10 @@ bw.add_km1_sheet(
     subtitle="The bank's own UK KM1 key-metrics template (published as 'Appendix 1: Own Funds Disclosure "
              "template'), reproduced whole in its own row order, numbering, labels and precision. "
              "FY2025-FY2022 each from its own edition; FY2021 from the FY2022 edition's comparative, the "
-             "only UK-template FY2021 column this bank ever printed. FY2026 blank - the bank became an "
-             "SDDT in December 2025 and no longer prepares Pillar 3 disclosures at all. FY2020/FY2019 "
+             "only UK-template FY2021 column this bank ever printed. FY2026 carries an explicit stated "
+             "negative on its status row rather than sitting blank (2026-09-18) - the bank became an SDDT "
+             "in December 2025 and, in its own words, 'no longer prepares Pillar III disclosures'. "
+             "FY2020/FY2019 "
              "blank - the template post-dates those editions. AMOUNT ROWS APPEAR TWICE, once per unit: "
              "the FY2022 edition prints single pounds where the later editions print thousands, and a "
              "published template is reproduced, never restated into a common unit.",
@@ -972,8 +1056,19 @@ metric("Tier 1 Capital", "£'000 (= CET1 capital; no AT1 instruments)", [("Tier 
     note=OWN_YEAR_2024_NOTE)
 
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {
-    "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%", "FY2019": "22.42%"})],
-    note="FY2019: the FY2019 edition's Appendix 1 row 62 prints the Tier 1 ratio as 22.42%, identical to "
+    "FY2026": "22.7%", "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%", "FY2019": "22.42%"})],
+    note="FY2026 IS NOT FROM A PILLAR 3 DISCLOSURE - there is none (SDDT, see the sheet's source citation). "
+         "It is taken from the Financial Report 2026's own Strategic Report KPI panel, 'Financial Performance "
+         "Review and the Market Environment' (printed folio 7, PDF p.11), where a panel captioned in the "
+         "bank's own words 'TIER 1 RATIO' prints 22.7 for 2025/26 against 23 for 2024/25, with the movement "
+         "stated as -0.3 (-1.3%). That panel is the only place the FY2026 Annual Report labels a Tier 1 ratio: "
+         "the Directors' Report capital note (p.32) prints a CET1 ratio and a total capital ratio but no "
+         "Tier 1 row. The two agree - the capital note's own 'Total Common Equity Tier 1 capital and Total "
+         "Tier 1 capital' line is a single combined figure (GBP567,436k), i.e. the bank holds no AT1, so its "
+         "Tier 1 ratio necessarily equals its CET1 ratio of 22.7%. Printed to 1dp in the Annual Report where "
+         "the Pillar 3 KM1 used 2dp; shown as printed, hence '22.7%' not '22.70%'. The KPI panel's own 2024/25 "
+         "comparative ('23') is NOT used for FY2025, which keeps 23.00% from the FY2025 Pillar 3's own KM1.\n"
+         "FY2019: the FY2019 edition's Appendix 1 row 62 prints the Tier 1 ratio as 22.42%, identical to "
          "CET1 - the bank held no AT1 instruments that year either (Appendix 1 rows 36/44 are nil).")
 
 metric("Total Capital", "£'000", [("Total capital", {
@@ -1047,6 +1142,8 @@ RWA_SOURCES = (
 )
 
 rwa_breakdown_rows = [
+    ("DATA", "Pillar 3 edition status for this year (see source note)",
+     {"FY2026": HOARE_FY2026_NO_P3_NO_AR}),
     ("SECTION", "RWA by exposure class, £'000", {}),
     ("DATA", "Institutions", {"FY2025": 41830, "FY2024": 54239, "FY2023": 162882, "FY2022": 61655}),
     ("DATA", "Corporates", {"FY2025": 76500, "FY2024": 102248, "FY2023": 107319, "FY2022": 95307}),
@@ -1099,7 +1196,10 @@ for _kind, _label, _values in rwa_breakdown_rows:
 
 bw.add_rwa_breakdown_sheet(
     title="C. Hoare & Co. — RWA Breakdown",
-    subtitle="UK OV1 exposure-class split, £'000. No FY2026: bank left the Pillar 3 regime (SDDT, Dec 2025).",
+    subtitle="UK OV1 exposure-class split, £'000. The FY2026 column stays visible and now carries an explicit stated "
+             "negative on the status row rather than sitting blank (2026-09-18): the bank left the Pillar 3 regime "
+             "entirely on SDDT approval of 9 December 2025, before its 31 March 2026 year-end, and the Financial Report "
+             "2026 that replaces the disclosure prints only a single total RWA figure with no exposure-class split.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_SOURCES,
     first_col_width=64,
@@ -1108,6 +1208,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric("Leverage Ratio", "%, TWO BASES - see rows and note", [
     ("Leverage ratio excluding claims on central banks (UK KM1 row 14, FY2022 onward)", {
+        "FY2026": HOARE_FY2026_NO_P3_NO_AR,
         "FY2025": "9.29%", "FY2024": "7.61%", "FY2023": "6.96%", "FY2022": "6.61%"}),
     ("Total exposure measure excluding claims on central banks (£'000)", {
         "FY2025": 5668227, "FY2024": 5517665, "FY2023": 5497608, "FY2022": 5526723}),
@@ -1140,10 +1241,17 @@ metric("Leverage Ratio", "%, TWO BASES - see rows and note", [
          "7.5% in Table 6b row 22 (p.23). These are not three different figures but three roundings of "
          "one: Tier 1 capital 370,810 / total leverage exposure 4,910,489 = 7.5514%. The 2dp form is used "
          "above to match the precision of the other years on this sheet; the document's own 1dp variants "
-         "are recorded here rather than discarded.")
+         "are recorded here rather than discarded.\n"
+         "FY2026 now STATES its absence in the cell rather than sitting blank (2026-09-18): the bank left "
+         "the Pillar 3 regime entirely on SDDT approval of 9 December 2025 (PRA Rule 3.1, no end date), "
+         "before its 31 March 2026 year-end, and the Financial Report 2026 that replaces the disclosure "
+         "prints no numeric leverage ratio and no exposure measure - re-tested on that document "
+         "2026-09-18 with a richness control (3,013 hits for 'the', 118 for 'capital'), against which "
+         "'exposure measure' returns zero and both 'leverage' hits are narrative.")
 
 metric("LCR", "%, 12-month rolling average of month-end positions", [
     ("Liquidity coverage ratio", {
+        "FY2026": HOARE_FY2026_NO_P3_NO_AR,
         "FY2025": "341%", "FY2024": "308%", "FY2023": "273%", "FY2022": "272%", "FY2021": "357%"}),
     ("Total high-quality liquid assets (HQLA), weighted value, 12-month average (£'000)", {
         "FY2025": 3800472, "FY2024": 3587504, "FY2023": 3837797, "FY2022": 4066151, "FY2021": 3199721}),
@@ -1161,11 +1269,16 @@ metric("LCR", "%, 12-month rolling average of month-end positions", [
          "FY2020 AND FY2019: genuinely never published as a number. The FY2021 edition prints no FY2020 "
          "LCR comparative, and the FY2019 edition's section 11 says only that 'The bank exceeds its "
          "regulatory requirements for the LCR ratio' with no template and no figure. Blank, not estimated."
-         "\nFY2026: the bank left the Pillar 3 regime entirely (SDDT approval, December 2025) and the "
-         "Annual Report capital note that replaces it carries no liquidity metrics at all.")
+         "\nFY2026 now STATES that in the cell rather than sitting blank (2026-09-18): the bank left the "
+         "Pillar 3 regime entirely on SDDT approval of 9 December 2025 (PRA Rule 3.1, no end date), before "
+         "its 31 March 2026 year-end, and the Financial Report 2026 that replaces the disclosure prints no "
+         "liquidity metrics at all - re-tested on that document 2026-09-18 with a richness control: 3,013 "
+         "hits for 'the' and 111 for 'ratio' against zero for 'liquidity coverage', 'LCR' and "
+         "'high-quality liquid', its single HQLA mention being a sentence about central bank reserves.")
 
 metric("NSFR", "%, 4-quarter rolling average of quarter-end positions", [
-    ("NSFR ratio", {"FY2025": "250%", "FY2024": "246%", "FY2023": "256%", "FY2022": "269%"}),
+    ("NSFR ratio", {"FY2026": HOARE_FY2026_NO_P3_NO_AR,
+                    "FY2025": "250%", "FY2024": "246%", "FY2023": "256%", "FY2022": "269%"}),
     ("Total available stable funding (£'000)", {
         "FY2025": 5331412, "FY2024": 4999224, "FY2023": 5346941, "FY2022": 5241977}),
     ("Total required stable funding (£'000)", {
@@ -1177,7 +1290,11 @@ metric("NSFR", "%, 4-quarter rolling average of quarter-end positions", [
          "FY2022 edition's KM1 prints a 31-Mar-21 comparative for the LCR block (rows 15-17) but leaves "
          "the NSFR block (rows 18-20) blank in that column - so unlike the LCR, no restated FY2021 NSFR "
          "exists to recover. FY2020 and FY2019 likewise carry no numeric NSFR in any edition. Left blank "
-         "rather than inferred from the LCR or from the following year.")
+         "rather than inferred from the LCR or from the following year.\n"
+         "FY2026 now STATES its absence in the cell rather than sitting blank (2026-09-18): the bank left "
+         "the Pillar 3 regime entirely on SDDT approval of 9 December 2025 (PRA Rule 3.1, no end date), "
+         "before its 31 March 2026 year-end, and 'net stable funding' and 'NSFR' return zero hits in the "
+         "whole Financial Report 2026 against 3,013 hits for 'the'.")
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(PAGES),
@@ -1236,8 +1353,8 @@ bw.add_overview_sheet(
             "FY2026": "22.7%", "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%",
             "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%", "FY2019": "22.42%"}),
         ("Tier 1 Ratio", {
-            "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%", "FY2022": "20.96%",
-            "FY2021": "21.61%", "FY2020": "21.11%", "FY2019": "22.42%"}),
+            "FY2026": "22.7%", "FY2025": "23.00%", "FY2024": "23.11%", "FY2023": "21.44%",
+            "FY2022": "20.96%", "FY2021": "21.61%", "FY2020": "21.11%", "FY2019": "22.42%"}),
         ("Total Capital Ratio", {
             "FY2026": "22.9%", "FY2025": "23.21%", "FY2024": "23.34%", "FY2023": "21.72%",
             "FY2022": "21.20%", "FY2021": "21.86%", "FY2020": "21.34%", "FY2019": "22.61%"}),
@@ -1252,9 +1369,12 @@ bw.add_overview_sheet(
          "source citation for the underlying document/page.\n"
          "FY2026 Pillar 3 ratios are a PERMANENT end to the series, not a pending publication: the bank was "
          "approved under the PRA's Small Domestic Deposit Taking regime in December 2025 and no longer "
-         "prepares Pillar III disclosures. The two FY2026 ratios shown come from the Financial Report 2026's "
-         "own capital note (p.32), which prints the capital amounts and the CET1 and total capital ratios "
-         "only - hence no FY2026 Tier 1 ratio, leverage ratio, LCR or NSFR here.\n"
+         "prepares Pillar III disclosures. The FY2026 CET1 and total capital ratios come from the Financial "
+         "Report 2026's own capital note (p.32), which prints the capital amounts and those two ratios only; "
+         "the FY2026 Tier 1 ratio comes from a different part of the same report - the Strategic Report KPI "
+         "panel on printed folio 7, captioned 'TIER 1 RATIO', which gives 22.7 for 2025/26. There is no "
+         "FY2026 leverage ratio, LCR or NSFR here because the FY2026 Annual Report prints none anywhere (the "
+         "whole document was searched on 2026-09-18; see the Tier 1 Ratio and Leverage Ratio sheets).\n"
          "LEVERAGE RATIO IS TWO SERIES, NOT ONE. The UK removed claims on central banks from the leverage "
          "exposure measure from 1 January 2022, and this bank's own disclosures change basis at exactly that "
          "point. The two rows above are deliberately kept separate and must not be read as a single trend - "

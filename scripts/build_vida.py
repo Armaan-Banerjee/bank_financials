@@ -4,8 +4,9 @@ from bank_workbook import BankWorkbook
 
 # Entity was named "Belmont Green Finance Limited" (trading as Vida/Vida
 # Homeloans) through FY2023, renamed "Vida Bank Limited" on receiving its PRA
-# banking licence 19 Nov 2024. FY2022 cash flow is a genuine gap - see
-# ENTITY_NOTE. Pillar 3 only exists from FY2024 (first year as a bank).
+# banking licence 19 Nov 2024. FY2022 cash flow was recorded here as "a genuine
+# gap" until 2026-09-18; it was not one - see FY2022_FOUND_NOTE.
+# Pillar 3 only exists from FY2024 (first year as a bank).
 # Extended back to FY2018 (confirmed historical floor per HD-057): FY2018-
 # FY2020 the entity was "Belmont Green Finance Limited", a specialist
 # mortgage lender regulated only by the FCA (not yet PRA-authorised, no
@@ -18,6 +19,15 @@ AR2025_URL = "https://www.vidabank.co.uk/media/pkmnxlqg/annual-report-and-accoun
 AR2024_URL = "https://www.vidabank.co.uk/media/emghy4z2/annual-report-and-accounts-2024-company.pdf"
 AR2023_URL = "https://www.vidabank.co.uk/media/zhoj0swe/annual-report-and-accounts-2023.pdf"
 AR2021_URL = "https://www.vidabank.co.uk/media/p3wau0ms/annual-report-and-accounts-2021.pdf"
+
+# FY2022 Annual Report (Belmont Green Finance Limited) - Companies House only.
+# No copy is published on vidabank.co.uk's media library, which is why earlier
+# passes never opened it; the Companies House copy is an IMAGE-ONLY SCAN
+# (go-tiff2pdf / CCITT G4, 303 dpi, 164 pages, zero-character text layer), so a
+# text search of it returns nothing whatever it contains. Read here via full-
+# document OCR (ocrmypdf --force-ocr, tesseract 5.5.3) and confirmed against a
+# 300 dpi render of the page itself.
+AR2022_URL = "https://find-and-update.company-information.service.gov.uk/company/09837692/filing-history/MzM4Nzk2MDY5OWFkaXF6a2N4/document?format=pdf&download=0"
 
 # FY2018-FY2020 Annual Reports (Belmont Green Finance Limited) - sourced from
 # Companies House filing history (company number 09837692), re-verified this
@@ -42,9 +52,12 @@ ENTITY_NOTE = (
     "Cash flow figures below are on the Company's own (non-consolidated/solo) basis in every populated year - this "
     "is the only basis for which a full three-part cash flow statement (operating/investing/financing) could be "
     "found in every report; the Consolidated (Group) statement of financial position was reported each year from "
-    "FY2019 onwards, but the FY2022 and FY2023 Annual Reports' own primary financial statements do not include a "
-    "full Group cash flow statement, only a partial 'Net cash flow from operating activities' reconciliation note "
-    "(Note 25) on the Group basis - see FY2022_GAP_NOTE below. FY2018's own Annual Report only presented Company-"
+    "FY2019 onwards. (CORRECTED 2026-09-18: this note previously said the FY2022 AND FY2023 Annual Reports print "
+    "only a partial Group operating-activities reconciliation and no full Group cash flow statement. That is true "
+    "of the FY2023 report; it is NOT true of the FY2022 report, which prints a full three-part CONSOLIDATED "
+    "Statement of Cash Flows on printed p.117 AND a full three-part COMPANY statement on printed p.161. The claim "
+    "had been generalised from the one report that was actually opened - see FY2022_FOUND_NOTE.) FY2018's own "
+    "Annual Report only presented Company-"
     "only financial statements (no Group/consolidated accounts were filed for FY2018); Group consolidated accounts "
     "for Belmont Green Finance Limited first appear in the FY2019 Annual Report, which also restates FY2018's "
     "Company-basis Balance Sheet, Cash Flow Statement and Statement of Changes in Equity figures - see "
@@ -71,13 +84,42 @@ FY2018_RESTATEMENT_NOTE = (
     "transparency rather than blended in."
 )
 
-FY2022_GAP_NOTE = (
-    "FY2022 is blank on this sheet: neither the FY2022 nor FY2023 Annual Report presents a full three-part Company "
-    f"cash flow statement for FY2022 (checked both directly - {AR2023_URL} - and via the FY2023 report's own prior-"
-    "year comparative column, which is likewise not present.) The FY2023 Annual Report's Note 25 gives only a "
-    "partial Group-basis operating reconciliation ending at 'Net cash flows from operating activities: £68,297k' "
-    "for FY2022 - not on the same (Company) basis as every other populated year here and with no investing/"
-    "financing breakdown at all, so it is not shown rather than presented as a misleadingly partial column."
+FY2022_FOUND_NOTE = (
+    "FY2022 (FILLED 2026-09-18 - IT WAS NEVER A GAP IN THE DISCLOSURE, ONLY IN OUR READING). This sheet previously "
+    "carried a note saying 'neither the FY2022 nor FY2023 Annual Report presents a full three-part Company cash "
+    "flow statement for FY2022', with the FY2023 report cited as the document checked. Only the FY2023 report had "
+    "in fact been checked. Belmont Green Finance Limited's OWN FY2022 Annual Report prints a complete three-part "
+    "Company cash flow statement - operating, investing and financing, with opening and closing cash - on printed "
+    "p.161, presented under the running head 'Notes to the Company Financial Statements (continued)' rather than "
+    "under a title of its own, which is why a heading search for 'Company Statement of Cash Flows' finds nothing "
+    "in it. (The same report also prints a full CONSOLIDATED Statement of Cash Flows on printed p.117, so the "
+    "Group-basis claim was wrong for FY2022 too.) The reason it had not been read is a sourcing one, not a "
+    "disclosure one: vidabank.co.uk's media library carries the 2021, 2023, 2024 and 2025 reports but not 2022, "
+    f"and the Companies House copy ({AR2022_URL}) is an image-only scan with a zero-character text layer, so any "
+    "text search of it returns nothing regardless of content. It was read by OCRing all 164 pages and then "
+    "confirming the figures against a 300 dpi render of p.161 itself.\n"
+    "BASIS: Company (non-consolidated), identical to every other populated year here. The same page's 2021 "
+    "comparative column reproduces this workbook's existing FY2021 column cell for cell (operating (179,449); PPE "
+    "(190); software (1,567); investing (1,757); shares issued 8,300; deemed loans 169,705; leases (1,407); "
+    "financing 176,598; net (4,608); opening 18,108; closing 13,500), which confirms both the basis and the "
+    "transcription.\n"
+    "TWO DIVERGENCES ARE REPRODUCED RATHER THAN RECONCILED, both verified on the page image:\n"
+    "(1) The Bank's own FY2022 financing subtotal does not foot. Its three financing lines are nil, (31,392) and "
+    "(1,365), which sum to (32,757), but the printed 'Net cash (utilised)/generated by financing activities' reads "
+    "(32,755) - a £2k break in the BANK's own arithmetic. The printed (32,755) is the odd figure out: the printed "
+    "net increase of 1,419 equals 35,347 - 1,171 - 32,757 and ties exactly to the printed cash balances "
+    "(13,500 -> 14,919), whereas the printed subtotal would give 1,421. Both the components and the subtotal are "
+    "transcribed exactly as printed; nothing has been adjusted to make the column foot.\n"
+    "(2) 'Proceeds from shares issued' is printed as a DASH for FY2022 and is carried here as a literal '-'. A "
+    "dash is the Bank stating nil, which is a different statement from a blank cell (no such line) and from a "
+    "typed zero; it is kept as printed. The workbook's block-reconciliation check still reads the column and "
+    "reports divergence (1) as a financing-block break of exactly £2k (-32,757 summed vs -32,755 printed), which "
+    "is the intended outcome: the disagreement is the Bank's, and it stays visible.\n"
+    "FY2022/FY2023 BOUNDARY: FY2022's own report closes cash at 14,919 while the FY2023 column (taken from the "
+    "FY2024 report's comparative) opens at 14,920 - a £1k cross-edition difference, left as each edition printed "
+    "it. The FY2022 Annual Report's own Company loss of £(25,453)k was also later restated; this workbook's "
+    "Statement of Changes in Equity already carries the restated FY2022 figures from the FY2023 report and "
+    "documents that boundary separately. The cash flow column here is FY2022's own edition throughout."
 )
 
 CASH_FLOW_SOURCES = (
@@ -88,7 +130,12 @@ CASH_FLOW_SOURCES = (
     f"{AR2024_URL}\n"
     f"FY2023: taken from Vida Bank Limited's FY2024 Annual Report's own FY2023 comparative column (p.73, same "
     f"document as above) - Belmont Green Finance Limited's own FY2023 Annual Report does not present a comparable "
-    f"Company-basis statement (see ENTITY_NOTE/FY2022_GAP_NOTE).\n"
+    f"Company-basis statement (see ENTITY_NOTE/FY2022_FOUND_NOTE).\n"
+    f"FY2022: Belmont Green Finance Limited Annual Report and Accounts 2022, printed p.161 / PDF p.161 (the "
+    f"Company cash flow statement, printed under the running head 'Notes to the Company Financial Statements "
+    f"(continued)'; the operating-activities reconciliation behind it is Note 34 on printed p.164) - {AR2022_URL} "
+    f"(Companies House copy, image-only scan, read by OCR and confirmed against a 300 dpi page render - see "
+    f"FY2022_FOUND_NOTE).\n"
     f"FY2021: Belmont Green Finance Limited (Vida) Annual Report and Accounts 2021, p.150 (Company Statement of "
     f"Cash Flows) - {AR2021_URL}\n"
     f"FY2020: Belmont Green Finance Limited Annual Report and Accounts 2020 (Company Statement of Cash Flows) - "
@@ -98,7 +145,7 @@ CASH_FLOW_SOURCES = (
     f"FY2018: taken from the FY2019 Annual Report's own restated FY2018 comparative column (same document/notes as "
     f"above) - see FY2018_RESTATEMENT_NOTE for why the restated figures are used in place of Belmont Green's "
     f"originally-filed FY2018 Annual Report ({AR2018_URL}).\n\n"
-    + ENTITY_NOTE + "\n\n" + FY2022_GAP_NOTE + "\n\n" + FY2018_RESTATEMENT_NOTE
+    + ENTITY_NOTE + "\n\n" + FY2022_FOUND_NOTE + "\n\n" + FY2018_RESTATEMENT_NOTE
 )
 
 
@@ -191,7 +238,10 @@ BALANCE_SHEET_SOURCES = (
     f"FY2023: Belmont Green Finance Limited Annual Report and Accounts 2023, p.185 (Company Statement of "
     f"Financial Position) - {AR2023_URL}\n"
     f"FY2022: taken from the FY2023 Annual Report's own restated FY2022 comparative column (same document/page "
-    f"as above) - Belmont Green's own FY2022 Annual Report was not fetched this session.\n"
+    f"as above). Belmont Green's own FY2022 Annual Report has since been located and read (2026-09-18, see the "
+    f"Cash Flow Statement sheet's FY2022_FOUND_NOTE); its own Company Statement of Financial Position is on "
+    f"printed p.159 and its figures were superseded by the FY2023 report's restatement, so the restated "
+    f"comparative is retained here deliberately rather than for want of the original.\n"
     f"FY2021: Belmont Green Finance Limited Annual Report and Accounts 2021, p.149 (Company Statement of "
     f"Financial Position) - {AR2021_URL}\n"
     f"FY2020: Belmont Green Finance Limited Annual Report and Accounts 2020, Company Statement of Financial "
@@ -458,29 +508,30 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Operating activities", {}),
-    ("TOTAL", "Net cash flows from/(used in) operating activities", {"FY2025": 1766849, "FY2024": 70662, "FY2023": 65493, "FY2021": -179449, "FY2020": -47723, "FY2019": -423882, "FY2018": -763195}),
+    ("TOTAL", "Net cash flows from/(used in) operating activities", {"FY2025": 1766849, "FY2024": 70662, "FY2023": 65493, "FY2022": 35347, "FY2021": -179449, "FY2020": -47723, "FY2019": -423882, "FY2018": -763195}),
     ("SECTION", "Investing activities", {}),
-    ("DATA", "Purchase of property, plant and equipment", {"FY2025": -92, "FY2024": -57, "FY2023": -24, "FY2021": -190, "FY2020": -119, "FY2019": -4537, "FY2018": -1319}),
-    ("DATA", "Expenditure on software development", {"FY2025": -12, "FY2024": -351, "FY2023": -674, "FY2021": -1567, "FY2020": -994, "FY2019": -311, "FY2018": 0}),
-    ("TOTAL", "Net cash flows from/(used in) investing activities", {"FY2025": -104, "FY2024": -408, "FY2023": -698, "FY2021": -1757, "FY2020": -1113, "FY2019": -4848, "FY2018": -1319}),
+    ("DATA", "Purchase of property, plant and equipment", {"FY2025": -92, "FY2024": -57, "FY2023": -24, "FY2022": -131, "FY2021": -190, "FY2020": -119, "FY2019": -4537, "FY2018": -1319}),
+    ("DATA", "Expenditure on software development", {"FY2025": -12, "FY2024": -351, "FY2023": -674, "FY2022": -1040, "FY2021": -1567, "FY2020": -994, "FY2019": -311, "FY2018": 0}),
+    ("TOTAL", "Net cash flows from/(used in) investing activities", {"FY2025": -104, "FY2024": -408, "FY2023": -698, "FY2022": -1171, "FY2021": -1757, "FY2020": -1113, "FY2019": -4848, "FY2018": -1319}),
     ("SECTION", "Financing activities", {}),
-    ("DATA", "Proceeds from shares issued", {"FY2021": 8300, "FY2020": 27850, "FY2019": 38671, "FY2018": 44782}),
-    ("DATA", "Movement of deemed loans due to Group undertakings", {"FY2025": -904243, "FY2024": 115457, "FY2023": -62096, "FY2021": 169705, "FY2020": 36209, "FY2019": 392814, "FY2018": 723148}),
+    ("DATA", "Proceeds from shares issued", {"FY2022": "-", "FY2021": 8300, "FY2020": 27850, "FY2019": 38671, "FY2018": 44782}),
+    ("DATA", "Movement of deemed loans due to Group undertakings", {"FY2025": -904243, "FY2024": 115457, "FY2023": -62096, "FY2022": -31392, "FY2021": 169705, "FY2020": 36209, "FY2019": 392814, "FY2018": 723148}),
     ("DATA", "Loan to/from subsidiary undertakings", {"FY2019": -4356, "FY2018": -5804}),
     ("DATA", "Repayment of loans", {"FY2024": -25000}),
     ("DATA", "Issuance of Tier 2 subordinated liabilities", {"FY2025": 35000}),
-    ("DATA", "Repayment of lease liabilities", {"FY2025": -479, "FY2024": -225, "FY2023": -446, "FY2021": -1407, "FY2020": -1194}),
+    ("DATA", "Repayment of lease liabilities", {"FY2025": -479, "FY2024": -225, "FY2023": -446, "FY2022": -1365, "FY2021": -1407, "FY2020": -1194}),
     ("DATA", "Movement in debt securities", {"FY2025": -785634, "FY2024": -34135}),
     ("DATA", "Other movements", {"FY2025": 0, "FY2024": -27, "FY2023": -12}),
-    ("TOTAL", "Net cash flows (used in)/generated from financing activities", {"FY2025": -1655356, "FY2024": 56070, "FY2023": -62554, "FY2021": 176598, "FY2020": 62865, "FY2019": 427129, "FY2018": 762126}),
-    ("TOTAL", "Net increase/(decrease) in cash and cash equivalents", {"FY2025": 111389, "FY2024": 126324, "FY2023": 2241, "FY2021": -4608, "FY2020": 14029, "FY2019": -1601, "FY2018": -2389}),
-    ("DATA", "Cash and cash equivalents at the beginning of the year", {"FY2025": 143485, "FY2024": 17161, "FY2023": 14920, "FY2021": 18108, "FY2020": 4079, "FY2019": 5680, "FY2018": 8069}),
-    ("TOTAL", "Cash and cash equivalents at the end of the year", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2021": 13500, "FY2020": 18108, "FY2019": 4079, "FY2018": 5680}),
+    ("TOTAL", "Net cash flows (used in)/generated from financing activities", {"FY2025": -1655356, "FY2024": 56070, "FY2023": -62554, "FY2022": -32755, "FY2021": 176598, "FY2020": 62865, "FY2019": 427129, "FY2018": 762126}),
+    ("TOTAL", "Net increase/(decrease) in cash and cash equivalents", {"FY2025": 111389, "FY2024": 126324, "FY2023": 2241, "FY2022": 1419, "FY2021": -4608, "FY2020": 14029, "FY2019": -1601, "FY2018": -2389}),
+    ("DATA", "Cash and cash equivalents at the beginning of the year", {"FY2025": 143485, "FY2024": 17161, "FY2023": 14920, "FY2022": 13500, "FY2021": 18108, "FY2020": 4079, "FY2019": 5680, "FY2018": 8069}),
+    ("TOTAL", "Cash and cash equivalents at the end of the year", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2022": 14919, "FY2021": 13500, "FY2020": 18108, "FY2019": 4079, "FY2018": 5680}),
 ]
 
 bw.add_cash_flow_sheet(
     title="Vida Bank Limited — Company Cash Flow Statement",
-    subtitle="Company (non-consolidated) basis, £'000. FY2022 blank - see source note at bottom.",
+    subtitle="Company (non-consolidated) basis, £'000. Every year FY2018-FY2025 is populated; see the source "
+              "note for FY2022's own two documented divergences and the FY2018 restatement.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=68,

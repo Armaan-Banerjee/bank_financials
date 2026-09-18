@@ -481,23 +481,55 @@ RWA_SOURCES = (
     f"FY2023: Pillar 3 Disclosure, December 31, 2023, p.11 - {P3_2023_URL}\n"
     f"FY2022: Pillar 3 Disclosure, December 31, 2022, p.14 - {P3_2022_URL}\n"
     f"FY2021: Pillar 3 Disclosure, December 31, 2021, p.25 - {P3_2021_URL}\n"
-    f"FY2020: Pillar 3 Disclosure 2020, Table 7 'EU OV1 - Overview of RWAs', p.13 - {P3_2020_URL}\n"
-    f"FY2019: Pillar 3 Disclosure 2019, Table 8 'EU OV1 - Overview of RWAs', p.14 - {P3_2019_URL}\n"
-    f"FY2018: Pillar 3 Disclosure 2018, Table 8 'EU OV1 - Overview of RWAs', p.13 - {P3_2018_URL}\n"
-    f"FY2017: Pillar 3 Disclosure 2017, 'Risk Exposure Amount by Risk Type' chart, p.10 (no OV1-format table "
-    f"published that year - the chart's own figures tie exactly to the FY2018 report's restated FY2017 OV1 "
-    f"comparative) - {P3_2017_URL}\n"
-    f"FY2016: Pillar 3 Disclosure 2016, Table 6 'Capital requirements', p.20 (pre-OV1-template era; shows "
-    f"consolidated Risk Exposure Amount by risk type directly, not a capital-requirement figure needing "
+    f"FY2020: Pillar 3 Disclosure 2020, Table 7 'EU OV1 - Overview of RWAs', printed folio 29 - {P3_2020_URL}\n"
+    f"FY2019: Pillar 3 Disclosure 2019, Table 8 'EU OV1 - Overview of RWAs', printed folio 31 - {P3_2019_URL}\n"
+    f"FY2018: Pillar 3 Disclosure 2018, Table 8 'EU OV1 - Overview of RWAs', printed folio 30 - {P3_2018_URL}\n"
+    f"FY2017: Pillar 3 Disclosure 2017, Table 6 'Capital requirements' - heading and intro on printed folio 24, "
+    f"the table itself overleaf on folio 25 - {P3_2017_URL}\n"
+    f"FY2016: Pillar 3 Disclosure 2016, Table 6 'Capital requirements', printed folio 20 (pre-OV1-template era; "
+    f"shows consolidated Risk Exposure Amount by risk type directly, not a capital-requirement figure needing "
     f"conversion - Credit risk SA 383 + Counterparty Credit Risk SA 4 + Market risk SA 43 + Operational risk 359 "
     f"+ Credit Valuation Adjustment 4 = Total 793, tying exactly to that year's Consolidated Total RWA from "
-    f"Table 1 'Capital ratios'; CCR and CVA combined into the 'Counterparty credit risk' row, same treatment as "
-    f"FY2021 above) - {P3_2016_URL}\n\n"
-    "Note: FY2021's own report uses the older EU OV1 template, which separately discloses Credit Valuation "
-    "Adjustment (CVA) as its own risk type; combined here into the 'Counterparty credit risk' row (£2m CCR + £2m "
-    "CVA = £4m) to match the UK OV1 template's grouping used FY2022 onward - the combined figure ties to that "
-    "year's own Total RWA (£838m). FY2021's securitisation exposure is a genuine disclosed zero ('the Company's "
-    "securitisation portfolio was immaterial'), not a gap.\n\n"
+    f"Table 1 'Capital ratios') - {P3_2016_URL}\n\n"
+    "GA-011 CORRECTION, 2026-09-18 - CCR AND CVA ARE NOW REPRODUCED, NOT ADDED UP. Until this date the "
+    "FY2021-FY2016 half of this sheet carried a single 'Counterparty credit risk' row per year whose value had "
+    "been COMPUTED by a past session (FY2021 as £2m CCR + £2m CVA = £4m, 'to match the UK OV1 template's "
+    "grouping used FY2022 onward'; FY2016 as £4m + £4m = £8m; and FY2020/FY2019/FY2018 silently, under a "
+    "caption reading '(incl. CVA where separately disclosed)' that did not say who had done the combining). "
+    "Every one of the six pre-FY2022 editions was re-read from the primary PDF on 2026-09-18 (each fetched "
+    "direct from bnymellon.com and verified as a real PDF by %PDF magic bytes and Content-Type before use), and "
+    "EVERY ONE OF THE SIX PRINTS COUNTERPARTY CREDIT RISK AND CREDIT VALUATION ADJUSTMENT AS TWO SEPARATE RISK "
+    "TYPES. Nothing was un-merged by subtraction: each figure below is the number standing on its own row in "
+    "that year's own edition. As printed - FY2021 CCR 2 / CVA 2; FY2020 CCR 4 / CVA 4; FY2019 CCR 3 / CVA 3; "
+    "FY2018 CCR 2 / CVA 2; FY2017 CCR '-' / CVA '-' (both dashes, see below); FY2016 CCR 4 / CVA 4. Each year's "
+    "pair is taken from that year's OWN edition, never a later edition's comparative, though where a later "
+    "edition does carry the comparative it agrees (the FY2020 report's 31-Dec-19 column prints 3 and 3; the "
+    "FY2019 report's 31-Dec-18 column prints 2 and 2; the FY2018 report's 31-Dec-17 column prints a dash for "
+    "both). Each of the six documents contains exactly one such table, so no second printing was missed. The "
+    "FY2025-FY2022 UK OV1 rows are NOT affected and are unchanged: that template genuinely groups CVA inside "
+    "counterparty credit risk, so those years have one row because the bank published one row.\n\n"
+    "FY2017 - A TABLE THIS WORKBOOK PREVIOUSLY SAID DID NOT EXIST. The FY2017 block used to be sourced from the "
+    "'Risk Exposure Amount by Risk Type' CHART on folio 10, above a note asserting that 'no OV1-format table "
+    "was published that year'. That assertion was wrong. The Pillar 3 Disclosure 2017 carries Table 6 'Capital "
+    "requirements' - the same table the FY2016 report uses, listed in the FY2017 report's own contents - "
+    "showing Credit risk SA 504, Counterparty credit risk SA '-', Market risk SA 66, Operational risk 366, "
+    "Credit Valuation Adjustment - standardised method '-', Total 936. This is the same miss recorded below for "
+    "FY2016 ('a prior review of this document had missed this table'), one edition later. Because the chart's "
+    "three slices are numerically identical to Table 6's, NO FY2017 figure changed except the counterparty "
+    "rows: the sheet previously printed CCR as 0, which was a fabricated zero - the bank printed a DASH, and a "
+    "dash is the bank saying 'nil for us' while a zero is a measured nought. Both dashes are now reproduced as "
+    "dashes.\n\n"
+    "FY2021 SECURITISATION - A FABRICATED ZERO, NOW CORRECTED (GA-008, 2026-09-18). The FY2021 EU OV1 (Table "
+    "7, printed folio 25) prints its 'Securitisation risk**' row as an em dash in BOTH the 31-Dec-21 and "
+    "31-Dec-20 risk-weighted-exposure columns, footnoted '** SEC-ERBA approach. At the reporting date the "
+    "Company's securitisation portfolio was immaterial.' This sheet previously carried 0 there, which asserted "
+    "a measured nought the Company never published. It now carries the dash the Company printed. GA-011 saw "
+    "the cell and correctly left it alone as outside its counterparty remit; it was converted here, against "
+    "the FY2021 PDF read directly rather than on inference. Total RWAs is unchanged at 838 and still foots "
+    "(466 + 2 + 2 + 16 + 352 = 838), because a dash contributes nothing that a zero did not.\n\n"
+    "WHY THAT MATTERS BEYOND THIS ONE CELL: a fabricated zero reconciles, cross-checks clean and is invisible "
+    "to every instrument in this repo - it looks exactly like a real nought. Restoring dashes only where a "
+    "cell is currently EMPTY would have missed it entirely.\n\n"
     "HD-025 (FY2016-FY2020 extension) NOTE: the FY2017-FY2020 EU OV1 tables are published on a CONSOLIDATED basis "
     "only (no separate Solo-basis RWA-by-type breakdown exists in any of these 4 reports) - their totals therefore "
     "tie to the Consolidated Total RWA column on the CET1/Tier1/Total Capital Ratio sheets, not the Solo-basis "
@@ -528,13 +560,50 @@ RWA_SOURCES = (
 )
 
 rwa_breakdown_rows = [
-    ("SECTION", "RWA by risk category (£m)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 435, "FY2024": 519, "FY2023": 539, "FY2022": 569, "FY2021": 466, "FY2020": 538, "FY2019": 582, "FY2018": 804, "FY2017": 504, "FY2016": 383}),
-    ("DATA", "Counterparty credit risk (incl. CVA where separately disclosed)", {"FY2025": 1, "FY2024": 1, "FY2023": 0, "FY2022": 0, "FY2021": 4, "FY2020": 8, "FY2019": 6, "FY2018": 4, "FY2017": 0, "FY2016": 8}),
-    ("DATA", "Securitisation exposures", {"FY2025": 7, "FY2024": 9, "FY2023": 9, "FY2022": 3, "FY2021": 0}),
-    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 12, "FY2024": 12, "FY2023": 14, "FY2022": 12, "FY2021": 16, "FY2020": 10, "FY2019": 14, "FY2018": 32, "FY2017": 66, "FY2016": 43}),
-    ("DATA", "Operational risk", {"FY2025": 592, "FY2024": 577, "FY2023": 489, "FY2022": 415, "FY2021": 352, "FY2020": 383, "FY2019": 394, "FY2018": 393, "FY2017": 366, "FY2016": 359}),
-    ("TOTAL", "Total RWAs", {"FY2025": 1047, "FY2024": 1118, "FY2023": 1051, "FY2022": 999, "FY2021": 838, "FY2020": 939, "FY2019": 996, "FY2018": 1233, "FY2017": 936, "FY2016": 793}),
+    ("SECTION", "UK OV1 'Overview of risk-weighted exposure amounts' (Table 4) — each year's own Pillar 3 Disclosure, BNYMIL SOLO basis (FY2025-FY2022)", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 435, "FY2024": 519, "FY2023": 539, "FY2022": 569}),
+    ("DATA", "Counterparty credit risk", {"FY2025": 1, "FY2024": 1, "FY2023": 0, "FY2022": 0}),
+    ("DATA", "Securitisation exposures", {"FY2025": 7, "FY2024": 9, "FY2023": 9, "FY2022": 3}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 12, "FY2024": 12, "FY2023": 14, "FY2022": 12}),
+    ("DATA", "Operational risk", {"FY2025": 592, "FY2024": 577, "FY2023": 489, "FY2022": 415}),
+    ("TOTAL", "Total RWAs", {"FY2025": 1047, "FY2024": 1118, "FY2023": 1051, "FY2022": 999}),
+    ("SECTION", "EU OV1 'Overview of RWAs' (Table 7), the older CRR template — Pillar 3 Disclosure, December 31, 2021, printed folio 25 (FY2021). This template discloses Credit Valuation Adjustment as its OWN risk type and BNYMIL prints it that way, so CVA has its own row below and the 'Counterparty credit risk' row here is CCR ALONE — a narrower measure than the UK OV1 CCR row above, which subsumes CVA. The table is headed 'the Company (Consolidated)'; the report's own key-metrics table prints Consolidated and Solo Total RWA as identical for FY2021 (838 and 838), so this block ties to the Solo figure on the Total RWAs sheet. Corrected 2026-09-18, GA-011 — see sources note", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2021": 466}),
+    ("DATA", "Counterparty credit risk", {"FY2021": 2}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2021": 2}),
+    # A FABRICATED ZERO, CORRECTED 2026-09-18. The source prints a DASH here,
+    # not a nought: Table 7 EU OV1, printed folio 25, row "Securitisation
+    # risk**" carries an em dash in both the 31-Dec-21 and 31-Dec-20 RWA
+    # columns, footnoted "** SEC-ERBA approach. At the reporting date the
+    # Company's securitisation portfolio was immaterial." Read in the FY2021
+    # PDF itself, not inferred. Total RWAs stays 838 as printed and still foots
+    # (466 + 2 + 2 + 16 + 352 = 838) - a dash contributes nothing, so removing
+    # the fabricated 0 changes no total.
+    ("DATA", "Securitisation exposures", {"FY2021": "-"}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2021": 16}),
+    ("DATA", "Operational risk", {"FY2021": 352}),
+    ("TOTAL", "Total RWAs", {"FY2021": 838}),
+    ("SECTION", "EU OV1 'Overview of RWAs' (Table 7 in the FY2020 report, Table 8 in FY2019 and FY2018) — BNYMIL CONSOLIDATED basis (FY2020-FY2018), the only basis on which these reports publish a risk-type split, so these totals do NOT match the Solo figures on the Total RWAs sheet: FY2020 939 = Solo 939 (exact tie that year only), FY2019 996 vs Solo 994, FY2018 1,233 vs Solo 1,211. Neither figure is to be changed to make the two sheets agree. All three of these editions print Credit Valuation Adjustment as its own risk type, so CVA has its own row below and 'Counterparty credit risk' here is CCR ALONE. Corrected 2026-09-18, GA-011 — see sources note", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2020": 538, "FY2019": 582, "FY2018": 804}),
+    ("DATA", "Counterparty credit risk", {"FY2020": 4, "FY2019": 3, "FY2018": 2}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 4, "FY2019": 3, "FY2018": 2}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2020": 10, "FY2019": 14, "FY2018": 32}),
+    ("DATA", "Operational risk", {"FY2020": 383, "FY2019": 394, "FY2018": 393}),
+    ("TOTAL", "Total RWAs", {"FY2020": 939, "FY2019": 996, "FY2018": 1233}),
+    ("SECTION", "Table 6 'Capital requirements', Pillar 3 Disclosure 2017 — heading and intro on printed folio 24, the table itself overleaf on folio 25. BNYMIL CONSOLIDATED basis (936 vs Solo 881). This report DOES publish a full risk-type table (an earlier review of this workbook stated it did not and sourced the year from the p.10 'Risk Exposure Amount by Risk Type' chart instead; the chart's three slices are identical to Table 6's, so only the provenance and the CCR/CVA rows changed). Table 6 prints CCR and CVA as separate risk types and prints BOTH as a DASH — reproduced as dashes below, because a dash is the bank saying nil and is not a zero. Corrected 2026-09-18, GA-011 — see sources note", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2017": 504}),
+    ("DATA", "Counterparty credit risk", {"FY2017": "-"}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2017": "-"}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2017": 66}),
+    ("DATA", "Operational risk", {"FY2017": 366}),
+    ("TOTAL", "Total RWAs", {"FY2017": 936}),
+    ("SECTION", "Table 6 'Capital requirements', Pillar 3 Disclosure 2016, printed folio 20 — pre-OV1-template era; discloses Risk Exposure Amount by risk type directly. BNYMIL CONSOLIDATED basis (793 vs Solo 765). This table prints Counterparty Credit Risk and Credit Valuation Adjustment as separate risk types, so each has its own row below. Corrected 2026-09-18, GA-011 — see sources note", {}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2016": 383}),
+    ("DATA", "Counterparty credit risk", {"FY2016": 4}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2016": 4}),
+    ("DATA", "Market risk (position, FX and commodities)", {"FY2016": 43}),
+    ("DATA", "Operational risk", {"FY2016": 359}),
+    ("TOTAL", "Total RWAs", {"FY2016": 793}),
 ]
 
 # ---------------------------------------------------------------
@@ -604,8 +673,14 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.50 %", "FY2024": "2.50 %", "FY2023": "2.50 %", "FY2022": "2.50 %", "FY2021": "2.50 %"}),
+    # FY2021 is an EM DASH the Bank printed in its own FY2021 edition (Table
+    # 1:KM1, printed p.11, "Countercyclical buffer requirement" row, "—%" in
+    # all four of its Consolidated/Solo x 31-Dec-21/31-Dec-20 columns). The
+    # FY2022 edition's 31-Dec-21 comparative prints the same em dash. See the
+    # note: the same FY2021 document's NARRATIVE says the requirement "equated
+    # to 0.0%", which is recorded there and deliberately NOT substituted here.
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
-     {"FY2025": "1.90 %", "FY2024": "1.96 %", "FY2023": "1.95 %", "FY2022": "0.92 %"}),
+     {"FY2025": "1.90 %", "FY2024": "1.96 %", "FY2023": "1.95 %", "FY2022": "0.92 %", "FY2021": "-"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2025": "4.40 %", "FY2024": "4.46 %", "FY2023": "4.45 %", "FY2022": "3.42 %"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -668,9 +743,19 @@ KM1_SOURCES = (
     "are not reported\", and footnote 4, \"Comparatives are not provided for LCR and NSFR following a change in "
     "the instructions from those reportable at 31 December 2021\". The FY2021 point-in-time LCR, NSFR and leverage "
     "figures BNYMIL did publish are on the LCR, NSFR and Leverage Ratio sheets, on their own captioned rows.\n"
-    "• A DASH IS NOT A ZERO: row 9 (countercyclical buffer) is printed \"—%\" in the FY2022 report's 31-Dec-21 "
-    "column and is left BLANK above. The FY2021 report prints the same em-dash for the same row. Every other "
-    "cell shown is a figure the bank printed as a figure.\n"
+    "• A DASH IS A DASH, NOT A ZERO: row 9 (countercyclical buffer) is printed \"—%\" in the FY2022 report's "
+    "31-Dec-21 column, and the FY2021 report prints the same em dash for the same row in its OWN 31-Dec-21 "
+    "column - 'Table 1:KM1 - Key metrics', printed p.11, where it appears as \"—%\" in all four of that "
+    "table's Consolidated and Solo columns. FY2021 therefore carries the dash rather than a blank, and it is "
+    "taken from the FY2021 edition's own column, not from the later edition's comparative. Every other cell "
+    "shown is a figure the bank printed as a figure.\n"
+    "• AND THE BANK'S OWN NARRATIVE DISAGREES WITH ITS OWN TABLE, WHICH IS RECORDED RATHER THAN RESOLVED. The "
+    "same FY2021 document states in prose, two pages later: 'The Company is subject to a countercyclical "
+    "buffer requirement, however this equated to 0.0% at 31 December 2021.' So here the dash demonstrably "
+    "does mean zero - the Bank says so itself. The cell still shows the dash, because this sheet reproduces "
+    "the TABLE and the table prints a dash; substituting 0.0% would import a figure from prose into a "
+    "regulatory template that did not print it. The prose is the citation a reader needs to interpret the "
+    "dash, and it is given here for exactly that purpose.\n"
     "• FY2024 IS SHOWN AS ORIGINALLY PUBLISHED, NOT RESTATED. The FY2025 report heads its comparative column "
     "\"31-Dec-24 Restated\" and notes \"The prior period is restated\". Its restated FY2024 values differ from "
     "the FY2024 report's own as-published ones in nine rows: row 4 RWA 1,091 (was 1,118); rows 5/6/7 87.54 % "
@@ -788,7 +873,7 @@ bw.add_rwa_breakdown_sheet(
     rows=rwa_breakdown_rows,
     sources_text=RWA_SOURCES,
     first_col_width=64,
-    source_height=280,
+    source_height=640,
     unit_suffix=" (£m)",
 )
 

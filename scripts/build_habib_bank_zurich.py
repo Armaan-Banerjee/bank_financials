@@ -1560,7 +1560,16 @@ bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
     per_note={
         "NSFR": "Not disclosed in any year's statutory accounts.",
-        "MREL Ratio": "Not disclosed - Habib Bank Zurich Plc is not identified as a UK resolution entity in these accounts.",
+        "MREL Ratio": "Not disclosed - Habib Bank Zurich Plc is not identified as a UK resolution entity in "
+                      "these accounts. POSITIVE RECORD ADDED 18 September 2026 (KM1-032): that was an "
+                      "entity-classification inference drawn from the accounts' silence. It is now sourced. "
+                      "The Bank of England's own 'External minimum requirements for own funds and eligible "
+                      "liabilities (MRELs)' disclosures (2023, 2024, 2025 and 2026 editions, at "
+                      "bankofengland.co.uk/financial-stability/resolution/mrels-<year>) contain 'all firms "
+                      "with a resolution entity incorporated in the UK for which an MREL above MCR has been "
+                      "communicated', in the BoE's own words. Habib Bank Zurich Plc appears in none of the "
+                      "four editions. The BoE publishes the requirement, not the ratio, so nothing from "
+                      "that table is transcribed here.",
     },
 )
 

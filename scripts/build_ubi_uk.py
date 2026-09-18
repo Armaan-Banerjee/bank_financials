@@ -254,7 +254,35 @@ def p3_sources():
         "That last sentence is a pointer to the equity statement, NOT a regulatory capital disclosure - "
         "reading a Tier 1 figure across from book equity would be a back-solve and is expressly not done "
         "here. A full-text scan of the report for CET1, Tier 1, Tier 2, RWA, risk-weighted, own funds, "
-        "capital ratio, leverage ratio, LCR, NSFR and MREL returns no quantitative disclosure of any of them."
+        "capital ratio, leverage ratio, LCR, NSFR and MREL returns no quantitative disclosure of any of them.\n"
+        "FIFTH CHECK (2026-09-18, separate session) - UNCHANGED, and it finally supplies the Bank's OWN "
+        "statement of the position rather than an inference from an index. (1) The index at "
+        "https://www.unionbankofindiauk.co.uk/disclosures/financial-reports was re-fetched and re-parsed: "
+        "still the same eleven Pillar 3 documents (31-03-2015 through 31-03-2025) and still a bare "
+        "'Financial Accounts 31-03-2026' entry with no Pillar 3 beside it. (2) DECISIVE: the FY2026 Annual "
+        "Report's own 'Pillar III' section, immediately above the directors' approval block, states "
+        "verbatim: 'Further information concerning the Bank's approach to risk management and its capital "
+        "adequacy are contained in the unaudited disclosures made under the requirements of Pillar 3. These "
+        "disclosures for 2025 are published on the Bank's website at www.unionbankofindiauk.co.uk and the "
+        "ones for 2026 WILL BE AVAILABLE AFTER THE FINANCIAL STATEMENTS ARE APPROVED.' (emphasis added; the "
+        "report was approved by the Board on 16 June 2026). That is the Bank asserting, in its own signed "
+        "accounts, that the FY2026 Pillar 3 was still to come - which converts this from 'we could not find "
+        "it' into 'the issuer says it is not out yet'. The FY2026 blanks are a publication lag, full stop.\n"
+        "SIXTH CHECK (2026-09-18, gap-fill round) - UNCHANGED, and the finding has now been WRITTEN INTO "
+        "THE FY2026 CELLS rather than left only in this note, because a note is invisible to the coverage "
+        "census and the column still read as an untouched gap. The live index at "
+        "https://www.unionbankofindiauk.co.uk/disclosures/financial-reports was re-fetched (HTTP 200, "
+        "text/html, 86,099 bytes) and every PDF href parsed: still exactly eleven Pillar 3 documents, "
+        "31-03-2015 through 31-03-2025, and still a bare 'Financial Accounts 31-03-2026' entry "
+        "(/Portals/0/Annual Accounts UBIUK 2026 Signed_1.pdf) with no Pillar 3 beside it. One point in the "
+        "earlier notes is now SUPERSEDED and should not be repeated: the FY2026 accounts are no longer "
+        "'awaiting approval'. Companies House filing history for company 07653660 shows 'AA - Full accounts "
+        "made up to 31 March 2026' FILED ON 11 JULY 2026 (71 pages), and the report itself was approved by "
+        "the Board on 16 June 2026. So the condition the Bank attached to its own Pillar 3 - 'the ones for "
+        "2026 will be available after the financial statements are approved' - has already been met, and the "
+        "FY2026 Pillar 3 is simply overdue against the Bank's own stated trigger rather than blocked behind "
+        "it. There is no statutory filing deadline for a Pillar 3 disclosure to cite in its place. This "
+        "remains the one re-checkable negative in this workbook."
     )
 
 
@@ -879,6 +907,13 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
+# FY2026 in-column statement. The reason was established across five independent
+# checks (see p3_sources) but lived only in the note, so the census still read the
+# whole FY2026 column as an untouched gap. It is now written into the cells.
+UBI_FY2026_NP = ("Not published - FY2026 Pillar 3 not yet issued; the Bank's own FY2026 accounts say it "
+                 "follows their approval. Index re-checked 18 Sep 2026")
+
+
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=130)
 
@@ -910,6 +945,7 @@ KM1_THOUSANDS = " (USD'000)"                       # FY2025, FY2024, FY2023 edit
 KM1_DOLLARS = " ($, single dollars as printed)"    # FY2022 edition
 
 km1_rows = [
+    ("DATA", "[No UK KM1 published for this year - see note below]", {"FY2026": UBI_FY2026_NP}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1    Common Equity Tier 1 (CET1) capital" + KM1_THOUSANDS,
      {"FY2025": 111479, "FY2024": 116706, "FY2023": 113622}),
@@ -933,23 +969,31 @@ km1_rows = [
      {"FY2025": "27.20%", "FY2024": "27.67%", "FY2023": "29.50%", "FY2022": "32.05%"}),
     ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted "
                 "exposure amount)", {}),
-    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)", {}),
-    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {}),
-    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {}),
-    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {}),
+    # The FY2022 edition prints this whole SREP block and DASHES every row of
+    # it. The FY2023, FY2024 and FY2025 editions drop the block entirely, so
+    # their cells stay blank - a different fact, shown differently.
+    ("DATA", "UK 7a    Additional CET1 SREP requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 7b    Additional AT1 SREP requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 7c    Additional T2 SREP requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 7d    Total SREP own funds requirements (%)", {"FY2022": "-"}),
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
     ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the "
-             "level of a Member State (%)", {}),
+             "level of a Member State (%)", {"FY2025": "-", "FY2022": "-"}),
+    # FY2022 is a DASH in the FY2022 edition's own column. The FY2023 edition's
+    # 31-Mar-22 comparative prints 0.03%, but rule 1 takes each year from the
+    # edition in which it is the reporting year, and that edition dashed it.
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
-     {"FY2025": "0.71%", "FY2024": "0.76%", "FY2023": "0.43%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {}),
-    ("DATA", "11    Combined buffer requirement (%)", {}),
+     {"FY2025": "0.71%", "FY2024": "0.76%", "FY2023": "0.43%", "FY2022": "-"}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)", {"FY2025": "-", "FY2022": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)", {"FY2025": "-", "FY2022": "-"}),
+    ("DATA", "UK 10a    Other Systemically Important Institution buffer", {"FY2025": "-", "FY2022": "-"}),
+    # Row 11 is the one row printed in ALL FOUR editions and dashed in all four.
+    ("DATA", "11    Combined buffer requirement (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
-     {"FY2025": "15.49%", "FY2024": "15.54%", "FY2023": "15.21%"}),
+     {"FY2025": "15.49%", "FY2024": "15.54%", "FY2023": "15.21%", "FY2022": "-"}),
     ("DATA", "12    CET1 available after meeting the total SREP own funds requirements (%)",
      {"FY2025": "14.92%", "FY2024": "15.39%", "FY2023": "17.22%", "FY2022": "17.48%"}),
     ("SECTION", "Leverage ratio", {}),
@@ -960,12 +1004,14 @@ km1_rows = [
      {"FY2025": "22.43%", "FY2024": "22.81%", "FY2023": "23.92%", "FY2022": "27.49%"}),
     ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a "
                 "percentage of leverage ratio total exposure amount)", {}),
-    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {}),
-    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {}),
-    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {}),
-    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {}),
-    ("DATA", "UK 14e    Applicable leverage buffer", {}),
-    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {}),
+    # Printed and dashed throughout in the FY2022 edition (printed p.40); the
+    # FY2023-FY2025 editions omit the whole block, so those cells stay blank.
+    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {"FY2022": "-"}),
+    ("DATA", "UK 14e    Applicable leverage buffer", {"FY2022": "-"}),
+    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {"FY2022": "-"}),
     ("SECTION", "Liquidity Coverage Ratio", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)" + KM1_THOUSANDS,
      {"FY2025": 43965, "FY2024": 43840, "FY2023": 48637}),
@@ -1028,24 +1074,29 @@ KM1_SOURCES = (
     "editions head their two columns 'a' and 'e' (the template's own column letters for 'current' and "
     "'four quarters ago'); the FY2025 edition prints the same two columns without letters; the FY2022 "
     "edition prints one column only.\n"
-    "• A DASH IS NOT A ZERO. Every unpopulated cell in every edition is printed as a hyphen '-', and all "
-    "of them are left BLANK here. There is exactly one printed zero-like value anywhere in the series and "
-    "it is not a zero: the FY2022 edition's row 9 is a dash, not '0%'. Blank cells on this sheet are "
-    "therefore either 'the edition printed a dash' or 'the edition did not print the row at all'; which of "
-    "the two applies is set out in the ROW SET note below.\n"
+    "• A DASH IS A DASH, NOT A ZERO AND NOT A BLANK. Every unpopulated cell in every edition is printed as "
+    "a hyphen '-', and every one of them now CARRIES that hyphen. There is exactly one printed zero-like "
+    "value anywhere in the series and it is not a zero: the FY2022 edition's row 9 is a dash, not '0%'. "
+    "That distinction is now visible on the face of the sheet rather than only in this note. A cell showing "
+    "'-' means the Bank printed a dash there; a cell left EMPTY means that edition did not print the row at "
+    "all - and the row set drifts sharply here, so both states occur. Which applies where is set out in the "
+    "ROW SET note below.\n"
     "• ROW SET DRIFTS SHARPLY BETWEEN EDITIONS, so a blank is not always the same kind of blank:\n"
     "   - The FY2022 edition prints the template in FULL: rows 1-20 including the complete UK 7a-7d SREP "
     "block, UK 8a, UK 9a, 10, UK 10a and the entire UK 14a-14f additional-leverage block. Every one of "
-    "those rows is printed with a DASH in that edition, so all are blank here.\n"
+    "those rows is printed with a DASH in that edition, so every one of them carries a dash in the FY2022 "
+    "column - 17 rows of it, re-read at the source on 2026-09-18 off printed pp.40-41.\n"
     "   - The FY2023 and FY2024 editions DROP the UK 7a-7d block, UK 8a, UK 9a, row 10, UK 10a and the "
     "whole UK 14a-14f block entirely - those rows are not printed at all, so their FY2023/FY2024 cells are "
     "blank because the row does not exist in that edition, not because it was dashed.\n"
     "   - The FY2025 edition restores UK 8a, UK 9a, row 10 and UK 10a (all dashed) but still omits the UK "
     "7a-7d and UK 14a-14f blocks.\n"
-    "   - Row 11 (Combined buffer requirement) is printed in all four editions and DASHED in all four, "
-    "which is itself odd given that rows 8 and 9 are populated in three of them; reproduced as printed and "
-    "flagged rather than computed (map rule 7 - a derived figure in a disclosure template reads as a "
-    "disclosure).\n"
+    "   - Row 11 (Combined buffer requirement) is printed in all four editions and DASHED in all four, so "
+    "it carries a dash in all four columns. That is itself odd, given that rows 8 and 9 are populated in "
+    "three of them and row 11 is nominally their sum - 2.50% + 0.71% would be 3.21% for FY2025, not a dash. "
+    "It is reproduced as printed and flagged rather than computed (map rule 7 - a derived figure in a "
+    "disclosure template reads as a disclosure). Note this is the Bank's own dash on a row it printed, NOT "
+    "a row derived here from dashed inputs.\n"
     "• ROW 9's CAPTION CHANGES WORDING BETWEEN EDITIONS while the measure does not. The FY2022, FY2023 and "
     "FY2024 editions caption it 'Institution specific countercyclical capital buffer (%)' (the template's "
     "own wording, used here); the FY2025 edition re-captions the same row 'Countercyclical Capital Buffer "
@@ -1133,17 +1184,17 @@ bw.add_km1_sheet(
     source_height=900,
 )
 
-metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", stock(CET1_TIER1_USD))], p3_sources())
-metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CAP_RATIO)], p3_sources())
-metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital", stock(CET1_TIER1_USD))], p3_sources(),
+metric("CET1 Capital", "£'000 (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", {**stock(CET1_TIER1_USD), "FY2026": UBI_FY2026_NP})], p3_sources())
+metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", {**CAP_RATIO, "FY2026": UBI_FY2026_NP})], p3_sources())
+metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital", {**stock(CET1_TIER1_USD), "FY2026": UBI_FY2026_NP})], p3_sources(),
        note="Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.")
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", CAP_RATIO)], p3_sources())
-metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", stock(TOTAL_CAP_USD))], p3_sources(),
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", {**CAP_RATIO, "FY2026": UBI_FY2026_NP})], p3_sources())
+metric("Total Capital", "£'000 (conv. from USD)", [("Total capital", {**stock(TOTAL_CAP_USD), "FY2026": UBI_FY2026_NP})], p3_sources(),
        note="Equal to CET1/Tier 1 capital in every year except FY2021 (no Tier 2 instruments); FY2021 Total "
             "capital ($115,017k) exceeds CET1/Tier 1 ($111,081k), implying Tier 2 capital held that year which "
             "had run off by FY2022 (not explicitly explained in the source).")
-metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {**CAP_RATIO, "FY2021": "33.52%"})], p3_sources())
-metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", stock(RWA_USD))], p3_sources())
+metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", {**CAP_RATIO, "FY2021": "33.52%", "FY2026": UBI_FY2026_NP})], p3_sources())
+metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", {**stock(RWA_USD), "FY2026": UBI_FY2026_NP})], p3_sources())
 
 # ---------------------------------------------------------------
 # RWA Breakdown (placed right after Total RWAs, since it's itself a
@@ -1171,6 +1222,7 @@ bw.add_rwa_breakdown_sheet(
     title="Union Bank of India (UK) Limited — RWA Breakdown (UK OV1 - Overview of risk-weighted exposure amounts)",
     subtitle="£'000, converted from USD - see source note for the FY2021/FY2022 presentation difference (pre-UK-OV1-template).",
     rows=[
+        ("DATA", "[No FY2026 UK OV1 published - see note below]", {"FY2026": UBI_FY2026_NP}),
         ("DATA", "Credit risk (excluding CCR) / Standardised approach", rwab_line("credit_std")),
         ("DATA", "Counterparty credit risk (CCR)", rwab_line("ccr")),
         ("DATA", "  of which: Credit valuation adjustment (CVA)", rwab_line("cva")),
@@ -1188,7 +1240,7 @@ metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
         ("Leverage ratio total exposure measure", stock({"FY2025": 496976, "FY2024": 511751, "FY2023": 475110, "FY2022": 411084, "FY2021": 402973, "FY2020": 410130, "FY2019": 460623, "FY2018": 445036})),
-        ("Leverage ratio (%)", {"FY2025": "22.43%", "FY2024": "22.81%", "FY2023": "23.92%", "FY2022": "27.49%", "FY2021": "27.57%", "FY2020": "29.43%", "FY2019": "20.19%", "FY2018": "21.23%"}),
+        ("Leverage ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "22.43%", "FY2024": "22.81%", "FY2023": "23.92%", "FY2022": "27.49%", "FY2021": "27.57%", "FY2020": "29.43%", "FY2019": "20.19%", "FY2018": "21.23%"}),
     ],
     p3_sources(),
     note="FY2021/FY2022 disclosed on the 'Basel III leverage ratio' basis (per that era's Pillar 3 template); "
@@ -1202,7 +1254,7 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA), weighted value", stock({"FY2025": 43965, "FY2024": 43840, "FY2023": 48637, "FY2022": 36977, "FY2021": 64886, "FY2020": 30713, "FY2019": 49916, "FY2018": 24913})),
         ("Total net cash outflows, adjusted value", stock({"FY2025": 3017, "FY2024": 4815, "FY2023": 1637, "FY2022": 3888, "FY2021": 4486, "FY2020": 2067, "FY2019": 4485, "FY2018": 6086})),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "1457%", "FY2024": "910%", "FY2023": "2971%", "FY2022": "951%", "FY2021": "1446%", "FY2020": "1486%", "FY2019": "1113%", "FY2018": "409%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "1457%", "FY2024": "910%", "FY2023": "2971%", "FY2022": "951%", "FY2021": "1446%", "FY2020": "1486%", "FY2019": "1113%", "FY2018": "409%"}),
     ],
     p3_sources(),
 )
@@ -1212,7 +1264,7 @@ metric(
     [
         ("Total available stable funding", stock({"FY2025": 431914, "FY2024": 412656, "FY2023": 408381, "FY2022": 346323})),
         ("Total required stable funding", stock({"FY2025": 318358, "FY2024": 314809, "FY2023": 282448, "FY2022": 247487})),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "136%", "FY2024": "131%", "FY2023": "145%", "FY2022": "140%",
+        ("Net Stable Funding Ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "136%", "FY2024": "131%", "FY2023": "145%", "FY2022": "140%",
                                           "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed"}),
     ],
     p3_sources(),

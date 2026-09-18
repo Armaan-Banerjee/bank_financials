@@ -579,6 +579,15 @@ KM1_SOURCES = (
     "/wp-content/uploads/2025/05/Pillar-3-Document.pdf is a byte-identical DUPLICATE of the FY2024 edition "
     "(both md5 284d09c52c9b28eeaf50b546f7ca55c1, both 1,434,534 bytes) - one document under two URLs, not a "
     "second basis (map rule 11's inverse case)."
+    "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2023, FY2022 AND FY2021 - READ FROM THE DOCUMENTS ON "
+    "2026-09-18 AND RECORDED HERE SO THE QUESTION IS NOT RE-OPENED. The FY2023 edition's 'Key Metrics for the "
+    "Bank' table prints 83,177 on row 1, row 2 AND row 3 for September 2023, and 75,267 for September 2022; the "
+    "FY2022 edition's Bank table prints 75,267 and 71,644 the same way. The three coincide because the Bank had "
+    "no Additional Tier 1 and no Tier 2 in issue in those years - no AT1 or Tier 2 line is populated in the own- "
+    "funds tables. ENTITY: each edition prints the template TWICE, 'Key Metrics for the Group' followed by 'Key "
+    "Metrics for the Bank'. This sheet is the BANK series throughout; the Group series for the same dates is "
+    "99,699 / 92,572 / 85,310 and must not be mixed into it.\n"
 )
 
 km1_rows = [

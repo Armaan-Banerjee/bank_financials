@@ -178,7 +178,21 @@ CF = {
     "Cash and cash equivalents at the end of the period": {"FY2026": 277.5, "FY2025": 175.7, "FY2024": 375.6, "FY2023": 417.2, "FY2022": 558.8, "FY2021": 337.5},
 }
 
-ROWS = [("SECTION", "Operating activities", {})]
+# GA-006 (2026-09-18): FY2008-FY2020 held no cell on any row, so thirteen year
+# columns were blank to a reader and to audit_gaps.py even though the reason is
+# fully established and quoted in the sheet subtitle - a formal FRS 1/FRS 102
+# exemption, confirmed by HD-075 as explicitly invoked in each FY2008-FY2013
+# Companies House filing. The statement now appears IN those columns, one cell
+# per year, the same fix applied to ICICI Bank UK and Morgan Stanley Bank
+# International in this ticket. No column is suppressed (GA-001) - they are all
+# still printed, they now say something.
+NO_CF_YEARS = ["FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015",
+               "FY2014", "FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008"]
+ROWS = [
+    ("DATA", "No statement of cash flows prepared - FRS 1 / FRS 102 exemption (see note below)",
+     {y: "Not published - no statement of cash flows prepared (FRS 1/FRS 102 exemption)" for y in NO_CF_YEARS}),
+    ("SECTION", "Operating activities", {}),
+]
 for label in list(CF)[:10]:
     ROWS.append(("TOTAL" if label == "Net cash flows from operating activities" else "DATA", label, CF[label]))
 ROWS.append(("SECTION", "Investing activities", {}))
@@ -511,7 +525,8 @@ bw.add_equity_changes_sheet(
 
 bw.add_cash_flow_sheet(
     "Mizuho International plc — Consolidated Statement of Cash Flows",
-    "Consolidated Group basis, £ millions. FY2008-FY2020 are blank (not zero): none of those years' Annual "
+    "Consolidated Group basis, £ millions. FY2008-FY2020 carry a statement rather than figures (and are "
+    "certainly not zero): none of those years' Annual "
     "Reports/statutory filings include a cash flow statement, each invoking the FRS 1/FRS 102 exemption for a "
     "qualifying subsidiary whose ultimate parent (Mizuho Financial Group, Inc.) publishes consolidated financial "
     "statements including the Company - the same exemption basis as FY2021-FY2025's ENTITY NOTE. HD-075 "
@@ -757,7 +772,35 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "%", {"FY2026": "4.43%", "FY2025": "4.2%", "FY2024": "4.07%", "FY2023": "4.24%", "FY2022": "4.07%", "FY2021": "4.75%", "FY2020": "3.74%", "FY2019": "3.74%", "FY2018": "4.50%", "FY2017": "4.36%", "FY2016": "3.28%", "FY2015": "1.87%"}, "FY2014 leverage ratio was discussed qualitatively (implementation of PRA bank-level reporting was noted as having 'commenced') but no computed ratio was numerically disclosed in the FY2014 Pillar 3 document.")
 metric("LCR", "%", {"FY2026": "272.4%", "FY2025": "268.7%", "FY2024": "250.39%", "FY2023": "302.67%", "FY2022": "364.04%", "FY2021": "303.00%", "FY2020": "340%", "FY2019": "416%", "FY2018": "396%"}, "LCR was first disclosed in the FY2018 Pillar 3 document (the document itself states this); not disclosed FY2014-FY2017.")
 metric("NSFR", "%", {"FY2026": "147.4%", "FY2025": "122.5%", "FY2024": "128.67%", "FY2023": "140.66%", "FY2022": "177.71%"}, "NSFR was not disclosed in the 2021 report or any FY2014-FY2020 report; 2025 is from the Annual Report KPI section.")
-metric("MREL Ratio", "%", {}, "MREL ratio was not numerically disclosed in any FY2014-FY2025 official annual/Pillar 3 report checked.")
+# GA-006 (2026-09-18): this sheet was WHOLLY empty - 13 year columns, not one
+# cell - with the finding sitting only in the note. It is the whole of this
+# bank's leading-empty count in the census. The finding is now in the cells.
+# Note the old note stopped at FY2025 and the workbook already carried FY2026,
+# so the newest year was not covered by the claim at all; re-established below
+# against the two newest editions directly.
+MREL_NA = "Not disclosed - MHI publishes no MREL ratio in any edition"
+metric("MREL Ratio", "%",
+       {y: MREL_NA for y in ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021",
+                             "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]},
+       "MREL ratio is not numerically disclosed in any Mizuho International plc annual report or Pillar 3 "
+       "disclosure. RE-ESTABLISHED WITH A CONTROL 2026-09-18 rather than carried forward - the previous "
+       "note asserted this for FY2014-FY2025 and was already out of date, since the workbook carries "
+       "FY2026. Whole-document search of the two newest editions, both text-native and downloaded fresh "
+       "(%PDF-, application/pdf): the FY2026 consolidated Pillar 3 (217,429 characters) returns ZERO hits "
+       "for 'MREL', 'minimum requirement for own funds' and 'TLAC', against 145 hits for 'capital', "
+       "231 for 'ratio' and 10 for 'own funds' in the same extraction; the FY2025 edition (224,343 "
+       "characters) returns the same three zeros against 152 and 228. So the zero is a fact about the "
+       "documents, not a failure of the search. The FY2026 Annual Report (696,912 characters) likewise "
+       "returns zero for all three.\n"
+       "WHAT THE DOCUMENTS DO SAY, which is consistent with there being nothing to find. The FY2026 "
+       "Pillar 3 reproduces the PRA's 'UK CCA: Main features of regulatory own funds instruments and "
+       "eligible liabilities instruments' template - i.e. the template that WOULD carry an eligible-"
+       "liabilities instrument if MHI had one - and its only instrument is ordinary share capital, with "
+       "row 34a 'Type of subordination (only for eligible liabilities)' printed 'n/a'. The FY2026 "
+       "Annual Report states that the Group 'continues to participate actively in Mizuho Financial "
+       "Group's recovery and resolution planning', i.e. resolution is planned at the Japanese parent "
+       "level. That is context, not proof of a scope exclusion, and it is recorded as context: what is "
+       "established here is that MHI publishes no MREL ratio, not why.")
 
 bw.add_overview_sheet(
     balance_sheet_totals=[

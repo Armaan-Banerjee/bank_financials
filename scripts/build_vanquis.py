@@ -850,14 +850,20 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
-    # Printed as a hyphen in every edition and every column - left BLANK, not zero.
+    # Printed as a hyphen in every edition and every column. The cell carries
+    # that hyphen: not a zero, and not a blank either. Each year read from
+    # column 'a' (31 December) of its OWN edition, re-read 2026-09-18.
     ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a "
-             "member state (%)", {}),
+             "member state (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global systemically important Institution buffer (%)", {}),
-    ("DATA", "UK 10a    Other systemically important Institution buffer", {}),
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "10    Global systemically important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "UK 10a    Other systemically important Institution buffer",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -898,13 +904,22 @@ km1_rows = [
      {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%"}),
     # FY2024 prints an em dash on all three rows and FY2025 omits the block
     # entirely - both because the Group became an SDDT consolidation entity in
-    # March 2024 and the NSFR requirement was formally disapplied. A dash is not
-    # a zero, so these stay BLANK; the reason is a formal exclusion, stated in
-    # each edition's own footnote, not a gap in this transcription.
+    # March 2024 and the NSFR requirement was formally disapplied. The two are
+    # DIFFERENT statements and the sheet shows them differently: FY2024 carries
+    # the dash the Group printed, FY2025 is blank because the Group printed
+    # nothing at all. Neither is a zero. The reason is a formal exclusion,
+    # stated in each edition's own footnote, not a gap in this transcription.
     ("SECTION", "Net stable funding ratio", {}),
-    ("DATA", "18    Total available stable funding (£m)", {"FY2023": 2611.7, "FY2022": 2322.9}),
-    ("DATA", "19    Total required stable funding (£m)", {"FY2023": 1828.1, "FY2022": 1652.3}),
-    ("DATA", "20    NSFR ratio (%)", {"FY2023": "142.8%", "FY2022": "140.6%"}),
+    # FY2024 is an EM DASH, not a blank: the FY2024 edition still prints all
+    # three rows and puts an em dash in its 31-Dec-24 column (the 31-Dec-23
+    # column of that same edition still carries 2,611.7 / 1,828.1 / 142.8).
+    # The dash is the Group saying the metric no longer applies to it - the
+    # NSFR was disapplied for SDDTs from 1 July 2024 - which is a different
+    # statement from the FY2025 edition, which drops the rows ALTOGETHER and
+    # so leaves FY2025 correctly blank.
+    ("DATA", "18    Total available stable funding (£m)", {"FY2024": "-", "FY2023": 2611.7, "FY2022": 2322.9}),
+    ("DATA", "19    Total required stable funding (£m)", {"FY2024": "-", "FY2023": 1828.1, "FY2022": 1652.3}),
+    ("DATA", "20    NSFR ratio (%)", {"FY2024": "-", "FY2023": "142.8%", "FY2022": "140.6%"}),
 
     ("SECTION", "BLOCK 2 - 'Table 1: Summary of key metrics' as printed in the FY2021 edition (Provident "
                 "Financial plc, consolidated - the same continuous listed entity, renamed Vanquis Banking Group "
@@ -980,8 +995,9 @@ KM1_SOURCES = (
     "EU-19a tokens are rows of the EU LRCom leverage-ratio common disclosure template ('EU-14a Derogation for "
     "SFTs...', 'Total leverage ratio exposures (sum of lines 3, 11, 16, 19, EU-19a and EU-19b)'), which the "
     "FY2018, FY2019 and FY2020 editions all print.\n\n"
-    "ZERO GLYPHS AND 'n/a' - THREE DIFFERENT STATES, ALL PRESERVED. A HYPHEN IS NOT A ZERO: rows UK 8a, UK 9a, "
-    "10 and UK 10a are printed as '-' in every column of every UK KM1 edition and are left BLANK here. The "
+    "ZERO GLYPHS AND 'n/a' - THREE DIFFERENT STATES, ALL PRESERVED. A HYPHEN IS NOT A ZERO AND NOT A BLANK: "
+    "rows UK 8a, UK 9a, 10 and UK 10a are printed as '-' in every column of every UK KM1 edition and CARRY "
+    "that hyphen here, each year taken from column 'a' (31 December) of its own edition. The "
     "literal string 'n/a' is what the FY2022, FY2023 and FY2024 editions print on rows 14a-14e, and it is "
     "reproduced as that string rather than blanked - those editions say 'cells not required have been left "
     "blank or indicated as not applicable' and that only LREQ firms complete rows 14a-14e. The FY2025 edition "

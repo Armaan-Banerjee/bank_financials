@@ -676,15 +676,15 @@ km1_rows = [
      {"FY2026": "2.50%", "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.5%", "FY2022": "2.5%"}),
     ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the "
              "level of a Member State (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
+     {"FY2026": "-", "FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2026": "1.99%", "FY2025": "1.99%", "FY2024": "1.95%", "FY2023": "1.0%", "FY2022": "0%"}),
     ("DATA", "UK 9a    Systemic risk buffer (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
+     {"FY2026": "-", "FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
     ("DATA", "10    Global Systemically Important Institution buffer (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
+     {"FY2026": "-", "FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
     ("DATA", "UK 10a    Other Systemically Important Institution buffer",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
+     {"FY2026": "-", "FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0%", "FY2022": "0%"}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2026": "4.49%", "FY2025": "4.49%", "FY2024": "4.45%", "FY2023": "3.5%", "FY2022": "2.5%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -778,15 +778,24 @@ KM1_SOURCES = (
     "exposure measure. The FY2022 figures are therefore on the older, wider basis and are NOT "
     "comparable with FY2023 onward; both captions are shown above. See the Leverage Ratio sheet, "
     "which carries the two bases on separate rows for the full year range.\n\n"
-    "A DASH IS NOT A ZERO - BLANK CELLS IN FY2026 ARE DELIBERATE. From the FY2026 edition Monzo "
-    "prints an em dash (\u2014%) rather than a figure for UK 8a (conservation buffer for "
-    "macro-prudential/systemic risk), UK 9a (systemic risk buffer), 10 (G-SII buffer) and UK 10a "
-    "(O-SII buffer). Those cells are left BLANK here rather than written as 0%, because a dash in a "
-    "regulatory template records that no such requirement applies to this firm, which is not the same "
-    "statement as a requirement measured at zero. NOTE THE CONTRAST WITH EARLIER YEARS, which is the "
-    "bank's own change of house style and not an inconsistency introduced here: the FY2022 and FY2023 "
-    "editions print '0%' and the FY2024 and FY2025 editions print '0.00%' for those same four rows. "
-    "Each year is reproduced as that year's document printed it.\n\n"
+    "MONZO PRINTS THREE DIFFERENT THINGS IN THIS TABLE, AND THIS SHEET SHOWS ALL THREE AS PRINTED. A "
+    "cell reading '-' is a dash Monzo printed; a blank cell is a figure Monzo has never published for "
+    "that date in any edition; a figure is a figure.\n"
+    "WHERE THE DASHES ARE. The FY2026 (MBHG) edition prints an em dash ('\u2014%') on printed p.9 for "
+    "UK 8a (conservation buffer for macro-prudential/systemic risk), UK 9a (systemic risk buffer), 10 "
+    "(G-SII buffer) and UK 10a (O-SII buffer). The FY2022 (MBL) edition prints an em dash for UK "
+    "14a-14e, in the excessive-leverage block of its own table (printed pp.32-33). Those nine cells "
+    "carry '-' above. The glyph the documents use is an em dash; the cell carries a plain ASCII hyphen, "
+    "which is what a spreadsheet cell can hold.\n"
+    "THE SAME FOUR BUFFER ROWS CARRY FIGURES IN EVERY EARLIER EDITION, and that is Monzo's own change "
+    "of house style rather than an inconsistency introduced here: the FY2022 and FY2023 editions print "
+    "'0%' and the FY2024 and FY2025 editions print '0.00%' on all four. A printed zero is a measured "
+    "zero and is kept as a number, so those cells are figures and not dashes. The FY2026 edition's own "
+    "2025 comparative column DOES print an em dash on all four rows - but the FY2025 column here comes "
+    "from the FY2025 edition, which printed '0.00%', and a later edition's comparative does not "
+    "displace a year's own edition.\n"
+    "UK 14f is the exception inside its own block: the FY2022 edition prints it as '0.0%' where 14a-14e "
+    "are dashed, and that printed zero is kept as a zero.\n\n"
     "TWO SEPARATE FY2026 REPORTS EXIST AND ONLY ONE BELONGS HERE. Monzo published both an MBHG "
     "(Holding Group) and an MBL (Bank) Pillar 3 report for 2026. This workbook is on the MBHG basis "
     f"from FY2024 onward, so the MBHG edition is used; the MBL edition ({P3_26_MBL_URL}) is a "

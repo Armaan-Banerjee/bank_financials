@@ -506,6 +506,187 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - OakNorth's own published UK KM1 template, reproduced whole,
+# placed immediately after Asset Quality and immediately before CET1 Capital.
+#
+# YEARS: FY2021-FY2025 only. FY2015-FY2020 carry NO COLUMN AT ALL rather than
+# an empty one: the UK KM1 template post-dates those editions and no edition
+# anywhere prints a column for them, so there is nothing for a header to head.
+#
+# ROW NUMBERING DRIFTS BETWEEN EDITIONS. The FY2024 and FY2025 editions number
+# every row ("1", "UK 7a", "13a"); the FY2022 and FY2023 editions print the
+# identical rows with NO numbering at all. The numbers shown here are
+# OakNorth's own, from the FY2025 edition.
+#
+# LEVERAGE IS A TWO-BLOCK ROW SET, NOT ONE SERIES. From the FY2023 edition
+# OakNorth prints the post-1-January-2022 UK basis explicitly - separate
+# excluding-claims-on-central-banks (13/14) and including (13a/14a) rows. The
+# FY2022 and FY2021 columns come from an edition that prints a single
+# unqualified "Leverage ratio total exposure measure" / "Leverage ratio" pair
+# instead, so those sit on their OWN rows and are never merged with the
+# excluding/including pair above them.
+# ---------------------------------------------------------------
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - OakNorth Bank plc's own 'UK KM1 - Key metrics' template, £'000 and percentages as printed. "
+    "Each year is taken from the edition in which it is the REPORTING year, except FY2021 (see below):\n"
+    f"FY2025: Pillar 3 Disclosures 2025, section 5.1, pp.14-15 (printed folios 14-15; the table breaks across "
+    f"the two pages) - {P3_URLS['FY2025']}\n"
+    f"FY2024: Pillar 3 Disclosures 2024, section 5.1, pp.15-16 (printed folios 15-16) - {P3_URLS['FY2024']}\n"
+    f"FY2023: Pillar 3 Disclosure 2023, section 4.2, pp.6-7 (printed folios 6-7) - {P3_URLS['FY2023']}\n"
+    f"FY2022: Pillar 3 disclosures 2022, section 4.1.1, pp.18-19 (printed folios 18-19) - {P3_URLS['FY2022']}\n"
+    f"FY2021: the SAME FY2022 edition's own 2021 comparative column, pp.18-19 - {P3_URLS['FY2022']}. "
+    "OakNorth's FY2021 Pillar 3 report contains no key-metrics template of any kind, so this column is filled "
+    "from the earliest edition that prints the year rather than left blank (see the next paragraph for the "
+    "test applied).\n\n"
+    "THE FY2021 EDITION GENUINELY PRINTS NO KM1, ON POSITIVE EVIDENCE RATHER THAN A FAILED SEARCH. Searching "
+    "its extracted text returns zero occurrences of 'KM1' and zero of 'Key metrics', while the SAME extraction "
+    "is rich on neighbouring regulatory language - 8 occurrences of 'own funds', 19 of 'Leverage ratio', 7 of "
+    "'countercyclical' and 5 of 'risk-weighted' - so the zeros are a fact about the document and not about the "
+    "extraction. The document was also checked for an image-only table: it embeds bitmaps on its cover and back "
+    "page only, with none on any table page. FY2015-FY2020 are the same, and additionally predate the template.\n\n"
+    "LATEST-EDITION CHECK 2026-09-18 against oaknorth.co.uk's own '/pillar-3-disclosures/' and '/investors/' "
+    "pages: the newest Pillar 3 is the 2025 edition and the newest Annual Report is Annual Report 2025, both of "
+    "which this workbook already holds. Nothing newer exists; OakNorth's year-end is 31 December.\n\n"
+    "CROSS-EDITION DIVERGENCES, RECORDED NOT RECONCILED (each column is its own edition's, per the standing "
+    "rule that a later edition's restatement does not displace what the bank originally published):\n"
+    "- LEVERAGE, FY2022. The FY2022 edition prints a total exposure measure of 4,954,910 and a ratio of 14.5%; "
+    "the FY2023 edition's 2022 comparative restates the same date to 3,719,196 and 19.4% on the "
+    "excluding-central-banks basis. This sheet carries 4,954,910 / 14.5%.\n"
+    "- CET1 AVAILABLE (row 12), FY2023. The FY2023 edition prints 12.5%; the FY2024 edition's 2023 comparative "
+    "prints 10.4% and relabels the row '(excluding buffers)'. This sheet carries 12.5%.\n"
+    "- OVERALL CAPITAL REQUIREMENTS (UK 11a), FY2024. The FY2024 edition prints 15.2%; the FY2025 edition's "
+    "2024 comparative prints 15.24%. This sheet carries 15.2%. The FY2025 column keeps the two-decimal 15.05% "
+    "its own edition prints - differing precision between editions is OakNorth's house style, not an error.\n"
+    "- T1 SREP (UK 7b), FY2023. The FY2023 edition prints 2.0%; the FY2024 edition's comparative prints 2.1%. "
+    "This sheet carries 2.0%.\n\n"
+    "BLANK CELLS AND WHAT THEY MEAN HERE. The FY2021 column's countercyclical-buffer cell is blank because "
+    "that edition printed a dash there, and the cell now CARRIES that dash. Its three NSFR cells by contrast "
+    "stay BLANK, because that edition printed 'n/a' against the footnote 'UK did not adopt the EBA NSFR in "
+    "2021 therefore comparative data cannot be presented' - an 'n/a' is the Bank's own word for a different "
+    "thing again, and is deliberately not converted into a dash. So three states appear in one column: a "
+    "dash on row 9, blanks on the NSFR rows, and figures elsewhere. The 'PRA Buffer' row exists only in the "
+    "FY2022 and FY2023 editions (the FY2024 and FY2025 editions drop it); it is DASHED in both of those "
+    "editions' own reporting years, so FY2023 and FY2022 carry a dash, while FY2021 carries the figure "
+    "0.56% and FY2024/FY2025 are blank because the row is gone altogether. A dash is never a zero, a blank "
+    "is never a dash, and an 'n/a' is neither.\n\n"
+    "ONE FIGURE ON THIS SHEET IS NOT ON THE LCR METRIC SHEET, AND THAT IS NOT A CONTRADICTION TO RECONCILE. "
+    "This sheet's FY2021 column carries an LCR of 319% with HQLA of 452,554 and net outflows of 142,079, "
+    "because the FY2022 edition's 2021 comparative publishes them. The LCR metric sheet reads 'Not publicly "
+    "disclosed' for FY2021, which is a true statement about the FY2021 EDITION - that edition contains no "
+    "comparable LCR key-metrics disclosure - and was written before this sheet existed. The two describe "
+    "different documents. No figure has been altered on either sheet."
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'000)",
+     {"FY2025": 988868, "FY2024": 952901, "FY2023": 853523, "FY2022": 719977, "FY2021": 628446}),
+    ("DATA", "2  Tier 1 capital (£'000)",
+     {"FY2025": 988868, "FY2024": 952901, "FY2023": 853523, "FY2022": 719977, "FY2021": 628446}),
+    ("DATA", "3  Total capital (£'000)",
+     {"FY2025": 1168868, "FY2024": 1132901, "FY2023": 883523, "FY2022": 769977, "FY2021": 678446}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£'000)",
+     {"FY2025": 6363514, "FY2024": 5517819, "FY2023": 4577382, "FY2022": 3840274, "FY2021": 3065585}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount) (%)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "15.5%", "FY2024": "17.3%", "FY2023": "18.6%", "FY2022": "18.7%", "FY2021": "20.5%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "15.5%", "FY2024": "17.3%", "FY2023": "18.6%", "FY2022": "18.7%", "FY2021": "20.5%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "18.4%", "FY2024": "20.5%", "FY2023": "19.3%", "FY2022": "20.1%", "FY2021": "22.1%"}),
+    ("SECTION", "Additional own funds requirements based on Supervisory Review and Evaluation Process (SREP) "
+                "(as a percentage of risk-weighted exposure amount) (%)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "6.1%", "FY2024": "6.1%", "FY2023": "6.1%", "FY2022": "6.1%", "FY2021": "7.1%"}),
+    ("DATA", "UK 7b  Additional T1 SREP requirements (%)",
+     {"FY2025": "2.0%", "FY2024": "2.1%", "FY2023": "2.0%", "FY2022": "2.1%", "FY2021": "2.2%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
+     {"FY2025": "2.7%", "FY2024": "2.7%", "FY2023": "2.7%", "FY2022": "2.7%", "FY2021": "2.3%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "10.9%", "FY2024": "10.9%", "FY2023": "10.9%", "FY2022": "10.9%", "FY2021": "11.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount) (%)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    # FY2021 blank: the FY2022 edition prints a dash in that cell, which is not a zero.
+    # FY2021 is a printed dash in the FY2022 edition's 2021 column, and that is
+    # a legitimate rule-28 fill: the FY2021 edition prints NO key-metrics table
+    # at all. Tested, not assumed - 39 pages and 134k characters returning zero
+    # occurrences of 'KM1', 'Key metrics', 'Available own funds', 'Total
+    # exposure measure' and 'SREP', against 16 of 'Common Equity Tier 1', 8 of
+    # 'own funds', 7 of 'countercyclical' and 5 of 'risk-weighted' in the SAME
+    # extraction. The zeros are about the document, not about the extraction.
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "1.6%", "FY2024": "1.8%", "FY2023": "1.9%", "FY2022": "1.0%", "FY2021": "-"}),
+    # Printed only by the FY2022 and FY2023 editions, and dashed in both of
+    # their own reporting years - so only FY2021 carries a figure.
+    ("DATA", "PRA Buffer", {"FY2023": "-", "FY2022": "-", "FY2021": "0.56%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "4.1%", "FY2024": "4.3%", "FY2023": "4.4%", "FY2022": "3.5%", "FY2021": "3.1%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "15.05%", "FY2024": "15.2%", "FY2023": "15.3%", "FY2022": "14.4%", "FY2021": "14.6%"}),
+    ("SECTION", "Surplus over SREP requirements (Pillar 1 + Pillar 2A)", {}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "7.4%", "FY2024": "9.1%", "FY2023": "12.5%", "FY2022": "12.6%", "FY2021": "13.4%"}),
+    # Printed only by the FY2022 edition.
+    ("DATA", "Total Capital available after meeting the total SREP own funds requirements (%)",
+     {"FY2022": "9.1%", "FY2021": "10.6%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Leverage ratio total exposure measure excluding claims on central banks (£'000)",
+     {"FY2025": 6177019, "FY2024": 5262074, "FY2023": 4463419}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks",
+     {"FY2025": "16%", "FY2024": "18.1%", "FY2023": "19.1%"}),
+    ("DATA", "13a  Leverage ratio total exposure measure including claims on central banks (£'000)",
+     {"FY2025": 8361483, "FY2024": 7951087, "FY2023": 6100733}),
+    ("DATA", "14a  Leverage ratio including claims on central banks",
+     {"FY2025": "11.8%", "FY2024": "12.0%", "FY2023": "14.0%"}),
+    # The FY2022 edition's own unqualified pair - a DIFFERENT basis from the
+    # two blocks above, kept separate and never merged with them.
+    ("DATA", "Leverage ratio total exposure measure (£'000) [FY2022 edition's own unqualified measure]",
+     {"FY2022": 4954910, "FY2021": 3855405}),
+    ("DATA", "Leverage ratio [FY2022 edition's own unqualified ratio]",
+     {"FY2022": "14.5%", "FY2021": "16.3%"}),
+    ("SECTION", "Liquidity Coverage Ratio (LCR)", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value -average) (£'000)",
+     {"FY2025": 2609639, "FY2024": 1876341, "FY2023": 1189319, "FY2022": 556199, "FY2021": 452554}),
+    ("DATA", "UK 16a  Cash outflows - Total weighted value (£'000)",
+     {"FY2025": 795431, "FY2024": 546183, "FY2023": 458967, "FY2022": 279626, "FY2021": 223656}),
+    ("DATA", "UK 16b  Cash inflows - Total weighted value (£'000)",
+     {"FY2025": 239530, "FY2024": 162128, "FY2023": 133361, "FY2022": 121057, "FY2021": 81577}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£'000)",
+     {"FY2025": 555901, "FY2024": 384055, "FY2023": 325606, "FY2022": 158569, "FY2021": 142079}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "478%", "FY2024": "489%", "FY2023": "365%", "FY2022": "351%", "FY2021": "319%"}),
+    ("SECTION", "Net Stable Funding Ratio (NSFR)", {}),
+    # FY2021 blank across all three rows: that edition prints "n/a", footnoted
+    # "UK did not adopt the EBA NSFR in 2021 therefore comparative data cannot
+    # be presented" - a regulatory boundary, not a gap and not a zero.
+    ("DATA", "18  Total available stable funding (£'000)",
+     {"FY2025": 6855628, "FY2024": 6303663, "FY2023": 4831446, "FY2022": 3748427}),
+    ("DATA", "19  Total required stable funding (£'000)",
+     {"FY2025": 3608230, "FY2024": 3324269, "FY2023": 2993447, "FY2022": 2436946}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "190%", "FY2024": "190%", "FY2023": "161.40%", "FY2022": "154%"}),
+]
+
+bw.add_km1_sheet(
+    title="OakNorth Bank plc — KM1 Key Metrics",
+    subtitle="OakNorth Bank plc's own published 'UK KM1 - Key metrics' template, reproduced in its own row "
+             "order, labels and precision. Amounts in £'000, ratios as printed. Row numbers are OakNorth's "
+             "own from the FY2025 edition; the FY2022 and FY2023 editions print the same rows unnumbered. "
+             "FY2015-FY2020 are not shown at all - the template post-dates those editions and no edition "
+             "prints a column for them.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=70,
+    source_height=520,
+    years=KM1_YEARS,
+)
+
+
 def metric(name, unit, rows, note=None):
     bw.add_metric_sheet(name, unit, rows, p3_sources(), note=note, first_col_width=52, source_height=155)
 

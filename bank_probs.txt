@@ -1,0 +1,80 @@
+General points:
+- If no Km1 for 2021 and earlier, please dont put header for them in spreadsheet, eg Alrayan bank
+- For RWA breakdown when using multiple sources, for differnt years, eg using UK OV1 template table 11 EU OV1, Table 1 analysis of pillar 1 capital requirement, for one bank, put into seperate sections, to make it easier to understand the situation
+- 2024 should no longer be an acceptable baseline for latest bank data, many banks now have 2026 data looking at their websites, we should endavour to bring all up to at least 2025 (kroo bank eg falls short here) 
+
+
+1) Access Bank UK 2024 RWA breakdown & RWA
+2) Alicia bank no RWA breakdown 
+3) Alpha bank London, no KM1 despite having balance sheet and Pnl till 2019 
+4) Arab Bank Europe, RWA breakdonw 2022 and 2021 but not 2024 and 2023? Same with KM1
+5) Arbuthnot Latham 2025 RWA breakdown but has other data for 2025
+6) Bank of Africa - RWA Breakdown in 2024 - 2021 but not 2025, 2020, 2019, 2018, 2015 and 2014, no apparent km1 metrics but has all pillar 3 ratios for most years
+7) Bank of beirut - jumps in data from 2021 - 2017
+8) Bank of Cylon (UK) No KM1 overview, but othe rpillar 3 metrics available 
+9) Bank of Ireland, RWA breakdown not publicaly discolsed but does have breakdowns for 2017 to 2014, same km1  problems as before 
+10) Bank of the Phillippine Islands (europe) PLc - Same KM1 as before 
+11) bank Saderat - No RWA breakdown 2025 - 2024, but does have RWA breakdown 2023 - 2019, same km1 problem as before 
+12) Same KM1 as before
+13) RWA breadkwon not publicly disclosed 2025 - 2022, but is discolsed 2021 - 2014 
+14) Brown shipley - KM1 key metrics only exists 2024, 2025, 2023, 2022 and 2021 appears to be missing depiste having data for those years for pillar 3
+15) C Hoeare and Co - RWA published for 2026 but no breakdown, no km1 either for 2026? SOme of this may not be released yet 
+16) CAF bank - 2025 RWA breakdown not publically discolsed by is for 2024 and earlier, km1 not shown for 2025 
+17) Cambridge and counties bank - 2025 RWA breakdown missing, no 2025 km1 entry either
+18) Castle trust capital financials - RWA breakddown not available in 2023 and 2022 but is in 2024 and 2021, also there seems to be a row called FY2022-FY2023
+19) Carter Allen - No RWA breakdown, RWA, or KM1
+20) Charity bank - No RWA breakdown 2024 and 2024, KM1 missing 2024 and 2025 but is there FY2022-FY2021 
+21) Charter court financial services - No RWA breakdown, RWA, or KM1
+22) Citibank Uk - No 2025 asset quality figures 
+23) Cynergy Bank - Sparse RWA breakdown, no data for 2025, 2024, 2017, 2016, KM1 missing 2025, FY2022-FY2023
+24) There is already a note here, but no RWA breakdown, RWA or KM1 
+25) FCMB - No KM1 for any year 
+26) Fidbank UK - RWA breakdown missing 2025, 2024, KM1 missing 2025 
+27) Firstbank - No RWA Breakdwon for 2025, no KM1 for 2025
+28) Gatebouse Bank - No RWA breakdow for 2025, no KM1 for 2025 
+29) Ghana international - No RWA breakdown for 2025, KM1 missing for 2025 
+30) Grifin Bank - No pillar 3 metrics except for 2023 
+31) Gauranty Trust bank - no balance sheet for 2025 , but does have pillar 3 for that year
+32) GUlf International bank - No data for 2025 at all 
+33) Hampden adn Co - No RWA breakdown 2025 and 2024, KM1 missing 2025 and 2024 
+34) Havin - No RWA breakdown, no Km1 
+35) HBL - No KM1 for all years 
+36) HSBC Bank PLC - SHould have 2026 data now 
+37) HSBC innvoation bank - RWA breakdown only for 2022, Km1 missing 2025-2023, when other pillar 3 should be available 
+38) Should have 2026 data now 
+39) Itau BBA international - No KM1 for 2025 and 2024
+40) Jordan Internation - No 2025 RWA breakdown, KM1 or pillar 3 data 
+41) Julian Hodge - No RWA breakdown 2025 and 2024, no KM1 2025 and 2024 
+42) Kexim - KM1 only shows for 2025 
+43) Kingdom bank - No RWA breakdown 2025 - 2022, but is available 2021 and 2020, KM1 same story 
+44) Kuwait Finance - RWA breakdown clearly visible but calims int he total RWAs sheet not discosed, no KM1 any year 
+45) Marks and spencers - No KM1 claims it publishes no pillar 3 but all pillar 3 sheets are filled in 
+46) Melli bank - no RWA breakdown, no KM1 any year 
+47) RWA breakdown shows 2023-2019 but not present 2025 - 2024 and 2018 - 2016, no KM1 2024 and 2024 
+48) Metro Bank - no 2025 or 2024 casho flow or balance sheet 
+49) Monument bank - no 2025 data for anything 
+50) Morgan stanley bank international - No KM1 
+51) National bank of Kuwait - 2023 no rwa breakdown or 2023 km1 
+52) national westminster bank plc - 2026 data should now be available
+53) Nomurea bank international - No RWA breakdown or KM1 
+54) Northern bank - No KM1 
+55) Perenna - no RWA breakdwon or any pillar 3 metrics 
+56) Persia international - No RWA breakdown 2025 - 2022 or km1 2025 - 2023 
+57) Phillippine national bank Europe - No RWA breakdown 2022, 2018, no KM1 data 
+58) Rathbones investment management - No RWA breakdown, Km1, or other pillar 3 metrics 
+59) RCI bank - CET1 capital no data 2022 - 2019 but CET1 ratio data exists in that time period 
+60) Redwood - No RWA breakdown 2025, 2024 
+61) No RWA breakdwon 2026 - 2024, no Km1 data 
+62) Santander financial services - No RWA breakdown, no Km1 
+63) Santander - 2026 data should be available
+64) Schroder - no RWA breakdown, Km1 or any other pillar 3 
+65) Streambank - Saying not publicly disclosed for 2026 for RWA breakdown but has 2025 -2024, cuold be publication timing 
+66) The bank of london group - No RWA breakdown, RWA or KM1 
+67) This bank - No RWA breakdown, no KM1 
+68) Triodos - no 2025 RWA breakdown, no KM1
+69) Turkish bank Uk - CET1 capital maanged to be source dby not CET1 ratio for 2025 
+70) Union bancaire Privee - no 2025 data 
+71) United National - No KM1, CET1 capital present, but not CET1 ratio 
+72) Weatherbys - NO 2025 RWA breakdown, no KM1 
+72) No 2025 balance sheet, RWA breakdwon missing 2019 -2016 but present 2015 and 2014, same with other pillar 3
+

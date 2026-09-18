@@ -989,13 +989,24 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA) (£'000)", {"FY2025": 101212, "FY2024": 99206, "FY2023": 108880, "FY2019": 131851, "FY2018": 130130}),
         ("Total net cash outflows (£'000)", {"FY2025": 77081, "FY2024": 66349, "FY2023": 86856, "FY2019": 118123, "FY2018": 116560}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2021": "345%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
     ],
-    note="Not disclosed for FY2021/FY2022 - the Key Metrics/KM1-style LCR template was not yet used in BOCUK's "
-         "FY2021 Pillar 3 disclosure, and no FY2022 document was found (see source note). FY2020's Pillar 3 "
-         "document discloses only the headline Liquidity Ratio (109%, from its infographic-style 'Key Metrics' "
-         "summary) with no HQLA/net cash outflow breakdown anywhere in that document - the two absolute £'000 "
-         "rows are left blank for FY2020 rather than guessed, while the ratio itself is populated. FY2013 is blank "
+    note="FY2021 ADDED 2026-09-18 (interior-gap sweep): 345%, from the FY2021 Pillar 3 document's own "
+         "infographic-style 'KEY METRICS' panel, printed p.3, where it is captioned 'LIQUIDITY RATIO' - the "
+         "SAME panel, in the same document series, with the same caption, that already supplies this row's "
+         "FY2020 figure of 109%. This note previously said FY2021 was 'Not disclosed' because 'the Key "
+         "Metrics/KM1-style LCR template was not yet used in BOCUK's FY2021 Pillar 3 disclosure'. The KM1-style "
+         "template really is absent from that edition - but so is it from the FY2020 edition, whose headline "
+         "figure this workbook had already accepted, so the reason given did not distinguish the two years and "
+         "the FY2021 panel had simply not been read. Both years are the Bank's headline liquidity ratio, both "
+         "are whole-percent, and neither edition breaks out HQLA or net cash outflows anywhere - the two "
+         "absolute £'000 rows stay blank for FY2020 AND FY2021 rather than being guessed. "
+         "FY2022 remains genuinely blank: no FY2022 Pillar 3 document was ever published (see the sourced "
+         "negative in the source note), and the FY2022 and FY2023 statutory accounts state no liquidity ratio "
+         "of any kind - re-checked 2026-09-18 by re-rendering the FY2023 accounts' Strategic Report and "
+         "risk-management pages at 300 dpi and OCR'ing them, since that document is an image-only scan; its "
+         "liquidity sections are entirely narrative (ILAAP, stress testing, HQLA portfolio) with no figure. "
+         "FY2013 is blank "
          "on all three rows for a structural reason: the LCR did not exist as a UK requirement or disclosure at "
          "31 December 2013 (it was phased in from October 2015), and the recovered 31 December 2013 edition "
          "contains no liquidity ratio at all - its liquidity section describes the then-applicable BIPRU 12 / "
@@ -1060,7 +1071,7 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"}),
         ("Total Capital Ratio", {"FY2025": "21.7%", "FY2024": "24.6%", "FY2023": "45.9%", "FY2021": "57.8%", "FY2020": "36.7%", "FY2019": "57.5%", "FY2018": "46.9%"}),
         ("Leverage Ratio", {"FY2025": "14.3%", "FY2024": "18.5%", "FY2023": "28.8%", "FY2021": "46.2%", "FY2020": "35.3%", "FY2019": "34.2%", "FY2018": "46.6%"}),
-        ("LCR", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
+        ("LCR", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2021": "345%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
         ("NSFR", {"FY2025": "185%", "FY2024": "141%", "FY2023": "141%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "

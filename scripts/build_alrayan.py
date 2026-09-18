@@ -887,17 +887,22 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000s",
     ratios=[
-        ("CET1 Ratio", {"FY2024": "15.95%", "FY2023": "17.36%", "FY2022": "14.93%", "FY2021": "15.1%", "FY2020": "13.4%"}),
-        ("Tier 1 Ratio", {"FY2024": "16.15%", "FY2023": "17.65%", "FY2022": "15.23%", "FY2021": "15.4%", "FY2020": "13.7%"}),
-        ("Total Capital Ratio", {"FY2024": "17.19%", "FY2023": "19.41%", "FY2022": "17.45%", "FY2021": "18.1%", "FY2020": "16.2%"}),
-        ("Leverage Ratio", {"FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"}),
-        ("LCR", {"FY2024": "523%", "FY2023": "641%", "FY2022": "442%", "FY2021": "316%", "FY2020": "352%"}),
-        ("NSFR", {"FY2024": "161%", "FY2023": "157%", "FY2022": "155%", "FY2021": "146%", "FY2020": "145%"}),
+        ("CET1 Ratio", {"FY2025": "15.45%", "FY2024": "15.95%", "FY2023": "17.36%", "FY2022": "14.93%", "FY2021": "15.1%", "FY2020": "13.4%"}),
+        ("Tier 1 Ratio", {"FY2025": "15.65%", "FY2024": "16.15%", "FY2023": "17.65%", "FY2022": "15.23%", "FY2021": "15.4%", "FY2020": "13.7%"}),
+        ("Total Capital Ratio", {"FY2025": "15.82%", "FY2024": "17.19%", "FY2023": "19.41%", "FY2022": "17.45%", "FY2021": "18.1%", "FY2020": "16.2%"}),
+        ("Leverage Ratio", {"FY2025": "7.6%", "FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"}),
+        ("LCR", {"FY2025": "481%", "FY2024": "523%", "FY2023": "641%", "FY2022": "442%", "FY2021": "316%", "FY2020": "352%"}),
+        ("NSFR", {"FY2025": "151%", "FY2024": "161%", "FY2023": "157%", "FY2022": "155%", "FY2021": "146%", "FY2020": "145%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
-         "citation for the underlying document/page. Pillar 3 ratios and RWA Breakdown are blank for FY2025 (no "
-         "Pillar 3 disclosure published yet - the Balance Sheet/P&L/Equity headline blocks above ARE available "
-         "for FY2025, sourced from the Annual Report). LCR uses the 12-month average/KM1 basis throughout, not the "
+         "citation for the underlying document/page. CORRECTION, 18 September 2026 (KM1-032): this note "
+         "previously read 'Pillar 3 ratios and RWA Breakdown are blank for FY2025 (no Pillar 3 disclosure "
+         "published yet)'. That sentence was true when written and became false on 2026-09-15, when Alrayan's "
+         "FY2025 Pillar 3 Disclosures appeared and every FY2025 Pillar 3 cell in this workbook was transcribed "
+         "from its Annex I KM1/OV1 templates. The detail sheets were updated in that pass; this Overview block "
+         "was not, so it carried a stale non-publication claim beside sheets that already held the figures. "
+         "FY2025 is now filled here too, from the same KM1 Annex source the detail sheets cite. "
+         "LCR uses the 12-month average/KM1 basis throughout, not the "
          "spot figures also disclosed in this bank's own Executive Summary tables - see the LCR sheet's note. "
          "'Loans and advances to customers' combines Home Purchase Plans and Structured Real Estate/Commercial "
          "Property Finance (Al Rayan's Sharia-compliant financing products, functionally equivalent to "

@@ -461,6 +461,148 @@ bw.add_asset_quality_sheet(
 )
 
 
+# ---------------------------------------------------------------
+# KM1 Key Metrics - OSB Group plc's own published UK KM1 template, reproduced
+# whole, placed immediately after Asset Quality and immediately before CET1
+# Capital.
+#
+# YEARS: FY2021-FY2025 only. FY2019 and FY2020 carry NO COLUMN AT ALL rather
+# than an empty one - see the row-set finding in KM1_SOURCES below.
+#
+# COLUMN SELECTION. OSB's KM1 is QUARTERLY: the FY2023-FY2025 editions each
+# print five columns (a-e) for the four quarter-ends of the reporting year plus
+# the prior 31 December. Only the 31 December column of each edition is taken
+# here, because this workbook's columns are financial years. The intermediate
+# quarters are not a different basis, just different dates, and mixing one in
+# would silently turn a year column into a quarter column.
+# ---------------------------------------------------------------
+KM1_YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
+
+KM1_SOURCES = (
+    "Sources - OSB Group plc consolidated Pillar 3 basis (includes OneSavings Bank plc and CCFSL), 'UK KM1 - "
+    "Key metrics template', £m. Each year is the 31 DECEMBER column of the edition in which it is the reporting "
+    "year, except FY2021 (see below):\n"
+    f"FY2025: Pillar 3 Disclosures 31 December 2025, section 2.1, p.7 (printed folio 7), column a '31-Dec-25' - "
+    f"{P3_2025_URL}\n"
+    f"FY2024: Pillar 3 Disclosures 31 December 2024, section 2.1, p.9 (printed folio 9), column a '31 Dec 24' - "
+    f"{P3_2024_URL}\n"
+    f"FY2023: Pillar 3 Disclosures 31 December 2023, section 2.1, p.9 (printed folio 9), column a '31 Dec 23' - "
+    f"{P3_2023_URL}\n"
+    f"FY2022: Pillar 3 Disclosures 31 December 2022, 'UK KM1 Key metrics', pp.8-9 (printed folios 8-9; the "
+    f"table breaks across the two pages - the leverage, LCR and NSFR blocks are on p.9), column '31 Dec 2022 "
+    f"(T)' - {P3_2022_URL}\n"
+    f"FY2021: the SAME FY2022 edition's own '31 Dec 2021 (T-4)' comparative column, pp.8-9 - {P3_2022_URL}. "
+    "OSB published no UK KM1 for FY2021 itself (see the row-set finding below), so this column is filled from "
+    "the earliest edition that prints the year on the template rather than left blank.\n\n"
+    "WHY FY2019-FY2021 HAVE NO OWN-EDITION KM1, AND WHY FY2019/FY2020 ARE ABSENT ENTIRELY. The FY2019, FY2020 "
+    "and FY2021 editions each print a table headed 'Table 1: Key metrics' (FY2019, FY2020) or 'Table 4: Key "
+    "metrics' (FY2021), and none of them is the UK KM1 template. They carry no row numbers, no SREP block (UK "
+    "7a-7d), no combined-buffer block, no NSFR block and no leverage exposure measure, while carrying an 'Asset "
+    "Encumbrance Ratio' row that appears nowhere in the template. That is a different and shorter table, not an "
+    "unnumbered rendering of the template, so it is not transcribed here - the template simply is not used in "
+    "those editions, which is a different finding from 'no Pillar 3 is published' (OSB published one every "
+    "year). FY2021 is nonetheless shown because the FY2022 edition prints a full-template comparative column "
+    "for 31 December 2021; FY2019 and FY2020 are shown NOT AT ALL, because the earliest column on any edition's "
+    "template is 31 December 2021, so there is nothing for a FY2019 or FY2020 header to head.\n\n"
+    "OSB ALSO PUBLISHES QUARTERLY PILLAR 3 DISCLOSURES (Q1/Q2/Q3), and at the date of the latest-edition check "
+    "below the Q1 2026 and Q2 2026 editions were already published. Those are interim quarters, not a new "
+    "financial year - OSB's year-end is 31 December - so the newest FULL-YEAR edition remains 31 December 2025, "
+    "which this workbook holds. Latest-edition check performed 2026-09-18 against osb.co.uk's own "
+    "'Results, reports and presentations' page.\n\n"
+    "RESTATEMENT NOTE, recorded not reconciled: the FY2022 edition footnotes its liquidity rows 'Liquidity "
+    "coverage has been restated for June 2022 and December 2021 due to a change in methodology. Previous "
+    "disclosures were prepared using a 3 month quarterly average. Disclosure have now been restated to "
+    "incorporate a 12 month average preceding the quarter in line with regulation.' The FY2021 column here is "
+    "therefore on the 12-month-average basis as that edition restated it. The same edition also footnotes that "
+    "on a like-for-like basis the 31 December 2021 leverage ratio would have been 8.9% with an exposure measure "
+    "of £21,742.2m; this sheet carries the 7.9% / £24,555.5m actually printed in the template's own row.\n\n"
+    "NSFR rows 18-20 are blank for FY2021 and FY2022 because the FY2022 edition prints them empty, footnoted "
+    "'In line with PS22/21, Net Stable Funding Disclosures are not due until 1 January 2023'. That is a "
+    "regulatory boundary, not a gap.\n\n" + ENTITY_NOTE
+)
+
+km1_rows = [
+    ("SECTION", "Available own funds (amounts)", {}),
+    ("DATA", "1  Common Equity Tier 1 (CET1) capital (£m)",
+     {"FY2025": 1975.8, "FY2024": 1946.4, "FY2023": 1905.7, "FY2022": 1920.7, "FY2021": 1781.7}),
+    ("DATA", "2  Tier 1 capital (£m)",
+     {"FY2025": 2142.9, "FY2024": 2096.4, "FY2023": 2055.7, "FY2022": 2070.7, "FY2021": 1931.7}),
+    ("DATA", "3  Total capital (£m)",
+     {"FY2025": 2392.9, "FY2024": 2346.4, "FY2023": 2305.7, "FY2022": 2070.7, "FY2021": 1931.7}),
+    ("SECTION", "Risk-weighted exposure amounts", {}),
+    ("DATA", "4  Total risk-weighted exposure amount (£m)",
+     {"FY2025": 12541.7, "FY2024": 11915.7, "FY2023": 11845.6, "FY2022": 10494.7, "FY2021": 9101.6}),
+    ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "15.8%", "FY2024": "16.3%", "FY2023": "16.1%", "FY2022": "18.3%", "FY2021": "19.6%"}),
+    ("DATA", "6  Tier 1 ratio (%)",
+     {"FY2025": "17.1%", "FY2024": "17.6%", "FY2023": "17.4%", "FY2022": "19.7%", "FY2021": "21.2%"}),
+    ("DATA", "7  Total capital ratio (%)",
+     {"FY2025": "19.1%", "FY2024": "19.7%", "FY2023": "19.5%", "FY2022": "19.7%", "FY2021": "21.2%"}),
+    ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure "
+                "amount)", {}),
+    ("DATA", "UK 7a  Additional CET1 SREP requirements (%)",
+     {"FY2025": "0.8%", "FY2024": "0.8%", "FY2023": "0.8%", "FY2022": "0.8%", "FY2021": "0.8%"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)",
+     {"FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.3%", "FY2021": "0.3%"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)",
+     {"FY2025": "0.4%", "FY2024": "0.4%", "FY2023": "0.4%", "FY2022": "0.4%", "FY2021": "0.4%"}),
+    ("DATA", "UK 7d  Total SREP own funds requirements (%)",
+     {"FY2025": "9.5%", "FY2024": "9.5%", "FY2023": "9.4%", "FY2022": "9.5%", "FY2021": "9.5%"}),
+    ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
+    ("DATA", "8  Capital conservation buffer (%)",
+     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    # FY2021 prints a literal "0%" here, not a dash - a disclosed zero, kept.
+    ("DATA", "9  Institution specific countercyclical capital buffer (%)",
+     {"FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%", "FY2021": "0%"}),
+    ("DATA", "11  Combined buffer requirement (%)",
+     {"FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%"}),
+    ("DATA", "UK 11a  Overall capital requirements (%)",
+     {"FY2025": "14.0%", "FY2024": "14.0%", "FY2023": "13.9%", "FY2022": "13.0%", "FY2021": "12.3%"}),
+    ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)",
+     {"FY2025": "9.6%", "FY2024": "10.2%", "FY2023": "10.0%", "FY2022": "10.3%", "FY2021": "11.7%"}),
+    ("SECTION", "Leverage ratio", {}),
+    ("DATA", "13  Total exposure measure excluding claims on central banks (£m)",
+     {"FY2025": 28956.3, "FY2024": 27322.9, "FY2023": 27438.8, "FY2022": 24725.4, "FY2021": 24555.5}),
+    ("DATA", "14  Leverage ratio excluding claims on central banks (%)",
+     {"FY2025": "7.4%", "FY2024": "7.7%", "FY2023": "7.5%", "FY2022": "8.4%", "FY2021": "7.9%"}),
+    ("SECTION", "Liquidity Coverage Ratio", {}),
+    ("DATA", "15  Total high-quality liquid assets (HQLA) (Weighted value - average) (£m)",
+     {"FY2025": 3181.5, "FY2024": 3351.8, "FY2023": 3078.0, "FY2022": 2907.1, "FY2021": 2636.3}),
+    ("DATA", "16a  Cash outflows - Total weighted value (£m)",
+     {"FY2025": 2171.6, "FY2024": 2134.3, "FY2023": 1847.2, "FY2022": 1656.8, "FY2021": 1442.0}),
+    ("DATA", "16b  Cash inflows - Total weighted value (£m)",
+     {"FY2025": 273.0, "FY2024": 340.0, "FY2023": 281.6, "FY2022": 165.3, "FY2021": 93.8}),
+    ("DATA", "16  Total net cash outflows (adjusted value) (£m)",
+     {"FY2025": 1898.6, "FY2024": 1794.3, "FY2023": 1565.6, "FY2022": 1491.5, "FY2021": 1348.3}),
+    ("DATA", "17  Liquidity coverage ratio (%)",
+     {"FY2025": "169.5%", "FY2024": "188.0%", "FY2023": "197.1%", "FY2022": "197.0%", "FY2021": "195.5%"}),
+    ("SECTION", "Net Stable Funding Ratio", {}),
+    # FY2022/FY2021 blank: the FY2022 edition prints rows 18-20 empty, not zero
+    # - NSFR disclosures were not due until 1 January 2023 (PS22/21).
+    ("DATA", "18  Total available stable funding (£m)",
+     {"FY2025": 26596.3, "FY2024": 27138.8, "FY2023": 26087.0}),
+    ("DATA", "19  Total required stable funding (£m)",
+     {"FY2025": 18911.8, "FY2024": 20051.6, "FY2023": 19638.6}),
+    ("DATA", "20  NSFR ratio (%)",
+     {"FY2025": "140.6%", "FY2024": "135.4%", "FY2023": "132.8%"}),
+]
+
+bw.add_km1_sheet(
+    title="OneSavings Bank plc — KM1 Key Metrics",
+    subtitle="OSB Group plc's own published 'UK KM1 - Key metrics template', reproduced in its own row order, "
+             "row numbering, labels and precision. Amounts in £m, ratios as printed. OSB GROUP CONSOLIDATED "
+             "BASIS, not OneSavings Bank plc solo - see the entity note. Each column is the 31 December column "
+             "of that year's own edition (FY2021: the FY2022 edition's comparative). FY2019 and FY2020 are not "
+             "shown at all: those editions do not use the template.",
+    rows=km1_rows,
+    sources_text=KM1_SOURCES,
+    first_col_width=68,
+    source_height=430,
+    years=KM1_YEARS,
+)
+
+
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, f"OSB Group consolidated basis, {unit}" if unit else "OSB Group consolidated basis", rows_data, p3_sources(), note=note, first_col_width=50, source_height=190)
 

@@ -722,6 +722,13 @@ KM1_SOURCES = (
     "RWA and ratio figures are on the individual metric sheets, sourced from that table and labelled as "
     "such - they are deliberately not reassembled into a KM1 shape here.\n\n"
     + ENTITY_NOTE
+    + "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2022 AND FY2021 - READ FROM THE DOCUMENTS ON 2026-09-18 AND "
+    "RECORDED HERE SO THE QUESTION IS NOT RE-OPENED. The FY2022 edition's Key Metrics table prints CET1 Capital, "
+    "T1 Capital and Total Capital all as 84,579 at Dec-22 and all as 82,690 at Dec-21. The FY2021 edition's Table "
+    "1 states the reason in its own rows: 'Additional Tier 1 Capital -' and 'Tier 2 Capital -', against Total "
+    "Regulatory Capital of 82,690. ENTITY: the FY2021 edition prints Group beside Bank (82,690 against 90,051) "
+    "and the FY2022 edition's table is headed 'Consolidated Group'. This sheet is the GROUP series.\n"
 )
 
 bw.add_km1_sheet(
@@ -751,10 +758,24 @@ metric("Total RWAs", "£'000", [("Total risk-weighted exposure amount", TOTAL_RW
 
 bw.add_rwa_breakdown_sheet(
     title="DF Capital Bank Limited — RWA Breakdown",
-    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000 (UK OV1 template). FY2023 category split OCR-recovered from an image-rendered table (2026-09-12). See source note at bottom.",
+    subtitle="Distribution Finance Capital Holdings plc Group basis, £'000. TWO different source tables, "
+             "kept in separate sections below: the OV1-format 'Overview of RWA' table for FY2025-FY2022, and "
+             "the pre-OV1 Table 3 'Pillar 1 Capital requirement' - which prints a risk-weighted-assets column "
+             "alongside the capital-requirement column - for FY2021 and FY2020. The older table carries only "
+             "two risk categories, so no row runs across the break. FY2023 category split OCR-recovered from "
+             "an image-rendered table (2026-09-12). See source note at bottom.",
     rows=[
+        # GA-002: two source templates, each in its own section with its own TOTAL.
+        # No figure changed, no row merged or re-labelled across the break.
+        ("SECTION", "OV1-format 'Overview of RWA' table - DF Capital Pillar III 2025, p.5 (FY2025, with FY2024 "
+                    "as that document's own comparative column); DF Capital Pillar III 2024, section 3.4 "
+                    "'Approach to RWAs', p.15 (FY2023, OCR-recovered from an image-rendered table); and Pillar 3 "
+                    "Disclosures at 31 December 2022, section 5.1 'Pillar 1 Capital requirements - Overview of "
+                    "RWA and Own Funds', p.22 (FY2022). All four years carry the OV1 row set - credit risk "
+                    "excluding CCR, counterparty credit risk with its standardised and CVA components, and "
+                    "operational risk - whatever each edition titles it (FY2025-FY2022)", {}),
         ("DATA", "Credit risk (excluding CCR)",
-        {"FY2025": 533039, "FY2024": 388533, "FY2023": 323338, "FY2022": 369638, "FY2021": 211065, "FY2020": 90139}),
+         {"FY2025": 533039, "FY2024": 388533, "FY2023": 323338, "FY2022": 369638}),
         ("DATA", "Counterparty credit risk (CCR) - of which standardised approach",
          {"FY2025": 2259, "FY2024": 1635, "FY2023": 1651, "FY2022": 662}),
         ("DATA", "Counterparty credit risk (CCR) - of which credit valuation adjustment (CVA)",
@@ -762,11 +783,27 @@ bw.add_rwa_breakdown_sheet(
         ("TOTAL", "Counterparty credit risk (CCR), total",
          {"FY2025": 3286, "FY2024": 4006, "FY2023": 2402, "FY2022": 1029}),
         ("DATA", "Operational risk (Basic Indicator Approach)",
-         {"FY2025": 87281, "FY2024": 65026, "FY2023": 21294, "FY2022": 11305, "FY2021": 5288, "FY2020": 5288}),
+         {"FY2025": 87281, "FY2024": 65026, "FY2023": 21294, "FY2022": 11305}),
         ("TOTAL", "Total RWAs",
-         {"FY2025": 623607, "FY2024": 457565, "FY2023": 347034, "FY2022": 381972, "FY2021": 216353, "FY2020": 95427}),
+         {"FY2025": 623607, "FY2024": 457565, "FY2023": 347034, "FY2022": 381972}),
         ("DATA", "Securitisation exposures in the non-trading book (after the cap, deducted from CET1 - not part of Total RWAs)",
-         {"FY2025": 10942, "FY2024": 10095, "FY2023": 11281, "FY2020": 0}),
+         {"FY2025": 10942, "FY2024": 10095, "FY2023": 11281}),
+
+        ("SECTION", "Table 3 'Pillar 1 Capital requirement at 31 December' - DF Capital Pillar III Dec 2021, "
+                    "p.22 (FY2021, with FY2020 as that table's own comparative column), and Pillar 3 Disclosures "
+                    "at 31 December 2020, p.21 (FY2020). PRE-OV1 AND NOT DERIVED: this table prints a "
+                    "risk-weighted-assets column beside its Pillar 1 capital-requirement column, so these are "
+                    "disclosed RWAs - but it carries only TWO risk categories, with no counterparty-credit-risk, "
+                    "CVA or securitisation line at all, so those rows are absent here rather than nil and cannot "
+                    "be read across from the block above. The FY2020 edition's section 10 states that 'At 31 "
+                    "December 2020 the Group had no exposure to securitisation structures', which is why the "
+                    "securitisation row below carries an explicit 0 for that year rather than a blank; the "
+                    "securitisation programme itself began only in March 2023 (FY2021, FY2020)", {}),
+        ("DATA", "Credit Risk", {"FY2021": 211065, "FY2020": 90139}),
+        ("DATA", "Operational Risk", {"FY2021": 5288, "FY2020": 5288}),
+        ("TOTAL", "Total RWAs", {"FY2021": 216353, "FY2020": 95427}),
+        ("DATA", "Securitisation exposures in the non-trading book (not part of Total RWAs)",
+         {"FY2020": 0}),
     ],
     sources_text=(
         "Sources - Distribution Finance Capital Holdings plc Pillar 3 Disclosures, 'Overview of risk "
@@ -777,7 +814,7 @@ bw.add_rwa_breakdown_sheet(
         f"programme, which only began March 2023 per the FY2023 Pillar 3 document's own approach-to-RWAs "
         f"note) - {P3_2021_URL}\n"
         f"FY2020: DF Capital Pillar 3 Disclosures at 31 December 2020, Table 3 'Pillar 1 capital "
-        f"requirement', p.20 (pre-dates CCR/CVA and securitisation entirely - the document's own s.10 "
+        f"requirement', p.21 (pre-dates CCR/CVA and securitisation entirely - the document's own s.10 "
         f"states 'At 31 December 2020 the Group had no exposure to securitisation structures', hence the "
         f"explicit GBP0k rather than blank) - {P3_2020_URL}\n"
         f"FY2022: DF Capital Pillar 3 Disclosures at 31 December 2022, p.22 (FY2022 OV1-style table) - {P3_2022_URL}; "
@@ -809,7 +846,33 @@ LCR_BASIS_NOTE = (
     "against both PDFs 2026-09-16."
 )
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "4", note=LCR_BASIS_NOTE)
-metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "4", note=NSFR_NOTE)
+# GAP-FILL (2026-09-18): FY2024 and FY2025 previously carried NO cell here, so two
+# sheet-years read as blank to audit_gaps.py even though the finding was complete
+# and evidenced in NSFR_NOTE. The finding is now stated IN the columns. A separate
+# display dict is used so the Overview sheet's NSFR series keeps numeric values only.
+# RE-VERIFIED 2026-09-18 by direct search of all four relevant documents, each of
+# which has a genuine text layer (so these zeros are facts about the documents, not
+# instrument limits): Pillar 3 at 31 December 2024 (7pp, 11,640 chars) and Pillar 3
+# 2025 (7pp, 11,893 chars) - zero hits for 'NSFR' / 'net stable funding' against a
+# 'pillar' control of 10 and 9; Annual Report 2024 (101pp, 460,556 chars, 'capital'
+# control 355) and Annual Report 2025 (97pp, 432,968 chars, 'capital' control 341) -
+# zero hits in both, while the 2025 report DOES print an LCR ('Liquidity Coverage
+# Ratio was at 693%'), which is the positive control showing the search works.
+# Both Pillar 3 editions state the cause themselves at p.3, verbatim and identically:
+# 'The Group has opted into the Small Domestic Deposit Takers ("SDDT") regime at both
+# Consolidated and Bank levels. Having received PRA approval, disclosures are prepared
+# in accordance with the regime's reduced disclosure requirements as prescribed by
+# Article 433b.'
+# DATE DISCIPLINE: the PRA consent is dated 07/03/2025, so it does NOT by itself cover
+# the FY2024 reporting date. What covers FY2024 is that its Pillar 3 document was
+# PUBLISHED in April 2025, after the consent, and is itself already the reduced
+# Article 433b form saying 'Having received PRA approval'. That is publication timing,
+# not a waiver reaching backwards - see the DATE FIT paragraph in the sources note.
+NSFR_SDDT = ("Not published - SDDT reduced Pillar 3 template (Article 433b) drops the NSFR; "
+             "not disclosed in the Annual Report either")
+NSFR_DISPLAY = dict(NSFR, **{"FY2025": NSFR_SDDT, "FY2024": NSFR_SDDT})
+
+metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR_DISPLAY)], "4", note=NSFR_NOTE)
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),

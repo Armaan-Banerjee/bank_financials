@@ -2208,8 +2208,16 @@ KM1_SOURCES = (
     "Rows 14a-14e are likewise blank by formal exclusion in every edition. Each document's footnote 2 "
     "states the additional leverage disclosures are 'Only required for LREQ firms... The rows have been "
     "left blank as the Bank is not currently captured by either threshold'. Rows UK 8a, UK 9a, 10 and "
-    "UK 10a print '-' in the FY2020-FY2024 editions and are not printed at all in the FY2025 edition; a "
-    "printed dash is reproduced as a blank, never as a zero.\n"
+    "UK 10a are DASHED in the FY2024, FY2023 and FY2022 editions' Individual tables and in the FY2022 "
+    "edition's 31-Dec-21 and 31-Dec-20 comparative columns, and they carry that dash here - FY2024, FY2023, "
+    "FY2022, FY2021 and FY2020, twenty cells, re-read at source on 2026-09-18. They are NOT PRINTED AT ALL "
+    "in the FY2025 edition, whose Table 1 runs straight from row 9 to row 11, so FY2025 is correctly BLANK "
+    "on those four rows. That contrast is the whole point: a dash means the Bank printed 'this does not "
+    "apply to us', a blank means the Bank printed nothing, and this sheet now shows both on the same four "
+    "rows. A dash is never reproduced as a zero, and never as a blank.\n"
+    "Note the FY2025 edition was read by RENDERING printed folios 4-5 at 150 dpi: its text layer extracts "
+    "225,000 characters of mojibake (zero occurrences of even the word 'the'), so a text search of it would "
+    "have reported the whole template as absent.\n"
     "Each edition's footnote 3 records that the LCR rows 'have been calculated as a simple average of the "
     "12 month end observations preceding the end of each half year', and the FY2025 edition adds that the "
     "NSFR 'is calculated as an average of the current and three preceding quarters'. The FY2025 edition "
@@ -2266,13 +2274,22 @@ km1_rows = [
     ("DATA", "8  Capital conservation buffer (%)", {
         "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%", "FY2021": "2.5%",
         "FY2020": "2.5%"}),
+    # Dashed in the INDIVIDUAL table of every edition that prints one - read on
+    # 2026-09-18 in the FY2024, FY2023 and FY2022 editions' appendix tables
+    # ("KM1 - KEY METRICS TEMPLATE (INDIVIDUAL)"), never the section 3.2 GROUP
+    # table. FY2021 and FY2020 come from the FY2022 INDIVIDUAL table's columns
+    # c and e, the same columns every other FY2021/FY2020 cell here comes from.
     ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the level "
-             "of a Member State (%)", {}),
+             "of a Member State (%)",
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-", "FY2020": "-"}),
     ("DATA", "9  Institution specific countercyclical capital buffer (%)", {
         "FY2025": "2.0%", "FY2024": "2.0%", "FY2023": "2.0%", "FY2022": "1.0%"}),
-    ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
-    ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)",
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-", "FY2020": "-"}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)",
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-", "FY2020": "-"}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer",
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-", "FY2020": "-"}),
     ("DATA", "11  Combined buffer requirement (%)", {
         "FY2025": "4.5%", "FY2024": "4.5%", "FY2023": "4.5%", "FY2022": "3.5%", "FY2021": "2.5%",
         "FY2020": "2.5%"}),
@@ -2428,6 +2445,7 @@ bw.add_rwa_breakdown_sheet(
     title="The Co-operative Bank p.l.c. — RWA Breakdown (Bank Company-only, Individual Pillar 3 basis)",
     subtitle="UK OV1 'Overview of risk weighted exposures (Individual)', £m",
     rows=[
+        ("SECTION", "UK OV1 'Overview of risk weighted exposures (Individual)' — each year's own Pillar 3 Disclosures (FY2024-FY2021)", {}),
         ("DATA", "Credit risk (excluding CCR)", {
             "FY2024": 4143.6, "FY2023": 4132.3, "FY2022": 4178.2, "FY2021": 3743.6,
         }),
@@ -2441,16 +2459,24 @@ bw.add_rwa_breakdown_sheet(
             "FY2024": 0.0, "FY2023": 0.0, "FY2022": 0.0, "FY2021": 0.0,
         }),
         ("DATA", "Operational risk", {
-            "FY2024": 706.7, "FY2023": 566.3, "FY2022": 495.1, "FY2021": 491.5, "FY2020": 512.6,
-            "FY2019": 486.5, "FY2018": 480.9, "FY2017": 550.8,
+            "FY2024": 706.7, "FY2023": 566.3, "FY2022": 495.1, "FY2021": 491.5,
         }),
         ("DATA", "Amounts below the thresholds for deduction (for information)", {
             "FY2024": 136.1, "FY2023": 205.1, "FY2022": 236.1, "FY2021": 232.6,
         }),
         ("TOTAL", "Total", {
-            "FY2024": 4950.8, "FY2023": 4830.6, "FY2022": 4806.7, "FY2021": 4399.8, "FY2020": 4668.4,
-            "FY2019": 4830.1, "FY2018": 5004.3, "FY2017": 4986.0, "FY2016": 6676.1, "FY2015": 7422.9,
-            "FY2014": 12632.2,
+            "FY2024": 4950.8, "FY2023": 4830.6, "FY2022": 4806.7, "FY2021": 4399.8,
+        }),
+        ("SECTION", "'Pillar 1 capital requirements' table, Appendix 2 (Table 40/41/42, individual basis) — an older CRR exposure-class format (IRB approach vs Standardised approach) that predates the UK OV1 template. Only Operational risk and the Total map onto the categories above, so no other category row is shown for these years and this block does NOT foot — the remaining components are published on an exposure-class basis that cannot be mapped to the rows above without inventing a correspondence the Bank never published (FY2020-FY2017)", {}),
+        ("DATA", "Operational risk", {
+            "FY2020": 512.6, "FY2019": 486.5, "FY2018": 480.9, "FY2017": 550.8,
+        }),
+        ("TOTAL", "Total", {
+            "FY2020": 4668.4, "FY2019": 4830.1, "FY2018": 5004.3, "FY2017": 4986.0,
+        }),
+        ("SECTION", "Total risk weighted assets only, no category breakdown published — the Bank's pre-UK-OV1-era Pillar 3 disclosures (Table 1 'CRD IV key capital ratios' and equivalents) state the RWA total and do not break it into risk categories (FY2016-FY2014)", {}),
+        ("TOTAL", "Total", {
+            "FY2016": 6676.1, "FY2015": 7422.9, "FY2014": 12632.2,
         }),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,

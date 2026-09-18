@@ -48,7 +48,23 @@ ENTITY_NOTE = (
     "and changed its name to Afin Bank Limited after receiving banking authorisation with restrictions in "
     "October 2024. FY2021-FY2023 figures below are therefore All Africa Capital Limited's own pre-bank statutory "
     "accounts for the same continuous legal entity, sourced from Companies House (not from afinbank.com, which "
-    "only hosts the FY2024 bank-era documents)."
+    "only hosts the FY2024 bank-era documents).\n"
+    "WHY THIS WORKBOOK STOPS AT FY2024 - CHECKED 18 SEPTEMBER 2026, AND FY2025 DOES NOT EXIST YET. Three "
+    "independent routes, all positive readings rather than failed fetches. (1) The bank's own index at "
+    "https://afinbank.com/about/annual-reports-and-disclosures/ returns HTTP 200 unblocked and links exactly "
+    "three PDFs: the FY2024 Pillar 3, the FY2024 signed year-end accounts, and an interest-rate history. "
+    "(2) The site's WordPress media REST API is open and was searched across the WHOLE library, not just the "
+    "page - search=pillar, annual, accounts, disclosure, financial - and returns exactly two report documents, "
+    "both FY2024, both uploaded 24 September 2025. The same API returns dozens of hits for product and "
+    "rate documents dated through August 2026, so the library is live and current and the two-document result "
+    "is a fact about what the bank has published, not about the query. (3) Companies House filing history for "
+    "company 13090556 shows the newest accounts filing is 'AA - Full accounts made up to 31 December 2024', "
+    "filed 29 September 2025; no FY2025 accounts had been filed as at 18 September 2026.\n"
+    "WHEN TO LOOK AGAIN: very soon. This company files at the statutory deadline - FY2024 accounts were filed "
+    "29 September 2025 (the deadline for a 31 December 2024 year-end is 30 September 2025) and posted to the "
+    "website on 24 September 2025; FY2023 was filed 3 June 2024. The FY2025 filing deadline is 30 SEPTEMBER "
+    "2026, twelve days after this check, and the FY2024 pattern suggests the Pillar 3 and the website upload "
+    "land in the same week. A re-check in October 2026 should find both."
 )
 
 FY2020_SKIP_NOTE = (
@@ -375,9 +391,11 @@ def metric(name, unit, rows_data, note=None):
 # locate - FY2023/FY2022/FY2021 are blank here because no KM1 obligation or
 # disclosure existed, not because none was found.
 #
-# THE FULL TEMPLATE, INCLUDING ITS EMPTY ROWS. Afin prints the complete UK KM1
-# row set, including UK 8a, UK 9a, 10 and UK 10a - each as a DASH. Under map
-# rule 2 a dash is left BLANK and is not recorded as zero. That matters here
+# THE FULL TEMPLATE, INCLUDING ITS DASHED ROWS. Afin prints the complete UK KM1
+# row set, including UK 8a, UK 9a, 10 and UK 10a - each as a DASH, re-read off
+# the FY2024 PDF on 2026-09-18. Each of those four cells carries a literal "-":
+# the dash is Afin stating the requirement does not apply to it, which is a
+# different statement from a blank. That matters here
 # because this same table also prints GENUINE ZEROES two blocks below (UK 16a
 # and row 16 are "0", not "-"), so the two glyphs appear in one column and mean
 # different things. Recording the dashes as zeros would assert that Afin has a
@@ -419,11 +437,11 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8  Capital conservation buffer (%)", {"FY2024": "2.5%"}),
     ("DATA", "UK 8a  Conservation buffer due to macro-prudential or systemic risk identified at the "
-             "level of a Member State (%)", {}),
+             "level of a Member State (%)", {"FY2024": "-"}),
     ("DATA", "9  Institution specific countercyclical capital buffer (%)", {"FY2024": "2%"}),
-    ("DATA", "UK 9a  Systemic risk buffer (%)", {}),
-    ("DATA", "10  Global Systemically Important Institution buffer (%)", {}),
-    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {}),
+    ("DATA", "UK 9a  Systemic risk buffer (%)", {"FY2024": "-"}),
+    ("DATA", "10  Global Systemically Important Institution buffer (%)", {"FY2024": "-"}),
+    ("DATA", "UK 10a  Other Systemically Important Institution buffer", {"FY2024": "-"}),
     ("DATA", "11  Combined buffer requirement (%)", {"FY2024": "4.5%"}),
     ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": "147%"}),
     ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%)", {"FY2024": "276%"}),
@@ -487,11 +505,16 @@ KM1_SOURCES = (
     "contingent on a consultation, NOT a PRA Rulebook Rule 3.1 election, and it removes no disclosure duty for "
     "FY2024 - which is why a full KM1 exists for this year.\n"
     "\n"
-    "LATEST-EDITION CHECK: Afin's own index at https://afinbank.com/about/annual-reports-and-disclosures/ was "
-    "read successfully on 2026-09-16 (HTTP 200, unblocked). It lists exactly three PDFs: this 2024 Pillar 3 "
-    "document, the FY2024 signed year-end accounts, and an interest-rate history. The 2024 edition is the "
-    "newest Pillar 3 published. NONE NEWER - and this is a positive reading of the bank's live index, not an "
-    "inference from a failed fetch."
+    "LATEST-EDITION CHECK, RE-RUN 18 SEPTEMBER 2026 - NONE NEWER, ON POSITIVE EVIDENCE. Afin's own index at "
+    "https://afinbank.com/about/annual-reports-and-disclosures/ reads successfully (HTTP 200, unblocked) and "
+    "lists exactly three PDFs: this 2024 Pillar 3 document, the FY2024 signed year-end accounts, and an "
+    "interest-rate history. The 2024 edition is the newest Pillar 3 published. This check went further than the "
+    "2026-09-16 one: the site's WordPress media REST API is open and was searched across the whole library "
+    "(search=pillar / annual / accounts / disclosure / financial), which returns those same two FY2024 report "
+    "documents and nothing else, against dozens of product and rate PDFs dated through August 2026 - so the "
+    "library is live and the negative is about the bank's publishing, not about the index page. Companies "
+    "House agrees: the newest accounts filing for company 13090556 is 'Full accounts made up to 31 December "
+    "2024', filed 29 September 2025. See the entity note for the publication lag and when to look again."
 )
 
 bw.add_km1_sheet(
@@ -499,7 +522,7 @@ bw.add_km1_sheet(
     subtitle="Afin Bank's own published UK KM1 template, in its own row order, row numbers, labels and "
              "precision. Amounts in £'000; ratios as printed. FY2024 is the only column because the bank was "
              "authorised (with restrictions) in October 2024 and states it provides no prior-period "
-             "comparatives. Dashed rows are left blank; the zeroes in UK 16a and row 16 are the bank's own. "
+             "comparatives. Dashed rows carry the dash Afin printed; the zeroes in UK 16a and row 16 are the bank's own. "
              "Row 17 is published as 999999% - see the sources note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,

@@ -60,8 +60,10 @@ ENTITY_NOTE = (
     "LCR/NSFR at all. FY2014's RWA and ratios are DERIVED (not directly disclosed) from the FY2014 Annual Report's "
     "own 'Pillar 1 capital requirements' table, using the standard CRR identity that the Pillar 1 minimum capital "
     "requirement equals 8% of RWA - flagged wherever used. FY2015's RWA/ratios are sourced from the FY2016 Pillar "
-    "III Disclosure's own FY2015 comparative column (same precedent as this workbook already used for FY2021, "
-    "whose own edition pre-dates the KM1 template).\n"
+    "III Disclosure's own FY2015 comparative column, because the FY2015 edition publishes no such table at all "
+    "and there is therefore no own-edition figure for a later comparative to displace. FY2021 is NOT that case "
+    "and no longer follows that precedent: its own edition publishes 'Table 2: Key ratios', so every FY2021 "
+    "Pillar 3 metric is now taken from it (ticket KM1-034, 18 September 2026).\n"
     "(3) FY2015-2016 held non-zero Tier 2 capital (the collective impairment provision, per CRR transitional rules) "
     "- CET1/Tier1 ratios differ slightly from the Total Capital ratio those two years only, unlike every other year "
     "in this workbook where CET1 = Tier1 = Total Capital exactly (no AT1/T2 instruments from FY2017 onward).\n"
@@ -107,6 +109,47 @@ CASH_FLOW_SOURCES = (
 )
 
 
+FY2021_RESOURCING_NOTE = (
+    "FY2021 RE-SOURCED TO ITS OWN EDITION, 18 SEPTEMBER 2026 (ticket KM1-034), AND CHECKED FIGURE BY FIGURE "
+    "AGAINST THE FY2022 COMPARATIVE IT REPLACES. Until that date every FY2021 figure on these Pillar 3 metric "
+    "sheets was taken from the FY2022 Pillar III Disclosure's FY2021 comparative column, justified as being "
+    "'for consistency with every other year in this workbook'. That is the reasoning the project's rule - use "
+    "each year's OWN edition, never a later edition's comparative - exists to forbid, because consistency is "
+    "what makes a substitution feel harmless. Every FY2021 cell above now comes from BLME's own FY2021 "
+    "Pillar III Disclosure.\n"
+    "The comparison is recorded rather than discarded, so a reader can tell 'we checked and it matched' from "
+    "'nobody ever looked'. FY2021 edition vs FY2022 edition's FY2021 comparative:\n"
+    "- CET1 capital / Tier 1 capital / Total capital: the FY2021 edition's Table 2 prints £239m for all three "
+    "(it captions the third 'Total regulatory capital resources'); the FY2022 comparative prints 238,839 in "
+    "GBP'000 (= £238.839m) for all three. THEY AGREE at the precision the FY2021 edition prints. £239m is "
+    "carried here, which is the bank's own precision for that year: every year FY2015-FY2020 is likewise an "
+    "integer £m, FY2017-FY2020 off the same 'Table 2: Key ratios' in their own editions. The finer 238.839 "
+    "figure is not lost: it is "
+    "what the KM1 Key Metrics sheet carries, under rule 28, and it is named here.\n"
+    "- CET1 ratio / Tier 1 ratio / Total capital ratio: 18.18% in both documents, all three rows. Identical.\n"
+    "- Leverage ratio: 14.92% in both. The FY2021 edition prints it twice - Table 2 (p.7) and section 16 "
+    "'Table 40: Leverage' (p.55), which gives the Basel and the UK leverage ratio as 14.92% each, and states "
+    "BLME has no claims on central banks to exclude, so the two bases coincide for this bank. Its leverage "
+    "exposure measure, £1,600m, agrees with the FY2022 comparative's 1,600,428 GBP'000.\n"
+    "- Total RWAs: the FY2021 edition's own Table 8 prints £1,313.777m; the FY2022 comparative prints 1,313,776 "
+    "GBP'000. A £1,000 rounding difference between the bank's own two printings of the same quantity. Recorded, "
+    "not reconciled, and the own-edition 1,313.777 is what this workbook now carries - which is also the figure "
+    "the RWA Breakdown sheet's FY2021 total carries, from that same Table 8, so the two sheets now agree where "
+    "before they differed by £1k.\n"
+    "- LCR: the two documents GENUINELY DIFFER, 208% against 315%, and this is a basis difference rather than a "
+    "restatement. See the LCR sheet's own source note and note, which set out the evidence on both sides.\n"
+    "- NSFR: only the FY2021 edition prints a figure (113.85%); the FY2022 comparative prints the literal string "
+    "'N/A'. See the NSFR sheet.\n"
+    "- MREL: neither document prints a ratio. See the MREL Ratio sheet.\n"
+    "THE ABSENCE OF A KM1 TEMPLATE IN THE FY2021 EDITION IS A FINDING, NOT A FAILED SEARCH. Text extraction "
+    "from the 55-page FY2021 PDF returns 103 hits for 'capital', 123 for 'ratio', 54 for 'liquidity', 21 for "
+    "'buffer', 16 for 'own funds' and 14 for 'leverage', and against that richness returns ZERO for 'KM1', "
+    "'Key metrics' and 'SREP'. The document uses the bank's own pre-template vocabulary - 'Total regulatory "
+    "capital resources', 'Risk-weighted assets', 'Leverage ratio exposure measure' - which is why it still "
+    "supplies almost every metric on these sheets even though it supplies no KM1 rows.\n"
+)
+
+
 def p3_sources(extra=""):
     return (
         "Sources - BLME plc's own Pillar III Disclosures, £m capital amounts / % ratios, all years:\n"
@@ -114,10 +157,9 @@ def p3_sources(extra=""):
         f"FY2024: Pillar III Disclosure - 31 December 2024, Key metrics table, p.4 - {P32024_URL}\n"
         f"FY2023: Pillar III Disclosure - 31 December 2023, Key metrics table, p.4 - {P32023_URL}\n"
         f"FY2022: Pillar III Disclosure - 31 December 2022, Key metrics table, p.4 - {P32022_URL}\n"
-        f"FY2021: sourced from the FY2022 Pillar III Disclosure's own FY2021 comparative column, Key metrics "
-        f"table, p.4 - {P32022_URL} (the FY2021 edition itself, {P32021_URL}, pre-dates BLME's adoption of the "
-        f"standardised KM1 template - it uses the older CRR own-funds/appendix format instead, so the FY2022 "
-        f"report's comparative column is used for consistency with every other year in this workbook).\n"
+        f"FY2021: Pillar III Disclosure - 31 December 2021, section 1.3 'Table 2: Key ratios', p.7 (capital "
+        f"amounts, the three capital ratios, leverage exposure and ratio, LCR, NSFR) and section 4.2 'Table 8: "
+        f"Overview of Risk Weighted Assets', p.15 (Total RWAs) - {P32021_URL}\n"
         f"FY2020: Pillar III Disclosure - 31 December 2020, Table 2 'Key ratios', p.6 - {P32020_URL}\n"
         f"FY2019: Pillar III Disclosure - 31 December 2019, Table 2 'Key ratios', p.6 - {P32019_URL}\n"
         f"FY2018: Pillar III Disclosure - 31 December 2018, Table 2 'Key ratios', p.6 - {P32018_URL}\n"
@@ -127,12 +169,15 @@ def p3_sources(extra=""):
         f"FY2015: sourced from the FY2016 Pillar III Disclosures' own FY2015 comparative column (Table 3/Table 7, "
         f"pp.13,16) - {P32016_URL} (the FY2015 edition itself, {P32015_URL}, pre-dates CRD IV's standardised "
         f"template and discloses only absolute Tier 1/Tier 2 capital resource amounts - no RWA and no ratio at "
-        f"all - so the FY2016 report's comparative column is used, same precedent as FY2021 above).\n"
+        f"all - so the FY2016 report's comparative column is used. That is the map's rule-28 case, in which a "
+        f"year's own edition publishes NO capital table at all and there is therefore no own-edition figure for a "
+        f"later comparative to displace; it is NOT the case FY2021 was in - see the FY2021 note below).\n"
         f"FY2014: DERIVED from the FY2014 Annual Report and Accounts - Revised's own 'Capital adequacy' note "
         f"(Total regulatory capital £189,179,557; Total Pillar 1 capital requirement £99,164,000), p.115 - "
         f"{FS2014_URL} - using the standard CRR identity that the Pillar 1 minimum capital requirement equals 8% "
         f"of RWA (RWA = £99,164,000 / 0.08 = £1,239.55m); the FY2014 Pillar III Disclosure itself, {P32014_URL}, "
         f"discloses only absolute Tier 1 capital resource amounts, no RWA and no ratio of any kind.\n"
+        + "\n" + FY2021_RESOURCING_NOTE
         + (extra + "\n" if extra else "")
         + "\n" + ENTITY_NOTE
     )
@@ -729,15 +774,28 @@ KM1_SOURCES = (
     "• LIQUIDITY COVERAGE RATIO. This sheet carries 315%, the figure the FY2022 edition's comparative "
     "column prints, and it is internally consistent with its own component rows in that column (HQLA 71,695 "
     "/ net cash outflows 22,744 = 315.2%), which are 12-month weighted AVERAGES as the row captions say. The "
-    "FY2021 edition's own Table 2 prints 208% for the same date - a smaller, differently-built summary that "
-    "gives no components and states no averaging basis. The two are not reconciled here and neither is "
-    "adjusted to match the other; this sheet reproduces the template column, and the divergence is recorded "
-    "so a reader meeting 208% elsewhere knows where it comes from.\n"
+    "FY2021 edition's own Table 2 prints 208% for the same date, and the LCR metric sheet in this workbook "
+    "carries that 208% under its own citation (ticket KM1-034, 18 September 2026 - before that date the "
+    "metric sheet carried this sheet's 315% too). The FY2021 edition settles what its own 208% measures: its "
+    "section 6.2.6.7 'Table 12: LCR Metrics', p.25, prints the LCR at each 2021 quarter-end (Q1 249%, Q2 "
+    "577%, Q3 193%, Q4 208%) with the 31/12/2021 components liquidity buffer £68.65m and net cash outflows "
+    "£32.97m, so 208% is a year-end SPOT ratio against this column's 12-month AVERAGE. A BASIS DIFFERENCE, "
+    "NOT A RESTATEMENT. The two are not reconciled here and neither is adjusted to match the other; this "
+    "sheet reproduces the template column and the metric sheet reproduces the year's own edition, so A "
+    "CROSS-CHECK BETWEEN THE TWO SHEETS WILL REPORT THIS CELL, AND THAT REPORT IS CORRECT AND EXPECTED.\n"
     "• NET STABLE FUNDING RATIO. The FY2022 edition's comparative prints 'N/A' for all three NSFR rows, "
     "which is what this sheet shows. The FY2021 edition's own Table 2 does print an NSFR of 113.85%, on its "
     "own bespoke basis, and that is the figure the NSFR metric sheet in this workbook carries under its own "
     "citation. So this sheet and that one legitimately differ for FY2021, each faithful to a different "
-    "published table, and neither has been edited to agree with the other.\n\n"
+    "published table, and neither has been edited to agree with the other.\n"
+    "EVERYWHERE ELSE THE TWO FY2021 SOURCES AGREE, AND THAT WAS CHECKED RATHER THAN ASSUMED (ticket KM1-034, "
+    "18 September 2026). The FY2021 edition's Table 2 prints CET1 = Tier 1 = Total regulatory capital "
+    "resources of £239m against this column's 238,839 GBP'000, all three capital ratios at 18.18% against "
+    "18.18%, a leverage exposure measure of £1,600m against 1,600,428 GBP'000 and a leverage ratio of 14.92% "
+    "against 14.92%; its Table 8 prints total RWAs of £1,313.777m against this column's 1,313,776 GBP'000, a "
+    "£1k rounding difference between the bank's own two printings. The metric sheets now carry the "
+    "own-edition figures at the FY2021 edition's own precision, so where they read £239m and this sheet reads "
+    "238,839 the two are the same figure printed to different precision, not two figures.\n\n"
     "LATEST-EDITION CHECK: BLME's own Financial Results and Reporting page "
     "(https://www.blme.com/about-us/investors/financial-results-and-reporting/) was read on 2026-09-16. It "
     "lists Pillar III Disclosures for every year from 2009 to 2025; 2025 is the newest and this workbook "
@@ -828,7 +886,7 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 
 metric("CET1 Capital", "£m",
-       [("Common Equity Tier 1 (CET1) capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 238.839,
+       [("Common Equity Tier 1 (CET1) capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 239,
          "FY2020": 245, "FY2019": 221, "FY2018": 215, "FY2017": 216, "FY2016": 216, "FY2015": 201, "FY2014": 189.180})],
        p3_sources())
 
@@ -838,7 +896,7 @@ metric("CET1 Ratio", "% of RWA",
        p3_sources())
 
 metric("Tier 1 Capital", "£m",
-       [("Tier 1 capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 238.839,
+       [("Tier 1 capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 239,
          "FY2020": 245, "FY2019": 221, "FY2018": 215, "FY2017": 216, "FY2016": 216, "FY2015": 201, "FY2014": 189.180})],
        p3_sources(), note="CET1 = Tier 1 = Total Capital every year from FY2017 onward - BLME has no Additional Tier 1 "
             "or Tier 2 instruments in that period. FY2015-2016 held non-zero Tier 2 capital (the collective "
@@ -852,7 +910,7 @@ metric("Tier 1 Ratio", "% of RWA",
        p3_sources())
 
 metric("Total Capital", "£m",
-       [("Total capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 238.839,
+       [("Total capital", {"FY2025": 225.806, "FY2024": 227.639, "FY2023": 226.478, "FY2022": 227.212, "FY2021": 239,
          "FY2020": 245, "FY2019": 221, "FY2018": 215, "FY2017": 220, "FY2016": 220, "FY2015": 204, "FY2014": 189.180})],
        p3_sources())
 
@@ -862,7 +920,7 @@ metric("Total Capital Ratio", "% of RWA",
        p3_sources())
 
 metric("Total RWAs", "£m",
-       [("Total risk-weighted exposure amount", {"FY2025": 1170.428, "FY2024": 1279.034, "FY2023": 1342.418, "FY2022": 1376.389, "FY2021": 1313.776,
+       [("Total risk-weighted exposure amount", {"FY2025": 1170.428, "FY2024": 1279.034, "FY2023": 1342.418, "FY2022": 1376.389, "FY2021": 1313.777,
          "FY2020": 1472.268, "FY2019": 1466.255, "FY2018": 1245.086, "FY2017": 1032, "FY2016": 1055, "FY2015": 1305, "FY2014": 1239.550})],
        p3_sources("FY2014 RWA is derived, not directly disclosed - see the FY2014 line above."))
 
@@ -938,11 +996,38 @@ metric("Leverage Ratio", "%",
             "project where FY2021 sits on an older methodology.")
 
 metric("LCR", "%",
-       [("Liquidity Coverage Ratio (12-month average)", {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "315%",
+       [("Liquidity Coverage Ratio", {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "208%",
          "FY2020": "234.15%", "FY2019": "261.23%", "FY2018": "184.86%", "FY2017": "403%", "FY2016": "4,115%",
          "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})],
-       p3_sources(),
-       note="FY2016 sourced from the FY2017 Pillar III Disclosure's own FY2016 comparative column (Table 2, p.5) "
+       p3_sources(
+           f"FY2021 LCR - THE ONE FIGURE ON WHICH BLME'S TWO DOCUMENTS FOR THAT DATE GENUINELY DISAGREE, AND IT "
+           f"IS A BASIS DIFFERENCE, NOT A RESTATEMENT. This sheet carries 208%, from BLME's OWN FY2021 Pillar III "
+           f"Disclosure - section 1.3 'Table 2: Key ratios', p.7, corroborated inside the same document by section "
+           f"6.2.6.7 'Table 12: LCR Metrics', p.25, which prints the LCR 'as reported at the end of each calendar "
+           f"quarter of 2021' (Q1 249%, Q2 577%, Q3 193%, Q4 208%) together with its 31/12/2021 components, "
+           f"liquidity buffer £68.65m and total net cash outflows £32.97m (68.65 / 32.97 = 208.2%). So 208% is a "
+           f"YEAR-END SPOT ratio - {P32021_URL}\n"
+           f"The FY2022 Pillar III Disclosure's FY2021 comparative column prints 315% instead, and that figure is "
+           f"a 12-MONTH WEIGHTED AVERAGE: its own component rows in that column are captioned 'Weighted value - "
+           f"average' and give HQLA 71,695 / total net cash outflows 22,744 = 315.2% - {P32022_URL}. Both figures "
+           f"are correct for 31 December 2021 and they are not reconciled here; neither has been adjusted to "
+           f"agree with the other. The KM1 Key Metrics sheet in this workbook carries the 315% average, because "
+           f"that sheet reproduces the FY2022 edition's template column whole, so THE TWO SHEETS LEGITIMATELY "
+           f"DIFFER FOR FY2021 and any cross-check that reports it is reporting a real, documented basis "
+           f"divergence rather than a transcription error.\n"
+           f"Until 18 September 2026 this sheet carried the 315% average for FY2021 (ticket KM1-034). That was "
+           f"the single average-basis figure sitting in the middle of a spot-basis run, which is what made the "
+           f"substitution invisible."),
+       note="BASIS BREAK AT FY2021/FY2022, and the row caption used to hide it. FY2014-FY2021 are YEAR-END SPOT "
+            "ratios, printed in the bespoke 'Table 2: Key ratios' each of those editions carries; FY2022-FY2025 "
+            "are the UK KM1 measure, which is a 12-MONTH WEIGHTED AVERAGE. The two are not like-for-like and the "
+            "series should not be read as one continuous measure across that boundary. This row was captioned "
+            "'Liquidity Coverage Ratio (12-month average)' until 18 September 2026, which was a false statement "
+            "about FY2014-FY2021: the FY2020 and FY2021 editions each print a quarterly LCR table of their own "
+            "(FY2020's Q4 is 234.15%, FY2021's Q4 is 208%) showing that their Table 2 headline is the "
+            "fourth-quarter-end figure, not an average of the four. The caption is now unqualified and the basis "
+            "is stated here per year instead.\n"
+            "FY2016 sourced from the FY2017 Pillar III Disclosure's own FY2016 comparative column (Table 2, p.5) "
             "since FY2016's own Pillar III Disclosure does not include an LCR figure at all - the 4,115% figure is "
             "transcribed exactly as printed in that source; it is an outlier against every other year in this "
             "series and is flagged here rather than silently corrected or omitted. FY2014-2015 not publicly "
@@ -955,8 +1040,9 @@ metric("NSFR", "%",
          "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})],
        p3_sources(
            f"FY2021 NSFR ONLY: Pillar III Disclosure - 31 December 2021, section 1.3 Table 2 'Key ratios', p.7 - "
-           f"{P32021_URL}. The FY2022 report's FY2021 comparative column (used for every other FY2021 metric here) "
-           f"prints 'N/A' for NSFR rows 18-20, so the FY2021 edition's own Table 2 is the only source for it.\n"),
+           f"{P32021_URL}. The FY2022 report's FY2021 comparative column prints the literal string 'N/A' for NSFR "
+           f"rows 18-20, so the FY2021 edition's own Table 2 is the only source for it - as it now is for every "
+           f"other FY2021 metric in this workbook too (ticket KM1-034, 18 September 2026).\n"),
        note="FY2018-FY2021 NSFR was voluntarily disclosed by BLME in Table 2 'Key ratios' of its own Pillar III "
             "Disclosure, ahead of the UK's binding NSFR requirement (PRA PS17/21 and PS22/21, in force 1 January "
             "2022); FY2014-2017 pre-date this voluntary disclosure entirely. BASIS NOTE: FY2018-FY2021 are therefore "
@@ -967,10 +1053,16 @@ metric("NSFR", "%",
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "MREL is not mentioned in the FY2021-2025 Pillar III Disclosures reviewed (searched "
-                             "directly, no hits any year); the FY2018-2020 disclosures mention MREL only to state "
-                             "that 'the PRA does not require BLME to hold a MREL recapitalisation reserve' (no "
-                             "ratio given); FY2014-2017 disclosures don't mention MREL at all (it wasn't yet a "
+    per_note={"MREL Ratio": "No MREL ratio is disclosed in any year. CORRECTED 18 September 2026 (ticket "
+                             "KM1-034): this note previously said MREL was 'not mentioned in the FY2021-2025 "
+                             "Pillar III Disclosures reviewed (searched directly, no hits any year)', which was "
+                             "false for FY2021 - that edition mentions it at section 5.3 'Total loss absorbing "
+                             "capacity', p.16: 'The total loss absorbing capacity at 31 December 2021 is equal to "
+                             "the minimum capital requirement (i.e. Pillar 1 + Pillar 2A capital). The PRA does "
+                             "not require BLME to hold a MREL recapitalisation reserve.' That is the same "
+                             "statement the FY2018-2020 disclosures make, and it gives no ratio. The FY2022-2025 "
+                             "disclosures are 4-5 page documents containing only the KM1 Key metrics table and do "
+                             "not mention MREL at all; FY2014-2017 disclosures don't mention it either (it wasn't yet a "
                              "framework) - consistent with a bank of this size not being its own resolution entity "
                              "under the Bank of England's MREL framework throughout the full FY2014-2025 window."},
 )

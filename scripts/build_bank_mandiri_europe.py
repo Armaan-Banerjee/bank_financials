@@ -13,18 +13,36 @@ from bank_workbook import BankWorkbook
 # precedent: 13-sheet structure, Cash Flow Statement sheet documents the exemption
 # instead of line items, Overview sheet omits the cash-flow chart.
 #
-# The Bank's functional currency is US Dollars (Note 1.2). No dedicated Pillar 3
-# document exists - the only capital/liquidity disclosures found are a narrative
-# paragraph + "Key Performance Indicator" table in the Strategic Report of each
-# Annual Report, giving only a combined Total Capital Ratio (labelled "Capital
-# Adequacy Ratio", Own Funds / Total RWA - no separate CET1/Tier 1 breakdown exists
-# anywhere), LCR, NSFR, and total "regulatory capital resources" (Own Funds, $m).
-# This KPI table format was only introduced from the FY2023 Annual Report onward
+# The Bank's functional currency is US Dollars (Note 1.2). The entity has published
+# exactly ONE Pillar 3 document in its history, covering 31 December 2016 (see
+# PILLAR3_2016_ARCHIVE_URL). For every other year the only capital/liquidity
+# disclosures are a narrative paragraph + "Key Performance Indicator" table in the
+# Strategic Report of each Annual Report, giving only a combined Total Capital Ratio
+# (labelled "Capital Adequacy Ratio", Own Funds / Total RWA - no separate CET1/Tier 1
+# breakdown is printed there), LCR, NSFR, and total "regulatory capital resources"
+# (Own Funds, $m); plus, in the FY2018-FY2021 Annual Reports only, a "regulatory
+# Tier 1 resources" table inside the Risk management note.
+# The KPI table format was only introduced from the FY2023 Annual Report onward
 # (FY2022's own report has a KPI table with no capital/liquidity rows, and no
 # capital/liquidity narrative was found in its Strategic Report or Directors'
 # Report) - FY2022's figures come from FY2023's own comparative column instead.
-# FY2021 could not be found in any source checked (FY2022 filing has no numeric
-# capital/liquidity disclosure at all) - left blank, not estimated.
+# FY2021's Annual Report carries no capital ratio, LCR or NSFR in any form (checked
+# 2026-09-18 against the bank's own text-layer copy) - left blank, not estimated.
+#
+# GA-005 (2026-09-18) - THREE CLAIMS THIS SCRIPT PREVIOUSLY MADE WERE WRONG AND ARE
+# CORRECTED THROUGHOUT:
+#   (1) "no RWA figure appears in any source checked for any year" - the 2016 Pillar 3
+#       prints a full "Risk weighted assets" table (Total Risk Exposure US$64,242k) and
+#       a "Total Eligible Capital" of US$49,163k. Both are now on their sheets, as the
+#       bank's own DISCLOSED figures - not derived, and unrelated to the back-solved
+#       values withdrawn on 2026-09-15, which stay withdrawn.
+#   (2) "the credit-quality-per-class table was NOT found in any of the FY2023-FY2014
+#       Annual Reports" - it is in EVERY one of them, FY2014 through FY2025, plus the
+#       2016 Pillar 3. Asset Quality is now populated for all twelve years.
+#   (3) "the regulatory Tier 1 resources table appears in the FY2021-style report" only
+#       - it is also in the FY2020, FY2019 and FY2018 Annual Reports. The FY2017, FY2016,
+#       FY2015 and FY2014 reports' "(G) Capital adequacy risk" note is narrative only,
+#       with no table, which is a positive finding rather than a failed search.
 
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]  # most recent first, calendar year-end (31 December)
 YEAR_LABEL = {y: y for y in YEARS}
@@ -178,13 +196,21 @@ EXEMPTION_NOTE = (
 CASH_FLOW_SOURCES = ENTITY_NOTE + "\n\n" + EXEMPTION_NOTE
 
 NOT_DISCLOSED_NOTE = (
-    "No dedicated Pillar 3 document is published by this entity - the only capital/liquidity disclosures found are "
-    "a narrative paragraph and Key Performance Indicator table in each Annual Report's Strategic Report, which give "
-    "only a single combined Total Capital Ratio (no CET1/Tier 1 breakdown), LCR, and NSFR. This metric is not "
-    "disclosed in any form found in any of the 4 Annual Reports (FY2022-FY2025) or the FY2014-FY2020 filings "
-    "checked under HD-017 (this KPI-table format was only introduced from the FY2023 Annual Report onward - "
-    "confirmed by direct inspection of the FY2020 and FY2014 Chairman's Statement/Strategic Report, both of which "
-    "discuss capital and liquidity only in qualitative/narrative terms, with no ratio figures of any kind)."
+    "This metric is not disclosed by this entity in any year, and that has been established positively rather "
+    "than by failing to find it. The entity has published exactly one Pillar 3 disclosure in its history, for "
+    "31 December 2016; that document contains ZERO occurrences of \"Tier 1\", \"Tier 2\", \"own funds\", "
+    "\"leverage\" and \"MREL\" across its whole 98,380-character text, while returning 38 hits for \"Pillar 3\" "
+    "and 36 for \"liquidity\" in the same extraction, so the zeros are facts about the document. For every "
+    "other year the only capital/liquidity disclosures are a narrative paragraph and Key Performance Indicator "
+    "table in each Annual Report's Strategic Report - a single combined Total Capital Ratio (no CET1/Tier 1 "
+    "breakdown), LCR and NSFR - plus, in the FY2018-FY2021 reports only, a Tier 1 resources table inside the "
+    "Risk management note, which itemises Tier 1 and says nothing about ratios, leverage or MREL. The KPI-table "
+    "format was only introduced from the FY2023 Annual Report onward; the FY2014-FY2022 reports discuss capital "
+    "and liquidity only in qualitative terms, with no ratio figures of any kind. Full-text searches of the "
+    "bank's own text-layer copies of the FY2021, FY2022, FY2024 and FY2025 reports (2026-09-18) return no "
+    "leverage ratio and no MREL figure; the two \"leverage\" hits in the FY2024 and FY2025 reports are the verb "
+    "(\"leverage Bank Mandiri Group's wholesale banking ecosystem\", \"a PD model that leverages the financial "
+    "... macroeconomic series\"), not the ratio."
 )
 
 
@@ -221,24 +247,66 @@ def p3_sources(extra=""):
         "over a REQUIREMENT rather than over RWAs - Bank Saderat's 'Capital Cover' and Alpha Bank London's "
         "shareholders'-funds-over-RWA measure are both in that category and must not be mapped here.\n"
         f"PILLAR 3 HISTORY: the only Pillar 3 document this entity is known to have published covers FY2016 and "
-        f"is now dead on the live site, surviving only in the Wayback Machine ({PILLAR3_2016_ARCHIVE_URL}). The "
-        f"practice lapsed about a decade before this workbook's earliest open year, so it gives no reason to "
-        f"expect a recent disclosure.\n"
+        f"is now dead on the live site, surviving only in the Wayback Machine ({PILLAR3_2016_ARCHIVE_URL}). "
+        f"Re-read in full on 2026-09-18, and it is NOT the narrative-only document an earlier note here "
+        f"described: it is a CRD IV Pillar 3 & Remuneration Code disclosure carrying real quantitative tables, "
+        f"and it is the only source in this entity's history that prints a risk-weighted-asset total (Total "
+        f"Risk Exposure US$64,242k, p.11) or an eligible-capital total (Total Eligible Capital US$49,163k, "
+        f"p.12). Both are now carried on the Total RWAs, Total Capital and RWA Breakdown sheets. It contains no "
+        f"CET1/Tier 1/Tier 2 split, no leverage ratio, no capital RATIO and no LCR or NSFR, so it adds nothing "
+        f"to the other metric sheets. The practice lapsed after that one edition, so it gives no reason to "
+        f"expect a recent disclosure - but it does mean FY2016 is better documented than any year between it "
+        f"and FY2022.\n"
+        "LEVEL OF APPLICATION / PARENT DISCLOSURE (KM1 map rule 18), settled 2026-09-18 from the bank's own "
+        "words. Section 1.4 \"Scope\" of the 2016 Pillar 3 states: \"BMEL operates solely without subsidiaries "
+        "or affiliate companies included in its financial statements and, accordingly, these Pillar 3 "
+        "disclosures apply entirely to BMEL.\" This entity discloses on a SOLO basis and is not consolidated "
+        "into any UK parent's disclosure, so there is no UK parent Pillar 3 that could carry a subsidiary block "
+        "for it. Its only parent is PT Bank Mandiri (Persero) Tbk, an Indonesian bank supervised by OJK, which "
+        "carries neither a UK Disclosure (CRR) Article 433 duty nor an EU CRR Article 13(1) large-subsidiary "
+        "duty - the two regimes that make a parent's Pillar 3 the normal home for a subsidiary's numbers. "
+        "Stated plainly: bankmandiri.co.id was not read, because two attempts on 2026-09-18 returned an HTTP/2 "
+        "INTERNAL_ERROR and then a 90-second timeout. That is a fact about the fetch and not about the parent; "
+        "the conclusion above rests on the regime and on BMEL's own Scope paragraph, not on that failed fetch.\n"
+        "COMPANIES HOUSE STATUS CHECKED 2026-09-18: company 03793679 is ACTIVE, SIC 64191 (Banks), last "
+        "accounts made up to 31 December 2025 and filed 28 June 2026, next accounts to 31 December 2026 due "
+        "30 September 2027, confirmation statement filed 23 June 2026 and a director appointed 10 July 2026. "
+        "The entity has NOT wound down, surrendered its permission or deregistered, so none of the blank years "
+        "below can be explained that way - they are years in which an operating, PRA-authorised bank simply "
+        "published no regulatory disclosure.\n"
+        "PRA WAIVERS REGISTER CHECKED 2026-09-18 (map rule 29): the Bank of England consolidated waivers "
+        "register carries exactly one row for FRN 204424 - a direction for modification by consent of 5.1 to "
+        "5.3 of the CAPITAL BUFFERS Part of the PRA Rulebook, ref 00007751, start date 12/04/2024, no end "
+        "date. That is not an SDDT Regime General Application Rule 3.1 opt-in and removes no Pillar 3 "
+        "disclosure duty; it also post-dates every year before FY2024, so it could not explain an earlier "
+        "absence even if it were one. The years with no Pillar 3 therefore have no registered instrument "
+        "behind them: the bank simply stopped publishing after 2016.\n"
         + (extra + "\n" if extra else "")
         + "FY2022's Total Capital Ratio/LCR/NSFR are sourced from the FY2023 Annual Report's own comparative column "
           "- the FY2022 Annual Report's own KPI table and Strategic Report do not include these figures at all "
-          "(this KPI format was only introduced from the FY2023 report onward). FY2021 could not be found in any "
-          "form (numeric or narrative) in the FY2022 Annual Report - left blank, not estimated. HD-017 (2026-09-05) "
+          "(this KPI format was only introduced from the FY2023 report onward). FY2021 has no capital ratio, LCR "
+          "or NSFR in any form: neither in the FY2022 Annual Report's comparative column nor in the FY2021 "
+          "Annual Report itself, whose own text-layer copy was full-text searched on 2026-09-18 and returns zero "
+          "hits on 'risk weighted', 'own funds', 'Total Capital Ratio' and 'liquidity coverage' against 43 hits "
+          "on 'capital' in the same text - left blank, not estimated. HD-017 (2026-09-05) "
           "extended the source-year window back to FY2014 and confirmed this KPI-table format simply did not exist "
           "before FY2023: none of the FY2014-FY2020 Annual Reports checked contain a numeric capital or liquidity "
-          "ratio anywhere (Chairman's Statement, Strategic Report, or notes) - see NOT_DISCLOSED_NOTE. FY2014-FY2020 "
-          "left blank on every regulatory-metric sheet accordingly, not estimated.\n"
+          "RATIO anywhere (Chairman's Statement, Strategic Report, or notes) - see NOT_DISCLOSED_NOTE. That "
+          "remains true of the RATIO sheets. GA-005 (2026-09-18) qualifies it for the AMOUNT sheets, where it was "
+          "over-broad: the FY2018-FY2021 reports each carry a 'regulatory Tier 1 resources' table inside the Risk "
+          "management note (a different part of the document from the Strategic Report those passes searched), "
+          "and the 2016 Pillar 3 carries both an RWA total and an eligible-capital total. Those are now on the "
+          "CET1 Capital, Tier 1 Capital, Total Capital, Total RWAs and RWA Breakdown sheets. FY2014-FY2017 remain "
+          "blank on every regulatory-metric sheet except the FY2016 column fed by the 2016 Pillar 3, and except "
+          "FY2017's Tier 1 figure, which comes from the FY2018 edition's comparative.\n"
           "RE-VERIFIED 2026-09-12 (disclosure audit, independent of the 2026-09-08 RWA-only review): the FY2022 "
           "and FY2025 Annual Reports were re-downloaded from Companies House and OCR'd page-by-page (both are "
           "scanned, no text layer). Three findings, all confirming the existing treatment. (1) The FY2022 report "
           "contains no capital-adequacy ratio, no own-funds figure and no RWA figure anywhere - its KPI table "
-          "carries only return on equity, return on assets, cost efficiency and yield on assets - so FY2021 "
-          "genuinely cannot be recovered from it. (2) The FY2025 KPI table's capital line is a single combined "
+          "carries only return on equity, return on assets, cost efficiency and yield on assets - so FY2021's "
+          "capital RATIO, LCR and NSFR cannot be recovered from it (and, per the FY2021 report's own full-text "
+          "search above, do not exist anywhere; FY2021's Tier 1 AMOUNT does exist and is on its sheets). "
+          "(2) The FY2025 KPI table's capital line is a single combined "
           "'(Own Funds / Risk Weighted Asset) 33.59% 42.90%', and the Strategic Report narrative gives one "
           "combined amount ('The Bank's regulatory capital resources were US$56.4 million on 31 December 2025 "
           "(2024: US$54.3 million)') - there is no CET1/Tier 1/Tier 2 split to transcribe, confirming those four "
@@ -552,6 +620,7 @@ INCOME_STATEMENT_SOURCES = (
       "comparable across every year in the full FY2014-FY2025 window; each year's own component rows reconcile "
       "exactly to it (profit + all populated OCI component rows = total, verified for every year FY2014-FY2020)."
 )
+# (FY2021 gap note removed by GA-005 - the gap is closed; see EQUITY_CHANGES_SOURCES.)
 
 bw.add_income_statement_sheet(
     title="Bank Mandiri (Europe) Limited — Profit and Loss Account and Statement of Comprehensive Income",
@@ -592,6 +661,8 @@ def mov(usd_thousands, year):
 # movements + this line = closing exactly, each year.
 FX_TRANSLATION_EFFECT = {
     "FY2022": 5105, "FY2023": -2099, "FY2024": 744, "FY2025": -3041,
+    # GA-005 (2026-09-18): FY2021 added once the FY2021 Statement of change in equity was read.
+    "FY2021": -224,
     # HD-017: FY2014-FY2020, computed the same way (closing - opening - sum of movement rows, £'000, per year).
     "FY2014": 1738, "FY2015": 1619, "FY2016": 6675, "FY2017": -3618, "FY2018": 2118, "FY2019": -1355, "FY2020": -1316,
 }
@@ -652,9 +723,15 @@ equity_changes_rows = [
     ("DATA", "Profit for the year", mov((None, None, None, 440, 440), "FY2020")),
     ("DATA", "FX translation effect on equity, net (£'000, see FX conversion note)", (None, None, None, None, FX_TRANSLATION_EFFECT["FY2020"])),
     ("TOTAL", "At 31 December 2020", bal((49000, 11496, 1219, -8808, 52907), "FY2020")),
-    # NOTE: FY2021's own equity movements were not located (see EQUITY_CHANGES_SOURCES) - the roll-forward
-    # resumes below at 1 January 2022 using the FY2021 CLOSING balance sheet figures (a different, later
-    # point in time than the 31 December 2020 row directly above), leaving a one-year gap for FY2021 itself.
+    # GA-005 (2026-09-18): the FY2021 gap is CLOSED. The FY2021 Annual Report does carry a full Statement of
+    # change in equity (printed p.20) with a "At 1 January 2021" opening row; the 2026-09-15 session that
+    # first fetched that filing read its Note 24(H) capital table but not its equity statement.
+    ("TOTAL", "At 1 January 2021", bal((49000, 11496, 1219, -8808, 52907), "FY2020")),
+    ("DATA", "Decrease in fair value of debt securities", mov((None, None, -938, None, -938), "FY2021")),
+    ("DATA", "UK corporation tax credit on fair value of financial instruments at FVTOCI", mov((None, None, 144, None, 144), "FY2021")),
+    ("DATA", "Profit for the year", mov((None, None, None, 376, 376), "FY2021")),
+    ("DATA", "FX translation effect on equity, net (£'000, see FX conversion note)", (None, None, None, None, FX_TRANSLATION_EFFECT["FY2021"])),
+    ("TOTAL", "At 31 December 2021", bal((49000, 11496, 425, -8432, 52489), "FY2021")),
     ("TOTAL", "At 1 January 2022", bal((49000, 11496, 425, -8432, 52489), "FY2021")),
     ("DATA", "Decrease in fair value of debt securities", mov((None, None, -3384, None, -3384), "FY2022")),
     ("DATA", "Profit for the year", mov((None, None, None, 609, 609), "FY2022")),
@@ -697,20 +774,21 @@ EQUITY_CHANGES_SOURCES = (
       "increase £680k = £(535)k), so the scanned £(627)k is treated as an OCR/legibility misread of one digit. The "
       "1 January 2014 opening balance is converted at the 31 December 2013 GBP/USD spot rate (not itself a covered "
       "year in this workbook — sourced separately, see FX_SPOT['FY2013'] in the build script) since that date is "
-      "the same point in time as the FY2013 year-end. A one-year gap remains at FY2021: the 31 December 2020 "
-      "closing row above does not connect to the FY2021 opening balance below (see existing FY2021 note "
-      "immediately following) — the FY2021 Annual Report itself was not sourced in this session or the prior one, "
-      "so that single year's equity roll-forward is not shown even though the FY2021 P&L/OCI flows and the 31 "
-      "December 2021 closing balance are both available from the FY2022 Annual Report's comparative column.\n\n"
-      "FY2021's opening balance (1 January 2021) was not located this session — the FY2021 movements "
-      "(profit £376k, FVOCI change $(938)k, deferred tax credit $178k, tax-rate-change effect $(34)k, giving total "
-      "comprehensive loss $(418)k per that year's own Statement of Comprehensive Income) are disclosed via the "
-      "FY2022 Annual Report's comparative column, but the FY2022 report does not itself show a 1 January 2021 "
-      "opening equity roll-forward row — only the FY2021 P&L/OCI flows and the 31 December 2021 closing balance "
-      "(= 1 January 2022 opening balance, £52,489k / $52,489k, shown above) are available without the FY2021 "
-      "Annual Report itself, which was not sourced this session. This sheet therefore begins at 1 January 2022, "
-      "not 1 January 2021 — a narrower start than the Balance Sheet/P&L sheets' FY2021 column, which come "
-      "straight off each report's own comparative column and don't need an opening equity bridge.\n\n"
+      "the same point in time as the FY2013 year-end.\n\n"
+      "FY2021 — GAP CLOSED, GA-005 (2026-09-18). This sheet previously jumped from 31 December 2020 straight to "
+      "1 January 2022, on the stated basis that the FY2021 Annual Report had never been sourced and that the "
+      "FY2022 report shows no 1 January 2021 opening row. The first half of that had already stopped being true "
+      "on 2026-09-15, when the FY2021 filing was found and used for the Tier 1 capital table; what that session "
+      "did not do was open the same document's Statement of change in equity. It is there, printed p.20, and it "
+      "carries the full FY2021 roll-forward: At 1 January 2021 US$52,907k total (share capital 49,000, capital "
+      "reserve 11,496, revaluation reserve 1,219, profit and loss (8,808)); Decrease in fair value of debt "
+      "securities (938); UK corporation tax credit on fair value of financial instruments at FVTOCI 144; Profit "
+      "for the year 376; At 31 December 2021 US$52,489k (49,000 / 11,496 / 425 / (8,432)). The column foots "
+      f"exactly and the opening row equals the 31 December 2020 closing row above. Source: Annual Report FY2021, "
+      f"Statement of change in equity, p.20 — {FY2021_AR_URL}. The equity statement presents the FVTOCI tax "
+      "effect as one combined US$144k line, where the Profit & Loss sheet reproduces the more granular "
+      "presentation the same report's OCI note uses (deferred tax credit $178k plus a $(34)k effect of changes "
+      "in tax rate); 178 - 34 = 144, so the two agree. Each sheet reproduces the table it comes from.\n\n"
       "FX TRANSLATION EFFECT: each year's opening balance is converted at the PRIOR year-end's spot rate (the same "
       "point in time as that row, so opening always exactly equals the prior year's closing row); each year's "
       "movement rows (FVOCI change, profit) are converted at that year's AVERAGE rate, consistent with the "
@@ -755,31 +833,70 @@ bw.add_cash_flow_sheet(
 # ---------------------------------------------------------------
 # Asset Quality (loans and advances to customers by credit quality + ECL)
 # ---------------------------------------------------------------
-# Only FY2025 and FY2024 Annual Reports contain a "Credit quality per class
-# of financial assets" note (Note 23.5, Credit Risk) breaking loans and
-# advances to customers into rating buckets with a 12-month ECL column -
-# this note format was not located in the FY2023/FY2022/FY2021 filings
-# checked (their equivalent notes cover lease/share-capital/pensions/fair-
-# value at the same note numbers instead - the credit-quality-per-class
-# table appears to be a later addition to this entity's disclosure). No
-# Stage 1/2/3 lifetime-ECL split is disclosed in any year checked - every
-# row in the note carries only a "12-mo ECL" column, consistent with this
-# entity never disclosing a non-performing/Stage 3 loan figure anywhere
-# (its whole book appears to be treated as Stage 1/performing).
+# GA-005 (2026-09-18): EVERY Annual Report from FY2014 to FY2025 carries a
+# "Credit quality per class of financial assets" table inside its Risk
+# management note, and so does the 2016 Pillar 3. The earlier claim that the
+# table was absent before FY2024 was wrong; all twelve years are populated
+# below, each from its OWN edition.
+#
+# The table changes presentation at IFRS 9 adoption and the two presentations
+# are NOT merged, because they measure different things:
+#   FY2018-FY2025 - columns "Neither past due nor impaired" / "12-mo ECL" /
+#       "Total". Loss allowances are measured on ALL financial assets at
+#       12-month expected credit losses (the note says so in terms).
+#   FY2014-FY2017 - columns "Neither past due nor impaired (Current)" /
+#       "Impaired" / "Total". No ECL column exists; the Impaired column is
+#       printed "-" in every one of those four years.
+# No Stage 1/2/3 lifetime-ECL split is disclosed in any year, and no
+# non-performing or Stage 3 loan balance appears anywhere in any edition, so
+# no NPL/Stage 3 ratio is presented.
 ASSET_QUALITY_USD = {
+    # IFRS 9 presentation, FY2018-FY2025
     "Sub-investment grade (rated below Baa3 by Moody's) — gross": {"FY2025": 4_814_000},
     "Sub-investment grade (rated below Baa3 by Moody's) — 12-mo ECL": {"FY2025": -57_000},
-    "Unrated — gross": {"FY2025": 127_274_000, "FY2024": 88_401_000},
-    "Unrated — 12-mo ECL": {"FY2025": -601_000, "FY2024": -391_000},
-    "Total gross loans and advances to customers": {"FY2025": 132_088_000, "FY2024": 88_401_000},
-    "Total 12-mo ECL allowance": {"FY2025": -658_000, "FY2024": -391_000},
-    "Total net loans and advances to customers": {"FY2025": 131_430_000, "FY2024": 88_010_000},
+    "Unrated — gross": {
+        "FY2025": 127_274_000, "FY2024": 88_401_000, "FY2023": 87_748_000, "FY2022": 74_202_000,
+        "FY2021": 59_961_000, "FY2020": 42_782_000, "FY2019": 59_104_000, "FY2018": 76_571_000,
+    },
+    "Unrated — 12-mo ECL": {
+        "FY2025": -601_000, "FY2024": -391_000, "FY2023": -320_000, "FY2022": -137_000,
+        "FY2021": -49_000, "FY2020": -34_000, "FY2019": -60_000, "FY2018": -36_000,
+    },
+    "Total gross loans and advances to customers": {
+        "FY2025": 132_088_000, "FY2024": 88_401_000, "FY2023": 87_748_000, "FY2022": 74_202_000,
+        "FY2021": 59_961_000, "FY2020": 42_782_000, "FY2019": 59_104_000, "FY2018": 76_571_000,
+    },
+    "Total 12-mo ECL allowance": {
+        "FY2025": -658_000, "FY2024": -391_000, "FY2023": -320_000, "FY2022": -137_000,
+        "FY2021": -49_000, "FY2020": -34_000, "FY2019": -60_000, "FY2018": -36_000,
+    },
+    "Total net loans and advances to customers": {
+        "FY2025": 131_430_000, "FY2024": 88_010_000, "FY2023": 87_428_000, "FY2022": 74_065_000,
+        "FY2021": 59_912_000, "FY2020": 42_748_000, "FY2019": 59_044_000, "FY2018": 76_535_000,
+    },
+    # Pre-IFRS 9 presentation, FY2014-FY2017 (no ECL column; "Impaired" instead)
+    "Unrated — neither past due nor impaired (pre-IFRS 9)": {
+        "FY2017": 88_506_000, "FY2016": 93_240_000, "FY2015": 74_148_000, "FY2014": 68_247_000,
+    },
+    "Total loans and advances to customers (pre-IFRS 9 presentation)": {
+        "FY2017": 88_506_000, "FY2016": 93_240_000, "FY2015": 74_148_000, "FY2014": 68_247_000,
+    },
 }
 AQ = {k: stock(v) for k, v in ASSET_QUALITY_USD.items()}
-ECL_COVERAGE = {"FY2025": "0.50%", "FY2024": "0.44%"}  # 658/132,088; 391/88,401 - not directly disclosed, calculated here
+# The pre-IFRS 9 table prints "-" on the sub-investment-grade and Impaired rows in all
+# four years. A printed dash is the bank saying the row does not apply to it, which is a
+# different statement from silence, so it is reproduced as a dash rather than blanked.
+DASH4 = {y: "-" for y in ("FY2017", "FY2016", "FY2015", "FY2014")}
+# CALCULATED, not disclosed: 12-mo ECL allowance / gross loans, to 2 d.p., for the eight
+# years where the bank prints both components. Blank for FY2014-FY2017, which have no
+# ECL allowance to divide by (their Impaired column is a dash, not a zero).
+ECL_COVERAGE = {
+    "FY2025": "0.50%", "FY2024": "0.44%", "FY2023": "0.36%", "FY2022": "0.18%",
+    "FY2021": "0.08%", "FY2020": "0.08%", "FY2019": "0.10%", "FY2018": "0.05%",
+}
 
 asset_quality_rows = [
-    ("SECTION", "Loans and advances to customers, by credit quality (Note 23.5)", {}),
+    ("SECTION", "Loans and advances to customers, by credit quality — IFRS 9 presentation (FY2018-FY2025)", {}),
     ("DATA", "Sub-investment grade (rated below Baa3 by Moody's) — gross", AQ["Sub-investment grade (rated below Baa3 by Moody's) — gross"]),
     ("DATA", "Sub-investment grade (rated below Baa3 by Moody's) — 12-mo ECL", AQ["Sub-investment grade (rated below Baa3 by Moody's) — 12-mo ECL"]),
     ("DATA", "Unrated — gross", AQ["Unrated — gross"]),
@@ -787,22 +904,60 @@ asset_quality_rows = [
     ("TOTAL", "Total gross loans and advances to customers", AQ["Total gross loans and advances to customers"]),
     ("DATA", "Total 12-mo ECL allowance", AQ["Total 12-mo ECL allowance"]),
     ("TOTAL", "Total net loans and advances to customers", AQ["Total net loans and advances to customers"]),
+    ("SECTION", "Loans and advances to customers, by credit quality — pre-IFRS 9 presentation (FY2014-FY2017)", {}),
+    ("DATA", "Sub-investment grade — neither past due nor impaired (pre-IFRS 9)", DASH4),
+    ("DATA", "Unrated — neither past due nor impaired (pre-IFRS 9)", AQ["Unrated — neither past due nor impaired (pre-IFRS 9)"]),
+    ("DATA", "Impaired (pre-IFRS 9)", DASH4),
+    ("TOTAL", "Total loans and advances to customers (pre-IFRS 9 presentation)", AQ["Total loans and advances to customers (pre-IFRS 9 presentation)"]),
     ("SECTION", "Ratios (calculated)", {}),
     ("DATA", "ECL coverage ratio (12-mo ECL allowance ÷ gross loans)", ECL_COVERAGE),
 ]
 
 ASSET_QUALITY_SOURCES = (
-    "Sources — Bank Mandiri (Europe) Limited's own \"Credit quality per class of financial assets\" note (Note "
-    "23.5, Credit Risk), Loans and advances to customers rows only, converted from USD to £'000 at each "
-    "year-end's Bank of England GBP/USD spot rate (see FX conversion note below): FY2025 & FY2024 — Bank Mandiri "
-    f"(Europe) Limited Annual Report FY2025, Note 23.5 Credit Risk, p.48-49 — {FY2025_AR_URL}.\n\n"
-    "FY2023, FY2022, FY2021, and (per HD-017's FY2014-FY2020 extension) FY2020 down through FY2014: this "
-    "credit-quality-per-class-of-financial-assets table was NOT found in any of the FY2023-FY2014 Annual Reports "
-    "checked (their financial-risk-management notes are structured differently and do not include an equivalent "
-    "loans-and-advances credit-quality breakdown) — left blank rather than estimated. No Stage 1/2/3 IFRS 9 staging split (only an aggregate/12-month ECL figure) is "
-    "disclosed for any year — this entity does not appear to disclose a non-performing or Stage 3 loan balance "
-    "anywhere in any of the 4 reports checked, so no NPL/Stage 3 ratio is presented here. The ECL coverage ratio "
-    "row is CALCULATED (12-mo ECL allowance ÷ gross loans), not directly disclosed.\n\n"
+    "Sources — Bank Mandiri (Europe) Limited's own \"Credit quality per class of financial assets\" table, which "
+    "sits inside the Risk management note of every Annual Report from FY2014 to FY2025. Only the \"Loans and "
+    "advances to customers\" rows are reproduced here. Figures converted from USD to £'000 at each year-end's "
+    "Bank of England GBP/USD spot rate (see FX conversion note below). EACH YEAR IS TAKEN FROM ITS OWN EDITION, "
+    "and each was independently confirmed against the adjacent edition's comparative column for the same date — "
+    "all twelve agreed digit for digit:\n"
+    f"FY2025 & FY2024 comparative — Annual Report FY2025, Note 23, pp.49-50 — {FY2025_AR_URL}\n"
+    f"FY2024 & FY2023 comparative — Annual Report FY2024, Note 23, p.50 — {FY2024_AR_URL}\n"
+    f"FY2023 & FY2022 comparative — Annual Report FY2023, Note 23, p.49 — {FY2023_AR_URL}\n"
+    f"FY2022 & FY2021 comparative — Annual Report FY2022, Note 23, p.49 — {FY2022_AR_URL}\n"
+    f"FY2021 & FY2020 comparative — Annual Report FY2021, Note 24, p.51 — {FY2021_AR_URL}\n"
+    f"FY2020 & FY2019 comparative — Annual Report FY2020, Note 24, p.49 — {FY2020_AR_URL}\n"
+    f"FY2019 & FY2018 comparative — Annual Report FY2019, Note 24, pp.51-52 — {FY2019_AR_URL}\n"
+    f"FY2018 & FY2017 comparative — Annual Report FY2018, Note 24, pp.50-51 — {FY2018_AR_URL}\n"
+    f"FY2017 & FY2016 comparative — Annual Report FY2017, Note 24, pp.40-41 — {FY2017_AR_URL}\n"
+    f"FY2016 & FY2015 comparative — Annual Report FY2016, Note 26, pp.36-37 — {FY2016_AR_URL}\n"
+    f"FY2015 & FY2014 comparative — Annual Report FY2015, Note 27, pp.37-38 — {FY2015_AR_URL}\n"
+    f"FY2014 & FY2013 comparative — Annual Report FY2014, Note 24, pp.31-32 — {FY2014_AR_URL}\n"
+    f"FY2016 is additionally corroborated a THIRD time by the bank's 2016 Pillar 3 disclosure, printed p.28, "
+    f"which reproduces the same table for 31 December 2016 and 31 December 2015 with identical figures — "
+    f"{PILLAR3_2016_ARCHIVE_URL}\n\n"
+    "TWO PRESENTATIONS, DELIBERATELY NOT MERGED. From the FY2018 Annual Report onward the table's second column "
+    "is \"12-mo ECL\" and the note states that loss allowances are measured on all financial assets at an amount "
+    "equal to 12-month expected credit losses. In the FY2014-FY2017 editions the second column is \"Impaired\" "
+    "and there is no ECL concept at all; the loans rows print \"-\" in that column in all four years, and \"-\" "
+    "on the sub-investment-grade line. Those dashes are reproduced as dashes, not converted to zeros and not "
+    "blanked: the bank printed something, and what it printed was \"not applicable to us\".\n\n"
+    "SOURCE DEFECT, RECORDED NOT CORRECTED (FY2014). The FY2014 Annual Report's own table prints the Unrated "
+    "loans row as \"68,247 - 166,308\": the Total column carries 166,308, which is the PRIOR year's unrated "
+    "loans figure (31 December 2013), not FY2014's. The row does not foot, while the table's own Total line "
+    "(188,022) does foot to the five \"neither past due nor impaired\" figures including 68,247. The FY2015 "
+    "Annual Report's FY2014 comparative prints the row correctly as \"68,247 - 68,247\". 68,247 is carried "
+    "here; the misprinted 166,308 is recorded in this note rather than reproduced as a figure. Confirmed by two "
+    "independent renderings of the FY2014 page at 300 dpi and 500 dpi, which agree digit for digit, so the "
+    "166,308 is the document's and not an extraction artefact.\n\n"
+    "SOURCING METHOD. The FY2021, FY2022, FY2024 and FY2025 Annual Reports are text-layer PDFs (the bank hosts "
+    "its own copies) and were read directly. The FY2014-FY2020 and FY2023 filings are image-only scans with no "
+    "text layer and were recovered by page-image OCR at 300 dpi, with every figure re-read at 500 dpi or "
+    "confirmed against a text-layer edition's comparative column before use.\n\n"
+    "No Stage 1/2/3 IFRS 9 staging split is disclosed in any year — every row carries only an aggregate 12-month "
+    "ECL — and this entity discloses no non-performing or Stage 3 loan balance anywhere in any edition, so no "
+    "NPL/Stage 3 ratio is presented here. The ECL coverage ratio row is CALCULATED (12-mo ECL allowance ÷ gross "
+    "loans), not directly disclosed, and is shown only for the eight years where the bank prints both "
+    "components.\n\n"
     + ENTITY_NOTE
 )
 
@@ -824,10 +979,107 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 TOTAL_CAPITAL_USD = {"FY2025": 56_400_000, "FY2024": 54_300_000, "FY2023": 52_300_000, "FY2022": 49_710_000}
 CAR = {"FY2025": "33.59%", "FY2024": "42.90%", "FY2023": "34.30%", "FY2022": "34.09%"}
-# Calculated: Own Funds / CAR - no separate RWA figure is directly disclosed anywhere.
-# RWA_USD removed 2026-09-15 - these were back-solved as Own Funds / Total Capital
-# Ratio, never disclosed. The values are preserved in the Total RWAs sheet note so the
-# withdrawal is auditable, but they are no longer written to the workbook. See that note.
+
+# ---------------------------------------------------------------
+# THE FINDING GOES IN THE CELL, NOT ONLY IN THE NOTE (remaining-gap round,
+# 18 September 2026). Nothing below is new research. Every one of these 31
+# sheet-years was ALREADY established as a non-disclosure, with evidence, in
+# TIER1_SOURCES / P3_2016_NOTE / RWA_BREAKDOWN_SOURCES / KM1_SOURCES - some of it
+# re-gathered three times. What was wrong is WHERE it was written: a finding that
+# lives only in a note= string is invisible to audit_gaps.py, which reads the year
+# grid, so this workbook scored 31 untouched unexplained gaps while carrying the
+# answer to all of them a few rows below. These short cell statements move the
+# finding into the grid; the evidence stays in the notes.
+#
+# THE SHAPE OF THIS WORKBOOK'S GAP IS THE ANSWER TO IT, and it is worth stating
+# plainly because it looks like a bank that stopped disclosing and is not. Capital
+# is populated FY2017-FY2021 and empty FY2022-FY2025; Total Capital is the exact
+# reverse. That is not one series with a hole in it - it is TWO DIFFERENT SOURCE
+# DOCUMENTS meeting at a break:
+#   - FY2017-FY2021: the "Capital adequacy risk" note in the FY2018-FY2021 Annual
+#     Reports tabulates "the regulatory Tier 1 resources of the Bank" - Tier 1
+#     ONLY, with no Tier 2, no total own funds, no RWA and no ratio. So those
+#     years have a Tier 1/CET1 figure and CANNOT have a Total Capital one.
+#   - FY2022-FY2025: that table is gone from the reports. What replaces it is a
+#     single narrative sentence in the Strategic Report giving one combined
+#     "regulatory capital resources" amount - a total, with no CET1/Tier 1/Tier 2
+#     split. So those years have a Total Capital figure and CANNOT have a
+#     CET1/Tier 1 one.
+# Neither document type ever prints an RWA, which is why Total RWAs and RWA
+# Breakdown are blank in BOTH halves and carry FY2016 alone, from the bank's only
+# Pillar 3 disclosure.
+#
+# RE-VERIFIED INDEPENDENTLY THIS SESSION rather than inherited. The FY2025 and
+# FY2024 Annual Reports were re-fetched from the bank's own site (HTTP 200,
+# application/pdf, %PDF- magic, 1,681,014 and 285,830 bytes) and re-extracted:
+# 162,945 and 161,914 characters, matching the counts already on record to the
+# digit. RICHNESS CONTROL FIRST - 'the ' returns 1,357 and 1,334 hits and
+# 'capital' 31 and 28, so the extraction is sound. Against that, BOTH reports
+# return ZERO hits for 'tier 1', 'tier one', 'pillar 3', 'pillar 1', 'cet1',
+# 'common equity', 'leverage ratio' and '12.5'. Every 'risk-weighted' / 'RWA' /
+# 'own funds' hit was read in context and is one of exactly two things: the
+# narrative "the decrease in CAR reflects an increase in risk-weighted assets",
+# and the KPI parenthetical "(Own Funds / Total Risk Weighted Asset)". Neither
+# carries a number. The only capital amount in the FY2025 report is the sentence
+# "The Bank's regulatory capital resources were US$56.4 million on 31 December
+# 2025 (2024: US$54.3 million)" - the two values TOTAL_CAPITAL_USD already holds.
+# The bank's legal page was re-enumerated the same day (HTTP 200 with a browser
+# UA; a plain curl gets 403) and lists 14 PDFs with ZERO occurrences of "pillar".
+# ---------------------------------------------------------------
+_NO_RWA_LATE = "Not disclosed - AR prints the Own Funds / Total RWA ratio but no RWA amount"
+_NO_RWA_EARLY = "Not disclosed - AR capital note tabulates Tier 1 resources only, no RWA line"
+NO_RWA = {
+    # FY2022-FY2025: text-layer PDFs on the bank's own site, searched in full.
+    "FY2025": _NO_RWA_LATE, "FY2024": _NO_RWA_LATE, "FY2023": _NO_RWA_LATE, "FY2022": _NO_RWA_LATE,
+    # FY2017-FY2021: image-only Companies House scans (FY2019/FY2018/FY2017 yield
+    # 57/56/47 characters of text layer for 57/56/51 pages), re-rendered and OCR'd
+    # page-by-page at 250 dpi, plus the FY2021 report's own text layer.
+    "FY2021": _NO_RWA_EARLY, "FY2020": _NO_RWA_EARLY, "FY2019": _NO_RWA_EARLY,
+    "FY2018": _NO_RWA_EARLY, "FY2017": _NO_RWA_EARLY,
+}
+# The two halves of the capital break described above, each stated from the side
+# of the break the reader is standing on.
+NO_TIER1_SPLIT = {y: "Not disclosed - Tier 1 resources table dropped from FY2022 AR onward; only a combined capital figure is given"
+                  for y in ("FY2025", "FY2024", "FY2023", "FY2022")}
+NO_TOTAL_CAPITAL = {y: "Not disclosed - the FY2018-FY2021 capital note tabulates Tier 1 only; no Tier 2 or total own funds line"
+                    for y in ("FY2021", "FY2020", "FY2019", "FY2018", "FY2017")}
+# RWA_USD removed 2026-09-15 - those four values (FY2022-FY2025) were BACK-SOLVED as
+# Own Funds / Total Capital Ratio, never disclosed, and stay withdrawn. Nothing below
+# reinstates them. What IS below is a different thing entirely: an RWA total the bank
+# actually printed, for one year only.
+
+# ---------------------------------------------------------------
+# The 2016 Pillar 3 - the one regulatory disclosure this entity has ever published,
+# and the only source in its whole history that prints a risk-weighted-asset figure
+# or an eligible-capital figure. Found by GA-005 (2026-09-18). The document had been
+# fetched before, but only searched for UK KM1 template vocabulary ("KM1", "CET1",
+# "own funds", "leverage ratio"), all of which are genuinely absent from it - it
+# pre-dates that template by six years. It was described as "narrative" on the
+# strength of those zeros. It is not: it is a CRD IV Pillar 3 & Remuneration Code
+# disclosure carrying real quantitative tables, in the Bank's own house vocabulary
+# ("Total Risk Exposure", "Total Eligible Capital"), which is why a template-word
+# search found nothing. Text-native, 33 pages, read in full with pdftotext -layout.
+P3_2016_TOTAL_RWA_USD = {"FY2016": 64_242_000}          # "Total Risk Exposure", printed p.11
+P3_2016_ELIGIBLE_CAPITAL_USD = {"FY2016": 49_163_000}   # "Total Eligible Capital", printed p.12
+
+P3_2016_NOTE = (
+    "THE 2016 PILLAR 3 IS THE ONLY SOURCE IN THIS ENTITY'S HISTORY THAT PRINTS AN RWA OR ELIGIBLE-CAPITAL "
+    "FIGURE. \"Bank Mandiri (Europe) Limited - Pillar 3 Disclosures as at 31st December 2016\", 33 pages, "
+    f"text-native, single column headed \"Dec-16\" in U$'000 - {PILLAR3_2016_ARCHIVE_URL}. The document is dead "
+    "on the live site and survives only in the Wayback Machine. As printed, p.11: Risk weighted assets for "
+    "credit risk 57,663; Risk exposure for operational risk 6,579; Risk exposure for market risk \"-\"; Total "
+    "Risk Exposure 64,242. p.12: Total Eligible Capital 49,163, against a Total Capital Requirement of 25,529 "
+    "measured against the ICG ratio and 28,053 measured against the trigger ratio. The Total Eligible Capital "
+    "figure equals the FY2016 Balance Sheet's own Total shareholders' funds (US$49,163k) to the digit, which is "
+    "an independent corroboration from a separate document.\n"
+    "WHAT THE DOCUMENT DOES NOT CONTAIN, checked with a richness control (map rule 15): zero occurrences of "
+    "\"Tier 1\", \"Tier 2\", \"own funds\", \"leverage\" and \"MREL\" in the whole 98,380-character extraction, "
+    "against 38 hits for \"Pillar 3\", 36 for \"liquidity\", 12 for \"capital requirement\" and 4 for \"capital "
+    "resources\" in the same text - so those zeros are facts about the document rather than about the search. "
+    "There is therefore no CET1/Tier 1/Tier 2 split and no leverage ratio for FY2016 either, and no capital "
+    "RATIO is printed anywhere in the document: the ratio is NOT computed here from the capital and RWA figures, "
+    "because this project does not derive a disclosure the bank did not make."
+)
 
 # Sheet order matches the project-wide standard (CET1 Capital/Ratio, Tier 1 Capital/Ratio,
 # Total Capital/Ratio, Total RWAs, Leverage Ratio, LCR, NSFR, MREL Ratio) even though this
@@ -837,29 +1089,57 @@ CAR = {"FY2025": "33.59%", "FY2024": "42.90%", "FY2023": "34.30%", "FY2022": "34
 # table the later reports dropped: "The following table summarises the regulatory
 # Tier 1 resources of the Bank as at 31st December". Earlier audits searched the
 # Strategic Report KPI table, which is a different part of the document, and so
-# missed it. FY2020 comes from that same table's own comparative column.
-TIER1_CAPITAL_USD = {"FY2021": 52_489_000, "FY2020": 52_907_000}
+# missed it.
+# EXTENDED BY GA-005 (2026-09-18): the same table is also printed in the FY2020,
+# FY2019 and FY2018 Annual Reports, which the 2026-09-15 pass did not check because
+# it was looking for the reason the table STOPPED rather than for how far back it
+# went. FY2020/FY2019/FY2018 now come from their own editions; FY2017 comes from the
+# FY2018 edition's comparative column, because the FY2017 report prints no such table
+# at all (see below). FY2016 and earlier: no table in any edition.
+TIER1_CAPITAL_USD = {
+    "FY2021": 52_489_000,
+    "FY2020": 52_907_000,
+    "FY2019": 51_836_000,
+    "FY2018": 49_199_000,
+    "FY2017": 50_407_000,
+}
 
 TIER1_SOURCES = (
-    "Sources - Bank Mandiri (Europe) Limited's own Note 24(H) \"Capital adequacy risk\" table, headed \"The "
-    "following table summarises the regulatory Tier 1 resources of the Bank as at 31st December\". The filing is "
-    "a scanned image-only PDF with no text layer, so this was recovered by page-image OCR:\n"
-    f"FY2021 (and FY2020 comparative): Bank Mandiri (Europe) Limited Annual Report FY2021, Note 24(H) - "
-    f"{FY2021_AR_URL}\n\n"
-    "As printed (US$'000): Called up share capital 49,000 / 49,000; Capital reserve 11,496 / 11,496; Revaluation "
-    "reserve 425 / 1,219; Retained earnings (8,432) / (8,808); Total tier 1 capital 52,489 / 52,907. Both columns "
-    "foot exactly. Converted to GBP at this workbook's existing period-end spot rates (31 Dec 2021 1.3728; 31 Dec "
-    "2020 1.3649).\n\n"
-    "FOUND IN THE 2026-09-15 MAXIMUM-EFFORT RE-AUDIT. Two earlier passes recorded FY2021 as unrecoverable, on the "
-    "basis that the FY2022 Annual Report's KPI table carries no capital figures - which is true, and is confirmed "
-    "again here by a fresh full-document OCR of the FY2022 filing. What those passes missed is that the FY2021 "
-    "ACCOUNTS FILING ITSELF had never been fetched: this script's source constants jumped from FY2022 straight to "
-    "FY2020. The filing exists (AA, made up to 31 December 2021, filed 13 July 2022) and carries this table.\n\n"
-    "WHY THIS TABLE STOPS: it appears in the FY2021-style report but not in FY2022 onward. Fresh full-document "
-    "OCR of the FY2022 and FY2023 filings on 2026-09-15 confirms neither contains a Tier 1 capital table or any "
-    "own-funds itemisation - FY2022 contains no capital figure at all, and FY2023 gives only the single combined "
-    "narrative figure already carried on the Total Capital sheet. The Bank changed its disclosure format, so "
-    "FY2022-FY2025 genuinely have no CET1/Tier 1 split to transcribe.\n\n" + ENTITY_NOTE
+    "Sources - Bank Mandiri (Europe) Limited's own \"Capital adequacy risk\" table inside the Risk management "
+    "note, headed \"The following table summarises the regulatory Tier 1 resources of the Bank as at 31st "
+    "December\". Each year is taken from ITS OWN edition except FY2017, which has none of its own (see below):\n"
+    f"FY2021 (with FY2020 comparative): Annual Report FY2021, Note 24(H), p.48 - {FY2021_AR_URL}\n"
+    f"FY2020 (with FY2019 comparative): Annual Report FY2020, Note 24(H), p.46 - {FY2020_AR_URL}\n"
+    f"FY2019 (with FY2018 comparative): Annual Report FY2019, Note 24(H), p.48 - {FY2019_AR_URL}\n"
+    f"FY2018 (with FY2017 comparative): Annual Report FY2018, Note 24, p.47 - {FY2018_AR_URL}\n\n"
+    "AS PRINTED (US$'000), each column footing exactly to its stated total: FY2021 49,000 / 11,496 / 425 / "
+    "(8,432) = 52,489. FY2020 49,000 / 11,496 / 1,219 / (8,808) = 52,907. FY2019 49,000 / 11,496 / 588 / "
+    "(9,248) = 51,836. FY2018 49,000 / 11,496 / (1,386) / (9,911) = 49,199. FY2017 49,000 / 11,496 / 107 / "
+    "(10,196) = 50,407. Converted to GBP at this workbook's existing period-end spot rates.\n\n"
+    "SOURCE DEFECT, RECORDED NOT CORRECTED. The FY2018 Annual Report's own table prints its FY2018 revaluation "
+    "reserve as \"(1,368)\", which does not foot to its own stated total of 49,199; the FY2019 edition's FY2018 "
+    "comparative prints \"(1,386)\", which does foot, and (1,386) is also what the FY2018 Balance Sheet itself "
+    "shows. Two independent renderings of the FY2018 page (300 dpi and 500 dpi) agree on \"(1,368)\", so the "
+    "transposition is the document's, not an extraction artefact. Only the Total tier 1 capital line is carried "
+    "onto this sheet and both editions print that identically as 49,199, so nothing on the sheet depends on the "
+    "defective component.\n\n"
+    "FY2017 IS FILLED FROM THE FY2018 EDITION'S COMPARATIVE, and the reason is a positive finding rather than a "
+    "failed search: the FY2017 Annual Report's own \"(G) Capital adequacy risk\" note is four sentences of "
+    "narrative with NO table - it says only that \"For regulatory purposes, the capital is made up of share "
+    "capital, capital reserve and accumulated losses\". The FY2016, FY2015 and FY2014 reports carry the identical "
+    "narrative-only note. The table is an addition made in the FY2018 report, so FY2016 and earlier have no "
+    "Tier 1 figure of any kind in any edition and stay blank.\n\n"
+    "WHY THIS TABLE STOPS AT THE OTHER END: it appears through the FY2021 report and not in FY2022 onward. "
+    "Full-document searches of the FY2022 and FY2023 filings (OCR 2026-09-15, re-confirmed 2026-09-18 against "
+    "the bank's own text-layer FY2022 copy, which returns ZERO hits on \"Tier 1\", \"own funds\", "
+    "\"risk weighted\" and \"capital adequacy\" while returning 30 hits on \"capital\") find no Tier 1 table and "
+    "no own-funds itemisation. FY2022 contains no capital figure at all; FY2023 onward give only the single "
+    "combined narrative figure already carried on the Total Capital sheet. So FY2022-FY2025 genuinely have no "
+    "CET1/Tier 1 split to transcribe.\n\n"
+    "SOURCING METHOD: the FY2021 figures were read from the bank's own text-layer PDF of that report; the "
+    "FY2020, FY2019 and FY2018 filings are image-only scans and were recovered by page-image OCR at 300 dpi and "
+    "re-read at 500 dpi, with every total additionally cross-read from the adjacent edition's comparative "
+    "column.\n\n" + ENTITY_NOTE
 )
 
 CET1_EQUIV_NOTE = (
@@ -871,7 +1151,8 @@ CET1_EQUIV_NOTE = (
     "CET1 = Tier 1 therefore follows from the composition the Bank itself prints, not from an assumption made "
     "here. NOTE this does NOT extend to Total Capital: the table covers Tier 1 only and discloses nothing about "
     "Tier 2, so Total Capital is left to the separate combined 'regulatory capital resources' figure the Bank "
-    "publishes from FY2022 onward, and stays blank for FY2021/FY2020."
+    "publishes from FY2022 onward and to the 2016 Pillar 3's 'Total Eligible Capital', and stays blank for "
+    "FY2017-FY2021."
 )
 
 # ---------------------------------------------------------------
@@ -884,11 +1165,18 @@ KM1_SOURCES = (
     "that could not be checked stated as such.\n"
     "\n"
     "THE ONLY PILLAR 3 THAT EXISTS. 'BMEL - Pillar 3 Disclosures 31st December 2016' (1,041,727 bytes, "
-    "text-native, 96,712 characters extracted) mentions 'Pillar 3' 38 times and contains ZERO occurrences of "
-    "'KM1', 'key metric', 'CET1', 'Common Equity', 'own funds', 'leverage ratio' and 'liquidity coverage'. It "
-    "is a narrative, pre-CRR-template disclosure. The UK KM1 template arrived with the Disclosure (CRR) Part "
+    "text-native, 33 pages) mentions 'Pillar 3' 38 times and contains ZERO occurrences of "
+    "'KM1', 'key metric', 'CET1', 'Common Equity', 'own funds', 'leverage ratio' and 'liquidity coverage'. "
+    "Those zeros are correct and stand. But a note here previously drew the wrong conclusion from them and "
+    "called the document 'narrative'; it is not. It is a CRD IV Pillar 3 & Remuneration Code disclosure "
+    "carrying real quantitative tables in the Bank's own house vocabulary - 'Total Risk Exposure' 64,242 and "
+    "'Total Eligible Capital' 49,163 (U$'000, pp.11-12), a Pillar 1 and Pillar 2 capital build-up, a "
+    "credit-risk RWA split by country, and a credit-quality-per-class table for 2016 and 2015. Those figures "
+    "are now carried on the Total RWAs, Total Capital, RWA Breakdown and Asset Quality sheets. What the "
+    "document genuinely lacks is the TEMPLATE: the UK KM1 template arrived with the Disclosure (CRR) Part "
     "of the PRA Rulebook, six years after it, so its absence there is expected rather than a gap (map rule "
-    "16).\n"
+    "25). The lesson worth keeping is that a zero on template vocabulary is evidence about the template and "
+    "not about the document's contents.\n"
     "\n"
     "THE LIVE SITE WAS ENUMERATED IN FULL, NOT SAMPLED. bkmandiri.co.uk is a five-page site: the home page, "
     "/about-us/, /products-services/, /contact-us/ and /legal-important-information/, plus /sitemap/ which "
@@ -943,7 +1231,8 @@ bw.add_km1_sheet(
 
 metric(
     "CET1 Capital", "£'000 (conv. from USD)",
-    [("Common Equity Tier 1 capital (= Tier 1; no AT1 component disclosed)", stock(TIER1_CAPITAL_USD))],
+    [("Common Equity Tier 1 capital (= Tier 1; no AT1 component disclosed)",
+      {**stock(TIER1_CAPITAL_USD), **NO_TIER1_SPLIT})],
     TIER1_SOURCES,
     note=CET1_EQUIV_NOTE + " FY2022-FY2025 are blank because the Bank stopped publishing this table - see the "
          "source note. No CET1 RATIO is derivable: no directly disclosed RWA exists in any year (see Total RWAs).",
@@ -955,7 +1244,7 @@ bw.add_not_disclosed_metric_sheets(
 
 metric(
     "Tier 1 Capital", "£'000 (conv. from USD)",
-    [("Total tier 1 capital", stock(TIER1_CAPITAL_USD))],
+    [("Total tier 1 capital", {**stock(TIER1_CAPITAL_USD), **NO_TIER1_SPLIT})],
     TIER1_SOURCES,
     note="Directly disclosed as \"Total tier 1 capital\" in the Bank's own Note 24(H) table. " + CET1_EQUIV_NOTE,
 )
@@ -966,10 +1255,17 @@ bw.add_not_disclosed_metric_sheets(
 
 metric(
     "Total Capital", "£'000 (conv. from USD)",
-    [("Regulatory capital resources (\"Own Funds\")", stock(TOTAL_CAPITAL_USD))],
+    [
+        ("Regulatory capital resources (\"Own Funds\")", {**stock(TOTAL_CAPITAL_USD), **NO_TOTAL_CAPITAL}),
+        ("Total Eligible Capital (2016 Pillar 3 disclosure)", stock(P3_2016_ELIGIBLE_CAPITAL_USD)),
+    ],
     p3_sources(),
-    note="No CET1/Tier 1 breakdown is disclosed anywhere in the source - only this single combined 'regulatory "
-         "capital resources' figure. See CET1 Capital / Tier 1 Capital sheets.",
+    note="Two rows, because the two figures come from different documents under different captions and are not "
+         "the same series. FY2022-FY2025 is the single combined \"regulatory capital resources\" amount the "
+         "Strategic Report narrates; FY2016 is the \"Total Eligible Capital\" line of the bank's 2016 Pillar 3. "
+         "No CET1/Tier 1/Tier 2 breakdown accompanies either. FY2017-FY2021 stay blank: the Tier 1 table those "
+         "reports carry covers Tier 1 only and says nothing about Tier 2, so no total capital figure exists for "
+         "them. See the CET1 Capital / Tier 1 Capital sheets.\n\n" + P3_2016_NOTE,
 )
 
 metric(
@@ -980,9 +1276,14 @@ metric(
 
 metric(
     "Total RWAs", "£'000 (conv. from USD)",
-    [("Total risk-weighted assets", {})],
+    [("Total Risk Exposure (2016 Pillar 3 disclosure)", {**stock(P3_2016_TOTAL_RWA_USD), **NO_RWA})],
     p3_sources(),
-    note="Not disclosed. No RWA figure, aggregate or by category, appears in any source checked for any year.\n\n"
+    note="ONE YEAR ONLY, AND IT IS DISCLOSED RATHER THAN DERIVED. FY2016 carries the \"Total Risk Exposure\" "
+         "line the bank printed in its 2016 Pillar 3; see the block below. Every other year is blank because "
+         "the bank has never printed an RWA figure for it - not because a figure was removed.\n\n"
+         + P3_2016_NOTE + "\n\n"
+         "EVERY OTHER YEAR: NOT DISCLOSED. No RWA figure, aggregate or by category, appears in any Annual "
+         "Report or other source found for any year but FY2016.\n\n"
          "EVIDENCE UPGRADED 2026-09-15 - this is now a machine-verified negative, not a visual one. An earlier "
          "version of this note said all four FY2022-FY2025 Annual Reports were scanned/image-only and had been "
          "reviewed page-by-page; that was true of the Companies House filings but WRONG about the documents "
@@ -1001,32 +1302,138 @@ metric(
          "Bank London, Nomura Bank International, State Bank of India (UK), Ghana International, Weatherbys and "
          "Havin. The derivation was in any case limited by the 2-decimal-place ratio it inverted, and using the "
          "result to compute any further ratio would simply return its own inputs. The Total Capital and Total "
-         "Capital Ratio sheets carry the Bank's own printed figures and are unaffected.",
+         "Capital Ratio sheets carry the Bank's own printed figures and are unaffected. THE FY2016 FIGURE ABOVE "
+         "IS NOT A REINSTATEMENT OF ANY OF THOSE: it is a number the bank printed, in a document, under its own "
+         "caption, for a year none of the withdrawn values covered.\n\n"
+         "FY2017-FY2019 UPGRADED THE SAME WAY, 2026-09-18 (leading-gap sweep). The paragraph above made "
+         "FY2022-FY2025 a machine-verified negative but left the middle years resting on a 'checked page by "
+         "page' claim, which is exactly the kind of assertion this project has repeatedly found to be wrong. "
+         "Those filings are genuine image-only scans - a text extraction of the FY2019, FY2018 and FY2017 "
+         "Companies House filings yields 57, 56 and 47 characters respectively for 57, 56 and 51 pages - so "
+         "they were re-rendered and OCR'd page-by-page at 250 dpi and searched the same way the later years "
+         "were. RESULT: across the full OCR of both the FY2019 and the FY2018 filing, the strings "
+         "'risk-weighted' / 'risk weight' / 'RWA' / 'own funds' / 'eligible capital' / 'Pillar' return ZERO "
+         "hits of any kind. The only capital disclosure in either document is the note headed 'Capital "
+         "adequacy risk' (note 24(H) in FY2019, 24(G) in FY2018), which says the Bank manages capital against "
+         "its PRA Individual Capital Guidance, describes ICAAP/SREP in words, and then prints ONE table - "
+         "'The following table summarises the regulatory Tier 1 resources of the Bank as at 31 December' - "
+         "with no RWA line, no capital requirement, no ratio and no total-own-funds line. Both tables "
+         "reproduce exactly what this workbook already carries: FY2019 49,000 / 11,496 / 588 / (9,248) = "
+         "51,836 with FY2018 comparative 49,199, and FY2018 49,000 / 11,496 / (1,368) / (9,911) = 49,199 "
+         "with FY2017 comparative 50,407. (That (1,368) is the FY2018 edition's own printing of its "
+         "revaluation reserve against the (1,386) the FY2019 edition prints as its comparative - the source "
+         "defect already recorded on the Tier 1 Capital sheet, re-observed here independently and again NOT "
+         "corrected.) FY2020 and FY2021 are covered from the other direction by the FY2021 Annual Report, a "
+         "text-layer PDF whose full text contains no risk-weighted-asset amount for either year while "
+         "carrying the same Tier 1 table (52,489 / 52,907). So the RWA blank now rests on a full-document "
+         "search for every year from FY2017 to FY2025, not on a visual pass for any of them.",
+)
+
+# GA-005 (2026-09-18): this sheet was a documented "not disclosed" stub. It is now a
+# real sheet for ONE year. The 2016 Pillar 3 splits the Bank's risk exposure two
+# different ways - by risk type and by country of exposure - and those are two
+# different templates from the same document, so they are shown as separate sections
+# rather than merged (gaps map general point 3). The £ figures are converted at the
+# 31 Dec 2016 spot rate, £1 = $1.2303, the same rate the Balance Sheet uses.
+P3_2016_RWA_BY_RISK_USD = {
+    "Risk weighted assets for credit risk": {"FY2016": 57_663_000},
+    "Risk exposure for operational risk": {"FY2016": 6_579_000},
+    "Total Risk Exposure": {"FY2016": 64_242_000},
+}
+P3_2016_PILLAR1_USD = {
+    "4.2.1 Credit risk (including supporting factor)": {"FY2016": 4_613_000},
+    "4.2.2 Operational risk": {"FY2016": 526_000},
+    "Total Pillar 1": {"FY2016": 5_139_000},
+}
+P3_2016_RWA_BY_COUNTRY_USD = {
+    "Belgium": {"FY2016": 160_000},
+    "Germany": {"FY2016": 201_000},
+    "Hong Kong": {"FY2016": 9_417_000},
+    "Indonesia": {"FY2016": 41_507_000},
+    "United Kingdom": {"FY2016": 2_695_000},
+    "United States": {"FY2016": 3_682_000},
+    "Total Exposure": {"FY2016": 57_663_000},
+}
+DASH16 = {"FY2016": "-"}
+
+rwa_breakdown_rows = (
+    [("SECTION", "FY2016 — risk exposure by risk type (2016 Pillar 3, printed p.11)", {})]
+    + [("DATA", "Risk weighted assets for credit risk", stock(P3_2016_RWA_BY_RISK_USD["Risk weighted assets for credit risk"])),
+       ("DATA", "Risk exposure for operational risk", stock(P3_2016_RWA_BY_RISK_USD["Risk exposure for operational risk"])),
+       ("DATA", "Risk exposure for market risk", DASH16),
+       ("TOTAL", "Total Risk Exposure", stock(P3_2016_RWA_BY_RISK_USD["Total Risk Exposure"]))]
+    + [("SECTION", "FY2016 — Pillar 1 capital requirement, same table (2016 Pillar 3, printed p.11)", {})]
+    + [("DATA", "4.2.1 Credit risk (including supporting factor)", stock(P3_2016_PILLAR1_USD["4.2.1 Credit risk (including supporting factor)"])),
+       ("DATA", "4.2.2 Operational risk", stock(P3_2016_PILLAR1_USD["4.2.2 Operational risk"])),
+       ("DATA", "4.2.3 Market risk", DASH16),
+       ("TOTAL", "Total Pillar 1", stock(P3_2016_PILLAR1_USD["Total Pillar 1"]))]
+    + [("SECTION", "FY2016 — credit-risk RWA by country of exposure (2016 Pillar 3, printed p.19)", {})]
+    + [("DATA", c, stock(P3_2016_RWA_BY_COUNTRY_USD[c])) for c in
+       ("Belgium", "Germany", "Hong Kong", "Indonesia", "United Kingdom", "United States")]
+    + [("TOTAL", "Total Exposure (credit-risk RWA)", stock(P3_2016_RWA_BY_COUNTRY_USD["Total Exposure"]))]
+    # Disclosure-status row for the eleven years that are not FY2016, so the grid
+    # itself says why those columns are empty instead of leaving the reader - and
+    # audit_gaps.py - to infer it from the subtitle. Deliberately placed LAST,
+    # after every TOTAL: put above one, verify_workbook.py folds it into the
+    # summation block it checks against that total.
+    + [("DATA", "Disclosure status where no figures are shown", dict(NO_RWA))]
 )
 
 RWA_BREAKDOWN_SOURCES = (
-    "No dedicated Pillar 3 document, and no UK OV1-style RWA-by-exposure-class breakdown, is published by this "
-    "entity — the only RWA figure available (even the single aggregate Total RWAs figure on the 'Total RWAs' "
-    "sheet) is itself CALCULATED, not directly disclosed (see that sheet's note). With no directly disclosed "
-    "aggregate RWA figure to begin with, a category-level split cannot exist. Re-checked all 4 Annual Reports "
-    "(FY2022-FY2025) on 2026-09-08, and again on 2026-09-15 against the bank's own text-layer PDFs - see the "
-    "Total RWAs sheet note, which corrects the earlier claim that every one of these reports is scanned; in fact "
-    "only FY2023 is, and the rest are machine-searchable, so this negative is now full-text-verified - "
-    "specifically for a 'Regulatory capital'/'Risk-weighted assets' note (Note 25/26 style) or a Pillar 1 capital "
-    "requirement table that could be grossed up by x12.5 - none exists in any year. Each year's Note 23 "
-    "'Risk Management' covers only market risk (23.1), interest rate risk (23.2), currency risk (23.3), liquidity "
-    "risk (23.4) and credit risk (23.5); the only capital-related disclosure anywhere in any of the 4 Annual "
-    "Reports is the single aggregate Total Capital Ratio (Own Funds / Total RWA) KPI in the Strategic Report - "
-    "no risk-type split (credit/market/operational) and no book-type split either. NOTE: the FY2022_AR_URL "
-    "constant previously pointed to the wrong Companies House filing (a Deloitte auditor-resignation letter, not "
-    "the accounts) - this has been corrected to the real FY2022 'Full accounts' filing "
-    f"({FY2022_AR_URL}), which was the document actually re-checked here and confirmed to also lack any RWA "
-    "breakdown. Also checked the FY2020 Companies House filing — no exposure-class RWA table found there either.\n\n"
+    "ONE YEAR IS DISCLOSED; ELEVEN ARE NOT. FY2016 is sourced from this entity's only Pillar 3 disclosure, "
+    f"\"Bank Mandiri (Europe) Limited - Pillar 3 Disclosures as at 31st December 2016\" - "
+    f"{PILLAR3_2016_ARCHIVE_URL} - which prints the Bank's risk exposure two different ways, shown above as two "
+    "separate sections because they are two different templates rather than one split:\n"
+    "(a) BY RISK TYPE, printed p.11, single column headed \"Dec-16\", U$'000: Risk weighted assets for credit "
+    "risk 57,663; Risk exposure for operational risk 6,579; Risk exposure for market risk \"-\"; Total Risk "
+    "Exposure 64,242. The same table continues into the Pillar 1 capital requirement shown in the second "
+    "section (4,613 / 526 / \"-\" / 5,139), which foots exactly. The two market-risk dashes are reproduced as "
+    "dashes: the document does print a market-risk figure elsewhere, as a US$10k capital requirement on a "
+    "US$131k FX open position at p.17, but in THIS table it prints a dash, and a dash is not a zero.\n"
+    "ROUNDING NOTE on section (a): in US$ the table foots exactly (57,663 + 6,579 + nil = 64,242). In the "
+    "£'000 shown above it is one short - 46,869 + 5,347 = 52,216 against a total of 52,217 - because every "
+    "line is converted from its own US$ figure at the 31 Dec 2016 spot rate (£1 = $1.2303) and rounded to the "
+    "nearest £'000 independently, and the total's own unrounded value is 52,216.53. The £1k gap is created by "
+    "that rounding; it is not a discrepancy in the Bank's disclosure. Section (b)'s Pillar 1 block happens to "
+    "foot in both currencies.\n"
+    "(b) BY COUNTRY OF EXPOSURE, printed p.19, a concentration-risk table giving gross exposure, RWA exposure "
+    "and capital requirement per country. Only the RWA EXPOSURE column is reproduced above. In U$'000 as "
+    "printed: Belgium 160; Germany 201; Hong Kong 9,417; Indonesia 41,507; United Kingdom 2,695; United States "
+    "3,682; Total Exposure 57,663 — which reconciles to the credit-risk RWA line in section (a).\n"
+    "SOURCE ROUNDING, RECORDED NOT CORRECTED: the six country lines sum to 57,662, one thousand dollars below "
+    "the 57,663 the same table prints as its own total. Each line is reproduced exactly as printed; the total "
+    "row is the bank's own printed total, not a re-sum. The £ figures shown here also carry ordinary conversion "
+    "rounding, since each line is converted individually at £1 = $1.2303 and then rounded to the nearest "
+    "£'000.\n"
+    "THE 2016 DISCLOSURE IS A CRD IV DOCUMENT AND HAS NO UK OV1 TEMPLATE, which is not a defect: the UK OV1 "
+    "template post-dates it. There is no exposure-class split (central governments / institutions / corporates "
+    "/ retail) in it, only the risk-type and country splits above.\n\n"
+    "EVERY OTHER YEAR: NOT DISCLOSED, and established as such rather than merely not found. No dedicated Pillar "
+    "3 document exists for any year but 2016 (the live site was enumerated in full and a Wayback CDX sweep of "
+    "the whole bkmandiri.co.uk domain returned 27 distinct PDFs across its history, of which exactly one is a "
+    "Pillar 3 - see the KM1 Key Metrics sheet for that enumeration, re-run and re-confirmed 2026-09-18). The "
+    "Annual Reports carry no RWA figure at all: the FY2021, FY2022, FY2024 and FY2025 reports are text-layer "
+    "PDFs and full-text searches of them return no risk-weighted-asset amount anywhere, only the narrative "
+    "sentence that the change in capital ratio \"reflects an increase in risk-weighted assets\" and the "
+    "parenthetical defining the KPI as \"(Own Funds / Total Risk Weighted Asset)\", neither carrying a number; "
+    "the FY2023 scan was re-OCR'd at 500 dpi with the same result; and the FY2014-FY2020 filings were checked "
+    "page by page. Each year's Risk Management note covers market, interest rate, currency, liquidity and "
+    "credit risk and no capital-requirement table that could be grossed up by x12.5.\n"
+    "NOTE ON AN EARLIER CORRECTION: the FY2022_AR_URL constant once pointed to the wrong Companies House filing "
+    f"(a Deloitte auditor-resignation letter, not the accounts); it has since pointed to the real FY2022 \"Full "
+    f"accounts\" filing ({FY2022_AR_URL}), which is the document the checks above were run against.\n\n"
     + ENTITY_NOTE
 )
 
-bw.add_not_disclosed_metric_sheets(
-    ["RWA Breakdown"], RWA_BREAKDOWN_SOURCES, per_note={"RWA Breakdown": RWA_BREAKDOWN_SOURCES},
+bw.add_rwa_breakdown_sheet(
+    title="Bank Mandiri (Europe) Limited — RWA Breakdown",
+    subtitle="£'000, converted from USD at £1 = $1.2303 (31 Dec 2016 spot). FY2016 only — the one year this "
+             "entity published a Pillar 3 disclosure. See the source note for how the other eleven years were "
+             "established as non-disclosures.",
+    rows=rwa_breakdown_rows,
+    sources_text=RWA_BREAKDOWN_SOURCES,
+    first_col_width=54,
+    source_height=320,
 )
 
 bw.add_not_disclosed_metric_sheets(
@@ -1077,7 +1484,7 @@ bw.add_overview_sheet(
         # Each opening balance is 31-Dec-(Y-1)'s figure, converted at THAT
         # date's spot rate (FX_SPOT["FY"+str(Y-1)]) - same fix as the
         # Statement of Change in Equity sheet's "At 1 January" rows above.
-        ("Opening shareholders' funds", {"FY2025": bal((54254,), "FY2024")[0], "FY2024": bal((52323,), "FY2023")[0], "FY2023": bal((49714,), "FY2022")[0], "FY2022": bal((52489,), "FY2021")[0]}),
+        ("Opening shareholders' funds", {"FY2025": bal((54254,), "FY2024")[0], "FY2024": bal((52323,), "FY2023")[0], "FY2023": bal((49714,), "FY2022")[0], "FY2022": bal((52489,), "FY2021")[0], "FY2021": bal((52907,), "FY2020")[0]}),
         ("Total comprehensive income/(loss) for the year", {"FY2025": flow({"FY2025": 2_230_000})["FY2025"], "FY2024": flow({"FY2024": 1_931_000})["FY2024"], "FY2023": flow({"FY2023": 2_609_000})["FY2023"], "FY2022": flow({"FY2022": -2_775_000})["FY2022"], "FY2021": flow({"FY2021": -418_000})["FY2021"]}),
         # Pure FX-translation artefact of converting opening/movements/closing at 3 different
         # GBP/USD rates within one year - see the Statement of Change in Equity sheet's source
@@ -1092,14 +1499,15 @@ bw.add_overview_sheet(
         ("NSFR", {"FY2025": "121.85%", "FY2024": "142%", "FY2023": "131.85%", "FY2022": "143.26%"}),
     ],
     note="This entity takes the FRS 101 cash-flow-statement exemption every year (see the Cash Flow Statement "
-         "sheet), so no cash flow summary or chart is shown here. No dedicated Pillar 3 document is published by "
-         "this entity; only a combined Total Capital Ratio (no CET1/Tier 1 breakdown), LCR, and NSFR are "
-         "disclosed, in each Annual Report's Strategic Report — Total RWAs and RWA Breakdown are both blank, "
-         "because no RWA figure is disclosed in any year and the previously shown Total RWAs values were "
-         "back-solved from capital and ratio and were withdrawn on 2026-09-15; see those sheets. FY2021 not "
-         "available for the ratio trend chart — see each "
-         "Pillar 3 sheet's own source citation. Opening shareholders' funds is not available for FY2021 — see the "
-         "Statement of Change in Equity sheet's source note.",
+         "sheet), so no cash flow summary or chart is shown here. It has published exactly one Pillar 3 "
+         "disclosure in its history, covering 31 December 2016; for every other year the only regulatory "
+         "disclosures are a combined Total Capital Ratio (no CET1/Tier 1 breakdown), LCR and NSFR in each Annual "
+         "Report's Strategic Report, plus a Tier 1 resources table in the FY2018-FY2021 reports. Total RWAs and "
+         "RWA Breakdown therefore carry FY2016 only, from that 2016 Pillar 3, and are blank elsewhere; the four "
+         "Total RWAs values shown before 2026-09-15 were back-solved from capital and ratio and stay withdrawn "
+         "— the FY2016 figure is not one of them, it is a figure the bank printed. No capital ratio, LCR or NSFR "
+         "exists for FY2021 or for any year before FY2022, so the ratio trend chart starts at FY2022 — see each "
+         "Pillar 3 sheet's own source citation.",
 )
 
 # ---------------------------------------------------------------

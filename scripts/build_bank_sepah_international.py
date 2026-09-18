@@ -529,7 +529,12 @@ KM1_SOURCES = (
     "ROW DIFFERENCES BETWEEN EDITIONS (a row not printed is left blank, never filled from another year): the "
     "March-2021 edition prints neither a 'Cash Outflows' nor a 'Cash Inflows' row, and labels its net figure "
     "'Total net cash outflow' in the singular. It also prints the countercyclical buffer as 0%, where every "
-    "later edition prints a dash - so FY2021 carries a zero and the other four years are blank.\n\n"
+    "later edition prints a dash - so FY2021 carries a zero and the other four years carry that dash. The two "
+    "are deliberately not the same cell: at March 2021 the Bank measured its countercyclical buffer and "
+    "reported nil, and from March 2022 onward it printed a dash instead, saying the line did not apply to it. "
+    "Flattening both to an empty cell, or both to a zero, would erase a change the Bank itself made. Verified "
+    "2026-09-18 by retrieving all five editions and reading each year from its own Table 1, printed page 5, "
+    "first column (each edition also prints the four preceding quarter-ends, which are not used here).\n\n"
     "LATEST-EDITION CHECK, 2026-09-16: the Bank's own documents page "
     "(https://www.banksepah.co.uk/information) lists the March 2023, March 2024 and March 2025 Pillar 3 "
     "disclosures; March 2025 is the newest and this workbook already holds it. No March-2026 edition has "
@@ -552,8 +557,15 @@ km1_rows = [
      {"FY2025": "103%", "FY2024": "91%", "FY2023": "82%", "FY2022": "68%", "FY2021": "61%"}),
     ("DATA", "Capital Conservation Buffer",
      {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.5%", "FY2021": "2.5%"}),
+    # All five editions re-read at source 2026-09-18, each year taken from its OWN
+    # edition's Table 1 "Summary of Key Metrics", printed page 5, FIRST column only.
+    # Every edition prints its reporting date plus the four preceding QUARTER-ends,
+    # so columns 2-5 are within-year observations and are never used for another
+    # financial year. March-2025/2024/2023/2022 each print "-" in that first column;
+    # the March-2021 edition prints "0%" there, and that zero STAYS a zero. The Bank
+    # changed what it printed, and the sheet now shows that it did.
     ("DATA", "Countercyclical buffer %",
-     {"FY2021": "0%"}),
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "0%"}),
     ("DATA", "CET1 available after meeting Minimum Capital Requirement as a % of TRE",
      {"FY2025": "95%", "FY2024": "83%", "FY2023": "74%", "FY2022": "60%", "FY2021": "53%"}),
     ("DATA", "Leverage ratio",

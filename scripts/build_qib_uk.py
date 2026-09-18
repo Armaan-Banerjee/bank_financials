@@ -730,14 +730,25 @@ metric("Total Capital Ratio","% of RWA",[("Total capital ratio",ratios["Total Ca
 metric("Total RWAs","£m",[("Total risk-weighted exposure amount",rwa)],"FY2014/FY2015: no RWA figure is disclosed in the reviewed QIB UK Pillar 3 documents for these two years.")
 
 rwa_breakdown_rows = [
+    ("SECTION", "Template UK OV1 'Overview of risk weighted exposure amounts' — p.7 of each year's own Pillar 3 document (FY2025-FY2021; FY2021 read from the FY2022 document's own comparative column)", {}),
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 634.742, "FY2024": 548.789, "FY2023": 500.902, "FY2022": 465.681, "FY2021": 432.383}),
     ("DATA", "Counterparty credit risk (CCR, including CVA)", {"FY2025": 3.345, "FY2024": 4.023, "FY2023": 1.390, "FY2022": 1.852, "FY2021": 2.166}),
     ("DATA", "Position, foreign exchange and commodities risk (market risk)", {"FY2025": 0.049, "FY2024": 0.053, "FY2023": 0.122, "FY2022": 0.044, "FY2021": 0.031}),
-    ("DATA", "Credit and counterparty credit risk, combined (pre-2021 template)", {"FY2020": 392.457, "FY2018": 336, "FY2017": 316, "FY2016": 249}),
-    ("DATA", "Market risk (pre-2021 template)", {"FY2020": 0.026, "FY2018": 0, "FY2017": 1, "FY2016": 1}),
-    ("DATA", "Credit valuation adjustment (CVA) (pre-2021 template)", {"FY2020": 0.736}),
-    ("DATA", "Operational risk", {"FY2025": 55.017, "FY2024": 49.062, "FY2023": 40.771, "FY2022": 31.545, "FY2021": 27.440, "FY2020": 24.864, "FY2018": 18, "FY2017": 18, "FY2016": 14}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 693.154, "FY2024": 601.927, "FY2023": 543.185, "FY2022": 499.122, "FY2021": 462.020, "FY2020": 418.084, "FY2019": 375.285, "FY2018": 354, "FY2017": 335, "FY2016": 264}),
+    ("DATA", "Operational risk", {"FY2025": 55.017, "FY2024": 49.062, "FY2023": 40.771, "FY2022": 31.545, "FY2021": 27.440}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 693.154, "FY2024": 601.927, "FY2023": 543.185, "FY2022": 499.122, "FY2021": 462.020}),
+    ("SECTION", "Pillar 1 minimum-capital-requirement table by exposure class — the Bank's own standalone Pillar 3 document, p.30 (FY2020). This table BUNDLES credit and counterparty credit risk into a single line and discloses CVA separately, so its rows are not the UK OV1 rows above", {}),
+    ("DATA", "Credit and counterparty credit risk, combined", {"FY2020": 392.457}),
+    ("DATA", "Market risk", {"FY2020": 0.026}),
+    ("DATA", "Credit valuation adjustment (CVA)", {"FY2020": 0.736}),
+    ("DATA", "Operational risk", {"FY2020": 24.864}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2020": 418.084}),
+    ("SECTION", "Annual Report Note 4.2 'Regulatory capital required' — each year's own Annual Report, FY2016 taken from the FY2017 report's own comparative column (FY2018-FY2016). THREE categories only: this table has no separate counterparty-credit-risk or CVA line at all", {}),
+    ("DATA", "Credit and counterparty credit risk, combined", {"FY2018": 336, "FY2017": 316, "FY2016": 249}),
+    ("DATA", "Market risk", {"FY2018": 0, "FY2017": 1, "FY2016": 1}),
+    ("DATA", "Operational risk", {"FY2018": 18, "FY2017": 18, "FY2016": 14}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2018": 354, "FY2017": 335, "FY2016": 264}),
+    ("SECTION", "No risk-type breakdown disclosed (FY2019) — total risk-weighted exposure amount only; see the Total RWAs sheet", {}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2019": 375.285}),
 ]
 bw.add_rwa_breakdown_sheet(
     title="QIB (UK) plc — RWA Breakdown",

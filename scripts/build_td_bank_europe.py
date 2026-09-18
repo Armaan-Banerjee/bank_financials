@@ -354,13 +354,19 @@ km1_rows = [
     ("DATA", "Total SREP own funds requirements (%)", {"FY2025": "16.5%", "FY2024": "16.5%", "FY2023": "13.0%", "FY2022": "13.0%"}),
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "Capital conservation buffer (%)", {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
-    # Printed as "-" in every edition - a dash is NOT a zero, so blank.
-    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%) [printed \"-\" in every edition - see note]", {}),
+    # Printed as "-" in every edition and in every column - re-read in all four
+    # PDFs on 2026-09-18. The dash is TDBEL saying the requirement does not
+    # apply to it, so the cell carries the dash: not a blank, and not a zero.
+    ("DATA", "Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "Institution specific countercyclical capital buffer (%)",
      {"FY2025": "1.21%", "FY2024": "1.15%", "FY2023": "1.58%", "FY2022": "0.04%"}),
-    ("DATA", "Systemic risk buffer (%) [printed \"-\" in every edition - see note]", {}),
-    ("DATA", "Global Systemically Important Institution buffer (%) [printed \"-\" in every edition - see note]", {}),
-    ("DATA", "Other Systemically Important Institution buffer [printed \"-\" in every edition - see note]", {}),
+    ("DATA", "Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "Global Systemically Important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "Other Systemically Important Institution buffer",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "Combined buffer requirement (%)", {"FY2025": "3.7%", "FY2024": "3.7%", "FY2023": "4.1%", "FY2022": "2.5%"}),
     ("DATA", "Overall capital requirements (%)", {"FY2025": "20.2%", "FY2024": "20.1%", "FY2023": "17.1%", "FY2022": "23.5%"}),
     ("SECTION", "Leverage ratio", {}),
@@ -418,13 +424,14 @@ KM1_SOURCES = (
     "section 1.2.1 with just FOUR rows (CET1 Ratio, Leverage Ratio, LCR, NSFR). That is a summary, not the "
     "template, and the two disagree: the FY2025 Table 1 states an NSFR of 5820% where Table 21 states 5467%. "
     "Table 21 is used here and on the NSFR sheet, and the disagreement is recorded rather than reconciled.\n\n"
-    "A DASH IS NOT A ZERO. Four buffer rows - 'Conservation buffer due to macro-prudential or systemic risk...', "
-    "'Systemic risk buffer', 'Global Systemically Important Institution buffer' and 'Other Systemically Important "
-    "Institution buffer' - are printed as '-' in EVERY edition and in every column. They are left BLANK here "
-    "rather than written as 0%, because a dash records that no such requirement applies to this firm, which is "
-    "not the same statement as a requirement measured at zero. The rows are kept rather than dropped so that a "
-    "reader can see TDBEL printed them. By contrast 'Additional leverage ratio buffer (%)' is printed as '0.0%' "
-    "in the FY2025 edition, and that printed zero IS kept.\n\n"
+    "A DASH IS A DASH, AND IT IS NOT A ZERO. Four buffer rows - 'Conservation buffer due to macro-prudential or "
+    "systemic risk...', 'Systemic risk buffer', 'Global Systemically Important Institution buffer' and 'Other "
+    "Systemically Important Institution buffer' - are printed as '-' by TDBEL in EVERY edition and in every "
+    "column, re-read in all four PDFs on 2026-09-18. Every one of those cells carries a literal '-' above: the "
+    "dash is TDBEL stating that no such requirement applies to it, which is a different statement from silence. "
+    "A BLANK cell on this sheet means the other thing - that TDBEL printed no such row, or no figure in it, in "
+    "the edition for that year. By contrast 'Additional leverage ratio buffer (%)' is printed as '0.0%' in the "
+    "FY2025 edition, and a printed zero is a measured zero and stays a number.\n\n"
     "ROW SET DRIFT, AND WHY FY2022 IS BLANK ON FIVE ROWS. The whole 'Additional leverage ratio disclosure "
     "requirements' block appears first in the FY2023 edition; the FY2022 edition does not contain those rows at "
     "all. A row the bank did not print is blank, not zero - and the FY2023 edition's own 2022 comparative prints "

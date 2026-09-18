@@ -65,12 +65,62 @@ CASH_FLOW_SOURCES = (
     f"Report and Financial Statements 2023, p.26 (Cash Flow Statement, 2022 restated column) - {AR2023_URL}\n"
     f"FY2023: Annual Report and Financial Statements 2023, p.26 (Cash Flow Statement) - {AR2023_URL}\n"
     f"FY2024: Annual Report and Financial Statements 2024, p.27 (Cash Flow Statement) - {AR2024_URL}\n"
-    f"FY2025: Not applicable - FRS 101 cash-flow exemption newly taken this year. Annual Report "
-    f"and Financial Statements 2025, p.29 (Note 1, Basis of preparation) - {AR2025_URL}\n\n"
+    f"FY2025: NEVER PUBLISHED (not 'unreached') - no Statement of Cash Flows exists in the FY2025 "
+    f"filing, for FY2025 or for its FY2024 comparative, because the FRS 101 exemption from IAS 7 "
+    f"was newly taken this year. Evidence: Annual Report and Financial Statements 2025, printed "
+    f"p.29 = PDF p.30, Note 1 'Accounting policies', sub-heading 'Basis of preparation', which "
+    f"reads verbatim: \"These financial statements are presented with the benefit of the "
+    f"disclosure exemptions permitted by FRS 101 with regards to: IAS 7, 'Statement of cash "
+    f"flows' and paragraphs 10(d) (statement of cash flows), and 111 (statement of cash flows "
+    f"information)\". The same note states the cause: \"during the year, the Company has undergone "
+    f"transition from reporting under UK-adopted International Accounting Standards to FRS 101\" - "
+    f"i.e. the exemption only became available on that transition, which is why FY2021-FY2024 are "
+    f"full cash flow statements and FY2025 is not. Retrieval and search method (this filing is "
+    f"image-only - 43 characters of text layer across 43 pages, so every keyword search against "
+    f"the PDF text returns nothing regardless of content): fetched with curl -L (HTTP 200, "
+    f"Content-Type application/pdf, %PDF-1.1 magic bytes, 2,050,119 bytes), rendered with "
+    f"pdftoppm -r 200 -png and OCR'd with tesseract; richness control on the OCR text returned "
+    f"1,893 hits for 'the'. Searched terms: 'cash flow', 'statement of cash flows', 'IAS 7', "
+    f"'FRS 101', 'exemption'. 'cash flow' hits 8 of 43 pages and every hit is discursive "
+    f"(contractual-maturity table p.11; going-concern and auditors' report p.23; IFRS 9 "
+    f"business-model policy pp.32-33; cash-generating-unit impairment projections pp.34, 39, 40). "
+    f"The only primary-statement headings in the document are Balance Sheet and Statement of "
+    f"Changes in Equity. - {AR2025_URL}\n\n"
     + ENTITY_NOTE
 )
 
 rows = [
+    # GAP-FILL (2026-09-18): the FY2025 column previously held NO cell at all, so a
+    # reader (and audit_gaps.py) could not tell "the exemption was taken" from
+    # "nobody has looked yet" - even though the finding was already complete and
+    # quoted in ENTITY_NOTE/CASH_FLOW_SOURCES. The exemption now appears IN the
+    # column, in one labelled row, the same treatment already applied to Atom Bank
+    # and AIB Group (UK). No column is suppressed.
+    #
+    # RE-PROVEN 2026-09-18 from the FY2025 filing's OWN basis-of-preparation note
+    # (printed p.29 = PDF p.30, Note 1 'Accounting policies', 'Basis of
+    # preparation'). The filing is image-only - 43 characters of text layer across
+    # 43 pages - so it was rendered at 200dpi and OCR'd before the wording could be
+    # read at all. Verbatim: "These financial statements are presented with the
+    # benefit of the disclosure exemptions permitted by FRS 101 with regards to:
+    # IAS 7, 'Statement of cash flows' and paragraphs 10(d) (statement of cash
+    # flows), and 111 (statement of cash flows information)".
+    #
+    # WHY IT IS NEW IN THE FINAL YEAR - the same note gives the mechanism, which
+    # was not previously recorded here: "during the year, the Company has undergone
+    # transition from reporting under UK-adopted International Accounting Standards
+    # to FRS 101". The exemption did not become available until that transition, so
+    # FY2021-FY2024 are genuinely full cash flow statements and only FY2025 is not.
+    #
+    # All 43 OCR'd pages were searched for "cash flow": 8 pages hit and every hit is
+    # discursive (contractual-maturity table p.11, going-concern and audit report
+    # p.23, IFRS 9 business-model policy pp.32-33, CGU impairment projections
+    # pp.34/39/40). The only primary-statement headings in the filing are Balance
+    # Sheet and Statement of Changes in Equity. There is no Statement of Cash Flows
+    # for FY2025 nor for its FY2024 comparative.
+    ("SECTION", "FY2025 — no Cash Flow Statement is published; the FRS 101 exemption from IAS 7 was newly taken this year (see note below)", {}),
+    ("DATA", "Statement of Cash Flows for the year",
+     {"FY2025": "Not published - FRS reduced-disclosure cash-flow exemption taken on transition (see note)"}),
     ("SECTION", "Operating activities", {}),
     ("DATA", "Profit before tax", {"FY2024": 168882, "FY2023": 169529, "FY2022": 67307, "FY2021": 39358}),
     ("DATA", "Effect of foreign exchange rates on loans and advances to banks",

@@ -92,8 +92,11 @@ ENTITY_NOTE = (
     "Mellat and 40% by Bank Tejarat. STATUS RE-CONFIRMED 2026-09-15: Companies House shows the company as ACTIVE, "
     "with full accounts to 31 March 2025 filed 2 September 2025, accounts to 31 March 2026 due by 31 December 2026, "
     "and a confirmation statement filed 10 June 2026; the Bank also still holds PRA authorisation, appearing as "
-    "'Persia International Bank Plc', FRN 208020, in the Bank of England's own 'List of banks' as at 30 September "
-    "2026. A further restriction post-dates the FY2025 reporting date: the Bank's own website notice 'Persia "
+    "'Persia International Bank Plc', FRN 208020, in the Bank of England's own 'List of PRA-regulated Banks as at "
+    "01 September 2026', in its first section, 'Banks incorporated in the UK authorised to accept deposits' "
+    "(re-read from the published file 2026-09-18; earlier revisions of this note dated that list 30 September 2026, "
+    "which is not a date the Bank of England has published - the list's own header reads 01 September 2026). "
+    "A further restriction post-dates the FY2025 reporting date: the Bank's own website notice 'Persia "
     "International Bank PLC - Sanctions Notice' (dated 06/10/2025) states it 'has been made subject to financial "
     "sanctions by the UK Government and the European Union as of 29 September 2025' and operates under OFSI General "
     "Licence INT/2025/7345464. These are the Company's own entity-level financial statements, prepared under "
@@ -234,6 +237,19 @@ P3_CESSATION_NOTE = (
     "captured by the Internet Archive despite continued crawling. So FY2022 is a published-then-removed (or "
     "asserted-but-never-actually-posted) case rather than a declared non-publication, and it is the one year "
     "of the four where a copy might still exist somewhere to be found.\n"
+    "FY2022 NARROWED FURTHER, 18 September 2026 (GA-005). The 'published-then-removed' reading is weaker "
+    "than it looks, and the reason is a date. The FY2022 Annual Report was filed at Companies House on 18 "
+    "October 2022, and on that date the Bank's website DID carry a Pillar 3 document - the 31 March 2021 "
+    "edition, which is still the only one there. So the sentence 'Pillar 3 disclosures are made separately "
+    "and are published on the Bank's web site' was literally true of the 2021 edition when it was written, "
+    "and is NOT evidence that a 31 March 2022 edition was ever prepared or posted. Read that way, the FY2022 "
+    "report is describing a stale file rather than reporting a new one, and the wording change in the FY2023 "
+    "report is the moment the Bank stopped claiming to publish at all. Nothing found in this session "
+    "supports the existence of a FY2022 edition: it appears in no capture of the domain in a 152-URL Wayback "
+    "CDX enumeration covering every year the site has been crawled, and the FY2020 edition's own title page "
+    "carries the note '(Note - the Pillar 3 Disclosure Document for 2021 is being prepared and will be "
+    "available shortly)' - the Bank flagged forthcoming editions on the title page when it had one coming, "
+    "and the 2021 edition carries no such note for 2022.\n"
     "That wording change is the disclosure-policy change itself, and it lines up exactly with what is on the "
     "Bank's website. The live site was reachable this session over plain HTTP (http://www.persiabank.co.uk/ "
     "- HTTPS still fails the TLS handshake, which is why earlier sessions recorded the domain as dead) and "
@@ -243,6 +259,22 @@ P3_CESSATION_NOTE = (
     "that same 2021 edition, and the domain was still being crawled in 2024 and 2025 (e.g. its 2025 Wolfsberg "
     "questionnaire and its July 2024 GDPR notice were both captured), so this is a genuine absence rather "
     "than a crawl gap.\n"
+    "DIRECT-FETCH PROBE ADDED 2026-09-18 (leading-gap sweep), because every check above is an ENUMERATION - "
+    "a link list or an archive index - and an enumeration can only ever fail to mention a file that is "
+    "nonetheless being served. A file can sit on this host unlinked and uncrawled, so the two conventions the "
+    "Bank has demonstrably used for these filenames were fetched directly rather than looked up: the bare "
+    "form 'Pillar 3 <year>.pdf' and the versioned form 'Pillar 3 <year> v<n>.pdf' for n = 1..7 (the 2020 "
+    "edition is v7 and the 2021 edition is v3, so the version suffix genuinely varies and had to be swept). "
+    "That is 32 URLs, for 2022, 2023, 2024 and 2025, each fetched over plain http:// with --http1.1 -L and "
+    "each judged on the SHAPE OF SUCCESS - the first five bytes had to be '%PDF-'. NONE of the 32 returned a "
+    "PDF. THE PROBE CARRIES ITS OWN POSITIVE CONTROL, which is the only thing that makes those 32 zeros worth "
+    "anything: the identical method, same host, same session, fetched the 2021 edition successfully - HTTP "
+    "200, application/pdf, %PDF- magic, 1,382,251 bytes, byte-for-byte the size already recorded in the LINK "
+    "PROVENANCE note above. So the method demonstrably reaches a Pillar 3 file on this server when one is "
+    "there; for FY2022-FY2025 there is none there to reach. The live site was also re-walked the same day "
+    "(index.asp, aboutus.asp, services.asp, contact.asp, faq.asp, Dubai.asp, Tehranoffice.asp - all HTTP 200) "
+    "and carries no .pdf href at all on any page, which is why the direct probe, not the link list, is the "
+    "load-bearing evidence here.\n"
     "The statutory accounts do not fill the gap either. The FY2022 and FY2024 Annual Reports were "
     "independently re-downloaded from Companies House and OCR'd page-by-page this session (both are scanned "
     "filings with no text layer; the earlier audit had covered FY2023 and FY2025 the same way, so all four "
@@ -253,12 +285,27 @@ P3_CESSATION_NOTE = (
     "ratio and no LCR. Capital adequacy appears only as narrative ('The Tier 1 Capital ratios are still "
     "robust'). Those capital-base amounts are already carried on the CET1/Tier 1/Total Capital sheets; "
     "nothing else in the accounts is transcribable, and no RWA is back-solved from them here.\n"
+    "  RE-READ ONCE MORE 2026-09-18, on the newest year only, to check that paragraph against the document "
+    "rather than against itself. The FY2025 filing was re-downloaded from Companies House (HTTP 200, "
+    "application/pdf, 3,462,575 bytes, 82 pages, and confirmed image-only: a text-layer extraction yields 82 "
+    "characters for 82 pages, i.e. nothing but page furniture) and re-OCR'd page-by-page at 250 dpi. Three "
+    "things were confirmed against the rendered text. (a) The Strategic Report's 'Pillar 3 Disclosures' "
+    "section reads, in full, 'Pillar 3 disclosures are made separately and can be made available on request.' "
+    "(b) Note 25 'Capital management' prints Ordinary share capital 150,000 / Retained earnings (39,576) / "
+    "Total regulatory capital base 110,424 for 31-Mar-25, against 150,000 / (22,307) / 127,693 for 31-Mar-24 "
+    "- the two figures this workbook already carries in CAPITAL_EUR - and states the PRA sets a requirement "
+    "'based upon the ratio of capital to total risk weighted exposures' WITHOUT printing any such exposure "
+    "amount or ratio. (c) A search of the whole OCR'd document for risk-weighted/RWA/capital ratio/leverage/"
+    "LCR/NSFR/own funds returns only that one requirement sentence, the 150% Iranian-exposure risk-weighting "
+    "narrative in the Strategic Report, and the narrative 'The Tier 1 Capital ratios are still robust'. No "
+    "figure for any of the four gap metrics exists in the newest filing.\n"
     "THE ENTITY HAS NOT CEASED, WHICH IS WHY THIS IS A DISCLOSURE-POLICY FINDING RATHER THAN A WIND-UP: "
     "Companies House shows Persia International Bank Plc (04218020) as ACTIVE, with full accounts to 31 March "
     "2025 filed on 2 September 2025, next accounts to 31 March 2026 due by 31 December 2026, and a "
     "confirmation statement filed on 10 June 2026; and the Bank appears as 'Persia International Bank Plc', "
-    "FRN 208020, in the Bank of England's own 'List of banks' as at 30 September 2026 - i.e. it retains PRA "
-    "authorisation. Its restriction has, however, deepened: the Bank's own website notice 'Persia "
+    "FRN 208020, in the Bank of England's own 'List of PRA-regulated Banks as at 01 September 2026', in the "
+    "section headed 'Banks incorporated in the UK authorised to accept deposits' - i.e. it retains PRA "
+    "authorisation AND its deposit-taking permission. Its restriction has, however, deepened: the Bank's own website notice 'Persia "
     "International Bank PLC - Sanctions Notice' (dated 06/10/2025) states that it 'has been made subject to "
     "financial sanctions by the UK Government and the European Union as of 29 September 2025' and operates "
     "under OFSI General Licence INT/2025/7345464 - an event that post-dates the FY2025 (31 March 2025) "
@@ -280,6 +327,47 @@ P3_CESSATION_NOTE = (
     "is recorded here as context for why the Bank's disclosure practice narrowed, not as a solvency "
     "judgement. It is also why 'the entity wound down' remains unavailable as an explanation: a bank filing "
     "audited accounts with an unmodified opinion is still operating.\n"
+    "NO REGULATORY INSTRUMENT ENDED THE DUTY - THE REGISTER WAS READ, NOT GUESSED AT (18 September 2026, GA-005). "
+    "Where a UK bank stops publishing Pillar 3 there is usually a dated instrument behind it, and the Bank of "
+    "England's consolidated register of waivers and modifications for PRA firms is where it would appear. That "
+    "file was downloaded and read in full on 18 September 2026 (2,916 data rows). Persia International Bank Plc, "
+    "FRN 208020, appears in it TWICE, and neither entry touches disclosure:\n"
+    "  - 'Direction for modification by consent of 5.1 to 5.3 of the Capital Buffers Part of the PRA Rulebook', "
+    "rule description 'Permissions and Waivers (CRR Firms)', sub-rule CA.BU.5.1-5.3, ref 00008999.pdf, start date "
+    "24/10/2024, no end date. DATE FIT: it begins inside the year ended 31 March 2025 and so cannot explain a gap "
+    "that opens at 31 March 2022; and it is a capital-buffers modification, not a disclosure one.\n"
+    "  - 'Permission of classify new instrument as CET1', rule description 'Capital Requirements Regulation', "
+    "sub-rule Ar 26(3), ref A00001287P.pdf, start date 29/03/2021, no end date. This one is not about disclosure "
+    "either, but it corroborates a figure this workbook already carries: 29 March 2021 is the date of the share "
+    "allotment recorded at Companies House on 18 May 2021 ('Statement of capital following an allotment of shares "
+    "on 29 March 2021, EUR 150,000,000'), i.e. the EUR 50m ordinary share capital issued in FY2021 that replaced "
+    "the EUR 46,500k subordinated loan. The Article 26(3) permission is the PRA consenting to count that new "
+    "instrument as CET1, which is why FY2021 is the first year with no Tier 2 and why this workbook's FY2021 CET1 "
+    "ratio and Total capital ratio are the same number.\n"
+    "  WHAT IS ABSENT, AND WHY THE ABSENCE IS A FACT ABOUT THE REGISTER RATHER THAN ABOUT THE SEARCH. The only "
+    "instrument that removes a UK Pillar 3 disclosure duty is a modification of Rule 3.1 of the SDDT Regime - "
+    "General Application Part (the opt-in to the Small Domestic Deposit Taker regime); modifications of Rule 1.2, "
+    "2.1(9) or 3.2 change the ELIGIBILITY CRITERIA and remove nothing. The same file holds 90 'SDDT Regime - "
+    "General Application' rows, 67 of them carrying sub-rule Ru 3.1, and a further 16 rows under 'Public "
+    "Disclosure (CRR Firms)'. Persia International Bank holds NONE of them. So the register contains exactly the "
+    "kind of row that would have explained this gap, for 67 other firms, and does not contain one for this Bank.\n"
+    "  NOR HAS THE BANK BEEN DEAUTHORISED, WHICH WAS THE OTHER CANDIDATE EXPLANATION. It appears in the Bank of "
+    "England's 'List of PRA-regulated Banks as at 01 September 2026' under 'Banks incorporated in the UK "
+    "authorised to accept deposits' (FRN 208020, LEI 213800HTIY6D1KMBG757) - it has neither surrendered nor had "
+    "cancelled its Part 4A permission to accept deposits. Companies House shows the company Active on the same "
+    "date, with accounts to 31 March 2026 due by 31 December 2026. A wind-down would have explained the gap; it "
+    "did not happen, and saying so is a finding rather than the absence of one.\n"
+    "  WHAT REMAINS UNREACHED, stated separately so it is not mistaken for a negative. The FCA/PRA Financial "
+    "Services Register's own firm page could not be read this session: its API returns HTTP 403 'Missing Headers' "
+    "without a registered key, and the web interface is JavaScript-rendered and returns no firm content to a "
+    "fetch. So the dated HISTORY of variations to this Bank's Part 4A permission has not been inspected - only "
+    "its current state, which the Bank of England list settles. That is a limit of our reach, not a fact about "
+    "the Bank.\n"
+    "  THE CONCLUSION THIS SUPPORTS. There is no instrument removing the duty, and no deauthorisation. The "
+    "FY2022-FY2025 absence is the Bank's own disclosure practice - stated in its own Annual Reports as making the "
+    "disclosures available on request rather than publishing them - and not a consequence of any exemption, "
+    "waiver or loss of permission that this project has been able to find. This workbook records what the Bank "
+    "published and what it did not; it takes no view on whether that practice satisfies the Bank's obligations.\n"
     "USER-ACTIONABLE: a direct written request to the Bank is the only realistic route to FY2022-FY2025 RWA, "
     "leverage and LCR figures - that is what its own Annual Reports invite. Further online searching will not "
     "surface them. If someone wants to try the site in a browser, note that it only answers on "
@@ -815,6 +903,72 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=50, source_height=620)
 
 
+# ---------------------------------------------------------------
+# THE FINDING GOES IN THE CELL, NOT ONLY IN THE NOTE (remaining-gap round,
+# 18 September 2026). Everything below was ALREADY established and evidenced in
+# P3_CESSATION_NOTE and EXT_LEVERAGE_LCR_NOTE; none of it is new research. What
+# was wrong is WHERE it was written. A finding that lives only in a note= string
+# or a subtitle is invisible to audit_gaps.py, which reads the year grid - so
+# 31 sheet-years of this workbook scored as untouched, unexplained gaps even
+# though the evidence for each had been gathered, re-gathered and re-verified
+# three separate times. These short cell statements carry the finding to where a
+# reader and the census both look; the evidence stays in the notes below.
+#
+# Each statement is deliberately specific enough to tell outcome 2 (the document
+# exists and does not print this) from outcome 3 (we could not reach a document).
+# All of these are outcome 2.
+#
+# RE-VERIFIED INDEPENDENTLY THIS SESSION, 18 September 2026, rather than
+# inherited: http://www.persiabank.co.uk/ answers HTTP 200 (12,469 bytes) and
+# contains ZERO occurrences of "pillar" and no .pdf string of any kind. A direct
+# fetch of "Pillar 3 2021 v3.pdf" over plain http:// returned HTTP 200,
+# application/pdf, %PDF- magic bytes and 1,382,251 bytes - the exact size already
+# on record - which is the POSITIVE CONTROL that makes the two negatives worth
+# something: "Pillar 3 2022.pdf" and "Pillar 3 2023.pdf" both returned HTTP 404
+# text/html from the same host in the same session.
+#
+# AND THE ENTITY IS NOT WINDING UP. This round was dispatched on the premise that
+# Persia was in a members' voluntary wind-down. It is not: Companies House shows
+# PERSIA INTERNATIONAL BANK PLC (04218020) with company status ACTIVE on
+# 18 September 2026, last accounts made up to 31 March 2025 (filed 2 September
+# 2025), next accounts to 31 March 2026 due by 31 December 2026, and its last
+# confirmation statement dated 17 May 2026. The Bank still files. The
+# FY2022-FY2025 absence is therefore a live disclosure-policy choice, which is
+# what makes "available on request" the whole and correct answer rather than a
+# side-effect of the entity shutting down.
+# ---------------------------------------------------------------
+_P3_ON_REQUEST = "Not published - AR p.8: Pillar 3 'can be made available on request'"
+P3_GONE = {
+    "FY2025": _P3_ON_REQUEST,
+    "FY2024": _P3_ON_REQUEST,
+    "FY2023": _P3_ON_REQUEST,
+    # FY2022 is a DIFFERENT negative and must not be collapsed into the other
+    # three: that year's AR still claimed web publication, but the claim was true
+    # of the stale 2021 edition, and no 31 March 2022 edition has ever existed on
+    # the host or in any Wayback capture. See P3_CESSATION_NOTE.
+    "FY2022": "Not published - no 31 Mar 2022 edition; site probe found only the 2021 one",
+}
+
+# THE THREE MIDDLE GAPS, which are a different claim from the four trailing ones
+# and get their own wording. A blank with figures on BOTH sides is not a missing
+# document - the document exists, was read in full, and does not print the row.
+# Established under GA-005 and recorded in EXT_LEVERAGE_LCR_NOTE; written into
+# the cells here.
+_LEV_NO_COMPARATIVE = "Not disclosed - each Pillar 3 edition prints its own date only, never a comparative"
+LEVERAGE_MIDDLE_GAPS = {
+    # The FY2018 and FY2020 editions each state one leverage ratio, for their own
+    # reporting date. Neither prints a prior-year column, so no 31 Mar 2019 or
+    # 31 Mar 2017 leverage ratio exists in this Bank's disclosure set at all.
+    "FY2019": _LEV_NO_COMPARATIVE,
+    "FY2017": _LEV_NO_COMPARATIVE,
+}
+LCR_MIDDLE_GAPS = {
+    # FY2018 edition's quarter set: 30/06/2017, 30/09/2017, 31/12/2017, 31/03/2018.
+    # FY2020 edition's: 31/03/2020, 31/12/2019, "31/09/2019", 30/06/2019.
+    # 31 March 2019 falls between the two windows and is in neither table.
+    "FY2019": "Not disclosed - 31 Mar 2019 quarter is in neither the FY2018 nor the FY2020 LCR table",
+}
+
 CAPITAL_EUR = {"FY2025": 110424, "FY2024": 127693, "FY2023": 132561, "FY2022": 131758, "FY2021": 130644}
 CAPITAL_GBP = stock(CAPITAL_EUR)
 RWA_GBP = {"FY2021": round(318824 * YEAR_END_RATE["FY2021"], 1)}  # GBP = EUR * rate
@@ -983,7 +1137,36 @@ EXT_LEVERAGE_LCR_NOTE = (
     "guidelines only applied from 31 December 2017 - so FY2015-FY2017 LCR, and FY2015 leverage ratio, are genuinely "
     "not disclosed anywhere located, not a gap in this transcription. FY2019's LCR similarly falls in a gap between "
     "the FY2018 and FY2020 Pillar 3 documents' own quarterly disclosure windows (neither one's table includes a "
-    "31 March 2019 quarter)."
+    "31 March 2019 quarter).\n"
+    "THE BLANK YEARS IN THE MIDDLE OF THESE TWO SHEETS WERE RE-ESTABLISHED FROM THE DOCUMENTS ON 18 SEPTEMBER 2026 "
+    "(GA-005), because a blank with figures on BOTH sides is a different claim from a blank at either end and "
+    "deserves its own evidence. Every surviving edition was re-downloaded and re-read; all four MD5s match the "
+    "values recorded in the LINK PROVENANCE note on this workbook's other sheets.\n"
+    "  LEVERAGE RATIO - THE BANK NEVER PRINTED A COMPARATIVE, IN ANY EDITION. Each edition devotes one short "
+    "section to it and states a single figure for its own reporting date only: FY2016 edition, section 10, "
+    "'... a ratio of 49.99% at 31 March 2016'; FY2018 edition, section 11, '49.27% as at 31 March 2018' above a "
+    "one-column table headed '31 March 2018' (total assets 184,318 / off-balance sheet items 15,211 / total "
+    "exposure measure 199,529 / Tier 1 capital 98,302); FY2020 edition, section 11, '33.77% as at 31 March 2020', "
+    "narrative only; FY2021 edition, section 9, '53.32% as at 31 March 2021', narrative only. There is therefore no "
+    "31 March 2019, 31 March 2017 or 31 March 2015 leverage ratio anywhere in this Bank's disclosure set - not a "
+    "comparative column we failed to read, but a column the Bank never printed. (Richness control: each text-native "
+    "edition returns 4-6 hits for 'leverage ratio' and 16-18 for 'own funds'; every leverage hit was inspected.)\n"
+    "  LCR - THE QUARTER SETS ARE PRINTED, AND 31 MARCH 2019 IS NOT IN ANY OF THEM. The FY2018 edition's table "
+    "(p.15) is headed 30/06/2017, 30/09/2017, 31/12/2017, 31/03/2018 (245.89% / 374.10% / 452.44% / 539.22%). The "
+    "FY2020 edition's table is headed 31/03/2020, 31/12/2019, 31/09/2019, 30/06/2019 (181.69% / 247.38% / 296.59% "
+    "/ 493.56%). The FY2021 edition's table (p.16) is headed 31/03/2021, 31/03/2020, 31/12/2019, 31/09/2019 "
+    "(221.13% / 181.69% / 247.38% / 296.59%). The 31 March 2019 quarter falls between the FY2018 table's window "
+    "and the FY2020 table's window and appears in neither, which is why FY2019 is blank here. The FY2016 edition "
+    "contains no LCR disclosure at all - zero occurrences of 'LCR' or 'Liquidity Coverage' against 83 occurrences "
+    "of 'capital' in the same extraction - consistent with the EBA guidelines applying only from 31 December 2017, "
+    "which is why FY2015-FY2017 are blank.\n"
+    "  TWO SOURCE DEFECTS RECORDED RATHER THAN CORRECTED. (1) The FY2020 and FY2021 editions both print a column "
+    "headed '31/09/2019' - a date that does not exist; it is plainly 30/09/2019. (2) The FY2021 edition's four "
+    "columns are NOT four consecutive quarters: it prepends 31/03/2021 to the FY2020 edition's first three columns "
+    "and drops 30/06/2019, giving 31/03/2021, 31/03/2020, 31/12/2019, 31/09/2019. Both are reproduced as printed. "
+    "Separately, the FY2020 edition's Introduction still reads 'the Pillar 3 disclosure ... as at 31 March 2018', "
+    "a stale line carried over from the FY2018 edition, although its title page, its LCR table and its leverage, "
+    "capital and RWA figures are all unambiguously 31 March 2020."
 )
 
 # ---------------------------------------------------------------
@@ -1057,11 +1240,27 @@ KM1_SOURCES = (
     "cited here. persiabank.co.uk's home page was fetched over PLAIN HTTP (its TLS is broken at the server "
     "- see the scheme note at the top of this script) and its links enumerated. The ONLY Pillar 3 link on "
     "the Bank's entire website is 'Pillar 3 2021 v3.pdf', the 31 March 2021 edition already cited here "
-    "(re-fetched and verified today: HTTP 200, application/pdf, %PDF magic bytes, 1,382,251 bytes, 29 PDF "
+    "(re-fetched and verified: HTTP 200, application/pdf, %PDF magic bytes, 1,382,251 bytes, 28 PDF "
     "pages). No newer Pillar 3 exists on the Bank's site. For the Annual Report, Companies House (company "
     "04218020) was listed directly: the newest accounts filed are 'Full accounts made up to 31 MARCH 2025', "
     "filed 2 September 2025 - already this workbook's FY2025. The 31 March 2026 accounts were not yet filed "
     "as at 16 September 2026. Nothing newer to transcribe; YEARS is unchanged.\n"
+    "RE-RUN INDEPENDENTLY 18 September 2026 (GA-005), because a citation list cannot answer the question it "
+    "is being asked. All three legs were repeated from scratch and all three agree. (1) The Bank's own site, "
+    "fetched over plain HTTP and fully link-enumerated: 34 links, exactly one of which is a Pillar 3 - "
+    "'Pillar 3 2021 v3.pdf'. Re-fetched live the same day: HTTP 200, Content-Type application/pdf, %PDF magic "
+    "bytes, 1,382,251 bytes, MD5 08b8d37ca13c50b214d275062ab119c3, 28 pages - byte-identical to the figures "
+    "recorded here in September 2026, and the '29 PDF pages' that stood in this paragraph until 18 September "
+    "2026 was simply wrong; the file has 28. (2) Companies House company 04218020: 'Last accounts made up to "
+    "31 March 2025', next accounts made up to 31 March 2026 due by 31 December 2026, company status Active. "
+    "The FY2026 accounts had still not been filed on 18 September 2026, so FY2025 remains the newest year "
+    "that exists. (3) A fresh Wayback CDX sweep of the whole persiabank.co.uk domain (152 distinct URLs ever "
+    "captured, plus targeted .*pillar.* / .*annual.* / .*disclosure.* sweeps): the newest Pillar 3 the "
+    "Internet Archive has EVER captured on the domain is that same 'Pillar 3 2021 v3.pdf' (most recent "
+    "capture 25 December 2025), and the domain was still being crawled in 2026 (its Complaint Procedure "
+    "document was captured 3 February 2026), so the absence of any FY2022-FY2025 edition is a genuine "
+    "absence and not a crawl gap. THIS IS A 'CHECKED, NONE NEWER EXISTS' FINDING, not a 'could not reach' "
+    "one: every document was retrieved successfully and read.\n"
     "Also recorded from that same page-fetch, since it bears on whether the Bank is still publishing at "
     "all: the site carries a notice dated 6 October 2025 stating that 'Persia International Bank PLC has "
     "been made subject to financial sanctions by the UK Government and the European Union as of 29 "
@@ -1101,14 +1300,14 @@ bw.add_km1_sheet(
 metric("CET1 Capital", "£'000 (conv. from EUR)", [("Common Equity Tier 1 capital / disclosed Tier one base",
     {**CAPITAL_GBP, **CET1_TIER1_GBP_EXT, "FY2018": TIER1_STATUTORY_GBP["FY2018"], "FY2017": TIER1_STATUTORY_GBP["FY2017"], "FY2016": TIER1_STATUTORY_GBP["FY2016"]})],
     note=CAPITAL_NOTE + "\n\n" + EXT_CAPITAL_NOTE)
-metric("CET1 Ratio", "%", [("CET1 ratio", {"FY2021": "40.99%", **CET1_RATIO_EXT})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
+metric("CET1 Ratio", "%", [("CET1 ratio", {"FY2021": "40.99%", **CET1_RATIO_EXT, **P3_GONE})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
 metric("Tier 1 Capital", "£'000 (conv. from EUR)", [("Tier one / total regulatory capital base", {**CAPITAL_GBP, **TIER1_STATUTORY_GBP})], note=CAPITAL_NOTE + "\n\n" + EXT_CAPITAL_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {"FY2021": "40.99%", **CET1_RATIO_EXT, "FY2015": TIER1_RATIO_FY2015})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
+metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {"FY2021": "40.99%", **CET1_RATIO_EXT, "FY2015": TIER1_RATIO_FY2015, **P3_GONE})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
 metric("Total Capital", "£'000 (conv. from EUR)", [("Total regulatory capital base", {**CAPITAL_GBP, **TOTAL_CAPITAL_STATUTORY_GBP})], note=CAPITAL_NOTE + "\n\n" + EXT_TOTAL_CAPITAL_NOTE)
-metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2021": "40.99%", **TOTAL_CAPITAL_RATIO_EXT})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
+metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2021": "40.99%", **TOTAL_CAPITAL_RATIO_EXT, **P3_GONE})], note=FY2021_RATIO_NOTE + "\n\n" + NOT_DISCLOSED + "\n\n" + EXT_RATIO_NOTE)
 metric("Total RWAs", "£'000 (conv. from EUR)", [
     ("Pillar 1 risk-weighted assets (FY2016-FY2021 are each edition's own printed Pillar 1 total; FY2015 is CREDIT-RISK RWA ONLY and understates the total - see note)",
-     {**RWA_GBP, **RWA_TOTAL_GBP_EXT}),
+     {**RWA_GBP, **RWA_TOTAL_GBP_EXT, **P3_GONE}),
     ("FY2015 only - risk-weighted exposures the FY2015 edition discloses SEPARATELY and does NOT include in the 221,221 above: market risk (FX spot position risk) 4,128 and operational risk 11,501",
      {"FY2015": 15629})],
     note="Only FY2021 is directly disclosed among FY2021-FY2025: €318.824m in the 2021 Pillar 3 disclosure, p.18. FY2022-FY2025 "
@@ -1144,6 +1343,12 @@ rwa_breakdown_rows = [
      {**RWA_GBP, **RWA_TOTAL_GBP_EXT, "FY2015": None}),
     ("DATA", "FY2015 ONLY - arithmetic sum of the three FY2015 rows above (NOT a disclosed figure; shown here so the gap against the Total RWAs sheet's credit-only 221,221 is visible, and deliberately NOT carried onto the Total RWAs sheet - see note)",
      {"FY2015": stock_v(236850, "FY2015")}),
+    # Disclosure-status row, so the FY2022-FY2025 columns say in the GRID why
+    # they are empty instead of leaving the reader - and audit_gaps.py - to infer
+    # it from the subtitle. Deliberately placed BELOW the Total row: put above it,
+    # verify_workbook.py folds it into the credit/market/operational summation
+    # block it checks against that Total.
+    ("DATA", "Disclosure status where no figures are shown", dict(P3_GONE)),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -1197,8 +1402,8 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
-metric("LCR", "%", [("Liquidity Coverage Ratio (simple average of 12 monthly reports)", {"FY2021": "221.13%", **LCR_EXT})], note="FY2021, plus FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below; the statutory accounts state no LCR in any of those years.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
+metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT, **LEVERAGE_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
+metric("LCR", "%", [("Liquidity Coverage Ratio (simple average of 12 monthly reports)", {"FY2021": "221.13%", **LCR_EXT, **LCR_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below; the statutory accounts state no LCR in any of those years.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
 bw.add_not_disclosed_metric_sheets(["NSFR", "MREL Ratio"], p3_sources(), per_note={m: NOT_DISCLOSED for m in ["NSFR", "MREL Ratio"]})
 
 def _row_values(rows, label):
@@ -1247,7 +1452,8 @@ bw.add_overview_sheet(
          "disclosures 'are published on the Bank's web site'; the FY2023, FY2024 and FY2025 reports all replace that with "
          "'can be made available on request'), confirmed against the Bank's live site, which carries exactly one Pillar 3 "
          "PDF, the 2021 edition. The Bank itself has not ceased - it is Active at Companies House, filed accounts to "
-         "31 March 2025, and still holds PRA authorisation (FRN 208020, Bank of England List of banks at 30 September 2026). "
+         "31 March 2025, and still holds PRA authorisation and its deposit-taking permission (FRN 208020, Bank of England "
+         "'List of PRA-regulated Banks as at 01 September 2026', UK-incorporated deposit-takers section). "
          "See the Total RWAs / Leverage Ratio / LCR sheets for the full evidence. FY2016/FY2018/FY2020 leverage and "
          "FY2018/FY2020 LCR were added under HD-021 from the Bank's own standalone Pillar 3 disclosures - see the Leverage "
          "Ratio/LCR sheets for the FY2015/FY2017/FY2019 gaps. FY2021's opening equity is blank because the Bank's disclosed "

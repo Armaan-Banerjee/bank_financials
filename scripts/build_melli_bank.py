@@ -438,7 +438,12 @@ RWA = {"FY2025": 458000, "FY2024": 466000, "FY2023": 498000, "FY2022": 423000, "
 CAPITAL_RATIO = {"FY2025": "56%", "FY2024": "55%", "FY2023": "51%", "FY2022": "60%", "FY2021": "64%"}
 LCR = {"FY2025": "679%", "FY2024": "697%", "FY2023": "529%", "FY2022": "617%", "FY2021": "350%",
        "FY2016": "119.16%"}
+# GA-006 (2026-09-18): FY2021-FY2025 now carry the non-disclosure statement in the
+# cell rather than being left blank, matching how the NSFR and MREL sheets in this
+# same workbook already present an evidenced absence. See LEVERAGE_NOTE for the
+# richness-controlled evidence behind it.
 LEVERAGE = {"FY2016": "75%", "FY2014": "approximately 60%"}
+LEVERAGE.update({y: "Not publicly disclosed" for y in YEARS})
 
 CAPITAL_NOTE = (
     "FY2021-FY2025: eligible regulatory capital is 100% CET1 in the disclosed KPI/capital-management tables; "
@@ -523,8 +528,21 @@ LEVERAGE_NOTE = (
     "editions add that 'detailed statistics will not become relevant until normal business recommences and "
     "significant balance sheet expansion takes place', the position of a sanctioned bank holding a large capital "
     "base against a shrunken balance sheet.\n"
-    "FY2021-FY2025 are blank: no leverage ratio appears in any of those years' Annual Reports, and no Pillar 3 "
-    "document exists for them to appear in."
+    "FY2021-FY2025 record 'Not publicly disclosed': no leverage ratio appears in any of those years' Annual "
+    "Reports, and no Pillar 3 document exists for them to appear in.\n"
+    "EVIDENCE FOR THAT ABSENCE, re-established independently 2026-09-18 (GA-006), because every Melli source is "
+    "an image scan and a zero from an unreadable document is worth nothing. The FY2025 Annual Report (Companies "
+    "House, a go-tiff2pdf scan with no text layer at all - pdftotext returns zero characters for all 54 pages) "
+    "was rendered at 200dpi and OCR'd across its whole front section. 'Leverage' appears ZERO times, against a "
+    "richness control in the SAME extraction of 19 hits for 'capital', 65 for 'ratio' and 18 for 'liquidity' - "
+    "so the zero is a fact about the document, not about the extraction. Decisively, the 'Capital and Liquidity "
+    "Position' KPI table was read in full and its eight rows are: Shareholders' Equity, Eligible Capital, Total "
+    "Assets, Total Risk Exposure Amount, Total Capital Ratio, Equity to Assets Ratio, Liquidity Coverage Ratio, "
+    "Total Net Income. There is no leverage row, and that table is the only place the metric could sit. Its two "
+    "columns are 2025 and 2024, so FY2024 is covered by the same reading. The FY2023 edition (Hong Kong Monetary "
+    "Authority register, also an image scan) was checked the same way and gives the same result - zero "
+    "'leverage' against 18 'capital', 41 'ratio' and 11 'liquidity' - which covers FY2023 and its FY2022 "
+    "comparative. This is an evidenced absence, not a failed search."
 )
 LCR_NOTE = (
     "FY2021-FY2025: directly disclosed in the Annual Report KPI tables. FY2021 is reported in the FY2023 Annual "
@@ -659,8 +677,12 @@ bw.add_km1_sheet(
              "'available on request' rather than published. The Annual Report's eight-row 'Capital and Liquidity "
              "Position' KPI table is not the template and is not reshaped into it. The Bank's website is "
              "unreachable under sanctions; that is recorded as BLOCKED and is not the basis of this finding.",
-    rows=[("DATA", "Not applicable — no UK KM1 template has ever been published by this entity, in any year "
-                   "covered by this workbook", {})],
+    # GA-006 (2026-09-18): the "not applicable" finding was stated only in this
+    # sheet's subtitle and in the row LABEL, leaving all 7 year columns blank to a
+    # reader and scored as 7 empty year-columns by audit_gaps.py. The finding was
+    # never in doubt; it simply was not in the columns. It is now, per year.
+    rows=[("DATA", "UK KM1 - Key metrics template",
+           {y: "Not applicable - no UK KM1 template ever published by this entity" for y in P3_YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=88,
     source_height=1500,
@@ -687,7 +709,10 @@ metric("Total RWAs", "EUR '000", [("Total risk exposure amount", RWA)], note=RWA
 bw.add_rwa_breakdown_sheet(
     title="Melli Bank plc — RWA Breakdown",
     subtitle="Not disclosed at category level for any year - including in the Bank's own FY2016 and FY2014 Pillar 3 documents. EUR '000. See source note.",
-    rows=[("DATA", "RWA breakdown by risk category", {})],
+    # GA-006 (2026-09-18): same fix as the KM1 sheet above - the evidenced
+    # non-disclosure now appears in each year column instead of only in the label.
+    rows=[("DATA", "RWA breakdown by risk category",
+           {y: "Not disclosed at category level in any surviving source" for y in P3_YEARS})],
     sources_text=p3_sources(
         "RWA BREAKDOWN: no category-level (credit risk / market risk / operational risk / CVA) RWA breakdown is "
         "disclosed for ANY year, FY2014 through FY2025 - and as of 2026-09-16 that now covers the Bank's own "

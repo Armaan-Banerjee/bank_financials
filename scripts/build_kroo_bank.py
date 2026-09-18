@@ -6,9 +6,12 @@ from bank_workbook import BankWorkbook
 # 2016) was authorised as a bank with restrictions on 7 July 2021 and only
 # came within scope of UK bank regulation from that date. Only 4 Annual
 # Reports have ever been published (FY2021-FY2024, year-end 31 December) -
-# no FY2025 report exists yet as of this build (next one due ~Sept/Oct 2026)
-# - so only 4 years are included here rather than padding to 5, the same
-# pattern as Brown Shipley/Griffin Bank.
+# no FY2025 report exists yet. Re-checked 2026-09-18 (GA-003) by four
+# independent routes; Kroo's FY2025 accounts are not due at Companies House
+# until 30 SEPTEMBER 2026, twelve days after that check, and Kroo has filed on
+# the deadline in every one of its four years. See ENTITY_NOTE for the
+# evidence and the exact date to look again. So only 4 years are included here
+# rather than padding to 5, the same pattern as Brown Shipley/Griffin Bank.
 YEARS = ["FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first
 YEAR_LABEL = {y: y for y in YEARS}
 
@@ -26,7 +29,33 @@ ENTITY_NOTE = (
     "and only came within scope of UK bank regulation from that date - FY2021 is therefore its first "
     "reporting period as a regulated bank. Only 4 Annual Reports have ever been published "
     "(FY2021-FY2024) - no FY2025 Annual Report or Pillar 3 report exists yet as of this build, so only "
-    "4 years are included here rather than padding to 5."
+    "4 years are included here rather than padding to 5.\n"
+    "FY2025 DOES NOT EXIST YET - CHECKED 18 SEPTEMBER 2026 (GA-003), FOUR INDEPENDENT ROUTES, ALL "
+    "AGREEING. This is recorded in full so that a later session can tell 'checked, none newer' from "
+    "'never checked', and so that nobody re-runs the same dead search.\n"
+    "  (1) Kroo publishes its reports on two DEDICATED index pages, not a general legal page: "
+    "kroo.com/annual-reports lists exactly four documents (2021, 2022, 2023, 2024) and "
+    "kroo.com/pillar-3-disclosures lists exactly four (2021, 2022, 2023, 2024). Both were fetched as "
+    "static HTML - the links are in the served markup, so nothing is hidden behind JavaScript.\n"
+    "  (2) Those index pages also SHOW the file-naming convention "
+    "(/files/kroo-annual-report-<year>.pdf and /files/kroo-pillar-3-disclosures-<year>.pdf), which is "
+    "what makes a direct probe meaningful rather than a guess: the 2025 and 2026 forms of both names "
+    "return HTTP 404, while the 2024 forms of both return 200 / Content-Type application/pdf / %PDF "
+    "magic bytes (492,016 and 350,437 bytes) as a reach control. Both 2024 files were opened and their "
+    "cover pages still read 'For the year ended 31 December 2024' - so Kroo has NOT quietly republished a "
+    "FY2025 edition over a FY2024 filename.\n"
+    "  (3) Companies House, company 10359002, read 18 Sep 2026: 'Last accounts made up to 31 December "
+    "2024'; 'Next accounts made up to 31 December 2025 due by 30 SEPTEMBER 2026'. No FY2025 accounts "
+    "filed.\n"
+    "  (4) A Wayback CDX sweep of the whole kroo.com domain (6,127 captured URLs) returns no annual "
+    "report or Pillar 3 document later than 2024, on either the live host or the dev.kroo.com staging "
+    "host that mirrors /files/ - and the FY2024 Pillar 3 was still being captured as recently as 10 March "
+    "2026. The staging host's own index pages were fetched too and likewise list only four of each.\n"
+    "PUBLICATION LAG, AND THE DATE TO LOOK AGAIN. Kroo files at the statutory deadline every single year: "
+    "FY2021 filed 26 Sep 2022, FY2022 filed 5 Oct 2023, FY2023 filed 28 Sep 2024, FY2024 filed 22 Sep "
+    "2025. The FY2025 deadline is 30 SEPTEMBER 2026 - twelve days after this check. A re-check in October "
+    "2026 should find the Annual Report, and the Pillar 3 disclosure has followed within weeks of it in "
+    "every year so far. This is a 'come back in a fortnight', not a dead end."
 )
 
 CASH_FLOW_SOURCES = (
@@ -516,11 +545,17 @@ KM1_SOURCES = (
     "FY2022-edition capital-resources table - the same ratio at two different printed precisions from two "
     "different tables, not a disagreement about the number. The same applies to the FY2022 leverage ratio "
     "(100.0% here against 99.97% on the Leverage Ratio sheet).\n\n"
-    "LATEST-EDITION CHECK (required by the KM1 map), performed 2026-09-17 against the Bank's OWN website: "
-    "kroo.com/pillar-3-disclosures lists exactly four Pillar 3 documents - 2021, 2022, 2023 and 2024 - which "
-    "are the four already cited in this build script, and kroo.com/annual-reports likewise carries FY2021 "
-    "through FY2024. The newest Pillar 3 edition published is the 2024 one. NONE NEWER EXISTS; no FY2025 "
-    "Annual Report or Pillar 3 disclosure has been published yet.\n\n"
+    "LATEST-EDITION CHECK (required by the KM1 map), first performed 2026-09-17 against the Bank's OWN "
+    "website and re-performed and WIDENED 2026-09-18 for GA-003: kroo.com/pillar-3-disclosures lists "
+    "exactly four Pillar 3 documents - 2021, 2022, 2023 and 2024 - which are the four already cited in "
+    "this build script, and kroo.com/annual-reports likewise carries FY2021 through FY2024. The newest "
+    "Pillar 3 edition published is the 2024 one. NONE NEWER EXISTS; no FY2025 Annual Report or Pillar 3 "
+    "disclosure has been published yet. The 2026-09-17 reading was index-only; the 2026-09-18 re-check "
+    "added three further routes - a direct probe of the 2025/2026 filenames on the convention those index "
+    "pages themselves demonstrate (404, against a 200/application/pdf/%PDF control on the 2024 names), a "
+    "read of the live 2024 files' cover pages to rule out an in-place republication, and Companies House "
+    "('next accounts made up to 31 December 2025 due by 30 September 2026'). The full evidence and the "
+    "date to look again are in the entity note below.\n\n"
     + ENTITY_NOTE
 )
 
@@ -726,7 +761,12 @@ bw.add_overview_sheet(
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's "
          "own source citation for the underlying document/page. Only 4 years shown - no FY2025 Annual "
-         "Report or Pillar 3 report has been published yet.",
+         "Report or Pillar 3 report has been published yet. That was re-checked on 18 September 2026 by "
+         "four independent routes (the Bank's own two index pages, a direct probe of the 2025 filenames "
+         "with a live-URL control, Companies House, and a Wayback sweep of the whole domain including the "
+         "staging host); Kroo's FY2025 accounts are not due until 30 September 2026 and it has filed on "
+         "the deadline in every one of its four years, so October 2026 is when to look again. See the "
+         "entity note on any detail sheet for the full evidence.",
 )
 
 # ---------------------------------------------------------------

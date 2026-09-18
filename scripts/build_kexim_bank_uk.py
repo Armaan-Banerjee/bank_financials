@@ -15,8 +15,13 @@ from bank_workbook import BankWorkbook
 # International / ABC International Bank / Bank Mandiri Europe / DB UK Bank
 # precedent: 13-sheet Pillar-3-only structure.
 #
-# No dedicated Pillar 3 document exists for this entity and no reachable bank-owned
-# website was found this session (see WEBSITE_NOTE below) - the ONLY capital metric
+# SUPERSEDED 2026-09-18 (KM1-032): this comment used to open "No dedicated Pillar 3
+# document exists for this entity and no reachable bank-owned website was found this
+# session". Both halves are false - four Pillar 3 editions (FY2021-FY2023, FY2025)
+# were retrieved on 2026-09-15 from the Export-Import Bank of Korea's London board at
+# koreaexim.go.kr/uk/HPHYEU015M01, which is reachable with a cookie jar. See
+# WEBSITE_NOTE and PILLAR3_ACCESS_NOTE below. What remains true of the ANNUAL REPORTS,
+# which is what the rest of this comment is about, is that - the ONLY capital metric
 # disclosed anywhere in the 5 Annual Reports checked is a single combined "Common
 # Equity Tier 1 and total capital adequacy ratio" percentage, stated once per report
 # in the Strategic Report's "Review of the business" section, with a prior-year
@@ -69,8 +74,20 @@ WEBSITE_NOTE = (
     "domain-parking page, not the Bank's own site. Two other plausible domains (keximuk.com, kexim.co.uk) either "
     "did not resolve or refused connections this session, and the Wayback Machine returned persistent HTTP 429 "
     "rate-limit responses throughout this session (a known ongoing Internet Archive-side issue also seen on "
-    "other tickets in this project - not bank-specific). No standalone Pillar 3 document could therefore be "
-    "located this session; worth a revisit with fresh Wayback/WebSearch budget."
+    "other tickets in this project - not bank-specific).\n\n"
+    "RETRACTED 18 September 2026 (KM1-032). This note used to end 'No standalone Pillar 3 document could "
+    "therefore be located this session; worth a revisit with fresh Wayback/WebSearch budget.' That sentence "
+    "was FALSE by the time it shipped, and because this note is appended to the Cash Flow Statement sheet's "
+    "source text it was telling a reader of that sheet no Pillar 3 could be located while eleven other sheets "
+    "of this same workbook were sourced from four editions of one. The dead domains above are still dead - "
+    "keximbank.co.uk still does not resolve, re-tested today - but they were never the route. The Bank's "
+    "documents are indexed on the Export-Import Bank of Korea's own London board at "
+    "https://www.koreaexim.go.kr/uk/HPHYEU015M01 , which returns HTTP 200 (text/html, 116,591 bytes) once a "
+    "cookie jar is used: the host runs a cookie challenge, not a geo-block. Four editions (FY2021, FY2022, "
+    "FY2023, FY2025) were retrieved that way on 2026-09-15 and are cited on the sheets that use them - see "
+    "PILLAR3_ACCESS_NOTE below. The standing lesson the earlier retraction already recorded is the right one "
+    "and is repeated here so this sheet carries it too: 'it hangs' is not evidence that a document is "
+    "unobtainable."
 )
 
 NOT_DISCLOSED_NOTE = (

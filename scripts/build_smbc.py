@@ -1371,6 +1371,20 @@ KM1_SOURCES = (
     "own reporting date only, marking the four comparative columns 'n/a'.\n"
     "- UK 8a appears only in the FY2022 edition, which prints it as a zero. It is kept as a zero, and is blank "
     "in every other year because those editions do not print the row.\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN EVERY YEAR, AND THAT IS WHAT SMBC BI PRINTS. CET1 capital, Tier 1 capital and "
+    "Total capital carry the same figure in all twelve columns because the Bank has no Additional Tier 1 and no "
+    "Tier 2 instruments in issue, so CET1 = Tier 1 = Total capital by construction. Verified directly in the "
+    "FY2026 PDF on 18 September 2026: Table 2.1 prints all three rows as 6,168 at 31 March 2026 and 5,786 at "
+    "31 March 2025. The Bank's own ratio rows agree - 6,168 / 29,411 = 21.0%, which is what rows 5, 6 and 7 all "
+    "print. Recorded because an identical triple otherwise looks like one value copied into three slots.\n\n"
+    "COLUMN SELECTION: from the FY2025 edition onward SMBC BI prints KM1 with FIVE columns - the reporting date "
+    "and the four preceding quarter-ends (31 Mar 2026, 31 Dec 2025, 30 Sep 2025, 30 Jun 2025, 31 Mar 2025). Only "
+    "the 31 MARCH columns are taken here, one per financial year; the intermediate quarter-ends are a "
+    "within-year series and belong to the Interim Pillar 3 sheet, not to this one.\n\n"
+    "YEAR COLUMNS SHOWN: this sheet carries FY2026-FY2015. FY2014 is omitted from the header rather than shown "
+    "as an empty column - neither the FY2014 nor the FY2015 edition prints a key-metrics table of any kind, and "
+    "no edition anywhere prints a 31 March 2014 comparative in this form, so there is no KM1 for that year on "
+    "any basis. The other sheets in this workbook still carry FY2014.\n\n"
     "CROSS-EDITION DIFFERENCES (each year is its own edition's figure, per this project's convention):\n"
     "- 31 March 2018 leverage exposure reads 70,307.1 in the FY2018 edition (used here) and 70,312.4 in the "
     "FY2019 edition's comparative.\n"
@@ -1400,11 +1414,13 @@ bw.add_km1_sheet(
              "FY2016-FY2021 editions, whose row numbers mean different things and whose leverage rows are on a "
              "different basis. FY2015 is the FY2016 edition's comparative column; FY2014 is blank because no "
              "edition prints it. See the source note for the FY2021 bitmap transcription and the cross-edition "
-             "differences.",
+             "differences. FY2014 is not shown at all: no edition prints a key-metrics table for that date on "
+             "any basis, so the column is omitted rather than printed empty.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=76,
-    source_height=520,
+    source_height=600,
+    years=Y_CORE[:Y_CORE.index("FY2015") + 1],
 )
 
 metric("CET1 Capital", "£m (conv. from USD)", [("Common Equity Tier 1 (CET1) capital", gbp_spot(CET1_CAPITAL))])

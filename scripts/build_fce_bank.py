@@ -1253,11 +1253,14 @@ KM1_SOURCES = (
     "not a financial year. The discarded columns were read, and are recorded here so the reading is "
     "checkable: 2023 edition Sep-23 / Jun-23 / Mar-23 CET1 2,345 / 2,362 / 2,406 and RWA 13,774 / "
     "13,906 / 13,873; 2022 edition Jun-22 CET1 2,687, RWA 11,707, CET1 ratio 22.95%.\n"
-    "* UK 7b IS A DASH, NOT A ZERO. FCE prints '-%' for Additional AT1 SREP requirements in every "
-    "column of every edition, so those cells are BLANK here rather than 0%. FCE holds no AT1 "
-    "instruments, which is also why rows 1 and 2 are identical in every year. No printed zero appears "
-    "anywhere in the year-end columns of this table; the one '0.00%' FCE prints (row 9) is in the "
-    "2022 edition's discarded 30 Jun 2022 column.\n"
+    "* UK 7b IS A DASH, NOT A ZERO, AND THE SHEET CARRIES THE DASH. FCE prints an em dash ('—%') for "
+    "Additional AT1 SREP requirements in every column of every edition - re-read in the FY2025, FY2024, "
+    "FY2023 and FY2022 PDFs on 2026-09-18 - so each of those four cells carries a literal '-'. The dash "
+    "is FCE stating that no additional AT1 SREP requirement applies to it, consistent with its holding "
+    "no AT1 instruments, which is also why rows 1 and 2 are identical in every year. It is a different "
+    "statement from a blank, which on this sheet means FCE published no figure at all. No printed zero "
+    "appears anywhere in the year-end columns of this table; the one '0.00%' FCE prints (row 9) is in "
+    "the 2022 edition's discarded 30 Jun 2022 column.\n"
     "* ROWS UK 8a, UK 9a, 10 AND UK 10a ARE A FORMAL EXCLUSION, not rows this project failed to find, "
     "and FCE states it under the table in every edition - so they are not shown as blank rows. The "
     "wording changed between editions and both are recorded: 2022 edition, 'FCE does not have "
@@ -1335,8 +1338,11 @@ bw.add_km1_sheet(
                     "risk-weighted exposure amount)", {}),
         ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
          {"FY2025": "1.73%", "FY2024": "1.74%", "FY2023": "1.73%", "FY2022": "1.74%"}),
-        # UK 7b is printed "-%" in every column of every edition: a dash, so blank here, not zero.
-        ("DATA", "UK 7b    Additional AT1 SREP requirements (%) — FCE prints a dash in every year", {}),
+        # UK 7b is printed as an em dash ("-%") in every column of every edition
+        # - re-read in all four PDFs on 2026-09-18. The cell carries the dash:
+        # not a blank (FCE did print something) and not a zero.
+        ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
+         {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
         ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
          {"FY2025": "0.55%", "FY2024": "0.53%", "FY2023": "0.47%", "FY2022": "0.48%"}),
         ("DATA", "UK 7d    Total SREP own funds requirements (%)",

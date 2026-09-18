@@ -167,14 +167,31 @@ CAPITAL_RATIO_NOTE = (
     "(CET1+AT1+T2 ÷ RWA) since the numerator is an accounting equity figure, not a confirmed regulatory-"
     "capital figure. Used as the best available proxy since no other capital ratio breakdown is disclosed. "
     "FY2025's Performance Metrics infographic (p.7) separately states this same ratio as 21.64%, a minor "
-    "internal inconsistency with the Financial Highlights table's own 21.46% - the Financial Highlights "
-    "table figure is used here as the formal 5-year comparative disclosure."
+    "internal inconsistency with the Strategic Report 'Key Performance Indicators' section (p.12), which "
+    "gives 21.99% twice. The 21.99% figure is used here, because it appears in the formal KPI section "
+    "rather than in a summary infographic; 21.64% is recorded rather than discarded, and the inconsistency "
+    "is the bank's own. Both readings were confirmed visually at 450 dpi, not by OCR alone.\n\n"
+    "STALE-NOTE CORRECTION (2026-09-18). This paragraph previously said the ratio used here was 21.46%, "
+    "'the Financial Highlights table's own' figure. That was wrong twice over: 21.46% appears NOWHERE in "
+    "the FY2025 Annual Report - it was a transcription error, corrected on 15 September 2026 - and the "
+    "script has carried 21.99% ever since. The note was simply not updated with the figure, so a reader "
+    "checking the sheet against its own note would have found them disagreeing, with the note citing a "
+    "figure that does not exist in the source. A correction that changes a value must also change every "
+    "note that names it; the sheet and its note are one disclosure, not two."
 )
 
 NOT_DISCLOSED_NOTE = (
-    "Not publicly disclosed - no standalone Pillar 3 document exists for this entity, and this metric does "
-    "not appear anywhere in any of the 3 Annual Report filings reviewed (FY2023, FY2024, FY2025 - the only "
-    "filings that exist at Companies House for this entity). See the Cash Flow Statement sheet's entity note."
+    "Not publicly disclosed - the metric does not appear in FidBank UK Limited's four standalone Pillar 3 "
+    "disclosures (FY2021-FY2024, published on the Bank's own Reporting Archive and cited in full on the "
+    "capital sheets), nor in any of the 3 Annual Report filings reviewed (FY2023, FY2024, FY2025 - the only "
+    "filings that exist at Companies House for this entity). The FY2023/FY2024 UK KM1 tables disclose CET1, "
+    "Tier 1, total capital, RWA, capital ratios, leverage, LCR and NSFR, and carry no MREL row.\n\n"
+    "CORRECTION, 18 September 2026 (KM1-032): this note previously opened 'no standalone Pillar 3 document "
+    "exists for this entity'. That was false and had already been retracted elsewhere in this same build - "
+    "the HD-064 primary-source correction on the capital sheets establishes that FidBank publishes "
+    "entity-level Pillar 3 disclosures for FY2021-FY2024 - but the superseded sentence was left standing "
+    "here, so one stale string kept asserting on this sheet what the rest of the workbook had disproved. "
+    "The absence being recorded is MREL's, not the document's. See the Cash Flow Statement sheet's entity note."
 )
 
 

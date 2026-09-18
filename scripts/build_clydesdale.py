@@ -134,12 +134,36 @@ NATIONWIDE_NOTE = (
 )
 
 FY2026_CASH_FLOW_GAP_NOTE = (
-    "FY2026 cash flow is blank: the FY2026 Annual Report and Accounts moved to the FRS 101 Reduced Disclosure "
-    f"Framework and explicitly took the IAS 7 'Statement of Cash Flows' disclosure exemption (p.60) - {AR2026_URL} "
-    "- available to it as a qualifying subsidiary whose ultimate parent (Nationwide Building Society) publishes "
-    "consolidated financial statements. No cash flow statement of any kind appears in the FY2026 accounts. See the "
-    "Nationwide acquisition note above for context (the exemption coincides with the Part VII transfer of "
-    "substantially all of the Bank's business)."
+    "FY2026 - NEVER PUBLISHED (not 'unreached'): no cash flow statement of any kind appears in the FY2026 accounts, "
+    "because the FY2026 Annual Report and Accounts moved to the FRS 101 Reduced Disclosure Framework and took the "
+    "IAS 7 'Statement of Cash Flows' disclosure exemption - available to the Bank as a qualifying subsidiary whose "
+    "ultimate parent (Nationwide Building Society) publishes consolidated financial statements. Evidence: Clydesdale "
+    "Bank PLC 2026 Annual Report and Accounts, printed p.60, note 1.2 'Basis of accounting' (within 'Section 1: "
+    "Basis of preparation'), which reads verbatim: \"The Bank has adopted a new financial reporting framework in the "
+    "period. The financial statements... have been prepared in accordance with applicable law and United Kingdom "
+    "Accounting Standards (UK GAAP), including Financial Reporting Standard 101 Reduced Disclosure Framework (FRS "
+    "101). This is a change from previous financial statements, which were prepared under UK adopted International "
+    "Accounting Standards (IAS).\" The bullet list that follows - \"The Bank has taken advantage of the following "
+    "disclosure exemptions under FRS 101 and removed the requirements of:\" - includes \"IAS 7 'Statement of Cash "
+    "Flows'\" in its entirety, not merely selected paragraphs of it. Retrieval and search method: fetched with plain "
+    "curl, the first rung of the fetch ladder (HTTP 200, Content-Type application/pdf, %PDF-1.7 magic bytes, "
+    "1,960,231 bytes, 104 pages); the text layer is sound - richness control returned 3,895 hits for 'the' and 32 "
+    "for 'Clydesdale' - so no OCR was needed. Searched terms: 'statement of cash flows', 'cash flow', 'IAS 7', 'FRS "
+    "101', 'exemption'. 'Statement of cash flows' occurs nowhere as a heading; the document's only primary-statement "
+    "headings are Balance sheet, Statement of comprehensive income and Statement of changes in equity. Every other "
+    "'cash flow' hit is discursive (cash flow hedge reserve and hedge-accounting policy, undiscounted "
+    "contractual-maturity tables, IFRS 9 contractual-cash-flow classification policy, IAS 19 pension obligation "
+    f"duration). - {AR2026_URL}\n\n"
+    "FY2026 IS A COMPLETED YEAR, NOT AN INTERIM PERIOD - stated here because Clydesdale Bank PLC's historic 30 "
+    "September year end makes an FY2026 annual column look impossible in September 2026. It is not. The year end "
+    "moved from 30 September to 31 MARCH via the PRA-approved 18-month transition period (1 October 2023 - 31 March "
+    "2025, shown as the 'FY2025 (18mo)' column), so FY2026 is a complete twelve-month financial year ended 31 March "
+    "2026; the FY2026 accounts use the phrase 'the year ended 31 March 2026' twelve times. Every FY2026 figure in "
+    "this workbook is taken from an annual document for that year end - the 2026 Annual Report and Accounts and the "
+    "2026 Pillar 3 Report, whose KM1 is struck at 31 Mar 2026 - and not from a half-year or quarterly disclosure. No "
+    "part of FY2026 therefore belongs on an 'Interim Pillar 3' sheet, and this workbook correctly does not have one. "
+    "See the Nationwide acquisition note above for context: the FRS 101 adoption coincides with the Part VII "
+    "transfer of substantially all of the Bank's business."
 )
 
 CASH_FLOW_SOURCES = (
@@ -576,6 +600,41 @@ bw.add_equity_changes_sheet(
 # Sheet 1: Cash Flow Statement
 # ---------------------------------------------------------------
 rows = [
+    # GAP-FILL (2026-09-18): the FY2026 column previously held NO cell at all, so
+    # neither a reader nor audit_gaps.py could tell "the exemption was taken" from
+    # "nobody has looked yet", even though FY2026_CASH_FLOW_GAP_NOTE below already
+    # carried the finding. The exemption now appears IN the column, in one labelled
+    # row - the same treatment already applied to Atom Bank and AIB Group (UK).
+    #
+    # RE-PROVEN 2026-09-18 from the FY2026 accounts themselves (Clydesdale Bank PLC
+    # 2026 Annual Report and Accounts, printed p.60, note 1.2 'Basis of accounting'
+    # within 'Section 1: Basis of preparation'). Verbatim: "The Bank has adopted a
+    # new financial reporting framework in the period... including Financial
+    # Reporting Standard 101 Reduced Disclosure Framework (FRS 101). This is a
+    # change from previous financial statements, which were prepared under UK
+    # adopted International Accounting Standards (IAS)." The bullet list of
+    # exemptions taken then removes the requirements of, in full and not merely by
+    # paragraph, "IAS 7 'Statement of Cash Flows'".
+    #
+    # AND THE COLUMN IS A GENUINE COMPLETED YEAR, NOT AN INTERIM PERIOD. This is
+    # worth stating because Clydesdale's old 30 September year end makes an FY2026
+    # annual column look impossible in September 2026. It is not: the year end moved
+    # from 30 September to 31 MARCH via the PRA-approved 18-month transition period
+    # (1 Oct 2023 - 31 Mar 2025, the 'FY2025 (18mo)' column above), so FY2026 is a
+    # complete twelve-month year ended 31 March 2026 - the phrase "the year ended
+    # 31 March 2026" appears twelve times in the document. Every FY2026 figure in
+    # this workbook comes from an annual document for that year end, so no part of
+    # FY2026 belongs on an Interim Pillar 3 sheet.
+    #
+    # The document was searched for "statement of cash flows" as a heading: zero
+    # hits. Its only primary-statement headings are Balance sheet, Statement of
+    # comprehensive income and Statement of changes in equity. Every remaining
+    # "cash flow" hit is discursive (cash flow hedge reserve and hedge accounting,
+    # undiscounted contractual-maturity tables, IFRS 9 SPPI classification policy,
+    # IAS 19 pension obligation duration).
+    ("SECTION", "FY2026 — no Cash Flow Statement is published; FRS 101 was adopted this year and the IAS 7 exemption taken (see note below)", {}),
+    ("DATA", "Statement of Cash Flows for the year",
+     {"FY2026": "Not published - FRS reduced-disclosure framework adopted this year; cash-flow exemption taken (see note)"}),
     ("SECTION", "Operating activities", {}),
     ("DATA", "Profit on ordinary activities before tax", {"FY2025": 186, "FY2023": 344, "FY2022": 590, "FY2021": 416, "FY2020": -173, "FY2019": -182, "FY2018": -276, "FY2017": -261, "FY2016": -352, "FY2015": -308, "FY2014": -216, "FY2013": -33, "FY2012": -614, "FY2011": 21, "FY2010": 49, "FY2009": 48}),
     ("DATA", "Non-cash or non-operating items included in profit before tax", {"FY2025": 368, "FY2023": -1203, "FY2022": -1306, "FY2021": -1221, "FY2020": -544, "FY2019": -935, "FY2018": -761, "FY2017": -735, "FY2016": -644, "FY2015": -721, "FY2014": -696, "FY2013": -583, "FY2012": -136, "FY2011": -630, "FY2010": -690, "FY2009": -685}),
@@ -645,7 +704,7 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="Clydesdale Bank PLC — Consolidated Cash Flow Statement",
-    subtitle="Clydesdale Bank (CB) Group (consolidated basis), £m unless stated. FY2026 blank - see source note at bottom.",
+    subtitle="Clydesdale Bank (CB) Group (consolidated basis), £m unless stated. FY2026 states the FRS 101 / IAS 7 cash-flow exemption in place of figures - see source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=72,

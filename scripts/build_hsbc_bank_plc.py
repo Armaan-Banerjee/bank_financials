@@ -980,6 +980,89 @@ bw.add_not_disclosed_metric_sheets(
 )
 
 # ---------------------------------------------------------------
+# Additional interim Pillar 3 disclosures
+# ---------------------------------------------------------------
+# The standard metric sheets above intentionally remain ANNUAL - one fixed
+# column per 31 December year-end.  HSBC Bank plc also publishes quarterly
+# Pillar 3 disclosures under Article 433a, each carrying a full UK KM1 at a
+# non-year-end reporting date.  Those observations are kept here, in a separate
+# wide matrix with periods across the columns, so that a half-year or quarterly
+# reporting date is never mixed into a year-end column.
+P3_2026_Q1_URL = ("https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/"
+                  "hsbc-bank-plc/260508-hsbc-bank-plc-pillar-3-disclosures-at-31-march-2026.pdf")
+P3_2026_H1_URL = ("https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/"
+                  "hsbc-bank-plc/260810-hsbc-bank-plc-pillar-3-disclosures-at-30-june-2026.pdf")
+
+INTERIM_PERIODS = [
+    ("2026 H1", "H1", "HSBC Bank plc Pillar 3 Disclosures at 30 June 2026", "p.3, Table 1", P3_2026_H1_URL),
+    ("2026 Q1", "Q1", "HSBC Bank plc Pillar 3 Disclosures at 31 March 2026", "p.3, Table 1", P3_2026_Q1_URL),
+]
+
+# Order of each list matches INTERIM_PERIODS above (30 Jun 2026, then 31 Mar 2026).
+INTERIM_VALUES = {
+    "CET1 Capital": [19180, 19113],
+    "Tier 1 Capital": [23783, 23321],
+    "Total Capital": [41356, 41581],
+    "Total RWAs": [112200, 109459],
+    "CET1 Ratio": ["17.1%", "17.5%"],
+    "Tier 1 Ratio": ["21.2%", "21.3%"],
+    "Total Capital Ratio": ["36.9%", "38.0%"],
+    "Leverage Ratio": ["4.1%", "4.2%"],
+    "LCR": ["139%", "142%"],
+    "NSFR": ["112%", "112%"],
+}
+
+interim_rows = []
+_interim_basis = "HSBC Bank plc consolidated entity-level"
+for _metric_name, _values in INTERIM_VALUES.items():
+    _unit = "%" if _metric_name in {"CET1 Ratio", "Tier 1 Ratio", "Total Capital Ratio",
+                                    "Leverage Ratio", "LCR", "NSFR"} else "£m"
+    for _idx, (_period, _dtype, _document, _page, _url) in enumerate(INTERIM_PERIODS):
+        interim_rows.append(
+            (_period, _dtype, _metric_name, _values[_idx], _unit, _interim_basis, _url, _page)
+        )
+
+bw.add_wide_interim_sheet(
+    "Interim Pillar 3",
+    rows=interim_rows,
+    hyperlink_cells={(i, 6): row[6] for i, row in enumerate(interim_rows)},
+    title="HSBC Bank plc — Interim Pillar 3",
+    subtitle="Entity-level quarterly/half-year KM1 observations at 31 March 2026 and 30 June 2026; "
+             "annual year-end values remain on the standard metric sheets.",
+    note=(
+        "Why this sheet exists, and why there is no FY2026 annual column anywhere in this workbook. "
+        "HSBC Bank plc has a 31 DECEMBER year-end, so the FY2026 reporting date (31 December 2026) had not "
+        "been reached when this workbook was built (18 September 2026) and no FY2026 Annual Report or annual "
+        "Pillar 3 exists. What the bank HAS published for 2026 is its quarterly Pillar 3 disclosures under "
+        "Article 433a: at 31 March 2026 (published 8 May 2026) and at 30 June 2026 (published 10 August "
+        "2026). Those are HALF-YEAR and FIRST-QUARTER reporting dates, not year-end ones, so they are "
+        "recorded here with their dates stated rather than placed in an annual column - a 30 June figure and "
+        "a 31 December figure are not the same measurement and must not share a column. The 30 September "
+        "2026 quarter had not ended, so no Q3 2026 disclosure exists yet; that is an absence in the "
+        "publication calendar, not a document we were unable to obtain.\n\n"
+        "Each period is taken from the edition in which that date is the REPORTING date, not from the other "
+        "edition's comparative column. Both editions agree digit-for-digit on 31 March 2026.\n\n"
+        "Scope. This sheet deliberately covers 2026 only. HSBC Bank plc has published quarterly Pillar 3 "
+        "disclosures for earlier years too, and the 2026 editions reprint 31 Mar / 30 Jun / 30 Sep 2025 as "
+        "comparatives, but those earlier periods are NOT backfilled here from a later edition's comparative "
+        "column. A backfill would need each period's own edition; it was not in scope for this pass and its "
+        "absence is a scope boundary, not a finding that the bank did not publish.\n\n"
+        "Restatement check. Both 2026 editions reprint 31 December 2025 as a comparative and print it "
+        "identically to the FY2025 figures already held on this workbook's annual metric sheets: CET1 "
+        "£20,063m, tier 1 £24,272m, total capital £41,473m, RWAs £112,340m, ratios 17.9% / 21.6% / 36.9%, "
+        "leverage ratio 4.5%, LCR 148%, NSFR 114%. No restatement of any previously held figure was found, "
+        "so no annual figure was changed. The 31 March 2026 edition's footnote 1 records that from 30 June "
+        "2025 the regulatory valuation of tier 2 capital includes accrued interest and that prior periods "
+        "have NOT been restated - a prospective change, affecting no figure already in this workbook.\n\n"
+        "Basis. Capital, RWA and ratio rows are KM1 rows 1-7. The leverage ratio row is KM1 row 14, "
+        "'Leverage ratio excluding claims on central banks', the same basis as the annual Leverage Ratio "
+        "sheet for FY2022 onwards. LCR is the average of the preceding 12 months and NSFR the average of "
+        "the preceding four quarter-ends, as the bank states above its own table. MREL is not disclosed at "
+        "this entity level in any edition - see the MREL Ratio sheet."
+    ),
+)
+
+# ---------------------------------------------------------------
 # Overview sheet
 # ---------------------------------------------------------------
 bw.add_overview_sheet(

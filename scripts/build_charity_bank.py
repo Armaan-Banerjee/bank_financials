@@ -648,27 +648,59 @@ metric(
     note=LEVERAGE_BASIS_NOTE,
 )
 
+# GAP-FILL (2026-09-18): FY2024 and FY2025 previously carried NO cell on the LCR
+# and NSFR sheets, so four sheet-years read as blank to audit_gaps.py even though
+# the finding was complete. The finding is now stated IN the columns.
+# EVIDENCE RE-VERIFIED 2026-09-18, three independent ways:
+#   (1) No Pillar 3 edition exists for either year. Wayback CDX for every
+#       charitybank.org Pillar 3 PDF ever captured ends at
+#       PILLAR-3-disclosures-2023.pdf; there is no 2024 or 2025 file. Charity Bank
+#       has since removed the whole Pillar 3 series from its live site - the
+#       verbatim 2023 URL used by this script now returns HTTP 404 - so a live-site
+#       search cannot settle the question either way and the archive is the
+#       instrument that can.
+#   (2) The Annual Reports disclose neither ratio. Both editions have genuine text
+#       layers (2024: 228,666 chars over 98pp; 2025: 229,517 over 100pp), and both
+#       return ZERO hits for 'LCR', 'liquidity coverage', 'NSFR' and 'net stable
+#       funding' against a richness control of 329/317 hits for 'Charity Bank' on
+#       the same extraction. Neither report mentions Pillar 3 AT ALL: all 17
+#       'pillar' hits in each are Pillar 1 / Pillar 2A / Pillar 2B CAPITAL
+#       requirements, which are a different regime from Pillar 3 DISCLOSURE.
+#   (3) The PRA register carries the opt-in that removes the duty - see
+#       PILLAR3_NOTE. Charity Bank's year end is 31 December (confirmed in both
+#       reports), so a modification effective 01/02/2024 covers FY2024 and FY2025
+#       and neither FY2023 nor earlier.
+SDDT_NO_P3 = ("Not published - SDDT regime, no Pillar 3 disclosure required from FY2024; "
+              "not disclosed in the Annual Report either")
+
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (LCR)", {
+        "FY2025": SDDT_NO_P3, "FY2024": SDDT_NO_P3,
         "FY2023": "206.0%", "FY2022": "182.2%", "FY2021": "222.4%",
     })],
     p3_sources(),
-    note="FY2021 is disclosed in the FY2022 Pillar 3 document's comparative column (222.4%); FY2024-FY2025 "
-         "remain blank (no standalone Pillar 3 "
-         "document has been published for either year, and the Annual Reports do not disclose LCR at all - see "
-         "the Pillar 3 note on this sheet's source citation).",
+    note="FY2021 is disclosed in the FY2022 Pillar 3 document's comparative column (222.4%). FY2024-FY2025 are "
+         "NOT a transcription gap: no standalone Pillar 3 document has been published for either year (the "
+         "archived series ends at the 2023 edition) and the Annual Reports do not disclose LCR at all - zero "
+         "hits for 'LCR' or 'liquidity coverage' in either, against a 329/317-hit control for 'Charity Bank' on "
+         "the same text extraction. See the Pillar 3 note on this sheet's source citation for the PRA "
+         "modification that removes the duty.",
 )
 
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (NSFR)", {
+        "FY2025": SDDT_NO_P3, "FY2024": SDDT_NO_P3,
         "FY2023": "139.7%", "FY2022": "135.6%",
     })],
     p3_sources(),
-    note="Blank FY2021 (not disclosed in that year's Pillar 3 document, predates the UK NSFR requirement in any "
-         "case - PS22/21) and FY2024-FY2025 (no standalone Pillar 3 document published, Annual Reports don't "
-         "disclose NSFR at all).",
+    note="Blank FY2021 (not disclosed in that year's Pillar 3 document, and predates the UK NSFR requirement in "
+         "any case - PS22/21). FY2024-FY2025 are a regulatory absence, not a search miss: no standalone Pillar 3 "
+         "document was published for either year and the Annual Reports do not disclose NSFR at all (zero hits "
+         "for 'NSFR' and 'net stable funding' in both, same controls as the LCR sheet). Becoming an SDDT also "
+         "replaces the full NSFR with a Simplified Retail Deposit Ratio, and Charity Bank publishes no value for "
+         "that either, so nothing replaces the series here.",
 )
 
 bw.add_not_disclosed_metric_sheets(

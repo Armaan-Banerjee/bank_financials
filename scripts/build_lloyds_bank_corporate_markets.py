@@ -766,8 +766,16 @@ INTERIM_URLS = {
 # this project's research. The Q1/Q3 2022 reports additionally omit the
 # leverage template entirely (it wasn't yet part of LBCM's quarterly
 # disclosure set); NSFR first appears in the Dec-2022 comparative column of
-# the 2023-H1 report. No interim (non-year-end) Pillar 3 disclosures exist
-# for LBCM in 2021 (confirmed: every 2021 interim URL pattern 404s).
+# the 2023-H1 report.
+# CORRECTED 2026-09-18 (KM1-032): this comment used to end "No interim
+# (non-year-end) Pillar 3 disclosures exist for LBCM in 2021 (confirmed: every
+# 2021 interim URL pattern 404s)." False. LBCM published half-year Pillar 3
+# reports in BOTH 2020 and 2021; the 404s came from guessing the 2022-2025
+# folder shape, which changed. The 2020/2021 editions sit in a flat year folder
+# under /assets/pdfs/investors/financial-performance/. Neither uses the UK KM1
+# template - the 2021 edition has zero occurrences of "KM1" - so these periods
+# stay empty on the Interim sheet for a documented reason, not an imagined one.
+# See that sheet's note for the verified URLs and controls.
 INTERIM_VALUES = {
     "2025-Q1": [None, None, None, 21775, None, None, None, 81263, "4.4%", "166%", None],
     "2025-H1": [2971, 6950, 6950, 22419, "13.3%", "31.0%", "31.0%", 84779, "8.2%", "167%", "132%"],
@@ -811,10 +819,38 @@ bw.add_wide_interim_sheet(
         "(LCR) — confirmed by direct inspection of each report's table of contents, not an "
         "extraction gap. No leverage template was published in the Q1/Q3 2022 reports "
         "(first appears from the 2022 half-year report onward). NSFR was not disclosed "
-        "before the 31 December 2022 comparative shown in the 2023 half-year report. No "
-        "interim (non-year-end) Pillar 3 disclosures exist for LBCM for 2021 — confirmed "
-        "via direct URL-pattern checks against the same archive structure used for "
-        "2022–2025, all of which 404."
+        "before the 31 December 2022 comparative shown in the 2023 half-year report.\n\n"
+        "2021 CORRECTED 18 September 2026 (KM1-032). This note previously said \"No interim "
+        "(non-year-end) Pillar 3 disclosures exist for LBCM for 2021 — confirmed via direct "
+        "URL-pattern checks against the same archive structure used for 2022–2025, all of "
+        "which 404.\" THAT WAS FALSE. LBCM published a half-year Pillar 3 in 2021, and in "
+        "2020 as well. The URL patterns 404'd because they were the wrong patterns: the "
+        "2020 and 2021 editions sit under a flat year folder, not the .../<year>/<quarter>/ "
+        "structure the 2022–2025 editions use, and the whole tree is under "
+        "/assets/pdfs/investors/financial-performance/, not the financial-downloads path "
+        "the page itself is served from. Guessing a filename tests our guess, not the "
+        "bank; the index had to be read, and it lists every edition:\n"
+        "  2021 half-year: .../lloyds-bank-corporate-markets-plc/2021/2021-lbcm-hy-pillar-3.pdf "
+        "(re-verified 2026-09-18: HTTP 200, application/pdf, %PDF-, 207,996 bytes)\n"
+        "  2020 half-year: .../2020/2020-lbcm-hy-pillar-3-v2.pdf (HTTP 200, application/pdf, "
+        "%PDF-, 129,099 bytes)\n"
+        "A negative control run in the same pass (an invented filename in the 2021 folder) "
+        "returned HTTP 404 with a 274,912-byte text/html body, so a hit and a miss are "
+        "cleanly distinguishable on this host and the 200s above are real.\n"
+        "WHAT THE 2021 AND 2020 HALF-YEAR EDITIONS ACTUALLY CONTAIN, which is why the rows "
+        "above are still empty for those periods: NEITHER USES THE UK KM1 TEMPLATE. The "
+        "2021 half-year report contains zero occurrences of the string \"KM1\". Its "
+        "quantitative content is Table 1, the IFRS9-FL own-funds and leverage comparison "
+        "(columns 30 Jun 2021 / 31 Dec 2020 / 30 Jun 2020), plus Table 2 (OV1) and credit-"
+        "risk tables — no LCR, NSFR, SREP or buffer rows. So the sheet's CONTENT is barely "
+        "affected, but the REASON changes completely: from \"no such document exists\" to "
+        "\"the documents exist and print a different table\". That distinction is the whole "
+        "point of the correction — an empty cell justified by a false premise is not the "
+        "same artifact as an empty cell justified by the document's own scope.\n"
+        "ALSO NOT YET CARRIED HERE, found on the same index: 2026-Q1 and 2026-H1 LBCM "
+        "Pillar 3 editions are live (2026-lbcm-q1-pillar-3.pdf; 2026-lbcm-hy-pillar-3.pdf, "
+        "HTTP 200, application/pdf, %PDF-, 402,445 bytes), and a 2019 half-year Pillar 3 "
+        "exists as .xlsx. This sheet stops at 2025-Q3."
     ),
 )
 

@@ -877,6 +877,8 @@ metric(
 # year). HSBC UK publishes additional Q1/H1/Q3 disclosures, so these are kept
 # in a separate wide matrix with periods across the columns.
 INTERIM_PERIODS = [
+    ("2026 H1", "H1", "2026-06-30"),
+    ("2026 Q1", "Q1", "2026-03-31"),
     ("2025 Q3", "Q3", "2025-09-30"),
     ("2025 H1", "H1", "2025-06-30"),
     ("2025 Q1", "Q1", "2025-03-31"),
@@ -894,48 +896,60 @@ INTERIM_PERIODS = [
 
 INTERIM_VALUES = {
     "CET1 Capital": [
+        16395, 16054,
         15626, 15255, 15211, 14966, 14550, 14611, 14818, 14382, 14317,
         12338, 12346, 12244, 13219,
     ],
     "Tier 1 Capital": [
+        19343, 18761,
         18334, 17963, 17423, 17220, 16802, 16864, 17072, 16632, 16567,
         14586, 14599, 14490, 15467,
     ],
     "Total Capital": [
+        23284, 22717,
         21978, 21632, 20598, 20375, 19990, 20053, 20140, 19671, 19625,
         17721, 17668, 17509, 18454,
     ],
     "Total RWAs": [
+        124338, 120226,
         117852, 115402, 112221, 105494, 104352, 102218, 100563, 99098, 99930,
         91917, 90209, 89803, 84555,
     ],
     "CET1 Ratio": [
+        "13.2%", "13.4%",
         "13.3%", "13.2%", "13.6%", "14.2%", "13.9%", "14.3%", "14.7%", "14.5%", "14.3%",
         "13.4%", "13.7%", "13.6%", "15.6%",
     ],
     "Tier 1 Ratio": [
+        "15.6%", "15.6%",
         "15.6%", "15.6%", "15.5%", "16.3%", "16.1%", "16.5%", "17.0%", "16.8%", "16.6%",
         "15.9%", "16.2%", "16.1%", "18.3%",
     ],
     "Total Capital Ratio": [
+        "18.7%", "18.9%",
         "18.6%", "18.7%", "18.4%", "19.3%", "19.2%", "19.6%", "20.0%", "19.9%", "19.6%",
         "19.3%", "19.6%", "19.5%", "21.8%",
     ],
     "Leverage Ratio": [
+        "5.6%", "5.6%",
         "5.7%", "5.7%", "5.8%", "5.8%", "5.9%", "6.1%", "6.4%", "6.3%", "6.3%",
         "5.6%", "5.8%", "5.8%", "4.6%",
     ],
     "LCR": [
+        "160%", "168%",
         "181%", "186%", "189%", "192%", "193%", "196%", "206%", "213%", "220%",
         "232%", "232%", "230%", None,
     ],
     "NSFR": [
+        "143%", "144%",
         "148%", "151%", "154%", "155%", "155%", "156%", "160%", "162%", "163%",
         "165%", "166%", "167%", None,
     ],
 }
 
 INTERIM_SOURCES = {
+    "2026 H1": ("HSBC UK Bank plc Pillar 3 Disclosures at 30 June 2026", "p.5, Table 1", "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/hsbc-uk-bank-plc/260810-hsbc-uk-bank-plc-pillar-3-disclosures-at-30-june-2026.pdf"),
+    "2026 Q1": ("HSBC UK Bank plc Pillar 3 Disclosures at 31 March 2026", "p.3, Table 1", "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-uk-bank-plc/260508-hbuk-pillar-3-disclosures-at-31-march-2026.pdf"),
     "2025 Q3": ("HSBC UK Bank plc Pillar 3 Disclosures at 30 September 2025", "Table 1", "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/3q/pdfs/hsbc-uk-bank-plc-ring-fenced-bank/251106-hsbc-uk-bank-plc-pillar-3-disclosures-at-30-september-2025.pdf"),
     "2025 H1": ("HSBC UK Bank plc Pillar 3 Disclosures at 30 June 2025", "Table 1", "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/interim/pdfs/hsbc-uk-bank-plc/250806-pillar-3-disclosures-at-30-june-2025.pdf"),
     "2025 Q1": ("HSBC UK Bank plc Pillar 3 Disclosures at 31 March 2025", "Table 1", "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/1q/pdfs/hsbc-uk-bank-plc/250507-hbuk-pillar-3-disclosures-at-31-march-2025.pdf"),
@@ -963,18 +977,35 @@ def add_interim_pillar3_sheet():
             )
 
     note = (
-        "Scope note: 2022–2025 Q1/H1/Q3 observations are taken from HSBC UK Bank plc's own entity-level "
+        "Scope note: 2022–2026 Q1/H1/Q3 observations are taken from HSBC UK Bank plc's own entity-level "
         "Pillar 3 Table 1 disclosures or their comparative columns. The only 2021 interim observation found "
         "was 30 June 2021; LCR and NSFR were not disclosed for that period. MREL was not disclosed in the "
         "entity-level reports. Blank values are source gaps, not calculated estimates. HSBC UK Bank plc is "
-        "distinct from HSBC Bank plc and HSBC Group."
+        "distinct from HSBC Bank plc and HSBC Group.\n\n"
+        "2026 observations (added 18 September 2026): 31 March 2026 comes from the Pillar 3 Disclosures at "
+        "31 March 2026 (published 8 May 2026) and 30 June 2026 from the Pillar 3 Disclosures at 30 June 2026 "
+        "(published 10 August 2026) — each period taken from the edition in which it is the reporting date. "
+        "There is NO FY2026 annual column anywhere in this workbook and there cannot be one: HSBC UK Bank plc "
+        "has a 31 December year-end, so the FY2026 reporting date (31 December 2026) had not been reached as "
+        "at the date this workbook was built. These two 2026 observations are half-year and first-quarter "
+        "reporting dates and are deliberately kept on this sheet rather than placed in an annual column. The "
+        "30 September 2026 quarter had likewise not ended, so no Q3 2026 disclosure exists yet.\n\n"
+        "Restatement check: the 31 March 2026 and 30 June 2026 editions both reprint 31 December 2025 as a "
+        "comparative and print it identically to the FY2025 figures already held on the annual metric sheets "
+        "(CET1 £15,509m, tier 1 £18,218m, total capital £21,888m, RWAs £117,463m, ratios 13.2%/15.5%/18.6%, "
+        "leverage 5.6%, LCR 175%, NSFR 146%), and both reprint the 2025 Q1/H1/Q3 columns identically to the "
+        "figures already on this sheet. No restatement of any previously held figure was found. The 30 June "
+        "2026 edition does footnote (footnote 2) that the leverage exposure calculation for securities "
+        "collateral posted to central banks was enhanced in 2Q26 with comparatives not restated, but that "
+        "affects KM1 row 14b (leverage ratio INCLUDING claims on central banks), which this sheet does not "
+        "carry; the row 14 basis used here (EXCLUDING claims on central banks) is unaffected."
     )
     bw.add_wide_interim_sheet(
         "Interim Pillar 3",
         rows=interim_rows,
         hyperlink_cells={(i, 6): row[6] for i, row in enumerate(interim_rows)},
         title="HSBC UK Bank plc — Interim Pillar 3",
-        subtitle="Additional entity-level Q1/H1/Q3 observations; annual values remain on the standard metric sheets.",
+        subtitle="Additional entity-level Q1/H1/Q3 observations, 30 June 2021 to 30 June 2026; annual values remain on the standard metric sheets.",
         note=note,
     )
 

@@ -542,11 +542,19 @@ km1_rows = [
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%"}),
-    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+    ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2025": "1.98%", "FY2024": "1.97%", "FY2023": "1.97%", "FY2022": "1.00%"}),
-    ("DATA", "UK 9a    Systemic risk buffer (%)", {}),
-    ("DATA", "10    Global Systemically Important Institution buffer (%)", {}),
+    # Dashed in the 31 December column of PART 2 (Santander UK plc Group, the
+    # RFB) in every UK-template edition - each year read in its own edition,
+    # re-read at source 2026-09-18. NOTE the row immediately below: UK 10a is a
+    # real 1.00% in Part 2 and a dash in Part 1, so the half of the document
+    # matters. See the KM1 note.
+    ("DATA", "UK 9a    Systemic risk buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "10    Global Systemically Important Institution buffer (%)",
+     {"FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "UK 10a    Other Systemically Important Institution buffer",
      {"FY2025": "1.00%", "FY2024": "1.00%", "FY2023": "1.00%", "FY2022": "1.00%"}),
     ("DATA", "11    Combined buffer requirement (%)",
@@ -614,10 +622,13 @@ km1_rows = [
     ("DATA", "14    Fully loaded ECL accounting model total capital ratio (%)", {"FY2021": "21.9%", "FY2020": "21.2%"}),
     ("SECTION", "Additional CET1 buffer requirements as a percentage of RWA", {}),
     ("DATA", "Capital conservation buffer requirement (2.5% from 2019) (%)", {"FY2021": "2.5%", "FY2020": "2.5%"}),
-    ("DATA", "Countercyclical buffer requirement (%)", {}),
-    ("DATA", "Bank G-SIB and/or D-SIB additional requirements (%)", {}),
+    ("DATA", "Countercyclical buffer requirement (%)", {"FY2021": "-", "FY2020": "-"}),
+    ("DATA", "Bank G-SIB and/or D-SIB additional requirements (%)", {"FY2021": "-", "FY2020": "-"}),
     ("DATA", "Other Systemically Important Institution Buffer (%)", {"FY2021": "1.00%", "FY2020": "1.00%"}),
-    ("DATA", "Systemic Risk Buffer requirement (%)", {}),
+    # A dash at 31 Dec 2020 and 31 Dec 2021, but 1.00% at the three 2020
+    # quarter-ends - the SRB and the O-SII buffer swapped over during 2020.
+    # The year-end dash is the year-end position, not a missed figure.
+    ("DATA", "Systemic Risk Buffer requirement (%)", {"FY2021": "-", "FY2020": "-"}),
     ("DATA", "Total of bank CET1 specific buffer requirements (%)", {"FY2021": "3.50%", "FY2020": "3.50%"}),
     ("DATA", "CET1 available after meeting the banks minimum capital requirements (%)", {"FY2021": "8.11%", "FY2020": "7.39%"}),
     ("SECTION", "UK CRR leverage ratio (FY2021 edition's caption)", {}),
@@ -673,10 +684,22 @@ KM1_SOURCES = (
     "- PRECISION DRIFT IS THE BANK'S. The FY2022 and FY2023 editions print capital ratios and LCR/NSFR to two "
     "decimal places (15.41%, 156.75%, 136.80%); the FY2024 and FY2025 editions print them to one or none (14.9%, "
     "154%, 137%). Each cell keeps its own edition's precision.\n"
-    "- DASHES LEFT BLANK. Rows UK 8a, UK 9a and 10 are printed \"-\" in every UK-template edition and are left "
-    "blank here, as are Countercyclical buffer requirement, Bank G-SIB and/or D-SIB additional requirements and "
-    "Systemic Risk Buffer requirement in the FY2021/FY2020 block. No zero is recorded where the bank printed a "
-    "dash.\n"
+    "- DASHES ARE CARRIED AS DASHES. Rows UK 8a, UK 9a and 10 are printed \"-\" in the 31 December column of "
+    "PART 2 of every UK-template edition and carry that dash here, as do Countercyclical buffer requirement, "
+    "Bank G-SIB and/or D-SIB additional requirements and Systemic Risk Buffer requirement in the FY2021/FY2020 "
+    "block. All six ACRMDs were re-read at source on 2026-09-18. No zero is recorded where the bank printed a "
+    "dash, and no cell is left empty where the bank printed something.\n"
+    "- ROW UK 10a IS A FIGURE, NOT A DASH - AND PART 1 OF THE SAME DOCUMENT WOULD HAVE SAID OTHERWISE. "
+    "Santander UK plc Group (the RFB, Part 2) carries an O-SII buffer of 1.00% in every UK-template edition. "
+    "The SAME documents also print a KM1 table in PART 1, for Santander UK Group Holdings plc, where UK 10a "
+    "IS a dash. Reading the wrong half of the document would therefore have replaced a published 1.00% with a "
+    "dash on four cells. Every figure on this sheet comes from Part 2, and the two tables are never mixed.\n"
+    "- THE O-SII AND SYSTEMIC RISK BUFFERS SWAPPED OVER DURING 2020, and the FY2020 column catches it. In the "
+    "FY2020 edition's Part 2 the Systemic Risk Buffer requirement is 1.00% at 31 March, 30 June and 30 "
+    "September 2020 and a DASH at 31 December 2020, while the O-SII Buffer is a dash at those three quarter "
+    "ends and 1.00% at 31 December. FY2020 accordingly carries a dash on the SRB row and 1.00% on the O-SII "
+    "row: that is the year-end position, not a transcription slip. The Countercyclical buffer requirement is "
+    "likewise a dash at 31 December 2020, having been 0.02% at 31 March 2020 and 0.99% at 31 December 2019.\n"
     "- TWO CROSS-EDITION DISAGREEMENTS, RECORDED AND NOT RECONCILED. (1) Row UK 11a (Overall capital "
     "requirements) for FY2023: the FY2023 edition's own column prints 17.85%, while the FY2024 edition's "
     "31 December 2023 comparative prints 17.58%. 17.58% is what the same edition's own components add to "
@@ -880,6 +903,116 @@ metric(
          "own 'RFB Group' level shown throughout the rest of this workbook. As at 31 December 2025, Santander UK "
          "Group Holdings plc's Total Own Funds and Eligible Liabilities were 36.1% of RWA / 9.8% of UK leverage "
          "exposure measure (ACRMD 2025, p.6 (Key metrics - MREL (KM2))).",
+)
+
+# ---------------------------------------------------------------
+# Additional interim Pillar 3 disclosures
+# ---------------------------------------------------------------
+# The metric sheets above are ANNUAL - one fixed column per 31 December
+# year-end.  Santander UK publishes its Additional Capital and Risk Management
+# Disclosures quarterly as well as annually, each edition carrying a full UK KM1
+# at a non-year-end reporting date.  Those observations live here so that a
+# quarter-end or half-year date is never mixed into a year-end column.
+#
+# ENTITY: every figure below is taken from PART 2 of each edition - "Additional
+# Capital and Risk Management Disclosures for Santander UK plc Group", the
+# consolidated RFB Group - which is the basis used throughout the rest of this
+# workbook.  Each edition prints the KM1 template TWICE: Part 1 is Santander UK
+# Group Holdings plc (the wider intermediate holding company / resolution
+# entity) and Part 2 is Santander UK plc Group.  The two differ materially and
+# the Part 1 table comes FIRST, so taking the first KM1 an anchor finds would
+# silently give the wrong entity (at 30 June 2026, Part 1 CET1 is GBP 11,481m
+# against Part 2's GBP 11,370m - a plausible-looking 1% error).
+ACRMD_2026_Q1_URL = ("https://assets.santandermedia.com/adobe/assets/"
+                     "urn:aaid:aem:f00ce81d-d424-4cf6-8b64-9e3df1ff0aa3/original/as/"
+                     "Q1-26SantanderUKACRMD_1.pdf")
+ACRMD_2026_H1_URL = ("https://assets.santandermedia.com/adobe/assets/"
+                     "urn:aaid:aem:94435843-ac08-4d49-8c4b-0c86bb0f4271/original/as/"
+                     "Santander%20UK%202026%20Half%20Yearly%20ACRMD.pdf")
+
+INTERIM_PERIODS = [
+    ("30 June 2026", "H1 2026",
+     "Santander UK 2026 Half Yearly Additional Capital and Risk Management Disclosures",
+     "p.33, Key metrics (KM1), Part 2: Santander UK plc Group", ACRMD_2026_H1_URL),
+    ("31 March 2026", "Q1 2026",
+     "Santander UK Q1 2026 Additional Capital and Risk Management Disclosures",
+     "p.13, Key metrics (KM1), Part 2: Santander UK plc Group", ACRMD_2026_Q1_URL),
+]
+
+# Order matches INTERIM_PERIODS above (30 June 2026, then 31 March 2026).
+INTERIM_VALUES = [
+    ("1  Common Equity Tier 1 (CET1) capital", "£m", [11370, 10692]),
+    ("2  Tier 1 capital", "£m", [13430, 12752]),
+    ("3  Total capital", "£m", [15800, 15115]),
+    ("4  Total risk-weighted exposure amount", "£m", [79849, 67736]),
+    ("5  Common Equity Tier 1 ratio (%)", "%", ["14.2%", "15.8%"]),
+    ("6  Tier 1 ratio (%)", "%", ["16.8%", "18.8%"]),
+    ("7  Total capital ratio (%)", "%", ["19.8%", "22.3%"]),
+    ("13  Total exposure measure excluding claims on central banks", "£m", [278858, 246039]),
+    ("14  Leverage ratio excluding claims on central banks (%)", "%", ["4.8%", "5.2%"]),
+    ("14b  Leverage ratio including claims on central banks (%)", "%", ["4.2%", "4.6%"]),
+    ("17  Liquidity coverage ratio (%)", "%", ["163%", "158%"]),
+    ("20  NSFR ratio (%)", "%", ["137%", "136%"]),
+]
+
+interim_rows = []
+_interim_basis = "Santander UK plc Group (consolidated RFB Group), as published in Part 2"
+for _metric_name, _unit, _values in INTERIM_VALUES:
+    for _idx, (_period, _dtype, _document, _page, _url) in enumerate(INTERIM_PERIODS):
+        interim_rows.append(
+            (_period, _dtype, _metric_name, _values[_idx], _unit, _interim_basis, _url, _page)
+        )
+
+bw.add_wide_interim_sheet(
+    "Interim Pillar 3",
+    rows=interim_rows,
+    hyperlink_cells={(i, 6): row[6] for i, row in enumerate(interim_rows)},
+    title="Santander UK Plc — Interim Pillar 3",
+    subtitle="Santander UK plc Group (RFB Group) UK KM1 key metrics at 31 March 2026 and 30 June 2026; "
+             "annual year-end values remain on the standard metric sheets.",
+    note=(
+        "WHY THIS SHEET EXISTS, AND WHY THERE IS NO FY2026 ANNUAL COLUMN IN THIS WORKBOOK. Santander UK Plc "
+        "has a 31 DECEMBER year-end, so the FY2026 reporting date (31 December 2026) had not been reached "
+        "when this workbook was built (18 September 2026) and no FY2026 Annual Report or annual ACRMD "
+        "exists. What the bank HAS published for 2026 is its quarterly Additional Capital and Risk "
+        "Management Disclosures: the Q1 2026 edition (at 31 March 2026) and the 2026 Half Yearly edition "
+        "(at 30 June 2026). Those are a first-quarter and a half-year reporting date, not year-end ones, so "
+        "they are recorded here with their dates stated rather than placed in an annual column - a 30 June "
+        "measurement and a 31 December measurement are not the same thing. The 30 September 2026 quarter "
+        "had not ended, so no Q3 2026 edition exists yet; that is an absence in the publication calendar, "
+        "not a document that could not be obtained.\n\n"
+        "ENTITY - READ THIS BEFORE COMPARING ANY FIGURE HERE WITH A PUBLISHED SANTANDER NUMBER. Each ACRMD "
+        "edition prints the KM1 template TWICE, for two different entities. Part 1 covers SANTANDER UK GROUP "
+        "HOLDINGS PLC, the intermediate holding company and resolution entity. Part 2 covers SANTANDER UK "
+        "PLC GROUP (the consolidated 'RFB Group'), which is the basis used throughout the rest of this "
+        "workbook. EVERY FIGURE ON THIS SHEET IS FROM PART 2. The two tables differ materially and Part 1 "
+        "comes first in the document, so a reader checking against 'the KM1 table' must scroll to Part 2: at "
+        "30 June 2026 Part 1 reports CET1 of £11,481m and RWEAs of £81,073m, against Part 2's £11,370m and "
+        "£79,849m.\n\n"
+        "PROVENANCE. Each period is taken from the edition in which that date is the REPORTING date, not "
+        "from the other edition's comparative column. The two editions agree digit-for-digit on 31 March "
+        "2026 (Part 2: CET1 £10,692m, tier 1 £12,752m, total capital £15,115m, RWEAs £67,736m, 15.8% / "
+        "18.8% / 22.3%, leverage exposure £246,039m, 5.2%, LCR 158%, NSFR 136%).\n\n"
+        "RESTATEMENT CHECK. Both 2026 editions reprint 31 December 2025 as a Part 2 comparative and print it "
+        "identically to the FY2025 figures already held on this workbook's annual metric sheets: CET1 "
+        "£10,601m, tier 1 £12,461m, total capital £14,315m, RWEAs £67,231m, ratios 15.8% / 18.5% / 21.3%, "
+        "leverage exposure £247,722m, leverage ratio 5.0% excluding and 4.5% including claims on central "
+        "banks, LCR 162%, NSFR 135%. No restatement of any previously held figure was found, so no annual "
+        "figure was changed.\n\n"
+        "THE RWEA JUMP AT 30 JUNE 2026 IS REAL, NOT A TRANSCRIPTION ERROR. Part 2 RWEAs rise from £67,736m "
+        "at 31 March 2026 to £79,849m at 30 June 2026, with the leverage exposure measure rising from "
+        "£246,039m to £278,858m and the CET1 ratio falling from 15.8% to 14.2% - a step change, not a "
+        "trend. See the acquisition note carried on the Cash Flow Statement sheet regarding Santander's "
+        "acquisition of TSB Bank plc, which was announced on 21 July 2025 and had not completed as at the "
+        "FY2025 reporting date. The figures are reproduced exactly as the bank printed them; this note "
+        "records the discontinuity so that a reader does not read it as an error or as organic growth.\n\n"
+        "MREL IS ABSENT HERE BY DESIGN, AND THAT IS AN AFFIRMATIVE FINDING RATHER THAN A GAP. Both 2026 "
+        "editions do publish a KM2 MREL table, but it appears ONCE in each document and only in Part 1, for "
+        "the Santander UK Group Holdings plc group - the resolution entity. Part 2's own contents list for "
+        "the Santander UK plc Group runs KM1, LIQ1, LIQB, OV1 and the two CR8 RWEA flow statements, and "
+        "contains no KM2. This is the same conclusion the MREL Ratio sheet already records for the annual "
+        "years, now confirmed against the 2026 editions."
+    ),
 )
 
 # ---------------------------------------------------------------

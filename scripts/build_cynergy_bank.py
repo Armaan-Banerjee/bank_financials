@@ -961,15 +961,60 @@ FY2023_RESTATEMENT_NOTE = (
 )
 
 FY2017_RWA_CAVEAT = (
-    "FY2017 Total Capital (£) and Total RWAs are left blank deliberately, not omitted by oversight: the "
-    "FY2018 Pillar 3 document's FY2017 comparative discloses CET1/Tier 1 capital (£109,910k) and three ratios "
-    "(CET1 16.6%, Total Capital 21.0%, Leverage 5.8%) but never states a Total Capital £ amount or a Total "
-    "RWA £ amount directly, and the same document's own FY2017 credit-risk RWA figure (£629,000k) is larger "
-    "than either of the two different 'implied total RWA' figures that back-solving from the two disclosed "
-    "ratios would produce (~£523m assuming Total Capital = CET1 that year, or ~£662m assuming CET1 ratio "
-    "alone pins down RWA) - these are inconsistent with each other and with the disclosed credit-risk RWA, "
-    "so no single figure can be derived reliably. Rather than guess, these two cells are left blank for "
-    "FY2017 only; the three ratios above are the source's own directly-stated figures and are populated."
+    "FY2017 Total Capital (£139,447k) and Total RWAs (£663,552k) ARE DIRECTLY DISCLOSED, and were filled on "
+    "2026-09-18. Both are printed, in those words and to the pound, in the FY2017 column of 'Appendix 1 - "
+    "Own Funds Disclosure' on printed p.13 of the Cynergy Bank Pillar 3 Disclosures 2018. That appendix "
+    "gives the whole FY2017 stack: CET1 capital before regulatory adjustments 112,718, less intangibles "
+    "(2,408) and a significant-investment deduction (400), giving CET1 = Tier 1 = 109,910; Tier 2 capital "
+    "29,537; TOTAL CAPITAL 139,447; TOTAL RISK WEIGHTED ASSETS 663,552; and the ratios 16.6% / 16.6% / "
+    "21.0%. Everything foots: 109,910 + 29,537 = 139,447, 109,910 / 663,552 = 16.56% and 139,447 / 663,552 "
+    "= 21.01%, matching the printed ratios and the CET1 figure this workbook already carried for FY2017.\n"
+    "WHAT THIS REPLACES, KEPT VISIBLE BECAUSE IT IS INSTRUCTIVE. The note here used to state that the FY2018 "
+    "Pillar 3's FY2017 comparative 'never states a Total Capital £ amount or a Total RWA £ amount directly', "
+    "and then reasoned at length about why back-solving from the ratios was unsafe - concluding, correctly "
+    "on its own premise, that the cells must stay blank. The premise was false. The figures are in the same "
+    "document, six pages after the credit-risk table that reasoning was built on, in the appendix that "
+    "exists precisely to state them. The elaborate argument against deriving a number was, in the end, an "
+    "argument for reading further into the document. Note in passing that it also came close to the right "
+    "answer and rejected it: its '~£662m assuming CET1 ratio alone pins down RWA' is £663.55m.\n"
+    "A SECOND, GENUINELY DIFFERENT FY2017 CAPITAL FIGURE EXISTS and is deliberately NOT used here. Bank of "
+    "Cyprus UK Limited's own FY2017 Annual Report (Companies House, filed 29 May 2018; an image-only scan, "
+    "OCR'd at 200 dpi on 2026-09-18) carries a 'Composition of regulatory capital and ratios (Unaudited)' "
+    "table in the Strategic Report giving Core Tier 1 111,095, qualifying Tier 2 of 29,537 subordinated "
+    "loan PLUS 2,451 of collective provisions, Total regulatory capital 143,083, Core tier 1 ratio 16.5%, "
+    "Total capital ratio 21.4% and leverage 6.0%. That is £3,636k more capital than the Pillar 3 figure, "
+    "because it counts collective provisions in Tier 2 and applies a smaller intangibles deduction (1,623 "
+    "vs 2,408) and no significant-investment deduction. The Pillar 3 basis is used on these sheets because "
+    "it is the basis every FY2018-FY2023 year already uses and the basis the FY2017 CET1 and ratio cells "
+    "already carried; the Annual Report basis is recorded here so the £143,083 / 21.4% pair is recognised "
+    "if it is met again rather than treated as a contradiction.\n"
+    "FY2017 RWA BREAKDOWN is a separate question and is only partly answered - see that sheet."
+)
+
+DERIVED_RWA_FLAG = (
+    "FY2018 CORRECTED 2026-09-18, from a derived £796,565k to the DISCLOSED £794,959k. The line below lists "
+    "FY2018 among the years derived as Total Capital / Total Capital ratio. It did not need to be: 'Appendix "
+    "1 - Own Funds Disclosure' prints 'Total risk weighted assets 794,959' for 2018 outright, on printed "
+    "p.13 of the 2018 edition, and the 2019 edition's own 2018 comparative prints the same 794,959 - two "
+    "independent printings agreeing to the pound against a derivation that was £1.6m out. The same appendix "
+    "is what supplied FY2017 above. No figure was adjusted to satisfy a checker; a derivation was replaced "
+    "by the source it was standing in for.\n"
+    "STILL DERIVED, AND STILL FLAGGED: FY2016. Bank of Cyprus UK's FY2016 Annual Report was re-downloaded "
+    "and OCR'd in full on 2026-09-18 (44 pages, image-only scan) and states no risk-weighted-asset amount "
+    "anywhere - its note 30 capital table gives Core Tier 1 65,017, Total regulatory capital 96,777, Tier 1 "
+    "ratio 12.1%, Total capital ratio 18.2% and leverage 4.7%, and the Strategic Report says only 'total "
+    "capital standing at 18.2% of risk weighted assets'. 96,777 / 0.182 = 531,742.0 exactly, which is this "
+    "sheet's FY2016 figure to the pound, so the derivation is confirmed as such rather than merely declared. "
+    "It is left in place, because it is disclosed as derived rather than passed off as printed, but a ratio "
+    "quoted to one decimal place cannot pin RWA to six significant figures and the figure should not be "
+    "treated as precise. FY2015 and FY2014 do not reproduce under the same test (101,139 / 0.244 = 414,504 "
+    "against a stated 416,813; 98,022 / 0.254 = 385,913 against 385,638), so a different route produced "
+    "those two.\n"
+    "SEPARATELY FLAGGED, NOT CHANGED (out of this pass's scope, and the discrepancy is small but real): the "
+    "Total Capital sheet carries £165,416k for FY2018 and £186,465k for FY2019, while the 2018 and 2019 "
+    "Pillar 3 Own Funds appendices both print 164,940 for 2018 and the 2019 edition prints 186,464 for "
+    "2019. A £476k gap on FY2018 and £1k on FY2019. Whoever revisits this should find which table the "
+    "workbook's figures came from before changing anything."
 )
 
 # ---------------------------------------------------------------
@@ -1025,6 +1070,19 @@ _K = " (£'000 — the 2023 edition's own stated unit)"
 _P = " (£ — whole pounds, as the 2022 edition prints it; that edition states no unit at all)"
 
 km1_rows = [
+    # GA-006 (2026-09-18): the FY2024 and FY2025 columns carried no cell at all,
+    # so a reader opening this sheet saw two blank year columns and the census
+    # scored them as gaps - even though the reason is established and quoted in
+    # the sources note below (SDDT approval 17 January 2025; the Bank says so in
+    # both Annual Reports, the PRA register carries the matching Rule 3.1 row,
+    # and its own disclosures page still lists six Pillar 3 editions, FY2018-
+    # FY2023, and none later - re-checked live 2026-09-18). The statement now
+    # appears IN those columns. Nothing is computed, reordered or restated; this
+    # is a statement row, not a template row, and it is labelled as such so the
+    # KM1/metric-sheet cross-check does not resolve it to any metric sheet.
+    ("DATA", "[No UK KM1 published for this year - see note below]",
+     {"FY2025": "Not required - SDDT, no Pillar 3 published",
+      "FY2024": "Not required - SDDT, no Pillar 3 published"}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "Common Equity Tier 1 (CET1) capital" + _K, {"FY2023": 306251}),
     ("DATA", "Common Equity Tier 1 (CET1) capital" + _P,
@@ -1085,13 +1143,22 @@ km1_rows = [
     ("DATA", "Liquidity coverage ratio (%)",
      {"FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%"}),
     ("SECTION", "Net Stable Funding Ratio", {}),
-    # FY2021's three NSFR cells are printed "-" in the 2022 edition: a dash, so blank here.
+    # DASH RULE, applied 2026-09-18 (GA-006, on the user's reversal of KM1 map
+    # rule 2): the 2022 edition prints a literal "-" in all THREE NSFR rows of
+    # its FY2021 comparative column, and a dash is the Bank saying the row does
+    # not apply to it - a different statement from silence. Those three cells
+    # were previously BLANKED under the old rule; they now carry "-" as printed.
+    # Verified against the source PDF itself, not against the note that claimed
+    # it: cynergy-bank-2022-pillar-3-disclosures.pdf, "Key metrics" p.5 (printed
+    # PAGE 5), re-read 2026-09-18. Those three are the ONLY dash cells in that
+    # table - every other FY2022/FY2021 cell prints a figure - and the 2023
+    # edition's KM1 prints no dash in either of its columns.
     ("DATA", "Total available stable funding" + _K, {"FY2023": 3903341}),
-    ("DATA", "Total available stable funding" + _P, {"FY2022": "3,721,028,413"}),
+    ("DATA", "Total available stable funding" + _P, {"FY2022": "3,721,028,413", "FY2021": "-"}),
     ("DATA", "Total required stable funding" + _K, {"FY2023": 2625631}),
-    ("DATA", "Total required stable funding" + _P, {"FY2022": "2,489,263,786"}),
+    ("DATA", "Total required stable funding" + _P, {"FY2022": "2,489,263,786", "FY2021": "-"}),
     ("DATA", "NSFR ratio (%)",
-     {"FY2023": "148.67%", "FY2022": "149.48%"}),
+     {"FY2023": "148.67%", "FY2022": "149.48%", "FY2021": "-"}),
 ]
 
 KM1_SOURCES = (
@@ -1145,10 +1212,16 @@ KM1_SOURCES = (
     "cross-checks all of them against the metric sheets automatically - they agree.\n"
     "* PRECISION AS PRINTED. The countercyclical buffer row is printed '2.00%' in the 2023 edition but "
     "'1%' and '0%' (no decimals) in the 2022 edition; '0%' is a printed zero and is kept as such.\n"
-    "* A DASH IS NOT A ZERO. The 2022 edition prints '-' in all three Net Stable Funding Ratio rows of "
-    "its FY2021 comparative column - the Bank had no NSFR disclosure for 2021 on this basis - so those "
-    "three FY2021 cells are BLANK here, not zero. (The 2021 edition's own narrative states an FY2021 "
-    "NSFR of 130%, on its own different basis; that figure is on the NSFR sheet, not here.)\n"
+    "* A DASH IS NOT A ZERO, AND IS NOT A BLANK EITHER. The 2022 edition prints '-' in all three Net "
+    "Stable Funding Ratio rows of its FY2021 comparative column - the Bank had no NSFR disclosure for "
+    "2021 on this basis - so those three FY2021 cells carry the literal '-' the Bank printed. They are "
+    "NOT zero, and they are NOT blank: a dash is the Bank stating the row does not apply to it, which is "
+    "a different statement from silence. (Changed 2026-09-18, on the user's reversal of the earlier rule "
+    "that blanked a printed dash; these three cells were blank until then. Re-read off p.5 of the 2022 "
+    "edition on 2026-09-18 to confirm the dash rather than trusting the note that recorded it - and those "
+    "three are the only dash cells in that table, while the 2023 edition's KM1 prints none at all.) The "
+    "2021 edition's own narrative states an FY2021 NSFR of 130%, on its own different basis; that figure "
+    "is on the NSFR sheet, not here.\n"
     "* FY2021 COMES FROM THE 2022 EDITION'S COMPARATIVE, not from its own year's document. The 2021 "
     "Pillar 3's own table (p.20, 'Key capital, liquidity and leverage metrics', columns '2021' and "
     "'2020', figures in £m) is a much narrower PRE-KM1 disclosure: nine value rows, no SREP, buffer, "
@@ -1182,9 +1255,9 @@ bw.add_km1_sheet(
              "the 2023 edition prints £'000, the 2022 edition whole pounds, and each year keeps its own "
              "edition's presentation, so every amount row appears TWICE - once captioned (£'000) carrying "
              "FY2023, once captioned (£) carrying FY2022/FY2021. Those pairs are the same published row in "
-             "two units, not two disclosures, and nothing is rescaled. FY2024/FY2025 are "
-             "blank because Cynergy became an SDDT on 17 January 2025 and no longer publishes Pillar 3; "
-             "FY2020 and earlier predate the template.",
+             "two units, not two disclosures, and nothing is rescaled. FY2024/FY2025 carry a statement "
+             "rather than figures because Cynergy became an SDDT on 17 January 2025 and no longer "
+             "publishes Pillar 3; FY2020 and earlier predate the template.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=72,
@@ -1203,10 +1276,21 @@ metric(
     note=P3_2021_2022_NOTE + FY25_CAP + "\n\n" + SDDT_NOTE,
 )
 
+# GA-006 (2026-09-18): FY2024/FY2025 were left as EMPTY cells on every Pillar 3
+# metric sheet, so the census scored 16 "leading gaps" against this bank even though
+# the reason is fully established and quoted in the notes below (SDDT approval
+# 17 January 2025 - the Bank says so itself in both Annual Reports, and the PRA
+# register carries the matching Rule 3.1 row). The finding now appears IN the cells
+# instead of only in the prose. Independently re-confirmed 2026-09-18 against the
+# Bank's own disclosures page, which still lists six Pillar 3 editions (2018-2023)
+# and none for 2024 or 2025.
+SDDT_NA = "Not required - SDDT, no Pillar 3 published"
+SDDT_NA_NSFR = "Not published - SDDT; SRDR replaces the NSFR requirement"
+
 metric(
     "CET1 Ratio", "%",
     [
-        ("CET1 ratio", {"FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
+        ("CET1 ratio", {"FY2025": SDDT_NA, "FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
                         "FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%"}),
         ("Core Tier 1 / Tier 1 ratio (Basel II/CRD III era terminology; closest equivalent to CET1 ratio)",
          {"FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
@@ -1230,7 +1314,7 @@ metric(
     "Tier 1 Ratio", "%",
     [
         ("Tier 1 ratio (= CET1 ratio; no Additional Tier 1 instrument in issue any year reviewed)",
-         {"FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
+         {"FY2025": SDDT_NA, "FY2024": "13.59%", "FY2023": "14.69%", "FY2022": "15.78%", "FY2021": "13.92%",
           "FY2020": "14.12%", "FY2019": "13.7%", "FY2018": "17.0%", "FY2017": "16.6%",
           "FY2016": "12.1%", "FY2015": "16.6%", "FY2014": "16.9%"}),
     ],
@@ -1241,7 +1325,7 @@ metric(
     "Total Capital", "£'000",
     [("Total eligible regulatory capital (CET1/Core Tier 1 + Tier 2 subordinated debt)",
       {"FY2025": 398606, "FY2024": 336877, "FY2023": 321251, "FY2022": 287447, "FY2021": 227200,
-       "FY2020": 212588, "FY2019": 186465, "FY2018": 165416,
+       "FY2020": 212588, "FY2019": 186465, "FY2018": 165416, "FY2017": 139447,
        "FY2016": 96777, "FY2015": 101139, "FY2014": 98022})],
     note=FY2017_RWA_CAVEAT + FY25_CAP + "\n\n" + SDDT_NOTE,
 )
@@ -1249,7 +1333,7 @@ metric(
 metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio",
-      {"FY2023": "15.41%", "FY2022": "15.78%", "FY2021": "16.03%",
+      {"FY2025": SDDT_NA, "FY2024": SDDT_NA, "FY2023": "15.41%", "FY2022": "15.78%", "FY2021": "16.03%",
        "FY2020": "16.42%", "FY2019": "16.3%", "FY2018": "20.7%", "FY2017": "21.0%",
        "FY2016": "18.2%", "FY2015": "24.4%", "FY2014": "25.4%"})],
     note=FY2023_P3_NOTE
@@ -1264,15 +1348,17 @@ metric(
 metric(
     "Total RWAs", "£'000",
     [("Total risk-weighted assets",
-      {"FY2023": 2084246, "FY2022": 1822159, "FY2021": 1417123,
-       "FY2020": 1294931, "FY2019": 1144428, "FY2018": 796565,
+      {"FY2025": SDDT_NA, "FY2024": SDDT_NA, "FY2023": 2084246, "FY2022": 1822159, "FY2021": 1417123,
+       "FY2020": 1294931, "FY2019": 1144428, "FY2018": 794959, "FY2017": 663552,
        "FY2016": 531742, "FY2015": 416813, "FY2014": 385638})],
     note=FY2023_P3_NOTE + "\n\n"
-    + FY2017_RWA_CAVEAT
-    + "\nFY2020 is the document's own directly-stated Total RWA figure; FY2014-2016, FY2018 and FY2019 are "
-      "derived from that year's own disclosed Total Capital (or minimum capital requirement) divided by that "
-      "year's own disclosed Total Capital ratio (or x12.5 of the minimum capital requirement) - both inputs "
-      "to each derivation come from the same source document/year, not mixed across years.\n\n"
+    + FY2017_RWA_CAVEAT + "\n\n" + DERIVED_RWA_FLAG
+    + "\nFY2017 to FY2020 are now the documents' own directly-stated Total RWA figures (FY2017 and FY2018 "
+      "from the 2018 edition's Own Funds appendix, FY2019 from the 2019 edition's, FY2020 from the 2020 "
+      "edition's); FY2014-FY2016 remain derived from that year's own disclosed Total Capital (or minimum "
+      "capital requirement) divided by that year's own disclosed Total Capital ratio (or x12.5 of the "
+      "minimum capital requirement) - both inputs to each derivation come from the same source "
+      "document/year, not mixed across years.\n\n"
     + SDDT_NOTE
     + " No FY2024 or FY2025 RWA figure is stated in any Annual Report (the word 'risk weighted assets' "
       "appears in AR2025 only inside a restatement note, with no amount), and none is back-solved here from "
@@ -1283,10 +1369,21 @@ metric(
 )
 
 RWA_BREAKDOWN_NOTE = (
-    "FY2016 and FY2017 are deliberately left blank on this sheet, not omitted by oversight: FY2016's "
-    "Annual Report discloses only the aggregate Total Capital and ratio, no risk-category RWA split at all; "
-    "FY2017 is left blank for the same reason given on the Total RWAs sheet (the disclosed ratios don't "
-    "reliably pin down a single RWA figure that year). FY2020's own Pillar 3 document does disclose a "
+    "FY2017 FILLED 2026-09-18, on exactly the footing FY2018 and FY2019 already sit on: credit-risk RWA "
+    "only, £629,000k, from 'Table 9 - Summary of On Balance Sheet Credit Risk Exposure, As at 31 December "
+    "2017' on printed p.10 of the Cynergy Bank Pillar 3 Disclosures 2018 (the source reports £m; converted "
+    "to £'000). Like FY2018 and FY2019, that is NOT the complete Pillar 1 total - the same document's Own "
+    "Funds appendix puts FY2017 total RWA at £663,552k, so £34.5m of operational and other Pillar 1 risk is "
+    "disclosed in aggregate but never split by category. The 'Total RWA' row therefore shows £629,000k for "
+    "FY2017 and will not tie to the Total RWAs sheet; that difference is the undisclosed categories, not an "
+    "error. The note this replaces said FY2017 was blank because 'the disclosed ratios don't reliably pin "
+    "down a single RWA figure that year' - see the Total RWAs sheet for why that reasoning fell away.\n"
+    "FY2016 IS still blank, and now for a checked reason rather than an assumed one: Bank of Cyprus UK's "
+    "FY2016 Annual Report is an image-only scan, so the earlier text-search finding proved nothing; it was "
+    "re-rendered at 200 dpi and OCR'd page by page on 2026-09-18, and it contains no exposure-class table, "
+    "no risk-category split and in fact no risk-weighted-asset amount of any kind. The entity published no "
+    "standalone Pillar 3 for FY2016, and the earliest edition that exists (2018) reaches back only to "
+    "FY2017. FY2020's own Pillar 3 document does disclose a "
     "summary of on-balance-sheet credit-risk RWA by exposure class (p.25); those figures are now included "
     "below as a separate credit-risk section. They are not the complete Total RWAs figure because the source "
     "does not provide the corresponding operational-risk/other Pillar 1 components at this granularity. FY2014/FY2015 "
@@ -1305,10 +1402,17 @@ RWA_BREAKDOWN_NOTE = (
 bw.add_rwa_breakdown_sheet(
     title="Cynergy Bank Plc — RWA Breakdown",
     subtitle="Consolidated (Company-only FY2014-2015) basis, £'000. FY2023 added 2026-09-15 from the 2023 "
-             "Pillar 3's UK OV1 table. FY2020 credit-risk exposure-class RWA summary is shown separately; "
-             "FY2016/FY2017 remain unavailable - see source note at bottom.",
+             "Pillar 3's UK OV1 table; FY2017 added 2026-09-18 from the 2018 Pillar 3's own FY2017 "
+             "credit-risk table (credit risk only, like FY2018/FY2019 - see source note). FY2020 "
+             "credit-risk exposure-class RWA summary is shown separately; FY2016 has no category split in "
+             "any document and stays blank.",
     rows=[
         ("SECTION", "Risk-weighted assets by category", {}),
+        # GA-006 (2026-09-18): state the SDDT absence in the FY2024/FY2025 columns
+        # rather than leaving them blank - same reason as the metric sheets.
+        ("DATA", "UK OV1 - overview of risk weighted exposure amounts",
+         {"FY2025": "Not required - SDDT, no Pillar 3 published",
+          "FY2024": "Not required - SDDT, no Pillar 3 published"}),
         ("SECTION", "FY2020 credit-risk RWA by exposure class (source summary; not complete Pillar 1 total)", {}),
         ("DATA", "Central governments or central banks", {"FY2020": 0}),
         ("DATA", "Institutions", {"FY2020": 9000}),
@@ -1326,12 +1430,13 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Total operational risk (standardised approach)", {"FY2023": 179000, "FY2022": 136000, "FY2021": 117000}),
         ("TOTAL", "Total Pillar 1 RWA per the OV1 table", {"FY2023": 2084000, "FY2022": 1822000, "FY2021": 1389000}),
         ("SECTION", "Earlier editions", {}),
-        ("DATA", "Credit risk RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2015": 385977, "FY2014": 355707}),
+        ("DATA", "Credit risk RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2017": 629000, "FY2015": 385977, "FY2014": 355707}),
         ("DATA", "Operational risk RWA (derived from disclosed capital requirement x12.5)",
          {"FY2015": 30838, "FY2014": 29938}),
-        ("TOTAL", "Total RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2015": 416815, "FY2014": 385645}),
+        ("TOTAL", "Total RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2017": 629000, "FY2015": 416815, "FY2014": 385645}),
     ],
-    sources_text=p3_sources() + "\nFY2020: Cynergy Bank Pillar 3 Disclosures 2020, 'Summary of On Balance Sheet Credit Risk Exposure', p.25 (source reports £m; converted to £'000) - " + P3_2020_URL
+    sources_text=p3_sources() + "\nFY2017: Cynergy Bank Pillar 3 Disclosures 2018, 'Table 9 - Summary of On Balance Sheet Credit Risk Exposure, As at 31 December 2017', p.10 (source reports £m; converted to £'000; Central governments nil, Institutions 12, Corporates 151, Retail 75, Secured by mortgages 350, Exposures in default 6, High risk 14, Other items 21, Total 629) - " + P3_2018_URL
+                 + "\nFY2020: Cynergy Bank Pillar 3 Disclosures 2020, 'Summary of On Balance Sheet Credit Risk Exposure', p.25 (source reports £m; converted to £'000) - " + P3_2020_URL
                  + "\nFY2023: Cynergy Bank Limited 2023 Pillar 3 Disclosures, 'Overview of risk-weighted "
                    "exposure amounts' (UK OV1) table, p.8 (source reports £m; converted to £'000) - "
                    + P3_2023_URL
@@ -1355,7 +1460,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio",
-      {"FY2023": "6.96%", "FY2022": "7.40%", "FY2021": "5.46%",
+      {"FY2025": SDDT_NA, "FY2024": SDDT_NA, "FY2023": "6.96%", "FY2022": "7.40%", "FY2021": "5.46%",
        "FY2020": "6.1%", "FY2019": "6.3%", "FY2018": "6.9%", "FY2017": "5.8%",
        "FY2016": "4.7%", "FY2015": "6.0%", "FY2014": "6.1%"})],
     note=FY2023_P3_NOTE
@@ -1378,7 +1483,7 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (12-month average basis; source labels the HQLA input 'Weighted value - average')",
-      {"FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%", "FY2020": "340%"})],
+      {"FY2025": SDDT_NA, "FY2024": SDDT_NA, "FY2023": "304.44%", "FY2022": "315.98%", "FY2021": "242.91%", "FY2020": "340%"})],
     note=FY2023_P3_NOTE + "\n\n" + FY2023_RESTATEMENT_NOTE + "\n\n"
          + P3_2021_2022_NOTE + " NOTE ON FY2020: this sheet's FY2020 figure (340%) comes from the 2020 "
          "Pillar 3 edition's own statement, but the 2021 edition's FY2020 comparative column instead "
@@ -1395,7 +1500,7 @@ metric(
 
 metric(
     "NSFR", "%",
-    [("Net Stable Funding Ratio", {"FY2023": "148.67%", "FY2022": "149.48%", "FY2021": "130%", "FY2020": "132%"})],
+    [("Net Stable Funding Ratio", {"FY2025": SDDT_NA_NSFR, "FY2024": SDDT_NA_NSFR, "FY2023": "148.67%", "FY2022": "149.48%", "FY2021": "130%", "FY2020": "132%"})],
     note=FY2023_P3_NOTE + "\n\n" + FY2023_RESTATEMENT_NOTE + "\n\n"
          + P3_2021_2022_NOTE + " FY2021's NSFR is taken from the 2021 edition's own ratio table (130%); "
          "the 2022 edition shows a dash rather than an FY2021 NSFR comparative, so the 2021 edition is "

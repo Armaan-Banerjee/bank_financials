@@ -24,12 +24,37 @@ AR2021_URL = ("https://find-and-update.company-information.service.gov.uk/compan
 # EFG Private Bank Limited's own standalone Pillar 3 Disclosures report - located 2026-09-04 by
 # retrying efginternational.com with a spoofed browser User-Agent (the site returns HTTP 403 to a
 # bare curl/no-UA request, which is what caused the original "no standalone Pillar 3 document
-# locatable" conclusion - now corrected everywhere in this file, see PILLAR3_REACH_NOTE). No
-# earlier-year standalone Pillar 3 report for this entity was locatable via web search or the
-# Wayback Machine (CDX search of efginternational.com's "pillar" and "investor" URL patterns turns
-# up only EFG International Group-level and EFG Bank (Luxembourg) S.A. reports, never an EFG Private
-# Bank Limited-specific one) - the FY2024 edition appears to have been the first standalone
-# entity-level Pillar 3 report EFGIUK published.
+# locatable" conclusion - now corrected everywhere in this file, see PILLAR3_REACH_NOTE).
+#
+# CORRECTED 2026-09-18 (KM1-032). This comment used to continue: "No earlier-year standalone
+# Pillar 3 report for this entity was locatable via web search or the Wayback Machine (CDX
+# search of efginternational.com's 'pillar' and 'investor' URL patterns turns up only EFG
+# International Group-level and EFG Bank (Luxembourg) S.A. reports, never an EFG Private Bank
+# Limited-specific one) - the FY2024 edition appears to have been the first standalone
+# entity-level Pillar 3 report EFGIUK published." The parenthetical was false about a result
+# set this project already had. An unfiltered CDX sweep of efginternational.com* (26,072 rows)
+# contains 47 "pillar" URLs, and one of them IS an EFG Private Bank Limited document, at the
+# very jcr asset id cited elsewhere in this file:
+#   https://www.efginternational.com/doc/jcr:895b914b-441b-48b6-9853-0b3aeaa4e2fd/2018%20Pillar%20III%20Disclosure.pdf
+# captured 20220630160355 and 20250805050752. Fetched via the Wayback id_ raw form: HTTP 200,
+# application/pdf, %PDF, 41,426 bytes, 2 pages, opening "Remuneration Code / 2018 Pillar 3
+# disclosure ... Remuneration policy for EFG Private Bank Limited (EFGIUK) and its subsidiaries
+# ... Registered no. 2321802" - the same company number as the Companies House URLs below. It
+# is an entity-level UK Pillar 3 disclosure under CRR Article 450.
+#
+# So EFGIUK published at least one standalone entity-level Pillar 3 before FY2024. The row it
+# sits on MATCHES the "pillar" filter, so the miss was not in the filter - the result set was
+# not read to the end. A filtered sweep whose output is skimmed produces a negative that looks
+# method-backed and is not. FY2019-FY2023 remain genuinely unestablished.
+#
+# MECHANICAL FINDING, established with a negative control, which also corrects this file's own
+# explanation of the "one URL, two editions" puzzle: on this host the filename segment in
+# /doc/jcr:<id>/<name>.pdf is DECORATIVE - the jcr id alone addresses the asset. The real 2018
+# filename, the FY2024 filename and an invented NOT_A_REAL_FILE_ctrl.pdf all return the same
+# 5,881,612-byte FY2025 report. EFG did not republish over an asset while keeping an old
+# filename; the filename never identified anything. Likewise, the statement elsewhere in this
+# file that CDX on the exact jcr: asset returns nothing is wrong - it holds two captures,
+# indexed under the asset's 2018 display name.
 #
 # ===============================================================================================
 # 2026-09-16, KM1-012: THIS ONE URL HAS SERVED TWO DIFFERENT EDITIONS. Its path still spells
@@ -794,8 +819,9 @@ KM1_SOURCES = (
     "* NO DASHES AND NO PRINTED ZEROES appear anywhere in this table in either edition, so the "
     "dash-versus-zero question does not arise for this bank.\n\n"
     "WHY FY2022 AND FY2021 ARE BLANK - an absence established from documents, not a failed search:\n"
-    "* EFGIUK published no standalone Pillar 3 report before the FY2024 edition, so there is no KM1 "
-    "for those years to take, and none is back-filled from the statutory accounts, which are a "
+    "* The FY2024 edition is the first standalone Pillar 3 report EFGIUK published that carries a KM1, "
+    "so there is no KM1 for those years to take, and none is back-filled from the statutory accounts, "
+    "which are a "
     "different basis. The accounts' own Capital management note for those years states CET1 capital, "
     "Total capital, Total RWAs and two ratios and nothing else - no SREP rows, no buffer rows, no "
     "leverage exposure measure, no HQLA or cash-flow rows, no ASF/RSF. Those figures are on the "
@@ -1009,7 +1035,12 @@ metric(
          "each from the edition in which that year is the reporting year except FY2023, which is the "
          "FY2024 edition's comparative. FY2022 and FY2021 are blank: no leverage ratio is stated in "
          "the statutory accounts for those years (confirmed by reading the Capital management and "
-         "Liquidity risk notes in full), no standalone Pillar 3 existed yet, and the parent's group "
+         "Liquidity risk notes in full), no standalone Pillar 3 carrying a KM1 existed yet (CORRECTED "
+         "2026-09-18, KM1-032: this read 'no standalone Pillar 3 existed yet', which is false - EFGIUK "
+         "published a 2-page remuneration-only Pillar 3 disclosure under CRR Article 450 for FY2018, "
+         "recovered from the Wayback id_ raw form of the jcr asset cited in this file's header comment; "
+         "it carries no KM1, no capital amounts and no ratios, so these cells stay blank either way), "
+         "and the parent's group "
          "Pillar 3 carries no block for this entity. EFGIUK is not a LREQ firm and is not required to "
          "maintain the 3.25% minimum under the UK leverage ratio framework, which the source states "
          "directly. NOTE THE FY2024 RESTATEMENT: the FY2025 edition's comparative column shows 5.34% "

@@ -344,6 +344,14 @@ KM1_SOURCES = (
     f"p.13 — {P3_22_URL}\n"
     "Each of FY2025/FY2024/FY2023/FY2022 is taken from the edition in which that year is the REPORTING year, "
     "not from a later edition's comparative."
+    "\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN THE SOURCE FOR FY2024, FY2023 AND FY2022 - READ FROM THE DOCUMENTS ON "
+    "2026-09-18 AND RECORDED HERE SO THE QUESTION IS NOT RE-OPENED. The Pillar 3 Disclosures 2024 prints 76,953 "
+    "on rows 1, 2 and 3 for FY2024 and 39,032 for FY2023; the Pillar 3 Disclosures 2023 prints 39,032 and 35,017 "
+    "the same way. No Additional Tier 1 or Tier 2 line is populated in either edition's own-funds composition, "
+    "which is why the three measures coincide. FY2025 is DISTINCT in the source - CET1 79,319 against Tier 1 and "
+    "Total capital of 93,994 - and is held that way here, so the rows are told apart in this series wherever the "
+    "Bank prints them apart.\n"
 )
 
 KM1_NOTE = (

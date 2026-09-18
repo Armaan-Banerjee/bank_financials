@@ -812,9 +812,14 @@ KM1_SOURCES = (
     f"'countercyclical' (5) and 'high-quality liquid' (4) - so the text extracts fine and the template is "
     f"genuinely absent. The FY2021 column here is the FY2022 edition's own '2021' comparative column "
     f"({CSI_P3_2022_URL}); the FY2021 edition itself is at {P3_URLS['FY2021']}.\n\n"
-    "DASHES ARE REPRODUCED AS BLANKS, not zeroes. The FY2022 edition's 2021 comparative column prints '-' "
-    "for 'Overall leverage ratio requirements' and for all three Net Stable Funding Ratio rows; NSFR became a "
-    "disclosed KM1 line for CSi only from FY2022.\n\n"
+    "DASHES ARE REPRODUCED AS DASHES, and are never turned into zeroes. The FY2022 edition's 2021 comparative "
+    "column prints an en-dash for 'Overall leverage ratio requirements' and for all three Net Stable Funding "
+    "Ratio rows, and those four cells CARRY that dash rather than being left empty. The distinction is the "
+    "point: NSFR became a disclosed KM1 line for CSi only from FY2022, so for 2021 CSi is saying the line did "
+    "not apply to it, which is a different statement from never having published the row - and different again "
+    "from a measured nil, which would be a printed zero. Re-read at source 2026-09-18 in that edition's 'KM1 - "
+    "Key metrics template'; the same column prints ordinary figures on every other row, so the dashes are "
+    "deliberate rather than an artefact of a missing column.\n\n"
     "FY2022 CROSS-EDITION DIVERGENCE, documented rather than reconciled. This sheet follows the rule that "
     "each year is taken from its OWN edition, so the FY2022 column is the FY2022 document's originally "
     "published figures: Total risk-weighted exposure amount 60,818, CET1 ratio 24.02%, Tier 1 ratio 25.99% "
@@ -871,8 +876,14 @@ km1_rows = [
         "FY2025": "53.08%", "FY2024": "21.16%", "FY2023": "17.78%", "FY2022": "12.51%", "FY2021": "7.47%"}),
     ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a % of "
                 "leverage ratio total exposure amount)", {}),
+    # FY2021 carries a literal dash. Re-read at source 2026-09-18 in the FY2022
+    # edition's "KM1 - Key metrics template", column "2021": CSi prints an en-dash
+    # here and on all three NSFR rows below, against real figures in its 2022
+    # column. Using that edition's comparative for FY2021 is the documented route
+    # for this sheet (the FY2021 edition prints no KM1 template at all - control
+    # recorded in the source note), so this is rule 28, not a rule 1 breach.
     ("DATA", "Overall leverage ratio requirements (%)", {
-        "FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "3.25%"}),
+        "FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "3.25%", "FY2021": "-"}),
     ("SECTION", "Liquidity Coverage Ratio", {}),
     ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value - average) (USD million)", {
         "FY2025": 8090, "FY2024": 15031, "FY2023": 15364, "FY2022": 25457, "FY2021": 21785}),
@@ -886,11 +897,11 @@ km1_rows = [
         "FY2025": "341.45%", "FY2024": "363.29%", "FY2023": "280.3%", "FY2022": "150.4%", "FY2021": "152.7%"}),
     ("SECTION", "Net Stable Funding Ratio", {}),
     ("DATA", "Total available stable funding (USD million)", {
-        "FY2025": 6345, "FY2024": 17503, "FY2023": 30356, "FY2022": 49315}),
+        "FY2025": 6345, "FY2024": 17503, "FY2023": 30356, "FY2022": 49315, "FY2021": "-"}),
     ("DATA", "Total required stable funding (USD million)", {
-        "FY2025": 1903, "FY2024": 8693, "FY2023": 24166, "FY2022": 38717}),
+        "FY2025": 1903, "FY2024": 8693, "FY2023": 24166, "FY2022": 38717, "FY2021": "-"}),
     ("DATA", "NSFR ratio (%)", {
-        "FY2025": "384.98%", "FY2024": "214.78%", "FY2023": "125.6%", "FY2022": "127.5%"}),
+        "FY2025": "384.98%", "FY2024": "214.78%", "FY2023": "125.6%", "FY2022": "127.5%", "FY2021": "-"}),
 ]
 
 bw.add_km1_sheet(

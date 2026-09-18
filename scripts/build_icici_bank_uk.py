@@ -115,13 +115,22 @@ ENTITY_NOTE = (
 )
 
 EXEMPTION_NOTE = (
-    "FRS 101 CASH-FLOW EXEMPTION: ICICI Bank UK Plc applies the FRS 101 reduced-"
-    "disclosure framework and does not prepare a separate Statement of Cash Flows. "
+    "FRS 102 CASH-FLOW EXEMPTION: ICICI Bank UK Plc is a qualifying entity and takes the "
+    "FRS 102 disclosure exemption for the Cash Flow Statement, so it does not prepare one. "
     "This is therefore a Pillar-3-only workbook; the Cash Flow Statement sheet is "
     "retained to document the exemption rather than substituting parent-group cash flows. "
+    "CORRECTED 2026-09-18 (GA-006): this note previously named FRS 101 as the framework. "
+    "That was wrong, and the document it cited says so - the string 'FRS 101' does not "
+    "appear anywhere in either the FY2025 or the FY2026 Annual Report, while 'FRS 102' "
+    "appears 20 and 19 times respectively. The exemption itself is real and unchanged; only "
+    "the standard was misnamed. "
     f"Official supporting source: ICICI Bank UK PLC Strategic report, Directors' report "
-    f"and financial statements for the year ended 31 March 2025, cash-flow exemptions "
-    f"section (c) - {AR2025_URL}. "
+    f"and financial statements for the year ended 31 March 2025, note 2 'Basis of "
+    f"preparation', printed p.36, which reads 'the Bank is considered to be a qualifying "
+    f"entity and has applied the exemptions available under FRS 102 in respect of the "
+    f"following disclosures: Cash Flow Statement and related notes; ...' - {AR2025_URL}. "
+    f"Confirmed again in the FY2026 edition (year ended 31 March 2026), note 2 'Basis of "
+    f"preparation', printed p.38, in identical wording - {AR2026_URL}. "
     f"For FY2008-FY2015 the Bank's own Annual Report instead cites the equivalent exemption "
     f"under FRS 1 (the pre-FRS 101/102 UK GAAP standard then in force) - same substantive "
     f"exemption, different accounting-standard citation; confirmed in the FY2015 Annual Report's "
@@ -683,8 +692,23 @@ bw.add_equity_changes_sheet(
 
 bw.add_cash_flow_sheet(
     title="ICICI Bank UK Plc — Cash Flow Statement",
-    subtitle="Not applicable — FRS 101 cash-flow-statement exemption applies for the periods covered.",
-    rows=[("SECTION", "Not applicable", {}), ("DATA", EXEMPTION_NOTE, {})],
+    subtitle="Not applicable — the Bank takes the FRS 102 qualifying-entity exemption from preparing a Cash Flow Statement (FRS 1 for FY2008-FY2015). Every year column carries that statement rather than being left blank.",
+    rows=[
+        ("SECTION", "Not applicable - the Bank does not prepare a Cash Flow Statement", {}),
+        # GA-006 (2026-09-18): the exemption used to be stated only in this
+        # sheet's subtitle and in a row LABEL, which left all 19 year columns
+        # reading as blank to any reader - and to audit_gaps.py, which scored
+        # this sheet as 19 empty year-columns, the single largest "leading
+        # gap" recorded against this bank. Nothing was missing; the statement
+        # simply was not in the columns. It now is, per year, naming the
+        # standard each year's own Annual Report actually cites.
+        ("DATA", "Statement of Cash Flows", {
+            y: ("Not applicable - FRS 102 qualifying-entity exemption"
+                if y >= "FY2016"
+                else "Not applicable - FRS 1 (revised) exemption")
+            for y in YEARS
+        }),
+    ],
     sources_text=EXEMPTION_NOTE + "\n\n" + ENTITY_NOTE,
     first_col_width=105,
     source_height=180,
@@ -787,8 +811,13 @@ KM1_NOTE = (
     "FY2022 edition leaves every cell from row 13 (leverage) through row 20 (NSFR) EMPTY in the 2021 column — "
     "not dashed, simply blank — so those cells are blank here. They are not zeros and they are not figures we "
     "failed to find.\n\n"
-    "DASHES ARE LEFT BLANK. Rows UK 8a, UK 9a, 10 and UK 10a are printed as '-' in every edition from FY2022 "
-    "onward. A dash is not a zero, so those cells are blank rather than 0.00%. Contrast the Bank's genuine "
+    "DASHES ARE REPRODUCED AS DASHES. Rows UK 8a, UK 9a, 10 and UK 10a are printed as '-' by the Bank in "
+    "every edition - re-read in the FY2026, FY2024-25, FY2023-24, FY2022-23 and FY2021-22 PDFs on "
+    "2026-09-18, and dashed in BOTH columns of every one of them - so all six year-columns above carry a "
+    "literal '-'. That includes FY2021, which is the FY2022 edition's comparative column (its own edition "
+    "prints no KM1 at all): that column dashes these four rows exactly as its current-year column does. A "
+    "dash is the Bank stating the requirement does not apply to it, which is a different statement from a "
+    "blank (never published) and from a zero (a measured nil). Contrast the Bank's genuine "
     "zeros elsewhere: it prints small but non-zero countercyclical buffers (0.02%, 0.03%) rather than dashing "
     "them, which is what makes the dashed rows legible as 'not applicable' rather than 'nil'.\n\n"
     "PRECISION AND LABELS ARE THE BANK'S OWN. Ratios are printed to two decimal places throughout and are "
@@ -823,11 +852,15 @@ bw.add_km1_sheet(
         ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2026": "11.46%", "FY2025": "11.46%", "FY2024": "10.29%", "FY2023": "10.29%", "FY2022": "10.45%", "FY2021": "10.08%"}),
         ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
         ("DATA", "8 Capital conservation buffer (%)", {"FY2026": "2.50%", "FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
-        ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {}),
+        ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
+         {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
         ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2026": "1.09%", "FY2025": "0.91%", "FY2024": "0.81%", "FY2023": "0.43%", "FY2022": "0.03%", "FY2021": "0.02%"}),
-        ("DATA", "UK 9a Systemic risk buffer (%)", {}),
-        ("DATA", "10 Global Systemically Important Institution buffer (%)", {}),
-        ("DATA", "UK 10a Other Systemically Important Institution buffer", {}),
+        ("DATA", "UK 9a Systemic risk buffer (%)",
+         {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+        ("DATA", "10 Global Systemically Important Institution buffer (%)",
+         {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+        ("DATA", "UK 10a Other Systemically Important Institution buffer",
+         {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
         ("DATA", "11 Combined buffer requirement (%)", {"FY2026": "3.59%", "FY2025": "3.41%", "FY2024": "3.31%", "FY2023": "2.93%", "FY2022": "2.53%", "FY2021": "2.52%"}),
         ("DATA", "UK 11a Overall capital requirements (%)", {"FY2026": "15.05%", "FY2025": "14.87%", "FY2024": "13.60%", "FY2023": "13.22%", "FY2022": "12.98%", "FY2021": "12.60%"}),
         ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2026": "8.48%", "FY2025": "10.98%", "FY2024": "12.42%", "FY2023": "13.82%", "FY2022": "9.92%", "FY2021": "16.20%"}),
@@ -1159,7 +1192,7 @@ bw.add_overview_sheet(
         ("NSFR (UK KM1 four-quarter average - FY2023 onward)", NSFR_KM1_AVERAGE),
         ("NSFR (point-in-time at 31 March - FY2022 onward)", NSFR_POINT_IN_TIME),
     ],
-    note="ICICI Bank UK Plc's FRS 101 cash-flow exemption means no cash-flow summary or chart is shown (5 blocks total: Balance Sheet, P&L, Equity, and Ratios - no Cash Flow block). All statement figures are Bank-standalone USD, kept in the Bank's own native reporting currency (not converted to £) for consistency with the pre-existing Pillar 3 sheets, which are also USD. FY2026 (year ended 31 March 2026) was added 2026-09-15 from the Bank's own website - its Annual Report and Pillar 3 disclosure are both published there ahead of the Companies House filing, whose latest accounts are still those for 31 March 2025. Extended back to FY2014 (from FY2021) under HD-046, capped at FY2014 by explicit project-wide decision even though the Bank's own archive goes back further (see wayfinder/historical-depth/tickets/HD-046.md). Leverage Ratio and LCR are blank before FY2017/FY2018 respectively (not yet disclosed as a published figure by the Bank) and NSFR is marked 'Not applicable' before FY2022 (the PRA introduced the UK NSFR framework only with effect from 1 January 2022) - neither is force-filled. 2026-09-15: each of Leverage Ratio, LCR and NSFR is now split across TWO rows because each spans a genuine definitional break, and the two rows in each pair must not be read, charted or compared as one series - Leverage breaks at FY2022 (UK KM1 measure excluding central-bank claims, vs the earlier CRR LRCom full exposure measure that includes them), LCR breaks at FY2022 (UK KM1 12-month average vs the point-in-time figure each edition states in prose, which for FY2022 differ by 18pp and for FY2023 by 119pp), and NSFR breaks at FY2023, NOT FY2022 (the FY2022 KM1 figure is itself point-in-time by that edition's own note, since the four-quarter average could not be computed in the requirement's first year). See each metric sheet's own note for the verbatim source wording establishing each break.",
+    note="ICICI Bank UK Plc's FRS 102 cash-flow exemption means no cash-flow summary or chart is shown (5 blocks total: Balance Sheet, P&L, Equity, and Ratios - no Cash Flow block). All statement figures are Bank-standalone USD, kept in the Bank's own native reporting currency (not converted to £) for consistency with the pre-existing Pillar 3 sheets, which are also USD. FY2026 (year ended 31 March 2026) was added 2026-09-15 from the Bank's own website - its Annual Report and Pillar 3 disclosure are both published there ahead of the Companies House filing, whose latest accounts are still those for 31 March 2025. Extended back to FY2014 (from FY2021) under HD-046, capped at FY2014 by explicit project-wide decision even though the Bank's own archive goes back further (see wayfinder/historical-depth/tickets/HD-046.md). Leverage Ratio and LCR are blank before FY2017/FY2018 respectively (not yet disclosed as a published figure by the Bank) and NSFR is marked 'Not applicable' before FY2022 (the PRA introduced the UK NSFR framework only with effect from 1 January 2022) - neither is force-filled. 2026-09-15: each of Leverage Ratio, LCR and NSFR is now split across TWO rows because each spans a genuine definitional break, and the two rows in each pair must not be read, charted or compared as one series - Leverage breaks at FY2022 (UK KM1 measure excluding central-bank claims, vs the earlier CRR LRCom full exposure measure that includes them), LCR breaks at FY2022 (UK KM1 12-month average vs the point-in-time figure each edition states in prose, which for FY2022 differ by 18pp and for FY2023 by 119pp), and NSFR breaks at FY2023, NOT FY2022 (the FY2022 KM1 figure is itself point-in-time by that edition's own note, since the four-quarter average could not be computed in the requirement's first year). See each metric sheet's own note for the verbatim source wording establishing each break.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ICICI BANK UK FINANCIALS.xlsx")

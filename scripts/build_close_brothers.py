@@ -597,6 +597,19 @@ P3_SOURCES = (
     "basis rather than merely similar. That document is cited in full on the KM1 Key Metrics sheet, and "
     "it is also where this workbook's leverage-ratio retraction comes from - see the Leverage Ratio "
     f"sheet. Index page: {CBG_REPORTS_INDEX}\n\n"
+    "WHY THAT SECOND SOURCE STOPS AT KM1, IN THE PUBLISHER'S OWN WORDS (added 2026-09-18, KM1-032). "
+    "The parent's Pillar 3 states the limit of its CBL-level disclosure explicitly: 'The only "
+    "quantitative disclosures for the individual consolidation basis included within this document are "
+    "UK KM1 and the IFRS 9 transitional arrangements template. In line with CRR article 432, other "
+    "templates are not disclosed on an individual consolidation basis as they are consistent with group "
+    "disclosures or are not deemed materially different.' (Pillar 3 Disclosures 2025, printed p.2 / PDF "
+    "p.6; re-read 18 September 2026.) This is a formal Article 432 exclusion, and it settles a question "
+    "that would otherwise stay open across EVERY sheet in this workbook rather than one metric: where a "
+    "CBL-level template is absent here, the reason of record is that Close Brothers chose not to publish "
+    "it on that basis - not that it was published somewhere this project failed to reach. It is also why "
+    "the Companies House filings above remain the primary source for the metric sheets: outside UK KM1 "
+    "there is no CBL-level Pillar 3 template to read, in any edition."
+    + "\n\n"
     + LATEST_EDITION_NOTE
 )
 
@@ -613,7 +626,7 @@ TIER1_DERIVATION_NOTE = (
 
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit or "", rows_data, sources_text,
-                        note=note, first_col_width=54, source_height=250)
+                        note=note, first_col_width=54, source_height=310)
 
 
 # ---------------------------------------------------------------
@@ -847,10 +860,15 @@ bw.add_rwa_breakdown_sheet(
         "recorded here because the same failure mode could recur on these scanned filings.\n"
         "FY2023/FY2022/FY2021 note that operational and market risk include an adjustment at 8% in order "
         "to determine notional RWAs. No finer sub-split (e.g. standardised vs IRB, or a UK OV1 template) "
-        "is published at this entity level in any year."
+        "is published at this entity level in any year - and that is now a documented exclusion rather "
+        "than the outcome of a search: the parent's Pillar 3 states that UK KM1 and the IFRS 9 "
+        "transitional template are the ONLY quantitative disclosures it gives on the individual "
+        "consolidation basis, other templates being withheld under CRR article 432 (quoted in full in "
+        "the source note above). UK OV1 is printed in those documents on the GROUP basis only, and group "
+        "RWAs are not substituted here."
     ),
     first_col_width=54,
-    source_height=320,
+    source_height=380,
     unit_suffix=" (£m)",
 )
 

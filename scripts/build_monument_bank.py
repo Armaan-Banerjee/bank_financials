@@ -35,12 +35,34 @@ WEB_AR20_URL = "https://cdn.prod.website-files.com/6435124ea79f72c265f72807/6489
 ENTITY_NOTE = (
     "ENTITY/BASIS NOTE: Monument Bank Limited (Companies House 10921940; FRN 849724; "
     "LEI 213800OLF8OE1I3HVY91) is the matched legal entity in Banks List 2608.xlsx. "
-    "Cash flows are the Company/standalone figures in £'000. The latest available filing "
-    "is the report for the year ended 31 December 2024; FY2025 is blank because no FY2025 "
-    "accounts were available in the Companies House filing history reviewed. The accounts "
-    "are scanned filings and were OCR-processed and cross-checked against rendered pages "
-    "(the FY2020 filing was re-OCR'd with layout-preserving column extraction to resolve "
-    "a multi-column table). Blank cells mean not publicly disclosed, not zero.\n\n"
+    "Cash flows are the Company/standalone figures in £'000. Monument's year-end is "
+    "31 DECEMBER, confirmed from the Companies House register itself rather than assumed.\n"
+    "LATEST-EDITION CHECK, 18 SEPTEMBER 2026 - FY2025 IS NOT YET PUBLISHED, and this is a "
+    "filing-lag gap with a known re-look date, not an unsearched one. Two independent "
+    "authorities agree. (1) The Companies House register for company 10921940 records 'Last "
+    "accounts made up to 31 December 2024' and 'Next accounts made up to 31 December 2025, due "
+    "by 30 September 2026'; no FY2025 accounts had been filed as at the check date, twelve days "
+    "before that statutory deadline. The register is a filing record rather than an index, so "
+    "an absence in it is evidence of absence in a way a website's navigation is not. (2) "
+    "Monument's own financial-information page, https://www.monument.co/annual-reports, listed "
+    "nothing newer than the 2024 Annual Report on the same date; the page is static HTML "
+    "carrying its PDF links directly in source, so nothing is hidden behind JavaScript, and the "
+    "Webflow staging copy of the same page lists an identical set.\n"
+    "PUBLICATION LAG, so a later session knows WHEN to look rather than repeating the search. "
+    "Monument posts each Annual Report to its own website between early August and late "
+    "September, roughly seven to nine months after the 31 December year-end and always close to "
+    "the Companies House deadline: the FY2022 report appeared 29 September 2023, FY2023 on "
+    "27 September 2024, and FY2024 on 7 August 2025 (the last confirmed by that PDF's own "
+    "Last-Modified header), with the FY2024 accounts reaching Companies House five days later on "
+    "12 August 2025. The FY2025 report is therefore expected by 30 September 2026. NEXT SESSION: "
+    "check again in the first week of October 2026, after that deadline has passed.\n"
+    "The COMPANIES HOUSE COPIES of the accounts are scanned filings with no text layer, so they "
+    "were OCR-processed and cross-checked against rendered pages (the FY2020 filing was re-OCR'd "
+    "with layout-preserving column extraction to resolve a multi-column table). That is a "
+    "property of the Companies House copies and not of the reports themselves - Monument hosts "
+    "its own PDFs of the same accounts, and the FY2020, FY2023 and FY2024 web copies carry real "
+    "text layers. Both sets were compared and agree on every figure in this workbook. Blank "
+    "cells mean not publicly disclosed, not zero.\n\n"
     "HISTORICAL FLOOR NOTE: the entity (Companies House 10921940) was incorporated on "
     "18 August 2017 as 'Monument Principal Capital Ltd.', renamed 'Monument Corporation "
     "Ltd.' on 26 January 2018, and only renamed 'Monument Bank Limited' on 9 November 2020 "
@@ -67,6 +89,82 @@ ENTITY_NOTE = (
     "2020 comparative column (see the Pillar 3 sheets' 2026-09-12 re-verification note)."
 )
 
+# ---------------------------------------------------------------
+# EXPLICIT NON-DISCLOSURE STATEMENTS (leading-gap close, 2026-09-18).
+#
+# 21 sheet-years of this workbook previously stood as BARE EMPTY CELLS, which
+# a reader cannot tell apart from a cell nobody has looked at yet. Each now
+# states its own reason on the face of the sheet, with the evidence in the
+# sources note (ND_EVIDENCE_NOTE, appended to all three source blocks).
+#
+# FOUR reasons, deliberately kept in FOUR DIFFERENT STRINGS. Collapsing them
+# into one house phrase would assert an equivalence the documents do not
+# support: a report that has not been filed yet, a Pillar 3 that will never
+# exist again, a Pillar 3 edition that was never published, and a table that
+# simply prints no such row are four different findings with four different
+# re-look implications.
+# ---------------------------------------------------------------
+# WORDED "Not published yet", NOT "Not yet published", DELIBERATELY. audit_gaps.py
+# classifies a cell as a statement-about-absence with
+#   not\s+(publicly\s+)?(disclosed|published|available|applicable|reported)
+# so an adverb between "not" and "published" breaks the match, and the corpus
+# census then counts the statement as a FIGURE - hiding the very gap it records.
+# Confirmed by building it both ways: "Not yet published" reported these 13
+# sheet-years as '.', "Not published yet" reports them as 'n'.
+ND_FY2025_AR = "Not published yet - FY2025 Annual Report not filed (due 30 Sep 2026)"
+ND_FY2025_P3 = "Not published - no FY2025 Pillar 3 (SDDT Rule 3.1, from 15 Jan 2025)"
+ND_FY2024_P3 = "Not published - Monument published no FY2024 Pillar 3 document"
+ND_FY2024_ROWSET = "Not disclosed - FY2024 Annual Report's ratio block prints no such row"
+
+ND_EVIDENCE_NOTE = (
+    "\n\nEXPLICIT NON-DISCLOSURE STATEMENTS - WHY 21 CELLS CARRY TEXT INSTEAD OF STANDING EMPTY "
+    "(2026-09-18, leading-gap close). Until this pass, 21 sheet-years stood as bare empty cells: "
+    "17 across the FY2025 column, and 4 in the FY2024 column (KM1 Key Metrics, MREL Ratio, Tier 1 "
+    "Ratio and Total Capital Ratio). An empty cell cannot be told apart from one nobody has looked "
+    "at yet, so each now states its own reason. NO FIGURE WAS ADDED, REMOVED, DERIVED OR ADJUSTED "
+    "- every numeric cell in this workbook is exactly as it was. Four distinct reasons are "
+    "recorded, in four different forms of words:\n"
+    f"(1) '{ND_FY2025_AR}' - a FILING-LAG gap that will close. Verified 2026-09-18 from two "
+    "independent authorities. The Companies House register for company 10921940 reads 'Next "
+    "accounts made up to 31 December 2025 due by 30 September 2026. Last accounts made up to "
+    "31 December 2024', so nothing had been filed twelve days before the statutory deadline - a "
+    "register is a filing RECORD, so an absence in it is evidence of absence in a way a website's "
+    "navigation is not. And Monument's own annual-reports page "
+    "(https://www.monument.co/annual-reports, HTTP 200, static HTML carrying its PDF hrefs in "
+    "source, so nothing is hidden behind JavaScript) listed nothing newer than 'Monument Bank "
+    "2024.pdf'. Applied to the 13 sheet-years the FY2024 edition's own row set shows WILL be "
+    "fillable when that report appears: Balance Sheet, Profit & Loss, Cash Flow Statement, Asset "
+    "Quality, RWA Breakdown, CET1 Capital, CET1 Ratio, Tier 1 Capital, Total Capital, Total RWAs, "
+    "Leverage Ratio, LCR and NSFR.\n"
+    f"(2) '{ND_FY2025_P3}' - a PERMANENT absence rather than a lag, and the only place the SDDT "
+    "waiver legitimately does the work. These four metrics exist only in a Pillar 3 document, and "
+    "Monument will never publish another: the PRA consolidated waivers register (re-read "
+    "2026-09-18) carries FRN 849724 with 'Rule Handbook: Rule Description' = 'SDDT Regime - "
+    "General Application', sub-rule 'Ru 3.1', waiver ref A00009546.pdf, start date 15/01/2025, no "
+    "end date - which removes the Pillar 3 duty outright. MATCHED ON THE RULE DESCRIPTION, NEVER "
+    "ON 'Ru 3.1' ALONE: that sub-rule number spans five different Rulebook Parts (SDDT, "
+    "remuneration, Lloyd's, permissions, transitional), and matching the number by itself is a "
+    "confirmed source of false positives. Applied to KM1 Key Metrics, Tier 1 Ratio, Total Capital "
+    "Ratio and MREL Ratio, FY2025 only.\n"
+    f"(3) '{ND_FY2024_P3}' - applied to KM1 Key Metrics FY2024 only, and evidenced by the DOCUMENT "
+    "SET rather than by the waiver. Monument's annual-reports page lists a Pillar 3 document for "
+    "FY2023, FY2022 and FY2021 and none for FY2024 (the newest is the FY2023 'Monument Bank Pillar "
+    "3 Report'), and no later edition prints a 2024 comparative column - so no published KM1 "
+    "column for that date exists on any basis.\n"
+    f"(4) '{ND_FY2024_ROWSET}' - applied to Tier 1 Ratio, Total Capital Ratio and MREL Ratio for "
+    "FY2024. THIS RESTS ON THE DOCUMENT, NOT ON THE WAIVER. The FY2024 Annual Report's 'Balance "
+    "sheet and regulatory metrics' table (printed folio 9) prints EXACTLY FOUR ratio rows - "
+    "'CET 1 %', 'Leverage ratio', 'Liquidity coverage ratio', 'Net stable funding ratio' - which "
+    "is precisely the set of sheets that DO carry an FY2024 figure. See the row-set note carried "
+    "on each of those three sheets for the verbatim block and the full-document term census, run "
+    "with positive controls, that makes its zeroes facts about the document rather than about the "
+    "search.\n"
+    "THESE STATEMENTS ARE NEITHER DASHES NOR ZEROES. Monument prints a dash in its Pillar 3 "
+    "exposure-class tables to mean a DISCLOSED NIL, and this workbook keeps those as printed; a "
+    "cell reading 'Not published...' means no figure was ever published, which is a third and "
+    "different statement. None of the three is ever converted into another."
+)
+
 CASH_SOURCES = (
     "Sources - Monument Bank Limited Company/standalone cash flows, £'000:\n"
     f"FY2024 & FY2023: Financial Statements for the year ended 31 December 2024, pp.74-75 (Company columns) - {AR25_URL}\n"
@@ -76,6 +174,7 @@ CASH_SOURCES = (
     f"FY2020: Financial Statements for the year ended 31 December 2020, Statement of Cash Flows, "
     f"p.30 - {AR20_URL}\n\n"
     + ENTITY_NOTE
+    + ND_EVIDENCE_NOTE
 )
 
 P3_SOURCES = (
@@ -118,7 +217,9 @@ P3_SOURCES = (
     "recorded on the affected sheet rather than one silently replacing the other - see the Total "
     "RWAs, NSFR and RWA Breakdown sheets.\n\n"
     "The reports do not provide a complete UK KM1 table for every year. Only explicitly disclosed "
-    "entity-level values are populated; unavailable capital components and ratios remain blank.\n\n"
+    "entity-level values are populated; unavailable capital components and ratios are left blank or, "
+    "where the reason has been established from the documents, carry an explicit non-disclosure "
+    "statement instead (see ND_EVIDENCE_NOTE at the end of this note).\n\n"
     "RE-VERIFIED 2026-09-12 (disclosure audit): all five annual reports (FY2020-FY2024) were "
     "re-downloaded from Companies House and OCR'd in full - they are scanned filings with no text "
     "layer, so an earlier text-only pass would have found nothing in them. This pass overturned two "
@@ -155,12 +256,26 @@ P3_SOURCES = (
     "basis because no FY2024 Pillar 3 exists or will exist, and that IS an SDDT consequence. What SDDT does "
     "not explain is FY2020, which predates both the SDDT regime and Monument's first Pillar 3 - the Bank was "
     "in its post-licence mobilisation phase and simply published less. Do not read SDDT back onto FY2023 or "
-    "earlier: those years have full KM1 tables. The FY2025 column is blank "
-    "for an entirely separate and unrelated reason - no FY2025 accounts had been filed at Companies House "
-    "when this workbook was built (a filing-lag gap, which will close when the FY2025 accounts appear); it "
-    "is NOT an SDDT exemption. What the SDDT status does establish is forward-looking: no Monument Pillar 3 "
+    "earlier: those years have full KM1 tables. THE FY2025 COLUMN HAS TWO DIFFERENT REASONS AND THEY MUST "
+    "NOT BE CONFLATED. On the nine sheets the FY2024 Annual Report's row set will fill (CET1 Capital, CET1 "
+    "Ratio, Tier 1 Capital, Total Capital, Total RWAs, RWA Breakdown, Leverage Ratio, LCR, NSFR) FY2025 is "
+    "a FILING-LAG gap - no FY2025 accounts had been filed at Companies House when this workbook was built, "
+    "and it will close when they appear; that is NOT an SDDT exemption. On the four sheets that need a "
+    "Pillar 3 document (KM1 Key Metrics, Tier 1 Ratio, Total Capital Ratio, MREL Ratio) FY2025 is a "
+    "PERMANENT absence, and there the SDDT consent is the reason. Both now say so in the cells themselves "
+    "rather than standing empty. What the SDDT status does establish is forward-looking: no Monument Pillar 3 "
     "disclosure will ever be published for FY2025 or later, so the Annual Report will remain the only "
     "source for these metrics.\n"
+    "FY2025 RE-CHECKED 18 SEPTEMBER 2026 and still not published - the gap is dated, not unsearched. "
+    "Companies House records Monument's next accounts as made up to 31 December 2025 and due by "
+    "30 September 2026, with none filed as at the check date; Monument's own annual-reports page listed "
+    "nothing newer than the 2024 Annual Report. Monument publishes between early August and late September "
+    "each year (FY2022 on 29/09/2023, FY2023 on 27/09/2024, FY2024 on 07/08/2025), so the FY2025 Annual "
+    "Report is expected on or before the 30 September 2026 deadline. A later session should look again in "
+    "the first week of October 2026 rather than repeating this search. When it appears it will fill FY2025 "
+    "on the CET1 Capital, CET1 Ratio, Tier 1 Capital, Total Capital, Total RWAs, RWA Breakdown, Leverage "
+    "Ratio, LCR and NSFR sheets - the rows the FY2024 edition prints - and not the Tier 1 Ratio, Total "
+    "Capital Ratio, MREL Ratio or KM1 sheets, which need a Pillar 3 document that will not exist.\n"
     "The Bank does not state its SDDT status in its own words. The FY2023 and FY2024 Annual Reports are "
     "fully scanned, image-only Companies House filings with no text layer (pdftotext extracted 0 characters "
     "from each), so both were OCR'd page-by-page at 200dpi with tesseract before being searched - a plain "
@@ -177,6 +292,27 @@ P3_SOURCES = (
     "(the FY2022 web copy is scanned like the Companies House one). Future passes on this bank should "
     "prefer the web copies; the OCR round-trip is avoidable for three of the five years. Both sets were "
     "compared for this pass and agree on every figure in this workbook."
+    + ND_EVIDENCE_NOTE
+)
+
+# Shared once, deliberately, rather than restated on each of the three sheets it applies to:
+# a claim copied into several notes is how this file previously came to contradict itself.
+FY2024_ROWSET_NOTE = (
+    " WHY FY2024 CARRIES A NON-DISCLOSURE STATEMENT HERE WHILE THE SHEETS EITHER SIDE OF IT CARRY "
+    "A FIGURE - a row-set "
+    "difference in the source, verified 2026-09-18, not an extraction miss. With no FY2024 "
+    "Pillar 3 document (see the SDDT note), the only FY2024 regulatory disclosure is the "
+    "'Balance sheet and regulatory metrics' table in the FY2024 Annual Report's Strategic "
+    "Report, printed folio 9. That table prints exactly four ratio rows - 'CET 1 %', 'Leverage "
+    "ratio', 'Liquidity coverage ratio' and 'Net stable funding ratio' - which is precisely the "
+    "set of Pillar 3 sheets that DO carry FY2024. It prints no Tier 1 ratio row, no total "
+    "capital ratio row and no MREL row, so those three sheets have nothing to take. The FY2024 "
+    "report states the phrases 'total capital ratio', 'MREL', 'own funds' and 'eligible "
+    "liabilities' nowhere at all, and its only two occurrences of 'Tier 1 ratio' are both inside "
+    "the caption 'Common Equity Tier 1 Ratio (CET1%)', i.e. the CET1 ratio already recorded - "
+    "while the same document is rich on the neighbouring terms (CET1, leverage ratio, liquidity "
+    "coverage, net stable funding all present repeatedly), which is what makes those zeroes "
+    "facts about the document rather than about the search."
 )
 
 bw = BankWorkbook(bank_name="Monument Bank Limited", years=YEARS, header_color="5B2C6F")
@@ -230,14 +366,31 @@ STATEMENTS_SOURCES = (
     "2020 Banking Licence), so no loan book or impairment provision existed to disclose that "
     "year - confirmed by the FY2020 Statement of Financial Position, which has no loans and "
     "advances to customers line at all.\n\n"
-    "RWA BREAKDOWN NOTE: no breakdown of Total RWAs by risk category (credit/market/"
-    "operational risk) was found in any of the 4 filings' risk management or capital "
-    "sections reviewed - only the aggregate Total Tier 1 capital and (via the Total Capital "
-    "Ratio) an implied Total RWAs figure are disclosed. Confirmed as a genuine non-disclosure, "
-    "not an access gap - all 4 filings were fully read through their risk management notes."
+    "RWA BREAKDOWN NOTE (CORRECTED 2026-09-15, restated here 2026-09-18). This note "
+    "previously said that 'no breakdown of Total RWAs by risk category was found in any of "
+    "the 4 filings' risk management or capital sections reviewed' and called that 'a genuine "
+    "non-disclosure, not an access gap'. Both halves were wrong, and the correction is "
+    "repeated here because this note is shared by the Balance Sheet, Profit & Loss, Statement "
+    "of Changes in Equity and Asset Quality sheets, where a reader would otherwise still meet "
+    "the superseded claim. Monument DOES disclose a breakdown of Total RWAs, in more detail "
+    "than the annual reports' three-way split: section 6.1 'Pillar 1 Capital requirements' of "
+    "its standalone Pillar 3 documents gives a full standardised-approach exposure-class "
+    "breakdown for FY2021, FY2022 and FY2023. Those documents are published on Monument's own "
+    "website and are never filed at Companies House, which is why a Companies-House-only pass "
+    "found nothing. The annual reports additionally print a three-way risk-type split (credit "
+    "and counterparty / operational / credit valuation adjustment) for FY2024 and FY2023. See "
+    "the RWA Breakdown sheet, which carries both bases as separate blocks. FY2020 has no "
+    "breakdown on either basis and FY2025 has no document at all."
+    + ND_EVIDENCE_NOTE
 )
 
 bs_rows = [
+    # Leading-gap close 2026-09-18: the FY2025 column held no cell at all and
+    # so read as unexamined. The reason is established and is in the source
+    # note; it now appears IN the column too. A STATEMENT row, deliberately
+    # placed above the first SECTION so it sits outside every DATA->TOTAL
+    # reconciliation block. No statement line is a figure and none is summed.
+    ("DATA", "Publication status", {"FY2025": ND_FY2025_AR}),
     ("SECTION", "Assets", {}),
     ("DATA", "Cash and balances at central banks / with banks", {"FY2024": 3685561, "FY2023": 354658, "FY2022": 60337.153, "FY2021": 23888.337, "FY2020": 25112.989}),
     ("DATA", "Loans and advances to credit institutions", {"FY2024": 39419, "FY2023": 22557, "FY2022": 5336.605}),
@@ -271,6 +424,9 @@ bw.add_balance_sheet_sheet(
 )
 
 pl_rows = [
+    # See the Balance Sheet's Publication status row - same reason, same
+    # placement above the first SECTION, outside every reconciliation block.
+    ("DATA", "Publication status", {"FY2025": ND_FY2025_AR}),
     ("SECTION", "Income", {}),
     ("DATA", "Interest receivable and similar income", {"FY2024": 148993, "FY2023": 20705, "FY2022": 2128.074, "FY2021": 0.730, "FY2020": 8.260}),
     ("DATA", "Interest payable and similar charges", {"FY2024": -136868, "FY2023": -17400, "FY2022": -1784.745, "FY2021": -1.102}),
@@ -345,6 +501,9 @@ bw.add_equity_changes_sheet(
 )
 
 asset_quality_rows = [
+    # See the Balance Sheet's Publication status row - same reason, same
+    # placement above the first SECTION, outside every reconciliation block.
+    ("DATA", "Publication status", {"FY2025": ND_FY2025_AR}),
     ("SECTION", "Loans and advances to customers, Company basis", {}),
     ("DATA", "Gross loans and advances", {"FY2024": 174105, "FY2023": 139876, "FY2022": 93475.759, "FY2021": 761.749}),
     ("DATA", "Less: allowance for impairment on loans and advances", {"FY2024": -266, "FY2023": -187, "FY2022": -104.644, "FY2021": -2.664}),
@@ -358,6 +517,9 @@ asset_quality_rows = [
 ]
 
 rows = [
+    # See the Balance Sheet's Publication status row - same reason, same
+    # placement above the first SECTION, outside every reconciliation block.
+    ("DATA", "Publication status", {"FY2025": ND_FY2025_AR}),
     ("SECTION", "Cash flows from operating activities", {}),
     ("DATA", "Loss for the financial year", {"FY2024": -13086, "FY2023": -19360, "FY2022": -12709.555, "FY2021": -9973.318, "FY2020": -5735.001}),
     ("DATA", "Amortisation charges", {"FY2024": 3538, "FY2023": 2793.918, "FY2022": 2175.212, "FY2021": 128.659}),
@@ -391,7 +553,8 @@ rows = [
 
 bw.add_cash_flow_sheet(
     title="Monument Bank Limited - Company Cash Flow Statement",
-    subtitle="Company/standalone basis, £'000; 31 December year-end. FY2025 not yet filed. "
+    subtitle="Company/standalone basis, £'000; 31 December year-end. FY2025 not yet published or "
+              "filed as at 18 September 2026 (due at Companies House by 30 September 2026). "
               "FY2020 is the Bank's first full annual report, filed post-Banking Licence "
               "(6 Oct 2020) in its pre-revenue mobilisation phase - 'Finance income' and "
               "'Interest received' are that year's own reconciling items (interest accrued "
@@ -423,6 +586,18 @@ bw.add_asset_quality_sheet(
 # rather than on a divider.
 # ---------------------------------------------------------------
 km1_rows = [
+    # Leading-gap close 2026-09-18: FY2025 and FY2024 held no cell at all, so
+    # two year columns stood empty and read as unexamined. The reasons are
+    # established and are in the sources note; they now appear IN the columns.
+    # Labelled in square brackets, and carrying no template row number, so
+    # verify_workbook's _metric_sheet_for resolves it to NO metric sheet - a
+    # STATEMENT row, not a template row. Nothing on the template itself is
+    # computed, reordered, re-rounded, restated or merged across a basis
+    # break, and the two reasons are kept apart: FY2025 is permanent (no
+    # Pillar 3 will ever exist again), FY2024 is a document that was simply
+    # never published.
+    ("DATA", "[No UK KM1 published for this year - see note below]",
+     {"FY2025": ND_FY2025_P3, "FY2024": ND_FY2024_P3}),
     ("SECTION", "Available capital", {}),
     ("DATA", "1 Common Equity Tier 1 (CET1) (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
     ("DATA", "1a Fully loaded ECL accounting model CET1 (£, single pounds as printed)", {"FY2023": 28035733, "FY2022": 21299969, "FY2021": 32643538}),
@@ -466,10 +641,12 @@ bw.add_km1_sheet(
              "document), reproduced whole in the bank's own row order, row numbers, labels and precision. "
              "AMOUNTS ARE IN SINGLE POUNDS, as printed - the source column header is a bare '£', not "
              "£'000 - so each amount row carries that unit in its own label; ratio rows are percentages. "
-             "Only FY2023, FY2022 and FY2021 are populated, and each comes from the edition in which that "
-             "year is the reporting year, never from a later edition's comparative column. FY2024, FY2025 "
-             "and FY2020 are blank because no KM1 column for those dates exists in any edition anywhere "
-             "(see the source note).",
+             "Only FY2023, FY2022 and FY2021 carry figures, and each comes from the edition in which that "
+             "year is the reporting year, never from a later edition's comparative column. FY2024 and "
+             "FY2025 carry an explicit statement in place of a figure, and FY2020 is blank, because no KM1 "
+             "column for those dates exists in any edition anywhere - and the three reasons differ (see "
+             "the source note). The statement sits on its own bracketed row ABOVE the template; not one "
+             "numbered template row has been added, reordered, re-rounded or restated to carry it.",
     rows=km1_rows,
     sources_text=P3_SOURCES + "\n\n" + (
         "KM1 SHEET SOURCES - one edition per column, per this project's own-year sourcing rule:\n"
@@ -480,13 +657,17 @@ bw.add_km1_sheet(
         f"FY2021: Monument Bank Pillar 3 Disclosures for the year ended 31 December 2021, section 11 "
         f"'Key Metrics', pp.30-31 (the table breaks across two pages: rows 1-12 on p.30, rows 13-20 on "
         f"p.31) - {P3_21_URL}\n\n"
-        "WHY FY2024, FY2025 AND FY2020 ARE BLANK - three different reasons, none of them a sourcing gap.\n"
-        "FY2024 and FY2025: Monument became a Small Domestic Deposit Taker on 15 January 2025 (PRA "
-        "register, Rule 3.1 of the SDDT Regime - General Application Part; see the SDDT note above), which "
-        "removed the obligation to publish Pillar 3 disclosures as at 31 December 2024. No FY2024 or FY2025 "
-        "Pillar 3 document exists or will exist, Monument's own annual-reports page lists none, and no "
-        "later edition prints a comparative column for either date - so there is no published KM1 column "
-        "for those years on any basis.\n"
+        "WHY FY2024, FY2025 AND FY2020 CARRY NO KM1 FIGURES - three different reasons, none of them a "
+        "sourcing gap. FY2024 and FY2025 now say so in the columns themselves; FY2020 remains blank.\n"
+        "FY2024 - ESTABLISHED FROM THE DOCUMENT SET, NOT FROM THE WAIVER. Monument's own annual-reports "
+        "page lists a Pillar 3 document for FY2023, FY2022 and FY2021 and none for FY2024 (the newest is "
+        "the FY2023 'Monument Bank Pillar 3 Report'), and no later edition prints a 2024 comparative "
+        "column - so no published KM1 column for that date exists on any basis. That is the whole of the "
+        "evidence for this cell, and it stands on its own.\n"
+        "FY2025 - PERMANENT, and here the SDDT consent IS the reason. Monument became a Small Domestic "
+        "Deposit Taker on 15 January 2025 (PRA register, 'SDDT Regime - General Application', sub-rule "
+        "Ru 3.1; see the SDDT note above), which removes the Pillar 3 duty outright. No FY2025 Pillar 3 "
+        "document will ever exist, so unlike this workbook's filing-lag gaps this column will never fill.\n"
         "FY2020: predates Monument's first Pillar 3 document entirely (the Bank was in its post-licence "
         "mobilisation phase), and the FY2021 edition is a SINGLE-COLUMN table carrying 2021 only, so it "
         "prints no 2020 comparative either. Nothing has been back-filled from the annual reports, which "
@@ -517,18 +698,36 @@ bw.add_km1_sheet(
 def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, P3_SOURCES, note=note, first_col_width=56, source_height=180)
 
-def vals(data):
-    return {y: data.get(y) for y in YEARS}
+def vals(data, nd=None):
+    """Map every YEAR to its figure.
 
-metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}))], "FY2020 is the 2020 comparative column of the FY2021 report's own 'Regulatory capital' table (Note 20) and its Strategic Report KPI table, which labels the same figure 'Common Equity Tier 1 (CET1) capital'.")
-metric("CET1 Ratio", "%", [("Common Equity Tier 1 (CET1) ratio", vals({"FY2024": "20%", "FY2023": "22%", "FY2022": "43.99%", "FY2021": "108.99%"}))], "FY2024 is the FY2024 annual report's regulatory metrics table ('CET 1 %', p.9). FY2023 is the same table's 2023 comparative; the FY2023 Pillar 3 states the same ratio to two decimals as 22.12% (KM1 item 5), the small difference coming from the FY2024 report's restated FY2023 RWA denominator - see the Total RWAs sheet. FY2022 and FY2021 are KM1 item 5 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15; the previous note's claim that 'earlier ratios were not separately disclosed' was a Companies-House-only search artefact. Both Pillar 3 ratios reproduce exactly from that year's own disclosed capital and RWA: 21,299,969/48,417,473 = 43.99% and 32,643,538/29,951,235 = 108.99%.")
-metric("Tier 1 Capital", "£'000", [("Total Tier 1 capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}))], "Directly disclosed: every annual report from FY2020 onward carries a 'Regulatory capital' table whose bottom line is labelled 'Total Tier 1 capital'. The amounts equal the CET1 Capital sheet's figures because the table builds Tier 1 solely from ordinary share capital and share premium (plus, from FY2023, the AFS reserve less PruVal adjustment) less accumulated losses and intangible-asset deductions - no Additional Tier 1 instrument is disclosed in any year.")
-metric("Tier 1 Ratio", "%", [("Tier 1 ratio", vals({"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}))], "Added 2026-09-15, overturning the previous 'no standalone Tier 1 ratio was separately disclosed in the reports reviewed' - that was true of the annual reports but the standalone Pillar 3 documents carry the ratio explicitly as KM1 item 6, 'Tier 1 ratio (%)', for all three years they cover. The figures equal the CET1 ratios because Monument's capital base is entirely CET1 in every year (no Additional Tier 1 and no Tier 2 instrument is disclosed anywhere), which the Pillar 3 KM1 tables show directly by printing identical values for items 5, 6 and 7 - this is the disclosed position, not a derivation. FY2024 and FY2020 remain blank: neither year has a Pillar 3 document and neither annual report states a Tier 1 ratio.")
-metric("Total Capital", "£'000", [("Total capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}))], "Shown equal to Total Tier 1 capital on the strength of the reports' own explicit statement, repeated verbatim each year, that the capital base consists entirely of Tier 1 - e.g. 'As at 31 December 2024, our capital base was made up of £56.3 million of Tier 1 capital (2023: £28.0 million)'. No Tier 2 row appears in any year's 'Regulatory capital' table and no Tier 2 instrument is disclosed anywhere in the reports, although the Bank's stated capital policy permits Tier 2 up to 25% of total capital. This is the disclosed composition, not a derived figure.")
-metric("Total Capital Ratio", "%", [("Total capital ratio", vals({"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}))], "CORRECTED 2026-09-15 - this sheet previously read FY2022 44%, FY2021 529%, FY2020 359%. The FY2021 and FY2020 values were not CRR total capital ratios at all and have been withdrawn. Monument's annual reports use the abbreviation 'TCR' for two different things in different years, and the two earlier reports use it in the PRA sense of Total Capital Requirement. The FY2020 report states 'As at 31st December 2020, our Total Capital Ratio (TCR) was 359% (2019 453%)' and the FY2021 report's KPI table prints 'Total capital ratio (TCR) 529% 359%' - these are capital-resources-to-capital-requirement cover ratios, not capital as a percentage of RWA. The FY2021 Pillar 3, KM1 item 7, gives the actual CRR total capital ratio for FY2021 as 108.99%, which reproduces exactly from that document's own figures (32,643,538 total capital / 29,951,235 total RWA) and is what now sits in the FY2021 cell. From the FY2022 report onward 'TCR' reverts to the CRR meaning: the FY2023 report's '22% (2022: 44%)' agrees with KM1 item 7 of the FY2023 and FY2022 Pillar 3 documents (22.12% and 43.99%), and those two-decimal Pillar 3 values are used here. FY2020 is now blank: Monument published no Pillar 3 for FY2020, the FY2020 report discloses no RWA figure at all, and the only ratio it gives is the cover ratio - so no CRR total capital ratio exists for that year and none may be computed. FY2024 is blank for the same reason on the other end: no FY2024 Pillar 3 (SDDT) and the FY2024 report states only the CET1 ratio.")
-metric("Total RWAs", "£'000", [("Total risk-weighted assets", vals({"FY2024": 281756, "FY2023": 126528, "FY2022": 48417.473, "FY2021": 29951.235}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 4 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15 - the previous note's 'earlier totals were not separately disclosed' was wrong, they are disclosed, just not at Companies House. TWO-SOURCE DIVERGENCE ON FY2023, recorded rather than resolved: the FY2023 Pillar 3 states Total RWA of 126,732.992 (£'000), while the FY2024 annual report's 2023 comparative states 126,528 - a difference of 205, or 0.16%. The cell holds the annual report figure so that it stays on the same basis as FY2024 beside it, and because the Pillar 3 components behind 126,732.992 differ from the annual report's by risk category as well as in total (see the RWA Breakdown sheet, which carries both splits side by side in separate blocks rather than mixing them in one row). The divergence is a restatement in the later document, not a transcription error: both figures were read from their own source and both reconcile internally to their own components. Neither has been adjusted.")
+    `nd` optionally supplies an explicit NON-DISCLOSURE STATEMENT for years
+    that have no figure, so the cell says why rather than standing empty (see
+    ND_EVIDENCE_NOTE). A real figure ALWAYS wins - `data` is applied over
+    `nd`, so no statement can ever displace a disclosed value, and a year in
+    neither dict stays blank.
+    """
+    merged = dict(nd or {})
+    merged.update(data)
+    return {y: merged.get(y) for y in YEARS}
+
+
+
+metric("CET1 Capital", "£'000", [("Common Equity Tier 1 (CET1) capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}, {"FY2025": ND_FY2025_AR}))], "FY2020 is the 2020 comparative column of the FY2021 report's own 'Regulatory capital' table (Note 20) and its Strategic Report KPI table, which labels the same figure 'Common Equity Tier 1 (CET1) capital'.")
+metric("CET1 Ratio", "%", [("Common Equity Tier 1 (CET1) ratio", vals({"FY2024": "20%", "FY2023": "22%", "FY2022": "43.99%", "FY2021": "108.99%"}, {"FY2025": ND_FY2025_AR}))], "FY2024 is the FY2024 annual report's regulatory metrics table ('CET 1 %', p.9). FY2023 is the same table's 2023 comparative; the FY2023 Pillar 3 states the same ratio to two decimals as 22.12% (KM1 item 5), the small difference coming from the FY2024 report's restated FY2023 RWA denominator - see the Total RWAs sheet. FY2022 and FY2021 are KM1 item 5 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15; the previous note's claim that 'earlier ratios were not separately disclosed' was a Companies-House-only search artefact. Both Pillar 3 ratios reproduce exactly from that year's own disclosed capital and RWA: 21,299,969/48,417,473 = 43.99% and 32,643,538/29,951,235 = 108.99%.")
+metric("Tier 1 Capital", "£'000", [("Total Tier 1 capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}, {"FY2025": ND_FY2025_AR}))], "Directly disclosed: every annual report from FY2020 onward carries a 'Regulatory capital' table whose bottom line is labelled 'Total Tier 1 capital'. The amounts equal the CET1 Capital sheet's figures because the table builds Tier 1 solely from ordinary share capital and share premium (plus, from FY2023, the AFS reserve less PruVal adjustment) less accumulated losses and intangible-asset deductions - no Additional Tier 1 instrument is disclosed in any year.")
+metric("Tier 1 Ratio", "%", [("Tier 1 ratio", vals({"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}, {"FY2025": ND_FY2025_P3, "FY2024": ND_FY2024_ROWSET}))], "Added 2026-09-15, overturning the previous 'no standalone Tier 1 ratio was separately disclosed in the reports reviewed' - that was true of the annual reports but the standalone Pillar 3 documents carry the ratio explicitly as KM1 item 6, 'Tier 1 ratio (%)', for all three years they cover. The figures equal the CET1 ratios because Monument's capital base is entirely CET1 in every year (no Additional Tier 1 and no Tier 2 instrument is disclosed anywhere), which the Pillar 3 KM1 tables show directly by printing identical values for items 5, 6 and 7 - this is the disclosed position, not a derivation. FY2024 now carries an explicit non-disclosure statement instead of standing empty, and FY2020 remains blank: neither year has a Pillar 3 document and neither annual report states a Tier 1 ratio. FY2025 carries a statement of its own, and a DIFFERENT one - no FY2025 Pillar 3 will ever be published (SDDT), so unlike the filing-lag gaps elsewhere in this workbook that cell will never fill." + FY2024_ROWSET_NOTE)
+metric("Total Capital", "£'000", [("Total capital", vals({"FY2024": 56324, "FY2023": 28035.733, "FY2022": 21299.969, "FY2021": 32643.538, "FY2020": 23895.804}, {"FY2025": ND_FY2025_AR}))], "Shown equal to Total Tier 1 capital on the strength of the reports' own explicit statement, repeated verbatim each year, that the capital base consists entirely of Tier 1 - e.g. 'As at 31 December 2024, our capital base was made up of £56.3 million of Tier 1 capital (2023: £28.0 million)'. No Tier 2 row appears in any year's 'Regulatory capital' table and no Tier 2 instrument is disclosed anywhere in the reports, although the Bank's stated capital policy permits Tier 2 up to 25% of total capital. This is the disclosed composition, not a derived figure.")
+metric("Total Capital Ratio", "%", [("Total capital ratio", vals({"FY2023": "22.12%", "FY2022": "43.99%", "FY2021": "108.99%"}, {"FY2025": ND_FY2025_P3, "FY2024": ND_FY2024_ROWSET}))], "CORRECTED 2026-09-15 - this sheet previously read FY2022 44%, FY2021 529%, FY2020 359%. The FY2021 and FY2020 values were not CRR total capital ratios at all and have been withdrawn. Monument's annual reports use the abbreviation 'TCR' for two different things in different years, and the two earlier reports use it in the PRA sense of Total Capital Requirement. The FY2020 report states 'As at 31st December 2020, our Total Capital Ratio (TCR) was 359% (2019 453%)' and the FY2021 report's KPI table prints 'Total capital ratio (TCR) 529% 359%' - these are capital-resources-to-capital-requirement cover ratios, not capital as a percentage of RWA. The FY2021 Pillar 3, KM1 item 7, gives the actual CRR total capital ratio for FY2021 as 108.99%, which reproduces exactly from that document's own figures (32,643,538 total capital / 29,951,235 total RWA) and is what now sits in the FY2021 cell. From the FY2022 report onward 'TCR' reverts to the CRR meaning: the FY2023 report's '22% (2022: 44%)' agrees with KM1 item 7 of the FY2023 and FY2022 Pillar 3 documents (22.12% and 43.99%), and those two-decimal Pillar 3 values are used here. FY2020 is now blank: Monument published no Pillar 3 for FY2020, the FY2020 report discloses no RWA figure at all, and the only ratio it gives is the cover ratio - so no CRR total capital ratio exists for that year and none may be computed. FY2024 now carries an explicit non-disclosure statement for the same reason on the other end, and that statement rests on the FY2024 DOCUMENT rather than on the SDDT consent: the FY2024 report's regulatory metrics table prints no total capital ratio row at all (see the row-set note below), and there is no FY2024 Pillar 3 to fall back on. FY2025 carries a different statement again - no FY2025 Pillar 3 will ever exist, so that cell will never fill." + FY2024_ROWSET_NOTE)
+metric("Total RWAs", "£'000", [("Total risk-weighted assets", vals({"FY2024": 281756, "FY2023": 126528, "FY2022": 48417.473, "FY2021": 29951.235}, {"FY2025": ND_FY2025_AR}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 4 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15 - the previous note's 'earlier totals were not separately disclosed' was wrong, they are disclosed, just not at Companies House. TWO-SOURCE DIVERGENCE ON FY2023, recorded rather than resolved: the FY2023 Pillar 3 states Total RWA of 126,732.992 (£'000), while the FY2024 annual report's 2023 comparative states 126,528 - a difference of 205, or 0.16%. The cell holds the annual report figure so that it stays on the same basis as FY2024 beside it, and because the Pillar 3 components behind 126,732.992 differ from the annual report's by risk category as well as in total (see the RWA Breakdown sheet, which carries both splits side by side in separate blocks rather than mixing them in one row). The divergence is a restatement in the later document, not a transcription error: both figures were read from their own source and both reconcile internally to their own components. Neither has been adjusted.")
 
 rwa_breakdown_rows = [
+    # See the Balance Sheet's Publication status row - same reason, same
+    # placement above the first SECTION, outside every reconciliation block.
+    # FY2025 is the ANNUAL REPORT reason here, not the Pillar 3 one: the
+    # FY2024 edition prints this three-way split, so the FY2025 edition will
+    # fill this sheet when it appears.
+    ("DATA", "Publication status", {"FY2025": ND_FY2025_AR}),
     ("SECTION", "Annual report basis - 'Balance sheet and regulatory metrics' table (Company, as disclosed)", {}),
     ("DATA", "Counterparty and credit risk weighted assets (RWA)", {"FY2024": 270331, "FY2023": 112159}),
     ("DATA", "Operational RWA", {"FY2024": 9755, "FY2023": 11500}),
@@ -621,10 +820,10 @@ bw.add_rwa_breakdown_sheet(
     source_height=220,
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", vals({"FY2024": "3.9%", "FY2023": "4.1%", "FY2022": "12.00%", "FY2021": "90.48%"}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 14, 'Basel III leverage ratio (%) (row 2 / row 13)', of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15. Same definition throughout - Tier 1 capital over the Basel III total leverage exposure measure - and the FY2023 Pillar 3 states 4.08% against the annual report's 4.1%, i.e. the same figure at a different rounding, which is what confirms the two sources share a basis here. The very high FY2021 ratio is as printed: the Bank had a £36.1m exposure measure against £32.6m of Tier 1 capital, having received its banking licence on 4 November 2021 and taken its first deposit on 6 December 2021, so it was carrying a full capital base against almost no balance sheet. FY2020 is blank - no leverage ratio is stated in that year's report and there is no FY2020 Pillar 3.")
-metric("LCR", "%", [("Liquidity coverage ratio", vals({"FY2024": "589%", "FY2023": "1,093%", "FY2022": "10,128%", "FY2021": "2,861,111,111%"}))], "FY2021’s unusually high percentage is reproduced exactly as printed in the 2021 accounts; it is not normalised or inferred.")
-metric("NSFR", "%", [("Net stable funding ratio", vals({"FY2024": "560%", "FY2023": "228%", "FY2022": "242.85%", "FY2021": "153.40%"}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 20 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15, each supported in the same table by its own available and required stable funding amounts (FY2022 160,835,001/66,227,130; FY2021 34,625,872/22,572,338), which reproduce the printed ratios. FY2021 predates the UK NSFR requirement, which came into force on 1 January 2022 under PRA PS17/21 - Monument disclosed the ratio voluntarily a year early, so this is a real disclosure rather than the structural blank that FY2021 NSFR usually is across this workbook set. TWO-SOURCE DIVERGENCE ON FY2023, recorded rather than resolved: the FY2023 Pillar 3 states 237.48% where the FY2024 annual report's 2023 comparative states 228%, a gap of 9.5 percentage points that is too large to be rounding. Neither document states which convention it uses, so the divergence cannot be attributed with confidence - point-in-time against four-quarter-average is the usual cause of a gap this shape, and the later document restates FY2023 RWA too (see the Total RWAs sheet), so a restatement is equally possible. The cell holds the annual report figure to stay on the same basis as FY2024 beside it; the Pillar 3 figure is recorded here and neither is adjusted.")
-metric("MREL Ratio", None, [("MREL ratio", vals({y: "Not applicable" for y in ["FY2023", "FY2022", "FY2021"]}))], "CHANGED 2026-09-15 from blank to an explicit 'Not applicable' for the three years Monument published a Pillar 3 document, because those documents answer the question directly rather than leaving it open. Section 10 of each, 'Minimum Requirement for Own Funds and Eligible Liabilities', states that Monument falls under a Modified Insolvency process - the Bank of England applies this where a firm provides fewer than roughly 40,000 to 80,000 transactional accounts and its failure would not disrupt the wider financial system - and that 'under [which] minimum requirement for own funds and eligible liabilities (MREL) is set at the same level as regulatory capital requirements and so the Bank will meet its MREL by meeting existing regulatory capital requirements as described in Section 6 Capital Requirements.' Monument therefore has no MREL requirement distinct from its capital requirement and no separate MREL ratio exists to disclose. This is a structural non-applicability, not a sourcing gap: the earlier note, 'no quantitative MREL ratio was located in the official annual reports reviewed', was accurate about the annual reports but left the reader unable to tell an unresearched blank from a real absence. FY2024, FY2025 and FY2020 are left blank rather than marked not applicable, because no document covering those years makes the statement - although nothing suggests Monument's resolution strategy has changed.")
+metric("Leverage Ratio", "%", [("Leverage ratio", vals({"FY2024": "3.9%", "FY2023": "4.1%", "FY2022": "12.00%", "FY2021": "90.48%"}, {"FY2025": ND_FY2025_AR}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 14, 'Basel III leverage ratio (%) (row 2 / row 13)', of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15. Same definition throughout - Tier 1 capital over the Basel III total leverage exposure measure - and the FY2023 Pillar 3 states 4.08% against the annual report's 4.1%, i.e. the same figure at a different rounding, which is what confirms the two sources share a basis here. The very high FY2021 ratio is as printed: the Bank had a £36.1m exposure measure against £32.6m of Tier 1 capital, having only emerged from its post-licence mobilisation phase on 4 November 2021 and taken its first deposit on 6 December 2021, so it was carrying a full capital base against almost no balance sheet. (CORRECTED 2026-09-18: this note previously gave 4 November 2021 as the date Monument 'received its banking licence', contradicting the entity note on this workbook's other sheets. The banking licence itself dates from 6 October 2020, when the Bank entered 'Authorisation with Restriction' - a date independently corroborated by the PRA's consolidated waivers register, which records an Article 26(3) Capital Requirements Regulation permission for FRN 849724 starting 06/10/2020. 4 November 2021 is when the restrictions were lifted, one month before the first deposit.) FY2020 is blank - no leverage ratio is stated in that year's report and there is no FY2020 Pillar 3.")
+metric("LCR", "%", [("Liquidity coverage ratio", vals({"FY2024": "589%", "FY2023": "1,093%", "FY2022": "10,128%", "FY2021": "2,861,111,111%"}, {"FY2025": ND_FY2025_AR}))], "FY2021’s unusually high percentage is reproduced exactly as printed in the 2021 accounts; it is not normalised or inferred.")
+metric("NSFR", "%", [("Net stable funding ratio", vals({"FY2024": "560%", "FY2023": "228%", "FY2022": "242.85%", "FY2021": "153.40%"}, {"FY2025": ND_FY2025_AR}))], "FY2024 and FY2023 are the FY2024 report's regulatory metrics table (p.9). FY2022 and FY2021 are KM1 item 20 of the FY2022 and FY2021 Pillar 3 documents, added 2026-09-15, each supported in the same table by its own available and required stable funding amounts (FY2022 160,835,001/66,227,130; FY2021 34,625,872/22,572,338), which reproduce the printed ratios. FY2021 predates the UK NSFR requirement, which came into force on 1 January 2022 under PRA PS17/21 - Monument disclosed the ratio voluntarily a year early, so this is a real disclosure rather than the structural blank that FY2021 NSFR usually is across this workbook set. TWO-SOURCE DIVERGENCE ON FY2023, recorded rather than resolved: the FY2023 Pillar 3 states 237.48% where the FY2024 annual report's 2023 comparative states 228%, a gap of 9.5 percentage points that is too large to be rounding. Neither document states which convention it uses, so the divergence cannot be attributed with confidence - point-in-time against four-quarter-average is the usual cause of a gap this shape, and the later document restates FY2023 RWA too (see the Total RWAs sheet), so a restatement is equally possible. The cell holds the annual report figure to stay on the same basis as FY2024 beside it; the Pillar 3 figure is recorded here and neither is adjusted.")
+metric("MREL Ratio", None, [("MREL ratio", vals({y: "Not applicable" for y in ["FY2023", "FY2022", "FY2021"]}, {"FY2025": ND_FY2025_P3, "FY2024": ND_FY2024_ROWSET}))], "CHANGED 2026-09-15 from blank to an explicit 'Not applicable' for the three years Monument published a Pillar 3 document, because those documents answer the question directly rather than leaving it open. Section 10 of each, 'Minimum Requirement for Own Funds and Eligible Liabilities', states that Monument falls under a Modified Insolvency process - the Bank of England applies this where a firm provides fewer than roughly 40,000 to 80,000 transactional accounts and its failure would not disrupt the wider financial system - and that 'under [which] minimum requirement for own funds and eligible liabilities (MREL) is set at the same level as regulatory capital requirements and so the Bank will meet its MREL by meeting existing regulatory capital requirements as described in Section 6 Capital Requirements.' Monument therefore has no MREL requirement distinct from its capital requirement and no separate MREL ratio exists to disclose. This is a structural non-applicability, not a sourcing gap: the earlier note, 'no quantitative MREL ratio was located in the official annual reports reviewed', was accurate about the annual reports but left the reader unable to tell an unresearched blank from a real absence. FY2024 and FY2025 are still NOT marked 'Not applicable', because no document covering those years makes that statement - although nothing suggests Monument's resolution strategy has changed. They no longer stand empty either: each now carries its own explicit non-disclosure statement, and the two reasons differ. FY2024 rests on the document - the FY2024 Annual Report prints no MREL row and uses the term 'MREL' nowhere at all (see the row-set note below). FY2025 rests on the SDDT consent - no FY2025 Pillar 3 will ever be published, so that cell will never fill. FY2020 has no cell on any row of this sheet, so its column is trimmed away entirely: the disclosure did not exist that far back." + FY2024_ROWSET_NOTE)
 
 def row_values(label):
     return next(values for kind, name, values in rows if name == label)
@@ -677,7 +876,7 @@ bw.add_overview_sheet(
         ("LCR", vals({"FY2024": "589%", "FY2023": "1,093%", "FY2022": "10,128%", "FY2021": "2,861,111,111%"})),
         ("NSFR", vals({"FY2024": "560%", "FY2023": "228%", "FY2022": "242.85%", "FY2021": "153.40%"})),
     ],
-    note="Monument Bank Limited standalone/Company basis. FY2025 is blank because the latest available Companies House accounts cover 31 December 2024. FY2020 is the Bank's real historical floor (first full annual report, post-Banking Licence, pre-revenue) - FY2017-FY2019 are self-skipped in full because the entity was a pre-authorisation shell company with no bank-relevant disclosure (see Balance Sheet sheet's source note). Pillar 3 sheets contain only explicitly disclosed annual regulatory values; blank cells mean not disclosed. FY2021-FY2023 ratios are from Monument's own standalone Pillar 3 documents (found 2026-09-15), FY2024 from the annual report - the two sources diverge on FY2023 NSFR and Total RWAs and both figures are kept, on the relevant detail sheets. The FY2021 and FY2020 Total Capital Ratio figures previously shown here (529% and 359%) were capital-cover ratios, not CRR ratios, and have been withdrawn or replaced - see the Total Capital Ratio sheet.",
+    note="Monument Bank Limited standalone/Company basis. Year-end 31 December. FY2025 is blank on this Overview - and carries an explicit 'not yet published' statement on the detail sheets - because Monument had not published or filed its FY2025 accounts as at 18 September 2026, when this was last checked against both Companies House and Monument's own annual-reports page: Companies House shows those accounts as due by 30 September 2026. Monument publishes between early August and late September each year, so a later session should look again in the first week of October 2026 - see the Balance Sheet sheet's source note for the full check and the publication-lag record. FY2020 is the Bank's real historical floor (first full annual report, post-Banking Licence, pre-revenue) - FY2017-FY2019 are self-skipped in full because the entity was a pre-authorisation shell company with no bank-relevant disclosure (see Balance Sheet sheet's source note). Pillar 3 sheets contain only explicitly disclosed annual regulatory values; blank cells mean not disclosed. FY2021-FY2023 ratios are from Monument's own standalone Pillar 3 documents (found 2026-09-15), FY2024 from the annual report - the two sources diverge on FY2023 NSFR and Total RWAs and both figures are kept, on the relevant detail sheets. The FY2021 and FY2020 Total Capital Ratio figures previously shown here (529% and 359%) were capital-cover ratios, not CRR ratios, and have been withdrawn or replaced - see the Total Capital Ratio sheet.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/MONUMENT BANK FINANCIALS.xlsx")

@@ -22,17 +22,28 @@ AR23_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annua
 AR25_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2025.pdf"
 AR26_SGHL_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Group-Annual-Report-2026.pdf"
 AR20_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-21.pdf"
-# BLOCKED, WITH NO ARCHIVED FALLBACK - an unresolved state, explicitly NOT a negative
-# (checked 2026-09-16). starlingbank.com refuses this project's automated fetcher: this URL
-# returns HTTP 403 with a ~49KB text/html bot-protection page rather than a PDF. A 403 is an
-# UNKNOWN - it records that the host declined to serve US, NOT that the document has been
-# withdrawn, and a human browser or a different network may well retrieve it normally. No
-# substitute could be offered either: a Wayback CDX query on this exact URL was run on
-# 2026-09-16 and returned successfully with an EMPTY result set, so the absence of an ARCHIVE
-# is enumerated rather than assumed - but that says nothing about the document itself, which
-# remains unexamined rather than absent. Left cited at the publisher's live URL deliberately,
-# since there is nothing verified to replace it with. Do not downgrade this to "dead".
-AR19_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2019-18.pdf"
+# RESOLVED 2026-09-18 - THE 403 WAS A SLUG THAT DOES NOT EXIST, NOT A BLOCKED HOST.
+# A note previously stood here saying starlingbank.com "refuses this project's automated
+# fetcher" because the FY2019 Annual Report URL returned HTTP 403 with a ~49KB text/html
+# bot-protection page, and that a Wayback CDX query on that URL returned an empty result set.
+# Both observations were real; the CONCLUSION drawn from them was wrong in both directions.
+#  - The host is not blocking us. On 2026-09-18 plain `curl -L` (rung 1, no UA, no cookies)
+#    fetched Starling-Bank-Annual-Report-2019-21.pdf from the same directory: HTTP 200,
+#    Content-Type application/pdf, %PDF magic bytes, 32,987,359 bytes. Same host, same path
+#    prefix, same fetcher, same minute.
+#  - The 403 was specific to the filename. The old URL read "...-2019-18.pdf"; Starling's
+#    own investor index (https://www.starlingbank.com/investors/, read as HTML rather than
+#    guessed) links the file as "...-2018-19.pdf" - the year pair the other way round. The
+#    CDN answers 403 rather than 404 for a path it does not hold, which is what made a
+#    typo look like an access denial. All five rungs of the ladder (plain, -L, --http1.1,
+#    browser UA + Accept/Referer, cookie warm-up from /investors/, and plain http://)
+#    returned the identical 403 on the wrong slug, and rung 1 succeeded on the right one -
+#    so ladder position was never the variable. The empty Wayback result likewise says only
+#    that nobody ever archived a URL that never existed.
+# The real index (fetched 2026-09-18) lists exactly these annual reports:
+# 2016-17, 2017-18, 2018-19, 2019-21, 2022, plus /investors/<year>/annual-report-<year>/
+# landing pages for 2023-2026, and Pillar3-2018 .. Pillar3-2026.
+AR19_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-Bank-Annual-Report-2018-19.pdf"
 AR18_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2017-18.pdf"
 AR17_URL = "https://www.starlingbank.com/docs/annual-reports/Starling-bank-annual-report-2016-17.pdf"
 
@@ -62,9 +73,16 @@ ENTITY_NOTE = (
     "are on the narrower 'Regulatory Group' basis (SGHL, SIHL, SBL, SFSSL and Ember only - Murmur/Fleet "
     "Mortgages/Engine fall below CRR Article 19 materiality thresholds); cross-checking confirms this made no "
     "difference to the FY2025 capital figures, so Pillar 3 continuity FY2021-FY2026 is unaffected by the "
-    "restructuring. FY2020-FY2017 are covered by Starling's official investor archive: FY2020/FY2019 in the "
-    "2019-21 report, FY2018 in the 2017-18 report, and FY2017 in the 2016-17 report. Older columns retain blanks "
-    "where the historical filing used a materially different presentation and no reliable like-for-like line exists."
+    "restructuring. FY2019-FY2017 are covered by Starling's official investor archive, each from its OWN edition: "
+    "FY2019 in the 2018-19 report (year ended 30 November 2019), FY2018 in the 2017-18 report, and FY2017 in the "
+    "2016-17 report. Older columns retain blanks where the historical filing used a materially different "
+    "presentation and no reliable like-for-like line exists.\n"
+    "FY2020 HAS NO REPORTING DATE AT ALL - THERE IS NO STARLING BALANCE SHEET TO FIND (established 2026-09-18, "
+    "see the Balance Sheet source note for the documents read). Starling changed its accounting reference date "
+    "from 30 November to 31 March, so the twelve months to 30 November 2020 fall INSIDE the 16-month period "
+    "1 December 2019 - 31 March 2021 and were never themselves a financial year. No statement of financial "
+    "position was ever drawn up at any date in the FY2020 slot - not by the Group, not in a Pillar 3, and not at "
+    "Companies House. This is a sourced negative about the calendar, not a gap in the search."
 )
 
 CASH_FLOW_SOURCES = (
@@ -137,6 +155,39 @@ STATEMENTS_SOURCES = (
     f"2021, p.62-68 (Consolidated Statement of Comprehensive Income / Financial Position / Changes in Equity) - "
     f"{AR21_URL}. Independently cross-checked against Annual Report 2023's FY2021 comparative opening equity "
     f"balance, which agrees exactly.\n"
+    f"FY2019: Starling Bank Limited Annual Report and Consolidated Financial Statements for the year ended "
+    f"30 November 2019, printed p.46 / PDF p.25, 'Consolidated Statement of Financial Position' - {AR19_URL}. "
+    f"That table prints four columns (Group 2019, Group 2018, Company 2019, Company 2018); the GROUP 2019 column "
+    f"is used, as everywhere else in this workbook. The column foots exactly to its own printed totals (Total "
+    f"Assets 1,200,682; Total Liabilities 1,132,756; Total Equity 67,926), and its equity components agree "
+    f"exactly with the 'Balance at 30 November 2019' row on this workbook's Statement of Changes in Equity "
+    f"sheet, which was transcribed from a different page. Independently cross-checked against the 16-month "
+    f"report's own 30 Nov 2019 comparative column (p.64-65 / PDF p.34), which agrees on every line except Other Liabilities "
+    f"and Accruals, printed 40,542 in FY2019's own edition and 40,541 in the later one - a £1k difference "
+    f"reproduced here as each edition printed it, with FY2019's own edition used, not reconciled away.\n"
+    f"FY2019 EDITION-vs-EDITION NOTE (FY2018 comparative): the FY2019 report's FY2018 comparative column splits "
+    f"Other Liabilities and Accruals 3,784 / Deferred Income 361, where FY2018's OWN report printed 3,614 / 531. "
+    f"The two sum identically (4,145) - a £170k reclassification between the two captions on re-presentation. "
+    f"The FY2018 column in this workbook keeps FY2018's own edition, per this workbook's each-year-from-its-own-"
+    f"edition rule; nothing was restated.\n"
+    f"FY2020: NO BALANCE SHEET EXISTS - a sourced negative, not a gap in the search (established 2026-09-18). "
+    f"Starling changed its accounting reference date from 30 November to 31 March, so its accounts run "
+    f"...year to 30 Nov 2019, then the 16-month period 1 Dec 2019 - 31 Mar 2021, then year to 31 Mar 2022. The "
+    f"twelve months to 30 November 2020 were never a financial year of their own. Three independent documents "
+    f"were read rather than searched: (1) the 16-month Annual Report's note 01(b) 'Change to accounting "
+    f"reference date' states 'The financial statements are therefore for the 16 month period ended 31 March "
+    f"2021' and that income-statement comparatives are the 12 months to 30 November 2019; (2) that report's "
+    f"Consolidated Statement of Financial Position (p.64-65 / PDF p.34) prints exactly two balance-sheet dates, 31 Mar 2021 "
+    f"and 30 Nov 2019 - there is no 30 Nov 2020 column anywhere in the statements; (3) Companies House filing "
+    f"history for Starling Bank Limited (09092149) lists accounts made up to 30 November 2019 and then 31 March "
+    f"2021, with nothing in between. The ONLY 30 November 2020 figures Starling ever published are an UNAUDITED "
+    f"12-month INCOME-STATEMENT memorandum in the 16-month report's Group Strategic Report (p.14-15, alongside "
+    f"an unaudited 4-month column to 31 Mar 2021) and a matching unaudited interest-margin table (p.16-17) - "
+    f"income and margin only, no assets, no liabilities and no equity. Nothing from those memoranda is carried "
+    f"here: they are unaudited, they are not a balance sheet, and this is a Balance Sheet sheet. Starling's "
+    f"Pillar 3 series does not fill the hole either: the files are named by PUBLICATION year, not reporting "
+    f"date - Pillar3-2020.pdf is 'Starling Bank Limited Pillar 3 Disclosures 30 November 2019' and "
+    f"Pillar3-2019.pdf is as at 30 November 2018 - so no Starling Pillar 3 has a 2020 reporting date either.\n"
     f"FY2018 (& FY2017): Starling Bank Limited Annual Report and Consolidated Financial Statements for the year "
     f"ended 30 November 2018, printed p.45 / PDF p.25, 'Consolidated Statement of Financial Position as at "
     f"30 November 2018' - {AR18_URL}. That table prints four columns (Group 2018, Group 2017, Company 2018, "
@@ -250,11 +301,34 @@ balance_sheet_rows = [
     ("TOTAL", "Total liabilities and equity", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834}),
 ]
 
-# FY2017-FY2018 are transcribed from Starling's original official annual
+# FY2017-FY2019 are transcribed from Starling's original official annual
 # reports (rather than back-filled from later comparatives).  The old reports
 # use a materially different line presentation, so only exact line matches
 # are carried into the extended ladder.
+#
+# FY2019 added 2026-09-18 from the Annual Report and Consolidated Financial
+# Statements for the year ended 30 November 2019 (printed p.46 / PDF p.25,
+# "Consolidated Statement of Financial Position"), GROUP columns.  The column
+# foots to its own printed totals exactly: assets 764,705 + 331,597 + 54,290
+# + 31,642 + 2,393 + 16,055 = 1,200,682; liabilities 1,007,282 + 1,575 +
+# 40,542 + 83,357 = 1,132,756; equity 7 + 159,332 + 761 - 92,174 = 67,926;
+# 1,132,756 + 67,926 = 1,200,682.  Equity components also tie exactly to the
+# "Balance at 30 November 2019" row already carried on this workbook's
+# Statement of Changes in Equity sheet, which was transcribed separately.
+# Derivatives and the deferred tax asset have no FY2019 line (both first
+# appear in the 16-month period), and note 09 "Debt Securities" gives no
+# issuer-type split - only a credit-rating split (AAA 288,934 / AA 42,663) -
+# so the four issuer sub-lines stay blank, exactly as for FY2018/FY2017.
 _OLD_BS = {
+    "FY2019": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 764705,
+               "Total debt securities": 331597, "Loans and advances to customers": 54290,
+               "Property, plant and equipment and right of use assets": 2393,
+               "Intangible assets": 16055, "Other assets": 31642, "Total assets": 1200682,
+               "Customer deposits": 1007282, "Provisions": 1575, "Other liabilities": 40542,
+               "Deferred income": 83357, "Total liabilities": 1132756, "Share capital": 7,
+               "Share premium": 159332, "Other reserves (own shares held/share awards/sundry/FX - see source note)": 761,
+               "Retained earnings / (Accumulated losses)": -92174, "Total equity": 67926,
+               "Total liabilities and equity": 1200682},
     "FY2018": {"Loans and advances to banks (FY2021-FY2023: includes cash and cash equivalents - see source note)": 187008,
                "Total debt securities": 18039, "Loans and advances to customers": 8698,
                "Property, plant and equipment and right of use assets": 616,
@@ -677,6 +751,18 @@ KM1_SOURCES = (
     "decimals in the FY2024 edition's comparative. The bank's own precision for the year is kept.\n\n"
     "PRINTED-FORM NOTE: the FY2026 edition puts a space before the per-cent sign ('28.58 %') where earlier "
     "editions do not ('31.55%'). Reproduced as published.\n\n"
+    "ROWS 1, 2 AND 3 ARE EQUAL IN EVERY YEAR, AND THAT IS WHAT STARLING PRINTS. CET1 capital, Tier 1 capital and "
+    "Total capital carry the same figure in all six columns because Starling has no Additional Tier 1 and no "
+    "Tier 2 instruments in issue, so CET1 = Tier 1 = Total capital by construction. Confirmed against the FY2026 "
+    "report twice over on 18 September 2026: section 4.1 prints all three rows as 1,123,255 (2026) and 1,000,231 "
+    "(2025), and the same document's UK CC1 composition-of-own-funds table independently prints 'Tier 1 capital "
+    "(T1 = CET1 + AT1)' and 'Total capital (TC = T1 + T2)' at 1,123,255 as well. The bank's own ratio rows agree: "
+    "1,123,255 / 3,930,308 = 28.58%, which is what rows 5, 6 and 7 all print. This is recorded because an "
+    "identical triple otherwise looks like one value copied into three slots.\n\n"
+    "YEAR COLUMNS SHOWN: this sheet carries FY2026-FY2021 only. FY2020, FY2019, FY2018 and FY2017 are omitted "
+    "from the header rather than shown as empty columns, because Starling published no Pillar 3 report at all "
+    "for those years and so has no key-metrics table on any basis - there is nothing for a column to be empty "
+    "OF. The other sheets in this workbook still carry those years.\n\n"
     "ROWS LEFT BLANK: FY2021's three NSFR rows are printed as 'n/a' in the FY2022 edition, with its own "
     "footnote explaining that 'NSFR is a new requirement introduced in 2022 as part of CRR 2, thus the Bank "
     "does not provide comparative information for the prior period'. FY2020-FY2017 are blank because Starling "
@@ -690,12 +776,14 @@ bw.add_km1_sheet(
              "the string 'KM1', so no row numbers have been added - it is the template on the row-set test. "
              "Amounts in £'000, ratios as printed. FY2026-FY2022 come from their own editions; FY2021 is the "
              "FY2022 edition's comparative column (that year's own report pre-dates the template). FY2026 is "
-             "the SGHL Regulatory Group basis - see the source note. FY2020-FY2017 are blank: no Pillar 3 "
-             "report exists for those years.",
+             "the SGHL Regulatory Group basis - see the source note. FY2020-FY2017 are not shown at all: "
+             "Starling published no Pillar 3 report for those years, so those columns are omitted rather than "
+             "printed empty.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     first_col_width=72,
-    source_height=460,
+    source_height=520,
+    years=["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
 )
 
 metric(
