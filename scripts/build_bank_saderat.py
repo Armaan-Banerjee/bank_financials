@@ -711,6 +711,16 @@ NOT_DISCLOSED_NOTE = (
     "figure (see the other Pillar 3 sheets)."
 )
 
+# GA-020 (2026-09-19): bare statements reclassified on the ten-document search above.
+# Archive page re-checked 2026-09-19: newest edition still 2023, so FY2024/FY2025 rest on
+# the Annual Reports alone (OCR-searched, as above).
+def _np(term):
+    return {y: ("Not published – no " + term + " in Bank Saderat Pillar 3 " + y[2:] + " or Annual Report (full-text/OCR "
+                "search, 2026-09-16); no edition prints one.") for y in ["FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]} | \
+           {y: ("Not published – no " + term + " in the " + y + " Annual Report (OCR search, 2026-09-16); no " + y +
+                " Pillar 3 on the Bank's Basel Disclosures archive (newest 2023, re-checked 2026-09-19).") for y in ["FY2025", "FY2024"]}
+GA020_ST = {"Leverage Ratio": _np("leverage ratio"), "NSFR": _np("NSFR"), "MREL Ratio": _np("MREL figure")}
+
 # ---------------------------------------------------------------
 # KM1 Key Metrics - NOT APPLICABLE. This bank DOES publish Pillar 3
 # disclosures - a continuous annual series back to 2008 on its own Reports
@@ -876,6 +886,7 @@ bw.add_rwa_breakdown_sheet(
 
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio"], p3_sources(RATIO_PAGES), per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE},
+    statements=GA020_ST,
 )
 
 metric("LCR", "%, all currencies", [("Liquidity Coverage Ratio", LCR_ALL_CCY)],
@@ -886,6 +897,7 @@ bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(RATIO_PAGES),
     per_note={m: NOT_DISCLOSED_NOTE for m in ["NSFR", "MREL Ratio"]},
+    statements=GA020_ST,
 )
 
 # ---------------------------------------------------------------

@@ -612,7 +612,15 @@ metric("NSFR", "£'000 / %", [
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "No quantitative MREL figure was located in the official 2022-2025 Pillar 3 reports reviewed."},
+    statements={"MREL Ratio": {
+        **{y: "Not published – no MREL figure or mention in this year's GB Bank Pillar 3 report (text-searched 2026-09-19)"
+           for y in ("FY2025", "FY2024", "FY2023", "FY2022")},
+        "FY2021": ("Not published – no FY2021 Pillar 3 exists (2022 edition is the first); its Dec-21 comparative "
+                   "has no MREL (text-searched 2026-09-19)"),
+    }},
+    per_note={"MREL Ratio": "No quantitative MREL figure was located in the official 2022-2025 Pillar 3 reports reviewed. "
+                            "GA-020 (2026-09-19): all four editions (P3_2022-2025_URL) re-fetched and searched for "
+                            "'MREL'/'eligible liabilities' - zero hits."},
 )
 
 bw.add_overview_sheet(

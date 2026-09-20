@@ -154,16 +154,23 @@ AR1991_CH_URL = f"{CH_BASE}/OTk0ODQ2MjRhZGlxemtjeA/document?format=pdf&download=
 # accounting periods beginning on/after 23 March 1992) - only a structurally
 # different "Statement of Source and Application of Funds" (SSAP 10) appears, and
 # it is not force-mapped onto the Cash Flow Statement sheet's row structure.
-AR1990_CH_URL = f"{CH_BASE}/NDE5NjQxMjFhZGlxemtjeA/document?format=pdf&download=0"  # accounts at 12th January 1991 (own Balance Sheet cover date, independently re-verified)
-AR1989_CH_URL = f"{CH_BASE}/NDk0ODQ2MjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 14 Jan 1990
-AR1988_CH_URL = f"{CH_BASE}/MzAwNDIyMjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 9 Jan 1989
-AR1987_CH_URL = f"{CH_BASE}/NTUxNzgzNDBhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 10 Jan 1988
-AR1986_CH_URL = f"{CH_BASE}/NTg3OTI0NzVhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 11 Jan 1987
-AR1985_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MmFkaXF6a2N4/document?format=pdf&download=0"  # 'Financial Statement 1985' (own cover title, independently re-verified) - accounts made up to 12 Jan 1986
-AR1984_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3M2FkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 14 Jan 1985
-AR1983_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3NGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 8 Jan 1984
-AR1982_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2OWFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 9 Jan 1983
-AR1981_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MGFkaXF6a2N4/document?format=pdf&download=0"  # accounts for the year ended 9th January 1982 (own cover title, independently re-verified) - this is the Bank's own FY1981 filing; also used for the FY1980 comparative column within the same document
+# GA-024 (2026-09-19): THESE CONSTANTS ARE NAMED BY THE CALENDAR YEAR OF THE
+# JANUARY YEAR-END, NOT BY FISCAL YEAR - unlike AR1991+ above, which are named by
+# fiscal year. AR<n> is the accounts made up to early January <n>, i.e. FY<n-1>.
+# Every date below is the one printed on the document itself and matches the
+# Companies House filing-history description (1985+). The FY1990 filing (made up
+# to 12 Jan 1991) had never been used here and is FY1990_CH_URL.
+FY1990_CH_URL = f"{CH_BASE}/MTQyMTMwNTk0YWRpcXprY3g/document?format=pdf&download=0"  # full group accounts made up to 12 Jan 1991 = FY1990 (filed 20 May 1991)
+AR1990_CH_URL = f"{CH_BASE}/NDE5NjQxMjFhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 13 Jan 1990 = FY1989
+AR1989_CH_URL = f"{CH_BASE}/NDk0ODQ2MjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 14 Jan 1989 = FY1988
+AR1988_CH_URL = f"{CH_BASE}/MzAwNDIyMjdhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 9 Jan 1988 = FY1987
+AR1987_CH_URL = f"{CH_BASE}/NTUxNzgzNDBhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 10 Jan 1987 = FY1986
+AR1986_CH_URL = f"{CH_BASE}/NTg3OTI0NzVhZGlxemtjeA/document?format=pdf&download=0"  # accounts made up to 11 Jan 1986 = FY1985 ('Financial Statement 1985' on its own cover)
+AR1985_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MmFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 12 Jan 1985 = FY1984
+AR1984_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3M2FkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 14 Jan 1984 = FY1983
+AR1983_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3NGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 8 Jan 1983 = FY1982
+AR1982_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk2OWFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 9 Jan 1982 = FY1981
+AR1981_CH_URL = f"{CH_BASE}/MjAyNDY1Mjk3MGFkaXF6a2N4/document?format=pdf&download=0"  # accounts made up to 10 Jan 1981 = FY1980
 
 # HD-078 (2026-09-07): FY1980-FY1972, the workbook's genuine hard floor - see HD078_1972_1980_NOTE
 # below for full methodology (why P&L/Cash Flow Statement are not extended the same way as FY1990-
@@ -234,10 +241,8 @@ HD078_1991_2002_NOTE = (
     "sourced from the FY1993 AR's own FY1992 comparative (cross-checked "
     "against FY1991's continuity, e.g. identical £75.0m subordinated Loan "
     "Stock). 34 years now on both extended sheets: FY2024-FY1991.\n"
-    "P&L NOT EXTENDED: from at least FY1993 the Bank took the Section 230 "
-    "Companies Act 1985 exemption (predecessor to s.408) and disclosed only "
-    "a Group profit-attributable figure, not a Bank income statement - left "
-    "blank per the same FY2003-FY2011 convention rather than fabricated.\n"
+    "P&L: SUPERSEDED 2026-09-19 - the s.230 note DOES state the Bank's own "
+    "profit every year, and the P&L sheet now carries FY2002-FY1992.\n"
     "CASH FLOW NOT EXTENDED: FRS 1 only applies to periods beginning on/"
     "after 23 Mar 1992 - FY1991 instead presents an incompatible 'Statement "
     "of Source and Application of Funds' (SSAP 10). Separately, this "
@@ -273,9 +278,8 @@ HD078_1991_2002_NOTE = (
 
 HD078_1981_1990_NOTE = (
     "HD-078 FOLLOW-UP (2026-09-07): FY1990-FY1981 extends Balance Sheet and "
-    "Statement of Changes in Equity ONLY (P&L/Cash Flow not extended, same "
-    "Section 230 exemption / pre-FRS1 reasons as HD078_1991_2002_NOTE, plus "
-    "the 1948/1967 Companies Act predecessor for FY1981-1984). Transcribed "
+    "Statement of Changes in Equity ONLY (Cash Flow not extended, pre-FRS1; "
+    "P&L extended 2026-09-19 on a GROUP basis - no Bank-only one exists). Transcribed "
     "from each year's own Companies House filing.\n"
     "FORMAT: FY1985-1990 continue FY1991's Sch. 9 mapping (see "
     "HD078_1991_2002_NOTE). FY1981-1984 predate the Companies Act 1985 "
@@ -335,11 +339,9 @@ HD078_1972_1980_NOTE = (
     "vested in Co-operative Bank Limited on 10 July 1971; no earlier full "
     "accounting year exists to extend to. All 9 years transcribed from each "
     "year's own scanned Companies House filing (company 00990937).\n"
-    "P&L NOT EXTENDED (Bank-only): these filings do not present a Bank Company-"
-    "only income statement at all, only a Consolidated Group one, so a new "
-    "Group-basis P&L section is added instead; the existing Bank-only 'Profit/"
-    "(loss) for the year' row is left blank for this range to avoid conflating "
-    "bases.\n"
+    "P&L NOT EXTENDED (Bank-only): no Bank Company-only income statement is "
+    "presented at all, only a Consolidated Group one, carried in its own "
+    "Group-basis section (extended to FY1991 on 2026-09-19).\n"
     "CASH FLOW NOT EXTENDED: predates SSAP 10 (1975) and FRS 1 (1992); where a "
     "Source and Application of Funds statement exists (FY1975+) its structure "
     "is incompatible with this sheet's row layout, same treatment as FY1991.\n"
@@ -361,6 +363,174 @@ HD078_1972_1980_NOTE = (
     "from £21.563m (as originally reported) to £23.021m, +£1.458m combined for "
     "a SSAP 15 deferred-tax policy change plus a released general bad-debt "
     "provision, shown as its own 'Restatement' row."
+)
+
+# HD-078 follow-up (2026-09-19): the Bank's OWN-edition Financial Statements for
+# FY2003-FY2011, hosted on co-operativebank.co.uk. These are born-digital,
+# searchable PDFs (pdftotext returns 1,300-3,800 hits for " the ", so keyword
+# search on them is trustworthy - unlike the Companies House scans above, which
+# have no text layer at all and had to be OCR'd and then read off rendered page
+# images). They are preferred over the Companies House filings for these years
+# because several of the CH filings are a later year's edition carrying the year
+# in question only as a comparative.
+COOP_FS_BASE = ("https://www.co-operativebank.co.uk/pdfs/bank/investorrelations/"
+                "financialresults/bank-financial-statement")
+FS2011_URL = f"{COOP_FS_BASE}-2011.pdf"
+FS2010_URL = f"{COOP_FS_BASE}-2010.pdf"
+FS2009_URL = f"{COOP_FS_BASE}-2009.pdf"
+FS2008_URL = f"{COOP_FS_BASE}-2008.pdf"
+FS2007_URL = f"{COOP_FS_BASE}-2007.pdf"
+FS2005_URL = f"{COOP_FS_BASE}-2005.pdf"
+FS2004_URL = f"{COOP_FS_BASE}-2004.pdf"
+FS2003_URL = f"{COOP_FS_BASE}-2003.pdf"
+# NOTE: there is no usable FS2006_URL. The bank's own index page links
+# .../bank-financial-statement-2006.pdf, but that path SERVES THE 2007 DOCUMENT -
+# byte-identical (md5 d893321826b9d07d9ae47ab5ff978be1) to the -2007.pdf path, on
+# both the /pdfs/ and /assets/pdf/ prefixes, and in the Wayback Machine's capture
+# too, so it is a long-standing site-side error rather than a transient one.
+# FY2006 therefore uses its own Companies House filing (AR2006_CH_URL) instead.
+
+HD078_PL_1981_2011_NOTE = (
+    "HD-078 FOLLOW-UP (2026-09-19) - CLOSING THE FY2011-FY1981 PROFIT & LOSS HOLE.\n"
+    "Before this pass the P&L sheet was populated for FY1980-FY1972 and for "
+    "FY2024-FY2012 and empty for the 31 years in between, with no statement in "
+    "the cells saying why. Every one of those 31 years is now filled from a "
+    "primary source. Two different things were found, and they are kept on "
+    "separate rows because they are different measures:\n"
+    "(1) FY2011-FY1992 - A BANK COMPANY-ONLY BOTTOM LINE DOES EXIST, and is "
+    "independently disclosed. The Bank took the s.230 Companies Act 1985 "
+    "exemption (from FY2006 onward its s.408 Companies Act 2006 successor) from "
+    "presenting its own individual profit and loss account every year in this "
+    "range - but that exemption REQUIRES the amount of the Group profit dealt "
+    "with in the parent's own accounts to be stated in a note, and that note is "
+    "present in all 20 editions. The earlier HD-078 pass left FY2003-FY2011 "
+    "blank on the ground that a Bank-only profit would have to be backed out as "
+    "a residual of the equity roll-forward; that premise was wrong - the figure "
+    "is printed, and nothing below is derived, netted or back-solved.\n"
+    "THE NOTE'S BASIS CHANGES TWICE, so the figures are carried on three rows, "
+    "not one:\n"
+    "  - FY2011-FY2005 'Group profit attributable to EQUITY shareholders dealt "
+    "with in the accounts of The Co-operative Bank p.l.c.';\n"
+    "  - FY2004-FY1999 'Group profit for the financial year attributable to "
+    "SHAREHOLDERS...' (preference holders included);\n"
+    "  - FY1998-FY1993 'Group profit attributable to ORDINARY shareholders...' "
+    "(i.e. struck AFTER the preference dividend).\n"
+    "The break between the second and third is arithmetically demonstrable and "
+    "is NOT reconciled away: the FY1998 edition's note says £40,088,000 while "
+    "the FY1999 edition restates that same comparative to £45,623,000, and the "
+    "difference is exactly the £5,535,000 preference dividend printed in the "
+    "FY1998 edition's own note 10 (60,000,000 9.25% non-cumulative irredeemable "
+    "£1 preference shares). Each year below is its OWN edition's figure.\n"
+    "FY1992 is the one exception and is flagged on its own row: FY1992's own "
+    "filing was not retrieved, so its £472,000 comes from the FY1993 edition's "
+    "own FY1992 comparative column - the same limitation the Balance Sheet "
+    "sheet already records for FY1992.\n"
+    "FY2004 RESTATEMENT (both figures disclosed, neither suppressed): FY2004's "
+    "own edition (UK GAAP) states £88.0m; the FY2005 edition restates the same "
+    "FY2004 comparative to £78.7m on first-time IFRS adoption. The workbook's "
+    "own-edition convention keeps £88.0m on the sheet and records £78.7m here.\n"
+    "FY2009 BRITANNIA MERGER: Britannia Building Society transferred its "
+    "engagements to the Bank on 1 August 2009, roughly trebling the balance "
+    "sheet. FY2009 and FY2010 are therefore NOT like-for-like with FY2008 and "
+    "earlier, and the step up in this series should not be read as organic.\n"
+    "Sources, each year from its own edition:\n"
+    f"  FY2011 note 11 - {FS2011_URL}\n"
+    f"  FY2010 note 11 - {FS2010_URL}\n"
+    f"  FY2009 note 11 - {FS2009_URL}\n"
+    f"  FY2008 note 10 - {FS2008_URL}\n"
+    f"  FY2007 note 10 - {FS2007_URL}\n"
+    f"  FY2006 note 9, p.67 (Companies House scan; see the FS2006 caveat above) - {AR2006_CH_URL}\n"
+    f"  FY2005 note 9 - {FS2005_URL}\n"
+    f"  FY2004 note 6 - {FS2004_URL}\n"
+    f"  FY2003 note 6 - {FS2003_URL}\n"
+    f"  FY2002 note 6, p.43 - {AR2002_CH_URL}\n"
+    f"  FY2001 note 6, p.43 - {AR2001_CH_URL}\n"
+    f"  FY2000 note 6, p.43 - {AR2000_CH_URL}\n"
+    f"  FY1999 note 9, p.43 - {AR1999_CH_URL}\n"
+    f"  FY1998 note 9, p.39 - {AR1998_CH_URL}\n"
+    f"  FY1997 note 10, p.36 - {AR1997_CH_URL}\n"
+    f"  FY1996 note 10, p.28 - {AR1996_CH_URL}\n"
+    f"  FY1995 note 8, p.42 - {AR1995_CH_URL}\n"
+    f"  FY1994 note 8, p.31 - {AR1994_CH_URL}\n"
+    f"  FY1993 note 8, p.36 - {AR1993_CH_URL}\n"
+    f"  FY1992 (FY1993 edition's comparative) - {AR1993_CH_URL}\n"
+    "(2) FY1991-FY1981 - NO BANK COMPANY-ONLY INCOME STATEMENT AND NO s.230 "
+    "NOTE EXIST. Every one of these 11 filings was OCR'd in full and the "
+    "relevant pages read off rendered page images; the phrase 'dealt with in "
+    "the accounts of The Co-operative Bank' appears nowhere before the FY1993 "
+    "edition. What these editions DO print is a Consolidated (Group) Profit and "
+    "Loss Account, plus a single Bank Company-only line at its foot, "
+    "'Profits/(Losses) Retained - By The Bank'. Both are now on the sheet: the "
+    "Group statement extends the existing FY1980-FY1972 Group block up to "
+    "FY1991, and the Bank-only retained line has its own row. That retained "
+    "line is a POST-DIVIDEND APPROPRIATION, not a profit for the year, so it is "
+    "deliberately not written into the 'Profit/(loss) for the year' row.\n"
+    "DOCUMENT DATING - READ THIS BEFORE RE-USING THE AR<year>_CH_URL "
+    "CONSTANTS. The Bank's year end in this era was an early-January 52/53-week "
+    "date, and each constant below was opened and dated from the statement's own "
+    "printed dateline and column headings rather than from its name or from the "
+    "Companies House description:\n"
+    f"  FY1991 - 'year ended January 1992', columns 1991/1990, p.25 - {AR1991_CH_URL}\n"
+    f"  FY1990 - 'for the year ended 12th January, 1991', columns 1990/1989, Consolidated P&L printed "
+    f"p.23 (PDF p.25) - {FY1990_CH_URL}. This own-edition filing (filed 20 May 1991) was not located "
+    f"before 2026-09-19 and FY1990 had been filled from the FY1991 edition's comparative column, which "
+    f"RE-PRESENTS the year: it splits the own edition's single 'Operating (Loss)/Profit' (14,687) into "
+    f"(14,041) plus a separate 'Unity Trust Bank plc and its subsidiaries' line (646), prints an "
+    f"Exceptional Item line as a dash, and merges the preference dividend (5,535) into one 'Dividend' "
+    f"line. FY1990 now carries the OWN edition (own-year-primary convention); every subtotal "
+    f"is unchanged.\n"
+    f"  FY1989 - 'for the year ended 13th January, 1990', columns 1989/1988, p.23 - {AR1990_CH_URL}\n"
+    f"  FY1988 - 'for the year ended 14th January, 1989', columns 1988/1987, p.3 - {AR1989_CH_URL}\n"
+    f"  FY1987 - 'for the year ended 9th January, 1988', columns 1987/1986, p.3 - {AR1988_CH_URL}\n"
+    f"  FY1986 - 'for the year ended 10th January, 1987', columns 1986/1985 - {AR1987_CH_URL}\n"
+    f"  FY1985 - 'for the year ended 11th January, 1986', columns 1985/1984, p.3 - {AR1986_CH_URL}\n"
+    f"  FY1984 - 'for the year ended 12th January, 1985', columns 1984/1983, p.9 - {AR1985_CH_URL}\n"
+    f"  FY1983 - 'for the year ended 14th January, 1984', columns 1983/1982, p.9 - {AR1984_CH_URL}\n"
+    f"  FY1982 - 'for the year ended 8th January, 1983', columns 1982/1981, p.9 - {AR1983_CH_URL}\n"
+    f"  FY1981 - 'for the year ended 9th January, 1982', columns 1981/1980, p.9 - {AR1982_CH_URL}\n"
+    f"  FY1980 - 'for the year ended 10th January, 1981', columns 1980/1979, p.13 - {AR1981_CH_URL}\n"
+    "That last line is the one to notice: AR1981_CH_URL holds the FY1980 "
+    "statement, AR1982_CH_URL holds FY1981, and so on up the range - each "
+    "constant holds the filing for the year ended in the January that names it, "
+    "which is the PRECEDING fiscal year. The Balance Sheet/Statement of Changes "
+    "in Equity citation block used to label these same constants one year later; "
+    "that was corrected on 2026-09-19 (GA-024) after each document's own dateline "
+    "was re-read and matched to its Companies House filing description. The "
+    "FIGURES on those sheets were right throughout (e.g. Total assets FY1981 696.3 "
+    "/ FY1982 816.1 / FY1983 905.4 tie to 696,331 / 816,072 / 905,414 in the "
+    "9 Jan 1982, 8 Jan 1983 and 14 Jan 1984 filings).\n"
+    "SIGN CONVENTION: these editions switch convention mid-range. Up to the "
+    "FY1985 statement a deduction is printed unbracketed and an addition "
+    "bracketed; from the FY1986 statement brackets mean a deduction. Every "
+    "column above was settled by footing it to its own printed Retained "
+    "Earnings total, not by reading the brackets.\n"
+    "ONE ILLEGIBLE CELL: the FY1987 edition's 'Sovereign Debt Provisions' "
+    "figure is physically damaged on the Companies House scan. It is carried as "
+    "1.384 from the FY1988 edition's legible FY1987 comparative column, cited as "
+    "a comparative. It was NOT inferred from the 15,684 / 14,300 subtotals "
+    "printed either side of it, although those do agree with it.\n"
+    "ONE FIGURE DELIBERATELY LEFT OUT: the FY1988 edition's FY1987 comparative "
+    "also prints 'Profit attributable to Ordinary Shareholders 9,164' for "
+    "FY1987, a line FY1987's own edition does not carry. It is recorded here "
+    "rather than placed in an own-edition row.\n"
+    "ONE NEW verify_workbook.py BLOCK MISMATCH, EXPECTED AND NOT A DATA "
+    "ERROR: that script checks a TOTAL row against the sum of the DATA rows "
+    "since the PREVIOUS TOTAL, and cannot carry a running subtotal forward. "
+    "'Profit attributable to ordinary shareholders (Group)' is a genuine "
+    "subtotal on the face of the FY1990, FY1989 and FY1988 statements, struck as "
+    "Profit before Taxation LESS the five lines under it - so it needs the "
+    "preceding TOTAL row (Profit before taxation) as well as its own block, "
+    "and the checker reports 18.543 - 12.667 = 5.876 as a mismatch because it "
+    "starts from zero instead of from 18.543. Both columns foot exactly "
+    "against their own printed statements (FY1989 5,876; FY1988 12,477). The "
+    "sheet's existing 'Retained earnings (Group)' TOTAL has had the same "
+    "property since HD-078 for the same reason. Nothing was adjusted to make "
+    "either reconcile.\n"
+    "RICHNESS CONTROL: all 11 Companies House filings in this range are "
+    "image-only - pdftotext returns ZERO hits for ' the ' on every one, so a "
+    "keyword search of them proves nothing either way. They were OCR'd "
+    "(ocrmypdf/tesseract) to locate pages, and every figure above was then read "
+    "off a rendered page image at 170-400 dpi."
 )
 
 ENTITY_NOTE = (
@@ -588,19 +758,22 @@ STATEMENTS_SOURCES = (
     f"pre-Sch.9 presentation, see HD078_1991_2002_NOTE) - {AR1991_CH_URL}\n\n"
     "HD-078 FOLLOW-UP - FY1990-FY1981 (Balance Sheet/Equity only, all Companies House filings; see "
     "HD078_1981_1990_NOTE for full methodology):\n"
-    f"FY1990: Report and Accounts, BS at 12 Jan 1991 + Reserves note - {AR1990_CH_URL}\n"
-    f"FY1989: Report and Accounts, BS+Reserves note (to 14 Jan 1990; discloses restated FY1988 Share premium "
-    f"comparative - see HD078_1981_1990_NOTE) - {AR1989_CH_URL}\n"
+    f"FY1990: Report and Accounts, Bank Balance Sheet at 12 Jan 1991, printed p.26/27 + Reserves note "
+    f"- {FY1990_CH_URL}\n"
+    f"FY1989: Report and Accounts, BS+Reserves note (to 13 Jan 1990; discloses restated FY1988 Share premium "
+    f"comparative - see HD078_1981_1990_NOTE) - {AR1990_CH_URL}\n"
     f"FY1988: Report and Accounts, BS (assets side only re-captured, liabilities a residual - see "
-    f"HD078_1981_1990_NOTE) + Reserves note (to 9 Jan 1989) - {AR1988_CH_URL}\n"
-    f"FY1987: Report and Accounts, BS+Reserves note (to 10 Jan 1988) - {AR1987_CH_URL}\n"
-    f"FY1986: Report and Accounts, BS+Reserves note (to 11 Jan 1987) - {AR1986_CH_URL}\n"
-    f"FY1985: 'Financial Statement 1985' AR, BS+Reserves note (to 12 Jan 1986) - {AR1985_CH_URL}\n"
-    f"FY1984: Report and Accounts, BS+Reserves note, as originally reported (to 14 Jan 1985; not FY1985's "
-    f"restated comparative - see HD078_1981_1990_NOTE) - {AR1984_CH_URL}\n"
-    f"FY1983: Report and Accounts, BS+Reserves note (to 8 Jan 1984) - {AR1983_CH_URL}\n"
-    f"FY1982: Report and Accounts, BS+Reserves note (to 9 Jan 1983) - {AR1982_CH_URL}\n"
-    f"FY1981: 'Report and Accounts for the year ended 9th January 1982', BS+Reserves note - {AR1981_CH_URL}\n\n"
+    f"HD078_1981_1990_NOTE) + Reserves note (to 14 Jan 1989) - {AR1989_CH_URL}\n"
+    f"FY1987: Report and Accounts, BS+Reserves note (to 9 Jan 1988) - {AR1988_CH_URL}\n"
+    f"FY1986: Report and Accounts, BS+Reserves note (to 10 Jan 1987) - {AR1987_CH_URL}\n"
+    f"FY1985: 'Financial Statement 1985' AR (own cover title), BS+Reserves note (to 11 Jan 1986) - {AR1986_CH_URL}\n"
+    f"FY1984: Report and Accounts, BS+Reserves note, as originally reported (to 12 Jan 1985; not "
+    f"FY1985's restated comparative - see HD078_1981_1990_NOTE) - {AR1985_CH_URL}\n"
+    f"FY1983: Report and Accounts, BS+Reserves note (to 14 Jan 1984) - {AR1984_CH_URL}\n"
+    f"FY1982: Report and Accounts, BS+Reserves note (to 8 Jan 1983) - {AR1983_CH_URL}\n"
+    f"FY1981: 'Report and Accounts for the year ended 9th January 1982', BS+Reserves note - {AR1982_CH_URL}\n"
+    "GA-024 (2026-09-19): these lines previously cited one document too early (FY<n> -> AR<n>, the "
+    "FY<n-1> filing); the figures were always right.\n\n"
     "HD-078 FOLLOW-UP - FY1980-FY1972 (Balance Sheet/Equity only, the workbook's genuine hard floor; see "
     "HD078_1972_1980_NOTE for full methodology):\n"
     f"FY1980: Report and Accounts, BS+Note 9 Reserves (year ended 10 Jan 1981) - {AR1981_CH_URL}\n"
@@ -681,6 +854,7 @@ PL_SOURCES = STATEMENTS_SOURCES + (
     "FY2024/FY2023(comp): 2024 AR p.6\nFY2022/FY2021(comp): 2022 AR p.6\nFY2020: 2020 AR p.6\n"
     "FY2019: 2019 AR p.6\nFY2018: 2018 AR p.4 (Group)\nFY2017: 2017 AR p.15 (Group)\n"
     "FY2016: 2016 AR p.19 (Bank)\nFY2015: 2015 AR p.23 (Bank)\nFY2014/FY2013(comp): 2014 AR p.19 (Bank)\n"
+    "\nFY2011-FY1981 P&L sources: SECOND source cell below (this one is at openpyxl's size ceiling).\n"
 )
 
 ASSET_QUALITY_SOURCES = (
@@ -1198,11 +1372,12 @@ bw.add_balance_sheet_sheet(
             "FY2015": 0.3, "FY2014": 0.3,
             "FY2013": 4.2, "FY2010": 17.3, "FY2007": 2.9,
             # HD-078 follow-up (2026-09-07): FY1989, FY1987, FY1986's own separately-disclosed 'Taxation'
-            # line (Bank Company-only) - see HD078_1981_1990_NOTE. FY1990: nil that year (no separate
-            # taxation liability disclosed on the Bank balance sheet). FY1988 and FY1985-FY1981: not
+            # line (Bank Company-only) - see HD078_1981_1990_NOTE. FY1990: the own edition's Bank balance
+            # sheet (12 Jan 1991, printed p.26) prints 'Current taxation' as a literal DASH, carried as
+            # '-' (was 0.0 until GA-024 - a printed dash is content, not a measured zero). FY1988 and FY1985-FY1981: not
             # separately disclosed that year - folded into the aggregate deposits residual (FY1988) or
             # genuinely not itemised as a distinct balance sheet line (FY1985-FY1981) - left blank.
-            "FY1990": 0.0, "FY1989": 9.1, "FY1987": 6.7, "FY1986": 5.9,
+            "FY1990": "-", "FY1989": 9.1, "FY1987": 6.7, "FY1986": 5.9,
         }),
         ("DATA", "Lease liabilities", {
             "FY2024": 26.2, "FY2023": 30.1, "FY2022": 31.0, "FY2021": 44.1, "FY2020": 53.6,
@@ -1418,7 +1593,8 @@ bw.add_balance_sheet_sheet(
 bw.add_income_statement_sheet(
     title="The Co-operative Bank p.l.c. — Profit & Loss (Bank Company-only)",
     subtitle="Bank Company-only basis; bottom-line profit plus OCI detail (FY2017-FY2024), full income statement "
-             "(FY2012-FY2016, see source note), £m",
+             "(FY2012-FY2016), Bank-only s.230/s.408 note profit (FY1992-FY2011), and Consolidated GROUP P&L "
+             "(FY1972-FY1991, the years no Bank-only income statement exists at all) - see source note, £m",
     rows=[
         # HD-078 NOTE: FY2003-FY2011 are NOT included on this sheet. Bottom-line profit figures for
         # those years exist in the Bank's own primary sources, but this workbook's convention is that
@@ -1503,58 +1679,196 @@ bw.add_income_statement_sheet(
             "FY2019": -126.5, "FY2018": 256.5, "FY2017": 54.2, "FY2016": -404.8, "FY2015": -616.7,
             "FY2014": -142.0,
         }),
-        ("SECTION", "HD-078 (2026-09-07): Consolidated Group P&L, FY1980-FY1972 (Group basis, NOT "
-                    "Bank Company-only, since no Bank-only income statement is disclosed at all this "
-                    "era; see HD078_1972_1980_NOTE. The existing 'Profit/(loss) for the year' row above "
-                    "is deliberately left blank for these years rather than populated with a Group "
-                    "figure that would conflate two different consolidation bases.)", {}),
+        ("SECTION", "HD-078 (2026-09-07; extended to FY1991 on 2026-09-19): Consolidated Group P&L, "
+                    "FY1991-FY1972 (Group basis, NOT Bank Company-only, since no Bank-only income "
+                    "statement is disclosed at all this era - see HD078_1972_1980_NOTE and "
+                    "HD078_PL_1981_2011_NOTE. The 'Profit/(loss) for the year' row above is deliberately "
+                    "left blank for these years rather than populated with a Group figure that would "
+                    "conflate two different consolidation bases; the one genuinely Bank-only line these "
+                    "editions print - 'Profits/(Losses) Retained By The Bank' - is carried on its own row "
+                    "at the foot of this block.)", {}),
         ("DATA", "Operating profit/Profit for the year (Group, before exceptional items)", {
             # HD-078 (2026-09-07): each year's own source label varies ('Operating Profit' FY1974-1980;
             # 'Profit for the year' FY1972-1973, where no separate exceptional-item line is disclosed).
+            # HD-078 follow-up (2026-09-19), FY1991-FY1981: the label varies again by era - 'Profit/(Loss)
+            # before Exceptional Item and certain Subsidiary Undertakings' (FY1991); 'Operating (Loss)/Profit'
+            # (FY1990's own edition, which does not carve out Unity Trust - GA-024); 'Operating
+            # Profit (Bank and Subsidiaries)' (FY1989-FY1988); 'Profit before Taxation and Sovereign Debt
+            # Provisions - Bank and Subsidiaries' (FY1987); 'Profit before Taxation - The Bank and
+            # Subsidiaries' (FY1986-FY1985); 'Operating Profit' (FY1982-FY1981). FY1984 and FY1983 are
+            # blank because those two editions start the statement at Profit before Taxation and print no
+            # line above it - a presentation gap, not a missing figure.
+            "FY1991": 2.137, "FY1990": -14.687, "FY1989": 20.187, "FY1988": 23.597, "FY1987": 15.675,
+            "FY1986": 14.271, "FY1985": 12.941, "FY1982": 1.689, "FY1981": 4.003,
             "FY1980": 5.422, "FY1979": 6.244, "FY1978": 5.429, "FY1977": 3.974, "FY1976": 3.018,
             "FY1975": 3.569, "FY1974": 4.763, "FY1973": 4.867, "FY1972": 3.699,
+        }),
+        ("DATA", "Sovereign debt provisions (Group)", {
+            # HD-078 follow-up (2026-09-19): a separate line on the face of the statement FY1989-FY1987
+            # only. FY1987's own edition (year ended 9 Jan 1988) has this cell physically damaged on the
+            # Companies House scan; the value below is the FY1988 edition's own FY1987 COMPARATIVE column,
+            # which is legible, and is cited as a comparative - it is NOT back-solved from the subtotals.
+            "FY1989": -1.500, "FY1988": -1.655, "FY1987": -1.384,
+        }),
+        ("DATA", "Unity Trust Bank plc and its subsidiaries (Group)", {
+            # HD-078 follow-up (2026-09-19): FY1991 only - that edition carves Unity Trust out of the
+            # headline profit line. FY1990's OWN edition does not (its (14,687) includes it); the FY1991
+            # edition's FY1990 comparative shows (646) here, recorded in the P&L note, not in this cell.
+            "FY1991": -1.708,
         }),
         ("DATA", "Exceptional items", {
             # HD-078 (2026-09-07): FY1976 = Pension Fund provision (0.350); FY1975 = Additional
             # provision (1.400); FY1974 = Additional provision (2.650) + Special contribution to
             # Pension Fund (0.146). Not disclosed as a separate line FY1972-1973 or FY1977-1980.
+            # HD-078 follow-up (2026-09-19): FY1991 = Restructuring Costs (6.328); FY1988 = a CREDIT
+            # (0.969, surplus on disposal of loans to and investment in an associated company); FY1981 =
+            # 0.377 charge. FY1990's own edition prints no such line (blank; the dash was the FY1991
+            # edition's comparative). FY1989/FY1982 print a literal DASH, carried as '-' because a printed
+            # dash is the bank saying the line is nil, not silence. FY1987-FY1983 print no such line at
+            # all in their own editions, so those cells are blank rather than dashed.
+            "FY1991": -6.328, "FY1989": "-", "FY1988": 0.969, "FY1982": "-",
+            "FY1981": -0.377,
             "FY1976": -0.350, "FY1975": -1.400, "FY1974": -2.796,
         }),
         ("DATA", "Share of profits/(losses) of associated companies", {
             # HD-078 (2026-09-07): not disclosed as a separate line on the face of this statement
             # FY1978-FY1980 (folded into Operating profit that era).
+            # HD-078 follow-up (2026-09-19): reappears FY1991-FY1985 ('Associated Undertakings' FY1991-
+            # FY1990, 'Associated Companies' FY1989-FY1985). FY1984-FY1981 print no separate line.
+            "FY1991": -0.073, "FY1990": -0.185, "FY1989": -0.144, "FY1988": 0.295, "FY1987": 0.009,
+            "FY1986": -0.500, "FY1985": -0.025,
             "FY1977": 0.028, "FY1976": 0.002, "FY1975": -0.011, "FY1974": -0.714, "FY1973": -0.113,
             "FY1972": 0.149,
         }),
         ("TOTAL", "Profit before taxation (and extraordinary item, FY1974)", {
+            "FY1991": -5.972, "FY1990": -14.872, "FY1989": 18.543, "FY1988": 23.206, "FY1987": 14.300,
+            "FY1986": 13.771, "FY1985": 12.916, "FY1984": 13.035, "FY1983": 7.524, "FY1982": 1.689,
+            "FY1981": 3.626,
             "FY1980": 5.769, "FY1979": 6.028, "FY1978": 3.569, "FY1977": 4.002, "FY1976": 2.670,
             "FY1975": 2.158, "FY1974": 1.253, "FY1973": 4.754, "FY1972": 3.848,
         }),
         ("DATA", "Taxation", {
             # HD-078 (2026-09-07): FY1980/FY1979 shown as tax CREDITS (reconciling the disclosed
             # Operating profit to the disclosed post-tax subtotal); all other years are tax charges.
+            # HD-078 follow-up (2026-09-19): FY1991/FY1990/FY1982 are CREDITS (loss-making or reversing
+            # years). The scanned editions change their bracket convention mid-range - up to FY1985 a
+            # deduction is printed unbracketed and an addition bracketed; from FY1986 brackets mean a
+            # deduction. Each column's direction below was settled by footing that column to its own
+            # printed Retained Earnings figure, never assumed from the brackets.
+            "FY1991": 3.343, "FY1990": 9.744, "FY1989": -7.644, "FY1988": -9.075, "FY1987": -5.981,
+            "FY1986": -5.411, "FY1985": -5.078, "FY1984": -4.616, "FY1983": -0.117, "FY1982": 0.317,
+            "FY1981": -0.301,
             "FY1980": 0.347, "FY1979": -0.216, "FY1978": -1.860, "FY1977": -2.036, "FY1976": -1.457,
             "FY1975": -1.047, "FY1974": -0.676, "FY1973": -2.269, "FY1972": -1.108,
         }),
         ("DATA", "Minority interest", {
+            "FY1991": 0.955, "FY1990": 0.276, "FY1989": -0.312, "FY1988": 0.211, "FY1987": -0.159,
+            "FY1986": -0.151, "FY1985": -0.042, "FY1984": 0.019, "FY1983": -0.020, "FY1982": -0.019,
+            "FY1981": 0.022,
             "FY1980": -0.025, "FY1979": -0.087, "FY1978": -0.173, "FY1977": -0.163, "FY1976": -0.090,
             "FY1975": -0.085, "FY1974": 0.015, "FY1973": -0.187, "FY1972": -0.233,
         }),
         ("DATA", "Extraordinary item", {
             # HD-078 (2026-09-07): FY1974 only - disclosed as a separate item below the tax/minority-
             # interest line, per that year's own presentation (Note 7).
+            # HD-078 follow-up (2026-09-19): FY1989-FY1981. FY1981's 2.321 charge is the net of the
+            # £3,192,000 Special Tax on Banking Deposits (the 1981 windfall tax already flagged in
+            # HD078_1981_1990_NOTE) less an £871,000 'Other' credit; FY1982 is a £59,000 credit with the
+            # Special Tax line printing a dash. FY1989 prints a literal dash. FY1991/FY1990 print no
+            # extraordinary-items line at all.
+            "FY1989": "-", "FY1988": -0.050, "FY1987": 1.004, "FY1986": -0.030, "FY1985": -0.607,
+            "FY1984": -13.017, "FY1983": -2.889, "FY1982": 0.059, "FY1981": -2.321,
             "FY1974": 0.186,
+        }),
+        ("DATA", "Transfer from reserves (Group)", {
+            # HD-078 follow-up (2026-09-19): FY1984 only as a figure - the £13.0m Reserves -> P&L
+            # transfer that funded the Finance Act 1984 Group deferred-tax provision, already narrated in
+            # HD078_1981_1990_NOTE. Shown on the face of the FY1984 and FY1985 statements as its own
+            # line; FY1985 prints a dash.
+            "FY1985": "-", "FY1984": 13.000,
+        }),
+        ("DATA", "Preference dividend", {
+            # HD-078 follow-up (2026-09-19): first appears FY1988 (the 40.0m 8.48% cumulative redeemable
+            # £1 preference issue of Apr 1988), rising to 4.711 in FY1989 after the Jun-1989 conversion
+            # to 9.25% non-cumulative irredeemable plus the May-1989 20.0m top-up. FY1990's own edition
+            # prints 'Dividend on Preference Shares' (5,535). FY1991 reverts to a single undifferentiated
+            # 'Dividend' line carried on the Proposed/final dividend row below, so this row is blank there.
+            "FY1990": -5.535, "FY1989": -4.711, "FY1988": -1.815,
+        }),
+        ("TOTAL", "Profit attributable to ordinary shareholders (Group)", {
+            # HD-078 follow-up (2026-09-19): printed on the face of the statement only FY1990-FY1988.
+            # FY1987's figure (9.164) exists solely in the FY1988 edition's comparative column and is
+            # left out here rather than mixed into an own-edition row - see HD078_PL_1981_2011_NOTE.
+            "FY1990": -10.387, "FY1989": 5.876, "FY1988": 12.477,
         }),
         ("DATA", "Proposed/final dividend", {
             # HD-078 (2026-09-07): FY1980 = first year with a proposed dividend (£0.4m, 5p per £1
             # share); FY1972 = Nil (the comparative 26-week stub period to 8 Jan 1972 had a final
             # dividend of £0.2m/5%, not shown here since it is not a full prior year - see
             # HD078_1972_1980_NOTE).
+            # HD-078 follow-up (2026-09-19): FY1991 is the single undifferentiated 'Dividend' line
+            # (ordinary + preference together); FY1990's own edition prints 'Dividend on Ordinary Shares'
+            # as a literal dash (GA-024); FY1989-FY1988 are 'Proposed Dividend on Ordinary
+            # Shares' with preference split out on its own row above. FY1981 prints a literal dash.
+            # FY1982's own edition omits the line entirely, so that cell is blank, not dashed.
+            "FY1991": -5.535, "FY1990": "-", "FY1989": -2.500, "FY1988": -2.500, "FY1987": -2.000,
+            "FY1986": -1.900, "FY1985": -1.850, "FY1984": -0.840, "FY1983": -0.560, "FY1981": "-",
             "FY1980": -0.400,
         }),
         ("TOTAL", "Retained earnings (Group)", {
+            "FY1991": -7.209, "FY1990": -10.387, "FY1989": 3.376, "FY1988": 9.977, "FY1987": 7.164,
+            "FY1986": 6.279, "FY1985": 5.339, "FY1984": 7.581, "FY1983": 3.938, "FY1982": 2.046,
+            "FY1981": 1.026,
             "FY1980": 5.344, "FY1979": 5.941, "FY1978": 3.396, "FY1977": 1.803, "FY1976": 1.123,
             "FY1975": 1.026, "FY1974": 0.778, "FY1973": 2.298, "FY1972": 2.507,
+        }),
+        ("DATA", "of which retained by the Bank (Bank Company-only - the ONLY Bank-only figure these "
+                 "editions print)", {
+            # HD-078 follow-up (2026-09-19): the 'Profits Retained - By The Bank' line at the foot of
+            # each Consolidated P&L. This is a RETAINED (post-dividend) appropriation, NOT a profit for
+            # the year, so it is deliberately NOT written into the 'Profit/(loss) for the year' row
+            # above. It is the era's only genuinely Bank Company-only income-statement disclosure.
+            "FY1991": -6.630, "FY1990": -9.883, "FY1989": 2.532, "FY1988": 9.811, "FY1987": 8.056,
+            "FY1986": 7.372, "FY1985": 4.910, "FY1984": 7.237, "FY1983": 7.364, "FY1982": 4.293,
+            "FY1981": 1.508, "FY1980": 5.032, "FY1979": 5.911,
+        }),
+        ("SECTION", "HD-078 follow-up (2026-09-19): Bank Company-only profit for the financial year, "
+                    "FY2011-FY1992 - the Companies Act s.230 (CA1985) / s.408 (CA2006) NOTE disclosure. "
+                    "The Bank took the exemption from presenting its own individual profit and loss "
+                    "account in every one of these years, but that exemption REQUIRES the amount of the "
+                    "Group profit dealt with in the Bank's own accounts to be disclosed in a note - so "
+                    "these are independently disclosed figures, not residuals backed out of the equity "
+                    "roll-forward. The note's own basis label changes twice across the range, so the "
+                    "three rows below are deliberately NOT merged into one; see "
+                    "HD078_PL_1981_2011_NOTE.", {}),
+        ("TOTAL", "Profit/(loss) attributable to EQUITY shareholders, Bank Company-only (s.230/s.408 "
+                  "note; FY2009-FY2011 after significant items)", {
+            "FY2011": -93.3, "FY2010": 73.1, "FY2009": 166.6, "FY2008": 12.4, "FY2007": -1.1,
+            "FY2006": 119.0, "FY2005": 60.9,
+        }),
+        ("DATA", "of which: before significant items (as separately disclosed FY2011-FY2006)", {
+            "FY2011": 11.9, "FY2010": 108.1, "FY2009": 194.0, "FY2008": 46.1, "FY2007": 25.5,
+            "FY2006": 44.4,
+        }),
+        ("TOTAL", "Profit for the financial year attributable to SHAREHOLDERS, Bank Company-only "
+                  "(s.230 note wording FY2004-FY1999; preference holders NOT excluded)", {
+            # FY2004's own edition (UK GAAP) says 88.0; the FY2005 edition restates that comparative to
+            # 78.7 on first-time IFRS. Both are source-disclosed; the workbook's own-edition convention
+            # keeps 88.0 here and records the restatement in HD078_PL_1981_2011_NOTE rather than
+            # silently adopting one of the two.
+            "FY2004": 88.0, "FY2003": 86.1, "FY2002": 83.9, "FY2001": 72.7, "FY2000": 61.8,
+            "FY1999": 57.618,
+        }),
+        ("TOTAL", "Profit attributable to ORDINARY shareholders, Bank Company-only (s.230 note wording "
+                  "FY1998-FY1993; i.e. AFTER the preference dividend - not comparable with the row "
+                  "above)", {
+            "FY1998": 40.088, "FY1997": 30.452, "FY1996": 26.308, "FY1995": 17.979, "FY1994": 11.697,
+            "FY1993": 3.802,
+        }),
+        ("DATA", "FY1992 - same measure, taken from the FY1993 edition's own FY1992 COMPARATIVE column "
+                 "(FY1992's own filing was not retrieved; same limitation the Balance Sheet sheet "
+                 "already records for FY1992)", {
+            "FY1992": 0.472,
         }),
     ],
     sources_text=PL_SOURCES,
@@ -1562,6 +1876,11 @@ bw.add_income_statement_sheet(
     source_height=280,
     unit_suffix=" (£m)",
 )
+
+# HD-078 follow-up (2026-09-19): the FY2011-FY1981 evidence goes in its own
+# citation cell directly under the main one - see append_source_cell's docstring
+# for why it cannot simply be appended to PL_SOURCES.
+bw.append_source_cell(bw.wb["Profit & Loss"], HD078_PL_1981_2011_NOTE, height=560)
 
 # ---------------------------------------------------------------
 # Sheet 3: Statement of Changes in Equity

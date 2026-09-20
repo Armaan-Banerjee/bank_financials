@@ -1006,8 +1006,18 @@ metric(
 )
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
+    statements={"MREL Ratio": {
+        **{y: ("Not applicable – absent from BoE 'External MRELs' disclosures 2023-2026, which list every UK "
+               "resolution entity with MREL above minimum capital (MCR); MREL = MCR") for y in ("FY2025", "FY2024", "FY2023")},
+        **{y: ("Not published – no MREL figure or mention in this year's JIB Pillar 3 report (text-searched "
+               "2026-09-19)") for y in ("FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016")},
+    }},
     per_note={
-        "MREL Ratio": "Not disclosed in any year - Jordan International Bank Plc is not "
+        "MREL Ratio": "GA-020 (2026-09-19): all nine Pillar 3 reports FY2016-FY2024 (P3_20xx_URL) re-fetched and "
+                      "text-searched for 'MREL'/'eligible liabilities' - zero hits. FY2023-FY2025 cite the BoE "
+                      "record below as a 'Not applicable' reason; FY2016-FY2022 predate the first BoE edition "
+                      "checked and say only 'Not published'.\n"
+                      "Not disclosed in any year - Jordan International Bank Plc is not "
                       "identified as a UK resolution entity in these reports. POSITIVE RECORD ADDED "
                       "18 September 2026 (KM1-032): that was an inference from the reports' silence, "
                       "unlike this bank's other, evidenced sheets. It is now sourced independently. The "

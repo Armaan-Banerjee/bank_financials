@@ -786,6 +786,8 @@ metric("Leverage Ratio", "%", [
     ("Basel III / CRR leverage ratio, exposure measure including claims on central banks", {"FY2020": "10.4%", "FY2019": "9.8%", "FY2018": "10.4%", "FY2017": "12.3%"}),
 ], LEVERAGE_BASIS_NOTE)
 
+STB_LCR_NP = ("Not published – this year's Pillar 3 has no LCR figure (liquidity narrative only; text-searched "
+              "2026-09-19); P3 2022 KM1 shades its Dec-21 LCR cells")
 LCR_BASIS_NOTE = (
     "TWO DIFFERENT SERIES, DELIBERATELY KEPT ON SEPARATE ROWS. FY2022-FY2025 are the UK KM1 Liquidity Coverage Ratio, which is a TWELVE-MONTH "
     "AVERAGE of month-end observations, as the UK KM1 template requires. FY2017 and FY2018 come from the pre-UK Basel III KM1 'Liquidity "
@@ -801,9 +803,19 @@ LCR_BASIS_NOTE = (
 )
 
 metric("LCR", "%", [
-    ("Liquidity Coverage Ratio - UK KM1 twelve-month average", {"FY2025": "190.4%", "FY2024": "219.6%", "FY2023": "208.0%", "FY2022": "270.1%", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed"}),
+    ("Liquidity Coverage Ratio - UK KM1 twelve-month average", {"FY2025": "190.4%", "FY2024": "219.6%", "FY2023": "208.0%", "FY2022": "270.1%",
+        **{y: STB_LCR_NP for y in ("FY2021", "FY2020", "FY2019")}}),
     ("Liquidity Coverage Ratio - Basel III KM1 period observation", {"FY2018": "623.2%", "FY2017": "736.4%"}),
-], LCR_BASIS_NOTE)
+    ("Liquidity Coverage Ratio - Annual Report year-end position (see note)", {"FY2021": "439.1%"}),
+], LCR_BASIS_NOTE + "\n"
+   "GA-020 (2026-09-19): the three KM1-average cells now state their outcome. The Pillar 3 2022 KM1 (printed p.4) "
+   "shades its 31 Dec 2021 LCR cells - footnote 1: first-time PS22/21 disclosures carry no comparatives - so no "
+   "FY2021 average exists there either. FOUND, ON A DIFFERENT BASIS: Annual Report & Accounts 2021, Strategic "
+   "Report 'Management of liquidity', printed p.17 (PDF p.19): 'as at 31 December 2021, the LCR was 439.1%' - "
+   f"{AR_URLS['FY2021']}. Read off the page image. It is a YEAR-END point observation, so it sits on its own row "
+   "and must not be compared with the averaged series. The 2019 and 2020 Annual Reports say only that the LCR "
+   "at 31 December 'was significantly higher than the regulatory requirement' (2019 printed p.43; 2020 PDF p.45) "
+   "and print no figure.")
 SDDT_NSFR_NOTE = (
     "FY2024 and FY2025 are STRUCTURALLY EXEMPT, not a sourcing failure (established 2026-09-15, cross-bank "
     "SDDT pass). Secure Trust Bank is a Small Domestic Deposit Taker ('SDDT') and its Pillar 3 disclosures "
@@ -843,8 +855,20 @@ SDDT_NSFR_NOTE = (
     "reason for those blanks; the Group simply stopped publishing the metric after FY2018 and resumed under UK KM1 in FY2022."
 )
 
-metric("NSFR", "%", [("Net Stable Funding Ratio", {"FY2025": "Not required (SDDT)", "FY2024": "Not required (SDDT)", "FY2023": "143.6%", "FY2022": "152.8%", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "147.4%", "FY2017": "Not applicable"})], SDDT_NSFR_NOTE)
-metric("MREL Ratio", "%", [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], (
+metric("NSFR", "%", [("Net Stable Funding Ratio", {"FY2025": "Not required (SDDT)", "FY2024": "Not required (SDDT)", "FY2023": "143.6%", "FY2022": "152.8%", **{y: ("Not published – this year's Pillar 3 and Annual Report print no NSFR figure (text-searched "
+             "2026-09-19); P3 2022 KM1 shades its Dec-21 NSFR cells") for y in ("FY2021", "FY2020", "FY2019")},
+    "FY2018": "147.4%",
+    "FY2017": ("Not published – Pillar 3 2017 prints no NSFR; it says NSFR disclosure 'is required from June 2018' "
+               "(p.4 list of new requirements)")})], SDDT_NSFR_NOTE)
+metric("MREL Ratio", "%", [("MREL ratio", {
+    **{y: ("Not applicable – this year's Pillar 3 states the Group is not required by the PRA to hold an MREL "
+           "recapitalisation reserve (MREL = its Pillar 1 + 2A capital requirement)") for y in ("FY2021", "FY2020", "FY2019", "FY2018", "FY2017")},
+    **{y: ("Not published – no MREL figure or mention in this year's Pillar 3 or Annual Report (text-searched "
+           "2026-09-19)") for y in ("FY2025", "FY2024", "FY2023", "FY2022")}})], (
+    "GA-020 (2026-09-19): FY2021 Pillar 3 carries the same 'not required ... to hold a Minimum Requirement for own "
+    "funds and Eligible Liabilities (MREL) recapitalisation reserve' statement as FY2017-FY2020 (all re-fetched and "
+    "read). FY2022-FY2025 Pillar 3 and Annual Reports were searched for 'MREL' and 'recapitalisation' - zero hits, "
+    "so those years say 'Not published' rather than carrying the earlier statement forward.\n"
     "No quantitative MREL ratio was located in the reviewed annual reports or Pillar 3 disclosures. This is a SOURCED negative for "
     "FY2017-FY2020, not merely an unsearched gap: each of those four Pillar 3 editions addresses MREL directly and in the same terms - "
     "the Group's Total Loss Absorbing Capacity equals its Pillar 1 + Pillar 2A capital requirement, and 'The Group is not required by the "

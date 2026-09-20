@@ -1054,11 +1054,32 @@ metric(
          "assuming absence). A real self-skip across all 5 years, not an omission.",
 )
 
+# GA-020 (2026-09-19): all ten Pillar 3 editions FY2017-FY2026 re-searched as text. The old
+# note's "zero hits in FY2021-FY2026" was WRONG for FY2021/FY2022 - see the corrected note.
+_MREL_EQ = ("Not applicable – Atom Pillar 3 {y}, MREL section: 'Atom's MREL requirement is equal to its CRD "
+            "IV/V requirement under Pillar 1 and Pillar 2A', so no MREL instruments or ratio beyond capital.")
+_MREL_437 = ("Not applicable – Atom Pillar 3 {y}, CRR disclosure index: 'Article 437a Disclosure of Own Funds "
+             "and Eligible Liabilities – Not Applicable – Due to Article 433c (2)'.")
+MREL_ST = {y: _MREL_EQ.format(y=y) for y in ["FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017"]}
+MREL_ST.update({y: _MREL_437.format(y=y) for y in ["FY2026", "FY2025", "FY2024"]})
+MREL_ST["FY2023"] = ("Not published – Atom Pillar 3 FY2023 (text search, 2026-09-19) has no MREL figure or mention; "
+                     "neighbouring editions say MREL = capital requirement.")
+MREL_ST["FY2016"] = ("Not published – no FY2016 Pillar 3 (the FY2016/17 edition is Atom's first); FY2016 Annual "
+                     "Report (OCR, 2026-09-19) has no MREL figure.")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": MREL_ST},
     per_note={
-        "MREL Ratio": "MREL is not mentioned anywhere in any of Atom's 6 Pillar 3 Disclosures (FY2021-FY2026) - "
+        "MREL Ratio": "CORRECTED 2026-09-19 (GA-020): every edition FY2017-FY2022 DOES address MREL - each "
+                       "states that 'Atom's MREL requirement is equal to its CRD IV [CRD V from FY2021] requirement "
+                       "under Pillar 1 and Pillar 2A. Consequently, the Bank does not need to hold any MREL "
+                       "compliant instruments in addition to those needed to satisfy its CRD IV requirement' - so "
+                       "no separate MREL ratio exists to publish. The FY2023 edition does not mention MREL. The "
+                       "FY2024-FY2026 editions' CRR index reads 'Article 437a ... Not Applicable - Due to Article "
+                       "433c (2)'. The earlier wording below ('zero hits ... FY2021-FY2026') held for the FY2026 "
+                       "edition only and is kept as the record of that search. "
+                       "MREL is not mentioned anywhere in any of Atom's 6 Pillar 3 Disclosures (FY2021-FY2026) - "
                        "zero hits for 'MREL', 'minimum requirement for own funds' and 'resolution' in the FY2026 "
                        "edition, against rich neighbouring terms in the same document ('CET1' 26, 'own funds' 21, "
                        "'leverage' 17), so this is a real self-skip and not a failed search. It is also a FORMAL "

@@ -1080,7 +1080,15 @@ metric("NSFR", "%",
             "Unlike the LCR sheet, the NSFR components reconcile to the printed ratio exactly in every disclosed "
             "year: FY2025 198,459 / 94,033 = 211%; FY2024 200,729 / 77,347 = 260%; FY2023 194,572 / 62,864 = "
             "310%; FY2022 214,036 / 84,527 = 253% (GBP'000).")
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources())
+# GA-020 (2026-09-19): FY2022-FY2025 editions re-fetched from their cited URLs and text-searched for 'MREL',
+# 'eligible liabilities' and 'minimum requirement for own funds': zero hits in all four. FY2021 is carried in
+# the FY2022 edition's comparative column. A Wayback capture of an undated 'GTBUK-Pillar.pdf' (2023-06-06)
+# is a 1 MiB truncated file that does not parse, so it could not be read either way.
+_GTB_MREL = {y: f"Not published – no MREL figure in the {y} GTBank UK Pillar 3 (text-searched 2026-09-19: 'MREL' 0 hits)"
+             for y in ("FY2025", "FY2024", "FY2023", "FY2022")}
+_GTB_MREL["FY2021"] = ("Not published – no MREL figure in the FY2022 GTBank UK Pillar 3, which carries the FY2021 "
+                       "comparatives (text-searched 2026-09-19: 'MREL' 0 hits)")
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), statements={"MREL Ratio": _GTB_MREL})
 
 # ---------------------------------------------------------------
 # Overview sheet

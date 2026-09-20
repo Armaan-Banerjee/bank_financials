@@ -15,10 +15,15 @@ AR23_URL = f"{CH_BASE}/MzQyMDE3MTk5NWFkaXF6a2N4/document?format=pdf&download=0"
 AR21_URL = f"{CH_BASE}/MzMzODgwNTQxMWFkaXF6a2N4/document?format=pdf&download=0"
 # HD-052 (2026-09-05): FY2014-FY2020 extension, re-sourced from Companies House filing-history scans
 # (image-only PDFs, OCR'd + page-rendered) rather than the live URLs above, which are FY2021+ only.
-AR20_URL = f"{CH_BASE}/MzMyNTUwMDk3NmFkaXF6a2N4/document?format=pdf&download=0"
-AR18_URL = f"{CH_BASE}/MzI0ODY3MjA2N2FkaXF6a2N4/document?format=pdf&download=0"
+AR20_URL = f"{CH_BASE}/MzI5ODk0OTk0OGFkaXF6a2N4/document?format=pdf&download=0"
+AR18_URL = f"{CH_BASE}/MzIzMzkyNDA5MmFkaXF6a2N4/document?format=pdf&download=0"
 AR16_URL = f"{CH_BASE}/MzE3NTM0ODg3NmFkaXF6a2N4/document?format=pdf&download=0"
+# FY2017's own filing, obtained 2026-09-18. It is on PAGE 8 of the Companies
+# House filing history (filed 26 Apr 2018); page 1 reaches only back to Nov
+# 2023, which is why earlier passes recorded it as not downloaded.
+AR17_URL = f"{CH_BASE}/MzIwMzU0NzY5NGFkaXF6a2N4/document?format=pdf&download=0"
 AR14_URL = f"{CH_BASE}/MzEyNTM4MDgyMGFkaXF6a2N4/document?format=pdf&download=0"
+PILLAR3_2013_URL = "https://www.itau.com.br/content/dam/ibba/en/IBBAInt_Cons_Pillar3_2013_FINAL_20140625.pdf"
 
 CASH_FLOW_SOURCES = (
     "Sources — all figures are Itau BBA International plc (\"IBBAInt\"/\"the Bank\") solo-entity (Bank, not Group) "
@@ -42,8 +47,8 @@ CASH_FLOW_SOURCES = (
     "is printed with an inconsistent sign convention across report vintages (positive in the FY2025 report's own "
     "FY2025/FY2024 columns, negative in the FY2023 report's own FY2023/FY2022 columns) — transcribed exactly as "
     "each source year printed it, not normalized. Blank cells indicate that year's report did not disclose that "
-    "specific line; a dash ('-') in the source is shown as 0. All 5 years' opening cash balances tie exactly to "
-    "the prior year's closing balance. DATA QUALITY NOTE: summing FY2024's own individually-transcribed line "
+    "specific line. CONVENTION DEFECT, PART-REMEDIED 2026-09-19 FROM THE SOURCE. This sheet was transcribed under a since-retired convention that printed a source dash ('-') as 0, contradicting the project's 2026-09-18 rule that a printed dash is published content and must be carried as a literal '-'. When that was found, the sheet held 15 zero cells and NO literal dashes, and which zeros were dashes was NOT recoverable from the workbook - so nothing was reinterpreted, because back-solving that mapping is what this project forbids. It was instead resolved the only legitimate way, by RE-READING THE SOURCE: p.35 of the 2018 Annual Report (Bank columns, 31.12.18 and 31.12.17) prints a DASH for 'Other non-cash movements' in both years, and for 'Issue/(Repayment) of subordinated debt', 'Interest from financing activities' and 'Net cash flow from financing activities' at 31.12.18. Those five cells now carry a literal '-' instead of 0. The same page prints a DASH for 'Effects of exchange rate change on cash and cash equivalents' in both Bank years, where this sheet had been BLANK - the opposite half of the same defect, a published dash lost as an absence - so those two cells are now '-' as well. THE REMAINING 10 ZEROS, RESOLVED 2026-09-19 FROM EACH YEAR'S OWN EDITION (Bank columns, read off 300dpi page renders, no OCR): ALL TEN ARE PRINTED DASHES and now carry a literal '-'; none was a printed zero and none a real figure. (1) FY2024 'Effects of exchange rate change on cash and cash equivalents': 2024 Annual Report (Companies House filing 12 May 2025, document MzQ2NTc1NjI1M2FkaXF6a2N4), p.58, Bank '2024' - the 2025 edition's comparative (p.65) also prints a dash. (2)-(3) FY2021 'Balances at central banks (mandatory reserves)' and 'Effects of exchange rate change...': 2021 Annual Report p.56, Bank '31.12.21'. (4) FY2019 'Other non-cash movements': 2019 Annual Report (filing 09 Jul 2020, document MzI3MjczNTQwNGFkaXF6a2N4), p.39, Bank '31.12.19'. (5) FY2015 'Other non-cash movements': the 2015 Annual Report (filing 02 Jun 2016, document MzE0OTg1MTU0N2FkaXF6a2N4, p.33) prints NO such line at all, so its own edition says nothing either way; the dash is taken, as a STATED FALLBACK, from the 2016 Annual Report's Bank '31.12.15' comparative on p.28, the declared source of this sheet's FY2015 column. (6)-(7) FY2014 'Cash and equivalents acquired in the merger' and 'Purchases/(Sales) of subordinated debt': 2014 Annual Report, Bank-solo standalone report, printed p.30 (PDF p.129 of the filing), column '31.12.14'. (8) FY2013 'Cash and cash equivalents at beginning of year': 2013 Annual Report (filing 20 Jun 2014, document MzEwMjExOTI2OGFkaXF6a2N4), p.33, column '31.12.13' - the 2014 edition's comparative agrees. (9)-(10) FY2013 'Dissolution of subsidiaries' and 'Subsidiaries' capital increase': the 2013 edition prints NEITHER line, so the dash is taken, as a STATED FALLBACK, from the 2014 Bank-solo report's '31.12.13' comparative (printed p.30), the declared source of this sheet's FY2013 column. Nothing on this sheet remains UNREACHED from this defect, and the sheet now holds no zero cells. BLANK-FOR-DASH FOLLOW-UP, RESOLVED 2026-09-19 FROM EACH YEAR'S OWN EDITION (GA-008): the Bank columns print a dash for 'Effects of exchange rate change on cash and cash equivalents' at 31.12.23, 31.12.20 and 31.12.19, where this sheet's cells had been BLANK - the same blank-for-dash half of the defect as FY2018/FY2017 above. Each was read off a page render of its OWN edition (Companies House scans, image-only - 0 hits for ' the ' under pdftotext - so no text search was relied on): FY2023 - 2023 Annual Report (document MzQyMDE3MTk5NWFkaXF6a2N4) p.57, Bank '2023' prints '-' (Group prints 1 647); FY2020 - 2020 Annual Report (document MzI5ODk0OTk0OGFkaXF6a2N4) p.46, Bank 'Year ended 31.12.20' prints '-' (Group prints (49)); FY2019 - 2019 Annual Report (document MzI3MjczNTQwNGFkaXF6a2N4) p.39, Bank '31.12.19' prints '-' (Group prints (956)). All three cells now carry a literal '-'. Each own edition agrees with the later edition's comparative (2024 p.58, 2021 p.56, 2020 p.46). OBSERVED, NOT ACTED ON (outside that approved scope): the 2023 Annual Report p.57 also prints a dash in the Bank '2022' comparative column on this row, and this sheet's FY2022 cell - whose declared source is that page - is BLANK; the FY2022 edition's own page has not been read for it. CASH ROLL-FORWARD: A TRANSCRIPTION DEFECT, FOUND AND CORRECTED 2026-09-19. This passage previously asserted that all 5 years' opening cash balances tie exactly to the prior year's closing balance - true when written, for FY2025-FY2021, but STALE once HD-052 extended the sheet to 13 years. Re-measured across all 13 columns, 8 boundaries tied, 2 broke and 2 were unscorable (FY2014/FY2013 hold no figures on these rows). The tell was not the magnitude: FY2018's opening EQUALED its own closing (both 270,914) and FY2017's opening EQUALED its own closing (both 141,646), i.e. exactly zero net cash movement two years running, which a real roll-forward does not do. p.35 of the 2018 Annual Report settles it - the Bank columns print cash and cash equivalents AT END OF YEAR of 494,919 (31.12.18) and 270,914 (31.12.17). Both cells had been filled with that year's OPENING balance instead. Corrected to the printed figures, on three rows (the statement total, the 'comprise' subtotal, and the Overview sheet's copy). This is a READ, not a back-solve, and the workbook was already overdetermined against it: the comprise components on this sheet (23 + 494,896 and 17 + 270,897) and the printed Increase/(decrease) rows (224,005 and 129,268 on openings of 270,914 and 141,646) both give the same two figures. Every other FY2018/FY2017 value on this sheet - more than thirty of them - already reproduced p.35 exactly, so the defect was confined to those cells. All 13 boundaries now tie or are unscorable; none breaks. CITATION DEFECT FOUND IN THE SAME PASS, CORRECTED: the URLs cited here for the 2018 and 2020 Annual Reports pointed at the WRONG FILINGS - a PSC04 (change of person with significant control, filed 06/11/2019) and a TM01 (termination of a director appointment, filed 03/01/2022) respectively. Both were live 200-response PDFs, so a status check could never have caught them; only opening them could. They are replaced with the accounts filings themselves (FY2018 accounts filed 08 May 2019; FY2020 accounts filed 28 Apr 2021). The page references were always right - it was only the document ids that were wrong. "
+    "DATA QUALITY NOTE: summing FY2024's own individually-transcribed line "
     "items gives USD 233,960k for 'Net cash flow from operating activities before payment of income tax', a USD "
     "7k gap against the figure the source itself prints for that subtotal (USD 233,967k, used here) — an "
     "immaterial rounding artifact within the source document, not a transcription error (every individual line "
@@ -126,6 +131,13 @@ PILLAR3_2022_WAYBACK = "https://web.archive.org/web/20230502054346id_/" + PILLAR
 PILLAR3_2023_URL = "https://www.itau.com.br/media/dam/m/11e1e216dd5df1fd/original/Pillar-3-2023.pdf"
 # Verified 2026-09-16: 1,144,738 bytes, 62pp, cover "Market Discipline - 2023 Pillar III / Itau BBA International plc".
 PILLAR3_2023_WAYBACK = "https://web.archive.org/web/20240812211731id_/" + PILLAR3_2023_URL
+# GA-020 second pass (2026-09-19): both linked from the live index https://www.itau.com.br/itaubba-en/international,
+# which served HTTP 200 over HTTP/2 with a full Chrome header set (HTTP/1.1 got 403 the same minute). Each
+# fetched the same way: HTTP 200, application/pdf, begins %PDF, text-native, cover names Itau BBA International plc.
+PILLAR3_2024_URL = "https://www.itau.com.br/media/dam/m/4c36b133120fa793/original/IBBAI-Pillar-3-2024-Final.pdf"
+# 1,201,789 bytes, 64pp, cover "Market Discipline - 2024 Pillar III / Itau BBA International plc". No Wayback capture.
+PILLAR3_2025_URL = "https://www.itau.com.br/media/dam/m/70996afd168ff52f/original/IBBAI_Pillar-3-2025_Final.pdf"
+# 1,235,956 bytes, 62pp, cover "Market Discipline - 2025 Pillar 3 / Itau BBA International plc". No Wayback capture.
 
 BLOCKED_HOST_NOTE = (
     "BLOCKED SOURCE HOST - NOT A DEAD LINK (recorded 2026-09-16). The three standalone Pillar 3 documents "
@@ -163,7 +175,10 @@ BLOCKED_HOST_NOTE = (
     "HTTP 302, Server nginx/1.22.1, X-Powered-By PHP/7.2.2, Location "
     "https://www.itau.com.br/itaubba-en/international. That redirect target is an HTML page on a different path "
     "from the DAM file host, and it returned 403 to every rung including the winning one, which is why the "
-    "FY2024 and FY2025 Pillar 3 URLs still could not be listed.\n"
+    "FY2024 and FY2025 Pillar 3 URLs still could not be listed. [SUPERSEDED 2026-09-19: over HTTP/2 with a full "
+    "Chrome header set the same index page returned HTTP 200 and linked both editions, which were then "
+    "downloaded - see the KM1 Key Metrics sheet. HTTP/1.1 got 403 the same minute, the reverse of the 2026-09-18 "
+    "result, so neither protocol is reliably the winning one on this host.]\n"
     "  • The Internet Archive was DEGRADED during this session (an 'Internet Archive: Temporarily Offline' page, "
     "and HTTP 429 on the availability API), so its silence is an OUTAGE and carries no evidential weight either "
     "way."
@@ -185,7 +200,11 @@ def pillar3_disclosure_sources(note_extra=""):
         f"FY2021 LCR only (the 2021 document predates the UK KM1 template): '2021 Pillar 3 Disclosures', Table 26 "
         f"'Liquidity Coverage Ratio', p.46 — live: {PILLAR3_2021_URL} — archived: {PILLAR3_2021_WAYBACK}\n"
         "All figures are Group/consolidated (IBBAInt Group) basis, matching this workbook's other Pillar 3 sheets. "
-        "FY2024/FY2025: no standalone Pillar 3 Disclosures document for either year has been obtained (see the "
+        "FY2024/FY2025: CORRECTED 2026-09-19 - both editions WERE obtained on the GA-020 second pass ('Market "
+        f"Discipline - 2024 Pillar III' {PILLAR3_2024_URL}; 'Market Discipline - 2025 Pillar 3' {PILLAR3_2025_URL}) "
+        "and their UK KM1 tables are transcribed on the KM1 Key Metrics sheet only. Figures on THIS sheet for "
+        "those two years are unchanged and still come from the sources stated in this sheet's note; the "
+        "earlier wording, kept below for the record, said no edition had been obtained (see the "
         "host-reach correction below). THE TRAILING CLAUSE PREVIOUSLY HERE — that 'the Annual Report itself does "
         "not break out these figures for any year' — IS FALSE AND IS WITHDRAWN (GA-018, 2026-09-18). Each year's "
         "own Annual Report states BOTH the LCR and the NSFR, and the FY2025 and FY2024 figures on the LCR and "
@@ -207,6 +226,8 @@ def p3_sources(page, doc_label, url, note_extra=""):
         "are published as a separate, standalone unaudited document on www.itaubba.co.uk — that site was "
         "unreachable this session (connection refused/timed out; no usable Wayback Machine snapshot found), so "
         "only the summary figures printed directly in the Annual Report's own 'Capital' section are used here. "
+        f"The FY2013 column added in this pass is instead read directly from the standalone 2013 Pillar 3 "
+        f"Disclosure, p.11 (capital resources table) — {PILLAR3_2013_URL}. "
         "Figures are Group/consolidated basis (the Annual Report's Capital section is presented at Group level "
         "only, not solo Bank level, throughout all 5 years)." + (" " + note_extra if note_extra else "")
     )
@@ -452,10 +473,10 @@ rows = [
     ("DATA", "Profit before tax and dividends", {"FY2025": 120167, "FY2024": 131803, "FY2023": 83525, "FY2022": 68873, "FY2021": 23680, "FY2020": 6111, "FY2019": 51437, "FY2018": 53203, "FY2017": 33254, "FY2016": 31895, "FY2015": 21471}),
     ("DATA", "Credit impairment charges and other provisions", {"FY2025": -64, "FY2024": -306, "FY2023": 6669, "FY2022": -4188, "FY2021": -9753, "FY2020": 22264, "FY2019": 1893, "FY2018": -1272, "FY2017": -3702, "FY2016": 651, "FY2015": 2531}),
     ("DATA", "Depreciation, amortisation and impairment of property, plant, equipment and intangibles", {"FY2025": 831, "FY2024": 852, "FY2023": 999, "FY2022": 1280, "FY2021": 1276, "FY2020": 1472, "FY2019": 2872, "FY2018": 1674, "FY2017": 3106, "FY2016": 2135, "FY2015": 2203}),
-    ("DATA", "Other non-cash movements", {"FY2025": -104138, "FY2024": 31363, "FY2023": -33091, "FY2022": 9264, "FY2021": 1017, "FY2020": 67, "FY2019": 0, "FY2018": 0, "FY2017": 0, "FY2016": -1429, "FY2015": 0}),
+    ("DATA", "Other non-cash movements", {"FY2025": -104138, "FY2024": 31363, "FY2023": -33091, "FY2022": 9264, "FY2021": 1017, "FY2020": 67, "FY2019": "-", "FY2018": "-", "FY2017": "-", "FY2016": -1429, "FY2015": "-"}),
     ("DATA", "Trading assets and financial assets designated at fair value", {"FY2025": 124541, "FY2024": -213757, "FY2023": 501113, "FY2022": 629204, "FY2021": 156038, "FY2020": -749221, "FY2019": 196346, "FY2018": 400641, "FY2017": -300159, "FY2016": 49417, "FY2015": 60768}),
     ("DATA", "Loans and advances to banks", {"FY2025": 135096, "FY2024": -240931, "FY2023": 23043, "FY2022": -200127, "FY2021": 37815, "FY2020": 91151, "FY2019": -75375, "FY2018": -122750, "FY2017": 353239, "FY2016": 361529, "FY2015": -508984}),
-    ("DATA", "Balances at central banks (mandatory reserves)", {"FY2021": 0, "FY2020": 401863, "FY2019": 407900, "FY2018": -235535, "FY2017": -557507, "FY2016": -15940, "FY2015": 498}),
+    ("DATA", "Balances at central banks (mandatory reserves)", {"FY2021": "-", "FY2020": 401863, "FY2019": 407900, "FY2018": -235535, "FY2017": -557507, "FY2016": -15940, "FY2015": 498}),
     ("DATA", "Loans and advances to customers", {"FY2025": 60053, "FY2024": -235192, "FY2023": -263283, "FY2022": -378299, "FY2021": -32696, "FY2020": 662957, "FY2019": -86994, "FY2018": -722973, "FY2017": -270184, "FY2016": 397743, "FY2015": -323835}),
     ("DATA", "Derivatives designated as hedging instruments (assets)", {"FY2025": 3103, "FY2024": -1190, "FY2023": 38012, "FY2022": -48100, "FY2021": -1705, "FY2020": 530, "FY2019": 2655, "FY2018": -1334, "FY2017": -2541, "FY2016": 201, "FY2015": 428}),
     ("DATA", "Other operating assets", {"FY2025": 17431, "FY2024": 12645, "FY2023": 22312, "FY2022": -33257, "FY2021": 3638, "FY2020": 391, "FY2019": 2780, "FY2018": 96, "FY2017": -3448, "FY2016": 6007, "FY2015": -2662}),
@@ -483,18 +504,18 @@ rows = [
     ("DATA", "Merger with IEI and IPI (financing activities, Note 27)", {"FY2019": 8092}),
     ("DATA", "Leasing Contracts", {"FY2025": -862, "FY2024": -838, "FY2023": 1619, "FY2022": -926, "FY2021": 948, "FY2020": -4131, "FY2019": 4383}),
     ("DATA", "Sub-Lease Contracts", {"FY2020": 1893, "FY2019": -1893}),
-    ("DATA", "Issue/(Repayment) of subordinated debt", {"FY2018": 0, "FY2017": -30000}),
-    ("DATA", "Interest from financing activities", {"FY2018": 0, "FY2017": -128, "FY2016": 57, "FY2015": 16}),
+    ("DATA", "Issue/(Repayment) of subordinated debt", {"FY2018": "-", "FY2017": -30000}),
+    ("DATA", "Interest from financing activities", {"FY2018": "-", "FY2017": -128, "FY2016": 57, "FY2015": 16}),
     ("DATA", "Share Capital Increase", {"FY2023": 500000}),
-    ("TOTAL", "Net cash flow from financing activities", {"FY2025": -862, "FY2024": -838, "FY2023": 501619, "FY2022": -926, "FY2021": 948, "FY2020": -2238, "FY2019": 9582, "FY2018": 0, "FY2017": -30128, "FY2016": 57, "FY2015": 16}),
+    ("TOTAL", "Net cash flow from financing activities", {"FY2025": -862, "FY2024": -838, "FY2023": 501619, "FY2022": -926, "FY2021": 948, "FY2020": -2238, "FY2019": 9582, "FY2018": "-", "FY2017": -30128, "FY2016": 57, "FY2015": 16}),
     ("TOTAL", "Increase/(decrease) in cash and cash equivalents", {"FY2025": -734280, "FY2024": 351396, "FY2023": 479882, "FY2022": -193078, "FY2021": 143317, "FY2020": 131241, "FY2019": -258370, "FY2018": 224005, "FY2017": 129268, "FY2016": 7324, "FY2015": -71029}),
     ("DATA", "Cash and cash equivalents at beginning of year", {"FY2025": 1149307, "FY2024": 797911, "FY2023": 318029, "FY2022": 511107, "FY2021": 367790, "FY2020": 236549, "FY2019": 494919, "FY2018": 270914, "FY2017": 141646, "FY2016": 134322, "FY2015": 205351}),
-    ("DATA", "Effects of exchange rate change on cash and cash equivalents", {"FY2025": 45560, "FY2024": 0, "FY2021": 0}),
-    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 270914, "FY2017": 141646, "FY2016": 141646, "FY2015": 134322}),
+    ("DATA", "Effects of exchange rate change on cash and cash equivalents", {"FY2025": 45560, "FY2024": "-", "FY2023": "-", "FY2021": "-", "FY2020": "-", "FY2019": "-", "FY2018": "-", "FY2017": "-"}),
+    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 494919, "FY2017": 270914, "FY2016": 141646, "FY2015": 134322}),
     ("SECTION", "Cash and cash equivalents comprise (FY2015-FY2025)", {}),
     ("DATA", "Cash and balances at Central Banks", {"FY2025": 17, "FY2024": 16, "FY2023": 16, "FY2022": 15, "FY2021": 16, "FY2020": 15, "FY2019": 12, "FY2018": 23, "FY2017": 17, "FY2016": 29, "FY2015": 36}),
     ("DATA", "Loans and advances to banks with original maturity less than three months", {"FY2025": 460570, "FY2024": 1149291, "FY2023": 797895, "FY2022": 318014, "FY2021": 511091, "FY2020": 367775, "FY2019": 236537, "FY2018": 494896, "FY2017": 270897, "FY2016": 141617, "FY2015": 134286}),
-    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 270914, "FY2017": 141646, "FY2016": 141646, "FY2015": 134322}),
+    ("TOTAL", "Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 494919, "FY2017": 270914, "FY2016": 141646, "FY2015": 134322}),
     ("SECTION", "Cash flows from operating activities (FY2013-FY2014 - DIRECT method; see DATA QUALITY / METHODOLOGY NOTE in the source citation below)", {}),
     ("DATA", "Interest and commissions received", {"FY2014": 112779, "FY2013": 93454}),
     ("DATA", "Interest and commissions paid", {"FY2014": -72127, "FY2013": -77380}),
@@ -515,19 +536,19 @@ rows = [
     ("DATA", "Income tax (direct-method)", {"FY2014": -119, "FY2013": 2640}),
     ("TOTAL", "Net cash flow from operating activities (direct-method)", {"FY2014": 154213, "FY2013": -24822}),
     ("SECTION", "Cash flows from investing activities (FY2013-FY2014)", {}),
-    ("DATA", "Cash and equivalents acquired in the merger", {"FY2014": 0, "FY2013": 46358}),
-    ("DATA", "Dissolution of subsidiaries", {"FY2014": 104, "FY2013": 0}),
-    ("DATA", "Subsidiaries' capital increase", {"FY2014": -70000, "FY2013": 0}),
+    ("DATA", "Cash and equivalents acquired in the merger", {"FY2014": "-", "FY2013": 46358}),
+    ("DATA", "Dissolution of subsidiaries", {"FY2014": 104, "FY2013": "-"}),
+    ("DATA", "Subsidiaries' capital increase", {"FY2014": -70000, "FY2013": "-"}),
     ("DATA", "Dividends received (direct-method section)", {"FY2014": 6474, "FY2013": 85962}),
     ("DATA", "Purchase of fixed assets (direct-method section)", {"FY2014": -3215, "FY2013": -4417}),
     ("TOTAL", "Net cash flow from investing activities (direct-method section)", {"FY2014": -66637, "FY2013": 127903}),
     ("SECTION", "Cash flows from financing activities (FY2013-FY2014)", {}),
-    ("DATA", "Purchases/(Sales) of subordinated debt (direct-method section)", {"FY2014": 0, "FY2013": 30000}),
+    ("DATA", "Purchases/(Sales) of subordinated debt (direct-method section)", {"FY2014": "-", "FY2013": 30000}),
     ("DATA", "Interest paid from financing activities (direct-method section)", {"FY2014": -221, "FY2013": -142}),
     ("TOTAL", "Net cash flow from financing activities (direct-method section)", {"FY2014": -221, "FY2013": 29858}),
     ("DATA", "Effects of exchange rate change on cash and cash equivalents (direct-method section)", {"FY2014": -13823, "FY2013": -1120}),
     ("TOTAL", "Increase/(decrease) in cash and cash equivalents (direct-method section)", {"FY2014": 73532, "FY2013": 131819}),
-    ("DATA", "Cash and cash equivalents at beginning of year (direct-method section)", {"FY2014": 131819, "FY2013": 0}),
+    ("DATA", "Cash and cash equivalents at beginning of year (direct-method section)", {"FY2014": 131819, "FY2013": "-"}),
     ("TOTAL", "Cash and cash equivalents at end of year (direct-method section)", {"FY2014": 205351, "FY2013": 131819}),
     ("SECTION", "Cash and cash equivalents comprise (FY2013-FY2014)", {}),
     ("DATA", "Cash (direct-method section)", {"FY2014": 29, "FY2013": 22}),
@@ -566,14 +587,14 @@ asset_quality_rows = [
     ("TOTAL", "Total ECL provisions", {"FY2025": -1071, "FY2024": -1135, "FY2023": -1441, "FY2022": -2689, "FY2021": -6877, "FY2020": -16631, "FY2019": -3009, "FY2018": -1481}),
     ("TOTAL", "Total cash collateral", {"FY2025": -1100, "FY2024": -12930, "FY2023": -15535, "FY2022": -47791, "FY2021": -196179, "FY2020": -572866, "FY2019": -737350, "FY2018": -895973}),
     ("TOTAL", "Total net exposure", {"FY2025": 4561007, "FY2024": 4812495, "FY2023": 4406142, "FY2022": 4028460, "FY2021": 3394225, "FY2020": 3123509, "FY2019": 3888814, "FY2018": 3593974}),
-    ("SECTION", "Loans and advances to customers, by IAS 39 category (Bank) - FY2014-FY2016, pre-IFRS 9 (transition 1 Jan 2018); figures as disclosed by the source, USD m (not USD'000 like the rest of this sheet - see source note)", {}),
-    ("DATA", "Neither past due nor impaired (USD m)", {"FY2016": 2800, "FY2015": 3198, "FY2014": 2868}),
-    ("DATA", "Past due but not impaired (USD m)", {"FY2016": 0, "FY2015": 0, "FY2014": 4}),
-    ("DATA", "Impaired (USD m)", {"FY2016": 6, "FY2015": 8, "FY2014": 8}),
-    ("DATA", "Commissions related to amortised cost, net (USD m)", {"FY2016": -13, "FY2015": -15, "FY2014": -13}),
-    ("TOTAL", "Gross amount of loans and advances to customers (USD m)", {"FY2016": 2793, "FY2015": 3191, "FY2014": 2867}),
-    ("DATA", "Loan impairment (USD m)", {"FY2016": -11, "FY2015": -12, "FY2014": -12}),
-    ("TOTAL", "Net amount of loans and advances to customers (USD m)", {"FY2016": 2782, "FY2015": 3179, "FY2014": 2855}),
+    ("SECTION", "Loans and advances to customers, by IAS 39 category (Bank) - FY2014-FY2017, pre-IFRS 9 (transition 1 Jan 2018); figures as disclosed by the source, USD m (not USD'000 like the rest of this sheet - see source note)", {}),
+    ("DATA", "Neither past due nor impaired (USD m)", {"FY2017": 3069, "FY2016": 2800, "FY2015": 3198, "FY2014": 2868}),
+    ("DATA", "Past due but not impaired (USD m)", {"FY2017": "-", "FY2016": 0, "FY2015": 0, "FY2014": 4}),
+    ("DATA", "Impaired (USD m)", {"FY2017": "-", "FY2016": 6, "FY2015": 8, "FY2014": 8}),
+    ("DATA", "Commissions related to amortised cost, net (USD m)", {"FY2017": -12, "FY2016": -13, "FY2015": -15, "FY2014": -13}),
+    ("TOTAL", "Gross amount of loans and advances to customers (USD m)", {"FY2017": 3057, "FY2016": 2793, "FY2015": 3191, "FY2014": 2867}),
+    ("DATA", "Loan impairment (USD m)", {"FY2017": -1, "FY2016": -11, "FY2015": -12, "FY2014": -12}),
+    ("TOTAL", "Net amount of loans and advances to customers (USD m)", {"FY2017": 3056, "FY2016": 2782, "FY2015": 3179, "FY2014": 2855}),
 ]
 
 bw.add_asset_quality_sheet(
@@ -593,12 +614,28 @@ bw.add_asset_quality_sheet(
         + statement_sources(46, "2020", AR20_URL, "Covers FY2020/FY2019 (same IFRS 9 stage table).") + "\n\n"
         + statement_sources(35, "2018", AR18_URL, "Covers FY2018 only (same IFRS 9 stage table; this is the first "
             "year under the new IFRS 9 stage-based note format - the FY2018 Annual Report does not restate FY2017 "
-            "to this categorisation, IFRS 9 permitting no restatement of prior-year ECL disclosures). SELF-SKIP: "
-            "FY2017 Asset Quality is left blank for this reason - the FY2018 Annual Report's own note only shows "
-            "31.12.18, and no FY2017-native filing was downloaded this session to source the old IAS 39-format "
-            "comparative directly (FY2017's Balance Sheet/Income Statement/Equity/Pillar 3 figures ARE populated, "
-            "sourced from this same FY2018 Annual Report's comparative column - only this one sheet's FY2017 "
-            "column is affected).") + "\n\n"
+            "to this categorisation, IFRS 9 permitting no restatement of prior-year ECL disclosures). The FY2018 "
+            "edition's own note therefore shows 31.12.18 only, which is why FY2017 cannot be sourced from it and "
+            "is taken from FY2017's own filing instead - see the FY2017 entry below.") + "\n\n"
+        + statement_sources(90, "2017", AR17_URL, "Covers FY2017/FY2016 on the OLD IAS 39 basis, table 'Quality "
+            "of the portfolio of Loans and advances to customers', Bank column at 31.12.17. SUPERSEDES A PRIOR "
+            "SELF-SKIP: this sheet's FY2017 column was previously left blank with the note that 'no FY2017-native "
+            "filing was downloaded this session'. That was an access limit, not a non-disclosure, and it is now "
+            "closed - the filing is on PAGE 8 of the Companies House filing history (filed 26 Apr 2018), which is "
+            "why a search of page 1 found nothing. "
+            "THE DOCUMENT IS AN IMAGE-ONLY SCAN with no text layer: a text search of it returns nothing whatever "
+            "it contains (richness control before OCR: 0 hits for ' the '; after OCR: 1,440). Every figure was "
+            "OCR'd and then confirmed against a 200 dpi render of printed p.90. "
+            "VALIDATION: this edition's own FY2016 comparative column reproduces this workbook's existing FY2016 "
+            "column figure-for-figure (2,800 / - / 6 / (13) / 2,793 / (11) / 2,782), and the FY2017 column foots "
+            "to its own printed totals (3,069 - 12 = 3,057 gross; 3,057 - 1 = 3,056 net). "
+            "BASIS: Bank column, not Group - the Group column prints 4,869 / 4,858 / 4,857, and this sheet is "
+            "Bank-solo throughout. "
+            "DASH: 'Past due but not impaired' and 'Impaired' are printed as DASHES at 31.12.17 and are carried "
+            "as literal '-' per the user's 2026-09-18 decision. NOTE THE INCONSISTENCY WITH THE ROW BESIDE THEM, "
+            "LEFT AS IS RATHER THAN HARMONISED: this workbook's FY2016/FY2015 cells on those rows hold 0, while "
+            "this edition prints the FY2016 comparative as a dash. Whether the FY2016 edition itself printed a 0 "
+            "or a dash was not re-checked, so no existing figure was changed.") + "\n\n"
         + statement_sources(24, "2016", AR16_URL, "Covers FY2016/FY2015 - pre-IFRS 9 (transition 1 Jan 2018), "
             "'Quality of the portfolio of Loans and advances to customers' note (a narrower population than the "
             "IFRS 9-era note above - customers only, no guarantees/commitments - and disclosed in USD m, not "
@@ -630,6 +667,10 @@ KM1_SOURCES = (
     "IBBAInt Group (consolidated basis — the document states the disclosures refer to the IBBAInt Group, "
     "comprising the Bank and its subsidiaries), amounts in thousands of US dollars, the unit the template "
     "itself is printed in.\n"
+    f"FY2025: 'Market Discipline – 2025 Pillar 3', Section 10 'Key Metrics', Template UK KM1: Key Metrics, p.41, "
+    f"column 'Dec 2025', its OWN reporting year — live: {PILLAR3_2025_URL} (no Wayback capture exists)\n"
+    f"FY2024: 'Market Discipline – 2024 Pillar III', Section 10 'Key Metrics', Template UK KM1: Key Metrics, p.42, "
+    f"column 'Dez 24', its OWN reporting year — live: {PILLAR3_2024_URL} (no Wayback capture exists)\n"
     f"FY2023: 'Market Discipline - 2023 Pillar III' (2023 Pillar 3 Disclosures), Section 10 'Key Metrics', "
     f"Template UK KM1, p.41, its OWN reporting year — live: {PILLAR3_2023_URL} — archived: {PILLAR3_2023_WAYBACK}\n"
     f"FY2022: '2022 Pillar 3 Disclosures', Section 10 'Key Metrics', Template UK KM1, p.44, its OWN reporting "
@@ -653,7 +694,37 @@ KM1_SOURCES = (
 )
 
 KM1_NOTE = (
-    "FY2025 AND FY2024 ARE BLANK BECAUSE NO PILLAR 3 DOCUMENT FOR EITHER YEAR COULD BE LOCATED — NOT BECAUSE "
+    "FY2025 AND FY2024 TRANSCRIBED 2026-09-19 (GA-020 second pass), EACH FROM ITS OWN EDITION (rule 1). FY2025 "
+    "comes from 'Market Discipline – 2025 Pillar 3', Template UK KM1: Key Metrics, printed p.41, column 'Dec 2025'. "
+    "FY2024 comes from 'Market Discipline – 2024 Pillar III', Template UK KM1, printed p.42, column 'Dez 24'. In "
+    "both PDFs the table is an EMBEDDED IMAGE inside an otherwise text-native document (rule 13: pdftotext "
+    "returns the heading and nothing else). Every figure was therefore read twice, once from a 300 dpi page "
+    "render and once from the embedded bitmap at native resolution, and the two readings agreed digit for digit. "
+    "The entity and basis are the same as the other columns: IBBAInt Group, consolidated, USD'000. Both "
+    "editions print the same row set as the 2023 edition (no UK 8a; the 2023 leverage captions and UK 14a-14e "
+    "block), so both years sit in the 2023-caption blocks. Both editions print UK 14c, 14d and 14e as a hyphen "
+    "'-', and those cells carry '-' (rule 2). The FY2023 cells on those rows are still blank as built earlier "
+    "(a GA-008 item, not changed here). Row 9 keeps each edition's own precision: 0.15% in the 2025 edition and "
+    "0.12911% in the 2024 edition. The 2025 edition's Dec 2024 comparative prints 0.13%, which is the same figure "
+    "rounded. CROSS-EDITION CHECK: on every other row, the 2025 edition's Dec 2024 column agrees with the 2024 "
+    "edition's own column. The 2024 edition's Dez 23 column agrees with every FY2023 figure on this sheet, and "
+    "it prints a dash on UK 14c-14e. The status row that stood above row 1 existed only to carry the "
+    "'Unreached today' outcome for these two years, so it has been removed. HOW THE EDITIONS WERE REACHED: the "
+    "live index https://www.itau.com.br/itaubba-en/international returned HTTP 200 over HTTP/2 with a full "
+    "Chrome header set (Accept, Accept-Language, Sec-Fetch-*, sec-ch-ua). With the same headers over HTTP/1.1 it "
+    "returned 403 in the same minute. The PDFs were then fetched over HTTP/2 with the index as Referer.\n"
+    "DIVERGENCES FROM THE SINGLE-METRIC SHEETS, recorded and NOT reconciled: (a) row 17 prints LCRs of 230% "
+    "(FY2025) and 245% (FY2024), as 12-month trailing averages. The LCR sheet carries the Annual Report's "
+    "point-in-time 172% and 302%. (b) Row 20 prints NSFRs of 176% and 159%, as four-quarter averages. The NSFR "
+    "sheet carries 168% and 155%. Both are the basis break those sheets already document. (c) For FY2024, row 14 "
+    "prints 16.74%, while the Leverage Ratio sheet carries 16.4% from the Annual Report. The 2025 edition's own "
+    "narrative (p.40) also says 'December 2024: 16.7%'. The Annual Report figure has not been re-read here, and "
+    "neither figure has been changed. (d) The 2025 edition's narrative on p.40 gives RWAs as 'USD 6,933.8bn'. "
+    "That is the edition's own UK OV1 row 1 credit-risk figure (p.47). Its KM1 row 4 and its OV1 total both "
+    "print 7,854,786, which is what this sheet carries. The narrative figure is recorded as a source defect "
+    "(rule 7).\n\n"
+    "HISTORY, SUPERSEDED BY THE PARAGRAPH ABOVE: "
+    "FY2025 AND FY2024 WERE BLANK BECAUSE NO PILLAR 3 DOCUMENT FOR EITHER YEAR COULD BE LOCATED — NOT BECAUSE "
     "THE BANK IS KNOWN NOT TO PUBLISH ONE. This is an unknown, not a finding. itau.com.br, which hosts the "
     "three documents cited above, refused every automated request this session (HTTP 403 with a short "
     "text/html WAF body, re-tested with browser user-agent, Accept and Referer headers); itaubba.com timed "
@@ -670,7 +741,22 @@ KM1_NOTE = (
     "information 'in a separate document (\"Pillar 3 Disclosures\")' and that these 'are published on "
     "www.itaubba.co.uk', and its Audit Committee report records that the Committee 'Reviewed the ILAAP, the "
     "ICAAP, the Pillar 3 Disclosures, and recommended their approval to the Board'. A FY2025 Pillar 3 was "
-    "therefore prepared and approved; this project simply cannot reach it.\n\n"
+    "therefore prepared and approved; this project could not then reach it.\n\n"
+    "GA-020 FIRST PASS (2026-09-19), SUPERSEDED BY THE SECOND PASS ABOVE: THE TWO EMPTY COLUMNS THEN SAID WHY, IN "
+    "THE CELLS. The first row, 'Pillar 3 edition status "
+    "for this year', is NOT a template row - the bank prints no such line - and exists only to carry the outcome "
+    "for FY2025 and FY2024: 'Unreached today', i.e. a limit on this project's reach and not a finding about the "
+    "bank. No KM1 figure was added for either year. What was tried, in order: (1) the attempts recorded above "
+    "(itau.com.br 403 WAF responses, itaubba.com timeouts, itau.co.uk 403, Internet Archive 503/429 outage; then "
+    "GA-018's HTTP/1.1 full-header rung, which served a cited 2023 PDF once but not the index page); (2) on "
+    "2026-09-19, the live index https://www.itau.com.br/itaubba-en/international over HTTP/1.1 with a complete "
+    "Chrome header set, twice: HTTP 403 both times; www.itaubba.co.uk on port 80: HTTP 302 to that same page, "
+    "and no connection on 443; (3) the Wayback CDX API over every itau.com.br path filtered for 'Pillar': it "
+    "holds this bank's 2015, 2017, 2018, 2019 ('IBB-PILAR3.pdf'), 2020, 2021, 2022 and 2023 editions and NO "
+    "2024 or 2025 edition (the only 2024 Pillar 3 captured is Itau BBA Europe's, a different, Portuguese "
+    "entity); the 2026-09-09 capture of the index page links Pillar 3 editions only to 2021. The FY2025 "
+    "Annual Report states on printed p.2 that the Pillar 3 Disclosures 'are published on www.itaubba.co.uk', "
+    "and its Audit Committee report (p.34) records reviewing them.\n\n"
     "FY2021 IS FILLED FROM A COMPARATIVE. The 2021 Pillar 3 Disclosures document prints no UK KM1 template at "
     "all — it predates it, disclosing liquidity instead through its own 'Table 26: Liquidity Coverage Ratio'. "
     "A full-text search of that document for 'KM1' and 'key metric' returns nothing while the same document "
@@ -704,42 +790,42 @@ bw.add_km1_sheet(
     subtitle="IBBAInt Group (consolidated basis), as published. Amounts in USD'000; ratios as printed.",
     rows=[
         ("SECTION", "Available own funds (amounts)", {}),
-        ("DATA", "1 Common Equity Tier 1 (CET1) capital (USD'000)", {"FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
-        ("DATA", "2 Tier 1 capital (USD'000)", {"FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
-        ("DATA", "3 Total capital (USD'000)", {"FY2023": 1939956, "FY2022": 1334422, "FY2021": 1317685}),
+        ("DATA", "1 Common Equity Tier 1 (CET1) capital (USD'000)", {"FY2025": 2275812, "FY2024": 2073400, "FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
+        ("DATA", "2 Tier 1 capital (USD'000)", {"FY2025": 2275812, "FY2024": 2073400, "FY2023": 1938639, "FY2022": 1334422, "FY2021": 1317685}),
+        ("DATA", "3 Total capital (USD'000)", {"FY2025": 2275812, "FY2024": 2073400, "FY2023": 1939956, "FY2022": 1334422, "FY2021": 1317685}),
         ("SECTION", "Risk-weighted exposure amounts", {}),
-        ("DATA", "4 Total risk-weighted exposure amount (USD'000)", {"FY2023": 7170116, "FY2022": 6811769, "FY2021": 5835714}),
+        ("DATA", "4 Total risk-weighted exposure amount (USD'000)", {"FY2025": 7854786, "FY2024": 8659758, "FY2023": 7170116, "FY2022": 6811769, "FY2021": 5835714}),
         ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
-        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
-        ("DATA", "6 Tier 1 ratio (%)", {"FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
-        ("DATA", "7 Total capital ratio (%)", {"FY2023": "27.06%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("DATA", "5 Common Equity Tier 1 ratio (%)", {"FY2025": "28.97%", "FY2024": "23.94%", "FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("DATA", "6 Tier 1 ratio (%)", {"FY2025": "28.97%", "FY2024": "23.94%", "FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"}),
+        ("DATA", "7 Total capital ratio (%)", {"FY2025": "28.97%", "FY2024": "23.94%", "FY2023": "27.06%", "FY2022": "19.59%", "FY2021": "22.58%"}),
         ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
-        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2023": "2.16%", "FY2022": "2.13%", "FY2021": "2.23%"}),
-        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {"FY2023": "0.71%", "FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2023": "0.96%", "FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2023": "11.83%", "FY2022": "11.83%", "FY2021": "12.03%"}),
+        ("DATA", "UK 7a Additional CET1 SREP requirements (%)", {"FY2025": "1.93%", "FY2024": "2.15%", "FY2023": "2.16%", "FY2022": "2.13%", "FY2021": "2.23%"}),
+        ("DATA", "UK 7b Additional AT1 SREP requirements (%)", {"FY2025": "0.64%", "FY2024": "0.71%", "FY2023": "0.71%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 7c Additional T2 SREP requirements (%)", {"FY2025": "0.86%", "FY2024": "0.96%", "FY2023": "0.96%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 7d Total SREP own funds requirements (%)", {"FY2025": "11.43%", "FY2024": "11.82%", "FY2023": "11.83%", "FY2022": "11.83%", "FY2021": "12.03%"}),
         ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
-        ("DATA", "8 Capital conservation buffer (%)", {"FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+        ("DATA", "8 Capital conservation buffer (%)", {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
         ("DATA", "UK 8a Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)", {"FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2023": "0.00964%", "FY2022": "0.0045%", "FY2021": "0.00171%"}),
-        ("DATA", "UK 9a Systemic risk buffer (%)", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "10 Global Systemically Important Institution buffer (%)", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "UK 10a Other Systemically Important Institution buffer", {"FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
-        ("DATA", "11 Combined buffer requirement (%)", {"FY2023": "2.51%", "FY2022": "2.50%", "FY2021": "2.50%"}),
-        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2023": "14.34%", "FY2022": "14.34%", "FY2021": "14.53%"}),
-        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2023": "20.41%", "FY2022": "12.96%", "FY2021": "15.84%"}),
+        ("DATA", "9 Institution specific countercyclical capital buffer (%)", {"FY2025": "0.15%", "FY2024": "0.12911%", "FY2023": "0.00964%", "FY2022": "0.0045%", "FY2021": "0.00171%"}),
+        ("DATA", "UK 9a Systemic risk buffer (%)", {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "10 Global Systemically Important Institution buffer (%)", {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "UK 10a Other Systemically Important Institution buffer", {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "0.00%", "FY2021": "0.00%"}),
+        ("DATA", "11 Combined buffer requirement (%)", {"FY2025": "2.65%", "FY2024": "2.63%", "FY2023": "2.51%", "FY2022": "2.50%", "FY2021": "2.50%"}),
+        ("DATA", "UK 11a Overall capital requirements (%)", {"FY2025": "14.08%", "FY2024": "14.45%", "FY2023": "14.34%", "FY2022": "14.34%", "FY2021": "14.53%"}),
+        ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2025": "22.57%", "FY2024": "17.32%", "FY2023": "20.41%", "FY2022": "12.96%", "FY2021": "15.84%"}),
         ("SECTION", "Leverage ratio — 2023 edition caption ('excluding claims on central banks')", {}),
-        ("DATA", "13 Total exposure measure excluding claims on central banks (USD'000)", {"FY2023": 11582569}),
-        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2023": "16.74%"}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (USD'000)", {"FY2025": 11923853, "FY2024": 12383352, "FY2023": 11582569}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2025": "19.09%", "FY2024": "16.74%", "FY2023": "16.74%"}),
         ("SECTION", "Leverage ratio — 2022 edition caption (total exposure measure, no central-bank exclusion stated)", {}),
         ("DATA", "13 Leverage ratio total exposure measure (USD'000)", {"FY2022": 11217813, "FY2021": 9007527}),
         ("DATA", "14 Leverage ratio (%)", {"FY2022": "11.90%", "FY2021": "14.63%"}),
         ("SECTION", "Additional leverage ratio disclosure requirements — 2023 edition block", {}),
-        ("DATA", "UK 14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {"FY2023": "16.74%"}),
-        ("DATA", "UK 14b Leverage ratio including claims on central banks (%)", {"FY2023": "16.74%"}),
-        ("DATA", "UK 14c Average leverage ratio excluding claims on central banks (%)", {}),
-        ("DATA", "UK 14d Average leverage ratio including claims on central banks (%)", {}),
-        ("DATA", "UK 14e Countercyclical leverage ratio buffer (%)", {}),
+        ("DATA", "UK 14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {"FY2025": "19.09%", "FY2024": "16.74%", "FY2023": "16.74%"}),
+        ("DATA", "UK 14b Leverage ratio including claims on central banks (%)", {"FY2025": "19.09%", "FY2024": "16.74%", "FY2023": "16.74%"}),
+        ("DATA", "UK 14c Average leverage ratio excluding claims on central banks (%)", {"FY2025": "-", "FY2024": "-"}),
+        ("DATA", "UK 14d Average leverage ratio including claims on central banks (%)", {"FY2025": "-", "FY2024": "-"}),
+        ("DATA", "UK 14e Countercyclical leverage ratio buffer (%)", {"FY2025": "-", "FY2024": "-"}),
         ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount) — 2022 edition block", {}),
         ("DATA", "UK 14a Additional CET1 leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
         ("DATA", "UK 14b Additional AT1 leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
@@ -748,15 +834,15 @@ bw.add_km1_sheet(
         ("DATA", "UK 14e Applicable leverage buffer [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
         ("DATA", "UK 14f Overall leverage ratio requirements (%) [2022 edition block]", {"FY2022": "0.00%", "FY2021": "0.00%"}),
         ("SECTION", "Liquidity Coverage Ratio (trailing average of 12 month-end observations)", {}),
-        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (USD'000)", {"FY2023": 1705730, "FY2022": 1767960, "FY2021": 1484567}),
-        ("DATA", "UK 16a Cash outflows - Total weighted value (USD'000)", {"FY2023": 1436296, "FY2022": 1612829, "FY2021": 1459720}),
-        ("DATA", "UK 16b Cash inflows - Total weighted value (USD'000)", {"FY2023": 616585, "FY2022": 674593, "FY2021": 580600}),
-        ("DATA", "16 Total net cash outflows (adjusted value) (USD'000)", {"FY2023": 819710, "FY2022": 938236, "FY2021": 879120}),
-        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2023": "208%", "FY2022": "188%", "FY2021": "169%"}),
+        ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (USD'000)", {"FY2025": 2013632, "FY2024": 1704545, "FY2023": 1705730, "FY2022": 1767960, "FY2021": 1484567}),
+        ("DATA", "UK 16a Cash outflows - Total weighted value (USD'000)", {"FY2025": 1822356, "FY2024": 1489127, "FY2023": 1436296, "FY2022": 1612829, "FY2021": 1459720}),
+        ("DATA", "UK 16b Cash inflows - Total weighted value (USD'000)", {"FY2025": 953307, "FY2024": 795261, "FY2023": 616585, "FY2022": 674593, "FY2021": 580600}),
+        ("DATA", "16 Total net cash outflows (adjusted value) (USD'000)", {"FY2025": 875582, "FY2024": 695043, "FY2023": 819710, "FY2022": 938236, "FY2021": 879120}),
+        ("DATA", "17 Liquidity coverage ratio (%)", {"FY2025": "230%", "FY2024": "245%", "FY2023": "208%", "FY2022": "188%", "FY2021": "169%"}),
         ("SECTION", "Net Stable Funding Ratio (trailing average of the last four quarter-ends)", {}),
-        ("DATA", "18 Total available stable funding (USD'000)", {"FY2023": 6583126, "FY2022": 6022050}),
-        ("DATA", "19 Total required stable funding (USD'000)", {"FY2023": 4097473, "FY2022": 4007354}),
-        ("DATA", "20 NSFR ratio (%)", {"FY2023": "161%", "FY2022": "150%"}),
+        ("DATA", "18 Total available stable funding (USD'000)", {"FY2025": 7640751, "FY2024": 7019120, "FY2023": 6583126, "FY2022": 6022050}),
+        ("DATA", "19 Total required stable funding (USD'000)", {"FY2025": 4342293, "FY2024": 4425438, "FY2023": 4097473, "FY2022": 4007354}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2025": "176%", "FY2024": "159%", "FY2023": "161%", "FY2022": "150%"}),
     ],
     sources_text=KM1_SOURCES + "\n\n" + KM1_NOTE,
     first_col_width=104,
@@ -765,7 +851,7 @@ bw.add_km1_sheet(
 
 metric(
     "CET1 Capital", "USD m",
-    [("Common equity tier 1 (CET1) capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1939, "FY2022": 1334, "FY2021": 1318, "FY2020": 1291, "FY2019": 1210, "FY2018": 1127, "FY2017": 1049, "FY2016": 992, "FY2015": 945, "FY2014": 933})],
+    [("Common equity tier 1 (CET1) capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1939, "FY2022": 1334, "FY2021": 1318, "FY2020": 1291, "FY2019": 1210, "FY2018": 1127, "FY2017": 1049, "FY2016": 992, "FY2015": 945, "FY2014": 933, "FY2013": 891})],
     p3_sources(21, "2025", AR25_URL) + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same Annual Report 'Regulatory "
         f"Capital composition' table, Group basis — FY2020/FY2019: 2020 Annual Report, p.136 — {AR20_URL}; "
         f"FY2018/FY2017: 2018 Annual Report, p.124 — {AR18_URL}; FY2016/FY2015: 2016 Annual Report, p.102 — "
@@ -774,24 +860,32 @@ metric(
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common equity tier 1 ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.0%", "FY2022": "19.6%", "FY2021": "22.6%", "FY2020": "23.9%", "FY2019": "19.9%", "FY2018": "19.2%", "FY2017": "19.4%", "FY2016": "18.0%", "FY2015": "17.9%", "FY2014": "17.8%"})],
+    [("Common equity tier 1 ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.0%", "FY2022": "19.6%", "FY2021": "22.6%", "FY2020": "23.9%", "FY2019": "19.9%", "FY2018": "19.2%", "FY2017": "19.4%", "FY2016": "18.0%", "FY2015": "17.9%", "FY2014": "17.8%", "FY2013": "17.7%"})],
     p3_sources(21, "2025", AR25_URL) + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same source as the CET1 Capital sheet.",
 )
 
 metric(
     "Tier 1 Capital", "USD m",
-    [("Tier 1 capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1939, "FY2022": 1334, "FY2021": 1318})],
-    pillar3_disclosure_sources(),
-    note="No distinct Tier 1 capital figure is broken out in the Annual Report's own 'Capital' section in any "
+    [("Tier 1 capital", {"FY2025": 2275.812, "FY2024": 2073.4, "FY2023": 1938.639, "FY2022": 1334.422, "FY2021": 1317.685})],
+    pillar3_disclosure_sources(note_extra=f"TIER 1 SHEETS ONLY, 2026-09-19 (user decision): the sentence above saying this sheet's FY2025/FY2024 figures are unchanged and come from the sources in the note NO LONGER APPLIES to this sheet. Every year FY2025-FY2021 on this sheet is now the exact printed Template UK KM1 figure, cited year by year in the note (2025 edition: {PILLAR3_2025_URL}; 2024 edition: {PILLAR3_2024_URL})."),
+    note="EXACT KM1 VALUES, 2026-09-19 (user decision). FY2025-FY2021 are each year's printed Template UK KM1 "
+         "row 2 'Tier 1 capital' (USD'000), IBBAInt Group consolidated, converted to this sheet's USD m by dividing "
+         "by 1,000 - a pure scale change with NO rounding (e.g. 2,275,812 -> 2275.812). Printed values: FY2025 2,275,812 FY2024 2,073,400 FY2023 1,938,639 FY2022 1,334,422 FY2021 1,317,685. Citations: FY2025: 'Market Discipline – 2025 Pillar 3', Template UK KM1: Key Metrics, printed p.41, row 2, column 'Dec 2025'. FY2024: 'Market Discipline – 2024 Pillar III', Template UK KM1: Key Metrics, printed p.42, row 2, column 'Dez 24'. FY2023: 'Market Discipline – 2023 Pillar III', Template UK KM1: Key Metrics, printed p.41, row 2, column 'Dez 23'. FY2022: '2022 Pillar 3 Disclosures', Template UK KM1: Key Metrics, printed p.44, row 2, column 'Dez 22'. FY2021: '2022 Pillar 3 Disclosures', Template UK KM1: Key Metrics, printed p.44 (comparative column; the 2021 document predates the template), row 2, column 'Dez 21'. "
+         "These are the same figures transcribed on the KM1 Key Metrics sheet. PREVIOUSLY these cells held the "
+         "Annual Report's rounded USD m figures (2276, 2073, 1939, 1334, 1318): FY2025/FY2024 were the Annual "
+         "Report's CET1 figure carried over by arithmetic (Tier 1 = CET1 because CET1 = Total), and FY2023-FY2021 "
+         "were the KM1 figure rounded to USD m. Superseded text follows for the record. "
+         "No distinct Tier 1 capital figure is broken out in the Annual Report's own 'Capital' section in any "
          "year (only 'Common equity tier 1 capital' and 'Total regulatory capital' are shown there — see the "
          "CET1 Capital and Total Capital sheets), but the standalone Pillar 3 Disclosures documents' Template UK "
          "KM1 table does disclose a distinct 'Tier 1 capital' line for FY2023/FY2022/FY2021 — identical to CET1 "
          "capital in every one of those years (Tier 2 capital is nil), confirming the earlier inference. "
-         "FY2025/FY2024 added 2026-09-15 and are NOT estimates: still no Pillar 3 Disclosures document for either "
-         "year, but in both years the Annual Report's own Capital section states CET1 capital and Total regulatory "
+         "FY2025/FY2024 added 2026-09-15 and are NOT estimates: no Pillar 3 Disclosures document for either "
+         "year had then been obtained (both were obtained 2026-09-19; their KM1 row 2 prints 2,275,812 and "
+         "2,073,400 USD'000 - see the KM1 Key Metrics sheet), but in both years the Annual Report's own Capital section states CET1 capital and Total regulatory "
          "capital as the SAME figure (FY2025: USD 2,276m; FY2024: USD 2,073m — see the CET1 Capital and Total "
          "Capital sheets). Since Tier 1 = CET1 + AT1 and Total = Tier 1 + Tier 2, both AT1 and Tier 2 must be nil "
-         "and Tier 1 capital is arithmetically forced to that same figure — there is no other value it can take. "
+         "and Tier 1 capital was set by that arithmetic to the same figure [superseded 2026-09-19: now the printed KM1 row 2 value, see above]. "
          "This is the same Tier 1 = CET1 = Total pattern the FY2021-FY2023 Pillar 3 KM1 tables confirm directly, "
          "and it is consistent with FY2023, where CET1 (1,939) and Total (1,940) differ by exactly the 1 of Tier 2 "
          "and Tier 1 is the disclosed 1,939. "
@@ -804,34 +898,43 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.0%", "FY2022": "19.6%", "FY2021": "22.6%"})],
-    pillar3_disclosure_sources(),
-    note="Same basis as the Tier 1 Capital sheet — the Annual Report's own 'Capital' section does not break out "
+    [("Tier 1 ratio", {"FY2025": "28.97%", "FY2024": "23.94%", "FY2023": "27.04%", "FY2022": "19.59%", "FY2021": "22.58%"})],
+    pillar3_disclosure_sources(note_extra=f"TIER 1 SHEETS ONLY, 2026-09-19 (user decision): the sentence above saying this sheet's FY2025/FY2024 figures are unchanged and come from the sources in the note NO LONGER APPLIES to this sheet. Every year FY2025-FY2021 on this sheet is now the exact printed Template UK KM1 figure, cited year by year in the note (2025 edition: {PILLAR3_2025_URL}; 2024 edition: {PILLAR3_2024_URL})."),
+    note="EXACT KM1 VALUES, 2026-09-19 (user decision). FY2025-FY2021 are each year's printed Template UK KM1 "
+         "row 6 'Tier 1 ratio (%)', IBBAInt Group consolidated, reproduced exactly as printed (two decimals). "
+         "Citations: FY2025: 'Market Discipline – 2025 Pillar 3', Template UK KM1: Key Metrics, printed p.41, row 6, column 'Dec 2025'. FY2024: 'Market Discipline – 2024 Pillar III', Template UK KM1: Key Metrics, printed p.42, row 6, column 'Dez 24'. FY2023: 'Market Discipline – 2023 Pillar III', Template UK KM1: Key Metrics, printed p.41, row 6, column 'Dez 23'. FY2022: '2022 Pillar 3 Disclosures', Template UK KM1: Key Metrics, printed p.44, row 6, column 'Dez 22'. FY2021: '2022 Pillar 3 Disclosures', Template UK KM1: Key Metrics, printed p.44 (comparative column; the 2021 document predates the template), row 6, column 'Dez 21'. "
+         "These are the same figures transcribed on the KM1 Key Metrics sheet. PREVIOUSLY these cells held "
+         "one-decimal figures (29.0%, 23.9%, 27.0%, 19.6%, 22.6%): FY2025/FY2024 were the Annual Report's rounded "
+         "CET1/Total capital ratio carried over by arithmetic, and FY2023-FY2021 were the KM1 figure rounded to one "
+         "decimal. Superseded text follows for the record. "
+         "Same basis as the Tier 1 Capital sheet — the Annual Report's own 'Capital' section does not break out "
          "a distinct Tier 1 ratio (see the CET1 Ratio and Total Capital Ratio sheets), but the standalone Pillar "
          "3 Disclosures documents' Template UK KM1 table discloses one directly for FY2023/FY2022/FY2021 — "
          "identical to the CET1 ratio and Total capital ratio in every one of those years. "
-         "FY2025/FY2024 added 2026-09-15 on the same forced-arithmetic basis as the Tier 1 Capital sheet: in both "
+         "FY2025/FY2024 were added 2026-09-15 by the same arithmetic as the Tier 1 Capital sheet [superseded 2026-09-19: now the printed KM1 row 6 values, see above]: in both "
          "years the Annual Report states the CET1 ratio and the Total capital ratio as the same figure (FY2025: "
          "29.0%; FY2024: 23.9%), and since CET1 Ratio <= Tier 1 Ratio <= Total Capital Ratio always holds, the "
-         "Tier 1 ratio is squeezed to exactly that value. Not an estimate, and not sourced from a Pillar 3 "
-         "document — none exists for either year.",
+         "Tier 1 ratio was set to that value. That was not sourced from a Pillar 3 "
+         "document. (CORRECTED 2026-09-19: this sentence used to say none exists for either year. Both exist and were "
+         "obtained on 2026-09-19; their KM1 row 6 prints 28.97% for FY2025 and 23.94% for FY2024 - see the KM1 Key "
+         "Metrics sheet. The figures above are unchanged.)",
 )
 
 metric(
     "Total Capital", "USD m",
-    [("Total regulatory capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1940, "FY2022": 1334, "FY2021": 1318, "FY2020": 1291, "FY2019": 1212, "FY2018": 1129, "FY2017": 1051, "FY2016": 1000, "FY2015": 955, "FY2014": 949})],
+    [("Total regulatory capital", {"FY2025": 2276, "FY2024": 2073, "FY2023": 1940, "FY2022": 1334, "FY2021": 1318, "FY2020": 1291, "FY2019": 1212, "FY2018": 1129, "FY2017": 1051, "FY2016": 1000, "FY2015": 955, "FY2014": 949, "FY2013": 913})],
     p3_sources(21, "2025", AR25_URL) + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same source as the CET1 Capital sheet.",
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.1%", "FY2022": "19.6%", "FY2021": "22.6%", "FY2020": "23.9%", "FY2019": "19.9%", "FY2018": "19.2%", "FY2017": "19.5%", "FY2016": "18.2%", "FY2015": "18.1%", "FY2014": "18.1%"})],
+    [("Total capital ratio", {"FY2025": "29.0%", "FY2024": "23.9%", "FY2023": "27.1%", "FY2022": "19.6%", "FY2021": "22.6%", "FY2020": "23.9%", "FY2019": "19.9%", "FY2018": "19.2%", "FY2017": "19.5%", "FY2016": "18.2%", "FY2015": "18.1%", "FY2014": "18.1%", "FY2013": "18.1%"})],
     p3_sources(21, "2025", AR25_URL) + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same source as the CET1 Capital sheet.",
 )
 
 metric(
     "Total RWAs", "USD m",
-    [("Risk-weighted assets (RWA)", {"FY2025": 7855, "FY2024": 8660, "FY2023": 7170, "FY2022": 6812, "FY2021": 5836, "FY2020": 5408, "FY2019": 6089, "FY2018": 5879, "FY2017": 5399, "FY2016": 5506, "FY2015": 5280, "FY2014": 5232})],
+    [("Risk-weighted assets (RWA)", {"FY2025": 7855, "FY2024": 8660, "FY2023": 7170, "FY2022": 6812, "FY2021": 5836, "FY2020": 5408, "FY2019": 6089, "FY2018": 5879, "FY2017": 5399, "FY2016": 5506, "FY2015": 5280, "FY2014": 5232, "FY2013": 5042})],
     p3_sources(21, "2025", AR25_URL) + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same source as the CET1 Capital sheet.",
 )
 
@@ -887,6 +990,35 @@ metric(
     [("Leverage ratio", {"FY2025": "19.1%", "FY2024": "16.4%", "FY2023": "16.7%", "FY2022": "11.9%", "FY2021": "14.6%", "FY2020": "14.4%", "FY2019": "13.5%", "FY2018": "11.9%", "FY2017": "12.4%", "FY2016": "11.3%", "FY2015": "10.3%", "FY2014": "10.5%"})],
     p3_sources(21, "2025", AR25_URL, "The Leverage Ratio is quoted in the Capital section's narrative text (not the composition table) each year.")
         + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same Annual Reports' own Key Performance Indicators tables.",
+    note="FY2024 = 16.4% IS AS PRINTED, AND THE BANK'S OWN PILLAR 3 PRINTS A DIFFERENT FIGURE FOR THE SAME DATE. "
+         "Both are recorded; neither is reconciled or changed (re-read 2026-09-19 from 300dpi page renders of "
+         "the Companies House scans, which are image-only - 0 hits for ' the ' under pdftotext - so no text "
+         "search or OCR digit was relied on). THE ANNUAL REPORT PRINTS 16.4% THREE TIMES: (1) 2025 Annual Report "
+         "(Companies House document MzUyNjQ0MDA3MmFkaXF6a2N4), p.21, 'Capital' narrative: 'the Consolidated "
+         "total capital ratio reached 29.0% (31.12.24: 23.9%) and the Leverage Ratio 19.1% (31.12.24: 16.4%)', "
+         "which is this sheet's declared source; the same edition's 'Performance Highlights' table (p.18), row "
+         "'Leverage ratio', column 31.12.24, also prints 16.4%. (2) 2024 Annual Report, FY2024's OWN edition "
+         "(Companies House filing 12 May 2025, document MzQ2NTc1NjI1M2FkaXF6a2N4), 'Consolidated Key Performance "
+         "Indicators' table, printed p.17 ('Strategic Report 17'), row 'Leverage ratio', column 31.12.24: 16.4% "
+         "(31.12.23: 16.7%); and the same edition's 'Capital' narrative, printed p.22: 'the Leverage Ratio 16.4% "
+         "(31.12.23: 16.7%)'. THE PILLAR 3 PRINTS 16.74%: 'Market Discipline – 2024 Pillar III', Template UK "
+         f"KM1, printed p.42, column 'Dez 24' ({PILLAR3_2024_URL}), row 14 'Leverage ratio excluding claims on "
+         "central banks' 16.74%, and rows UK 14a (fully loaded ECL) and UK 14b ('including claims on central "
+         "banks') also 16.74%; UK 14c/14d (averages) print '-'. Its narrative (p.40) says 'The leverage ratio "
+         "remained in 16.7% (December 2023: 16.7%)', and the 2025 edition's narrative (p.40, "
+         f"{PILLAR3_2025_URL}) says 'December 2024: 16.7%'. BASIS: both sources are IBBAInt Group CONSOLIDATED "
+         "(the Annual Report labels its table 'Consolidated Key Performance Indicators' and its narrative "
+         "'Consolidated total capital ratio ... and the Leverage Ratio'; the Pillar 3 is prepared for IBBAInt "
+         "Group on the accounting consolidation scope), and both are POINT-IN-TIME 31 December figures (the "
+         "Annual Report column is headed 31.12.24; the Pillar 3 prints no average). The Annual Report states no "
+         "leverage-ratio definition, and no definition the Pillar 3 prints yields anything but 16.74% - "
+         "excluding central banks, including them and fully loaded are all 16.74% - so the gap cannot be "
+         "attributed to entity, central-bank treatment or averaging. It is therefore recorded as an INCONSISTENT "
+         "PAIR PUBLISHED BY THE BANK for the same entity and date, not as a basis difference and not as a "
+         "transcription slip: the sheet keeps the Annual Report's 16.4% as sourced, and the Pillar 3's 16.74% "
+         "stays on the KM1 Key Metrics sheet (verify_workbook.py's KM1 row 14 FY2024 line is this disagreement "
+         "and is expected). By contrast the two sources agree for FY2023 (Annual Report 16.7%; Pillar 3 KM1 "
+         "16.74%).",
 )
 
 metric(
@@ -920,6 +1052,9 @@ metric(
          "were located (via Wayback Machine, after itau.co.uk/itaubba.co.uk/live itau.com.br all proved "
          "unreachable) for FY2023/FY2022/FY2021, each disclosing LCR as a 12-month trailing average. "
          "FY2024/FY2025 remain blank — no Pillar 3 Disclosures document for either year was found this session. "
+         "[Superseded twice: FY2025/FY2024 are filled from the Annual Report (above), and both years' Pillar 3 "
+         "editions were obtained on 2026-09-19. Their KM1 row 17 prints trailing-average LCRs of 230% (FY2025) and "
+         "245% (FY2024), on the KM1 sheet only. The point-in-time figures here are not replaced.] "
          "HD-052 (2026-09-05): FY2020-FY2015 were found directly in each year's own Annual Report Key Performance "
          "Indicators table (a point-in-time figure, not the trailing average the Pillar 3 documents disclose for "
          "FY2021-2023 — a genuine presentation difference between the two source types, not a data error). "
@@ -953,17 +1088,117 @@ metric(
          "FY2021 is blank because NSFR was not yet subject to the PRA's reporting requirement (effective 1 "
          "January 2022, per both the FY2022 and FY2023 documents' own notes) — no NSFR % appears in the FY2021 "
          "document. FY2024/FY2025 remain blank — no Pillar 3 Disclosures document for either year was found this "
-         "session. HD-052 (2026-09-05): FY2014-FY2020 also remain blank for the same reason — NSFR was not yet a "
+         "session. [Superseded twice: FY2025/FY2024 are filled from the Annual Report (above), and both years' "
+         "Pillar 3 editions were obtained on 2026-09-19. Their KM1 row 20 prints trailing four-quarter NSFRs of 176% "
+         "(FY2025) and 159% (FY2024), on the KM1 sheet only. The point-in-time figures here are not replaced.] HD-052 (2026-09-05): FY2014-FY2020 also remain blank for the same reason — NSFR was not yet a "
          "PRA reporting requirement, and no NSFR % appears in any of those years' own Annual Reports (searched "
          "in full this session).",
 )
 
+# GA-020 (2026-09-19): the MREL row carried a bare "Not publicly disclosed" in every year FY2025-FY2014, which
+# cannot say whether the bank did not publish, the rule did not apply, or we never saw the document. Each year
+# now carries the outcome its evidence supports. The Pillar 3 editions below were located via the Wayback CDX
+# API (itau.com.br prefix, filtered for 'Pillar'); every one is text-native, begins %PDF, and names Itau BBA
+# International plc and its year on the cover. None prints an MREL or eligible-liabilities figure: text search
+# 0 hits for 'MREL' against hundreds for ' the ' in every edition, NO table caption naming MREL, own funds and
+# eligible liabilities, or loss-absorbing capacity, and (because 2015/2017/2019 print their tables as images -
+# km1/map.md rule 13) Table 1 'Capital resources' was read off a page render for 2015 (p.17), 2017 (p.25) and
+# 2019 (p.27): CET1, Tier 2, total regulatory capital, requirements, RWAs and two ratios, no MREL line.
+P3_2015_WAYBACK = ("https://web.archive.org/web/20230502043032id_/https://www.itau.com.br/_arquivosestaticos/"
+                   "itauBBA/contents/common/docs/IBBAInt_Cons_Pillar3_2015_FINAL2.PDF")
+P3_2017_WAYBACK = ("https://web.archive.org/web/20230502074320id_/https://www.itau.com.br/content/dam/ibba/en/"
+                   "Pillar-3-Disclosures-2017.pdf")
+P3_2018_WAYBACK = ("https://web.archive.org/web/20230502042912id_/https://www.itau.com.br/content/dam/ibba/en/"
+                   "Pillar_3_-_2018_final.pdf")
+P3_2019_WAYBACK = ("https://web.archive.org/web/20230502042859id_/https://www.itau.com.br/content/dam/ibba/home/"
+                   "about-itau-bba/financial-information/affiliates/itau-bba-international-plc/pillar-3-disclosures/"
+                   "IBB-PILAR3.pdf")
+P3_2020_WAYBACK = ("https://web.archive.org/web/20230502102033id_/https://www.itau.com.br/content/dam/ibba/en/"
+                   "IBBAInt%20-%20Pillar%20III%20-%202020.pdf")
+
+def _mrel_np(year, pages, section, hits):
+    return (f"Not published – {year} Pillar 3 Disclosures ({pages}pp; capital adequacy s.9, {section}) has no "
+            f"MREL/eligible-liabilities figure or table; 'MREL' 0 hits vs {hits} for ' the ', read 2026-09-19")
+
+def _mrel_unreached(year, extra):
+    return (f"Unreached today – {year} Pillar 3 not obtained: {extra}; {year} Annual Report (scan, OCR) mentions "
+            "no MREL, 2026-09-19")
+
+MREL_STATEMENTS = {
+    "FY2025": ("Not published – 2025 Pillar 3 ('Market Discipline 2025', 62pp) has no MREL/eligible-liabilities "
+               "figure; its CRR mapping (App. A, p.60) marks Art. 437a 'own funds and eligible liabilities' Not "
+               "applicable"),
+    "FY2024": ("Not published – 2024 Pillar 3 ('Market Discipline 2024', 64pp) has no MREL/eligible-liabilities "
+               "figure; its CRR mapping (App. A, p.62) marks Art. 437a 'own funds and eligible liabilities' Not "
+               "applicable"),
+    "FY2023": ("Not published – 2023 Pillar 3 ('Market Discipline 2023', 62pp) has no MREL/eligible-liabilities "
+               "figure; its CRR mapping (App. A, p.60) marks Art. 437a 'own funds and eligible liabilities' Not "
+               "applicable"),
+    "FY2022": ("Not published – 2022 Pillar 3 Disclosures (67pp) has no MREL/eligible-liabilities figure; its CRR "
+               "mapping (p.65) marks Art. 437a 'own funds and eligible liabilities' Not applicable"),
+    "FY2021": _mrel_np("2021", 54, "pp.30-45", 726),
+    "FY2020": _mrel_np("2020", 52, "pp.29-44", 656),
+    "FY2019": _mrel_np("2019", 51, "pp.26-44", 574),
+    "FY2018": _mrel_np("2018", 52, "pp.26-45", 574),
+    "FY2017": _mrel_np("2017", 48, "pp.24-41", 509),
+    "FY2016": ("Unreached today – 2016 Pillar 3 is linked on the live index but its URL 301s to itau.com.br/404 "
+               "over HTTP/2 (2013/2017 on the same path serve); Wayback holds only 301s; CDX on 5 domains, "
+               "archive.ph, web search: none, 2026-09-19"),
+    "FY2015": _mrel_np("2015", 37, "pp.17-30", 460),
+    "FY2014": ("Unreached today – 2014 Pillar 3 is linked on the live index but its URL 301s to itau.com.br/404 "
+               "over HTTP/2 (2013/2017 on the same path serve); Wayback holds only 301s; CDX on 5 domains, "
+               "archive.ph, web search: none, 2026-09-19"),
+}
+
+MREL_SOURCES_EXTRA = (
+    "\n\nGA-020 (2026-09-19) - MREL per-year outcomes, and a CORRECTION to the paragraph above: the standalone "
+    "Pillar 3 documents are NOT all unreachable. Editions read for this sheet, each its own year's document: "
+    f"2015 (37pp) {P3_2015_WAYBACK}; 2017 (48pp) {P3_2017_WAYBACK}; 2018 (52pp) {P3_2018_WAYBACK}; 2019 (51pp, "
+    f"cover '2019 Pillar 3 Disclosures') {P3_2019_WAYBACK}; 2020 (52pp) {P3_2020_WAYBACK}; 2021 (54pp) "
+    f"{PILLAR3_2021_WAYBACK}; 2022 (67pp) {PILLAR3_2022_WAYBACK}; 2023 (62pp) {PILLAR3_2023_WAYBACK}. None prints "
+    "an MREL or eligible-liabilities figure, so those eight years read 'Not published', each citing its edition. "
+    "The 2022 and 2023 editions go further: their CRR-article compliance maps (2022 p.65; 2023 Appendix A, p.60) "
+    "mark Article 437a 'Disclosure of own funds and eligible liabilities' as 'Not applicable'. That is recorded as "
+    "the bank's own statement and NOT upgraded to a 'Not applicable' outcome here, because the same maps mark "
+    "several articles the documents plainly do address (e.g. 440, countercyclical buffers) 'Not applicable' too, "
+    "and no document seen states this bank's MREL requirement or resolution strategy. FY2016 and FY2014 are "
+    "'Unreached today': the 2016 and 2014 editions are linked from itau.com.br "
+    "(IBBAInt_Cons_Pillar3_2016_FINAL.PDF, IBBAInt_Cons_Pillar3_2014_FINAL.PDF), but the Wayback Machine's only "
+    "captures of both redirect to itau.com.br/404, and the live host returns 403. FY2025 and FY2024 were first "
+    "recorded as 'Unreached today' because no copy of either year's Pillar 3 had been obtained; that is "
+    "superseded by the second-pass paragraph below. For those four years each year's own Annual Report (Companies House scans, OCR'd only to "
+    "locate text; 1,132-2,281 hits for ' the ' per report) mentions MREL nowhere - but the Annual Report is not "
+    "where this bank puts regulatory capital detail, so that is not treated as evidence of non-publication."
+    "\n\nGA-020 SECOND PASS (2026-09-19). FY2025 and FY2024 are now 'Not published', on the same evidence "
+    "standard as the other years. Both editions were obtained from the live index over HTTP/2 "
+    f"({PILLAR3_2025_URL}; {PILLAR3_2024_URL}). Each is text-native, with 1,225 and 1,287 hits for ' the ', and "
+    "returns 0 hits for 'MREL'. Its only 'eligible liabilities' hits are two CC1 deduction-row captions and the "
+    "Article 437a line of the CRR mapping (App. A: 2025 p.60, 2024 p.62), which is marked 'Not applicable'. "
+    "Both documents print some tables as images (rule 13), so every image-table page was identified: the KM1 "
+    "(2025 p.41, 2024 p.42), CC2 and OV1 (2025 pp.46-47), REM1-REM4, and Appendix B. None of them is an MREL "
+    "or eligible-liabilities table. The 2025 OV1 was read off its bitmap to confirm this. As for the earlier "
+    "editions, the 'Not applicable' in the mapping is recorded but not upgraded to a 'Not applicable' outcome. "
+    "FY2016 and FY2014 remain 'Unreached today'. The live index (HTTP 200 over HTTP/2) still LINKS both editions "
+    "at itau.com.br/content/dam/ibba/en/IBBAInt_Cons_Pillar3_{2016,2014}_FINAL.PDF, but over HTTP/2 each URL "
+    "301s to itau.com.br/404 (HTTP 404, the site's own not-found page). Over HTTP/1.1 each returns 403. "
+    "Lower-case .pdf and _final variants also 404. As a positive control, the 2013 and 2017 editions on the same "
+    "path, fetched the same way, both return %PDF. Other routes tried: Wayback CDX, whose only captures of either "
+    "URL (20230502) are 301s; CDX domain sweeps of itau.com.br (filtered on 'pillar'/'pilar' and on 'ibbaint'), "
+    "itaubba.co.uk, itaubba.com, itau.co.uk and itaubba.eu, which found no other copy (itaubba.eu is Itau BBA "
+    "Europe, a different entity, and the itau.com.br RI Pillar 3 files are Itau Unibanco's, which the entity "
+    "rule excludes); archive.ph/newest for both paths, which returned 404 (no capture); and a web search for the "
+    "exact filenames, which found nothing."
+)
+
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS if y != "FY2013"})],
-    p3_sources(21, "2025", AR25_URL),
-    note="No MREL ratio or resolution-strategy discussion was found in the Annual Report's own pages; deferred to "
-         "the unreachable standalone Pillar 3 report, same as LCR/NSFR. FY2013 is left blank (not \"Not publicly "
+    [("MREL ratio", MREL_STATEMENTS)],
+    p3_sources(21, "2025", AR25_URL, MREL_SOURCES_EXTRA),
+    note="No MREL ratio or resolution-strategy discussion was found in the Annual Report's own pages. The "
+         "standalone Pillar 3 reports were once recorded here as unreachable; GA-020 (2026-09-19) found and read "
+         "the 2015 and 2017-2023 editions, and its second pass (same day) the 2024 and 2025 editions, none of which "
+         "prints an MREL figure - see the per-year cells and the two GA-020 paragraphs in the sources for the "
+         "evidence, and why FY2016/FY2014 remain 'Unreached today'. FY2013 is left blank (not \"Not publicly "
          "disclosed\") per HD-072 (2026-09-06) - Pillar 3 is out of scope for that ticket's FY2013 extension, so "
          "this sheet's dict is intentionally not extended to FY2013, same as every other Pillar 3 sheet.",
 )
@@ -995,8 +1230,8 @@ bw.add_overview_sheet(
     cash_flow_totals=[
         ("Net cash flow from operating activities", {"FY2025": -823201, "FY2024": 202045, "FY2023": 896845, "FY2022": 977211, "FY2021": 183186, "FY2020": 185310, "FY2019": -265920, "FY2018": 161184, "FY2017": 109779, "FY2016": -20832, "FY2015": -69031, "FY2014": 154213}),
         ("Net cash flow from investing activities", {"FY2025": 89783, "FY2024": 150189, "FY2023": -918582, "FY2022": -1169363, "FY2021": -40817, "FY2020": -51831, "FY2019": -2032, "FY2018": 62821, "FY2017": 49617, "FY2016": -28814, "FY2015": -1307, "FY2014": -66637}),
-        ("Net cash flow from financing activities", {"FY2025": -862, "FY2024": -838, "FY2023": 501619, "FY2022": -926, "FY2021": 948, "FY2020": -2238, "FY2019": 9582, "FY2018": 0, "FY2017": -30128, "FY2016": 57, "FY2015": 16, "FY2014": -221}),
-        ("Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 270914, "FY2017": 141646, "FY2016": 141646, "FY2015": 134322, "FY2014": 205351}),
+        ("Net cash flow from financing activities", {"FY2025": -862, "FY2024": -838, "FY2023": 501619, "FY2022": -926, "FY2021": 948, "FY2020": -2238, "FY2019": 9582, "FY2018": "-", "FY2017": -30128, "FY2016": 57, "FY2015": 16, "FY2014": -221}),
+        ("Cash and cash equivalents at end of year", {"FY2025": 460587, "FY2024": 1149307, "FY2023": 797911, "FY2022": 318029, "FY2021": 511107, "FY2020": 367790, "FY2019": 236549, "FY2018": 494919, "FY2017": 270914, "FY2016": 141646, "FY2015": 134322, "FY2014": 205351}),
     ],
     cash_flow_unit="USD'000",
     ratios=[

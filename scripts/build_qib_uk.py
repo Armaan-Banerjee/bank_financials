@@ -547,7 +547,7 @@ km1_rows = [
     ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
      {"FY2025": "2.56%", "FY2024": "2.56%", "FY2023": "1.86%", "FY2022": "1.86%", "FY2021": "1.86%"}),
     ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
-     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+     {y: "-" for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")}),
     ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
      {"FY2025": "1.14%", "FY2024": "1.14%", "FY2023": "0.83%", "FY2022": "0.83%", "FY2021": "0.83%"}),
     ("DATA", "UK 7d    Total SREP own funds requirements (%)",
@@ -556,16 +556,16 @@ km1_rows = [
     ("DATA", "8    Capital conservation buffer (%)",
      {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
     ("DATA", "UK 8a    Conservation buffer due to macro-prudential or systemic risk identified at the level of a Member State (%)",
-     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+     {y: "-" for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")}),
     # FY2021's 0.00% is a PRINTED ZERO, not a dash (map rule 2) - recorded as the zero.
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
      {"FY2025": "1.18%", "FY2024": "1.14%", "FY2023": "0.98%", "FY2022": "1.00%", "FY2021": "0.00%"}),
     ("DATA", "UK 9a    Systemic risk buffer (%)",
-     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+     {y: "-" for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")}),
     ("DATA", "10    Global Systemically Important Institution buffer (%)",
-     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+     {y: "-" for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")}),
     ("DATA", "UK 10a    Other Systemically Important Institution buffer",
-     {"FY2025": "N/A", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+     {y: "-" for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")}),
     ("DATA", "11    Combined buffer requirement (%)",
      {"FY2025": "3.68%", "FY2024": "3.64%", "FY2023": "3.48%", "FY2022": "3.50%", "FY2021": "2.50%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
@@ -688,8 +688,10 @@ KM1_SOURCES = (
     "ROWS 14a-14e ARE A STATED EXCLUSION, NOT A GAP. Every edition prints beneath the table: 'Rows 14a-14e "
     "have been removed as only LREQ firms are required to disclose this information.' They are not printed by "
     "the Bank, so they are not shown here; the reason is recorded instead.\n\n"
-    "'N/A' IS REPRODUCED AS THE BANK PRINTS IT. QIB (UK) writes the literal string 'N/A' in rows UK 7b, UK "
-    "8a, UK 9a, 10 and UK 10a - not a dash and not an empty cell - so 'N/A' is what this sheet carries. Row 9 "
+    "PRINTED GLYPH 'N/A' -> CELL '-' (KM1 map rule 2; GA-020, 2026-09-19). QIB (UK) writes the literal string "
+    "'N/A' in rows UK 7b, UK 8a, UK 9a, 10 and UK 10a in every edition FY2021-FY2025 - not a dash and not an "
+    "empty cell. Under the locked KM1 rule a printed not-applicable glyph is carried as a plain '-' in the cell, "
+    "and the glyph the bank actually used ('N/A') is recorded here. Row 9 "
     "for FY2021 is a printed '0.00%', which is a disclosed zero and is carried as the zero, not as a "
     "blank.\n\n"
     "TWO CROSS-EDITION DIVERGENCES, RECORDED AND NOT RECONCILED (each cell above is from the edition in which "
@@ -782,7 +784,14 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio","%",[("Leverage ratio excluding claims on central banks",ratios["Leverage Ratio"])],"Not numerically disclosed in the reviewed QIB UK documents before FY2019 (FY2019 figure is FY2020's own comparative column).")
 metric("LCR","%",[("Liquidity coverage ratio",ratios["LCR"])],"Not numerically disclosed in the reviewed QIB UK documents before FY2019 (FY2019 figure is FY2020's own comparative column); narrative mentions of the LCR regime starting 1 October 2015 appear from the FY2015 Pillar 3 Declaration onward, but with no percentage given. BASIS CHECKED 2026-09-15: this series swings widely (FY2022 1236.14% -> FY2023 1153.62% -> FY2024 322.05%, an 831pp fall in one year), which elsewhere in this project has indicated a silent mix of KM1 12-month-average and point-in-time year-end figures. It is NOT that here: every year from FY2019 onward is taken from a QIB (UK) Pillar 3 disclosure (see sources note), so the row is single-basis and the movement is as the Bank reported it. Recorded so the discontinuity is not re-investigated as a basis error.")
 metric("NSFR","%",[("Net stable funding ratio",ratios["NSFR"])],"No NSFR is disclosed in the reviewed QIB UK Pillar 3 documents through FY2020; the FY2020 document states the Bank was still 'monitoring' NSFR ahead of implementation.")
-metric("MREL Ratio","%",[("MREL ratio",{y:"Not publicly disclosed" for y in PILLAR3_YEARS})],"No MREL ratio or requirement is disclosed in the reviewed QIB UK Pillar 3 documents.")
+# GA-020 (2026-09-19): every cited edition FY2014-FY2025 was re-fetched and text-searched for
+# "MREL"/"minimum requirement for own funds" - zero hits. Native text: Pillar 3 FY2019/20 (one
+# doc), FY2021, FY2023, FY2024, FY2025; AR2015, AR2016. OCR (tesseract, 150dpi): Pillar 3 FY2022
+# (scanned), and the Companies House filed accounts for FY2014, FY2017, FY2018 (scans; the
+# qib-uk.com FY2017/FY2018 AR URLs are WAF-blocked).
+QIB_MREL_NP = ("Not published – no MREL figure or mention in this year's QIB UK Pillar 3 / Annual Report "
+               "(every FY2014-FY2025 edition text-searched 2026-09-19; see sheet note)")
+metric("MREL Ratio","%",[("MREL ratio",{y:QIB_MREL_NP for y in PILLAR3_YEARS})],"No MREL ratio or requirement is disclosed in any QIB UK Pillar 3 document or Annual Report FY2014-FY2025. GA-020 re-check 2026-09-19: each edition was re-fetched and searched for 'MREL' - native text for Pillar 3 FY2019/FY2020 (one document), FY2021, FY2023, FY2024, FY2025 and AR2015/AR2016; OCR for the scanned Pillar 3 FY2022 and the Companies House filed accounts for FY2014, FY2017 and FY2018. Zero hits in all.")
 
 bs_totals = {r[1]: r[2] for r in bs_rows}
 pl_totals = {r[1]: r[2] for r in pl_rows}

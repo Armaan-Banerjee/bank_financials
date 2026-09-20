@@ -986,6 +986,31 @@ metric(
          "project convention.",
 )
 
+GA020_OV1_NOTE = (
+    "\n\nFY2014-FY2018 BREAKDOWN FOUND 2026-09-19 (GA-020). These years previously read 'Not publicly "
+    "disclosed - category breakdown'. That was wrong: each edition prints an 'Overview of RWA' table. "
+    "Sources, each year's own edition, read from the page image: FY2018 - Pillar 3 Disclosures 2018, Table 6, "
+    f"printed p.28 - {P3_2018_URL}; FY2017 - Pillar 3 Disclosures 2017, Table 3, printed p.13 - {P3_2017_URL}; "
+    f"FY2016 - Capital and Risk Management Pillar 3 Disclosures 2016, Table 3, printed p.13 - {P3_2016_URL}; "
+    f"FY2015 - Capital and Risk Management Pillar 3 Disclosures 2015, Table 3, printed p.12 - {P3_2015_URL}; "
+    f"FY2014 - Pillar 3 Disclosures 2014, Table 3, printed p.11 - {P3_2014_URL}. "
+    "ROW DEFINITIONS: FY2014-FY2016 print credit risk EXCLUDING CCR plus a separate CCR line (the same "
+    "editions' Pillar 1 table labels that line 'Counterparty Credit Risk (including CVA)', so there is no "
+    "separate CVA row for those years); FY2017 prints credit risk INCLUDING counterparty credit and dilution "
+    "risks and free deliveries, plus a CVA line, so it has its own row; FY2018 returns to the "
+    "excluding-CCR layout, printing a dash for CCR and a separate CVA line. "
+    "SOURCE ARITHMETIC, recorded not corrected: FY2014's rows sum to 924,802 against the printed Total "
+    "924,791 (an 11k gap inside the table); FY2017's sum to 931,205 against 931,206 (the FY2018 edition's "
+    "comparative prints 931,205). FY2015, FY2016 and FY2018 foot exactly. "
+    "FY2014 BASIS DIVERGENCE, recorded not reconciled: the SAME FY2014 edition prints TWO different 'RWA' "
+    "figures - Table 1 'Total capital resources and risk asset ratios' gives 'Risk-weighted assets (RWA) "
+    "800,993' (the figure carried on the Total RWAs sheet, and the denominator of its printed 34%/42% ratios), "
+    "while Table 3 totals 924,791, and 800,993 is exactly Table 3's credit-risk-excluding-CCR line. This "
+    "sheet's FY2014 Total is Table 3's printed total; the Total RWAs sheet keeps Table 1's figure. Neither "
+    "is adjusted. FY2016: the FY2017 edition's comparative Total is 1,002,116 against the FY2016 edition's "
+    "own 1,003,913 (already noted on the Total RWAs sheet); own-edition figures are used."
+)
+
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Bank of China (UK) Limited's own UK OV1/EU OV1 'Overview of risk weighted exposure amounts' "
     "tables (same 5 Pillar 3 documents as the Total RWAs sheet), each year's own originally-published figures "
@@ -1011,6 +1036,7 @@ RWA_BREAKDOWN_SOURCES = (
     "entirely. FY2021's own originally-published split is used here per project convention, with the later "
     "restatement noted rather than silently substituted. FY2022 onward carries CCR as its own explicit line "
     "every year."
+    + GA020_OV1_NOTE
 )
 
 bw.add_rwa_breakdown_sheet(
@@ -1044,9 +1070,20 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Market risk (standardised approach)", {"FY2021": 14056}),
         ("DATA", "Operational risk", {"FY2021": 218688}),
         ("TOTAL", "Total risk exposure amount", {"FY2021": 1119380}),
-        ("SECTION", "No category breakdown on this sheet (FY2018-FY2014) — total risk exposure amount only; these years were not re-checked in the 2026-09-12 re-verification, see sources note", {}),
-        ("DATA", "Not publicly disclosed — category breakdown", {"FY2018": "Not publicly disclosed", "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"}),
-        ("TOTAL", "Total risk exposure amount", {"FY2018": 941052, "FY2017": 931206, "FY2016": 1003913, "FY2015": 895473, "FY2014": 800993}),
+        # GA-020 (2026-09-19): FY2014-FY2018 FOUND. This section previously read "Not publicly
+        # disclosed - category breakdown". Every one of those five Pillar 3 editions prints an
+        # 'Overview of RWA' table (the Basel/EBA OV1 layout); each figure below is from that
+        # year's OWN edition, read from the page image: FY2014 Table 3, printed p.11 (PDF p.12);
+        # FY2015 Table 3, p.12 (PDF p.13); FY2016 Table 3, p.13 (PDF p.14); FY2017 Table 3, p.13
+        # (PDF p.14); FY2018 Table 6, p.28 (PDF p.29). See GA020_OV1_NOTE in the sources.
+        ("SECTION", "'Overview of RWA' (Basel/EBA OV1 layout) — each year's own Pillar 3 Disclosure, FY2018-FY2014. Row definitions change in FY2017 (credit risk printed INCLUDING CCR); see sources note", {}),
+        ("DATA", "Credit risk (excluding counterparty credit risk, standardised approach)", {"FY2018": 754002, "FY2016": 840455, "FY2015": 754715, "FY2014": 800993}),
+        ("DATA", "Credit risk (including counterparty credit and dilution risks and free deliveries, as published)", {"FY2017": 757906}),
+        ("DATA", "Counterparty credit risk (standardised approach; includes CVA per the same editions' Pillar 1 table)", {"FY2018": "-", "FY2016": 4164, "FY2015": 2062, "FY2014": 3251}),
+        ("DATA", "Credit valuation adjustment (CVA)", {"FY2018": 2757, "FY2017": 2526}),
+        ("DATA", "Market risk (standardised approach)", {"FY2018": 8927, "FY2017": 9694, "FY2016": 11206, "FY2015": 9973, "FY2014": 13244}),
+        ("DATA", "Operational risk (Basic Indicator Approach)", {"FY2018": 175366, "FY2017": 161079, "FY2016": 148088, "FY2015": 128723, "FY2014": 107314}),
+        ("TOTAL", "Total (as printed in the Overview of RWA table)", {"FY2018": 941052, "FY2017": 931206, "FY2016": 1003913, "FY2015": 895473, "FY2014": 924791}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=58,
@@ -1101,10 +1138,14 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not disclosed" for y in YEARS})],
+    [("MREL ratio", {y: (f"Not published – BoC (UK) {y} Pillar 3 has no MREL figure, KM2 or eligible-"
+                          "liabilities disclosure (text probe 0 hits, 2026-09-19)") for y in YEARS})],
     p3_sources(),
     note="No MREL disclosure found in any of the 12 available Pillar 3 documents (FY2014-FY2025) - each was read "
-         "in full (table of contents plus a full-text search for 'MREL') and none contains one.",
+         "in full (table of contents plus a full-text search for 'MREL') and none contains one. Re-checked 2026-09-19 "
+         "(GA-020): all 12 editions re-downloaded (%PDF, text-native); 0 hits for 'MREL', 'KM2' and 'eligible "
+         "liabilities' in each, against 93-223 'capital' hits; the only 'loss-absorbing' hits are the generic "
+         "countercyclical-buffer description.",
 )
 
 # ---------------------------------------------------------------

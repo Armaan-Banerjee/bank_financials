@@ -668,8 +668,20 @@ bw.add_not_disclosed_metric_sheets(
     per_note={
         "MREL Ratio": "MREL is not mentioned anywhere in any of the 5 Pillar 3 Disclosures reviewed (searched "
                       "directly, no hits any year) - consistent with a bank of this size not being its own "
-                      "resolution entity under the Bank of England's MREL framework.",
+                      "resolution entity under the Bank of England's MREL framework. GA-020 RE-CHECK "
+                      "2026-09-19: the Pillar 3 editions for 2021, 2022, 2023, 2024 and 2025 and the Annual "
+                      "Reports for 2017, 2021, 2023, 2024 and 2025 were full-text searched: zero 'MREL' or "
+                      "'eligible liabilities' in any (46-80 'capital' hits each); the only 'loss absorbing' hit "
+                      "is the KM1 preamble phrase 'significant loss absorbing and underwriting capacity'.",
     },
+    statements={"MREL Ratio": {
+        **{y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 and Annual Report (full text searched "
+               "2026-09-19)") for y in ("FY2025", "FY2024", "FY2023", "FY2021")},
+        "FY2022": ("Not published – zero 'MREL' in the FY2022 Pillar 3 or the FY2023 edition carrying its "
+                   "comparatives (full text searched 2026-09-19)"),
+        "FY2017": ("Not published – zero 'MREL' in the FY2017 Annual Report (searched 2026-09-19); the bank's "
+                   "Pillar 3 index lists no edition before 2018"),
+    }},
 )
 
 # ---------------------------------------------------------------

@@ -17,6 +17,21 @@ P3_2024_URL = "https://www.allica.bank/hubfs/pdf/Pillar-3-Report-2024_Allica.pdf
 P3_2023_URL = "https://www.allica.bank/hubfs/Allica%20Bank%20Limited_Pillar%203%20Report%20_Year-ended%2031%20December%202023.pdf"
 P3_2022_URL = "https://www.allica.bank/hubfs/pdf/web/investor-relations/Allica_Bank_Pillar_3_disclosure_2022.pdf"
 P3_2020_URL = "https://www.allica.bank/hubfs/pdf/web/investor-relations/Allica_Bank_Pillar_3_disclosure_2020.pdf"
+# FY2021's own full-format Pillar 3 (32pp), live on the bank's site, found 2026-09-19 (GA-020) at the
+# same path pattern as FY2020. Its s.3.4 RWA table (p.17) is the only FY2021 RWA category split.
+P3_2021_URL = "https://www.allica.bank/hubfs/pdf/web/investor-relations/Allica_Bank_Pillar_3_disclosure_2021.pdf"
+
+# GA-020 outcome statements (2026-09-19).
+RWA_SPLIT_NP = ("Not published – Pillar 3 FY2022-FY2025 is a KM1-only table (CRR Art. 433b); no OV1 or risk-category "
+                "RWA split in any of those editions")
+NSFR_NA = ("Not applicable – UK NSFR in force only from 1 Jan 2022 (PRA PS17/21); FY2020/FY2021 Pillar 3 print no NSFR, "
+           "and the FY2022 KM1's 2021 column leaves rows 18-20 blank")
+MREL_NA_EARLY = ("Not applicable – this year's Pillar 3 (s.3.3) states Allica 'is not currently required to hold any "
+                 "additional capital in respect of MREL'")
+MREL_NP = ("Not published – Pillar 3 for this year is a KM1-only table (Art. 433b) with no MREL row (text-searched "
+           "2026-09-19)")
+S3_COV_FY2020 = ("Not published – FY2020 accounts Note 24 (p.48) says the single Stage 3 loan (£495k) carries 'an "
+                 "immaterial ECL' and gives no Stage 3 ECL amount")
 
 HISTORICAL_DEPTH_NOTE = (
     "HISTORICAL DEPTH NOTE (HD-056, 2026-09): FY2020 added as the earliest comparable full-year column. "
@@ -482,7 +497,7 @@ asset_quality_rows = [
     ("SECTION", "Asset quality ratios", {}),
     ("DATA", "ECL coverage ratio (Total impairment provision / Total gross exposure)", {"FY2025": "1.12%", "FY2024": "1.06%", "FY2023": "1.10%", "FY2022": "0.65%", "FY2021": "0.17%", "FY2020": "0.09%"}),
     ("DATA", "Stage 3 (NPL) ratio (Stage 3 gross exposure / Total gross exposure)", {"FY2025": "2.64%", "FY2024": "1.92%", "FY2023": "1.51%", "FY2022": "0.67%", "FY2021": "0.24%", "FY2020": "1.10%"}),
-    ("DATA", "Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross exposure)", {"FY2025": "18.06%", "FY2024": "21.85%", "FY2023": "14.35%", "FY2022": "16.28%", "FY2021": "1.54%", "FY2020": "Not disclosed"}),
+    ("DATA", "Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross exposure)", {"FY2025": "18.06%", "FY2024": "21.85%", "FY2023": "14.35%", "FY2022": "16.28%", "FY2021": "1.54%", "FY2020": S3_COV_FY2020}),
 ]
 
 bw.add_asset_quality_sheet(
@@ -711,14 +726,30 @@ RWA_BREAKDOWN_SOURCES = (
     "'Pillar_3_disclosure_2019' PDF exists from the bank's earlier, pre-2021 disclosure format, but "
     "it predates this workbook's FY2021-FY2025 window and its own KM1-era successors - FY2020 - are "
     "already the same 2-3 page format shown above). No category-level breakdown was found anywhere; "
-    "the non-disclosure is confirmed current, not a stale assumption."
+    "the non-disclosure is confirmed current, not a stale assumption.\n\n"
+    "CORRECTED 2026-09-19 (GA-020) FOR FY2021 AND FY2020 - the paragraphs above hold for FY2022-FY2025 only. "
+    "Allica's FY2020 and FY2021 Pillar 3 disclosures are full-format documents (28 and 32 pages), not KM1-only "
+    "tables, and each prints a risk-category RWA table in s.3.4 'Regulatory Capital', read off rendered page "
+    "images: FY2021 - Credit Risk 459,576; Credit Valuation Adjustment 133; Market Risk -; Operational Risk "
+    "26,849; Total RWA 486,558 (Pillar 3 disclosures 2021, p.17 - " + P3_2021_URL + "). FY2020 - Credit Risk "
+    "53,703; Market Risk -; Operational Risk 23,586; Total RWA 77,289 (Pillar 3 disclosures 2020, p.14 - "
+    + P3_2020_URL + "). Both sum exactly to the Total row. Operational risk RWAs are the Basic Indicator "
+    "Approach requirement x 12.5, per the tables' own footnote (2)."
 )
 
 bw.add_rwa_breakdown_sheet(
     title="Allica Bank Limited — RWA Breakdown",
     subtitle="Allica Bank Limited Group (consolidated basis), £'000",
     rows=[
-        ("DATA", "Not publicly disclosed — category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+        # FY2021 and FY2020 FOUND 2026-09-19 (GA-020): each year's OWN full-format Pillar 3, s.3.4
+        # 'Regulatory Capital' RWA table, read off rendered page images - FY2021 edition p.17, FY2020
+        # edition p.14. Market risk is printed as '-' in both. FY2020's own edition prints no CVA row
+        # (the FY2021 edition's 2020 comparative shows '-'), so FY2020 CVA is left blank.
+        ("DATA", "Credit risk", {"FY2021": 459576, "FY2020": 53703}),
+        ("DATA", "Credit valuation adjustment", {"FY2021": 133}),
+        ("DATA", "Market risk", {"FY2021": "-", "FY2020": "-"}),
+        ("DATA", "Operational risk", {"FY2021": 26849, "FY2020": 23586}),
+        ("DATA", "Category breakdown (FY2022 onward)", {y: RWA_SPLIT_NP for y in ["FY2025", "FY2024", "FY2023", "FY2022"]}),
         ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 2422216, "FY2024": 1908286, "FY2023": 1396450, "FY2022": 997945, "FY2021": 486558, "FY2020": 77289}),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
@@ -765,7 +796,7 @@ metric(
     [
         ("Total available stable funding (£'000)", {"FY2025": 3884410, "FY2024": 2937724, "FY2023": 1876364, "FY2022": 1338171}),
         ("Total required stable funding (£'000)", {"FY2025": 2799038, "FY2024": 2195700, "FY2023": 1385603, "FY2022": 897829}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "138.8%", "FY2024": "133.8%", "FY2023": "135.4%", "FY2022": "149.0%", "FY2021": "Not disclosed", "FY2020": "Not disclosed"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "138.8%", "FY2024": "133.8%", "FY2023": "135.4%", "FY2022": "149.0%", "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
     ],
     p3_sources(),
     note="NSFR was not a Pillar 3 disclosure requirement until FY2022 (the UK NSFR regime took effect from 1 "
@@ -779,11 +810,15 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", {y: (MREL_NA_EARLY if y in ("FY2021", "FY2020") else MREL_NP) for y in YEARS})],
     p3_sources(),
     note="No MREL ratio row appears in any of Allica's Pillar 3 reports; each explicitly states Allica Bank Limited "
          "is not an LREQ firm. As a smaller institution below the UK's MREL/bail-in resolution threshold, Allica is "
-         "not subject to a separate MREL disclosure requirement.",
+         "not subject to a separate MREL disclosure requirement. GA-020 (2026-09-19): FY2020 and FY2021 are "
+         "'Not applicable' on the bank's own words - the FY2020 Pillar 3 (s.3.3, PDF p.13) and FY2021 Pillar 3 "
+         "(s.3.3, PDF p.16, " + P3_2021_URL + ") each state 'Allica is not currently required to hold any "
+         "additional capital in respect of MREL'. FY2022-FY2025 editions are single KM1 tables with no MREL row "
+         "and no MREL text at all (text-searched 2026-09-19, 0 hits).",
 )
 
 # ---------------------------------------------------------------
@@ -823,7 +858,7 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2025": "16.8%", "FY2024": "18.8%", "FY2023": "19.5%", "FY2022": "18.8%", "FY2021": "19.3%", "FY2020": "69%"}),
         ("Leverage Ratio (excl. central banks)", {"FY2025": "7.3%", "FY2024": "9.4%", "FY2023": "11.4%", "FY2022": "11.3%", "FY2021": "12.5%"}),
         ("LCR", {"FY2025": "220.8%", "FY2024": "216.2%", "FY2023": "289.0%", "FY2022": "302.3%", "FY2021": "499.9%", "FY2020": "331%"}),
-        ("NSFR", {"FY2025": "138.8%", "FY2024": "133.8%", "FY2023": "135.4%", "FY2022": "149.0%", "FY2021": "Not disclosed", "FY2020": "Not disclosed"}),
+        ("NSFR", {"FY2025": "138.8%", "FY2024": "133.8%", "FY2023": "135.4%", "FY2022": "149.0%", "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. Allica is a young, fast-growing SME-lending challenger bank "

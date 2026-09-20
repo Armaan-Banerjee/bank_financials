@@ -914,6 +914,17 @@ UBI_FY2026_NP = ("Not published - FY2026 Pillar 3 not yet issued; the Bank's own
                  "follows their approval. Index re-checked 18 Sep 2026")
 
 
+# GA-020 (2026-09-19) evidenced statement texts.
+UBI_NSFR_NA = ("Not applicable – UK NSFR requirement began 1 Jan 2022, after this 31 March year-end; this year's "
+               "Pillar 3 contains no NSFR (full-text search 2026-09-19)")
+_UBI_MREL_NA = ("Not applicable – modified-insolvency firm: MREL equals the minimum capital requirement (P1+P2A), "
+                "not an additive requirement (Pillar 3 MREL section, e.g. FY2025 PDF p.10; BoE letter 9 Jan 2019)")
+UBI_MREL_STATEMENTS = {"MREL Ratio": {y: _UBI_MREL_NA for y in YEARS}}
+UBI_MREL_STATEMENTS["MREL Ratio"]["FY2018"] = (
+    "Not published – no MREL figure or reference in the FY2018 Pillar 3 (full-text search 2026-09-19); "
+    "the modified-insolvency MREL letter is dated 9 Jan 2019")
+
+
 def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=130)
 
@@ -1265,7 +1276,7 @@ metric(
         ("Total available stable funding", stock({"FY2025": 431914, "FY2024": 412656, "FY2023": 408381, "FY2022": 346323})),
         ("Total required stable funding", stock({"FY2025": 318358, "FY2024": 314809, "FY2023": 282448, "FY2022": 247487})),
         ("Net Stable Funding Ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "136%", "FY2024": "131%", "FY2023": "145%", "FY2022": "140%",
-                                          "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed"}),
+                                          "FY2021": UBI_NSFR_NA, "FY2020": UBI_NSFR_NA, "FY2019": UBI_NSFR_NA, "FY2018": UBI_NSFR_NA}),
     ],
     p3_sources(),
     note="The UK NSFR regime took effect from 1 January 2022, so no FY2018-FY2021 figures exist (consistent with "
@@ -1273,10 +1284,19 @@ metric(
          "comparative column (FY2022's own Pillar 3 report predates NSFR disclosure for this Bank).",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(),
-    per_note={"MREL Ratio": "No MREL disclosure (numeric or qualitative) or UK KM2 template found in any year's "
-                             "Pillar 3 report - consistent with the Bank's small size relative to typical "
-                             "MREL-in-scope thresholds."})
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), statements=UBI_MREL_STATEMENTS,
+    per_note={"MREL Ratio": "CORRECTED 2026-09-19 (GA-020): this note previously said no MREL disclosure, numeric or "
+                             "qualitative, appears in any year's Pillar 3. That was wrong. Every edition from FY2021 "
+                             "carries a 'Minimum requirement for owned funds and Eligible Liabilities (MREL)' section "
+                             "(FY2021 PDF p.14, FY2022 PDF p.15, FY2023-FY2025 PDF p.10) stating: 'Based on the Bank of "
+                             "England guidance on MREL (June 2018) and the letter dated 9th January 2019, the Bank is a "
+                             "Modified Insolvency firm and its MREL requirement is equal to minimum capital requirement "
+                             "excluding Buffers i.e., Pillar 1 + Pillar 2A and is not an additive requirement.' The "
+                             "FY2025 edition gives that requirement as 12.28% (PRA guidance December 2022) and 11.78% "
+                             "(PRA guidance June 2025). No MREL RATIO (resources over RWA) is published, and none is "
+                             "derived; the requirement percentage is not a ratio and is not entered as one. FY2018-FY2020 "
+                             "editions contain no MREL text (full-text search 2026-09-19); FY2019 onward are marked not "
+                             "applicable because the 9 January 2019 letter predates the 31 March 2019 year-end."})
 
 # ---------------------------------------------------------------
 # Overview sheet

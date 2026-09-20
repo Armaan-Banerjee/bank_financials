@@ -55,7 +55,19 @@ ENTITY_NOTE = (
     "FY2021 filed 26 Sep 2022, FY2022 filed 5 Oct 2023, FY2023 filed 28 Sep 2024, FY2024 filed 22 Sep "
     "2025. The FY2025 deadline is 30 SEPTEMBER 2026 - twelve days after this check. A re-check in October "
     "2026 should find the Annual Report, and the Pillar 3 disclosure has followed within weeks of it in "
-    "every year so far. This is a 'come back in a fortnight', not a dead end."
+    "every year so far. This is a 'come back in a fortnight', not a dead end.\n"
+    "RE-CHECKED 19 SEPTEMBER 2026 (GA-020) - STILL NO FY2025 DOCUMENT OF EITHER KIND, AND THE DEADLINE HAS "
+    "MOVED. (1) Companies House filing history for 10359002, read UNFILTERED on page 1: the newest rows are a "
+    "CS01 (15 Sep 2026), AP01/TM01/CH01/PSC04 (Sep 2026) and SH01 allotments; the newest AA is still 'Full "
+    "accounts made up to 31 December 2024', filed 22 Sep 2025. The company profile NOW reads 'Next accounts made "
+    "up to 31 December 2025 due by 31 DECEMBER 2026' - one day after the 18 Sep reading of 30 September 2026. "
+    "An extension of the filing period does not appear as a row in the filing history, so the change is recorded "
+    "here as read, not explained; it means the FY2025 accounts may not land until as late as 31 December 2026. "
+    "(2) kroo.com/annual-reports and kroo.com/pillar-3-disclosures still list exactly four documents each "
+    "(2021-2024); /files/kroo-annual-report-2025.pdf, -2026.pdf and the two Pillar 3 equivalents return a genuine "
+    "404 (after the www->apex redirect), against 200/application/pdf/%PDF controls on both 2024 files. "
+    "(3) Wayback CDX for kroo.com (all subdomains) from 2026 onward: 10 PDF captures, none later than the 2024 "
+    "editions."
 )
 
 CASH_FLOW_SOURCES = (
@@ -702,7 +714,14 @@ metric(
          "(only LCR), confirmed genuinely absent rather than an access gap.",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], sources_text=p3_sources())
+# GA-020 (2026-09-19): the P3_20xx_URL and AR20xx_URL documents above (all
+# text-native, 32-79 'capital' hits each) were full-text searched: zero
+# 'MREL', 'loss-absorbing' or 'eligible liabilities' in any of the eight.
+bw.add_not_disclosed_metric_sheets(
+    ["MREL Ratio"], sources_text=p3_sources(),
+    statements={"MREL Ratio": {y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 and Annual Report "
+                                   "(full text searched 2026-09-19)") for y in YEARS}},
+)
 
 # ---------------------------------------------------------------
 # Overview sheet

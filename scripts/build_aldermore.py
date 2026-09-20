@@ -1323,8 +1323,8 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
-        ("Total exposure measure excluding claims on central banks (£m)", {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3, "FY2021": "n/a", "FY2020": 15132.5, "FY2019": 12671.6, "FY2018": 10585.1, "FY2017": NO_FY2017, "FY2016": 8562.9, "FY2015": 7095.9, "FY2014": 5630.4, "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2021": "n/a", "FY2020": "6.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2017": NO_FY2017, "FY2016": "7.0%", "FY2015": "7.2%", "FY2014": "6.3%", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total exposure measure excluding claims on central banks (£m)", {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3, "FY2021": 13424.8, "FY2020": 15132.5, "FY2019": 12671.6, "FY2018": 10585.1, "FY2017": NO_FY2017, "FY2016": 8562.9, "FY2015": 7095.9, "FY2014": 5630.4, "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)"}),
+        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2021": "7.5%", "FY2020": "6.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2017": NO_FY2017, "FY2016": "7.0%", "FY2015": "7.2%", "FY2014": "6.3%", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)"}),
     ],
     p3_sources(),
     note="FY2020 (exposure 15,132.5, ratio 6.1%) and FY2016 (exposure 8,562.9, ratio 7.0%) ADDED 2026-09-18 from "
@@ -1336,8 +1336,14 @@ metric(
          "15,132.5 both ways; FY2016 8,591.4 on the reconciliation against 8,562.9 on the common-disclosure "
          "template, a £28.5m difference inside one document); the common-disclosure row 21 figure is used, being "
          "the one the printed ratio is struck on. See the Pillar 3 recovery note in the sources.\n"
-         "FY2021 leverage ratio disclosure basis was introduced from 1 January 2022; the FY2022 Pillar 3 report explicitly "
-         "marks FY2021 as 'n/a' with no comparative provided under the new template. FY2019/FY2018 and FY2015/FY2014 "
+         "FY2021 (exposure 13,424.8, ratio 7.5%) ADDED 2026-09-19 (GA-020) from rows 21/22 of Table 39 'Leverage "
+         "ratio common disclosure (Bank only)', p.67-68 of Aldermore Group PLC's Pillar 3 Disclosures for the year "
+         "ended 30 June 2021 (https://www.aldermore.co.uk/media/ahbpvlih/aldermore_group_plc_pillar_3_2021.pdf), "
+         "read off the page image. Validation: that table's 30 June 2020 comparative (15,132.5 / 6.1%) reproduces "
+         "this sheet's FY2020 column and its Tier 1 of 1,008.0 reproduces the Tier 1 sheet's FY2021 figure. This "
+         "column had previously read 'n/a' because the FY2022 edition prints n/a for its FY2021 comparatives under "
+         "the new 1 January 2022 template — but FY2021's own edition, which this workbook had not used, carries the "
+         "Bank figure on the same pre-2022 all-exposures basis as FY2020. FY2019/FY2018 and FY2015/FY2014 "
          "figures are each year's own pre-2022 leverage ratio disclosure basis (both are the CRR Part Eight / EBA "
          "Implementing Technical Standard leverage ratio, but the 'excluding claims on central banks' variant used from "
          "FY2022 onward did not exist as a separate disclosure before then, so these earlier figures are the Bank's "
@@ -1347,7 +1353,8 @@ metric(
          "wrong on both counts. FY2013, FY2012 "
          "and FY2011 are 'n/a' for a structural reason rather than a sourcing one: no leverage ratio existed as a UK "
          "regulatory measure or disclosure at 31 December 2011 or 31 December 2013 (the CRR leverage ratio arrived "
-         "with CRD IV from 2014), and neither recovered Basel II edition contains one in any form.\n"
+         "with CRD IV from 2014), and none of the three recovered Basel II editions (FY2011, FY2012, FY2013) "
+         "contains one in any form (each text-searched again 2026-09-19).\n"
          "RESTATEMENT: the FY2026 Pillar 3 report restates the Bank's 30-Jun-25 total exposure measure as "
          "£15,526.0m, where the FY2025 report itself disclosed £15,674.3m for that same period (a £148.3m "
          "reduction). The FY2025 column here is left at the £15,674.3m originally disclosed, consistent with "
@@ -1359,9 +1366,9 @@ metric(
 metric(
     "LCR", "£m / %",
     [
-        ("Total high-quality liquid assets (HQLA), weighted value average (£m)", {"FY2026": 3725.9, "FY2025": 3723.1, "FY2024": 4208.6, "FY2023": 3280.6, "FY2022": 2838.5, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Total net cash outflows, adjusted value (£m)", {"FY2026": 2263.1, "FY2025": 1968.3, "FY2024": 1959.4, "FY2023": 1686.4, "FY2022": 772.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Liquidity Coverage Ratio (%)", {"FY2026": "164.6%", "FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total high-quality liquid assets (HQLA), weighted value average (£m)", {"FY2026": 3725.9, "FY2025": 3723.1, "FY2024": 4208.6, "FY2023": 3280.6, "FY2022": 2838.5, "FY2021": "Not published – no Bank-solo HQLA in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group-level figure only (Table 24 p.49)", "FY2020": "Not published – no Bank-solo HQLA in FY2020 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.47)", "FY2019": "Not published – no Bank-solo HQLA in FY2019 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.45)", "FY2018": "Not published – no Bank-solo HQLA in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group-level figure only (p.45)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo HQLA in FY2016 Pillar 3; Bank-only appendix has none. Group-level figure only (p.40)", "FY2015": "Not published – no Bank-solo HQLA in FY2015 Pillar 3; Bank-only appendix has none. Group-level figure only (p.39)", "FY2014": "Not published – no Bank-solo HQLA in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group-level figure only (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no HQLA; the LCR did not yet exist (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no HQLA; the LCR did not yet exist (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no HQLA; the LCR did not yet exist (text searched 2026-09-19)"}),
+        ("Total net cash outflows, adjusted value (£m)", {"FY2026": 2263.1, "FY2025": 1968.3, "FY2024": 1959.4, "FY2023": 1686.4, "FY2022": 772.6, "FY2021": "Not published – no Bank-solo net cash outflows in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group-level figure only (Table 24 p.49)", "FY2020": "Not published – no Bank-solo net cash outflows in FY2020 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.47)", "FY2019": "Not published – no Bank-solo net cash outflows in FY2019 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.45)", "FY2018": "Not published – no Bank-solo net cash outflows in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group-level figure only (p.45)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo net cash outflows in FY2016 Pillar 3; Bank-only appendix has none. Group-level figure only (p.40)", "FY2015": "Not published – no Bank-solo net cash outflows in FY2015 Pillar 3; Bank-only appendix has none. Group-level figure only (p.39)", "FY2014": "Not published – no Bank-solo net cash outflows in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group-level figure only (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no net cash outflows; the LCR did not yet exist (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no net cash outflows; the LCR did not yet exist (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no net cash outflows; the LCR did not yet exist (text searched 2026-09-19)"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2026": "164.6%", "FY2025": "189.2%", "FY2024": "214.8%", "FY2023": "194.5%", "FY2022": "367.4%", "FY2021": "Not published – no Bank-solo LCR in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group-level figure only (Table 24 p.49)", "FY2020": "Not published – no Bank-solo LCR in FY2020 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.47)", "FY2019": "Not published – no Bank-solo LCR in FY2019 Pillar 3; Bank-only appendix has none. Group-level figure only (Table 24 p.45)", "FY2018": "Not published – no Bank-solo LCR in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group-level figure only (p.45)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo LCR in FY2016 Pillar 3; Bank-only appendix has none. Group-level figure only (p.40)", "FY2015": "Not published – no Bank-solo LCR in FY2015 Pillar 3; Bank-only appendix has none. Group-level figure only (p.39)", "FY2014": "Not published – no Bank-solo LCR in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group-level figure only (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no LCR; the LCR did not yet exist (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no LCR; the LCR did not yet exist (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no LCR; the LCR did not yet exist (text searched 2026-09-19)"}),
     ],
     p3_sources(),
     note="LCR is computed as a 12-month average to the period end. FY2021 and earlier are all 'n/a' — the Bank-solo "
@@ -1377,22 +1384,34 @@ metric(
          "FY2011 are 'n/a' on firmer ground still: the LCR did not exist as a UK requirement or disclosure at "
          "either date (it was introduced by CRD IV/CRR and phased in from October 2015), and neither recovered "
          "Basel II edition contains any liquidity ratio - each describes liquidity risk narratively and by the "
-         "then-applicable ILAA/liquid asset buffer framework instead. FY2012 has no edition at all.",
+         "then-applicable ILAA/liquid asset buffer framework instead; the FY2012 edition (cited on the capital "
+         "sheets) likewise has none.\n"
+         "GA-020 (2026-09-19): the FY2014-FY2021 cells now say WHY they are empty. Every one of those editions "
+         "DOES print an LCR — but for the GROUP only: narrative LCR in the FY2015 (p.39, with the 31 Dec 2014 "
+         "comparative) and FY2016 (p.40) editions, and the Group 'Quantitative LCR information' template (Table 24, "
+         "with Group HQLA and net outflows) in the FY2019 (p.45, with the 30 Jun 2018 comparative), FY2020 (p.47) "
+         "and FY2021 (p.49) editions. The FY2021 edition, not previously used by this workbook, was fetched from "
+         "https://www.aldermore.co.uk/media/ahbpvlih/aldermore_group_plc_pillar_3_2021.pdf. None of the Bank-only "
+         "appendices prints a liquidity metric, and the FY2022 edition's KM1 shows the Group and Bank LCRs differ "
+         "(399.7% vs 367.4%), so a Group figure is NOT substituted into this Bank-solo sheet.",
 )
 
 metric(
     "NSFR", "£m / %",
     [
-        ("Total available stable funding (£m)", {"FY2026": 16701.9, "FY2025": 15972.4, "FY2024": 16133.4, "FY2023": 15490.2, "FY2022": 15667.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Total required stable funding (£m)", {"FY2026": 13318.4, "FY2025": 12166.9, "FY2024": 11778.0, "FY2023": 12161.3, "FY2022": 12169.6, "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
-        ("Net Stable Funding Ratio (%)", {"FY2026": "125.4%", "FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%", "FY2021": "n/a", "FY2020": "n/a", "FY2019": "n/a", "FY2018": "n/a", "FY2017": NO_FY2017, "FY2016": "n/a", "FY2015": "n/a", "FY2014": "n/a", "FY2013": "n/a", "FY2012": "n/a", "FY2011": "n/a"}),
+        ("Total available stable funding (£m)", {"FY2026": 16701.9, "FY2025": 15972.4, "FY2024": 16133.4, "FY2023": 15490.2, "FY2022": 15667.6, "FY2021": "Not published – no Bank-solo available stable funding in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group NSFR ratio only, narrative (p.49)", "FY2020": "Not published – no Bank-solo available stable funding in FY2020 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.47)", "FY2019": "Not published – no Bank-solo available stable funding in FY2019 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2018": "Not published – no Bank-solo available stable funding in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo available stable funding in FY2016 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.40)", "FY2015": "Not published – no Bank-solo available stable funding in FY2015 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2014": "Not published – no Bank-solo available stable funding in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no available stable funding (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no available stable funding (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no available stable funding (text searched 2026-09-19)"}),
+        ("Total required stable funding (£m)", {"FY2026": 13318.4, "FY2025": 12166.9, "FY2024": 11778.0, "FY2023": 12161.3, "FY2022": 12169.6, "FY2021": "Not published – no Bank-solo required stable funding in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group NSFR ratio only, narrative (p.49)", "FY2020": "Not published – no Bank-solo required stable funding in FY2020 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.47)", "FY2019": "Not published – no Bank-solo required stable funding in FY2019 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2018": "Not published – no Bank-solo required stable funding in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo required stable funding in FY2016 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.40)", "FY2015": "Not published – no Bank-solo required stable funding in FY2015 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2014": "Not published – no Bank-solo required stable funding in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no required stable funding (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no required stable funding (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no required stable funding (text searched 2026-09-19)"}),
+        ("Net Stable Funding Ratio (%)", {"FY2026": "125.4%", "FY2025": "131.3%", "FY2024": "137.0%", "FY2023": "127.4%", "FY2022": "128.7%", "FY2021": "Not published – no Bank-solo NSFR in FY2021 Pillar 3 (30 Jun 21); Bank-only appendix has none. Group NSFR ratio only, narrative (p.49)", "FY2020": "Not published – no Bank-solo NSFR in FY2020 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.47)", "FY2019": "Not published – no Bank-solo NSFR in FY2019 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2018": "Not published – no Bank-solo NSFR in FY2019 Pillar 3 (30 Jun 18 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.46)", "FY2017": NO_FY2017, "FY2016": "Not published – no Bank-solo NSFR in FY2016 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.40)", "FY2015": "Not published – no Bank-solo NSFR in FY2015 Pillar 3; Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2014": "Not published – no Bank-solo NSFR in FY2015 Pillar 3 (31 Dec 14 comparative); Bank-only appendix has none. Group NSFR ratio only, narrative (p.39)", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no NSFR (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no NSFR (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no NSFR (text searched 2026-09-19)"}),
     ],
     p3_sources(),
-    note="NSFR is computed as a 4-quarter average to the period end. FY2021 and earlier are all 'n/a' — the UK NSFR "
-         "requirement did not take effect until 1 January 2022 (see FY2022 Pillar 3 report), so no NSFR figure exists "
-         "for FY2014-FY2020 at all. This is the one metric on this workbook where recovering the FY2016 and "
-         "FY2020 Pillar 3 editions (see the Pillar 3 recovery note in the sources) changed nothing and could not "
-         "have: there was no NSFR to disclose in either year. The same applies with more force to FY2013, FY2012 "
+    note="NSFR is computed as a 4-quarter average to the period end. FY2021 and earlier carry no figure — the UK NSFR "
+         "requirement did not take effect until 1 January 2022 (see FY2022 Pillar 3 report). CORRECTED 2026-09-19 "
+         "(GA-020): a previous version of this note said no NSFR figure exists for FY2014-FY2020 at all. That was "
+         "wrong at GROUP level: each edition states a Group NSFR in its liquidity narrative — FY2015 p.39 (with the "
+         "31 Dec 2014 comparative), FY2016 p.40, FY2019 p.46 (with the 30 Jun 2018 comparative), FY2020 p.47, "
+         "FY2021 p.49 — on the then-proposed Basel basis, without the ASF/RSF components. No Bank-only appendix "
+         "prints one, so the Bank-solo cells here read 'Not published' with that evidence, and no Group figure is "
+         "substituted. The same applies with more force to FY2013, FY2012 "
          "and FY2011, which predate even the "
          "Basel III NSFR observation period; none of the three recovered Basel II editions contains an NSFR. "
          "FY2017 reads 'No 31 Dec 2017 period exists' rather than 'n/a' because no reporting date existed there "
@@ -1401,11 +1420,21 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in P3_DISCLOSURE_YEARS})],
+    [("MREL ratio", {y: (NO_FY2017 if y == "FY2017" else
+                         "Not published – no MREL ratio, KM2 or MREL resources figure in that year's Aldermore "
+                         "Pillar 3 (every edition FY2011-FY2026 text-searched 2026-09-19; FY2026 mentions MREL "
+                         "only in its glossary)") for y in P3_DISCLOSURE_YEARS})],
     p3_sources(),
-    note="MREL is not disclosed for Aldermore Bank PLC/Aldermore Group PLC in any Pillar 3 report reviewed — the Group "
-         "sits below the balance-sheet threshold at which the Bank of England sets a bail-in MREL requirement above "
-    "minimum capital requirements, so no separate MREL ratio is published.",
+    note="MREL is not disclosed for Aldermore Bank PLC/Aldermore Group PLC in any Pillar 3 report. GA-020 "
+         "(2026-09-19) re-checked this document by document: the FY2011, FY2012, FY2013, FY2015, FY2016, FY2019, "
+         "FY2020, FY2021, FY2022, FY2023, FY2024, FY2025 and FY2026 editions were each text-searched for 'MREL', "
+         "'eligible liabilities' and 'loss-absorbing'. None prints an MREL ratio, MREL resources or a KM2/TLAC "
+         "template; the only hits are the FY2026 glossary definition of MREL and the FY2026 UK CCA template "
+         "heading ('own funds instruments and eligible liabilities instruments'), whose five instruments are all "
+         "CET1, AT1 or Tier 2. The cells therefore say 'Not published' on that evidence. An earlier version of "
+         "this note gave a reason (that the Group sits below the threshold for an MREL requirement above minimum "
+         "capital requirements); no Aldermore or Bank of England document stating that was cited, so it is not "
+         "relied on here.",
 )
 
 # ---------------------------------------------------------------

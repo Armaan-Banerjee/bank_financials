@@ -830,13 +830,25 @@ metric(
     p3_sources(),
 )
 
+# GA-020 (2026-09-19). The FY2022 Pillar 3 edition EXISTS and is live on the Bank's own host, under a filename
+# that does not say "2022" (found via Wayback CDX of alrayanbank.co.uk, filter mimetype:application/pdf, then
+# fetched live: HTTP 200, application/pdf, %PDF, 32 pages, cover 'Pillar 3 Disclosures 31 December 2022').
+# It is recorded here for the MREL search only; the KM1/OV1 FY2022 columns elsewhere in this script still come
+# from the FY2023 edition's comparative and have NOT been re-sourced in this pass (flagged to the coordinator).
+P3_2022_URL = ("https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2023-08/"
+               "al_rayan_pillar_three_32pp_brochure_-_final.pdf")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": ("Not published – no MREL figure or reference in this year's Pillar 3 (all six "
+                               "editions FY2020-FY2025 full-text searched 2026-09-19, zero 'MREL')")},
     per_note={
-        "MREL Ratio": "MREL is not mentioned anywhere in the FY2020, FY2023, FY2024 or FY2025 Pillar 3 Disclosures "
-                      "(searched directly, no hits) - consistent with a bank of this size not being its own "
-                      "resolution entity under the Bank of England's MREL framework.",
+        "MREL Ratio": "MREL is not mentioned anywhere in the FY2020, FY2021, FY2022, FY2023, FY2024 or FY2025 Pillar 3 "
+                      "Disclosures (full-text searched 2026-09-19 for 'MREL', 'minimum requirement for own funds' and "
+                      "'eligible liabilities': no hits, against 98-115 hits for 'capital' per edition). The FY2022 "
+                      "edition is " + P3_2022_URL + " . The FY2024 annual report's single 'eligible liabilities' hit "
+                      "is the Bank of England cash ratio deposit scheme, not MREL. Consistent with a bank of this size "
+                      "not being its own resolution entity under the Bank of England's MREL framework.",
     },
 )
 

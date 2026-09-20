@@ -575,11 +575,14 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not applicable" for y in YEARS})],
+    [("MREL ratio", {y: f"Not published – {y} Pillar 3 (reduced 'other institution' disclosure, no KM2 required) and {y} Annual Report read 2026-09-19: no MREL figure" for y in YEARS})],
     note="LHV Bank Limited is classified as an 'other institution' (not Large, not subject to LREQ/G-SII/O-SII "
          "status) under Article 433 of the PRA Rulebook's Disclosure Part as at 31 December 2025, requiring only "
          "reduced annual Pillar 3 disclosure with no UK KM2/MREL template - no MREL figure of any kind appears in "
-         "any year's Pillar 3 report.",
+         "any year's Pillar 3 report. GA-020 (2026-09-19): the FY2023-FY2025 Pillar 3 reports and Annual Reports "
+         "were re-read, with 0 MREL, eligible-liabilities or KM2 hits against 32-90 'capital' hits per document. "
+         "The cells previously read a bare 'Not applicable'. They now read 'Not published', because no document "
+         "states that no MREL requirement applies; the reduced disclosure regime explains only why none is printed.",
 )
 
 # ---------------------------------------------------------------

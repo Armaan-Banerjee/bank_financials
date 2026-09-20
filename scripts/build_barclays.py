@@ -848,12 +848,19 @@ metric(
          "FY2018 for that reason.",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts. Checked that day: the FY2019, FY2020 and FY2021 Pillar 3
+# reports (P3_19/20/21_URL; 592k-721k characters of text) contain no 'NSFR' or 'net stable funding' at all,
+# and the FY2018-FY2021 Annual Reports mention the NSFR only as a forthcoming Basel III / CRR II standard.
+BBUK_NSFR_NA_P3 = ("Not applicable – UK NSFR requirement began 1 Jan 2022; this year's Pillar 3 has no NSFR and the "
+                   "annual report names it only as a forthcoming standard (checked 2026-09-19)")
+BBUK_NSFR_NA_AR = ("Not applicable – UK NSFR requirement began 1 Jan 2022; FY2018 Annual Report (no standalone Pillar 3 "
+                   "that year) names it only as a forthcoming standard (checked 2026-09-19)")
 metric(
     "NSFR", "£m / %",
     [
         ("Total available stable funding (£m)", {"FY2025": 257230, "FY2024": 254755, "FY2023": 258620, "FY2022": 266421}),
         ("Total required stable funding (£m)", {"FY2025": 168761, "FY2024": 160041, "FY2023": 156588, "FY2022": 158156}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "152.4%", "FY2024": "159.3%", "FY2023": "165%", "FY2022": "168%", "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "152.4%", "FY2024": "159.3%", "FY2023": "165%", "FY2022": "168%", "FY2021": BBUK_NSFR_NA_P3, "FY2020": BBUK_NSFR_NA_P3, "FY2019": BBUK_NSFR_NA_P3, "FY2018": BBUK_NSFR_NA_AR}),
     ],
     p3_sources(part_label_25="Table 6: KM1 - Key metrics - Part 2", page_25="12",
                part_label_23="Table 6: KM1 - Key metrics - Part 2", page_23="12",

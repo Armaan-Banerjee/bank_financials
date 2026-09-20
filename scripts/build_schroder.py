@@ -329,14 +329,20 @@ KM1_SOURCES = (
     + ENTITY_NOTE
 )
 
+
+# GA-020 (2026-09-19): evidenced outcome text - see KM1_SOURCES for the three checks behind it.
+SCH_NP = ("Not published – Schroder & Co. publishes no Pillar 3 (schroders.com/cazenovecapital.com); parent "
+          "Schroders plc Pillar 3 is Group-only; FY2025 accounts (OCR'd) give no {what}")
+
 bw.add_km1_sheet(
     title=f"{COMPANY} - KM1 Key Metrics",
-    subtitle="Not applicable. Schroder & Co. Limited publishes no Pillar 3 disclosure of its own, its "
+    subtitle="Not published. Schroder & Co. Limited publishes no Pillar 3 disclosure of its own, its "
              "statutory accounts contain no regulatory-capital figures, and its parent Schroders plc's "
              "Pillar 3 carries a UK KM1 only for the consolidated Group - no column, block or appendix for "
              "this entity. See the source note for all three checks.",
     rows=[
-        ("DATA", "Not applicable - no Pillar 3 document is published for this entity", {y: "Not applicable" for y in YEARS}),
+        ("DATA", "UK KM1 key-metrics template - no Pillar 3 document is published for this entity",
+         {y: SCH_NP.format(what="KM1 metric") for y in YEARS}),
     ],
     sources_text=KM1_SOURCES,
     first_col_width=64,
@@ -362,7 +368,7 @@ for metric_name in _pillar3_before_rwa:
 bw.add_rwa_breakdown_sheet(
     title=f"{COMPANY} — RWA Breakdown",
     subtitle="Not publicly disclosed at entity level.",
-    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
+    rows=[("DATA", "RWA Breakdown", {y: SCH_NP.format(what="RWA figure") for y in YEARS})],
     sources_text=CASH_SOURCES,
     first_col_width=54,
     source_height=180,

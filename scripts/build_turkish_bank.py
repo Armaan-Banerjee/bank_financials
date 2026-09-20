@@ -563,10 +563,37 @@ RATIO_GAP_NEGATIVE = (
     "REMUNERATION disclosures only; it does not touch the key-metrics templates and does not explain these gaps. "
     "So FY2021/FY2022 are a historical publication failure, and FY2025 is most likely simply not published yet - "
     "on the FY2024 edition's own ~14-month lag an FY2025 edition would not be expected before early 2027, which "
-    "makes FY2025 (unlike FY2021/FY2022) worth one re-check then, and only then."
+    "makes FY2025 (unlike FY2021/FY2022) worth one re-check then, and only then.\n"
+    "  RE-ENUMERATED 2026-09-19 BY A SECOND, INDEPENDENT ROUTE, AND THE FY2025 CELL NOW SAYS SO INSTEAD OF "
+    "STANDING BLANK. The reports page was re-fetched (HTTP 200, text/html, 160,913 bytes) and still carries "
+    "exactly ONE Pillar 3 href among twenty PDFs. More usefully, turkishbank.co.uk runs WordPress, so the "
+    "media library itself was enumerated through the REST API - /wp-json/wp/v2/media?per_page=100&search="
+    "pillar (HTTP 200, application/json) - which lists UPLOADS whether or not any page links them, and so "
+    "answers a question the page cannot. It returns exactly ONE item: PILLAR-3-DISCLOSURE.pdf, uploaded "
+    "2026-02-13. That upload date is the real find. It pins the FY2024 edition's lag at thirteen and a half "
+    "months after its 31 December 2024 reporting date, which puts an FY2025 edition around February 2027 - "
+    "so FY2025 is NOT-YET-DUE rather than withheld, and the cell says that rather than implying a refusal. "
+    "No SDDT row exists for this bank in the PRA waivers register (checked on both required columns, "
+    "2026-09-19), so there is no exemption in play either - consistent with the Bank's own section 2.2."
 )
 
-RATIO_GAP_DEFAULTS = {y: NOT_DISCLOSED for y in RATIO_GAP_YEARS}
+# GA-020 (2026-09-19): the three gap years now say WHICH outcome they are,
+# on the evidence in RATIO_GAP_NEGATIVE. FY2021 was additionally checked
+# against its OWN Annual Report (a 64-page scan, OCR'd 2026-09-19 at 150dpi):
+# no 'Tier 1', 'CET1', 'capital ratio', 'leverage ratio', 'coverage ratio',
+# 'stable funding', 'LCR', 'NSFR' or 'MREL' anywhere; the capital note is
+# narrative plus amounts.
+GAP_TEXT = {
+    "FY2025": ("Not published yet – only Pillar 3 is the FY2024 ed., uploaded 13 Feb 2026 (~14m lag), so FY2025 due "
+               "c. Feb 2027; FY2025 AR Note 37 prints no ratio"),
+    "FY2022": ("Not published – no FY2022 Pillar 3 (reports page, WP media API, Wayback CDX enumerated); FY2022 AR "
+               "Note 38 p.62 gives a capital amount only, no ratio"),
+    "FY2021": ("Not published – no FY2021 Pillar 3 (reports page, WP media API, Wayback CDX enumerated); FY2021 and "
+               "FY2022 ARs give a capital amount only, no ratio"),
+}
+NSFR_FY2021 = ("Not applicable – UK NSFR requirement took effect 1 Jan 2022 (PRA PS17/21); in any case no FY2021 "
+               "Pillar 3 exists and the FY2021/FY2022 ARs print no NSFR")
+RATIO_GAP_DEFAULTS = dict(GAP_TEXT)
 
 
 def ratio_sources():
@@ -623,7 +650,12 @@ km1_rows = [
     ("SECTION", "Risk-weighted exposure amounts", {}),
     ("DATA", "4  Total risk-weighted exposure amount (£'000)", {"FY2024": 111235, "FY2023": 99516}),
     ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
-    ("DATA", "5  Common Equity Tier 1 ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
+    # FY2025 carries a recorded absence rather than a blank (2026-09-19). Row 5
+    # is chosen because the CET1 Ratio sheet already holds a text cell for
+    # FY2025, so no verifier comparison exists here to lose.
+    ("DATA", "5  Common Equity Tier 1 ratio (%)",
+     {"FY2025": "Not published yet - only edition is FY2024, uploaded Feb 2026; ~14m lag",
+      "FY2024": "25.97%", "FY2023": "28.24%"}),
     ("DATA", "6  Tier 1 ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
     ("DATA", "7  Total Capital ratio (%)", {"FY2024": "25.97%", "FY2023": "28.24%"}),
     ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
@@ -860,12 +892,12 @@ metric(
 metric(
     "NSFR", "£'000 / %",
     [
-        ("Total available stable funding", {"FY2025": NOT_DISCLOSED, "FY2024": 158883, "FY2023": 147611,
-                                            "FY2022": NOT_DISCLOSED, "FY2021": "Not applicable"}),
-        ("Total required stable funding", {"FY2025": NOT_DISCLOSED, "FY2024": 81335, "FY2023": 76650,
-                                           "FY2022": NOT_DISCLOSED, "FY2021": "Not applicable"}),
-        ("NSFR ratio (%)", {"FY2025": NOT_DISCLOSED, "FY2024": "195.34%", "FY2023": "192.58%",
-                            "FY2022": NOT_DISCLOSED, "FY2021": "Not applicable"}),
+        ("Total available stable funding", {"FY2025": GAP_TEXT["FY2025"], "FY2024": 158883, "FY2023": 147611,
+                                            "FY2022": GAP_TEXT["FY2022"], "FY2021": NSFR_FY2021}),
+        ("Total required stable funding", {"FY2025": GAP_TEXT["FY2025"], "FY2024": 81335, "FY2023": 76650,
+                                           "FY2022": GAP_TEXT["FY2022"], "FY2021": NSFR_FY2021}),
+        ("NSFR ratio (%)", {"FY2025": GAP_TEXT["FY2025"], "FY2024": "195.34%", "FY2023": "192.58%",
+                            "FY2022": GAP_TEXT["FY2022"], "FY2021": NSFR_FY2021}),
     ],
     ratio_sources() + (
         "\n\nNSFR FY2021 - STRUCTURAL, A DIFFERENT FINDING FROM THE OTHER GAP YEARS AND DELIBERATELY LABELLED "
@@ -890,8 +922,13 @@ bw.add_not_disclosed_metric_sheets(
         "Not publicly disclosed for any year - no numeric or qualitative MREL disclosure was found in either the "
         "Pillar 3 Disclosure or any Annual Report. Consistent with a very small bank likely below the threshold at "
         "which the Bank of England sets an MREL requirement above minimum capital requirements (no explicit "
-        "exemption is stated, it is simply absent)."
+        "exemption is stated, it is simply absent). GA-020 RE-CHECK 2026-09-19: zero occurrences of 'MREL' or "
+        "'loss-absorbing' in the FY2024 Pillar 3 (text-native; its one 'resolution' hit is governance wording), the "
+        "text-native FY2022, FY2023 and FY2024 Annual Reports, or the OCR text of the scanned FY2021 and FY2025 "
+        "Annual Reports."
     )},
+    statements={"MREL Ratio": ("Not published – no MREL figure or mention in the only Pillar 3 (FY2024 ed.) or in "
+                               "ARs FY2021-FY2025 (full text / OCR searched 2026-09-19)")},
 )
 
 # ---------------------------------------------------------------
@@ -927,8 +964,8 @@ bw.add_overview_sheet(
         ratio_row("Total Capital Ratio", {"FY2024": "25.97%", "FY2023": "28.24%"}),
         ratio_row("Leverage Ratio", {"FY2024": "15.9%", "FY2023": "15.2%"}),
         ratio_row("LCR", {"FY2024": "606%", "FY2023": "739%"}),
-        ("NSFR", {"FY2025": NOT_DISCLOSED, "FY2024": "195.34%", "FY2023": "192.58%",
-                  "FY2022": NOT_DISCLOSED, "FY2021": "Not applicable"}),
+        ("NSFR", {"FY2025": GAP_TEXT["FY2025"], "FY2024": "195.34%", "FY2023": "192.58%",
+                  "FY2022": GAP_TEXT["FY2022"], "FY2021": NSFR_FY2021}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. Pillar 3 ratios are only publicly disclosed for FY2023/FY2024 "

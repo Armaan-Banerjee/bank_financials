@@ -149,6 +149,15 @@ def p3_sources(page_25="3", page_24="4", page_21="12"):
         f"{P3_2013_URL}\n" + FY2013_NOTE + "\n"
         "FY2022: no standalone Pillar 3 document exists (2022 and 2023 editions are both absent from the bank's "
         "own published list; FY2023 is covered here only via FY2024's own comparative column).\n"
+        "RE-CONFIRMED 2026-09-19, AND NOW WRITTEN INTO THE CELLS. The bank's own Financial Statements index "
+        "(https://bankofceylon.co.uk/financial-statements/, fetched today, HTTP 200, text/html, 195,840 bytes, "
+        "read as HTML rather than slug-guessed) links exactly six Pillar 3 PDFs - 2018, 2019, 2020, 2021, 2024 "
+        "and 2025. There is still nothing for 2022 or 2023, twenty months after the FY2023 year end, so the "
+        "absence is settled rather than pending. The five FY2022 cells that this establishes as absent - Tier 1 "
+        "Ratio, Total RWAs, the RWA Breakdown total, Leverage Ratio and LCR - previously stood BLANK, which made "
+        "an established negative indistinguishable from a cell nobody had looked at. They now carry a short "
+        "statement naming the reason. This changes no figure and asserts nothing new; it moves an existing "
+        "finding from these notes into the grid where a reader and the gap census can both see it.\n"
         f"FY2022 PARTIAL FILL (2026-09-15, interior-gap sweep): the CET1 Capital and Tier 1 Capital sheets are "
         f"no longer blank for FY2022. The figure comes not from a Pillar 3 document but from the Bank's own "
         f"audited FY2022 statutory accounts, Note 28 'Capital Management' (Annual Financial Report 2022, p.60), "
@@ -635,6 +644,17 @@ KM1_SOURCES = (
     "already carried and cited by this script. NONE NEWER."
 )
 
+# GA-020 (2026-09-19): each year says WHICH outcome it is, on the edition-by-
+# edition evidence in KM1_SOURCES.
+KM1_CELLS = {y: ("Not published – the bank's Pillar 3 'Key metrics' (2018-21, 2024-25 eds) is its own summary, not "
+                 "UK KM1: no Tier 1, Tier 1 ratio or SREP rows in any edition (row-set test, 2026-09-16)")
+             for y in YEARS}
+for _y in ("FY2022", "FY2023"):
+    KM1_CELLS[_y] = ("Not published – no Pillar 3 for this year: the bank's own index (bankofceylon.co.uk/"
+                     "financial-statements, re-read 2026-09-19) lists 2018-21 and 2024-25 only")
+KM1_CELLS["FY2013"] = ("Not published – the recovered 31 Dec 2013 Pillar 3 (Wayback) pre-dates the KM1 template "
+                       "and prints no such table")
+
 bw.add_km1_sheet(
     title="Bank of Ceylon (UK) Limited - KM1 Key Metrics",
     subtitle="Not applicable: this bank publishes Pillar 3 disclosures but does not use the UK KM1 template in "
@@ -642,7 +662,7 @@ bw.add_km1_sheet(
              "infographic tiles), which omits Tier 1 capital, the Tier 1 ratio and every SREP row in every "
              "edition. See the sources note for the row-set test applied edition by edition.",
     rows=[("DATA", "UK KM1 - Key metrics template: not used by this bank in any year",
-           {y: "Not applicable" for y in YEARS})],
+           KM1_CELLS)],
     sources_text=KM1_SOURCES,
     first_col_width=64,
     source_height=300,
@@ -705,8 +725,10 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"})],
-    note="Equal to the CET1 ratio - no Additional Tier 1 capital in any year. FY2022 stays blank here: the only "
+    [("Tier 1 ratio", {"FY2025": "20.1%", "FY2024": "22.7%", "FY2023": "42.5%", "FY2022": "Not published - no FY2022 Pillar 3; accounts give a CET1 ratio only", "FY2021": "54.8%", "FY2020": "34.3%", "FY2019": "57.5%", "FY2018": "46.9%"})],
+    note="Equal to the CET1 ratio - no Additional Tier 1 capital in any year. FY2022 CARRIES A RECORDED ABSENCE "
+         "RATHER THAN A BLANK (2026-09-19): the finding below was already established and was invisible to a "
+         "reader of the grid and to the gap census, both of which saw only an empty cell. The only "
          "FY2022 ratio the Bank ever states (44%) is captioned a CET1 ratio in the FY2023 accounts' Strategic "
          "Report p.8, and is carried on the CET1 Ratio sheet's own labelled row. It is not copied across, "
          "because restating a CET1-captioned ratio as a Tier 1 ratio would be this workbook's inference; the "
@@ -784,7 +806,7 @@ metric(
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32187, "FY2021": 29052, "FY2020": 38848, "FY2019": 28513, "FY2018": 24492}),
+    [("Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32187, "FY2022": "Not published - no FY2022 Pillar 3; no RWA in the FY2022/FY2023 accounts", "FY2021": 29052, "FY2020": 38848, "FY2019": 28513, "FY2018": 24492}),
      ("Memo - figure the Bank itself printed as 'Total RWAs' that year (credit and counterparty credit risk ONLY; superseded above for FY2019/FY2021 - see note)",
       {"FY2021": 24509, "FY2019": 23604, "FY2018": 24492})],
     note="FY2013 IS BLANK, AND DELIBERATELY SO. The recovered 31 December 2013 edition discloses no "
@@ -938,7 +960,7 @@ rwa_breakdown_rows = [
     ("DATA", "Credit and counterparty credit risk", {"FY2025": 65343, "FY2024": 56022, "FY2023": 26888, "FY2021": 24509, "FY2020": 34473, "FY2019": 23600, "FY2018": 24488}),
     ("DATA", "Market risk", {"FY2025": 37, "FY2024": 557, "FY2023": 1150, "FY2021": 302, "FY2020": 187, "FY2019": 88, "FY2018": 100}),
     ("DATA", "Operational risk (Basic Indicator Approach)", {"FY2025": 5353, "FY2024": 4765, "FY2023": 4150, "FY2021": 4241, "FY2020": 4188, "FY2019": 4188, "FY2018": 3950}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32188, "FY2021": 29052, "FY2020": 38848, "FY2019": 27876, "FY2018": 28538}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2025": 70733, "FY2024": 61344, "FY2023": 32188, "FY2022": "Not published - no FY2022 Pillar 3; no RWA in the FY2022/FY2023 accounts", "FY2021": 29052, "FY2020": 38848, "FY2019": 27876, "FY2018": 28538}),
     ("SECTION", "FY2013 only - Pillar 1 CAPITAL requirement by risk type (£'000 of CAPITAL, not RWA - deliberately NOT divided by 8%; do not read down the same column as the RWA rows above)", {}),
     ("DATA", "Capital requirement - credit risk (standardised approach)", {"FY2013": 2454}),
     ("DATA", "Capital requirement - market risk (foreign currency position risk requirement)", {"FY2013": 24}),
@@ -969,7 +991,7 @@ metric(
     [
         ("Tier 1 capital available (£'000)", {"FY2025": 14217, "FY2024": 13940, "FY2023": 13685, "FY2021": 13424, "FY2020": 13338, "FY2019": 13569, "FY2018": 13393, "FY2013": 13436}),
         ("Total leverage ratio exposure measure (£'000)", {"FY2025": 99213, "FY2024": 75247, "FY2023": 47579, "FY2021": 29072, "FY2020": 37808, "FY2019": 39619, "FY2018": 28733}),
-        ("Leverage ratio (%)", {"FY2025": "14.3%", "FY2024": "18.5%", "FY2023": "28.8%", "FY2021": "46.2%", "FY2020": "35.3%", "FY2019": "34.2%", "FY2018": "46.6%"}),
+        ("Leverage ratio (%)", {"FY2025": "14.3%", "FY2024": "18.5%", "FY2023": "28.8%", "FY2022": "Not published - no FY2022 Pillar 3; none in the FY2022/FY2023 accounts", "FY2021": "46.2%", "FY2020": "35.3%", "FY2019": "34.2%", "FY2018": "46.6%"}),
     ],
     note="FY2024 uses the FY2024 Pillar 3 document's own originally-published figures; see the source note above "
          "for the slightly different restated FY2024 comparative (£76,247k / 18.3%) published a year later in "
@@ -989,7 +1011,7 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA) (£'000)", {"FY2025": 101212, "FY2024": 99206, "FY2023": 108880, "FY2019": 131851, "FY2018": 130130}),
         ("Total net cash outflows (£'000)", {"FY2025": 77081, "FY2024": 66349, "FY2023": 86856, "FY2019": 118123, "FY2018": 116560}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2021": "345%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "131%", "FY2024": "149%", "FY2023": "125%", "FY2022": "Not published - no FY2022 Pillar 3; accounts' liquidity sections are narrative only", "FY2021": "345%", "FY2020": "109%", "FY2019": "112%", "FY2018": "111%"}),
     ],
     note="FY2021 ADDED 2026-09-18 (interior-gap sweep): 345%, from the FY2021 Pillar 3 document's own "
          "infographic-style 'KEY METRICS' panel, printed p.3, where it is captioned 'LIQUIDITY RATIO' - the "
@@ -1033,7 +1055,10 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "Not disclosed in any of the 7 available Pillar 3 editions (FY2018, FY2019, FY2020, FY2021, FY2023 via comparative, FY2024, FY2025), any year - no numeric ratio or explicit exemption statement found."},
+    per_note={"MREL Ratio": "Not disclosed in any of the 7 available Pillar 3 editions (FY2018, FY2019, FY2020, FY2021, FY2023 via comparative, FY2024, FY2025), any year - no numeric ratio or explicit exemption statement found. GA-020 RE-CHECK 2026-09-19: full-text search of the 2013, 2018, 2019, 2020, 2021, 2024 and 2025 Pillar 3 PDFs returns zero 'MREL', 'loss-absorbing' or 'eligible liabilities' (against 64-97 hits for 'capital' in each); the image-only FY2022 accounts (no Pillar 3 that year) were OCR'd and also return zero."},
+    statements={"MREL Ratio": ("Not published – zero 'MREL'/'loss-absorbing' in every Pillar 3 edition (2013, "
+                               "2018-21, 2024-25; 2024 ed. carries FY2023 comparatives) and in the FY2022 accounts "
+                               "(OCR), searched 2026-09-19")},
 )
 
 # ---------------------------------------------------------------

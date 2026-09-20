@@ -92,7 +92,11 @@ PILLAR3_HISTORY_NOTE = (
     "publication, the website itself said available on request. That is a tension between TWO OF THE BANK'S OWN "
     "STATEMENTS - a Directors' report and its own web page - not between a claim and a hole in the archive. Both "
     "are recorded here as they stand; neither is treated as correcting the other, and no FY2023 Pillar 3 figure is "
-    "inferred from the Annual Report's assertion that one was published.\n"
+    "inferred from the Annual Report's assertion that one was published. COMMON CRAWL (2026-09-19) agrees: "
+    "mellibank.com and mellibank.co.uk, every host and path, in all 31 crawls CC-MAIN-2024-10 to CC-MAIN-2026-39 "
+    "hold compliance PDFs only (Wolfsberg, FSCS, AML, W-8BEN) and no Pillar 3 or report file; the /reports page "
+    "captured 3 November 2024 (CC-MAIN-2024-46) carries the same 'available on request' sentence and no report "
+    "link. FY2023 therefore stays Unreached.\n"
     "\n"
     "WHAT THIS MEANS FOR FUTURE PASSES, year by year:\n"
     "  FY2013-FY2019 and FY2023 - the Bank states the documents were (or would be) published. These are "
@@ -443,7 +447,46 @@ LCR = {"FY2025": "679%", "FY2024": "697%", "FY2023": "529%", "FY2022": "617%", "
 # same workbook already present an evidenced absence. See LEVERAGE_NOTE for the
 # richness-controlled evidence behind it.
 LEVERAGE = {"FY2016": "75%", "FY2014": "approximately 60%"}
-LEVERAGE.update({y: "Not publicly disclosed" for y in YEARS})
+# GA-020 (2026-09-19): all five Annual Reports FY2021-FY2025 (CH / HKMA scans) re-OCR'd at
+# 200 dpi. 'leverage' occurs only in the credit-risk sentence about borrowers' "liquidity,
+# leverage, profitability"; 'NSFR'/'stable funding' only in FY2025 narrative ("continues to
+# monitor ... Net Stable Funding Ratio"), never a figure; 'MREL'/'eligible liabilities'/
+# 'loss-absorb' zero in all five (richness: 'capital' 29-35 hits each). The Directors'
+# report says the Pillar 3 is 'available on request' (FY2021/22/24/25) - but for FY2023 it
+# says 'available on the Bank's website', and that edition was never obtained: mellibank.com
+# times out (2026-09-19), Wayback CDX from 2023 holds no report/Pillar 3 file (only
+# compliance PDFs), and the Pillar 3 is not a Companies House filing. FY2023 is therefore
+# UNREACHED, not "not published" - the one year a public edition may exist.
+def _ga020(term):
+    d = {y: ("Not published – no " + term + " in Melli AR " + y + " (OCR, 2026-09-19); Directors' report says "
+             "Pillar 3 is 'available on request' only.") for y in ["FY2025", "FY2024", "FY2022", "FY2021"]}
+    # GA-020 unreached pass, 2026-09-19: the Bank's own /reports page, in every Wayback
+    # capture from 4 Jun 2023 to 17 May 2026 (20230604145859, 20250209023014,
+    # 20260517153413), reads "Financial Statements and Pillar 3 Disclosures are available
+    # on request" and links no report file at all. So the edition the FY2023 AR points to
+    # is, on the Bank's own website, an on-request document: still UNREACHED, not
+    # "not published". Also tried: CDX of mellibank.com and mellibank.co.uk
+    # (matchType=domain, no mimetype filter: 266 + 294 URLs; newest Pillar 3 file is the
+    # 2016 edition); the HKMA VPR folder for the HK branch (100273) holds annual reports
+    # only; live site timed out again over HTTP/1.1.
+    # Common Crawl pass, 2026-09-19: mellibank.com and mellibank.co.uk (every host, every path) in all
+    # 31 crawls CC-MAIN-2024-10..2026-39 (self-hosted ZipNum lookup on data.commoncrawl.org): the only
+    # files are compliance PDFs (File/DownloadComplianceFiles?filename=Wolfsberg/FSCS/AML/W-8BEN...),
+    # no Pillar 3 or report file; the /reports page's CC-MAIN-2024-46 capture (2024-11-03, fetched,
+    # CC-MAIN-20241102231001-20241103021001-00360.warc.gz offset 370157579) carries the same 'available
+    # on request' sentence and no report link. Log: wayfinder/gaps/ga020/unreached/done/MELLI BANK.jsonl
+    d["FY2023"] = ("Unreached today – FY2023 AR (no " + term + ") points to the website, but mellibank.com/reports "
+                   "(Wayback Jun 2023-May 2026) says Pillar 3 is 'available on request'; site times out (2026-09-19); "
+                   "Common Crawl 2024-10..2026-39 checked.")
+    return d
+LEVERAGE.update(_ga020("leverage ratio"))
+NSFR_ST = dict(_ga020("NSFR figure"),
+               FY2016="Not published – Melli Pillar 3 FY2016 (read in full) says NSFR is used to manage funding risk "
+                      "but gives no figure.",
+               FY2014="Not published – Melli Pillar 3 FY2014 (read in full) does not mention stable funding.")
+MREL_ST = dict(_ga020("MREL figure"),
+               FY2016="Not published – Melli Pillar 3 FY2016 (read in full) does not mention MREL or eligible liabilities.",
+               FY2014="Not published – Melli Pillar 3 FY2014 (read in full) does not mention MREL or eligible liabilities.")
 
 CAPITAL_NOTE = (
     "FY2021-FY2025: eligible regulatory capital is 100% CET1 in the disclosed KPI/capital-management tables; "
@@ -742,10 +785,10 @@ bw.add_rwa_breakdown_sheet(
 
 metric("Leverage Ratio", "%", [("Leverage ratio (year-end, Basel III)", LEVERAGE)], note=LEVERAGE_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio (point-in-time, year-end)", LCR)], note=LCR_NOTE)
-metric("NSFR", "%", [("NSFR", {y: "Not publicly disclosed" for y in P3_YEARS})], note=NSFR_NOTE)
+metric("NSFR", "%", [("NSFR", NSFR_ST)], note=NSFR_NOTE)
 metric(
     "MREL Ratio", "%",
-    [("MREL Ratio", {y: "Not publicly disclosed" for y in P3_YEARS})],
+    [("MREL Ratio", MREL_ST)],
     note=GAP_NOTE + "\nSPECIFIC TO FY2016 AND FY2014: both Pillar 3 documents were read in full and neither "
                     "mentions MREL, minimum requirement for own funds and eligible liabilities, or resolution "
                     "planning of any kind - unsurprising for a sanctioned bank whose stated objective in both "

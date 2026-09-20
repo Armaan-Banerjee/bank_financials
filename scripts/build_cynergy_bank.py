@@ -1383,7 +1383,21 @@ RWA_BREAKDOWN_NOTE = (
     "re-rendered at 200 dpi and OCR'd page by page on 2026-09-18, and it contains no exposure-class table, "
     "no risk-category split and in fact no risk-weighted-asset amount of any kind. The entity published no "
     "standalone Pillar 3 for FY2016, and the earliest edition that exists (2018) reaches back only to "
-    "FY2017. FY2020's own Pillar 3 document does disclose a "
+    "FY2017.\n"
+    "RE-CHECKED 2026-09-19 AND NOW STATED IN THE CELL RATHER THAN LEFT BLANK. FY2016 is an INTERIOR "
+    "column on this sheet - FY2017 and FY2015 both carry figures - so it cannot be trimmed away, and an "
+    "empty cell there is indistinguishable from one nobody looked at. The check added this pass was aimed "
+    "at the one thing the OCR of the Annual Report could not settle: whether the PREDECESSOR entity "
+    "published a Pillar 3 somewhere other than the current site, since Bank of Cyprus UK Limited traded on "
+    "its own domain until the 2018 sale to Cynergy Capital. A Wayback CDX sweep of the whole "
+    "bankofcyprus.co.uk domain filtered for 'pillar' returns ZERO rows - and the POSITIVE CONTROL that "
+    "makes that zero mean anything is a second sweep of the same domain filtered for '.pdf', which "
+    "returns 120 archived PDFs (account conditions, tariffs, application forms, branch maps). The archive "
+    "holds that site's document shelf richly and carries no Pillar 3 of any year on it. The same sweep of "
+    "cynergybank.co.uk returns only the 2018-2022 editions already cited here. DELIBERATELY NOT RELIED "
+    "ON: the Cyprus parent (bankofcyprus.com) does publish Pillar 3 disclosures, but they are the Cypriot "
+    "group's own and carry no UK subsidiary block; using one would be a cross-entity substitution.\n"
+    "FY2020's own Pillar 3 document does disclose a "
     "summary of on-balance-sheet credit-risk RWA by exposure class (p.25); those figures are now included "
     "below as a separate credit-risk section. They are not the complete Total RWAs figure because the source "
     "does not provide the corresponding operational-risk/other Pillar 1 components at this granularity. FY2014/FY2015 "
@@ -1433,7 +1447,13 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Credit risk RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2017": 629000, "FY2015": 385977, "FY2014": 355707}),
         ("DATA", "Operational risk RWA (derived from disclosed capital requirement x12.5)",
          {"FY2015": 30838, "FY2014": 29938}),
-        ("TOTAL", "Total RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2017": 629000, "FY2015": 416815, "FY2014": 385645}),
+        # FY2016 carries a recorded absence rather than a blank (2026-09-19).
+        # It is an INTERIOR column here - FY2017 and FY2015 both carry figures -
+        # so it cannot be trimmed, and an empty interior column reads exactly
+        # like one nobody examined. See RWA_BREAKDOWN_NOTE for the evidence.
+        ("TOTAL", "Total RWA", {"FY2019": 1066000, "FY2018": 742000, "FY2017": 629000,
+                                "FY2016": "Not published - no FY2016 Pillar 3; AR (OCR'd in full) states no RWA",
+                                "FY2015": 416815, "FY2014": 385645}),
     ],
     sources_text=p3_sources() + "\nFY2017: Cynergy Bank Pillar 3 Disclosures 2018, 'Table 9 - Summary of On Balance Sheet Credit Risk Exposure, As at 31 December 2017', p.10 (source reports £m; converted to £'000; Central governments nil, Institutions 12, Corporates 151, Retail 75, Secured by mortgages 350, Exposures in default 6, High risk 14, Other items 21, Total 629) - " + P3_2018_URL
                  + "\nFY2020: Cynergy Bank Pillar 3 Disclosures 2020, 'Summary of On Balance Sheet Credit Risk Exposure', p.25 (source reports £m; converted to £'000) - " + P3_2020_URL
@@ -1507,8 +1527,23 @@ metric(
          "the only source for that year.\n\n" + NSFR_SDDT_NOTE,
 )
 
+# GA-020 (2026-09-19): every MREL cell now names its evidence. The six Pillar 3 editions (FY2018-FY2023) were
+# re-enumerated from the Contentful assets on P3_INDEX_URL and text-searched, as were the FY2023-FY2025 Annual
+# Reports: 'MREL' returns zero hits in all nine documents.
+_MREL_ST = {
+    **{y: ("Not published – no Pillar 3 after SDDT approval 17 Jan 2025 (AR2024 p.71, AR2025 p.45); that "
+           "year's Annual Report has no MREL figure ('MREL' 0 hits, 2026-09-19)") for y in ("FY2025", "FY2024")},
+    **{y: (f"Not published – the {y} Pillar 3 (Bank's Contentful page, re-fetched 2026-09-19) prints no MREL "
+           "figure ('MREL' 0 hits)") for y in ("FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018")},
+    "FY2017": ("Not published – no FY2017 edition; the FY2018 Pillar 3 prints FY2017 comparatives and no MREL "
+               "figure ('MREL' 0 hits, 2026-09-19)"),
+    **{y: ("Not published – no Pillar 3 exists for this year (Wayback sweep of bankofcyprus.co.uk: 0 Pillar 3 "
+           "among 120 archived PDFs; see RWA Breakdown note); no later edition prints MREL")
+       for y in ("FY2016", "FY2015", "FY2014")},
+}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE + "\n\n" + SDDT_NOTE},
+    statements={"MREL Ratio": _MREL_ST},
 )
 
 # ---------------------------------------------------------------

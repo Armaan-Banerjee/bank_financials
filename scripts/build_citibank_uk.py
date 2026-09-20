@@ -706,9 +706,18 @@ metric("NSFR", "£m / %", [
     ("Total required stable funding", {"FY2025": 175.2, "FY2024": 312.0, "FY2023": 1018.8, "FY2022": 1839.5}),
     ("NSFR ratio", {"FY2025": "306.3%", "FY2024": "467.9%", "FY2023": "401.6%", "FY2022": "342.2%"}),
 ], note="NSFR was implemented in the UK reporting framework from 2022; no FY2021/FY2020/FY2019 NSFR figure is populated - CUKL's own FY2019 and FY2020 Pillar 3 reports both confirm NSFR was not yet a binding requirement, and its FY2022 report prints 'N/A' in the FY2021 comparative column of rows 18-20 with a footnote saying the disclosure is new and no comparatives are being provided.")
+# GA-020 (2026-09-19): every edition (P3_2019..P3_2025_URL; FY2022 is image-only
+# and was OCR'd) was re-read for its MREL sentence. Each states that the Bank of
+# England has set CUKL's MREL requirement equal to its minimum capital
+# requirement and that no MREL-eligible debt has been issued.
+MREL_ST = {y: (f"Not applicable – CUKL {y} Pillar 3 (p.{pg}): the Bank of England set CUKL's MREL equal to its "
+               "minimum capital requirement; no MREL-eligible debt issued; no ratio disclosed")
+           for y, pg in [("FY2025", 8), ("FY2024", 8), ("FY2023", 9), ("FY2022", 10), ("FY2021", 11),
+                         ("FY2020", 12), ("FY2019", 10)]}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     P3_SOURCES,
+    statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "The 2021 report states that no MREL eligible debt had been issued. The 2023 report states that the BoE set CUKL's MREL requirement equal to its minimum capital requirement and that no MREL eligible debt had been issued as at 31 December 2023; no numeric MREL ratio is disclosed. The 2019 report states MREL was introduced as an internal CUKL requirement effective 1 January 2020, equal to CUKL's minimum capital requirement, and that no MREL eligible debt had been issued - consistent with FY2020 and all later years."},
 )
 

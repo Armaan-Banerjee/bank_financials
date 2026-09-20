@@ -435,8 +435,15 @@ km1_rows = [
      {"FY2025": 4062395, "FY2024": 4133905}),
     ("DATA", "Total exposure measure excluding claims on central banks" + USD,
      {"FY2022": 3625281, "FY2021": 3482137}),
+    # FY2023 carries a recorded absence rather than a blank (2026-09-19). This
+    # row is chosen deliberately: KM1 FY2023 and the Leverage Ratio sheet's
+    # FY2023 are BOTH empty today, so no verifier comparison exists here to
+    # lose when both sides become text. Putting it on a ratio row that the
+    # single-metric sheets do fill for FY2023 would have cost a real check.
     ("DATA", "Leverage ratio excluding claims on central banks (%)",
-     {"FY2025": "13.21%", "FY2024": "12.13%", "FY2022": "13.09%", "FY2021": "12.74%"}),
+     {"FY2025": "13.21%", "FY2024": "12.13%",
+      "FY2023": "Not available - no FY2023 edition retrievable; stable URL overwritten",
+      "FY2022": "13.09%", "FY2021": "12.74%"}),
     ("SECTION", "Liquidity Coverage Ratio ('LCR')", {}),
     ("DATA", "Total high-quality liquid assets (HQLA) (Weighted value average)" + GBP,
      {"FY2025": 731707, "FY2024": 925985}),
@@ -617,13 +624,15 @@ rwa_breakdown_rows = [
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 2449107, "FY2024": 2342000, "FY2022": 2020121, "FY2021": 1929456}),
     ("DATA", "Counterparty credit risk - CCR", {"FY2025": 12096, "FY2024": 11448, "FY2022": 21783, "FY2021": 3162}),
     ("DATA", "Operational risk", {"FY2025": 163201, "FY2024": 150357, "FY2022": 89736, "FY2021": 102240}),
-    ("TOTAL", "Total", {"FY2025": 2624404, "FY2024": 2503806, "FY2022": 2131640, "FY2021": 2034858}),
+    ("TOTAL", "Total", {"FY2025": 2624404, "FY2024": 2503806,
+                        "FY2023": "Not available - no FY2023 Pillar 3 retrievable; accounts give the total only",
+                        "FY2022": 2131640, "FY2021": 2034858}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="National Bank of Kuwait (International) Plc — RWA Breakdown",
     subtitle="Pillar 3 UK OV1 template. £'000 (FY2024-FY2025) / US$'000 (FY2021-FY2022) - see Currency Note. "
-              "FY2023 not publicly disclosed - no FY2023 Pillar 3 document was located.",
+              "FY2023 not available - no FY2023 Pillar 3 edition is retrievable (see source note).",
     rows=rwa_breakdown_rows,
     sources_text=p3_sources(
         "RWA Breakdown (Table 4: \"Pillar 1 RWA capital requirement\"): FY2025/FY2024 - official Pillar 3 Disclosure "
@@ -734,7 +743,27 @@ ARCHIVED_P3_NOTE = (
     "4. The FY2023 statutory accounts (NBKI-Financial-Statement-2023.pdf) were re-read: Note 28.2 'Liquidity "
     "Risk' is a contractual-maturity table only, and neither the term LCR/NSFR nor any leverage ratio appears "
     "anywhere in that document (nor in the FY2024 accounts).\n"
-    "Conclusion unchanged: NBKI's FY2023 Leverage Ratio, LCR and NSFR are genuinely not publicly disclosed."
+    "Conclusion unchanged: NBKI's FY2023 Leverage Ratio, LCR and NSFR are genuinely not publicly disclosed.\n\n"
+    "FIFTH VERIFICATION, AND A CORRECTION TO HOW THIS GAP IS DESCRIBED (2026-09-19). Two of the four checks "
+    "above were re-run independently from the documents rather than from these notes, and both hold: "
+    "(a) the 2024-02-17 capture was re-downloaded (HTTP 200, application/pdf, %PDF verified, 335,231 bytes) "
+    "and its own body text reads \"...for NBKI Limited ('NBKI' or 'the Bank') as of 31 December 2022\", so the "
+    "\"December 2023\" on its cover is indeed a posting date and not a reporting date; (b) the 2024-08-04 "
+    "capture of \"Pillar III Disclosures 2023.pdf\" was re-downloaded and its Table EU KM1 is headed \"in "
+    "millions euros\" with CET1 220,981 - NBK France SA, not this entity, exactly as recorded above. A fresh "
+    "domain-wide Wayback CDX sweep of nbk.com for 'pillar' returned 51 rows and no NBKI-London item beyond the "
+    "stable URL and the 2014 file.\n"
+    "THE CORRECTION is to the phrase \"shown absent by enumeration ... treat this gap as closed\" used in the "
+    "RWA Breakdown note. Enumeration shows that no FY2023 vintage was ever ARCHIVED, which - given that this "
+    "Bank overwrites one stable URL rather than minting a per-year file - is what would be observed whether or "
+    "not an FY2023 edition was published. The Wayback Machine's coverage of that URL is four captures in six "
+    "years, two of them error pages. So the defensible finding is UNREACHED, not never-published: no FY2023 "
+    "edition is retrievable today by any route tried, and nothing shows the Bank failed to publish one. The "
+    "FY2023 cells on this sheet, on LCR, on NSFR, on RWA Breakdown and on KM1 now say \"Not available\" rather "
+    "than standing blank, so that a reader can tell a limit on our reach from a fact about the Bank. What IS a "
+    "fact about the Bank, separately established and unchanged: the FY2023 statutory accounts (Note 31 "
+    "'Capital management') print the aggregate RWA figure and nothing else - no LCR, no NSFR, no leverage "
+    "ratio, and no category-level RWA split."
 )
 
 metric(
@@ -742,9 +771,9 @@ metric(
     "£000 / $000 / %",
     [
         ("Total exposure measure excluding claims on central banks", {"FY2025": 4062395, "FY2024": 4133905, "FY2022": 3625281, "FY2021": 3482137}),
-        ("Leverage ratio excluding claims on central banks", {"FY2025": "13.21%", "FY2024": "12.13%", "FY2022": "13.09%", "FY2021": "12.74%"}),
+        ("Leverage ratio excluding claims on central banks", {"FY2025": "13.21%", "FY2024": "12.13%", "FY2023": "Not available - FY2023 Pillar 3 unretrievable; none in the FY2023 accounts", "FY2022": "13.09%", "FY2021": "12.74%"}),
     ],
-    "FY2023: not publicly disclosed - see note below. FY2024-FY2025 are £000, from the official Pillar 3 Table 3, "
+    "FY2023: not available - no FY2023 Pillar 3 edition is retrievable; see note below. FY2024-FY2025 are £000, from the official Pillar 3 Table 3, "
     "p.16. FY2021-FY2022 are US$000, from archived Pillar 3 disclosures - see note below.\n\n" + ARCHIVED_P3_NOTE,
 )
 
@@ -754,17 +783,17 @@ metric(
     [
         ("Total HQLA (weighted value average)", {"FY2025": 731707, "FY2024": 925985, "FY2022": 659703, "FY2021": 702588}),
         ("Total net cash outflows (adjusted value)", {"FY2025": 147299, "FY2024": 215454, "FY2022": 220185, "FY2021": 209655}),
-        ("Liquidity Coverage Ratio (adjusted value)", {"FY2025": "497%", "FY2024": "430%", "FY2022": "300%", "FY2021": "227%"}),
+        ("Liquidity Coverage Ratio (adjusted value)", {"FY2025": "497%", "FY2024": "430%", "FY2023": "Not available - FY2023 Pillar 3 unretrievable; none in the FY2023 accounts", "FY2022": "300%", "FY2021": "227%"}),
     ],
-    "FY2023: not publicly disclosed - see note below. FY2024-FY2025 are £000, from the official Pillar 3 Table 3, "
+    "FY2023: not available - no FY2023 Pillar 3 edition is retrievable; see note below. FY2024-FY2025 are £000, from the official Pillar 3 Table 3, "
     "p.16. FY2021-FY2022 are US$000, from archived Pillar 3 disclosures - see note below.\n\n" + ARCHIVED_P3_NOTE,
 )
 
 metric(
     "NSFR",
     "%",
-    [("Net Stable Funding Ratio", {"FY2025": "120%", "FY2024": "127%", "FY2022": "127%", "FY2021": "114%"})],
-    "FY2023: not publicly disclosed - see note below. FY2024-FY2025 are from the official Pillar 3 Table 3, p.16. "
+    [("Net Stable Funding Ratio", {"FY2025": "120%", "FY2024": "127%", "FY2023": "Not available - FY2023 Pillar 3 unretrievable; none in the FY2023 accounts", "FY2022": "127%", "FY2021": "114%"})],
+    "FY2023: not available - no FY2023 Pillar 3 edition is retrievable; see note below. FY2024-FY2025 are from the official Pillar 3 Table 3, p.16. "
     "FY2021-FY2022 are from archived Pillar 3 disclosures - see note below. FY2022's NSFR (127%) and FY2024's "
     "NSFR (127%) are coincidentally identical values from two different years/documents.\n\n" + ARCHIVED_P3_NOTE,
 )
@@ -772,7 +801,42 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources("No MREL ratio or MREL requirement was numerically disclosed in the reviewed entity-level documents."),
-    per_note={"MREL Ratio": "No MREL ratio or requirement was located in the FY2021–FY2025 annual reports or the official Pillar 3 disclosure."},
+    # GA-020 (2026-09-19): the three reachable Pillar 3 editions (live FY2025 with
+    # 2024 comparatives; Wayback 2024-02-17 = FY2022 with 2021 comparatives;
+    # Wayback 2023-12-09 = FY2021) and all five sets of financial statements were
+    # full-text searched for MREL / loss-absorbing / eligible liabilities / 'minimum
+    # requirement for own funds': zero hits. FY2023's own Pillar 3 was overwritten
+    # at NBKI's single stable URL and never captured, so FY2023 stays unreached.
+    statements={"MREL Ratio": {
+        "FY2025": "Not published – NBKI Pillar 3 31 Dec 2025 and FY2025 financial statements (full text searched 2026-09-19) contain no MREL figure or reference",
+        "FY2024": "Not published – FY2025 Pillar 3 (with 2024 comparatives) and FY2024 financial statements (full text searched 2026-09-19) contain no MREL reference",
+        # GA-020 unreached pass (2026-09-19), second attempt, still UNREACHED. The stable
+        # URL's full capture list is 2023-12-09 (PDF), 2024-02-17 (PDF), 2025-02-14 and
+        # 2025-06-14 (both text/html error pages): nothing in the window when the FY2023
+        # edition was live. archive.ph/newest for both www. and bare hosts: 404 (control
+        # OK). The NBKI 'financial-reports' page (captures 2024-02, 2024-10, 2025-01 and
+        # ?year=2023) links only the financial statements, all on nbk.com/dam - no other
+        # file host. The two per-year 'Pillar III Disclosures 2023/2024' files on
+        # nbk.com/dam are NBK France SA (EU KM1, euros) and were re-read and rejected.
+        # Common Crawl pass (2026-09-19): nbk.com/dam/* in all 16 crawls CC-MAIN-2024-10..2025-26
+        # (self-hosted ZipNum lookup on data.commoncrawl.org). The stable URL was captured only in
+        # CC-2025-08 and CC-2025-26, both NBK's WAF block page ('The requested URL has been blocked
+        # by NBK security policy'); no 2024 crawl captured it. jcr:6ed10da3 'Pillar III Disclosures
+        # 2023.pdf' (CC-2024-33, fetched, complete 86,789-byte PDF) is again NBK France (NBKF, EU KM1,
+        # EUR) - rejected. Log: wayfinder/gaps/ga020/unreached/done/NATIONAL BANK OF KUWAIT INTERNATIONAL.jsonl
+        "FY2023": ("Unreached today – FY2023 Pillar 3 overwritten at NBKI's stable URL; no Wayback (captures skip "
+                   "Mar 2024-Jan 2025) or archive.ph copy; nbk.com/dam CDX & NBKI report pages: none (2026-09-19); "
+                   "Common Crawl 2024-10..2025-26 checked"),
+        "FY2022": "Not published – NBKI Pillar 3 at 31/12/22 (Wayback 2024-02-17) and FY2022 financial statements contain no MREL figure or reference",
+        "FY2021": "Not published – NBKI Pillar 3 December 2021 (Wayback 2023-12-09) and FY2021 financial statements contain no MREL figure or reference",
+    }},
+    per_note={"MREL Ratio": "No MREL ratio or requirement was located in the FY2021–FY2025 annual reports or the official Pillar 3 disclosure.\n"
+                            "FY2023 COMMON CRAWL CHECK (2026-09-19): every Common Crawl crawl CC-MAIN-2024-10 to CC-MAIN-2025-26 "
+                            "was searched for nbk.com/dam/* (www. and bare). NBKI's stable Pillar 3 URL "
+                            "(jcr:19757e7d.../Pillar_III_Disclosures.pdf) appears only in CC-MAIN-2025-08 and CC-MAIN-2025-26, "
+                            "and both records are NBK's web-firewall block page, not a document; no 2024 crawl captured it. "
+                            "The file 'Pillar III Disclosures 2023.pdf' (jcr:6ed10da3, CC-MAIN-2024-33, retrieved complete) "
+                            "is NBK France's EU KM1 in euros and is not NBKI's; it is not used. FY2023 stays Unreached."},
 )
 
 def bs_value(label):

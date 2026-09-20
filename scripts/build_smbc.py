@@ -1585,7 +1585,14 @@ bw.add_not_disclosed_metric_sheets(
     p3_sources(RATIO_PAGES),
     per_note={"MREL Ratio": "No MREL disclosure of any kind (numeric or qualitative) appears in any of the 12 "
                              "years' Pillar 3 disclosures (FY2014-FY2026) - SMBC BI does not appear to be subject "
-                             "to a disclosed MREL requirement."},
+                             "to a disclosed MREL requirement. GA-020 RE-CHECK 2026-09-19: all 13 editions "
+                             "(31 Mar 2014 - 31 Mar 2026, the P3_*_URL documents above) full-text searched; zero "
+                             "'MREL'. The only related hits are the CCA template title 'own funds instruments and "
+                             "eligible liabilities instruments' (FY2022+) and a narrative on SMFG's Japanese TLAC / "
+                             "single-point-of-entry strategy (FY2025-FY2026 s.5.4/5.5) - no ratio or requirement "
+                             "for SMBC BI."},
+    statements={"MREL Ratio": ("Not published – zero 'MREL' in every Pillar 3 edition, 31 Mar 2014 to 31 Mar 2026 "
+                               "(full text searched 2026-09-19); only SMFG's Japanese TLAC narrative appears")},
 )
 
 # ---------------------------------------------------------------

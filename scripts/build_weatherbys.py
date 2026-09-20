@@ -43,17 +43,28 @@ P3_URLS = {
     "FY2021": "https://www.weatherbys.bank/app/uploads/2022/05/Pillar-3-2021-v2.0-Weatherbys-Bank.pdf",
     "FY2020": "https://www.weatherbys.bank/app/uploads/2021/08/Pillar3-2020.pdf",
 }
+# FY2019 Pillar 3: only surviving copy is this truncated Wayback capture (pp.1-13 of 16 rebuilt 2026-09-19).
+FY2019_P3_WAYBACK_URL = "https://web.archive.org/web/20200921164839/https://www.weatherbys.bank/WeatherbysBank/media/About-Us/WBL-Pillar3-Disclosures.pdf"
 CH_URL = f"https://find-and-update.company-information.service.gov.uk/company/{COMPANY_NO}"
 PRA_URL = "https://www.bankofengland.co.uk/prudential-regulation/authorisations/which-firms-does-the-pra-regulate"
 
 PRE2021_NOTE = (
     "FY2015-FY2020 figures are sourced from Weatherbys Bank Limited's Companies-House-filed Group "
     "accounts (CH_AR_URLS above), not from weatherbys.bank (which retains only ~5 years of annual "
-    "reports); no separate Pillar 3 disclosure document was located for FY2015-FY2019 (a single "
-    "pre-2021 Pillar 3 PDF was found via the Wayback Machine, archived 2020-09-21, but the archive's "
-    "own capture is truncated mid-file - 1,048,576 of 1,264,248 original bytes - and unrecoverable; "
-    "this is a genuine access gap, not a disclosure gap, so those years' capital/RWA metric sheets are "
-    "left blank rather than estimated. The intact FY2020 document does, however, include FY2019 "
+    "reports). FY2019's own Pillar 3 ('Pillar 3 Disclosures For Year Ended 31st December 2019', dated "
+    "April 2020, a 16-page scanned document) survives only as a Wayback Machine capture (20200921164839 of "
+    "weatherbys.bank/WeatherbysBank/media/About-Us/WBL-Pillar3-Disclosures.pdf) truncated at 1,048,576 of "
+    "1,264,248 bytes. It was PARTLY RECOVERED on 2026-09-19: each page is one self-contained CCITT image, "
+    "and pages 1-13 lie wholly before the cut, so the PDF was rebuilt from those 13 complete page objects "
+    "and read off the page images; pages 14-16 (liquidity, remaining risk sections, remuneration) are lost. "
+    "FY2019 capital, RWA and leverage figures come from its Table 1 (p.5) and Table 2 (p.6), Group column; "
+    "its Table 6 (p.8, 'At 31 Dec 2019') fills FY2019's regulatory credit risk exposures on the Asset Quality "
+    "sheet; its Tables 3-4 (pp.6-7) print Pillar 1 capital requirements only, recorded in the RWA Breakdown "
+    "note rather than converted into RWAs. "
+    "No FY2015-FY2018 Pillar 3 was recoverable: the FY2016-FY2018 editions are named on archived "
+    "corporate-information pages (Weatherbys-Bank-Limited-Pillar-3-Disclosures-2016/2017/2018.pdf) but "
+    "were never captured, so those years' capital/RWA metric sheets are left blank rather than estimated "
+    "- an access gap, not a disclosure gap. The intact FY2020 document includes FY2019 "
     "comparative LCR (586%) and NSFR (207.6%), which are populated. FY2020's own Pillar 3 Disclosures document (Weatherbys Bank, "
     "Pillar3-2020.pdf) was independently located and is intact, so FY2020's Pillar 3 metrics ARE "
     "populated. Terminology note: Weatherbys' FY2020 Pillar 3 disclosure already reports capital under "
@@ -385,6 +396,11 @@ AQ_SOURCES = (
     f"FY2020 impairment/NPL from Group accounts made up to 31 Dec 2020, p.34 (Note 15/16) and Pillar 3 Disclosures "
     f"2020, Table 6, p.8 - {CH_AR_URLS['FY2020']} and {P3_URLS['FY2020']}; "
     f"FY2019 impairment/NPL from the same Group accounts' FY2019 comparative column - {CH_AR_URLS['FY2020']}; "
+    "FY2019 regulatory credit risk exposure by class from Pillar 3 Disclosures For Year Ended 31st December 2019 "
+    "(April 2020), Table 6 'Credit Risk Exposures', p.8, 'At 31 Dec 2019' column (Group and Solo, one column) - "
+    "Wayback Machine capture 20200921164839, truncated at 1,048,576 of 1,264,248 bytes; the PDF was rebuilt on "
+    "2026-09-19 from the capture's first 13 complete page images (pp.14-16 lost) and read off the rendered page "
+    f"- {FY2019_P3_WAYBACK_URL}; "
     f"FY2018/FY2017 impairment/NPL from Group accounts made up to 31 Dec 2018, p.33 (Note 15/16) - {CH_AR_URLS['FY2018']}; "
     f"FY2016/FY2015 impairment/NPL from Group accounts made up to 31 Dec 2016, p.25 (Note 15/16) - {CH_AR_URLS['FY2016']}.\n\n"
     + ENTITY_NOTE
@@ -400,9 +416,19 @@ AQ_SOURCES = (
     + " FY2015-FY2019's loan loss provision (used for both the 'Balance Sheet' and 'Note 16 cumulative' rows, "
     "since the Companies House Group accounts for those years give only the single Note 16 movement table, "
     "not a separate Balance Sheet-note split) and NPL figures are Group accounts Note 15/16 disclosures, not "
-    "Pillar 3 figures (no pre-FY2020 Pillar 3 document was recoverable - see PRE2021_NOTE); the regulatory "
-    "credit risk exposure section (Pillar 3 Table 6) is therefore populated for FY2020 only and left blank for "
-    "FY2015-FY2019, a genuine access gap rather than a non-disclosure."
+    "Pillar 3 figures (no FY2015-FY2018 Pillar 3 was recoverable and FY2019's was only partly recovered - see "
+    "PRE2021_NOTE); within FY2015-FY2020 the regulatory credit risk exposure section (Pillar 3 Table 6) is "
+    "populated for FY2020 and FY2019 and left blank for FY2015-FY2018, an access gap rather than a "
+    "non-disclosure. FY2019 (added 2026-09-19): transcribed from Table 6, p.8 of the recovered FY2019 edition, "
+    "'At 31 Dec 2019' column - the same column the FY2020 edition's Table 6 prints for FY2020 (the 'Average "
+    "2019' column is not used). Read twice from two independent renderings (150dpi full page, 300dpi crop), "
+    "digit-for-digit agreement. The FY2019 table prints exactly the FY2020 edition's row set and wording: its "
+    "'Secured by mortgages on property' (450,900) sits on this sheet's 'Secured on real estate property' row, "
+    "and 'Credit Valuation Adjustment' (759) on 'Credit Value Adjustment', as FY2020's do. FY2019 prints no "
+    "'CBILs - Government Guaranteed' row (the scheme began in 2020), so that cell is blank. The ten printed "
+    "lines foot to the printed Total 985,516. Corroboration from the same page: Table 5 'Provisions for Bad & "
+    "Doubtful Debts' (Group and Solo) prints a balance at 31 December 2019 of 1,961 (specific 779, collective "
+    "1,182), equal to this sheet's FY2019 accounts-sourced provision."
 )
 
 def npl_ratio(npl, gross):
@@ -426,66 +452,122 @@ aq_rows = [
     ("DATA", "NPL ratio (non-performing loans / gross loans)", {y: npl_ratio(aq_npl[y], aq_gross[y]) for y in YEARS}),
     ("DATA", "Coverage ratio (total provisions / non-performing loans)", {y: coverage_ratio(aq_prov_total[y], aq_npl[y]) for y in YEARS}),
     ("SECTION", "Regulatory credit risk exposure by class (Pillar 3 Table 6, before credit risk mitigation)", {}),
-    ("DATA", "Central Government and Central Banks", {"FY2025": None, "FY2024": 760594, "FY2023": 645464, "FY2022": 646149, "FY2021": 577637, "FY2020": 287639}),
-    ("DATA", "Financial institutions", {"FY2024": 65986, "FY2023": 40329, "FY2022": 48477, "FY2021": 38362, "FY2020": 56136}),
-    ("DATA", "Covered Bonds", {"FY2024": 86742, "FY2023": 60875, "FY2022": 67566, "FY2021": 51916, "FY2020": 69489}),
-    ("DATA", "Multilateral Development Banks", {"FY2024": 38424, "FY2023": 29455, "FY2022": 37092, "FY2021": 43634, "FY2020": 48783}),
-    ("DATA", "Corporates", {"FY2024": 0, "FY2023": 0, "FY2022": 15, "FY2021": 99, "FY2020": 232}),
-    ("DATA", "Retail", {"FY2024": 273745, "FY2023": 239489, "FY2022": 196497, "FY2021": 131874, "FY2020": 150260}),
+    ("DATA", "Central Government and Central Banks", {"FY2025": None, "FY2024": 760594, "FY2023": 645464, "FY2022": 646149, "FY2021": 577637, "FY2020": 287639, "FY2019": 221447}),
+    ("DATA", "Financial institutions", {"FY2024": 65986, "FY2023": 40329, "FY2022": 48477, "FY2021": 38362, "FY2020": 56136, "FY2019": 47020}),
+    ("DATA", "Covered Bonds", {"FY2024": 86742, "FY2023": 60875, "FY2022": 67566, "FY2021": 51916, "FY2020": 69489, "FY2019": 69294}),
+    ("DATA", "Multilateral Development Banks", {"FY2024": 38424, "FY2023": 29455, "FY2022": 37092, "FY2021": 43634, "FY2020": 48783, "FY2019": 23020}),
+    ("DATA", "Corporates", {"FY2024": 0, "FY2023": 0, "FY2022": 15, "FY2021": 99, "FY2020": 232, "FY2019": 380}),
+    ("DATA", "Retail", {"FY2024": 273745, "FY2023": 239489, "FY2022": 196497, "FY2021": 131874, "FY2020": 150260, "FY2019": 136209}),
     ("DATA", "CBILs - Government Guaranteed", {"FY2024": 15644, "FY2023": 10628, "FY2022": 12793, "FY2021": 13240}),
-    ("DATA", "Secured on real estate property", {"FY2024": 578244, "FY2023": 571853, "FY2022": 568369, "FY2021": 581162, "FY2020": 528553}),
-    ("DATA", "Other items", {"FY2024": 42329, "FY2023": 35556, "FY2022": 22514, "FY2021": 34363, "FY2020": 29989}),
-    ("DATA", "Exposures In Default", {"FY2024": 12703, "FY2023": 14760, "FY2022": 9269, "FY2021": 7139, "FY2020": 4403}),
-    ("DATA", "Credit Value Adjustment", {"FY2024": 6164, "FY2023": 1784, "FY2021": 1549, "FY2020": 598}),
-    ("TOTAL", "Total regulatory credit risk exposure", {"FY2024": 1880575, "FY2023": 1650193, "FY2022": 1608741, "FY2021": 1480975, "FY2020": 1176082}),
+    ("DATA", "Secured on real estate property", {"FY2024": 578244, "FY2023": 571853, "FY2022": 568369, "FY2021": 581162, "FY2020": 528553, "FY2019": 450900}),
+    ("DATA", "Other items", {"FY2024": 42329, "FY2023": 35556, "FY2022": 22514, "FY2021": 34363, "FY2020": 29989, "FY2019": 30101}),
+    ("DATA", "Exposures In Default", {"FY2024": 12703, "FY2023": 14760, "FY2022": 9269, "FY2021": 7139, "FY2020": 4403, "FY2019": 6386}),
+    ("DATA", "Credit Value Adjustment", {"FY2024": 6164, "FY2023": 1784, "FY2021": 1549, "FY2020": 598, "FY2019": 759}),
+    ("TOTAL", "Total regulatory credit risk exposure", {"FY2024": 1880575, "FY2023": 1650193, "FY2022": 1608741, "FY2021": 1480975, "FY2020": 1176082, "FY2019": 985516}),
 ]
 
 RWA_SOURCES = (
-    "Sources - Weatherbys Bank Limited Pillar 3 Disclosures, Group/Solo (identical), Tables 3-4, GBP'000: "
-    f"FY2024, pp.6-7 - {P3_URLS['FY2024']}; FY2023, p.7 - {P3_URLS['FY2023']}; FY2022, pp.7-8 - {P3_URLS['FY2022']}; "
-    f"FY2021, pp.5-7 - {P3_URLS['FY2021']}.\n\n"
+    "Sources - Weatherbys Bank Limited Pillar 3 Disclosures, Group/Solo, GBP'000: "
+    f"FY2024, Tables 3-4 p.7 - {P3_URLS['FY2024']}; FY2023, Tables 3-4 p.7 - {P3_URLS['FY2023']}; "
+    f"FY2022, Tables 3-4 p.8 - {P3_URLS['FY2022']}; FY2021, Table 3 p.6 and Table 4 p.7 - {P3_URLS['FY2021']}; "
+    f"FY2020, Table 3 p.6 and Table 4 p.7 - {P3_URLS['FY2020']}; FY2019, Table 3 p.6 and Table 4 p.7 - "
+    f"{FY2019_P3_WAYBACK_URL}.\n\n"
     + ENTITY_NOTE
-    + " Weatherbys does not publish a UK OV1-style risk-weighted-exposure-amount table by category - instead "
-    "each Pillar 3 disclosure gives the minimum capital requirement per credit risk exposure class (Table 3) "
-    "and per Pillar 1 risk type (Table 4). This RWA Breakdown derives each category's risk-weighted-asset "
-    "equivalent by dividing its capital requirement by the disclosed conversion rate: FY2021's Table 3 header "
-    "explicitly states 'Minimum Capital Requirement 8%' (the standard CRR Pillar 1 rate, confirmed in the "
-    "accompanying text - 'a factor of 8% is applied to the risk weighted exposure amounts'), so FY2021 uses "
-    "8%. From FY2022 onward, the PRA set the Bank's own Total Capital Requirement (TCR) at 9% of RWAs (per "
-    "the FY2022 disclosure's own text: 'In September 2022 the PRA set the Bank's TCR at 9% of RWAs plus a "
-    "static add-on of £4.4m'), and Table 3/4's own 'minimum capital requirement' figures for FY2022-FY2024 "
-    "are computed at this firm-specific 9% rate rather than the generic 8% - confirmed by summing each year's "
-    "credit-risk and operational-risk capital requirement components and dividing by 9%, which reconciles to "
-    "the separately and directly disclosed Total RWAs figure (see the Total RWAs sheet) to within 0.3% every "
-    "year, versus a >10% mismatch at 8%. This is therefore a derived breakdown, not a directly published "
-    "RWEA/OV1 table - the small remaining gap to the disclosed Total RWAs headline (FY2021: £5k/0.001%; "
-    "FY2022: £1,349k/0.28%; FY2023: £199k/0.04%; FY2024: £1,113k/0.18%) reflects rounding in the underlying, "
-    "more precise Bank calculation. The Static Pension add-on (a Pillar 2 item, not RWA-based) is excluded "
-    "from this breakdown. FY2025 is blank because no FY2025 Pillar 3 disclosure was located (same access gap "
-    "already noted on the other Pillar 3 sheets). "
-    "FY2020 uses the same 8% conversion rate as FY2021 (its own Table 3 header states 'Minimum Capital "
-    "Requirement 8%', predating the PRA's September-2022 9%-TCR determination); it reconciles to the directly "
-    "disclosed Total RWAs figure (401,130) to within 0.01% (FY2020: GBP40k/0.01%). FY2015-FY2019 are blank - "
-    "no Pillar 3 document was recoverable for those years (see PRE2021_NOTE)."
+    + " WHAT THIS SHEET HOLDS (2026-09-19): NO year carries transcribed risk-weighted amounts by type, "
+    "because no Weatherbys document prints any. Every year FY2019-FY2025 is a STATEMENT in the status row. "
+    "FY2019-FY2024 each say 'Not published as RWAs': the Pillar 3 edition for that year prints the breakdown "
+    "only as Pillar 1 capital requirements (Table 3 'Capital Requirements for Credit Risk', by exposure class; "
+    "Table 4 'Minimum Capital Resource Requirements', by risk type), never as risk-weighted exposure amounts. "
+    "FY2025 says 'Not published' because no FY2025 Pillar 3 exists: the Bank holds a PRA 'Modification by "
+    "Consent - Rule 3.1 of the SDDT Regime - General Application Part' (sub-rule Ru 3.1, PRA consolidated "
+    "waivers register) starting 02/04/2025 with no end date, which removes the Pillar 3 disclosure "
+    "obligation; its 31 December 2025 year-end falls after that date, so no FY2025 edition was ever owed "
+    "(see FY2025_P3_NOTE on the Pillar 3 metric sheets), and the Annual Report and Financial Accounts 2025 "
+    "prints no risk-weighted-assets figure of any kind. That is a non-disclosure, not an access gap. "
+    "FY2015-FY2018 carry no column: no Pillar 3 edition for those years was recoverable (see PRE2021_NOTE). "
+    "The total risk-weighted assets figure each edition DOES print is on the Total RWAs sheet.\n\n"
+    "HOW THE DOCUMENTS WERE CHECKED (2026-09-19): each FY2020-FY2024 Pillar 3 PDF was re-downloaded from the "
+    "URL above (all HTTP 200, application/pdf, begins %PDF-) and read in full; none contains a UK OV1 "
+    "template, an 'RWEA' column, or any table of risk-weighted amounts by exposure class or risk type. The "
+    "only risk-weighted amount any of them prints is the single total (Table 1 'Risk weighted assets', and "
+    "from FY2021 the own-funds template's row 60 'Total risk weighted assets'). The annual reports were "
+    "checked too - Annual Report & Accounts 2022 (FY2022 and FY2021 comparatives), 2023 and 2024, and the "
+    "FY2020 Group accounts filed at Companies House (a scanned image, OCR'd for the search) - and none "
+    "prints RWAs by type; their capital sections give total capital and ratios only.\n\n"
+    "PRINTED CAPITAL-REQUIREMENT FIGURES, recorded here and deliberately NOT written into any row, because "
+    "every row on this sheet is read downstream as a risk-weighted amount. Group column, GBP'000, read off "
+    "rendered page images (the text layer was used only to find the pages); Solo is identical unless stated. "
+    "Table 3 lines in order: Central Government and Central Banks; Financial institutions; Covered bonds; "
+    "Corporates; Public sector entities; Retail; Secured by mortgages on immovable property; Exposures in "
+    "default; Other items; [Credit Value Adjustment, FY2023-FY2024 only]; Minimum capital component for "
+    "credit risk.\n"
+    "  FY2024 (Table 3 p.7, headed 'Minimum Capital Requirement 9%'): 0; 1,320; 781; 0; 0; 13,489; 19,469; "
+    "1,465; 4,716; 555; total 41,794 (the lines add to 41,795). Table 4 p.7: Credit Risk 41,794; Market "
+    "Risk 0; Operational Risk 13,325; Static Pension add-on 4,400; Total Capital Requirement (TCR) 59,519; "
+    "Total Capital 99,753. Source defect reproduced, not corrected: Table 4's Solo column prints TCR 51,519 "
+    "against identical Solo components that add to 59,519.\n"
+    "  FY2023 (Table 3 p.7, headed 'Minimum Capital Requirement', no rate printed; p.7 prose: 'In July 2022 "
+    "the PRA set the Bank's TCR at 9% of RWAs plus a static add-on of GBP4.4m'): 0; 793; 548; 0; 0; 11,844; "
+    "19,231; 1,656; 4,189; 160; total 38,421. Table 4 p.7: Credit Risk 38,421; Market Risk 0; Operational "
+    "Risk 10,475; Static Pension add-on 4,400; TCR 53,296; Total Capital 87,815.\n"
+    "  FY2022 (Table 3 p.8, headed 'Minimum Capital Requirement', no rate printed): 0; 923; 608; 1; 0; 9,561; "
+    "19,106; 1,121; 3,932; total 35,253 (the lines add to 35,252). Table 4 p.8: Credit Risk 35,253; Market "
+    "Risk 0; Operational Risk 7,509; Static Pension add-on 4,400; TCR 47,162; Total Capital 69,108.\n"
+    "  FY2021 (Table 3 p.6, headed 'Minimum Capital Requirement 8%'): 0; 676; 415; 8; 0; 6,515; 17,507; 711; "
+    "2,564; total 28,396. Table 4 p.7: Credit Risk 28,396; Market Risk 78; Operational Risk 5,572; Minimum "
+    "Capital Resource Requirement 34,046; Total Capital 61,634; Total Capital Requirement 38,344.\n"
+    "  FY2020 (Table 3 p.6, headed 'Minimum Capital Requirement 8%'): 0; 913; 556; 19; 0; 7,266; 15,761; 442; "
+    "2,473; total 27,430 (Solo: Other items 2,441, total 27,398). Table 4 p.7: Credit Risk 27,430 (Solo "
+    "27,397 - one less than Solo's own Table 3 total, reproduced as printed); Market Risk 0; Operational "
+    "Risk 4,657; Minimum Capital Resource Requirement 32,087 (Solo 32,054); Total Capital 58,286 (Solo "
+    "57,364); Total Capital Requirement 36,371 (Solo 36,339).\n"
+    "  FY2019 (checked 2026-09-19): the partly recovered FY2019 edition (Pillar 3 Disclosures For Year Ended "
+    "31st December 2019, April 2020; see PRE2021_NOTE - the PDF was rebuilt from the truncated Wayback "
+    "capture's first 13 pages) prints this breakdown ONLY as Pillar 1 capital requirements. Table 3 "
+    "'Capital Requirements for Credit Risk', p.6, headed 'Minimum Capital Requirement 8%', Group column: "
+    "Central Government and Central Banks 0; Financial institutions 771; Covered bonds 554; Corporates 30; "
+    "Public sector entities 0; Retail 6,511; Secured by mortgages on immovable property 14,134; Exposures "
+    "in default 606; Other items 2,529; Minimum capital component for credit risk 25,136 (Solo column "
+    "identical except Other items 2,497 and total 25,104; the Group lines add to 25,135 against the printed "
+    "25,136, reproduced as printed). Table 4 'Minimum Capital Resource Requirements', p.7, Group column: "
+    "Credit Risk 25,136; Market Risk 0; Operational Risk 4,008; Minimum Capital Resource Requirement 29,144; "
+    "Total Capital 57,360; Total Capital Requirement 33,620 (Pillar 1 plus Pillar 2A; Solo 33,587, the "
+    "figure p.7's prose gives as GBP33.59m). Read twice from two independent renderings (150dpi full page, "
+    "300dpi crop), digit-for-digit agreement.\n\n"
+    "RECORD OF THE EARLIER BUILD (replaced 2026-09-19 at the user's direction): until 2026-09-19 this sheet "
+    "carried FY2020-FY2024 figures DERIVED by dividing the capital requirements above by 8% (FY2020-FY2021) "
+    "or 9% (FY2022-FY2024), presented as an RWA breakdown with a derived total (FY2024 612,446; FY2023 "
+    "543,289; FY2022 475,123; FY2021 425,577; FY2020 401,090). Those were not printed figures. The user "
+    "directed that the sheet hold only risk-weighted amounts the documents print, and that a year printing "
+    "only capital requirements be a statement, as FY2019 already was. The derived values are kept in "
+    "wayfinder/gaps/ga020/leads/weatherbys_rwa.jsonl, not in the workbook."
 )
 
+# RWA BREAKDOWN, REBUILT 2026-09-19 AT THE USER'S DIRECTION. The earlier build DERIVED every
+# FY2020-FY2024 figure below by dividing a printed Pillar 1 capital requirement by 8% or 9%.
+# The user ruled that out: figures here must be risk-weighted amounts as PRINTED. Each edition was
+# re-read (see RWA_SOURCES); none prints RWAs by type, so each year is a statement, and the printed
+# capital-requirement figures are recorded in RWA_SOURCES, never in the rows (the insights pipeline,
+# in040_risk_metrics.py, reads every row on this sheet as a risk-weighted amount).
+# Checkpoint log: wayfinder/gaps/ga020/leads/weatherbys_rwa.jsonl (old derived values kept there).
+def _rwa_cap_only(y, where):
+    return f"Not published as RWAs – {y} Pillar 3 ({where}) prints capital requirements only; not converted, see note"
+
+RWA_STATUS = {
+    "FY2025": "Not published - SDDT Rule 3.1 opt-in from 02/04/2025; AR 2025 prints no RWA figure",
+    "FY2024": _rwa_cap_only("FY2024", "Tables 3-4 p.7"),
+    "FY2023": _rwa_cap_only("FY2023", "Tables 3-4 p.7"),
+    "FY2022": _rwa_cap_only("FY2022", "Tables 3-4 p.8"),
+    "FY2021": _rwa_cap_only("FY2021", "Table 3 p.6, Table 4 p.7"),
+    "FY2020": _rwa_cap_only("FY2020", "Table 3 p.6, Table 4 p.7"),
+    "FY2019": "Not published as RWAs - FY2019 Pillar 3 prints capital requirements at 8% only (Table 3 p.6, Table 4 p.7); not converted, see note",
+}
+
+# No edition prints a risk-weighted amount by type, so there are no data rows: the category rows
+# (credit risk by exposure class, operational risk, market risk) the earlier build carried held
+# only derived figures, and with those removed every cell in them is empty in every year.
 rwa_rows = [
-    ("DATA", "Pillar 3 edition status for this year (see source note)",
-     {"FY2025": "Not published - SDDT Rule 3.1 opt-in from 02/04/2025; AR 2025 prints no RWA figure"}),
-    ("SECTION", "Credit risk, by exposure class (derived, see sources)", {}),
-    ("DATA", "Financial institutions", {"FY2024": 14667, "FY2023": 8811, "FY2022": 10256, "FY2021": 8450, "FY2020": 11413}),
-    ("DATA", "Covered bonds", {"FY2024": 8678, "FY2023": 6089, "FY2022": 6756, "FY2021": 5188, "FY2020": 6950}),
-    ("DATA", "Corporates", {"FY2024": 0, "FY2023": 0, "FY2022": 11, "FY2021": 100, "FY2020": 238}),
-    ("DATA", "Retail", {"FY2024": 149878, "FY2023": 131600, "FY2022": 106233, "FY2021": 81438, "FY2020": 90825}),
-    ("DATA", "Secured by mortgages on immovable property", {"FY2024": 216322, "FY2023": 213678, "FY2022": 212289, "FY2021": 218838, "FY2020": 197013}),
-    ("DATA", "Exposures in default", {"FY2024": 16278, "FY2023": 18400, "FY2022": 12456, "FY2021": 8888, "FY2020": 5525}),
-    ("DATA", "Other items", {"FY2024": 52400, "FY2023": 46544, "FY2022": 43689, "FY2021": 32050, "FY2020": 30913}),
-    ("DATA", "Credit Value Adjustment", {"FY2024": 6167, "FY2023": 1778}),
-    ("TOTAL", "Credit risk (subtotal)", {"FY2024": 464390, "FY2023": 426900, "FY2022": 391690, "FY2021": 354952, "FY2020": 342877}),
-    ("SECTION", "Other risk categories", {}),
-    ("DATA", "Market risk", {"FY2021": 975}),
-    ("DATA", "Operational risk", {"FY2024": 148056, "FY2023": 116389, "FY2022": 83433, "FY2021": 69650, "FY2020": 58213}),
-    ("TOTAL", "Total RWAs (derived - see sources for reconciliation to the directly disclosed Total RWAs sheet)", {"FY2024": 612446, "FY2023": 543289, "FY2022": 475123, "FY2021": 425577, "FY2020": 401090}),
+    ("DATA", "Pillar 3 edition status for this year (see source note)", RWA_STATUS),
 ]
 
 bw = BankWorkbook(bank_name=COMPANY, years=YEARS, year_label=None, header_color="7030A0")
@@ -634,7 +716,12 @@ P3_SOURCES = (
     f"FY2023, pp.5-6 and 20-27 - {P3_URLS['FY2023']}; "
     f"FY2022, pp.6-7 and 21-27 - {P3_URLS['FY2022']}; "
     f"FY2021, pp.5-6 and 14, 18-22 - {P3_URLS['FY2021']}; "
-    f"FY2020, Pillar 3 Disclosures - Year Ended 31st December 2020, Tables 1-2 and 10 (pp.5-6, 13-14) - {P3_URLS['FY2020']}.\n\n"
+    f"FY2020, Pillar 3 Disclosures - Year Ended 31st December 2020, Tables 1-2 and 10 (pp.5-6, 13-14) - {P3_URLS['FY2020']}; "
+    "FY2019 (capital, RWA, ratios, leverage), Pillar 3 Disclosures For Year Ended 31st December 2019 (April 2020), "
+    "Table 1 Capital Resources & Ratios p.5 and Table 2 Leverage Ratio p.6, Group column - Wayback Machine capture "
+    "(truncated; pp.1-13 of 16 recovered 2026-09-19) https://web.archive.org/web/20200921164839/https://www.weatherbys.bank/WeatherbysBank/media/About-Us/WBL-Pillar3-Disclosures.pdf. "
+    "FY2019 defects reproduced, not corrected: Table 1 prints the total capital ratio as 'Tier 2 Ratio' (15.74% = "
+    "57,360/364,330), and p.5's prose gives the total capital ratio as 12.67%, which is the CET1 ratio.\n\n"
     + ENTITY_NOTE
     + " " + FY2025_P3_NOTE
     + " " + PRE2021_NOTE
@@ -693,13 +780,23 @@ capital = {
     "FY2020": {"cet1": 46910, "tier1": 46910, "total": 58286, "rwa": 401130, "cet1r": "11.69%", "tier1r": "11.69%", "totalr": "14.53%", "lev": "3.92%", "lcr": "683%", "nsfr": "227.8%"},
     # The intact FY2020 disclosure also reports the prior-year liquidity comparatives (Table 10).
     # No other FY2019 regulatory metrics were available in that document.
-    "FY2019": {"cet1": None, "tier1": None, "total": None, "rwa": None, "cet1r": None, "tier1r": None, "totalr": None, "lev": None, "lcr": "586%", "nsfr": "207.6%"},
+    # FY2019 capital/RWA/leverage: the FY2019 Pillar 3 recovered from its truncated Wayback capture
+    # (see PRE2021_NOTE), Group column, read off page images 2026-09-19. Table 1 (p.5): Total Tier 1
+    # capital 46,178; Total capital 57,360; Risk weighted assets 364,330; CET 1 Ratio 12.67%; Tier 1
+    # Ratio 12.67%; and a row printed "Tier 2 Ratio" 15.74% which is the total capital ratio (the same
+    # mislabel as FY2020's Table 1). p.5 states "The Bank's Tier 1 capital is made up entirely of CET1",
+    # which is the printed basis for CET1 = 46,178. SOURCE DEFECT, recorded not corrected: p.5's prose says
+    # the total capital ratio "was 12.67%", which is the CET1 ratio; the table prints 15.74%. Table 2 (p.6):
+    # Leverage ratio 4.60%. LCR/NSFR stay as the FY2020 edition's comparatives (the FY2019 edition's own
+    # liquidity table 10 sat on p.14, beyond the truncation).
+    "FY2019": {"cet1": 46178, "tier1": 46178, "total": 57360, "rwa": 364330, "cet1r": "12.67%", "tier1r": "12.67%", "totalr": "15.74%", "lev": "4.60%", "lcr": "586%", "nsfr": "207.6%"},
 }
-# FY2015-FY2019: no capital/RWA metrics. FY2019's LCR and NSFR are disclosed as comparatives in the intact
-# FY2020 document (Table 10). The only pre-2021 Weatherbys Pillar 3 document located (a Wayback Machine
-# capture of the pre-wp-uploads "WBL-Pillar3-Disclosures.pdf", archived 2020-09-21, timed to be the FY2019
-# disclosure) is truncated mid-file by the Wayback Machine's own capture (1,048,576 of 1,264,248 original bytes)
-# and unrecoverable by qpdf/pdftotext repair; no other pre-2021 Pillar 3 PDF for this bank was found via
+# FY2015-FY2018: no capital/RWA metrics. FY2019's LCR and NSFR are disclosed as comparatives in the intact
+# FY2020 document (Table 10). The FY2019 Pillar 3 (Wayback capture of the pre-wp-uploads
+# "WBL-Pillar3-Disclosures.pdf", archived 2020-09-21) is truncated mid-file (1,048,576 of 1,264,248 original
+# bytes); qpdf/pdftotext repair failed because it is a scanned document with no text layer, but its pages
+# 1-13 are complete CCITT image objects and were rebuilt into a readable PDF on 2026-09-19 (GA-020 second
+# pass) - FY2019 above comes from it. No FY2016-FY2018 Pillar 3 PDF for this bank was found via
 # web/CDX search. This is a genuine access gap (self-skip), not a non-disclosure - see PRE2021_NOTE.
 
 def series(key):
@@ -717,10 +814,10 @@ metric("Total Capital Ratio", "%", "Total capital ratio", "totalr")
 metric("Total RWAs", "£'000", "Total risk weighted assets", "rwa")
 bw.add_rwa_breakdown_sheet(
     title=f"{COMPANY} — RWA Breakdown",
-    subtitle="Weatherbys Bank risk-weighted assets by category, GBP'000 — derived from Pillar 3 capital requirement tables (see sources). "
-             "The FY2025 column stays visible and now carries an explicit stated negative on the status row rather than sitting blank: "
-             "the Bank holds a PRA SDDT Rule 3.1 modification effective 2 April 2025 with no end date, preceding its 31 December 2025 "
-             "year-end, so no FY2025 Pillar 3 exists, and the FY2025 Annual Report prints no risk-weighted-assets figure of any kind.",
+    subtitle="Weatherbys Bank risk-weighted assets by category, GBP'000. No Weatherbys document prints RWAs by type: "
+             "FY2019-FY2024 Pillar 3 editions give the breakdown only as capital requirements (recorded in the source note, not "
+             "converted), and no FY2025 Pillar 3 exists (PRA SDDT Rule 3.1 modification effective 2 April 2025, before the "
+             "31 December 2025 year-end). Each year's status row says which; total RWAs are on the Total RWAs sheet.",
     rows=rwa_rows,
     sources_text=RWA_SOURCES,
     first_col_width=58,
@@ -730,9 +827,22 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "%", "Leverage ratio", "lev")
 metric("LCR", "%", "Liquidity coverage ratio", "lcr")
 metric("NSFR", "%", "Net stable funding ratio", "nsfr")
+_GA020_MREL = {
+    **{y: f"Not published – {y} Pillar 3 (weatherbys.bank) and Annual Report read 2026-09-19: no MREL, eligible-liabilities or KM2 figure" for y in ["FY2024", "FY2023", "FY2022", "FY2021", "FY2020"]},
+    "FY2025": "Not published – no FY2025 Pillar 3 (PRA SDDT Rule 3.1 modification from 2 Apr 2025, PRA waivers register); FY2025 Annual Report has no MREL figure",
+    "FY2015": "Not published – FY2015 Pillar 3 (Wayback 20170503164039, WBL_Pillar3_2015.pdf) and FY2015 accounts print no MREL figure",
+    "FY2019": "Not published – FY2019 Pillar 3 (Wayback 20200921164839, pp.1-13 of 16 recovered): contents p.2 lists no MREL section or table; pp.1-13 print none",
+    **{y: f"Unreached today – {y} Pillar 3 named on archived index (Weatherbys-Bank-Limited-Pillar-3-Disclosures-{y[2:]}.pdf) but never captured; live 404; archive.ph none (2026-09-19)" for y in ["FY2018", "FY2017", "FY2016"]},
+}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], P3_SOURCES,
-    per_note={"MREL Ratio": "MREL was not separately disclosed in the Weatherbys 2021-2024 Pillar 3 documents reviewed; FY2025 has no official Pillar 3 document located. This is an explicit non-disclosure, not a zero."},
+    per_note={"MREL Ratio": "MREL was not separately disclosed in the Weatherbys 2021-2024 Pillar 3 documents reviewed; FY2025 has no official Pillar 3 document located. This is an explicit non-disclosure, not a zero. "
+              "GA-020 (2026-09-19): every cell now carries its evidence. FY2020-24 Pillar 3 editions (weatherbys.bank uploads) and FY2022-25 Annual Reports were re-read: 0 MREL / eligible-liabilities / KM2 hits. "
+              "FY2025: no Pillar 3 exists (PRA waivers register, SDDT Rule 3.1 modification effective 2 Apr 2025). "
+              "FY2015: the FY2015 Pillar 3 (Wayback 20170503164039 of weatherbys.co.uk/Weatherbys/media/PDFs/WBL_Pillar3_2015.pdf) prints no MREL (its only 'resolution' hit is the Recovery and Resolution Plan). "
+              "FY2019: the FY2019 Pillar 3 (weatherbys.bank/WeatherbysBank/media/About-Us/WBL-Pillar3-Disclosures.pdf, Wayback 20200921164839) was captured truncated at 1 MiB of 1,264,248 bytes; it is a scanned document whose pages are self-contained images, and pages 1-13 of 16 were rebuilt and read on 2026-09-19 (GA-020 second pass). Its contents page (p.2) lists every section and all 11 tables and none concerns MREL or eligible liabilities; pp.1-13 print no MREL figure. The three lost pages hold liquidity (Table 10), the remaining risk sections and remuneration (Table 11) per that contents page. Recorded as Not published on that evidence. "
+              "FY2016-18: each edition is named on an archived corporate-information page (Wayback 20171108012716: .../media/Test-images/Weatherbys-Bank-Limited-Pillar-3-Disclosures-2016.pdf; 20181009054641: .../media/About-Us/...-2017.pdf; 20190820203909: .../About-Us/...-2018.pdf) but none of the three PDFs was ever captured (CDX exact and prefix query of weatherbys.bank/WeatherbysBank/media/, and domain-wide CDX of weatherbys.bank, weatherbys.co.uk, weatherbysbank.com and weatherbys.com without the mimetype filter, 2026-09-19); live URLs 404; archive.ph has no copy of the Pillar 3 URL (its domain listings answered HTTP 429, a block, not a negative); web search for the titles returns only the 2021-2024 editions; the FY2015-20 accounts (Companies House scans) print no MREL. Left as Unreached today, not Not published."},
+    statements={"MREL Ratio": _GA020_MREL},
 )
 
 bw.add_overview_sheet(
@@ -769,9 +879,10 @@ bw.add_overview_sheet(
         "(2026-09-18). FY2021-FY2024 "
         "values are the official Weatherbys Group/Solo disclosures. FY2020's Pillar 3 metrics are populated "
         "from Weatherbys' own FY2020 Pillar 3 Disclosures document (already reported under CRD IV/Basel III "
-        "CET1/Tier 1/Tier 2 terminology - no Basel-II-era Tier-1/Total-Capital-only caveat applies). FY2015-"
-        "FY2019 Pillar 3 metrics are blank: the only pre-2021 Pillar 3 document found for this bank is an "
-        "unrecoverable, truncated Wayback Machine capture, a genuine access gap rather than a non-disclosure "
+        "CET1/Tier 1/Tier 2 terminology - no Basel-II-era Tier-1/Total-Capital-only caveat applies). FY2019 "
+        "capital, RWA and leverage metrics come from the FY2019 Pillar 3, partly recovered (pp.1-13 of 16) from a "
+        "truncated Wayback Machine capture. FY2015-FY2018 Pillar 3 metrics are blank: no edition for those years "
+        "was recoverable, an access gap rather than a non-disclosure "
         "(see the Balance Sheet/Cash Flow/Asset Quality sheets' source notes). All other statements (Balance "
         "Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement, and the Asset Quality "
         "sheet's loan-book credit-quality rows) are populated back to FY2015, this bank's confirmed historical "

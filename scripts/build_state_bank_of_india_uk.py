@@ -730,7 +730,16 @@ metric("NSFR", "£m / %", [
     ("Total required stable funding", {"FY2025": 1311.47, "FY2024": 1200.00, "FY2023": 1231.00, "FY2022": 1209.80}),
     ("NSFR ratio (%)", {"FY2026": "130%", "FY2025": "135.94%", "FY2024": "140.48%", "FY2023": "143.36%", "FY2022": "129.93%", "FY2021": "124%", "FY2020": "120%", "FY2019": "123%"}),
 ], "FY2021/FY2020/FY2019's Pillar 3 reports disclose only the headline NSFR ratio; no ASF/RSF component amounts were found for these three years, so they remain blank.")
-metric("MREL Ratio", "£m / %", [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No numeric MREL ratio was disclosed in the five SBI UK Pillar 3 documents reviewed; it is not inferred from capital or liquidity metrics.")
+# GA-020 (2026-09-19): outcome wording. Evidence: every P3[] edition FY2019-
+# FY2025 and the FS2019-FS2023 / FS2025 annual reports full-text searched -
+# zero 'MREL' or 'loss-absorbing'; the only 'eligible liabilities' hits are the
+# standard CC1 own-funds template rows (56a, 72), carrying zero.
+GA020_MREL = {y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 and annual report (full text searched "
+                  "2026-09-19); 'eligible liabilities' only in CC1 template rows")
+              for y in YEARS if y != "FY2026"}
+GA020_MREL["FY2026"] = ("Not published yet – the 31 Mar 2026 Pillar 3 is not out at 2026-09-19; the FY2025 edition "
+                        "appeared in Dec 2025, about nine months after year-end")
+metric("MREL Ratio", "£m / %", [("MREL ratio", GA020_MREL)], "No numeric MREL ratio was disclosed in the five SBI UK Pillar 3 documents reviewed; it is not inferred from capital or liquidity metrics. GA-020 re-check 2026-09-19: all seven Pillar 3 editions (FY2019-FY2025) and the FY2019-FY2025 annual reports return zero 'MREL'; FY2026 awaits its Pillar 3.")
 
 bw.add_overview_sheet(
     balance_sheet_totals=[

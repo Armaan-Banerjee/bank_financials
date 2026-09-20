@@ -524,7 +524,10 @@ HIST_P3_NOTE = (
     "Bank's own Pillar 3 index page name the files. But the PDFs themselves 404 on the live site and were never "
     "captured by any crawler. This is a stronger and more useful statement than 'not found': the disclosure was "
     "made, and it is the archive that failed, so no amount of further searching of the Bank's own site will "
-    "recover it.\n"
+    "recover it. Second pass 2026-09-19 also tried archive.ph, Wayback CDX of every Zenith domain without the "
+    "PDF mimetype filter, the following year's Annual Report for a comparative, the parent Zenith Bank Plc's "
+    "Pillar 3 (no separate UK-entity disclosure in what is readable; live copies 403, archived copies truncated) "
+    "and a web search - all negative.\n"
     "(b) FY2017, FY2018 and FY2020 - APPARENTLY NEVER POSTED. The Bank's index page only ever displayed the "
     "single latest edition, and it still showed FY2016 as at February 2019 and still showed FY2019 as at "
     "September 2021 - which implies no FY2017, FY2018 or FY2020 edition was ever published to the site. "
@@ -589,7 +592,7 @@ def p3_sources():
         "(regulatory available capital / derived RWA) is NOT the same figure as the Bank's own headline "
         "'Solvency Ratio against Pillar 1' (available capital / capital REQUIREMENT, i.e. roughly 12.5x this "
         "ratio) - both are shown in the RWA Breakdown sheet's source note for transparency.\n\n"
-        + HIST_P3_NOTE + "\n\n" + P3_SCALE_FIX_NOTE
+        + HIST_P3_NOTE + "\n\n" + P3_SCALE_FIX_NOTE + "\n\n" + Z16_SOURCE_NOTE
     )
 
 
@@ -1633,9 +1636,78 @@ AR_CAPITAL_ROWS = [
 # Explicit stated-absence markers, so a researched absence is never re-chased as a blank.
 # The three archive states are kept distinct (see HIST_P3_NOTE): FY2016/FY2019 editions
 # demonstrably existed and are lost; FY2017/FY2018 were apparently never posted.
-P3_LOST = "Not disclosed (Pillar 3 published but lost; Annual Report prints none)"
+# GA-020 (2026-09-19): "published but lost" is a limit on OUR reach, so it now carries the
+# reserved "Unreached today" phrase. Re-tried today: both named PDFs (media/1013/...2016.pdf,
+# media/2177/...2019.pdf, plus the old /uploads/ 2016 path) return HTTP 404 text/html while the
+# FY2025 edition on the same host returns 200 application/pdf (positive control); a Wayback CDX
+# pdf sweep of zenith-bank.co.uk lists the 2008/2011/2014/2015/2021-2024 editions and neither of
+# these. The year's Annual Report (read in full 2026-09-18) prints no such figure. Companies
+# House holds only the accounts, not the Pillar 3.
+# GA-020 second pass (2026-09-19) added routes, all negative: archive.ph (newest) for all four
+# URL forms of the two PDFs -> 404; Wayback CDX matchType=domain WITHOUT the mimetype filter on
+# zenith-bank.co.uk, zenithbank.co.uk, zenith-bank.com and zenithbank.com -> no capture of either
+# file (media/1013 and media/2177 never captured); the NEXT year's Annual Report (FY2017 for
+# FY2016, FY2020 for FY2019) read for a comparative ratio/RWA/leverage/LCR/MREL -> none (FY2020's
+# prints only the 2019 CET1 capital AMOUNT, 260,687,679); parent Zenith Bank Plc's Dec-2016 and
+# Dec-2019 Pillar 3s (zenithbank.com media/2117 and media/3149): live 403 (a block, not a negative),
+# Wayback captures truncated at 1 MiB, and the readable part names Zenith Bank (UK) only as a
+# subsidiary with no entity-level capital table - and under the tightened brief a parent figure may
+# be used only if printed as a separate labelled UK-entity disclosure, which none is; web search
+# for the titles returns only FY2023/FY2024 UK editions and the parent's reports.
+def _p3_lost(y):
+    # cdn-sweep (2026-09-19): only FY2019 is still lost; FY2016 was recovered (see Z16_* below).
+    assert y == "FY2019", y
+    return ("Unreached today – FY2019 Pillar 3 named on archived index page; PDF 404 live; no copy in "
+            "Wayback, archive.ph, Common Crawl (74 crawls) or the Azure origin host (2026-09-19); "
+            "FY2019/FY2020 ARs print none")
+# GA-020 cdn-sweep (2026-09-19): the FY2016 edition WAS recovered - Common Crawl captured it at its
+# pre-2018 address http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2016.pdf on
+# 2018-02-24 (CC-MAIN-2018-09). Read on page images; see Z16_SOURCE_NOTE. It is the same pre-CRD IV
+# Pillar 1/Pillar 2 format as FY2014/FY2015, so it prints NONE of these metrics.
+Z16_DOC = "FY2016 Pillar 3 (recovered via Common Crawl, 17pp)"
+Z16_RATIO = ("Not published – FY2016 AR prints no ratio; recovered FY2016 Pillar 3 p.9-10 prints only a 365% "
+             "'Solvency Ratio against Pillar 1' (capital/requirement), no CET1 ratio")
+Z16_RWA = ("Not published – " + Z16_DOC + " p.9-10 prints Pillar 1 capital requirements (total "
+           "US$52,940k), not risk-weighted amounts; nothing derived")
+Z16_LEV = "Not published – " + Z16_DOC + " prints no leverage ratio (capital section p.8-11 read)"
+Z16_LCR = ("Not published – " + Z16_DOC + " names LCR only as a PRA standard it maintains (p.8, "
+           "s.3.3.1); no LCR figure")
+Z16_MREL = "Not published – " + Z16_DOC + " has no MREL or eligible-liabilities figure"
+Z16_SOURCE_NOTE = (
+    "FY2016 PILLAR 3 RECOVERED (GA-020 cdn-sweep, 2026-09-19) - this supersedes the FY2016 half of the "
+    "'unobtainable' paragraph above. The Bank's pre-2018 site served files from /uploads/, and Common Crawl "
+    "captured http://www.zenith-bank.co.uk/uploads/ZBL_Pillar_3_Disclosure_Document_2016.pdf on 2018-02-24 "
+    "(crawl CC-MAIN-2018-09; WARC crawl-data/CC-MAIN-2018-09/segments/1518891815318.53/warc/"
+    "CC-MAIN-20180224033332-20180224053332-00132.warc.gz, offset 592640953, length 648238; retrieve with an "
+    "HTTP Range request against https://data.commoncrawl.org/). HTTP 200 application/pdf, Last-Modified "
+    "2018-01-02, 713,641 bytes = the stated Content-Length, %PDF ... %%EOF, 17 pages; title page 'ZENITH BANK "
+    "(UK) LIMITED - PILLAR 3 DISCLOSURES FOR THE YEAR ENDED 31 DECEMBER 2016'. Read on the page images: p.8 "
+    "s.3.3.1 names 'LCR, NSFR, Funding concentration' only as PRA standards the Bank maintains, with no figure; "
+    "p.9 s.4.2 Total CET-1 capital US$192,990k (2015: 190,521) and s.4.3.1 Pillar 1 capital requirements "
+    "Credit 47,135 / Market 633 / Operational 5,172 / Total 52,940 (US$000), Regulatory Available Capital "
+    "192,990; p.10 'Solvency Ratio against Pillar 1 (Available capital / Required capital)' 365% (2015: 258%) "
+    "and the credit-risk capital requirement (8%) by exposure class; p.11 Pillar 2A allocation, total 94,675. "
+    "It is the same pre-CRD IV Pillar 1/Pillar 2 format as FY2014/FY2015: no CET1/capital ratio, no "
+    "risk-weighted amount, no leverage ratio, no LCR/NSFR figure and no MREL anywhere in its 17 pages (text "
+    "layer on every page; the only image is the p.1 logo). So the FY2016 ratio, RWA, leverage, LCR and MREL "
+    "cells read 'Not published' from the edition itself. The RWA is NOT derived from the requirements by "
+    "dividing by 8%, following the FY2011 treatment (the FY2014/FY2015 derivation stays flagged, not "
+    "extended). The 365% cover multiple is NOT a capital ratio (see the Tier 1 Ratio note). The capital "
+    "AMOUNT (US$192,990k) is not written anywhere by this pass: the capital sheets' FY2016 cells come from "
+    "the Annual Report and were not in this pass's scope - a later pass may cross-check them against it. "
+    "FY2019 remains unreached: its media/2177 file was never captured by Wayback or by any of 74 Common Crawl "
+    "crawls (2016-2023) of zenith-bank.co.uk/media/*, and the Azure origin zenithbank-uk.azurewebsites.net "
+    "301s to the same 404."
+)
+P3_LOST = None  # retained name; per-year text is built by _p3_lost()
 P3_ABSENT = "Not disclosed (no Pillar 3 located; Annual Report prints none)"
-NO_P3_1619 = {"FY2019": P3_LOST, "FY2016": P3_LOST, "FY2018": P3_ABSENT, "FY2017": P3_ABSENT}
+NO_P3_1619 = {"FY2019": _p3_lost("FY2019"), "FY2018": P3_ABSENT, "FY2017": P3_ABSENT}
+# GA-020 (2026-09-19): the FY2011 Basel II edition survives and was read (see notes on the
+# Tier 1 Ratio / Total RWAs sheets); what it lacks is recorded as NOT PUBLISHED, with the reason.
+FY2011_NO_RATIO = ("Not published – FY2011 Pillar 3 (Basel II) prints no capital ratio; its 203% "
+                   "'Solvency Ratio against Pillar 1' is capital/requirement, not a ratio - see note")
+FY2011_NO_RWA = ("Not published – FY2011 Pillar 3 (Basel II) prints Pillar 1 capital requirements "
+                 "(total GBP 19,686k), not risk-weighted amounts; nothing derived - see note")
 PRE_CRDIV_ABSENT = {"FY2015": "Not disclosed (pre-CRD IV edition prints no such metric)",
                     "FY2014": "Not disclosed (pre-CRD IV edition prints no such metric)"}
 
@@ -1680,8 +1752,10 @@ AR_RATIO_ROW_NOTE = (
     "Annual Report prints the RWA that would explain the movement. Nothing has been back-solved from capital "
     "and ratio to produce one - that is barred by this project's rules and would in any case be a derivation "
     "presented as a disclosure. The ratios are carried as printed; the RWA cells stay stated-absent.\n"
-    "FY2016 and FY2019 get no ratio at all: those two editions print a Capital Resources table but no capital "
-    "ratio anywhere, and their Pillar 3 documents are the two that demonstrably existed and are lost."
+    "FY2016 and FY2019 get no ratio at all: those two Annual Reports print a Capital Resources table but no "
+    "capital ratio anywhere. FY2016's Pillar 3 was recovered on 2026-09-19 (see the Z16 note in the source "
+    "cell) and prints no capital ratio either - only a 365% capital-cover multiple - so FY2016 is 'Not "
+    "published'; FY2019's Pillar 3 demonstrably existed and is still lost, so FY2019 is 'Unreached today'."
 )
 AR_RATIO = {"FY2018": "32.38%", "FY2017": "35.53%"}
 AR_RATIO_LABEL = ("Common Equity Tier 1 (CET1) ratio as stated in that year's own ANNUAL REPORT "
@@ -1694,29 +1768,29 @@ metric("CET1 Capital", "£'000 (conv. from USD)",
             + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("CET1 Ratio", "% of RWA",
        [("Common Equity Tier 1 (CET1) ratio", dict(CAPITAL_RATIO, **hist_na())),
-        (AR_RATIO_LABEL, dict(AR_RATIO, FY2019=P3_LOST, FY2016=P3_LOST))],
+        (AR_RATIO_LABEL, dict(AR_RATIO, FY2019=_p3_lost("FY2019"), FY2016=Z16_RATIO))],
        p3_sources(),
        note="FY2009-FY2013 'Not applicable (Basel II)' - no CET1 concept existed (see CET1 Capital sheet).\n\n"
             + AR_RATIO_ROW_NOTE + "\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS + AR_CAPITAL_ROWS, p3_sources(),
        note=HIST_CAPITAL_NOTE + "Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Tier 1 Ratio", "% of RWA",
-       [("Tier 1 ratio", dict(CAPITAL_RATIO, **hist_nd("Not publicly disclosed"))),
+       [("Tier 1 ratio", dict(CAPITAL_RATIO, **hist_nd(FY2011_NO_RATIO))),
         (AR_RATIO_LABEL.replace("Common Equity Tier 1 (CET1) ratio", "Tier 1 ratio (= the CET1 ratio; no AT1 in issue)"),
-         dict(AR_RATIO, FY2019=P3_LOST, FY2016=P3_LOST))],
+         dict(AR_RATIO, FY2019=_p3_lost("FY2019"), FY2016=Z16_RATIO))],
        p3_sources(),
        note="FY2011 'Not publicly disclosed': the recovered FY2011 edition states no capital/RWA ratio at all. It DOES print a 'Solvency Ratio against Pillar 1' of 203%, but that is capital divided by the capital REQUIREMENT - a capital-cover multiple, roughly 12.5x a true capital ratio - and putting it here would overstate the Bank's capitalisation by an order of magnitude. See the source note. Nothing is back-solved from the capital and capital-requirement figures either.\n\n"
             + AR_RATIO_ROW_NOTE + "\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Total Capital", "£'000 (conv. from USD)", [("Total capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS + AR_CAPITAL_ROWS, p3_sources(),
        note=HIST_CAPITAL_NOTE + "Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Total Capital Ratio", "% of RWA",
-       [("Total capital ratio", dict(CAPITAL_RATIO, **hist_nd("Not publicly disclosed"))),
+       [("Total capital ratio", dict(CAPITAL_RATIO, **hist_nd(FY2011_NO_RATIO))),
         (AR_RATIO_LABEL.replace("Common Equity Tier 1 (CET1) ratio", "Total capital ratio (= the CET1 ratio; no AT1 or Tier 2 in issue)"),
-         dict(AR_RATIO, FY2019=P3_LOST, FY2016=P3_LOST))],
+         dict(AR_RATIO, FY2019=_p3_lost("FY2019"), FY2016=Z16_RATIO))],
        p3_sources(),
        note="FY2011 'Not publicly disclosed' - see the Tier 1 Ratio sheet's note on the 203% capital-cover trap.\n\n"
             + AR_RATIO_ROW_NOTE + "\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
-metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", dict(stock_k(RWA_USD), **dict(hist_nd("Not publicly disclosed"), **NO_P3_1619)))], p3_sources(),
+metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", dict(stock_k(RWA_USD), **dict(hist_nd(FY2011_NO_RWA), FY2016=Z16_RWA, **NO_P3_1619)))], p3_sources(),
        note="FY2011 'Not publicly disclosed' (2026-09-15): the recovered FY2011 Basel II edition discloses Pillar 1 capital "
             "REQUIREMENTS (Credit 18,156 / Market 27 / Operational 1,503 / Total 19,686, GBP'000), not risk-weighted amounts. "
             "Dividing those by 8% would give a total RWA of 246,075, but that is a derivation and this project transcribes only "
@@ -1769,7 +1843,7 @@ RWA_ABSENCE_ROWS = [
                 "full that day; every one prints a Capital Resources table (now on the capital sheets) and NONE "
                 "prints a risk-weighted exposure amount or any RWA split. Nothing is back-solved from the FY2017 "
                 "/ FY2018 capital and ratio figures - see the note below", {}),
-    ("DATA", "Total risk-weighted exposure amount", dict(NO_P3_1619)),
+    ("DATA", "Total risk-weighted exposure amount", dict(NO_P3_1619, FY2016=Z16_RWA)),
 ]
 bw.add_rwa_breakdown_sheet(
     title="Zenith Bank (UK) Limited — RWA Breakdown (UK OV1)",
@@ -1834,7 +1908,7 @@ metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
         ("Total exposure measure excluding claims on central banks", stock_k({"FY2025": 3171798, "FY2024": 2987483, "FY2023": 2872422, "FY2022": 3409175, "FY2021": 3219954, "FY2020": 2483697})),
-        ("Leverage ratio excluding claims on central banks (%)", dict({"FY2025": "12.08%", "FY2024": "11.25%", "FY2023": "9.76%", "FY2022": "7.32%", "FY2021": "8.36%", "FY2020": "10.68%"}, **dict(hist_na(), **NO_P3_1619, **PRE_CRDIV_ABSENT))),
+        ("Leverage ratio excluding claims on central banks (%)", dict({"FY2025": "12.08%", "FY2024": "11.25%", "FY2023": "9.76%", "FY2022": "7.32%", "FY2021": "8.36%", "FY2020": "10.68%"}, **dict(hist_na(), FY2016=Z16_LEV, **NO_P3_1619, **PRE_CRDIV_ABSENT))),
     ],
     p3_sources(),
     note="FY2009-FY2013 'Not applicable (Basel II)' (2026-09-15): the regulatory leverage ratio is a CRD IV "
@@ -1864,7 +1938,7 @@ metric(
         ("Total net cash outflows, adjusted value", stock_k({"FY2025": 352543, "FY2024": 306820, "FY2023": 369648, "FY2022": 374822, "FY2021": 337730, "FY2020": 179896})),
         ("Liquidity Coverage Ratio (%) (12-month simple average)", {"FY2025": "270.19%", "FY2024": "330.42%", "FY2023": "310%", "FY2022": "343%"}),
         ("Liquidity Coverage Ratio (%) (point-in-time at year-end)", dict({"FY2021": "276%", "FY2020": "435%"},
-            **dict(hist_na("Not applicable (pre-LCR regime)"), **NO_P3_1619, **PRE_CRDIV_ABSENT))),
+            **dict(hist_na("Not applicable (pre-LCR regime)"), FY2016=Z16_LCR, **NO_P3_1619, **PRE_CRDIV_ABSENT))),
     ],
     p3_sources(),
     note="FY2009-FY2013 'Not applicable (pre-LCR regime)' (2026-09-15): the LCR was not a UK requirement in those "
@@ -1904,8 +1978,11 @@ metric(
     [
         ("Total available stable funding", stock_k({"FY2025": 1316936, "FY2024": 1136904, "FY2023": 1066880, "FY2022": 912816})),
         ("Total required stable funding", stock_k({"FY2025": 948441, "FY2024": 768308, "FY2023": 744377, "FY2022": 735763})),
-        ("Net Stable Funding Ratio (%)", dict({"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%", "FY2021": "Not disclosed"},
-            **dict(hist_na("Not applicable"),
+        ("Net Stable Funding Ratio (%)", dict({"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%",
+                     "FY2021": "Not published – FY2021 Pillar 3 s.10 p.22: NSFR 'adopted' from 1 Jan 2022 and "
+                               "'will be shown in the next Pillar 3 disclosure'; no FY2021 figure printed"},
+            **dict(hist_na("Not applicable – no UK NSFR requirement before 1 Jan 2022 (PRA PS17/21; Bank's "
+                           "FY2021 Pillar 3 p.22); FY2011 Basel II Pillar 3 has none"),
                    **{y: "Not applicable (pre-NSFR regime)" for y in
                       ("FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014")}))),
     ],
@@ -1935,7 +2012,13 @@ metric(
 # FY2009-FY2013 can be marked "Not applicable" (MREL did not exist as a UK regime
 # then) instead of "Not publicly disclosed", which would imply a real gap.
 metric("MREL Ratio", None,
-       [("MREL Ratio", dict({y: "Not publicly disclosed" for y in PILLAR3_YEARS},
+       [("MREL Ratio", dict({y: (f"Not published – Zenith UK {y} Pillar 3 has no MREL/eligible-liabilities "
+                                 "figure or KM2 (text probe 0 hits, 2026-09-19)")
+                             for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2015", "FY2014")},
+                            FY2020=("Not published – no MREL in FY2021 Pillar 3 (carries FY2020 comparatives) "
+                                    "or FY2020 Annual Report (text probe 0 hits, 2026-09-19)"),
+                            FY2019=_p3_lost("FY2019"), FY2016=Z16_MREL,
+                            FY2018=P3_ABSENT, FY2017=P3_ABSENT,
                             **hist_na("Not applicable (pre-dates MREL regime)")))],
        p3_sources(),
        note="No MREL disclosure (numeric or qualitative) or UK KM2 template found in any year's "

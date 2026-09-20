@@ -565,12 +565,18 @@ metric(
          "Bank's own figures; the report states that BFC Bank refers to the renamed iFAST Global Bank Limited.",
 )
 
+# GA-020 (2026-09-19) outcome statements.
+IF_NSFR_FY21 = ("Not applicable – UK NSFR in force only from 1 Jan 2022 (PRA PS17/21); FY2021 Pillar 3 prints no "
+                "NSFR and the FY2022 KM1's 31-Dec-21 column leaves rows 18-20 empty")
+IF_MREL = {y: ("Not published – no MREL figure or statement in this year's Pillar 3, nor in the Annual Reports held (text-searched "
+               "2026-09-19)") for y in YEARS}
+
 metric(
     "NSFR", "£'000 / %",
     [
-        ("Total available stable funding (£'000)", {"FY2025": 835880, "FY2024": 555781, "FY2023": 173025, "FY2022": 92023, "FY2021": "Not disclosed"}),
-        ("Total required stable funding (£'000)", {"FY2025": 437854, "FY2024": 215858, "FY2023": 50090, "FY2022": 22101, "FY2021": "Not disclosed"}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "190.9%", "FY2024": "257.5%", "FY2023": "345.4%", "FY2022": "416.4%", "FY2021": "Not disclosed"}),
+        ("Total available stable funding (£'000)", {"FY2025": 835880, "FY2024": 555781, "FY2023": 173025, "FY2022": 92023, "FY2021": IF_NSFR_FY21}),
+        ("Total required stable funding (£'000)", {"FY2025": 437854, "FY2024": 215858, "FY2023": 50090, "FY2022": 22101, "FY2021": IF_NSFR_FY21}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "190.9%", "FY2024": "257.5%", "FY2023": "345.4%", "FY2022": "416.4%", "FY2021": IF_NSFR_FY21}),
     ],
     p3_sources(),
     note="FY2021 is genuinely not disclosed — see the LCR sheet's note; the FY2021 Pillar 3 document predates "
@@ -580,6 +586,7 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": IF_MREL},
     per_note={"MREL Ratio": "MREL is not disclosed in any of the 5 years' Pillar 3 documents — iFAST Global "
               "Bank Limited (formerly BFC Bank Limited) is a small bank below the threshold at which the Bank "
               "of England sets an MREL requirement above minimum capital requirements."},
@@ -620,7 +627,7 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2025": "23.9%", "FY2024": "28.1%", "FY2023": "36.3%", "FY2022": "40.7%", "FY2021": "22%"}),
         ("Leverage Ratio", {"FY2025": "11.0%", "FY2024": "15.4%", "FY2023": "29.0%", "FY2022": "47.3%", "FY2021": "19%"}),
         ("LCR", {"FY2025": "531%", "FY2024": "912%", "FY2023": "728%", "FY2022": "1240%", "FY2021": "1109%"}),
-        ("NSFR", {"FY2025": "190.9%", "FY2024": "257.5%", "FY2023": "345.4%", "FY2022": "416.4%", "FY2021": "Not disclosed"}),
+        ("NSFR", {"FY2025": "190.9%", "FY2024": "257.5%", "FY2023": "345.4%", "FY2022": "416.4%", "FY2021": IF_NSFR_FY21}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page. FY2023 cash figures use the originally-reported "

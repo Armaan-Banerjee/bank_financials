@@ -956,12 +956,12 @@ km1_rows = [
      {"FY2025": "7.2%", "FY2024": "6.6%", "FY2023": "6.8%", "FY2022": "5.7%", "FY2021": "6.7%"}),
     ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of "
                 "leverage ratio total exposure amount)", {}),
-    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {"FY2023": "NA"}),
-    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {"FY2023": "NA"}),
-    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {"FY2023": "NA"}),
-    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {"FY2023": "NA"}),
-    ("DATA", "UK 14e    Applicable leverage buffer", {"FY2023": "NA"}),
-    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {"FY2023": "NA"}),
+    ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)", {"FY2023": "-"}),
+    ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)", {"FY2023": "-"}),
+    ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)", {"FY2023": "-"}),
+    ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)", {"FY2023": "-"}),
+    ("DATA", "UK 14e    Applicable leverage buffer", {"FY2023": "-"}),
+    ("DATA", "UK 14f    Overall leverage ratio requirements (%)", {"FY2023": "-"}),
     ("SECTION", "Liquidity Coverage Ratio (£000s / %)", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
      {"FY2025": 1317356, "FY2024": 1444002, "FY2023": 1423835, "FY2022": 1301435, "FY2021": 1012861}),
@@ -975,11 +975,11 @@ km1_rows = [
      {"FY2025": "234%", "FY2024": "327%", "FY2023": "271%", "FY2022": "254%", "FY2021": "276%"}),
     ("SECTION", "Net Stable Funding Ratio (£000s / %)", {}),
     ("DATA", "18    Total available stable funding",
-     {"FY2025": 1128295, "FY2024": 1037035, "FY2023": 967179, "FY2022": 933833, "FY2021": "N/A"}),
+     {"FY2025": 1128295, "FY2024": 1037035, "FY2023": 967179, "FY2022": 933833, "FY2021": "-"}),
     ("DATA", "19    Total required stable funding",
-     {"FY2025": 680515, "FY2024": 649132, "FY2023": 640365, "FY2022": 723950, "FY2021": "N/A"}),
+     {"FY2025": 680515, "FY2024": 649132, "FY2023": 640365, "FY2022": 723950, "FY2021": "-"}),
     ("DATA", "20    NSFR ratio (%)",
-     {"FY2025": "166%", "FY2024": "160%", "FY2023": "151%", "FY2022": "130%", "FY2021": "N/A"}),
+     {"FY2025": "166%", "FY2024": "160%", "FY2023": "151%", "FY2022": "130%", "FY2021": "-"}),
 ]
 
 KM1_SOURCES = (
@@ -1015,7 +1015,8 @@ KM1_SOURCES = (
     "(2020: 215%) - not a table and not the template. The 2022 edition's own comparative column is the only "
     "31/12/2021 column BACB has printed on the UK template, and it agrees with the infographic to the rounding "
     "the infographic uses.\n"
-    "• \"N/A\" IN ROWS 18-20 FOR FY2021 IS THE BANK'S OWN WORD, not a blank and not a zero. The 2022 edition's "
+    "• ROWS 18-20 FOR FY2021 CARRY '-' FOR A PRINTED \"N/A\" (KM1 map rule 2; GA-020, 2026-09-19): the glyph "
+    "the 2022 edition prints is \"N/A\", the bank's own word, not a blank and not a zero. The 2022 edition's "
     "footnote 3 reads: \"These disclosures are based on the PRA's disclosure templates and instructions which came "
     "into force on 1 January 2022. 'N/A' in prior periods indicate that the disclosure is new or changed and no "
     "comparatives are available.\" It is reproduced verbatim rather than back-filled from an older basis.\n"
@@ -1030,7 +1031,7 @@ KM1_SOURCES = (
     "capital as 276,133 (and its own UK CC1 template agrees, row 59); the 2024 edition's 31/12/2023 comparative "
     "prints 276,130. The figure above is the one from the edition in which FY2023 is the reporting year.\n"
     "• ROW SET DRIFT: only the 2023 edition prints rows UK 8a, UK 9a, 10 and UK 10a (all with empty value cells) "
-    "and the UK 14a-14f excessive-leverage block (every cell \"NA\", with footnote 2 \"Leverage ratio requirements "
+    "and the UK 14a-14f excessive-leverage block (every cell printed \"NA\" - carried above as '-' per KM1 map rule 2 - with footnote 2 \"Leverage ratio requirements "
     "are not applicable to BACB\"). The 2022, 2024 and 2025 editions omit all ten rows. The union is shown above "
     "in the template's canonical order, so the sheet matches the table a reader of the 2023 report would "
     "recognise; no disclosed figure is lost either way.\n"
@@ -1227,8 +1228,17 @@ metric("NSFR", "%", [("NSFR ratio (4-quarter average)", NSFR)], p3_sources(
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
-    per_note={"MREL Ratio": "Not found in any of the 5 Annual Reports or Pillar 3 Disclosures checked - not "
-                             "asserted as an explicit exemption, just absent from every source."},
+    statements={"MREL Ratio": {**{y: ("Not published – no MREL figure or mention in BACB's Pillar 3 Disclosures "
+                                      "for this year (text-searched 2026-09-19; see note)") for y in Y_CORE},
+                               "FY2020": ("Not published – no FY2020 Pillar 3 exists (Wayback CDX); FY2020 Annual "
+                                          "Report and FY2021 Pillar 3 (comparative) have no MREL (searched 2026-09-19)")}},
+    per_note={"MREL Ratio": "Not found in any Annual Report or Pillar 3 Disclosure checked - not asserted as an "
+                             "explicit exemption, just absent from every source. GA-020 re-check 2026-09-19: every "
+                             "Pillar 3 Disclosure FY2014-FY2019 and FY2021-FY2025 (P3_URL) was re-fetched and "
+                             "searched for 'MREL' - native text for all, plus OCR of FY2024/FY2025 whose tables are "
+                             "vector-drawn with no text layer. Zero MREL hits (the only 'eligible liabilities' hit "
+                             "is CC1 row 72, holdings of other entities' instruments). FY2020 has no Pillar 3; the "
+                             "FY2020 Annual Report and FY2025 Annual Report were also searched - zero hits."},
 )
 
 # ---------------------------------------------------------------

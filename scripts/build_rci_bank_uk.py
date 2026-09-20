@@ -484,6 +484,14 @@ KM1_SOURCES = (
     "genuine latest edition, not a stale baseline. On the bank's own past cadence (FY2024 accounts filed October "
     "2025, FY2024 Pillar 3 uploaded December 2025) the FY2025 pair should appear around October and December "
     "2026.\n\n"
+    "LATEST-EDITION RE-CHECK 2026-09-19 (GA-020) - STILL NONE. (i) Companies House filing history for 11429127, "
+    "read UNFILTERED on page 1: newest rows SH01 (2 Jul 2026), CS01 (26 Jun 2026), TM01 (27 May 2026); the newest "
+    "AA is still the FY2024 group accounts filed 07 Oct 2025, and the profile still reads 'due by 30 September "
+    "2026'. (ii) The facts-and-figures index (HTTP 200) still links exactly two Pillar III disclosures, FY2023 "
+    "and FY2024; direct probes of 'Pillar III Disclosures FY 2025 - External.pdf' under the 2026-06 to 2026-09 "
+    "upload paths all return a genuine 404, against a 200/application/pdf/%PDF control on the FY2024 file. "
+    "(iii) Wayback CDX for rcibank.co.uk from 2026 onward: 57 PDF captures, the only Pillar III among them the "
+    "FY2024 edition. Look again after 30 September 2026 (accounts) and around December 2026 (Pillar III).\n\n"
     "A TRAP ON THAT SAME INDEX PAGE, EXPLICITLY REJECTED: its headline statistics ('Basel III Core Tier 1 "
     "solvency ratio 16.05%', 'All figures correct at year end 2025') are RCI Banque / Mobilize Financial Services "
     "GROUP figures for the French parent, not RCI Bank UK Limited. They look exactly like the FY2025 data this "
@@ -646,7 +654,11 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "£'000 / %", [("Total exposure measure excluding claims on central banks", {"FY2024": 6642000, "FY2023": 6148000}), ("Leverage ratio excluding claims on central banks (%)", {"FY2024": "10.6%", "FY2023": "10.9%", "FY2022": "11.10%"})], "FY2024-FY2023 are from the dedicated UK KM1 disclosure. FY2022 is disclosed as a prior-year comparative on the introduction page of the FY2023 Pillar 3 report ('UK Leverage Ratio 10.9% (2022: 11.10%)'); the FY2023 report gives no FY2022 total exposure measure, so that row is left blank for FY2022 rather than back-solved. The FY2021-FY2019 annual reports disclose no leverage ratio in any form, and no Pillar 3 disclosure exists for those years.")
 metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted value - average", {"FY2024": 899000, "FY2023": 1035000}), ("Total net cash outflows (adjusted value)", {"FY2024": 365000, "FY2023": 467000}), ("Liquidity Coverage Ratio (%)", {"FY2024": "287%", "FY2023": "236%", "FY2022": "354%", "FY2021": "158%", "FY2020": "551%", "FY2019": "221%"})], "FY2024-FY2023 amounts and ratios are UK KM1. The FY2022-FY2019 headline ratios are from the statutory annual-report Capital and Liquidity sections. BASIS NOTE: the FY2023 Pillar 3 report's introduction page prints the FY2022 LCR as 352%, two points below the 354% the FY2022 annual report states. The annual-report value is retained here for continuity with FY2021-FY2019, which have no Pillar 3 equivalent at all. The gap is rounding/restatement scale rather than a basis break (contrast the KM1 12-month-average vs point-in-time divergences seen at other banks, which run to tens or hundreds of points), so the series is not split into two rows.")
 metric("NSFR", "£'000 / %", [("Total available stable funding", {"FY2024": 6115000, "FY2023": 5622000}), ("Total required stable funding", {"FY2024": 4863000, "FY2023": 4312000}), ("NSFR ratio (%)", {"FY2024": "126%", "FY2023": "130%", "FY2022": "138%", "FY2021": "109%", "FY2020": "138%", "FY2019": "122%"})], "FY2024-FY2023 amounts and ratios are UK KM1. The FY2022-FY2019 headline ratios are from the statutory annual-report Capital and Liquidity sections.")
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No quantitative MREL ratio was found in the RCI Bank UK annual reports, the RCI Bank UK Pillar 3 disclosures reviewed, or the official facts-and-figures page.")
+_RCI_MREL = {
+    **{y: f"Not published – {y} Pillar 3 and {y} annual report (Companies House) read 2026-09-19: no MREL, eligible-liabilities or KM2 figure" for y in ["FY2024", "FY2023"]},
+    **{y: f"Not published – {y} annual report (Companies House, OCR) has no MREL figure; no {y} Pillar 3 exists (Wayback CDX of rcibank.co.uk holds only FY2023/FY2024 editions)" for y in ["FY2022", "FY2021", "FY2020", "FY2019"]},
+}
+metric("MREL Ratio", None, [("MREL ratio", {y: _RCI_MREL.get(y, "Not publicly disclosed") for y in YEARS})], "No quantitative MREL ratio was found in the RCI Bank UK annual reports, the RCI Bank UK Pillar 3 disclosures reviewed, or the official facts-and-figures page. GA-020 (2026-09-19): FY2019-FY2024 annual reports (Companies House scans, OCR) and the FY2023/FY2024 Pillar 3 reports were re-read, with 0 MREL, eligible-liabilities or KM2 hits against 22-72 'capital' hits per document. A full Wayback CDX crawl of rcibank.co.uk (6,188 URLs) shows no Pillar 3 edition before FY2023.")
 
 bw.add_overview_sheet(
     balance_sheet_totals=[

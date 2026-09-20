@@ -702,7 +702,11 @@ bw.add_km1_sheet(
              "exclusion.",
     rows=[
         ("DATA", "Not applicable — the UK KM1 template is not used in HBL Bank UK Limited's Pillar 3 disclosures",
-         {y: "Not applicable" for y in YEARS}),
+         # GA-020 (2026-09-19): each year now names its edition and pages.
+         {y: (f"Not published – HBL {y} Pillar III s.2 'Key Metrics' ({pg}) is three bespoke tables; the UK KM1 "
+              "template is not used (see note)")
+          for y, pg in [("FY2025", "pp.4-5"), ("FY2024", "pp.4-5"), ("FY2023", "p.5"), ("FY2022", "pp.6-7"),
+                        ("FY2021", "pp.4-5")]}),
     ],
     sources_text=KM1_SOURCES,
     source_height=330,
@@ -933,8 +937,14 @@ metric(
     p3_sources(),
 )
 
+# GA-020 (2026-09-19): all five editions (P3_2021..P3_2025_URL; FY2022/FY2024 via
+# their Wayback captures) re-downloaded and full-text searched for MREL /
+# loss-absorbing / eligible liabilities: zero hits; 'resolution' occurs only in
+# 'Recovery and Resolution Plan' governance text.
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
+    statements={"MREL Ratio": {y: (f"Not published – HBL {y} Pillar III Disclosure (full text searched 2026-09-19) "
+                                   "contains no MREL figure or reference") for y in YEARS}},
     per_note={"MREL Ratio": "Not disclosed - HBL Bank UK Limited is not identified as a UK resolution entity in its Pillar 3 disclosures."},
 )
 

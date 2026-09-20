@@ -1036,8 +1036,19 @@ bw.add_not_disclosed_metric_sheets(
         "Annual Reports, nor anywhere in the Bank's own standalone Pillar 3 document obtained 2026-09-15 "
         "(searched in full: zero occurrences of \"MREL\" or \"minimum requirement for own funds\"). KEXIM Bank "
         "(UK) Limited is a wholly-owned subsidiary of a foreign parent and is not a UK resolution entity, so "
-        "no MREL requirement is set for it."
+        "no MREL requirement is set for it. GA-020 RE-CHECK 2026-09-19: the 'not applicable' reason above is not "
+        "sourced to any document, so the cells record the documentary finding instead. All five image-only "
+        "Annual Reports (FY2021-FY2025) were OCR'd in full (38-46 'capital' hits each) and the FY2021, FY2022 and "
+        "FY2023 Pillar 3 editions were re-fetched from the koreaexim.go.kr board (ids 101611, 104242, 108650; "
+        "152 'capital' hits each): zero 'MREL', 'loss-absorbing' or 'eligible liabilities' in any, as in the "
+        "FY2025 edition (which carries FY2024 comparatives)."
     )},
+    statements={"MREL Ratio": {
+        **{y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 and Annual Report (full text / OCR searched "
+               "2026-09-19)") for y in ("FY2025", "FY2023", "FY2022", "FY2021")},
+        "FY2024": ("Not published – zero 'MREL' in the FY2024 Annual Report (OCR) and the FY2025 Pillar 3 that "
+                   "carries FY2024 comparatives, searched 2026-09-19"),
+    }},
 )
 
 # ---------------------------------------------------------------

@@ -789,11 +789,20 @@ metric(
     note="The FY2021 standalone disclosure does not contain an NSFR series; the recovered FY2022 disclosure provides NSFR from FY2022 onward but no FY2021 comparative.",
 )
 
+# GA-020 (2026-09-19). FY2021/FY2022: full-text search recorded in ACCESS_GAP_NOTE (manual retrieval
+# 2026-09-15). FY2023-FY2025: the IR host still returns HTTP 403 / times out to direct requests, so each
+# edition was read on 2026-09-19 as a text render through the r.jina.ai reader proxy ('P3 Annual Solo 2023',
+# 42pp; '2024', 51pp; '2025'; 'capital' 70/142/98 hits). Every MREL hit is framework narrative, the glossary,
+# or the Tier 2 footnote on the USD subordinated loan issued 'as part of the Firm's strategy to comply with
+# MREL'; no ratio or requirement figure. A proxy render is a view, so this negative is recorded as such.
+JPMS_MREL_STATEMENT = ("Not published – no JPMS plc MREL ratio in this year's Pillar 3: MREL appears only as "
+                       "framework narrative and the Tier 2 MREL-loan footnote (full-text search 2026-09-15/19)")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": JPMS_MREL_STATEMENT},
     per_note={
-        "MREL Ratio": "The recovered standalone disclosures describe the MREL framework and identify subordinated instruments issued in support of the Firm's MREL strategy, but no JPMS plc numeric MREL ratio or requirement is reported. No ratio is inferred from the capital instruments.",
+        "MREL Ratio": "The recovered standalone disclosures describe the MREL framework and identify subordinated instruments issued in support of the Firm's MREL strategy, but no JPMS plc numeric MREL ratio or requirement is reported. No ratio is inferred from the capital instruments. GA-020 re-check 2026-09-19: FY2023-FY2025 editions re-read as text renders (the IR host blocks direct requests) - MREL hits are framework narrative, glossary and the Tier 2 subordinated-loan footnote only.",
     },
 )
 

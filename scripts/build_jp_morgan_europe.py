@@ -639,6 +639,14 @@ metric("Leverage Ratio", "%", "Leverage ratio", LEVERAGE, GAP_NOTE)
 metric("LCR", "%", "Liquidity Coverage Ratio", LCR, GAP_NOTE)
 metric("NSFR", "%", "Net Stable Funding Ratio", NSFR, GAP_NOTE)
 
+JPMEL_MREL = {
+    "FY2025": "Not published – Main Disclosure 2025 Large Subsidiaries: MREL named as policy only (PDF p.11), no MREL/KM2 table or ratio for JPMEL",
+    "FY2024": "Not published – Main Disclosure 2024 Large Subsidiaries: MREL named as policy only (PDF p.11), no MREL/KM2 table or ratio for JPMEL",
+    "FY2023": "Not published – FY2023 accounts (CH, OCR) say JPMEL 'continues to meet applicable UK MREL requirements' but give no ratio; FY2023 Large Subsidiary Pillar 3 covers JPMS plc only",
+    "FY2022": "Not published – FY2022 accounts (CH, OCR, PDF p.9) say JPMEL 'continues to meet applicable UK MREL requirements' but give no MREL ratio or amount",
+    "FY2021": "Not published – FY2021 accounts (CH, OCR, PDF p.8) describe the BoE MREL SoP and say requirements are met, but give no MREL ratio or amount",
+}
+
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     P3_SOURCES,
@@ -646,9 +654,21 @@ bw.add_not_disclosed_metric_sheets(
         "MREL Ratio": (
             "No standalone JPMEL MREL ratio was found in the annual solo "
             "tables reviewed; group or another JPMorgan entity's MREL is not "
-            "substituted."
+            "substituted.\n\n"
+            "GA-020 (2026-09-19). Each year is recorded as Not published, on these searches. "
+            "FY2024 and FY2025: the Main Disclosure - Large Subsidiaries editions (Wayback copies, "
+            "%PDF, complete %%EOF; 51pp and 53pp) mention MREL only as BoE policy (PDF p.11) and in "
+            "an own-funds footnote (p.14), with no MREL or KM2 table and no ratio. The positive "
+            "control 'capital' has 149/155 hits. FY2021-FY2023: JPMEL's Companies House accounts "
+            "are image-only, so they were OCR'd (filings MzM0MTgzNDEzMGFkaXF6a2N4, "
+            "MzM4MDkyOTYxNGFkaXF6a2N4, MzQyNDAwMDkzMGFkaXF6a2N4). They describe the MREL SoP and "
+            "state 'The Company continues to meet applicable UK MREL requirements' (PDF pp.7-9) but "
+            "print no MREL figure. The 'Main Disclosure 2023 - Large Subsidiary' edition "
+            "(static-files/3645e9a4-...) covers J.P. Morgan Securities plc only, with 0 hits for JPMEL."
         )
     },
+    years=["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"],
+    statements={"MREL Ratio": JPMEL_MREL},
 )
 
 bw.add_overview_sheet(

@@ -377,11 +377,14 @@ KM1_SOURCES = (
 
 bw.add_km1_sheet(
     title="Santander Financial Services plc - KM1 Key Metrics",
-    subtitle="Not applicable. SFS publishes no Pillar 3 disclosure document of its own, and neither its own "
+    subtitle="Not published. SFS publishes no Pillar 3 disclosure document of its own, and neither its own "
              "Annual Reports nor its parent's Pillar 3 (the Santander UK ACRMD) contains a KM1 key-metrics "
              "template for this entity. See the source note for the three checks behind that statement.",
     rows=[
-        ("DATA", "Not applicable - no Pillar 3 document is published for this entity", {y: "Not applicable" for y in YEARS}),
+        ("DATA", "UK KM1 template - no Pillar 3 document is published for this entity",
+         {y: f"Not published – no SFS Pillar 3 exists; SFS {y} annual report has no KM1 and the parent's "
+             "ACRMD prints KM1 only for Santander UK Group Holdings and the RFB group; see note"
+          for y in YEARS}),
     ],
     sources_text=KM1_SOURCES,
     first_col_width=64,
@@ -389,21 +392,35 @@ bw.add_km1_sheet(
 )
 
 
+# GA-020 (2026-09-19): bare cells reclassified NOT PUBLISHED on evidence. All five SFS
+# annual reports (FY2021-FY2025) were re-downloaded today (%PDF) and their text layers probed:
+# 'tier 1 ratio' 0, 'total capital ratio' 0, 'mrel'/'eligible liabilities'/'loss-absorbing' 0 in
+# every one; 'risk-weighted' occurs only in "exposures are risk-weighted at 0%" (core UK group
+# permission) and 'leverage' only in "leverage exposure measure" narrative - no RWA or leverage
+# ratio figure. 'CET1 capital ratio' occurs only in the capital-risk sentence naming it as a
+# metric and in an AT1 write-down trigger clause; the regulatory capital table (e.g. FY2025
+# Risk review, 'Regulatory capital resources') prints amounts only. ~85 'capital' hits each
+# (positive control). No SFS Pillar 3 exists (KM1_SOURCES). Not SDDT (PRA waivers register).
+def _sfs_np(what):
+    return {y: f"Not published – SFS {y} annual report prints no {what} (capital table gives amounts "
+               "only) and SFS publishes no Pillar 3; see note" for y in YEARS}
+
+
 def metric(name, unit, data, note=None):
     bw.add_metric_sheet(name, unit, data, CAPITAL_SOURCES, note=note, first_col_width=52, source_height=170)
 
 metric("CET1 Capital", "£m", [("CET1 capital", {"FY2025": 249, "FY2024": 266, "FY2023": 288, "FY2022": 256, "FY2021": 293})])
-metric("CET1 Ratio", "%", [("CET1 capital ratio", {y: "Not publicly disclosed" for y in YEARS})], "The SFS reports disclose CET1 capital amounts but do not disclose a standalone CET1 percentage or RWA in the reviewed reports. No ratio is inferred from other Santander entities.")
+metric("CET1 Ratio", "%", [("CET1 capital ratio", _sfs_np("CET1 ratio"))], "The SFS reports disclose CET1 capital amounts but do not disclose a standalone CET1 percentage or RWA in the reviewed reports. No ratio is inferred from other Santander entities.")
 metric("Tier 1 Capital", "£m", [("Tier 1 capital", {"FY2025": 299, "FY2024": 316, "FY2023": 338, "FY2022": 306, "FY2021": 293})])
-metric("Tier 1 Ratio", "%", [("Tier 1 ratio", {y: "Not publicly disclosed" for y in YEARS})])
+metric("Tier 1 Ratio", "%", [("Tier 1 ratio", _sfs_np("Tier 1 ratio"))])
 metric("Total Capital", "£m", [("Total regulatory capital", {"FY2025": 299, "FY2024": 316, "FY2023": 338, "FY2022": 306, "FY2021": 293})])
-metric("Total Capital Ratio", "%", [("Total capital ratio", {y: "Not publicly disclosed" for y in YEARS})])
-metric("Total RWAs", "£m", [("Total risk-weighted assets", {y: "Not publicly disclosed" for y in YEARS})])
+metric("Total Capital Ratio", "%", [("Total capital ratio", _sfs_np("total capital ratio"))])
+metric("Total RWAs", "£m", [("Total risk-weighted assets", _sfs_np("RWA figure"))])
 
 bw.add_rwa_breakdown_sheet(
     title="Santander Financial Services plc — RWA Breakdown",
     subtitle="Standalone company basis. Not publicly disclosed.",
-    rows=[("DATA", "RWA breakdown by risk category", {y: "Not publicly disclosed" for y in YEARS})],
+    rows=[("DATA", "RWA breakdown by risk category", _sfs_np("RWA figure or breakdown"))],
     sources_text=(
         "Sources - reviewed SFS Annual Reports FY2021-FY2025 (see Total RWAs sheet for the same document list).\n\n"
         "SFS's own risk review states it relies on Banco Santander's group Pillar 3 report for CRD IV risk "
@@ -430,6 +447,7 @@ bw.add_rwa_breakdown_sheet(
 UNAVAILABLE = "Not publicly disclosed at SFS standalone level"
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio"], CAPITAL_SOURCES,
+    statements={"Leverage Ratio": _sfs_np("leverage ratio")},
     per_note={"Leverage Ratio": "The reviewed SFS annual reports do not provide this metric for the SFS standalone/company basis. Santander UK Group Holdings disclosures are a different regulatory entity and were not substituted."},
 )
 
@@ -464,6 +482,7 @@ bw.add_metric_sheet("LCR", "£bn / %", [("Eligible liquidity pool", {"FY2025": 3
 bw.add_metric_sheet("NSFR", "%", [("NSFR ratio", {"FY2025": "148%", "FY2024": "149%", "FY2023": "142%", "FY2022": "127%", "FY2021": "137%"})], LIQ_SOURCES, note="NSFR was described by SFS as implemented from 1 January 2022, but the 2021 report nevertheless states the SFS NSFR at 31 December 2021; values are reproduced as reported.", first_col_width=58, source_height=180)
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], CAPITAL_SOURCES,
+    statements={"MREL Ratio": _sfs_np("MREL figure")},
     per_note={"MREL Ratio": "The reviewed SFS annual reports do not provide this metric for the SFS standalone/company basis. Santander UK Group Holdings disclosures are a different regulatory entity and were not substituted."},
 )
 

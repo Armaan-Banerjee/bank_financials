@@ -1125,9 +1125,16 @@ NSFR_KM1_AVERAGE = {
     # computed." A blank here would read as an unresearched gap.
     "FY2022": "Not computed - first year of the requirement",
 }
-NSFR_KM1_AVERAGE.update({y: "Not applicable" for y in NSFR_NOT_APPLICABLE_YEARS})
+# GA-020 (2026-09-19): each pre-2022 year states its reason and names the edition checked.
+def _nsfr_na(y):
+    if y in ("FY2018", "FY2019", "FY2020", "FY2021"):
+        return ("Not applicable – UK NSFR requirement began 1 Jan 2022 (FY2023 Pillar 3 note (h)); this year's "
+                "Pillar 3 says NSFR is 'yet to be introduced as a regulatory requirement' and gives no figure")
+    return ("Not applicable – UK NSFR requirement began 1 Jan 2022 (FY2023 Pillar 3 note (h)); this year's "
+            "Pillar 3 edition contains no NSFR (full-text search 2026-09-19)")
+NSFR_KM1_AVERAGE.update({y: _nsfr_na(y) for y in NSFR_NOT_APPLICABLE_YEARS})
 NSFR_POINT_IN_TIME = {"FY2026": "132.18%", "FY2025": "147.50%", "FY2024": "152.71%", "FY2023": "169.72%", "FY2022": "141.69%"}
-NSFR_POINT_IN_TIME.update({y: "Not applicable" for y in NSFR_NOT_APPLICABLE_YEARS})
+NSFR_POINT_IN_TIME.update({y: _nsfr_na(y) for y in NSFR_NOT_APPLICABLE_YEARS})
 
 metric(
     "NSFR",
@@ -1157,7 +1164,7 @@ metric(
         "The point-in-time row was added 2026-09-15."
     ),
 )
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": "No MREL ratio appears in the official ICICI Bank UK Basel disclosures; no figure has been inferred. ENUMERATED ABSENCE, NOT AN UNSEARCHED GAP (2026-09-16): all 19 Pillar 3 editions the Bank has ever published - FY2008 through FY2026, every one of them downloaded and full-text searched - were searched for 'MREL', 'minimum requirement for own funds and eligible liabilities' and 'loss-absorbing capacity'. There is exactly one hit across the entire 19-document series, and it is not an MREL disclosure: the FY2017 edition's leverage-risk narrative uses the phrase 'loss absorbing capacity in times of a stress' in describing why leverage risk is managed. No MREL requirement, ratio, or eligible-liabilities figure is disclosed in any year. This is consistent with the Bank's size and resolution strategy - the Bank states it is not in scope of the PRA's LREQ leverage regime either - but the point here is only that the documents contain no figure to transcribe."})
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), statements={"MREL Ratio": "Not published – no MREL figure in any Pillar 3 edition FY2008-FY2026 (all 19 full-text searched 2026-09-16; FY2014-FY2026 re-searched 2026-09-19, zero 'MREL')"}, per_note={"MREL Ratio": "No MREL ratio appears in the official ICICI Bank UK Basel disclosures; no figure has been inferred. ENUMERATED ABSENCE, NOT AN UNSEARCHED GAP (2026-09-16): all 19 Pillar 3 editions the Bank has ever published - FY2008 through FY2026, every one of them downloaded and full-text searched - were searched for 'MREL', 'minimum requirement for own funds and eligible liabilities' and 'loss-absorbing capacity'. There is exactly one hit across the entire 19-document series, and it is not an MREL disclosure: the FY2017 edition's leverage-risk narrative uses the phrase 'loss absorbing capacity in times of a stress' in describing why leverage risk is managed. No MREL requirement, ratio, or eligible-liabilities figure is disclosed in any year. This is consistent with the Bank's size and resolution strategy - the Bank states it is not in scope of the PRA's LREQ leverage regime either - but the point here is only that the documents contain no figure to transcribe."})
 
 bw.add_overview_sheet(
     cash_flow_totals=[],

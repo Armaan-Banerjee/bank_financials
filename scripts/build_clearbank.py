@@ -183,9 +183,10 @@ def p3_sources():
         "the source (e.g. \"53%\", \"88%\"); FY2020's are disclosed to 1 decimal place via the "
         "FY2021 Pillar 3 document's comparative column. No Basel II/CET1-terminology issue arises "
         "for any of these years (all post-date the 2014 CRD IV/CET1 introduction).\n"
-        "CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments). MREL not "
-        "disclosed anywhere in any Pillar 3 document or Annual Report reviewed (FY2017-FY2025), "
-        "no reason given.\n"
+        "CET1 = Tier 1 = Total Capital every year (no AT1/Tier 2 instruments). No MREL ratio is "
+        "disclosed in any Pillar 3 document or Annual Report reviewed (FY2017-FY2025); the FY2018-FY2021 "
+        "Pillar 3 documents state the Bank is not required to hold additional capital for MREL - see the "
+        "MREL Ratio sheet (corrected 2026-09-19, GA-020).\n"
         "LEVERAGE RATIO BASIS NOTE: FY2021's own Pillar 3 document (Table 1) discloses two "
         "different leverage figures with materially different values - a \"CRD leverage ratio\" "
         "of 1% and a \"UK leverage ratio\" of 39%, reflecting genuinely different exposure-measure "
@@ -1012,11 +1013,34 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)],
             "small lending book, so required stable funding is tiny relative to available stable "
             "funding.")
 
+# GA-020 (2026-09-19) evidenced statement texts, per year.
+_CB_MREL_NA = ("Not applicable – this year's Pillar 3 MREL section: ClearBank 'has been informed by the PRA that we "
+               "are not currently required to hold any additional capital in respect of MREL'")
+_CB_MREL_NP = ("Not published – no MREL figure or reference in this year's Pillar 3 or annual report "
+               "(full-text search 2026-09-19)")
+CB_MREL = {
+    "FY2025": _CB_MREL_NP, "FY2023": _CB_MREL_NP, "FY2022": _CB_MREL_NP,
+    "FY2024": ("Not published – no MREL figure; FY2024 Pillar 3 (PDF p.8) says only that the 2024 Resolution "
+               "Communication left resolution strategy and MREL unchanged for 2025"),
+    "FY2021": ("Not applicable – FY2021 Pillar 3 MREL section (PDF p.11): 'Currently, ClearBank is not required to "
+               "hold any additional capital in respect of MREL'"),
+    "FY2020": _CB_MREL_NA, "FY2019": _CB_MREL_NA, "FY2018": _CB_MREL_NA,
+    "FY2017": ("Not published – no MREL figure; FY2017 Pillar 3 says only that MREL applied from 1 Jan 2016, fully "
+               "phased in by 1 Jan 2022"),
+}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "Not publicly disclosed - no MREL ratio or qualitative MREL statement "
-                             "found in any Pillar 3 document or Annual Report reviewed (FY2017-FY2025), no reason given."},
+    statements={"MREL Ratio": CB_MREL},
+    per_note={"MREL Ratio": "CORRECTED 2026-09-19 (GA-020). This note previously said no qualitative MREL statement "
+                             "appears in any Pillar 3 or Annual Report. That was wrong: the Pillar 3 documents carry an "
+                             "MREL section in FY2017 (phase-in dates only), FY2018 (PDF p.10), FY2019 (p.10), FY2020 "
+                             "(p.10) and FY2021 (p.11) - the last four stating that ClearBank has been informed by the "
+                             "PRA that it is not currently required to hold any additional capital in respect of MREL - "
+                             "and FY2024 (p.8) notes that the 2024 Resolution Communication left its resolution strategy "
+                             "and MREL unchanged for 2025. No MREL ratio or requirement figure is published in any year "
+                             "and none is derived. FY2022, FY2023 and FY2025 Pillar 3 documents and every Annual Report "
+                             "FY2016-FY2025 available return zero hits for 'MREL' (full-text search 2026-09-19)."},
 )
 
 # ---------------------------------------------------------------

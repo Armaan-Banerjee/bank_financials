@@ -963,6 +963,33 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", "Leverage ratio", {"FY2023": "35.4%", "FY2022": "33.49%", "FY2021": "33.05%", "FY2020": "~30%", "FY2019": "~30%"}, "The Company states that the smaller-bank leverage requirement does not apply; reported ratios are included as disclosed. FY2024 and FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): SDDT Rule 3.1 modification effective 11/04/2024, no end date, preceding both reporting dates. FY2020/FY2019 are transcribed as disclosed - the narrative Pillar 3 documents for these years state only 'approximately 30%', not an exact figure (the FY2021 standalone Pillar 3 document uses the same approximate wording, but a more precise 33.05% is used for FY2021 above, sourced from the newer FY2022 Pillar 3 document's comparative column). FY2016-FY2018: no Pillar 3 document has been reached - UNPROVEN, not established as unpublished (see Sources).")
+# GA-020 (2026-09-19): outcome wording for the statement cells below.
+GA020_LCR = {y: ("Not published – the " + y + " Pillar 3 (re-read 2026-09-18) states only a policy of LCR "
+                 ">= 200%, no measured LCR") for y in ("FY2020", "FY2019")}
+GA020_NSFR = {y: "Not applicable – no UK NSFR requirement before 1 Jan 2022 (PRA PS17/21, PS22/21)"
+              for y in ("FY2018", "FY2017", "FY2016")}
+GA020_NSFR.update({y: ("Not applicable – no UK NSFR requirement before 1 Jan 2022 (PRA PS17/21, PS22/21); the "
+                       + y + " Pillar 3 has no NSFR section") for y in ("FY2020", "FY2019")})
+GA020_MREL = {}
+for _y in ("FY2025", "FY2024"):
+    GA020_MREL[_y] = ("Not published – no Pillar 3 after the SDDT Rule 3.1 opt-in of 11 Apr 2024 (PRA waivers "
+                      "register); zero 'MREL' in AR2024/AR2025, searched 2026-09-19")
+for _y in ("FY2023", "FY2022", "FY2021", "FY2020", "FY2019"):
+    GA020_MREL[_y] = ("Not published – zero 'MREL' in the " + _y + " Pillar 3 edition (full text searched "
+                      "2026-09-19)")
+# GA-020 unreached pass (2026-09-19), second attempt, still UNREACHED. A web search
+# returns an index entry for .../sitefiles/resources/pdf/pillar3disclosures2016.pdf
+# (titled only "Home"), so a file of that name probably existed. Tried: that URL and
+# the 2017/2018 equivalents live (404; the site has since moved to /media/<id>/ paths,
+# so even the cited FY2023 /media/ URL now 404s - the live probes are no control);
+# Wayback CDX for each exact URL on both hosts (no capture) and for the whole domain
+# before 2020 (no document at all); archive.ph/newest for each (404, control OK);
+# CDX of candidate former domains (methodistchapelaid.org/.org.uk/.co.uk: none;
+# mca-ltd.co.uk and mcafundingforchurches.com: unrelated/empty).
+for _y in ("FY2018", "FY2017", "FY2016"):
+    GA020_MREL[_y] = ("Unreached today – no " + _y + " Pillar 3 reached: live paths 404, no Wayback/archive.ph "
+                      "capture (exact URLs + domain pre-2020), web search (2026-09-19); CH accounts OCR'd: no MREL")
+
 metric_rows(
     "LCR", "%",
     [
@@ -971,7 +998,7 @@ metric_rows(
         ("Liquidity coverage ratio at year-end (point-in-time, per UK KM1)",
          dict(MCA_P3_STATUS,
               **{"FY2023": "970%", "FY2022": "833%", "FY2021": "603%",
-                 "FY2020": "Not disclosed", "FY2019": "Not disclosed"})),
+                 "FY2020": GA020_LCR["FY2020"], "FY2019": GA020_LCR["FY2019"]})),
     ],
     LIQUIDITY_BASIS_NOTE
     + "\n\nFY2022's average of 827% is newly added here (2026-09-15) from the FY2022 Pillar 3 document's own "
@@ -1014,8 +1041,7 @@ metric_rows(
         ("Net stable funding ratio at year-end (point-in-time, per UK KM1)",
          dict(MCA_P3_STATUS,
               **{"FY2023": "174%", "FY2022": "192%", "FY2021": "184%",
-                 "FY2020": "Not applicable", "FY2019": "Not applicable", "FY2018": "Not applicable",
-                 "FY2017": "Not applicable", "FY2016": "Not applicable"})),
+                 **GA020_NSFR})),
     ],
     LIQUIDITY_BASIS_NOTE
     + "\n\nFY2022's average of 194% is newly added here (2026-09-15) from the FY2022 Pillar 3 document's own "
@@ -1040,7 +1066,17 @@ metric_rows(
       "because an empty cell is indistinguishable from a year nobody searched. The distinction from the "
       "FY2016-FY2020 'Not applicable' cells is preserved - those years had no NSFR requirement at all.",
 )
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": "No MREL ratio was disclosed in the located Methodist Chapel Aid Pillar 3 documents."})
+bw.add_not_disclosed_metric_sheets(
+    ["MREL Ratio"], p3_sources(),
+    per_note={"MREL Ratio": "No MREL ratio was disclosed in the located Methodist Chapel Aid Pillar 3 documents. "
+              "GA-020 RE-CHECK 2026-09-19: zero 'MREL', 'loss-absorbing', 'eligible liabilities' or "
+              "'resolution' in the FY2019-FY2023 Pillar 3 editions and the text-native Annual Reports 2022, 2024 "
+              "and 2025, against 57-84 hits for 'capital' in each; the image-only Companies House accounts for "
+              "FY2016 and FY2018 (the latter carrying FY2017 comparatives) were OCR'd and also return zero. "
+              "FY2016-FY2018 nonetheless read 'Unreached today', because no Pillar 3 edition for those years has "
+              "been reached (see PRE2019_STATUS) and an MREL statement, if any, would live there."},
+    statements={"MREL Ratio": GA020_MREL},
+)
 
 bw.add_overview_sheet(
     cash_flow_totals=[
@@ -1057,7 +1093,7 @@ bw.add_overview_sheet(
         ("LCR (12-month average of quarterly end-of-month positions)", {"FY2023": "835%", "FY2022": "827%"}),
         ("LCR at year-end (point-in-time, per UK KM1)",
          {"FY2023": "970%", "FY2022": "833%", "FY2021": "603%",
-          "FY2020": "Not disclosed", "FY2019": "Not disclosed"}),
+          "FY2020": GA020_LCR["FY2020"], "FY2019": GA020_LCR["FY2019"]}),
         ("NSFR (12-month average of quarterly end-of-month positions)", {"FY2023": "182%", "FY2022": "194%"}),
         ("NSFR at year-end (point-in-time, per UK KM1)",
          {"FY2023": "174%", "FY2022": "192%", "FY2021": "184%",

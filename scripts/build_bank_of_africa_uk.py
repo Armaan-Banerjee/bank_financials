@@ -34,7 +34,9 @@ AR2019_OWNSITE_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/
 # Standalone Pillar 3 disclosures, found on the Bank's own site
 # (bankofafricaunitedkingdom.co.uk/finances.html) - text-native PDFs, no OCR
 # needed. No FY2021 or FY2025 edition exists (site's earliest is FY2022; FY2025
-# not yet published).
+# not yet published). [SUPERSEDED 2026-09-19 for FY2025 - see P3_2025_FOUND.]
+P3_2025_URL = "https://storage.weblysoft.com/files/general/4ec1bc10-d.pdf"
+P3_2025_FOUND = "FY2025 PILLAR 3 FOUND 19 SEPTEMBER 2026 (GA-020 unreached pass): the Bank's finances page now builds its document list from a JSON API (/api/public/financial-reports), which lists 'Pillar 3 Disclosure Report 2025' hosted OFF the Bank's domain, on its CMS file store: https://storage.weblysoft.com/files/general/4ec1bc10-d.pdf (HTTP 200, application/pdf, %PDF, 1,487,825 bytes, 35pp, MD5 261e9d209bf68811b42d56cc747ca514, 'Pillar 3 Disclosures ... 31 December 2025'). The static .pdf hrefs on finances.html - which every earlier check enumerated - never included it. Used so far ONLY for the KM1 and MREL sheets' FY2025 statements; its key-metric charts (p.6) and tables have NOT yet been transcribed onto the other sheets."
 P3_2022_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/BOA_UK_Pillar_III_2022.pdf"
 P3_2023_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/Pillar3-Disclosures-2023.pdf"
 P3_2024_URL = "https://www.bankofafricaunitedkingdom.co.uk/pdfs/finances/Pillar3-Disclosures-2024.pdf"
@@ -277,6 +279,7 @@ def p3_sources(extra=""):
         f"Report is the 2024 one, so the site as a whole has not yet been updated for the 2025 year-end. "
         f"This is an enumeration of the Bank's own document index, which is stronger than the filename "
         f"permutations recorded on the Leverage Ratio sheet and reaches the same conclusion.\n"
+        f"   {P3_2025_FOUND}\n"
         f"FY2017: Pillar III Disclosures 2017, p.13 (Own Funds/Solvency ratio table) - {P3_2017_URL}\n"
         f"FY2016: Pillar III Disclosures 2017, p.13 (Own Funds/Solvency ratio table, FY2016 comparative column) - {P3_2017_URL}\n"
         f"FY2015: Pillar 3 Disclosures 2015, p.2 (Ratios table) - {P3_2015_URL}\n"
@@ -764,6 +767,8 @@ EARLY_YEARS_NOTE = (
 # That is a different finding from "no Pillar 3 is published" (map rule 8), and
 # it is recorded here on positive evidence rather than on a failed search.
 KM1_SOURCES = (
+    "FY2025 (added 2026-09-19): " + P3_2025_FOUND + " Its p.6 Key Metrics are bar charts, not the KM1 template - "
+    "see the FY2025 cell.\n\n"
     "UK KM1 - KEY METRICS TEMPLATE: NOT USED BY THIS BANK IN ANY YEAR.\n"
     "This is not the same finding as 'no Pillar 3 is published'. BOA UK publishes a Pillar 3 disclosure every "
     "year and the recent editions are carried and cited throughout this workbook; what they do not contain is "
@@ -818,6 +823,32 @@ KM1_SOURCES = (
     "\n" + ENTITY_NOTE
 )
 
+# GA-020 (2026-09-19) outcome statements.
+# FY2021 PILLAR 3 FOUND 2026-09-19: a 36-page "Pillar 3 Disclosures 31 December
+# 2021" (BOA UK, text-native) is archived by the Wayback Machine at
+# bankofafricaunitedkingdom.co.uk/pdfs/pillar/Pillar_3.pdf, capture
+# 20260414002518 (1,723,249 bytes, complete - qpdf clean). Earlier captures of
+# the same URL (20241205, 20250122) are a different, 1 MiB-truncated file. Its
+# s.1.1.4 KEY METRICS is the same four-bar-chart picture (checked as a page
+# image), with no KM1 template and no MREL text. The note above ('no FY2021
+# edition exists') predates this find.
+P3_2021_WAYBACK = ("https://web.archive.org/web/20260414002518id_/https://bankofafricaunitedkingdom.co.uk/"
+                   "pdfs/pillar/Pillar_3.pdf")
+_KM1_PRE = ("Not applicable – UK KM1 template arrived with the PRA Disclosure (CRR) Part on 1 Jan 2022, after this "
+            "year-end")
+_KM1_NOT_USED = ("Not applicable – this year's own Pillar 3 does not use the UK KM1 template (key metrics printed as "
+                 "four bar charts, p.6; 0 'KM1' hits)")
+KM1_STATEMENTS = {y: _KM1_PRE for y in YEARS}
+KM1_STATEMENTS.update({y: _KM1_NOT_USED for y in ("FY2024", "FY2023", "FY2022")})
+# GA-020 unreached pass (2026-09-19): FY2025 edition FOUND (P3_2025_FOUND). Its
+# section 1.1.4 'Key Metrics' (p.6, page image read) is the same four bar charts as
+# FY2022-FY2024 (Own Funds, Credit RWA, Leverage Ratio, LCR Ratio for 2023-2025);
+# 0 'KM1', 0 'combined buffer', 0 'total exposure measure' hits in 118,572 chars of
+# text; the only images are the p.6 charts, the p.1 cover and a p.16 lines-of-defence
+# diagram (rule 13 checked). So the template is not used, exactly as in FY2022-24.
+KM1_STATEMENTS["FY2025"] = ("Not applicable – FY2025 Pillar 3 (found 2026-09-19 on the bank's CMS file store) does not "
+                            "use the UK KM1 template (key metrics as four bar charts, p.6; 0 'KM1' hits)")
+
 bw.add_km1_sheet(
     title="Bank of Africa United Kingdom Plc - KM1 Key Metrics",
     subtitle="Not applicable: this bank publishes a Pillar 3 every year but does not use the UK KM1 template "
@@ -825,7 +856,7 @@ bw.add_km1_sheet(
              "whose values do not reconcile to the same document's capital tables. See the sources note for "
              "the positive evidence and for what was checked.",
     rows=[("DATA", "UK KM1 - Key metrics template: not used by this bank in any year",
-           {y: "Not applicable" for y in YEARS})],
+           KM1_STATEMENTS)],
     sources_text=KM1_SOURCES,
     first_col_width=64,
     source_height=300,
@@ -896,7 +927,7 @@ metric(
 )
 
 RWA_BREAKDOWN_PRESENTATION_NOTE = (
-    "PRESENTATION NOTE: FY2025 category breakdown not available - no FY2025 Pillar 3 "
+    "PRESENTATION NOTE [" + P3_2025_FOUND + "]: FY2025 category breakdown not available - no FY2025 Pillar 3 "
     "disclosure has been published yet (same gap already noted on the Total RWAs and other "
     "Pillar 3 sheets), so only the aggregate Total RWA figure exists for that year and it is "
     "(re-confirmed 2026-09-12: bank's own finances.html page still lists Pillar3-Disclosures-2024.pdf "
@@ -931,6 +962,9 @@ RWA_BREAKDOWN_PRESENTATION_NOTE = (
 RWA_BREAKDOWN_SOURCES = (
     "Sources - Bank of Africa United Kingdom Plc's own Pillar 3 Disclosures, 'Overview of Risk "
     "Weighted Assets and Minimum Capital Required under Pillar 1' table, GBP'000:\n"
+    f"FY2025 (added 2026-09-19, & FY2024 comparative which matches the FY2024 column): Pillar 3 Disclosures 2025, "
+    f"'Overview of the Bank's 2025 Risk Weighted Assets and Minimum Capital Required under Pillar 1', p.21 (read off "
+    f"the page image) - {P3_2025_URL}\n"
     f"FY2024 (& FY2023 comparative): Pillar 3 Disclosures 2024, p.22 - {P3_2024_URL}\n"
     f"FY2023 (used as primary column): Pillar 3 Disclosures 2023, p.22 - {P3_2023_URL}\n"
     f"FY2022 (used as primary column, & FY2021 comparative): Pillar 3 Disclosures 2022, p.18-19 - {P3_2022_URL}\n"
@@ -947,15 +981,14 @@ rwa_breakdown_rows = [
     # and in particular the FY2020 Annual Report's 'Capital Requirements (Per
     # Risk Type)' PIE CHART stays refused, for the three reasons in the note.
     ("DATA", "[No risk-type RWA breakdown published for this year - see note below]",
-     {"FY2025": "Not published - no Pillar III edition for this year",
-      "FY2020": "Not disclosed - no risk-type split in the Annual Report",
+     {"FY2020": "Not disclosed - no risk-type split in the Annual Report",
       "FY2019": "Not disclosed - no risk-type split in the Annual Report",
       "FY2018": "Not disclosed - no risk-type split in the Annual Report"}),
-    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2024": 194090, "FY2023": 167168, "FY2022": 345166, "FY2021": 238172, "FY2017": 292139, "FY2016": 277878}),
-    ("DATA", "Counterparty credit risk (of which CVA)", {"FY2024": 1442, "FY2023": 447, "FY2022": 246, "FY2021": 350, "FY2017": 225, "FY2016": 226}),
-    ("DATA", "Market risk", {"FY2024": 7152, "FY2023": 45736, "FY2022": 67257, "FY2021": 206395, "FY2017": 77898, "FY2016": 90900}),
-    ("DATA", "Operational risk", {"FY2024": 29727, "FY2023": 39255, "FY2022": 40455, "FY2021": 36001, "FY2017": 31126, "FY2016": 26239}),
-    ("TOTAL", "Total RWA", {"FY2024": 232412, "FY2023": 252606, "FY2022": 453124, "FY2021": 480918, "FY2017": 401388, "FY2016": 395244}),
+    ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2025": 212890, "FY2024": 194090, "FY2023": 167168, "FY2022": 345166, "FY2021": 238172, "FY2017": 292139, "FY2016": 277878}),
+    ("DATA", "Counterparty credit risk (of which CVA)", {"FY2025": 387, "FY2024": 1442, "FY2023": 447, "FY2022": 246, "FY2021": 350, "FY2017": 225, "FY2016": 226}),
+    ("DATA", "Market risk", {"FY2025": 2071, "FY2024": 7152, "FY2023": 45736, "FY2022": 67257, "FY2021": 206395, "FY2017": 77898, "FY2016": 90900}),
+    ("DATA", "Operational risk", {"FY2025": 19728, "FY2024": 29727, "FY2023": 39255, "FY2022": 40455, "FY2021": 36001, "FY2017": 31126, "FY2016": 26239}),
+    ("TOTAL", "Total RWA", {"FY2025": 235076, "FY2024": 232412, "FY2023": 252606, "FY2022": 453124, "FY2021": 480918, "FY2017": 401388, "FY2016": 395244}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -969,14 +1002,20 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Leverage Ratio",
-      {"FY2025": "Not disclosed - no Pillar III edition; absent from the Annual Report",
+      {"FY2025": "14.25%",
        "FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%",
        "FY2020": "Not disclosed in the FY2020 Annual Report",
        "FY2019": "Not disclosed in the FY2019 Annual Report",
        "FY2018": "Not disclosed in the FY2018 Annual Report",
        "FY2017": "12.08%", "FY2016": "9.62%"})],
     p3_sources(
-        "\n\nFY2025 leverage ratio not found - left blank rather than guessed. Re-verified "
+        "\n\nFY2025 (added 19 September 2026): 14.25%, the 2025 bar's printed data label on the 'Leverage "
+        "Ratio' chart in section 1.1.4 Key Metrics, p.6 of the Pillar 3 Disclosures 2025 (read off the page "
+        "image; the same chart prints 17.67% for 2024 and 20.66% for 2023, matching this sheet) - " + P3_2025_URL + ". "
+        + P3_2025_FOUND + " THE PARAGRAPH THAT FOLLOWS IS SUPERSEDED: it was true of the documents it names "
+        "(the Annual Report has no leverage ratio), but its conclusion that no FY2025 edition existed was a "
+        "limit of the index it enumerated.\n\n"
+        "FY2025 leverage ratio not found - left blank rather than guessed. Re-verified "
         "independently on 15 September 2026, three ways: (1) the bank's own finances.html "
         "index still lists Pillar3-Disclosures-2024.pdf as the newest Pillar 3 edition, with "
         "no 2025 entry; (2) four filename permutations for a 2025 edition "
@@ -1006,9 +1045,9 @@ metric(
         "blanks - and note that FY2021 onward and FY2016/FY2017 DO carry the ratio, which is what "
         "made this an interior gap worth chasing."
     ),
-    note="No FY2025 figure - a confirmed disclosure gap, not an unchecked one. See the source note for the "
-         "three-way verification (site index, filename permutations against a live control file, and a full "
-         "100-page OCR of the scanned FY2025 Annual Report) carried out on 15 September 2026.",
+    note="FY2025 added 19 September 2026 from the FY2025 Pillar 3's p.6 Key Metrics chart (14.25%). The earlier "
+         "'confirmed disclosure gap' for FY2025 was wrong: the edition existed on the Bank's CMS file store, "
+         "outside the static index that was checked - see the source note.",
 )
 
 metric(
@@ -1074,6 +1113,31 @@ metric(
     note="FY2014-FY2023 not publicly disclosed - see source note.",
 )
 
+# GA-020 (2026-09-19): each MREL year names the document checked. Text or OCR
+# of every document below searched for MREL / eligible liabilities / loss
+# absorbing: 0 genuine hits (one OCR artefact 'mrEl' in a FY2020 chart label),
+# with 30-128 'capital' hits per document as a positive control. Image-only
+# Companies House scans (FY2025, FY2021, FY2018, FY2016, FY2014) were OCR'd in
+# full at 150dpi.
+def _boa_np(doc):
+    return "Not published – no MREL figure or statement in " + doc + " (searched 2026-09-19)"
+_BOA_MREL_PRE = ("Not applicable – UK MREL framework (BoE Statement of Policy, Nov 2016) postdates this year-end; "
+                 "Pillar 3 2015 has no MREL")
+BOA_MREL_STATEMENTS = {
+    "FY2025": _boa_np("Pillar 3 2025 (found 2026-09-19, CMS file store) or FY2025 Annual Report (OCR)"),
+    "FY2024": _boa_np("Pillar 3 2024 or Annual Report 2024"),
+    "FY2023": _boa_np("Pillar 3 2023 or FY2023 Financial Statements"),
+    "FY2022": _boa_np("Pillar 3 2022 or FY2022 Financial Statements"),
+    "FY2021": _boa_np("Pillar 3 31 Dec 2021 (Wayback) or FY2021 Annual Report (OCR)"),
+    "FY2020": _boa_np("the FY2020 Annual Report (own-site PDF)"),
+    "FY2019": _boa_np("the FY2019 Annual Report (own-site PDF)"),
+    "FY2018": _boa_np("the FY2018 Annual Report (CH scan, OCR)"),
+    "FY2017": _boa_np("Pillar 3 2017"),
+    "FY2016": _boa_np("FY2016 Annual Report (CH scan, OCR) or Pillar 3 2017's FY2016 column"),
+    "FY2015": _BOA_MREL_PRE,
+    "FY2014": _BOA_MREL_PRE,
+}
+
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     "No MREL disclosure found in any Annual Report or Pillar 3 document for any year "
@@ -1083,7 +1147,9 @@ bw.add_not_disclosed_metric_sheets(
     "left as not disclosed rather than assumed. Official Bank of Africa UK financial reports "
     f"and Pillar 3 disclosures archive reviewed: {BOA_FINANCES_URL}. The available official "
     f"Pillar 3 reports are also cited directly above (2015: {P3_2015_URL}; 2017: "
-    f"{P3_2017_URL}; 2022: {P3_2022_URL}; 2023: {P3_2023_URL}; 2024: {P3_2024_URL}).",
+    f"{P3_2017_URL}; 2022: {P3_2022_URL}; 2023: {P3_2023_URL}; 2024: {P3_2024_URL}; 2021 (Wayback, found "
+    f"2026-09-19): {P3_2021_WAYBACK}).",
+    statements={"MREL Ratio": BOA_MREL_STATEMENTS},
 )
 
 # ---------------------------------------------------------------
@@ -1120,7 +1186,7 @@ bw.add_overview_sheet(
     ratios=[
         ("CET1 Ratio", {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%", "FY2020": "13.76%", "FY2019": "14.04%", "FY2018": "13.5%", "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"}),
         ("Total Capital Ratio", {"FY2025": "24.03%", "FY2024": "25.95%", "FY2023": "23.83%", "FY2022": "15.70%", "FY2021": "15.49%", "FY2020": "16.89%", "FY2019": "17.36%", "FY2018": "17.0%", "FY2017": "19.0%", "FY2016": "16.9%", "FY2015": "16.2%", "FY2014": "17.9%"}),
-        ("Leverage Ratio", {"FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%", "FY2017": "12.08%", "FY2016": "9.62%"}),
+        ("Leverage Ratio", {"FY2025": "14.25%", "FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%", "FY2017": "12.08%", "FY2016": "9.62%"}),
         ("LCR", {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%", "FY2020": "179%", "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "

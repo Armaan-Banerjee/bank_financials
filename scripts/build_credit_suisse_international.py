@@ -1122,13 +1122,56 @@ metric(
          "comparative column, and FY2021's own report mentions the NSFR only in narrative risk-management text "
          "with no figure. FY2025 added 2026-09-15 from that same KM1 line (p.6) - see this sheet's source note.",
 )
+# GA-020 (2026-09-19). Each CSi Pillar 3 FY2015-FY2024 (Wayback / ubs.com copies
+# cited in this script) was text-searched for MREL, TLAC, loss-absorbing,
+# eligible liabilities and KM2: no MREL or internal-MREL ratio or amount in any
+# of them (positive control 140-197 'capital' hits each). 'Eligible
+# liabilities' occurs only as UK CC1/CCA template labels (FY2022), and 'iMREL'
+# only as a funding-source word in the FY2018 and FY2019 liquidity narrative
+# ('subordinated debt (including iMREL...)'). THAT WORD CONTRADICTS THE NOTE
+# BELOW: CSi did issue internal MREL, so 'no entity-level MREL requirement
+# applies' is not established - the cells therefore say 'Not published', not
+# 'Not applicable'. FY2025's own Pillar 3 on ubs.com returned an Akamai
+# 'Access Denied' page on 2026-09-19 (browser headers tried) and has no
+# Wayback capture, so FY2025 is unreached.
+CSI_MREL = {y: ("Not published – no MREL/iMREL ratio or amount in CSi's own Pillar 3 for this year (text-searched "
+                "2026-09-19; 'iMREL' appears only as a funding source, FY2018-19)")
+            for y in YEARS}
+# GA-020 unreached pass (2026-09-19), second attempt, still UNREACHED. Tried: the cited
+# ubs.com link URL over HTTP/1.1 and HTTP/2 with full browser headers (403 Akamai); the
+# decoded DAM path /content/dam/assets/global/en/collections/credit-suisse/documents/
+# international-documents/csi-pillar-2025-disclosure-v6.pdf on www.ubs.com (403) and
+# ubs.com (302 to the blocked host); Wayback CDX for that DAM path and for the whole
+# regulatory-directory/international prefix (2026 captures hold the index pages and the
+# 2024 annual report, not the 2025 Pillar 3); Wayback Save Page Now (HTTP 500);
+# archive.ph/newest (404 - no capture; control URL 302 to a capture); r.jina.ai
+# (returns an ad-tracker page, not the PDF). A 2026-09-15 session transcribed KM1
+# figures from a manual browser download, but no copy of that file is kept in the
+# repo, so its MREL content cannot be checked now. Group (UBS) documents are not used:
+# they are not CSi's own disclosure.
+# Common Crawl pass 2026-09-19: CC-MAIN-2026-08..2026-39 (10 crawls, self-hosted ZipNum lookup on
+# data.commoncrawl.org) for the regulatory-directory/international/* link prefix and the
+# /content/dam/.../international-documents/* DAM prefix: 0 records in every crawl, while
+# ubs.com/global/en/collections/credit-suisse/* returns 66 records in CC-MAIN-2026-17 (control),
+# so the file was never crawled. Log: wayfinder/gaps/ga020/unreached/done/CREDIT SUISSE INTERNATIONAL.jsonl
+CSI_MREL["FY2025"] = ("Unreached today – FY2025 Pillar 3 on ubs.com: Akamai 403 (link and DAM path, HTTP/1.1+2); "
+                      "no Wayback or archive.ph capture; Wayback save failed (2026-09-19); Common Crawl "
+                      "2026-08..2026-39 checked")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": CSI_MREL},
     per_note={"MREL Ratio": "Not publicly disclosed for any year FY2015-FY2025, and not expected to be: CSi is "
                             "not a UK resolution entity, so no entity-level MREL requirement applies to it. "
                             "Re-checked 2026-09-12 against the recovered FY2021-FY2024 Pillar 3 documents - the "
-                            "term appears in none of them, nor in any Annual Report."},
+                            "term appears in none of them, nor in any Annual Report.\n"
+                            "FY2025 COMMON CRAWL CHECK (2026-09-19): every Common Crawl crawl from CC-MAIN-2026-08 "
+                            "to CC-MAIN-2026-39 was searched for the ubs.com link prefix "
+                            ".../regulatory-directory/international/* and the DAM prefix "
+                            "/content/dam/assets/global/en/collections/credit-suisse/documents/international-documents/*: "
+                            "no record in any crawl. The same instrument returns 66 records for "
+                            "ubs.com/global/en/collections/credit-suisse/* in CC-MAIN-2026-17, so the zero means the "
+                            "file was never crawled, not that the lookup failed. FY2025 stays Unreached."},
 )
 
 # ---------------------------------------------------------------

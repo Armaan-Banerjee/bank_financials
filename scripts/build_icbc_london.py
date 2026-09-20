@@ -36,6 +36,11 @@ P3_21_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/do
 # verified HTTP 200 + Content-Type application/pdf + %PDF magic bytes on 2026-09-16.
 # Nothing earlier than FY2018 was located under any filename tried; that is "not located",
 # not "does not exist" (map rule 9).
+# SUPERSEDED 2026-09-19: FY2015-FY2017 editions found - see P3_EARLY_FOUND below.
+P3_17_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2018/2017_Pillar_3_Disclosures.pdf"
+P3_16_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2017/2016_Pillar_3_Disclosures.pdf"
+P3_15_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2015/2015_Pillar_3_Disclosures.pdf"
+P3_EARLY_FOUND = "FOUND 19 SEPTEMBER 2026 (GA-020 unreached pass): the FY2015, FY2016 and FY2017 editions DO exist on the same CDN, in a THIRD filename style ('<year>_Pillar_3_Disclosures.pdf', capitalised, with underscores): download/2015/2015_Pillar_3_Disclosures.pdf (31 December 2015, 36pp), download/2017/2016_Pillar_3_Disclosures.pdf (31 December 2016, 37pp), download/2018/2017_Pillar_3_Disclosures.pdf (31 December 2017, 45pp), each HTTP 200 application/pdf %PDF. So the sentence this replaces ('no Pillar 3 edition earlier than FY2018 was located') is superseded. So far these editions have been used ONLY for the MREL sheet; their capital/RWA/leverage figures have not yet been transcribed onto the other sheets, and FY2017 there still comes from the FY2018 edition's comparative. No FY2014 edition was found (5 name variants x 3 folders, 404)."
 P3_20_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2021/2020Pillar3Disclosure.pdf"
 P3_19_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2020/2019Pillar3Disclosure.pdf"
 P3_18_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2019/2018Pillar3Disclosure.pdf"
@@ -136,16 +141,13 @@ def p3_sources(note_disclosure_start=True):
             "DO disclose total risk-weighted exposures, the three capital ratios and (FY2018-FY2020) the "
             "leverage ratio and its exposure measure, in their own 'Table 1 - Own Funds' and 'The Leverage "
             "Ratio' section - so the Total RWAs, CET1/Tier 1/Total Capital Ratio and Leverage Ratio sheets "
-            "now carry FY2018-FY2020 (and FY2017 from the FY2018 edition's own comparative column, the only "
-            "source for that year located). Those sheets' FY2014-FY2016 cells remain blank: no Pillar 3 "
-            "edition earlier than FY2018 was located under any filename tried, and no RWA figure appears in "
-            "the Annual Reports.\n"
-            "The NSFR and RWA Breakdown sheets are NOT back-filled from these three editions: no NSFR ratio "
-            "of any kind is stated in any of them (the CRR II NSFR disclosure is one of the requirements "
-            "they describe as not yet applicable), and their RWA analysis is a 'Table 7 - Pillar 1 capital "
-            "requirement' breakdown by EXPOSURE CLASS, which is a different cut from the UK OV1 risk-type "
-            "breakdown the RWA Breakdown sheet reproduces; mapping one onto the other would invent a "
-            "correspondence the Bank never published.\n"
+            "now carry FY2018-FY2020 (and FY2017 from the FY2018 edition's comparative column). The FY2015, "
+            "FY2016 and FY2017 editions were subsequently found under a third filename style [" + P3_EARLY_FOUND + "]. "
+            "The ratio and Total RWA sheets now also carry FY2015-FY2016, and FY2016 leverage is transcribed; "
+            "FY2014 remains blank because no FY2014 Pillar 3 was reached and no RWA figure appears in its Annual Report.\n"
+            "NSFR remains blank before FY2021 because the early editions state no NSFR ratio. The FY2015-FY2016 "
+            "RWA analysis is reproduced in its own pre-OV1 section rather than mapped onto the later UK OV1 rows; "
+            "the two source templates are visibly separated on the RWA Breakdown sheet.\n"
             "CET1/Tier 1/Total Capital $ amounts are disclosed every year back to FY2014 via each year's "
             "own Annual Report 'Regulatory capital' note (see the CET1/Tier 1/Total Capital sheets' own "
             "FY2014-FY2020 source note), and for FY2017-FY2020 those Annual Report amounts tie EXACTLY to "
@@ -191,25 +193,19 @@ def p3_capital_sources_1420():
     )
 
 def p3_prekm1_sources():
-    """FY2017-FY2020 RWA, capital ratios and leverage - from the three pre-KM1
-    standalone Pillar 3 editions located 2026-09-16 (KM1-016). These years were
-    previously left blank on the strength of a claim that no Pillar 3 document
-    existed before FY2021; it does."""
+    """FY2015-FY2020 RWA, capital ratios and leverage from pre-KM1 Pillar 3."""
     return (
-        "Sources FY2017-FY2020 - ICBC (London) plc's own standalone Pillar 3 Disclosures for those years, "
+        "Sources FY2015-FY2020 - ICBC (London) plc's own standalone Pillar 3 Disclosures for those years, "
         "'Table 1 - Own Funds' (total risk weighted exposures and the three capital ratios) and section 5 "
         "'The Leverage Ratio' (the ratio in the section's own narrative sentence, the exposure measure in "
         "its 'Summary reconciliation of accounting assets and Leverage ratio exposures' table), $'000:\n"
         f"FY2020: Pillar 3 Disclosures 2020, Table 1 p.13 and section 5 p.18 (own 2020 column) — {P3_20_URL}\n"
         f"FY2019: Pillar 3 Disclosures 2019, Table 1 p.12 and section 5 p.17 (own 2019 column) — {P3_19_URL}\n"
         f"FY2018: Pillar 3 Disclosures 2018, Table 1 p.9 and section 5 p.15 (own 2018 column) — {P3_18_URL}\n"
-        f"FY2017: Pillar 3 Disclosures 2018, Table 1 p.9 (2017 COMPARATIVE column) — {P3_18_URL}. No FY2017 "
-        "or earlier Pillar 3 edition was located under any filename pattern tried, so FY2017 is the one "
-        "year here taken from a later edition's comparative rather than its own document; it is flagged "
-        "rather than silently mixed in. The FY2018 edition prints no 2017 leverage comparative, so FY2017 "
-        "has no leverage figure.\n"
-        "These three editions were located on 2026-09-16, misfiled one year forward on the Bank's own CDN "
-        "in exactly the way already documented for the FY2021 and FY2022 editions, and each was verified "
+        f"FY2017: Pillar 3 Disclosures 2017, Table 1 PDF p.15 / printed p.12 and leverage Tables 8-9 PDF pp.20-21 / printed pp.17-18 — {P3_17_URL}\n"
+        f"FY2016: Pillar 3 Disclosures 2016, Table 1 PDF p.11 / printed p.8 and leverage Tables 8-9 PDF p.16 / printed p.13 — {P3_16_URL}\n"
+        f"FY2015: Pillar 3 Disclosures 2015, Table 1 PDF p.10 / printed p.7 — {P3_15_URL}. The FY2015 edition does not print a leverage ratio.\n"
+        "The FY2018-FY2020 editions were located on 2026-09-16 and the FY2015-FY2017 editions on 2026-09-19; each was verified "
         "by HTTP 200, Content-Type application/pdf and %PDF magic bytes. They do NOT use the UK KM1 "
         "template (it post-dates them - see the KM1 Key Metrics sheet's own note), so these figures come "
         "from the Bank's own bespoke tables and are not re-labelled onto template row numbers anywhere.\n"
@@ -831,7 +827,8 @@ KM1_SOURCES = (
     "credit-quality-step mapping table, neither of them a key-metrics table. Page selection was anchored "
     "on each document's own table of contents rather than on any digit-density heuristic (rule 16).\n"
     "No Pillar 3 edition earlier than FY2018 was located under any filename pattern tried. That is 'not "
-    "located', not 'does not exist' (rule 9).\n\n"
+    "located', not 'does not exist' (rule 9). " + P3_EARLY_FOUND + " None of the three is a UK KM1 template "
+    "(it did not yet exist); a rule-8 check of them is still to do.\n\n"
     "PRECISION AND GLYPHS, reproduced not normalised: ICBC prints amounts to two decimal places of "
     "USD '000 and ratios to two decimal places with a per cent sign, in every edition, and this sheet "
     "keeps both. No cell in any of the five editions' 31 December columns is a dash or a blank, so no "
@@ -879,7 +876,7 @@ metric(
 metric(
     "CET1 Ratio", "% of RWA",
     [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                                     "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"})],
+                                     "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
@@ -892,7 +889,7 @@ metric(
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                       "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"})],
+                       "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
@@ -905,18 +902,19 @@ metric(
 metric(
     "Total Capital Ratio", "% of RWA",
     [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                              "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%"})],
+                              "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%", "FY2016": "26.98%", "FY2015": "23.51%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
     "Total RWAs", "$'000",
     [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738, "FY2022": 902857, "FY2021": 739776,
-                                              "FY2020": 1022681, "FY2019": 1145387, "FY2018": 1572886, "FY2017": 1793374})],
+                                              "FY2020": 1022681, "FY2019": 1145387, "FY2018": 1572886, "FY2017": 1794374, "FY2016": 1777358, "FY2015": 1953629})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 rwa_breakdown_rows = [
+    ("SECTION", "UK OV1 risk-type template (FY2021-FY2025)", {}),
     ("DATA", "Credit risk (excluding CCR)",
      {"FY2025": 590477.63, "FY2024": 660913.86, "FY2023": 795488.58, "FY2022": 848322.89, "FY2021": 671772.29}),
     ("DATA", "Counterparty credit risk (CCR)",
@@ -925,13 +923,28 @@ rwa_breakdown_rows = [
      {"FY2025": 84197.30, "FY2024": 57831.90, "FY2023": 47249.90, "FY2022": 54534.06, "FY2021": 67983.12}),
     ("TOTAL", "Total risk weighted exposure amount",
      {"FY2025": 675423.74, "FY2024": 719040.48, "FY2023": 842738.48, "FY2022": 902856.95, "FY2021": 739776.26}),
+    ("SECTION", "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017)", {}),
+    ("DATA", "Total Credit and Counterparty Credit Risk / Total Credit Risk",
+     {"FY2017": 1666837, "FY2016": 1640881, "FY2015": 1811655}),
+    ("DATA", "Operational risk (Table 5)", {"FY2017": 125483, "FY2016": 127677, "FY2015": 107701}),
+    ("DATA", "Market risk - Position risk (Table 5)", {"FY2017": 135, "FY2016": 243, "FY2015": 90}),
+    ("DATA", "Credit valuation adjustment (Table 5)", {"FY2017": 1919, "FY2016": 8557, "FY2015": 34183}),
+    ("TOTAL", "Grand Total, as printed in Table 5", {"FY2017": 1794374, "FY2016": 1777359, "FY2015": 1953629}),
+    ("DATA", "FY2018-FY2020 edition status (not a risk category)", {
+        "FY2020": "Published - pre-OV1 exposure-class table requires its own section; not mapped to UK OV1 rows",
+        "FY2019": "Published - pre-OV1 exposure-class table requires its own section; not mapped to UK OV1 rows",
+        "FY2018": "Published - pre-OV1 exposure-class table requires its own section; not mapped to UK OV1 rows",
+    }),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="ICBC (London) plc — RWA Breakdown",
     subtitle="Solo basis, UK OV1 template, $'000",
     rows=rwa_breakdown_rows,
-    sources_text=rwa_sources(),
+    sources_text=rwa_sources() + "\n\n" + p3_prekm1_sources()
+                 + "\nFY2015/FY2016 RWA categories: each edition's Table 5, PDF p.14. FY2017: Table 5, PDF p.17 / printed p.14. "
+                   "FY2016's printed components sum to 1,777,358 while its printed Grand Total is 1,777,359; "
+                   "both are reproduced as printed rather than force-reconciled.",
     first_col_width=60,
     source_height=170,
     unit_suffix=" ($'000)",
@@ -941,9 +954,9 @@ metric(
     "Leverage Ratio", "$'000 / %",
     [
         ("Leverage ratio total exposure measure ($'000)", {"FY2025": 1153889, "FY2024": 1493767, "FY2023": 1339718, "FY2022": 1436983, "FY2021": 1467315,
-                                                           "FY2020": 2058837, "FY2019": 2327148, "FY2018": 2516920}),
+                                                           "FY2020": 2058837, "FY2019": 2327148, "FY2018": 2516920, "FY2017": 2717039, "FY2016": 2951237}),
         ("Leverage ratio (%)", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%",
-                                "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%"}),
+                                "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%", "FY2017": "14.64%", "FY2016": "12.79%"}),
     ],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
@@ -990,7 +1003,28 @@ bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(note_disclosure_start=False) + "\nMREL is not referenced anywhere in ANY of the eight standalone "
     "Pillar 3 disclosure documents now located for this Bank (FY2018 through FY2025); ICBC (London) plc does not "
-    "appear to be subject to a separate MREL requirement.",
+    "appear to be subject to a separate MREL requirement.\n"
+    "GA-020 (2026-09-19): all eight Pillar 3 PDFs FY2018-FY2025 were re-fetched from the URLs above and "
+    "text-searched for 'MREL' / 'eligible liabilities' - zero hits (the only 'resolution' hits are Board terms of "
+    "reference naming the 'Resolution Pack'). UPDATE 2026-09-19: the FY2015, FY2016 and FY2017 editions were "
+    "then found (" + P3_15_URL + " ; " + P3_16_URL + " ; " + P3_17_URL + ") and text-searched the same way "
+    "(MREL / eligible liabilities / loss-absorbing / bail-in: zero; 'own funds' 7-10 hits each; 'resolution' only "
+    "'Resolution Pack'), and each contents page (pp.2-3) was read off a rendered image: no MREL or resolution-"
+    "funding section. FY2014 stays unreached: no edition under 5 name variants in CDN folders 2014-2016, and the "
+    "CDX sweeps of icbclondon.com / www.icbc.com.cn / v.icbc.com.cn hold none. Original GA-020 text follows. "
+    "FY2014-FY2017 are UNREACHED, not negative: no Pillar 3 for those "
+    "years was located under any filename tried, and a Wayback CDX listing of the whole ICBCLondon/download/ CDN "
+    "path (173 URLs) holds no Pillar 3 for them - but that same listing also lacks the FY2018-FY2020 editions "
+    "that are live on the CDN, so it cannot prove absence. The 2016 Report and Accounts (ICBCreport2016.pdf, "
+    "native text) has no MREL mention.",
+    statements={"MREL Ratio": {
+        **{f"FY{y}": ("Not published – no MREL figure or mention in this year's Pillar 3 disclosure "
+                      "(text-searched 2026-09-19)") for y in range(2018, 2026)},
+        **{f"FY{y}": (f"Not published – ICBC (London) plc Pillar 3 Disclosures 31 Dec {y} (CDN, found 2026-09-19): "
+                      "no MREL in text or contents pp.2-3") for y in range(2015, 2018)},
+        "FY2014": ("Unreached today – no FY2014 Pillar 3 found: CDN name tries (incl. the FY2015-17 style, 2026-09-19), "
+                   "CDX of v.icbc.com.cn, icbclondon.com, icbc.com.cn London pages; FY2015 edition has no MREL"),
+    }},
 )
 
 # ---------------------------------------------------------------
@@ -1049,7 +1083,7 @@ bw.add_overview_sheet(
          "pre-KM1 editions states one. No risk-weighted-assets figure appears in the Bank's own FY2014-FY2020 "
          "ANNUAL REPORTS, which is why the CET1/Tier1/Total Capital $ amounts run back to FY2014 while the ratios "
          "stop at FY2017; blank cells for FY2014-FY2016 are intentional, not zeros, and mean no Pillar 3 edition "
-         "for those years has been located. BASIS: the pre-KM1 (FY2017-FY2020) and KM1 (FY2021 onward) figures "
+         "for those years has been located [" + P3_EARLY_FOUND + "]. BASIS: the pre-KM1 (FY2017-FY2020) and KM1 (FY2021 onward) figures "
          "are not on the same capital basis - at 31 December 2020 the FY2020 edition reports 44.60% where the "
          "FY2021 edition's comparative reports 43.57% - and are deliberately not reconciled. LCR is the one ratio "
          "disclosed earlier still, as a narrative percentage from FY2017 (see the LCR sheet's own source note for "

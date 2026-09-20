@@ -809,10 +809,22 @@ for name, values in ANNUAL.items():
             source_height=200,
             unit_suffix=" (£m)",
         )
+# GA-020 (2026-09-19): outcome wording, evidence in the MREL note below.
+GA020_MREL = {y: ("Not published – LB plc Pillar 3 " + y + " states only that internal MREL resources exceed the "
+                  "minimum (material subsidiary of LBG plc) plus TLAC 2 ranking; no ratio. ARs likewise")
+              for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019")}
+for _y in ("FY2018", "FY2017"):
+    GA020_MREL[_y] = ("Not published – zero 'MREL' in the Lloyds Bank plc " + _y + " Annual Report (searched "
+                      "2026-09-19); no Lloyds Bank plc Pillar 3 exists before FY2019")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     annual_sources("p3"),
-    per_note={"MREL Ratio": "A numeric MREL ratio for Lloyds Bank plc Group was not disclosed in the reviewed Lloyds Bank plc year-end reports; parent-level or instrument data is not substituted."},
+    per_note={"MREL Ratio": "A numeric MREL ratio for Lloyds Bank plc Group was not disclosed in the reviewed Lloyds Bank plc year-end reports; parent-level or instrument data is not substituted. "
+              "GA-020 RE-CHECK 2026-09-19: every P3_URLS edition (FY2019-FY2025) and AR_URLS/AR2017_URL annual report (FY2017-FY2025) was full-text searched. "
+              "From FY2019 the Pillar 3 carries an MREL section stating only that Lloyds Bank plc is a material subsidiary of the resolution entity Lloyds Banking Group plc "
+              "and that its internal MREL resources exceeded the minimum required (e.g. FY2025 year-end Pillar 3, p.15), plus the TLAC 2 creditor-ranking template (amounts, not a ratio). "
+              "No MREL ratio appears in any edition. The FY2017 and FY2018 annual reports contain zero occurrences of 'MREL', and no Lloyds Bank plc Pillar 3 exists before FY2019."},
+    statements={"MREL Ratio": GA020_MREL},
 )
 
 

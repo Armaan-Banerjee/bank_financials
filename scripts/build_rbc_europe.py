@@ -32,6 +32,35 @@ P3_URL = {
     "FY2015": "https://www.rbc.com/regulatory-information/_assets-custom/pdf/Pillar-III/Pillar-Disclosure-2015.pdf",
     "FY2014": "https://www.rbc.com/regulatory-information/_assets-custom/pdf/Pillar-III/Pillar-Disclosure-2014.pdf",
 }
+# GA-020 (2026-09-19) - evidence for the reclassified statement cells.
+# LCR/NSFR FY2014-FY2020: every annual Pillar III (P3_URL) was text-searched and every
+# Annual Report (AR_URL, image scans) OCR'd at 150 dpi: 'LCR'/'NSFR' occur only in
+# narrative (the Company "reports and monitors" them / they "will apply"), never a figure.
+# FY2021: FOUND - the FY2022 edition's UK KM1 (PDF p.18, printed p.13) prints an Oct-21
+# (T-4) column: HQLA 8,388; net cash outflows 6,618; LCR 127%; ASF 14,695; RSF 15,247;
+# NSFR 97% - read off the page image. That year's own edition prints none.
+# MREL: FY2019 edition PDF p.5 / FY2020 edition PDF p.6 - "iMREL is equal to its total
+# capital requirements"; FY2022-FY2025 editions' CRR compliance table, Article 437a
+# (Own Funds and Eligible Liabilities): "N/A - The Company is not a G-SII." (FY2022 PDF
+# p.73, FY2023 p.72, FY2024 p.71, FY2025 p.71). FY2014-FY2018 and FY2021 editions contain
+# no MREL figure (FY2017/FY2018 ARs describe MREL only as forthcoming BoE policy).
+FY21_KM1_SRC = ("FY2021 LCR/NSFR (added 2026-09-19, GA-020): RBC Europe Limited Pillar 3 Disclosures 31 October 2022, "
+                "UK KM1 - Key Metrics, printed p.13 (PDF p.18), Oct-21 (T-4) comparative column - " + P3_URL["FY2022"] +
+                ". The FY2021 edition itself prints no LCR/NSFR table.")
+NP_LIQ = {y: ("Not published – RBCEL Pillar III " + y + " has no %s table/ratio (text search) and the " + y +
+              " Annual Report mentions it only in narrative (OCR, 2026-09-19).")
+          for y in ["FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]}
+MREL_ST = {}
+for _y in ["FY2025", "FY2024", "FY2023", "FY2022"]:
+    MREL_ST[_y] = ("Not applicable – RBCEL Pillar 3 " + _y + ", CRR compliance table, Art. 437a (own funds and eligible "
+                   "liabilities): 'N/A – The Company is not a G-SII.'; iMREL = total capital requirement (FY2019/20 eds).")
+for _y in ["FY2020", "FY2019"]:
+    MREL_ST[_y] = ("Not applicable – RBCEL Pillar III " + _y + " (capital section): 'RBCEL's iMREL is equal to its total "
+                   "capital requirements', so no separate MREL ratio.")
+for _y in ["FY2021", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]:
+    MREL_ST[_y] = ("Not published – no MREL figure or statement in RBCEL Pillar III " + _y + " (text search, 2026-09-19); "
+                   "Annual Report gives none either.")
+
 HISTORICAL_SOURCES = (
     "HD-018 (FY2014-FY2020 extension) - RBC Europe Limited's own Annual Report and Accounts filed with Companies "
     "House (company 00995939) and its own annual Pillar III disclosures published at rbc.com/regulatory-information "
@@ -560,6 +589,9 @@ KM1_SOURCES = (
     "caption reading '(%)'; the 480 is reproduced as published rather than converted. The FY2024 and FY2025 "
     "editions print that row as a percentage again.\n"
     "- Rows 14c/14d/14e read 'N/A' for Oct-22 and Oct-21 and carry figures from Oct-23 onward.\n"
+    "- GLYPH RECORD (KM1 map rule 2, applied 2026-09-19 under GA-020): every '-' on this sheet stands for the "
+    "printed glyph 'N/A' - rows 13, 14, 14a and 14b in the Oct-21 column and rows 14c/14d/14e in the Oct-22 and "
+    "Oct-21 columns of the FY2022 edition's UK KM1 (printed p.13, PDF p.18), checked against the page image.\n"
     "- The FY2022 edition prints row 8 for its Apr-22 column as '0.025' rather than '2.50%', and the FY2023 "
     "edition does the same for its Oct-22 column. Both are the source's own formatting slips, in columns this "
     "sheet does not take: the Oct-22 column here comes from the FY2022 edition, which prints 2.50%.\n\n"
@@ -637,14 +669,14 @@ bw.add_km1_sheet(
         ("DATA", "UK 11a Overall capital requirements (%)", _km1v("13.54%", "13.58%", "13.24%", "12.61%", "14.24%")),
         ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", _km1v("12.56%", "10.97%", 480)),
         ("SECTION", "Leverage ratio", {}),
-        ("DATA", "13 Total exposure measure excluding claims on central banks (£m)", _km1v(45993, 42872, 40693, 40753, "N/A")),
-        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "N/A")),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£m)", _km1v(45993, 42872, 40693, 40753, "-")),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "-")),
         ("SECTION", "Additional leverage ratio disclosure requirements", {}),
-        ("DATA", "14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "N/A")),
-        ("DATA", "14b Leverage ratio including claims on central banks (%)", _km1v("4.28%", "3.71%", "3.48%", "3.27%", "N/A")),
-        ("DATA", "14c Average leverage ratio excluding claims on central banks (%)", _km1v("4.34%", "4.29%", "4.27%", "N/A", "N/A")),
-        ("DATA", "14d Average leverage ratio including claims on central banks (%)", _km1v("3.94%", "3.82%", "3.48%", "N/A", "N/A")),
-        ("DATA", "14e Countercyclical leverage ratio buffer (%)", _km1v("0.32%", "0.33%", "0.26%", "N/A", "N/A")),
+        ("DATA", "14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", _km1v("4.51%", "4.09%", "4.27%", "4.12%", "-")),
+        ("DATA", "14b Leverage ratio including claims on central banks (%)", _km1v("4.28%", "3.71%", "3.48%", "3.27%", "-")),
+        ("DATA", "14c Average leverage ratio excluding claims on central banks (%)", _km1v("4.34%", "4.29%", "4.27%", "-", "-")),
+        ("DATA", "14d Average leverage ratio including claims on central banks (%)", _km1v("3.94%", "3.82%", "3.48%", "-", "-")),
+        ("DATA", "14e Countercyclical leverage ratio buffer (%)", _km1v("0.32%", "0.33%", "0.26%", "-", "-")),
         ("SECTION", "Liquidity Coverage Ratio", {}),
         ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value -average) (£m)", _km1v(12642, 10688, 11490, 10868, 8388)),
         ("DATA", "UK 16a Cash outflows - Total weighted value (£m)", _km1v(13416, 11589, 12047, 11851, 9203)),
@@ -732,9 +764,9 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "£m / %", [("Total exposure measure excluding claims on central banks", {"FY2025": 45993, "FY2024": 42872, "FY2023": 40693, "FY2022": 40753}), ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "4.51%", "FY2024": "4.09%", "FY2023": "4.27%", "FY2022": "4.12%"}), ("Total leverage ratio exposure (older CRR leverage table, FY2015-FY2021)", {"FY2021": 46925, "FY2020": 44648.596, "FY2019": 46933.644, "FY2018": 46509.827, "FY2017": 43328.495, "FY2016": 38502.673, "FY2015": 30412.357}), ("Leverage ratio (older CRR leverage table, FY2015-FY2021)", {"FY2021": "3.51%", "FY2020": "3.51%", "FY2019": "3.15%", "FY2018": "2.76%", "FY2017": "2.38%", "FY2016": "2.48%", "FY2015": "2.97%"})], note="FY2015-FY2021 (FY2015-FY2020 added under HD-018) all use the same older, single 'Total leverage ratio exposure' CRR table (total exposure £46,924.653m; ratio 3.51% for FY2021, own-year filing for each earlier year) - each year's own narrative text corroborates the prior year's own figure (e.g. the FY2020 filing states '3.51% (2019: 3.15%)', which matches FY2019's own-year table exactly), so all six years are cross-checked, not just transcribed once. From FY2022, KM1 reports the excluding-central-bank basis; the FY2022 report shows FY2021 as N/A under that revised presentation. FY2014 is a genuine blank: RBC Europe's own FY2014 Pillar III disclosure states the Delegated Act required it to first publish a Leverage Ratio for the year ending 31 October 2015, and no numeric ratio appears anywhere in that filing.")
-metric("LCR", "£m / %", [("Total high-quality liquid assets (HQLA), weighted value (average)", {"FY2025": 12642, "FY2024": 10688, "FY2023": 11490, "FY2022": 10868}), ("Total net cash outflows, adjusted value", {"FY2025": 9632, "FY2024": 8036, "FY2023": 9031, "FY2022": 8696}), ("Liquidity coverage ratio (%)", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed", "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})], note="The FY2021 standalone Pillar 3 disclosure contains no LCR table or headline ratio. FY2014-FY2020 (checked under HD-018) are the same: none of the seven annual Pillar III filings contains an LCR table, headline ratio, or HQLA/net-cash-outflow figures - the only 'HQLA' tables present in the FY2019/FY2020 filings are Template A/B Asset Encumbrance disclosures (a different regulatory template, EU 2017/2295), not a liquidity coverage ratio table, and pre-FY2019 filings have no such table at all. Genuinely not disclosed, not unfound.")
-metric("NSFR", "£m / %", [("Total available stable funding", {"FY2025": 18791, "FY2024": 17010, "FY2023": 16879, "FY2022": 18964}), ("Total required stable funding", {"FY2025": 16780, "FY2024": 15158, "FY2023": 13654, "FY2022": 17081}), ("NSFR ratio (%)", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed", "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})], note="The FY2021 standalone Pillar 3 disclosure contains no NSFR table or headline ratio. FY2014-FY2020 (checked under HD-018) are the same: NSFR is only ever discussed as a forthcoming CRR2 requirement ('It is proposed to be applied from January 2022 in the UK', per the FY2020 filing's own text) - no numeric available/required stable funding figures or ratio appear in any of the seven filings. Genuinely not disclosed, not unfound.")
-metric("MREL Ratio", "£m / %", [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], note="No numeric MREL ratio was identified in the five annual RBCEL Pillar 3 disclosures reviewed.")
+metric("LCR", "£m / %", [("Total high-quality liquid assets (HQLA), weighted value (average)", {"FY2025": 12642, "FY2024": 10688, "FY2023": 11490, "FY2022": 10868, "FY2021": 8388}), ("Total net cash outflows, adjusted value", {"FY2025": 9632, "FY2024": 8036, "FY2023": 9031, "FY2022": 8696, "FY2021": 6618}), ("Liquidity coverage ratio (%)", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%", "FY2021": "127%", **{y: t % "LCR" for y, t in NP_LIQ.items()}})], note=FY21_KM1_SRC + " The FY2021 standalone Pillar 3 disclosure contains no LCR table or headline ratio. FY2014-FY2020 (checked under HD-018) are the same: none of the seven annual Pillar III filings contains an LCR table, headline ratio, or HQLA/net-cash-outflow figures - the only 'HQLA' tables present in the FY2019/FY2020 filings are Template A/B Asset Encumbrance disclosures (a different regulatory template, EU 2017/2295), not a liquidity coverage ratio table, and pre-FY2019 filings have no such table at all. Genuinely not disclosed, not unfound.")
+metric("NSFR", "£m / %", [("Total available stable funding", {"FY2025": 18791, "FY2024": 17010, "FY2023": 16879, "FY2022": 18964, "FY2021": 14695}), ("Total required stable funding", {"FY2025": 16780, "FY2024": 15158, "FY2023": 13654, "FY2022": 17081, "FY2021": 15247}), ("NSFR ratio (%)", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%", "FY2021": "97%", **{y: t % "NSFR" for y, t in NP_LIQ.items()}})], note=FY21_KM1_SRC + " The FY2021 standalone Pillar 3 disclosure contains no NSFR table or headline ratio. FY2014-FY2020 (checked under HD-018) are the same: NSFR is only ever discussed as a forthcoming CRR2 requirement ('It is proposed to be applied from January 2022 in the UK', per the FY2020 filing's own text) - no numeric available/required stable funding figures or ratio appear in any of the seven filings. Genuinely not disclosed, not unfound.")
+metric("MREL Ratio", "£m / %", [("MREL ratio", MREL_ST)], note="No numeric MREL ratio is printed in any of the twelve annual RBCEL Pillar III editions FY2014-FY2025 (re-checked 2026-09-19, GA-020). FY2019 edition PDF p.5 and FY2020 edition PDF p.6: 'RBCEL's iMREL is equal to its total capital requirements'. FY2022-FY2025 editions, CRR compliance table, Article 437a: 'N/A - The Company is not a G-SII.' (FY2022 PDF p.73; FY2023 p.72; FY2024 p.71; FY2025 p.71). FY2014-FY2018 and FY2021 editions do not mention MREL; the FY2017/FY2018 Annual Reports describe it only as forthcoming Bank of England policy.")
 add_interim_pillar3_sheet()
 bw.add_overview_sheet(
     balance_sheet_totals=[
@@ -757,5 +789,5 @@ bw.add_overview_sheet(
         ("Closing equity", {"FY2025": 3156622, "FY2024": 1781844, "FY2023": 1763502, "FY2022": 1707383, "FY2021": 1647297}),
     ],
     equity_changes_unit="£'000",
-    cash_flow_totals=[("Net cash (outflow)/inflow from operating activities", {"FY2025": -2827725, "FY2024": -4638153, "FY2023": -1165304, "FY2022": 5441607, "FY2021": 3898171}), ("Net cash from investing activities", {"FY2025": -1153173, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}), ("Net cash inflow/(outflow) from financing activities", {"FY2025": 1715050, "FY2024": -36915, "FY2023": -35017, "FY2022": -19285, "FY2021": -14281}), ("Cash and cash equivalents at end of year", {"FY2025": 2534127, "FY2024": 4455652, "FY2023": 9347772, "FY2022": 10594230, "FY2021": 5171908})], cash_flow_unit="£'000", ratios=[("CET1 Ratio", CET1R), ("Tier 1 Ratio", T1R), ("Total Capital Ratio", TCR), ("Leverage Ratio", {"FY2025": "4.51%", "FY2024": "4.09%", "FY2023": "4.27%", "FY2022": "4.12%", "FY2021": "3.51%"}), ("LCR", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%"}), ("NSFR", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%"})], note="Figures are duplicated from the detail sheets; see those sheets for source pages, basis notes, and disclosure gaps.")
+    cash_flow_totals=[("Net cash (outflow)/inflow from operating activities", {"FY2025": -2827725, "FY2024": -4638153, "FY2023": -1165304, "FY2022": 5441607, "FY2021": 3898171}), ("Net cash from investing activities", {"FY2025": -1153173, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}), ("Net cash inflow/(outflow) from financing activities", {"FY2025": 1715050, "FY2024": -36915, "FY2023": -35017, "FY2022": -19285, "FY2021": -14281}), ("Cash and cash equivalents at end of year", {"FY2025": 2534127, "FY2024": 4455652, "FY2023": 9347772, "FY2022": 10594230, "FY2021": 5171908})], cash_flow_unit="£'000", ratios=[("CET1 Ratio", CET1R), ("Tier 1 Ratio", T1R), ("Total Capital Ratio", TCR), ("Leverage Ratio", {"FY2025": "4.51%", "FY2024": "4.09%", "FY2023": "4.27%", "FY2022": "4.12%", "FY2021": "3.51%"}), ("LCR", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%", "FY2021": "127%"}), ("NSFR", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%", "FY2021": "97%"})], note="Figures are duplicated from the detail sheets; see those sheets for source pages, basis notes, and disclosure gaps.")
 bw.save("/Users/armaan/code/katalysis/banks/RBC EUROPE FINANCIALS.xlsx")

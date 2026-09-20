@@ -90,6 +90,22 @@ def p3_sources():
         "March-2026-Annual-Report-2026.pdf, FY26-Pillar-3-StreamBank-PLC.pdf and Pillar-3-Disclosures-2026.pdf all "
         "return the 25,989-byte soft-404, while March-2025-Pillar-3-Disclosures.pdf still returns a real 779,478-byte "
         "application/pdf from the same directory - so the absence is genuine and not a site-wide outage.\n"
+        "      RE-ENUMERATED INDEPENDENTLY 2026-09-19 and unchanged: /js/app.js was re-downloaded (HTTP 200, "
+        "application/javascript, 930,330 bytes) and its '.pdf' strings re-extracted, returning the same six "
+        "site documents and the same two Pillar 3 files, FY2024 and FY2025. (The only other .pdf string in the "
+        "bundle is an external Metropolitan Police fraud leaflet.)\n"
+        "      AND THE REASON NO FY2026 EDITION IS OWED IS NOW NAMED, which no earlier pass on this bank had "
+        "established. Bank of England consolidated waivers register, downloaded 2026-09-19 (HTTP 200, text/csv, "
+        "900,160 bytes, UTF-16 TSV), matched on BOTH of the columns that together identify the disclosure "
+        "opt-in - Rule Description 'SDDT Regime - General Application' AND Sub Rule Number 'Ru 3.1': StreamBank "
+        "PLC, FRN 954876, START DATE 04/05/2024, NO END DATE. Rule 3.1 removes the Pillar 3 disclosure "
+        "obligation outright. DATE FIT: the Bank's year end is 31 March, so the FY2026 reporting date of 31 "
+        "March 2026 falls nearly two years after the opt-in and no FY2026 Pillar 3 is owed.\n"
+        "      THIS BANK IS ALSO ITS OWN COUNTER-EXAMPLE, AND THE POINT MUST NOT BE LOST: opting in does not "
+        "stop a bank publishing. StreamBank's FY2025 edition covers the year ended 31 March 2025, which is ELEVEN "
+        "MONTHS AFTER the same opt-in, and it was published anyway. So the waiver explains the FY2026 absence "
+        "but does not on its own establish it - the enumeration above does that, and the waiver says why. "
+        "Neither finding is load-bearing alone; both are recorded.\n"
         "      The enumeration also turned up a document this workbook did not have: the Bank's own copy of the "
         "FY2026 Annual Report (AR2026_SITE_URL above). It is the same report as the Companies House filing already "
         "cited, but TEXT-NATIVE (232,811 characters) rather than a 79-page scan yielding 79 characters. All the "
@@ -442,11 +458,28 @@ PRE_LICENCE_YEARS = ["FY2021"]
 # now established by enumerating the site's full document list rather than by guessing
 # filenames (see the SITE ENUMERATION NOTE in p3_sources).
 NOT_DISCLOSED = "Not publicly disclosed"
-NOT_APPLICABLE = "Not applicable"
+# GA-020 (2026-09-19): every gap cell on the metric sheets now names its outcome and evidence.
+NOT_APPLICABLE = ("Not applicable – no banking licence in FY2021: Authorisation with Restrictions June 2022, "
+                  "full licence February 2023 (FY2023 Annual Report, pp.12-13)")
+
+
+def np26(what):
+    return ("Not published – no FY2026 Pillar 3 (site JS bundle enumerated 2026-09-19: FY2024/FY2025 only; SDDT "
+            f"Ru 3.1 opt-in 04/05/2024); FY2026 Annual Report gives no {what}")
+
+
+def np23(what):
+    return ("Not published – no FY2023 Pillar 3 (first edition is FY2024; site enumerated); FY2023 Annual Report "
+            f"capital note (p.24) gives CET1, total RWA and ratios only, no {what}")
+
+
+def mrel_mi(year, page):
+    return (f"Not applicable – BoE assigned StreamBank to 'Modified Insolvency'; MREL met by holding TCR "
+            f"(FY{year} Pillar 3, 'Capital' section, PDF p.{page})")
 
 
 def metric(name, unit, rows_data, note=None):
-    rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
+    rows_data = [(label, {**{y: NOT_APPLICABLE for y in PRE_LICENCE_YEARS}, **values})
                  for label, values in rows_data]
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=180)
 
@@ -475,7 +508,12 @@ km1_rows = [
     ("DATA", "2    Tier 1 (£'000)", {"FY2025": 35066.3, "FY2024": 32012.2}),
     ("DATA", "3    Total capital (£'000)", {"FY2025": 35066.3, "FY2024": 32012.2}),
     ("SECTION", "Risk-weighted exposure", {}),
-    ("DATA", "4    Risk-weighted exposure amounts (£'000)", {"FY2025": 141336.1, "FY2024": 143947.0}),
+    # FY2026 carries a recorded absence rather than a blank (2026-09-19). Row 4
+    # is chosen because the Total RWAs sheet already carries a text cell for
+    # FY2026, so no verifier comparison exists here to lose.
+    ("DATA", "4    Risk-weighted exposure amounts (£'000)",
+     {"FY2026": "Not published - SDDT Rule 3.1 opt-in from 04/05/2024; no FY2026 edition",
+      "FY2025": 141336.1, "FY2024": 143947.0}),
     # Printed by the Bank as an unnumbered bold row immediately under row 4,
     # carrying the identical figure. Kept because the Bank printed it.
     ("TOTAL", "Total risk-weighted exposures (£'000) [printed unnumbered]", {"FY2025": 141336.1, "FY2024": 143947.0}),
@@ -588,12 +626,12 @@ metric("Tier 1 Capital", "£'000", [("Tier 1 capital", {"FY2026": 32644.1, "FY20
 metric("Tier 1 Ratio", "%", [("Tier 1 capital ratio", {"FY2026": "21.6%", "FY2025": "24.8%", "FY2024": "22.2%", "FY2023": "50.6%"})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
 metric("Total Capital", "£'000", [("Total capital", {"FY2026": 32644.1, "FY2025": 35066.3, "FY2024": 32012.2, "FY2023": 32171})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023 is the note's own 'Total own funds' line. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
 metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2026": "21.6%", "FY2025": "24.8%", "FY2024": "22.2%", "FY2023": "50.6%"})], "FY2026 is from the Bank's own FY2026 Annual Report Note 22 'Capital' (p.78) and KPI page (p.15), NOT from a Pillar 3 document - none has been published for FY2026. It is therefore on a different basis from FY2025/FY2024; see the source note above for the size of the difference. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
-metric("Total RWAs", "£'000", [("Risk-weighted exposure amounts", {"FY2026": NOT_DISCLOSED, "FY2025": 141336.1, "FY2024": 143947.0, "FY2023": 63586})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. FY2023 ties internally: £32,171k CET1 / £63,586k RWA = 50.6%, the ratio the same note states. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
+metric("Total RWAs", "£'000", [("Risk-weighted exposure amounts", {"FY2026": np26("risk-weighted asset figure"), "FY2025": 141336.1, "FY2024": 143947.0, "FY2023": 63586})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. FY2023 ties internally: £32,171k CET1 / £63,586k RWA = 50.6%, the ratio the same note states. FY2023 (15m) from the Bank's own FY2023 Annual Report 'Capital management' note (p.28, marked unaudited) - located in the 2026-09-12 disclosure audit; no standalone FY2023 Pillar 3 document exists (see p3_sources). FY2021 is structural: the Bank held no banking licence in that period (Authorisation with Restrictions granted June 2022, full licence February 2023), so no Pillar 3 / regulatory capital disclosure obligation applied and none exists.")
 rwa_breakdown_rows = [
     ("SECTION", "Risk-weighted exposure amounts (UK OV1)", {}),
-    ("DATA", "Credit risk (excluding CCR)", {"FY2026": NOT_DISCLOSED, "FY2025": 123094.2, "FY2024": 126646.0, "FY2023": NOT_DISCLOSED, "FY2021": NOT_APPLICABLE}),
-    ("DATA", "Operational risk", {"FY2026": NOT_DISCLOSED, "FY2025": 18241.9, "FY2024": 17301.0, "FY2023": NOT_DISCLOSED, "FY2021": NOT_APPLICABLE}),
-    ("TOTAL", "Total risk-weighted exposure amount", {"FY2026": NOT_DISCLOSED, "FY2025": 141336.1, "FY2024": 143947.0, "FY2023": 63586, "FY2021": NOT_APPLICABLE}),
+    ("DATA", "Credit risk (excluding CCR)", {"FY2026": np26("RWA breakdown"), "FY2025": 123094.2, "FY2024": 126646.0, "FY2023": np23("credit/operational split"), "FY2021": NOT_APPLICABLE}),
+    ("DATA", "Operational risk", {"FY2026": np26("RWA breakdown"), "FY2025": 18241.9, "FY2024": 17301.0, "FY2023": np23("credit/operational split"), "FY2021": NOT_APPLICABLE}),
+    ("TOTAL", "Total risk-weighted exposure amount", {"FY2026": np26("risk-weighted asset figure"), "FY2025": 141336.1, "FY2024": 143947.0, "FY2023": 63586, "FY2021": NOT_APPLICABLE}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -603,7 +641,8 @@ bw.add_rwa_breakdown_sheet(
     sources_text=p3_sources() + (
         "\n\nFY2026 is blank because no FY2026 Pillar 3 Disclosures document has been published yet (verified "
         "2026-09-15); the FY2026 Annual Report contains no risk-weighted asset figure of any kind, let alone "
-        "a UK OV1 breakdown. Expect this column to become fillable when the FY2026 Pillar 3 document appears.\n"
+        "a UK OV1 breakdown. Since the Bank opted into SDDT Rule 3.1 from 04/05/2024 (waivers register, see "
+        "above), no FY2026 edition is owed, so this column is not expected to fill (GA-020, 2026-09-19).\n"
         "StreamBank's Pillar 3 Disclosures document is only published from FY2024 onward; no standalone "
         "Pillar 3 report covering the FY2023 (15-month) or FY2021 periods was found on the Bank's own site "
         "or via Wayback Machine - a genuine access/non-existence gap, consistent with the pre-existing "
@@ -613,17 +652,17 @@ bw.add_rwa_breakdown_sheet(
     source_height=200,
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks (CRR basis)", {"FY2026": NOT_DISCLOSED, "FY2025": "20.4%", "FY2024": "21.0%", "FY2023": NOT_DISCLOSED}),
-                               ("Leverage ratio including claims on central banks (CRR basis)", {"FY2026": NOT_DISCLOSED, "FY2025": "16.6%", "FY2024": "17.3%", "FY2023": NOT_DISCLOSED}),
-                               ("Memo - Annual Report 'Leverage ratio' KPI, defined as CET1 capital / liabilities (NOT a CRR leverage ratio - do not compare)", {"FY2026": "19.2%", "FY2025": "19.5%", "FY2024": NOT_DISCLOSED, "FY2023": "182.3%"})], "THREE ROWS, TWO COMPLETELY DIFFERENT MEASURES - READ THE ROW LABELS BEFORE COMPARING ANYTHING. Rows 1 and 2 are the real CRR leverage ratio (Tier 1 capital divided by the total leverage exposure measure), taken from the UKB KM1/leverage templates of the FY2024 and FY2025 Pillar 3 documents, which are the only two Pillar 3 editions StreamBank has ever published. Row 3 is a MEMO row carrying a completely different statistic that the Bank happens to headline in its Annual Reports under the same words, and it must never be spliced into rows 1 or 2.\n"
-       "WHY ROW 3 IS QUARANTINED: the FY2026 Annual Report's KPI table (p.15) prints \"Leverage ratio 19.2%\" (FY2025 comparative 19.5%), and the FY2023 Annual Report (p.11) prints \"Leverage ratio 182.3%\" - but each report's own footnote defines the measure as \"CET1 capital divided by liabilities\" (FY2023's footnote 2: \"Common equity Tier 1 capital divided by liabilities\"). That is capital over LIABILITIES, not capital over a regulatory exposure measure, and it is not a CRR ratio at all. The FY2023 figure of 182.3% is the giveaway - a leverage ratio above 100% is arithmetically impossible on the CRR definition, and it arises here only because at 31 March 2023 the Bank had £32.2m of capital against £17.3m of liabilities, having been capitalised well ahead of taking deposits. The figures are preserved on row 3 rather than discarded, because they are genuine disclosures and a reader is entitled to see them, but they are labelled so they cannot be mistaken for the CRR series. Carrying them on rows 1-2 would have shown StreamBank's leverage ratio leaping from 21.0% to 19.2% between FY2024 and FY2026 on a silently-changed definition.\n"
+metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks (CRR basis)", {"FY2026": np26("CRR leverage ratio"), "FY2025": "20.4%", "FY2024": "21.0%", "FY2023": np23("leverage exposure")}),
+                               ("Leverage ratio including claims on central banks (CRR basis)", {"FY2026": np26("CRR leverage ratio"), "FY2025": "16.6%", "FY2024": "17.3%", "FY2023": np23("leverage exposure")}),
+                               ("Memo - Annual Report 'Leverage ratio' KPI, defined as CET1 capital / liabilities (NOT a CRR leverage ratio - do not compare)", {"FY2026": "19.2%", "FY2025": "19.5%", "FY2024": "21.2%", "FY2023": "182.3%"})], "THREE ROWS, TWO COMPLETELY DIFFERENT MEASURES - READ THE ROW LABELS BEFORE COMPARING ANYTHING. Rows 1 and 2 are the real CRR leverage ratio (Tier 1 capital divided by the total leverage exposure measure), taken from the UKB KM1/leverage templates of the FY2024 and FY2025 Pillar 3 documents, which are the only two Pillar 3 editions StreamBank has ever published. Row 3 is a MEMO row carrying a completely different statistic that the Bank happens to headline in its Annual Reports under the same words, and it must never be spliced into rows 1 or 2.\n"
+       "WHY ROW 3 IS QUARANTINED: the FY2026 Annual Report's KPI table (p.15) prints \"Leverage ratio 19.2%\" (FY2025 comparative 19.5%), and the FY2023 Annual Report (p.11) prints \"Leverage ratio 182.3%\" - but each report's own footnote defines the measure as \"CET1 capital divided by liabilities\" (FY2023's footnote 2: \"Common equity Tier 1 capital divided by liabilities\"). That is capital over LIABILITIES, not capital over a regulatory exposure measure, and it is not a CRR ratio at all. The FY2023 figure of 182.3% is the giveaway - a leverage ratio above 100% is arithmetically impossible on the CRR definition, and it arises here only because at 31 March 2023 the Bank had £32.2m of capital against £17.3m of liabilities, having been capitalised well ahead of taking deposits. FY2024 on row 3 (21.2%) ADDED 2026-09-19 (GA-020) from the FY2024 Annual Report, Chief Financial Officer's Report KPI table, printed p.11 (PDF p.14), footnote 2 'Common equity Tier 1 capital divided by liabilities', read off the page image - the cell had read 'Not publicly disclosed'. That same table prints the FY2023 comparative as 186.2%, where the FY2023 Annual Report itself printed 182.3%; the FY2023 column keeps its own edition's 182.3%, recorded here rather than reconciled. The figures are preserved on row 3 rather than discarded, because they are genuine disclosures and a reader is entitled to see them, but they are labelled so they cannot be mistaken for the CRR series. Carrying them on rows 1-2 would have shown StreamBank's leverage ratio leaping from 21.0% to 19.2% between FY2024 and FY2026 on a silently-changed definition.\n"
        "ROWS 1-2, FY2026: 'Not publicly disclosed'. No FY2026 Pillar 3 Disclosures document has been published - an ENUMERATED finding as of 2026-09-15, not a failed guess: the site's JS bundle lists the complete set of six PDFs it links to and only two are Pillar 3 files, covering FY2024 and FY2025 (see the SITE ENUMERATION NOTE in the source citation). The FY2026 Annual Report contains no CRR leverage ratio and no exposure measure either - a whole-document search of the text-native copy returns zero occurrences of 'exposure measure' and exactly one of 'leverage', the disqualified KPI above. Nothing is derived or back-solved from the CET1 ratio.\n"
        "ROWS 1-2, FY2023: 'Not publicly disclosed' for the same enumerated reason - StreamBank began publishing Pillar 3 disclosures with FY2024 and none covers the FY2023 15-month period, and the FY2023 Annual Report's capital note gives capital, RWAs and ratios but no leverage exposure measure.\n"
        "Row 2 exists because the Pillar 3 documents report BOTH bases and this workbook should not hide one: the excluding-central-bank-claims ratio is the headline (20.4% / 21.0%) and the including-claims ratio is lower (16.6% / 17.3%). Do not compare row 1 against another bank's including-claims figure or vice versa.\n"
        "FY2021 is structural on every row - no banking licence was held in that period.")
-metric("LCR", "%", [("Liquidity Coverage Ratio", {"FY2026": NOT_DISCLOSED, "FY2025": "9081.1%", "FY2024": "54235.0%", "FY2023": NOT_DISCLOSED})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. Not publicly disclosed for FY2023 (15m) - the FY2023 Annual Report's capital note gives CET1/RWA/ratios only, with no LCR figure, and no standalone FY2023 Pillar 3 document exists. FY2021 is structural (no banking licence held). The source rounds the FY2025 table presentation to 9,081% in one location and reports 9,081.1% in UKB KM1; the latter is retained here.")
-metric("NSFR", "%", [("Net Stable Funding Ratio", {"FY2026": NOT_DISCLOSED, "FY2025": "171.6%", "FY2024": "223.8%", "FY2023": NOT_DISCLOSED})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. Not publicly disclosed for FY2023 (15m) - the FY2023 Annual Report's capital note gives CET1/RWA/ratios only, with no NSFR figure, and no standalone FY2023 Pillar 3 document exists. FY2021 is structural (no banking licence held).")
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], "No quantitative MREL ratio was found in the annual reports or Pillar 3 disclosures reviewed. StreamBank states it is assigned to the Modified Insolvency resolution category.")
+metric("LCR", "%", [("Liquidity Coverage Ratio", {"FY2026": np26("LCR %"), "FY2025": "9081.1%", "FY2024": "54235.0%", "FY2023": np23("LCR")})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. Not publicly disclosed for FY2023 (15m) - the FY2023 Annual Report's capital note gives CET1/RWA/ratios only, with no LCR figure, and no standalone FY2023 Pillar 3 document exists. FY2021 is structural (no banking licence held). The source rounds the FY2025 table presentation to 9,081% in one location and reports 9,081.1% in UKB KM1; the latter is retained here.")
+metric("NSFR", "%", [("Net Stable Funding Ratio", {"FY2026": np26("NSFR"), "FY2025": "171.6%", "FY2024": "223.8%", "FY2023": np23("NSFR")})], "FY2026 IS DELIBERATELY BLANK: no FY2026 Pillar 3 Disclosures document has been published (verified 2026-09-15), and the FY2026 Annual Report discloses no figure for this metric - its Note 22 'Capital' gives eligible capital amounts only, with no risk-weighted assets, leverage exposure, LCR or NSFR anywhere in the document. Nothing here is derived or back-solved from the CET1 ratio. Not publicly disclosed for FY2023 (15m) - the FY2023 Annual Report's capital note gives CET1/RWA/ratios only, with no NSFR figure, and no standalone FY2023 Pillar 3 document exists. FY2021 is structural (no banking licence held).")
+metric("MREL Ratio", None, [("MREL ratio", {"FY2026": np26("MREL figure"), "FY2025": mrel_mi(2025, 15), "FY2024": mrel_mi(2024, 14), "FY2023": np23("MREL figure")})], "No quantitative MREL ratio was found in the annual reports or Pillar 3 disclosures reviewed. StreamBank states it is assigned to the Modified Insolvency resolution category: FY2024 Pillar 3 PDF p.14 and FY2025 Pillar 3 PDF p.15 each read 'Under the Bank Recovery and Resolution Directive (BRRD I and II), the Bank of England has assigned StreamBank to the Modified Insolvency category. The Bank meets this requirement by holding sufficient capital to meet its Total Capital Requirements (TCR)' - so FY2024/FY2025 read 'Not applicable' on the Bank's own words (GA-020, 2026-09-19). FY2026 and FY2023 have no Pillar 3 edition and their Annual Reports do not mention MREL (text-searched 2026-09-19), so they read 'Not published' rather than borrowing the neighbouring years' statement. FY2021: no banking licence.")
 
 bw.add_overview_sheet(
     balance_sheet_totals=[

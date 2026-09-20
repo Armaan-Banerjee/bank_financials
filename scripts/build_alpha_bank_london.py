@@ -29,6 +29,29 @@ AR21_URL = (
     "sites/default/files/2025-10/ABL%20Financial%20Statements%202021%20Final%20contents%20page%20fixed.pdf"
 )
 
+# GA-020 (2026-09-19). FY2023 Annual Report fetched from Companies House (scanned, 71pp,
+# OCR'd at 200 dpi and the KPI table read off the page image at PDF p.7). Its KPI table
+# prints a 2022 COMPARATIVE column for LCR / Capital adequacy ratio / Leverage ratio,
+# which the FY2022 report itself does not print - so those three FY2022 figures are
+# FOUND and added below. The same OCR'd texts (FY2022-FY2025, CH scans) plus the
+# text-layer FY2019-FY2021 reports were searched for 'NSFR'/'net stable', 'MREL'/
+# 'eligible liabilities', 'CET1'/'common equity' and 'risk-weighted': no NSFR, MREL,
+# CET1/Tier 1 ratio or RWA amount in any of the seven (positive control: 'Liquidity
+# coverage ratio' and the KPI table are found in FY2023-FY2025).
+AR23_URL = "https://find-and-update.company-information.service.gov.uk/company/00185070/filing-history/MzQyNDU4ODA2MmFkaXF6a2N4/document?format=pdf&download=0"
+FY22_KPI_SRC = ("FY2022 figure (added 2026-09-19, GA-020): Annual Report and Financial Statements 31 December 2023, "
+                "Strategic Report 'Key Performance Indicators' table, printed p.7, 2022 comparative column (read off "
+                "the page image) - " + AR23_URL + ". The FY2022 report itself prints no such KPI.")
+_ARS = "Alpha Bank London ARs FY2019–FY2025"
+NP_RATIO = ("Not published – " + _ARS + " print no CET1/Tier 1 ratio and no RWA; only an own-defined 'Capital "
+            "adequacy ratio' (shareholders' funds ÷ RWA, KPI table FY2022+). No Pillar 3 exists (Wayback CDX).")
+NP_RWA = ("Not published – no RWA amount in " + _ARS + " (capital note is a Tier 1/Tier 2 build-up only; "
+          "'risk-weighted' appears only in ICG narrative). No Pillar 3 exists (Wayback CDX, 39 PDFs).")
+NP_NSFR = ("Not published – 'NSFR'/'net stable funding' absent from " + _ARS + " (full-text/OCR search, "
+           "2026-09-19); no Pillar 3 exists (Wayback CDX of domain, 39 PDFs).")
+NP_MREL = ("Not published – 'MREL'/'eligible liabilities' absent from " + _ARS + " (full-text/OCR search, "
+           "2026-09-19); no Pillar 3 exists (Wayback CDX of domain, 39 PDFs).")
+
 LINK_PROVENANCE = (
     "LINK PROVENANCE (checked 15 September 2026). Alpha Bank London migrated from a WordPress site "
     "(/wp-content/uploads/<year>/<month>/) to Drupal (/sites/default/files/<year>-<month>/), and the FY2019 "
@@ -422,7 +445,7 @@ RWA_BREAKDOWN_SOURCES = (
     + LINK_PROVENANCE
 )
 rwa_breakdown_rows = [
-    ("DATA", "RWA category breakdown", {y: "Not publicly disclosed" for y in YEARS}),
+    ("DATA", "RWA category breakdown", {y: NP_RWA for y in YEARS}),
 ]
 
 bw.add_balance_sheet_sheet(
@@ -606,7 +629,7 @@ metric(
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("CET1 ratio", {y: "Not separately disclosed" for y in YEARS})],
+    [("CET1 ratio", {y: NP_RATIO for y in YEARS})],
     p3_sources(),
     note="The source discloses only a single 'Capital adequacy ratio' (see Total Capital Ratio sheet), not "
          "separately-stated CET1/Tier 1/Total Capital ratios, and as of 2026-09-15 that ratio is known NOT to be a "
@@ -627,7 +650,7 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {y: "Not separately disclosed" for y in YEARS})],
+    [("Tier 1 ratio", {y: NP_RATIO for y in YEARS})],
     p3_sources(),
     note="Same basis issue as the CET1 Ratio sheet — the only ratio disclosed is the Bank's own 'Capital adequacy "
          "ratio', whose numerator is shareholders' funds rather than any CRR capital measure, and no RWA "
@@ -644,8 +667,8 @@ metric(
 metric(
     "Total Capital Ratio", "% of RWA",
     [("Memo: Bank's own 'Capital adequacy ratio' = shareholders' funds ÷ RWA (NOT a CRR total capital ratio)",
-      {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%"})],
-    p3_sources(),
+      {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%", "FY2022": "25%"})],
+    p3_sources() + "\n" + FY22_KPI_SRC,
     note="BASIS CORRECTED 2026-09-15. This row was previously labelled as the Total Capital ratio on the stated "
          "grounds that the 'source does not specify whether the numerator is Total Capital or Tier 1 only'. The "
          "source does specify: 'Capital adequacy ratio is a measure of capital strength and calculated by dividing "
@@ -656,14 +679,15 @@ metric(
          "The figure is genuine and correctly sourced, so it is kept, but as an explicitly-labelled memo row on "
          "the Bank's own definition rather than as a CRR total capital ratio. The true CRR ratio is not "
          "derivable, because no RWA denominator is disclosed — see the Total RWAs sheet. Not disclosed at all for "
-         "FY2019-FY2022: the Annual Report KPI table for those years lists only Profit before tax, Total equity "
-         "and Return on equity; the Capital adequacy/LCR/Leverage ratio KPI trio was introduced from the FY2023 "
-         "report onward.",
+         "FY2019-FY2021: the Annual Report KPI table for those years lists only Profit before tax, Total equity "
+         "and Return on equity; the Capital adequacy/LCR/Leverage ratio KPI trio was introduced in the FY2023 "
+         "report, whose 2022 comparative column supplies FY2022 (added 2026-09-19; the FY2022 report itself "
+         "does not print it).",
 )
 
 metric(
     "Total RWAs", "£000's",
-    [("Total risk-weighted assets", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Total risk-weighted assets", {y: NP_RWA for y in YEARS})],
     p3_sources(),
     note="CORRECTED 2026-09-15 — this sheet previously carried £372,640k/£334,848k/£271,664k for "
          "FY2025/FY2024/FY2023, back-solved as Total regulatory capital ÷ Capital adequacy ratio. Those figures "
@@ -692,26 +716,29 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%"})],
-    p3_sources(),
-    note="Not disclosed for FY2021/FY2022 (same KPI-table introduction timing as the Total Capital Ratio sheet). "
+    [("Leverage ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%", "FY2022": "12%"})],
+    p3_sources() + "\n" + FY22_KPI_SRC,
+    note="Not disclosed for FY2019-FY2021 (same KPI-table introduction timing as the Total Capital Ratio sheet); "
+         "FY2022 is the 2022 comparative printed in the FY2023 report's KPI table (added 2026-09-19). "
          "No exposure-measure £ figure is disclosed alongside the ratio in any year.",
 )
 
 metric(
     "LCR", "%",
-    [("Liquidity coverage ratio", {"FY2025": "310%", "FY2024": "323%", "FY2023": "349%"})],
-    p3_sources(),
-    note="Not disclosed for FY2021/FY2022 (same KPI-table introduction timing as the other ratio sheets).",
+    [("Liquidity coverage ratio", {"FY2025": "310%", "FY2024": "323%", "FY2023": "349%", "FY2022": "399%"})],
+    p3_sources() + "\n" + FY22_KPI_SRC,
+    note="Not disclosed for FY2019-FY2021 (same KPI-table introduction timing as the other ratio sheets); FY2022 "
+         "is the 2022 comparative printed in the FY2023 report's KPI table (added 2026-09-19).",
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(),
+    statements={"NSFR": NP_NSFR, "MREL Ratio": NP_MREL},
     per_note={
-        "NSFR": "Not disclosed in any of the 5 years reviewed — no NSFR figure or qualitative statement found in "
+        "NSFR": "Not disclosed in any of the 7 Annual Reports reviewed (FY2019-FY2025) — no NSFR figure or qualitative statement found in "
                 "any Annual Report, including the years the LCR/leverage/capital-adequacy KPI trio was introduced.",
-        "MREL Ratio": "Not disclosed in any of the 5 years reviewed, and no explicit exemption statement found "
+        "MREL Ratio": "Not disclosed in any of the 7 Annual Reports reviewed (FY2019-FY2025), and no explicit exemption statement found "
                       "either — plausibly reflects the Bank's small balance sheet size sitting below the threshold "
                       "requiring a stated MREL requirement, but this is not confirmed by the source.",
     },
@@ -749,16 +776,16 @@ bw.add_overview_sheet(
     cash_flow_unit="£'000",
     ratios=[
         ("Capital adequacy ratio (Bank's own definition — not a CRR ratio)",
-         {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%"}),
-        ("Leverage Ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%"}),
-        ("LCR", {"FY2025": "310%", "FY2024": "323%", "FY2023": "349%"}),
+         {"FY2025": "20%", "FY2024": "23%", "FY2023": "25%", "FY2022": "25%"}),
+        ("Leverage Ratio", {"FY2025": "11%", "FY2024": "13%", "FY2023": "13%", "FY2022": "12%"}),
+        ("LCR", {"FY2025": "310%", "FY2024": "323%", "FY2023": "349%", "FY2022": "399%"}),
     ],
     note="No CRR capital ratio (CET1, Tier 1 or Total Capital) is disclosed by this bank in any year. The single "
          "ratio shown above is the Bank's own 'Capital adequacy ratio', which the Annual Report defines as "
          "shareholders' funds divided by risk-weighted assets — a numerator that excludes the £10,000k Tier 2 "
          "subordinated debt and is struck before the intangible-assets deduction, so it is neither a Total Capital "
          "nor a CET1 ratio; see the Total Capital Ratio sheet's note. No ratios of any kind are disclosed for "
-         "FY2019-FY2022, and no RWA amount is disclosed in any year. Figures are duplicated from the detail sheets "
+         "FY2019-FY2021 (FY2022 comes from the FY2023 report's comparative column), and no RWA amount is disclosed in any year. Figures are duplicated from the detail sheets "
          "for at-a-glance trend viewing; see each sheet's own source citation for the underlying document/page.",
 )
 

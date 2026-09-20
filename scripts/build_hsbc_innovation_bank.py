@@ -846,11 +846,27 @@ metric(
     source_height=620,
 )
 
+# GA-020 (2026-09-19): the FY2022 Pillar 3 Report (12pp, native text) and the
+# FY2022-FY2025 Annual Reports (scanned Companies House filings, OCR'd in full,
+# 57-85pp) were searched for MREL / loss-absorbing / eligible liabilities /
+# 'minimum requirement for own funds': zero hits in any of them (richness
+# control: 'capital' 83-89 hits per report). FY2020/FY2021 were a dormant /
+# pre-authorisation shell with no banking business (entity-history note).
+MREL_ST = {"FY2022": ("Not published – FY2022 Pillar 3 Report (12pp) and FY2022 Annual Report (full OCR) contain no "
+                      "MREL figure or reference")}
+MREL_ST.update({y: (f"Not published – no {y} Pillar 3 exists; {y} Annual Report (Companies House, full OCR "
+                    "2026-09-19) contains no MREL figure or reference") for y in ["FY2023", "FY2024", "FY2025"]})
+MREL_ST["FY2021"] = ("Not applicable – pre-authorisation shell with no banking business: FY2021 small-company "
+                     "accounts (FRS 101, filed 7 Sep 2022); see entity-history note")
+MREL_ST["FY2020"] = ("Not applicable – dormant shell: FY2020 Dormant Accounts under s480 CA2006 (filed 26 Jul 2021) "
+                     "show a £1 balance sheet only; see entity-history note")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "Not publicly disclosed at this entity level in any year - MREL is set at the "
-                              "wider HSBC resolution-group level, not for this individual subsidiary."},
+    statements={"MREL Ratio": MREL_ST},
+    per_note={"MREL Ratio": "No MREL figure appears in any document this entity has published (see the per-year "
+                              "statements). MREL is plausibly set at the wider HSBC resolution-group level, but no "
+                              "document read states that for this subsidiary, so the cells record non-publication."},
 )
 
 # ---------------------------------------------------------------

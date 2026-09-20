@@ -53,10 +53,9 @@ ENTITY_NOTE = (
     "enumerated that day at https://www.ubs.com/global/en/investor-relations/complementary-financial-"
     "information/disclosure-legal-entities/archive-credit-suisse.html (plain curl clears the 403 that a "
     "browser User-Agent triggers). That index lists a CSUK edition for every year 2014-2023. "
-    "The 2016 edition was NOT opened in that pass, which was scoped to interior gaps only, so FY2016 stays "
-    "blank as an UNCHECKED LEAD - a document known to exist and not yet read - rather than as anything "
-    "resembling an absence. FY2016 CET1/Tier 1 Capital (the £ amount) "
-    "IS available, from the Capital adequacy note's Own Funds table.\n"
+    "RESOLVED 19 September 2026: the 2016 edition was opened and supplies the previously missing FY2016 "
+    "CET1/Tier 1 ratio, Total Capital ratio, Total RWA and leverage ratio. FY2016 CET1/Tier 1 Capital "
+    "(the £ amount) remains sourced from the Annual Report's Capital adequacy note.\n"
     "- Leverage Ratio is disclosed only in the FY2017/FY2018 KPI TABLES (6.3%/7.8%) - absent from FY2016 "
     "(no KPI table) and from FY2019/FY2020's own KPI tables (which dropped the 'Statement of Financial "
     "Position' KPI section entirely). Average LCR is disclosed only in the FY2018 KPI table (154%) - "
@@ -80,8 +79,9 @@ ENTITY_NOTE = (
     "the standalone Pillar 3 editions this workbook already cites. Both the Total Capital and Total Capital "
     "Ratio sheets now carry those years and name that source. The original claim was true only of the KPI "
     "table, which never carried a Total Capital line - a statement about ONE document read as a statement "
-    "about the bank's disclosure. No Total Capital RATIO (%) was found disclosed in any year FY2016-FY2020 "
-    "either (only the £ Own Funds figure), so that row stays blank for the new years too.\n"
+    "about the bank's disclosure. The 2016 standalone Pillar 3 supplies a directly disclosed 23.7% Total "
+    "Capital ratio for FY2016; FY2017-FY2020 remain blank because no directly disclosed ratio has yet been "
+    "located for those years.\n"
     "- Asset Quality's loan-book note uses the SAME UK/Foreign x Commercial/Consumer borrower-type format "
     "in every FY2016-FY2020 filing checked as the format already used on this sheet for FY2021-FY2023 - no "
     "IFRS 9 stage-level (Stage 1/2/3) split exists in the PRIMARY 'Loans and advances' note in any year "
@@ -278,7 +278,15 @@ RWA_BREAKDOWN_SOURCES = (
     "entities/archive-credit-suisse.html (csuk-pillar-3-disclosures-2022.pdf)\n"
     "FY2021: Pillar 3 Disclosures 2021, 'RWA and Capital Requirements' table (pre-dates the OV1 template/label, "
     "same underlying disclosure, broken down further by credit-risk exposure class) - same archive page "
-    "(2021-csuk-pillar-3-disclosures.pdf)\n\n"
+    "(2021-csuk-pillar-3-disclosures.pdf)\n"
+    "FY2020-FY2016 (ADDED 2026-09-19, GA-020 - the 'genuinely undisclosed' statement above is SUPERSEDED): each "
+    "year's own Pillar 3 Disclosures edition, all listed on the same archive page and downloaded clean with plain "
+    "curl (2020-, 2019-, 2018-, 2017-, 2016-csuk-pillar-3-disclosures.pdf), 'RWA and capital requirements (£000s)' "
+    "table - FY2020 p.5, FY2019 p.5, FY2018 p.5, FY2017 p.4, FY2016 p.6, each read off the page image. Carried as "
+    "the same three summary lines as FY2021 plus the grand total. FY2019's 'other risks' line (217,134) includes "
+    "settlement risk of 493 alongside operational risk of 216,641; FY2020 and FY2019 print a dash for market risk. "
+    "The FY2017 edition's 2016 comparative restates FY2016 market risk to 4,087 and the total to 892,870; the "
+    "FY2016 edition's own 56 / 888,838 are carried, including on the Total RWAs sheet. ROUNDING, NOT A TRANSCRIPTION ERROR: in FY2016, FY2017 and FY2018 the three printed lines sum to 1 more than the printed grand total (888,839 v 888,838; 1,241,499 v 1,241,498; 1,225,218 v 1,225,217) - the Bank's own £000 rounding, seen on the page images; verify_workbook.py flags it and the figures are left as printed.\n\n"
     "Every year's Total ties to the Total RWAs sheet's own figure (to the nearest £m). FY2021's own document "
     "uses an older, pre-OV1 layout (exposure-class detail within credit risk; three summary lines 'Total credit "
     "and counterparty credit risk' / 'Total market risk' / 'Total other risks') rather than the UK OV1 template "
@@ -760,11 +768,11 @@ def p3_sources(page_note=""):
         "FY2018: FY2018 Annual Report, KPI table p.7 - " + AR2018_URL + "\n"
         "FY2017: FY2018 Annual Report's own FY2017 comparative column, p.7 (FY2017's own Annual Report "
         "carries no KPI table at all - only introduced from the FY2018 report) - " + AR2018_URL + "\n"
-        "FY2016: no KPI table exists for FY2016 in any filing obtained, and no comparative column reaches "
-        "back that far (FY2017's own report also lacks a KPI table) - RWA/CET1-Tier1 Ratio/Leverage/LCR/"
-        "NSFR are self-skipped for FY2016 as genuinely undisclosed (see ENTITY NOTE); FY2016 CET1/Tier 1 "
-        "Capital (£) is instead sourced from the Capital adequacy note's Own Funds table, FY2016 Annual "
-        "Report p.88 - " + AR2016_URL + "\n"
+        "FY2016: the Annual Report has no KPI table, but the entity's own standalone 2016 Pillar 3 directly "
+        "discloses CET1/Tier 1 ratio 20.9% and Total Capital ratio 23.7% (capital composition and ratios, "
+        "PDF p.5), RWA £888.838m (PDF p.6), and leverage ratio 6.2% with £2,996.370m exposure (PDF p.20) - "
+        + P3_2016_URL + ". FY2016 CET1/Tier 1 Capital (£) remains sourced from the Capital adequacy note's "
+        "Own Funds table, FY2016 Annual Report p.88 - " + AR2016_URL + "\n"
         "FY2021-FY2023: CSUK official Pillar 3 disclosures hosted by UBS (KM1 / capital composition tables) - "
         "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/disclosure-legal-entities/archive-credit-suisse.html\n"
         "FY2024-FY2025: CSUK official Pillar 3 disclosures hosted by UBS (KM1 / capital composition tables) - "
@@ -774,8 +782,8 @@ def p3_sources(page_note=""):
         "financial-information/disclosure-legal-entities/archive-credit-suisse.html - which lists one CSUK "
         "edition per year for 2014-2023. Each edition's own title carries the fiscal year ('Pillar 3 "
         "Disclosures 2019', '2020 Pillar 3 Disclosures', and so on), so the filename-year trap that "
-        "affects the FY2025 edition does not arise for these. Editions 2014-2018 are listed on the same "
-        "index and have NOT been opened by this workbook - a standing lead, not an absence.\n"
+        "affects the FY2025 edition does not arise for these. The FY2016 edition has also now been opened "
+        "and supplies the metrics listed above; FY2014, FY2015, FY2017 and FY2018 remain standing leads.\n"
         + page_note
     )
 
@@ -783,16 +791,17 @@ def p3_sources(page_note=""):
 CET1_TIER1_CAPITAL = {"FY2025": 306, "FY2024": 299, "FY2023": 291, "FY2022": 330, "FY2021": 336,
                        "FY2020": 314, "FY2019": 300, "FY2018": 276, "FY2017": 213, "FY2016": 186}
 CET1_TIER1_RATIO = {"FY2025": "191%", "FY2024": "45%", "FY2023": "29.15%", "FY2022": "29.39%", "FY2021": "25.09%",
-                     "FY2020": "22%", "FY2019": "21.9%", "FY2018": "22.5%", "FY2017": "17.2%"}
+                     "FY2020": "22%", "FY2019": "21.9%", "FY2018": "22.5%", "FY2017": "17.2%",
+                     "FY2016": "20.9%"}
 RWA = {"FY2025": 160, "FY2024": 672, "FY2023": 1000, "FY2022": 1124, "FY2021": 1340,
-       "FY2020": 1338, "FY2019": 1371, "FY2018": 1225, "FY2017": 1241}
+       "FY2020": 1338, "FY2019": 1371, "FY2018": 1225, "FY2017": 1241, "FY2016": 888.838}
 # FY2023-FY2019 added 2026-09-18 (interior-gap sweep, GA- series). Each year is
 # the figure printed by THAT year's OWN CSUK standalone Pillar 3 edition - see
 # LEVERAGE_INTERIOR_NOTE for the document, printed folio and the cross-edition
 # restatements that are deliberately NOT applied.
 LEVERAGE_RATIO = {"FY2025": "87%", "FY2024": "17%", "FY2023": "12.09%", "FY2022": "11.40%",
                   "FY2021": "9.30%", "FY2020": "8.07%", "FY2019": "8.47%",
-                  "FY2018": "7.8%", "FY2017": "6.3%"}
+                  "FY2018": "7.8%", "FY2017": "6.3%", "FY2016": "6.2%"}
 # FY2021 added 2026-09-18 on the SPOT basis this row uses - see LCR_INTERIOR_NOTE.
 LCR = {"FY2025": "1,154%", "FY2024": "451%", "FY2023": "554.67%", "FY2022": "216.40%",
        "FY2021": "216%", "FY2018": "154%"}
@@ -811,8 +820,8 @@ NSFR = {"FY2025": "3,600%", "FY2024": "167%", "FY2023": "129.25%", "FY2022": "13
 COMBINED_NOTE = (
     "The Bank's own KPI table discloses a single combined 'Tier 1 and Common Equity Tier 1 (CET1)' "
     "line, not separate Tier 1/CET1 figures - used identically for both the CET1 and Tier 1 sheets. FY2016's "
-    "£ figure is the Capital adequacy note's 'Total Tier 1 (and CET1) capital' (£185,547k, rounded to £186m) "
-    "- no ratio/RWA is available for FY2016 to pair with it (see ENTITY NOTE and p3_sources above)."
+    "£ figure is the Capital adequacy note's 'Total Tier 1 (and CET1) capital' (£185,547k, rounded to £186m). "
+    "The FY2016 ratio is directly disclosed as 20.9% in the entity's own 2016 Pillar 3 report."
 )
 
 CSUK_P3_INDEX_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
@@ -842,6 +851,9 @@ _UBS_DAM = ("https://www.ubs.com/global/en/investor-relations/complementary-fina
 P3_2019_URL = (_UBS_DAM + "accordionsplit_ba44/table.1211843275.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMv"
                "Y2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAx"
                "OS8yMDE5LWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2019-csuk-pillar-3-disclosures.pdf")
+P3_2016_URL = (_UBS_DAM + "accordionsplit_edb9/table_672121609.1602187955.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMv"
+               "Y2MvaW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAxNi8yMDE2"
+               "LWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2016-csuk-pillar-3-disclosures.pdf")
 P3_2020_URL = (_UBS_DAM + "accordionsplit/table.670434488.file/dGFibGVUZXh0PS9jb250ZW50L2RhbS9hc3NldHMvY2Mv"
                "aW52ZXN0b3ItcmVsYXRpb25zL2NvbXBsZW1lbnRhcnktZmluYW5jaWFsLWluZm9ybWF0aW9uL2FyY2hpdmUvMjAyMC8y"
                "MDIwLWNzdWstcGlsbGFyLTMtZGlzY2xvc3VyZXMucGRm/2020-csuk-pillar-3-disclosures.pdf")
@@ -1073,14 +1085,11 @@ TOTAL_CAPITAL_NOTE = (
 metric("Total Capital", "£m", [("Total Capital (Own Funds)", TOTAL_CAPITAL)], p3_sources(), note=TOTAL_CAPITAL_NOTE)
 
 TOTAL_CAPITAL_RATIO_NOTE = (
-    "Directly disclosed in the official UBS-hosted Pillar 3 KM1 tables for FY2021-FY2025; FY2016-FY2020 were not "
-    "reported as a percentage in the located KPI/capital-adequacy tables. "
-    "Not directly disclosed as a percentage ratio in any of the 5 earlier years' KPI tables or Capital adequacy "
-    "notes checked (FY2016-FY2025) - only the £ Own Funds figure is given (see the Total Capital sheet), "
-    "with no accompanying Total Capital Ratio %. NOT assumed or derived by dividing Own Funds by RWA "
-    "without an explicit stated ratio, per project convention - left blank rather than guessed for FY2016-FY2020."
+    "Directly disclosed in the official UBS-hosted Pillar 3 reports for FY2016-FY2025. The FY2017-FY2020 "
+    "values were added from each year's own standalone CSUK edition: FY2017 p.4 (19.2%), FY2018 p.4 (27.0%), "
+    "FY2019 p.4 (25.9%) and FY2020 p.4 (26.20%). Nothing is derived by dividing Own Funds by RWA."
 )
-metric("Total Capital Ratio", "%", [("Total Capital Ratio", {"FY2025": "191.10%", "FY2024": "51.64%", "FY2023": "34.50%", "FY2022": "34.29%", "FY2021": "29.19%"})], p3_sources(), note=TOTAL_CAPITAL_RATIO_NOTE)
+metric("Total Capital Ratio", "%", [("Total Capital Ratio", {"FY2025": "191.10%", "FY2024": "51.64%", "FY2023": "34.50%", "FY2022": "34.29%", "FY2021": "29.19%", "FY2020": "26.20%", "FY2019": "25.9%", "FY2018": "27.0%", "FY2017": "19.2%", "FY2016": "23.7%"})], p3_sources(), note=TOTAL_CAPITAL_RATIO_NOTE)
 
 metric("Total RWAs", "£m", [("Risk Weighted Assets (RWA)", RWA)], p3_sources())
 
@@ -1094,18 +1103,23 @@ rwa_breakdown_rows = [
     ("DATA", "Market risk", {"FY2025": 7791, "FY2023": 15933}),
     ("DATA", "Operational risk", {"FY2025": 147290, "FY2024": 189114, "FY2023": 202259, "FY2022": 209312}),
     ("DATA", "Settlement risk", {"FY2022": 3}),
-    ("SECTION", "Pre-OV1 format, collapsed to summary lines (FY2021)", {}),
-    ("DATA", "Total credit and counterparty credit risk", {"FY2021": 1109433}),
-    ("DATA", "Total market risk", {"FY2021": 0}),
-    ("DATA", "Total other risks (operational risk)", {"FY2021": 230434}),
+    ("SECTION", "Pre-OV1 format, collapsed to summary lines (FY2016-FY2021)", {}),
+    # FY2016-FY2020 FOUND 2026-09-19 (GA-020): each year's OWN CSUK Pillar 3
+    # edition, 'RWA and capital requirements (£000s)' table, lines (i)/(ii)/(iii)
+    # and the grand total, read off the page images (FY2016 p.6, FY2017 p.4,
+    # FY2018/FY2019/FY2020 p.5). A printed dash is carried as a dash.
+    ("DATA", "Total credit and counterparty credit risk", {"FY2021": 1109433, "FY2020": 1097895, "FY2019": 1153884,
+                                                           "FY2018": 1026751, "FY2017": 1069630, "FY2016": 748287}),
+    ("DATA", "Total market risk", {"FY2021": 0, "FY2020": "-", "FY2019": "-", "FY2018": 3291, "FY2017": 5633, "FY2016": 56}),
+    ("DATA", "Total other risks (operational risk)", {"FY2021": 230434, "FY2020": 239911, "FY2019": 217134, "FY2018": 195176,
+                                                      "FY2017": 166236, "FY2016": 140496}),
     ("TOTAL", "Total RWAs", {"FY2025": 160021, "FY2024": 671676, "FY2023": 999597, "FY2022": 1123970, "FY2021": 1339867,
-                             "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed",
-                             "FY2017": "Not publicly disclosed", "FY2016": "Not publicly disclosed"}),
+                             "FY2020": 1337806, "FY2019": 1371018, "FY2018": 1225217, "FY2017": 1241498, "FY2016": 888838}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Credit Suisse (UK) Limited — RWA Breakdown",
-    subtitle="£'000s. UK OV1 template FY2022-FY2025; older pre-OV1 format for FY2021. Not publicly disclosed FY2016-FY2020 - see source note.",
+    subtitle="£'000s. UK OV1 template FY2022-FY2025; older pre-OV1 format (summary lines) for FY2016-FY2021 - see source note.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=58,
@@ -1146,9 +1160,8 @@ LEVERAGE_INTERIOR_NOTE = (
     "two coincide at the FY2021/FY2022 join - the FY2022 edition's own 2021 comparative on the UK-captioned "
     "row prints exactly the 9.30% the 2021 edition printed on the CRR row - but that is the Bank's own "
     "arithmetic, not an equivalence asserted here.\n"
-    "FY2016 remains blank: that year has no KPI table and its standalone Pillar 3 was not opened in this "
-    "pass (an edition for 2016 IS listed on the UBS archive index - see the reach note in the sources "
-    "above - so the FY2016 blank is an UNCHECKED lead, not a demonstrated absence)."
+    f"FY2016 FILLED 2026-09-19: the entity's own 2016 Pillar 3 'Leverage Ratio Common Disclosure' table "
+    f"prints a 6.2% leverage ratio and £2,996.370m total exposure (PDF p.20) - {P3_2016_URL}."
 )
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(LEVERAGE_INTERIOR_NOTE))
 
@@ -1206,7 +1219,14 @@ MREL_NOTE = (
     "Bank of England's MREL threshold given CSUK's small and (post-Part-VII-transfer) shrinking balance "
     "sheet, but not confirmed - left blank rather than guessed."
 )
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": MREL_NOTE})
+# GA-020 (2026-09-19): every CSUK Pillar 3 edition FY2016-FY2025 (archive page +
+# other-subsidiaries page; FY2025 is the file named '...-2026.pdf') was downloaded
+# and full-text searched for MREL / loss-absorbing / eligible liabilities /
+# 'minimum requirement for own funds': zero hits in all ten.
+MREL_ST = {y: (f"Not published – CSUK {y} Pillar 3 Disclosures (full text searched 2026-09-19) contain no MREL "
+               "figure or reference; Companies House accounts none either") for y in YEARS}
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": MREL_NOTE},
+                                   statements={"MREL Ratio": MREL_ST})
 
 # ---------------------------------------------------------------
 # Overview sheet

@@ -374,6 +374,25 @@ bw.add_asset_quality_sheet(
 # chaseable gaps. Matches build_vida.py and build_afin_bank.py.
 PRE_LICENCE_YEARS = ["FY2021"]
 
+# GA-020 (2026-09-19): every former bare "Not publicly disclosed" / "Not
+# applicable" cell now states WHICH outcome it is and on what document. FY2022
+# and FY2023 Annual Reports were OCR'd in full on 2026-09-19 (55 and 73 scanned
+# pages) for this: their only regulatory metrics are the leverage and CET1
+# ratios in the KPI list (FY2022 AR p.5; FY2023 AR printed p.3).
+PRE_LICENCE_TEXT = ("Not applicable – no banking licence in the period to 31/12/2021: FY2021 accounts, Strategic "
+                    "Report p.1, say Perenna was still applying for Part 4A permission (restricted licence Aug 2022)")
+ND_BY_YEAR = {
+    "FY2025": "Not published – FY2025 Annual Report (full OCR, 76pp) gives only CET1 and leverage ratios (KPI table "
+              "p.1); no Pillar 3 exists (SDDT Rule 3.1 opt-in from 10/06/2025). See note.",
+    "FY2024": "Not published – FY2024 Annual Report (full OCR, 90pp) gives only CET1 and leverage ratios (KPI table "
+              "p.1); no Pillar 3 on perenna.com, static.perenna.com, Wayback or Companies House.",
+    "FY2023": "Not published – FY2023 Annual Report (full OCR, 73pp) gives only CET1 and leverage ratios (KPIs, "
+              "p.3); no Pillar 3 on perenna.com, static.perenna.com, Wayback or Companies House.",
+    "FY2022": "Not published – FY2022 Annual Report (full OCR, 55pp) gives only CET1 and leverage ratios (KPIs, "
+              "p.5); no Pillar 3 on perenna.com, static.perenna.com, Wayback or Companies House.",
+    "FY2021": PRE_LICENCE_TEXT,
+}
+
 
 # ---------------------------------------------------------------
 # KM1 Key Metrics - "Not applicable". Perenna has never published a Pillar 3
@@ -420,7 +439,7 @@ KM1_SOURCES = (
     "CONSEQUENCE, RECORDED SO A LATER SESSION DOES NOT REPEAT THE SEARCH: from 10 June 2025 Perenna is an "
     "SDDT, so no standalone Pillar 3 or KM1 document will be published for FY2025 or later, and the Annual "
     "Report KPI table will remain the only source for this workbook's ratio sheets. The same evidence is why "
-    "the RWA Breakdown sheet and most Pillar 3 metric sheets read 'Not publicly disclosed': those are genuine "
+    "the RWA Breakdown sheet and most Pillar 3 metric sheets carry 'Not published –' statements: those are genuine "
     "non-disclosures by this bank, not omissions in this workbook.\n\n" + ENTITY_NOTE
 )
 
@@ -441,28 +460,28 @@ bw.add_km1_sheet(
 
 
 def metric(name, unit, rows_data, note=None):
-    rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
+    rows_data = [(label, {**{y: PRE_LICENCE_TEXT for y in PRE_LICENCE_YEARS}, **values})
                  for label, values in rows_data]
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=170)
 
 
-metric("CET1 Capital", None, [("CET1 capital", {y: "Not publicly disclosed" for y in YEARS})])
+metric("CET1 Capital", None, [("CET1 capital", dict(ND_BY_YEAR))])
 metric("CET1 Ratio", "%", [("CET1 ratio", {"FY2025": "48%", "FY2024": "133%", "FY2023": "269%", "FY2022": "101.66%"})],
        note="The Annual Reports disclose this ratio as a Key Performance Indicator, but do not provide a "
             "separate Pillar 3/KM1 capital amount. FY2021 is blank for a STRUCTURAL reason, not a sourcing "
             "gap: Perenna did not hold a banking licence at all during that period (restricted licence "
             "granted August 2022, full licence 2023 - see the entity note), so no regulatory capital ratio "
             "existed to disclose for the period ended 31 December 2021. Re-verified 2026-09-12.")
-metric("Tier 1 Capital", None, [("Tier 1 capital", {y: "Not publicly disclosed" for y in YEARS})])
-metric("Tier 1 Ratio", None, [("Tier 1 ratio", {y: "Not publicly disclosed" for y in YEARS})])
-metric("Total Capital", None, [("Total capital", {y: "Not publicly disclosed" for y in YEARS})])
-metric("Total Capital Ratio", None, [("Total capital ratio", {y: "Not publicly disclosed" for y in YEARS})])
-metric("Total RWAs", None, [("Total risk-weighted assets", {y: "Not publicly disclosed" for y in YEARS})])
+metric("Tier 1 Capital", None, [("Tier 1 capital", dict(ND_BY_YEAR))])
+metric("Tier 1 Ratio", None, [("Tier 1 ratio", dict(ND_BY_YEAR))])
+metric("Total Capital", None, [("Total capital", dict(ND_BY_YEAR))])
+metric("Total Capital Ratio", None, [("Total capital ratio", dict(ND_BY_YEAR))])
+metric("Total RWAs", None, [("Total risk-weighted assets", dict(ND_BY_YEAR))])
 
 bw.add_rwa_breakdown_sheet(
     title="Perenna Bank PLC — RWA Breakdown",
-    subtitle="Not publicly disclosed. £.",
-    rows=[("DATA", "RWA breakdown by risk category", {y: "Not publicly disclosed" for y in YEARS})],
+    subtitle="Not published by the bank - see the per-year statements and source note. £.",
+    rows=[("DATA", "RWA breakdown by risk category", dict(ND_BY_YEAR))],
     sources_text=(
         "No separate Perenna Pillar 3/KM1 disclosure or category-level RWA breakdown was located on the "
         "Bank's website or in its Companies House filings (the full document was read through to its "
@@ -478,9 +497,9 @@ metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2025": "21.47%", "FY2024":
        note="The Annual Reports disclose this ratio as a Key Performance Indicator. FY2021 is blank for the "
             "same STRUCTURAL reason as the CET1 Ratio sheet - the entity held no banking licence during the "
             "period ended 31 December 2021. Re-verified 2026-09-12.")
-metric("LCR", None, [("Liquidity coverage ratio", {y: "Not publicly disclosed" for y in YEARS})])
-metric("NSFR", None, [("Net stable funding ratio", {y: "Not publicly disclosed" for y in YEARS})])
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})])
+metric("LCR", None, [("Liquidity coverage ratio", dict(ND_BY_YEAR))])
+metric("NSFR", None, [("Net stable funding ratio", dict(ND_BY_YEAR))])
+metric("MREL Ratio", None, [("MREL ratio", dict(ND_BY_YEAR))])
 
 bw.add_overview_sheet(
     cash_flow_totals=[

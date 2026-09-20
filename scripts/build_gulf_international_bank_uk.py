@@ -1541,7 +1541,22 @@ metric(
          "edition published).",
 )
 
+# GA-020 (2026-09-19). FY2022-FY2024 Pillar 3 editions re-fetched (%PDF) and text-searched:
+# 'MREL' appears ONLY in the abbreviations list - no MREL paragraph, figure or requirement
+# statement (richness 'capital' 72-81). The FY2021 and FY2020 Wayback captures came back
+# truncated at exactly 1 MiB on three attempts today, so those two years rest on this
+# script's earlier full reading (quoted in the note below). FY2025 AR (text): zero hits.
+MREL_ST = {
+    "FY2025": ("Not published – GIB (UK) Annual Report 2025 (text search, 2026-09-19) has no MREL figure; no FY2025 "
+               "Pillar 3 in the Bank's document library (re-enumerated 2026-09-18)."),
+    "FY2021": ("Not applicable – GIB (UK) Pillar 3 FY2021: 'GIB (UK)'s MREL requirement is equal to its CRD V "
+               "requirement under Pillar 1 and Pillar 2A' - no MREL instruments or ratio beyond capital."),
+    "FY2020": ("Not published – GIB (UK) Pillar 3 FY2020 (read in full, HD-062) has no MREL section or mention."),
+}
+MREL_ST.update({y: ("Not published – GIB (UK) Pillar 3 " + y + " (text search, 2026-09-19): 'MREL' only in the "
+                    "abbreviations list; no figure or requirement statement.") for y in ["FY2024", "FY2023", "FY2022"]})
 bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), source_height=409,
+    statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "No separate MREL ratio or instruments disclosed in any year, including FY2020 (its "
                              "Basel II-era Pillar 3 document has no MREL section or mention at all - a different, "
                              "and more basic, non-disclosure than later years' explained non-disclosure below). "

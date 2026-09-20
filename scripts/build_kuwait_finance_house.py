@@ -746,8 +746,19 @@ metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)])
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)])
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
 
+# GA-020 (2026-09-19): all five Annual Reports FY2021-FY2025 (which carry the Pillar 3 appendix)
+# OCR'd from Companies House at 150 dpi: 'MREL'/'eligible liabilities'/'loss-absorbing' zero in
+# every one (richness 'capital' 59-66). FY2023-FY2025 additionally rest on the BoE 'External
+# MRELs' lists (2023-2026 editions), which by their own scope sentence name every UK resolution
+# entity with an MREL above MCR and do not name KFH - see the note. FY2021/FY2022 predate the
+# earliest edition relied on, so they are recorded as not published rather than not applicable.
+MREL_ST = {y: ("Not applicable – no MREL above MCR: KFH Plc absent from BoE 'External MRELs' lists 2023–26, which "
+               "name every UK resolution entity with MREL above MCR; AR " + y + " (incl. Pillar 3) has none.")
+           for y in ["FY2025", "FY2024", "FY2023"]}
+MREL_ST.update({y: ("Not published – no MREL figure in KFH Plc Annual Report " + y + " or its Pillar 3 appendix "
+                    "(CH scan, OCR 2026-09-19).") for y in ["FY2022", "FY2021"]})
 bw.add_not_disclosed_metric_sheets(
-    ["MREL Ratio"], p3_sources("n/a"),
+    ["MREL Ratio"], p3_sources("n/a"), statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "Not publicly disclosed any year. POSITIVE RECORD ADDED 18 September 2026 "
                              "(KM1-032): this note previously read 'consistent with a small UK bank "
                              "subsidiary that is not itself a resolution entity' - a plausibility argument "

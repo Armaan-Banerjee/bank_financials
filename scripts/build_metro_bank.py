@@ -29,7 +29,8 @@ YEAR_LABEL["FY2010"] = "FY2010 (16m)"
 # cover this session (see HIST_P3_NOTE). They are Basel II documents and their
 # figures are NOT continuous with the CRR series, so they are carried on their
 # own separate, explicitly-labelled rows rather than extending the existing
-# ones. FY2012 is recorded as genuinely absent, not as an open gap.
+# ones. FY2012's edition was published (named on the Feb-2014 legal page) but never
+# archived, so its cells read 'Unreached today' (corrected 2026-09-19; this said 'genuinely absent').
 PILLAR3_YEARS = list(YEARS)
 
 AR_2014 = "https://www.metrobankonline.co.uk/globalassets/documents/investor_documents/annual-report-2015.pdf"  # FY2014 restated comparative column (see DATA QUALITY note)
@@ -256,12 +257,34 @@ HIST_P3_NOTE = (
     "(164), which is the FY2015 Annual Report's 'restated' FY2014 comparative - GBP 6.5m apart. That independently "
     "corroborates the restatement flagged in the DATA QUALITY FLAG above (note 36 of the 2015 AR references "
     "undisclosed prior-period adjustments), and is the first contemporaneous FY2014 figure located for it.\n\n"
-    "FY2012 - GENUINELY ABSENT, CLOSED. No FY2012 Pillar 3 edition exists in the Wayback Machine: a CDX prefix "
-    "scan of the metrobankonline.co.uk Pillar 3 paths returned no FY2012 capture, and an independent search on "
-    "the filename and bank name was also negative. The FY2012 cells on the Pillar 3 sheets are marked 'FY2012 "
-    "Pillar 3 not located' rather than left blank, so this is not re-chased forever. Note that the structurally "
+    "FY2012 - PUBLISHED BUT NOT ARCHIVED (corrected 2026-09-19; this previously read 'genuinely absent, closed'). "
+    "The FY2012 edition existed: the bank's Legal Information page as archived on 2014-02-14 (Wayback "
+    "20140214085420 of metrobankonline.co.uk/Footer/LegalInformation/) links 'Pillar 3 Disclosures' to "
+    "/Global/Legal Information/Pillar 3 Disclosure update - December 2012.pdf, between the FY2011 file it "
+    "replaced (still linked on the 2013-05-14, 2013-08-12 and 2013-11-14 captures) and the undated 'Pillar 3 "
+    "Disclosure.pdf' that carried FY2013 by 2014-07-06. That file has no Wayback capture (CDX exact and prefix "
+    "on the name), is 404 live, and archive.ph has none. The FY2013 edition (Wayback 20140915151355) prints no "
+    "2012 comparative anywhere (0 occurrences of '2012' in its text layer), so it cannot fill the year. The "
+    "FY2012 statutory accounts (Companies House scan, page images read 2026-09-19) print only the Directors' "
+    "report KPI 'Capital as %age of risk weighted assets 55%' (PDF p.7, carried on the Total Capital Ratio "
+    "sheet); note 25 'Capital management' refers back to that KPI table and gives no capital amount, RWA or "
+    "provision on the Pillar 3 basis. The FY2012 cells that depend on the Pillar 3 therefore stay 'Unreached "
+    "today' - a limit on our reach, not a statement that the bank published nothing. Note that the structurally "
     "inapplicable FY2012 metrics (CET1, leverage, LCR, NSFR, MREL) are marked 'Not applicable (Basel II)' like "
     "their neighbours - those would not have been disclosed in an FY2012 edition even if one were found.\n\n"
+    "CDN/HOST SWEEP (GA-020 cdn-sweep, 2026-09-19), all negative, so FY2012 stays UNREACHED: (i) link and host "
+    "extraction from the archived 2013-2014 Legal Information, homepage, About-us and Press-releases pages - "
+    "every PDF was served same-origin from the EPiServer /Global/ tree; the only other hosts are the bank's own "
+    "subdomains (personal., corporate., commercial., selfservice.) and metrobankmore.co.uk, no CDN or document "
+    "host; (ii) Wayback CDX matchType=domain on metrobankonline.co.uk to 2017 without a mimetype filter (2,823 "
+    "URL keys over 20 host variants): no FY2012 file, and the undated 'Pillar 3 Disclosure.pdf' digests are "
+    "FY2013 (2014-09) and FY2014 (2015-12), never FY2012; (iii) the post-2015 EPiServer /globalassets/ tree, "
+    "where the 2015/2016 editions were re-hosted (/globalassets/legal-information/pillar-3-disclosure-2015.pdf "
+    "and -2016.pdf are live %PDF): CDX of all 7,632 URL keys has no pre-2015 Pillar 3, and slug guesses for "
+    "the Dec-2012 update and the 2011 file 404; (iv) Common Crawl URL index, every crawl 2012-2016, for "
+    "www.metrobankonline.co.uk/Global/*, metrobankonline.co.uk/Global/* and *.metrobankonline.co.uk: no "
+    "capture of any /Global/ PDF; (v) web search for the title: 2019+ editions only; (vi) UK Web Archive CDX "
+    "endpoint unavailable, Memento TimeTravel unreachable - neither is evidence.\n\n"
     "H1 interim editions for 2019-2021 were checked and are absent: 404 live with no Wayback capture."
 )
 
@@ -828,7 +851,7 @@ asset_quality_rows = [
     # above - the two must never be read as one series.
     ("SECTION", "Basel II incurred-loss provisioning (FY2010-FY2014) - separate basis, NOT comparable with the IFRS 9 ECL rows above", {}),
     ("DATA", "General doubtful debt provision, as stated in that year's Pillar 3", {
-        "FY2014": 3.5, "FY2013": 1.09, "FY2012": "FY2012 Pillar 3 not located", "FY2011": 0.186, "FY2010": 0}),
+        "FY2014": 3.5, "FY2013": 1.09, "FY2012": "Unreached today – FY2012 Pillar 3 ('Pillar 3 Disclosure update - December 2012.pdf', linked Feb 2014): not in Wayback, archive.ph or Common Crawl; live 404 incl. globalassets slugs (2026-09-19); FY2013 edition has no 2012 column", "FY2011": 0.186, "FY2010": 0}),
     ("DATA", "Past due >20% impaired secured exposure (Basel II credit risk table)", {"FY2014": 2.2, "FY2013": 1.1}),
 ]
 
@@ -928,7 +951,15 @@ def vals(data):
 HIST_P3_YEARS = ["FY2013", "FY2012", "FY2011", "FY2010"]
 NA_BASEL2 = "Not applicable (Basel II)"
 ND_BASEL2 = "Not publicly disclosed"
-NOT_LOCATED_2012 = "FY2012 Pillar 3 not located"
+# GA-020 (2026-09-19): "FY2012 Pillar 3 not located" is a limit on OUR reach and now carries
+# the reserved phrase. Tried today: Wayback CDX of metrobankonline.co.uk/Global/* (every
+# pre-2016 Pillar 3 lived there) lists the FY2010, FY2011, FY2013 and FY2014 editions and no
+# FY2012 one; the FY2011-pattern path "Pillar 3 Disclosure - 2012.pdf" 301s to a 404 live.
+# Companies House "Full accounts made up to 31 December 2012" (filed 04 Jun 2013, 45pp scan)
+# was OCR'd and its pages viewed: its Note 25 'Capital management' gives no capital amount and
+# points to the Directors' report KPI table, which prints only 'Capital as %age of risk
+# weighted assets 55%' (carried on the Total Capital Ratio sheet).
+NOT_LOCATED_2012 = "Unreached today – FY2012 Pillar 3 ('Pillar 3 Disclosure update - December 2012.pdf', linked Feb 2014): not in Wayback, archive.ph or Common Crawl; live 404 incl. globalassets slugs (2026-09-19); FY2013 edition has no 2012 column"
 
 
 def hist_na():
@@ -936,6 +967,47 @@ def hist_na():
     in Metro Bank's Basel II disclosure regime at all, so an FY2012 edition
     would not have carried it either - hence FY2012 is marked the same way."""
     return {y: NA_BASEL2 for y in HIST_P3_YEARS}
+
+
+# GA-020 (2026-09-19): the bare "Not publicly disclosed" cells for FY2010/FY2011/FY2013 were
+# re-checked against each year's STATUTORY ACCOUNTS as well as the Pillar 3 (Companies House
+# 06419578 scans, OCR'd 2026-09-19 and the KPI tables viewed as page images):
+#   FY2010 accounts (16 months to 31 Dec 2010), Directors' report KPI table (PDF p.6):
+#     'Tier 1 capital £89.8m / Risk weighted assets £19.0m / Tier 1 ratio 474%'.
+#   FY2011 accounts, KPI table (PDF p.5): 'Capital as %age of risk weighted assets 74%'.
+#   FY2012 accounts, KPI table (PDF p.7): 55% (2011: 74%).
+#   FY2013 accounts, KPI table (PDF p.7): 50% (2012: 55%).
+#   FY2014 group accounts, Financial Highlights (PDF p.4): 28% (2013: 50%).
+# These are FOUND figures and are written as printed. The bank does not say which RWA it
+# divides by; FY2010's £19.0m equals the Pillar 3 credit-risk-only RWA (18,950k), so the KPI
+# ratios are almost certainly over credit-risk RWA only - flagged in the cells, not adjusted.
+# 69.1/93.2 = 74.2% ties FY2011; 381.5/775.3 = 49.2% against a printed 50% for FY2013 does
+# not tie exactly - recorded, not reconciled. "Capital" is the whole capital base, which the
+# Pillar 3 editions state is entirely Tier 1, so the ratio is carried on the Total Capital
+# Ratio sheet (capital / RWA); only FY2010's explicitly labelled 'Tier 1 ratio' goes on the
+# Tier 1 Ratio sheet. No total RWA (incl. operational risk) is printed in any document.
+_KPI_TCR = {
+    "FY2013": "50% (FY2013 accounts KPI 'Capital as %age of risk weighted assets'; Basel II, RWA basis unstated)",
+    "FY2012": "55% (FY2012 accounts KPI 'Capital as %age of risk weighted assets'; Basel II, RWA basis unstated)",
+    "FY2011": "74% (FY2011 accounts KPI 'Capital as %age of risk weighted assets'; Basel II, RWA basis unstated)",
+    "FY2010": ("Not published – FY2010 accounts and Pillar 3 print no total capital ratio; accounts print "
+               "'Tier 1 ratio 474%' (no Tier 2 held) - on Tier 1 Ratio sheet"),
+}
+_KPI_T1R = {
+    "FY2013": ("Not published – FY2013 Pillar 3 and accounts print no Tier 1 ratio; accounts KPI "
+               "'Capital as %age of RWA' 50% is on Total Capital Ratio sheet"),
+    "FY2012": NOT_LOCATED_2012,
+    "FY2011": ("Not published – FY2011 Pillar 3 and accounts print no Tier 1 ratio; accounts KPI "
+               "'Capital as %age of RWA' 74% is on Total Capital Ratio sheet"),
+    "FY2010": "474% (FY2010 accounts KPI 'Tier 1 ratio', CH filing PDF p.6; over RWA £19.0m = credit-risk RWA)",
+}
+_NO_TOTAL_RWA = {
+    y: (f"Not published – {y} Pillar 3 prints credit-risk RWA only (row below) and {y} accounts print no "
+        "RWA amount; no total incl. operational risk anywhere")
+    for y in ("FY2014", "FY2013", "FY2011")}
+_NO_TOTAL_RWA["FY2010"] = ("Not published – FY2010 accounts' 'Risk weighted assets £19.0m' equals the Pillar 3 "
+                           "credit-risk-only RWA (18,950k, row below); no total incl. op risk printed")
+_NO_TOTAL_RWA["FY2012"] = NOT_LOCATED_2012
 
 
 def hist_nd():
@@ -946,7 +1018,7 @@ def hist_nd():
 
 # Basel II / GENPRU Total Regulatory Capital (= Tier 1; no Tier 2 held), GBP'm,
 # as printed on the bottom line of each edition's own capital table. FY2012's
-# edition is absent.
+# edition was published but never archived (unreached).
 BASEL2_TOTAL_CAPITAL = {"FY2014": 387.3, "FY2012": NOT_LOCATED_2012, "FY2013": 381.5, "FY2011": 69.1, "FY2010": 89.8}
 # Credit-risk-only RWA, Basel II standardised approach, GBP'm. Operational risk
 # under the Basic Indicator Approach is never quantified in any edition, so no
@@ -1176,8 +1248,9 @@ metric("Tier 1 Capital", "£m", [
        "FY2014 APPEARS ON BOTH ROWS AND THE TWO DISAGREE, ON PURPOSE: 384 on the CRR row is the FY2015 Annual Report's Capital management note; 387.3 on the Basel II row is the FY2014 Pillar 3's own printed Total Regulatory Capital of 387,261 (its narrative rounds this to 'GBP 388m'). The GBP 3.3m gap between two different documents on two different bases is documented, not reconciled, and the pre-existing figure was not overwritten. See the source note for the FY2014 table's own GBP 630k internal footing error. "
        "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (see CET1 Capital sheet's note). HD-049: FY2014-FY2017 Tier 1 = CET1 (no AT1 disclosed) - see CET1 Capital sheet's note.")
 metric("Tier 1 Ratio", "%", [("Tier 1 ratio", vals(dict({"FY2025": "16.1%", "FY2024": "12.5%", "FY2023": "13.1%", "FY2022": "10.3%", "FY2021": "12.6%",
-       "FY2020": "15.0%", "FY2019": "15.6%", "FY2018": "13.1%", "FY2017": "15.25%", "FY2016": "18.16%", "FY2015": "13%", "FY2014": "28%"}, **hist_nd())))],
-       "FY2010/FY2011/FY2013 'Not publicly disclosed' (2026-09-15): a Tier 1 ratio was a Basel II concept and could in principle have been disclosed, but none of the three recovered editions states one anywhere. It is deliberately NOT computed from the Basel II capital and credit-risk RWA figures elsewhere in this workbook - that would be back-solving, and the denominator would in any case be a credit-risk-only subtotal. FY2012's edition was never located. "
+       "FY2020": "15.0%", "FY2019": "15.6%", "FY2018": "13.1%", "FY2017": "15.25%", "FY2016": "18.16%", "FY2015": "13%", "FY2014": "28%"}, **_KPI_T1R)))],
+       "GA-020 2026-09-19: FY2010 FOUND - 474% is the 'Tier 1 ratio' printed in the FY2010 statutory accounts' Directors' report KPI table (Companies House filing, PDF p.6), beside 'Tier 1 capital £89.8m' and 'Risk weighted assets £19.0m'; the £19.0m is the Pillar 3's credit-risk-only RWA, so this ratio is on a credit-risk denominator and is NOT comparable with the CRR series. FY2011/FY2013 remain unpublished as a Tier 1 ratio; the accounts' 'Capital as %age of risk weighted assets' KPI for those years is on the Total Capital Ratio sheet. See the GA-020 comment above hist_nd() in the build script. "
+       "FY2010/FY2011/FY2013 'Not publicly disclosed' (2026-09-15, SUPERSEDED for FY2010 by the accounts KPI above): a Tier 1 ratio was a Basel II concept and could in principle have been disclosed, but none of the three recovered editions states one anywhere. It is deliberately NOT computed from the Basel II capital and credit-risk RWA figures elsewhere in this workbook - that would be back-solving, and the denominator would in any case be a credit-risk-only subtotal. FY2012's edition was never located. "
        "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (see CET1 Capital sheet's note). HD-049: FY2014-FY2017 Tier 1 ratio = CET1 ratio (no AT1 disclosed).")
 metric("Total Capital", "£m", [
     ("Total capital (CRR/CRD IV basis)", vals({"FY2025": 1232, "FY2024": 958, "FY2023": 1135, "FY2022": 1069, "FY2021": 1184,
@@ -1186,13 +1259,14 @@ metric("Total Capital", "£m", [
 ], note="SECOND ROW ADDED 2026-09-15: the Basel II bottom line printed in each recovered Pillar 3 edition's capital table. These editions describe the entire capital base as Tier 1 ('the Bank's capital base was made up of GBP Xm of Tier 1 capital') and contain no occurrence of 'Tier 2' at all, so Total Regulatory Capital equals Tier 1 for FY2010-FY2014 as a matter of what the documents state, not by inference. The FY2014 disagreement between the two rows (384 vs 387.3) is explained on the Tier 1 Capital sheet. "
        "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (see CET1 Capital sheet's note). HD-049: FY2014-FY2017 Total capital = Tier 1 (no Tier 2 disclosed until FY2018's £249m debt securities). FY2014/FY2015 from the Annual Report, not Pillar 3.")
 metric("Total Capital Ratio", "%", [("Total capital ratio", vals(dict({"FY2025": "18.4%", "FY2024": "14.9%", "FY2023": "15.1%", "FY2022": "13.4%", "FY2021": "15.9%",
-       "FY2020": "18.1%", "FY2019": "18.3%", "FY2018": "15.9%", "FY2017": "15.25%", "FY2016": "18.16%", "FY2015": "13%", "FY2014": "28%"}, **hist_nd())))],
+       "FY2020": "18.1%", "FY2019": "18.3%", "FY2018": "15.9%", "FY2017": "15.25%", "FY2016": "18.16%", "FY2015": "13%", "FY2014": "28%"}, **_KPI_TCR)))],
+       "GA-020 2026-09-19: FY2011 74%, FY2012 55% and FY2013 50% FOUND - each is the 'Capital as %age of risk weighted assets' KPI printed in that year's own statutory accounts (Companies House scans, Directors' report KPI table; each read from the page image, and each confirmed by the next year's comparative column). The capital base was wholly Tier 1 with no Tier 2 (the Pillar 3 editions say so), so capital/RWA is the total capital ratio; the RWA denominator is not stated and FY2010's shows it was credit-risk RWA only. Basel II basis, NOT continuous with the CRR series above. RATIO TIE: FY2011 69.1/93.2 = 74.2% ties; FY2013 381.5/775.3 = 49.2% vs 50% printed - recorded, not reconciled. The earlier text below saying no ratio appears is right about the Pillar 3 editions only. "
        "FY2010/FY2011/FY2013 'Not publicly disclosed' - no capital ratio of any kind appears in the recovered Basel II editions, and none is back-solved here (see the Tier 1 Ratio sheet's note). FY2012's edition was never located. "
        "CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end (see CET1 Capital sheet's note). HD-049: FY2014-FY2017 Total capital ratio = CET1 ratio (no Tier 2 disclosed).")
 metric("Total RWAs", "£m", [
     ("Total risk-weighted exposure amount", vals(dict({"FY2025": 6711, "FY2024": 6442, "FY2023": 7533, "FY2022": 7990, "FY2021": 7454,
        "FY2020": 7957, "FY2019": 9147, "FY2018": 8936, "FY2017": 5882, "FY2016": 3590, "FY2015": 2261.2},
-       **{"FY2014": ND_BASEL2}, **hist_nd()))),
+       **_NO_TOTAL_RWA))),
     ("Credit risk RWA only, Basel II standardised approach - the sole RWA figure these editions disclose (NOT a total RWA)", vals(BASEL2_CREDIT_RWA)),
 ], note="SECOND ROW ADDED 2026-09-15. The recovered Basel II editions each print an RWA column in their credit-risk exposure table, totalled on the bottom row (captioned 'TOTAL Risk Weighted Assets' in FY2011/FY2013, 'TOTAL' in FY2014, and sitting on the 'Total assets' row in FY2010). Despite the FY2011/FY2013 caption, that figure is NOT a total RWA: the table covers credit-risk exposures only, and each edition states that operational risk is measured under the Basic Indicator Approach without ever quantifying the resulting RWA. It is therefore carried on its own row and never added to, or continued into, the CRR total above. "
        "FY2010-FY2013 read 'Not publicly disclosed' on the first row rather than 'Not applicable': a total Pillar 1 RWA (credit plus market plus operational) WAS a defined Basel II concept, so this is a genuine disclosure gap in those editions, not a structurally inapplicable metric. "
@@ -1342,7 +1416,8 @@ metric("NSFR", "£m / %", [
     ("Net stable funding ratio", vals(dict({"FY2025": "165%", "FY2024": "160%", "FY2023": "136%", "FY2022": "143%"},
         **{y: "Not applicable (pre-dates the UK NSFR requirement)"
            for y in ["FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"]},
-        **{y: "Not applicable" for y in HIST_P3_YEARS}))),
+        **{y: ("Not applicable – no UK NSFR requirement before 1 Jan 2022 (PRA PS17/21); the FY2010/11/13 "
+               "Basel II Pillar 3s contain no 'NSFR'") for y in HIST_P3_YEARS}))),
 ], note="FY2010-FY2013 marked 'Not applicable' (2026-09-15): the NSFR did not exist as a UK requirement until 2022, so those years are structurally inapplicable, not gaps. (They are marked 'Not applicable' rather than 'Not applicable (Basel II)' used elsewhere on these sheets, because the NSFR post-dates CRD IV as well as Basel II.) "
        "FY2014-FY2021 CLOSED 2026-09-18 (interior-gap pass): these eight years previously stood BLANK with the prose note alone saying they were not yet a requirement, which made them read as eight outstanding gaps sitting between a populated FY2022 and eight 'Not applicable' cells below. They are now marked on the face of the sheet, on the same footing as FY2010-FY2013 and for the same reason - the NSFR became a binding UK requirement only on 1 January 2022, so no year ending on or before 31 December 2021 could have one. THIS IS ENUMERATED, NOT ASSUMED. Every Metro Bank Pillar 3 edition that exists for those years was fetched on 2026-09-18 and searched for 'NSFR' and 'net stable funding': FY2014 (21pp), FY2016 (25pp), FY2017, FY2018, FY2019, FY2020 and FY2021 (80pp) return ZERO occurrences each; so do the Annual Report and Accounts for 2015, 2016 and 2017. FY2015 has no Pillar 3 edition at all (see the Total RWAs sheet note for the Wayback enumeration), and its own Annual Report likewise has none. POSITIVE CONTROL, so that the zeros are known to mean something: the identical search over the Pillar 3 Disclosure 2022 returns 12 occurrences, including 'Table 16 UK LIQ2 Net Stable Funding Ratio' and the quantitative row this sheet's FY2022 column is taken from. The instrument works; these years genuinely have no NSFR. "
        "FY2023-FY2025 are Holdings Group figures after the restructure. CORRECTED 2026-09-03 (ST-026): FY2023-FY2025 previously showed the 30 June interim column instead of 31 December year-end.")

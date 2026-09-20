@@ -641,9 +641,9 @@ km1_rows = [
     ("DATA", "Total EBA leverage ratio exposure measure (£m)", {"FY2021": 14224.7, "FY2020": 16674.5, "FY2019": 17704.5, "FY2018": 15347.8, "FY2017": 15108.3}),
     ("DATA", "EBA leverage ratio (%)", {"FY2021": "4.75%", "FY2020": "3.74%", "FY2019": "3.74%", "FY2018": "4.50%", "FY2017": "4.36%"}),
     ("SECTION", "Liquidity Coverage Ratio (LCR)", {}),
-    ("DATA", "Total High Quality Liquid Assets (HQLA) (£m)", {"FY2021": 2166.4, "FY2020": 2073.6, "FY2019": 2040.4, "FY2018": 1996.8, "FY2017": "N/A"}),
-    ("DATA", "Total net cash outflow (£m)", {"FY2021": 724.9, "FY2020": 649.0, "FY2019": 513.3, "FY2018": 517.3, "FY2017": "N/A"}),
-    ("DATA", "LCR ratio (%)", {"FY2021": "303%", "FY2020": "340%", "FY2019": "416%", "FY2018": "396%", "FY2017": "N/A"}),
+    ("DATA", "Total High Quality Liquid Assets (HQLA) (£m)", {"FY2021": 2166.4, "FY2020": 2073.6, "FY2019": 2040.4, "FY2018": 1996.8, "FY2017": "-"}),
+    ("DATA", "Total net cash outflow (£m)", {"FY2021": 724.9, "FY2020": 649.0, "FY2019": 513.3, "FY2018": 517.3, "FY2017": "-"}),
+    ("DATA", "LCR ratio (%)", {"FY2021": "303%", "FY2020": "340%", "FY2019": "416%", "FY2018": "396%", "FY2017": "-"}),
 ]
 
 bw.add_km1_sheet(
@@ -697,7 +697,8 @@ bw.add_km1_sheet(
         "column for several rows, but that column is not used here - FY2021 comes from the FY2021 "
         "edition). The FY2018 edition prints 'N/A' for all three LCR rows in its 2017 comparative, "
         "footnoted 'Not applicable as this disclosure is being made for the first time in 2018'; that "
-        "glyph is reproduced as printed rather than blanked.\n\n"
+        "glyph is carried as a plain '-' (KM1 map rule 2, applied GA-020 2026-09-19; the printed glyph is "
+        "'N/A') rather than blanked.\n\n"
         "FY2025 LCR - THREE DIFFERENT PUBLISHED FIGURES FOR ONE DATE, ALL RECORDED, NONE RECONCILED.\n"
         "  (a) This sheet's FY2025 column carries the FY2025 edition's own figures: HQLA 2,014.2, net "
         "cash outflows 850.4, LCR 239.20%.\n"

@@ -605,6 +605,63 @@ LCR_BUFFER = {"FY2017": 25.4}
 LCR_OUTFLOWS = {"FY2017": 4.0}
 NSFR = {"FY2024": "153.5%", "FY2023": "151.1%", "FY2022": "150.6%"}
 
+# ---------------------------------------------------------------
+# FY2025 GAP-FILL, 19 September 2026.
+# Every FY2025 Pillar-3 cell on the sheets below was previously BLANK. The
+# reason was already written up at length in the source notes - but a note is
+# invisible to the corpus census, which scored nine FY2025 sheet-years here as
+# untouched gaps indistinguishable from "nobody has looked". The finding now
+# goes IN the year column as well as in the note.
+#
+# RE-VERIFIED THIS SESSION, not inherited:
+#  - The Bank's own publications index (PUBLICATIONS_INDEX_URL) was fetched as
+#    HTML on 19/09/2026. Its "Pillar III Disclosure" block lists editions 2024,
+#    2023, 2022, 2021, 2020, 2019, 2018 and 2017 - and no 2025. The FY2025
+#    ANNUAL REPORT is listed on the same page and serves a real 14.7MB PDF
+#    (HTTP 200, Content-Type application/pdf, %PDF-1.7 magic bytes), so the page
+#    is current rather than stale.
+#  - A Wayback CDX sweep of the whole assets.gatehousebank.com domain returns
+#    fifteen Pillar III captures, the newest being the 2024 edition (captured
+#    11/06/2026). No 2025 edition has ever been archived.
+#  - The Bank says so itself, in print: Annual Report 2025 p.125, "Pillar 3
+#    Disclosures (Unaudited)" - "Pillar 3 disclosures are presented in the
+#    'Pillar 3 Disclosures' document, available on request. The disclosures are
+#    made annually and are PUBLISHED AS SOON AS PRACTICABLE AFTER THE
+#    PUBLICATION OF THE ANNUAL REPORT and financial statements of the Bank"
+#    (emphasis added). The FY2025 Annual Report's own asset-server timestamp is
+#    August 2026, so on the Bank's stated sequence the FY2025 Pillar 3 is
+#    PENDING, not missed. This is outcome 2 (a document that does not exist yet),
+#    not outcome 3 (a document we could not reach).
+# ---------------------------------------------------------------
+FY2025_P3_PENDING = "Not published - no FY2025 Pillar III edition as at 19/09/2026"
+FY2025_P3_AND_AR = ("Not published - no FY2025 Pillar III edition; "
+                    "figure absent from Annual Report 2025")
+
+# Two FY2025 figures ARE available, but on the Bank's OWN KPI basis rather than
+# the Pillar 3 basis, so they go on separate labelled memo rows - never merged
+# into the Pillar 3 series above them. Annual Report 2025, "Key Performance
+# Indicators" table, printed p.21.
+AR_KPI_CET1_RATIO = {"FY2025": "15.74%", "FY2024": "16.56%"}
+AR_KPI_LEVERAGE_RATIO = {"FY2025": "6.53%", "FY2024": "7.29%"}
+AR_KPI_NOTE = (
+    "FY2025 MEMO ROW (added 2026-09-19), AND WHY IT IS A SEPARATE ROW. No FY2025 Pillar 3 disclosure "
+    "exists yet (see above), but the Annual Report 2025's own Key Performance Indicators table (printed "
+    "p.21) prints a CET1 ratio of 15.74% (2024: 16.56%) and a leverage ratio of 6.53% (2024: 7.29%), with "
+    "the Bank's own formulae stated in footnote 3 on the same page - 'CET1 ratio: calculated as Tier 1 "
+    "common equity / risk weighted assets' and 'Leverage ratio: calculated as Tier 1 Capital / Total "
+    "exposures'.\n"
+    "THESE ARE NOT THE SAME NUMBERS THE PILLAR 3 PRINTS, and the divergence is recorded rather than "
+    "reconciled. On the KPI table's own FY2024 comparative column the CET1 ratio is 16.56% where this "
+    "workbook's FY2024 Pillar 3 KM1 figure is 17.1%, and the leverage ratio is 7.29% where the KM1 figure "
+    "is 7.4%. So the two measures demonstrably disagree in a year where BOTH are published - which is the "
+    "reason the FY2025 KPI figures are shown on their own row, labelled with their source, instead of "
+    "being dropped into the Pillar 3 row as though they continued the series. Neither figure is adjusted "
+    "to make the other tie.\n"
+    "The KPI table also prints an 'Average risk weight' of 40.97% (2024: 43.61%), defined as risk-weighted "
+    "assets / total assets. That is deliberately NOT used to reconstruct FY2025 Total RWAs: multiplying it "
+    "by a balance-sheet total would be a back-solve, and this project does not back-solve an RWA. The "
+    "Total RWAs and RWA Breakdown sheets stay as recorded absences for FY2025.")
+
 FY2017_NOTE = (
     "FY2017 RECOVERED 2026-09-15. These cells were previously blank on the stated ground that 'FY2017 "
     "Pillar 3 key metrics were not published in the 2017 annual report'. That was true of the annual "
@@ -687,12 +744,28 @@ KM1_NOTE = (
     "from its templates, so their absence is the Bank's presentation choice and is reproduced as absence. "
     "They are not filled in from any other source.\n"
     "\n"
-    "SOURCE DEFECT RECORDED, NOT CORRECTED: in the 2024 edition, row 13 prints '1433,3' in its T-2 column - "
+    "THE TOP ROW IS NOT PART OF THE TEMPLATE (added 2026-09-19). It is bracketed, unnumbered and labelled "
+    "'[Edition status for this year - not a KM1 template row]'. It exists only so that the FY2025 column "
+    "states in the grid what this note states in prose: there is no FY2025 edition to transcribe. It "
+    "carries no figure, it is not one of the Bank's rows, and the Bank's own rows below it are untouched - "
+    "same order, same numbers, same labels, same precision.\n"
+    "\n"
+    "SOURCE DEFECT RECORDED, NOT CORRECTED: in the 2024 edition, row 13 prints '1433,3' in its T-2 column -"
     "a comma where a decimal point belongs. That column is not transcribed here (only column T is), but the "
     "defect is recorded so a later reader does not treat it as a transcription slip of this workbook's."
 )
 
 km1_rows = [
+    # Gap-fill 2026-09-19. This is a STATEMENT ROW, not a template row, and it
+    # is placed ABOVE the template rather than inside it precisely so that the
+    # Bank's own KM1 sequence, row numbers and labels are left untouched - the
+    # locked transcription rules forbid reordering, renumbering or inventing a
+    # template row, and this row does none of those things. It exists because
+    # the FY2025 column was wholly empty, which a corpus census cannot tell
+    # apart from an unexamined gap; the reason was already in the note below
+    # but nowhere a reader or a tool would meet it in the grid itself.
+    ("DATA", "[Edition status for this year - not a KM1 template row]",
+     {"FY2025": "Not published - no FY2025 Pillar III edition as at 19/09/2026"}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital (£'m)",
      {"FY2024": 108.6, "FY2023": 108.2, "FY2022": 103.2, "FY2021": 94.5}),
@@ -756,8 +829,9 @@ bw.add_km1_sheet(
              "labels and precision. Amounts in £'m, ratios as printed (the source prints them without a "
              "percent sign, under a heading that states they are percentages). Each edition prints five "
              "quarterly columns; only column T - that edition's own year-end - is used. FY2021 is the "
-             "FY2022 edition's 31 December 2021 comparative column. FY2025 and FY2017 are blank: no FY2025 "
-             "Pillar 3 has been published and the FY2017 edition predates the template.",
+             "FY2022 edition's 31 December 2021 comparative column. FY2025 carries no template figures: "
+             "no FY2025 Pillar 3 has been published, and the top row states that in the column itself. "
+             "FY2017 predates the template entirely.",
     rows=km1_rows,
     sources_text=p3_sources("32") + (
         "\n\nKM1 key-metrics table by edition (printed folios, not PDF sheet indices): FY2024 = Pillar III "
@@ -775,17 +849,57 @@ bw.add_km1_sheet(
 )
 
 metric("CET1 Capital", "£m", [("Common Equity Tier 1 (CET1) capital", CET1_CAPITAL), (CET1_DERIVED_LABEL, CET1_CAPITAL_DERIVED)], "32", note=FY2017_NOTE + "\n\n" + CET1_DERIVED_NOTE)
-metric("CET1 Ratio", "%", [("CET1 ratio", CET1_RATIO)], "32", note=FY2017_NOTE)
+metric("CET1 Ratio", "%",
+       [("CET1 ratio", dict(CET1_RATIO, FY2025=FY2025_P3_PENDING)),
+        ("CET1 ratio — Annual Report 2025 KPI table (Bank's own KPI basis, not Pillar 3)",
+         AR_KPI_CET1_RATIO)],
+       "32", note=FY2017_NOTE + "\n\n" + AR_KPI_NOTE)
 metric("Tier 1 Capital", "£m", [("Tier 1 capital", CET1_CAPITAL), (CET1_DERIVED_LABEL.replace("Common Equity Tier 1 (CET1)", "Tier 1"), CET1_CAPITAL_DERIVED)], "32", note=NO_AT1_NOTE + "\n\n" + FY2017_NOTE + "\n\n" + CET1_DERIVED_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 ratio", CET1_RATIO)], "32", note=NO_AT1_NOTE + "\n\n" + FY2017_NOTE)
+metric("Tier 1 Ratio", "%",
+       [("Tier 1 ratio", dict(CET1_RATIO, FY2025=FY2025_P3_PENDING)),
+        ("Tier 1 ratio — Annual Report 2025 KPI table, shown there as the CET1 ratio "
+         "(Tier 1 = CET1: no AT1 in issue). Bank's own KPI basis, not Pillar 3",
+         AR_KPI_CET1_RATIO)],
+       "32", note=NO_AT1_NOTE + "\n\n" + FY2017_NOTE + "\n\n" + AR_KPI_NOTE)
 metric("Total Capital", "£m", [("Total capital", TOTAL_CAPITAL)], "32", note=FY2017_NOTE)
-metric("Total Capital Ratio", "%", [("Total capital ratio", TOTAL_CAPITAL_RATIO)], "32", note=FY2017_NOTE)
-metric("Total RWAs", "£m", [("Total risk-weighted exposure amount", TOTAL_RWA)], "32", note=FY2017_NOTE)
+metric("Total Capital Ratio", "%",
+       [("Total capital ratio", dict(TOTAL_CAPITAL_RATIO, FY2025=FY2025_P3_AND_AR))],
+       "32", note=FY2017_NOTE + "\n\n"
+       "FY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (2026-09-19). Unlike the CET1 and leverage "
+       "ratios, the Annual Report 2025 prints NO total capital ratio anywhere: its Key Performance "
+       "Indicators table (p.21) carries only CET1 ratio, leverage ratio and average risk weight, and its "
+       "Strategic Report (p.20) says only that 'our total regulatory capital and total capital adequacy "
+       "ratios [exceed] the minimum levels required' - a qualitative statement with no figure. The "
+       "regulatory capital note (p.126) gives the capital AMOUNT (Total regulatory capital £111,120k) but "
+       "no denominator. It is not computed from the amount and the KPI table's average risk weight.")
+metric("Total RWAs", "£m",
+       [("Total risk-weighted exposure amount", dict(TOTAL_RWA, FY2025=FY2025_P3_AND_AR))],
+       "32", note=FY2017_NOTE + "\n\n"
+       "FY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (2026-09-19). The Annual Report 2025 prints "
+       "no risk-weighted-asset amount in any year column: a text search of the full report returns "
+       "'risk weighted' only in the KPI footnote definitions on p.21 and in the narrative phrase 'risk "
+       "weighted asset intensity' on the same page (richness control: the same extraction returns 2,129 "
+       "hits for ' the ', so the document has a real text layer and the absence is the document's, not "
+       "the instrument's). The KPI table's 'Average risk weight' of 40.97% is a ratio to total assets, "
+       "not an RWA, and is NOT multiplied out here.")
 
 bw.add_rwa_breakdown_sheet(
     title="Gatehouse Bank Plc — RWA Breakdown",
     subtitle="Consolidated basis, £m. Pillar 1 credit risk RWA by exposure class + derived operational risk RWA. See source note at bottom.",
     rows=[
+        # Gap-fill 2026-09-19: FY2025 held no cell at all on this sheet, so the
+        # census scored it as an untouched gap even though the finding was
+        # already established in the source note below. It now appears IN the
+        # column. This is a statement row, not a risk category - nothing is
+        # computed, and in particular the Annual Report 2025 KPI table's
+        # 'Average risk weight' of 40.97% is NOT multiplied by total assets to
+        # manufacture an FY2025 RWA.
+        ("DATA", "[No RWA breakdown published for this year - see note below]",
+         # FY2017 is deliberately NOT given a cell here: that column is absent
+         # from this sheet because _trim_trailing_empty_years dropped it, and
+         # writing into it would resurrect an oldest-end column the trim is
+         # meant to remove. Its own absence is explained in the note below.
+         {"FY2025": "Not published - no FY2025 Pillar III edition as at 19/09/2026"}),
         ("SECTION", "Credit risk RWA, by exposure class (Standardised approach)", {}),
         ("DATA", "Cash and balances with banks",
          {"FY2024": 4.8, "FY2023": 4.5, "FY2022": 3.5, "FY2021": 3.6}),
@@ -862,9 +976,31 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO), ("Total leverage ratio exposure (£m)", LEVERAGE_EXPOSURE)], "32", note=FY2017_NOTE)
-metric("LCR", "%", [("Liquidity coverage ratio", LCR), ("Liquidity buffer (£m)", LCR_BUFFER), ("Total net cash outflows (£m)", LCR_OUTFLOWS)], "32", note=FY2017_NOTE)
-metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], "32", note=NSFR_NOTE + " FY2017 likewise predates the UK NSFR regime entirely (the PRA's NSFR requirement and its disclosure template took effect 1 January 2022 under PS17/21 and PS22/21), so the FY2017 blank here is structural, not a sourcing gap - the 2017 Pillar 3 disclosure, which supplied every other FY2017 metric in this workbook, contains no NSFR because none was required.")
+metric("Leverage Ratio", "%",
+       [("Leverage ratio excluding claims on central banks", dict(LEVERAGE_RATIO, FY2025=FY2025_P3_PENDING)),
+        ("Leverage ratio — Annual Report 2025 KPI table (Tier 1 capital ÷ total exposures, "
+         "Bank's own KPI basis, not Pillar 3)", AR_KPI_LEVERAGE_RATIO),
+        ("Total leverage ratio exposure (£m)", LEVERAGE_EXPOSURE)],
+       "32", note=FY2017_NOTE + "\n\n" + AR_KPI_NOTE)
+metric("LCR", "%",
+       [("Liquidity coverage ratio",
+         dict(LCR, FY2025="Not disclosed - AR2025 is qualitative on LCR; no FY2025 Pillar III edition")),
+        ("Liquidity buffer (£m)", LCR_BUFFER), ("Total net cash outflows (£m)", LCR_OUTFLOWS)],
+       "32", note=FY2017_NOTE + "\n\n"
+       "FY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (2026-09-19). The Annual Report 2025 "
+       "mentions the LCR exactly once, in the Strategic Report's business-model section (printed p.20): "
+       "'the Bank maintained solid capital, funding and liquidity levels. Our liquidity coverage ratio "
+       "remained comfortably above the regulatory threshold'. That is the whole of it - no percentage, no "
+       "buffer amount, no net-outflow amount, and no LCR table anywhere in the report. A qualitative "
+       "assurance is not a disclosed ratio and is not transcribed as one. The figure would come from the "
+       "FY2025 Pillar 3, which does not exist yet.")
+metric("NSFR", "%",
+       [("Net Stable Funding Ratio",
+         dict(NSFR, FY2025="Not published - no FY2025 Pillar III edition; NSFR absent from AR2025"))],
+       "32", note=NSFR_NOTE + "\n\nFY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (2026-09-19): "
+       "unlike the LCR, the NSFR is not even mentioned qualitatively in the Annual Report 2025 - "
+       "'net stable funding', 'NSFR' and 'stable funding' all return zero hits across the full report "
+       "(richness control: ' the ' returns 2,129 hits in the same extraction). FY2017 likewise predates the UK NSFR regime entirely (the PRA's NSFR requirement and its disclosure template took effect 1 January 2022 under PS17/21 and PS22/21), so the FY2017 blank here is structural, not a sourcing gap - the 2017 Pillar 3 disclosure, which supplied every other FY2017 metric in this workbook, contains no NSFR because none was required.")
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),
@@ -882,7 +1018,30 @@ bw.add_not_disclosed_metric_sheets(
                              "no MREL above its minimum capital requirement, or no UK-incorporated resolution "
                              "entity. Note the BoE publishes the REQUIREMENT, not the ratio a bank holds "
                              "against it, so nothing from that table is or could be transcribed onto this "
-                             "sheet - it establishes that there was nothing for the Bank to disclose."},
+                             "sheet - it establishes that there was nothing for the Bank to disclose. "
+                             "GA-020 RE-CHECK 2026-09-19: the 2017, 2021, 2022, 2023 and 2024 Pillar 3 "
+                             "editions and the 2017, 2021, 2022, 2023 and 2025 Annual Reports (the *_URL "
+                             "documents above, text-native, 64-130 'capital' hits each) return zero 'MREL', "
+                             "'loss-absorbing' or 'eligible liabilities'. FY2025 stays 'Unreached today' "
+                             "because its Pillar 3 exists but is 'available on request' only (AR2025 p.125) "
+                             "and has not been read. File-host check 2026-09-19: the live corporate-governance "
+                             "page lists Pillar 3 up to 2024 only; every PDF it links sits on "
+                             "assets.gatehousebank.com (BunnyCDN over S3, not listable - 403); Wayback CDX "
+                             "matchType=domain on that host holds Pillar III 2017-2024 and nothing for 2025; "
+                             "filename guesses (2025-FINAL, 2025, Pillar-3-2025, slug pillar-3-disclosure-2025) "
+                             "404 while the 2024 control returns %PDF. COMMON CRAWL (2026-09-19): gatehousebank.com "
+                             "and all its subdomains (incl. assets.) in every crawl CC-MAIN-2026-04..2026-39 (11 "
+                             "crawls, 278-863 records each): Pillar III 2018-2022 and 2024 PDFs and the 2017-2022 "
+                             "download slugs are captured (positive control), no 2025 Pillar 3 under any name."},
+    statements={"MREL Ratio": {
+        **{y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 and Annual Report (full text searched "
+               "2026-09-19); Gatehouse absent from BoE MREL-above-MCR lists 2023-26")
+           for y in ("FY2023", "FY2022", "FY2021", "FY2017")},
+        "FY2024": ("Not published – zero 'MREL' in the FY2024 Pillar 3 and in AR2025, which carries FY2024 "
+                   "comparatives (searched 2026-09-19); absent from BoE MREL-above-MCR lists 2023-26"),
+        "FY2025": ("Unreached today – FY2025 Pillar 3 is 'available on request' only (AR2025 p.125); not on the "
+                   "index, CDN or Wayback CDX (2026-09-18/19); Common Crawl 2026-04..2026-39 checked. AR2025 has no MREL"),
+    }},
 )
 
 # ---------------------------------------------------------------

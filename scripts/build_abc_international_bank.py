@@ -1081,9 +1081,31 @@ metric(
          "FY2014-FY2016 likewise unavailable.",
 )
 
+# GA-020 (2026-09-19): every MREL year names the document checked. Text layers
+# of Pillar 3 2017-2025 and Annual Reports 2014/2018/2019/2020/2022/2024, and a
+# full 150dpi OCR of the FY2016 Companies House scan, searched for MREL /
+# eligible liabilities / loss absorbing: 0 hits in every one (positive
+# control: 51-136 'capital' hits per document).
+def _abc_mrel(doc):
+    return "Not published – no MREL figure or statement in " + doc + " (text-searched 2026-09-19)"
+ABC_MREL = {
+    "FY2025": _abc_mrel("Pillar 3 Report 2025"),
+    "FY2024": _abc_mrel("Pillar 3 2024 or Annual Report 2024"),
+    "FY2023": _abc_mrel("Pillar 3 Disclosures 2023"),
+    "FY2022": _abc_mrel("Pillar 3 Disclosure 2022 or Annual Report 2022"),
+    "FY2021": _abc_mrel("Pillar 3 Disclosure 2021"),
+    "FY2020": _abc_mrel("Pillar 3 Disclosure 2020 or Annual Report 2020"),
+    "FY2019": _abc_mrel("Pillar 3 Disclosure 2019 or Annual Report 2019"),
+    "FY2018": _abc_mrel("Pillar 3 Disclosure 2018 or Annual Report 2018"),
+    "FY2017": _abc_mrel("Pillar 3 Disclosure 2017"),
+    "FY2016": _abc_mrel("FY2016 accounts (CH scan, OCR)"),
+    "FY2015": ("Not applicable – UK MREL framework (BoE Statement of Policy, Nov 2016) postdates this year-end"),
+    "FY2014": ("Not applicable – UK MREL framework (BoE Statement of Policy, Nov 2016) postdates this year-end"),
+}
+
 metric(
     "MREL Ratio", "£m / %",
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", {y: ABC_MREL.get(y, "Not publicly disclosed") for y in YEARS})],
     p3_sources(),
     note="No MREL figure (numeric or qualitative) appears in any Pillar 3 Report reviewed for this entity across "
          "FY2014-FY2025 - no reason is stated. ABCIB's balance sheet size (~£2.7-4.3bn across this whole period) "

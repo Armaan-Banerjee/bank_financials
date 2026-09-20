@@ -1562,9 +1562,23 @@ metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central bank
        "column, which sometimes differs from the prior year's own headline figure for this same reason.")
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], LCR_NOTE)
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
+# GA-020 (2026-09-19): all 13 Pillar 3 editions re-downloaded from pnbint.com (%PDF, text-native)
+# and searched: 0 hits for "MREL" and "KM2" in every one (78-195 "capital" hits each). The
+# FY2022-FY2026 editions' own disclosure index (appendix, PDF p.49/61/61/62/61) lists "Article
+# 437a Disclosure of Own Funds and Eligible Liabilities" as "Not Applicable - Due to Article
+# 433c(2)", i.e. the bank states the MREL disclosure does not apply to it -> "Not applicable".
+# FY2014-FY2021 editions carry neither the article nor any MREL figure -> "Not published".
+_PNBI_437A_PAGE = {"FY2026": 61, "FY2025": 62, "FY2024": 61, "FY2023": 61, "FY2022": 49}
+_PNBI_MREL = {y: (f"Not applicable – PNBIL {y} Pillar 3 disclosure index (PDF p.{pg}): Art. 437a own funds "
+                  "and eligible liabilities 'Not Applicable - Due to Article 433c(2)'; no MREL figure")
+              for y, pg in _PNBI_437A_PAGE.items()}
+for _y in ("FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015", "FY2014"):
+    _PNBI_MREL[_y] = (f"Not published – PNBIL {_y} Pillar 3 has no MREL figure or KM2 (text probe 0 hits, "
+                      "2026-09-19)")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
-    per_note={"MREL Ratio": "No MREL ratio or MREL target is disclosed in any FY2014-FY2026 Pillar 3 report or annual report reviewed; left explicitly undisclosed."},
+    statements={"MREL Ratio": _PNBI_MREL},
+    per_note={"MREL Ratio": "No MREL ratio or MREL target is disclosed in any FY2014-FY2026 Pillar 3 report or annual report reviewed. GA-020 (2026-09-19): FY2022-FY2026 marked 'Not applicable' because each edition's own disclosure index states Article 437a (own funds and eligible liabilities) is 'Not Applicable - Due to Article 433c(2)'; FY2014-FY2021 editions contain no MREL reference (text search, 0 hits) and are marked 'Not published'."},
     years=PILLAR3_YEARS,
 )
 

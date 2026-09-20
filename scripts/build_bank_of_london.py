@@ -412,11 +412,29 @@ KM1_SOURCES = (
     + ENTITY_NOTE + "\n\n" + REGULATORY_NOTE
 )
 
+# GA-020 (2026-09-19): the bare "Not publicly disclosed"/"Not applicable" cells are
+# reclassified as NOT PUBLISHED on evidence. (a) No Pillar 3 document exists: domain crawl
+# and unfiltered Wayback CDX sweep (see KM1_SOURCES / NOT_DISCLOSED_SOURCES). (b) Every
+# year's annual report was OCR'd: FY2023/FY2024/FY2025 in earlier passes (recorded above)
+# and FY2022 on 2026-09-19 (Companies House "Full accounts made up to 31 December 2022",
+# filed 10 Jan 2024, 30pp image-only, OCR 64,296 chars; 'capital' 22 / 'ratio' 35 hits but
+# 0 for 'tier 1', 'risk-weighted', 'own funds', 'liquidity coverage', 'nsfr', 'net stable',
+# 'mrel', 'pillar'; its 'leverage' and 'RWA' hits are the words "leverage deposits" and OCR
+# fragments, not metrics). Not SDDT: the PRA waivers register (2026-09-19) has no Rule 3.1
+# SDDT row for this firm, so "Not applicable" would be unsupported.
+def _bol_np(what):
+    return {y: (f"Not published – no {what} in the {y} annual report (page-image OCR) and no Pillar 3 "
+                "document exists (site crawl + Wayback CDX sweep); see note")
+            for y in YEARS}
+
 bw.add_km1_sheet(
     title="The Bank of London Group Limited — KM1 Key Metrics",
     subtitle="Not applicable - this entity publishes no Pillar 3 disclosure document, so there is no UK KM1 "
              "template to reproduce for any year. See the source note below for the positive evidence.",
-    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not published – no Pillar 3 document or KM1 template "
+                                                       "exists for this entity (site crawl + Wayback CDX sweep; "
+                                                       f"{y} annual report OCR has no KM1); see note"
+                                                       for y in YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=72,
     source_height=340,
@@ -463,7 +481,7 @@ bw.add_metric_sheet(
 
 bw.add_metric_sheet(
     "Tier 1 Capital", None,
-    [("Tier 1 capital", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Tier 1 capital", _bol_np("Tier 1 capital amount"))],
     NOT_DISCLOSED_SOURCES,
     note="Not disclosed as an absolute amount. The Annual Report states the Bank's capital structure 'comprises "
          "Tier 1 instruments only', implying Tier 1 capital = CET1 capital, but neither absolute figure is published.",
@@ -472,7 +490,7 @@ bw.add_metric_sheet(
 
 bw.add_metric_sheet(
     "Tier 1 Ratio", None,
-    [("Tier 1 ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Tier 1 ratio", _bol_np("Tier 1 ratio"))],
     NOT_DISCLOSED_SOURCES,
     note="Not explicitly disclosed. Given the Annual Report states capital is 'Tier 1 instruments only', this would "
          "conceptually equal the CET1 ratio (see CET1 Ratio sheet) - but is not populated here since it isn't "
@@ -482,7 +500,7 @@ bw.add_metric_sheet(
 
 bw.add_metric_sheet(
     "Total Capital", None,
-    [("Total capital", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Total capital", _bol_np("total capital amount"))],
     NOT_DISCLOSED_SOURCES,
     note="Not disclosed as an absolute amount for any year.",
     first_col_width=46, source_height=210,
@@ -490,7 +508,7 @@ bw.add_metric_sheet(
 
 bw.add_metric_sheet(
     "Total Capital Ratio", None,
-    [("Total capital ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Total capital ratio", _bol_np("total capital ratio"))],
     NOT_DISCLOSED_SOURCES,
     note="Not explicitly disclosed. As with the Tier 1 ratio, this would conceptually equal the CET1 ratio given "
          "the Bank has no AT1 or Tier 2 capital, but is not populated here since it isn't separately stated.",
@@ -499,7 +517,7 @@ bw.add_metric_sheet(
 
 bw.add_metric_sheet(
     "Total RWAs", None,
-    [("Total risk-weighted exposure amount", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Total risk-weighted exposure amount", _bol_np("risk-weighted assets figure"))],
     NOT_DISCLOSED_SOURCES,
     first_col_width=46, source_height=210,
 )
@@ -507,7 +525,7 @@ bw.add_metric_sheet(
 bw.add_rwa_breakdown_sheet(
     title="The Bank of London Group Limited — RWA Breakdown",
     subtitle="Not publicly disclosed - see note below.",
-    rows=[("DATA", "Total risk-weighted exposure amount", {y: "Not publicly disclosed" for y in YEARS})],
+    rows=[("DATA", "Total risk-weighted exposure amount", _bol_np("risk-weighted assets figure"))],
     sources_text=NOT_DISCLOSED_SOURCES,
     first_col_width=46,
     source_height=210,
@@ -515,28 +533,28 @@ bw.add_rwa_breakdown_sheet(
 
 bw.add_metric_sheet(
     "Leverage Ratio", None,
-    [("Leverage ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Leverage ratio", _bol_np("leverage ratio"))],
     NOT_DISCLOSED_SOURCES,
     first_col_width=46, source_height=210,
 )
 
 bw.add_metric_sheet(
     "LCR", None,
-    [("Liquidity Coverage Ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Liquidity Coverage Ratio", _bol_np("LCR"))],
     NOT_DISCLOSED_SOURCES,
     first_col_width=46, source_height=210,
 )
 
 bw.add_metric_sheet(
     "NSFR", None,
-    [("Net Stable Funding Ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("Net Stable Funding Ratio", _bol_np("NSFR"))],
     NOT_DISCLOSED_SOURCES,
     first_col_width=46, source_height=210,
 )
 
 bw.add_metric_sheet(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", _bol_np("MREL figure"))],
     NOT_DISCLOSED_SOURCES,
     note="No MREL disclosure of any kind (numeric or qualitative) was found for this bank.",
     first_col_width=46, source_height=210,

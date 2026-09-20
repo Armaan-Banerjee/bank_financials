@@ -75,6 +75,10 @@ P3_2025_URL = "https://www.vanquis.com/wp-content/uploads/2026/02/DEC25_VANQ_Pil
 # vanquis.com with these documents unreachable live; cited via Wayback.
 P3_2014_URL = "https://web.archive.org/web/20220703025345id_/https://www.providentfinancial.com/application/files/9516/1437/2735/2015-pillar-iii-disclosures-april-2015.pdf"
 P3_2015_URL = "https://web.archive.org/web/20220703055435id_/https://www.providentfinancial.com/application/files/2416/1454/4505/pf-plc-2016-pillar-3-disclosures.pdf"
+# GA-020 (2026-09-19): a COMPLETE capture of the FY2016 edition exists under the renamed domain
+# (1,322,229 bytes, ends %EOF, 24pp, MD5 510302fa35adbe0f85122d258f0c01f3) - the truncated capture
+# described below was of the providentfinancial.com URL only.
+P3_2016_URL = "https://web.archive.org/web/20231022085735id_/https://www.vanquisbankinggroup.com/application/files/4916/1454/6696/pfg_pillar_3_report-31-december-2016.pdf"
 P3_2017_URL = "https://web.archive.org/web/20220703024108id_/https://www.providentfinancial.com/application/files/7916/1454/6790/pfg_pillar_3_report-2017.pdf"
 P3_2018_URL = "https://web.archive.org/web/20220703030203id_/https://www.providentfinancial.com/application/files/4516/1454/6864/22746_pfg_pillar_3_report_2018-2.pdf"
 P3_2019_URL = "https://web.archive.org/web/20220703022837id_/https://www.providentfinancial.com/application/files/6516/1415/8644/provident-financial-plc-pillar-3-disclosures-2019.pdf"
@@ -114,7 +118,10 @@ HD074_NOTE = (
     "Statement of Cash Flows with no such exemption)."
 )
 
-# FY2016's own standalone Pillar 3 document exists in the Wayback index but
+# SUPERSEDED 2026-09-19 (GA-020): see P3_2016_URL - a complete capture exists on
+# vanquisbankinggroup.com, and the FY2016 figures below were checked against it
+# (printed pp.07-08: 454.6 / 2,091.8 / 21.7% / 2,715.9 / 16.7%, all agree).
+# Original text: FY2016's own standalone Pillar 3 document exists in the Wayback index but
 # its single capture is truncated mid-file (server confirmed: "wayback
 # content truncated by length", captured 1,048,576 of 1,322,229 bytes) - a
 # genuine, unrecoverable access gap, not a search failure. FY2016 Pillar 3
@@ -879,18 +886,21 @@ km1_rows = [
     # and FY2024 editions (only LREQ firms complete them, and the Group is not
     # one) and are ABSENT ALTOGETHER from the FY2025 edition, which says so in
     # its own footnote 2. Two different states, both preserved: "n/a" as
-    # published, and blank where the row was not printed at all.
+    # published, and blank where the row was not printed at all. GA-020
+    # (2026-09-19): per the locked KM1 rule 2 the printed "n/a" is carried as
+    # the plain ASCII "-" in the cell, and the glyph is recorded in the sheet
+    # note - page images re-read (FY2024 p.5; FY2023/FY2022 KM1 text).
     ("SECTION", "Additional leverage ratio disclosure requirements", {}),
     ("DATA", "14a    Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)",
-     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "14b    Leverage ratio including claims on central banks (%)",
-     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "14c    Average leverage ratio excluding claims on central banks (%)",
-     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "14d    Average leverage ratio including claims on central banks (%)",
-     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "14e    Countercyclical leverage ratio buffer (%)",
-     {"FY2024": "n/a", "FY2023": "n/a", "FY2022": "n/a"}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("SECTION", "Liquidity coverage ratio", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (weighted value - average) (£m)",
      {"FY2025": 930.0, "FY2024": 802.0, "FY2023": 512.0, "FY2022": 383.2}),
@@ -987,10 +997,10 @@ KM1_SOURCES = (
     "extractions are rich in neighbouring terms (capital 130-182 hits, ratio 38-108, leverage 12-31, buffer "
     "31-50 per edition) - so the zeros are facts about the documents, not about the search. `pdfimages -list` "
     "over all six returns no embedded raster larger than 300x200 anywhere, so no table is hiding inside a "
-    "bitmap either. FY2016's own document could not be read - its only Wayback capture is truncated at exactly "
-    "1,048,576 bytes (re-verified 2026-09-17; the two alternative paths in the archive's index return a 404 and "
-    "a 94-byte HTML stub) - so FY2016 is bracketed by the direct reads of FY2015 and FY2017 rather than read "
-    "itself. CORRECTION TO THE SURVEY INVENTORY: research/km1_inventory.jsonl records the FY2019 edition as "
+    "bitmap either. FY2016's own document (P3_2016_URL, a complete capture on the renamed "
+    "vanquisbankinggroup.com domain found 2026-09-19; the providentfinancial.com capture is truncated at "
+    "1,048,576 bytes) was read in full on 2026-09-19: 24pp, zero 'KM1' and zero 'key metric', no key-metrics "
+    "table - consistent with FY2015 and FY2017. CORRECTION TO THE SURVEY INVENTORY: research/km1_inventory.jsonl records the FY2019 edition as "
     "KM1_PRESENT on the strength of a header block reading '- - EU14a'. It is not a KM1. Those EU14a/EU-15a/"
     "EU-19a tokens are rows of the EU LRCom leverage-ratio common disclosure template ('EU-14a Derogation for "
     "SFTs...', 'Total leverage ratio exposures (sum of lines 3, 11, 16, 19, EU-19a and EU-19b)'), which the "
@@ -998,8 +1008,9 @@ KM1_SOURCES = (
     "ZERO GLYPHS AND 'n/a' - THREE DIFFERENT STATES, ALL PRESERVED. A HYPHEN IS NOT A ZERO AND NOT A BLANK: "
     "rows UK 8a, UK 9a, 10 and UK 10a are printed as '-' in every column of every UK KM1 edition and CARRY "
     "that hyphen here, each year taken from column 'a' (31 December) of its own edition. The "
-    "literal string 'n/a' is what the FY2022, FY2023 and FY2024 editions print on rows 14a-14e, and it is "
-    "reproduced as that string rather than blanked - those editions say 'cells not required have been left "
+    "literal string 'n/a' is what the FY2022, FY2023 and FY2024 editions print on rows 14a-14e; under KM1 "
+    "map rule 2 the cell carries the plain ASCII '-' and THIS NOTE records that the printed glyph was 'n/a' "
+    "(page images re-read 2026-09-19, GA-020) rather than blanking it - those editions say 'cells not required have been left "
     "blank or indicated as not applicable' and that only LREQ firms complete rows 14a-14e. The FY2025 edition "
     "instead OMITS rows 14a-14e altogether, which is a different fact again and is shown as a blank. Printed "
     "zeros are kept as zeros: the FY2021 edition's countercyclical capital buffer reads '0.0%' for both 2021 "
@@ -1079,7 +1090,7 @@ metric(
     + p3_sources_pfg("FY2019: Pillar 3 Disclosures 2019", P3_2019_URL, "n/a") + "\n"
     + p3_sources_pfg("FY2018: Pillar 3 Disclosures 2018", P3_2018_URL, "n/a") + "\n"
     + p3_sources_pfg("FY2017: Pillar 3 Disclosures 2017", P3_2017_URL, "n/a") + "\n"
-    + p3_sources_pfg("FY2016 (sourced from FY2017's own comparative column - FY2016's own document is truncated in the Wayback archive, see HISTORICAL_NOTE)", P3_2017_URL, "n/a") + "\n"
+    + p3_sources_pfg("FY2016: Pillar 3 Disclosures 31 December 2016, s.4.5 capital ratios (printed p.07) and s.4.6 leverage (printed p.08) - figures first taken from FY2017's comparative column and confirmed against this own edition 2026-09-19", P3_2016_URL, "n/a") + "\n"
     + p3_sources_pfg("FY2015: Pillar 3 Disclosures 2015", P3_2015_URL, "n/a") + "\n"
     + p3_sources_pfg("FY2014: Pillar 3 Disclosures 2014", P3_2014_URL, "n/a"),
     note="FY2014-FY2020: Provident Financial plc (Vanquis Bank's then-parent, the same continuous listed entity "
@@ -1275,12 +1286,43 @@ metric(
          "(excluding Q4 profits) is used here as the primary, consistent figure.",
 )
 
+# GA-020 (2026-09-19): former bare "Not required" / "Not applicable" cells now
+# state their outcome and the page that evidences it. Every edition below was
+# re-downloaded from its cited URL and text-searched; PDF page numbers.
+LCR_FY2014 = ("Not applicable – LCR not yet in force: FY2014 Pillar 3 (PDF p.3) says the group 'will be subject "
+              "to the new PRA liquidity provisions which come into force on 1 October 2015'; no LCR printed")
+LCR_FY2015 = ("Not published – FY2015 Pillar 3 (22pp, full text searched) prints no LCR; p.3 says only that the "
+              "group is subject to the PRA liquidity provisions in force from 1 October 2015")
+FY2016_NSFR = ("Not published – FY2016 Pillar 3 s.7.2.2 (printed p.14) describes the NSFR observation period and EU "
+               "proposals only; no figure printed (complete capture read 2026-09-19)")
+FY2016_MREL = ("Not published – FY2016 Pillar 3 (24pp, complete capture read 2026-09-19) contains no MREL, eligible "
+               "liabilities or loss-absorbing capacity")
+NSFR_ST = {
+    "FY2025": ("Not applicable – SDDT consolidation entity: FY2025 Pillar 3 (PDF p.6) says NSFR is not reported "
+               "from 30 June 2024 (PRA Rule 3.1 modification, FRN 221156, from 13/03/2024)"),
+    "FY2024": ("Not applicable – SDDT consolidation entity: FY2024 Pillar 3 KM1 footnote 3 (PDF p.8) says NSFR is "
+               "not reported from 30 June 2024; KM1 prints dashes (PRA Rule 3.1, FRN 221156, 13/03/2024)"),
+    "FY2021": ("Not published – FY2021 Pillar 3 s.10.2.2 (PDF p.26): 'No further disclosure on NSFR is required at "
+               "31 December 2021'; binding NSFR from 1 January 2022"),
+    "FY2020": ("Not published – FY2020 Pillar 3 s.7.2.2 (PDF p.20): 'No further disclosure on NSFR is required at "
+               "31 December 2020'"),
+    "FY2019": "Not published – FY2019 Pillar 3 s.7.2.2 (PDF p.22) describes the NSFR proposals only; no figure printed",
+    "FY2018": "Not published – FY2018 Pillar 3 s.7.2.2 (PDF p.21) describes the NSFR proposals only; no figure printed",
+    "FY2017": "Not published – FY2017 Pillar 3 s.7.2.2 (PDF p.18) describes the NSFR observation period only; no figure",
+    "FY2016": FY2016_NSFR,
+    "FY2015": "Not published – FY2015 Pillar 3 (22pp, full text searched 2026-09-19) never mentions the NSFR",
+    "FY2014": "Not published – FY2014 Pillar 3 (23pp, full text searched 2026-09-19) never mentions the NSFR",
+}
+MREL_ST = {y: (f"Not published – {y} Pillar 3 (full text searched 2026-09-19) contains no MREL figure or "
+               "reference to MREL, eligible liabilities or resolution") for y in PILLAR3_YEARS}
+MREL_ST["FY2016"] = FY2016_MREL
+
 metric(
     "LCR", "£m / %",
     [
-        ("Total high-quality liquid assets (HQLA) / liquidity buffer", {"FY2025": 930.0, "FY2024": 802.0, "FY2023": 512.0, "FY2022": 383.2, "FY2021": 439, "FY2020": 842, "FY2019": 396, "FY2018": 453.6, "FY2017": 213.3}),
-        ("Total net cash outflows (adjusted value)", {"FY2025": 249.4, "FY2024": 116.4, "FY2023": 74.7, "FY2022": 48.0, "FY2021": 21, "FY2020": 64, "FY2019": 96, "FY2018": 106.7, "FY2017": 92.8}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%", "FY2021": "2,073%", "FY2020": "1,756%", "FY2019": "578%", "FY2018": "490%", "FY2017": "242%", "FY2016": "207%", "FY2015": "Not required", "FY2014": "Not required"}),
+        ("Total high-quality liquid assets (HQLA) / liquidity buffer", {"FY2025": 930.0, "FY2024": 802.0, "FY2023": 512.0, "FY2022": 383.2, "FY2021": 439, "FY2020": 842, "FY2019": 396, "FY2018": 453.6, "FY2017": 213.3, "FY2016": 172.5}),
+        ("Total net cash outflows (adjusted value)", {"FY2025": 249.4, "FY2024": 116.4, "FY2023": 74.7, "FY2022": 48.0, "FY2021": 21, "FY2020": 64, "FY2019": 96, "FY2018": 106.7, "FY2017": 92.8, "FY2016": 70.9}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%", "FY2021": "2,073%", "FY2020": "1,756%", "FY2019": "578%", "FY2018": "490%", "FY2017": "242%", "FY2016": "251%", "FY2015": LCR_FY2015, "FY2014": LCR_FY2014}),
     ],
     p3_sources("FY2025: Pillar 3 Disclosures 31 Dec 2025", P3_2025_URL, "7") + "\n"
     + p3_sources("FY2024: Pillar 3 Disclosures 2024", P3_2024_URL, "5", "6") + "\n"
@@ -1296,9 +1338,16 @@ metric(
          "net cash outflows, 2,073% LCR) from the pre-onshoring quarterly disclosure format, not a 12-month "
          "average. FY2017-FY2020 use the same 12-month-rolling-average methodology as FY2022 onward (not the "
          "FY2021 quarterly-spot exception). The LCR regime only came into force in the UK from 1 October 2015, so "
-         "FY2014 and FY2015 have no LCR disclosure at all ('Not required'). FY2016's buffer/outflow sub-figures "
-         "could not be sourced (see HISTORICAL_NOTE on the FY2016 Wayback truncation) - only the ratio itself "
-         "survives via FY2017's own comparative column, a self-skip of those two sub-figures specifically.",
+         "FY2014 and FY2015 print no LCR (each cell now names the page). FY2016 - CHANGED 2026-09-19 (GA-020): the "
+         "FY2017 edition's liquidity table (PDF p.18, printed p.16; page image read) prints the 2016 quarterly "
+         "12-month averages, and its Quarter 4 column - liquidity buffer 172.5, net cash outflows 70.9, LCR 251% - "
+         "is now carried, on the same basis as FY2017's 213.3 / 92.8 / 242%. The FY2016 cell previously read 207%, "
+         "which is the SAME page's spot figure ('The group's LCR at 31 December 2017 was 189% (2016: 207%)'), a "
+         "different basis from every neighbouring year; it is recorded here, not discarded. The buffer/outflow "
+         "sub-figures had been described as unobtainable, but they sit on that page. FY2016's own edition "
+         "(P3_2016_URL, read 2026-09-19) prints only the spot figure - s.7.2.1, printed p.14: 'The group's LCR at "
+         "31 December 2016 was 207% (2015: 141%)' - and no 12-month-average table, so the basis-consistent 251% "
+         "from the FY2017 edition stays.",
 )
 
 metric(
@@ -1306,7 +1355,7 @@ metric(
     [
         ("Total available stable funding", {"FY2023": 2611.7, "FY2022": 2322.9}),
         ("Total required stable funding", {"FY2023": 1828.1, "FY2022": 1652.3}),
-        ("NSFR ratio (%)", {"FY2025": "Not required", "FY2024": "Not required", "FY2023": "142.8%", "FY2022": "140.6%", "FY2021": "Not required", "FY2020": "Not required", "FY2019": "Not required", "FY2018": "Not required", "FY2017": "Not required", "FY2016": "Not required", "FY2015": "Not required", "FY2014": "Not required"}),
+        ("NSFR ratio (%)", {**NSFR_ST, "FY2023": "142.8%", "FY2022": "140.6%"}),
     ],
     p3_sources("FY2023: Pillar 3 Disclosures 2023", P3_2023_URL, "4", "5") + "\n"
     + p3_sources("FY2022: Pillar 3 Disclosures 2022 (the Group's OWN FY2022 edition - see note)", P3_2022_URL, "4", "5") + "\n"
@@ -1348,12 +1397,16 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not applicable" for y in YEARS})],
+    [("MREL ratio", dict(MREL_ST))],
     p3_sources("All years: Pillar 3 Disclosures 2021-2025 (no MREL section in any edition)", P3_2025_URL, "n/a"),
     note="No MREL disclosure of any kind (numeric or qualitative) appears in any Pillar 3 Disclosures document "
-         "reviewed, FY2014-FY2025 - consistent with Vanquis Banking Group (and its Provident Financial plc "
-         "predecessor entity) not being a resolution entity subject to a standalone MREL requirement in any of "
-         "these years.",
+         "reviewed, FY2014-FY2025. GA-020 (2026-09-19): each readable edition (FY2014, FY2015, FY2017-FY2025) "
+         "was re-downloaded from its cited URL and its full text searched for 'MREL', 'eligible liabilities' "
+         "and 'resolution' - zero hits in every one. The cells therefore now say 'Not published' rather than "
+         "'Not applicable': the earlier reading, that the Group is not a resolution entity with an MREL above "
+         "capital requirements, is plausible but no document seen states it. FY2016 was 'Unreached today' "
+         "until 2026-09-19, when a complete capture of its own edition was found on the renamed "
+         "vanquisbankinggroup.com domain (P3_2016_URL); its full text also has zero MREL hits.",
 )
 
 # ---------------------------------------------------------------
@@ -1393,7 +1446,7 @@ bw.add_overview_sheet(
         ("Tier 1 Ratio", {"FY2025": "19.3%", "FY2024": "18.8%", "FY2023": "20.5%", "FY2022": "26.4%", "FY2021": "29.1%", "FY2020": "34.2%", "FY2019": "31.1%", "FY2018": "28.2%", "FY2017": "14.5%", "FY2016": "21.7%", "FY2015": "21.5%", "FY2014": "20.0%"}),
         ("Total Capital Ratio", {"FY2025": "26.1%", "FY2024": "29.7%", "FY2023": "30.6%", "FY2022": "37.5%", "FY2021": "40.6%", "FY2020": "34.2%", "FY2019": "31.1%", "FY2018": "28.2%", "FY2017": "14.5%", "FY2016": "21.7%", "FY2015": "21.5%", "FY2014": "20.0%"}),
         ("Leverage Ratio", {"FY2025": "12.1%", "FY2024": "13.9%", "FY2023": "16.4%", "FY2022": "21.0%", "FY2021": "18.1%", "FY2020": "20.8%", "FY2019": "22.8%", "FY2018": "20.3%", "FY2017": "10.8%", "FY2016": "16.7%", "FY2015": "16.5%", "FY2014": "15.5%"}),
-        ("LCR", {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%", "FY2021": "2,073%", "FY2020": "1,756%", "FY2019": "578%", "FY2018": "490%", "FY2017": "242%", "FY2016": "207%", "FY2015": "Not required", "FY2014": "Not required"}),
+        ("LCR", {"FY2025": "391.6%", "FY2024": "1,001.2%", "FY2023": "847.1%", "FY2022": "986.2%", "FY2021": "2,073%", "FY2020": "1,756%", "FY2019": "578%", "FY2018": "490%", "FY2017": "242%", "FY2016": "251%"}),
         ("NSFR", {"FY2023": "142.8%", "FY2022": "140.6%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "

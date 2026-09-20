@@ -858,7 +858,18 @@ metric("LCR","%","Liquidity Coverage Ratio",lcr,"All five years are the Pillar 3
        "above it'. FY2025 previously cited the Annual Report instead; the figure was the same 154.0%, but the "
        "citation now names the document the number is actually printed in.")
 metric("NSFR","%","Net Stable Funding Ratio",nsfr)
-metric("MREL Ratio","%","MREL ratio",{y:"Not publicly disclosed" for y in YEARS},"No MREL figure was located in the reviewed Paragon Annual Reports or Pillar 3 disclosures.")
+# GA-020 (2026-09-19): Paragon Bank PLC's own accounts FY2017-FY2025 (Companies House, image
+# scans, OCR'd at 150 dpi) contain no MREL figure - 'MREL'/'loss-absorbing' zero in all nine;
+# 'eligible liabilities' only in the cash-ratio-deposit note; richness 'capital' 50-148 hits.
+# The Pillar III editions (FY2021-FY2025) could not be re-fetched today - paragonbankinggroup
+# .co.uk answers curl with a Cloudflare 403 and the Wayback Machine holds no capture - so for
+# those years the Pillar III half of the claim rests on this script's earlier reading (KM1-032,
+# 2026-09-18), whose KM1 transcription carries no MREL row.
+MREL_ST = {y: ("Not published – no MREL figure in Paragon Bank PLC accounts " + y + " (CH scan, OCR 2026-09-19) or "
+               "in its Pillar III (UK KM1 read 2026-09-18 has no MREL row).") for y in ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]}
+MREL_ST.update({y: ("Not published – no MREL figure in Paragon Bank PLC accounts " + y + " (Companies House scan, "
+                    "OCR 2026-09-19: 'MREL' zero hits).") for y in ["FY2020", "FY2019", "FY2018", "FY2017"]})
+metric("MREL Ratio","%","MREL ratio",MREL_ST,"No MREL figure was located in the reviewed Paragon Annual Reports or Pillar 3 disclosures. GA-020 (2026-09-19): Paragon Bank PLC's statutory accounts for FY2017-FY2025 were each OCR'd from the Companies House filing (company 05390593) and contain no MREL figure ('MREL' zero hits; 'capital' 50-148 hits per report). The Pillar III editions were not re-fetchable on 2026-09-19 (Cloudflare 403; no Wayback capture).")
 bw.add_wide_interim_sheet(
     "Interim Pillar 3",
     rows=INTERIM_ROWS,

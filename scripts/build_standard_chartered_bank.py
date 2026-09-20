@@ -387,11 +387,11 @@ bw.add_asset_quality_sheet(
 )
 
 
-def unavailable(name, note):
+def unavailable(name, note, cells=None):
     bw.add_metric_sheet(
         name,
         "$million / %",
-        [(name + " — standalone Bank Company basis", {y: "Not publicly disclosed" for y in YEARS})],
+        [(name + " — standalone Bank Company basis", cells or {y: "Not publicly disclosed" for y in YEARS})],
         SOURCE_NOTE + "\n\n" + REGULATORY_GAP_NOTE,
         note=note,
         first_col_width=58,
@@ -678,7 +678,8 @@ bw.add_metric_sheet(
     "% (12-month average)",
     [("Liquidity coverage ratio — solo-consolidated basis, 12-month average to 31 December",
       {"FY2025": "169.2%", "FY2024": "152.7%", "FY2023": "162.1%", "FY2022": "154%",
-       "FY2021": "Not publicly disclosed"})],
+       "FY2021": ("Not published – FY2021 SC PLC Pillar 3 has no solo-consolidation section; FY2022 edition's solo "
+                  "LIQ1 covers only 2022's quarters (see note)")})],
     SOLO_SOURCES + "\n\nLCR: Table 'Liquidity Coverage Ratio (LCR) (UK LIQ1) - Solo consolidation', row 23, in each "
     "edition (FY2025 Table 125; FY2024; FY2023 Table 126; FY2022). The template reports four quarterly columns, "
     "each a 12-month average; the figure carried here is the 31 December column, i.e. the average of the 12 months "
@@ -696,7 +697,8 @@ bw.add_metric_sheet(
     "% (average)",
     [("Net stable funding ratio — solo-consolidated basis",
       {"FY2025": "122.7%", "FY2024": "121.4%", "FY2023": "121.9%", "FY2022": "117.6%",
-       "FY2021": "Not applicable"})],
+       "FY2021": ("Not published – FY2021 SC PLC Pillar 3 has no solo-consolidation section or NSFR table; UK NSFR "
+                  "disclosure began 1 Jan 2022 (PRA PS22/21)")})],
     SOLO_SOURCES + "\n\nNSFR: Table 'Net Stable Funding Ratio (UK LIQ2) - Solo consolidation', row 34, in each "
     "edition (FY2025 Table 126; FY2024 Table 130; FY2023 Table 127; FY2022 Table 123). Each edition prints row 34 "
     "twice - the first occurrence is that edition's own year and the second is the prior-year comparative - which "
@@ -715,7 +717,16 @@ unavailable(
     "MREL Ratio",
     "No solo-consolidated MREL ratio is disclosed. MREL requirements are set for UK resolution entities; the "
     "resolution entity in this group is Standard Chartered PLC, not this Bank entity, so a group MREL figure "
-    "would not be an entity-level substitute.",
+    "would not be an entity-level substitute. GA-020 (2026-09-19): the FY2025 Standard Chartered PLC Pillar 3 was "
+    "re-read - its MREL/TLAC ratios are Table 2 'Key metrics - TLAC requirements (KM2)' for the SC PLC resolution "
+    "group only; for Standard Chartered Bank it prints Table 13 'Standard Chartered Bank - creditor ranking "
+    "(TLAC2)', which gives TLAC-eligible amounts by rank ($43,746m total at 2025) but no ratio. The FY2022 "
+    "edition carries the same SCB TLAC2 table. The amounts are not transcribed: a ratio from them would be a "
+    "back-solve.",
+    cells={**{y: ("Not published – SC PLC Pillar 3 gives MREL/TLAC ratios (KM2) only for the SC PLC resolution "
+                  "group; for this Bank only a TLAC2 creditor-ranking table, no ratio") for y in ("FY2025", "FY2024", "FY2023", "FY2022")},
+           "FY2021": ("Not published – FY2021 SC PLC Pillar 3 has no Bank-level (solo) section; MREL/TLAC ratios are "
+                      "given only for the SC PLC resolution group")},
 )
 
 EQUITY_CHANGES_OVERVIEW = [

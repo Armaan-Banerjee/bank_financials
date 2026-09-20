@@ -576,8 +576,21 @@ metric(
          "risk-weighted assets figure is disclosed anywhere - see the CET1 Ratio and Total RWAs sheets.",
 )
 
+# GA-020 (2026-09-19): outcome wording. Evidence: NOT_DISCLOSED_NOTE (AR2025
+# Directors' Report p.17 places the Pillar 3 duty on the DBIGB UK consolidation
+# group), plus a 2026-09-19 OCR pass over all five image-only Companies House
+# accounts (FY2021-FY2025): zero 'MREL'/'loss-absorbing'/'eligible
+# liabilities', and the only 'risk weighted' hit (FY2022) is narrative, not a
+# figure. The DBIGB Group Pillar 3 2023/2024/2025 editions (text-native) also
+# return zero 'MREL'.
+GA020_ENTITY = ("Not published – no entity-level RWA{x} in DB UK Bank's ARs FY2021-FY2025 (OCR'd 2026-09-19: "
+                "CET1 £ and a capital-to-requirement ratio only); Pillar 3 is at DBIGB group level (AR2025 p.17)")
+GA020_MREL = ("Not published – zero 'MREL' in DB UK Bank's ARs FY2021-FY2025 (OCR) and in the DBIGB group "
+              "Pillar 3 2023-2025 editions, searched 2026-09-19")
+
 bw.add_not_disclosed_metric_sheets(
     ["CET1 Ratio"], p3_sources(), per_note={"CET1 Ratio": NOT_DISCLOSED_NOTE},
+    statements={"CET1 Ratio": GA020_ENTITY.format(x=" or CET1 ratio")},
 )
 
 metric(
@@ -589,6 +602,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["Tier 1 Ratio"], p3_sources(), per_note={"Tier 1 Ratio": NOT_DISCLOSED_NOTE},
+    statements={"Tier 1 Ratio": GA020_ENTITY.format(x=" or Tier 1 ratio")},
 )
 
 metric(
@@ -618,6 +632,7 @@ bw.add_not_disclosed_metric_sheets(
     ["Total RWAs"],
     p3_sources(),
     per_note={"Total RWAs": NOT_DISCLOSED_NOTE},
+    statements={"Total RWAs": GA020_ENTITY.format(x=" figure")},
 )
 
 bw.add_rwa_breakdown_sheet(
@@ -671,6 +686,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+    statements={"MREL Ratio": GA020_MREL},
 )
 
 # ---------------------------------------------------------------

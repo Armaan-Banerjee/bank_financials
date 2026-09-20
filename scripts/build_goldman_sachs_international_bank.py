@@ -449,7 +449,18 @@ LCR_RATIO = {"FY2025": "155.57%", "FY2024": "158%", "FY2023": "151%", "FY2022": 
 
 NSFR_AVAILABLE_USD = {"FY2025": 52125, "FY2024": 47029, "FY2023": 46071, "FY2022": 45775}
 NSFR_REQUIRED_USD = {"FY2025": 40480, "FY2024": 27270, "FY2023": 26631, "FY2022": 30642}
-NSFR_RATIO = {"FY2025": "130.01%", "FY2024": "173%", "FY2023": "173%", "FY2022": "151%", "FY2021": "Not publicly disclosed"}
+# GA-020 (2026-09-19): FY2021 statements, evidenced against GSG UK Q4 2021 Pillar 3 (text PDF,
+# searched in full) and GSIB's own FY2021 accounts (CH scan, OCR'd 200 dpi - no LCR, NSFR
+# or MREL figure). Table 39 'GSIB Liquidity Coverage Ratio Summary' (printed p.53) prints
+# only Liquidity buffer / Total net cash outflows / LCR; the edition has no NSFR table for
+# any entity (the UK NSFR applied from 1 Jan 2022). The Q4 2022 KM1 has no Dec-2021 column.
+NP21_LCR = ("Not published – GSG UK Pillar 3 Dec 2021, Table 39 'GSIB LCR Summary' (p.53) prints only liquidity "
+            "buffer, net cash outflows and LCR; GSIB FY2021 accounts give none.")
+NP21_NSFR = ("Not published – GSG UK Pillar 3 Dec 2021 has no NSFR table for any entity (UK NSFR applied from "
+             "1 Jan 2022); GSIB FY2021 accounts give none; Q4 2022 KM1 has no Dec-21 column.")
+MREL_ST = ("Not applicable – internal MREL attaches to GSGUK consolidated: GSG UK Q4 Pillar 3 (MREL section, p.16-17) "
+           "'material subsidiaries ... such as GSGUK, are required to have' own funds and eligible liabilities; no GSIB figure.")
+NSFR_RATIO = {"FY2025": "130.01%", "FY2024": "173%", "FY2023": "173%", "FY2022": "151%", "FY2021": NP21_NSFR}
 
 cet1_gbp = {y: stock(v, y) for y, v in CET1_USD.items()}
 tier1_gbp = {y: stock(v, y) for y, v in TIER1_USD.items()}
@@ -550,17 +561,17 @@ km1_rows = [
     ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a "
                 "percentage of leverage ratio total exposure amount)", {}),
     ("DATA", "UK 14a    Additional CET1 leverage ratio requirements (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "-"}),
     ("DATA", "UK 14b    Additional AT1 leverage ratio requirements (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "-"}),
     ("DATA", "UK 14c    Additional T2 leverage ratio requirements (%)",
-     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "N/A*"}),
+     {"FY2025": "0.00%", "FY2024": "0.00%", "FY2023": "0.00%", "FY2022": "-"}),
     ("DATA", "UK 14d    Total SREP leverage ratio requirements (%)",
-     {"FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "N/A*"}),
+     {"FY2025": "3.25%", "FY2024": "3.25%", "FY2023": "3.25%", "FY2022": "-"}),
     ("DATA", "UK 14e    Applicable leverage buffer",
-     {"FY2025": "0.40%", "FY2024": "0.40%", "FY2023": "0.30%", "FY2022": "N/A*"}),
+     {"FY2025": "0.40%", "FY2024": "0.40%", "FY2023": "0.30%", "FY2022": "-"}),
     ("DATA", "UK 14f    Overall leverage ratio requirements (%)",
-     {"FY2025": "3.65%", "FY2024": "3.65%", "FY2023": "3.55%", "FY2022": "N/A*"}),
+     {"FY2025": "3.65%", "FY2024": "3.65%", "FY2023": "3.55%", "FY2022": "-"}),
     ("SECTION", "Liquidity Coverage Ratio — $ in millions / %", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value -average)",
      {"FY2025": 32924, "FY2024": 31716, "FY2023": 28379, "FY2022": 20000}),
@@ -592,6 +603,9 @@ KM1_SOURCES = (
     f"FY2023: Q4 2023 Pillar 3 Disclosures, p.14-15, \"As of December 2023 / GSIB\" column - {P3_2023_URL}\n"
     f"FY2022: Q4 2022 Pillar 3 Disclosures, p.14-15, \"As of December 2022 / GSIB\" column - {P3_2022_URL}\n"
     f"FY2021: no KM1 exists - see below - {P3_2021_URL}\n"
+    "GLYPH RECORD (KM1 map rule 2, applied 2026-09-19 under GA-020): the '-' in rows UK 14a-UK 14f for FY2022 "
+    "stands for the printed glyph 'N/A' (the row labels carry an asterisk, '(%)*'), Q4 2022 edition p.15, GSIB "
+    "column; the asterisk's footnote is reproduced as the last row of this sheet.\n"
     "\n"
     "WHOSE TEMPLATE THIS IS. GSIB publishes no standalone Pillar 3 report; its Annual Report states each year "
     "(Note 1) that \"the bank is included in the consolidated Pillar 3 disclosures of GSG UK\". That does NOT "
@@ -730,20 +744,21 @@ metric("Leverage Ratio", "£m (conv. from USD) / %", [
 ])
 metric("LCR", "£m (conv. from USD) / %", [
     ("Total high-quality liquid assets (HQLA) (weighted value - average)", {y: stock(v, y) for y, v in LCR_HQLA_USD.items()}),
-    ("Cash outflows - total weighted value", {**{y: stock(v, y) for y, v in LCR_OUTFLOWS_USD.items()}, "FY2021": "Not publicly disclosed"}),
-    ("Cash inflows - total weighted value", {**{y: stock(v, y) for y, v in LCR_INFLOWS_USD.items()}, "FY2021": "Not publicly disclosed"}),
+    ("Cash outflows - total weighted value", {**{y: stock(v, y) for y, v in LCR_OUTFLOWS_USD.items()}, "FY2021": NP21_LCR}),
+    ("Cash inflows - total weighted value", {**{y: stock(v, y) for y, v in LCR_INFLOWS_USD.items()}, "FY2021": NP21_LCR}),
     ("Total net cash outflows (adjusted value)", {y: stock(v, y) for y, v in LCR_NET_OUTFLOWS_USD.items()}),
     ("Liquidity coverage ratio", LCR_RATIO),
 ], note="FY2021 source reports the GSIB LCR summary as liquidity buffer and total net cash outflows; separate cash-inflow and cash-outflow rows were not reported in that table.")
 metric("NSFR", "£m (conv. from USD) / %", [
-    ("Total available stable funding", {**{y: stock(v, y) for y, v in NSFR_AVAILABLE_USD.items()}, "FY2021": "Not publicly disclosed"}),
-    ("Total required stable funding", {**{y: stock(v, y) for y, v in NSFR_REQUIRED_USD.items()}, "FY2021": "Not publicly disclosed"}),
+    ("Total available stable funding", {**{y: stock(v, y) for y, v in NSFR_AVAILABLE_USD.items()}, "FY2021": NP21_NSFR}),
+    ("Total required stable funding", {**{y: stock(v, y) for y, v in NSFR_REQUIRED_USD.items()}, "FY2021": NP21_NSFR}),
     ("NSFR ratio", NSFR_RATIO),
 ], note="The FY2021 Q4 report does not show a GSIB NSFR table; FY2022-FY2025 values are taken from the GSIB columns in Table 1.")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "No GSIB-specific numeric MREL value is shown in the reviewed official GSG UK Q4 Pillar 3 disclosures; GSGUK MREL figures are not substituted. THE PARENT'S DOCUMENT WAS SEARCHED FOR A GSIB BLOCK, NOT ASSUMED EMPTY (re-confirmed 2026-09-16, table by table, in the Q4 2025 edition). This is the same document that DOES carry GSIB's key metrics, so the search was pointed at the right shelf: its Table 1 'Key Metric Template' prints GSGUK, GSI and GSIB columns side by side, which is exactly why every other Pillar 3 sheet in this workbook is sourced from it. The MREL tables in that same document are different in shape - Table 2 'Own Funds and Eligible Liabilities' and Table 3 'Own Funds and Eligible Liabilities Composition' each carry a SINGLE column, headed GSGUK, with no GSI or GSIB column and no separate subsidiary table or appendix anywhere in the 166-page document (14 occurrences of 'MREL' and 28 of 'own funds and eligible liabilities' were each read in place). The document says why: 'Material subsidiaries of an overseas banking group at the consolidated level, such as GSGUK, are required to have sufficient own funds and eligible liabilities to meet internal MREL' - the internal-MREL requirement attaches to GSGUK at the consolidated level, not to GSIB. So the absence here is a fact about where the obligation sits, established from the parent's own disclosure, and NOT an inference from GSIB publishing no standalone Pillar 3. Do not fill this sheet with GSGUK's 22.97% / 7.82%: those are the parent's ratios on the parent's RWAs and leverage exposure, a different reporting entity."},
+    statements={"MREL Ratio": MREL_ST},
+    per_note={"MREL Ratio": "GA-020 (2026-09-19): the internal-MREL sentence was confirmed in every edition FY2021-FY2025 - Q4 2021 printed p.17 ('require material subsidiaries of an overseas banking group at the consolidated level, such as GSGUK, to have sufficient own funds and eligible liabilities to meet internal MREL'), Q4 2022 p.16, Q4 2023/2024/2025 p.17; every edition's Own Funds and Eligible Liabilities table is a single GSGUK column. No GSIB-specific numeric MREL value is shown in the reviewed official GSG UK Q4 Pillar 3 disclosures; GSGUK MREL figures are not substituted. THE PARENT'S DOCUMENT WAS SEARCHED FOR A GSIB BLOCK, NOT ASSUMED EMPTY (re-confirmed 2026-09-16, table by table, in the Q4 2025 edition). This is the same document that DOES carry GSIB's key metrics, so the search was pointed at the right shelf: its Table 1 'Key Metric Template' prints GSGUK, GSI and GSIB columns side by side, which is exactly why every other Pillar 3 sheet in this workbook is sourced from it. The MREL tables in that same document are different in shape - Table 2 'Own Funds and Eligible Liabilities' and Table 3 'Own Funds and Eligible Liabilities Composition' each carry a SINGLE column, headed GSGUK, with no GSI or GSIB column and no separate subsidiary table or appendix anywhere in the 166-page document (14 occurrences of 'MREL' and 28 of 'own funds and eligible liabilities' were each read in place). The document says why: 'Material subsidiaries of an overseas banking group at the consolidated level, such as GSGUK, are required to have sufficient own funds and eligible liabilities to meet internal MREL' - the internal-MREL requirement attaches to GSGUK at the consolidated level, not to GSIB. So the absence here is a fact about where the obligation sits, established from the parent's own disclosure, and NOT an inference from GSIB publishing no standalone Pillar 3. Do not fill this sheet with GSGUK's 22.97% / 7.82%: those are the parent's ratios on the parent's RWAs and leverage exposure, a different reporting entity."},
 )
 
 # ---------------------------------------------------------------

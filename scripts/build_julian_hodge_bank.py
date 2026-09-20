@@ -1397,12 +1397,27 @@ metric(
          "the Basel II regime those six years used; see the pre-CRD IV note in this sheet's sources.",
 )
 
+# GA-020 (2026-09-19): every MREL cell now states its outcome. The FY2010-FY2023
+# Pillar 3 editions (P3_*_URL, live on hodgebank.co.uk) were re-downloaded and
+# full-text searched for 'MREL', 'loss-absorbing', 'eligible liabilities' and
+# 'minimum requirement for own funds': zero hits in all fourteen. FY2024/FY2025
+# rest on the Annual Report full-text searches recorded in the entity note.
+MREL_ST = {y: (f"Not published – Hodge {y} Pillar 3 (full text searched 2026-09-19) contains no MREL figure or "
+               "reference to MREL or loss-absorbing capacity") for y in P3_DISCLOSURE_YEARS}
+MREL_ST["FY2024"] = ("Not published – FY2024 Annual Report (full text) has zero MREL/loss-absorbing hits, and no "
+                     "FY2024 Pillar 3 was published (see entity note)")
+MREL_ST["FY2025"] = ("Not published – FY2025 Annual Report (full text) has zero MREL/loss-absorbing hits; no Pillar 3 "
+                     "after the SDDT Rule 3.1 opt-in of 18/02/2025 (PRA register, FRN 204439)")
+
 metric(
     "MREL Ratio", "£m / %",
-    [("MREL ratio", {y: ("Not applicable" if y == "FY2025" else "Not publicly disclosed") for y in YEARS})],
+    [("MREL ratio", dict(MREL_ST))],
     p3_sources(),
-    note="FY2025 reads 'Not applicable', every other year 'Not publicly disclosed', and the difference is "
-         "deliberate and load-bearing. 'Not publicly disclosed' asserts a figure may exist that was not found; "
+    note="GA-020 (2026-09-19): every year now reads 'Not published', each cell naming the document searched - "
+         "FY2025 no longer reads 'Not applicable', because the absence is a finding about the documents (the "
+         "Annual Report searched and silent) rather than a rule that forbids the figure. HISTORY: FY2025 read "
+         "'Not applicable', every other year 'Not publicly disclosed', and the difference was "
+         "deliberate. 'Not publicly disclosed' asserts a figure may exist that was not found; "
          "'Not applicable' means no such disclosure can exist. FY2025 is the latter, but the reasoning was "
          "TIGHTENED on 2026-09-18 and the earlier version of it should not be reused. It is not enough that the "
          "SDDT modification (PRA Rule 3.1, FRN 204439, effective 18 February 2025) removed this bank's Pillar 3 "

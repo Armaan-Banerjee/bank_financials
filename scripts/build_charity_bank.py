@@ -708,8 +708,18 @@ bw.add_not_disclosed_metric_sheets(
     p3_sources(),
     per_note={
         "MREL Ratio": "Not disclosed in any Pillar 3 document or Annual Report found for any year FY2021-FY2025 "
-                      "- no explicit exemption stated, simply absent from every source.",
+                      "- no explicit exemption stated, simply absent from every source. GA-020 RE-CHECK "
+                      "2026-09-19: the FY2021, FY2022 and FY2023 Pillar 3 editions (Wayback) and the 2023, 2024 "
+                      "and 2025 Annual Reports, all text-native with 115-162 'capital' hits each, return zero "
+                      "'MREL', 'loss-absorbing' or 'eligible liabilities'. FY2024-FY2025 have no Pillar 3 at all "
+                      "(SDDT Rule 3.1 modification from 01/02/2024 - see the Pillar 3 source note).",
     },
+    statements={"MREL Ratio": {
+        **{y: ("Not published – zero 'MREL' in the " + y + " Pillar 3 (full text searched 2026-09-19)")
+           for y in ("FY2023", "FY2022", "FY2021")},
+        **{y: ("Not published – no Pillar 3 after the SDDT Rule 3.1 opt-in of 01/02/2024 (PRA waivers register); "
+               "zero 'MREL' in AR2024/AR2025, searched 2026-09-19") for y in ("FY2025", "FY2024")},
+    }},
 )
 
 # ---------------------------------------------------------------

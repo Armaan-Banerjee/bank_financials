@@ -756,8 +756,13 @@ AR2025_BANK_BASIS = (
 # ---------------------------------------------------------------
 km1_rows = [
     ("SECTION", "Available own funds (amounts)", {}),
+    # FY2025 carries a recorded absence rather than a blank (2026-09-19). The
+    # finding is an ENTITY one and was already established in KM1_SOURCES; it
+    # was invisible in the grid, where an empty column reads the same as one
+    # nobody examined. No verifier comparison is lost: this cell was blank.
     ("DATA", "1    Common Equity Tier 1 (CET1) capital (£m)",
-     {"FY2024": 1297.0, "FY2023": 1122.7, "FY2022": 951.5, "FY2021": 775.7}),
+     {"FY2025": "Not published at Bank level - FY2025 Pillar 3 is Shawbrook Group plc only",
+      "FY2024": 1297.0, "FY2023": 1122.7, "FY2022": 951.5, "FY2021": 775.7}),
     ("DATA", "2    Tier 1 capital (£m)",
      {"FY2024": 1422.0, "FY2023": 1247.7, "FY2022": 1076.5, "FY2021": 900.7}),
     ("DATA", "3    Total capital (£m)",
@@ -853,6 +858,18 @@ KM1_SOURCES = (
     "instead on the two extra rows this sheet reproduces separately; and the LCR rows are 'a new disclosure "
     "requirement and accordingly comparative information is not provided'. Rows 18-20 are absent for both "
     "years because that edition states the NSFR 'is not applicable until 1 January 2023'.\n\n"
+    "ENTITY SCOPE RE-VERIFIED FROM THE DOCUMENT ITSELF, 2026-09-19, and the FY2025 cell now states the "
+    "finding instead of standing blank. shawbrook-pillar-3-disclosures-2025.pdf was re-downloaded (HTTP 200, "
+    "Content-Type application/pdf, %PDF magic bytes, 1,543,741 bytes) and read as text (348,653 characters "
+    "extracted - text-native, so no scanned-image false negative, and 1,261 occurrences of ' the ' as the "
+    "richness control). Its contents list carries exactly ONE reporting section, '2. Disclosures for Shawbrook "
+    "Group plc (the Group)', under which 'Template 1: UK KM1 - Key metrics template' is printed once. Every "
+    "page header in the body reads 'Disclosures for Shawbrook Group plc'. The string 'Shawbrook Bank Limited' "
+    "occurs THREE times in the whole document and not one is a disclosure heading - twice in securitisation "
+    "narrative about transferring beneficial interest, once in a list of Group entities. There is therefore no "
+    "Bank-level KM1 for 31 December 2025 to reproduce, and the Group's table is a different entity and is not "
+    "substituted. This is map rule 18 running in the direction it usually does not: the parent's Pillar 3 IS "
+    "the document, and it simply does not carry a subsidiary block.\n\n"
     "LATEST-EDITION CHECK, 2026-09-17: shawbrook.co.uk's own results centre "
     "(/about-us/investors/results-centre/) was read directly (HTTP 200). The newest Pillar 3 document is "
     "Pillar 3 Disclosures 2025, which this workbook already holds. Checked, none newer.\n\n"

@@ -106,6 +106,16 @@ ENTITY_NOTE = (
     "or 2026 edition in the library at all. The Bank's habit is to publish in May-July of the following year, "
     "so an FY2025 edition would have appeared around May 2026 and has not - which is what the exemption "
     "predicts. Exempt AND demonstrably stopped, established two independent ways.\n"
+    "BOTH HALVES RE-RUN INDEPENDENTLY 2026-09-19, AND THE FINDING IS NOW IN THE CELLS RATHER THAN ONLY IN THIS "
+    "NOTE. (a) The waivers register was re-downloaded (HTTP 200, text/csv, 900,160 bytes, UTF-16) and matched "
+    "on BOTH required columns together - Rule Description 'SDDT Regime - General Application' AND Sub Rule "
+    "Number 'Ru 3.1' - which returns FRN 579415, start 20/02/2025, no end date. Matching either column alone is "
+    "what manufactures false exemptions and was deliberately not relied on. (b) The WordPress media library was "
+    "re-enumerated (/wp-json/wp/v2/media?per_page=100&search=pillar, HTTP 200, application/json) and still "
+    "returns exactly ELEVEN Pillar 3 files spanning 2015-2024, the newest uploaded 14 May 2025. Sixteen months "
+    "after the opt-in and four months past the Bank's own May publication slot, no FY2025 edition exists. The "
+    "three FY2025 cells this explains - RWA Breakdown, Leverage Ratio, NSFR - previously stood blank and now "
+    "name the rule and its date, so the census and a reader can both tell this from a cell nobody examined.\n"
     "THE FY2025 ANNUAL REPORT WAS ALSO SEARCHED FOR THE MISSING METRICS RATHER THAN ASSUMED EMPTY "
     "(2026-09-18, text layer, 490,500 characters extracted). Its 'Capital' table on printed p.23 gives Total "
     "Shareholders' Funds £248,643k, Risk weighted assets £1,138m, CET1 19.2%, Tier 1 21.3% and Total capital "
@@ -764,7 +774,7 @@ rwa_breakdown_rows = [
     ("DATA", "Securitisation exposures in the non-trading book", {"FY2024": 0, "FY2023": 0, "FY2022": 7991, "FY2021": 9158, "FY2020": 8161, "FY2019": 9034, "FY2018": 0, "FY2017": 0, "FY2016": 0, "FY2015": 0}),
     ("DATA", "Operational risk", {"FY2024": 130786, "FY2023": 112879, "FY2022": 88964, "FY2021": 78784, "FY2020": 78647, "FY2019": 79158, "FY2018": 70234, "FY2017": 53863, "FY2016": 35013, "FY2015": 19275}),
     ("DATA", "Amounts below the thresholds for deduction", {"FY2024": 2267, "FY2023": 1801, "FY2022": 2749, "FY2021": 1984, "FY2020": 1813, "FY2019": 1823, "FY2018": 2199, "FY2017": 632, "FY2016": 551, "FY2015": 653}),
-    ("TOTAL", "Total RWAs", {"FY2024": 980319, "FY2023": 841556, "FY2022": 787621, "FY2021": 728379, "FY2020": 629727, "FY2019": 619342, "FY2018": 621368, "FY2017": 561630, "FY2016": 428605, "FY2015": 284853}),
+    ("TOTAL", "Total RWAs", {"FY2025": "Not published - AR gives a total RWA only; SDDT Rule 3.1 from 20/02/2025", "FY2024": 980319, "FY2023": 841556, "FY2022": 787621, "FY2021": 728379, "FY2020": 629727, "FY2019": 619342, "FY2018": 621368, "FY2017": 561630, "FY2016": 428605, "FY2015": 284853}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -783,7 +793,7 @@ metric(
     "Leverage Ratio", "£'000 exposure / %",
     [
         ("Leverage ratio total exposure measure", {"FY2024": 1605041, "FY2023": 1435897, "FY2022": 1335869, "FY2021": 1298463, "FY2020": 1097253, "FY2019": 1028001, "FY2018": 1051134, "FY2017": 1024505, "FY2016": 821551, "FY2015": 582770}),
-        ("Leverage ratio (%)", {"FY2024": "14.71%", "FY2023": "14.88%", "FY2022": "13.92%", "FY2021": "12.90%", "FY2020": "13.96%", "FY2019": "13.85%", "FY2018": "12.10%", "FY2017": "7.39%", "FY2016": "6.91%", "FY2015": "6.30%"}),
+        ("Leverage ratio (%)", {"FY2025": "Not published - SDDT Rule 3.1 opt-in from 20/02/2025; no FY2025 edition", "FY2024": "14.71%", "FY2023": "14.88%", "FY2022": "13.92%", "FY2021": "12.90%", "FY2020": "13.96%", "FY2019": "13.85%", "FY2018": "12.10%", "FY2017": "7.39%", "FY2016": "6.91%", "FY2015": "6.30%"}),
     ],
     p3_sources(LEVERAGE_NOTE),
     note="FY2025 not publicly disclosed (no standalone Pillar 3 document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE; and the Annual "
@@ -805,7 +815,7 @@ metric(
     [
         ("Total available stable funding", {"FY2024": 1303092, "FY2023": 1190919, "FY2022": 1104235}),
         ("Total required stable funding", {"FY2024": 960390, "FY2023": 873031, "FY2022": 842391}),
-        ("Net Stable Funding Ratio (%)", {"FY2024": "136%", "FY2023": "136%", "FY2022": "131%"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "Not published - SDDT Rule 3.1 opt-in from 20/02/2025; no FY2025 edition", "FY2024": "136%", "FY2023": "136%", "FY2022": "131%"}),
     ],
     p3_sources(),
     note="FY2021 and FY2025 not publicly disclosed - the UK NSFR requirement only took effect for periods "
@@ -813,9 +823,22 @@ metric(
          "Pillar 3 document has been published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE.",
 )
 
+# GA-020 (2026-09-19): each edition in P3_*_URL (FY2015-FY2024; FY2015 and FY2018
+# are image-only and were OCR'd, FY2023/FY2024 are .docx) and the FY2025 Annual
+# Report were full-text searched for MREL / loss-absorbing / eligible
+# liabilities. Only FY2019's Pillar 3 addresses MREL (p.31): the Bank is in the
+# Bank of England's 'Modified Insolvency' category and its MREL equals its
+# Total Capital Requirement. No other edition mentions MREL.
+MREL_ST = {y: (f"Not published – CCB {y} Pillar 3 (full text searched 2026-09-19) contains no MREL figure or "
+               "reference to MREL") for y in YEARS}
+MREL_ST["FY2019"] = ("Not applicable – FY2019 Pillar 3 p.31: the Bank is in the Bank of England's 'Modified "
+                     "Insolvency' category, so its MREL equals its Total Capital Requirements; no separate ratio")
+MREL_ST["FY2025"] = ("Not published – FY2025 Annual Report (full text) has no MREL figure; no FY2025 Pillar 3 "
+                     "(SDDT Rule 3.1 opt-in from 20/02/2025, FRN 579415)")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "Not found in any of the 5 years' Annual Reports or Pillar 3 disclosures reviewed - "
                              "no numeric ratio, and no explicit exemption statement either; the Bank's balance "
                              "sheet scale is consistent with sitting below the threshold at which MREL applies."},

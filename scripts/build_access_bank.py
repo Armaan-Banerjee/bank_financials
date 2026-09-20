@@ -1150,7 +1150,20 @@ metric(
          "report itself does not tabulate NSFR). FY2020 not found in any source.",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(),
+# GA-020 (2026-09-19): every cited document re-fetched (%PDF) and text-searched for 'MREL',
+# 'eligible liabilities', '437a' and 'KM2': Pillar 3 2020-2023 - the only hit is the PRA
+# rulebook part name 'Own Funds and Eligible Liabilities (CRR)'; Annual Reports 2019, 2021-2025
+# - zero (richness 'capital' 53-73 per AR, 79-103 per Pillar 3). No 2024/2025 Pillar 3 exists
+# (see p3_sources); the FY2019 edition was never located, so FY2019 rests on its AR and on the
+# FY2020 Pillar 3, which carries Dec-19 comparatives.
+_P3Y = {"FY2023", "FY2022", "FY2021", "FY2020"}
+MREL_ST = {y: (("Not published – no MREL figure or KM2 in Access Bank UK Pillar 3 " + y + " or Annual Report "
+                "(text search, 2026-09-19).") if y in _P3Y else
+               ("Not published – no MREL figure in Access Bank UK Annual Report " + y + " (text search, "
+                "2026-09-19); " + ("no " + y + " Pillar 3 exists." if y != "FY2019" else
+                                   "FY2020 Pillar 3 (Dec-19 comparatives) has none.")))
+           for y in ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019"]}
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "No MREL disclosure (numeric or qualitative) or UK KM2 template found in any year's "
                              "Pillar 3 report - not explicitly stated as an exemption, but consistent with the "
                              "Bank's small size relative to typical MREL-in-scope thresholds."})

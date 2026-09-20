@@ -820,6 +820,44 @@ KM1_SOURCES = (
     + ENTITY_NOTE
 )
 
+
+# GA-020 (2026-09-19). The FY2018 and FY2019 Pillar 3 editions exist and were not previously used by this
+# workbook (recovered via Wayback CDX; the FY2018 file is still live at monzo.com/documents/pillar_3_2018.pdf).
+# See FY2018_P3_NOTE below.
+P3_18_URL = "https://monzo.com/documents/pillar_3_2018.pdf"
+P3_19_URL = "https://web.archive.org/web/20190915162842id_/https://monzo.com/documents/pillar_3_2019.pdf"
+T1_2018 = ("Not published – FY2018 Pillar 3 prints no Tier 1 capital amount (Table b p.15; Appendix 1 p.25 omits "
+           "row 45) but states Monzo has no AT1, and prints a Tier 1 ratio of 196%")
+LEV_EXCL_NP = ("Not published – {doc} gives only an all-assets leverage ratio ({v}), carried on the 'including "
+               "claims on central banks' row; the UK exclusion began 1 Jan 2022")
+MREL_AT_MCR = {
+    "FY2020": "Not applicable – FY2020 Pillar 3 p.8: 'Monzo's current MREL requirement is equal to its regulatory "
+              "total capital requirement'",
+    "FY2019": "Not applicable – FY2019 Pillar 3 p.15: 'Monzo has no additional MREL above its minimum capital "
+              "requirements'",
+    "FY2018": "Not applicable – FY2018 Pillar 3 p.13: 'Monzo's MREL requirement is equal to its CRD IV "
+              "requirement under Pillar 1 and Pillar 2A'",
+}
+FY2018_P3_NOTE = (
+    "GA-020 CORRECTION, 2026-09-19: this note said 'no Pillar 3 edition reaches back' to FY2018. That was wrong. A "
+    "Wayback CDX sweep of monzo.com returns Pillar 3 editions for 28 February 2017, 2018 and 2019 as well as 2020 "
+    "onward, and the FY2018 one is still live at " + P3_18_URL + " (HTTP 200, %PDF, 242,527 bytes, 26pp, cover "
+    "'Pillar 3 Disclosures 28 February 2018'; the Wayback copy is byte-identical). FY2018 figures now added from "
+    "it, each read off the page image: Table b 'Capital and leverage ratios' p.15 - CET1 capital 56,165, total "
+    "capital 56,165, RWAs 28,672, CET1 ratio 196%, leverage ratio 40%; Table c p.15 - leverage exposure (all "
+    "balance-sheet assets less intangibles plus undrawn overdrafts) 139,879, placed on the INCLUDING-central-bank-"
+    "claims rows for the same reason as FY2019; Appendix 1 EBA own funds p.25 - Tier 1 ratio (row 62) and total "
+    "capital ratio (row 63) both 196%; LCR p.19 - 'The ratio as at February 2018 sat at 2,402%' (point in time). "
+    "RECORDED, NOT RECONCILED: the same document's Appendix 1 prints CET1 capital 56,167 (row 29) and Total "
+    "Capital 56,179 (row 59) against Table b's 56,165 for both; Table b's headline figures are the ones carried. "
+    "No Tier 1 capital AMOUNT is printed anywhere in it, so that cell says so rather than copying CET1. "
+    "The FY2019 edition exists in TWO versions - the original (Wayback 2019-09-15) printing a 126% CET1/total "
+    "capital ratio and an 'Updated as of November 2019' version (monzo.com/docs/pillar_3_2019.pdf) printing "
+    "104%* - which bears on the FY2019 restatement discussed above; the FY2019 column is left as it stood, since "
+    "re-sourcing it is outside this pass. Also added: FY2020 total capital ratio 70%, printed in the FY2020 "
+    "Pillar 3's Table b, p.10."
+)
+
 NOT_DISCLOSED_1820 = {"FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed"}
 
 PRE2021_PILLAR3_NOTE = (
@@ -853,7 +891,8 @@ PRE2021_PILLAR3_NOTE = (
     "FY2019 accounts have no capital-management note at all, and no Pillar 3 edition reaches back that far.\n"
     "STILL BLANK FOR FY2019 AFTER THIS SWEEP, deliberately: NSFR and MREL (the FY2020 edition contains neither "
     "template in any column) and the RWA Breakdown sheet (the FY2020 edition's Table d 'RWAs as at 29 February "
-    "2020' is single-column - RWAs against Pillar 1 capital, no prior-year column - so there is nothing to read)."
+    "2020' is single-column - RWAs against Pillar 1 capital, no prior-year column - so there is nothing to read).\n"
+    + FY2018_P3_NOTE
 )
 
 bw.add_km1_sheet(
@@ -869,7 +908,7 @@ bw.add_km1_sheet(
 
 metric(
     "CET1 Capital", "£'000, Group/consolidated basis (solo basis for MBL years - Monzo's subsidiaries are excluded from prudential consolidation as below UK CRR Article 19 thresholds)",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2026": 1276002, "FY2025": 1158302, "FY2024": 888274, "FY2023": 532582, "FY2022": 575287, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632}})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2026": 1276002, "FY2025": 1158302, "FY2024": 888274, "FY2023": 532582, "FY2022": 575287, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632, "FY2018": 56165}})],
     p3_sources(),
     note=PRE2021_PILLAR3_NOTE,
 )
@@ -877,7 +916,7 @@ metric(
 metric(
     "CET1 Ratio", "% of RWA",
     [
-        ("Common Equity Tier 1 (CET1) ratio - as originally reported by each year's own document", {"FY2026": '33.45%', "FY2025": "55.92%", "FY2024": "54.94%", "FY2023": "54.40%", "FY2022": "155.1%", "FY2021": "99%", "FY2020": "70% (unaudited)", "FY2019": "126% (unaudited)", "FY2018": "Not publicly disclosed"}),
+        ("Common Equity Tier 1 (CET1) ratio - as originally reported by each year's own document", {"FY2026": '33.45%', "FY2025": "55.92%", "FY2024": "54.94%", "FY2023": "54.40%", "FY2022": "155.1%", "FY2021": "99%", "FY2020": "70% (unaudited)", "FY2019": "126% (unaudited)", "FY2018": "196%"}),
         ("CET1 ratio for FY2019 as restated in the FY2020 Pillar 3's own 2019 comparative column", {"FY2019": "104%"}),
     ],
     p3_sources(),
@@ -894,7 +933,7 @@ metric(
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {"FY2026": 1276002, "FY2025": 1158302, "FY2024": 888274, "FY2023": 532582, "FY2022": 575287, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632}})],
+    [("Tier 1 capital", {"FY2026": 1276002, "FY2025": 1158302, "FY2024": 888274, "FY2023": 532582, "FY2022": 575287, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632, "FY2018": T1_2018}})],
     p3_sources(),
     note="Equal to CET1 capital in every year shown - Monzo has not issued any Additional Tier 1 (AT1) instruments. " + PRE2021_PILLAR3_NOTE,
 )
@@ -902,7 +941,7 @@ metric(
 metric(
     "Tier 1 Ratio", "% of RWA",
     [
-        ("Tier 1 ratio - as originally reported by each year's own document", {"FY2026": '33.45%', "FY2025": "55.92%", "FY2024": "54.94%", "FY2023": "54.40%", "FY2022": "155.1%", "FY2021": "99%", "FY2020": "70% (unaudited)", "FY2019": "126% (unaudited)", "FY2018": "Not publicly disclosed"}),
+        ("Tier 1 ratio - as originally reported by each year's own document", {"FY2026": '33.45%', "FY2025": "55.92%", "FY2024": "54.94%", "FY2023": "54.40%", "FY2022": "155.1%", "FY2021": "99%", "FY2020": "70% (unaudited)", "FY2019": "126% (unaudited)", "FY2018": "196%"}),
         ("Tier 1 ratio for FY2019 as restated in the FY2020 Pillar 3's own 2019 comparative column", {"FY2019": "104%"}),
     ],
     p3_sources(),
@@ -915,21 +954,21 @@ metric(
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital", {"FY2026": 1291772, "FY2025": 1173723, "FY2024": 903387, "FY2023": 547407, "FY2022": 589880, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632}})],
+    [("Total capital", {"FY2026": 1291772, "FY2025": 1173723, "FY2024": 903387, "FY2023": 547407, "FY2022": 589880, "FY2021": 233604, "FY2020": 142642, **{**NOT_DISCLOSED_1820, "FY2020": 142642, "FY2019": 97632, "FY2018": 56165}})],
     p3_sources(),
     note=PRE2021_PILLAR3_NOTE,
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2026": '33.86%', "FY2025": "56.67%", "FY2024": "55.87%", "FY2023": "55.91%", "FY2022": "159.1%", "FY2021": "99%", **{**NOT_DISCLOSED_1820, "FY2019": "104%"}})],
+    [("Total capital ratio", {"FY2026": '33.86%', "FY2025": "56.67%", "FY2024": "55.87%", "FY2023": "55.91%", "FY2022": "159.1%", "FY2021": "99%", **{**NOT_DISCLOSED_1820, "FY2020": "70%", "FY2019": "104%", "FY2018": "196%"}})],
     p3_sources(),
     note=PRE2021_PILLAR3_NOTE,
 )
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2026": 3814585, "FY2025": 2071182, "FY2024": 1616928, "FY2023": 979042, "FY2022": 370849, "FY2021": 236653, "FY2020": 202708, **{**NOT_DISCLOSED_1820, "FY2020": 202708, "FY2019": 93972}})],
+    [("Total risk-weighted exposure amount", {"FY2026": 3814585, "FY2025": 2071182, "FY2024": 1616928, "FY2023": 979042, "FY2022": 370849, "FY2021": 236653, "FY2020": 202708, **{**NOT_DISCLOSED_1820, "FY2020": 202708, "FY2019": 93972, "FY2018": 28672}})],
     p3_sources(),
     note=PRE2021_PILLAR3_NOTE,
 )
@@ -997,11 +1036,11 @@ metric(
     "Leverage Ratio", "£'000 / %",
     [
         ("Total exposure measure excluding claims on central banks", {"FY2026": 12352667, "FY2025": 7459493, "FY2024": 5550297, "FY2023": 3763096, "FY2021": 796590, "FY2020": 1764243}),
-        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": '10.33%', "FY2025": "15.53%", "FY2024": "16.00%", "FY2023": "14.15%", "FY2021": "29.3%", "FY2020": "8.1%", **{**NOT_DISCLOSED_1820, "FY2020": "8.1%"}}),
+        ("Leverage ratio excluding claims on central banks (%)", {"FY2026": '10.33%', "FY2025": "15.53%", "FY2024": "16.00%", "FY2023": "14.15%", "FY2021": "29.3%", "FY2020": "8.1%", "FY2019": LEV_EXCL_NP.format(y="FY2019", doc="FY2019 Pillar 3 Table c, p.17", v="15.5%"), "FY2018": LEV_EXCL_NP.format(y="FY2018", doc="FY2018 Pillar 3 Table c, p.15", v="40%")}),
         ("Leverage ratio total exposure measure - 2022 KM1 format, basis not specified in source", {"FY2022": 2238857}),
         ("Leverage ratio (%) - 2022 KM1 format, basis not specified in source", {"FY2022": "25.7%"}),
-        ("Total exposure measure including claims on central banks (CRR basis, retired from FY2022)", {"FY2021": 3667694, "FY2019": 631369}),
-        ("Leverage ratio including claims on central banks (%) (CRR basis, retired from FY2022)", {"FY2021": "6.4%", "FY2019": "15.5%"}),
+        ("Total exposure measure including claims on central banks (CRR basis, retired from FY2022)", {"FY2021": 3667694, "FY2019": 631369, "FY2018": 139879}),
+        ("Leverage ratio including claims on central banks (%) (CRR basis, retired from FY2022)", {"FY2021": "6.4%", "FY2019": "15.5%", "FY2018": "40%"}),
     ],
     p3_sources(),
     note="Leverage ratio terminology changed across these reports. FY2021 disclosed both a UK ratio (excluding central "
@@ -1031,7 +1070,7 @@ metric(
     [
         ("Total high-quality liquid assets / liquidity buffer (weighted value)", {"FY2026": 20082983, "FY2025": 13124870, "FY2024": 7651328, "FY2023": 5103316, "FY2022": 4600376, "FY2021": 3212266, "FY2020": 1415419, "FY2019": 510314}),
         ("Total net cash outflows (adjusted value)", {"FY2026": 1668780, "FY2025": 1133118, "FY2024": 1070436, "FY2023": 671159, "FY2022": 428980, "FY2021": 355375, "FY2020": 183675, "FY2019": 76994}),
-        ("Liquidity Coverage Ratio (%)", {"FY2026": '1209.79%', "FY2025": "1,178.76%", "FY2024": "724.51%", "FY2023": "760.4%", "FY2022": "1,072.4%", "FY2021": "904%", "FY2020": "771%", **{**NOT_DISCLOSED_1820, "FY2020": "771%", "FY2019": "663%"}}),
+        ("Liquidity Coverage Ratio (%)", {"FY2026": '1209.79%', "FY2025": "1,178.76%", "FY2024": "724.51%", "FY2023": "760.4%", "FY2022": "1,072.4%", "FY2021": "904%", "FY2020": "771%", **{**NOT_DISCLOSED_1820, "FY2020": "771%", "FY2019": "663%", "FY2018": "2,402%"}}),
     ],
     p3_sources(),
     note="FY2020 uses Monzo's own Pillar 3 Table i (liquidity buffer / net outflows); FY2021 used a simpler 'Table K: LCR' disclosure (liquidity buffer / net cash outflows) rather than the full "
@@ -1053,7 +1092,7 @@ metric(
     [
         ("Total available stable funding", {"FY2026": 22342143, "FY2025": 14543697, "FY2024": 9139028, "FY2023": 6055616, "FY2022": 4703076}),
         ("Total required stable funding", {"FY2026": 2966966, "FY2025": 1807551, "FY2024": 1345619, "FY2023": 835938, "FY2022": 444598}),
-        ("Net Stable Funding Ratio (%)", {"FY2026": '752.75%', "FY2025": "843.98%", "FY2024": "680.81%", "FY2023": "724.4%", "FY2022": "1,057.8%", "FY2021": "Not disclosed", **NOT_DISCLOSED_1820}),
+        ("Net Stable Funding Ratio (%)", {"FY2026": '752.75%', "FY2025": "843.98%", "FY2024": "680.81%", "FY2023": "724.4%", "FY2022": "1,057.8%", "FY2021": "Not published – FY2021 Pillar 3 says Monzo monitors its NSFR but prints no figure (text-searched 2026-09-19); first published in FY2022", **{y: f"Not published – no NSFR in the {y} Pillar 3 (text-searched 2026-09-19)" for y in ("FY2020", "FY2019", "FY2018")}}),
     ],
     p3_sources(),
     note="NSFR was not disclosed in Monzo's FY2021 Pillar 3 report (no NSFR table or mention present); it first "
@@ -1062,7 +1101,7 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not disclosed (ratio)" for y in YEARS if y not in ("FY2020", "FY2019", "FY2018")} | NOT_DISCLOSED_1820)],
+    [("MREL ratio", {y: "Not disclosed (ratio)" for y in YEARS if y not in ("FY2020", "FY2019", "FY2018")} | MREL_AT_MCR)],
     p3_sources(),
     note="Unlike Barclays Bank UK PLC, Monzo IS subject to its own MREL requirement (preferred resolution strategy: "
          "partial transfer) - but no Pillar 3 report in this series discloses a numeric MREL ratio or MREL resources "

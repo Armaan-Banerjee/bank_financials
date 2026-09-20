@@ -227,6 +227,19 @@ P3_SOURCES = (
 # metric() wrapper, following the build_vida.py / build_afin_bank.py convention, so an
 # empty cell is never mistaken for an unresearched gap.
 PRE_AUTHORISATION_YEARS = ["FY2020", "FY2019", "FY2018"]
+# GA-020 (2026-09-19) outcome vocabulary. The pre-authorisation reason is stated
+# in the cell itself, with its source, rather than a bare "Not applicable".
+PRE_AUTH_NA = ("Not applicable – no PRA authorisation of any kind at this 31 March year-end (AwR Nov 2020, full "
+               "authorisation Sep 2021: FY2022 Annual Report, PDF pp.23 and 45)")
+# The Bank's own printed "n/a" in the Mar-21 column of the March 2023 Pillar 3
+# UK KM1 (printed p.3), footnotes (a)/(b) on the same page.
+NA_PRINTED = "N/A (as printed)"
+MREL_NOT_PUBLISHED = ("Not published – own Pillar 3 UK KM1 (Mar-23/24/25/26 editions, printed p.3) has no MREL row; "
+                      "re-read 2026-09-19")
+MREL_NOT_PUBLISHED_FY2022 = ("Not published – no MREL row in UK KM1 Mar-22 column (Pillar 3 March 2023, p.3); FY2022 "
+                             "Annual Report text has no MREL mention (searched 2026-09-19)")
+MREL_NOT_PUBLISHED_FY2021 = ("Not published – no MREL row in UK KM1 Mar-21 column (Pillar 3 March 2023, p.3); FY2021 "
+                             "Annual Report capital note (p.43) has six lines, none MREL")
 
 PRE_AUTHORISATION_NOTE = (
     "FY2018-FY2020 READ 'Not applicable', NOT BLANK AND NOT 'Not disclosed' (set 2026-09-15). Recognise Bank Limited held no PRA "
@@ -493,7 +506,7 @@ def metric(name, unit, data, note=None, sources=None):
     # Pre-authorisation years are written as an explicit "Not applicable" default and
     # only overridden if a real figure exists for them (none does, by construction).
     rows_data = [
-        (label, {**{y: "Not applicable" for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in values.items() if v is not None}})
+        (label, {**{y: PRE_AUTH_NA for y in PRE_AUTHORISATION_YEARS}, **{k: v for k, v in values.items() if v is not None}})
         for label, values in data
     ]
     full_note = PRE_AUTHORISATION_NOTE + "\n\n" + ENUMERATED_NEGATIVE_NOTE
@@ -532,7 +545,7 @@ km1 = {
     # "(a) Exclusion of certain central bank claims was a new requirement for
     # 2022" and "(b) NSFR was a new requirement for 2022". It is not a blank and
     # not a zero.
-    "FY2021": (26396, 33449, "78.92%", "n/a", "n/a", 12767, 3329, 2497, 832, "1,534.1%", "n/a", "n/a", "n/a"),
+    "FY2021": (26396, 33449, "78.92%", NA_PRINTED, NA_PRINTED, 12767, 3329, 2497, 832, "1,534.1%", NA_PRINTED, NA_PRINTED, NA_PRINTED),
 }
 _NO_KM1 = (None,) * 13
 def col(i): return {y: km1.get(y, _NO_KM1)[i] for y in YEARS}
@@ -565,7 +578,9 @@ KM1_SOURCES = (
     "edition and are left BLANK here; row 9 is printed '-' for Mar-22 and Mar-21 and is likewise blank, while the "
     "2.0% and 1.0% entries from Mar-23 onward are real figures. Rows 13, 14, 18, 19 and 20 are printed 'n/a' for "
     "Mar-21 (the exclusion of central bank claims and the NSFR were both new requirements for 2022, per the "
-    "table's own footnotes (a) and (b)), and 'n/a' is reproduced as printed.\n\n"
+    "table's own footnotes (a) and (b)). Per KM1 map rule 2 those five Mar-21 cells carry the plain ASCII '-' "
+    "(changed 2026-09-19 under GA-020 from the literal 'n/a'); the glyph the March 2023 edition actually printed "
+    "is 'n/a'. The Leverage Ratio and NSFR sheets, which are not KM1 sheets, show it as 'N/A (as printed)'.\n\n"
     "TWO PRINTINGS THAT DIFFER, RECORDED NOT RECONCILED:\n"
     "- Row 12 for Mar-22 is 27.5% in the March 2023, 2024 and 2025 editions (used here, from the March 2023 "
     "edition) and 7.5% in the 2026 edition.\n"
@@ -654,8 +669,8 @@ bw.add_km1_sheet(
         ("DATA", "UK 11a Overall capital requirements (%)", {"FY2026": "17.3%", "FY2025": "21.1%", "FY2024": "21.1%", "FY2023": "18.9%", "FY2022": "17.9%", "FY2021": "15.2%"}),
         ("DATA", "12 CET1 available after meeting the total SREP own funds requirements (%)", {"FY2026": "8.1%", "FY2025": "13.8%", "FY2024": "9.7%", "FY2023": "49.7%", "FY2022": "27.5%", "FY2021": "66.2%"}),
         ("SECTION", "Leverage ratio", {}),
-        ("DATA", "13 Total exposure measure excluding claims on central banks (£'000)", {"FY2026": 509006, "FY2025": 329206, "FY2024": 316246, "FY2023": 134402, "FY2022": 109158, "FY2021": "n/a"}),
-        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2026": "14.7%", "FY2025": "20.3%", "FY2024": "16.6%", "FY2023": "42.8%", "FY2022": "34.3%", "FY2021": "n/a"}),
+        ("DATA", "13 Total exposure measure excluding claims on central banks (£'000)", {"FY2026": 509006, "FY2025": 329206, "FY2024": 316246, "FY2023": 134402, "FY2022": 109158, "FY2021": "-"}),
+        ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {"FY2026": "14.7%", "FY2025": "20.3%", "FY2024": "16.6%", "FY2023": "42.8%", "FY2022": "34.3%", "FY2021": "-"}),
         ("SECTION", "Liquidity Coverage Ratio", {}),
         ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {"FY2026": 220955, "FY2025": 212180, "FY2024": 149255, "FY2023": 71930, "FY2022": 20648, "FY2021": 12767}),
         ("DATA", "UK 16a Cash outflows - Total weighted value (£'000)", {"FY2026": 82309, "FY2025": 44148, "FY2024": 39271, "FY2023": 18358, "FY2022": 13379, "FY2021": 3329}),
@@ -663,9 +678,9 @@ bw.add_km1_sheet(
         ("DATA", "16 Total net cash outflows (adjusted value) (£'000)", {"FY2026": 73679, "FY2025": 38692, "FY2024": 28891, "FY2023": 8996, "FY2022": 5300, "FY2021": 832}),
         ("DATA", "17 Liquidity coverage ratio (%)", {"FY2026": "299.9%", "FY2025": "548.4%", "FY2024": "516.6%", "FY2023": "799.6%", "FY2022": "389.6%", "FY2021": "1,534.1%"}),
         ("SECTION", "Net Stable Funding Ratio", {}),
-        ("DATA", "18 Total available stable funding (£'000)", {"FY2026": 520393, "FY2025": 480437, "FY2024": 440424, "FY2023": 247010, "FY2022": 128630, "FY2021": "n/a"}),
-        ("DATA", "19 Total required stable funding (£'000)", {"FY2026": 295089, "FY2025": 211608, "FY2024": 213351, "FY2023": 93289, "FY2022": 78103, "FY2021": "n/a"}),
-        ("DATA", "20 NSFR ratio (%)", {"FY2026": "176.4%", "FY2025": "227.0%", "FY2024": "206.4%", "FY2023": "264.8%", "FY2022": "164.7%", "FY2021": "n/a"}),
+        ("DATA", "18 Total available stable funding (£'000)", {"FY2026": 520393, "FY2025": 480437, "FY2024": 440424, "FY2023": 247010, "FY2022": 128630, "FY2021": "-"}),
+        ("DATA", "19 Total required stable funding (£'000)", {"FY2026": 295089, "FY2025": 211608, "FY2024": 213351, "FY2023": 93289, "FY2022": 78103, "FY2021": "-"}),
+        ("DATA", "20 NSFR ratio (%)", {"FY2026": "176.4%", "FY2025": "227.0%", "FY2024": "206.4%", "FY2023": "264.8%", "FY2022": "164.7%", "FY2021": "-"}),
     ],
     sources_text=KM1_SOURCES,
     first_col_width=80,
@@ -700,9 +715,9 @@ bw.add_rwa_breakdown_sheet(
          {"FY2021": "Not published - the only edition reaching this date splits no categories"}),
         ("SECTION", "Not applicable - entity held no PRA authorisation in these years", {}),
         ("DATA", "Not applicable (no banking licence, and no authorisation of any kind, held at these year-ends)", {
-            "FY2020": "Not applicable",
-            "FY2019": "Not applicable",
-            "FY2018": "Not applicable",
+            "FY2020": PRE_AUTH_NA,
+            "FY2019": PRE_AUTH_NA,
+            "FY2018": PRE_AUTH_NA,
         }),
     ],
     sources_text=RWA_SOURCES + "\n\n" + PRE_AUTHORISATION_NOTE + "\n\n" + ENUMERATED_NEGATIVE_NOTE,
@@ -729,7 +744,7 @@ metric("LCR", "£'000 / %", [("Total high-quality liquid assets (HQLA), weighted
             "net outflows.",
        sources=P3_SOURCES_WITH_FY2021)
 metric("NSFR", "£'000 / %", [("Total available stable funding", col(10)), ("Total required stable funding", col(11)), ("NSFR ratio", col(12))], note=FY2021_NA_NOTE, sources=P3_SOURCES_WITH_FY2021)
-metric("MREL Ratio", None, [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS if y not in PRE_AUTHORISATION_YEARS})], "No quantitative MREL ratio was located in the official Recognise Bank annual reports or Pillar 3 disclosures reviewed. The March 2023, 2024, 2025 and 2026 Pillar 3 disclosures contain no MREL row in their UK KM1 tables at all (the 2026 edition was re-read in full on 2026-09-15 to confirm). FY2018-FY2020 read 'Not applicable' rather than 'Not publicly disclosed' because the entity was not PRA-authorised in those years.")
+metric("MREL Ratio", None, [("MREL ratio", {**{y: MREL_NOT_PUBLISHED for y in ["FY2026", "FY2025", "FY2024", "FY2023"]}, "FY2022": MREL_NOT_PUBLISHED_FY2022, "FY2021": MREL_NOT_PUBLISHED_FY2021})], "No quantitative MREL ratio was located in the official Recognise Bank annual reports or Pillar 3 disclosures reviewed. The March 2023, 2024, 2025 and 2026 Pillar 3 disclosures contain no MREL row in their UK KM1 tables at all (the 2026 edition was re-read in full on 2026-09-15 to confirm). FY2018-FY2020 read 'Not applicable' because the entity was not PRA-authorised in those years. GA-020 (2026-09-19): every MREL cell now states its outcome - 'Not published' with the document checked for each year. The FY2022 Annual Report's text layer and the four Pillar 3 editions were searched for 'MREL', 'eligible liabilities' and 'loss absorbing' with zero hits (positive control: the same AR text returns 78 'capital' hits).")
 
 def row_values(label, rows_list=rows):
     return next(values for kind, name, values in rows_list if name == label)

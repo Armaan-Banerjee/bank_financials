@@ -765,8 +765,9 @@ KM1_SOURCES = (
     "carry a 31/12/2020 comparative, but it is the same bespoke 13-line shape, not the template, so it "
     "cannot fill a template column; and no other edition prints FY2020 in template form. Those years' "
     "figures remain on the individual metric sheets, cited to their own editions.\n\n"
-    "THE THREE NSFR ROWS FOR FY2021 READ 'N/A' BECAUSE THAT IS THE LITERAL STRING THE BANK PRINTS IN THAT "
-    "COLUMN - not a dash and not an empty cell - so 'N/A' is what this sheet carries (map rule 2). The "
+    "THE THREE NSFR ROWS FOR FY2021 CARRY '-' BECAUSE THE BANK PRINTS THE LITERAL STRING 'N/A' IN THAT "
+    "COLUMN (FY2022 edition p.4, page image re-read 2026-09-19) - not an empty cell. Under KM1 map rule 2 a "
+    "printed 'n/a' is carried as the plain ASCII '-' and the glyph actually printed, 'N/A', is recorded here. The "
     "FY2021 column's countercyclical buffer row, by contrast, is a printed '0.00%', a disclosed zero, and is "
     "carried as the zero.\n\n"
     "TWO FY2021 FIGURES ON WHICH THE BANK'S TWO TABLES GENUINELY DISAGREE - BOTH RECORDED, NEITHER "
@@ -856,11 +857,11 @@ km1_rows = [
      {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "315%"}),
     ("SECTION", "NET STABLE FUNDING RATIO", {}),
     ("DATA", "Total available stable funding (£'000)",
-     {"FY2025": 1289527, "FY2024": 1281180, "FY2023": 1401110, "FY2022": 1502432, "FY2021": "N/A"}),
+     {"FY2025": 1289527, "FY2024": 1281180, "FY2023": 1401110, "FY2022": 1502432, "FY2021": "-"}),
     ("DATA", "Total required stable funding (£'000)",
-     {"FY2025": 1070069, "FY2024": 1025644, "FY2023": 969949, "FY2022": 1053953, "FY2021": "N/A"}),
+     {"FY2025": 1070069, "FY2024": 1025644, "FY2023": 969949, "FY2022": 1053953, "FY2021": "-"}),
     ("DATA", "NSFR ratio (%)",
-     {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%", "FY2021": "N/A"}),
+     {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%", "FY2021": "-"}),
 ]
 
 bw.add_km1_sheet(
@@ -960,23 +961,33 @@ RWA_SOURCES = (
     + ENTITY_NOTE
 )
 
+# GA-020 (2026-09-19): the FY2022-FY2025 category split is NOT published - each
+# edition is a 5-page KM1-only document and each year's financial statements
+# (FS2022-FS2025, full text searched 2026-09-19) contain no RWA figure at all.
+RWA_SPLIT_NP = {y: (f"Not published – BLME {y} Pillar III Disclosure (5pp) is the Key metrics table only: total "
+                    f"RWEA, no split by risk type; {y} financial statements print no RWA")
+                for y in ["FY2022", "FY2023", "FY2024", "FY2025"]}
+
 rwa_breakdown_rows = [
     ("SECTION", "RWA by risk category (£m)", {}),
     ("DATA", "Credit risk (excluding counterparty credit risk)", {"FY2021": 1244.608, "FY2020": 1392.593, "FY2019": 1389.033,
      "FY2018": 1162.669, "FY2017": 943, "FY2016": 960, "FY2015": 1220, "FY2014": 1165.875,
-     "FY2022": "Not publicly disclosed", "FY2023": "Not publicly disclosed", "FY2024": "Not publicly disclosed", "FY2025": "Not publicly disclosed"}),
+     **RWA_SPLIT_NP}),
     ("DATA", "Counterparty credit risk", {"FY2021": 0.509, "FY2020": 0.899, "FY2019": 2.104, "FY2018": 0, "FY2017": 0, "FY2014": 3.150}),
     ("DATA", "Market risk", {"FY2021": 1.397, "FY2020": 5.201, "FY2019": 3.993, "FY2018": 4, "FY2017": 1, "FY2016": 7, "FY2015": 3, "FY2014": 2.988}),
     ("DATA", "Operational risk", {"FY2021": 67.263, "FY2020": 73.575, "FY2019": 77.763, "FY2018": 78, "FY2017": 88, "FY2016": 87, "FY2015": 81, "FY2014": 67.538}),
     ("DATA", "Credit valuation adjustment", {"FY2016": 1, "FY2015": 1}),
     ("TOTAL", "Total RWAs", {"FY2021": 1313.777, "FY2020": 1472.268, "FY2019": 1466.255, "FY2018": 1245.086, "FY2017": 1032,
      "FY2016": 1055, "FY2015": 1305, "FY2014": 1239.550,
-     "FY2022": "Not publicly disclosed", "FY2023": "Not publicly disclosed", "FY2024": "Not publicly disclosed", "FY2025": "Not publicly disclosed"}),
+     # GA-020 (2026-09-19): FY2022-FY2025 totals FOUND - each edition's Key metrics
+     # 'Total risk-weighted exposure amount' (£'000 / 1,000), the same figures the
+     # Total RWAs sheet carries. FY2022 re-read off the page image (p.4: 1,376,389).
+     "FY2022": 1376.389, "FY2023": 1342.418, "FY2024": 1279.034, "FY2025": 1170.428}),
 ]
 
 bw.add_rwa_breakdown_sheet(
     title="Bank of London and The Middle East plc — RWA Breakdown",
-    subtitle="FY2014-FY2021 (UK OV1-equivalent category split) - not disclosed at this granularity FY2022-25, see note below.",
+    subtitle="FY2014-FY2021 (UK OV1-equivalent category split); FY2022-25 publish the total only (Key metrics table), no category split - see note below.",
     rows=rwa_breakdown_rows,
     sources_text=RWA_SOURCES,
     first_col_width=58,
@@ -987,7 +998,8 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "%",
        [("Leverage ratio (excluding claims on central banks)", {"FY2025": "14.95%", "FY2024": "14.98%", "FY2023": "14.88%", "FY2022": "14.00%", "FY2021": "14.92%",
          "FY2020": "13.60%", "FY2019": "13.40%", "FY2018": "15.83%", "FY2017": "19.28%", "FY2016": "19.94%", "FY2015": "15.63%",
-         "FY2014": "Not publicly disclosed"})],
+         "FY2014": ("Not published – FY2014 Annual Report (p.13) says BLME 'was compliant with the leverage ratio' and "
+                    "reported it to the PRA, but prints no ratio; FY2014 Pillar III Disclosures (21pp) print none")})],
        p3_sources(),
        note="FY2014 leverage ratio not publicly disclosed - the UK leverage ratio framework was not yet a binding "
             "PRA reporting requirement at that date (per the FY2014 Annual Report's own text: 'the ratio was "
@@ -998,7 +1010,10 @@ metric("Leverage Ratio", "%",
 metric("LCR", "%",
        [("Liquidity Coverage Ratio", {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "208%",
          "FY2020": "234.15%", "FY2019": "261.23%", "FY2018": "184.86%", "FY2017": "403%", "FY2016": "4,115%",
-         "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})],
+         "FY2015": ("Not published – FY2015 Pillar III Disclosures (20pp) and FY2015 financial statements print no LCR "
+                    "(full text searched 2026-09-19); FY2016 edition prints none either"),
+         "FY2014": ("Not published – FY2014 Pillar III Disclosures (21pp) and FY2014 financial statements print no LCR "
+                    "(full text searched 2026-09-19)")})],
        p3_sources(
            f"FY2021 LCR - THE ONE FIGURE ON WHICH BLME'S TWO DOCUMENTS FOR THAT DATE GENUINELY DISAGREE, AND IT "
            f"IS A BASIS DIFFERENCE, NOT A RESTATEMENT. This sheet carries 208%, from BLME's OWN FY2021 Pillar III "
@@ -1036,8 +1051,10 @@ metric("LCR", "%",
 metric("NSFR", "%",
        [("Net Stable Funding Ratio", {"FY2025": "121%", "FY2024": "125%", "FY2023": "144%", "FY2022": "143%",
          "FY2021": "113.85%",
-         "FY2020": "114.46%", "FY2019": "112.48%", "FY2018": "104%", "FY2017": "Not publicly disclosed",
-         "FY2016": "Not publicly disclosed", "FY2015": "Not publicly disclosed", "FY2014": "Not publicly disclosed"})],
+         "FY2020": "114.46%", "FY2019": "112.48%", "FY2018": "104%",
+         **{y: (f"Not published – BLME {y} Pillar III Disclosures and {y} financial statements (full text searched "
+                "2026-09-19) never mention the NSFR; voluntary NSFR disclosure began FY2018")
+            for y in ["FY2017", "FY2016", "FY2015", "FY2014"]}})],
        p3_sources(
            f"FY2021 NSFR ONLY: Pillar III Disclosure - 31 December 2021, section 1.3 Table 2 'Key ratios', p.7 - "
            f"{P32021_URL}. The FY2022 report's FY2021 comparative column prints the literal string 'N/A' for NSFR "
@@ -1050,9 +1067,17 @@ metric("NSFR", "%",
             "to be an average of four quarter-ends - the two are not strictly like-for-like. The FY2022 report's own "
             "FY2021 comparative column shows 'N/A' on that KM1 basis.")
 
+MREL_ST = {y: (f"Not published – BLME {y} Pillar III Disclosures and financial statements (full text searched "
+               "2026-09-19) never mention MREL or loss-absorbing capacity") for y in ["FY2014", "FY2015", "FY2016", "FY2017"]}
+MREL_ST.update({y: (f"Not published – BLME {y} Pillar III Disclosure (5pp, Key metrics table only) and {y} financial "
+                    "statements (full text searched 2026-09-19) never mention MREL") for y in ["FY2022", "FY2023", "FY2024", "FY2025"]})
+MREL_ST.update({y: (f"Not applicable – BLME {y} Pillar III s.5.3 (p.{pg}): loss-absorbing capacity equals the minimum "
+                    "capital requirement; 'The PRA does not require BLME to hold a MREL recapitalisation reserve'")
+                for y, pg in [("FY2018", 15), ("FY2019", 16), ("FY2020", 16), ("FY2021", 16)]})
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": MREL_ST},
     per_note={"MREL Ratio": "No MREL ratio is disclosed in any year. CORRECTED 18 September 2026 (ticket "
                              "KM1-034): this note previously said MREL was 'not mentioned in the FY2021-2025 "
                              "Pillar III Disclosures reviewed (searched directly, no hits any year)', which was "

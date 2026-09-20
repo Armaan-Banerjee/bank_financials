@@ -1296,8 +1296,20 @@ metric("NSFR", "%, 4-quarter rolling average of quarter-end positions", [
          "before its 31 March 2026 year-end, and 'net stable funding' and 'NSFR' return zero hits in the "
          "whole Financial Report 2026 against 3,013 hits for 'the'.")
 
+# GA-020 (2026-09-19): re-downloaded and searched (text-native, %PDF): Pillar 3 Disclosures
+# 2019 (Wayback id_), 2021, 2022, 2023, 2024, 2025 and Financial Reports 2019, 2020, 2021, 2025,
+# 2026 - 0 hits for "MREL", "KM2", "eligible liabilities" and "loss-absorbing" in every one,
+# against 99-191 "capital" hits each.
+_HOARE_MREL = {y: (f"Not published – C. Hoare & Co. {y} Pillar 3 Disclosures has no MREL figure, KM2 or "
+                   "eligible-liabilities row (text probe 0 hits, 2026-09-19)")
+               for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2019")}
+_HOARE_MREL["FY2020"] = ("Not published – no MREL in the Pillar 3 2021 (FY2020 comparatives) or the FY2020 "
+                         "Annual Report and Accounts (text probe 0 hits, 2026-09-19)")
+_HOARE_MREL["FY2026"] = ("Not published – no Pillar 3 for FY2026 (SDDT Rule 3.1 opt-in 9 Dec 2025, PRA "
+                         "waivers register) and Financial Report 2026 has no MREL (0 hits, 2026-09-19)")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(PAGES),
+    statements={"MREL Ratio": _HOARE_MREL},
     per_note={"MREL Ratio": "Not found in either Pillar 3 document reviewed (2025 or 2023 edition) - no MREL "
                              "row exists in this bank's Own Funds Disclosure template at all, and no separate "
                              "qualitative statement was found either."},

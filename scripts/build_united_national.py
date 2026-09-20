@@ -7,6 +7,12 @@ from bank_workbook import BankWorkbook
 # Wayback signal), re-verified here against the actual Companies House
 # filings and ubluk.com Pillar 3 archive rather than assumed from that scan.
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018", "FY2017", "FY2016"]  # most recent first
+# GA-020 (2026-09-19): evidenced statements. FY2025: the bank's index (re-fetched 2026-09-19) still lists
+# no FY2025 Pillar III Disclosure; FY2024's edition is dated 1 July 2026, so FY2025's is not yet due on the
+# bank's own cadence. The FY2025 AR KPI table (p.5) prints only a total-capital CAR (16.3%) and LCR - no
+# CET1/Tier 1 ratio, RWA, leverage, NSFR or MREL figure (native text searched 2026-09-19).
+UNB_P3_PENDING = ("Not published yet – FY2025 Pillar 3 not on bank's index at 2026-09-19; FY2024 edition was dated "
+                  "1 Jul 2026, so due c. mid-2027. AR2025 KPI table prints no such figure")
 YEAR_LABEL = {y: y for y in YEARS}
 
 AR2025_URL = "https://find-and-update.company-information.service.gov.uk/company/04146820/filing-history/MzUxODk3MTQ2NWFkaXF6a2N4/document?format=pdf"
@@ -770,7 +776,7 @@ metric(
 metric(
     "CET1 Ratio", "% of RWA",
     [("Common Equity Tier 1 (CET1) ratio", {
-        "FY2023": "21.46%", "FY2022": "19.08%", "FY2024": "19.86%", "FY2025": "Not disclosed",
+        "FY2023": "21.46%", "FY2022": "19.08%", "FY2024": "19.86%", "FY2025": UNB_P3_PENDING,
         "FY2021": "22.2%", "FY2020": "23.9%", "FY2019": "21.4%", "FY2018": "21.1%",
         "FY2017": "18.6%", "FY2016": "17.6%",
     })],
@@ -799,7 +805,7 @@ metric(
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {
-        "FY2023": "21.46%", "FY2022": "19.08%", "FY2024": "19.86%", "FY2025": "Not disclosed",
+        "FY2023": "21.46%", "FY2022": "19.08%", "FY2024": "19.86%", "FY2025": UNB_P3_PENDING,
         "FY2021": "22.2%", "FY2020": "23.9%", "FY2019": "21.4%", "FY2018": "21.1%",
         "FY2017": "18.6%", "FY2016": "17.6%",
     })],
@@ -848,7 +854,7 @@ metric(
 metric(
     "Total RWAs", "£",
     [("Total risk-weighted exposure amount", {
-        "FY2023": 412732000, "FY2022": 385707000, "FY2024": 493153000, "FY2025": "Not disclosed",
+        "FY2023": 412732000, "FY2022": 385707000, "FY2024": 493153000, "FY2025": UNB_P3_PENDING,
         "FY2021": 342987000, "FY2020": 316139000, "FY2019": 361460000, "FY2018": 331832000,
         "FY2017": 438970000, "FY2016": 434265000,
     })],
@@ -884,7 +890,7 @@ rwa_breakdown_rows = [
         "FY2017": 27243000, "FY2016": 25482000,
     }),
     ("TOTAL", "Total risk-weighted exposure amount", {
-        "FY2023": 412732000, "FY2022": 385707000, "FY2024": 493153000, "FY2025": "Not disclosed",
+        "FY2023": 412732000, "FY2022": 385707000, "FY2024": 493153000, "FY2025": UNB_P3_PENDING,
         "FY2021": 342987000, "FY2020": 316139000, "FY2019": 361460000, "FY2018": 331832000,
         "FY2017": 438970000, "FY2016": 434265000,
     }),
@@ -923,7 +929,7 @@ metric(
             "FY2017": 81564000, "FY2016": 76866000,
         }),
         ("Leverage ratio (%)", {
-            "FY2023": "8.52%", "FY2022": "8.43%", "FY2024": "7.17%", "FY2025": "Not disclosed",
+            "FY2023": "8.52%", "FY2022": "8.43%", "FY2024": "7.17%", "FY2025": UNB_P3_PENDING,
             "FY2021": "10.97%", "FY2020": "12.55%", "FY2019": "15.51%", "FY2018": "13.95%",
             "FY2017": "15.8%", "FY2016": "14.4%",
         }),
@@ -981,6 +987,9 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["NSFR"], p3_sources(),
+    statements={"NSFR": {**{y: ("Not published – this year's Pillar III Disclosure mentions the NSFR only in "
+                                "narrative (no ratio printed); text-searched 2026-09-19")
+                            for y in YEARS if y != "FY2025"}, "FY2025": UNB_P3_PENDING}},
     per_note={"NSFR": "No numeric NSFR is disclosed in any year. Re-verified 2026-09-15 against the FY2024 "
                       "Pillar 3 document and the FY2021-FY2025 Annual Reports: the FY2024 Pillar 3 refers to "
                       "the NSFR only in narrative terms (\"the Bank is also required to report the Net Stable "
@@ -992,9 +1001,14 @@ bw.add_not_disclosed_metric_sheets(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not disclosed" for y in YEARS})],
+    [("MREL ratio", {**{y: ("Not published – no MREL figure or mention in this year's Pillar III Disclosure "
+                            "(text-searched 2026-09-19)") for y in YEARS if y != "FY2025"},
+                     "FY2025": UNB_P3_PENDING})],
     p3_sources(),
-    note="No numeric or qualitative MREL disclosure of any kind was found for this bank in any year reviewed.",
+    note="No numeric or qualitative MREL disclosure of any kind was found for this bank in any year reviewed. "
+         "GA-020 re-check 2026-09-19: all nine Pillar III Disclosures FY2016-FY2024 (native text, from the bank's "
+         "own index) and the FY2025 Annual Report were searched for 'MREL' - zero hits. FY2025's Pillar 3 is not "
+         "yet published (see UNB_P3_PENDING wording).",
 )
 
 # ---------------------------------------------------------------

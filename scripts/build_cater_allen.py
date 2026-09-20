@@ -366,7 +366,28 @@ CET1_RATIO = {"FY2025": "78.20%", "FY2024": "98.74%", "FY2023": "122.8%", "FY202
 #   FY2025 217,373/0.7820 = 277,971    FY2024 246,095/0.9874 = 249,235
 #   FY2023 220,848/1.2280 = 179,844    FY2022 268,414/2.4650 = 108,890
 RWA_CALC_WITHDRAWN = {"FY2025": 277971, "FY2024": 249235, "FY2023": 179844, "FY2022": 108890}  # noqa: F841
-RWA_NOT_DISCLOSED = {y: "Not publicly disclosed" for y in YEARS}
+# GA-020 (2026-09-19): bare statements reclassified on the evidence already cited in this
+# script (FY2021-FY2025 Annual Reports; Santander UK ACRMD FY2023-FY2025; BoE waivers
+# register row for FRN 178737), re-checked against the text-layer FY2022-FY2024 reports:
+# 'leverage' and 'MREL' occur only as "continues to be in excess of ... minimum leverage
+# requirements and ... MREL" and "subject to ... leverage rules" at RFB sub-group level;
+# liquidity is managed through the RFB Domestic Liquidity Sub-Group (FY2024 AR, Liquidity risk).
+RWA_NOT_DISCLOSED = {y: ("Not published – no RWA amount in Cater Allen ARs FY2021–FY2025 (Capital adequacy table is a "
+                         "Tier 1 build-up only); Santander UK ACRMD FY2023–25 carries no Cater Allen figure.") for y in YEARS}
+GA020_ST = {
+    "Leverage Ratio": ("Not published – Cater Allen ARs FY2021–FY2025 print no leverage ratio, only that it is 'in excess "
+                       "of ... minimum leverage requirements' (leverage rules apply at Santander UK RFB sub-group level)."),
+    "LCR": dict({y: ("Not applicable – liquidity requirements met at RFB Domestic Liquidity Sub-group level (BoE waivers "
+                     "register, FRN 178737, 'DoLSub Permission', Ru 2.2, from 01/01/2022; AR Liquidity risk section).")
+                 for y in ["FY2025", "FY2024", "FY2023", "FY2022"]},
+                FY2021="Not published – no LCR figure in the FY2021 or FY2022 Annual Report (liquidity described narratively only)."),
+    "NSFR": dict({y: ("Not applicable – liquidity requirements met at RFB Domestic Liquidity Sub-group level (BoE waivers "
+                      "register, FRN 178737, 'DoLSub Permission', Ru 2.2, from 01/01/2022; AR Liquidity risk section).")
+                  for y in ["FY2025", "FY2024", "FY2023", "FY2022"]},
+                 FY2021="Not published – no NSFR figure in the FY2021 or FY2022 Annual Report (liquidity described narratively only)."),
+    "MREL Ratio": ("Not published – no MREL figure in Cater Allen ARs FY2021–FY2025 (FY2023/24 say only it is 'in excess "
+                   "of ... MREL') or in Santander UK's ACRMD FY2023–25."),
+}
 
 NOT_DISCLOSED_NOTE = (
     "Not publicly disclosed. Cater Allen's Annual Report discloses only CET1 capital ratio and "
@@ -485,7 +506,9 @@ bw.add_km1_sheet(
     title="Cater Allen Limited - KM1 Key Metrics",
     subtitle="Not applicable - the Bank publishes no Pillar 3 of its own, and Santander UK's group ACRMD "
              "carries no Cater Allen capital block (liquidity is reported at RFB DoLSub level)",
-    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: ("Not applicable – no own Pillar 3: disclosure duty sits with Santander "
+                                                          "UK Group Holdings (ACRMD scope: 'large subsidiary of an EU parent'); "
+                                                          "ACRMD FY2023–25 has no Cater Allen block.") for y in YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=76,
     source_height=560,
@@ -534,6 +557,7 @@ bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
     CAPITAL_SOURCES,
     per_note={m: NOT_DISCLOSED_NOTE for m in ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]},
+    statements=GA020_ST,
 )
 
 # ---------------------------------------------------------------

@@ -578,10 +578,13 @@ bw.add_asset_quality_sheet(
 # RWA Breakdown sheet on this same workbook already does, and build_afin_bank.py's
 # handling of the identical situation.
 PRE_LICENCE_YEARS = ["FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018"]
+# GA-020 (2026-09-19): evidenced wording replacing bare "Not applicable".
+PRE_LICENCE_NA = ("Not applicable – not a PRA-authorised bank until 19 Nov 2024, so no CRR Pillar 3 duty; "
+                  "FY2019/FY2020 ARs (Companies House 09837692) show the licence application still pending")
 
 
 def metric(name, unit, rows_data, note=None):
-    rows_data = [(label, {**{y: "Not applicable" for y in PRE_LICENCE_YEARS}, **values})
+    rows_data = [(label, {**{y: PRE_LICENCE_NA for y in PRE_LICENCE_YEARS}, **values})
                  for label, values in rows_data]
     bw.add_metric_sheet(name, f"Vida Group Holdings basis, {unit}" if unit else "Vida Group Holdings basis",
                          rows_data, p3_sources(), note=note, first_col_width=48, source_height=130)
@@ -729,12 +732,12 @@ bw.add_rwa_breakdown_sheet(
         ("TOTAL", "Total risk weighted exposure amount (Table OV1)", {"FY2025": 1105779, "FY2024": 986809}),
         ("SECTION", "Not applicable - entity was not a PRA-authorised bank", {}),
         ("DATA", "Not applicable (no banking licence held in these years)", {
-            "FY2023": "Not applicable",
-            "FY2022": "Not applicable",
-            "FY2021": "Not applicable",
-            "FY2020": "Not applicable",
-            "FY2019": "Not applicable",
-            "FY2018": "Not applicable",
+            "FY2023": PRE_LICENCE_NA,
+            "FY2022": PRE_LICENCE_NA,
+            "FY2021": PRE_LICENCE_NA,
+            "FY2020": PRE_LICENCE_NA,
+            "FY2019": PRE_LICENCE_NA,
+            "FY2018": PRE_LICENCE_NA,
         }),
     ],
     sources_text=(
@@ -794,7 +797,9 @@ metric(
     ],
 )
 metric("MREL Ratio", None,
-       [("MREL ratio", {y: "Not disclosed" for y in YEARS if y not in PRE_LICENCE_YEARS})],
+       [("MREL ratio", {y: ("Not published – Vida Group Holdings Pillar 3 report 2025 and 2024 (9pp each, "
+                                   "re-read 2026-09-19) contain no MREL figure or mention")
+                               for y in YEARS if y not in PRE_LICENCE_YEARS})],
        note="FY2025/FY2024: no MREL disclosure (numeric or qualitative) found in either Pillar 3 report - Vida is a "
             "small, recently-authorised bank and does not appear to be within scope of an MREL-above-minimum-capital "
             "requirement based on its own disclosures. FY2018-FY2023 read 'Not applicable' rather than 'Not "

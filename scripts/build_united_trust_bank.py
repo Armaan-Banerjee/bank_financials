@@ -902,8 +902,13 @@ metric("NSFR", "£'000 / %", [
     "Bank Limited's own solo-basis FY2020 Pillar 3 disclosure - confirmed absent from its own contents page, "
     "not merely a document gap."
 ))
-metric("MREL Ratio", "£'000 / %", [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})], note=(
-    "No MREL ratio or numeric MREL requirement was located in the five UTB Partners Pillar 3 reports reviewed."
+metric("MREL Ratio", "£'000 / %", [("MREL ratio", {y: (
+    f"Not published – no MREL figure or requirement in the {y} UTB Pillar 3 (text-searched 2026-09-19: 'MREL' "
+    "0 hits)") for y in YEARS})], note=(
+    "No MREL ratio or numeric MREL requirement was located in the five UTB Partners Pillar 3 reports reviewed. "
+    "GA-020 (2026-09-19): all six editions FY2020-FY2025 re-fetched from their cited URLs (FY2024 from its "
+    "Wayback snapshot) and searched for 'MREL' and 'eligible liabilities' - zero hits in every one, so each "
+    "cell reads 'Not published' on that evidence."
 ))
 
 bw.add_overview_sheet(

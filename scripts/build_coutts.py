@@ -518,11 +518,23 @@ metric(
          "onward (shown there with a FY2022 comparative, used for the FY2022 column here).",
 )
 
+# GA-020 (2026-09-19): re-checked against the four Coutts & Co Pillar 3 reports (P3_*_URL,
+# text PDFs). Each KM1 footnotes rows 15-20 'Under the UK DoLSub waiver Coutts & Co liquidity
+# [and funding are] managed and disclosed at the sub-group level rather than entity level'
+# (FY2022 report covers its Dec-2021 comparative column too). MREL: no KM1/KM2 MREL row and
+# no MREL ratio anywhere; 'MREL' appears only in the capital-instruments (CCA) table as
+# per-instrument 'amount recognised ... for the purpose of MREL'.
+GA020_LIQ = ("Not applicable – UK DoLSub waiver: Coutts Pillar 3 FY2022–25 KM1 footnote, 'Coutts & Co liquidity "
+             "[and funding are] managed and disclosed at the sub-group level' (FY2022 ed. covers Dec-21); see NWH Group.")
+GA020_MREL = ("Not published – no MREL ratio in Coutts Pillar 3 FY2022–25 (KM1 has no MREL rows; CCA gives only "
+              "per-instrument amounts 'for the purpose of MREL') or in ARs FY2021–25.")
 bw.add_not_disclosed_metric_sheets(
     ["LCR", "NSFR"], p3_sources(), per_note={"LCR": NOT_DISCLOSED_LIQ_NOTE, "NSFR": NOT_DISCLOSED_LIQ_NOTE},
+    statements={"LCR": GA020_LIQ, "NSFR": GA020_LIQ},
 )
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_MREL_NOTE},
+    statements={"MREL Ratio": GA020_MREL},
 )
 
 # ---------------------------------------------------------------

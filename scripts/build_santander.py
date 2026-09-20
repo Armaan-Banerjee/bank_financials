@@ -99,6 +99,7 @@ def p3_sources(page_25="47-48", page_23="47-48", page_21="42", page_20="42"):
 
 
 AR2022_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/santander_uk_plc_annual_report_2022.pdf"
+AR2021_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/santander_uk_plc_2021_annual_report.pdf"
 
 ACRMD2024_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/ACRMD%20FINAL_Dec%2024.pdf"
 
@@ -887,11 +888,23 @@ metric(
     [
         ("Total available stable funding", {"FY2025": 211913, "FY2024": 208000, "FY2023": 218975, "FY2022": 233408}),
         ("Total required stable funding", {"FY2025": 156768, "FY2024": 151457, "FY2023": 158693, "FY2022": 170615}),
-        ("NSFR ratio (%)", {"FY2025": "135%", "FY2024": "137%", "FY2023": "137.99%", "FY2022": "136.80%", "FY2021": "Not disclosed", "FY2020": "Not disclosed"}),
+        ("NSFR ratio (%)", {"FY2025": "135%", "FY2024": "137%", "FY2023": "137.99%", "FY2022": "136.80%",
+                            "FY2021": "Not published \u2013 FY2021 ACRMD KM1 has no NSFR rows (UK NSFR from 1 Jan 2022); "
+                                      "Annual Report 2021 p.112 gives RFB DoLSub year-end 136%, on the row below",
+                            "FY2020": "Not published \u2013 FY2020 ACRMD prints no NSFR; Annual Report 2020 says the NSFR is "
+                                      "'due to be implemented on 1 January 2022', no figure"}),
+        ("NSFR ratio, RFB DoLSub year-end (Annual Report, different basis)", {"FY2022": "135%", "FY2021": "136%"}),
     ],
-    p3_sources(),
-    note="NSFR was not a UK Pillar 3 disclosure requirement as at FY2021 or FY2020 (the UK NSFR regime took effect "
-         "from 1 January 2022), so no FY2021/FY2020 figures are available.",
+    p3_sources() + (
+        f"\nRFB DoLSub row: FY2022 - Santander UK plc Annual Report 2022, printed p.99 (Liquidity risk review, 'Net "
+        f"Stable Funding Ratio (NSFR)' table, 2022 135%) - {AR2022_URL}\n"
+        f"FY2021 - Santander UK plc Annual Report 2021, printed p.112 (PDF p.114), 'At 31 December 2021, the RFB DolSub "
+        f"NSFR was 136%.' - {AR2021_URL}"
+    ),
+    note="The NSFR ratio row is the KM1 basis (RFB Group). The UK NSFR regime took effect from 1 January 2022, so the "
+         "FY2021 ACRMD KM1 and the FY2020 ACRMD print no NSFR. The Annual Reports separately print a year-end NSFR for the "
+         "RFB DoLSub (domestic liquidity sub-group), a different perimeter and basis: 136% at 31 December 2021 and 135% at "
+         "31 December 2022. They sit on their own row and are not merged into the KM1 row (FY2022 KM1 prints 136.80%).",
 )
 
 metric(

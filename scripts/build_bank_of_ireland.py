@@ -809,6 +809,11 @@ RWA_BREAKDOWN_SOURCES = (
     "risk (unaudited)' paragraph (describing netting arrangements with the Irish Parent, with no RWA figure "
     "attached) appearing in every year's Credit risk section. Confirms the prior non-disclosure claim still "
     "holds for FY2021-FY2025.\n\n"
+    "GA-020 (2026-09-19), FY2018-FY2020: the Companies House group accounts for these years are image-only "
+    "(filings MzIyOTQwMjg5NWFkaXF6a2N4, MzI2NzAyNjQ2OWFkaXF6a2N4, MzI5NTcwMDU0M2FkaXF6a2N4), so they were OCR'd "
+    "in full. The only RWA figure is the Capital management table total. Searches for 'Pillar 1', 'credit and "
+    "counterparty' and 'operational risk' with a figure found no risk-type table. The FY2019 page image (PDF p.58, "
+    "printed p.57) was read and confirms the total-only layout.\n\n"
     "FY2014-FY2017 ADDENDUM: unlike FY2018 onward, these 4 years' own Annual Reports DO disclose a genuine Pillar "
     "1 capital requirements RWA breakdown (Credit and counterparty risk / Operational risk, each on a Basel III/"
     "CRD IV standardised-approach basis) - a real finding that MORE granular RWA data is available for these older "
@@ -819,7 +824,12 @@ RWA_BREAKDOWN_SOURCES = (
 
 rwa_breakdown_rows = [
     ("SECTION", "No category breakdown published (FY2025-FY2018) — the Annual Report's 'Capital management' section discloses the aggregate total risk weighted assets only, with no risk-type table; re-verified against all five FY2021-FY2025 Annual Reports on 2026-09-12, see sources note", {}),
-    ("DATA", "Category breakdown (credit risk / market risk / operational risk)", {"FY2025": "Not publicly disclosed", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed"}),
+    ("DATA", "Category breakdown (credit risk / market risk / operational risk)", {
+        "FY2025": "Not published – FY2025 Annual Report Capital management (p.55) gives total RWA only; no Pillar 1 or OV1 risk-type table anywhere in the report (full-text search)",
+        "FY2020": "Not published – FY2020 accounts (CH, OCR of 179pp) Capital management table (p.62) gives total RWA only; no Pillar 1 risk-type table as printed to FY2017",
+        "FY2019": "Not published – FY2019 accounts (CH, OCR of 169pp) Capital management table (p.57, page image read) gives total RWA only; no Pillar 1 risk-type table",
+        "FY2018": "Not published – FY2018 accounts (CH, OCR of 167pp) Capital management table (p.56) gives total RWA only; the FY2014-17 Pillar 1 table is no longer printed",
+    }),
     ("TOTAL", "Total risk weighted assets", {"FY2025": 8180, "FY2024": 7767, "FY2023": 7939, "FY2022": 7699, "FY2021": 8686, "FY2020": 10780, "FY2019": 10971, "FY2018": 10550}),
     ("SECTION", "Pillar 1 capital requirements RWA breakdown (Credit and counterparty risk / Operational risk, Basel III / CRD IV standardised approach) — each year's own Annual Report (FY2017-FY2014). Two categories only: this table has no separate market-risk or CVA line, and its 'Credit and counterparty risk' row COMBINES what UK OV1 would split, so it is not comparable line-for-line with a later OV1 breakdown", {}),
     ("DATA", "Credit and counterparty risk", {"FY2017": 9475, "FY2016": 9255, "FY2015": 9151, "FY2014": 9105}),

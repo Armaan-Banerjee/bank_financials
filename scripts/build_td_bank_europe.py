@@ -560,7 +560,18 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
-    per_note={"MREL Ratio": "No numeric MREL ratio was identified in the reviewed 2021 comparative or FY2022-FY2025 TD Bank Europe Pillar 3 reports."},
+    statements={"MREL Ratio": {
+        **{y: "Not published – no MREL figure or mention in this year's TD Bank Europe Pillar 3 report (text-searched 2026-09-19)"
+           for y in ("FY2025", "FY2024", "FY2023", "FY2022")},
+        "FY2021": ("Not published – no FY2021 TDBEL Pillar 3 in Wayback CDX of tdsecurities.com/tds/document/ (first "
+                   "is 2022); 2022 edition's FY2021 comparative has no MREL"),
+    }},
+    per_note={"MREL Ratio": "No numeric MREL ratio was identified in the reviewed 2021 comparative or FY2022-FY2025 TD Bank Europe Pillar 3 reports. "
+                            "GA-020 (2026-09-19): the four editions (P3_URL) were re-fetched and searched for 'MREL', "
+                            "'eligible liabilities' and 'resolution' - zero hits. A Wayback CDX listing of "
+                            "tdsecurities.com/tds/document/* (295 URLs) shows 'Pillar-3-Disclosure-2022' as the "
+                            "first UK Pillar 3; the '2021-TDS-UK-Disclosure' document there is a remuneration "
+                            "disclosure, not a Pillar 3."},
 )
 
 bw.add_overview_sheet(

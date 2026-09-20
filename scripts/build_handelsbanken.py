@@ -732,12 +732,28 @@ metric(
          "462% exactly).",
 )
 
+# GA-020 (2026-09-19): former bare "Not disclosed" cells. FY2021 Annual Report and
+# FY2020 Annual Report (site copy, document 52-110258; its 2019 column is the
+# FY2019 source) re-downloaded and searched: each names the NSFR only as a
+# monitored ratio ('...namely the Liquidity Coverage Ratio (LCR) and Net Stable
+# Funding Ratio (NSFR) metrics') with no figure. The FY2022 Pillar 3's KM1 prints
+# a single 31-Dec-22 column (no 2021 comparative). The Wayback capture of the
+# investor-relations page of 17 June 2021 lists the Annual Report 2020 and no
+# Pillar 3 document.
+NSFR_ST = {
+    "FY2021": ("Not published – FY2021 Annual Report names the NSFR only as a monitored ratio, no figure; no FY2021 "
+               "Pillar 3 (FY2022 edition's KM1 has no 2021 column)"),
+    "FY2020": ("Not published – FY2020 Annual Report names the NSFR only as a monitored ratio, no figure; IR page "
+               "(Wayback 17/06/2021) lists no Pillar 3"),
+    "FY2019": ("Not published – FY2019 Annual Report and the FY2020 report's 2019 column name the NSFR as a "
+               "monitored ratio but print no figure"),
+}
 metric(
     "NSFR", "£m / %",
     [
         ("Total available stable funding", {"FY2025": 19047, "FY2024": 19210, "FY2023": 19525, "FY2022": 20678}),
         ("Total required stable funding", {"FY2025": 14676, "FY2024": 14166, "FY2023": 14950, "FY2022": 15953}),
-        ("NSFR ratio (%)", {"FY2025": "130%", "FY2024": "136%", "FY2023": "131%", "FY2022": "130%", "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "105% (internal interpretation of Basel NSFR rules, pre-UK NSFR regulation)"}),
+        ("NSFR ratio (%)", {"FY2025": "130%", "FY2024": "136%", "FY2023": "131%", "FY2022": "130%", **NSFR_ST, "FY2018": "105% (internal interpretation of Basel NSFR rules, pre-UK NSFR regulation)"}),
     ],
     p3_sources(),
     note=FY2021_BASIS_NOTE + " " + HISTORICAL_P3_NOTE + " FY2018's Annual Report states the Bank operated with an "

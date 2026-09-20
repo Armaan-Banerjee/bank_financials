@@ -509,8 +509,16 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not applicable" for y in YEARS})],
-    note="Per Zempler's FY2026 Pillar 3 Disclosures: 'MREL is set annually by the Bank of England on a case-by-case "
+    [("MREL ratio", {y: (f"Not applicable – {y} Pillar 3 ({pg}): BoE requires no MREL above minimum Pillar 1 and "
+                         "Pillar 2A requirements, per its preferred resolution strategy for the bank")
+                     for y, pg in (("FY2026", "p.31"), ("FY2025", "p.29"), ("FY2024", "p.29"), ("FY2023", "p.21"),
+                                   ("FY2022", "Cashplus FY2021/22 edition, p.13"))})],
+    note="GA-020 (2026-09-19): the same MREL statement was read in EVERY edition, not only FY2026 - FY2026 p.31, "
+         "FY2025 p.29, FY2024 p.29, FY2023 p.21, and the Cashplus 'Financial Year 2021/22 Pillar 3 Disclosures' "
+         "p.13 (not otherwise used by this workbook; Wayback "
+         "https://web.archive.org/web/20221205140039id_/https://www.cashplus.com/media/2700/pillar-3-fy21-22-final.pdf) "
+         "- so each year's cell cites its own edition. "
+         "Per Zempler's FY2026 Pillar 3 Disclosures: 'MREL is set annually by the Bank of England on a case-by-case "
          "basis. In line with its preferred resolution strategy for Zempler, the Bank of England does not "
          "currently require any additional MREL to be held by the bank over and above its minimum Pillar 1 and "
          "Pillar 2A requirements.' No numeric MREL disclosure exists in any year's Pillar 3 report (no KM2 template "

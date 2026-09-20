@@ -533,11 +533,10 @@ KM1_NOTE = (
     "18.3%, 5.1%). This sheet shows the KM1 comparative as the KM1 template printed it; the single-metric "
     "sheets show the 2021 edition's own two-decimal figures. Both are the bank's own numbers at different "
     "printed precision, and each is left exactly as the document that carries it printed it.\n\n"
-    "SOURCE DEFECT RECORDED, NOT CORRECTED: the NSFR sheet in this workbook states that no FY2021 NSFR figure "
-    "is available because the UK NSFR regime only took effect on 1 January 2022. The 2022 edition's KM1 "
-    "nevertheless prints a 31.12.2021 NSFR comparative (121.8%, with available/required stable funding of "
-    "8,474.8 / 6,955.7). Both statements are the bank's own; the comparative is reproduced here as printed and "
-    "the NSFR sheet is left as it stands rather than being edited to agree.\n\n"
+    "FY2021 NSFR: the 2022 edition's KM1 prints a 31.12.2021 NSFR comparative (121.8%, with available/required "
+    "stable funding of 8,474.8 / 6,955.7), footnoted as SPOT values because the NSFR went live on 1 January "
+    "2022. The NSFR sheet previously said no FY2021 figure was available; since 2026-09-19 (GA-020) it carries "
+    "these same three figures from this same page, with the spot-basis caveat, so the two sheets now agree.\n\n"
     "Rows UK 8a, UK 9a, 10 and UK 10a are printed as an explicit '0.0%' in every edition from 2022 onward, not "
     "as a dash, so they are recorded as zeros. Rows UK 14a-14e are absent from every edition: each one states "
     "in a footnote that they 'have not been disclosed as these are only applicable to LREQ firms', and the 2025 "
@@ -716,7 +715,7 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA), weighted value (average) ($m)", {"FY2025": 5294.2, "FY2024": 5216.2, "FY2023": 5704.2, "FY2022": 6280.5, "FY2021": 5027, "FY2020": 4371, "FY2019": 4856, "FY2018": 4458, "FY2017": 4322}),
         ("Total net cash outflows, adjusted value ($m)", {"FY2025": 2777.2, "FY2024": 2422.5, "FY2023": 3561.5, "FY2022": 2926.2, "FY2021": 2425, "FY2020": 2426, "FY2019": 2509, "FY2018": 2062, "FY2017": 3126}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "197.3%", "FY2024": "226.7%", "FY2023": "165.3%", "FY2022": "206.0%", "FY2021": "207%", "FY2020": "180%", "FY2019": "195%", "FY2018": "217%", "FY2017": "145%", "FY2016": "159%", "FY2015": "Not publicly disclosed"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "197.3%", "FY2024": "226.7%", "FY2023": "165.3%", "FY2022": "206.0%", "FY2021": "207%", "FY2020": "180%", "FY2019": "195%", "FY2018": "217%", "FY2017": "145%", "FY2016": "159%", "FY2015": "Not published – FY2015 Pillar 3 (PDF p.28) treats the LCR qualitatively; FY2015 Annual Report (p.134) says only that it was 'in excess of 100%'"}),
     ],
     p3_sources(page_20="30", page_19="31", page_18="29", page_17="30", page_16="27", page_15="27",
                table_name="Table 8/9/10: Consolidated Liquidity Coverage Ratio for ICBCS (Group)"),
@@ -735,11 +734,14 @@ metric(
 metric(
     "NSFR", "$m / %",
     [
-        ("Total available stable funding ($m)", {"FY2025": 9393.0, "FY2024": 8348.6, "FY2023": 7963.4, "FY2022": 8417.6}),
-        ("Total required stable funding ($m)", {"FY2025": 7736.7, "FY2024": 6118.4, "FY2023": 4462.0, "FY2022": 5266.3}),
+        ("Total available stable funding ($m)", {"FY2025": 9393.0, "FY2024": 8348.6, "FY2023": 7963.4, "FY2022": 8417.6, "FY2021": 8474.8}),
+        ("Total required stable funding ($m)", {"FY2025": 7736.7, "FY2024": 6118.4, "FY2023": 4462.0, "FY2022": 5266.3, "FY2021": 6955.7}),
         ("Net Stable Funding Ratio (%)", {
-            **{"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%"},
-            **{y: "Not disclosed" for y in YEARS if y not in ("FY2025", "FY2024", "FY2023", "FY2022")},
+            **{"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%", "FY2021": "121.8%"},
+            **{y: (f"Not published – no NSFR figure in the {y} Pillar 3 (text-searched 2026-09-19"
+                   + ("; narrative only: 'expected to go live in January 2018'" if y == "FY2015" else "")
+                   + "); UK NSFR applied from 1 Jan 2022")
+               for y in YEARS if y not in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021")},
         }),
     ],
     p3_sources(include_pre2021=False),
@@ -755,8 +757,15 @@ metric(
          "light on 2026-09-17, when this workbook gained a KM1 Key Metrics sheet reproducing row 20 of the same "
          "table for the same years and so placed a second, independent transcription of each of those four "
          "figures beside this sheet's.\n"
+         "FY2021 (ASF 8,474.8 / RSF 6,955.7 / NSFR 121.8%) ADDED 2026-09-19 (GA-020) from the 31.12.2021 "
+         "comparative column of UK KM1 rows 18-20, p.5 of the 2022 Pillar 3 Disclosures (" + P3_22_URL + "), read "
+         "off the page image. BASIS DIFFERS FROM THE COLUMNS BESIDE IT, as the template's own footnote 2 says: "
+         "'2021 numbers are spot values as at 31 December 2021 as NSFR went live from 1 January 2022', whereas "
+         "FY2022 onward are four-quarter averages. The 2021 edition itself prints no NSFR figure (its three NSFR "
+         "mentions are narrative), so this is the only published FY2021 value. This also removes the "
+         "disagreement the KM1 sheet's note recorded between that sheet's row 20 and this one.\n"
          "NSFR was not a UK Pillar 3 disclosure requirement until 1 January 2022 (the UK NSFR regime's effective "
-         "date), so no FY2015-FY2021 figures are available in any of the eleven ICBC Standard Bank Pillar 3 "
+         "date), so no FY2015-FY2020 figures are available in any of the eleven ICBC Standard Bank Pillar 3 "
          "Disclosures reports reviewed (2015-2025). FY2015's own Pillar 3 document explicitly notes 'the NSFR is "
          "expected to go live in January 2018' (an EU timeline later superseded by the UK's own 1 January 2022 "
          "implementation) - confirming this is a genuine regulatory-timeline gap, not a missed disclosure. "
@@ -765,11 +774,14 @@ metric(
 
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", {y: "Not published – no MREL figure in any ICBCS Pillar 3 (all 11 editions 2015-2025 "
+                         "text-searched 2026-09-19: 'MREL' 0 hits)" for y in YEARS})],
     p3_sources(include_pre2021=False),
     note="No MREL disclosure appears in any of the eleven ICBC Standard Bank Pillar 3 Disclosures reports "
-         "reviewed (2015-2025) — ICBC Standard Bank Plc is not itself a resolution entity subject to a standalone "
-         "MREL requirement.",
+         "(2015-2025): each was re-fetched from its cited URL and text-searched on 2026-09-19, and 'MREL' returns "
+         "zero hits in every one. An earlier version of this note added that ICBC Standard Bank Plc is not itself "
+         "a resolution entity subject to a standalone MREL requirement; no document stating that was cited, so "
+         "the cells rest on the absence alone.",
 )
 
 # ---------------------------------------------------------------
@@ -808,7 +820,7 @@ bw.add_overview_sheet(
         ("Total Capital Ratio", {"FY2025": "15.0%", "FY2024": "18.1%", "FY2023": "21.1%", "FY2022": "20.2%", "FY2021": "18.28%", "FY2020": "18.26%", "FY2019": "19.54%", "FY2018": "22.25%", "FY2017": "19.97%", "FY2016": "19.3%", "FY2015": "19.13%"}),
         ("Leverage Ratio", {"FY2025": "5.6%", "FY2024": "6.9%", "FY2023": "7.7%", "FY2022": "7.7%", "FY2021": "5.09%", "FY2020": "4.90%", "FY2019": "4.78%", "FY2018": "5.02%", "FY2017": "4.91%", "FY2016": "4.66%", "FY2015": "5.36%"}),
         ("LCR", {"FY2025": "197.3%", "FY2024": "226.7%", "FY2023": "165.3%", "FY2022": "206.0%", "FY2021": "207%", "FY2020": "180%", "FY2019": "195%", "FY2018": "217%", "FY2017": "145%", "FY2016": "159%", "FY2015": "Not publicly disclosed"}),
-        ("NSFR", {"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%", "FY2021": "Not disclosed", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed"}),
+        ("NSFR", {"FY2025": "122.8%", "FY2024": "136.4%", "FY2023": "183.3%", "FY2022": "163.8%", "FY2021": "121.8%", "FY2020": "Not disclosed", "FY2019": "Not disclosed", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. All amounts are in USD ($m), the reporting currency used "

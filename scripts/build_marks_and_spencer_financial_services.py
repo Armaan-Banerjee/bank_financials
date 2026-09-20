@@ -538,11 +538,29 @@ DEFAULT_NOT_DISCLOSED_NOTE = (
     "document of its own (see the KM1 Key Metrics sheet), and HSBC UK Bank plc's consolidated Pillar 3 figures are "
     "group-level, so they are not substituted here."
 )
+# GA-020 (2026-09-19) evidenced statement texts. All five Companies House filings are image-only scans
+# (pdftotext returns ~55 characters each); they were rendered at 150dpi and OCR'd in full on 2026-09-19
+# (270 pages, 206k-227k characters per year, 'capital' 53-59 hits per year - so the zeroes below are
+# facts about the documents). Zero hits in every year for 'liquidity coverage'/'LCR', 'NSFR'/'stable
+# funding', 'MREL'/'eligible liabilities'; the only 'leverage' hits are 'leverages'/'Leveraged Finance'.
+# The FY2022-FY2025 liquidity-risk notes (PDF pp.51/49/51/53) say the Entity is part of HSBC UK's Domestic
+# Liquidity sub-group and its liquidity is managed as part of it; the FY2021 edition has no such sentence, so
+# its LCR/NSFR cells omit that clause.
+_MS_NO_P3 = "; the Entity publishes no Pillar 3 (accounts: included in HSBC UK Bank plc's consolidated Pillar 3)"
+MS_STATEMENTS = {
+    "Leverage Ratio": "Not published – no leverage ratio in the annual accounts (image scans OCR'd in full 2026-09-19)" + _MS_NO_P3,
+    "LCR": ("Not published – no entity LCR in the annual accounts (OCR'd in full 2026-09-19); liquidity is managed "
+            "in HSBC UK's Domestic Liquidity sub-group (accounts' liquidity-risk note)"),
+    "NSFR": ("Not published – no entity NSFR in the annual accounts (OCR'd in full 2026-09-19); liquidity is managed "
+             "in HSBC UK's Domestic Liquidity sub-group (accounts' liquidity-risk note)"),
+    "MREL Ratio": "Not published – no MREL figure in the annual accounts (OCR'd in full 2026-09-19)" + _MS_NO_P3,
+}
 for name in not_disclosed:
     bw.add_metric_sheet(
         name,
         None,
-        [(name, {y: "Not publicly disclosed" for y in YEARS})],
+        [(name, {y: (MS_STATEMENTS[name].split("; liquidity is managed")[0] if y == "FY2021" else MS_STATEMENTS[name])
+               for y in YEARS})],
         NOT_DISCLOSED_SOURCES,
         note=PER_NOT_DISCLOSED_NOTE.get(name, DEFAULT_NOT_DISCLOSED_NOTE),
         note_height=150,

@@ -498,6 +498,78 @@ P3_LCR = {"FY2024": "243.39%", "FY2023": "233.04%", "FY2022": "379.92%"}
 NSFR = {"FY2024": "211.78%", "FY2023": "335.67%", "FY2022": "363.79%"}
 
 # ---------------------------------------------------------------
+# FY2025 GAP-FILL, 19 September 2026.
+# Seven FY2025 sheet-years here (CET1 Ratio, Tier 1 Ratio, Total RWAs, RWA
+# Breakdown, Leverage Ratio, NSFR and KM1) were BLANK. The finding was already
+# established and written up at length in p3_sources() below - but a note is
+# invisible to the corpus census, which cannot tell an established negative
+# from a cell nobody has looked at. The finding now goes IN the year column.
+# Nothing below changes a figure; only empty cells gain text.
+#
+# RE-VERIFIED INDEPENDENTLY THIS SESSION, not inherited from the earlier note:
+#  1. NO FY2025 PILLAR 3 EXISTS. FidBank's own site carries no disclosures
+#     index at all - regulatory-information.html and media-page.html were both
+#     fetched as HTML on 19/09/2026 and link no PDF of any kind - so the Pillar
+#     3 files are unlinked uploads under /assets/Uploads/NewFolder/. Probing
+#     that path: FidBank-UK-Pillar-3-Disclosure-2025.pdf returns HTTP 404 and
+#     FBUK-Pillar-3-Disclosure-2025.pdf returns HTTP 404, while the FY2024 file
+#     at the identical path returns HTTP 200 with Content-Type application/pdf -
+#     a positive control on the same host in the same sweep, so the 404s are
+#     absence and not blocking. A Wayback CDX sweep of the whole fidbank.co.uk
+#     domain lists three Pillar 3 PDFs ever archived (2022, 2023, 2024), the
+#     newest captured 17/01/2026.
+#  2. THE FY2025 ANNUAL REPORT DOES NOT SUPPLY THESE FIGURES. The filing
+#     (Companies House, filed 25/07/2026) is an image-only scan - Creator
+#     'go-tiff2pdf', 69 pages, pdftotext returns 69 bytes and ZERO hits for
+#     ' the ', so a text search of it proves nothing. It was re-rasterised at
+#     300 dpi and OCR'd this session; the OCR returns 1,276 hits for ' the ',
+#     which is the richness control that makes the following absences the
+#     document's rather than the instrument's:
+#       - No RWA AMOUNT anywhere. 'risk weighted' appears only in the
+#         Performance Metrics formula caption, in the narrative sentence
+#         "FBUK's capital over risk weighted assets was 21.99% (2024: 43%)",
+#         and in note 30's standard description of how RWAs are determined.
+#       - No leverage ratio figure. 'Leverage' appears twice, once in a risk-
+#         governance sentence ("The Capital Adequacy Ratio (CAR) and Leverage
+#         Ratio is tracked daily") and once in an unrelated business sentence.
+#       - No NSFR at all: 'NSFR' and 'stable funding' both return zero hits.
+#       - No CET1 line. Note 30's capital table (printed p.64) runs Share
+#         Capital 85,090 / P&L Reserve (28,820) / FVOCI 11 / Less Intangibles
+#         (616) / Total Tier 1 Capital 55,665 / Total Regulatory Capital 55,665,
+#         with a 2024 comparative column - capital AMOUNTS only, no denominator.
+#     Nothing here is back-solved: in particular Total RWAs is NOT computed as
+#     capital / 21.99%, for the reasons already in CAPITAL_RATIO_NOTE.
+#  3. NOT DUE YET EITHER. FidBank publishes its Pillar 3 roughly 12-13 months
+#     after year-end (the FY2024 edition was first archived January 2026), so
+#     an FY2025 edition would be expected around January 2027 - after this
+#     build date. This is a document that does not exist yet, not one that
+#     could not be reached.
+# ---------------------------------------------------------------
+FY2025_NO_P3 = "Not published - no FY2025 Pillar 3 edition; no RWA denominator in AR2025"
+FY2025_NO_RWA = "Not disclosed - AR2025 prints no RWA amount; no FY2025 Pillar 3 edition"
+FY2025_NO_LEVERAGE = "Not disclosed - no leverage ratio in AR2025; no FY2025 Pillar 3 edition"
+FY2025_NO_NSFR = "Not disclosed - 'stable funding' absent from AR2025; no FY2025 Pillar 3 edition"
+FY2025_GAPFILL_NOTE = (
+    "\n\nFY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (written into the column 2026-09-19). "
+    "Three things were re-verified this session rather than inherited. (1) No FY2025 Pillar 3 edition "
+    "exists: FidBank's site carries no disclosures index at all (regulatory-information.html and "
+    "media-page.html both fetched as HTML on 19/09/2026, neither links any PDF), its Pillar 3 files are "
+    "unlinked uploads, and two filename permutations for a 2025 edition under that upload path return "
+    "HTTP 404 while the FY2024 file at the identical path returns HTTP 200 with Content-Type "
+    "application/pdf - a positive control in the same sweep. A Wayback CDX sweep of the whole "
+    "fidbank.co.uk domain lists three Pillar 3 PDFs ever, the newest being FY2024 (archived 17/01/2026). "
+    "(2) The FY2025 Annual Report does not supply the figure. That filing is an image-only scan (Creator "
+    "'go-tiff2pdf'; pdftotext returns 69 bytes and ZERO hits for ' the ' across 69 pages, so a text search "
+    "of it indicts the instrument, not the Bank). It was re-rasterised at 300 dpi and OCR'd here, giving "
+    "1,276 hits for ' the ' as the richness control; on that OCR there is no RWA amount, no leverage "
+    "ratio, no NSFR mention of any kind, and no CET1 line - note 30's capital table (printed p.64) gives "
+    "capital AMOUNTS only (Total Tier 1 Capital = Total Regulatory Capital = US$55,665k, 2024: 55,005). "
+    "(3) It is not due yet: FidBank publishes its Pillar 3 roughly 12-13 months after year-end, so an "
+    "FY2025 edition is expected around January 2027. Nothing is back-solved - Total RWAs is specifically "
+    "NOT computed as capital divided by the 21.99% ratio, for the reasons in the Total Capital Ratio "
+    "sheet's note.")
+
+# ---------------------------------------------------------------
 # KM1 Key Metrics - the Bank's own UK KM1 template, reproduced whole
 # ---------------------------------------------------------------
 KM1_NOTE = (
@@ -539,10 +611,19 @@ KM1_NOTE = (
     "ROW 12 IS PRINTED WITH NO VALUES in both editions - the row exists in the table and its cells are "
     "empty. It is reproduced as a present-but-blank row, not dropped and not filled with a zero.\n"
     "\n"
-    "ROW 10 PRINTS 'N.A.' and is reproduced verbatim as text. 'N.A.' is the Bank's own statement that the "
-    "requirement does not apply to it; it is not a blank and it is certainly not a zero.\n"
+    "ROW 10 PRINTS 'N.A.' (the glyph in both the FY2024 and FY2023 editions, in the FY2024, FY2023 and "
+    "FY2022 columns) and the cells carry the plain ASCII '-' under KM1 transcription rule 2 (a printed "
+    "dash/'n/a' becomes '-', the glyph is recorded here). It is the Bank's own statement that the G-SII "
+    "buffer does not apply to it; it is not a blank and it is certainly not a zero. (Changed 2026-09-19, "
+    "GA-020: the cells previously carried the literal text 'N.A.'.)\n"
     "\n"
-    "FY2025 AND FY2021 ARE BLANK. No FY2025 Pillar 3 edition has been published. The FY2021 edition "
+    "THE TOP ROW IS NOT PART OF THE TEMPLATE (added 2026-09-19). It is bracketed, unnumbered and labelled "
+    "'[Edition status for this year - not a KM1 template row]'. It carries no figure and is not one of the "
+    "Bank's rows; it exists only so the FY2025 column states in the grid what this note states in prose. "
+    "The Bank's own rows below it are untouched - same order, same numbers, same labels, same precision.\n"
+    "\n"
+    "FY2025 AND FY2021 CARRY NO TEMPLATE FIGURES. No FY2025 Pillar 3 edition has been published (the "
+    "FY2025 column's top row says so; see also the source note). The FY2021 edition "
     "predates the Bank's adoption of the template and carries no key-metrics table, and no later edition "
     "reaches back to 2021 with a comparative column, so there is nothing to transcribe and nothing is "
     "inferred from the CET1 ratio and RWA figures that the metric sheets carry for that year.\n"
@@ -552,6 +633,14 @@ KM1_NOTE = (
 )
 
 km1_rows = [
+    # Gap-fill 2026-09-19. STATEMENT ROW, NOT A TEMPLATE ROW, placed above the
+    # template so the Bank's own KM1 sequence, row numbers, labels and
+    # precision are left exactly as printed. It exists because the FY2025
+    # column was wholly empty, which the corpus census cannot tell apart from
+    # an unexamined gap; the reason was already in the note below but nowhere a
+    # reader would meet it in the grid itself.
+    ("DATA", "[Edition status for this year - not a KM1 template row]",
+     {"FY2025": "Not published - no FY2025 Pillar 3 edition as at 19/09/2026"}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital ($'000)",
      {"FY2024": 55029, "FY2023": 57034, "FY2022": 35045}),
@@ -573,7 +662,7 @@ km1_rows = [
     ("DATA", "9  Institution specific countercyclical capital buffer (%)",
      {"FY2024": 0.87, "FY2023": 0.44, "FY2022": 0.12}),
     ("DATA", "10  Global Systemically Important Institution buffer (%)",
-     {"FY2024": "N.A.", "FY2023": "N.A.", "FY2022": "N.A."}),
+     {"FY2024": "-", "FY2023": "-", "FY2022": "-"}),
     ("DATA", "11  Combined buffer requirement (%)", {"FY2024": 3.37, "FY2023": 2.94, "FY2022": 2.62}),
     ("DATA", "UK 11a  Overall capital requirements (%)", {"FY2024": 16.20, "FY2023": 15.35, "FY2022": 15.03}),
     ("DATA", "12  CET1 available after meeting the total SREP own funds requirements (%) [printed with no values]", {}),
@@ -624,14 +713,16 @@ bw.add_km1_sheet(
 metric("CET1 Capital", "£'000 (conv. from USD)", [("CET1 Capital (= Total Regulatory Capital)", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-metric("CET1 Ratio", "% of RWA", [("CET1 ratio", CET1_RATIO)], p3_sources(),
-       note="FY2024-FY2022 are FidBank UK's own UK KM1 disclosures. FY2021 is calculated from its own disclosed CET1 capital and Pillar 1 RWA components; the Annual Report's 40% headline is rounded.")
+metric("CET1 Ratio", "% of RWA", [("CET1 ratio", dict(CET1_RATIO, FY2025=FY2025_NO_P3))], p3_sources(),
+       note="FY2024-FY2022 are FidBank UK's own UK KM1 disclosures. FY2021 is calculated from its own disclosed CET1 capital and Pillar 1 RWA components; the Annual Report's 40% headline is rounded."
+       + FY2025_GAPFILL_NOTE)
 
 metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Total Tier 1 Capital", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
 
-metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", CET1_RATIO)], p3_sources(),
-       note="FidBank has no AT1 or Tier 2 in the disclosed periods, so Tier 1 equals CET1.")
+metric("Tier 1 Ratio", "% of RWA", [("Tier 1 ratio", dict(CET1_RATIO, FY2025=FY2025_NO_P3))], p3_sources(),
+       note="FidBank has no AT1 or Tier 2 in the disclosed periods, so Tier 1 equals CET1."
+       + FY2025_GAPFILL_NOTE)
 
 metric("Total Capital", "£'000 (conv. from USD)", [("Total Regulatory Capital", CAPITAL_AMOUNT)],
        p3_sources(CAPITAL_AMOUNTS_NOTE), note=CAPITAL_AMOUNTS_NOTE)
@@ -653,31 +744,49 @@ metric("Total Capital Ratio", "%", [("Total capital ratio", {"FY2024": "41.28%",
        "summary infographic; the 21.64% alternative is recorded here rather than discarded, and the inconsistency is "
        "the Bank's own, not this workbook's.")
 
-metric("Total RWAs", "£'000 (conv. from USD)", [("Total risk-weighted exposure amount", REGULATORY_RWA)], p3_sources(),
-       note="FY2024-FY2022 are directly disclosed in UK KM1. FY2021 is the sum of the source's own Pillar 1 capital requirements divided by 8%; it reconciles to the Annual Report's rounded 40% capital proxy.")
+metric("Total RWAs", "£'000 (conv. from USD)",
+       [("Total risk-weighted exposure amount", dict(REGULATORY_RWA, FY2025=FY2025_NO_RWA))], p3_sources(),
+       note="FY2024-FY2022 are directly disclosed in UK KM1. FY2021 is the sum of the source's own Pillar 1 capital requirements divided by 8%; it reconciles to the Annual Report's rounded 40% capital proxy."
+       + FY2025_GAPFILL_NOTE)
 
 bw.add_rwa_breakdown_sheet(
     title="FidBank UK Limited — RWA Breakdown",
     subtitle="FidBank UK's own Pillar 3 disclosures; £'000 converted from USD.",
     rows=[
+        # Gap-fill 2026-09-19: the FY2025 column held no cell at all, so the
+        # census scored it as an untouched gap. Statement row, not a risk
+        # category - nothing is computed and no total is affected.
+        ("DATA", "[No RWA breakdown published for this year - see note below]",
+         {"FY2025": FY2025_NO_RWA}),
         ("DATA", "Credit risk", stock({"FY2023": 46743, "FY2022": 47963, "FY2021": 79725})),
         ("DATA", "Operational risk", stock({"FY2023": 10450, "FY2022": 15525, "FY2021": 21300})),
         ("DATA", "Market risk", stock({"FY2023": 3292, "FY2022": 2075, "FY2021": 1800})),
         ("TOTAL", "Total", REGULATORY_RWA),
     ],
-    sources_text=p3_sources("FY2023 components are direct from its own Pillar 3 Table 2. FY2022/FY2021 components are each disclosed Pillar 1 capital requirement ÷ 8%; immaterial rounding differences versus the separately disclosed aggregate are retained in the Total row."),
+    sources_text=p3_sources("FY2023 components are direct from its own Pillar 3 Table 2. FY2022/FY2021 components are each disclosed Pillar 1 capital requirement ÷ 8%; immaterial rounding differences versus the separately disclosed aggregate are retained in the Total row." + FY2025_GAPFILL_NOTE),
     unit_suffix=" (£'000, conv. from USD)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources(),
-       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 remains blank: its older Pillar 3 disclosure does not provide a leverage ratio.")
+metric("Leverage Ratio", "%", [("Leverage ratio", dict(LEVERAGE_RATIO, FY2025=FY2025_NO_LEVERAGE))], p3_sources(),
+       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 remains blank: its older Pillar 3 disclosure does not provide a leverage ratio."
+       + FY2025_GAPFILL_NOTE)
 
 metric("LCR", "%", [("Liquidity Coverage Ratio", {**LCR, **P3_LCR})], p3_sources(),
        note="FY2024-FY2022 values are directly disclosed in FidBank UK's UK KM1 tables; FY2025 remains sourced from its Annual Report. FY2021's older disclosure has no LCR value.")
 
-metric("NSFR", "%", [("Net stable funding ratio", NSFR)], p3_sources(),
-       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 and FY2025 remain blank because no entity-level value was located in their respective disclosures.")
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE})
+metric("NSFR", "%", [("Net stable funding ratio", dict(NSFR, FY2025=FY2025_NO_NSFR))], p3_sources(),
+       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 remains blank because no entity-level value was located in that year's older disclosure."
+       + FY2025_GAPFILL_NOTE)
+# GA-020 (2026-09-19): the four Pillar 3 editions were re-downloaded from fidbank.co.uk (%PDF,
+# text-native): 0 hits for "MREL", "KM2", "eligible liabilities" and "loss-absorbing" in each,
+# against 110-140 "capital" hits. FY2025's Pillar 3 is not out yet (see p3_sources: the Bank
+# publishes ~12-13 months after year-end, so ~January 2027).
+_FID_MREL = {y: (f"Not published – FidBank UK {y} Pillar 3 disclosure has no MREL figure or KM2 (text "
+                 "probe 0 hits, 2026-09-19)") for y in ("FY2024", "FY2023", "FY2022", "FY2021")}
+_FID_MREL["FY2025"] = ("Not published yet – FY2025 Pillar 3 expected ~Jan 2027 (FY2024 edition appeared Jan "
+                       "2026); FY2025 Annual Report has no MREL figure")
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+                                   statements={"MREL Ratio": _FID_MREL})
 
 # ---------------------------------------------------------------
 # Overview sheet

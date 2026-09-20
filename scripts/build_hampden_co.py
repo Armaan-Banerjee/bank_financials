@@ -969,7 +969,7 @@ KM1_SOURCES = (
     "2021 and 2020 columns) and a capital-resources section on p.14. A CC1 own-funds composition table is a "
     "different template from KM1. The FY2022 edition's Dec-21 comparative column is therefore used for FY2021, "
     "as printed and in full - including its 0.00% countercyclical buffer (a printed zero, kept as a zero) and "
-    "its 'N/A' leverage and NSFR cells (reproduced as 'N/A', which is what the Bank printed, and which its own "
+    "its 'N/A' leverage and NSFR cells (shown as '-' per map rule 2 - the printed glyph is 'N/A'; converted from the text 'N/A' under GA-020 on 2026-09-19 - and which its own "
     "footnotes explain: the leverage rules excluding central bank claims and the PRA's NSFR requirement both "
     "took effect 1 January 2022, and \"Disclosure of data for previous periods is not required when data is "
     "disclosed for the first time\").\n"
@@ -998,7 +998,7 @@ KM1_SOURCES = (
     "reporting period.\" The 180% on the LCR sheet is the FY2021 edition's own point-in-time figure, which "
     "pre-dates the UK KM1 format and states no averaging basis - which is why that sheet keeps it on a "
     "separate row captioned 'point-in-time, FY2018-FY2021 basis' rather than merging it with the later "
-    "average-basis series. The same split explains why row 14's FY2021 cell reads 'N/A' here while the "
+    "average-basis series. The same split explains why row 14's FY2021 cell reads '-' (printed 'N/A') here while the "
     "Leverage Ratio sheet carries 7% for FY2021 from the FY2021 edition's own pre-KM1 disclosure.\n\n"
     "LATEST-EDITION CHECK 2026-09-17: checked against the Bank's own site (hampdenbank.com/investors and "
     "/about-us/shareholder-information) rather than against this project's cited URLs, and its full sitemap was "
@@ -1074,26 +1074,26 @@ km1_rows = [
     }),
     ("SECTION", "Leverage ratio", {}),
     ("DATA", "13 Total exposure measure excluding claims on central banks (£'000)", {
-        "FY2023": 887505, "FY2022": 753996, "FY2021": "N/A",
+        "FY2023": 887505, "FY2022": 753996, "FY2021": "-",
     }),
     ("DATA", "14 Leverage ratio excluding claims on central banks (%)", {
-        "FY2023": "8.36%", "FY2022": "8.72%", "FY2021": "N/A",
+        "FY2023": "8.36%", "FY2022": "8.72%", "FY2021": "-",
     }),
     ("SECTION", "Additional leverage ratio disclosure requirements", {}),
     ("DATA", "14a Fully loaded ECL accounting model leverage ratio excluding claims on central banks (%)", {
-        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+        "FY2023": "-", "FY2022": "-", "FY2021": "-",
     }),
     ("DATA", "14b Leverage ratio including claims on central banks (%)", {
-        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+        "FY2023": "-", "FY2022": "-", "FY2021": "-",
     }),
     ("DATA", "14c Average leverage ratio excluding claims on central banks (%)", {
-        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+        "FY2023": "-", "FY2022": "-", "FY2021": "-",
     }),
     ("DATA", "14d Average leverage ratio including claims on central banks (%)", {
-        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+        "FY2023": "-", "FY2022": "-", "FY2021": "-",
     }),
     ("DATA", "14e Countercyclical leverage ratio buffer (%)", {
-        "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A",
+        "FY2023": "-", "FY2022": "-", "FY2021": "-",
     }),
     ("SECTION", "Liquidity Coverage Ratio", {}),
     ("DATA", "15 Total high-quality liquid assets (HQLA) (Weighted value - average) (£'000)", {
@@ -1113,13 +1113,13 @@ km1_rows = [
     }),
     ("SECTION", "Net Stable Funding Ratio", {}),
     ("DATA", "18 Total available stable funding (£'000)", {
-        "FY2023": 669587, "FY2022": 602633, "FY2021": "N/A",
+        "FY2023": 669587, "FY2022": 602633, "FY2021": "-",
     }),
     ("DATA", "19 Total required stable funding (£'000)", {
-        "FY2023": 360891, "FY2022": 324684, "FY2021": "N/A",
+        "FY2023": 360891, "FY2022": 324684, "FY2021": "-",
     }),
     ("DATA", "20 NSFR ratio (%)", {
-        "FY2023": "186%", "FY2022": "186%", "FY2021": "N/A",
+        "FY2023": "186%", "FY2022": "186%", "FY2021": "-",
     }),
 ]
 
@@ -1127,8 +1127,8 @@ bw.add_km1_sheet(
     title="Hampden & Co Plc — KM1 Key Metrics",
     subtitle="The Bank's own published UK KM1 key-metrics template, reproduced in its own row order with its own "
              "template row numbers, labels and printed precision. Single entity (the Bank has no subsidiaries), "
-             "amounts in £'000, ratios as printed. Blank cells are rows the Bank did not print; 'N/A' is "
-             "reproduced where the Bank printed it. FY2021 is the FY2022 edition's Dec-21 comparative column - "
+             "amounts in £'000, ratios as printed. Blank cells are rows the Bank did not print; '-' marks "
+             "a cell where the Bank printed 'N/A' (map rule 2; rows 13-14, 14a-14e, 18-20). FY2021 is the FY2022 edition's Dec-21 comparative column - "
              "that year's own edition prints no template at all. FY2024 and FY2025 are blank because the Bank has "
              "held a PRA SDDT Rule 3.1 modification since 25 April 2024 and no longer publishes Pillar 3. Both "
              "columns now carry that statement explicitly on the status row rather than sitting blank (2026-09-18) "
@@ -1367,17 +1367,29 @@ metric(
          "FY2016/FY2017: no Pillar 3 document exists at all for either year.",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts.
+NSFR_NA_PRE2022 = (
+    "Not applicable – UK NSFR requirement began 1 Jan 2022 (PRA PS22/21; FY2022 Pillar 3 KM1 footnote 4, p.6); "
+    "the FY2019-FY2021 Pillar 3 editions contain no NSFR"
+)
+NSFR_NA_PRE2022_NODOC = (
+    "Not applicable – UK NSFR requirement began 1 Jan 2022 (PRA PS22/21; FY2022 Pillar 3 KM1 footnote 4, p.6); "
+    "no Pillar 3 edition exists for this year"
+)
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio (4-quarter average)", {
         "FY2025": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
         "FY2024": "Not published - SDDT Rule 3.1 opt-in from 25/04/2024",
         "FY2023": "186%", "FY2022": "186%",
-        "FY2021": "Not applicable", "FY2020": "Not applicable", "FY2019": "Not applicable",
-        "FY2018": "Not applicable", "FY2017": "Not applicable", "FY2016": "Not applicable",
+        "FY2021": "N/A (as printed)", "FY2020": NSFR_NA_PRE2022, "FY2019": NSFR_NA_PRE2022,
+        "FY2018": NSFR_NA_PRE2022, "FY2017": NSFR_NA_PRE2022_NODOC, "FY2016": NSFR_NA_PRE2022_NODOC,
     })],
     p3_sources(),
-    note="FY2016-FY2021 are marked 'Not applicable' rather than left blank (changed 2026-09-15). These are "
+    note="GA-020 (2026-09-19): FY2021 now reads 'N/A (as printed)' - the FY2022 Pillar 3's UK KM1 prints 'N/A' in "
+         "its Dec-21 column for rows 18-20 (PDF p.6, footnote 4: NSFR per PRA requirements effective 1 January 2022, "
+         "prior periods not required on first disclosure), read off the page image. FY2016-FY2020 carry a reasoned "
+         "'Not applicable' statement. FY2016-FY2021 are marked 'Not applicable' rather than left blank (changed 2026-09-15). These are "
          "STRUCTURAL blanks, not undisclosed data and not an unresearched gap: the UK had no NSFR requirement "
          "and no NSFR disclosure template at all before 1 January 2022 (PRA PS17/21 / PS22/21, 'Implementation "
          "of Basel standards'), so there was no ratio for the Bank to compute or publish in any of those six "
@@ -1395,9 +1407,24 @@ metric(
          "years above.",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts, per year.
+_MREL_SDDT = ("Not published – no Pillar 3 owed after SDDT Rule 3.1 opt-in 25/04/2024 (PRA waivers register); "
+              "FY2024/FY2025 annual reports contain no 'MREL' (full-text search)")
+_MREL_P3AR = ("Not published – no MREL figure or reference in this year's Pillar 3 or annual report "
+              "(full-text search 2026-09-19)")
+_MREL_P3 = ("Not published – no MREL figure or reference in this year's Pillar 3 (full-text search 2026-09-19)")
+_MREL_NOP3 = ("Not published – no Pillar 3 edition exists for this year (Wayback CDX, both domains: FY2019-FY2023 "
+              "only); annual report OCR'd in full 2026-09-19, no 'MREL'")
+MREL_STATEMENTS = {"MREL Ratio": {
+    "FY2025": _MREL_SDDT, "FY2024": _MREL_SDDT,
+    "FY2023": _MREL_P3AR, "FY2022": _MREL_P3AR, "FY2021": _MREL_P3AR,
+    "FY2020": _MREL_P3, "FY2019": _MREL_P3,
+    "FY2018": _MREL_NOP3, "FY2017": _MREL_NOP3, "FY2016": _MREL_NOP3,
+}}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements=MREL_STATEMENTS,
     per_note={
         "MREL Ratio": "Not publicly disclosed for any year - no MREL-related content appears in any Pillar 3 "
                        "document reviewed (FY2018-FY2023); Hampden & Co Plc does not appear to be a UK "

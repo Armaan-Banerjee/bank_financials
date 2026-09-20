@@ -869,7 +869,18 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources())
 metric("LCR", "% (12-month average - see methodology note)", [("Liquidity Coverage Ratio", LCR_RATIO)], p3_sources())
 metric("NSFR", "% (4-quarter average - see methodology note)", [("Net Stable Funding Ratio", NSFR_RATIO)], p3_sources())
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": MREL_NOTE})
+# GA-020 (2026-09-19): all seven editions (FY2019 via Wayback, FY2020-FY2025 live) re-fetched and text-searched.
+bw.add_not_disclosed_metric_sheets(
+    ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": MREL_NOTE + (
+        " GA-020 re-check 2026-09-19: each edition FY2019-FY2025 re-fetched (FY2019 from Wayback: "
+        "https://web.archive.org/web/20210125000915id_/https://www.fcmbuk.com/wp-content/uploads/2020/12/"
+        "Pillar-III-Disclosures-FYE-2019-08Oct20-v3-002.pdf) and searched for 'MREL', 'eligible liabilities' "
+        "and 'loss-absorbing'. The only hit is the FY2025 edition's description of the PRA's forthcoming PS11/26 "
+        "MREL-resources disclosure (applying from 1 January 2027); no edition prints an MREL figure or states "
+        "the Bank's MREL requirement.")},
+    statements={"MREL Ratio": {y: (f"Not published – no MREL figure or requirement in the {y} FCMB UK Pillar 3 "
+                                   "(text-searched 2026-09-19)") for y in YEARS}},
+)
 
 # ---------------------------------------------------------------
 # Overview sheet

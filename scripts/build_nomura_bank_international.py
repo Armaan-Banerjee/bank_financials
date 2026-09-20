@@ -352,9 +352,7 @@ EQ_ROWS = [
 
 # Asset Quality: this entity's lending is almost entirely intercompany (Loans
 # and advances to affiliates) with a small external book (Loans and advances
-# to others); no IFRS 9 stage 1/2/3 split or counterparty-rating table is
-# disclosed anywhere in the 5 annual reports - only the accounting policy's
-# staging framework (qualitative) and an aggregate P&L impairment line.
+# to others). IFRS 9 staging: see the GA-020 correction inside AQ_ROWS.
 AQ_ROWS = [
     ("SECTION", "Credit exposure (Balance Sheet basis)", {}),
     ("DATA", "Loans and advances to affiliates", BS["Loans and advances to affiliates"]),
@@ -362,9 +360,53 @@ AQ_ROWS = [
     ("TOTAL", "Total loans and advances", {y: BS["Loans and advances to affiliates"][y] + BS["Loans and advances to others"][y] for y in YEARS}),
     ("SECTION", "Credit impairment (Income Statement basis)", {}),
     ("DATA", "Credit impairment release/(charge) for the year", IS["Credit impairment release/(charge)"]),
-    ("SECTION", "IFRS 9 staging", {}),
-    ("DATA", "Stage 1 / Stage 2 / Stage 3 split", {y: "Not publicly disclosed" for y in YEARS}),
+    # GA-020 FOUND 2026-09-19: the "no stage split" finding above was wrong. Every
+    # edition's Risk Management note ("Credit Risk Exposure" table) prints gross
+    # exposure with "Of which: Stage 1" / "Of which: Stage 2" columns (FY2022+),
+    # and FY2021 prints "Of which: Subject to ECL Model" with the footnote "All
+    # exposures subject to ECL model are classified as Stage 1". Read off the
+    # page images of each edition; see STAGE_NOTE. No Stage 3 column is printed
+    # in any year, so none is entered.
+    ("SECTION", "IFRS 9 staging - maximum credit risk exposure table (Risk Management note)", {}),
+    ("DATA", "Gross exposure - on balance sheet (table total)",
+     {"FY2026": 9281749, "FY2025": 7719594, "FY2024": 6420444, "FY2023": 5845512, "FY2022": 5872256, "FY2021": 6583658}),
+    ("DATA", "  of which: Stage 1 - on balance sheet",
+     {"FY2026": 6402158, "FY2025": 4928252, "FY2024": 3665161, "FY2023": 3226139, "FY2022": 2252821}),
+    ("DATA", "  of which: Stage 2 - on balance sheet",
+     {"FY2026": "-", "FY2025": "-", "FY2024": "-", "FY2023": "-", "FY2022": "-"}),
+    ("DATA", "Gross exposure - off balance sheet commitments and financial guarantee contracts",
+     {"FY2026": 1407317, "FY2025": 1284792, "FY2024": 2264670, "FY2023": 1083848, "FY2022": 1116065, "FY2021": 1422830}),
+    ("DATA", "  of which: Stage 1 - off balance sheet",
+     {"FY2026": 665546, "FY2025": 591504, "FY2024": 651046, "FY2023": 562197, "FY2022": 686250}),
+    ("DATA", "  of which: Stage 2 - off balance sheet",
+     {"FY2026": 25585, "FY2025": 13223, "FY2024": 122608, "FY2023": 121295, "FY2022": 142428}),
+    ("DATA", "Gross exposure - total on and off balance sheet (as printed)",
+     {"FY2026": 10689066, "FY2025": 9004386, "FY2024": 8685114, "FY2023": 6929360, "FY2022": 6988321, "FY2021": 8006488}),
+    ("DATA", "  of which: Stage 1 - total (as printed)",
+     {"FY2026": 7067704, "FY2025": 5519756, "FY2024": 4316207, "FY2023": 3788336, "FY2022": 2939071}),
+    ("DATA", "  of which: Stage 2 - total (as printed)",
+     {"FY2026": 25585, "FY2025": 13223, "FY2024": 122608, "FY2023": 121295, "FY2022": 142428}),
+    ("DATA", "FY2021 only - exposure 'subject to ECL model', on balance sheet (bank footnote: all classified Stage 1)",
+     {"FY2021": 1277318}),
+    ("DATA", "FY2021 only - exposure 'subject to ECL model', off balance sheet (bank footnote: all classified Stage 1)",
+     {"FY2021": 106561}),
+    ("DATA", "FY2021 only - exposure 'subject to ECL model', total (bank footnote: all classified Stage 1)",
+     {"FY2021": 1383879}),
 ]
+
+STAGE_NOTE = (
+    "\n\nIFRS 9 STAGING - FOUND 2026-09-19 (GA-020). An earlier revision of this note said no numeric Stage 1/2/3 "
+    "split is disclosed anywhere. That was wrong. Each Annual Report's Risk Management note carries a 'Credit Risk "
+    "Exposure' table of gross exposure by balance-sheet line with 'Of which: Stage 1' and 'Of which: Stage 2' "
+    "columns; the table totals are transcribed here as printed, read off the page images: AR2026 printed p.66 "
+    "(PDF p.67); AR2025 printed p.61 (PDF p.62); AR2024 printed p.67 (PDF p.68); AR2023 printed p.66 (PDF p.67); "
+    "AR2022 printed p.68 (PDF p.69). FY2021 (AR2021 printed p.59, PDF p.60, note 13) prints a different column, "
+    "'Of which: Subject to ECL Model', footnoted '* All exposures subject to ECL model are classified as Stage 1 and "
+    "have BBB rating' - carried on its own rows under the bank's own caption, not merged into the Stage 1 rows. "
+    "The Stage 2 on-balance-sheet cells are the printed dash. No Stage 3 column is printed in any year (each "
+    "edition states there is no loan past due), so no Stage 3 figure is entered. Each edition's prior-year "
+    "'Gross Exposure' column reproduces the previous edition's figure."
+)
 
 bw = BankWorkbook(bank_name="Nomura Bank International plc", years=YEARS, header_color="6B2D5C")
 bw.add_balance_sheet_sheet(
@@ -409,12 +451,10 @@ bw.add_asset_quality_sheet(
     rows=AQ_ROWS,
     sources_text=statement_sources() + (
         "\n\nASSET QUALITY NOTE: the Bank's lending is almost entirely intercompany (Loans and advances to "
-        "affiliates); the accounting policy note (p.42) describes a 3-stage IFRS 9 staging framework "
-        "qualitatively, but no numeric Stage 1/2/3 split or counterparty-rating table is disclosed anywhere "
-        "in the 5 annual reports checked - only the aggregate 'Credit impairment release/(charge)' P&L line."
-    ),
+        "affiliates); the accounting policy note (p.42) describes a 3-stage IFRS 9 staging framework."
+    ) + STAGE_NOTE,
     first_col_width=68,
-    source_height=200,
+    source_height=330,
     unit_suffix=" ($'000)",
 )
 
@@ -828,6 +868,23 @@ metric("Total Capital Ratio", "%",
             "CET1 ratio because NBI holds no Tier 2 capital (the CC1 table shows a dash on NBI's Tier 2 "
             "row, consistent with the Annual Report's own statement). " + CONF_BLANK,
        extra_source=NEH_SOURCE)
+# GA-020 (2026-09-19): outcome wording for the non-disclosure cells below.
+# Evidence: NEH_NOTE / KM1_SOURCES above (parent's 31 Mar 2021 Pillar 3 p.1
+# limits NBI to Art 437; the 31 Mar 2022 edition p.5 and every later edition
+# read exclude NBI by name) and the Bank's own AR capital note (Note 15/16),
+# which prints only Tier 1 and total capital resources in every year.
+def ga020_cells(what):
+    cells = {
+        "FY2021": ("Not published – parent NEH plc Pillar 3 31 Mar 2021 (p.1) limits NBI to Art 437 own funds as its "
+                   "RWAs are immaterial; NBI AR2021 Note 15 has no " + what),
+        "FY2026": ("Not published yet – parent NEH plc annual Pillar 3 for 31 Mar 2026 not out at 2026-09-19 (2025 ed. "
+                   "dated Sep 2025); NBI's own AR2026 Note 15 has no " + what),
+    }
+    for y in ("FY2025", "FY2024", "FY2023", "FY2022"):
+        cells[y] = ("Not published – NBI excluded by name from parent NEH plc Pillar 3 (31 Mar 2022 ed. p.5 onward); "
+                    "NBI's own AR capital note has no " + what)
+    return cells
+
 bw.add_not_disclosed_metric_sheets(
     ["Total RWAs"],
     p3_sources(
@@ -837,11 +894,12 @@ bw.add_not_disclosed_metric_sheets(
         "implied by the disclosed CET1 of $267m at the disclosed 279.68% ratio, but that is a "
         "back-solved inference from two rounded inputs, not a disclosed number, so it is deliberately "
         "NOT entered here." + NEH_NOTE),
+    statements={"Total RWAs": ga020_cells("RWA figure")},
 )
 bw.add_rwa_breakdown_sheet(
     title="Nomura Bank International plc — RWA Breakdown",
     subtitle="See source note - no RWA figure of any kind is published for this entity.",
-    rows=[("DATA", "RWA Breakdown by risk category", {y: "Not publicly disclosed" for y in YEARS})],
+    rows=[("DATA", "RWA Breakdown by risk category", ga020_cells("RWA figure of any kind"))],
     sources_text=p3_sources("Total RWAs itself is not numerically disclosed in the five entity-level annual reports checked (confirmed by reading each report's capital management/regulatory capital note, e.g. Note 15 at AR2025 p.79), so no category-level RWA Breakdown exists to transcribe; no values are inferred from group-level Nomura Europe disclosures."),
     first_col_width=90,
     source_height=220,
@@ -862,6 +920,8 @@ bw.add_not_disclosed_metric_sheets(
         "3 limits NBI to Article 437 (Own Funds) disclosures because NBI's RWAs are immaterial to the "
         "Group, which excludes leverage, liquidity and MREL templates. No values are inferred from "
         "group-level Nomura Europe disclosures." + NEH_NOTE),
+    statements={"Leverage Ratio": ga020_cells("leverage ratio"), "LCR": ga020_cells("LCR"),
+                "NSFR": ga020_cells("NSFR"), "MREL Ratio": ga020_cells("MREL figure")},
 )
 
 interim_rows = []

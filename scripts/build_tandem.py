@@ -671,7 +671,8 @@ metric(
     [
         ("Total available stable funding", {"FY2025": 2560820, "FY2024": 3156347, "FY2023": 3142854, "FY2022": 1447618}),
         ("Total required stable funding", {"FY2025": 1320668, "FY2024": 1199958, "FY2023": 1156379, "FY2022": 922410}),
-        ("NSFR ratio (%)", {"FY2025": "194.30%", "FY2024": "263.10%", "FY2023": "270.6%", "FY2022": "155.5%", "FY2021": "Not disclosed"}),
+        ("NSFR ratio (%)", {"FY2025": "194.30%", "FY2024": "263.10%", "FY2023": "270.6%", "FY2022": "155.5%", "FY2021": ("Not published – TML Pillar 3 2021 names the NSFR only as a risk-appetite limit (> 120%) and "
+                                                                   "prints no ratio (text-searched 2026-09-19)")}),
     ],
     p3_sources(),
     note="NSFR not disclosed for FY2021 - not yet part of TML's Pillar 3 template that year (consistent with the "
@@ -681,6 +682,13 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": {
+        **{y: ("Not applicable – absent from BoE 'External MRELs' disclosures 2023-2026, which list every UK "
+               "resolution entity with MREL above minimum capital (MCR); MREL = MCR") for y in ("FY2025", "FY2024", "FY2023")},
+        "FY2022": ("Not published – no FY2022 Pillar 3 edition found (newsroom, web search, Wayback); the FY2023 "
+                   "edition's Dec-22 comparative has no MREL (text-searched 2026-09-19)"),
+        "FY2021": "Not published – no MREL figure or mention in TML Pillar 3 2021 (text-searched 2026-09-19)",
+    }},
     per_note={
         "MREL Ratio": "MREL is not disclosed in any of TML's Pillar 3 Disclosures FY2021-FY2025. The Group states "
                        "(FY2023 Pillar 3 Disclosures, Overview) that it qualifies as a 'small, non-complex' "

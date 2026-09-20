@@ -1019,8 +1019,20 @@ bw.add_not_disclosed_metric_sheets(
                       "the Bank of England's Single Point of Entry resolution strategy for the HSBC group "
                       "(that role sits with HSBC Holdings plc at the top of the group), so no entity-level "
                       "MREL requirement or ratio applies here - the same pattern as HSBC Bank plc's "
-                      "relationship to the wider group (see that workbook).",
+                      "relationship to the wider group (see that workbook). "
+                      "GA-020 correction (2026-09-19): 'no MREL mention anywhere' overstated it. The FY2019/FY2020 Pillar 3 "
+                      "regulatory-developments text names MREL, and every Annual Report FY2019-FY2025 lists 'MREL eligible "
+                      "Subordinated Loans' from HSBC Holdings in its subordinated-liabilities note (FY2019 AR: '£6.5bn of eligible "
+                      "debt issued to meet our MREL'). No MREL ratio, requirement or eligible-liabilities total is printed in any "
+                      "of those documents. The FY2023-FY2025 Pillar 3 disclosure indices (PDF p.72/72/70) state that Art. 437a "
+                      "own funds and eligible liabilities disclosures are 'not applicable to HSBC UK'.",
     },
+    statements={"MREL Ratio": {
+        **{y: f"Not published – {y} Pillar 3 and Annual Report read 2026-09-19: AR lists MREL-eligible loans from HSBC Holdings but no MREL ratio or requirement; no KM2/TLAC table"
+           for y in ["FY2022", "FY2021", "FY2020", "FY2019"]},
+        **{y: f"Not applicable – {y} Pillar 3 disclosure index (PDF p.{pg}): Art. 437a own funds and eligible liabilities disclosures 'not applicable to HSBC UK'"
+           for y, pg in [("FY2025", 70), ("FY2024", 72), ("FY2023", 72)]},
+    }},
 )
 
 add_interim_pillar3_sheet()

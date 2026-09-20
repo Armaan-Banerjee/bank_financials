@@ -732,26 +732,47 @@ metric(
          "(FY2023 comparator in that report: 151%, unchanged).",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts and the documents checked for them.
+BBP_AR21_URL = ("https://home.barclays/content/dam/home-barclays/documents/investor-relations/reports-and-events/"
+                "annual-reports/2021/Barclays-Bank-PLC-2021-AR.pdf")
+BBP_NSFR_2021 = ("Not applicable – UK NSFR requirement began 1 Jan 2022; BBPLC Annual Report 2021 names the NSFR only "
+                 "as a forthcoming standard, with no figure (checked 2026-09-19)")
+_BBP_MREL_437A = ("Not published – this year's BBPLC Pillar 3 Art. 437a row: 'MREL disclosures are not applicable for "
+                  "Barclays Bank PLC' (refers to Barclays PLC TLAC2); annual report gives Group MREL only")
+_BBP_MREL_AR = ("Not published – no BBPLC MREL ratio in its annual report (MREL described at Barclays Group level "
+                "only) or Pillar 3 (full-text search 2026-09-19)")
+BBP_MREL = {"FY2025": _BBP_MREL_437A, "FY2024": _BBP_MREL_437A, "FY2023": _BBP_MREL_AR, "FY2022": _BBP_MREL_AR,
+            "FY2021": ("Not published – no BBPLC MREL ratio in its Annual Report 2021 (MREL described at Barclays "
+                       "Group level only; full-text search 2026-09-19)")}
 metric(
     "NSFR", "£bn / %",
     [
         ("Total Available Stable Funding (£bn)", {"FY2025": 381, "FY2024": 372, "FY2023": 339, "FY2022": 310}),
         ("Total Required Stable Funding (£bn)", {"FY2025": 337, "FY2024": 333, "FY2023": 308, "FY2022": 288}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "113%", "FY2024": "112%", "FY2023": "110%", "FY2022": "108%", "FY2021": "Not publicly disclosed"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "113%", "FY2024": "112%", "FY2023": "110%", "FY2022": "108%", "FY2021": BBP_NSFR_2021}),
     ],
     p3_sources(),
-    note="NSFR is an average of the last four spot quarter-end ratios. It was not a UK regulatory requirement "
+    note="GA-020 (2026-09-19): the FY2021 cell was checked against Barclays Bank PLC's own Annual Report 2021 ("
+         + BBP_AR21_URL + "): its only two NSFR mentions describe the NSFR as a forthcoming Basel III standard, with no "
+         "figure; no FY2021 Barclays Bank PLC Pillar 3 is listed on the Bank's annual-reports index. "
+         "NSFR is an average of the last four spot quarter-end ratios. It was not a UK regulatory requirement "
          "as at FY2021 (the UK NSFR regime took effect from 1 January 2022), so no FY2021 figure is available.",
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": BBP_MREL},
     per_note={
         "MREL Ratio": "MREL (Minimum Requirement for own funds and Eligible Liabilities) is set and disclosed "
                       "at the Barclays PLC resolution-group level, not for Barclays Bank PLC as an individual "
                       "operating subsidiary. No MREL ratio for Barclays Bank PLC specifically was found in its "
-                      "Annual Reports for FY2021-FY2025.",
+                      "Annual Reports for FY2021-FY2025. GA-020 re-check 2026-09-19: the BBPLC Annual Reports 2021-2025 "
+                      "(home.barclays annual-reports index) describe TLAC/MREL at Barclays Group level and give Group "
+                      "requirements only; the BBPLC Pillar 3 Reports 2024 (PDF p.59) and 2025 (PDF p.55) state under "
+                      "Art. 437a 'MREL disclosures are not applicable for Barclays Bank PLC', pointing to TLAC2 in the "
+                      "Barclays PLC Pillar 3 (creditor ranking, not a ratio); the 2022 and 2023 editions have no MREL "
+                      "text.",
     },
 )
 

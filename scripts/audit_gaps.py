@@ -40,8 +40,10 @@ of non-value. In that order:
                                               which is neither silence nor a
                                               measured zero - user, 2026-09-18)
     matches NOT_DISCLOSED_RE    -> not_disclosed
-    contains a digit            -> data      ('18.7%', '1,234' - CLAUDE.md:
-                                              strings are valid cell values)
+    STARTS with a number        -> data      ('18.7%', '1,234' - CLAUDE.md:
+                                              strings are valid cell values;
+                                              was "contains a digit" until
+                                              2026-09-19 - see FIGURE_STR_RE)
     anything else               -> not_disclosed, and the phrase is REPORTED
 
 Before this, the phrase list was the whole test and everything unmatched fell
@@ -65,10 +67,11 @@ Those columns are now marked `x` and reported apart as closures, not gaps.
 This moved 14 workbooks out of the empty-column list (52 -> 38).
 
 The three states the WORK is organised around - FOUND / NEVER PUBLISHED /
-UNREACHED TODAY - still have no representation here. `n` conflates the last
-two: "Not available today, no copy retrievable" matches NOT_DISCLOSED_RE and
-so a limit on OUR reach is filed as a fact about the bank. That is GA-020 and
-is NOT fixed by this change.
+UNREACHED TODAY - are represented since 2026-09-19 (GA-020, option 1): a
+statement opening "Unreached today –" counts as `u`, "Not published yet –" as
+`p`, and a statement giving no reason at all as `?` (unevidenced - it cannot
+say which outcome it is). See UNREACHED_RE / PENDING_RE / BARE_RE. The phrase
+is the whole contract, so write it exactly; the census prints the totals.
 
 A wholly-empty year column is called out separately because it is the one
 shape that is a defect whatever the cause: per the user's instruction of
@@ -165,6 +168,46 @@ EXPLAINS_RE = re.compile(
     re.I,
 )
 
+# A FIGURE STORED AS A STRING STARTS WITH ITS NUMBER. "18.7%", "(1,234)",
+# "£2.5m", "approximately 60%" and "179% (average ...)" are figures. The old
+# test - "contains any digit" - also scored statements as figures whenever
+# they mentioned a date or a year: on 2026-09-19 that was 63 cells in 11
+# banks, including "FY2012 Pillar 3 not located" (Metro, 8 cells) and
+# "Unreached today - ... 1978" (UBP), i.e. real gaps counted as FOUND. Every
+# digit-leading string in the corpus was checked for absence wording; the
+# only hit was a figure. Statements now fall through to the prose branch and
+# are surfaced in unphrased_absences rather than swallowed.
+FIGURE_STR_RE = re.compile(
+    r"^[\s(£$€+\-−~<>≈]*"
+    r"(?:(?:approx(?:imately|\.)?|c\.|circa|about|over|under|below|above"
+    r"|at least|less than|more than)\s*)?"
+    r"[£$€]?\d",
+    re.I,
+)
+
+# GA-020 OUTCOME VOCABULARY (adopted 2026-09-19, user's decision). A statement
+# in a year cell records ONE of three outcomes, and two of them are marked by a
+# reserved opening phrase so the census can count them without guessing:
+#   "Unreached today – <what was tried>"   -> u  (a limit on OUR reach, not a
+#                                                  fact about the bank)
+#   "Not published yet – <when it is due>" -> p  (period ended, document not
+#                                                  out yet)
+#   anything else with a stated reason     -> n  (never published / not
+#                                                  applicable, with evidence)
+# A statement that gives NO reason at all ("Not publicly disclosed", "n/a")
+# cannot say which of the three it is, so it is counted apart as `unevidenced`
+# - the number the reclassification work drives towards zero.
+# "N/A (as printed)" is the bank's own printed content, like a dash, and is
+# data.
+UNREACHED_RE = re.compile(r"^\s*unreached today\s*[-–—:]", re.I)
+PENDING_RE = re.compile(r"^\s*not published yet\s*[-–—:]", re.I)
+AS_PRINTED_RE = re.compile(r"^\s*(n/?a|nil|n\.a\.|n/m)\s*\(as printed\)\s*$", re.I)
+BARE_RE = re.compile(
+    r"^\s*(not\s+(publicly\s+|separately\s+)?(disclosed|published|available|applicable"
+    r"|presented|reported|required)|n/?a|na|n\.a\.|n/m)\s*[.*]?\s*$",
+    re.I,
+)
+
 YEAR_RE = re.compile(r"\bFY(\d{4})\b")
 
 
@@ -193,7 +236,15 @@ def _year_of(label):
     """
     if label is None:
         return None
-    hits = YEAR_RE.findall(str(label))
+    # Unit/basis annotations can contain another FY year, e.g.
+    # ``FY2025 ($'000, FY2021 conversion)``.  That annotation must not
+    # overwrite the reporting year.  Spanning labels such as FY2022-FY2023
+    # still use the last year in the reporting label.
+    text = str(label)
+    reporting_part = text.split("(", 1)[0]
+    hits = YEAR_RE.findall(reporting_part)
+    if not hits:
+        hits = YEAR_RE.findall(text)
     return int(hits[-1]) if hits else None
 
 
@@ -242,7 +293,10 @@ def audit_workbook(path):
             result["coverage"][sheet] = {}
             continue
 
-        counts = {y: {"data": 0, "not_disclosed": 0} for y in years.values()}
+        # not_disclosed stays the TOTAL of statements (unchanged meaning, so
+        # existing readers keep working); the three GA-020 sub-counts split it.
+        counts = {y: {"data": 0, "not_disclosed": 0, "unreached": 0,
+                      "pending": 0, "unevidenced": 0} for y in years.values()}
         for r in rows[HEADER_ROW:]:
             # The source-citation cell is a merged block in column A with
             # nothing beside it; it is not a data row and must not be read as
@@ -259,11 +313,20 @@ def audit_workbook(path):
                 # is published content and is tested before anything else.
                 if isinstance(v, (int, float)):
                     counts[y]["data"] += 1
-                elif _is_dash(v):
-                    counts[y]["data"] += 1          # the bank printed a dash
+                elif _is_dash(v) or AS_PRINTED_RE.search(str(v)):
+                    counts[y]["data"] += 1          # the bank printed it
+                elif UNREACHED_RE.search(str(v)):
+                    counts[y]["not_disclosed"] += 1
+                    counts[y]["unreached"] += 1
+                elif PENDING_RE.search(str(v)):
+                    counts[y]["not_disclosed"] += 1
+                    counts[y]["pending"] += 1
+                elif BARE_RE.search(str(v)):
+                    counts[y]["not_disclosed"] += 1
+                    counts[y]["unevidenced"] += 1
                 elif NOT_DISCLOSED_RE.search(str(v)):
                     counts[y]["not_disclosed"] += 1
-                elif re.search(r"\d", str(v)):
+                elif FIGURE_STR_RE.search(str(v)):
                     # A figure stored as a string - "18.7%", "1,234", "£2.5m".
                     # CLAUDE.md: numbers and strings are both valid cell values.
                     counts[y]["data"] += 1
@@ -348,11 +411,15 @@ def main():
         print(f"wrote {args.json} ({len(results)} workbooks)")
 
     if args.tsv:
-        print("bank\tsheet\tyear\tdata_cells\tnot_disclosed_cells")
+        # New columns are APPENDED so positional readers of the old five
+        # columns are unaffected.
+        print("bank\tsheet\tyear\tdata_cells\tnot_disclosed_cells"
+              "\tunreached_cells\tpending_cells\tunevidenced_cells")
         for r in results:
             for sheet, cov in r["coverage"].items():
                 for y, c in cov.items():
-                    print(f"{r['bank']}\t{sheet}\t{y}\t{c['data']}\t{c['not_disclosed']}")
+                    print(f"{r['bank']}\t{sheet}\t{y}\t{c['data']}\t{c['not_disclosed']}"
+                          f"\t{c['unreached']}\t{c['pending']}\t{c['unevidenced']}")
         return 0
 
     if args.bank and len(results) == 1:
@@ -366,6 +433,12 @@ def main():
             for y, c in cov.items():
                 if c["data"]:
                     mark = "."
+                elif c["unreached"]:
+                    mark = "u"
+                elif c["pending"]:
+                    mark = "p"
+                elif c["unevidenced"]:
+                    mark = "?"
                 elif c["not_disclosed"]:
                     mark = "n"
                 elif explained:
@@ -374,7 +447,9 @@ def main():
                     mark = "_"
                 bits.append(f"{y}{mark}")
             print(f"  {sheet:<24} {' '.join(bits)}")
-        print("\n  key: . = has figures   n = 'not disclosed' recorded in a cell"
+        print("\n  key: . = has figures   n = not published / not applicable, reason stated"
+              "\n       u = 'Unreached today' - a limit on OUR reach   p = 'Not published yet'"
+              "\n       ? = a statement with NO reason - cannot say which outcome it is"
               "\n       x = grid empty, but the SHEET explains why (subtitle or row label)"
               "\n       _ = EMPTY and unexplained - the only mark that is a question")
         if r["unphrased_absences"]:
@@ -420,6 +495,26 @@ def main():
             by_sheet.setdefault(sheet, []).append(y)
         parts = [f"{s} x{len(ys)}" for s, ys in sorted(by_sheet.items())]
         print(f"    {r['bank']}: {'; '.join(parts)}")
+
+    # GA-020: outcome totals across every statement cell in the corpus.
+    tot = {"not_disclosed": 0, "unreached": 0, "pending": 0, "unevidenced": 0}
+    unreached_where = {}
+    for r in results:
+        for sheet, cov in r["coverage"].items():
+            for y, c in cov.items():
+                for k in tot:
+                    tot[k] += c[k]
+                if c["unreached"]:
+                    unreached_where.setdefault(r["bank"], []).append(f"{sheet} {y}")
+    evidenced = (tot["not_disclosed"] - tot["unreached"] - tot["pending"]
+                 - tot["unevidenced"])
+    print(f"\nSTATEMENT OUTCOMES (GA-020) - {tot['not_disclosed']} statement cells:"
+          f"\n    n  never published / not applicable, reason stated  {evidenced:6}"
+          f"\n    p  'Not published yet'                             {tot['pending']:6}"
+          f"\n    u  'Unreached today' - OUR limit, not the bank's   {tot['unreached']:6}"
+          f"\n    ?  no reason given - outcome unknown               {tot['unevidenced']:6}")
+    for b, where in sorted(unreached_where.items()):
+        print(f"      u  {b}: {', '.join(where[:6])}{' ...' if len(where) > 6 else ''}")
 
     unphrased = {}
     for r in results:

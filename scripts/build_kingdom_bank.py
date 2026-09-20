@@ -18,8 +18,10 @@ YEAR_LABEL = {y: y for y in YEARS}
 PILLAR3_YEARS = [y for y in YEARS if y not in ("FY2013", "FY2012", "FY2011", "FY2010", "FY2009", "FY2008", "FY2007", "FY2006", "FY2005", "FY2004")]
 
 # All 22 years sourced from Companies House filings (fully scanned/image-only,
-# 0 text blocks per page) - the bank's registered site (www.kingdombank.co.uk)
-# is an unrelated expired/parked domain; the real site is www.kingdom.bank.
+# 0 text blocks per page). www.kingdombank.co.uk is NOT an unrelated domain
+# (corrected 2026-09-19): it was the bank's own website c.2005-May 2016, when it
+# began 301-redirecting to www.kingdom.bank; today it serves only a parking-style
+# JS redirect to /lander. See EARLY_EDITIONS_NOTE for what Wayback holds of it.
 # Per HD-045 (2026-09-05), the FY2014-FY2020 window was added on top of the
 # original FY2021-FY2025 build, capped at FY2014 by explicit project-wide
 # decision. HD-077 (2026-09-06) lifted that cap for the statutory-statement
@@ -27,7 +29,9 @@ PILLAR3_YEARS = [y for y in YEARS if y not in ("FY2013", "FY2012", "FY2011", "FY
 # Cash Flow Statement) back to the bank's real statutory floor of FY2004 -
 # Pillar 3, Asset Quality and RWA Breakdown remain capped at FY2014 by
 # design (see those sheets' own notes), since Pillar 3-style disclosure
-# genuinely didn't exist for this SDDT bank in the earlier years.
+# was not carried back that far. (Corrected 2026-09-19: the bank DID publish
+# Pillar 3 documents for 2011-2015 on www.kingdombank.co.uk / www.kingdom.bank -
+# none of those files is reachable today; see EARLY_EDITIONS_NOTE.)
 CH_BASE = "https://find-and-update.company-information.service.gov.uk/company/04346834/filing-history"
 FY2025_URL = f"{CH_BASE}/MzUzMjA2MDkzOWFkaXF6a2N4/document?format=pdf&download=0"
 FY2024_URL = f"{CH_BASE}/MzQ3Mjc3MDk4N2FkaXF6a2N4/document?format=pdf&download=0"
@@ -102,6 +106,22 @@ P3_FY2022_DEAD_URL = "https://www.kingdom.bank/wp-content/uploads/2023/04/Pillar
 
 AR2024_URL = "https://www.kingdom.bank/wp-content/uploads/KBL-Statutory-Accounts-2024.pdf"
 
+# GA-020 second pass (2026-09-19): the FY2023 edition's real filename, read off the
+# bank's own /oversight/ page as captured by Wayback on 20241104133630 and
+# 20250207202236. That exact URL has NO capture of its own in the CDX index.
+P3_FY2023_DEAD_URL = ("https://www.kingdom.bank/wp-content/uploads/2024/05/"
+                      "Pillar-3-Disclosures-2023-approved-11-April-2024.pdf")
+# GA-020 second pass (2026-09-19): FY2016, FY2017 and FY2018 editions FOUND, still
+# LIVE on the Webflow asset CDN the bank's site used c.2018-2021. The links come
+# from Wayback captures of www.kingdom.bank/about/oversight (20190723033712 to
+# 20210305044749). Each fetched 2026-09-19: HTTP 200, application/pdf, %PDF magic,
+# text layer present; cover 'Kingdom Bank / Pillar 3 Disclosures' with the stated
+# approval date, and p.3 'The figures in this document are as at 31 December <year>'.
+_WEBFLOW = "https://uploads-ssl.webflow.com/5bf6bdccc17611b9f6ac4438/"
+P3_FY2016_URL = _WEBFLOW + "5bfe7da20a26ac29c893316e_Pillar%203%20Disclosures%20approved%20May%2017%202017.pdf"  # 19pp, approved 17 May 2017
+P3_FY2017_URL = _WEBFLOW + "5bfe7da29464450ef43346a9_Pillar%203%20Disclosures%20approved%20May%2023%202018-V2.pdf"  # 19pp, approved 23 May 2018
+P3_FY2018_URL = _WEBFLOW + "5d074dcf1b310b728dc319ee_Pillar%203%20Disclosures%20approved%2022%20May%202019.pdf"  # 20pp, approved 22 May 2019
+
 # PRA consolidated waivers/modifications register (downloaded and parsed
 # 2026-09-15). One Rule 3.1 row for FRN 400972 'KINGDOM BANK LIMITED':
 # 'Modification by Consent - PRA Rulebook - CRR Firms - Rule 3.1 of the SDDT
@@ -121,9 +141,10 @@ ENTITY_NOTE = (
     "Limited (LPHL) from 31 March 2020 onward (whose investor group includes Stewardship Services (UKET) "
     "Limited); for FY2014-FY2019 the ultimate parent was instead Assemblies of God Property Trust. "
     "Solo/Bank basis throughout - no group consolidation applies. All 12 years' filings on Companies "
-    "House are fully scanned/image-only (0 extractable text on every page); the bank's registered-"
-    "looking domain www.kingdombank.co.uk is an unrelated expired/parked domain (a GoDaddy-style parking "
-    "page) - its real site is www.kingdom.bank. FY2014 was prepared under old UK GAAP/the BBA SORP (pre "
+    "House are fully scanned/image-only (0 extractable text on every page); the domain www.kingdombank.co.uk "
+    "was the bank's own website until May 2016, when it began redirecting to its current site "
+    "www.kingdom.bank; today it serves only a parking-style redirect (CORRECTED 2026-09-19: this note "
+    "previously called it 'an unrelated expired/parked domain', which Wayback captures of 2005-2016 disprove). FY2014 was prepared under old UK GAAP/the BBA SORP (pre "
     "FRS 102) and, as a wholly-owned subsidiary whose parent's consolidated accounts are publicly "
     "available, took the FRS 1 (revised 1996) exemption from preparing a cash flow statement - FY2014 "
     "genuinely has no cash flow statement, not a sourcing gap (see Note 1(b) of the FY2014 Annual "
@@ -146,9 +167,10 @@ STATUTORY_ENTITY_NOTE = (
     "Limited); for FY2004-FY2019 the ultimate parent was instead Assemblies of God Property Trust "
     "throughout (confirmed directly in each year's own accounting policies note, back to FY2004). "
     "Solo/Bank basis throughout - no group consolidation applies. All 22 years' filings on Companies "
-    "House are fully scanned/image-only (0 extractable text on every page); the bank's registered-"
-    "looking domain www.kingdombank.co.uk is an unrelated expired/parked domain (a GoDaddy-style parking "
-    "page) - its real site is www.kingdom.bank. FY2004-FY2014 were prepared under old UK GAAP/the BBA "
+    "House are fully scanned/image-only (0 extractable text on every page); the domain www.kingdombank.co.uk "
+    "was the bank's own website until May 2016, when it began redirecting to its current site "
+    "www.kingdom.bank; today it serves only a parking-style redirect (CORRECTED 2026-09-19: this note "
+    "previously called it 'an unrelated expired/parked domain', which Wayback captures of 2005-2016 disprove). FY2004-FY2014 were prepared under old UK GAAP/the BBA "
     "SORP (pre FRS 102) and, as a wholly-owned subsidiary whose parent's consolidated accounts are "
     "publicly available, took the FRS 1 (revised 1996) exemption from preparing a cash flow statement in "
     "every one of those years (confirmed directly in each year's own accounting policies note, not "
@@ -440,14 +462,40 @@ def p3_sources():
         "on kingdom.bank (checked 2026-09-15) returns FSCS application forms, a non-personal mandate form "
         "and site images, and no Pillar 3 file of any name. FY2023 regulatory figures are likewise blank, "
         "not zero.\n"
+        "SECOND PASS 2026-09-19 (GA-020 unreached). FY2023: the edition's filename is now known from the "
+        "bank's own Oversight page as archived on 4 Nov 2024 and 7 Feb 2025 - " + P3_FY2023_DEAD_URL + " - "
+        "and it returns HTTP 404 live, has no capture in the Wayback CDX index, none on archive.ph, and the "
+        "site's WordPress media library no longer lists it (47 PDFs, none a Pillar 3); search engines still "
+        "index the title 'Pillar 3 Disclosures 2023 - Kingdom Bank'. FY2022: the same live 404, the one WAF "
+        "capture, and nothing on archive.ph. staging.kingdom.bank does not resolve. Both stay UNREACHED.\n"
+        "COMMON CRAWL PASS 2026-09-19: kingdom.bank (every host and path) in all 35 Common Crawl crawls from "
+        "CC-MAIN-2023-14 to CC-MAIN-2026-39, and the bank's Webflow asset folders on uploads-ssl.webflow.com and "
+        "cdn.prod.website-files.com over the same crawls. The only Pillar 3 files captured are the FY2019, FY2020 "
+        "and FY2021 editions (CC-MAIN-2023-14), which shows the lookup reaches this site; neither the FY2022 nor "
+        "the FY2023 edition was captured under any name. Both stay UNREACHED.\n"
+        "FY2016, FY2017 AND FY2018 EDITIONS LOCATED 2026-09-19 (this CORRECTS the statement that no Pillar 3 "
+        "document had been located for those years). Linked from www.kingdom.bank/about/oversight in "
+        "Wayback captures of 2019-2021 and still live on the bank's former Webflow asset host: Pillar 3 "
+        "Disclosures approved 17 May 2017 (as at 31 December 2016, 19pp) - " + P3_FY2016_URL + "; approved "
+        "23 May 2018 (31 December 2017, 19pp) - " + P3_FY2017_URL + "; approved 22 May 2019 (31 December "
+        "2018, 20pp) - " + P3_FY2018_URL + ". Contents in all three: Introduction, Risk management, Board "
+        "and committee structure, Own funds, Exposure amounts under the standardised approach, Credit risk "
+        "and provisioning, Remuneration, Conclusion; each prints a section 5.2 Leverage Ratio. TRANSCRIBED "
+        "2026-09-19, each from its own edition, figures read off rendered page images, cited at the printed "
+        "folio: FY2016 - section 4 'Total Own Funds' table p.11, section 5.1 'Exposure category under CRR "
+        "Article 112' table p.12, section 5.2 Leverage Ratio p.13; FY2017 - the same sections at p.11, p.12 "
+        "and p.13; FY2018 - the same sections at p.12, p.13 and p.14. All three state every figure in £m to "
+        "one decimal place; they are carried in £'000 at that precision (5,300 means '£5.3m as printed'). "
+        "None of them prints a capital ratio or a total risk-weighted exposure amount.\n"
         "ANNUAL REPORT KPI TABLE (a separate, non-Pillar 3 series - see the individual sheets, which keep "
         "the two on separate labelled rows and never merge them). Each Annual Report from FY2015 onward "
         "discloses a Core Equity Tier 1 ('CET1') ratio, a Leverage ratio and a Liquidity Coverage "
         "Requirement ('LCR') ratio among the 'Key performance indicators' in the Strategic Report - "
         "re-verified directly against seven of this bank's own primary-source PDFs during HD-045 "
         "(2026-09-05), which also confirmed the KPI table did not yet exist in FY2014 (narrative-only "
-        "Capital paragraph that year). The KPI table is the ONLY source for FY2014-FY2018 and FY2022-"
-        "FY2025; where a Pillar 3 document also covers the year, both series are shown side by side "
+        "Capital paragraph that year). The KPI table is the only RATIO source for FY2014-FY2018 (the "
+        "FY2016-FY2018 Pillar 3 editions print a leverage ratio, which confirms it, and no capital ratio) and "
+        "for FY2022-FY2025; where a Pillar 3 document also covers the year, both series are shown side by side "
         "because they do not agree (see the CET1 Ratio, Leverage Ratio and LCR sheets).\n"
         "No MREL ratio is disclosed in any year, in any document - see that sheet's own note."
     )
@@ -466,24 +514,48 @@ ARCHIVE_PROVENANCE_NOTE = (
 )
 
 EARLY_EDITIONS_NOTE = (
-    "FY2014-FY2018 ARE A SEPARATE, OLDER GAP and are not covered by the recovered FY2019-FY2021 "
-    "documents. An unfiltered Wayback CDX sweep of kingdom.bank surfaced a dedicated disclosure page at "
-    "www.kingdom.bank/about-us/pillar-3-disclosure/, in the About Us > Financial Information menu. Its "
-    "only surviving capture (2 February 2017, HTTP 200) links exactly three documents - 'Pillar 3 "
-    "Disclosure 2013', 'Pillar 3 Disclosure 2014' and 'Pillar 3 Disclosure 2015' - by opaque content hash "
-    "rather than filename: /docs/bb5e9fae40063b28744f4d2d7d8908c1/ (2013), "
-    "/docs/d32034542cc36318b9bfa22706e15c90/ (2014) and /docs/997ae5938fc21ec9f20b8bc721e6c6f8/ (2015). "
-    "All three return HTTP 404 live, and a CDX prefix sweep of kingdom.bank/docs* returns zero captures - "
-    "the Wayback Machine archived the page listing them but never the files themselves. The FY2014 and "
-    "FY2015 editions would have supplied the figures still blank for those years; they are not withheld "
-    "or unlocated, they no longer exist in any public copy reachable online. No Pillar 3 document of any "
-    "kind has been located for FY2016, FY2017 or FY2018."
+    "FY2014-FY2015 ARE A SEPARATE, OLDER GAP. The bank published Pillar 3 documents for those years (and "
+    "earlier), and no copy of any of them is reachable today. Two archived sites list them:\n"
+    "(a) www.kingdombank.co.uk, the bank's own website until May 2016. Its 'legal' page, captured by Wayback on "
+    "7 April 2016 (20160407213515), links 'Pillar 3 Disclosure 2011' (/uploads/pillar3disclosures.pdf), '2012' "
+    "(/uploads/pillar3disclosures2012.pdf), '2013' (/uploads/pillar3disclosures2013.pdf) and '2014' "
+    "(/uploads/pillar3disclosures2014_20150603.pdf); no 2015 edition is listed there. The Wayback CDX index "
+    "(queried 2026-09-19 with matchType=domain and no mimetype filter, then per file) holds exactly one capture "
+    "each of the 2013 and 2014 files, both taken on 7 May 2016 after the move, and both are HTTP 301 redirects "
+    "whose target is the www.kingdom.bank HOMEPAGE, not a relocated file; the 2011 and 2012 files have no "
+    "capture at all. archive.ph has none either.\n"
+    "(b) www.kingdom.bank/about-us/pillar-3-disclosure/, captured 2 February 2017, links 'Pillar 3 Disclosure "
+    "2013', '2014' and '2015' by opaque content hash: /docs/bb5e9fae40063b28744f4d2d7d8908c1/ (2013), "
+    "/docs/d32034542cc36318b9bfa22706e15c90/ (2014) and /docs/997ae5938fc21ec9f20b8bc721e6c6f8/ (2015). All "
+    "three return HTTP 404 live and have no Wayback capture (CDX prefix query per hash, www. and bare host, "
+    "2026-09-19). CORRECTED 2026-09-19: an earlier version of this note said a CDX sweep of kingdom.bank/docs* "
+    "'returns zero captures'. That was an instrument miss: the same query form does find two /docs/ captures "
+    "from February 2017 (a 2-page Terms of business and an FSCS leaflet) - neither is a Pillar 3 document, so "
+    "the conclusion for the three Pillar 3 hashes stands.\n"
+    "(c) The bank's later Webflow asset host (uploads-ssl.webflow.com/5bf6bdccc17611b9f6ac4438/, CDX prefix "
+    "sweep 2026-09-19) holds about 60 archived PDFs, including 'CBCR 2015 Final', but no Pillar 3 edition "
+    "earlier than FY2016, and the Webflow-era /about/oversight page (2019-2021) links only the FY2016 edition "
+    "onward.\n"
+    "So FY2014 and FY2015 remain UNREACHED - published by the bank, and not available in any public copy found. "
+    "This workbook's Pillar 3 sheets start at FY2014, so the 2011-2013 editions would add no column here.\n"
+    "FY2016-FY2018 (updated 2026-09-19): the three editions are live on the Webflow host (URLs in the source "
+    "citation below) and are NOW TRANSCRIBED onto the CET1 Capital, Tier 1 Capital, Total Capital and RWA "
+    "Breakdown sheets, and confirm the Leverage Ratio sheet's figures. Like the FY2019 edition, none of them "
+    "prints a CET1, Tier 1 or total capital RATIO or a total risk-weighted exposure amount, so those four "
+    "sheets stay blank for FY2016-FY2018 on the Pillar 3 rows; nothing has been computed on the bank's behalf."
 )
 
 NOT_DISCLOSED_NOTE = (
-    "Not publicly disclosed. Kingdom Bank has never disclosed this metric in any year reviewed - not in "
-    "any of the five annual Pillar 3 disclosure documents it published (FY2019-FY2023), and not in any "
-    "Annual Report's Strategic Report 'Key performance indicators' table.\n\n"
+    "No MREL figure appears in any document READ: the six Pillar 3 editions in hand (FY2016, FY2017, "
+    "FY2018 - located 2026-09-19 - and FY2019, FY2020, FY2021) or any Annual Report's Strategic Report 'Key "
+    "performance indicators' table. The FY2022 and FY2023 editions exist but could not be reached, so those "
+    "two years are recorded as UNREACHED rather than 'not published'. (CORRECTED 2026-09-19: this sentence "
+    "previously said the metric was absent from 'the five annual Pillar 3 disclosure documents it published "
+    "(FY2019-FY2023)', two of which have never been read.)\n"
+    "FY2016-FY2018 CHECK (2026-09-19): each edition's text layer, pdftotext -layout, case-insensitive - 0 "
+    "hits for 'MREL', 'eligible liabilities', 'loss absorbing'/'loss-absorbing' and 'resolution', against "
+    "76-79 hits for 'capital' and 6 for 'own funds' in each (positive control); the contents page (p.2, "
+    "read on the page image) has no MREL or resolution section.\n\n"
     "CORRECTION LOGGED 2026-09-15. An earlier version of this note asserted that Kingdom Bank's Pillar 3 "
     "practice 'lapsed after the FY2015 edition' and that no standalone Pillar 3 document existed for any "
     "reported year. That was WRONG and has been withdrawn. The bank published Pillar 3 disclosures for "
@@ -524,11 +596,13 @@ NOT_DISCLOSED_NOTE = (
 # FY2020/FY2021 but that remain blank in every other year.
 PARTIAL_DISCLOSURE_NOTE = (
     "Disclosed for FY2021 and FY2020 only, from the recovered Pillar 3 Disclosures 2021 (Template UK KM1 "
-    "/ Template UK OV1, which show both years). Every other year is BLANK rather than zero, for three "
+    "/ Template UK OV1, which show both years). Every other year is BLANK rather than zero, for four "
     "distinct reasons that should not be conflated: FY2022 and FY2023 Pillar 3 documents were published "
     "but cannot be retrieved (FY2022's sole Wayback capture is an HTML bot-check page returned with HTTP "
-    "200, not the PDF; FY2023 was never archived at all) - see the source citation below; FY2019's own "
-    "Pillar 3 document predates the UK KM1/OV1 templates and simply does not contain this metric; and "
+    "200, not the PDF; FY2023 was never archived at all) - see the source citation below; the FY2016-FY2019 "
+    "Pillar 3 documents (FY2016-FY2018 transcribed 2026-09-19) predate the UK KM1/OV1 templates and do not "
+    "print this metric; FY2014 and FY2015 editions were published but are unreachable (see the last "
+    "paragraph); and "
     "FY2024 onward were not published. FY2025 is structurally exempt - the PRA register records "
     "Modification by Consent of Rule 3.1 of the SDDT Regime (General Application) for FRN 400972, waiver "
     "ref A00009930P.pdf, START DATE 20/02/2025, no end date, and Rule 3.1 removes the Pillar 3 disclosure "
@@ -1152,11 +1226,20 @@ def metric(name, unit, rows_data, note=None):
 # accounting reference date is 31 December, so only FY2025's year-end falls
 # after that date. FY2022, FY2023 and FY2024 are NOT excused by it. Closing all
 # four on the waiver would be a false negative dressed up as a regulatory fact.
+# Common Crawl pass 2026-09-19 (self-hosted ZipNum lookup on data.commoncrawl.org): kingdom.bank, every
+# host and path, in all 35 crawls CC-MAIN-2023-14..2026-39, plus the Webflow asset prefixes
+# uploads-ssl.webflow.com/ and cdn.prod.website-files.com/5bf6bdccc17611b9f6ac4438/*: Pillar 3 files
+# captured are FY2019/FY2020/FY2021 only (CC-MAIN-2023-14, the positive control); no FY2022 or FY2023
+# file of any name. Log: wayfinder/gaps/ga020/unreached/done/KINGDOM BANK.jsonl
+KB_UNREACHED = ("Unreached today – bank published it (FY2024 AR; filenames on archived /oversight/ page); live 404, "
+                "Wayback: WAF page (FY2022) or no capture (FY2023), archive.ph none, WP media purged – 2026-09-19; "
+                "Common Crawl 2023-14..2026-39 checked")
 KINGDOM_P3_STATUS = {
     "FY2025": "Not published - SDDT Rule 3.1 opt-in from 20/02/2025",
     "FY2024": "Not published - Bank states none required after FY2023",
-    "FY2023": "Not available today - published, no copy retrievable",
-    "FY2022": "Not available today - published, no copy retrievable",
+    # GA-020 (2026-09-19): reserved phrase, with what was tried.
+    "FY2023": KB_UNREACHED,
+    "FY2022": KB_UNREACHED,
 }
 
 km1_rows = [
@@ -1275,8 +1358,10 @@ KM1_SOURCES = (
     "the only document library on the site, carries seventeen PDFs and all of them are customer forms "
     "(deposit slips, change of address, ISA transfer authority, mandates, savings conditions). A Wayback "
     "CDX sweep of the whole kingdom.bank domain returns one Pillar 3 page capture, from 2017. So the newest "
-    "KM1-bearing edition obtainable anywhere remains the FY2021 one used above. The bank's registered domain "
-    "www.kingdombank.co.uk is an unrelated parked domain and is not this bank.\n\n"
+    "KM1-bearing edition obtainable anywhere remains the FY2021 one used above. The domain "
+    "www.kingdombank.co.uk was the bank's own website until May 2016 and now serves only a parking-style "
+    "redirect (CORRECTED 2026-09-19: this note previously called it 'an unrelated parked domain'); none of "
+    "its archived Pillar 3 links (2011-2014 editions) is a KM1-era document.\n\n"
     "DASHES ARE REPRODUCED AS BLANKS, NOT ZEROS (map rule 2). Rows 9, UK 9a, 10 and UK 10a are printed '-' in "
     "both columns of the FY2021 edition - the Bank had no countercyclical, systemic risk, G-SII or O-SII "
     "buffer requirement - and a dash is left blank here rather than recorded as a zero. The rows themselves "
@@ -1352,6 +1437,18 @@ P3_TOTAL_CAPITAL_VALUES_FY2019_M = {"FY2019": 6700}         # "Total Capital aft
 P3_CET1_BEFORE_DEDUCTIONS = {"FY2020": 6759}
 P3_DEDUCTIONS = {"FY2020": -165}
 
+# FY2016-FY2018 Pillar 3 editions (Webflow copies, transcribed 2026-09-19 from
+# rendered page images; each year from its OWN edition). Section 4 'Total Own
+# Funds' table (FY2016 p.11, FY2017 p.11, FY2018 p.12), £m to 1 d.p., carried in
+# £'000 at that precision exactly as the FY2019 figures above are.
+P3_CET1_VALUES_M = dict(P3_CET1_VALUES_FY2019_M,
+                        **{"FY2018": 5600, "FY2017": 5400, "FY2016": 5300})   # "Tier 1 Capital after deductions"
+P3_TOTAL_CAPITAL_VALUES_M = dict(P3_TOTAL_CAPITAL_VALUES_FY2019_M,
+                                 **{"FY2018": 6700, "FY2017": 6700, "FY2016": 6700})  # "Total Capital after deductions"
+P3_TIER2_VALUES_M_EARLY = {"FY2018": 1100, "FY2017": 1300, "FY2016": 1400}    # "Tier 2 Capital (no deductions)"
+P3_CET1_BEFORE_DEDUCTIONS_M_EARLY = {"FY2018": 5800, "FY2017": 5700, "FY2016": 5600}  # "Core Tier 1 capital before deductions"
+P3_DEDUCTIONS_M_EARLY = {"FY2018": -200, "FY2017": -300, "FY2016": -300}      # printed "(0.2)" / "(0.3)" / "(0.3)"
+
 P3_CET1_RATIO_VALUES = {"FY2021": "16.97%", "FY2020": "16.64%"}   # UK KM1 rows 5/6
 P3_TOTAL_CAPITAL_RATIO_VALUES = {"FY2021": "18.84%", "FY2020": "18.79%"}  # UK KM1 row 7
 P3_TOTAL_RWA_VALUES = {"FY2021": 40617, "FY2020": 39632}          # UK KM1 row 4 / UK OV1 row 29
@@ -1413,6 +1510,18 @@ KPI_NOT_YET_INTRODUCED_NOTE = (
     "genuine 'not yet introduced' gap, not a sourcing failure."
 )
 
+EARLY_P3_NO_RATIO_NOTE = (
+    "FY2016-FY2018 PILLAR 3 EDITIONS PRINT NO CAPITAL RATIO AND NO TOTAL RWA (checked 2026-09-19). Each "
+    "edition's contents page (p.2) runs Introduction / Risk management / Board and committee structure / Own "
+    "funds / Exposure amounts under the standardised approach / Credit risk and provisioning / Remuneration / "
+    "Conclusion. Its own-funds section prints amounts only (£m), and its section 5.1 table stops at a credit "
+    "risk risk-weighted exposure subtotal (£29.6m / £32.3m / £34.6m) plus an operational-risk CAPITAL "
+    "REQUIREMENT (£0.2m / £0.2m / £0.3m), with no operational-risk exposure amount and no total. Every "
+    "'ratio' in the three texts was read: the only ones are the leverage ratio (section 5.2), the large-"
+    "exposures ratio, the borrower service ratio and a mention of the LCR. So the Pillar 3 rows here stay "
+    "BLANK for FY2016-FY2018, and no ratio or total is computed from the components on the bank's behalf. "
+)
+
 TWO_SERIES_NOTE = (
     "TWO DIFFERENT SERIES ARE SHOWN ABOVE AND MUST NOT BE MERGED. The 'per Annual Report KPI table' row "
     "is the bank's own Strategic Report key-performance-indicator figure, available for FY2015-FY2025. "
@@ -1427,11 +1536,15 @@ metric(
     [
         ("Shareholders' funds (Core Equity Tier 1) - per Annual Report balance sheet", CET1_VALUES),
         ("CET1 capital, regulatory - per Pillar 3 (UK KM1 row 1 / Own funds table)", P3_CET1_VALUES),
-        ("CET1 capital, regulatory - per Pillar 3 FY2019 edition, which states £m to 1 d.p. (£5.7m)",
-         P3_CET1_VALUES_FY2019_M),
+        ("CET1 capital, regulatory - per Pillar 3 FY2016-FY2019 editions, which state £m to 1 d.p. "
+         "(Tier 1 capital after deductions)", P3_CET1_VALUES_M),
         ("Of which: Core Tier 1 capital before deductions - per Pillar 3", P3_CET1_BEFORE_DEDUCTIONS),
         ("Of which: deductions (intangible assets, DTAs relying on future profits) - per Pillar 3",
          P3_DEDUCTIONS),
+        ("Of which: Core Tier 1 capital before deductions - per Pillar 3 FY2016-FY2018 editions (£m to 1 d.p.)",
+         P3_CET1_BEFORE_DEDUCTIONS_M_EARLY),
+        ("Of which: deductions (intangible assets, DTAs relying on future profits) - per Pillar 3 "
+         "FY2016-FY2018 editions (£m to 1 d.p.)", P3_DEDUCTIONS_M_EARLY),
     ],
     note=TWO_SERIES_NOTE
     + "Regulatory CET1 is materially LOWER than shareholders' funds in every overlapping year (FY2021 "
@@ -1440,7 +1553,16 @@ metric(
       "until after the disclosure was signed (the FY2020 edition footnotes this explicitly - 'The profit "
       "and loss account figure excludes audited profits for 2020, which were not approved until 16 April "
       "2021'), and intangible assets and deferred tax assets relying on future profits are deducted "
-      "(£165k in FY2020). Neither figure is wrong; they are different measures.",
+      "(£165k in FY2020). Neither figure is wrong; they are different measures.\n\n"
+      "FY2016-FY2018 (added 2026-09-19 from each year's own Pillar 3 edition, section 4 'Total Own Funds' "
+      "table - FY2016 p.11, FY2017 p.11, FY2018 p.12; URLs in the source note). The Annual Report balance "
+      "sheet remains the primary row and is unchanged; the Pillar 3 figures sit on their own £m-precision "
+      "rows and DISAGREE with it in all three years, for the reasons above: FY2016 Pillar 3 £5.3m against "
+      "shareholders' funds £5,667k; FY2017 £5.4m against £5,778k; FY2018 £5.6m against £5,908k. Each edition "
+      "footnotes its profit and loss account line as excluding that year's audited profits (approved 22 March "
+      "2017, 21 March 2018 and 20 March 2019 respectively), and deducts intangible assets and DTAs relying on "
+      "future profits (£0.3m, £0.3m, £0.2m). Each edition's own build-up foots as printed: 5.6 - 0.3 = 5.3; "
+      "5.7 - 0.3 = 5.4; 5.8 - 0.2 = 5.6.",
 )
 
 metric(
@@ -1454,6 +1576,7 @@ metric(
       "Annual Report KPI table gives 17.13% while the Pillar 3 Disclosures 2021 comparative column gives "
       "16.64%, a 49bp gap consistent with the regulatory CET1 base being £6,594k against shareholders' "
       "funds of £6,771k. Both are shown; neither is overwritten. "
+    + EARLY_P3_NO_RATIO_NOTE
     + KPI_NOT_YET_INTRODUCED_NOTE,
 )
 
@@ -1462,14 +1585,18 @@ metric(
     [
         ("Shareholders' funds (Core Equity Tier 1) - per Annual Report balance sheet", CET1_VALUES),
         ("Tier 1 capital after deductions - per Pillar 3 (UK KM1 row 2 / Own funds table)", P3_CET1_VALUES),
-        ("Tier 1 capital after deductions - per Pillar 3 FY2019 edition, which states £m to 1 d.p. (£5.7m)",
-         P3_CET1_VALUES_FY2019_M),
+        ("Tier 1 capital after deductions - per Pillar 3 FY2016-FY2019 editions, which state £m to 1 d.p.",
+         P3_CET1_VALUES_M),
     ],
     note=TIER1_NOTE + " The recovered Pillar 3 documents confirm this directly: the FY2020 and FY2019 "
          "editions' own funds tables show a Tier 1 section containing only permanent share capital, the "
          "profit and loss account and the revaluation reserve, and Template UK KM1 in the FY2021 edition "
          "prints an identical value on row 1 (CET1 capital) and row 2 (Tier 1 capital) for both FY2021 "
-         "(£6,892k) and FY2020 (£6,594k). " + TWO_SERIES_NOTE,
+         "(£6,892k) and FY2020 (£6,594k). The FY2016-FY2018 editions (added 2026-09-19) print the same "
+         "Tier 1-only structure, with no Additional Tier 1 line: Tier 1 capital after deductions £5.3m "
+         "(FY2016, p.11), £5.4m (FY2017, p.11) and £5.6m (FY2018, p.12), against Annual Report shareholders' "
+         "funds of £5,667k, £5,778k and £5,908k - a disagreement of basis explained on the CET1 Capital sheet, "
+         "not reconciled here. " + TWO_SERIES_NOTE,
 )
 
 metric(
@@ -1480,7 +1607,7 @@ metric(
     ],
     note=TIER1_RATIO_NOTE + " Template UK KM1 in the FY2021 Pillar 3 edition prints the same value on "
          "row 5 (CET1 ratio) and row 6 (Tier 1 ratio) for both years shown, confirming this directly "
-         "rather than by inference. " + TWO_SERIES_NOTE + KPI_NOT_YET_INTRODUCED_NOTE,
+         "rather than by inference. " + TWO_SERIES_NOTE + EARLY_P3_NO_RATIO_NOTE + KPI_NOT_YET_INTRODUCED_NOTE,
 )
 
 metric(
@@ -1493,8 +1620,10 @@ metric(
         ("Tier 2 capital instruments (subordinated debt), eligible - per Pillar 3", P3_TIER2_VALUES),
         ("Total own funds after deductions - per Pillar 3 (UK KM1 row 3 / Own funds table)",
          P3_TOTAL_CAPITAL_VALUES),
-        ("Total own funds after deductions - per Pillar 3 FY2019 edition, which states £m to 1 d.p. "
-         "(Tier 1 £5.7m + Tier 2 £1.0m = £6.7m)", P3_TOTAL_CAPITAL_VALUES_FY2019_M),
+        ("Tier 2 capital (no deductions) - per Pillar 3 FY2016-FY2018 editions, which state £m to 1 d.p.",
+         P3_TIER2_VALUES_M_EARLY),
+        ("Total own funds after deductions - per Pillar 3 FY2016-FY2019 editions, which state £m to 1 d.p. "
+         "(Total Capital after deductions)", P3_TOTAL_CAPITAL_VALUES_M),
     ],
     note=TWO_SERIES_NOTE
     + "The Tier 2 rows diverge sharply and deliberately: the balance sheet carries subordinated "
@@ -1502,7 +1631,16 @@ metric(
       "eligible as regulatory Tier 2 capital in FY2020 - regulatory eligibility of dated subordinated "
       "debt amortises over its final five years. The FY2021 Pillar 3 edition uses Template UK KM1, which "
       "prints total capital (£7,653k) and Tier 1 (£6,892k) but no separate Tier 2 line, so no FY2021 "
-      "Pillar 3 Tier 2 figure is shown here - it is deliberately NOT back-solved from the other two.",
+      "Pillar 3 Tier 2 figure is shown here - it is deliberately NOT back-solved from the other two.\n\n"
+      "FY2016-FY2018 (added 2026-09-19, each from its own Pillar 3 edition's section 4 'Total Own Funds' "
+      "table: FY2016 p.11, FY2017 p.11, FY2018 p.12). All three print Total Capital after deductions of "
+      "£6.7m (as does FY2019), made up of Tier 1 £5.3m + Tier 2 £1.4m (FY2016), £5.4m + £1.3m (FY2017) and "
+      "£5.6m + £1.1m (FY2018) - each foots as printed. The Annual Report rows are unchanged and DISAGREE: "
+      "shareholders' funds plus the full nominal subordinated liabilities give £7,248k (FY2016), £7,359k "
+      "(FY2017) and £7,339k (FY2018), against £6.7m per Pillar 3. The Tier 2 gap is the eligibility "
+      "amortisation described above (nominal £1,581k/£1,581k/£1,431k against eligible £1.4m/£1.3m/£1.1m); "
+      "the Tier 1 gap is explained on the CET1 Capital sheet. The FY2019 Tier 2 figure (£1.0m) was "
+      "transcribed by an earlier session but is not carried on this sheet; it was not re-read 2026-09-19.",
 )
 
 metric(
@@ -1528,6 +1666,7 @@ metric(
          "CONTROL: every adjacent edition's comparative agrees exactly with the own-edition figure used "
          "here - FY2022 22.12% appears in both the FY2022 and FY2023 editions, FY2023 18.16% in both the "
          "FY2023 and FY2024 editions, FY2024 22.70% in both the FY2024 and FY2025 editions.\n\n"
+         + EARLY_P3_NO_RATIO_NOTE + "\n\n"
          + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
@@ -1559,7 +1698,7 @@ metric(
          "total risk-weighted exposure amount stated anywhere - so no FY2019 total is shown here, and the "
          "FY2020 total above is taken from the FY2021 edition's UK OV1 comparative column (where it IS "
          "stated directly) rather than being summed or back-solved. See the RWA Breakdown sheet for the "
-         "components. " + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
+         "components. " + EARLY_P3_NO_RATIO_NOTE + "\n\n" + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
 # RWA Breakdown - placed immediately after Total RWAs, before Leverage
@@ -1586,25 +1725,40 @@ rwa_rows = [
     ("DATA", "Claims on institutions and corporates with a short-term credit assessment", {"FY2021": 444}),
     ("DATA", "Other items", {"FY2021": 721}),
     ("TOTAL", "SA exposure classes excluding securitisation positions", {"FY2021": 36472}),
-    ("SECTION", "Credit risk by CRR Article 112 exposure category (FY2020 and FY2019 editions' own, "
+    ("SECTION", "Credit risk by CRR Article 112 exposure category (FY2016-FY2020 editions' own, "
                 "differently-structured analysis - see source note)", {}),
+    # FY2016-FY2018 added 2026-09-19 from each year's own edition, section 5.1
+    # table 'Exposure category under CRR Article 112', 'Risk weighted exposure
+    # £m' column (FY2016 p.12, FY2017 p.12, FY2018 p.13), £m to 1 d.p. carried
+    # in £'000. The central-government row prints '-' in all three and is kept
+    # as a literal dash (map rule 2); '0.0' is a printed zero and stays 0.
     ("DATA", "Exposures to central governments or central banks (Bank of England Reserve Account)",
-     {"FY2020": 0, "FY2019": 0}),
-    ("DATA", "Retail exposures (unsecured loans)", {"FY2020": 657, "FY2019": 200}),
+     {"FY2020": 0, "FY2019": 0, "FY2018": "-", "FY2017": "-", "FY2016": "-"}),
+    ("DATA", "Retail exposures (unsecured loans)",
+     {"FY2020": 657, "FY2019": 200, "FY2018": 100, "FY2017": 200, "FY2016": 200}),
     ("DATA", "Exposures secured by mortgages on immovable property (non-residential loans performing)",
-     {"FY2020": 26073, "FY2019": 27200}),
+     {"FY2020": 26073, "FY2019": 27200, "FY2018": 28300, "FY2017": 25000, "FY2016": 23200}),
     ("DATA", "Exposures secured by mortgages on immovable property (residential loans performing)",
-     {"FY2020": 3937, "FY2019": 3300}),
-    ("DATA", "Exposures in default (non-residential loans)", {"FY2020": 266, "FY2019": 300}),
-    ("DATA", "Exposures in default (residential loans)", {"FY2020": 0, "FY2019": 0}),
-    ("DATA", "Exposures in default (unsecured loans)", {"FY2020": 0, "FY2019": 0}),
-    ("DATA", "Exposures to institutions", {"FY2020": 2827, "FY2019": 1100}),
-    ("DATA", "Other items (fixed and other assets)", {"FY2020": 1728, "FY2019": 1900}),
-    ("TOTAL", "Credit Risk - risk weighted exposure amounts", {"FY2020": 35488, "FY2019": 34000}),
+     {"FY2020": 3937, "FY2019": 3300, "FY2018": 2800, "FY2017": 2500, "FY2016": 2000}),
+    ("DATA", "Exposures in default (non-residential loans)",
+     {"FY2020": 266, "FY2019": 300, "FY2018": 400, "FY2017": 400, "FY2016": 400}),
+    ("DATA", "Exposures in default (residential loans)",
+     {"FY2020": 0, "FY2019": 0, "FY2018": 0, "FY2017": 0, "FY2016": 0}),
+    ("DATA", "Exposures in default (unsecured loans)",
+     {"FY2020": 0, "FY2019": 0, "FY2018": 0, "FY2017": 0, "FY2016": 0}),
+    ("DATA", "Exposures to institutions",
+     {"FY2020": 2827, "FY2019": 1100, "FY2018": 1200, "FY2017": 2400, "FY2016": 2100}),
+    ("DATA", "Other items (fixed and other assets)",
+     {"FY2020": 1728, "FY2019": 1900, "FY2018": 1800, "FY2017": 1800, "FY2016": 1700}),
+    ("TOTAL", "Credit Risk - risk weighted exposure amounts",
+     {"FY2020": 35488, "FY2019": 34000, "FY2018": 34600, "FY2017": 32300, "FY2016": 29600}),
     ("SECTION", "Own funds requirement (8% of the risk weighted exposure amounts above)", {}),
-    ("DATA", "Credit risk - capital resources required", {"FY2021": 2917, "FY2020": 2839, "FY2019": 2700}),
-    ("DATA", "Operational risk - capital resources required", {"FY2021": 332, "FY2020": 332, "FY2019": 300}),
-    ("TOTAL", "Pillar 1 capital resources required", {"FY2021": 3249, "FY2020": 3171, "FY2019": 3000}),
+    ("DATA", "Credit risk - capital resources required",
+     {"FY2021": 2917, "FY2020": 2839, "FY2019": 2700, "FY2018": 2800, "FY2017": 2600, "FY2016": 2400}),
+    ("DATA", "Operational risk - capital resources required",
+     {"FY2021": 332, "FY2020": 332, "FY2019": 300, "FY2018": 300, "FY2017": 200, "FY2016": 200}),
+    ("TOTAL", "Pillar 1 capital resources required",
+     {"FY2021": 3249, "FY2020": 3171, "FY2019": 3000, "FY2018": 3100, "FY2017": 2800, "FY2016": 2600}),
 ]
 
 RWA_BREAKDOWN_NOTE = (
@@ -1634,13 +1788,31 @@ RWA_BREAKDOWN_NOTE = (
     "THE 250%-RISK-WEIGHT ROW IS INFORMATIONAL. Template UK OV1 marks it '(For information)' and the "
     "template's own total excludes it: 36,472 + 4,145 = 40,617 for FY2021 and 35,487 + 4,145 = 39,632 "
     "for FY2020, in both cases without the 214/48. It is reproduced above on that basis.\n\n"
+    "FY2016-FY2018 ADDED 2026-09-19, each from its OWN Pillar 3 edition (section 5.1 'Exposure category "
+    "under CRR Article 112' table: FY2016 printed p.12, FY2017 p.12, FY2018 p.13; URLs in the source "
+    "citation), in the same Article 112 structure as FY2019-FY2020 and at the same £m-to-1-d.p. precision. "
+    "Only the 'Risk weighted exposure £m' column and the three capital-requirement totals are carried; the "
+    "editions also print an 'Exposure £m' column and a per-line 'Capital required' column, which this "
+    "sheet has never carried for any year. Each year's own table foots as printed: FY2016 0.2 + 23.2 + 2.0 "
+    "+ 0.4 + 0.0 + 0.0 + 2.1 + 1.7 = 29.6, with 2.4 + 0.2 = 2.6 capital required; FY2017 0.2 + 25.0 + 2.5 "
+    "+ 0.4 + 2.4 + 1.8 = 32.3, with 2.6 + 0.2 = 2.8; FY2018 0.1 + 28.3 + 2.8 + 0.4 + 1.2 + 1.8 = 34.6, with "
+    "2.8 + 0.3 = 3.1. As in FY2019-FY2020, no edition states a total risk-weighted exposure amount - "
+    "operational risk appears only as a capital requirement - so no total is shown for these years.\n"
+    "DASHES. The central-government row prints '-' in both the risk-weighted-exposure and the capital-"
+    "required columns of all three FY2016-FY2018 editions (the exposure itself is printed: £4.2m, £4.5m, "
+    "£4.5m, i.e. the Bank of England Reserve Account at a 0% risk weight). Those cells carry a literal '-' "
+    "(the bank printed a dash). The FY2019 cell on the same row, described above as printed '-', was "
+    "entered as 0 by an earlier pass under the superseded rule and is left as found for the corpus-wide dash "
+    "conversion (GA-008) rather than converted one bank at a time; the FY2020 edition's glyph for that row "
+    "was not re-read on 2026-09-19.\n"
+    "The paragraph below describes the UK OV1 / total rows; the Article 112 rows are covered above.\n\n"
     + PARTIAL_DISCLOSURE_NOTE
 )
 
 bw.add_rwa_breakdown_sheet(
     title="Kingdom Bank Limited — RWA Breakdown",
-    subtitle="Risk weighted exposure amounts, Bank/solo basis, £'000. Disclosed FY2019-FY2021 only, in three "
-             "different structures - see source note at bottom.",
+    subtitle="Risk weighted exposure amounts, Bank/solo basis, £'000. Disclosed FY2016-FY2021 only, in three "
+             "different structures (FY2016-FY2019 at £m precision) - see source note at bottom.",
     rows=rwa_rows,
     sources_text=p3_sources() + "\n\n" + RWA_BREAKDOWN_NOTE,
     first_col_width=76,
@@ -1666,7 +1838,16 @@ metric(
          "control on the Annual Report KPI series: the FY2020 edition's section 5.2 states 'The Bank's "
          "calculated leverage ratio at 31 December 2020 was 9.37% (2019: 9.40%)' and the FY2019 edition "
          "states '...at 31 December 2019 was 9.40% (2018: 10.10%)' - matching the KPI table exactly in "
-         "all three years. " + KPI_NOT_YET_INTRODUCED_NOTE,
+         "all three years.\n\n"
+         "EACH YEAR'S OWN PILLAR 3 EDITION NOW CONFIRMS FY2016-FY2018 TOO (read 2026-09-19, section 5.2 "
+         "Leverage Ratio): FY2016 edition p.13 'The Bank's calculated leverage ratio at 31 December 2016 was "
+         "10.1% (2015: 8.96%)'; FY2017 edition p.13 '...at 31 December 2017 was 9.4% (2016: 10.1%)'; FY2018 "
+         "edition p.14 '...at 31 December 2018 was 10.1% (2017: 9.4%)'. The Annual Report KPI table gives "
+         "10.09%, 9.38% and 10.10%, so the two documents AGREE at the one decimal place the Pillar 3 editions "
+         "print; the KPI table's two-decimal figures are kept as the row's values and are not rounded to the "
+         "Pillar 3 precision. The FY2016 edition's comparative also confirms the FY2015 KPI figure of 8.96% "
+         "exactly (FY2015's own Pillar 3 edition is unreachable - see below). No FY2016-FY2018 edition prints "
+         "a leverage exposure measure. " + KPI_NOT_YET_INTRODUCED_NOTE + "\n\n" + EARLY_EDITIONS_NOTE,
 )
 
 metric(
@@ -1719,11 +1900,43 @@ metric(
          + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
 )
 
+# GA-020 (2026-09-19) - each MREL year states its outcome and evidence.
+# Text-searched 2026-09-19 for MREL / eligible liabilities / loss absorbing,
+# 0 hits in each (positive control 57-107 'capital' hits): Pillar 3 FY2019,
+# FY2020, FY2021 (Wayback copies cited above) and the bank's own-site
+# statutory accounts 2024 and 2025.
+_KB_MREL_P3_UNREACHED = ("Unreached today – this year's Pillar 3 is not retrievable (live URL 404; Wayback: WAF page or "
+                         "no capture; archive.ph none; WP media purged; Common Crawl 2023-14..2026-39; 2026-09-19); "
+                         "accounts' KPI table has no MREL")
+_KB_MREL_PRE = ("Not applicable – the UK MREL framework (BoE Statement of Policy, Nov 2016) postdates this "
+                "31 December year-end")
+KB_MREL_STATEMENTS = {
+    "FY2025": ("Not published – no Pillar 3 (SDDT Rule 3.1 from 20/02/2025, BoE register A00009930P); 2025 "
+               "statutory accounts text-searched 2026-09-19: no MREL"),
+    "FY2024": ("Not published – bank states no Pillar 3 required after FY2023; 2024 statutory accounts "
+               "text-searched 2026-09-19: no MREL"),
+    "FY2023": _KB_MREL_P3_UNREACHED,
+    "FY2022": _KB_MREL_P3_UNREACHED,
+    "FY2021": "Not published – Pillar 3 FY2021 (Wayback copy, read in full; text-searched 2026-09-19) has no MREL",
+    "FY2020": "Not published – Pillar 3 FY2020 (Wayback copy, read in full; text-searched 2026-09-19) has no MREL",
+    "FY2019": "Not published – Pillar 3 FY2019 (Wayback copy, read in full; text-searched 2026-09-19) has no MREL",
+    # GA-020 second pass 2026-09-19: the editions were found (Webflow CDN) and read.
+    "FY2018": ("Not published – Pillar 3 FY2018 (approved 22 May 2019, 20pp, Webflow copy) has no MREL: "
+               "contents p.2 has no such section; text 0 hits vs 79 'capital'"),
+    "FY2017": ("Not published – Pillar 3 FY2017 (approved 23 May 2018, 19pp, Webflow copy) has no MREL: "
+               "contents p.2 has no such section; text 0 hits vs 79 'capital'"),
+    "FY2016": ("Not published – Pillar 3 FY2016 (approved 17 May 2017, 19pp, Webflow copy) has no MREL: "
+               "contents p.2 has no such section; text 0 hits vs 76 'capital'"),
+    "FY2015": _KB_MREL_PRE,
+    "FY2014": _KB_MREL_PRE,
+}
+
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
     per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
     years=PILLAR3_YEARS,
+    statements={"MREL Ratio": KB_MREL_STATEMENTS},
 )
 
 # ---------------------------------------------------------------
@@ -1811,9 +2024,12 @@ bw.add_overview_sheet(
          "data. LCR is disclosed on the same basis but omitted from the chart only because its scale, "
          "running into four figures in most years, dwarfs the other two - see the LCR sheet directly. "
          "SEPARATELY, and recovered on 2026-09-15, Kingdom Bank published standalone annual Pillar 3 "
-         "disclosure documents for FY2019-FY2023; the FY2019, FY2020 and FY2021 editions have been "
+         "disclosure documents (for FY2011-FY2023 - the FY2011-FY2015, FY2022 and FY2023 editions are not "
+         "reachable today); the FY2019, FY2020 and FY2021 editions have been "
          "retrieved (every one of the bank's own live URLs now 404s, so the citations point at Wayback "
-         "`id_` snapshots with the dead originals kept alongside them) and supply regulatory-basis CET1, "
+         "`id_` snapshots with the dead originals kept alongside them), and the FY2016-FY2018 editions "
+         "(live on the bank's former Webflow asset host, transcribed 2026-09-19) add £m-precision own funds, "
+         "credit-risk RWA components and a leverage ratio for those years; together they supply regulatory-basis CET1, "
          "Tier 1 and Total Capital, a Total Capital ratio, Total RWAs, a full UK OV1 RWA breakdown, a "
          "leverage ratio excluding central bank claims, a 12-month-average LCR and an NSFR. Those "
          "regulatory figures do NOT agree with the KPI-table series above - they are computed on a "

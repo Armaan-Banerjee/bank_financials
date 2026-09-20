@@ -602,14 +602,28 @@ bw.add_km1_sheet(
 
 metric("CET1 Capital", "£", [("Common Equity Tier 1 (CET1) capital", dict(CAPITAL_VALUES))],
        p3_sources(), note=CAPITAL_NOTE)
-bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources())
+
+# GA-020 (2026-09-19): the evidenced outcome for every Pillar 3 metric this Bank does not publish. The
+# Bank's own document index (http://www.hib.uk.com/annrep.html, decoded and re-read 2026-09-19) lists
+# Pillar 3 editions 2010-2019 only and says "The Pillar 3 Disclosure and Country by Country report are
+# available upon request"; the Annual Reports say "Full disclosures are available on request". See the KM1
+# sheet's source note for the full evidence, including the phrase search of the FY2024 Annual Report.
+def havin_np(what):
+    return ("Not published – no Pillar 3 online after FY2019 (Bank's index hib.uk.com/annrep.html, re-read "
+            f"2026-09-19: 'available upon request'); Annual Report/Note 23 give no {what}")
+
+bw.add_not_disclosed_metric_sheets(["CET1 Ratio"], p3_sources(),
+                                  statements={"CET1 Ratio": havin_np("CET1 ratio")})
 metric("Tier 1 Capital", "£", [("Tier 1 capital", dict(CAPITAL_VALUES))],
        p3_sources(), note=CAPITAL_NOTE)
-bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources())
+bw.add_not_disclosed_metric_sheets(["Tier 1 Ratio"], p3_sources(),
+                                  statements={"Tier 1 Ratio": havin_np("Tier 1 ratio")})
 metric("Total Capital", "£", [("Total regulatory capital", dict(CAPITAL_VALUES))],
        p3_sources(), note=CAPITAL_NOTE)
 
-bw.add_not_disclosed_metric_sheets(["Total Capital Ratio", "Total RWAs"], p3_sources())
+bw.add_not_disclosed_metric_sheets(["Total Capital Ratio", "Total RWAs"], p3_sources(),
+                                  statements={"Total Capital Ratio": havin_np("total capital ratio"),
+                                              "Total RWAs": havin_np("RWA figure")})
 
 bw.add_rwa_breakdown_sheet(
     title="Havin Bank Limited — RWA Breakdown",
@@ -623,6 +637,10 @@ bw.add_rwa_breakdown_sheet(
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
     p3_sources(),
+    statements={"Leverage Ratio": havin_np("leverage ratio"),
+                "LCR": havin_np("LCR % (compliance sentence only)"),
+                "NSFR": havin_np("NSFR % (compliance sentence only)"),
+                "MREL Ratio": havin_np("MREL figure")},
 )
 
 # ---------------------------------------------------------------

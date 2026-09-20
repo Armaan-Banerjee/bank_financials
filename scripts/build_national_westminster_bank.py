@@ -1037,7 +1037,27 @@ bw.add_rwa_breakdown_sheet(
 metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 424554, "FY2024": 390032, "FY2023": 359897, "FY2022": 341308, "FY2021": 426681, "FY2020": 376527, "FY2019": 300438, "FY2018": 295483, "FY2017": 213474, "FY2016": 169586, "FY2015": 153100}), ("Leverage ratio", {"FY2025": "4.2%", "FY2024": "4.4%", "FY2023": "4.5%", "FY2022": "4.4%", "FY2021": "3.8%", "FY2020": "4.7%", "FY2019": "5.0%", "FY2018": "5.2%", "FY2017": "6.2%", "FY2016": "6.1%", "FY2015": "4.7%"})], note="FY2021 is shown on the prior CRR methodology as reported in NWB Plc Annual Report 2022, p.64; the report also gives 4.8% on the later UK methodology. FY2022 onward uses the current PRA basis and is not directly comparable with the FY2021 headline. FY2015-FY2020 sourced from each year's own Annual Report entity-level capital table (NWB Plc/NatWest Plc Annual Report and Accounts 2015-2020, Companies House filings). FY2014 is intentionally left blank - a binding minimum leverage ratio requirement, and NatWest's own entity-level leverage exposure/ratio disclosure, only began appearing from the FY2015 Annual Report onward; FY2014's own Annual Report discusses only the wider RBS Group leverage ratio (4.2%, out of scope for this NWB Plc-only workbook), not an NWB Plc/NatWest entity figure.")
 metric("LCR", "%", [("Liquidity Coverage Ratio - UK DoLSub", {"FY2025": "151%", "FY2024": "147%", "FY2023": "138%", "FY2022": "131%", "FY2021": "169%", "FY2020": "152%", "FY2019": "145%", "FY2018": "153%"})], note="UK DoLSub basis: NWB Plc, RBS plc and Coutts & Company. The 2025 figure is the December value from the NWB Pillar 3 report; the 2024 and 2023 figures are the December values in the corresponding KM1 disclosures. NWB Plc reports liquidity under a PRA waiver at UK DoLSub level rather than solo. FY2014-FY2017 are intentionally left blank: those years' own Annual Reports state liquidity and funding disclosures are presented for the wider NatWest/RBS Group rather than for the NWB Plc/UK DoLSub entity specifically, so no entity-level LCR figure is available to transcribe for those years without conflating it with Group-level data.")
 metric("NSFR", "%", [("Net Stable Funding Ratio - UK DoLSub", {"FY2025": "137%", "FY2024": "136%", "FY2023": "126%", "FY2022": "137%", "FY2021": "151%", "FY2020": "144%", "FY2019": "137%", "FY2018": "144%"})], note="UK DoLSub basis; see LCR note. NSFR is a four-quarter average under the regulatory disclosure framework. FY2014-FY2017 intentionally left blank for the same reason as the LCR sheet - see that sheet's note.")
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], "NWB Plc Pillar 3 Reports 2022-2025 - " + P3_2025_URL, per_note={"MREL Ratio": "No single numeric MREL ratio is presented in the five-year source set used for this annual workbook. MREL instruments and movements are discussed in the annual accounts, but no comparable headline ratio was disclosed in the reviewed NWB Plc UK KM1 material."})
+# GA-020 (2026-09-19): outcome wording. Evidence: full text of the NWB Plc
+# Pillar 3 reports 2022-2025 (P3_*_URL) and Annual Reports 2022-2025 (AR*_URL),
+# plus OCR of the image-only Companies House accounts FY2014-FY2021 (the
+# script's own filing links; 550k-880k characters each). No MREL RATIO for
+# NWB Plc appears anywhere. What IS printed: internal MREL instrument AMOUNTS
+# issued to NatWest Holdings (e.g. AR2025 funding table, MREL £8,143m; AR2021
+# 'Internal MREL 5,687'), the TLAC2 creditor-ranking template in the Pillar 3
+# (amounts), and from FY2018 a cross-reference sending the reader to the
+# RBS/NatWest GROUP Pillar 3 for MREL. FY2014-FY2017 mention MREL only as
+# regulatory-change narrative.
+GA020_MREL = {}
+for _y in ("FY2025", "FY2024", "FY2023", "FY2022"):
+    GA020_MREL[_y] = ("Not published – no MREL ratio in the NWB Plc " + _y[2:] + " Pillar 3 or AR (searched "
+                      "2026-09-19): only internal MREL amounts and the TLAC2 creditor ranking")
+for _y in ("FY2021", "FY2020", "FY2019", "FY2018"):
+    GA020_MREL[_y] = ("Not published – no MREL ratio in the " + _y + " accounts (OCR'd 2026-09-19): internal MREL "
+                      "amounts only; MREL cross-referred to the group Pillar 3")
+for _y in ("FY2017", "FY2016", "FY2015", "FY2014"):
+    GA020_MREL[_y] = ("Not published – the " + _y + " accounts (OCR'd 2026-09-19) mention MREL only as regulatory "
+                      "narrative; no ratio for the entity")
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], "NWB Plc Pillar 3 Reports 2022-2025 - " + P3_2025_URL, per_note={"MREL Ratio": "No single numeric MREL ratio is presented in the five-year source set used for this annual workbook. MREL instruments and movements are discussed in the annual accounts, but no comparable headline ratio was disclosed in the reviewed NWB Plc UK KM1 material. GA-020 re-check 2026-09-19: NWB Plc Pillar 3 2022-2025 and Annual Reports 2022-2025 full-text searched, FY2014-FY2021 Companies House accounts OCR'd - internal MREL amounts, the TLAC2 creditor ranking and a cross-reference to the group Pillar 3 appear, never a ratio for NWB Plc."}, statements={"MREL Ratio": GA020_MREL})
 
 
 # NWB Plc publishes quarterly UK KM1 disclosures.  The Q3 reports include the

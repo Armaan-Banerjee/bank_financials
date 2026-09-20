@@ -1592,16 +1592,46 @@ metric(
          "only becoming a binding UK requirement on 1 January 2022.",
 )
 
+# GA-020 (2026-09-19): the note below USED TO SAY "no MREL reference found in any" document.
+# That was wrong. Re-downloaded today (all %PDF, text-native) and searched: the FY2022-FY2025
+# Annual Pillar 3 Reports and the Pillar 3 section of the FY2021 Annual Report each STATE that
+# FCE's MREL is set equal to its Total Capital Requirement (the Bank of England's preferred
+# resolution strategy for FCE is a modified insolvency procedure), so no MREL ratio exists to
+# disclose - "Not applicable", with the bank's own statement as the source. FY2014-FY2020:
+# 0 hits for "MREL", "eligible liabilities" and "loss-absorbing" in each year's Annual Report
+# (fcebank.com live PDFs; 137-232 "capital" hits each) and in the standalone 2014 Pillar 3
+# (173 "capital" hits) - "Not published".
+_FCE_MREL_NA = {
+    "FY2025": "FY2025 Annual Pillar 3 Report p.5",
+    "FY2024": "FY2024 Annual Pillar 3 Disclosures p.5",
+    "FY2023": "FY2023 Annual Pillar 3 Report p.5",
+    "FY2022": "FY2022 Annual Pillar 3 Report p.6",
+    "FY2021": "FY2021 Annual Report, Pillar 3 Disclosures section p.138",
+}
+_FCE_MREL = {y: (f"Not applicable – FCE states its MREL equals its Total Capital Requirement (BoE "
+                 f"strategy: modified insolvency); no MREL ratio - {src}")
+             for y, src in _FCE_MREL_NA.items()}
+for _y in ("FY2020", "FY2019", "FY2018", "FY2017", "FY2016", "FY2015"):
+    _FCE_MREL[_y] = (f"Not published – FCE {_y} Annual Report has no MREL figure or mention "
+                     "(text probe 0 hits, 2026-09-19)")
+_FCE_MREL["FY2014"] = ("Not published – FCE 2014 Pillar 3 Disclosure and FY2014 accounts have no MREL "
+                       "figure or mention (text probe 0 hits, 2026-09-19)")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": _FCE_MREL},
     per_note={
-        "MREL Ratio": "Not publicly disclosed for any of FY2014-FY2025 - no MREL reference found in any "
-                      "of the 11 Annual Reports, the standalone 2014 Pillar 3 document, or the FY2022-"
-                      "FY2025 standalone Annual Pillar 3 Reports. Consistent with FCE Bank plc not being "
-                      "a UK resolution entity in its own right: it is a wholly-owned subsidiary of Ford "
-                      "ECO GmbH and an indirect subsidiary of Ford Motor Credit Company LLC, so "
-                      "resolution planning sits above it.",
+        "MREL Ratio": "No MREL ratio is published for any of FY2014-FY2025. CORRECTED 2026-09-19 (GA-020): "
+                      "this note previously said no MREL reference existed in any document. In fact the "
+                      "FY2021 Annual Report's Pillar 3 section (p.138: 'The Bank of England has set FCE's "
+                      "MREL as equal to its TCR', under a modified insolvency preferred resolution "
+                      "strategy) and each FY2022-FY2025 Annual Pillar 3 Report (p.5/6: 'FCE's Minimum "
+                      "Requirement for Own Funds and Eligible Liabilities (MREL) is equal to its Total "
+                      "SREP Own Funds Requirement ... as it is not required to hold additional "
+                      "loss-absorbing instruments to support resolution') say why there is no ratio - so "
+                      "those years read 'Not applicable'. FY2014-FY2020 documents contain no MREL "
+                      "reference at all and read 'Not published'. FCE is a wholly-owned subsidiary of "
+                      "Ford ECO GmbH, an indirect subsidiary of Ford Motor Credit Company LLC.",
     },
     years=PILLAR3_YEARS,
 )

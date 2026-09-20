@@ -680,7 +680,16 @@ metric(
     p3_sources(),
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], sources_text=p3_sources())
+# GA-020 (2026-09-19): AR2023/AR2024/AR2025 and the 30 Sept 2023 Pillar 3 re-fetched (%PDF) and
+# text-searched for 'MREL' / 'eligible liabilities' / '437a': zero hits in all four (richness
+# 'capital' 37-84). The SDDT opt-in (05/03/2024) removes the Pillar 3 duty, not MREL itself, so it
+# is cited as context only and the outcome is "not published", not "not applicable".
+MREL_ST = {"FY2023": ("Not published – no MREL figure or mention in Griffin's Pillar 3 (30 Sept 2023) or Annual "
+                      "Report 2023 (text search, 2026-09-19).")}
+MREL_ST.update({y: ("Not published – no MREL figure or mention in Griffin's Annual Report " + y + " (text search, "
+                    "2026-09-19); no Pillar 3 after 2023 (SDDT opt-in from 05/03/2024, PRA register).")
+                for y in ["FY2025", "FY2024"]})
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], sources_text=p3_sources(), statements={"MREL Ratio": MREL_ST})
 
 # ---------------------------------------------------------------
 # Overview sheet

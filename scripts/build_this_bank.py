@@ -374,9 +374,31 @@ def metric(name, unit, rows, note=None):
     bw.add_metric_sheet(name, unit, rows, p3_sources(), note=note, first_col_width=58, source_height=250)
 
 
+# GA-020 (2026-09-19) evidenced statement texts.
+RATIO_2020_NOT_PUB = (
+    "Not published – FY2020 accounts (16m to 31 Mar 2020) give CET1 £15,666k (note 27) but no capital ratio "
+    "anywhere, nor does the FY2021 report's comparative (both OCR'd in full 2026-09-19)"
+)
+KM1_NOT_PUB = (
+    "Not published – Pillar 3 only 'available on request' per every annual report FY2020-FY2025 ('Pillar 3 and "
+    "Country-by-Country Reporting'); no KM1 in any edition (see source note)"
+)
+def _acct_not_pub(what):
+    return ("Not published – no " + what + " in the annual accounts FY2020-FY2025 (image scans OCR'd in full "
+            "2026-09-17); Pillar 3 is only 'available on request' (see source note)")
+ACCT_STATEMENTS = {
+    "Total RWAs": _acct_not_pub("risk-weighted assets figure"),
+    "RWA Breakdown": _acct_not_pub("RWA breakdown"),
+    "Leverage Ratio": _acct_not_pub("leverage ratio"),
+    "NSFR": _acct_not_pub("NSFR"),
+    "MREL Ratio": _acct_not_pub("MREL figure"),
+}
 CET1 = {"FY2025": 25927, "FY2024": 8254, "FY2023": 8101, "FY2022": 8012, "FY2021": 11965, "FY2020": 15666}
-CET1_RATIO = {"FY2025": "16.44%", "FY2024": "19.20%", "FY2023": "16.28%", "FY2022": "15.90%", "FY2021": "66.50%", "FY2020": "Not publicly disclosed"}
-LCR = {"FY2025": "554%", "FY2024": "4840%", "FY2023": "7758%", "FY2022": "Not publicly disclosed", "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed"}
+CET1_RATIO = {"FY2025": "16.44%", "FY2024": "19.20%", "FY2023": "16.28%", "FY2022": "15.90%", "FY2021": "66.50%", "FY2020": RATIO_2020_NOT_PUB}
+# GA-020 FOUND 2026-09-19: FY2020-FY2022 LCR as printed, read off the page images - "The Bank's European Banking
+# Authority liquidity coverage ratio at 31 March 20xx was >1,000%": FY2020 note 27 printed p.48; FY2021 note 28
+# printed p.56; FY2022 note 29 printed p.66 (liquidity risk). Reproduced as the bound the bank printed.
+LCR = {"FY2025": "554%", "FY2024": "4840%", "FY2023": "7758%", "FY2022": ">1,000%", "FY2021": ">1,000%", "FY2020": ">1,000%"}
 DISCLOSURE_NOTE = (
     "The accounts provide entity-level regulatory capital data, but the Bank publishes no Pillar 3 document at "
     "all - in any year - and no UK KM1 template; see the KM1 Key Metrics sheet for the full evidence. FY2023 values use the FY2024 report's comparative KPI/capital figures. FY2021 values use the FY2022 "
@@ -466,6 +488,19 @@ KM1_SOURCES = (
     "December 2025, which is the FY2025 document this workbook already cites. Checked, none newer - the Bank's "
     "year-end is 31 MARCH, so FY2026 accounts are not due until 31 December 2026 and none is filed. Companies "
     "House filing history: " + CH + "\n\n"
+    "FY2026 RE-CHECK, 2026-09-19 - STILL NONE; NO FY2026 COLUMN ADDED. The year to 31 March 2026 has closed, "
+    "but its accounts are not public. Routes and results: (1) Companies House, UNFILTERED filing history for "
+    "11734380, page 1: newest accounts entry is still 'Full accounts made up to 31 March 2025' (01 Dec 2025); "
+    "everything later is non-accounts (TM01 18 Aug 2026, CS01 06 Jul 2026, SH01 14 Apr 2026 for an allotment "
+    "on 31 March 2026, SH01 05 Feb 2026, the change of name 19 Jan 2026). The parent Step One Money UK Limited "
+    "(15794213), page 1: newest accounts entry is its group accounts to 31 March 2025 (filed 19 Aug 2026), "
+    "already read. (2) thisbank.co.uk: all eight sub-sitemaps re-read (68 URLs), none an annual-report, "
+    "results, investor or Pillar 3 page; the WordPress media library (media_type=application, X-WP-Total 4) "
+    "holds savings-rate tables and an FSCS leaflet only, the newest being historic-saving-rate-5.pdf uploaded "
+    "11 Sep 2026 - no accounts. (3) Wayback CDX could not be queried that afternoon (the Internet Archive "
+    "served its 'Temporarily Offline' page) - UNREACHED, not a negative. The FY2026 filing deadline is 31 "
+    "December 2026 (the FY2025 accounts were filed 01 Dec 2025). No Pillar 3 is expected for FY2026 in any "
+    "case: the Bank has never published one, and it has held the SDDT Rule 3.1 opt-in since 06/11/2025.\n\n"
     + ENTITY_NOTE + "\n\n" + SITE_SWEEP_NOTE
 )
 
@@ -475,7 +510,7 @@ bw.add_km1_sheet(
              "every edition FY2020-FY2025 that the Pillar 3 disclosures are available on request rather than "
              "published, so there is no UK KM1 template to reproduce. See the source note below for the positive "
              "evidence, including why the Bank's own regulatory-capital table is not the template.",
-    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: KM1_NOT_PUB for y in YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=72,
     source_height=1500,
@@ -490,22 +525,26 @@ metric("Total Capital Ratio", "% of RWA", [("Total capital ratio", CET1_RATIO)],
 bw.add_not_disclosed_metric_sheets(
     ["Total RWAs"],
     p3_sources(),
+    statements=ACCT_STATEMENTS,
     per_note={"Total RWAs": "No numeric standalone value was identified in the FY2020-FY2025 annual accounts reviewed; no value has been derived."},
 )
 bw.add_not_disclosed_metric_sheets(
     ["RWA Breakdown"],
     p3_sources(),
+    statements=ACCT_STATEMENTS,
     per_note={"RWA Breakdown": "No RWA category breakdown (UK OV1 template or equivalent) was identified in the FY2020-FY2025 annual accounts reviewed; the accounts do not publish a standalone Pillar 3 document and Total RWAs itself is undisclosed."},
 )
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio"],
     p3_sources(),
+    statements=ACCT_STATEMENTS,
     per_note={"Leverage Ratio": "No numeric standalone value was identified in the FY2020-FY2025 annual accounts reviewed; no value has been derived."},
 )
-metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "FY2022, FY2021 and FY2020 accounts disclose HQLA amounts and describe LCR as above minimum (FY2020's own report states >1,000% and HQLA of £17.1m), but do not provide a numeric LCR ratio.\n" + DISCLOSURE_NOTE)
+metric("LCR", "%", [("Liquidity coverage ratio", LCR)], "FY2022, FY2021 and FY2020: the accounts give no point LCR, but each prints a bound in its liquidity-risk note - 'The Bank's European Banking Authority liquidity coverage ratio at 31 March 20xx was >1,000%' - FY2020 note 27 printed p.48, FY2021 note 28 printed p.56, FY2022 note 29 printed p.66 (read off the page images 2026-09-19; GA-020). Reproduced as printed ('>1,000%'), not as a point value; the KPI pages (FY2020 p.7, FY2021 p.7, FY2022 p.8) say only that the LCR 'greatly exceeded the regulatory minima'.\n" + DISCLOSURE_NOTE)
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(),
+    statements=ACCT_STATEMENTS,
     per_note={name: "No numeric standalone value was identified in the FY2020-FY2025 annual accounts reviewed; no value has been derived." for name in ["NSFR", "MREL Ratio"]},
 )
 

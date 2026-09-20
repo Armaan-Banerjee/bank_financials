@@ -124,7 +124,19 @@ ENTITY_NOTE = (
     "applies. The Bank's Own Funds consist entirely of Common Equity Tier 1 (CET1) capital (no AT1 or Tier 2 "
     "instruments), so CET1 capital = Tier 1 capital = Total capital in every year shown. No FY2025 Annual Report or "
     "Pillar 3 disclosure has been published yet (as of this workbook's build date), so this workbook covers "
-    "FY2018-FY2024 (7 years) rather than FY2025."
+    "FY2018-FY2024 (7 years) rather than FY2025.\n"
+    "RE-CHECKED 19 SEPTEMBER 2026 (GA-020) - STILL NO FY2025 DOCUMENT OF EITHER KIND. (1) Companies House filing "
+    "history for 03104974, read UNFILTERED on page 1: newest rows TM01 (6 Aug 2026) and AP01s (29 Jun 2026); the "
+    "newest AA is still 'Full accounts made up to 31 December 2024', filed 24 Apr 2025 (FY2023 was filed 9 May "
+    "2024, so FY2025 is later than this bank's own cadence). The profile reads 'Next accounts made up to 31 "
+    "December 2025 due by 31 DECEMBER 2026', i.e. the filing period has been extended beyond the usual nine "
+    "months, and flags the confirmation statement as overdue. (2) https://www.ubauk.com/financial-reports/ "
+    "(fetched as static HTML) still links the FY2024 Annual Report and FY2024 Pillar 3 as the newest reports, "
+    "while carrying other uploads dated as late as 2026/08, so the page is maintained. Direct probes of "
+    "UBA-UK-2025-AR.pdf and UBA-UK-2025-AR-1.pdf under /wp-content/uploads/sites/29/2026/04/ to /2026/09/ all "
+    "return a genuine 404, against a 200/application/pdf/%PDF control on the FY2024 AR URL. The WordPress media "
+    "API is closed on this host (returns an error object), so it could not be used. (3) Wayback CDX for "
+    "ubauk.com from 2026 onward: 6 PDF captures, none an FY2025 report."
 )
 
 FX_NOTE = (
@@ -1076,7 +1088,14 @@ metric(
          "p3_sources' PRE-2021 FORMAT NOTE).",
 )
 
+# GA-020 (2026-09-19): each year's OWN Pillar 3 (FY2018-FY2024, all on the bank's
+# financial-reports index; FY2019 and FY2021 editions are the index's
+# ubagroup.com / 2022/07 links) text-searched for MREL, eligible liabilities
+# and KM2: 0 hits in every edition (positive control 54-73 'capital' hits).
+UBA_MREL = {y: ("Not published – no MREL figure, statement or UK KM2 in this year's own Pillar 3 disclosures "
+                "(text-searched 2026-09-19)") for y in YEARS}
 bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(),
+    statements={"MREL Ratio": UBA_MREL},
     per_note={"MREL Ratio": "No MREL disclosure (numeric or qualitative) or UK KM2 template found anywhere in any "
                              "year's Pillar 3 report - not explicitly stated as an exemption, but consistent with "
                              "the Bank's small size relative to typical MREL-in-scope thresholds."})

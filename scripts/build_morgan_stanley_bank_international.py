@@ -542,13 +542,29 @@ def metric(name, unit, rows, note=None):
 # from three independent documents rather than on a failed search. See the
 # sheet's own source note for the evidence chain.
 # ---------------------------------------------------------------
+# GA-020 (2026-09-19): outcome wording, on the evidence in this sheet's note.
+GA020_KM1 = {y: ("Not published – MSBIL publishes no Pillar 3 of its own; UK disclosures sit in the MSI Group "
+                 "Pillar 3 (index morganstanley.com/about-us-ir/pillar-uk, read 2026-09-17)")
+             for y in PILLAR3_YEARS}
+for _y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021"):
+    GA020_KM1[_y] = ("Not published – MSI Group Pillar 3 (" + _y[2:] + " ed., s.4) is prepared for the group, not per "
+                     "entity, and MSBIL is not a large subsidiary; its KM1 is MSI Group only")
+# NSFR FY2021: the FY2022 Annual Report's own NSFR table (Strategic Report,
+# p.10, read off the page image 2026-09-19) prints "N/A(1)" in its 2021 column,
+# footnoted "NSFR not disclosed for 2021 as PRA requirement from 1 January 2022".
+GA020_NSFR21_RATIO = "N/A (as printed)"
+GA020_NSFR21_AMT = ("Not applicable – bank's own footnote, AR2022 p.10: 'NSFR not disclosed for 2021 as PRA "
+                    "requirement from 1 January 2022'")
+GA020_MREL = ("Not published – zero 'MREL' in all 12 ARs FY2014-FY2025 (image-only CH filings OCR'd 2026-09-19); "
+              "only TLAC regulatory-change narrative. No MSBIL Pillar 3 exists")
+
 bw.add_km1_sheet(
     title="Morgan Stanley Bank International Limited - KM1 Key Metrics",
     subtitle="Not applicable: MSBIL publishes no Pillar 3 disclosure of its own, and its UK parent's "
              "Pillar 3 carries no KM1 on an MSBIL basis. The parent's own KM1 is a Morgan Stanley "
              "International Limited Group consolidated table and is deliberately NOT reproduced here - a "
              "group figure is not this entity's figure. See the source note for the affirmative evidence.",
-    rows=[("DATA", "UK KM1 key metrics template", {y: "Not applicable" for y in PILLAR3_YEARS})],
+    rows=[("DATA", "UK KM1 key metrics template", GA020_KM1)],
     sources_text=annual_sources() + "\n\n" + (
         "WHY THIS SHEET IS 'NOT APPLICABLE' - AFFIRMATIVE EVIDENCE, NOT A FAILED SEARCH. Checked "
         "2026-09-17 against Morgan Stanley's own UK regulatory-disclosures page, "
@@ -683,14 +699,18 @@ metric("LCR", "£'000 / %", [
                                    "FY2020": "219%", "FY2019": "210%"}),
 ], note="The reports state that the HQLA amounts are reported to the regulator in USD and converted to GBP using an average annual exchange rate; the ratios are calculated using the preceding twelve months. FY2014-FY2018: no LCR/HQLA figure was disclosed anywhere in those years' annual reports (confirmed by direct review of each year's liquidity risk note).")
 metric("NSFR", "£'000 / %", [
-    ("Available stable funding", {"FY2025": 1485790, "FY2024": 1597110, "FY2023": 2191000, "FY2022": 2344000, "FY2021": "Not disclosed"}),
-    ("Required stable funding", {"FY2025": 574724, "FY2024": 716541, "FY2023": 1346000, "FY2022": 1417000, "FY2021": "Not disclosed"}),
-    ("Net Stable Funding Ratio", {"FY2025": "263%", "FY2024": "223%", "FY2023": "163%", "FY2022": "165%", "FY2021": "Not disclosed"}),
-], note="The Company states that NSFR became a PRA requirement from 1 January 2022; no NSFR was disclosed for FY2014-FY2021.")
+    ("Available stable funding", {"FY2025": 1485790, "FY2024": 1597110, "FY2023": 2191000, "FY2022": 2344000, "FY2021": GA020_NSFR21_AMT}),
+    ("Required stable funding", {"FY2025": 574724, "FY2024": 716541, "FY2023": 1346000, "FY2022": 1417000, "FY2021": GA020_NSFR21_AMT}),
+    ("Net Stable Funding Ratio", {"FY2025": "263%", "FY2024": "223%", "FY2023": "163%", "FY2022": "165%", "FY2021": GA020_NSFR21_RATIO}),
+], note="The Company states that NSFR became a PRA requirement from 1 January 2022; no NSFR was disclosed for FY2014-FY2021. "
+        "FY2021 ratio: the FY2022 Annual Report's NSFR table (Strategic Report p.10) prints 'N/A' in its 2021 column, "
+        "footnoted 'NSFR not disclosed for 2021 as PRA requirement from 1 January 2022' - reproduced as printed (GA-020, "
+        "2026-09-19). No 2021 stable-funding amounts are printed.")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
-    annual_sources() + "\nNo standalone MREL ratio was numerically disclosed in any of the twelve annual reports reviewed (FY2014-FY2025); group-level resolution disclosures were not substituted.",
+    annual_sources() + "\nNo standalone MREL ratio was numerically disclosed in any of the twelve annual reports reviewed (FY2014-FY2025); group-level resolution disclosures were not substituted. GA-020 RE-CHECK 2026-09-19: all twelve Companies House filings are image-only, so each was rendered at 110dpi and OCR'd in full (211k-366k characters each, 64-133 hits for 'capital'); zero 'MREL' or 'eligible liabilities' in any, and the only 'loss-absorbing' hits (FY2017-FY2020) are regulatory-change narrative on the G-SII TLAC standard, not a requirement or ratio for the Company.",
     years=PILLAR3_YEARS,
+    statements={"MREL Ratio": GA020_MREL},
 )
 
 bw.add_overview_sheet(
@@ -736,7 +756,7 @@ bw.add_overview_sheet(
                              "FY2020": "19.8%", "FY2019": "16.3%", "FY2018": "18.0%", "FY2017": "16.0%", "FY2016": "13.7%", "FY2015": "14.7%"}),
         ("LCR", {"FY2025": "412%", "FY2024": "417%", "FY2023": "250%", "FY2022": "191%", "FY2021": "226%",
                   "FY2020": "219%", "FY2019": "210%"}),
-        ("NSFR", {"FY2025": "263%", "FY2024": "223%", "FY2023": "163%", "FY2022": "165%", "FY2021": "Not disclosed"}),
+        ("NSFR", {"FY2025": "263%", "FY2024": "223%", "FY2023": "163%", "FY2022": "165%", "FY2021": GA020_NSFR21_RATIO}),
     ],
     note="The Company takes the FRS 101 exemption from presenting a cash-flow statement. Interim Morgan Stanley International Pillar 3 reports are group-level and do not provide defensible standalone MSBIL interim data. FY2014-FY2018: CET1 Ratio uses the disclosed Tier 1 ratio (CET1 = Tier 1 capital in every year checked); Total Capital Ratio, LCR and NSFR are blank where not disclosed (see the RWA/Total Capital/LCR/NSFR sheets for detail); FY2014 additionally has no Leverage Ratio (first required from FY2015) and no capital ratio of any kind besides what appears here.",
 )

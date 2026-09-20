@@ -1569,8 +1569,12 @@ bw.add_not_disclosed_metric_sheets(
                       "with a resolution entity incorporated in the UK for which an MREL above MCR has been "
                       "communicated', in the BoE's own words. Habib Bank Zurich Plc appears in none of the "
                       "four editions. The BoE publishes the requirement, not the ratio, so nothing from "
-                      "that table is transcribed here.",
+                      "that table is transcribed here. GA-020 RE-CHECK 2026-09-19: all ten Pillar 3 "
+                      "editions (FY2016-FY2025, the P3_*_URL documents above, text-native, 80-141 hits for "
+                      "'capital' each) return zero 'MREL', 'loss-absorbing' or 'eligible liabilities'.",
     },
+    statements={"MREL Ratio": ("Not published – zero 'MREL' in all ten Pillar 3 editions FY2016-FY2025 (searched "
+                               "2026-09-19); HBZ absent from the BoE's MREL-above-MCR lists 2023-2026")},
 )
 
 # ---------------------------------------------------------------

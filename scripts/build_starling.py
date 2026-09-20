@@ -183,6 +183,14 @@ STATEMENTS_SOURCES = (
     f"2021, with nothing in between. The ONLY 30 November 2020 figures Starling ever published are an UNAUDITED "
     f"12-month INCOME-STATEMENT memorandum in the 16-month report's Group Strategic Report (p.14-15, alongside "
     f"an unaudited 4-month column to 31 Mar 2021) and a matching unaudited interest-margin table (p.16-17) - "
+    f"RE-VERIFIED INDEPENDENTLY 2026-09-19, and the FY2020 column now SAYS this on the Total assets row rather "
+    f"than standing empty - FY2020 is an interior column here (FY2019, FY2018 and FY2017 all carry figures), so "
+    f"it cannot be trimmed away, and an empty interior column reads exactly like one nobody has examined. The "
+    f"Companies House accounts filing history for 09092149 was re-enumerated PAGE BY PAGE (?category=accounts"
+    f"&page=1..4, HTTP 200 each), because a filing absent from page 1 is not a missing filing: page 1 gives 31 "
+    f"March 2026 and 31 March 2025, page 2 gives 31 March 2024, 2023 and 2022, page 3 gives 31 March 2021 and "
+    f"page 4 gives 30 November 2019. The sequence steps straight from 30 Nov 2019 to 31 Mar 2021 with nothing "
+    f"made up to any date in 2020. "
     f"income and margin only, no assets, no liabilities and no equity. Nothing from those memoranda is carried "
     f"here: they are unaudited, they are not a balance sheet, and this is a Balance Sheet sheet. Starling's "
     f"Pillar 3 series does not fill the hole either: the files are named by PUBLICATION year, not reporting "
@@ -352,6 +360,19 @@ for _kind, _label, _values in balance_sheet_rows:
     for _year, _old in _OLD_BS.items():
         if _label in _old:
             _values[_year] = _old[_label]
+
+# FY2020 CARRIES A RECORDED ABSENCE RATHER THAN A BLANK (2026-09-19).
+# The finding is structural and was already established in STATEMENTS_SOURCES:
+# there is no 30 November 2020 reporting date, because the accounting reference
+# date moved from 30 November to 31 March and the twelve months to 30 Nov 2020
+# fall inside the 16-month period 1 Dec 2019 - 31 Mar 2021. FY2020 is an
+# INTERIOR column here (FY2019/FY2018/FY2017 all carry figures), so it cannot
+# be trimmed away, and an empty interior column is indistinguishable from one
+# nobody examined. One cell, on the row a reader checks first.
+for _kind, _label, _values in balance_sheet_rows:
+    if _label == "Total assets":
+        _values["FY2020"] = (
+            "Not applicable - no FY2020 balance-sheet date; ARD moved 30 Nov to 31 Mar")
 
 bw.add_balance_sheet_sheet(
     title="Starling Bank Limited — Balance Sheet",

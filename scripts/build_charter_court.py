@@ -378,6 +378,32 @@ NOT_DISCLOSED_NOTE = (
 )
 
 
+# GA-020 outcome statements (2026-09-19). All five CCFSL statutory accounts
+# (FY2021-FY2025, image-only Companies House scans, 658 pages) were rendered at
+# 150dpi and OCR'd page by page on 2026-09-19. Positive control: 73-97 hits for
+# "capital" per filing, and the CET1 / total capital ratios already on this
+# workbook are found at the pages cited. The accounts state ratios only (CET1,
+# total capital, leverage, LCR) - no CET1/Tier 1/total capital amount, no Tier 1
+# ratio, no RWA figure, no NSFR and no MREL ratio (FY2023/FY2024 mention the
+# interim 18% MREL requirement being met, with no ratio). OSB Group's Pillar 3
+# prints no CCFSL solo figure for these (see KM1_SOURCES).
+def _ccfsl_np(what):
+    return ("Not published – CCFSL's own accounts (every page OCR'd 2026-09-19) state capital ratios but no "
+            + what + "; OSB Group Pillar 3 prints no CCFSL solo figure")
+CCFSL_STATEMENTS = {
+    "CET1 Capital": _ccfsl_np("CET1 amount"),
+    "Tier 1 Capital": _ccfsl_np("Tier 1 amount"),
+    "Tier 1 Ratio": _ccfsl_np("Tier 1 ratio"),
+    "Total Capital": _ccfsl_np("total capital amount"),
+    "Total RWAs": _ccfsl_np("RWA figure"),
+    "NSFR": _ccfsl_np("NSFR"),
+    "MREL Ratio": ("Not published – CCFSL's own accounts (every page OCR'd 2026-09-19) mention MREL requirements "
+                   "(FY2023-24) but print no MREL ratio; OSB Group Pillar 3 has no CCFSL solo figure"),
+}
+KM1_NA = ("Not applicable – CCFSL publishes no Pillar 3; parent OSB Group's UK KM1 is Group-consolidated only, and "
+          "CCFSL holds no Art. 9 individual-consolidation permission (BoE waivers register)")
+
+
 def metric(name, unit, rows_data, note=None, extra_source=""):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(extra_source), note=note, first_col_width=44, source_height=150)
 
@@ -428,7 +454,7 @@ bw.add_km1_sheet(
     title="Charter Court Financial Services Limited - KM1 Key Metrics",
     subtitle="Not applicable - CCFSL publishes no Pillar 3 of its own, and its parent's UK KM1 is disclosed on "
              "an OSB Group consolidated basis only, which is not this entity's basis",
-    rows=[("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS})],
+    rows=[("DATA", "UK KM1 'Key metrics' template", {y: KM1_NA for y in YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=76,
     source_height=560,
@@ -440,29 +466,37 @@ bw.add_km1_sheet(
 # Ratio, LCR, NSFR, MREL Ratio - even though this entity only discloses 3 of them.
 bw.add_not_disclosed_metric_sheets(
     ["CET1 Capital"], p3_sources(), per_note={"CET1 Capital": NOT_DISCLOSED_NOTE},
+    statements=CCFSL_STATEMENTS,
 )
 
 metric(
     "CET1 Ratio", "%",
-    [("Common Equity Tier 1 (CET1) ratio, under CRD IV", {"FY2025": "16.2%", "FY2024": "17.8%", "FY2023": "15.8%", "FY2022": "18.8%"})],
+    [("Common Equity Tier 1 (CET1) ratio, under CRD IV", {"FY2025": "16.2%", "FY2024": "17.8%", "FY2023": "15.8%", "FY2022": "18.8%", "FY2021": "20.0%"})],
     note="FY2025/FY2024 from the Annual Report's own KPI table (FY2024 shown as that report's own "
          "comparative). FY2023 from the Strategic Report's own Solvency Risk narrative (FY2022 shown "
          "as that report's own comparative). FY2021 not located within this build's research budget - "
-         "left blank rather than guessed, not confirmed absent.",
+         "left blank rather than guessed, not confirmed absent."
+         "FY2021 FOUND 2026-09-19 (GA-020) - supersedes 'FY2021 not located' above: the FY2021 accounts' own "
+         "Strategic Report, Principal risks - Solvency risk, printed p.16 (PDF p.18), states \"The Company's fully-loaded "
+         "CET1 and total capital ratios under CRD IV increased to 20.0% and 21.7% respectively as at 31 December 2021 "
+         "(31 December 2020: 18.2% and 18.2%)\", read off a rendered page image; p.5 (PDF p.7) repeats the 20.0% CET1 "
+         "ratio. Full accounts made up to 31 Dec 2021 - " + AR2021_URL,
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["Tier 1 Capital", "Tier 1 Ratio"], p3_sources(),
     per_note={"Tier 1 Capital": NOT_DISCLOSED_NOTE, "Tier 1 Ratio": NOT_DISCLOSED_NOTE},
+    statements=CCFSL_STATEMENTS,
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["Total Capital"], p3_sources(), per_note={"Total Capital": NOT_DISCLOSED_NOTE},
+    statements=CCFSL_STATEMENTS,
 )
 
 metric(
     "Total Capital Ratio", "%",
-    [("Total capital ratio, under CRD IV", {"FY2025": "20.3%", "FY2024": "21.5%", "FY2023": "19.2%", "FY2022": "20.2%"})],
+    [("Total capital ratio, under CRD IV", {"FY2025": "20.3%", "FY2024": "21.5%", "FY2023": "19.2%", "FY2022": "20.2%", "FY2021": "21.7%"})],
     note="FY2025 AND FY2024 ADDED 2026-09-18 - see the source note above for how they were missed and how "
          "they were found. They are NOT 'not publicly disclosed': each year's own accounts state the total "
          "capital ratio twice, in the 'Risk Key Performance Indicators' list and again in the Solvency Risk "
@@ -472,11 +506,17 @@ metric(
          "21.5% appears identically in the FY2024 edition's own columns and in the FY2025 edition's "
          "comparative, and FY2023's 19.2% likewise in the FY2023 and FY2024 editions - no restatement "
          "anywhere in this row. FY2021 remains blank: not located within this build's research budget, and "
-         "not established absent. " + NOT_DISCLOSED_NOTE,
+         "not established absent. " + NOT_DISCLOSED_NOTE + "\n"
+         "FY2021 FOUND 2026-09-19 (GA-020) - supersedes 'FY2021 not located' above: the FY2021 accounts' own "
+         "Strategic Report, Principal risks - Solvency risk, printed p.16 (PDF p.18), states \"The Company's fully-loaded "
+         "CET1 and total capital ratios under CRD IV increased to 20.0% and 21.7% respectively as at 31 December 2021 "
+         "(31 December 2020: 18.2% and 18.2%)\", read off a rendered page image; p.5 (PDF p.7) repeats the 20.0% CET1 "
+         "ratio. Full accounts made up to 31 Dec 2021 - " + AR2021_URL,
 )
 
 bw.add_not_disclosed_metric_sheets(
     ["Total RWAs"], p3_sources(), per_note={"Total RWAs": NOT_DISCLOSED_NOTE},
+    statements=CCFSL_STATEMENTS,
 )
 
 bw.add_rwa_breakdown_sheet(
@@ -576,6 +616,7 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"], p3_sources(),
     per_note={m: NOT_DISCLOSED_NOTE for m in ["NSFR", "MREL Ratio"]},
+    statements=CCFSL_STATEMENTS,
 )
 
 # ---------------------------------------------------------------

@@ -302,6 +302,21 @@ NOT_DISCLOSED = "Not publicly disclosed at Rathbones Investment Management Limit
 # BUT the Company's OWN statutory accounts do disclose one entity-level
 # regulatory figure, which had been missed: a single own-funds total in the
 # capital-management note.  That is transcribed into Total Capital below.
+# GA-020 (2026-09-19): the bare "Not publicly disclosed" cells are reclassified
+# as "Not published –" on evidence covering EVERY year, not just FY2024/25. The
+# FY2021-FY2023 Group Pillar 3 editions were fetched from rathbones.com (%PDF
+# verified) and each carries the same consolidated-only statement.
+P3_2023_URL = "https://www.rathbones.com/sites/main/files/wealth-management/results_and_presentations/files/31_december_2023_pillar_3_disclosures_final.pdf"
+P3_2022_URL = "https://www.rathbones.com/sites/main/files/wealth-management/results_and_presentations/files/rathbones_pillar_3_december_2022_final3.pdf"
+P3_2021_URL = "https://www.rathbones.com/sites/main/files/wealth-management/results_and_presentations/files/pillar_3_dec_2021_final.pdf"
+NOT_PUB = ("Not published – no RIM entity figure: Rathbones Group Plc Pillar 3 FY2021–FY2025, s.1 Executive summary, "
+           "says disclosure is group-consolidated only (no large subsidiary, CRR 4(146)); RIM's own accounts print none.")
+NOT_PUB_NOTE = NOT_DISCLOSED + (
+    "\n\nGA-020 EVIDENCE, ALL FIVE YEARS (2026-09-19): the same statement 'Disclosures are made on a consolidated "
+    "group level, as we have no large subsidiaries meeting the requirements for individual disclosure under the "
+    "definition within CRR Article 4(146)' appears in Rathbones Group Plc Pillar 3 FY2021 (PDF p.5) - " + P3_2021_URL +
+    " ; FY2022 (PDF p.7) - " + P3_2022_URL + " ; FY2023 (PDF p.7) - " + P3_2023_URL + " ; and the FY2024 and FY2025 "
+    "editions (printed p.6) cited in the source note. No edition prints a RIM-solo figure.")
 RCR_SOURCES = CASH_SOURCES + (
     "\n\nENTITY-LEVEL REGULATORY CAPITAL RESOURCES (added 2026-09-15). Each year's own Annual Report and Financial "
     "Statements, capital-management note (scanned filings - figures read by OCR at 300-400 dpi and confirmed "
@@ -408,7 +423,8 @@ bw.add_km1_sheet(
 _pillar3_pre = ["CET1 Capital", "CET1 Ratio", "Tier 1 Capital", "Tier 1 Ratio"]
 _pillar3_post = ["Total Capital Ratio", "Total RWAs"]
 _pillar3_after_rwa = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
-bw.add_not_disclosed_metric_sheets(_pillar3_pre, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_pre}, source_height=430)
+bw.add_not_disclosed_metric_sheets(_pillar3_pre, CASH_SOURCES, per_note={m: NOT_PUB_NOTE for m in _pillar3_pre}, source_height=430,
+                                 statements={m: NOT_PUB for m in _pillar3_pre})
 bw.add_metric_sheet(
     "Total Capital",
     "£'000",
@@ -424,17 +440,19 @@ bw.add_metric_sheet(
     first_col_width=60,
     source_height=470,
 )
-bw.add_not_disclosed_metric_sheets(_pillar3_post, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_post}, source_height=430)
+bw.add_not_disclosed_metric_sheets(_pillar3_post, CASH_SOURCES, per_note={m: NOT_PUB_NOTE for m in _pillar3_post}, source_height=430,
+                                 statements={m: NOT_PUB for m in _pillar3_post})
 bw.add_rwa_breakdown_sheet(
     title="Rathbones Investment Management Limited — RWA Breakdown",
-    subtitle="Not publicly disclosed at entity level.",
-    rows=[("DATA", "RWA Breakdown", {y: "Not publicly disclosed" for y in YEARS})],
-    sources_text=CASH_SOURCES,
+    subtitle="Not published at entity level - see the GA-020 evidence at the foot of the source note.",
+    rows=[("DATA", "RWA Breakdown", {y: NOT_PUB for y in YEARS})],
+    sources_text=CASH_SOURCES + "\n\n" + NOT_PUB_NOTE,
     first_col_width=54,
     source_height=430,
     unit_suffix="",
 )
-bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_DISCLOSED for m in _pillar3_after_rwa}, source_height=430)
+bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_PUB_NOTE for m in _pillar3_after_rwa}, source_height=430,
+                                 statements={m: NOT_PUB for m in _pillar3_after_rwa})
 
 bw.add_overview_sheet(
     cash_flow_totals=[("Net cash inflow/(outflow) from operating activities", {"FY2025":988180,"FY2024":200256,"FY2023":-99468,"FY2022":276728,"FY2021":-249109}), ("Net cash used in investing activities", {"FY2025":-559268,"FY2024":-2375,"FY2023":-256406,"FY2022":-285059,"FY2021":-126903}), ("Cash and cash equivalents at the end of the year", {"FY2025":1609394,"FY2024":1249482,"FY2023":1078601,"FY2022":1484475,"FY2021":1530445})],

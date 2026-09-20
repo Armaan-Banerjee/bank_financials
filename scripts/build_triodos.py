@@ -918,9 +918,18 @@ metric(
          "simplified retail deposit ratio, which the Bank does not publish either.",
 )
 
+# GA-020 (2026-09-19): FY2020-FY2024 Pillar 3 editions re-fetched from their cited URLs and the FY2025 Annual
+# Report (site copy, text layer) text-searched: 'MREL' / 'eligible liabilities' return zero hits in all six.
+_TRI_MREL = {y: f"Not published – no MREL figure in the {y} TBUK Pillar 3 (text-searched 2026-09-19: 'MREL' 0 hits)"
+             for y in ("FY2024", "FY2023", "FY2022", "FY2021", "FY2020")}
+_TRI_MREL["FY2025"] = ("Not published – no FY2025 Pillar 3 (SDDT Ru 3.1 from 11 Mar 2025); FY2025 Annual Report "
+                       "has no MREL figure ('MREL' 0 hits, 2026-09-19)")
+_TRI_MREL["FY2019"] = ("Not published – no TBUK Pillar 3 for its first (8-month) period (Wayback sweep of "
+                       "triodos.co.uk: TBUK editions FY2020-FY2024 only); FY2020 edition has no MREL")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": _TRI_MREL},
     per_note={
         "MREL Ratio": "No MREL figure or qualitative MREL disclosure appears in any of TBUK's Annual Reports or "
                       "Pillar 3 Reports (FY2019-FY2024) - not asserted as an explicit exemption, simply absent "

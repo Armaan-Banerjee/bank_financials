@@ -646,12 +646,65 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # full KM1, and those documents dominate any search for "AIB Pillar 3" - an
 # earlier pass of this script surfaced them first and correctly discarded them.
 # A parent's consolidated KM1 can never stand in for a UK subsidiary's own.
+# GA-020 (2026-09-19) - WHAT THE NEW EVIDENCE SHOWS. AIB UK DID publish its own Pillar 3 up to FY2020:
+# 'Pillar 3 Report For the year ended 31 December 2020 AIB Group (UK) p.l.c.' (xlsx, 40 tabs, pre-2022
+# EU format, no KM1) is live at aib.ie/.../resultscentre/pillar3/2020/aib-group-UK-2020-pillar-3-report.xlsx,
+# and a 2019 edition (pillar-3-2019-uk-300320.xlsx) is in Wayback CDX. Nothing later was found: the live aib.ie
+# 'Pillar 3 Disclosures Q4 2022/2023/2024/2025' pages each list only AIB Group plc and Allied Irish Banks plc
+# files; a Wayback CDX listing of aib.ie/.../investorrelations/* (4,219 URLs, 84 Pillar 3 files) has no AIB UK
+# edition after 2020; the CDX listing of aibgb.co.uk's Regulatory-Information folder (62 URLs, holding the
+# AIB UK Annual Financial Reports 2019-2025 as positive control) has no Pillar 3; the AIB Group plc Q4 2024
+# Pillar 3 names AIB Group (UK) only narratively, with no UK KM1. The BoE waivers register lists no
+# disclosure waiver or SDDT modification for FRN 122088. FY2021 stays UNREACHED: the live aib.ie Q4 2021
+# Pillar 3 page returns 404 and the only Wayback copy of the FY2021 AFR is a 1 MiB-truncated capture.
+# GA-020 UNREACHED PASS (2026-09-19), second attempt, FY2021 still UNREACHED:
+#  - the live Q4 2021 page is at /investorrelations/financial-information/results-centre/aib-pillar-3-2021-q4
+#    (HTTP 200; the earlier 404 was a different slug). It links exactly two xlsx files,
+#    pillar3/2021/AIB-Group-plc-q4-2021-pillar-3-disclosures.xlsx and
+#    pillar3/2021/Allied-Irish-Banks-p.l.c-q4-2021-pillar-3-disclosures.xlsx, plus the AIB Group plc PDF -
+#    no AIB Group (UK) file. Both are parent entities, so neither may be used here.
+#  - 7 filename guesses for a UK file in pillar3/2021/ (both the 2020 style and the new Q4 style): 404
+#    (positive control: the 2020 UK xlsx returns 200, 1,603,385 bytes).
+#  - aibni.co.uk 'CRD website disclosure' page, Wayback captures 20 Oct 2021, 24 May 2022, 9 Dec 2023:
+#    links AIB Group (UK) Annual Financial Reports 2019/2021/2022 and governance PDFs, no Pillar 3.
+#  - Wayback CDX aibgb.co.uk (12,688 URLs), aibni.co.uk (7,837), firsttrustbank.co.uk (13,800): no Pillar 3.
+#  - the FY2021 AFR itself, now reached as a text-native PDF on aib.ie
+#    (.../annualreport/2021/aib-group-uk-plc-annual-financial-report.pdf, 743k chars): zero 'Pillar 3'
+#    hits; 'MREL' only in note 34's internal loan and the glossary. So nothing in the AFR says where,
+#    or whether, a FY2021 Pillar 3 was published.
+#  - web search for the entity + 'Pillar 3' + '31 December 2021' returns only parent documents.
+AIB_NO_P3 = ("Not published – no AIB UK Pillar 3 after FY2020: aib.ie Q4 Pillar 3 page lists only AIB Group plc "
+             "and AIB plc; none in Wayback CDX of aib.ie or aibgb.co.uk (checked 2026-09-19)")
+# Common Crawl pass 2026-09-19 (self-hosted ZipNum lookup on data.commoncrawl.org), crawls
+# CC-MAIN-2022-05..2025-51: aib.ie/content/dam/frontdoor/investorrelations/* (33 crawls) and the
+# aibgb.co.uk, aibni.co.uk and firsttrustbank.co.uk domains. The whole .../pillar3/ folder as
+# captured holds AIB Group plc and Allied Irish Banks plc quarterly PDFs, the 2008-2019 group
+# reports, and - the one UK entity file - the 2020 folder's five per-entity workbooks including
+# aib-group-UK-2020-pillar-3-report.xlsm (positive control). No 2021 folder and no UK-entity file
+# after 2020 was ever crawled. Log: wayfinder/gaps/ga020/unreached/done/AIB GROUP UK.jsonl
+AIB_2021_U = ("Unreached today – aib.ie Q4 2021 Pillar 3 page lists only AIB Group plc/AIB plc files; UK name "
+              "guesses 404; aibni CRD page & CDX of aibgb/aibni: none; Common Crawl 2022-05..2025-51: no 2021 "
+              "folder; FY2021 AFR silent (2026-09-19). FY2020 exists")
 km1_rows = [
     ("DATA", "UK KM1 - Key metrics template: not published by this entity",
-     {y: "Not applicable" for y in YEARS}),
+     {**{y: AIB_NO_P3 for y in ("FY2025", "FY2024", "FY2023", "FY2022")}, "FY2021": AIB_2021_U}),
 ]
 
 KM1_SOURCES = (
+    "CORRECTION (GA-020, 2026-09-19): the claim below that AIB UK 'does not publish a standalone Pillar 3 "
+    "disclosure document at all' is wrong as a statement about the bank. It published one for FY2019 and FY2020 "
+    "(xlsx workbooks on aib.ie: '.../pillar3/2020/aib-group-UK-2020-pillar-3-report.xlsx', title 'Pillar 3 "
+    "Report For the year ended 31 December 2020 AIB Group (UK) p.l.c.', pre-2022 EU tables, no KM1; and "
+    "'.../pillar3/pillar-3-2019-uk-300320.xlsx'). No edition for FY2022-FY2025 was found on the live aib.ie Q4 "
+    "Pillar 3 pages, in Wayback CDX of aib.ie (84 Pillar 3 files) or of aibgb.co.uk's Regulatory-Information "
+    "folder, so those cells read 'Not published'. FY2021 is 'Unreached today' (live page 404).\n"
+    "COMMON CRAWL (2026-09-19): every crawl from CC-MAIN-2022-05 to CC-MAIN-2025-51 was searched for "
+    "aib.ie/content/dam/frontdoor/investorrelations/* and for the aibgb.co.uk, aibni.co.uk and "
+    "firsttrustbank.co.uk domains. The .../resultscentre/pillar3/ folder is well covered - the 2020 folder's "
+    "five per-entity workbooks (including aib-group-UK-2020-pillar-3-report.xlsm), the AIB Group plc and "
+    "Allied Irish Banks plc quarterly PDFs for Q4 2021 onward, and the 2008-2019 group reports - so the "
+    "instrument reaches this folder. There is no 2021 sub-folder and no UK-entity file of any year after 2020 "
+    "in any crawl. FY2021 stays Unreached.\n\n"
     "AIB Group (UK) p.l.c. does not publish a UK KM1 key-metrics template, and does not publish a standalone "
     "Pillar 3 disclosure document at all. Its capital and liquidity metrics are disclosed inside the Annual "
     "Financial Report, in the 'Capital management and liquidity' section, and those figures are carried on the "
@@ -896,7 +949,12 @@ metric(
 bw.add_metric_sheet(
     "MREL Ratio",
     None,
-    [("MREL Ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL Ratio", {**{y: ("Not published – no MREL mention in this year's AIB UK Annual Financial Report "
+                            "(text-searched 2026-09-19) and no AIB UK Pillar 3 published (see KM1 sheet)")
+                        for y in ("FY2025", "FY2024", "FY2023", "FY2022")},
+                     "FY2021": ("Unreached today – FY2021 AFR note 34 shows an MREL requirement met by a £45m "
+                                "internal loan but no ratio; FY2021 AIB UK Pillar 3 not reached, 2nd pass 2026-09-19, "
+                                "Common Crawl 2022-05..2025-51 checked (see KM1 sheet)")})],
     p3_sources(),
     first_col_width=52,
     source_height=860,
@@ -931,6 +989,58 @@ bw.add_metric_sheet(
                       "instrument on 31 December 2021 - two independent disclosures thinning out at the same "
                       "moment, both consistent with the PS21/21 scope change described on the Leverage Ratio sheet."
     ),
+)
+
+# ---------------------------------------------------------------
+# Historical pre-2021 Pillar 3 extension (separate EUR basis)
+# ---------------------------------------------------------------
+# These are deliberately auxiliary sheets.  FY2019/FY2020 use the AIB UK
+# entity's pre-2022 EU-format Pillar 3 workbooks and EUR millions; they must
+# not be merged into the current FY2021-FY2025 GBP annual-report series.
+AIB_HIST_YEARS = ["FY2020", "FY2019"]
+AIB_HIST_LABEL = {"FY2020": "FY2020 (EUR)", "FY2019": "FY2019 (EUR)"}
+YEAR_LABEL.update(AIB_HIST_LABEL)
+AIB_HIST_SOURCES = (
+    "AIB Group (UK) p.l.c. own pre-2022 EU-format Pillar 3 workbooks, amounts in EUR millions. "
+    "FY2020: Tables 1, 3, 4 and 5, aib-group-UK-2020-pillar-3-report.xlsx, "
+    "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/pillar3/2020/aib-group-UK-2020-pillar-3-report.xlsx\n"
+    "FY2019: Tables 1, 3 and 4, pillar-3-2019-uk-300320.xlsx, "
+    "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/pillar3/pillar-3-2019-uk-300320.xlsx\n"
+    "These auxiliary rows are not part of the current GBP FY2021-FY2025 series. The source workbooks "
+    "have no LCR, NSFR or MREL figures suitable for these sheets."
+)
+bw.add_metric_sheet(
+    "Historical P3 Capital EUR", "EUR millions — AIB Group (UK) p.l.c. pre-2022 Pillar 3 basis",
+    [
+        ("CET1 capital", {"FY2020": 1693, "FY2019": 1613}),
+        ("Tier 1 capital", {"FY2020": 1693, "FY2019": 1613}),
+        ("Total capital", {"FY2020": 1693, "FY2019": 1613}),
+        ("CET1 ratio", {"FY2020": "20.7%", "FY2019": "17.6%"}),
+        ("Tier 1 ratio", {"FY2020": "20.7%", "FY2019": "17.6%"}),
+        ("Total capital ratio", {"FY2020": "20.7%", "FY2019": "17.6%"}),
+    ], AIB_HIST_SOURCES, years=AIB_HIST_YEARS,
+    note="Printed Table 1 values. FY2019 Table 1's own comparative reports 2018 separately; only FY2019/FY2020 are added here.",
+)
+bw.add_metric_sheet(
+    "Historical P3 RWA EUR", "EUR millions — EU OV1 risk-weighted assets",
+    [
+        ("Credit risk excluding CCR", {"FY2020": 7309, "FY2019": 8324}),
+        ("CCR", {"FY2020": 160, "FY2019": 131}),
+        ("Market risk", {"FY2020": 0, "FY2019": 0}),
+        ("Operational risk", {"FY2020": 605, "FY2019": 600}),
+        ("Amounts below deduction thresholds", {"FY2020": 104, "FY2019": 102}),
+        ("Total RWA", {"FY2020": 8178, "FY2019": 9157}),
+    ], AIB_HIST_SOURCES, years=AIB_HIST_YEARS,
+    note="Printed EU OV1 Table 3 values; the total is the bank's printed headline total and is not reconstructed.",
+)
+bw.add_metric_sheet(
+    "Historical P3 Leverage EUR", "EUR millions / % — transitional leverage disclosure",
+    [
+        ("Tier 1 capital used in leverage table", {"FY2020": 1693, "FY2019": 1612}),
+        ("Total leverage exposure", {"FY2020": 14728, "FY2019": 14353}),
+        ("Leverage ratio", {"FY2020": "11.5%", "FY2019": "11.2%"}),
+    ], AIB_HIST_SOURCES, years=AIB_HIST_YEARS,
+    note="Printed Table 5/LRCom values. FY2019's leverage-table Tier 1 amount is 1,612, while Table 1 prints 1,613; both are retained on their own source tables.",
 )
 
 # ---------------------------------------------------------------

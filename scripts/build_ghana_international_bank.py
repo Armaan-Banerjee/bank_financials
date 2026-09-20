@@ -1147,7 +1147,15 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)],
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
-    per_note={"MREL Ratio": "Not publicly disclosed any year - GHIB is not a UK resolution entity subject to MREL."},
+    # GA-020 (2026-09-19): all seven editions (P3_2019..P3_2025_URL, 33-44 pages,
+    # native text) full-text searched for MREL / loss-absorbing / eligible
+    # liabilities / 'minimum requirement for own funds': zero hits.
+    statements={"MREL Ratio": {y: (f"Not published – GHIB {y} Pillar 3 Disclosures (full text searched 2026-09-19) "
+                                   "contain no MREL figure or reference") for y in YEARS}},
+    per_note={"MREL Ratio": "No MREL figure or statement appears in any GHIB Pillar 3 edition FY2019-FY2025 "
+                            "(each full-text searched 2026-09-19). The earlier wording here - that GHIB 'is not a "
+                            "UK resolution entity subject to MREL' - was an inference no document states, so the "
+                            "cells record non-publication rather than non-applicability."},
 )
 
 # ---------------------------------------------------------------

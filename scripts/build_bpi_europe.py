@@ -459,7 +459,16 @@ metric("NSFR", "%", [("Net Stable Funding Ratio (NSFR)", NSFR)], p3_sources(),
             "long-term borrowings \"to comply with the requirements of Net Stable Funding Ratio (NSFR), ahead "
             "of its full implementation in 2022\", i.e. NSFR was not yet a tracked/reported metric for FY2021.")
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE})
+# GA-020 (2026-09-19): all five Companies House accounts FY2021-FY2025 (image-only;
+# FY2024's own filing, 57pp, filed 12 May 2025, id MzQ2NTc1OTE5MmFkaXF6a2N4, was
+# fetched as well) OCR'd in full at 150dpi: 0 hits for MREL / eligible
+# liabilities / loss absorbing (positive control 60-66 'capital' hits each).
+# The entity publishes no Pillar 3 (see KM1 note: no website; CH filings are its
+# complete public record).
+BPI_MREL = {y: ("Not published – no MREL figure or statement in this year's Companies House accounts (all pages "
+                "OCR'd 2026-09-19); the entity publishes no Pillar 3") for y in YEARS}
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+                                   statements={"MREL Ratio": BPI_MREL})
 
 # ---------------------------------------------------------------
 # Overview sheet (Pillar-3-only: no cash-flow chart)

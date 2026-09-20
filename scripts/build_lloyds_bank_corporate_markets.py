@@ -732,6 +732,14 @@ for name, values in ANNUAL.items():
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     annual_sources("p3"),
+    # GA-020 (2026-09-19): evidenced statement. Checked the parent layer (KM1 map rule 18): Lloyds Banking
+    # Group plc's year-end Pillar 3 FY2018-FY2025 were downloaded and searched. From FY2019 they print a TLAC2
+    # creditor-ranking table for LBCM (e.g. FY2025 edition, 'Page 30 of 133': own funds and eligible
+    # liabilities by rank, £m) but no LBCM MREL RATIO; every MREL ratio printed is the Group's. Dividing TLAC2
+    # amounts by LBCM RWAs would be a back-solve and is not done.
+    statements={"MREL Ratio": (
+        "Not published – no LBCM MREL ratio in its own Pillar 3/annual report or in LBG plc's Pillar 3, which "
+        "prints at most TLAC2 creditor-ranking amounts for LBCM (FY2019 on) and a Group MREL ratio (searched 2026-09-19)")},
     per_note={
         "MREL Ratio": (
             "Each year's own Pillar 3 report explicitly states MREL disclosures for this "

@@ -222,6 +222,68 @@ def p3_sources(page2024=None, page2023=None, page2022=None, page2021=None, table
 
 bw = BankWorkbook(bank_name="FirstBank UK Limited", years=YEARS, year_label=YEAR_LABEL, header_color="060F0B")
 
+# ---------------------------------------------------------------
+# FY2025 GAP-FILL, 19 September 2026.
+# Six FY2025 sheet-years here (KM1, Tier 1 Ratio, RWA Breakdown, Leverage
+# Ratio, LCR, NSFR) were BLANK. The finding behind them was already established
+# and written up in P3_SOURCES_NOTE above - but a note is invisible to the
+# corpus census, which cannot tell an established negative from a cell nobody
+# has looked at. It now goes IN the year column too.
+#
+# RE-VERIFIED THIS SESSION rather than inherited:
+#  - The Bank's own FY2025 Annual Report was re-fetched from the Bank's own
+#    site this time (not only Companies House): www.fbnbank.co.uk/annual-report/
+#    was read as HTML on 19/09/2026 and links FY2025-Annual-Reports-Accounts.pdf
+#    under /wp-content/uploads/2026/09/, which serves HTTP 200, Content-Type
+#    application/pdf, %PDF-1.7 magic bytes, 1.8MB - and is the real document
+#    (title page "FirstBank UK Limited, Annual Report and Financial Statements,
+#    For the year ended 31 December 2025"). Its text layer is rich: 1,872 hits
+#    for ' the '.
+#  - THE BANK STATES THE PILLAR 3 IS STILL TO COME, in that report, in the
+#    future tense: Directors' Report, "Further information regarding the Bank's
+#    approach to risk management and its capital adequacy is contained in the
+#    unaudited disclosures prepared in accordance with current regulatory
+#    capital requirements (see the Pillar 3 disclosures WHICH WILL BE PUBLISHED
+#    on the Bank's website at https://www.fbnbank.co.uk/ AFTER THE APPROVAL OF
+#    THESE FINANCIAL STATEMENTS)" (emphasis added). Note 32 repeats that the
+#    detail sits in "the Bank's Pillar 3 Disclosure document published on its
+#    website". So the FY2025 edition is PENDING - a document that does not
+#    exist yet, not one that could not be reached.
+#  - The site's own ?s=pillar search returns no Pillar 3 result of any kind,
+#    the FY2024 Pillar 3 URL cited in this script still 404s (the Bank has
+#    withdrawn its Pillar 3 back-catalogue from the live site), and the guessed
+#    FY2025 path under uploads/2026/09/ also 404s. THAT LAST PROBE PROVES
+#    NOTHING ON ITS OWN and is recorded as such: since the FY2024 URL 404s too,
+#    a 404 here cannot distinguish "absent" from "moved". The load-bearing
+#    evidence is the Bank's own future-tense sentence, not the probes.
+#  - The WordPress media REST endpoint remains an instrument failure, not
+#    evidence: /wp-json/wp/v2/media returns an empty array even with no search
+#    filter (unfiltered control run this session), while /wp-json/ itself
+#    returns 464KB - the media route is disabled, so it can neither confirm nor
+#    deny an upload.
+# ---------------------------------------------------------------
+FY2025_P3_PENDING = ("Not published - FY2025 Pillar 3 pending; AR2025 says it "
+                     "\"will be published ... after the approval of these Financial Statements\"")
+FY2025_NO_TIER1_RATIO = ("Not published - AR2025 labels only a CET1 ratio; FY2025 Pillar 3 pending")
+FY2025_NO_LCR = ("Not published - FY2025 Pillar 3 pending; AR2025's \"Liquidity Capital Ratio "
+                 "(Pillar 1)\" is a different measure, not the LCR")
+FY2025_GAPFILL_NOTE = (
+    "\n\nFY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (written into the column 2026-09-19). The "
+    "Bank itself puts the FY2025 Pillar 3 in the future tense, in its own audited FY2025 Annual Report's "
+    "Directors' Report: the capital-adequacy detail is in 'the Pillar 3 disclosures WHICH WILL BE "
+    "PUBLISHED on the Bank's website at https://www.fbnbank.co.uk/ AFTER THE APPROVAL OF THESE FINANCIAL "
+    "STATEMENTS' (emphasis added), and note 32 repeats that the detail sits in a document 'published on "
+    "its website'. So this is a document that does not exist yet, not one that could not be reached. "
+    "Re-verified 19/09/2026: the FY2025 Annual Report was fetched from the Bank's OWN site this time "
+    "(www.fbnbank.co.uk/annual-report/ read as HTML, linking uploads/2026/09/"
+    "FY2025-Annual-Reports-Accounts.pdf - HTTP 200, Content-Type application/pdf, %PDF-1.7, 1.8MB, and it "
+    "is the right document: 'For the year ended 31 December 2025' on its title page; richness control "
+    "1,872 hits for ' the '), the site's own ?s=pillar search returns no Pillar 3 result of any kind, and "
+    "the WordPress media REST endpoint still returns an empty array even for an UNFILTERED control query "
+    "while /wp-json/ itself returns 464KB - that route is disabled, so it is an instrument failure and "
+    "cannot be cited as evidence of absence either way. The FY2024 Pillar 3 URL this script cites also "
+    "404s now, so a 404 on any guessed FY2025 path proves nothing and is not relied on.")
+
 STATEMENTS_SOURCES = (
     "Sources - FirstBank UK Limited's own Statement of Comprehensive Income / Statement of Financial "
     "Position / Statement of Changes in Equity (page images, statutory accounts filed at Companies House - "
@@ -840,11 +902,21 @@ KM1_NOTE = (
     "that prior periods are not available on a comparable basis, so FY2021 and earlier NSFR rows are blank. "
     "The duplicated labels are recorded as a source defect and are not reproduced as rows.\n"
     "\n"
-    "FY2025 IS BLANK. No FY2025 Pillar 3 disclosure has been published, and the FY2025 Annual Report "
-    "contains no key-metrics table - confirmed by reading its full text layer, not by a failed search."
+    "FY2025 CARRIES NO TEMPLATE FIGURES. No FY2025 Pillar 3 disclosure has been published, and the FY2025 "
+    "Annual Report contains no key-metrics table - confirmed by reading its full text layer, not by a "
+    "failed search.\n"
+    "\n"
+    "THE TOP ROW IS NOT PART OF THE TEMPLATE (added 2026-09-19). It is bracketed, unnumbered and labelled "
+    "'[Edition status for this year - not a KM1 template row]'. It carries no figure and is not one of the "
+    "Bank's rows; it exists only so the FY2025 column states in the grid what this note states in prose - "
+    "a column that is merely empty cannot be told apart, by a reader or by a census, from one nobody has "
+    "examined. The Bank's own rows below it are untouched: same order, same row numbers, same labels, same "
+    "precision, same two currency blocks."
 )
 
 km1_rows = [
+    ("DATA", "[Edition status for this year - not a KM1 template row]",
+     {"FY2025": "Not published - FY2025 Pillar 3 pending; the Bank's own AR2025 puts it in the future tense"}),
     ("SECTION", "US DOLLAR BLOCK — FY2024 and FY2023, as published by the Bank in US dollars", {}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital: Instruments and reserves ($'000)",
@@ -960,8 +1032,9 @@ bw.add_km1_sheet(
              "order, row numbers, labels and precision, each year from its own edition. THE TABLE IS IN TWO "
              "CURRENCY BLOCKS: FY2024-FY2023 as published in US dollars, FY2022-FY2019 as published in "
              "pounds sterling. Amounts are not comparable across the two blocks; the ratio rows are. FY2025 "
-             "is blank - no Pillar 3 has been published for it. See the note for the Bank's own row-number "
-             "shift, its '(%)'-labelled amount row, and the FY2023 leverage-ratio restatement.",
+             "carries no template figures - no Pillar 3 has been published for it, and the top row says so "
+             "in the column itself. See the note for the Bank's own row-number shift, its '(%)'-labelled "
+             "amount row, and the FY2023 leverage-ratio restatement.",
     rows=km1_rows,
     sources_text=p3_sources(page2024=3, page2023=3, page2022=19, page2021=9, table="Table 1 - Key Metrics") + (
         "\n\nKM1 key-metrics table by edition (printed folios, not PDF sheet indices): FY2024 = Pillar 3 "
@@ -1014,10 +1087,26 @@ metric(
 metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 ratio", {
+        "FY2025": FY2025_NO_TIER1_RATIO,
         "FY2024": "26.07%", "FY2023": "25.05%", "FY2022": "22.47%", "FY2021": "17.79%",
         "FY2020": "20.20%", "FY2019": "19.49%",
-    })],
+    }),
+     ("Tier 1 ratio — Annual Report 2025 memo: the ratio the Bank prints on this capital, "
+      "captioned there as the CET 1 ratio (Tier 1 = CET1: no AT1 in issue)",
+      {"FY2025": "22.0%"})],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
+    note=FY2025_GAPFILL_NOTE.lstrip() +
+    "\n\nWHY FY2025 IS SPLIT ACROSS TWO ROWS. The Annual Report 2025 never uses the words 'Tier 1 ratio'. "
+    "Its Strategic Report 'Capital and Liquidity Management' table (printed p.8) labels $413mn as 'CET 1 "
+    "Capital' and prints a 'CET 1 Ratio' of 22.0% on it; note 32 'Capital management' (printed p.109) "
+    "labels the SAME amount, $413,014,692, 'Tier one capital', and shows the capital stack running Tier "
+    "one capital -> Available tier two capital -> Total available capital with no Additional Tier 1 line "
+    "anywhere. On the Bank's own numbers, therefore, Tier 1 capital and CET1 capital are the same $413.0m "
+    "(which is why this workbook's CET1 Capital and Tier 1 Capital sheets both carry it for FY2025), and "
+    "the ratio struck on it is the same 22.0%. That identity is shown on its own labelled memo row rather "
+    "than dropped into the series above it, because the series above is what the Bank labels a Tier 1 "
+    "ratio - and for FY2025 it labels nothing that way. Nothing is computed here: 22.0% is the Bank's own "
+    "printed figure, not capital divided by RWA.",
 )
 
 metric(
@@ -1111,6 +1200,14 @@ bw.add_rwa_breakdown_sheet(
              "FY2021 carries a small flagged discrepancy vs the Total RWAs sheet (see source note). See source "
              "note at bottom.",
     rows=[
+        # Gap-fill 2026-09-19: the FY2025 column held no cell at all, so the
+        # census scored it as an untouched gap even though the reason was
+        # already in the source note. Statement row, not a risk category -
+        # nothing is computed and no Total row is affected. In particular the
+        # Strategic Report's single 'Risk Weighted Assets $1,879mn' line is a
+        # TOTAL, and is not split into categories by any means.
+        ("DATA", "[No category RWA breakdown published for this year - see note below]",
+         {"FY2025": "Not published - FY2025 Pillar 3 pending; AR2025 gives a total RWA only, no OV1 split"}),
         ("SECTION", "UK OV1 template (FY2024-FY2021)", {}),
         ("DATA", "Credit risk (excluding CCR)", {
             "FY2024": 1196695, "FY2023": 1060740, "FY2022": 967989, "FY2021": 1293719,
@@ -1160,38 +1257,70 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio", {
+        "FY2025": FY2025_P3_PENDING,
         "FY2024": "14.12%", "FY2023": "19.64%", "FY2022": "9.84%", "FY2021": "6.83%",
         "FY2020": "6.75%", "FY2019": "4.98%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
+    note=FY2025_GAPFILL_NOTE.lstrip() +
+    "\n\nThe FY2025 Annual Report names the leverage ratio only as a metric the Bank monitors ('Leverage "
+    "Ratio: Measures the Bank's core capital ...' in the risk-management section); it prints no value for "
+    "it in any year column, and none is derived here from the capital and exposure figures elsewhere in "
+    "the report.",
 )
 
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio (12-month trailing average)", {
+        "FY2025": FY2025_NO_LCR,
         "FY2024": "409.09%", "FY2023": "383.17%", "FY2022": "240.65%", "FY2021": "243.08%",
         "FY2020": "252.76%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=26, table="Table 1 / Table 6"),
+    note=FY2025_GAPFILL_NOTE.lstrip() +
+    "\n\nTHE ANNUAL REPORT'S 282% IS NOT AN LCR AND HAS NOT BEEN USED AS ONE. The FY2025 Strategic "
+    "Report's 'Capital and Liquidity Management' table (printed p.8) prints a line called 'Liquidity "
+    "Capital Ratio (Pillar 1)' of 282% (2024: 278%). That is a different measure on a different basis: "
+    "this workbook's FY2024 LCR, taken from the Bank's own FY2024 Pillar 3 KM1, is 409.09% for the very "
+    "same year, so the two cannot be the same ratio. The report's narrative separately says only that "
+    "'the liquidity coverage ratio [provided] ample buffer above the 100% regulatory minimum' - a "
+    "qualitative statement with no figure attached.",
 )
 
 metric(
     "NSFR", "%",
     [("Net Stable Funding Ratio", {
+        "FY2025": FY2025_P3_PENDING,
         "FY2024": "213%", "FY2023": "286.37%", "FY2022": "274.71%",
         # FY2021: not disclosed on a comparable basis - the CRR2 NSFR rules commenced 1 Jan 2022 and the
         # Bank's own Pillar 3 Dec-2022 report states prior-period data is "not available on an equivalent basis"
     })],
     p3_sources(page2024=3, page2023=3, page2022=26, table="Table 1 / Table 6"),
     note="FY2021 not disclosed: the CRR2 NSFR rules commenced 1 January 2022 and the Bank's own Pillar 3 "
-         "Disclosures (Dec 2022) state prior-period NSFR data is 'not available on an equivalent basis'.",
+         "Disclosures (Dec 2022) state prior-period NSFR data is 'not available on an equivalent basis'."
+         + FY2025_GAPFILL_NOTE +
+         "\n\nThe FY2025 Annual Report names the NSFR only as a metric the Bank monitors ('Net Stable "
+         "Funding Ratio (NSFR): Measures the ...' in the liquidity-risk section, and again in a list of "
+         "limits it adheres to). It prints no NSFR value in any year column.",
 )
 
+# GA-020 (2026-09-19): all six Pillar 3 editions (the Wayback id_ captures cited above, %PDF,
+# page counts as recorded) text-searched for 'MREL' / 'eligible liabilities'. FY2020, FY2021 and
+# FY2022 each carry an MREL paragraph: the Bank of England as resolution authority set MREL
+# "equal to the capital requirements (comprising Pillar 1 and Pillar 2A)" (FY2020 p.~20,
+# FY2021 and FY2022 section 5.4, just before 5.5 Leverage Ratio). FY2019, FY2023 and FY2024
+# editions: zero hits (richness 'capital' 138-155). FY2025 Annual Report (bank's own site, text):
+# zero hits, and the FY2025 Pillar 3 is still to be published.
+_MREL_NA = ("Not applicable – FirstBank UK Pillar 3 {y}, MREL paragraph: Bank of England set MREL 'equal to the "
+            "capital requirements (comprising Pillar 1 and Pillar 2A)'; no separate ratio.")
+MREL_ST = {y: _MREL_NA.format(y=y) for y in ["FY2022", "FY2021", "FY2020"]}
+MREL_ST.update({y: ("Not published – FirstBank UK Pillar 3 " + y + " (text search, 2026-09-19) has no MREL figure "
+                    "or mention.") for y in ["FY2024", "FY2023", "FY2019"]})
+MREL_ST["FY2025"] = ("Not published yet – FY2025 Pillar 3 pending (AR2025: 'will be published' after approval of the "
+                     "Financial Statements); AR2025 itself has no MREL figure.")
 metric(
     "MREL Ratio", None,
-    [("Minimum Requirement for Own Funds and Eligible Liabilities (MREL) ratio", {
-        y: "Not publicly disclosed" for y in bw.years
-    })],
+    [("Minimum Requirement for Own Funds and Eligible Liabilities (MREL) ratio", MREL_ST)],
     "Sources - FirstBank UK Limited Pillar 3 Disclosures (31st December 2022, p.26) describes the Bank's MREL "
     "requirement qualitatively (set equal to its Pillar 1 + Pillar 2A capital requirements by the Bank of "
     "England as resolution authority under the BRRD) but does not disclose a quantitative MREL ratio figure in "

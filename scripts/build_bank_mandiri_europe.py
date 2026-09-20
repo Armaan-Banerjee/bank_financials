@@ -1215,6 +1215,18 @@ KM1_SOURCES = (
     "\n" + ENTITY_NOTE
 )
 
+# GA-020 (2026-09-19): outcome wording for the cells below, on the evidence in
+# KM1_SOURCES / NOT_DISCLOSED_NOTE (both name the documents checked).
+KM1_CELL = ("Not published – only Pillar 3 ever is the 31 Dec 2016 edition (pre-dates KM1); live site + Wayback CDX "
+            "enumerated 2026-09-16, no later one; ARs FY2024/FY2025 contain no KM1")
+GA020_EV = "only Pillar 3 ever (31 Dec 2016) has zero hits; ARs FY2014-FY2025 give capital only as Tier 1 (FY2017-21) or a combined total capital ratio (KPI table p.6, FY2022+). See note."
+GA020_STATEMENTS = {
+    "CET1 Ratio": "Not published – no CET1 ratio in any edition: " + GA020_EV,
+    "Tier 1 Ratio": "Not published – no Tier 1 ratio in any edition: " + GA020_EV,
+    "Leverage Ratio": "Not published – no leverage ratio in any edition: " + GA020_EV,
+    "MREL Ratio": "Not published – no MREL figure in any edition: " + GA020_EV,
+}
+
 bw.add_km1_sheet(
     title="Bank Mandiri (Europe) Limited - KM1 Key Metrics",
     subtitle="Not applicable: this entity has published exactly one Pillar 3 disclosure in its history, for "
@@ -1222,7 +1234,7 @@ bw.add_km1_sheet(
              "the Wayback archive, and the annual reports contain no KM1. See the sources note, which also "
              "records the one route that is blocked rather than empty.",
     rows=[("DATA", "UK KM1 - Key metrics template: not published by this entity in any year",
-           {y: "Not applicable" for y in YEARS})],
+           {y: KM1_CELL for y in YEARS})],
     sources_text=KM1_SOURCES,
     first_col_width=64,
     source_height=300,
@@ -1240,6 +1252,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["CET1 Ratio"], p3_sources(), per_note={"CET1 Ratio": NOT_DISCLOSED_NOTE},
+    statements={"CET1 Ratio": GA020_STATEMENTS["CET1 Ratio"]},
 )
 
 metric(
@@ -1251,6 +1264,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["Tier 1 Ratio"], p3_sources(), per_note={"Tier 1 Ratio": NOT_DISCLOSED_NOTE},
+    statements={"Tier 1 Ratio": GA020_STATEMENTS["Tier 1 Ratio"]},
 )
 
 metric(
@@ -1438,6 +1452,7 @@ bw.add_rwa_breakdown_sheet(
 
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio"], p3_sources(), per_note={"Leverage Ratio": NOT_DISCLOSED_NOTE},
+    statements={"Leverage Ratio": GA020_STATEMENTS["Leverage Ratio"]},
 )
 
 metric(
@@ -1459,6 +1474,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+    statements={"MREL Ratio": GA020_STATEMENTS["MREL Ratio"]},
 )
 
 # ---------------------------------------------------------------

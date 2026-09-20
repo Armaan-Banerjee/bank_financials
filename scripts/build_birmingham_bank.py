@@ -596,7 +596,7 @@ KM1_SOURCES = (
     "the live URL now serves the FY2023 edition while the dated Wayback capture still serves the FY2022 one - "
     "which is exactly why the FY2022 citation is pinned to a capture. The two files differ (md5s above). "
     "Do not 'simplify' the FY2022 citation to the live URL; that would silently swap the edition.\n\n"
-    "WHY 'NOT APPLICABLE' RATHER THAN 'NOT FOUND'. Searching each edition's text: 'KM1' occurs 0 times and "
+    "WHY THIS IS A BOUNDED NEGATIVE RATHER THAN 'NOT FOUND' (cells re-worded 'Not published' under the GA-020 vocabulary, 2026-09-19: the template's absence is a fact about documents that exist, which is what that outcome means; 'Not applicable' is reserved for a requirement that does not apply). Searching each edition's text: 'KM1' occurs 0 times and "
     "'key metric' 0 times, while the same extraction returns CET1/Common Equity 18 times, 'own funds' 3, "
     "'leverage' 5 and LCR 7-9 times in every edition. The extraction demonstrably reaches the capital and "
     "liquidity vocabulary where it is printed, so the absence of the template is a property of the documents, "
@@ -638,9 +638,17 @@ KM1_SOURCES = (
 
 bw.add_km1_sheet(
     title="Birmingham Bank Limited - KM1 Key Metrics",
-    subtitle="Not applicable - the Bank publishes a narrative Pillar 3 and has never printed the UK KM1 template",
+    subtitle="Not published - the Bank publishes a narrative Pillar 3 and has never printed the UK KM1 template",
     rows=[
-        ("DATA", "UK KM1 'Key metrics' template", {y: "Not applicable" for y in YEARS}),
+        ("DATA", "UK KM1 'Key metrics' template", {y: (
+            "Not published – no KM1 in the FY2022 edition, which prints the FY2021 comparatives narratively; no "
+            "FY2021 edition in Wayback (FY2020 file unchanged at 01/03/2022); UK KM1 applied from 1 Jan 2022"
+            if y == "FY2021" else
+            "Not published – no FY2025 Pillar 3 (footer links FY2024 only; SDDT Ru 3.1 from 14/04/2026); "
+            "FY2025 Annual Report has no KM1"
+            if y == "FY2025" else
+            f"Not published – that year's Pillar 3 is narrative and never prints KM1 ('KM1'/'key metric' 0 "
+            f"hits, text-searched 2026-09-19)") for y in YEARS}),
     ],
     sources_text=KM1_SOURCES,
     first_col_width=76,
@@ -655,13 +663,23 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=52, source_height=190)
 
 
+
+# GA-020 (2026-09-19): evidenced outcome text for FY2025 gap cells - see P3_FY2025_NOTE for the evidence.
+def np25(what):
+    return ("Not published – no FY2025 Pillar 3 (the footer's one Pillar 3 link still serves FY2024, re-fetched "
+            f"2026-09-19; SDDT Ru 3.1 from 14/04/2026); FY2025 Annual Report (51pp, OCR-searched) gives no {what}")
+
+
+NP_ALL_EDITIONS = ("Not published – absent from every Birmingham Pillar 3 (FY2022, FY2023, FY2024 editions, "
+                   "text-searched 2026-09-19: 0 hits) and from the FY2025 Annual Report")
+
 # FY2022/FY2021 added 2026-09-15 from the recovered FY2022 Pillar 3 report - see CAPITAL_2022_NOTE.
-TOTAL_CAPITAL = {"FY2025": "Not publicly disclosed", "FY2024": 35985, "FY2023": 18617, "FY2022": 6172, "FY2021": 8314}
+TOTAL_CAPITAL = {"FY2025": np25("capital amount (ratio only)"), "FY2024": 35985, "FY2023": 18617, "FY2022": 6172, "FY2021": 8314}
 # FY2022/FY2021 RESTATED 2026-09-15 from the Strategic Report's 91%/97% onto the Pillar 3's own
 # 90%/96% - same basis as the capital amounts above and the RWAs below. See CAPITAL_2022_NOTE.
 CAPITAL_RATIO = {"FY2025": "30.43%", "FY2024": "76%", "FY2023": "365%", "FY2022": "90%", "FY2021": "96%"}
-RWA = {"FY2025": "Not publicly disclosed", "FY2024": 47333, "FY2023": 5229, "FY2022": 6822, "FY2021": 8648}
-LEVERAGE = {"FY2025": "Not publicly disclosed", "FY2024": "24%", "FY2023": "63%", "FY2022": "36%", "FY2021": "37%"}
+RWA = {"FY2025": np25("risk-weighted assets"), "FY2024": 47333, "FY2023": 5229, "FY2022": 6822, "FY2021": 8648}
+LEVERAGE = {"FY2025": np25("leverage ratio"), "FY2024": "24%", "FY2023": "63%", "FY2022": "36%", "FY2021": "37%"}
 LCR = {"FY2025": "460%", "FY2024": "725%", "FY2023": "11,351%", "FY2022": "2,983%", "FY2021": "16,250%"}
 
 SINGLE_TIER_NOTE = "No Additional Tier 1 or Tier 2 capital in any year - equals CET1 Capital exactly."
@@ -727,9 +745,9 @@ metric("Total Capital Ratio", "%", [("Total Capital Ratio (= Capital Adequacy Ra
 metric("Total RWAs", "£'000", [("Total risk-weighted assets", RWA)], note=RWA_NOTE)
 
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk", {"FY2025": "Not publicly disclosed", "FY2024": 46037, "FY2023": 4056, "FY2022": 5797, "FY2021": 7133}),
-    ("DATA", "Operational risk", {"FY2025": "Not publicly disclosed", "FY2024": 1296, "FY2023": 1045, "FY2022": 1025, "FY2021": 1515}),
-    ("TOTAL", "Total RWAs (Pillar 1)", {"FY2025": "Not publicly disclosed", "FY2024": 47333, "FY2023": 5101, "FY2022": 6822, "FY2021": 8648}),
+    ("DATA", "Credit risk", {"FY2025": np25("RWA figure"), "FY2024": 46037, "FY2023": 4056, "FY2022": 5797, "FY2021": 7133}),
+    ("DATA", "Operational risk", {"FY2025": np25("RWA figure"), "FY2024": 1296, "FY2023": 1045, "FY2022": 1025, "FY2021": 1515}),
+    ("TOTAL", "Total RWAs (Pillar 1)", {"FY2025": np25("RWA figure"), "FY2024": 47333, "FY2023": 5101, "FY2022": 6822, "FY2021": 8648}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -781,6 +799,8 @@ metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)],
 bw.add_not_disclosed_metric_sheets(
     ["NSFR", "MREL Ratio"],
     p3_sources(),
+    statements={"NSFR": NP_ALL_EDITIONS.replace("absent", "NSFR absent"),
+                "MREL Ratio": NP_ALL_EDITIONS.replace("absent", "MREL absent")},
     per_note={
         "NSFR": "Not found in any Annual Report or in any of the three Pillar 3 documents published. "
                 "Re-tested on the FY2025 Annual Report, 2026-09-18: 'NSFR' and 'net stable' each return "

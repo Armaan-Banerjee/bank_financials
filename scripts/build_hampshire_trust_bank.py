@@ -1328,7 +1328,24 @@ metric(
          "disclosure-regime floor rather than a search gap.",
 )
 
-bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources())
+# GA-020 (2026-09-19): all ten Pillar 3 editions re-searched as text for 'MREL' / 'eligible
+# liabilities' / '437a'. The FY2016 and FY2017 editions DO address it (so the "not mentioned
+# anywhere" line in p3_sources() is wrong for those two years): "The Bank is in the lowest
+# resolution risk level category where MREL requirements are set to equal the level of Pillar 1
+# and Pillar 2 requirements" (FY2016 s.1, FY2017 s.1.6.3). FY2018-FY2025 editions: zero hits
+# (richness 'capital' 65-160 each); FY2020 and FY2025 Annual Reports (text) likewise none.
+MREL_ST = {y: ("Not applicable – HTB Pillar 3 " + y + ": 'lowest resolution risk level category where MREL "
+               "requirements are set to equal the level of Pillar 1 and Pillar 2 requirements'.") for y in ["FY2017", "FY2016"]}
+MREL_ST.update({y: ("Not published – HTB Pillar 3 " + y + " (text search, 2026-09-19) has no MREL figure or "
+                    "mention (richness control: capital 65-160 hits).")
+                for y in ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020", "FY2019", "FY2018"]})
+bw.add_not_disclosed_metric_sheets(["MREL Ratio"], p3_sources(), statements={"MREL Ratio": MREL_ST},
+                                   per_note={"MREL Ratio": "CORRECTION 2026-09-19 (GA-020): the source note's 'MREL is not "
+                                             "mentioned anywhere in any year's Pillar 3' is wrong for FY2016 and FY2017 - both "
+                                             "editions state the Bank 'is in the lowest resolution risk level category where MREL "
+                                             "requirements are set to equal the level of Pillar 1 and Pillar 2 requirements, "
+                                             "therefore no additional capital would be required' (FY2016 section 1; FY2017 "
+                                             "section 1.6.3). It holds for FY2018-FY2025, which were each re-searched."})
 
 # ---------------------------------------------------------------
 # Overview sheet

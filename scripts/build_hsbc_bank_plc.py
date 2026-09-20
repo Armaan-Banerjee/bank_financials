@@ -661,8 +661,8 @@ km1_rows = [
     ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
      {"FY2025": "4.5", "FY2024": "5.5", "FY2023": "5.1", "FY2022": "5.5"}),
     ("SECTION", "Leverage ratio (under Capital Requirements Regulation) — pre-1 January 2022 basis, FY2022 edition only", {}),
-    ("DATA", "     Total leverage ratio exposure measure (£m)", {"FY2022": "N/A"}),
-    ("DATA", "     Leverage ratio (%)", {"FY2022": "N/A"}),
+    ("DATA", "     Total leverage ratio exposure measure (£m)", {"FY2022": "-"}),
+    ("DATA", "     Leverage ratio (%)", {"FY2022": "-"}),
     ("SECTION", "Additional own funds requirements to address risks of excessive leverage (as a percentage of leverage ratio total exposure amount)", {}),
     ("DATA", "     Average exposure measure excluding claims on central banks (£m)",
      {"FY2023": 449733}),
@@ -701,6 +701,9 @@ km1_rows = [
 ]
 
 KM1_SOURCES = (
+    "GLYPH NOTE (GA-020, 2026-09-19; KM1 map rule 2): the two unnumbered old-CRR-basis leverage rows carry '-' "
+    "for FY2022. The FY2022 edition actually printed 'N/A' in those 31 Dec 2022 cells; the cell holds the plain "
+    "ASCII '-' per the locked KM1 rule, and the printed glyph is recorded here.\n\n"
     "Sources - HSBC Bank plc's OWN entity-level Pillar 3 Disclosures, Table 1 'Key metrics "
     "(KM1/IFRS9-FL)'. Each year is taken from the 31 December column of the edition in which "
     "that year is the reporting year - never from a later edition's comparative. Every PDF was "
@@ -966,9 +969,23 @@ metric(
          "NSFR disclosure requirement, effective 1 January 2022).",
 )
 
+# GA-020 (2026-09-19). Every HSBC Bank plc Pillar 3 FY2018-FY2025 and Annual
+# Report FY2018-FY2025 (URLs above) text-searched for MREL / TLAC / loss
+# absorbing: no MREL ratio or amount in any of them (positive control 189-220
+# 'capital' hits per Pillar 3). THE NOTE BELOW IS CONTRADICTED ON ONE POINT:
+# an internal MREL requirement DOES apply to this entity - the FY2018 Pillar 3
+# describes the BoE's internal-MREL regime in force from 1 Jan 2019, the FY2020
+# edition states 'the bank holds sufficient amount of eligible regulatory total
+# capital to meet the existing MREL requirements', and the FY2023/FY2025 Annual
+# Reports state 'HSBC Holdings provides our MREL'. So these cells read 'Not
+# published' (a requirement exists, no ratio is printed), not 'Not applicable'.
+HSBC_MREL = {y: ("Not published – HSBC Bank plc's Pillar 3 and Annual Report for this year print no MREL ratio or "
+                 "amount (text-searched 2026-09-19); internal MREL is described, not quantified")
+             for y in YEARS}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),
+    statements={"MREL Ratio": HSBC_MREL},
     per_note={
         "MREL Ratio": "No MREL figure or mention appears anywhere in any of HSBC Bank plc's own Pillar 3 "
                       "Disclosures FY2018-FY2025 - HSBC Bank plc is not itself a resolution entity under the "

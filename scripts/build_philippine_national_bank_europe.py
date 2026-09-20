@@ -611,6 +611,119 @@ CAPITAL_RATIO = {"FY2025": "127.55%", "FY2024": "136.95%", "FY2023": "121.95%", 
                  "FY2020": "95.80%", "FY2019": "96.76%", "FY2017": "96.63%", "FY2016": "92.23%"}
 TOTAL_RWA = {"FY2025": 8110, "FY2024": 7643, "FY2023": 8480, "FY2021": 8031, "FY2020": 10312,
              "FY2019": 10485, "FY2017": 11122, "FY2016": 12174}
+
+# ---------------------------------------------------------------
+# FY2022 / FY2018 GAP-FILL, 19 September 2026.
+# Twelve sheet-years here (CET1 Capital, CET1 Ratio, Tier 1 Ratio, Total
+# Capital Ratio, Total RWAs and RWA Breakdown, each for FY2022 and FY2018) were
+# BLANK. The reasons were already established and written up at length in
+# PILLAR3_SKIP_NOTE - but a note is invisible to the corpus census, which
+# cannot tell an established negative from a cell nobody has examined. The
+# finding now goes IN the year column as well.
+#
+# THE TWO REASONS ARE DIFFERENT AND ARE KEPT DIFFERENT IN THE CELL TEXT:
+#   (a) what the Bank's own statutory accounts DO say, read directly - a
+#       recorded absence; and
+#   (b) what the Pillar 3 edition for that year might say, which cannot be
+#       established because no such edition can be reached - an ACCESS
+#       statement about today, never a finding about the Bank.
+#
+# RE-VERIFIED THIS SESSION rather than inherited:
+#  1. FY2022 ACCOUNTS RE-READ FROM SOURCE. The Report and Financial Statements
+#     for the year ended 31 December 2022 (Companies House 02939223, filed
+#     02 May 2023, 42 pages) was downloaded again - HTTP 200, Content-Type
+#     application/pdf, %PDF-1.1 magic bytes. It is an image-only scan:
+#     pdftotext returns 42 bytes and ZERO hits for ' the ', so a text search of
+#     it indicts the instrument, not the Bank. Re-rasterised at 300 dpi and
+#     OCR'd; the OCR returns 776 hits for ' the ' (richness control passed).
+#     Note 18 'Risk management - Capital management', printed p.37 / PDF p.39,
+#     reads in full: "Tier 1 Capital 10,147 9,996 / Total Capital 10,147 9,996
+#     ... The Bank must comply with external regulatory capital requirements of
+#     GBP4,812k (2021: GBP4,634k) set by the PRA." On that OCR the whole
+#     document contains no 'CET', no 'common equity', no 'risk weighted', no
+#     'RWA', no 'leverage', no 'liquidity coverage' and no 'stable funding'
+#     anywhere. So the accounts give two capital AMOUNTS and a capital
+#     REQUIREMENT - and the requirement is NOT grossed up by 12.5 to make an
+#     RWA, here or anywhere else in this workbook.
+#  2. THE FY2022 AND FY2018 PILLAR 3 EDITIONS ARE STILL UNREACHED, and the
+#     search was pushed further than last time rather than repeated:
+#       - www.pnb.com.ph returns HTTP 403 on ALL SIX ladder rungs (plain curl;
+#         curl -L; curl --http1.1 -L; browser User-Agent with Accept and
+#         Accept-Language; a cookie warm-up then a second request; and plain
+#         http://), with an identical 372-byte text/html body each time.
+#         www.pnbeurope.com no longer even completes a connection (curl exit
+#         28, HTTP 000) - it has gone from 301-redirecting to this blocked host
+#         to not answering at all. A 403 is still not a finding about the Bank.
+#       - THE S3 BUCKET, HOWEVER, IS FULLY REACHABLE, so this is enumeration
+#         and not blocking. Ten filename permutations were probed on
+#         pnb-website.s3-ap-southeast-1.amazonaws.com/uploads/docs/ in one
+#         sweep: Pillar3_Disclosures_for_2020.pdf and _for_2021.pdf both return
+#         HTTP 200 / application/pdf / %PDF (the positive controls), and the
+#         rolling Pillar3_Disclosures.pdf returns HTTP 200 and is currently the
+#         31 December 2024 edition - while _for_2022, _for_2018, _2022,
+#         PNBE_..._2022 and the rest all return AccessDenied. Bucket listing is
+#         denied, so absence of a key cannot be proved outright, but ten misses
+#         against three hits on the same host in the same sweep is as far as
+#         enumeration reaches.
+#       - Wayback CDX, whole pnb.com.ph domain, filtered on 'pillar': exactly
+#         THREE captures ever, all of them the 2017 and 2019 editions. A prefix
+#         sweep of www.pnb.com.ph/europe/images/stories/docs/ lists every file
+#         ever archived in that directory and contains no 2018 edition. The
+#         S3 bucket's own CDX holds one capture of the rolling URL (07/08/2024,
+#         the 31 December 2023 edition) and no dated 2022 file. A pnbeurope.com
+#         domain sweep returns customer forms only.
+#  3. THE COMPARATIVE ROUTE WAS TRIED AND IS CLOSED. PNBE's Pillar 3 editions
+#     are SINGLE-COLUMN: the 2019 edition prints one column headed 'As at 31
+#     Dec 2019' and mentions 2018 only in narrative about the CRR phase-in
+#     timetable, and the 2023 edition contains the string '2022' ZERO times.
+#     Both were downloaded and read in full this session (real text layers:
+#     178 and 181 hits for ' the '). So no later edition carries a FY2018 or
+#     FY2022 comparative column that could be used on a labelled row.
+# ---------------------------------------------------------------
+FY2022_NO_CET1 = ("Not disclosed - FY2022 accounts print 'Tier 1 Capital' and 'Total Capital' only, "
+                  "no CET1 line; FY2022 Pillar 3 not reached")
+FY2018_NO_CET1 = ("Not disclosed - FY2018 accounts print 'Tier 1 Capital' and 'Total capital' only, "
+                  "no CET1 line; FY2018 Pillar 3 not reached")
+FY2022_NO_RATIO = ("Not disclosed - FY2022 accounts' capital note prints no ratio; "
+                   "FY2022 Pillar 3 not reached (host 403 on all six rungs)")
+FY2018_NO_RATIO = ("Not disclosed - FY2018 accounts' capital note prints no ratio; "
+                   "FY2018 Pillar 3 not reached (host 403 on all six rungs)")
+FY2022_NO_RWA = ("Not disclosed - FY2022 accounts give no RWA, only a GBP4,812k capital requirement "
+                 "(not grossed up); FY2022 Pillar 3 not reached")
+FY2018_NO_RWA = ("Not disclosed - FY2018 accounts give no RWA, only a GBP5,136k capital requirement "
+                 "(not grossed up); FY2018 Pillar 3 not reached")
+GAPFILL_NOTE_2026_09_19 = (
+    "\n\nFY2022 AND FY2018 ARE RECORDED ABSENCES PLUS AN ACCESS LIMIT - NOT UNCHECKED CELLS (written "
+    "into the columns 2026-09-19). The cell text on this sheet deliberately states TWO things, because "
+    "they are different claims. FIRST, what the Bank's own statutory accounts say, read directly from "
+    "source this session: the FY2022 Report and Financial Statements (Companies House 02939223, filed "
+    "02/05/2023) is an image-only scan - pdftotext returns 42 bytes and ZERO hits for ' the ' across 42 "
+    "pages, so a text search of it proves nothing - and was re-rasterised at 300 dpi and OCR'd here, "
+    "giving 776 hits for ' the ' as the richness control. On that OCR, Note 18 'Risk management - "
+    "Capital management' (printed p.37 / PDF p.39) prints 'Tier 1 Capital 10,147 / Total Capital 10,147' "
+    "with a 2021 comparative of 9,996, and states the PRA's external regulatory capital requirement of "
+    "GBP4,812k (2021: GBP4,634k). The whole document contains no 'CET', no 'common equity', no 'risk "
+    "weighted', no 'RWA' and no 'leverage'. FY2018's accounts carry the identical table at Note 17 and "
+    "were read the same way in an earlier pass. So the AMOUNTS are disclosed and the CET1 label, the "
+    "ratios and the RWA are genuinely not - and the capital REQUIREMENT is not converted into an RWA by "
+    "dividing by 8% or multiplying by 12.5.\n"
+    "SECOND, an access statement about today, which is NOT a finding about the Bank: no FY2022 or FY2018 "
+    "Pillar 3 edition could be reached. www.pnb.com.ph returns HTTP 403 on all six fetch-ladder rungs "
+    "(plain curl; -L; --http1.1 -L; browser User-Agent with Accept headers; cookie warm-up; plain "
+    "http://) with an identical 372-byte body, and www.pnbeurope.com no longer completes a connection at "
+    "all. The Bank's S3 bucket IS reachable, so the search there is enumeration rather than blocking: "
+    "ten filename permutations were probed in one sweep, and while Pillar3_Disclosures_for_2020.pdf, "
+    "_for_2021.pdf and the rolling Pillar3_Disclosures.pdf (currently the 31 December 2024 edition) all "
+    "return HTTP 200 with %PDF magic bytes, every 2022 and 2018 permutation returns AccessDenied. Bucket "
+    "listing is denied, so this is ten misses against three positive controls rather than proof of "
+    "absence. Wayback CDX over the whole pnb.com.ph domain returns three Pillar 3 captures ever, all the "
+    "2017 and 2019 editions.\n"
+    "THE COMPARATIVE ROUTE IS ALSO CLOSED, checked this session rather than assumed: PNBE's Pillar 3 "
+    "editions are single-column. The 2019 edition prints one column headed 'As at 31 Dec 2019' and "
+    "mentions 2018 only in narrative about the CRR phase-in timetable; the 2023 edition contains the "
+    "string '2022' zero times. Both were downloaded and read in full (real text layers - 178 and 181 "
+    "hits for ' the '), so there is no later edition carrying a FY2018 or FY2022 comparative column that "
+    "could be transcribed onto a labelled row.")
 PILLAR3_SKIP_NOTE = ("CORRECTED 2026-09-15 - THE FY2021 AND FY2020 PILLAR 3 DOCUMENTS DO SURVIVE AND ARE "
                      "NOW USED. This note previously read that FY2015, FY2018, FY2020, FY2021 and FY2022 "
                      "were 'genuinely unobtainable'. That was wrong for FY2021 and FY2020: both are live "
@@ -823,21 +936,37 @@ bw.add_km1_sheet(
     source_height=560,
 )
 
-metric("CET1 Capital", "GBP '000", [("Common Equity Tier 1 (CET1) capital", CET1_FUNDS)],
-       note=PILLAR3_SKIP_NOTE)
-metric("CET1 Ratio", "%", [("CET1 capital ratio", CAPITAL_RATIO)],
+metric("CET1 Capital", "GBP '000",
+       [("Common Equity Tier 1 (CET1) capital",
+         dict(CET1_FUNDS, FY2022=FY2022_NO_CET1, FY2018=FY2018_NO_CET1))],
+       note=PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19)
+metric("CET1 Ratio", "%",
+       [("CET1 capital ratio", dict(CAPITAL_RATIO, FY2022=FY2022_NO_RATIO, FY2018=FY2018_NO_RATIO))],
        note="CET1 = Tier 1 = total capital in every year located; PNBE states it holds no Tier 2 "
-            "capital. " + PILLAR3_SKIP_NOTE)
+            "capital. " + PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19)
 metric("Tier 1 Capital", "GBP '000", [("Tier 1 capital", TIER1_FUNDS)], note=PILLAR3_SKIP_NOTE)
-metric("Tier 1 Ratio", "%", [("Tier 1 capital ratio", CAPITAL_RATIO)], note=PILLAR3_SKIP_NOTE)
+metric("Tier 1 Ratio", "%",
+       [("Tier 1 capital ratio", dict(CAPITAL_RATIO, FY2022=FY2022_NO_RATIO, FY2018=FY2018_NO_RATIO))],
+       note=PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19)
 metric("Total Capital", "GBP '000", [("Own funds / total capital", TIER1_FUNDS)], note=PILLAR3_SKIP_NOTE)
-metric("Total Capital Ratio", "%", [("Total capital ratio", CAPITAL_RATIO)], note=PILLAR3_SKIP_NOTE)
-metric("Total RWAs", "GBP '000", [("Total risk-weighted assets", TOTAL_RWA)],
+metric("Total Capital Ratio", "%",
+       [("Total capital ratio", dict(CAPITAL_RATIO, FY2022=FY2022_NO_RATIO, FY2018=FY2018_NO_RATIO))],
+       note=PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19)
+metric("Total RWAs", "GBP '000",
+       [("Total risk-weighted assets", dict(TOTAL_RWA, FY2022=FY2022_NO_RWA, FY2018=FY2018_NO_RWA))],
        note="Total is the sum of credit/counterparty, market and operational RWA components in each "
-            "source table. " + PILLAR3_SKIP_NOTE)
+            "source table. " + PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19)
 
 # --- RWA Breakdown (placed right after Total RWAs, per the locked sheet order) ---
 rwa_breakdown_rows = [
+    # Gap-fill 2026-09-19: the FY2022 and FY2018 columns held no cell at all,
+    # so the census scored them as untouched gaps even though the reason was
+    # already established. Statement row, not a risk category - nothing is
+    # computed, and in particular the PRA capital REQUIREMENTS those years'
+    # accounts do print (GBP4,812k for FY2022, GBP5,136k for FY2018) are NOT
+    # grossed up by 12.5 or divided by 8% to manufacture an RWA.
+    ("DATA", "[No RWA breakdown available for this year - see note below]",
+     {"FY2022": FY2022_NO_RWA, "FY2018": FY2018_NO_RWA}),
     ("DATA", "Credit and counterparty credit risk", {"FY2025": 4568, "FY2024": 4486, "FY2023": 5236,
                                                       "FY2021": 4751, "FY2020": 6194,
                                                       "FY2019": 6444, "FY2017": 6845, "FY2016": 7635}),
@@ -872,7 +1001,7 @@ bw.add_rwa_breakdown_sheet(
         "now populated from these same two Total rows - the figures are the same disclosure, so leaving "
         "one sheet blank while the other showed a total would have been internally inconsistent. "
         "Both documents have a real text layer; no OCR was involved. "
-        + PILLAR3_SKIP_NOTE
+        + PILLAR3_SKIP_NOTE + GAPFILL_NOTE_2026_09_19
     ),
     first_col_width=54,
     source_height=280,
@@ -880,8 +1009,94 @@ bw.add_rwa_breakdown_sheet(
 )
 
 UNDISCLOSED = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
+# GA-020 (2026-09-19): each bare cell reclassified on evidence. Six editions were
+# re-downloaded today (FY2024 S3 live; FY2023/FY2019/FY2017 Wayback id_; FY2021/FY2020
+# S3 live), all %PDF, and probed with pdftotext -layout case-insensitively: 0 hits for
+# "leverage", "liquidity coverage"/"LCR", "NSFR"/"stable funding", "MREL"/"eligible
+# liabilities"/"loss-absorbing" in every one, against ~50 "capital" and 8 "liquidity"
+# hits each (positive control). FY2025 rests on the earlier session's read recorded in
+# the per-sheet note below (named document). FY2022/FY2018 have no reachable edition;
+# FY2016/FY2015 editions exist but their cited URLs are now blocked and were never
+# archived, so what they held for these metrics is unknown.
+_GA020_TERMS = {"Leverage Ratio": "no leverage ratio", "LCR": "no LCR",
+                "NSFR": "no NSFR", "MREL Ratio": "no MREL/eligible-liabilities figure"}
+_GA020_UNREACHED = {
+    # Second pass 2026-09-19 (GA-020 unreached), extended by the cdn-sweep pass the same day:
+    # wording lists the routes tried; the long list is in _UB_NOTE below. Still UNREACHED.
+    "FY2022": ("Unreached today – FY2022 Pillar 3 never linked under its own filename (only via the "
+               "overwritten rolling S3 URL); no Wayback, archive.ph or Common Crawl copy; FY2022 "
+               "accounts (CH) re-read 2026-09-19: no such figure"),
+    "FY2018": ("Unreached today – FY2018 Pillar 3 (linked on /europe/ page Aug 2019) is 403 live; no "
+               "Wayback, archive.ph or Common Crawl copy; S3 AccessDenied; FY2018 accounts (CH) re-read "
+               "2026-09-19: no such figure"),
+    "FY2016": ("Unreached today – FY2016 Pillar 3 exists (linked 2017, search-indexed) but pnb.com.ph "
+               "403s every path; no Wayback, archive.ph or Common Crawl copy; FY2016 accounts (CH) read "
+               "2026-09-19: no such figure"),
+    "FY2015": ("Unreached today – FY2015 Pillar 3 exists (search-indexed, also at /global-filipino-hub/) "
+               "but host 403s; no Wayback, archive.ph or Common Crawl copy; FY2015 accounts (CH) read "
+               "2026-09-19: no such figure"),
+}
+_UB_NOTE = (
+    "SECOND PASS ON THE UNREACHED YEARS (GA-020, 2026-09-19) - FY2015, FY2016, FY2018 and FY2022 "
+    "remain UNREACHED, not 'not published'. Routes tried beyond the first pass: (i) web search for "
+    "the edition titles and filenames - search engines still index the FY2015 edition ('Pillar 3 "
+    "Disclosures PNB (Europe) April 2016') at "
+    "www.pnb.com.ph/global-filipino-hub/europe/images/stories/docs/Pillar3_Disclosures_for_2015.pdf "
+    "(this workbook's cited /europe/ path was read live by an earlier session), and the FY2016 "
+    "edition ('... April 2017') at the /europe/ path, so both editions EXIST; no "
+    "FY2018 or FY2022 edition surfaced in any search; (ii) the /global-filipino-hub/ path for all four "
+    "years over HTTP/1.1 with a browser user agent: HTTP 403 (Akamai edge, ~495-byte body), the same "
+    "as the /europe/ path and the site root; (iii) the pnb-website S3 bucket for all four years at "
+    "both the dash- and dot-region hostnames: AccessDenied, while the FY2021 and undated keys return "
+    "200 application/pdf in the same run (positive control), so a missing key reads as AccessDenied "
+    "and says nothing about publication; (iv) Wayback CDX, matchType=domain and no mimetype filter, "
+    "on pnbeurope.com (443 URLs, last PDF 2015, no Pillar 3), pnbeurope.co.uk (2002-2003 only), "
+    "pnbeuropeplc.com and pnb-europe.com (none), and a prefix sweep of "
+    "pnb.com.ph/global-filipino-hub (326 captures, 2025-2026, Europe docs are forms and notices "
+    "only); (v) archive.ph for the exact URLs and the pnb.com.ph/europe* and S3 prefixes: one 2013 "
+    "page only; (vi) Wayback save-page-now and the r.jina.ai and Google-translate proxies: error, "
+    "CAPTCHA page and HTTP 400 respectively; (vii) the Bank's own full accounts at Companies House "
+    "for FY2015 (44pp), FY2016 (39pp), FY2018 (39pp) and FY2022 (42pp), image-only scans, OCR used "
+    "only to locate pages and the Strategic Report risk section and note 15 'Financial instruments' "
+    "read on the page images: liquidity is described as policy text plus a maturity table, and no "
+    "leverage ratio, LCR, NSFR or MREL figure appears; (viii) comparatives: every PNBE edition in hand "
+    "prints single-date tables and none of FY2017-FY2025 carries these four metrics at all, so no "
+    "later edition can supply them; (ix) parent route: PNB (Manila) reports to the BSP, not under UK "
+    "or EU CRR, so no parent Pillar 3 carries a UK sub-consolidated block for PNBE (rule 18's "
+    "which-regime test); its annual reports were located by search but not read for this metric."
+    "\n\nCDN/HOST SWEEP (GA-020 cdn-sweep, 2026-09-19), all negative, so the four years stay UNREACHED: "
+    "(x) the Bank's Pillar 3 page (Joomla article id=551, Itemid=351) was read in every Wayback capture "
+    "2015-2025 and its link history established: 2017-09 Pillar3_Disclosures_for_2016.pdf, 2018-07 "
+    "_for_2017, 2019-08 _for_2018 (so the FY2018 edition WAS posted, at "
+    "www.pnb.com.ph/europe/images/stories/docs/Pillar3_Disclosures_for_2018.pdf), 2021-07 S3 _for_2020, "
+    "2022-07 and 2023-07 S3 _for_2021, and from 2023-08 only the rolling S3 Pillar3_Disclosures.pdf - so "
+    "the FY2022 edition was never linked under a filename of its own, and the rolling URL's only archived "
+    "copy (2024-08-07) is already FY2023; (xi) host census across 106 archived /europe/ pages: files are "
+    "served only from the pnb.com.ph Joomla tree, the pnb-website S3 bucket and (2025+) "
+    "/storage/asset-libraries/; the other hosts (pnbeonline.co.uk e-banking, clarahost.clara.net old "
+    "registration form, ibs./remittanceservices./gcash2.pnb.com.ph) carry no Pillar 3 - their CDX holds "
+    "forms and login pages only; (xii) Common Crawl's URL index, every crawl 2016-2024 for "
+    "www.pnb.com.ph/europe/images/stories/docs/* and pnb.com.ph/europe/*, and 2021-2025 for the S3 "
+    "uploads/docs/* prefix: the only Pillar 3 files ever captured are the FY2017 and FY2019 editions "
+    "(the same two Wayback holds), and the rolling S3 URL was never crawled; (xiii) the live /europe/ "
+    "FY2016 and FY2018 URLs over HTTP/1.1 with a full Chrome user agent, and a fetch from a different "
+    "network (the WebFetch tool): HTTP 403 in both, so the Akamai block is not specific to this "
+    "environment; (xiv) S3 ListObjects on the bucket: AccessDenied; (xv) the UK Web Archive CDX endpoint "
+    "is out of service and Memento TimeTravel was unreachable - instrument failures, not evidence."
+)
+
+_GA020_STATEMENTS = {}
+for _n, _what in _GA020_TERMS.items():
+    _d = dict(_GA020_UNREACHED)
+    for _y in ("FY2024", "FY2023", "FY2021", "FY2020", "FY2019", "FY2017"):
+        _d[_y] = (f"Not published – PNBE Pillar 3 {_y} (own tables: own funds, Pillar 1 RWAs, "
+                  f"buffers) has {_what}; text probe 0 hits, re-read 2026-09-19")
+    _d["FY2025"] = (f"Not published – PNBE Pillar 3 FY2025 has {_what} (read by earlier session, "
+                    "see note; URL 403 on re-check 2026-09-19)")
+    _GA020_STATEMENTS[_n] = _d
 bw.add_not_disclosed_metric_sheets(
     UNDISCLOSED, P3_SOURCES,
+    statements=_GA020_STATEMENTS,
     per_note={name: "No quantitative standalone PNBE disclosure was located in any Pillar 3 document "
                     "reviewed (FY2017, FY2019, FY2023, FY2024 or FY2025); left blank rather than "
                     "estimated for every year in scope.\n"
@@ -899,7 +1114,7 @@ bw.add_not_disclosed_metric_sheets(
                     "statutory accounts carry no leverage ratio, LCR or NSFR in any year - their "
                     "capital note covers capital amounts only - so these metrics would have to come "
                     "from a Pillar 3 document even if one were reachable. MREL is additionally "
-                    "inapplicable: PNBE is not a UK resolution entity."
+                    "inapplicable: PNBE is not a UK resolution entity.\n" + _UB_NOTE
               for name in UNDISCLOSED},
 )
 

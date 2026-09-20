@@ -64,7 +64,19 @@ ENTITY_NOTE = (
     "29 September 2025 (the deadline for a 31 December 2024 year-end is 30 September 2025) and posted to the "
     "website on 24 September 2025; FY2023 was filed 3 June 2024. The FY2025 filing deadline is 30 SEPTEMBER "
     "2026, twelve days after this check, and the FY2024 pattern suggests the Pillar 3 and the website upload "
-    "land in the same week. A re-check in October 2026 should find both."
+    "land in the same week. A re-check in October 2026 should find both.\n"
+    "RE-CHECKED 19 SEPTEMBER 2026 (GA-020) - STILL NO FY2025 DOCUMENT OF EITHER KIND. (1) Companies House "
+    "filing history for 13090556, read UNFILTERED on page 1: the newest rows are an ANNOTATION (9 Sep 2026), "
+    "RESOLUTIONS (25 Aug 2026) and SH01/SH19/SH20/CAP-SS capital filings (Jul 2026); the newest AA is still "
+    "'Full accounts made up to 31 December 2024', filed 29 Sep 2025. The company profile still reads 'Next "
+    "accounts made up to 31 December 2025 due by 30 September 2026'. (2) The bank's index page (HTTP 200) still "
+    "links only the FY2024 Pillar 3, the FY2024 accounts and an interest-rate history dated 2026/08; the WordPress "
+    "media API (search=pillar, annual, accounts, disclosure, financial, 2025, FY25) returns the same two FY2024 "
+    "reports only, while its newest item is dated 9 Sep 2026, so the library is current. Direct probes of "
+    "/wp-content/uploads/2026/08/ and /2026/09/ for 'Afin-Bank-2025-Pillar-3-Disclosures-FINAL.pdf' and "
+    "'Afin-Bank-Ltd-Year-End-Accounts-FV25-FINAL-SIGNED.pdf' (and the FY25 spelling) all return a genuine 404, "
+    "against a 200/application/pdf/%PDF control on the FY2024 Pillar 3 URL. (3) Wayback CDX for afinbank.com "
+    "from 2026 onward: 54 PDF captures, none an FY2025 report. Look again after 30 September 2026."
 )
 
 FY2020_SKIP_NOTE = (
@@ -89,6 +101,20 @@ NOT_APPLICABLE_P3_NOTE = (
     "with restrictions. FY2021-FY2023 therefore sit wholly inside the pre-authorisation period and the blanks are "
     "structural. Also confirmed the workbook's FY2024 endpoint is still current: the latest accounts on the "
     "register are made up to 31 December 2024, with FY2025 accounts not yet filed (due 30 September 2026)."
+)
+
+# GA-020 (2026-09-19) evidenced statement texts.
+NA_PREBANK = (
+    "Not applicable – not a PRA-authorised bank until 18 Oct 2024 (FY2024 Pillar 3 s.1 p.2, KM1 footnote p.5; "
+    "Companies House 13090556); no Pillar 3 duty for FY2021-FY2023"
+)
+AQ_NO_LOANS = (
+    "Not applicable – no loan book at 31 Dec 2024: FY2024 annual report, strategic report credit risk, printed p.6, "
+    "says the Bank 'holds no loans or receivables from customers'"
+)
+MREL_NOT_PUB = (
+    "Not published – FY2024 Pillar 3 (7pp; KM1 pp.4-5, OV1 p.5) and FY2024 annual report contain no MREL figure "
+    "or reference (checked 2026-09-19)"
 )
 
 CASH_FLOW_SOURCES = (
@@ -355,10 +381,10 @@ bw.add_asset_quality_sheet(
     subtitle="Afin Bank Limited loan book / credit risk disclosures; amounts in £.",
     rows=[
         ("DATA", "Not publicly disclosed / Not applicable", {
-            "FY2024": "Not publicly disclosed",
-            "FY2023": "Not applicable",
-            "FY2022": "Not applicable",
-            "FY2021": "Not applicable",
+            "FY2024": AQ_NO_LOANS,
+            "FY2023": NA_PREBANK,
+            "FY2022": NA_PREBANK,
+            "FY2021": NA_PREBANK,
         }),
     ],
     sources_text=ASSET_QUALITY_SOURCES,
@@ -532,25 +558,25 @@ bw.add_km1_sheet(
 )
 
 metric("CET1 Capital", "£'000", [
-    ("Common Equity Tier 1 (CET1) capital", {"FY2024": 12922, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Common Equity Tier 1 (CET1) capital", {"FY2024": 12922, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("CET1 Ratio", "% of RWA", [
-    ("Common Equity Tier 1 (CET1) ratio", {"FY2024": "418.5%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Common Equity Tier 1 (CET1) ratio", {"FY2024": "418.5%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("Tier 1 Capital", "£'000", [
-    ("Tier 1 capital", {"FY2024": 12922, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Tier 1 capital", {"FY2024": 12922, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("Tier 1 Ratio", "% of RWA", [
-    ("Tier 1 ratio", {"FY2024": "418.5%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Tier 1 ratio", {"FY2024": "418.5%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("Total Capital", "£'000", [
-    ("Total capital", {"FY2024": 12922, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total capital", {"FY2024": 12922, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("Total Capital Ratio", "% of RWA", [
-    ("Total capital ratio", {"FY2024": "418.5%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total capital ratio", {"FY2024": "418.5%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("Total RWAs", "£'000", [
-    ("Total risk-weighted exposure amount", {"FY2024": 3087, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total risk-weighted exposure amount", {"FY2024": 3087, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 bw.add_rwa_breakdown_sheet(
     title="Afin Bank Limited — RWA Breakdown",
@@ -565,9 +591,9 @@ bw.add_rwa_breakdown_sheet(
         ("TOTAL", "Total risk weighted exposure amount", {"FY2024": 3087}),
         ("SECTION", "Not applicable", {}),
         ("DATA", "Not publicly disclosed / Not applicable", {
-            "FY2023": "Not applicable",
-            "FY2022": "Not applicable",
-            "FY2021": "Not applicable",
+            "FY2023": NA_PREBANK,
+            "FY2022": NA_PREBANK,
+            "FY2021": NA_PREBANK,
         }),
     ],
     sources_text=RWA_BREAKDOWN_SOURCES,
@@ -576,27 +602,27 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 metric("Leverage Ratio", "£'000 / %", [
-    ("Total exposure measure excluding claims on central banks", {"FY2024": 14782, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Leverage ratio excluding claims on central banks", {"FY2024": "87.4%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total exposure measure excluding claims on central banks", {"FY2024": 14782, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Leverage ratio excluding claims on central banks", {"FY2024": "87.4%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("LCR", "£'000 / %", [
-    ("Total high-quality liquid assets (HQLA) (weighted value - average)", {"FY2024": 8909, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Cash outflows - total weighted value", {"FY2024": 0, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Cash inflows - total weighted value", {"FY2024": 3971, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Total net cash outflows (adjusted value)", {"FY2024": 0, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Liquidity coverage ratio", {"FY2024": "999999%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total high-quality liquid assets (HQLA) (weighted value - average)", {"FY2024": 8909, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Cash outflows - total weighted value", {"FY2024": 0, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Cash inflows - total weighted value", {"FY2024": 3971, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Total net cash outflows (adjusted value)", {"FY2024": 0, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Liquidity coverage ratio", {"FY2024": "999999%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ], note=(
     "Afin states that it had no qualifying cash outflows at 31 December 2024; the source therefore reports the "
     "LCR as 999999%. This is reproduced as reported and is not interpreted as a conventional finite ratio. "
     "FY2021-FY2023 predate Afin's banking authorisation - no LCR obligation existed."
 ))
 metric("NSFR", "£'000 / %", [
-    ("Total available stable funding", {"FY2024": 21486, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("Total required stable funding", {"FY2024": 4365, "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
-    ("NSFR ratio", {"FY2024": "492.2%", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("Total available stable funding", {"FY2024": 21486, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("Total required stable funding", {"FY2024": 4365, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
+    ("NSFR ratio", {"FY2024": "492.2%", "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ])
 metric("MREL Ratio", None, [
-    ("MREL ratio", {"FY2024": "Not publicly disclosed", "FY2023": "Not applicable", "FY2022": "Not applicable", "FY2021": "Not applicable"}),
+    ("MREL ratio", {"FY2024": MREL_NOT_PUB, "FY2023": NA_PREBANK, "FY2022": NA_PREBANK, "FY2021": NA_PREBANK}),
 ], note=(
     "No numeric MREL ratio is disclosed in the 2024 Pillar 3 report or the audited annual accounts for FY2024. "
     "FY2021-FY2023 predate Afin's banking authorisation (October 2024), so no MREL obligation existed for those years."

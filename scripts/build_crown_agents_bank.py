@@ -684,6 +684,12 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)], p3_sources(), note=LIQ
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(),
+    # GA-020 (2026-09-19): the FY2021-FY2025 Pillar 3 editions and the FY2021/22/23/25
+    # Annual Reports were re-downloaded and full-text searched: no MREL figure,
+    # requirement or exemption statement ('eligible liabilities' appears only as
+    # the title of the CCA own-funds-instruments template, FY2023-FY2025).
+    statements={"MREL Ratio": {y: (f"Not published – Crown Agents Bank {y} Pillar 3 (full text searched 2026-09-19) "
+                                   "contains no MREL figure, requirement or exemption statement") for y in YEARS}},
     per_note={"MREL Ratio": "Not publicly disclosed - no MREL figure or exemption statement found in any "
                              "of the 5 years' Pillar 3 documents reviewed."},
 )

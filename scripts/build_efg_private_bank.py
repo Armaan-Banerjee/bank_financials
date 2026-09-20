@@ -1085,8 +1085,16 @@ bw.add_not_disclosed_metric_sheets(
     per_note={
         "MREL Ratio": NOT_DISCLOSED_NOTE + " EFGIUK's own standalone Pillar 3 Disclosures report "
         "(FY2025/FY2024) also has no MREL section or figure of any kind - confirmed against that "
-        "report's own table of contents, which has no MREL entry."
+        "report's own table of contents, which has no MREL entry. GA-020 (2026-09-19): the FY2021-FY2025 "
+        "accounts (Companies House scans, OCR) and the FY2025 Pillar 3 now served at PILLAR3_URL were re-read, "
+        "with 0 MREL, eligible-liabilities or KM2 hits against 45-73 'capital' hits per document."
     },
+    statements={"MREL Ratio": {
+        "FY2025": "Not published – FY2025 Pillar 3 (28pp, no MREL section) and FY2025 accounts (Companies House) read 2026-09-19: no MREL figure",
+        "FY2024": "Not published – FY2024 Pillar 3 (read 2026-09-04, no MREL in contents or text) and FY2024 accounts (re-read 2026-09-19): no MREL figure",
+        **{y: f"Not published – {y} accounts (Companies House, OCR 2026-09-19) have no MREL figure; no {y} entity Pillar 3 (efginternational.com CDX: 47 pillar URLs, no EFGPB prudential edition)"
+           for y in ["FY2023", "FY2022", "FY2021"]},
+    }},
 )
 
 # ---------------------------------------------------------------

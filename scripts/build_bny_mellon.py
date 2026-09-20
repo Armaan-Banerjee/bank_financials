@@ -963,9 +963,15 @@ metric(
          "a transcription error.",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts.
+BNY_MREL = {y: ("Not published – no MREL figure or reference in this year's Pillar 3 (full-text search "
+                "2026-09-19, zero 'MREL'/'eligible liabilities')") for y in YEARS}
+for _y in ("FY2016", "FY2017"):
+    BNY_MREL[_y] = ("Not published – no MREL figure or reference in this year's scanned Pillar 3 (re-OCR'd in "
+                    "full 2026-09-19, zero 'MREL'/'eligible liabilities')")
 metric(
     "MREL Ratio", "£m / %",
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", BNY_MREL)],
     p3_sources(KM1_PAGE),
     note="No MREL figure (numeric or qualitative) appears anywhere in any of the 10 Pillar 3 Disclosures or the "
          "available Financial Statements for this entity - no reason is stated.\n"
@@ -976,7 +982,12 @@ metric(
          "OCR (the FY2016 file yields only 5 clean occurrences of the Company's own name across 74 pages), so "
          "for those 2 years a nil string-match is weak evidence and the entry should be read as 'not located' "
          "rather than 'confirmed absent'. It remains the expected answer either way: this is a non-resolution-"
-         "entity custody bank, and MREL disclosure would not ordinarily apply to it.",
+         "entity custody bank, and MREL disclosure would not ordinarily apply to it.\n"
+         "UPDATE 2026-09-19 (GA-020): the FY2016 and FY2017 weakness is now closed. Both scanned editions were "
+         "rendered at 150dpi and re-OCR'd in full (74 and 80 pages; 170k/180k characters; 'capital' 176/197 hits, "
+         "'own funds' 26/38) and return zero hits for 'MREL', 'minimum requirement for own funds' and 'eligible "
+         "liabilities'. FY2018-FY2025 editions and the FY2023/FY2025 Financial Statements were re-searched the "
+         "same day with the same nil result, so every year now reads 'Not published' with that evidence.",
 )
 
 # ---------------------------------------------------------------

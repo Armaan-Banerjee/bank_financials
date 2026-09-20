@@ -608,9 +608,9 @@ km1_rows = [
     # footnote: the central-bank-claims exclusion arrived with CRR2 in 2022, so
     # there is no comparative on this basis. Not blanked, not back-filled.
     ("DATA", "13    Total exposure measure excluding claims on central banks",
-     {"FY2025": 878704, "FY2024": 681053, "FY2023": 608644, "FY2022": 480834, "FY2021": "n/a"}),
+     {"FY2025": 878704, "FY2024": 681053, "FY2023": 608644, "FY2022": 480834, "FY2021": "-"}),
     ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
-     {"FY2025": "12.8%", "FY2024": "14.5%", "FY2023": "13.0%", "FY2022": "17.6%", "FY2021": "n/a"}),
+     {"FY2025": "12.8%", "FY2024": "14.5%", "FY2023": "13.0%", "FY2022": "17.6%", "FY2021": "-"}),
     ("SECTION", "Liquidity Coverage Ratio (£'000 / %)", {}),
     ("DATA", "15    Total high-quality liquid assets (HQLA) (Weighted value - average)",
      {"FY2025": 106821, "FY2024": 87857, "FY2023": 97757, "FY2022": 94091, "FY2021": 89169}),
@@ -625,11 +625,11 @@ km1_rows = [
     ("SECTION", "Net Stable Funding Ratio (£'000 / %) — printed only in the FY2022 and FY2023 editions; "
                 "dropped from FY2024 onward under the SDDT/Article 433b reduced disclosure regime", {}),
     ("DATA", "Total ASF (Total available stable funding)",
-     {"FY2023": 566687, "FY2022": 410203, "FY2021": "n/a"}),
+     {"FY2023": 566687, "FY2022": 410203, "FY2021": "-"}),
     ("DATA", "Total RSF (Total required stable funding)",
-     {"FY2023": 382085, "FY2022": 251336, "FY2021": "n/a"}),
+     {"FY2023": 382085, "FY2022": 251336, "FY2021": "-"}),
     ("DATA", "NSFR ratio (%)",
-     {"FY2023": "148.2%", "FY2022": "163%", "FY2021": "n/a"}),
+     {"FY2023": "148.2%", "FY2022": "163%", "FY2021": "-"}),
 ]
 
 KM1_SOURCES = (
@@ -672,7 +672,10 @@ KM1_SOURCES = (
     "'n/a' in the FY2022 edition, with that edition's own footnotes explaining why: 'The new methodology of "
     "LR which excludes claims on Central Banks was introduced in 2022 as part of CRR2, therefore no "
     "contextual comparative information for the prior period included', and the same for NSFR. The marker "
-    "is recorded as printed; nothing is back-filled from the older leverage or NSFR basis. (The FY2021 "
+    "is recorded, per the locked KM1 transcription rule 2 (wayfinder/km1/map.md), as the plain ASCII '-' in "
+    "the cell: the glyph the FY2022 edition actually printed (p.28, Dec-21 column, rows 13, 14, 18, 19, 20) is "
+    "'n/a'. Converted from the literal 'n/a' on 2026-09-19 (GA-020), page image re-read. Nothing is "
+    "back-filled from the older leverage or NSFR basis. (The FY2021 "
     "Pillar 3's own narrow table does state an FY2021 leverage ratio of 21.2% and NSFR of 214% on those "
     "older bases - they are on the Leverage Ratio and NSFR sheets, not here.)\n"
     "* A PRINTED ZERO IS KEPT. FY2021's countercyclical buffer is printed '0.0%', a measured zero, and is "
@@ -876,12 +879,26 @@ metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR_DISPLAY)], "4", note=NSFR
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources("n/a"),
+    # GA-020 (2026-09-19): every edition re-fetched from its cited URL and text-searched for 'MREL'.
+    statements={"MREL Ratio": {
+        "FY2025": "Not published – SDDT reduced Pillar 3 (Art. 433b) and FY2025 Annual Report contain no MREL figure ('MREL' 0 hits, 2026-09-19)",
+        "FY2024": "Not published – SDDT reduced Pillar 3 (Art. 433b) contains no MREL figure ('MREL' 0 hits, 2026-09-19)",
+        "FY2023": "Not applicable – FY2023 Pillar 3 p.14: 'The Group MREL, as set by the PRA, is equal to its TCR, with no additional MREL requirement'",
+        "FY2022": "Not applicable – FY2022 Pillar 3 p.21: 'The Group MREL, as set by the PRA, is equal to its TCR, with no additional MREL requirement'",
+        "FY2021": "Not applicable – FY2021 Pillar 3 p.21: 'The Group MREL, as set by the PRA, is equal to its TCR, with no additional MREL requirement'",
+        "FY2020": "Not published – FY2020 Pillar 3 and FY2020 Annual Report contain no MREL figure or statement ('MREL' 0 hits, 2026-09-19)",
+    }},
     per_note={"MREL Ratio": (
         "Not publicly disclosed in any year (FY2020-FY2025), and no document states an MREL exemption. "
         "The earlier gloss 'consistent with a small SDDT-regime institution' was removed 2026-09-15 as an "
         "unevidenced inference: the Group's SDDT opt-in is now separately evidenced (see ENTITY NOTE) but "
         "it is dated 07/03/2025 and so cannot account for the FY2020-FY2023 MREL blanks, and no source "
-        "links SDDT status to the MREL absence in any year. Recorded simply as not disclosed."
+        "links SDDT status to the MREL absence in any year. Recorded simply as not disclosed.\n"
+        "GA-020 (2026-09-19): 'no document states an MREL exemption' was wrong. The FY2021 (p.21), FY2022 "
+        "(p.21) and FY2023 (p.14) Pillar 3 editions each state 'The Group MREL, as set by the PRA, is equal to "
+        "its TCR, with no additional MREL requirement in excess of Pillar 1 and Pillar 2A', so those three "
+        "years read 'Not applicable'. The FY2020, FY2024 and FY2025 editions and the FY2020/FY2025 Annual "
+        "Reports return zero hits for 'MREL', so those years read 'Not published'."
     )},
 )
 

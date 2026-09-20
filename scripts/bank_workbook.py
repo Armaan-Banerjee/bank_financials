@@ -164,6 +164,26 @@ class BankWorkbook:
         cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
         ws.row_dimensions[row].height = height
 
+    def append_source_cell(self, ws, text, ncols=None, height=150):
+        """Add a FURTHER merged source-citation cell below the one a sheet
+        already has.
+
+        Every sheet ends in a single merged citation cell, and openpyxl caps a
+        cell at 32,767 characters - a ceiling the Co-operative Bank's shared
+        statement-source block had already grown to within a few hundred
+        characters of by 2026-09-19, which left no room to cite the 31 newly
+        filled Profit & Loss years. Splitting the citation across two adjacent
+        cells keeps every source on the sheet that uses it rather than pushing
+        provenance out into a file the reader of the workbook never sees.
+
+        Use this only when one cell genuinely cannot hold the citation; the
+        one-cell form stays the default.
+        """
+        if ncols is None:
+            ncols = ws.max_column
+        self._write_source_cell(ws, ws.max_row + 2, ncols, text, height=height)
+        return ws
+
     def _style_chart_axes(self, chart):
         # openpyxl's TextAxis/NumericAxis both default axPos to "l", which
         # puts the category axis on top of the value axis - fix the category
@@ -1268,7 +1288,7 @@ class BankWorkbook:
         return ws
 
     def add_not_disclosed_metric_sheets(self, names, sources_text, per_note=None, years=None,
-                                        source_height=150):
+                                        source_height=150, statements=None):
         """Convenience for the common "no Pillar 3 doc exists" case - fills a
         list of metric sheets with a single "Not publicly disclosed" row each.
         per_note: optional {name: note_text} for sheet-specific notes.
@@ -1276,14 +1296,30 @@ class BankWorkbook:
         source_height: row height of the merged source-citation cell. The
         default matches _write_source_cell's own default; raise it when
         sources_text is long, since that cell has a fixed height and simply
-        clips any citation text that overflows it."""
+        clips any citation text that overflows it.
+        statements: optional {name: text} or {name: {year: text}} replacing the
+        bare "Not publicly disclosed" with a statement that says WHICH outcome
+        it is (GA-020): "Not published – <evidence>", "Not applicable –
+        <reason>", "Unreached today – <what was tried>" or "Not published yet
+        – <when due>". Omitted names/years keep the old bare text, so existing
+        callers are unchanged."""
         per_note = per_note or {}
+        statements = statements or {}
         years = years if years is not None else self.years
         for name in names:
+            st = statements.get(name)
+            cells = {}
+            for y in years:
+                if isinstance(st, dict):
+                    cells[y] = st.get(y, "Not publicly disclosed")
+                elif st:
+                    cells[y] = st
+                else:
+                    cells[y] = "Not publicly disclosed"
             self.add_metric_sheet(
                 name,
                 None,
-                [(name, {y: "Not publicly disclosed" for y in years})],
+                [(name, cells)],
                 sources_text,
                 note=per_note.get(name),
                 years=years,

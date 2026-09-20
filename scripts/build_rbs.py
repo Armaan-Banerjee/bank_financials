@@ -737,8 +737,20 @@ bw.add_not_disclosed_metric_sheets(
         "MREL Ratio": "RBS plc's Annual Report and Pillar 3 Report both discuss MREL only qualitatively (as a "
                        "category of gone-concern loss-absorbing instrument, e.g. senior notes) - no numeric MREL "
                        "ratio, MREL resources figure, or UK KM2 template appears in any of the FY2021-FY2025 "
-                       "sources reviewed."
+                       "sources reviewed. "
+                       "GA-020 correction (2026-09-19): 'only qualitatively' understated it. Each Annual Report's "
+                       "'Funding sources' table prints MREL instrument balances due to the holding company (FY2025: "
+                       "£1,065m; FY2021: 'CRR-compliant internal MREL' £387m) and an 'available in resolution' total, "
+                       "and the FY2022-FY2025 Pillar 3 Reports print a TLAC2 creditor-ranking table (PDF p.15/16/16/15) "
+                       "of nominal own funds and liabilities eligible for MREL by insolvency rank. None of these is an "
+                       "MREL ratio, and no MREL requirement or KM2 appears. No RBS plc Pillar 3 exists for FY2021 "
+                       "(Wayback CDX of the 18022022 results-centre folder lists none)."
     },
+    statements={"MREL Ratio": {
+        **{y: f"Not published – {y} Pillar 3 (TLAC2 creditor ranking only, PDF p.{pg}) and Annual Report read 2026-09-19: no MREL ratio or requirement"
+           for y, pg in [("FY2025", 15), ("FY2024", 16), ("FY2023", 16), ("FY2022", 15)]},
+        "FY2021": "Not published – FY2021 Annual Report prints internal MREL balance (£387m) but no ratio; no FY2021 RBS plc Pillar 3 exists (results-centre CDX)",
+    }},
 )
 
 # ---------------------------------------------------------------

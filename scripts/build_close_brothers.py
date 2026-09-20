@@ -54,7 +54,25 @@ LATEST_EDITION_NOTE = (
     "Close Brothers Group plc's own financial calendar puts the '2026 Preliminary Results' (year ended "
     "31 July 2026) on 29 September 2026, i.e. AFTER the date of this check, and Close Brothers Limited's "
     "own statutory filing for that year would not reach Companies House until around December 2026. "
-    "Checked, none newer. YEARS unchanged."
+    "Checked, none newer. YEARS unchanged.\n\n"
+    "FY2026 RE-CHECK, 2026-09-19 - STILL NONE; NO FY2026 COLUMN ADDED. The year to 31 July 2026 has closed, "
+    "but neither its accounts nor its Pillar 3 are out. Routes and results: (1) Companies House, UNFILTERED "
+    "filing history, page 1, for Close Brothers Limited (00195626): newest accounts entry is still 'Group of "
+    "companies' accounts made up to 31 July 2025' (filed 20 Dec 2025); later entries are MR01 (03 Jul 2026), "
+    "RES01 (21 Mar 2026) and MA (19 Mar 2026). For Close Brothers Group plc (00520241), page 1 holds only SH04 "
+    "treasury-share filings back to Dec 2025. (2) The group's regulatory news: Investegate's RNS list for CBG "
+    "(https://www.investegate.co.uk/company/CBG, HTTP 200) runs to 09 Sep 2026 (Director/PDMR Shareholding) "
+    "with no preliminary results, annual report or Pillar 3 announcement; the same list does show the 17 Mar "
+    "2026 'Half-year Report for six months to 31 January 2026', so it reaches this group's results "
+    "announcements. The last results-type RNS is the 21 May 2026 Trading Statement. (3) closebrothers.com's "
+    "'Results, reports and presentations' page now returns only a script-rendered shell to a command-line "
+    "fetch (HTTP 200, ~127.6kB, no document links in the HTML), and a reader proxy got a CAPTCHA/'Loading' "
+    "page - UNREACHED, not a negative. (4) Wayback CDX could not be queried that afternoon (the Internet "
+    "Archive served its 'Temporarily Offline' page) - also UNREACHED. The 29 September 2026 date for the 2026 "
+    "Preliminary Results comes from the financial calendar read on 2026-09-16 and was NOT re-read on "
+    "2026-09-19 (the calendar page is behind the same script shell). Expect the Group Annual Report and "
+    "Pillar 3 Disclosures 2026 around then (the 2025 editions are dated 3 October 2025), and Close Brothers "
+    "Limited's own statutory accounts at Companies House around December 2026."
 )
 
 ENTITY_NOTE = (
@@ -872,11 +890,29 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
+# GA-020 (2026-09-19) outcome statements.
+CB_LEV_FY21 = ("Not published – CBG Pillar 3 2021 s.3 'Key Regulatory Metrics' is group-basis only; CBL's FY2021 "
+               "Annual Report Note 21 'Capital' has no leverage row")
+CB_LCR_FY21 = ("Not published – no LCR in CBL's FY2021 filing (all 147pp OCR'd); CBG Pillar 3 2021 gives only the "
+               "group 12-month average (1,003%)")
+CB_NSFR_FY21 = ("Not applicable – PRA implemented the NSFR on 1 Jan 2022 (as CBL's FY2023/FY2025 reports state), "
+                "after this 31 July 2021 year-end")
+_CB_MREL_NA = ("Not applicable – CBG Pillar 3 {yr}: 'does not have any additional MREL requirements', so UK KM2 "
+               "is not presented")
+CB_MREL = {
+    "FY2025": _CB_MREL_NA.format(yr="2025 (PDF p.10)"),
+    "FY2024": _CB_MREL_NA.format(yr="2024 (PDF p.9)"),
+    "FY2023": _CB_MREL_NA.format(yr="2023 (PDF p.8)"),
+    "FY2022": _CB_MREL_NA.format(yr="2022 (PDF p.7)"),
+    "FY2021": ("Not published – no MREL figure or statement in CBG Pillar 3 2021 (text-searched 2026-09-19) or "
+               "CBL's FY2021 filing (OCR)"),
+}
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio excluding claims on central banks",
       {"FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%",
-       "FY2021": "Not publicly disclosed"}),
+       "FY2021": CB_LEV_FY21}),
      ("Leverage ratio total exposure measure excluding claims on central banks (£m)",
       {"FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9})],
     KM1_SOURCES,
@@ -906,7 +942,7 @@ metric(
     "LCR", "%",
     [("Liquidity coverage ratio (12-month average)",
       {"FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106%", "FY2022": "885%",
-       "FY2021": "Not publicly disclosed"})],
+       "FY2021": CB_LCR_FY21})],
     P3_SOURCES + (
         "\n\nLCR is disclosed as a 12-MONTH AVERAGE in the Strategic Report's liquidity/funding risk "
         "section, not as a point-in-time year-end figure:\n"
@@ -937,7 +973,7 @@ metric(
     "NSFR", "%",
     [("Net stable funding ratio (four-quarter average, except FY2022 - see note)",
       {"FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%", "FY2022": "133.6%",
-       "FY2021": "Not applicable"})],
+       "FY2021": CB_NSFR_FY21})],
     P3_SOURCES + (
         "\n\nNSFR is disclosed as a FOUR-QUARTER AVERAGE in the Strategic Report's funding risk section:\n"
         "FY2025 & FY2024: Annual Report 2025, Strategic Report funding section - " + AR2025_URL + "\n"
@@ -965,7 +1001,7 @@ metric(
 
 metric(
     "MREL Ratio", "%",
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", CB_MREL)],
     P3_SOURCES + (
         "\n\nMREL: no MREL figure or requirement is mentioned anywhere in any of the three filings - "
         "re-verified 2026-09-12 by full-document OCR search for 'MREL' and 'minimum requirement for own "

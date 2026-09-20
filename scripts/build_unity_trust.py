@@ -28,7 +28,9 @@ P3_2019_URL = "https://assets.unity.co.uk/Unity-Trust-Bank-PILLAR3-2019.pdf"
 # FY2018 Pillar 3 disclosures ("PILLAR3-2018-Final-Clean.pdf") are genuinely unobtainable - not live
 # on unity.co.uk and the only Wayback Machine capture of that URL is a 345-byte error page, not the
 # PDF (checked via a full CDX search of the unity.co.uk domain for every "pillar" filename ever
-# archived - no other candidate filename found either). FY2018's Pillar 3 figures used throughout
+# archived - no other candidate filename found either; a second address the Bank used,
+# www.unity.co.uk/content/uploads/PILLAR3-2018-Final-Clean.pdf, was found on 2026-09-19 via the archived
+# financial-profile page and is also live 404 and never archived). FY2018's Pillar 3 figures used throughout
 # this script are instead taken from the FY2019 Pillar 3 report's own FY2018 comparative column.
 
 ENTITY_NOTE = (
@@ -830,20 +832,56 @@ metric(
          "footnote, this does not agree to the average LCR balances disclosed elsewhere in the same report.",
 )
 
+# GA-020 (2026-09-19): FY2019/FY2020 Pillar 3 (text) mention NSFR only as a forthcoming CRR II
+# change; FY2018-FY2020 Annual Reports (Companies House scans, OCR'd 150 dpi) have zero NSFR /
+# 'stable funding' hits (richness 'capital' 57-65). FY2018's own Pillar 3 was never obtained:
+# live URL assets.unity.co.uk/2019/03/PILLAR3-2018-Final-Clean.pdf serves an HTML page, and the
+# only Wayback capture (20250802224050) is a 345-byte text/html page - so FY2018 is UNREACHED.
+# Second pass (2026-09-19): the archived financial-profile page (Wayback 20190721152234) links the
+# edition at a SECOND address, www.unity.co.uk/content/uploads/PILLAR3-2018-Final-Clean.pdf (beside
+# PILLAR3-2016-final.pdf and PILLAR3-2017-Final-280318.pdf). That URL is live 404, has no Wayback
+# capture (CDX exact and content/uploads/PILLAR3* prefix, none), and archive.ph has neither URL.
+# Domain-wide CDX of unity.co.uk, unitytrustbank.co.uk and unitytrustbank.com (no mimetype filter)
+# found no other copy; web search for the title found none. Still UNREACHED, not Not published:
+# the FY2019 edition calling NSFR forthcoming is strong circumstance, but it is not the FY2018 edition.
+NSFR_GA020 = {
+    "FY2020": ("Not published – Unity Pillar 3 FY2020 mentions NSFR only as a forthcoming CRR II change; no figure "
+               "there or in the FY2020 Annual Report (OCR, 2026-09-19)."),
+    "FY2019": ("Not published – Unity Pillar 3 FY2019 mentions NSFR only as a forthcoming CRR II change; no figure "
+               "there or in the FY2019 Annual Report (OCR, 2026-09-19)."),
+    "FY2018": ("Not published – Unity Pillar 3 FY2018 (Common Crawl copy, 22pp): contents p.2 and Summary of Key "
+               "Metrics p.3 have no NSFR; text 0 hits on all pages (read 2026-09-19)."),
+}
 metric(
     "NSFR", "£'000 / %",
     [
         ("Total available stable funding", {"FY2025": 1420532, "FY2024": 1303839, "FY2023": 1200480, "FY2022": 1144865, "FY2021": 1077138}),
         ("Total required stable funding", {"FY2025": 955318, "FY2024": 845763, "FY2023": 909694, "FY2022": 741481, "FY2021": 628367}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": "148.70%", "FY2024": "154.16%", "FY2023": "131.97%", "FY2022": "154.4%", "FY2021": "171.4%", "FY2020": "Not publicly disclosed", "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed"}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": "148.70%", "FY2024": "154.16%", "FY2023": "131.97%", "FY2022": "154.4%", "FY2021": "171.4%", **NSFR_GA020}),
     ],
     p3_sources(),
     note="FY2021's own Pillar 3 report did not disclose NSFR at all; the FY2021 figures shown here are taken from "
          "the FY2022 Pillar 3 report's own FY2021 comparative column instead. NSFR reporting only became a live "
          "CRR II requirement being phased in through 2020-2021 (per the Bank's own FY2019 and FY2020 Pillar 3 "
-         "reports, both read in full) - neither the FY2018, FY2019, nor FY2020 Pillar 3 report discloses an NSFR "
-         "figure at all (for any year, including as a prior-year comparative), so these three years are "
-         "genuinely not publicly disclosed rather than merely unsourced.",
+         "reports, both read in full) - neither the FY2019 nor the FY2020 Pillar 3 report discloses an NSFR "
+         "figure at all (for any year, including as a prior-year comparative), so those two years are "
+         "not published rather than merely unsourced. FY2018's own Pillar 3 has not been obtained: the Bank linked "
+         "it as PILLAR3-2018-Final-Clean.pdf at www.unity.co.uk/content/uploads/ (financial-profile page, Wayback "
+         "20190721152234) and at assets.unity.co.uk/2019/03/; both are gone live, the first was never archived and "
+         "the second's only Wayback capture is a 345-byte HTML page (checked 2026-09-19).\n\n"
+         "FY2018 RESOLVED (GA-020 cdn-sweep, 2026-09-19): the archived financial-profile page (Wayback "
+         "20191119205714) links the edition at a THIRD address, the timestamped WordPress-offload path "
+         "https://assets.unity.co.uk/content/uploads/20191004122817/PILLAR3-2018-Final-Clean.pdf. That URL is dead "
+         "live (soft-200 empty text/html) and never captured by Wayback, but Common Crawl captured it on "
+         "2020-04-08 (crawl CC-MAIN-2020-16, WARC crawl-data/CC-MAIN-2020-16/segments/1585371813538.73/warc/"
+         "CC-MAIN-20200408104113-20200408134613-00477.warc.gz, offset 351545006, length 484042; retrieve with an "
+         "HTTP Range request against https://data.commoncrawl.org/). The payload is a complete PDF (%PDF, %%EOF, "
+         "22 pages) titled 'Unity Trust Bank plc Pillar 3 disclosures 2018', 31 December 2018. Its contents "
+         "(p.2) has sections for LCR (3.4, p.17) and leverage (3.8, p.19) and none for NSFR; its Summary of Key "
+         "Metrics (p.3, read on the page image) lists CET1, RWA, buffers, the Basel III leverage ratio and the "
+         "LCR and no NSFR row; the text layer (present on all 22 pages; the only images, on p.6 and p.11, are "
+         "committee diagrams) has no occurrence of 'NSFR' or 'net stable funding'. FY2018 is therefore NOT "
+         "PUBLISHED, from the edition itself.",
 )
 
 metric(

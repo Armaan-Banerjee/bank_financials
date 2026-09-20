@@ -537,11 +537,13 @@ KM1_SOURCES = (
     "'Key Metrics for the Bank' before either table appears, so anchoring on the first occurrence of the "
     "caption lands in the table of contents, not the table (map rule 16 - anchor on structure, not on the first "
     "match). The body headings are the SECOND occurrence in every edition.\n\n"
-    "'N/A' IS REPRODUCED AS PRINTED (map rules 2 and 7). Rows UK 7b and UK 7c read 'N/A' in FY2022-FY2024 and "
+    "PRINTED GLYPH 'N/A' IS SHOWN AS '-' (map rule 2, the user's decision of 2026-09-18; converted under GA-020 on 2026-09-19 - "
+    "these cells previously carried the text 'N/A'). Rows UK 7b and UK 7c read 'N/A' in FY2022-FY2024 and "
     "carry figures only from FY2025; NSFR rows 18-20 read 'N/A' in the September 2021 comparative. The document "
     "explains its own glyph: 'Where \"N/A\" is shown, this indicates that this metric was not relevant for the "
     "Group and Bank or that the calculation methodology has been amended in the current year and therefore "
-    "comparators are not available.' N/A is neither a dash nor a zero and is left exactly as printed.\n\n"
+    "comparators are not available.' On this sheet each such cell carries the plain ASCII '-'; the glyph the "
+    "editions actually printed was 'N/A'. It is not a zero.\n\n"
     "A CROSS-EDITION DIVERGENCE IN ROW 12, recorded not corrected (map rules 1 and 7). The FY2024 edition's own "
     "September 2024 figure for row 12 'CET1 available after meeting the total SREP own funds requirements' is "
     "7.54%. The FY2025 edition's September 2024 COMPARATIVE for the same row prints 8.94% - which is precisely "
@@ -556,8 +558,8 @@ KM1_SOURCES = (
     "rather than rule 20's dashed-row case: there is no own-edition table for a later edition to displace, so "
     f"rule 1 has nothing to bite on. Source for every FY2021 cell here: Pillar 3 Disclosures FY ended 30 Sept "
     f"2022, p.6, 'Key Metrics for the Bank', September 2021 column - {P3_2022_URL} .\n"
-    "Rows UK 7b, UK 7c and 18-20 read 'N/A' in that comparative and are reproduced as 'N/A', not as blanks and "
-    "not as zeroes.\n"
+    "Rows UK 7b, UK 7c and 18-20 read 'N/A' in that comparative and are shown as '-' (printed glyph 'N/A'), "
+    "not as blanks and not as zeroes.\n"
     "A DIVERGENCE THE READER SHOULD KNOW ABOUT: the single-metric sheets take FY2021 from a DIFFERENT source - "
     "the FY2021 edition's own Appendix 4, which gives CET1 = Tier 1 = Total capital of 71,677 and a ratio of "
     "20.0% - and carry the FY2022 restatement (71,644 / 19.94%) on a separate labelled row beside it. This KM1 "
@@ -603,8 +605,8 @@ km1_rows = [
     ("DATA", "7  Total capital ratio (%)", {"FY2025": "15.72%", "FY2024": "18.04%", "FY2023": "20.10%", "FY2022": "21.03%", "FY2021": "19.94%"}),
     ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "UK 7a  Additional CET1 SREP requirements (%)", {"FY2025": "0.65%", "FY2024": "1.10%", "FY2023": "1.18%", "FY2022": "1.18%", "FY2021": "2.27%"}),
-    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2025": "0.22%", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
-    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2025": "0.29%", "FY2024": "N/A", "FY2023": "N/A", "FY2022": "N/A", "FY2021": "N/A"}),
+    ("DATA", "UK 7b  Additional AT1 SREP requirements (%)", {"FY2025": "0.22%", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
+    ("DATA", "UK 7c  Additional T2 SREP requirements (%)", {"FY2025": "0.29%", "FY2024": "-", "FY2023": "-", "FY2022": "-", "FY2021": "-"}),
     ("DATA", "UK 7d  Total SREP own funds requirements (%)", {"FY2025": "9.15%", "FY2024": "9.10%", "FY2023": "9.18%", "FY2022": "9.18%", "FY2021": "10.27%"}),
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8  Capital conservation buffer (%)", {"FY2025": "2.50%", "FY2024": "2.50%", "FY2023": "2.50%", "FY2022": "2.50%", "FY2021": "2.50%"}),
@@ -622,9 +624,9 @@ km1_rows = [
     ("DATA", "16  Total net cash outflows (adjusted value) (£'000)", {"FY2025": 139955, "FY2024": 36257, "FY2023": 28052, "FY2022": 22292, "FY2021": 13535}),
     ("DATA", "17  Liquidity coverage ratio (%)", {"FY2025": "189.07%", "FY2024": "296.84%", "FY2023": "324.90%", "FY2022": "401.68%", "FY2021": "575.71%"}),
     ("SECTION", "Net Stable Funding Ratio", {}),
-    ("DATA", "18  Total available stable funding (£'000)", {"FY2025": 1473649, "FY2024": 943517, "FY2023": 810485, "FY2022": 715551, "FY2021": "N/A"}),
-    ("DATA", "19  Total required stable funding (£'000)", {"FY2025": 826660, "FY2024": 603108, "FY2023": 471300, "FY2022": 421346, "FY2021": "N/A"}),
-    ("DATA", "20  NSFR ratio (%)", {"FY2025": "178.27%", "FY2024": "156.44%", "FY2023": "171.97%", "FY2022": "169.82%", "FY2021": "N/A"}),
+    ("DATA", "18  Total available stable funding (£'000)", {"FY2025": 1473649, "FY2024": 943517, "FY2023": 810485, "FY2022": 715551, "FY2021": "-"}),
+    ("DATA", "19  Total required stable funding (£'000)", {"FY2025": 826660, "FY2024": 603108, "FY2023": 471300, "FY2022": 421346, "FY2021": "-"}),
+    ("DATA", "20  NSFR ratio (%)", {"FY2025": "178.27%", "FY2024": "156.44%", "FY2023": "171.97%", "FY2022": "169.82%", "FY2021": "-"}),
 ]
 
 bw.add_km1_sheet(
@@ -699,6 +701,11 @@ metric(
     p3_sources(),
 )
 
+# GA-020 (2026-09-19) evidenced statement text.
+RWA_BD_NOT_PUB = (
+    "Not published – this year's Pillar 3 (8pp) holds only Group and Bank KM1 tables, no OV1 or RWA-by-risk "
+    "table (contents page; re-read 2026-09-12/15); FY2023 AR has no capital/RWA note"
+)
 rwa_breakdown_rows = [
     ("SECTION", "RWA by risk category (UK OV1, Bank basis)", {}),
     ("DATA", "Credit risk (excluding CCR)", {"FY2025": 566610, "FY2024": 439883}),
@@ -712,7 +719,7 @@ rwa_breakdown_rows = [
     ("DATA", "Operational risk", {"FY2021": 47825}),
     ("TOTAL", "Total", {"FY2021": 359249}),
     ("SECTION", "FY2022-FY2023", {}),
-    ("TOTAL", "Total", {"FY2023": "Not publicly disclosed", "FY2022": "Not publicly disclosed"}),
+    ("TOTAL", "Total", {"FY2023": RWA_BD_NOT_PUB, "FY2022": RWA_BD_NOT_PUB}),
 ]
 
 bw.add_rwa_breakdown_sheet(
@@ -810,6 +817,7 @@ metric(
 
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], p3_sources(page="n/a"), per_note={"MREL Ratio": NOT_DISCLOSED_NOTE},
+    statements={"MREL Ratio": "Not published – no MREL figure or reference in this year's Pillar 3 (all five editions FY2021-FY2025 full-text searched 2026-09-19, zero 'MREL')"},
 )
 
 # ---------------------------------------------------------------

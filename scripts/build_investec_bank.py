@@ -11,6 +11,11 @@ AR23_URL = "https://find-and-update.company-information.service.gov.uk/company/0
 # FY2021/FY2020 and FY2019/FY2018 respectively. Both are scanned/image-only PDFs
 # (no text layer), transcribed via page-render + manual reading, same as AR23/AR25/AR26.
 AR21_URL = "https://find-and-update.company-information.service.gov.uk/company/00489604/filing-history/MzMwOTY3ODkxNGFkaXF6a2N4/document?format=pdf&download=0"
+# GA-020 (2026-09-19): three more Companies House filings, OCR'd to locate pages and every figure
+# then read from the page image. See GA020_LIQ_NOTE.
+AR18_URL = "https://find-and-update.company-information.service.gov.uk/company/00489604/filing-history/MzIwOTQwODkxOWFkaXF6a2N4/document?format=pdf&download=0"
+AR20_URL = "https://find-and-update.company-information.service.gov.uk/company/00489604/filing-history/MzI3NjcwNDY2OWFkaXF6a2N4/document?format=pdf&download=0"
+AR22_URL = "https://find-and-update.company-information.service.gov.uk/company/00489604/filing-history/MzM0ODAzMjkxNWFkaXF6a2N4/document?format=pdf&download=0"
 AR19_URL = "https://find-and-update.company-information.service.gov.uk/company/00489604/filing-history/MzI0MjAzMDcwOWFkaXF6a2N4/document?format=pdf&download=0"
 # Standalone Investec Bank plc (IBP) Pillar 3 annual disclosure reports (31 March
 # period-end), re-sourced this session to test whether the FY2022-2026 build's LCR/
@@ -893,15 +898,54 @@ LCR_NSFR_SOURCES = (
     "against the 31 March comparative rows already recorded on the 'Interim Pillar 3' sheet."
 )
 
+GA020_LIQ_NOTE = (
+    "FY2018-FY2022 FOUND 2026-09-19 (GA-020). These five years previously read 'Not publicly disclosed'. "
+    "That was true of the Pillar 3 documents (and of the missing FY2022 Pillar 3) but NOT of Investec Bank "
+    "plc's own annual financial statements, which state the solo LCR and NSFR at each 31 March in the "
+    "Risk management section. The filings are image-only scans; each was OCR'd to find the page and every "
+    "figure was then read from the page image. Sources (Companies House, company 00489604, 'Group of "
+    "companies' accounts made up to 31 March'): "
+    f"FY2022 - PDF p.50: 'IBP (solo basis) reported an LCR of 476% and an NSFR of 136% at 31 March 2022' "
+    f"(repeated PDF p.103) - {AR22_URL}; "
+    f"FY2021 - PDF p.47 (printed 46): 'The LCR reported to the PRA at 31 March 2021 was 475% ... Excluding the "
+    f"sale [of the Australian corporate loans] the LCR would be 330%. The internally calculated NSFR was 126% "
+    f"for IBP (solo basis)' - {AR21_URL}; "
+    f"FY2020 - PDF p.38: LCR 'reported to the PRA at 31 March 2020 was 411%'; NSFR, on the bank's own "
+    f"interpretation ahead of the final rules, 120% (repeated PDF p.83) - {AR20_URL}; "
+    f"FY2019 - PDF p.31: 'The LCR reported to the PRA at 31 March 2019 was 291%'; NSFR 126% - {AR19_URL}; "
+    f"FY2018 - PDF p.39 (printed 37): 'The LCR reported to the PRA at 31 March 2018 was 301%'; PDF p.40: "
+    f"'the NSFR which was 133%' - {AR18_URL}. "
+    "BASIS: every one of these is a POINT-IN-TIME ratio at 31 March, as reported to the PRA, on the bank's own "
+    "interpretation of the EU Delegated Act (LCR) and of the BCBS guidelines (NSFR, before the UK rules took "
+    "effect in 2022). The FY2023-FY2026 cells above come from UK KM1 tables and the LCR there is a 12-month "
+    "average, so the two series are NOT directly comparable. (The FY2023 accounts print a point-in-time "
+    "LCR of 432% against the KM1-sourced 431% carried here.) FY2021's 475% was inflated by the sale of "
+    "Australian corporate loans; the bank's own ex-sale figure, 330%, is kept in the cell beside it. "
+    "The note below, written before these filings were read, says no numeric figure exists for FY2018-FY2022; "
+    "that remains correct for the Pillar 3 documents only.\n\n"
+)
+_LCR_AR = {
+    "FY2022": "476% (31 Mar 2022 point-in-time, IBP solo; FY2022 accounts, CH PDF p.50)",
+    "FY2021": "475% (31 Mar 2021 point-in-time as reported to PRA, IBP solo; 330% excl. Australian loan sale; FY2021 accounts PDF p.47)",
+    "FY2020": "411% (31 Mar 2020 point-in-time as reported to PRA, IBP solo; FY2020 accounts, CH PDF p.38)",
+    "FY2019": "291% (31 Mar 2019 point-in-time as reported to PRA, IBP solo; FY2019 accounts, CH PDF p.31)",
+    "FY2018": "301% (31 Mar 2018 point-in-time as reported to PRA, IBP solo; FY2018 accounts, CH PDF p.39)",
+}
+_NSFR_AR = {
+    "FY2022": "136% (31 Mar 2022, IBP solo; FY2022 accounts, CH PDF p.50)",
+    "FY2021": "126% (31 Mar 2021, internally calculated, IBP solo; FY2021 accounts, CH PDF p.47)",
+    "FY2020": "120% (31 Mar 2020, own interpretation of BCBS rules, IBP solo; FY2020 accounts, CH PDF p.38)",
+    "FY2019": "126% (31 Mar 2019, own interpretation of BCBS rules, IBP solo; FY2019 accounts, CH PDF p.31)",
+    "FY2018": "133% (31 Mar 2018, own interpretation of BCBS rules, IBP solo; FY2018 accounts, CH PDF p.40)",
+}
+
 metric(
     "LCR", None,
     [("Liquidity Coverage Ratio", {
-        "FY2026": "361%", "FY2025": "465%", "FY2024": "446%", "FY2023": "431%", "FY2022": "Not publicly disclosed",
-        "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed",
-        "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed",
+        "FY2026": "361%", "FY2025": "465%", "FY2024": "446%", "FY2023": "431%", **_LCR_AR,
     })],
     LCR_NSFR_SOURCES,
-    note="FY2022 (31 March 2022): not publicly disclosed. No standalone Pillar 3 report for that period-end was "
+    note=GA020_LIQ_NOTE + "FY2022 (31 March 2022): not publicly disclosed. No standalone Pillar 3 report for that period-end was "
          "ever published for Investec plc/Investec Bank plc — confirmed via Wayback Machine snapshots of "
          "investec.com's Basel Pillar III regulatory-disclosures listing page taken 30 Sept 2022 and 3 Oct 2023 "
          "(the most recent annual/semi-annual disclosure listed on both is the 2021 annual report; no 2022 entry "
@@ -928,12 +972,10 @@ metric(
 metric(
     "NSFR", None,
     [("Net Stable Funding Ratio", {
-        "FY2026": "141%", "FY2025": "145%", "FY2024": "138%", "FY2023": "136%", "FY2022": "Not publicly disclosed",
-        "FY2021": "Not publicly disclosed", "FY2020": "Not publicly disclosed",
-        "FY2019": "Not publicly disclosed", "FY2018": "Not publicly disclosed",
+        "FY2026": "141%", "FY2025": "145%", "FY2024": "138%", "FY2023": "136%", **_NSFR_AR,
     })],
     LCR_NSFR_SOURCES,
-    note="Same availability constraint as the LCR sheet for FY2022 (31 March 2022) — no standalone Pillar 3 "
+    note=GA020_LIQ_NOTE + "Same availability constraint as the LCR sheet for FY2022 (31 March 2022) — no standalone Pillar 3 "
          "report covering that period-end was ever published; confirmed via the same Wayback Machine snapshots "
          "(30 Sept 2022 and 3 Oct 2023) of investec.com's regulatory-disclosures listing page. FY2021/FY2020/"
          "FY2019/FY2018: re-verified this session against the standalone IBP Pillar 3 annual disclosure reports "
@@ -943,11 +985,33 @@ metric(
          "requirement entirely with no mention of it at all. Genuine, re-verified access gap, not an assumption.",
 )
 
+_IBP_MREL_SRC = {
+    "FY2018": "FY2018 accounts PDF p.39", "FY2019": "FY2019 accounts PDF p.31",
+    "FY2020": "FY2020 accounts PDF p.37", "FY2021": "FY2021 accounts PDF p.104",
+    "FY2022": "FY2022 accounts PDF p.50",
+}
+_IBP_MREL = {y: (f"Not applicable – BoE set IBP's MREL equal to its regulatory capital requirement "
+                 f"(modified insolvency strategy); no MREL ratio - {src}") for y, src in _IBP_MREL_SRC.items()}
+_IBP_MREL["FY2023"] = ("Not applicable – modified insolvency, 'no MREL requirement in excess of its minimum "
+                       "capital requirements' at March 2023 - FY2023 accounts PDF p.267")
+for _y in ("FY2024", "FY2025", "FY2026"):
+    _IBP_MREL[_y] = (f"Not applicable – bank states Art. 437(a) MREL disclosure 'not applicable for 31 March "
+                     f"{_y[2:]}' - Investec plc/IBP Pillar 3 annual report {_y[2:]} p.12 (PDF)")
+_IBP_MREL["FY2026"] += "; binding MREL phased in from 1 Jan 2026"
+
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not publicly disclosed" for y in YEARS})],
+    [("MREL ratio", _IBP_MREL)],
     p3_sources(280, 287, 270),
-    note="No MREL ratio is disclosed as such in any of the 9 years. Per the 'Recovery and resolution planning' / "
+    note="GA-020 (2026-09-19): every year now states WHY there is no ratio, from the bank's own documents "
+         "(page images checked): FY2018-FY2022 accounts (CH PDF p.39 / p.31 / p.37 / p.104 / p.50) say the BoE "
+         "set IBP's MREL equal to its (total) regulatory capital requirement under a modified-insolvency "
+         "strategy; the FY2023 accounts (PDF p.267, printed 266) say that as of March 2023 there was 'no MREL "
+         "requirement in excess of its minimum capital requirements'; and the March 2024, 2025 and 2026 annual "
+         "Pillar 3 reports (PDF p.12) each state 'The Pillar 3 disclosure requirements for MREL, per Article "
+         "437(a) of the CRR, are therefore not applicable for 31 March 20xx' - the 2026 edition while noting the "
+         "binding MREL phased in from 1 January 2026. All are 'Not applicable'. "
+         "No MREL ratio is disclosed as such in any of the 9 years. Per the 'Recovery and resolution planning' / "
          "'Liquidity risk' notes: at FY2022-FY2025, IBP's preferred resolution strategy was bank insolvency "
          "procedure (from March 2021, Modified Insolvency) with MREL set equal to IBP's Total Capital Requirement "
          "(Pillar 1 plus Pillar 2A) — i.e. no MREL requirement in excess of minimum capital requirements, so no "

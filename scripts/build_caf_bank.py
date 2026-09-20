@@ -115,6 +115,18 @@ ENTITY_NOTE = (
     "reading in substance (quoted above: 'is not required to publish a Pillar 3 report'). This project does not "
     "resolve the tension by picking a side: the FY2025 cells stay blank either way, and the distinction only "
     "affects how the blank is LABELLED. Recorded here so the next sweep does not re-litigate it.\n"
+    "LABELLING RESOLVED WITHOUT RESOLVING THE TENSION (2026-09-19). The KM1 sheet's FY2025 column was the last "
+    "wholly-empty column in this workbook, and a blank cell cannot distinguish 'established absent' from 'never "
+    "examined' - so it now carries a short statement instead. The statement is worded to assert only what is "
+    "settled: that no FY2025 edition exists, and that the date fit is UNDETERMINED. It deliberately does NOT "
+    "say the SDDT opt-in explains FY2025, because on the year-end reading it does not - 30 April 2025 precedes "
+    "08/08/2025 by three months. Compare Cambridge & Counties (opt-in 20/02/2025, year end 31 December 2025) "
+    "and Brown Shipley (28/10/2025, year end 31 December 2025), where the fit is unambiguous and the cells say "
+    "so; the difference between those banks and this one is exactly the three months, and it is the reason a "
+    "waiver must be date-fitted per bank and per year rather than read as a blanket explanation. The register "
+    "row itself was re-downloaded and re-matched on BOTH required columns again on 2026-09-19 (description "
+    "'SDDT Regime - General Application' AND sub-rule 'Ru 3.1', FRN 204451, start 08/08/2025, no end date) and "
+    "is unchanged.\n"
     "NOT IN TENSION: FY2026 (year ending 30 April 2026) falls unambiguously after the modification, so FY2026 "
     "onward is structurally exempt. FY2024 and earlier unambiguously predate it - and, consistent with that, real "
     "standalone Pillar 3 documents do exist for FY2020-FY2024.\n\n"
@@ -460,6 +472,19 @@ def metric(name, unit, rows_data, note=None):
 # rather than as a structural exemption.
 NOT_DISCLOSED = "Not publicly disclosed"
 NOT_APPLICABLE = "Not applicable"
+# GA-020 outcome vocabulary (2026-09-19): every statement cell names its evidence.
+FY25_NOT_PUBLISHED = ("Not published – no FY2025 Pillar 3 exists (bank's Pillar 3 page: 'not required to publish'); "
+                      "FY2025 Annual Report 'Key regulatory ratios' (p.28) gives only total capital, leverage, LCR")
+LEV_INCL_FY24 = ("Not published – FY2024 Pillar 3 UK LRCom prints the incl.-central-banks exposure (row 24, "
+                 "1,531,996) but no ratio on that basis")
+LEV_INCL_FY25 = ("Not published – FY2025 Annual Report Strategic Report (pp.27-28) gives the excl.-central-banks "
+                 "ratio only; no FY2025 Pillar 3 exists")
+LCR_FY2020 = ("Not published – FY2020 Pillar 3 (27pp, full read) has no LCR, and no later edition prints an "
+              "April 2020 LCR")
+NSFR_NA = ("Not applicable – UK NSFR in force only from 1 Jan 2022 (PRA PS17/21), after this 30 April year-end; "
+           "FY2022 edition's KM1 prints the 2021 NSFR cells blank")
+MREL_NP = ("Not published – no MREL figure in CAF's Pillar 3 FY2020-FY2024 (text-searched 2026-09-19; only UK CCA "
+           "template labels); FY2025 AR 'Key regulatory ratios' (p.28) has none")
 
 FY2025_NO_STANDALONE_NOTE = (
     "FY2025 reads 'Not publicly disclosed' rather than sitting blank: the absence is evidenced, not unchecked. No "
@@ -549,8 +574,15 @@ km1_rows = [
     ("DATA", "3    Total capital (£'000)",
      {"FY2024": 56157, "FY2023": 45140, "FY2022": 38253, "FY2021": 40095}),
     ("SECTION", "Risk-weighted exposure amounts", {}),
+    # FY2025 carries a recorded absence rather than a blank (2026-09-19). Row 4
+    # is chosen because the Total RWAs sheet already holds a text cell for
+    # FY2025, so no verifier comparison exists here to lose. The wording
+    # deliberately does NOT assert that the SDDT opt-in explains FY2025 - the
+    # date test below is UNDETERMINED, because the 30 April 2025 year end
+    # precedes the 08/08/2025 modification by three months.
     ("DATA", "4    Total risk-weighted exposure amount (£'000)",
-     {"FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127844}),
+     {"FY2025": "Not published - no FY2025 edition exists; SDDT date fit undetermined",
+      "FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127844}),
     ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "5    Common Equity Tier 1 ratio (%)",
      {"FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "21.9%", "FY2021": "22.8%"}),
@@ -703,6 +735,26 @@ KM1_SOURCES = (
     "April 2026); the most recent filings after it are Memorandum and Articles (04 Aug 2026), a "
     "resolution, and director/secretary appointments. Since the FY2025 accounts themselves took until "
     "February 2026 to file, an FY2026 filing is not yet due. So YEARS is unchanged at FY2025-FY2020.\n\n"
+    "FY2026 RE-CHECK 2026-09-19 - STILL NONE; NO FY2026 COLUMN ADDED. Routes and results: (1) Companies House, "
+    "UNFILTERED filing history for 01837656, page 1 (which reaches back to July 2025, so it spans the whole "
+    "window in which an FY2026 filing could appear): newest accounts entry is still 'Full accounts made up to 30 "
+    "April 2025' (10 Feb 2026); everything later is non-accounts (MA and RES01 04 Aug 2026, AP03 21 Jul 2026, "
+    "AP01 22 Jun 2026, CS01 01 Apr 2026). (2) The bank's own site: the CAF Bank 'Legal information' page "
+    "(https://www.cafonline.org/home/caf-bank/about-us/legal-information, HTTP 200, 62,847 bytes) links annual "
+    "reports, and its newest, /docs/default-source/annual-reports/caf_bank_annual-report.pdf (HTTP 200, "
+    "application/pdf, %PDF, 8,300,402 bytes, 51 pages), is the report for the year ended 30 April 2025 "
+    "(title page; PDF created 12 Aug 2025) - the edition already cited. The Pillar 3 index page is unchanged "
+    "(the SDDT sentence, no document links). FY2026 variants of the known filenames "
+    "(annual-reports/caf-bank-annual-report-2025_2026.pdf and -2024_2025.pdf, "
+    "caf-bank-pillar-3-disclosure-2025_2026.pdf and -2024_2025.pdf) each return the 136kB text/html soft-404, "
+    "while the control caf-bank-pillar-3-disclosure-2023_2024.pdf in the same folder returns 200 / "
+    "application/pdf / 1,401,132 bytes. The CAF group annual report linked from "
+    "/home/about-us/governance-and-policies/annual-reports (caf_group_annual-report.pdf) is also for the year "
+    "ended 30 April 2025. (3) Wayback CDX could not be queried that afternoon (the Internet Archive served its "
+    "'Temporarily Offline' page) - UNREACHED, not a negative. So the FY2026 (year to 30 April 2026) accounts "
+    "are not published at either Companies House or cafonline.org as of 2026-09-19; as a private company with a "
+    "30 April year-end the filing deadline is 31 January 2027. No FY2026 Pillar 3 is expected at all (Rule 3.1 "
+    "SDDT modification from 08/08/2025, above).\n\n"
     "WHY FY2025 IS BLANK. There is no Pillar 3 document, therefore no KM1 template, therefore nothing to "
     "reproduce. Note the deliberate difference from the single-metric sheets, which write 'Not publicly "
     "disclosed' in their FY2025 cells: on those sheets a metric exists and was searched for, whereas here "
@@ -758,19 +810,19 @@ bw.add_km1_sheet(
 
 metric(
     "CET1 Capital", "£'000",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": NOT_DISCLOSED, "FY2024": 54342, "FY2023": 45140, "FY2022": 27253, "FY2021": 29095, "FY2020": 30350})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 54342, "FY2023": 45140, "FY2022": 27253, "FY2021": 29095, "FY2020": 30350})],
     note=FY2025_NO_STANDALONE_NOTE,
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("CET1 ratio", {"FY2025": NOT_DISCLOSED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "21.9%", "FY2021": "22.8%", "FY2020": "20.6%"})],
+    [("CET1 ratio", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "21.9%", "FY2021": "22.8%", "FY2020": "20.6%"})],
     note=FY2025_NO_STANDALONE_NOTE,
 )
 
 metric(
     "Tier 1 Capital", "£'000",
-    [("Tier 1 capital", {"FY2025": NOT_DISCLOSED, "FY2024": 54342, "FY2023": 45140, "FY2022": 38253, "FY2021": 40095, "FY2020": 41350})],
+    [("Tier 1 capital", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 54342, "FY2023": 45140, "FY2022": 38253, "FY2021": 40095, "FY2020": 41350})],
     note=FY2025_NO_STANDALONE_NOTE + " Equal to CET1 capital from FY2023 onward - CAF Bank's Additional Tier 1 "
          "securities were fully redeemed during FY2023 (see Statement of Changes in Equity); FY2020/FY2021/FY2022 "
          "include the AT1 instrument.",
@@ -778,13 +830,13 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": NOT_DISCLOSED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "30.8%", "FY2021": "31.4%", "FY2020": "28.0%"})],
+    [("Tier 1 ratio", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "30.8%", "FY2021": "31.4%", "FY2020": "28.0%"})],
     note=FY2025_NO_STANDALONE_NOTE,
 )
 
 metric(
     "Total Capital", "£'000",
-    [("Total capital", {"FY2025": NOT_DISCLOSED, "FY2024": 56157, "FY2023": 45140, "FY2022": 38253, "FY2021": 40095, "FY2020": 41350})],
+    [("Total capital", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 56157, "FY2023": 45140, "FY2022": 38253, "FY2021": 40095, "FY2020": 41350})],
     note=FY2025_NO_STANDALONE_NOTE + " FY2024 is the only year with Tier 2 capital (£1,815k) - equal to Tier 1 "
          "capital in every other year shown.",
 )
@@ -798,7 +850,7 @@ metric(
 
 metric(
     "Total RWAs", "£'000",
-    [("Total risk-weighted exposure amount", {"FY2025": NOT_DISCLOSED, "FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127881, "FY2020": 147540})],
+    [("Total risk-weighted exposure amount", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127881, "FY2020": 147540})],
     note=FY2025_NO_STANDALONE_NOTE + " FY2021's own document states £127,881k; a later document's FY2021 "
          "comparative shows a immaterially different £127,844k - FY2021's own originally-published figure is "
          "used here, per this project's standard convention (see PILLAR3_SOURCES restatement note). FY2020's own "
@@ -808,10 +860,10 @@ metric(
 
 rwa_breakdown_rows = [
     ("SECTION", "RWA by risk category", {}),
-    ("DATA", "Credit risk (incl. counterparty credit risk, FY2020-FY2021 only)", {"FY2025": NOT_DISCLOSED, "FY2021": 105880, "FY2020": 125890}),
-    ("DATA", "Credit risk and counterparty credit risk", {"FY2025": NOT_DISCLOSED, "FY2024": 129538, "FY2023": 112829, "FY2022": 102044}),
-    ("DATA", "Operational risk", {"FY2025": NOT_DISCLOSED, "FY2024": 55585, "FY2023": 33505, "FY2022": 22199, "FY2021": 22001, "FY2020": 21650}),
-    ("TOTAL", "Total", {"FY2025": NOT_DISCLOSED, "FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127881, "FY2020": 147540}),
+    ("DATA", "Credit risk (incl. counterparty credit risk, FY2020-FY2021 only)", {"FY2025": FY25_NOT_PUBLISHED, "FY2021": 105880, "FY2020": 125890}),
+    ("DATA", "Credit risk and counterparty credit risk", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 129538, "FY2023": 112829, "FY2022": 102044}),
+    ("DATA", "Operational risk", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 55585, "FY2023": 33505, "FY2022": 22199, "FY2021": 22001, "FY2020": 21650}),
+    ("TOTAL", "Total", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 185123, "FY2023": 146334, "FY2022": 124243, "FY2021": 127881, "FY2020": 147540}),
 ]
 bw.add_rwa_breakdown_sheet(
     title="CAF Bank Limited — RWA Breakdown",
@@ -829,7 +881,7 @@ metric(
     "Leverage Ratio", "%",
     [
         ("Leverage ratio, excluding claims on central banks", {"FY2025": "6.35%", "FY2024": "6.05%", "FY2023": "4.64%", "FY2022": "3.97%", "FY2021": "3.81%", "FY2020": "4.62%"}),
-        ("Leverage ratio, including claims on central banks", {"FY2025": NOT_DISCLOSED, "FY2024": NOT_DISCLOSED, "FY2023": "2.83%", "FY2022": "2.44%", "FY2021": "2.72%", "FY2020": "3.35%"}),
+        ("Leverage ratio, including claims on central banks", {"FY2025": LEV_INCL_FY25, "FY2024": LEV_INCL_FY24, "FY2023": "2.83%", "FY2022": "2.44%", "FY2021": "2.72%", "FY2020": "3.35%"}),
     ],
     note="FY2025 sourced from the Annual Report's Strategic Report (no standalone Pillar 3 document - SDDT-exempt); "
          "its 6.35% figure reconciles exactly against FY2024's own 6.05% 'excluding central banks' comparative "
@@ -857,11 +909,18 @@ metric(
 metric(
     "LCR", "£'000 / %",
     [
-        ("High-quality liquid assets (weighted, average)", {"FY2025": NOT_DISCLOSED, "FY2024": 1150942, "FY2023": 1244786, "FY2022": 1255456, "FY2021": NOT_DISCLOSED, "FY2020": NOT_DISCLOSED}),
-        ("Net cash outflows (adjusted)", {"FY2025": NOT_DISCLOSED, "FY2024": 447586, "FY2023": 478804, "FY2022": 476184, "FY2021": NOT_DISCLOSED, "FY2020": NOT_DISCLOSED}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "543%", "FY2024": "257%", "FY2023": "260%", "FY2022": "264%", "FY2021": NOT_DISCLOSED, "FY2020": NOT_DISCLOSED}),
+        ("High-quality liquid assets (weighted, average)", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 1150942, "FY2023": 1244786, "FY2022": 1255456, "FY2021": 1130354, "FY2020": LCR_FY2020}),
+        ("Net cash outflows (adjusted)", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 447586, "FY2023": 478804, "FY2022": 476184, "FY2021": 421650, "FY2020": LCR_FY2020}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "543%", "FY2024": "257%", "FY2023": "260%", "FY2022": "264%", "FY2021": "268%", "FY2020": LCR_FY2020}),
     ],
-    note="FY2025's 543% is sourced from the Annual Report's Strategic Report (no standalone Pillar 3 document - "
+    note="FY2021 FILLED 2026-09-19 (GA-020) - SUPERSEDES THE LAST SENTENCE OF THIS NOTE. The FY2021 LCR block "
+         "(HQLA 1,130,354; net cash outflows 421,650; LCR 268%) is the bank's own printed '2021' comparative "
+         "column of Template UK KM1 in the CAF Bank Ltd Pillar 3 Disclosure 30 April 2022, p.5 (rows 15, 16, 17), "
+         "read off a rendered page image on 2026-09-19 - " + P3_2022_URL + ". The FY2021 edition itself prints "
+         "no LCR, so this is the only place CAF ever published an April 2021 LCR; a published figure is FOUND, "
+         "not 'not disclosed', and it is the same column the KM1 Key Metrics sheet already reproduces for "
+         "FY2021. FY2020 remains an absence: no edition prints an April 2020 LCR.\n"
+         "FY2025's 543% is sourced from the Annual Report's Strategic Report (no standalone Pillar 3 document - "
          "SDDT-exempt); its own comparator ties exactly to FY2024's Pillar 3 KM1 figure. FY2020 and FY2021 are "
          "both 'Not publicly disclosed' - both years' own Pillar 3 documents predate the LIQ1/KM1 templates that "
          "introduced LCR reporting, so no LCR figure was ever published for either year in its own document (a "
@@ -873,9 +932,9 @@ metric(
 metric(
     "NSFR", "£'000 / %",
     [
-        ("Available stable funding", {"FY2025": NOT_DISCLOSED, "FY2024": 1377360, "FY2023": 1429893, "FY2022": 1426183, "FY2021": NOT_APPLICABLE, "FY2020": NOT_APPLICABLE}),
-        ("Required stable funding", {"FY2025": NOT_DISCLOSED, "FY2024": 272188, "FY2023": 154418, "FY2022": 177361, "FY2021": NOT_APPLICABLE, "FY2020": NOT_APPLICABLE}),
-        ("Net Stable Funding Ratio (%)", {"FY2025": NOT_DISCLOSED, "FY2024": "506%", "FY2023": "926%", "FY2022": "804%", "FY2021": NOT_APPLICABLE, "FY2020": NOT_APPLICABLE}),
+        ("Available stable funding", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 1377360, "FY2023": 1429893, "FY2022": 1426183, "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
+        ("Required stable funding", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": 272188, "FY2023": 154418, "FY2022": 177361, "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
+        ("Net Stable Funding Ratio (%)", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "506%", "FY2023": "926%", "FY2022": "804%", "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
     ],
     note="THREE MISSING YEARS, TWO DIFFERENT REASONS, LABELLED DIFFERENTLY ON PURPOSE (split 2026-09-15; all "
          "three previously sat blank and were described together as 'not disclosed', which conflated a "
@@ -897,6 +956,7 @@ metric(
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     PILLAR3_SOURCES,
+    statements={"MREL Ratio": MREL_NP},
     per_note={"MREL Ratio": "Not publicly disclosed by CAF Bank Limited in any year FY2020-FY2025 - not in any "
               "standalone Pillar 3 document, nor in any Annual Report. CAF Bank is not a UK resolution entity."},
 )
@@ -933,12 +993,12 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000",
     ratios=[
-        ("CET1 Ratio", {"FY2025": NOT_DISCLOSED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "21.9%", "FY2021": "22.8%", "FY2020": "20.6%"}),
-        ("Tier 1 Ratio", {"FY2025": NOT_DISCLOSED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "30.8%", "FY2021": "31.4%", "FY2020": "28.0%"}),
+        ("CET1 Ratio", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "21.9%", "FY2021": "22.8%", "FY2020": "20.6%"}),
+        ("Tier 1 Ratio", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "29.35%", "FY2023": "30.8%", "FY2022": "30.8%", "FY2021": "31.4%", "FY2020": "28.0%"}),
         ("Total Capital Ratio", {"FY2025": "29.7%", "FY2024": "30.33%", "FY2023": "30.8%", "FY2022": "30.8%", "FY2021": "31.4%", "FY2020": "28.0%"}),
         ("Leverage Ratio", {"FY2025": "6.35%", "FY2024": "6.05%", "FY2023": "4.64%", "FY2022": "3.97%", "FY2021": "3.81%", "FY2020": "4.62%"}),
-        ("LCR", {"FY2025": "543%", "FY2024": "257%", "FY2023": "260%", "FY2022": "264%", "FY2021": NOT_DISCLOSED, "FY2020": NOT_DISCLOSED}),
-        ("NSFR", {"FY2025": NOT_DISCLOSED, "FY2024": "506%", "FY2023": "926%", "FY2022": "804%", "FY2021": NOT_APPLICABLE, "FY2020": NOT_APPLICABLE}),
+        ("LCR", {"FY2025": "543%", "FY2024": "257%", "FY2023": "260%", "FY2022": "264%", "FY2021": "268%", "FY2020": LCR_FY2020}),
+        ("NSFR", {"FY2025": FY25_NOT_PUBLISHED, "FY2024": "506%", "FY2023": "926%", "FY2022": "804%", "FY2021": NSFR_NA, "FY2020": NSFR_NA}),
     ],
     note="Full 6-year Balance Sheet/P&L/Statement of Changes in Equity/Cash Flow Statement (FY2020-FY2025), no "
          "FRS 101/102 cash-flow exemption. Extended back to FY2020 2026-09-06 (HD-061) - re-verified directly "

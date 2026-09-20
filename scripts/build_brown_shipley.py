@@ -636,12 +636,14 @@ TOTAL_CAPITAL_RATIO = {"FY2025": "21.6%", "FY2024": "23.86%", "FY2023": "24.7%",
 # Leverage Ratio and NSFR - FY2024 and FY2023 only, from the Pillar 3 2024
 # report (the Bank's statutory accounts disclose neither in any year, which is
 # why FY2022 and FY2021 stay blank).
-LEVERAGE_RATIO = {"FY2024": "11.23%", "FY2023": "9.96%", "FY2022": "9.1%"}
+LEVERAGE_RATIO = {"FY2025": "Not published - SDDT Rule 3.1 from 28/10/2025; accounts disclose none",
+                  "FY2024": "11.23%", "FY2023": "9.96%", "FY2022": "9.1%"}
 # FY2021 is held on its own row: the UK "excluding claims on central banks" basis only took
 # effect 1 January 2022, so the 2021 figure in the 2023 report's summary table cannot be
 # assumed to be that measure, and the report does not say which basis it is on.
 LEVERAGE_RATIO_2021 = {"FY2021": "8.6%"}
-NSFR_RATIO = {"FY2024": "162%", "FY2023": "181%", "FY2022": "165%", "FY2021": "121%"}
+NSFR_RATIO = {"FY2025": "Not published - SDDT Rule 3.1 from 28/10/2025; accounts disclose none",
+              "FY2024": "162%", "FY2023": "181%", "FY2022": "165%", "FY2021": "121%"}
 
 # Pillar 1 CAPITAL REQUIREMENT by risk type, as literally disclosed (not RWA itself -
 # see the RWA Breakdown sheet's own note for how RWA-by-category is derived from these).
@@ -727,7 +729,11 @@ km1_rows = [
     ("SECTION", "Net Stable Funding Ratio (£000 / %)", {}),
     ("DATA", "18    Total available stable funding (£'000)", {"FY2024": 832003}),
     ("DATA", "19    Total required stable funding (£'000)", {"FY2024": 514666}),
-    ("DATA", "20    NSFR ratio (%)", {"FY2024": "162%"}),
+    # FY2025 carries a recorded absence rather than a blank (2026-09-19). Row 20
+    # is chosen because the NSFR sheet's FY2025 is empty too, so no verifier
+    # comparison exists here to lose when both sides become text.
+    ("DATA", "20    NSFR ratio (%)",
+     {"FY2025": "Not published - SDDT Rule 3.1 opt-in from 28/10/2025 removes the duty", "FY2024": "162%"}),
 ]
 
 KM1_SOURCES = (
@@ -806,6 +812,52 @@ KM1_SOURCES = (
     "edition would therefore be due within days of this check. THE CONCLUSION IS 'NOT FOUND TODAY, AND DUE "
     "ABOUT NOW' - NOT 'NEVER PUBLISHED'. Re-check in a few weeks, and query a general web index with a "
     "filetype restriction rather than crawling the site, because site navigation will never reach this file.\n\n"
+    "RE-CHECKED AGAIN 2026-09-19, THE DAY AFTER A 2025 EDITION BECAME DUE - STILL NOT LOCATED, AND THE "
+    "FY2025 CELLS NOW SAY SO INSTEAD OF STANDING BLANK. Four probes:\n"
+    "   (i) POSITIVE CONTROL FIRST: the 2024 edition is still live at its unlinked media key - HTTP 200, "
+    "Content-Type application/pdf, %PDF magic bytes, 1,131,406 bytes - so the media store itself is reachable "
+    "and serving.\n"
+    "   (ii) THE SITE, crawled again rather than assumed: sitemap.xml (544 URLs) was fetched and every "
+    "important-information / annual / disclosure / regulatory page in it (17 pages) was fetched and scraped for "
+    "PDF hrefs. Eleven PDFs are linked in total - the TCFD report, the PlusPlus group annual report, fee "
+    "information documents, policy and fraud/bereavement guides - and NOT ONE Pillar 3 of any year. This "
+    "independently reproduces the standing finding that even the editions known to exist are unlinked, and it "
+    "means site navigation can never answer this question.\n"
+    "   (iii) WAYBACK CDX, domain-wide, re-run: 500 captures returned, none matching 'pillar'. Unchanged, and "
+    "still uninformative for the reason given above - this instrument is known to miss this domain's Pillar 3 "
+    "shelf, because it also has no record of the 2023 edition, which demonstrably exists.\n"
+    "   (iv) GENERAL WEB INDEX - UNAVAILABLE TODAY, AND PROVEN SO RATHER THAN ASSUMED. This is the one "
+    "instrument that has ever found an unlinked Brown Shipley edition, so its answer would have been decisive, "
+    "and it must not be allowed to return a silent false negative. Mojeek served a CAPTCHA page to every query "
+    "including the control. Bing returned full-sized result pages (~122 KB) that contained NO brownshipley.com "
+    "link even when queried for the EXACT filename of the 2024 edition, which is known to be indexed - so the "
+    "POSITIVE CONTROL FAILED and Bing's silence about a 2025 edition is a fact about our access, not about the "
+    "Bank.\n"
+    "   (v) THE PRA WAIVERS REGISTER - WHICH IS WHAT ACTUALLY ANSWERED THIS, AND WAS NOT CONSULTED BY ANY "
+    "EARLIER CHECK HERE. The Bank of England consolidated waivers register was downloaded (HTTP 200, text/csv, "
+    "900,160 bytes, UTF-16 TSV despite the extension) and matched on BOTH of the two columns that together "
+    "identify the disclosure opt-in - Rule Description 'SDDT Regime - General Application' AND Sub Rule Number "
+    "'Ru 3.1'. Brown Shipley & Co. Limited, FRN 124548, holds exactly such a row: START DATE 28/10/2025, NO END "
+    "DATE. Rule 3.1 of the SDDT Regime - General Application Part removes the Pillar 3 disclosure obligation "
+    "outright.\n"
+    "   DATE FIT, which is the whole of the argument and is stated so it can be checked: Brown Shipley's year "
+    "end is 31 December, so the FY2025 reporting date of 31 December 2025 falls AFTER 28/10/2025 and the duty "
+    "was already gone when it arrived. No FY2025 Pillar 3 is owed. The fit is tight and it does NOT reach "
+    "backwards: FY2024's reporting date of 31 December 2024 precedes the opt-in by ten months, which is why "
+    "that edition exists and was published on 3 September 2025 - itself BEFORE the opt-in. The Bank ALSO holds "
+    "a 'Ru 1.2 & 2.1(9)' row from 21/08/2025 (ending 21/08/2028); that one is a modification of the ELIGIBILITY "
+    "criteria and removes nothing, and citing it as the exemption would manufacture a permission the Bank does "
+    "not have. It is named here only so a later pass does not mistake it for the operative row.\n"
+    "   CONCLUSION, AND THE CORRECTION IT MAKES TO PROBE (iv). The earlier reading of this gap was 'not located "
+    "today, and due about now' on the strength of the September publication cadence. That cadence argument is "
+    "now superseded: there is a dated instrument removing the duty before the reporting date, which explains "
+    "the absence far better than a delay does. A WAIVER STILL EXPLAINS AN ABSENCE AND NEVER PROVES ONE - a bank "
+    "may publish after opting in, and this one published its FY2024 edition seven weeks before its own opt-in "
+    "took effect - so the search above was run in full anyway and is reported in full, including the failed "
+    "positive control that makes probe (iv) uninformative. The FY2025 cells on the KM1, Leverage Ratio and NSFR "
+    "sheets now name the rule and its date instead of standing blank. What remains firm and independent of all "
+    "of this: the FY2025 statutory accounts disclose no leverage ratio and no NSFR (89 pages OCR'd at 200 dpi, "
+    "with the Note 38 'Capital' table recovered intact as the positive control).\n\n"
     "PREVIOUS CHECK, 2026-09-16 - AND AN HONEST LIMIT ON IT. Brown Shipley publishes no regulatory-"
     "disclosures index of any kind. Its Pillar 3 report is an UNLINKED asset in the site's Umbraco media store, "
     "reachable only by its opaque media key (/media/o4tl2pod/...), and it is not referenced from any page in the "
@@ -986,9 +1038,21 @@ metric(
         "occurrence of 'NSFR' or 'stable funding' at all."),
 )
 
+# GA-020 (2026-09-19). All five Companies House accounts FY2021-FY2025 are image-only scans; each was rendered
+# at 150dpi and OCR'd in full that day (81/80/81/83/89 pages, 235k-282k characters, 'capital' 62-67 hits a
+# year) - zero hits for 'MREL', 'minimum requirement for own funds', 'eligible liabilities' or
+# 'loss-absorbing'. The FY2023 and FY2024 Pillar 3 reports (text-native, 'capital' 64 hits each) are likewise
+# zero. The parent layer (Quintet's Pillar 3, YE2021-YE2025) carries no Brown Shipley column (see note).
+_BS_MREL_P3 = ("Not published – no MREL figure or reference in this year's accounts (OCR'd in full 2026-09-19) or "
+               "own Pillar 3; Quintet parent Pillar 3 has no Brown Shipley column")
+_BS_MREL_AR = ("Not published – no MREL figure or reference in this year's accounts (OCR'd in full 2026-09-19); "
+               "no own Pillar 3 that year; Quintet parent Pillar 3 has no Brown Shipley column")
+BS_MREL = {"FY2025": _BS_MREL_AR, "FY2024": _BS_MREL_P3, "FY2023": _BS_MREL_P3, "FY2022": _BS_MREL_AR,
+           "FY2021": _BS_MREL_AR}
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     capital_note_sources(),
+    statements={"MREL Ratio": BS_MREL},
     per_note={
         "MREL Ratio": NOT_DISCLOSED_NOTE + " Confirmed by reading each year's own 'Capital' note in full, and "
                       "the FY2024 Pillar 3 report in full - no MREL requirement or ratio is mentioned in either.",
@@ -1041,8 +1105,11 @@ bw.add_overview_sheet(
          "FY2025 report restates FY2024 on the Income Statement, the Statement of Financial Position, the Cash "
          "Flow Statement and the regulatory Capital note; each year here stays as that year's own report "
          "originally published it, and the restated values are recorded in full on those sheets - which is why "
-         "FY2025 cash OPENS at £293,838k while FY2024 CLOSES at £374,909k. Leverage Ratio and NSFR are blank for "
-         "FY2025: the statutory accounts disclose neither and no FY2025 Pillar 3 report could be located (see "
+         "FY2025 cash OPENS at £293,838k while FY2024 CLOSES at £374,909k. Leverage Ratio and NSFR carry a recorded absence rather "
+         "than a blank for FY2025 (changed 2026-09-19): the statutory accounts disclose neither, and no FY2025 "
+         "Pillar 3 report is owed - the Bank holds a PRA SDDT 'Rule 3.1' modification by consent with no end "
+         "date, starting 28/10/2025, which removes the Pillar 3 disclosure obligation before its 31 December "
+         "2025 reporting date. None was located either, though that search hit a real instrument limit (see "
          "the KM1 Key Metrics sheet for how far that search went, and its honest limit). CET1 Ratio, Tier 1 "
          "Ratio, CET1 Capital, Tier 1 Capital, Total RWAs and LCR are all "
          "disclosed by Brown Shipley's own statutory accounts (the CET1/Tier 1 figures via each year's own "

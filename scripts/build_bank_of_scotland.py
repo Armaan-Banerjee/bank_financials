@@ -650,9 +650,30 @@ metric(
          "FY2022 value is unchanged at 4.5%; FY2021, previously blank, is now filled at 3.8% on its own basis.",
 )
 
+# GA-020 (2026-09-19): each edition re-fetched from its cited URL and read for these statements.
+_LIQ_EXCL = ("Not published – BoS Pillar 3 excluded-templates table ({pg}) omits {t}: liquidity is managed at the "
+             "Lloyds Bank sub-group level, see the Lloyds Bank plc Pillar 3")
+_LIQ_2021 = ("Not published – FY2021 BoS Pillar 3 contains no {m} (text-searched 2026-09-19); liquidity is managed "
+             "at the Lloyds Bank sub-group level")
+_PG = {"FY2025": "p.30", "FY2024": "p.3", "FY2023": "p.3", "FY2022": "p.4"}
+_MREL = ("Not published – no MREL ratio in the {y} BoS Pillar 3; it says TLAC 2 'is included within the Pillar 3 "
+         "disclosures for Lloyds Banking Group plc' ({pg})")
+BOS_STATEMENTS = {
+    "LCR": {**{y: _LIQ_EXCL.format(pg=pg, t="LIQ1 (LCR)") for y, pg in _PG.items()},
+            "FY2021": _LIQ_2021.format(m="LCR")},
+    "NSFR": {**{y: _LIQ_EXCL.format(pg=pg, t="LIQ2 (NSFR)") for y, pg in _PG.items() if y != "FY2022"},
+             "FY2022": ("Not published – no NSFR in the FY2022 BoS Pillar 3; its excluded-templates table (p.4) "
+                        "refers liquidity to the Lloyds Bank plc Pillar 3"),
+             "FY2021": _LIQ_2021.format(m="NSFR")},
+    "MREL Ratio": {**{y: _MREL.format(y=y, pg="p.4" if y == "FY2022" else "p.3") for y in _PG},
+                   "FY2021": ("Not published – no MREL ratio in the FY2021 BoS Pillar 3 (p.3 describes eligible "
+                              "MREL instruments only); MREL is disclosed for Lloyds Banking Group")},
+}
+
 bw.add_not_disclosed_metric_sheets(
     ["LCR", "NSFR", "MREL Ratio"],
     p3_sources(),
+    statements=BOS_STATEMENTS,
     per_note={
         "LCR": "NOT DISCLOSED AT THIS ENTITY LEVEL, BY THE BANK'S OWN EXPLICIT EXCLUSION - a stronger and more "
                "precise statement than the one this sheet previously carried. Bank of Scotland plc DOES publish "

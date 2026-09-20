@@ -28,9 +28,18 @@ PILLAR3_2021_URL_HTTPS_BROKEN = "https://www.persiabank.co.uk/Pillar%203%202021%
 # (scanned, no text layer - transcribed from page images) plus Wayback Machine snapshots
 # of the Bank's own standalone Pillar 3 disclosures for FY2016/FY2018/FY2020 (its own
 # site refused live TLS connections this session, same as the FY2021 Pillar 3 document
-# above). No standalone Pillar 3 document was locatable for FY2017 or FY2019; those two
-# years' regulatory-capital figures are instead the FY2017/FY2019 comparative columns
-# printed inside the FY2018/FY2020 Pillar 3 documents respectively.
+# above). No standalone Pillar 3 document was locatable for FY2017 or FY2019 at the time;
+# those two years' regulatory-capital figures are instead the FY2017/FY2019 comparative
+# columns printed inside the FY2018/FY2020 Pillar 3 documents respectively.
+# CORRECTED 2026-09-19 (GA-020 unreached pass): the FY2017 edition DOES exist and is
+# still served live - see PILLAR3_2017_URL below. Its filename was recovered from the
+# link list of archived home-page captures (Sep 2017 - Mar 2018); the Wayback CDX never
+# captured the file itself, which is why the domain sweep missed it. Only the FY2017
+# Leverage Ratio and the NSFR/MREL statements have been moved onto it; the other FY2017
+# capital figures still come from the FY2018 edition's comparative, but were compared
+# with the FY2017 edition's own text layer the same day and AGREE: CET1 103,851,
+# total capital 150,351, Pillar 1 RWAs 256,382 (EUR'000, pp.13-14), CET1/Tier 1 ratio
+# 40.51% and total capital ratio 54.01% (p.14). No FY2019 edition was ever linked.
 AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzI4MjYzOTE2OGFkaXF6a2N4/document?download=0&format=pdf"
 AR2019_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzI0MDMwNDExNmFkaXF6a2N4/document?download=0&format=pdf"
 AR2018_URL = "https://find-and-update.company-information.service.gov.uk/company/04218020/filing-history/MzIxMjI1ODQ3MmFkaXF6a2N4/document?download=0&format=pdf"
@@ -59,6 +68,12 @@ PILLAR3_2015_URL = (
     "http://web.archive.org/web/20160316221826id_/http://www.persiabank.co.uk/"
     "Pillar3_disclosures_March%202015.pdf"
 )
+# FY2017 STANDALONE PILLAR 3 (found 2026-09-19). Linked from the Bank's home page in
+# every archived capture from 22 Sep 2017 to 16 Mar 2018 as "Pillar 3 Disclosure as at
+# 31_03_2017 (002).pdf"; never captured by the Wayback Machine, but still served by the
+# live host over plain HTTP: HTTP 200, application/pdf, %PDF, 972,052 bytes, 23 pages,
+# MD5 b8002ce0bbf3670afcd0e0d3dd4b310c, text-native (Word 2013, created 7 Aug 2017).
+PILLAR3_2017_URL = "http://www.persiabank.co.uk/Pillar%203%20Disclosure%20as%20at%2031_03_2017%20(002).pdf"
 
 # NOTE ON THE FY2020 CAPTURE (recorded so a later pass does not "upgrade" the URL).
 # The Internet Archive holds two captures of the FY2020 edition. The one cited in
@@ -423,6 +438,8 @@ def p3_sources():
         f"FY2023/FY2022: Annual Report and Financial Statements 2023, Note 26 (Capital management), p.62 - {AR2023_URL}\n"
         f"FY2021: Annual Report and Financial Statements 2022, Note 26 (Capital management), p.58 - {AR2022_URL}\n"
         f"FY2021 Pillar 3: Persia International Bank Pillar 3 Disclosure 2021, pp.16-20 and 26 - {PILLAR3_2021_URL}\n"
+        "FY2017 Pillar 3 (found 2026-09-19): 'Pillar 3 Disclosure 31 March 2017', 23 pp., section 10 Leverage Ratio, "
+        f"p.22 of 23 (leverage ratio 52.52% as at 31 March 2017); no NSFR or MREL anywhere in it - {PILLAR3_2017_URL}\n"
         + FY2015_P3_NOTE + "\n"
         "The Bank states in the FY2023-FY2025 annual reports that Pillar 3 disclosures are made separately and can "
         "be made available on request; no public 2022-2025 Pillar 3 document was locatable. The 2021 Pillar 3 document "
@@ -957,10 +974,11 @@ P3_GONE = {
 _LEV_NO_COMPARATIVE = "Not disclosed - each Pillar 3 edition prints its own date only, never a comparative"
 LEVERAGE_MIDDLE_GAPS = {
     # The FY2018 and FY2020 editions each state one leverage ratio, for their own
-    # reporting date. Neither prints a prior-year column, so no 31 Mar 2019 or
-    # 31 Mar 2017 leverage ratio exists in this Bank's disclosure set at all.
+    # reporting date. Neither prints a prior-year column, so no 31 Mar 2019 leverage
+    # ratio exists in the editions reached. FY2017 was also listed here until
+    # 2026-09-19, when its OWN edition was found (PILLAR3_2017_URL) printing 52.52%;
+    # it now sits in LEVERAGE_RATIO_EXT.
     "FY2019": _LEV_NO_COMPARATIVE,
-    "FY2017": _LEV_NO_COMPARATIVE,
 }
 LCR_MIDDLE_GAPS = {
     # FY2018 edition's quarter set: 30/06/2017, 30/09/2017, 31/12/2017, 31/03/2018.
@@ -1047,7 +1065,7 @@ TOTAL_CAPITAL_RATIO_EXT = {
     "FY2015": "68.94%",  # FY2015: statutory Total Capital EUR 152,497k / RWA EUR 221,221k (no Pillar 3 ratio table pre-CRD IV)
 }
 TIER1_RATIO_FY2015 = "47.92%"  # FY2015: statutory Tier 1 EUR 105,997k / RWA EUR 221,221k (Basel II - Tier 1 ratio, no CET1 concept)
-LEVERAGE_RATIO_EXT = {"FY2020": "33.77%", "FY2018": "49.27%", "FY2016": "49.99%"}
+LEVERAGE_RATIO_EXT = {"FY2020": "33.77%", "FY2018": "49.27%", "FY2017": "52.52%", "FY2016": "49.99%"}
 LCR_EXT = {"FY2020": "181.69%", "FY2018": "539.22%"}
 
 CET1_TIER1_GBP_EXT = stock(CET1_TIER1_PILLAR3_EUR)
@@ -1132,8 +1150,8 @@ EXT_RWA_NOTE = (
 )
 EXT_LEVERAGE_LCR_NOTE = (
     "FY2015-FY2020 (added under HD-021): directly disclosed in the Bank's own standalone Pillar 3 disclosures where "
-    "found (FY2016/FY2018/FY2020). No leverage ratio is disclosed in the FY2017 or FY2019 Pillar 3 comparative "
-    "columns (only the current year's leverage ratio is tabulated in each document), and the EBA's LCR disclosure "
+    "found (FY2016/FY2017/FY2018/FY2020). No leverage ratio is disclosed in the FY2019 Pillar 3 comparative "
+    "column (only the current year's leverage ratio is tabulated in each document), and the EBA's LCR disclosure "
     "guidelines only applied from 31 December 2017 - so FY2015-FY2017 LCR, and FY2015 leverage ratio, are genuinely "
     "not disclosed anywhere located, not a gap in this transcription. FY2019's LCR similarly falls in a gap between "
     "the FY2018 and FY2020 Pillar 3 documents' own quarterly disclosure windows (neither one's table includes a "
@@ -1148,8 +1166,15 @@ EXT_LEVERAGE_LCR_NOTE = (
     "one-column table headed '31 March 2018' (total assets 184,318 / off-balance sheet items 15,211 / total "
     "exposure measure 199,529 / Tier 1 capital 98,302); FY2020 edition, section 11, '33.77% as at 31 March 2020', "
     "narrative only; FY2021 edition, section 9, '53.32% as at 31 March 2021', narrative only. There is therefore no "
-    "31 March 2019, 31 March 2017 or 31 March 2015 leverage ratio anywhere in this Bank's disclosure set - not a "
-    "comparative column we failed to read, but a column the Bank never printed. (Richness control: each text-native "
+    "31 March 2019 or 31 March 2015 leverage ratio in any edition reached - not a comparative column we failed to "
+    "read, but a column the Bank never printed. FY2017 WAS ALSO LISTED HERE UNTIL 19 SEPTEMBER 2026, and that "
+    "claim was false: the FY2017 edition itself, 'Pillar 3 Disclosure as at 31_03_2017 (002).pdf' (23 pages), "
+    "section 10 'Leverage Ratio' (heading p.21, sentence p.22 of 23, read off the page image), states 'The Bank "
+    "comfortably meets the minimum requirement with a ratio of 52.52% as at 31 March 2017' - " + PILLAR3_2017_URL + ". "
+    "The file was never captured by the Wayback Machine; its name was recovered from the archived home page's "
+    "link list (captures 22 Sep 2017 - 16 Mar 2018) and it is still served live over plain HTTP. No FY2019 "
+    "edition was ever linked: every home-page capture from 16 Jul 2019 to 24 Sep 2020 links only the 31 March "
+    "2018 edition, and the next capture (25 Feb 2021) links the FY2020 one. (Richness control: each text-native "
     "edition returns 4-6 hits for 'leverage ratio' and 16-18 for 'own funds'; every leverage hit was inspected.)\n"
     "  LCR - THE QUARTER SETS ARE PRINTED, AND 31 MARCH 2019 IS NOT IN ANY OF THEM. The FY2018 edition's table "
     "(p.15) is headed 30/06/2017, 30/09/2017, 31/12/2017, 31/03/2018 (245.89% / 374.10% / 452.44% / 539.22%). The "
@@ -1254,7 +1279,12 @@ KM1_SOURCES = (
     "2026 was simply wrong; the file has 28. (2) Companies House company 04218020: 'Last accounts made up to "
     "31 March 2025', next accounts made up to 31 March 2026 due by 31 December 2026, company status Active. "
     "The FY2026 accounts had still not been filed on 18 September 2026, so FY2025 remains the newest year "
-    "that exists. (3) A fresh Wayback CDX sweep of the whole persiabank.co.uk domain (152 distinct URLs ever "
+    "that exists (RE-CHECKED 19 September 2026: the filing history's page 1, unfiltered, still has the 2 September "
+    "2025 AA filing as its newest accounts and nothing filed after the 10 June 2026 confirmation statement; the company "
+    "page still reads 'Next accounts made up to 31 March 2026 due by 31 December 2026'; the live home page links no "
+    "annual report newer than pib_report_2010.pdf, and the Wayback CDX for 2026 holds no accounts document - the "
+    "only new document on the site is an Italian press release on the Milan branch's 'amministrazione "
+    "straordinaria' from 3 October 2025. So no FY2026 column is added). (3) A fresh Wayback CDX sweep of the whole persiabank.co.uk domain (152 distinct URLs ever "
     "captured, plus targeted .*pillar.* / .*annual.* / .*disclosure.* sweeps): the newest Pillar 3 the "
     "Internet Archive has EVER captured on the domain is that same 'Pillar 3 2021 v3.pdf' (most recent "
     "capture 25 December 2025), and the domain was still being crawled in 2026 (its Complaint Procedure "
@@ -1402,9 +1432,43 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT, **LEVERAGE_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
+metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT, **LEVERAGE_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021 and FY2017 added 2026-09-19 (GA-020 unreached pass, from the FY2017 edition's own p.22): directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio (simple average of 12 monthly reports)", {"FY2021": "221.13%", **LCR_EXT, **LCR_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below; the statutory accounts state no LCR in any of those years.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
-bw.add_not_disclosed_metric_sheets(["NSFR", "MREL Ratio"], p3_sources(), per_note={m: NOT_DISCLOSED for m in ["NSFR", "MREL Ratio"]})
+# GA-020 (2026-09-19): each former bare cell now states its outcome. Evidence
+# gathered that day: the FY2015/16/18/20/21 Pillar 3 editions (cited URLs; FY2015
+# OCR'd) were full-text searched for NSFR / stable funding / MREL / loss-absorbing
+# / eligible liabilities - zero hits in all five. The FY2022-FY2025 Annual
+# Reports were OCR'd in full: FY2023-FY2025 p.8 say Pillar 3 'can be made
+# available on request'; FY2022 p.8 (page image read) says it is 'published on
+# the Bank's web site' - yet a full Wayback CDX listing of persiabank.co.uk
+# (matchType=domain) holds Pillar 3 files for FY2015, FY2016, FY2018, FY2020 and
+# FY2021 only, and the live site links only FY2021. The FY2017 and FY2019
+# Annual Reports (OCR'd 2026-09-19) likewise say Pillar 3 is 'published on
+# [the Bank's] web site'. So FY2022, FY2019 and FY2017 are editions the Bank
+# says it published that could not be reached.
+# UPDATE 2026-09-19 (GA-020 unreached pass): FY2017 WAS reached - see
+# PILLAR3_2017_URL; it has no NSFR or MREL, so FY2017 is now 'Not published'.
+# FY2019 and FY2022 remain Unreached: the archived home-page link lists (the
+# page that carries every document link on this site) never show either edition.
+def _persia_st(metric):
+    st = {}
+    for y in ["FY2025", "FY2024", "FY2023"]:
+        st[y] = (f"Not published – no public Pillar 3 after FY2021: {y} Annual Report p.8 (full OCR) says Pillar 3 "
+                 f"'can be made available on request' and prints no {metric}; none on site or Wayback")
+    # GA-020 unreached pass, 2026-09-19: archived home-page link lists read for every
+    # capture Jul 2019 - Sep 2022; live host re-probed over HTTP/1.1; archive.ph 429.
+    st["FY2022"] = ("Unreached today – FY2022 AR p.8 says Pillar 3 is on the web site; CDX domain sweep, home-page link "
+                    "lists Jul-Sep 2022 (2021 edition only), live guesses 404, archive.ph 429 (2026-09-19)")
+    for y in ["FY2021", "FY2020", "FY2018", "FY2016", "FY2015"]:
+        st[y] = (f"Not published – Persia {y} Pillar 3 (full text searched 2026-09-19) contains no {metric} "
+                 "figure or reference")
+    st["FY2017"] = (f"Not published – FY2017 Pillar 3 (31 Mar 2017, 23pp, found live 2026-09-19): contents p.4 and "
+                    f"full text have no {metric}; only leverage (p.22)")
+    st["FY2019"] = ("Unreached today – FY2019 AR says Pillar 3 is on the web site, but home-page captures Jul 2019-Sep "
+                    "2020 link only the 2018 edition; CDX, live guesses 404, archive.ph 429 (2026-09-19)")
+    return st
+bw.add_not_disclosed_metric_sheets(["NSFR", "MREL Ratio"], p3_sources(), per_note={m: NOT_DISCLOSED for m in ["NSFR", "MREL Ratio"]},
+                                   statements={"NSFR": _persia_st("NSFR"), "MREL Ratio": _persia_st("MREL")})
 
 def _row_values(rows, label):
     for kind, lbl, values in rows:

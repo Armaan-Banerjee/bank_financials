@@ -510,7 +510,7 @@ def metric(name, unit, rows_data, sources_text, note=None):
 #     Leverage Ratio rules which exclude claims on central banks were
 #     effective from 1 January 2022", and rows 18-20 carry "NA: The current
 #     NSFR rules were effective 1 January 2022." Those five cells are written
-#     as "NA" - the bank's own marker - not blanked and not back-filled from
+#     as "-" (map rule 2; printed glyph "NA") - not blanked and not back-filled from
 #     a different basis.
 #
 #   * Rows 14a-14e are printed with a single note spanning the block, "NA:
@@ -522,7 +522,9 @@ def metric(name, unit, rows_data, sources_text, note=None):
 #     pre-KM1 "Key Regulatory Metrics" layout, so FY2021 here is the Dec-21
 #     comparative column of the FY2022 edition, which IS on the KM1 template.
 # ---------------------------------------------------------------
-_KM1_NA = "NA"
+# GA-020 (2026-09-19): KM1 map rule 2 - the printed "NA: ..." glyph is carried as a plain ASCII "-";
+# the glyph and its wording are recorded in KM1_SOURCES. Previously the cells held the text "NA".
+_KM1_NA = "-"
 
 km1_rows = [
     ("SECTION", "Available own funds (amounts, £'000)", {}),
@@ -623,8 +625,9 @@ KM1_SOURCES = p3_sources() + (
     "of them: \"NA: Only LREQ firms shall disclose values in rows UK KM1;14a to UK KM1;14e\". That is "
     "ABG's own \"NA\", not a dash, and it says which firms the rows apply to rather than giving a value. "
     "The cells stay empty and are deliberately NOT converted to \"-\".\n"
-    "• \"NA\" IN FY2021 IS THE BANK'S OWN WORD, in five cells, and marks the 1 January 2022 basis break "
-    "rather than missing data. Rows 13 and 14 print \"NA: For ABG the Leverage Ratio rules which exclude "
+    "• '-' IN FY2021 ROWS 13, 14, 18, 19 AND 20 IS WHERE THE BANK PRINTED \"NA\" (map rule 2: the cell carries "
+    "a plain ASCII '-', the glyph is recorded here; converted from the text 'NA' under GA-020, 2026-09-19). "
+    "It marks the 1 January 2022 basis break rather than missing data. Rows 13 and 14 print \"NA: For ABG the Leverage Ratio rules which exclude "
     "claims on central banks were effective from 1 January 2022\"; rows 18, 19 and 20 print \"NA: The "
     "current NSFR rules were effective 1 January 2022.\" The FY2022 report adds the general footnote "
     "\"The disclosure of data for previous periods is not required when data is disclosed for the first "
@@ -785,9 +788,17 @@ metric(
          "a figure.",
 )
 
+# GA-020 (2026-09-19) evidenced statement texts, per year.
+_ARB_MREL_447H = ("Not published – no MREL figure in this year's Pillar 3 (full-text search 2026-09-19); its KM1 "
+                  "preamble says the Art. 447(h) own funds/eligible liabilities ratios 'only apply to G-SIIs'")
+_ARB_MREL_P3 = "Not published – no MREL figure or reference in this year's Pillar 3 (full-text search 2026-09-19)"
+ARB_MREL = {y: _ARB_MREL_447H for y in ("FY2025", "FY2024", "FY2023")}
+ARB_MREL.update({"FY2022": _ARB_MREL_P3, "FY2021": _ARB_MREL_P3,
+                 "FY2017": ("Not published – no MREL figure or reference in AL & Co's FY2017 accounts (OCR'd in full "
+                            "2026-09-19) or ABG's FY2017 annual report (full-text search)")})
 metric(
     "MREL Ratio", None,
-    [("MREL ratio", {y: "Not disclosed" for y in YEARS})],
+    [("MREL ratio", ARB_MREL)],
     p3_sources(),
     note="No MREL disclosure found in any of the available Pillar 3 reports (FY2021-FY2024 annual, plus the 2025 "
          "and 2026 interim reports) - Arbuthnot Banking Group is not designated as a resolution entity subject to "

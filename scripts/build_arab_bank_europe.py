@@ -163,6 +163,12 @@ ENTITY_NOTE = (
     "ENTITY NOTE: Arab Bank Europe Plc, FRN 446951, company 05575857 (incorporated 2005, trades and files "
     "financial statements under the name \"Europe Arab Bank plc\" - the PRA list's word order is reversed vs. "
     "Companies House/FCA register, confirmed as the same entity via FRN and company number match, not a guess). "
+    "NAME CHANGE (recorded 2026-09-19 from the Companies House filing history): the company was renamed from "
+    "EUROPE ARAB BANK PLC to ARAB BANK EUROPE PLC by resolution of 1 July 2026 (RES15), with the certificate of "
+    "incorporation on change of name issued 14 July 2026, so the registered name now matches the PRA list's word "
+    "order. The entity is unchanged (company 05575857, FRN 446951). Every document cited in this workbook "
+    "predates the change and was published under the former name 'Europe Arab Bank plc', which is why the "
+    "citations use it. "
     "Wholly-owned subsidiary of Arab Bank plc (Jordan); UNLIKE many single-foreign-parent subsidiaries in this "
     "series, it does NOT take the FRS 101/102 cash-flow-statement exemption - a full Cash Flow Statement is "
     "published every year. eabplc.com's TLS configuration originally rejected every automated fetch attempted; "
@@ -425,8 +431,9 @@ RWA_NOT_DISCLOSED_NOTE = (
     "whose file field is literally null (so the link 302s to the homepage, while the sibling Annual Report entry "
     "301s to a real PDF), and every Annual Report states that the Pillar 3 ratios 'are published on EAB's "
     "website'. Europe Arab Bank plc (FRN 446951) also holds NO SDDT Rule 3.1 modification, so the disclosure duty "
-    "stood in all three years. The cells stay EMPTY on purpose - this is an UNREACHED gap, not an established "
-    "absence, and it must stay visible as one.\n"
+    "stood in all three years. This is an UNREACHED gap, not an established absence, and it must stay visible "
+    "as one: the cells were left EMPTY until 2026-09-19 and now carry the reserved 'Unreached today' phrase "
+    "in one status row below the TOTAL (GA-020).\n"
     "RE-VERIFIED AGAIN 2026-09-15, independently and via the FY2025 Annual Report (which was NOT available to "
     "the earlier checks in usable form). That report is now live and directly downloadable at "
     "https://arabbankeurope.com/wp-content/uploads/202602_EABAnnualReport_v9.pdf (111pp, real text layer, "
@@ -898,15 +905,12 @@ p3_total_rwa_gbp = gbp_spot(P3_TOTAL_RWA_EUR)
 # comparative column - the PRA's leverage/NSFR disclosure templates only took
 # effect from 1 Jan 2022, so no FY2021 comparative was ever produced (not a
 # gap in sourcing - the document itself says so). LCR has both years.
-LEVERAGE_RATIO = {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-                   "FY2023": "Not publicly disclosed",
-                   "FY2022": "11.7%", "FY2021": "Not publicly disclosed"}
-LCR_RATIO = {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-             "FY2023": "Not publicly disclosed",
-             "FY2022": "218%", "FY2021": "267%"}
-NSFR_RATIO = {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-              "FY2023": "Not publicly disclosed",
-              "FY2022": "120%", "FY2021": "Not publicly disclosed"}
+# GA-020 (2026-09-19): FY2021 is the bank's own printed "n/a" (Pillar 3 at 31 Dec
+# 2022, p.8, 31 Dec 2021 column); FY2023-FY2025 are UNREACHED (see GA020_NOTE).
+# P3_UNREACHED is defined below with GA020_NOTE, so these are filled in there.
+LEVERAGE_RATIO = {"FY2022": "11.7%", "FY2021": "N/A (as printed)"}
+LCR_RATIO = {"FY2022": "218%", "FY2021": "267%"}
+NSFR_RATIO = {"FY2022": "120%", "FY2021": "N/A (as printed)"}
 
 PILLAR3_SOURCES = (
     "FY2022/FY2021 (this row only): Europe Arab Bank plc's standalone Pillar 3 Disclosures as at 31 December "
@@ -919,6 +923,102 @@ PILLAR3_SOURCES = (
     "readable 35-page PDF. No equivalent standalone document could be found for FY2023 or FY2024 (see "
     "ENTITY_NOTE).\n\n"
     + BASIS_NOTE
+)
+
+
+# ---------------------------------------------------------------
+# GA-020 statement vocabulary (2026-09-19). The FY2023-FY2025 Pillar 3 editions
+# are UNREACHED, not established absences (see KM1_SOURCES): the duty stood (no
+# SDDT Ru 3.1 row for FRN 446951) and every Annual Report says the Pillar 3
+# ratios 'are published on EAB's website'. Cells now carry the reserved phrase.
+# ---------------------------------------------------------------
+def _p3_unreached(y):
+    # Second pass 2026-09-19 (GA-020 unreached): wording extended with the new routes; see GA020_NOTE (B).
+    return (f"Unreached today – {y} Pillar 3 not obtained: bank's download slot empty; WP media (.com/.eu), "
+            "Wayback + Common Crawl (eabplc.com, arabbankeurope.com/.eu, eabsa.eu), archive.today hold none; "
+            "Annual Report prints no such figure, 2026-09-19")
+
+
+P3_UNREACHED = {y: _p3_unreached(y) for y in ("FY2025", "FY2024", "FY2023")}
+LEVERAGE_RATIO = {**P3_UNREACHED, **LEVERAGE_RATIO}
+LCR_RATIO = {**P3_UNREACHED, **LCR_RATIO}
+NSFR_RATIO = {**P3_UNREACHED, **NSFR_RATIO}
+
+MREL_STATEMENTS = {
+    **P3_UNREACHED,
+    "FY2022": ("Not published – EAB Pillar 3 Disclosures at 31 Dec 2022 (35pp, text-searched 2026-09-19) "
+               "and Annual Report 2022 contain no MREL figure or mention"),
+    "FY2021": ("Unreached today – no FY2021 Pillar 3 in Wayback (full eabplc.com CDX), Common Crawl or "
+               "archive.today; Wayback AR 2021 copy is 1 MiB-truncated; FY2022 edition and AR 2022 carry no "
+               "MREL, 2026-09-19"),
+}
+
+GA020_NOTE = (
+    "GA-020 RECLASSIFICATION, 19 September 2026. Every bare 'Not publicly disclosed'/'n/a' cell and every "
+    "deliberately-empty UNREACHED cell on this workbook now states its outcome. (1) FY2023/FY2024/FY2025 on "
+    "every Pillar 3 metric sheet other than the two Annual Report KPI ratios, the KM1 sheet and the RWA "
+    "Breakdown sheet read 'Unreached today', because the document that would carry them - that year's "
+    "standalone Pillar 3 - exists (every Annual Report says the Pillar 3 ratios 'are published on EAB's "
+    "website': AR 2022 PDF p.13, AR 2024 PDF p.11, AR 2025 PDF p.11) and the duty stood "
+    "(PRA consolidated waivers register re-downloaded 2026-09-19: 2,900 rows, 67 strict 'SDDT Regime - "
+    "General Application' + 'Ru 3.1' rows, none for FRN 446951, whose three rows are Ar 9, CA.BU.5.1-5.3 "
+    "and Ar 400(2)(c)). What was tried on 2026-09-19: https://arabbankeurope.com/downloads/pillar-iii-"
+    "disclosures/ still 302s to the homepage and the REST record (post 2923, modified 2026-07-07) still has "
+    "\"eab_file\": null; the REST media library still lists 64 PDFs, none a Pillar 3 (search 'pillar' "
+    "returns []; control search 'annual' returns the FY2025 Annual Report); the record's guid names a "
+    "staging host abemigration.wpenginepowered.com, which answers HTTP 401 (authorisation required); "
+    "https://www.eabplc.com/downloads/Pillar3EABplc2023.pdf, .../Pillar3EAB_PLC_2024.pdf and .../Pillar3.pdf "
+    "all serve the 95,415-byte homepage HTML; Wayback CDX for both named 2023/2024 paths returns HTTP 200 "
+    "with no rows; CDX of eabplc.com filtered on 'pillar' returns the same 12 URLs (2009-2020 series plus "
+    "downloads/Pillar3.pdf); CDX of arabbankeurope.com holds no PDF. THE ONE UNEXAMINED CAPTURE WAS OPENED: "
+    "downloads/Pillar3.pdf at 20240713003435 (digest IFQXMT5C..., different from the pinned copy) is exactly "
+    "1,048,576 bytes, i.e. the Wayback 1 MiB truncation; five pages were salvaged by rebuilding the page "
+    "tree and its cover page image reads 'EAB Group - Pillar 3 Disclosures / 31 December 2022' - the SAME "
+    "FY2022 edition, not a later one. The Pillar 3 is not a Companies House filing, so the filing history "
+    "was not a route for it. (2) KM1 FY2021 leverage/NSFR 'n/a' cells carry the plain '-' (locked KM1 rule 2; "
+    "glyph printed: 'n/a'); the matching FY2021 cells on the Leverage Ratio and NSFR sheets read 'N/A (as "
+    "printed)'. In both places the bank printed 'n/a' in the 31 Dec 2021 "
+    "column of its Key metrics table (Pillar 3 at 31 Dec 2022, p.8, page image checked 2026-09-19). "
+    "(3) MREL FY2022 reads 'Not published': the FY2022 Pillar 3 (text layer confirmed - 395 lines contain "
+    "' the ') and the FY2022, FY2024 and FY2025 Annual Reports contain no 'MREL' or 'eligible liabilities' "
+    "anywhere. MREL FY2021 is 'Unreached today' because that year's own Pillar 3 edition was never obtained.\n"
+    "(B) GA-020 SECOND PASS, 19 September 2026 - routes the first pass did not use. NO FIGURE WAS FOUND; all 34 "
+    "cells stay 'Unreached today'. ENTITY BASIS CONFIRMED: EAB plc SOLO - the FY2022/FY2021 cells are the "
+    "Pillar 3's 'EAB plc**' entity-only column, and the Annual Reports are EAB plc's individual accounts (the "
+    "Directors' Report of AR 2024 and AR 2025 states the s.401 exemption: EAB SA's results are not "
+    "consolidated). Nothing below uses the EAB Group basis or the Jordanian parent. (i) OWN ANNUAL REPORTS read "
+    "beyond the KPI table: AR 2024 and AR 2025 (bank's text PDFs, searched for risk-weighted, own funds, tier 1, "
+    "leverage, liquidity coverage, stable funding, HQLA, MREL) and the FY2023 accounts, which exist only as the "
+    "Companies House filing of 31 May 2024 (140pp image scan, OCR-searched; control: 1,387 lines contain "
+    "' the '). Each prints only the CET1 and capital adequacy ratios already on the ratio sheets; the capital "
+    "management note gives net equity and perpetual subordinated liabilities only, and liquidity is narrative "
+    "('liquidity coverage ratio substantially above the regulatory requirements'). No CET1/Tier 1/Total "
+    "capital amount, Tier 1 ratio, RWA, leverage ratio, LCR, NSFR or MREL. The FY2024 and FY2025 Companies "
+    "House filings (133pp and 132pp scans, OCR-searched) hit the same terms only on the same pages. Filing "
+    "history read on pages 1 and 2 (back to April 2017). (ii) THE EDITIONS EXISTED: web search still indexes "
+    "https://www.eabplc.com/downloads/Pillar3EAB_PLC_2024.pdf under the title 'EAB Group - Pillar 3 "
+    "Disclosures - 31 December 2024' and .../Pillar3EABplc2023.pdf under 'Pillar III Disclosures'. Neither "
+    "Bing nor DuckDuckGo offers a cached copy. No FY2025 edition is indexed. (iii) COMMON CRAWL: 27 indexes "
+    "(CC-MAIN-2023-06 to CC-MAIN-2025-51) enumerated for eabplc.com (matchType=domain). The only Pillar 3 "
+    "capture is downloads/Pillar3.pdf on 13 Jul 2024, the same 1 MiB-truncated FY2022 copy (digest "
+    "IFQXMT5C...). For arabbankeurope.com the only hit is the 302 of downloads/pillar-iii-disclosures/ (Aug "
+    "2026). (iv) WAYBACK ON EVERY DOMAIN, without mimetype filter: eabplc.com full-domain CDX (12,185 rows) "
+    "has Pillar 3 files for 2009-2020 plus downloads/Pillar3.pdf, and nothing else; its 361 rows since 2023 "
+    "hold none. Three domains were newly found this pass: eabsa.eu (the French subsidiary's old site, 194 "
+    "rows, Pillar 3 mirror to 2018 only), eabplc.net (14 rows, no PDF) and the staging host "
+    "abemigration.wpenginepowered.com (0 rows). (v) ARCHIVE.TODAY: no capture of either named PDF, three "
+    "pre-2014 pages for www.eabplc.com, nothing for arabbankeurope.com. (vi) SISTER SITE arabbankeurope.eu "
+    "(eabsa.eu now 301s there; Cloudflare 403 over HTTP/2, 200 over HTTP/1.1). Its WordPress media library "
+    "(393 items, 29 PDFs) and sitemap (163 URLs) hold a 'Rapport de Pilier 3' at 31 Dec 2023 for Arab Bank "
+    "Europe SA, a DIFFERENT legal entity (EAB plc's French subsidiary), so it was not used. Its July 2026 "
+    "pitchbook prints no regulatory metric. The arabbankeurope.com media library was re-enumerated in full "
+    "(435 items, 64 PDFs) and still holds no Pillar 3. (vii) PARENT: the Arab Bank Group Annual Report 2023 "
+    "names EAB only as a subsidiary (paid capital EUR570m) and prints no separately labelled EAB capital or "
+    "liquidity table. (viii) MREL FY2021: the Wayback copy of the FY2021 Annual Report "
+    "(files/PDFs/annual_reports/2021_EAB_Annual_Report.pdf, both captures share one digest) and the 2020 "
+    "Pillar 3 capture are each exactly 1,048,576 bytes, the Wayback 1 MiB truncation, and neither opens. "
+    "WHAT WOULD CLOSE THESE CELLS: the FY2023-FY2025 Pillar 3 PDFs, obtained from the bank on request (see "
+    "the SDDT note: the duty stood)."
 )
 
 
@@ -958,9 +1058,14 @@ PILLAR3_SOURCES = (
 # FY2023 and FY2024 are blank: EAB published no Pillar 3 document for either
 # year that could be recovered (see ENTITY_NOTE), so there is no KM1 to show.
 # ---------------------------------------------------------------
-_EAB_NA = "n/a"
+# The bank printed "n/a" (p.8). On the KM1 sheet the LOCKED KM1 rule 2 (wayfinder/km1/map.md) governs: a
+# printed dash glyph - "-", "—" or "n/a" - is carried as the plain ASCII "-", with the glyph recorded in the
+# note. User decision 2026-09-19: KM1 rule 2 wins on KM1 sheets; BRIEF.md's "N/A (as printed)" is for
+# non-KM1 sheets only (the Leverage Ratio and NSFR sheets below keep it).
+_EAB_NA = "-"
 
 km1_rows = [
+    ("DATA", "[Edition status for this year - not a KM1 template row]", dict(P3_UNREACHED)),
     ("SECTION", "Available capital (€m)", {}),
     ("DATA", "Common Equity Tier 1 (CET1) capital", {"FY2022": 253, "FY2021": 252}),
     ("DATA", "Tier 1 capital", {"FY2022": 253, "FY2021": 252}),
@@ -1044,9 +1149,14 @@ KM1_SOURCES = (
     "Wayback CDX sweep of eabplc.com filtered on 'pillar' — 12 captures, every one FY2020 or earlier except "
     "the single 2024-07-13 capture of .../downloads/Pillar3.pdf that is the FY2022 edition already cited "
     "here. The old host is gone and the archive holds no 2023, 2024 or 2025 edition.\n"
-    "THE STATE TO RECORD IS THEREFORE 'UNREACHED', AND THE CELLS ARE LEFT EMPTY ON PURPOSE so the gap stays "
-    "visible in audit_gaps.py rather than being dressed as a finding. Do not convert these to a 'not "
-    "disclosed' statement without a document.\n\n"
+    "THE STATE TO RECORD IS THEREFORE 'UNREACHED'. Until 2026-09-19 the cells were left EMPTY on purpose so "
+    "the gap stayed visible; under GA-020 the three year columns instead carry the reserved 'Unreached "
+    "today' phrase in a single '[Edition status for this year - not a KM1 template row]' row placed ABOVE "
+    "the bank's own rows, which are untouched (same order, labels and precision). audit_gaps.py scores that "
+    "phrase 'u', a limit on our reach, never 'not published'. The five FY2021 cells where the bank printed "
+    "'n/a' carry the plain '-' (KM1 rule 2, locked; glyph printed: 'n/a'); 'N/A (as printed)' is used only on "
+    "non-KM1 sheets, per the user's decision of 19 September 2026.\n\n"
+    + GA020_NOTE + "\n\n"
     "KM1 presentation notes:\n"
     "• NOT LABELLED 'KM1' AND NOT ROW-NUMBERED. EAB heads the table 'Key metrics' and prints no template "
     "row numbers at all, but the row labels, their order and the section headings are the UK KM1 template "
@@ -1085,8 +1195,9 @@ bw.add_km1_sheet(
              "'KM1' nor prints its row numbers), reproduced in EAB's row order and printed precision. "
              "Amounts in €m as published — this is the one sheet in this workbook left in the source "
              "currency. 'EAB plc' entity-only columns, not the EAB Group columns printed beside them. "
-             "FY2025, FY2024 and FY2023 are blank because no Pillar 3 document for those years could be "
-             "OBTAINED — not because the bank is known not to have published one. See the source note.",
+             "FY2025, FY2024 and FY2023 read 'Unreached today' (top row only) because no Pillar 3 document "
+             "for those years could be OBTAINED — not because the bank is known not to have published one. "
+             "See the source note.",
     rows=km1_rows,
     sources_text=KM1_SOURCES,
     source_height=300,
@@ -1105,24 +1216,23 @@ NOT_DISCLOSED_NOTE = (
     "Bank's only capital/liquidity disclosure is the 'Other Key Performance Indicators' table's two headline "
     "ratios (Capital adequacy ratio, Common Equity Tier 1 ratio). No standalone Pillar 3 document was obtainable (see ENTITY_NOTE "
     "on the Cash Flow Statement sheet) and no other figure for this metric appears anywhere in either report.\n"
-    + SDDT_NOTE
+    + SDDT_NOTE + "\n" + GA020_NOTE
 )
 
 FY2324_ONLY_NOTE = (
     "FY2021/FY2022 now sourced from the recovered standalone Pillar3.pdf (see PILLAR3_SOURCES below and "
-    "ENTITY_NOTE). FY2023/FY2024 remain 'Not publicly disclosed' - the Bank's only capital disclosure for those "
+    "ENTITY_NOTE). FY2023/FY2024 (and FY2025) read 'Unreached today' (GA-020, 2026-09-19; see below) - the Bank's only capital disclosure for those "
     "two years is the Annual Report's 'Other Key Performance Indicators' table's two headline ratios (Capital "
     "adequacy ratio, Common Equity Tier 1 ratio); no standalone Pillar 3 document could be recovered for either "
     "year despite a re-check of both eabplc.com/arabbankeurope.com directly and a broader Wayback CDX search "
     "(2026-09-07, HD-081 item 4), re-confirmed independently 2026-09-15 and again 2026-09-18. FY2025 joins them: "
     "its Annual Report is now the newest edition in this workbook and it too discloses only those two ratios.\n"
-    + SDDT_NOTE
+    + SDDT_NOTE + "\n" + GA020_NOTE
 )
 
 metric("CET1 Capital", None,
        [("Common Equity Tier 1 (CET1) capital (£'000)",
-         {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-          "FY2023": "Not publicly disclosed",
+         {**P3_UNREACHED,
           "FY2022": p3_cet1_capital_gbp["FY2022"], "FY2021": p3_cet1_capital_gbp["FY2021"]})],
        note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
 
@@ -1136,8 +1246,7 @@ metric("CET1 Ratio", "% of RWA", [("Common Equity Tier 1 (CET1) ratio", CET1_RAT
 
 metric("Tier 1 Capital", None,
        [("Tier 1 capital (£'000)",
-         {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-          "FY2023": "Not publicly disclosed",
+         {**P3_UNREACHED,
           "FY2022": p3_tier1_capital_gbp["FY2022"], "FY2021": p3_tier1_capital_gbp["FY2021"]})],
        note=FY2324_ONLY_NOTE + " Additional Tier 1 (AT1) capital is nil in both FY2021 and FY2022 per Pillar3.pdf, "
                                "so Tier 1 = CET1 exactly in those two years.",
@@ -1145,8 +1254,7 @@ metric("Tier 1 Capital", None,
 
 metric("Tier 1 Ratio", None,
        [("Tier 1 ratio",
-         {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-          "FY2023": "Not publicly disclosed",
+         {**P3_UNREACHED,
           "FY2022": "15.5%", "FY2021": "15.6%"})],
        note=FY2324_ONLY_NOTE + " Tier 1 ratio = CET1 ratio in both FY2021 and FY2022 since AT1 is nil (see Tier 1 "
                                "Capital sheet). For FY2023/FY2024, the KPI table's 'Capital adequacy ratio' is "
@@ -1156,8 +1264,7 @@ metric("Tier 1 Ratio", None,
 
 metric("Total Capital", None,
        [("Total capital (£'000)",
-         {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-          "FY2023": "Not publicly disclosed",
+         {**P3_UNREACHED,
           "FY2022": p3_total_capital_gbp["FY2022"], "FY2021": p3_total_capital_gbp["FY2021"]})],
        note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
 
@@ -1171,8 +1278,7 @@ metric("Total Capital Ratio", "% of RWA", [("Capital adequacy (Total Capital) ra
 
 metric("Total RWAs", "£'000",
        [("Total risk-weighted assets (£'000)",
-         {"FY2025": "Not publicly disclosed", "FY2024": "Not publicly disclosed",
-          "FY2023": "Not publicly disclosed",
+         {**P3_UNREACHED,
           "FY2022": p3_total_rwa_gbp["FY2022"], "FY2021": p3_total_rwa_gbp["FY2021"]})],
        note=FY2324_ONLY_NOTE, extra_sources=PILLAR3_SOURCES)
 
@@ -1192,12 +1298,15 @@ bw.add_rwa_breakdown_sheet(
     rows=(
         [("DATA", label, gbp_spot(eur)) for label, eur in RWA_BREAKDOWN_EUR.items()]
         + [("TOTAL", "Total risk-weighted assets", {y: p3_total_rwa_gbp[y] for y in ("FY2022", "FY2021")})]
+        # GA-020: placed AFTER the TOTAL, never inside the DATA block, so verify_workbook.py
+        # does not skip a reconciled column for a text cell.
+        + [("DATA", "[Edition status for this year - not an RWA category row]", dict(P3_UNREACHED))]
     ),
     sources_text=(
         "FY2022/FY2021: recovered Pillar3.pdf's 'Overview of RWA' table, 'EAB PLC' entity-only RWA columns "
         "(not the 'EAB Group' columns, for consistency with the rest of this workbook), converted from EUR to "
         "£'000 at each year's period-end spot rate. " + PILLAR3_SOURCES + "\n\n"
-        "FY2023/FY2024: " + RWA_NOT_DISCLOSED_NOTE
+        "FY2023/FY2024: " + RWA_NOT_DISCLOSED_NOTE + "\n\n" + GA020_NOTE
     ),
     first_col_width=54,
     source_height=200,
@@ -1228,6 +1337,7 @@ metric("NSFR", None, [("Net Stable Funding Ratio", NSFR_RATIO)],
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(RATIO_PAGES) + "\n\n" + PILLAR3_SOURCES,
+    statements={"MREL Ratio": MREL_STATEMENTS},
     per_note={
         "MREL Ratio": NOT_DISCLOSED_NOTE + " Not disclosed in the recovered Pillar3.pdf either (no MREL section "
                                             "anywhere in that document) - EAB plc is likely below the MREL "

@@ -1081,6 +1081,7 @@ metric(
     "Leverage Ratio", "£m / %",
     [
         ("Total exposure measure excluding claims on central banks", {"FY2026": 78792, "FY2025": 83120, "FY2023": 86545, "FY2022": 83758, "FY2021": 84293, "FY2020": 86475, "FY2019": 94742}),
+        ("Total leverage ratio exposure - historical individual-consolidated basis", {"FY2018": 45471, "FY2017": 45541, "FY2016": 43518, "FY2015": 41970}),
         ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "6.3%", "FY2025": "5.5%", "FY2023": "4.9%", "FY2022": "5.1%", "FY2021": "5.1%", "FY2020": "4.8%", "FY2019": "4.4%", "FY2018": "5.6%", "FY2017": "6.2%", "FY2016": "6.8%", "FY2015": "7.2%", "FY2014": "5.7%"}),
         ("Leverage ratio including claims on central banks (%)", {"FY2026": "5.3%", "FY2025": "5.0%", "FY2023": "4.5%", "FY2022": "4.5%"}),
         ("UK leverage ratio (%)", {"FY2020": "4.9%", "FY2019": "4.9%", "FY2018": "6.5%", "FY2017": "7.3%"}),
@@ -1094,7 +1095,12 @@ metric(
          "like-for-like. FY2014-FY2020 report a plain 'CRD IV Leverage ratio' (Tier 1 capital / total exposure, no "
          "central-bank-claims split) shown on the 'excluding' row for continuity; a separate 'UK leverage ratio' "
          "(modified basis excluding qualifying central bank claims from the exposure measure, a UK-specific "
-         "framework in force from 1 Jan 2016) is shown on its own row from FY2017, the first year it was disclosed.",
+         "framework in force from 1 Jan 2016) is shown on its own row from FY2017, the first year it was disclosed. "
+         "The FY2015-FY2018 exposure amounts are kept on a separate historical individual-consolidated-basis row: "
+         "FY2018 £45,471m (2018 Pillar 3 Appendix 1, Table 46 LRCom), FY2017 £45,541m (2017 Pillar 3 Appendix 1, "
+         "Tables 40-41), and FY2016/FY2015 £43,518m/£41,970m (2016 Pillar 3 Appendix 1, Table 32). They are not "
+         "silently mapped into the later central-bank-excluded exposure row because both caption and prudential "
+         "basis differ. FY2014 exposure remains unrecovered.",
 )
 
 metric(
@@ -1102,10 +1108,14 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA), weighted value (average)", {"FY2026": 16246, "FY2025": 14868, "FY2023": 13798, "FY2022": 11503}),
         ("Total net cash outflows, adjusted value", {"FY2026": 9912, "FY2025": 9414, "FY2023": 9424, "FY2022": 8222}),
-        ("Liquidity Coverage Ratio (%)", {"FY2026": "164%", "FY2025": "158%", "FY2023": "146%", "FY2022": "140%", "FY2021": "Not disclosed", "FY2020": "140%", "FY2019": "152%", "FY2018": "137%", "FY2017": "164%", "FY2016": "140%", "FY2015": "136%", "FY2014": "110%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2026": "164%", "FY2025": "158%", "FY2023": "146%", "FY2022": "140%", "FY2021": "151%", "FY2020": "140%", "FY2019": "152%", "FY2018": "137%", "FY2017": "164%", "FY2016": "140%", "FY2015": "136%", "FY2014": "110%"}),
     ],
     p3_sources(),
-    note="LCR is a 12-month simple average of month-end observations. Not disclosed for FY2021 at the CB Group "
+    note="FY2021 FOUND 2026-09-19 (GA-020): 151%, Clydesdale Bank PLC Annual Report and Accounts 2021, Risk report "
+         "'Funding and liquidity risk', 'Liquidity coverage ratio (audited)' table, printed p.61 (eligible liquidity "
+         "buffer 10,996 / net stress outflows 7,289; 2020 comparative 140%, matching FY2020 here) - read off the page "
+         "image. Same Annual-Report basis as FY2014-FY2020. "
+         "LCR is a 12-month simple average of month-end observations. Not disclosed for FY2021 at the CB Group "
          "Consolidated level in the 2021 Pillar 3 report's dedicated CB appendix (only narrative/glossary mentions "
          "of LCR appear elsewhere in that report). FY2014-FY2020 LCR percentages are narrative disclosures in the "
          "Annual Report (Strategic Report/Risk Report) rather than a KM1-style table with HQLA/outflow £m amounts, "
@@ -1145,14 +1155,23 @@ metric(
 metric(
     "MREL Ratio", "£m / %",
     [
-        ("Total capital resources", {"FY2026": 5747, "FY2025": 5347, "FY2023": 5301, "FY2022": 5288, "FY2020": 4929, "FY2019": 4857}),
-        ("Eligible senior unsecured securities", {"FY2026": 3520, "FY2025": 3004, "FY2023": 2707, "FY2022": 2423, "FY2020": 2002, "FY2019": 1550}),
-        ("Total MREL resources", {"FY2026": 9267, "FY2025": 8351, "FY2023": 8008, "FY2022": 7711, "FY2020": 6931, "FY2019": 6407}),
-        ("MREL resources (% of total risk-weighted assets)", {"FY2026": "31.2%", "FY2025": "30.3%", "FY2023": "31.8%", "FY2022": "32.0%", "FY2021": "Not disclosed", "FY2020": "28.4%", "FY2019": "26.6%", "FY2018": "Not disclosed", "FY2017": "Not disclosed", "FY2016": "Not disclosed", "FY2015": "Not disclosed", "FY2014": "Not disclosed"}),
+        ("Total capital resources", {"FY2026": 5747, "FY2025": 5347, "FY2023": 5301, "FY2022": 5288, "FY2021": 5294, "FY2020": 4929, "FY2019": 4857}),
+        ("Eligible senior unsecured securities", {"FY2026": 3520, "FY2025": 3004, "FY2023": 2707, "FY2022": 2423, "FY2021": 2408, "FY2020": 2002, "FY2019": 1550}),
+        ("Total MREL resources", {"FY2026": 9267, "FY2025": 8351, "FY2023": 8008, "FY2022": 7711, "FY2021": 7702, "FY2020": 6931, "FY2019": 6407}),
+        ("MREL resources (% of total risk-weighted assets)", {"FY2026": "31.2%", "FY2025": "30.3%", "FY2023": "31.8%", "FY2022": "32.0%", "FY2021": "31.8%", "FY2020": "28.4%", "FY2019": "26.6%",
+            **{y: ("Not published – this year's Clydesdale Bank PLC Annual Report gives no MREL ratio (MREL discussed "
+                   "only in narrative, or not at all; text-searched 2026-09-19)") for y in ("FY2018", "FY2017", "FY2016", "FY2015", "FY2014")}}),
         ("MREL resources (% of UK leverage exposure measure)", {"FY2026": "11.8%", "FY2025": "10.0%", "FY2023": "9.3%", "FY2022": "9.2%"}),
     ],
     p3_sources(),
-    note="'Eligible senior unsecured securities' were issued by Clydesdale Bank PLC through FY2023, but by Virgin "
+    note="FY2021 FOUND 2026-09-19 (GA-020): Clydesdale Bank PLC Annual Report and Accounts 2021, Risk report "
+         "'Capital risk', 'MREL position' table, printed p.57 - total capital resources 5,294, eligible senior "
+         "unsecured securities issued by Clydesdale Bank PLC 2,408, total MREL resources 7,702, RWA 24,194, MREL ratio "
+         "31.8% (2020 comparative 4,929 / 2,002 / 6,931 / 28.4%, matching FY2020 here). Read off the page image; same "
+         "Annual-Report table as FY2019/FY2020. The sentence below that FY2021 has no numeric MREL disclosure is true "
+         "of the FY2021 Pillar 3 only. FY2014-FY2018 Annual Reports re-searched 2026-09-19: 2014/2015 never mention "
+         "MREL; 2016-2018 mention it only narratively (e.g. the 18% interim requirement) - no ratio. "
+         "'Eligible senior unsecured securities' were issued by Clydesdale Bank PLC through FY2023, but by Virgin "
          "Money UK PLC from the FY2025 (18mo) report onward - shown as reported each year, not adjusted for this "
          "change. FY2021's Pillar 3 report contains only qualitative MREL narrative (no numeric MREL disclosure of "
          "any kind), consistent with the UK KM2 MREL template not yet being in use for CB Group Consolidated that "
