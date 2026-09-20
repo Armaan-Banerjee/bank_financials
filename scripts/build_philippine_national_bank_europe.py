@@ -63,16 +63,20 @@ BLOCKED_HOST_NOTE = (
     "snapshot timestamp was moved from 20200922133733 to 20240711230833; the CDX index gives both captures "
     "the identical content digest VKQ52WNFALNSEOZOMIKKAWQ44KFF5FV5, so they are byte-identical and this is "
     "not a change of edition.\n"
-    "WHERE NO FALLBACK EXISTS - AN UNRESOLVED STATE, EXPLICITLY NOT A NEGATIVE. Three documents are blocked "
-    "by the 403 AND have no archived copy to offer instead: the FY2016 disclosure "
-    "(" + P3_2016_URL + "), the FY2015 disclosure (" + P3_2015_URL + "), and the FY2025 disclosure on the "
-    "newer asset-library path (" + P3_2025_URL + "). A Wayback CDX query was run against each of those three "
-    "exact URLs on 2026-09-16 and each returned successfully with an EMPTY result set, so the absence of an "
-    "ARCHIVE is enumerated rather than assumed. But that says nothing about whether the DOCUMENT exists: the "
-    "live host still refuses us, so its contents remain unknown. These three are therefore recorded as "
-    "BLOCKED WITH NO FALLBACK - an open, unresolved state to be retried from a different network or by a "
-    "human browser - and must NOT be read as a finding that the disclosures were never published or do not "
-    "exist. No figure was changed."
+    "FY2015 INDEXED COPY RECOVERED (2026-09-20): although the live URL above still returns 403 and Wayback "
+    "has no snapshot, the official 11-page document is accessible through search indexing. It is explicitly "
+    "PNBE's 31 December 2015 Pillar 3 disclosure (April 2016). Its pp.8-9 Liquidity Risk section is "
+    "qualitative only, and it contains no leverage ratio, LCR, NSFR or MREL/eligible-liabilities figure. "
+    "Those four FY2015 metric cells are therefore now stated as not published in the Bank's own disclosure. "
+    "The FY2016 indexed PDF was subsequently recovered and reviewed on 2026-09-20; it likewise contains "
+    "no leverage, LCR, NSFR or MREL figure.\n"
+    "WHERE NO FALLBACK EXISTS - AN UNRESOLVED STATE, EXPLICITLY NOT A NEGATIVE. Two documents remain "
+    "blocked by the 403 AND have no archived copy to offer instead: the FY2025 disclosure on the newer "
+    "asset-library path (" + P3_2025_URL + "). Wayback CDX was run against the exact URL on 2026-09-16 "
+    "and returned an empty result set. That says nothing about whether the DOCUMENT exists: the live host "
+    "refuses us, so its contents remain unknown. It is recorded as "
+    "BLOCKED WITH NO FALLBACK - open unresolved states to retry from a different network or by a human browser, "
+    "not findings that the disclosures were never published or do not exist. No figures were changed."
 )
 
 CH_PROFILE_URL = "https://find-and-update.company-information.service.gov.uk/company/02939223"
@@ -1015,9 +1019,9 @@ UNDISCLOSED = ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]
 # "leverage", "liquidity coverage"/"LCR", "NSFR"/"stable funding", "MREL"/"eligible
 # liabilities"/"loss-absorbing" in every one, against ~50 "capital" and 8 "liquidity"
 # hits each (positive control). FY2025 rests on the earlier session's read recorded in
-# the per-sheet note below (named document). FY2022/FY2018 have no reachable edition;
-# FY2016/FY2015 editions exist but their cited URLs are now blocked and were never
-# archived, so what they held for these metrics is unknown.
+# the per-sheet note below (named document). FY2022/FY2018 have no reachable edition.
+# FY2015 and FY2016 were recovered through official indexed PDFs on 2026-09-20;
+# both have only qualitative liquidity-risk text and none of these four metrics.
 _GA020_TERMS = {"Leverage Ratio": "no leverage ratio", "LCR": "no LCR",
                 "NSFR": "no NSFR", "MREL Ratio": "no MREL/eligible-liabilities figure"}
 _GA020_UNREACHED = {
@@ -1029,16 +1033,19 @@ _GA020_UNREACHED = {
     "FY2018": ("Unreached today – FY2018 Pillar 3 (linked on /europe/ page Aug 2019) is 403 live; no "
                "Wayback, archive.ph or Common Crawl copy; S3 AccessDenied; FY2018 accounts (CH) re-read "
                "2026-09-19: no such figure"),
-    "FY2016": ("Unreached today – FY2016 Pillar 3 exists (linked 2017, search-indexed) but pnb.com.ph "
-               "403s every path; no Wayback, archive.ph or Common Crawl copy; FY2016 accounts (CH) read "
-               "2026-09-19: no such figure"),
-    "FY2015": ("Unreached today – FY2015 Pillar 3 exists (search-indexed, also at /global-filipino-hub/) "
-               "but host 403s; no Wayback, archive.ph or Common Crawl copy; FY2015 accounts (CH) read "
-               "2026-09-19: no such figure"),
+    "FY2016": ("Not published – PNBE Pillar 3 FY2016 (April 2017), pp.6-11, reports capital/RWAs "
+               "and qualitative liquidity risk but contains no leverage ratio, LCR, NSFR or MREL figure; "
+               "checked 2026-09-20"),
 }
 _UB_NOTE = (
     "SECOND PASS ON THE UNREACHED YEARS (GA-020, 2026-09-19) - FY2015, FY2016, FY2018 and FY2022 "
-    "remain UNREACHED, not 'not published'. Routes tried beyond the first pass: (i) web search for "
+    "FINAL FOLLOW-UP (2026-09-20): the official FY2015 PDF was surfaced through search indexing despite "
+    "the live host's 403; its full 11-page text was inspected. The named metric cells now state that no "
+    "leverage ratio, LCR, NSFR or MREL figure is presented (Liquidity Risk is qualitative on pp.8-9). "
+    "No figure was transcribed from a text extraction. FY2016 was recovered in the same indexed-copy "
+    "route on 2026-09-20 and was found to omit all four metrics too (qualitative Liquidity Risk, pp.10-11).\n"
+    "FY2018 and FY2022 remain UNREACHED, not 'not published'. Routes tried beyond the first pass: "
+    "(i) web search for "
     "the edition titles and filenames - search engines still index the FY2015 edition ('Pillar 3 "
     "Disclosures PNB (Europe) April 2016') at "
     "www.pnb.com.ph/global-filipino-hub/europe/images/stories/docs/Pillar3_Disclosures_for_2015.pdf "
@@ -1088,6 +1095,11 @@ _UB_NOTE = (
 _GA020_STATEMENTS = {}
 for _n, _what in _GA020_TERMS.items():
     _d = dict(_GA020_UNREACHED)
+    _d["FY2015"] = (f"Not published – PNBE Pillar 3 FY2015 (April 2016), pp.8-9, contains {_what}; "
+                    "the report's liquidity-risk section is qualitative only; checked 2026-09-20")
+    _d["FY2016"] = (f"Not published – PNBE Pillar 3 FY2016 (April 2017), pp.6-11, contains {_what}; "
+                    "capital/RWA tables are present and the liquidity-risk section is qualitative only; "
+                    "checked 2026-09-20")
     for _y in ("FY2024", "FY2023", "FY2021", "FY2020", "FY2019", "FY2017"):
         _d[_y] = (f"Not published – PNBE Pillar 3 {_y} (own tables: own funds, Pillar 1 RWAs, "
                   f"buffers) has {_what}; text probe 0 hits, re-read 2026-09-19")
@@ -1098,7 +1110,7 @@ bw.add_not_disclosed_metric_sheets(
     UNDISCLOSED, P3_SOURCES,
     statements=_GA020_STATEMENTS,
     per_note={name: "No quantitative standalone PNBE disclosure was located in any Pillar 3 document "
-                    "reviewed (FY2017, FY2019, FY2023, FY2024 or FY2025); left blank rather than "
+                    "reviewed (FY2015, FY2016, FY2017, FY2019, FY2023, FY2024 or FY2025); left blank rather than "
                     "estimated for every year in scope.\n"
                     "RE-CHECKED 2026-09-12 (disclosure audit) - this is now partly an ACCESS problem, "
                     "not only a disclosure one, and the distinction matters for anyone retrying it. "
