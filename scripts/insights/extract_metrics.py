@@ -140,7 +140,13 @@ from in009_analysis import normalize_period
 # genuinely different shape (see extract_equity_changes_sheet()) and is
 # handled separately, writing to the equity_changes table instead of
 # annual_metrics.
-STATEMENT_SHEET_NAMES = ["Balance Sheet", "Profit & Loss", "Asset Quality", "RWA Breakdown"]
+STATEMENT_SHEET_NAMES = [
+    "Balance Sheet", "Profit & Loss", "Asset Quality", "RWA Breakdown",
+    # AIB's pre-2022 EU-format series is kept separate because it is EUR,
+    # not the current GBP series. These metric-shaped sheets belong in the
+    # same database/export path as the other annual observations.
+    "Historical P3 Capital EUR", "Historical P3 RWA EUR", "Historical P3 Leverage EUR",
+]
 
 BANKS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "banks")
 BANK_LIST_PATH = os.path.join(
@@ -807,6 +813,8 @@ def process_workbook(path, bank_list):
         if sheet_name not in wb.sheetnames:
             continue
         ws = wb[sheet_name]
+        historical_sheet = sheet_name.startswith("Historical P3 ")
+        historical_unit = str(ws.cell(row=2, column=1).value or "").split("—", 1)[0].strip()
         header_row = find_header_row(ws, {"Line item"})
         if header_row is not None:
             years, ncols = get_years(ws, header_row)
@@ -844,7 +852,9 @@ def process_workbook(path, bank_list):
                 rows_out.append(_row(
                     bank_name, canonical_bank, frn, source_workbook, workbook_kind,
                     sheet_name, label, y, v, basis_note,
-                    unit=stmt_units.get(y), reporting_basis=None,
+                    unit=("%" if historical_sheet and "ratio" in str(label).lower()
+                          else historical_unit if historical_sheet
+                          else stmt_units.get(y)), reporting_basis=None,
                     restatement_note=None, source_note=stmt_source_note,
                     row_kind=row_kind,
                 ))

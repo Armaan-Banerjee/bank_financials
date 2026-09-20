@@ -20,8 +20,8 @@
     "source_note"
   ],
   "identity_key": "frn (falls back to bank when frn is blank)",
-  "row_count": 122641,
-  "generated_at": "2026-09-16T10:06:46.617298+00:00",
+  "row_count": 123345,
+  "generated_at": "2026-09-20T08:51:08.915625+00:00",
   "generator": "scripts/extract_metrics.py",
   "source_of_truth": "research/insights.db - this CSV is a generated export, see IN-008"
 }

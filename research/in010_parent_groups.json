@@ -2311,6 +2311,16 @@
           ],
           "trends": [
             {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2017,
+              "n": 2,
+              "same": 0,
+              "start_year": 2016,
+              "up": 1
+            },
+            {
               "agreement": 1.0,
               "direction": "+",
               "down": 0,
@@ -6214,10 +6224,10 @@
               "direction": "+",
               "down": 0,
               "end_year": 2022,
-              "n": 2,
+              "n": 3,
               "same": 0,
               "start_year": 2021,
-              "up": 2
+              "up": 3
             },
             {
               "agreement": 0.6666666666666666,
@@ -7081,10 +7091,80 @@
               "agreement": 1.0,
               "direction": "+",
               "down": 0,
+              "end_year": 2017,
+              "n": 2,
+              "same": 0,
+              "start_year": 2016,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
               "end_year": 2018,
               "n": 2,
               "same": 0,
               "start_year": 2017,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2019,
+              "n": 2,
+              "same": 0,
+              "start_year": 2018,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "-",
+              "down": 2,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 0
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2022,
+              "n": 2,
+              "same": 0,
+              "start_year": 2021,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2023,
+              "n": 2,
+              "same": 0,
+              "start_year": 2022,
+              "up": 2
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2024,
+              "n": 2,
+              "same": 0,
+              "start_year": 2023,
               "up": 2
             },
             {
@@ -11845,6 +11925,16 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2017,
+              "n": 2,
+              "same": 0,
+              "start_year": 2016,
+              "up": 1
+            },
             {
               "agreement": 1.0,
               "direction": "+",
@@ -16673,6 +16763,56 @@
             }
           ],
           "trends": [
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2017,
+              "n": 2,
+              "same": 0,
+              "start_year": 2016,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2018,
+              "n": 2,
+              "same": 0,
+              "start_year": 2017,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2019,
+              "n": 2,
+              "same": 0,
+              "start_year": 2018,
+              "up": 1
+            },
+            {
+              "agreement": 0.5,
+              "direction": "mixed",
+              "down": 1,
+              "end_year": 2020,
+              "n": 2,
+              "same": 0,
+              "start_year": 2019,
+              "up": 1
+            },
+            {
+              "agreement": 1.0,
+              "direction": "+",
+              "down": 0,
+              "end_year": 2021,
+              "n": 2,
+              "same": 0,
+              "start_year": 2020,
+              "up": 2
+            },
             {
               "agreement": 1.0,
               "direction": "+",

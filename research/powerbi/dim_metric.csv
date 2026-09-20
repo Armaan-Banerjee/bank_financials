@@ -15,3 +15,6 @@ profit_loss,Profit & Loss,Profit & Loss,pillar_3
 asset_quality,Asset Quality,Asset Quality,pillar_3
 rwa_breakdown,RWA Breakdown,RWA Breakdown,pillar_3
 cash_flow_statement,Cash Flow Statement,Cash Flow Statement,cash_flow
+historical_p3_capital_eur,Historical P3 Capital EUR,Historical P3 Capital EUR,pillar_3
+historical_p3_rwa_eur,Historical P3 RWA EUR,Historical P3 RWA EUR,pillar_3
+historical_p3_leverage_eur,Historical P3 Leverage EUR,Historical P3 Leverage EUR,pillar_3

@@ -76,6 +76,26 @@ class PercentAndMissingValueParsing(unittest.TestCase):
         self.assertIsNone(parse_numeric(None))
 
 
+class AIBHistoricalPillar3Extraction(unittest.TestCase):
+    """Keep AIB's recovered EUR-era disclosures in the DB/export path."""
+
+    def test_historical_eur_sheets_are_extracted_with_units_and_provenance(self):
+        path = os.path.join(BANKS_DIR, "AIB GROUP UK FINANCIALS.xlsx")
+        if not os.path.exists(path):
+            self.skipTest("banks/ workbooks are not present")
+        _, frn, _, _, _, rows, _, _ = process_workbook(path, load_bank_list())
+        historical = [r for r in rows if r["sheet"].startswith("Historical P3 ")]
+        self.assertEqual(len(historical), 30)
+        by_key = {(r["sheet"], r["row_label"], r["year"]): r for r in historical}
+        cet1 = by_key[("Historical P3 Capital EUR", "CET1 capital", "FY2020")]
+        self.assertEqual(cet1["value_numeric"], 1693.0)
+        self.assertIn("EUR millions", cet1["unit"])
+        self.assertIn("pillar-3-2019-uk-300320.xlsx", cet1["source_note"])
+        ratio = by_key[("Historical P3 Capital EUR", "CET1 ratio", "FY2019")]
+        self.assertEqual(ratio["value_numeric"], 17.6)
+        self.assertEqual(ratio["unit"], "%")
+        self.assertEqual(ratio["frn"], frn)
+
 class DeduplicationBehaviour(unittest.TestCase):
     """Exercises deduplicate() directly with hand-built row dicts - the
     identity-key dedup logic itself, independent of any workbook."""
@@ -287,14 +307,23 @@ class SyntheticWorkbookExtraction(unittest.TestCase):
         rows = [
             ("TOTAL", "Net cash from operating activities",
              {"FY2025": 100.0}),  # FY2024 deliberately omitted
+            # Keep FY2024 as an actual worksheet column. BankWorkbook omits
+            # an all-empty trailing year column, so another row needs to
+            # disclose a FY2024 value for the blank cell above to exist.
+            ("TOTAL", "Net cash from investing activities",
+             {"FY2024": -25.0}),
         ]
         path = self._build("MISSINGYEARBANK", rows)
         _, _, _, _, _, extracted_rows, _, _ = process_workbook(path, self.bank_list)
-        fy2024_rows = [r for r in extracted_rows if r["year"] == "FY2024"]
-        self.assertEqual(len(fy2024_rows), 1)
-        self.assertEqual(fy2024_rows[0]["value_raw"], "")
-        self.assertEqual(fy2024_rows[0]["is_numeric"], "0")
-        fy2025_rows = [r for r in extracted_rows if r["year"] == "FY2025"]
+        missing_year_rows = [r for r in extracted_rows
+                             if r["row_label"] == "Net cash from operating activities"
+                             and r["year"] == "FY2024"]
+        self.assertEqual(len(missing_year_rows), 1)
+        self.assertEqual(missing_year_rows[0]["value_raw"], "")
+        self.assertEqual(missing_year_rows[0]["is_numeric"], "0")
+        fy2025_rows = [r for r in extracted_rows
+                       if r["row_label"] == "Net cash from operating activities"
+                       and r["year"] == "FY2025"]
         self.assertEqual(fy2025_rows[0]["value_numeric"], 100.0)
 
 

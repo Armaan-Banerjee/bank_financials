@@ -31,6 +31,8 @@ def match_context(observation, metric=None, year=None):
     candidates = [item for item in CONTEXT if item["metric"] == metric and item["effective_from"] <= (year or 0) and (item["effective_to"] is None or year <= item["effective_to"])]
     if not candidates:
         return {"status": "context_unavailable", "reason": "no dated context record for metric/period"}
+    if observation.get("value_numeric") in (None, ""):
+        return {"status": "context_unavailable", "reason": "observation has no parsed numeric value"}
     # `unit` alone is NULL for virtually every row in `annual_metrics` (never
     # populated at extraction time), so the original `observation.get("unit")
     # != "%"` check here returned "context_unavailable" for 100% of real

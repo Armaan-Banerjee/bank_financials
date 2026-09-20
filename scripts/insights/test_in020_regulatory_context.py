@@ -46,6 +46,13 @@ class In020RegulatoryContextTests(unittest.TestCase):
         self.assertEqual(result["status"], "context_unavailable")
         self.assertIn("basis", result["reason"])
 
+    def test_nonnumeric_disclosure_is_not_converted_to_float(self):
+        result = match_context({"metric": "LCR", "fiscal_year": 2025,
+                                "value_raw": "Not published", "reporting_basis": "entity",
+                                "value_numeric": ""})
+        self.assertEqual(result["status"], "context_unavailable")
+        self.assertIn("numeric value", result["reason"])
+
     def test_firm_specific_mrel_is_not_treated_as_universal(self):
         result = match_context({"metric": "MREL Ratio", "fiscal_year": 2026, "unit": "%", "reporting_basis": "entity", "value_numeric": "20"})
         self.assertEqual(result["status"], "context_unavailable")

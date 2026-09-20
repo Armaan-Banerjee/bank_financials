@@ -145,17 +145,19 @@ class FullInsightsPipeline(unittest.TestCase):
         self.assertNotIn("in016", payload["in011"]["in023"])
         self.assertNotIn("in017", payload["in011"]["in023"])
         self.assertNotIn("trace", payload["in011"]["in025"])
-        # Historical-depth work now contains 110,408 annual-metric rows,
+        # Historical-depth work now contains 123,345 annual-metric rows,
         # including UBP's FY1973--FY2025 run. This raw per-row payload grows
         # proportionally; the explicit non-embedding checks above distinguish
         # that legitimate growth from the prior duplication regression.
-        self.assertLess(len(html_text), 70_000_000,
+        self.assertLess(len(html_text), 80_000_000,
                          "deliverable HTML grew unexpectedly large - check for a "
                          "reintroduced duplicate/unused payload the way in023/in025 once had")
         self.assertIn("Regulatory headroom trajectory", html_text)
         self.assertIn('id="headroom-table"', html_text)
         self.assertEqual(html_text.count('class="sort-headroom"'), 9)
-        self.assertNotRegex(html_text, r"IN-[0-9]{3}")
+        # Require a token boundary after three digits so year-like source
+        # strings such as "IN-2020" aren't mistaken for ticket identifiers.
+        self.assertNotRegex(html_text, r"\bIN-[0-9]{3}\b")
         self.assertIn("Strict versus broad coverage", html_text)
         self.assertIn("Outlier investigation", html_text)
         self.assertNotRegex(html_text, r'<details id="outliers"[^>]*\bopen\b')

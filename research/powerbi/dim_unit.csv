@@ -5,6 +5,9 @@ unknown,unknown
 000_conv_from_usd,"£'000, conv. from USD"
 000_conv_from_usd,£'000 (conv. from USD)
 unknown,£
+eur_millions,EUR millions
+unknown,%
+eur_millions,EUR millions / %
 bank_solo_basis_m,"Bank solo basis, £m"
 consolidated_group_basis_000,"Consolidated (Group) basis, £'000"
 entity_level_basis_000_s,"Entity-level basis, £000's"
