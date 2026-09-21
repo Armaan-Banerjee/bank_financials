@@ -304,11 +304,11 @@ CAPITAL_SOURCES = (
 # ---------------------------------------------------------------
 # KM1 Key Metrics (KM1-026, 2026-09-16)
 #
-# FINDING: "no Pillar 3 document is published for this entity at all", which
-# is the strongest of the three non-disclosure findings to have to make and so
-# the one that needs the most evidence behind it. What follows is that
-# evidence, including the check of the PARENT's Pillar 3 that this project has
-# twice been caught skipping.
+# FINDING: SFS publishes no standalone Pillar 3 document and no KM1 template
+# for the entity. Its Annual Reports do contain selected prudential disclosures
+# (including regulatory capital, LCR and NSFR); they are not a full Pillar 3
+# disclosure. This distinction is supported below, including the check of the
+# PARENT's Pillar 3 that this project has twice been caught skipping.
 # ---------------------------------------------------------------
 ACRMD_2025_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/2025SantanderUKACRMD.pdf"
 ACRMD_2024_URL = "https://www.santander.co.uk/assets/s3fs-public/documents/ACRMD%20FINAL_Dec%2024.pdf"
@@ -324,8 +324,15 @@ KM1_SOURCES = (
     f"Management Disclosures (ACRMD), 31 December 2025 - {ACRMD_2025_URL}\n"
     f"and 31 December 2024 - {ACRMD_2024_URL} (the 2023, 2022, 2021 and 2020 editions were checked the same "
     "way).\n\n"
-    "NO KM1 EXISTS FOR THIS ENTITY, ON THREE INDEPENDENT CHECKS.\n"
-    "(1) SFS PUBLISHES NO PILLAR 3 DOCUMENT OF ITS OWN. Its own investor page - santander.co.uk > About "
+    "NO STANDALONE PILLAR 3 DOCUMENT OR KM1 EXISTS FOR THIS ENTITY, ON THREE INDEPENDENT CHECKS.\n"
+    "SCOPE CLARIFICATION: SFS's Annual Reports do contain selected entity-level prudential disclosures, "
+    "including an audited regulatory-capital table and LCR/NSFR figures. The FY2024 report (Risk review, "
+    "printed pp.36-38) gives CET1 capital £266m, AT1 £50m and total regulatory capital £316m for FY2024, "
+    "and LCR 186% / NSFR 149%; it does not give a KM1 template, RWA breakdown or standalone capital-ratio "
+    "figures. It says CRD IV exposure measurement is covered by Banco Santander's Pillar 3 report. The "
+    "presence of these selected disclosures is why the claim below is limited to absence of a standalone "
+    "Pillar 3 publication/KM1, not absence of all Pillar 3-related information.\n"
+    "(1) SFS PUBLISHES NO STANDALONE PILLAR 3 DOCUMENT. Its own investor page - santander.co.uk > About "
     "Santander > Investor relations > Santander Financial Services plc - lists Annual Reports only, one per "
     "year, 2021 through 2025, and nothing else. The FY2025 report is the newest document of any kind there.\n"
     "(2) NO ANNUAL REPORT CONTAINS THE TEMPLATE. All five reports (FY2021-FY2025) were downloaded fresh and "
@@ -377,12 +384,12 @@ KM1_SOURCES = (
 
 bw.add_km1_sheet(
     title="Santander Financial Services plc - KM1 Key Metrics",
-    subtitle="Not published. SFS publishes no Pillar 3 disclosure document of its own, and neither its own "
+    subtitle="No standalone Pillar 3/KM1 published. SFS Annual Reports contain selected prudential data, but neither its own "
              "Annual Reports nor its parent's Pillar 3 (the Santander UK ACRMD) contains a KM1 key-metrics "
              "template for this entity. See the source note for the three checks behind that statement.",
     rows=[
-        ("DATA", "UK KM1 template - no Pillar 3 document is published for this entity",
-         {y: f"Not published – no SFS Pillar 3 exists; SFS {y} annual report has no KM1 and the parent's "
+        ("DATA", "UK KM1 template - no standalone SFS Pillar 3/KM1 publication",
+         {y: f"Not published – no standalone SFS Pillar 3/KM1; SFS {y} annual report has no KM1 and the parent's "
              "ACRMD prints KM1 only for Santander UK Group Holdings and the RFB group; see note"
           for y in YEARS}),
     ],
@@ -400,10 +407,12 @@ bw.add_km1_sheet(
 # ratio figure. 'CET1 capital ratio' occurs only in the capital-risk sentence naming it as a
 # metric and in an AT1 write-down trigger clause; the regulatory capital table (e.g. FY2025
 # Risk review, 'Regulatory capital resources') prints amounts only. ~85 'capital' hits each
-# (positive control). No SFS Pillar 3 exists (KM1_SOURCES). Not SDDT (PRA waivers register).
+# (positive control). No standalone SFS Pillar 3/KM1 exists (KM1_SOURCES); selected prudential
+# disclosures are in the Annual Reports. Not SDDT (PRA waivers register).
 def _sfs_np(what):
     return {y: f"Not published – SFS {y} annual report prints no {what} (capital table gives amounts "
-               "only) and SFS publishes no Pillar 3; see note" for y in YEARS}
+               "only); selected prudential disclosures appear in the Annual Report, but no standalone "
+               "SFS Pillar 3/KM1 is published; see note" for y in YEARS}
 
 
 def metric(name, unit, data, note=None):
