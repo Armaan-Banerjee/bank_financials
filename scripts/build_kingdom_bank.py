@@ -1445,9 +1445,14 @@ P3_CET1_VALUES_M = dict(P3_CET1_VALUES_FY2019_M,
                         **{"FY2018": 5600, "FY2017": 5400, "FY2016": 5300})   # "Tier 1 Capital after deductions"
 P3_TOTAL_CAPITAL_VALUES_M = dict(P3_TOTAL_CAPITAL_VALUES_FY2019_M,
                                  **{"FY2018": 6700, "FY2017": 6700, "FY2016": 6700})  # "Total Capital after deductions"
-P3_TIER2_VALUES_M_EARLY = {"FY2018": 1100, "FY2017": 1300, "FY2016": 1400}    # "Tier 2 Capital (no deductions)"
-P3_CET1_BEFORE_DEDUCTIONS_M_EARLY = {"FY2018": 5800, "FY2017": 5700, "FY2016": 5600}  # "Core Tier 1 capital before deductions"
-P3_DEDUCTIONS_M_EARLY = {"FY2018": -200, "FY2017": -300, "FY2016": -300}      # printed "(0.2)" / "(0.3)" / "(0.3)"
+# FY2019 ADDED TO ALL THREE ROWS 2026-10-07. P3_TIER2_VALUES_FY2019_M above had been defined by an
+# earlier pass and referenced NOWHERE, so the figure sat in the script and never reached a sheet;
+# the two "Of which" rows were blank for FY2019 for the same reason. All three were re-read off a
+# 300 dpi image of the FY2019 edition's own printed p.13 before being placed - see FY2019_OWN_FUNDS_NOTE.
+P3_TIER2_VALUES_M_EARLY = dict(P3_TIER2_VALUES_FY2019_M,
+                               **{"FY2018": 1100, "FY2017": 1300, "FY2016": 1400})  # "Tier 2 Capital (no deductions)"
+P3_CET1_BEFORE_DEDUCTIONS_M_EARLY = {"FY2019": 5900, "FY2018": 5800, "FY2017": 5700, "FY2016": 5600}  # "Core Tier 1 capital before deductions"
+P3_DEDUCTIONS_M_EARLY = {"FY2019": -200, "FY2018": -200, "FY2017": -300, "FY2016": -300}  # printed "(0.2)" x2 / "(0.3)" / "(0.3)"
 
 P3_CET1_RATIO_VALUES = {"FY2021": "16.97%", "FY2020": "16.64%"}   # UK KM1 rows 5/6
 P3_TOTAL_CAPITAL_RATIO_VALUES = {"FY2021": "18.84%", "FY2020": "18.79%"}  # UK KM1 row 7
@@ -1531,6 +1536,65 @@ TWO_SERIES_NOTE = (
     "rows rather than one overwriting the other. "
 )
 
+FY2019_OWN_FUNDS_NOTE = (
+    "\n\nFY2019 PLACED 2026-10-07, FROM A TRANSCRIPTION THAT HAD BEEN SITTING IN THE SCRIPT UNUSED. The "
+    "FY2019 Pillar 3 edition's section 4 'Own funds' table had been read by an earlier pass and its Tier 2 "
+    "figure stored in a constant that was never referenced by any sheet, so the figure existed in the build "
+    "script and appeared nowhere in the workbook; the two 'Of which' rows were blank for FY2019 for the same "
+    "reason. The whole table was re-read on 2026-10-07 off a 300 dpi image of its own printed p.13 (the "
+    "document's page footer reads 13 on that sheet) before anything was placed. WHAT IT PRINTS, £m to one "
+    "decimal place: Permanent share capital (ordinary £1 shares) 4.2, Profit and loss account 1.5, "
+    "Revaluation reserve 0.2, Core Tier 1 capital before deductions 5.9, Deductions from Tier 1 capital "
+    "(intangible assets, deferred tax assets relying on future profits) (0.2), Tier 1 Capital after "
+    "deductions 5.7, Tier 2 capital instruments (subordinated debt) 1.0, Tier 2 Capital (no deductions) 1.0, "
+    "Total Capital after deductions 6.7. The narrative above the table says the same thing in words: 'The "
+    "Bank's total Own Funds, calculated in accordance with Article 72 of the CRR, amounted to £6.7m as at 31 "
+    "December 2019. This was made up of Tier 1 capital of £5.7m (after deductions) and Tier 2 capital of "
+    "£1.0m (no deductions).' Nothing was derived: the Tier 2 figure is printed twice on the page and stated "
+    "once in the narrative. As with FY2016-FY2018, these cells carry £m-precision figures expressed in "
+    "£'000 - '1,000' means '£1.0m as printed', not a figure measured to the nearest £1k. The edition "
+    "footnotes its profit and loss account line as excluding audited 2019 profits, 'which were not approved "
+    "until 27 April 2020', which is why regulatory Tier 1 of £5.7m sits below Annual Report shareholders' "
+    "funds of £6,145k."
+)
+
+RATIO_TIE_NOTE = (
+    "\n\nWHY A RATIO ON THESE SHEETS WILL NOT DIVIDE INTO THE FIRST CAPITAL ROW, AND WHY NOTHING HAS BEEN "
+    "CHANGED TO MAKE IT (examined in full 2026-10-07; no figure was adjusted). The first capital row on each "
+    "of the CET1 Capital, Tier 1 Capital and Total Capital sheets is SHAREHOLDERS' FUNDS from the Annual "
+    "Report balance sheet - a statutory accounting measure, present in every year back to FY2014. None of "
+    "the capital RATIOS on this workbook is struck on it. Every one of them is struck on the bank's "
+    "REGULATORY own funds, which is a smaller number for the two reasons the documents state themselves: "
+    "the profit and loss account component excludes the year's audited profits where those were approved "
+    "after the disclosure was signed, and intangible assets and deferred tax assets relying on future "
+    "profits are deducted. Dividing shareholders' funds by the risk-weighted exposure amount therefore "
+    "produces a number ABOVE every printed ratio, in every year, by construction.\n"
+    "WHERE BOTH BASES ARE PUBLISHED, THE RATIOS TIE EXACTLY, which is the control that settles this. Using "
+    "the regulatory capital rows and the Total RWAs sheet's own figures: FY2021 CET1 and Tier 1, £6,892k / "
+    "£40,617k = 16.97% against a printed 16.97%; FY2020 CET1 and Tier 1, £6,594k / £39,632k = 16.64% "
+    "against a printed 16.64%; FY2021 total capital, £7,653k / £40,617k = 18.84% against a printed 18.84%; "
+    "FY2020 total capital, £7,448k / £39,632k = 18.79% against a printed 18.79%. Four ratios, four exact "
+    "agreements, no rounding slack.\n"
+    "THE SAME ARITHMETIC ON THE SHAREHOLDERS'-FUNDS ROW IS WHAT PRODUCES THE APPARENT BREAKS, and they are "
+    "arithmetic about two different measures rather than a disagreement between two printings of one "
+    "measure. The largest is FY2020 total capital: £6,771k / £39,632k = 17.08% against the printed 18.79%, "
+    "a gap of 1.71pp that disappears entirely once the printed ratio is divided into the Total own funds "
+    "figure of £7,448k three rows below it on the same sheet. The others behave identically - FY2021 CET1 "
+    "and Tier 1 £7,451k / £40,617k = 18.34% against 16.97%; FY2023 £9,876k / £53,182k = 18.57% against "
+    "17.37%; FY2022 £9,353k / £43,648k = 21.43% against 20.84% (and 22.12% on total capital); FY2024 "
+    "£15,512k / £68,191k = 22.75% against 22.20%; FY2025 £15,808k / £82,630k = 19.13% against 18.8%.\n"
+    "FOR FY2022-FY2025 THERE IS NO SECOND BASIS ON THE SHEET TO TIE TO, and that is a disclosure gap rather "
+    "than an error. Those years' ratios come from the Annual Report (KPI table, and note 29(j) for total "
+    "capital), and no Kingdom Bank document this workbook holds publishes a regulatory own-funds AMOUNT for "
+    "them - the FY2022 and FY2023 Pillar 3 editions are unreached and the bank published none after FY2023. "
+    "The regulatory capital implied by those ratios has deliberately NOT been back-solved and written onto "
+    "any row; that would be a derivation presented as a disclosure. The cells stay as published.\n"
+    "ONE NEAR-COINCIDENCE, RECORDED SO IT IS NOT MISREAD AS A BASIS IDENTITY: in FY2020 shareholders' funds "
+    "over RWA gives 17.08% and the Annual Report KPI table prints 17.13%, which look like the same measure "
+    "and are not - the Pillar 3 ratio for that same date is 16.64%, struck on £6,594k. The two happen to "
+    "land close in that one year."
+)
+
 metric(
     "CET1 Capital", "£'000",
     [
@@ -1541,10 +1605,10 @@ metric(
         ("Of which: Core Tier 1 capital before deductions - per Pillar 3", P3_CET1_BEFORE_DEDUCTIONS),
         ("Of which: deductions (intangible assets, DTAs relying on future profits) - per Pillar 3",
          P3_DEDUCTIONS),
-        ("Of which: Core Tier 1 capital before deductions - per Pillar 3 FY2016-FY2018 editions (£m to 1 d.p.)",
+        ("Of which: Core Tier 1 capital before deductions - per Pillar 3 FY2016-FY2019 editions (£m to 1 d.p.)",
          P3_CET1_BEFORE_DEDUCTIONS_M_EARLY),
         ("Of which: deductions (intangible assets, DTAs relying on future profits) - per Pillar 3 "
-         "FY2016-FY2018 editions (£m to 1 d.p.)", P3_DEDUCTIONS_M_EARLY),
+         "FY2016-FY2019 editions (£m to 1 d.p.)", P3_DEDUCTIONS_M_EARLY),
     ],
     note=TWO_SERIES_NOTE
     + "Regulatory CET1 is materially LOWER than shareholders' funds in every overlapping year (FY2021 "
@@ -1562,7 +1626,8 @@ metric(
       "footnotes its profit and loss account line as excluding that year's audited profits (approved 22 March "
       "2017, 21 March 2018 and 20 March 2019 respectively), and deducts intangible assets and DTAs relying on "
       "future profits (£0.3m, £0.3m, £0.2m). Each edition's own build-up foots as printed: 5.6 - 0.3 = 5.3; "
-      "5.7 - 0.3 = 5.4; 5.8 - 0.2 = 5.6.",
+      "5.7 - 0.3 = 5.4; 5.8 - 0.2 = 5.6. FY2019 foots the same way: 5.9 - 0.2 = 5.7."
+    + FY2019_OWN_FUNDS_NOTE + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1577,7 +1642,7 @@ metric(
       "16.64%, a 49bp gap consistent with the regulatory CET1 base being £6,594k against shareholders' "
       "funds of £6,771k. Both are shown; neither is overwritten. "
     + EARLY_P3_NO_RATIO_NOTE
-    + KPI_NOT_YET_INTRODUCED_NOTE,
+    + KPI_NOT_YET_INTRODUCED_NOTE + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1596,7 +1661,7 @@ metric(
          "Tier 1-only structure, with no Additional Tier 1 line: Tier 1 capital after deductions £5.3m "
          "(FY2016, p.11), £5.4m (FY2017, p.11) and £5.6m (FY2018, p.12), against Annual Report shareholders' "
          "funds of £5,667k, £5,778k and £5,908k - a disagreement of basis explained on the CET1 Capital sheet, "
-         "not reconciled here. " + TWO_SERIES_NOTE,
+         "not reconciled here. " + TWO_SERIES_NOTE + FY2019_OWN_FUNDS_NOTE + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1607,7 +1672,8 @@ metric(
     ],
     note=TIER1_RATIO_NOTE + " Template UK KM1 in the FY2021 Pillar 3 edition prints the same value on "
          "row 5 (CET1 ratio) and row 6 (Tier 1 ratio) for both years shown, confirming this directly "
-         "rather than by inference. " + TWO_SERIES_NOTE + EARLY_P3_NO_RATIO_NOTE + KPI_NOT_YET_INTRODUCED_NOTE,
+         "rather than by inference. " + TWO_SERIES_NOTE + EARLY_P3_NO_RATIO_NOTE + KPI_NOT_YET_INTRODUCED_NOTE
+         + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1620,7 +1686,7 @@ metric(
         ("Tier 2 capital instruments (subordinated debt), eligible - per Pillar 3", P3_TIER2_VALUES),
         ("Total own funds after deductions - per Pillar 3 (UK KM1 row 3 / Own funds table)",
          P3_TOTAL_CAPITAL_VALUES),
-        ("Tier 2 capital (no deductions) - per Pillar 3 FY2016-FY2018 editions, which state £m to 1 d.p.",
+        ("Tier 2 capital (no deductions) - per Pillar 3 FY2016-FY2019 editions, which state £m to 1 d.p.",
          P3_TIER2_VALUES_M_EARLY),
         ("Total own funds after deductions - per Pillar 3 FY2016-FY2019 editions, which state £m to 1 d.p. "
          "(Total Capital after deductions)", P3_TOTAL_CAPITAL_VALUES_M),
@@ -1639,8 +1705,16 @@ metric(
       "shareholders' funds plus the full nominal subordinated liabilities give £7,248k (FY2016), £7,359k "
       "(FY2017) and £7,339k (FY2018), against £6.7m per Pillar 3. The Tier 2 gap is the eligibility "
       "amortisation described above (nominal £1,581k/£1,581k/£1,431k against eligible £1.4m/£1.3m/£1.1m); "
-      "the Tier 1 gap is explained on the CET1 Capital sheet. The FY2019 Tier 2 figure (£1.0m) was "
-      "transcribed by an earlier session but is not carried on this sheet; it was not re-read 2026-09-19.",
+      "the Tier 1 gap is explained on the CET1 Capital sheet.\n"
+      "FY2019 TIER 2 IS NOW CARRIED - CORRECTED 2026-10-07. This note previously ended 'The FY2019 Tier 2 "
+      "figure (£1.0m) was transcribed by an earlier session but is not carried on this sheet; it was not "
+      "re-read 2026-09-19.' That was accurate and is now superseded: the figure was re-read off the page "
+      "image and placed on the FY2016-FY2019 Tier 2 row above. FY2019 is therefore the fourth consecutive "
+      "year printing Total Capital after deductions of £6.7m, here as £5.7m Tier 1 + £1.0m Tier 2. The "
+      "Annual Report rows for FY2019 continue to disagree and are unchanged: shareholders' funds £6,145k "
+      "plus nominal subordinated liabilities £1,431k = £7,576k, against £6.7m per Pillar 3, the Tier 2 half "
+      "of the gap again being eligibility amortisation (nominal £1,431k against eligible £1.0m)."
+    + FY2019_OWN_FUNDS_NOTE + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1667,7 +1741,8 @@ metric(
          "here - FY2022 22.12% appears in both the FY2022 and FY2023 editions, FY2023 18.16% in both the "
          "FY2023 and FY2024 editions, FY2024 22.70% in both the FY2024 and FY2025 editions.\n\n"
          + EARLY_P3_NO_RATIO_NOTE + "\n\n"
-         + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY,
+         + PARTIAL_DISCLOSURE_NOTE_P3_SERIES_ONLY
+    + RATIO_TIE_NOTE,
 )
 
 metric(
@@ -1732,8 +1807,12 @@ rwa_rows = [
     # £m' column (FY2016 p.12, FY2017 p.12, FY2018 p.13), £m to 1 d.p. carried
     # in £'000. The central-government row prints '-' in all three and is kept
     # as a literal dash (map rule 2); '0.0' is a printed zero and stays 0.
+    # DASH RULE, 2026-10-07: FY2019 and FY2020 were 0 here; both editions print a DASH in the
+    # risk-weighted-exposure column of this row. Re-read off 300 dpi page images - FY2019 printed
+    # p.14 (a hyphen-style dash), FY2020 printed p.17 (an en dash). See the DASHES paragraph in
+    # the source note. The exposure itself is printed in both (GBP6.5m / GBP6,677k) at a 0% risk weight.
     ("DATA", "Exposures to central governments or central banks (Bank of England Reserve Account)",
-     {"FY2020": 0, "FY2019": 0, "FY2018": "-", "FY2017": "-", "FY2016": "-"}),
+     {"FY2020": "-", "FY2019": "-", "FY2018": "-", "FY2017": "-", "FY2016": "-"}),
     ("DATA", "Retail exposures (unsecured loans)",
      {"FY2020": 657, "FY2019": 200, "FY2018": 100, "FY2017": 200, "FY2016": 200}),
     ("DATA", "Exposures secured by mortgages on immovable property (non-residential loans performing)",
@@ -1773,10 +1852,9 @@ RWA_BREAKDOWN_NOTE = (
     "requires; neither has been adjusted to match the other.\n"
     "FY2019 ROWS ARE £m-PRECISION. The FY2019 Pillar 3 edition states every figure in £m to one decimal "
     "place. Its rows above are carried in £'000 at that precision - '34,000' means '£34.0m as printed', "
-    "not a figure measured to the nearest £1k. Rows shown above as 0 are printed in the source as either "
-    "'-' (central government/central bank exposures, which carry a 0% risk weight) or '0.0' (the "
-    "residential and unsecured default classes) - genuinely nil or below the rounding floor, which is why "
-    "they are 0 rather than blank.\n"
+    "not a figure measured to the nearest £1k. The residential and unsecured default classes are printed "
+    "'0.0' and are carried as 0: a measured nil, not a dash. The central government/central bank row is "
+    "printed as a DASH and is carried as one - see the DASHES paragraph below.\n"
     "ONE TYPO IN THE FY2021 SOURCE, reproduced faithfully and flagged rather than silently corrected: the "
     "narrative above that edition's UK OV1 table reads 'The Bank's total Pillar 1 capital resources "
     "requirement ... amounted to £3,249k as at 31 December 2020', but £3,249k is the 31 December 2021 "
@@ -1798,13 +1876,19 @@ RWA_BREAKDOWN_NOTE = (
     "+ 0.4 + 2.4 + 1.8 = 32.3, with 2.6 + 0.2 = 2.8; FY2018 0.1 + 28.3 + 2.8 + 0.4 + 1.2 + 1.8 = 34.6, with "
     "2.8 + 0.3 = 3.1. As in FY2019-FY2020, no edition states a total risk-weighted exposure amount - "
     "operational risk appears only as a capital requirement - so no total is shown for these years.\n"
-    "DASHES. The central-government row prints '-' in both the risk-weighted-exposure and the capital-"
-    "required columns of all three FY2016-FY2018 editions (the exposure itself is printed: £4.2m, £4.5m, "
-    "£4.5m, i.e. the Bank of England Reserve Account at a 0% risk weight). Those cells carry a literal '-' "
-    "(the bank printed a dash). The FY2019 cell on the same row, described above as printed '-', was "
-    "entered as 0 by an earlier pass under the superseded rule and is left as found for the corpus-wide dash "
-    "conversion (GA-008) rather than converted one bank at a time; the FY2020 edition's glyph for that row "
-    "was not re-read on 2026-09-19.\n"
+    "DASHES. The central-government row prints a dash in both the risk-weighted-exposure and the capital-"
+    "required columns of EVERY edition that carries this table - FY2016, FY2017, FY2018, FY2019 and FY2020 - "
+    "while printing the exposure itself (£4.2m, £4.5m, £4.5m, £6.5m and £6,677k respectively: the Bank of "
+    "England Reserve Account at a 0% risk weight). All five cells carry a literal '-', because a dash is the "
+    "bank saying the row does not apply and that is a different statement from a measured nought.\n"
+    "FY2019 AND FY2020 WERE CONVERTED ON 2026-10-07; THEY HAD HELD 0. The earlier pass left them for the "
+    "corpus-wide dash conversion (GA-008) rather than converting one bank at a time, and recorded that the "
+    "FY2020 edition's glyph had never been re-read at all. Both have now been read off 300 dpi page images "
+    "of the editions' own pages - FY2019 printed p.14 and FY2020 printed p.17, in each case the page footer "
+    "confirming the folio - and both print a dash. THE GLYPHS DIFFER BETWEEN EDITIONS AND THE CELL DOES NOT: "
+    "FY2016-FY2019 print a short hyphen-style dash and FY2020 prints an en dash; every cell carries the "
+    "plain ASCII '-'. Rows on those same two tables that print a real '0' or '0.0' (the residential and "
+    "unsecured default classes) are untouched and remain 0.\n"
     "The paragraph below describes the UK OV1 / total rows; the Article 112 rows are covered above.\n\n"
     + PARTIAL_DISCLOSURE_NOTE
 )
@@ -1950,15 +2034,15 @@ bw.add_overview_sheet(
         }),
         ("Loans and advances to customers", {
             "FY2025": 118242, "FY2024": 97733, "FY2023": 77532, "FY2022": 63291, "FY2021": 53795,
-            "FY2020": 47114, "FY2019": 45339, "FY2018": 41404, "FY2017": 38438, "FY2016": 35336, "FY2015": 33028, "FY2014": 29724,
+            "FY2020": 47114, "FY2019": 45339, "FY2018": 41404, "FY2017": 38438, "FY2016": 35336, "FY2015": 33028, "FY2014": 29724, "FY2013": 28355, "FY2012": 27886, "FY2011": 28238, "FY2010": 32538, "FY2009": 33073, "FY2008": 26860, "FY2007": 20322, "FY2006": 21208, "FY2005": 17900, "FY2004": 16680
         }),
         ("Customer accounts", {
             "FY2025": 141758, "FY2024": 121269, "FY2023": 102091, "FY2022": 78452, "FY2021": 66668,
-            "FY2020": 61287, "FY2019": 51378, "FY2018": 46112, "FY2017": 48656, "FY2016": 43885, "FY2015": 41906, "FY2014": 42935,
+            "FY2020": 61287, "FY2019": 51378, "FY2018": 46112, "FY2017": 48656, "FY2016": 43885, "FY2015": 41906, "FY2014": 42935, "FY2013": 47013, "FY2012": 42546, "FY2011": 41638, "FY2010": 47247, "FY2009": 45168, "FY2008": 46737, "FY2007": 39931, "FY2006": 29520, "FY2005": 26294, "FY2004": 24187
         }),
         ("Total shareholders' funds", {
             "FY2025": 15808, "FY2024": 15512, "FY2023": 9876, "FY2022": 9353, "FY2021": 7451,
-            "FY2020": 6771, "FY2019": 6145, "FY2018": 5908, "FY2017": 5778, "FY2016": 5667, "FY2015": 5631, "FY2014": 4960,
+            "FY2020": 6771, "FY2019": 6145, "FY2018": 5908, "FY2017": 5778, "FY2016": 5667, "FY2015": 5631, "FY2014": 4960, "FY2013": 4646, "FY2012": 4657, "FY2011": 4266, "FY2010": 4649, "FY2009": 4788, "FY2008": 5221, "FY2007": 5091, "FY2006": 4558, "FY2005": 4312, "FY2004": 4217
         }),
     ],
     balance_sheet_unit="£'000",
@@ -1969,7 +2053,7 @@ bw.add_overview_sheet(
         }),
         ("Administrative expenses", {
             "FY2025": -7241, "FY2024": -4776, "FY2023": -3597, "FY2022": -2953, "FY2021": -2437,
-            "FY2020": -2167, "FY2019": -1780, "FY2018": -1776, "FY2017": -1538, "FY2016": -1554, "FY2015": -1487, "FY2014": -1413,
+            "FY2020": -2167, "FY2019": -1780, "FY2018": -1776, "FY2017": -1538, "FY2016": -1554, "FY2015": -1487, "FY2014": -1413, "FY2013": -1241, "FY2012": -1201, "FY2011": -1185, "FY2010": -1194, "FY2009": -1082, "FY2008": -838, "FY2007": -726, "FY2006": -548, "FY2005": -568
         }),
         ("(Loss)/profit for the financial year", {
             "FY2025": -804, "FY2024": 279, "FY2023": 523, "FY2022": 102, "FY2021": 680,

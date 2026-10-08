@@ -753,16 +753,16 @@ metric("MREL Ratio", None, [("MREL resources as a percentage of total risk-weigh
 
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 19561.7, "FY2024": 17829.5, "FY2023": 16738.0, "FY2022": 15603.9, "FY2021": 14084.5}),
-        ("Loans and advances to customers", {"FY2025": 12656.1, "FY2024": 11958.8, "FY2023": 11432.2, "FY2022": 10531.9, "FY2021": 9476.4}),
-        ("Amounts owed to retail depositors", {"FY2025": 14088.3, "FY2024": 13525.4, "FY2023": 12246.5, "FY2022": 11132.2, "FY2021": 9739.4}),
-        ("Total equity", {"FY2025": 2098.7, "FY2024": 1925.7, "FY2023": 1848.4, "FY2022": 1796.5, "FY2021": 1691.5}),
+        ("Total assets", {"FY2025": 19561.7, "FY2024": 17829.5, "FY2023": 16738.0, "FY2022": 15603.9, "FY2021": 14084.5, "FY2020": 13374.8, "FY2019": 13469.9}),
+        ("Loans and advances to customers", {"FY2025": 12656.1, "FY2024": 11958.8, "FY2023": 11432.2, "FY2022": 10531.9, "FY2021": 9476.4, "FY2020": 8531.7, "FY2019": 7208.2}),
+        ("Amounts owed to retail depositors", {"FY2025": 14088.3, "FY2024": 13525.4, "FY2023": 12246.5, "FY2022": 11132.2, "FY2021": 9739.4, "FY2020": 9705.3, "FY2019": 9435.7}),
+        ("Total equity", {"FY2025": 2098.7, "FY2024": 1925.7, "FY2023": 1848.4, "FY2022": 1796.5, "FY2021": 1691.5, "FY2020": 1494.8, "FY2019": 1328.3}),
     ],
     balance_sheet_unit="£m",
     income_statement_totals=[
-        ("Total income", {"FY2025": 670.1, "FY2024": 667.2, "FY2023": 658.4, "FY2022": 775.4, "FY2021": 629.0}),
-        ("Administrative expenses", {"FY2025": -270.3, "FY2024": -258.1, "FY2023": -233.8, "FY2022": -206.5, "FY2021": -166.5}),
-        ("Profit for the year", {"FY2025": 287.1, "FY2024": 308.1, "FY2023": 283.6, "FY2022": 411.3, "FY2021": 345.0}),
+        ("Total income", {"FY2025": 670.1, "FY2024": 667.2, "FY2023": 658.4, "FY2022": 775.4, "FY2021": 629.0, "FY2020": 508.6, "FY2019": 343.4}),
+        ("Administrative expenses", {"FY2025": -270.3, "FY2024": -258.1, "FY2023": -233.8, "FY2022": -206.5, "FY2021": -166.5, "FY2020": -157.1, "FY2019": -108.7}),
+        ("Profit for the year", {"FY2025": 287.1, "FY2024": 308.1, "FY2023": 283.6, "FY2022": 411.3, "FY2021": 345.0, "FY2020": 196.2, "FY2019": 158.8}),
     ],
     income_statement_unit="£m",
     equity_changes_totals=[
@@ -773,9 +773,9 @@ bw.add_overview_sheet(
     ],
     equity_changes_unit="£m",
     cash_flow_totals=[
-        ("Net cash generated from operating activities", {"FY2025": 1096.4, "FY2024": 941.5, "FY2023": 151.3, "FY2022": 678.5, "FY2021": -543.9}),
-        ("Net cash from investing activities", {"FY2025": -107.8, "FY2024": -141.4, "FY2023": -282.6, "FY2022": -112.8, "FY2021": -3.7}),
-        ("Net cash from financing activities", {"FY2025": -759.2, "FY2024": -612.0, "FY2023": -467.3, "FY2022": -448.9, "FY2021": 502.3}),
+        ("Net cash generated from operating activities", {"FY2025": 1096.4, "FY2024": 941.5, "FY2023": 151.3, "FY2022": 678.5, "FY2021": -543.9, "FY2020": -390.8, "FY2019": -393.8}),
+        ("Net cash from investing activities", {"FY2025": -107.8, "FY2024": -141.4, "FY2023": -282.6, "FY2022": -112.8, "FY2021": -3.7, "FY2020": 330.2, "FY2019": -47.6}),
+        ("Net cash from financing activities", {"FY2025": -759.2, "FY2024": -612.0, "FY2023": -467.3, "FY2022": -448.9, "FY2021": 502.3, "FY2020": 281.6, "FY2019": 281.1}),
         ("Cash and cash equivalents at end of year", {"FY2025": 1268.0, "FY2024": 1038.6, "FY2023": 850.5, "FY2022": 1449.1, "FY2021": 1332.3}),
     ],
     cash_flow_unit="£m",

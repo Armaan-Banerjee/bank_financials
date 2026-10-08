@@ -286,7 +286,7 @@ RWA_BREAKDOWN_SOURCES = (
     "the same three summary lines as FY2021 plus the grand total. FY2019's 'other risks' line (217,134) includes "
     "settlement risk of 493 alongside operational risk of 216,641; FY2020 and FY2019 print a dash for market risk. "
     "The FY2017 edition's 2016 comparative restates FY2016 market risk to 4,087 and the total to 892,870; the "
-    "FY2016 edition's own 56 / 888,838 are carried, including on the Total RWAs sheet. ROUNDING, NOT A TRANSCRIPTION ERROR: in FY2016, FY2017 and FY2018 the three printed lines sum to 1 more than the printed grand total (888,839 v 888,838; 1,241,499 v 1,241,498; 1,225,218 v 1,225,217) - the Bank's own £000 rounding, seen on the page images; verify_workbook.py flags it and the figures are left as printed.\n\n"
+    "FY2016 edition's own 56 / 888,838 are carried, including on the Total RWAs sheet. RE-VERIFIED 2026-10-07 AGAINST THE PAGE IMAGE, AND RECORDED SO IT IS NOT RE-CHASED: the FY2016 edition was re-downloaded and its printed p.6 table 'RWAs and capital requirements (£000s)' re-read at 300 dpi. The 2016 RWA column is Institutions 1,240 / Corporates 83,324 / Secured by mortgages on immovable property 466,530 / Retail 13,117 / Other items 178,599 = Total Standardised Approach 742,809; CVA 5,478; (i) Total credit and counterparty credit risk 748,287; (ii) Total market risk 56 (foreign exchange); (iii) Total other risks 140,496 (operational risk, Basic Indicator Approach including buffer); Grand total RWA 888,838 against a capital requirement of 71,107. Entity and basis confirmed on the face of the table - the document is titled 'Credit Suisse (UK) Limited - Basel III - Pillar 3 Disclosures 2016' and the text above the table reads 'The Pillar 1 capital requirements of CSUK are summarised below'. A LEAD RAISED ON 2026-09-19 SAID THIS FIGURE WAS 'PRINTED IN A SOURCE BUT NOT ON THE TOTAL RWAs SHEET'. IT IS ON THAT SHEET AND HAS BEEN SINCE 2026-09-19. It reads 888.838 there rather than 888,838 because that sheet is denominated in £m while this table is in £000s, so a search for the £000s spelling finds nothing on it. Nothing was added or changed; the lead is closed as already done. ROUNDING, NOT A TRANSCRIPTION ERROR: in FY2016, FY2017 and FY2018 the three printed lines sum to 1 more than the printed grand total (888,839 v 888,838; 1,241,499 v 1,241,498; 1,225,218 v 1,225,217) - the Bank's own £000 rounding, seen on the page images; verify_workbook.py flags it and the figures are left as printed.\n\n"
     "Every year's Total ties to the Total RWAs sheet's own figure (to the nearest £m). FY2021's own document "
     "uses an older, pre-OV1 layout (exposure-class detail within credit risk; three summary lines 'Total credit "
     "and counterparty credit risk' / 'Total market risk' / 'Total other risks') rather than the UK OV1 template "
@@ -770,8 +770,14 @@ def p3_sources(page_note=""):
         "carries no KPI table at all - only introduced from the FY2018 report) - " + AR2018_URL + "\n"
         "FY2016: the Annual Report has no KPI table, but the entity's own standalone 2016 Pillar 3 directly "
         "discloses CET1/Tier 1 ratio 20.9% and Total Capital ratio 23.7% (capital composition and ratios, "
-        "PDF p.5), RWA £888.838m (PDF p.6), and leverage ratio 6.2% with £2,996.370m exposure (PDF p.20) - "
-        + P3_2016_URL + ". FY2016 CET1/Tier 1 Capital (£) remains sourced from the Capital adequacy note's "
+        "printed p.5), RWA £888.838m (printed p.6), and leverage ratio 6.2% with £2,996.370m exposure "
+        "(printed p.20) - " + P3_2016_URL + " . PAGE NUMBERS RESTATED AS PRINTED FOLIOS 2026-10-07 (they "
+        "previously read 'PDF p.N'): the document's own page footers were read on sheets 4, 6 and 20 and "
+        "print 4, 6 and 20, so the printed folio equals the PDF sheet index throughout this edition and the "
+        "numbers are unchanged - only the promise they make to a reader is. The document is "
+        "'Credit Suisse (UK) Limited - Basel III - Pillar 3 Disclosures 2016', 31pp, fetched 2026-10-07 "
+        "with plain curl (HTTP 200, Content-Type application/pdf, %PDF-1.6). "
+        "FY2016 CET1/Tier 1 Capital (£) remains sourced from the Capital adequacy note's "
         "Own Funds table, FY2016 Annual Report p.88 - " + AR2016_URL + "\n"
         "FY2021-FY2023: CSUK official Pillar 3 disclosures hosted by UBS (KM1 / capital composition tables) - "
         "https://www.ubs.com/global/en/investor-relations/complementary-financial-information/disclosure-legal-entities/archive-credit-suisse.html\n"
@@ -817,11 +823,39 @@ LCR_P3_AVERAGE = {"FY2025": "4860.58%", "FY2024": "539.19%", "FY2023": "729.77%"
                   "FY2021": "230%", "FY2020": "300%", "FY2019": "246%"}
 NSFR = {"FY2025": "3,600%", "FY2024": "167%", "FY2023": "129.25%", "FY2022": "131.72%"}
 
+# Annual Report basis - the Bank's own Strategic Report prints an average NSFR
+# for FY2020 and FY2019, years in which no Pillar 3 NSFR exists at all (the UK
+# NSFR requirement only began on 1 January 2022). Kept on its own row rather
+# than merged into the row above, which is the Pillar 3/KM1 basis.
+NSFR_AR_AVERAGE = {"FY2020": "114.4%", "FY2019": "97.4%"}
+
 COMBINED_NOTE = (
     "The Bank's own KPI table discloses a single combined 'Tier 1 and Common Equity Tier 1 (CET1)' "
     "line, not separate Tier 1/CET1 figures - used identically for both the CET1 and Tier 1 sheets. FY2016's "
     "£ figure is the Capital adequacy note's 'Total Tier 1 (and CET1) capital' (£185,547k, rounded to £186m). "
-    "The FY2016 ratio is directly disclosed as 20.9% in the entity's own 2016 Pillar 3 report."
+    "The FY2016 ratio is directly disclosed as 20.9% in the entity's own 2016 Pillar 3 report.\n"
+    "WHY THE £ AND THE % ON THESE SHEETS DO NOT DIVIDE INTO EACH OTHER (investigated and settled "
+    "2026-10-08 after check_ratio_ties.py reported FY2020 at 1.47pp and FY2024 at 0.51pp). Neither is a "
+    "transcription error and nothing has been changed. The two sides are two different published "
+    "quantities and the break is the distance between them.\n"
+    "  FY2020. The £314m on the capital sheets is the Annual Report's own-funds note - FY2020 Annual "
+    "Report, Note 36 'Capital adequacy', printed folio 116, 'Total Tier 1 (and CET1) capital 313,692' "
+    f"(2019: 298,897), read at 300 dpi off the page image - {AR2020_URL}. The 22% on the ratio sheets is "
+    "the KPI table, printed folio 8, where the same report prints 'Risk Weighted Assets (£ mn) 1,338' and "
+    "'Common Equity Tier 1 ('CET1') Capital Ratio 22 %'; the Strategic Report prose on folio 9 gives it "
+    "to two decimals as 22.09%. 313,692/1,338,000 is 23.4%, not 22.09%, and the Bank never reconciles "
+    "them - but its own 2020 Pillar 3 does show where the difference sits: that edition's 'Leverage Ratio "
+    "Common Disclosure' table, printed folio 24, uses Tier 1 Capital of £295,460k, which over the same "
+    "£1,338m of RWA gives 22.08%. The regulatory Tier 1 is £18.2m lower than the accounts' own-funds "
+    "figure. Both numbers are CSUK's, from the same year, on two different definitions.\n"
+    "  FY2024. The 45% on the ratio sheets is the FY2025 Annual Report's KPI table printing a whole "
+    "number; the Pillar 3 prints 44.58% (KM1 row 5), and the KM1 sheet's own row 1 (299,412) over row 4 "
+    "(671,676) reproduces 44.58% exactly. The sheets therefore disagree by the width of the Annual "
+    "Report's rounding, and the KM1 sheet carries the precise figure.\n"
+    "  A RELATED CROSS-EDITION DISAGREEMENT, recorded while these pages were open: the FY2020 KPI table's "
+    "own 2019 comparative prints the CET1 ratio as 20%, whereas the FY2019 Annual Report prints 21.9% "
+    f"(Strategic Report, printed folio 8 - {AR2019_URL}), which is the figure this sheet carries under "
+    "the project's own-edition rule. CSUK does not explain the movement. Do not reconcile them."
 )
 
 CSUK_P3_INDEX_URL = ("https://www.ubs.com/global/en/investor-relations/complementary-financial-information/"
@@ -1200,18 +1234,50 @@ LCR_INTERIOR_NOTE = (
     "its own rows 15/16 - reproduced as published, not corrected).\n"
     "WHAT THIS REPLACES: this note used to say FY2019/FY2020/FY2021 were 'confirmed genuinely absent for "
     "that year, not omitted by search'. They were absent from the Annual Report KPI table, which is the "
-    "only document that sentence had actually looked at."
+    "only document that sentence had actually looked at.\n"
+    "A THIRD AVERAGE, FOUND 2026-10-08 AND DELIBERATELY NOT PLACED ON EITHER ROW. The Annual Report's "
+    "Strategic Report prose - not its KPI table - prints its own average LCR: FY2020 Annual Report, "
+    "printed folio 9, read at 300 dpi, \"The Bank's average LCR as at 31 December 2020 is 268% (2019: "
+    f"246%)\" - {AR2020_URL}; and the FY2019 Annual Report, printed folio 8, \"The Bank's average "
+    f"Liquidity Coverage Ratio ('LCR') as at 31 December 2019 is 246% (2018: 154%)\" - {AR2019_URL}. "
+    "At FY2019 that agrees exactly with the 2019 Pillar 3's 246% already on row 2, and it also explains "
+    "FY2018's 154%, flagged above as an average sitting on the spot row - it is the same figure the "
+    "FY2019 Annual Report quotes as its 2018 comparative. At FY2020 it does NOT agree: the Annual Report "
+    "says 268%, the 2020 Pillar 3's own quarter-ending-31/12/2020 column says 300%. Both are published by "
+    "CSUK, both are captioned 'average', and neither document states the other's window, so there is no "
+    "basis on which to call either wrong. Row 2 keeps the Pillar 3 figure because that row is defined as "
+    "the Pillar 3 basis; the Annual Report's 268% is recorded here rather than placed on the spot row, "
+    "which it is not, or blended with row 2, which it must not be. Row 1 therefore still has no FY2020 or "
+    "FY2019 figure: no SPOT LCR has been located for either year."
 )
 metric("LCR", "%", [("Liquidity Coverage Ratio (LCR) - spot, year-end basis (Annual Report)", LCR),
                     ("Liquidity Coverage Ratio (LCR) - Pillar 3 basis, 12-month average of month-end "
                      "observations", LCR_P3_AVERAGE)],
        p3_sources(LCR_INTERIOR_NOTE))
 
-metric("NSFR", "%", [("Net Stable Funding Ratio (NSFR)", NSFR)], p3_sources(
+metric("NSFR", "%",
+       [("Net Stable Funding Ratio (NSFR) - Pillar 3 / KM1 basis", NSFR),
+        ("Net Stable Funding Ratio (NSFR) - Annual Report basis, average as at 31 December",
+         NSFR_AR_AVERAGE)],
+       p3_sources(
     "\nFY2021's KPI table (earliest format checked before this ticket) discloses only a 'Liquidity Buffer "
-    "(£m)' figure, no NSFR% - confirmed genuinely absent for that year, not omitted by search. No NSFR "
-    "figure was found in any of the FY2016-FY2020 KPI tables/comparative columns either, despite each "
-    "year's Strategic Report discussing NSFR in general regulatory terms."))
+    "(£m)' figure, no NSFR% - confirmed genuinely absent for that year, not omitted by search.\n"
+    "FY2020 AND FY2019 FOUND 2026-10-08, AND THE SENTENCE THAT HID THEM IS RECORDED HERE RATHER THAN "
+    "DELETED. This note used to end: 'No NSFR figure was found in any of the FY2016-FY2020 KPI tables/"
+    "comparative columns either, despite each year's Strategic Report discussing NSFR in general "
+    "regulatory terms.' Every clause of that was true, and the conclusion drawn from it was wrong, for the "
+    "third time in this workbook (see the Leverage Ratio and LCR notes for the first two): the KPI TABLE "
+    "carries no NSFR, but the Strategic Report prose two pages later prints one. FY2020 Annual Report, "
+    "printed folio 9, 'Liquidity' section, read at 300 dpi off the page image: \"The Bank's average NSFR "
+    "as at 31 December 2020 is 114.4% (2019 97.4%).\" - " + AR2020_URL + "\n"
+    "BASIS, stated not smoothed. These two cells are on their own row because they are NOT the row above's "
+    "measure. Row 1 is the Pillar 3/KM1 NSFR, which does not exist before FY2022: the UK NSFR requirement "
+    "began on 1 January 2022, so no FY2016-FY2021 Pillar 3 edition contains one. Row 2 is the Bank's own "
+    "annual-report average. Nothing is interpolated between them and the two rows are never to be merged.\n"
+    "FY2019 IS A COMPARATIVE, read off the FY2020 edition. The FY2019 Annual Report's own Strategic Report "
+    "(printed folio 8) names the NSFR as a metric the Bank monitors but prints no figure for it - checked "
+    "on the page image, " + AR2019_URL + " - so the FY2020 edition's comparative is the only published "
+    "FY2019 NSFR located."))
 
 MREL_NOTE = (
     "Not disclosed anywhere in any of the 10 years' Companies House filings reviewed (FY2016-FY2025), no "

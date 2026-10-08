@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T08:52:22.737772+00:00",
+  "generated_at": "2026-10-08T23:08:12.294977+00:00",
   "policy": "screening only: observed headroom and multi-year movement are ranked; no breach date or future value is projected",
   "records": [
     {
@@ -521,6 +521,31 @@
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
+      "bank": "RCI Bank UK Limited",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "cet1_pillar1_uk_2021",
+        "cocb_uk_2021"
+      ],
+      "current_headroom": 4.84,
+      "current_value": 11.84,
+      "frn": "815220",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": 7.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -2.75,
+      "trend_direction": "declining",
+      "trend_magnitude": 2.75
+    },
+    {
+      "applicable_buffer": 2.5,
+      "applicable_minimum": 4.5,
       "bank": "ICBC Standard Bank Plc",
       "comparable_pair_count": 10,
       "comparable_year_count": 11,
@@ -597,16 +622,16 @@
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "Close Brothers Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
       ],
-      "current_headroom": 5.9,
-      "current_value": 12.9,
+      "current_headroom": 5.800000000000001,
+      "current_value": 12.8,
       "frn": "124750",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "CET1 Ratio",
       "regulatory_floor": 7.0,
       "sources": [
@@ -614,9 +639,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": -1.6999999999999993,
+      "trend_change": -1.799999999999999,
       "trend_direction": "declining",
-      "trend_magnitude": 1.6999999999999993
+      "trend_magnitude": 1.799999999999999
     },
     {
       "applicable_buffer": 2.5,
@@ -688,6 +713,29 @@
       "trend_change": -5.6,
       "trend_direction": "declining",
       "trend_magnitude": 5.6
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "RCI Bank UK Limited",
+      "comparable_pair_count": 6,
+      "comparable_year_count": 7,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 6.220000000000001,
+      "current_value": 14.22,
+      "frn": "815220",
+      "latest_year": 2025,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": -1.4900000000000002,
+      "trend_direction": "declining",
+      "trend_magnitude": 1.4900000000000002
     },
     {
       "applicable_buffer": 2.5,
@@ -763,31 +811,6 @@
       "trend_change": -55.6,
       "trend_direction": "declining",
       "trend_magnitude": 55.6
-    },
-    {
-      "applicable_buffer": 2.5,
-      "applicable_minimum": 4.5,
-      "bank": "RCI Bank UK Limited",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "cet1_pillar1_uk_2021",
-        "cocb_uk_2021"
-      ],
-      "current_headroom": 6.460000000000001,
-      "current_value": 13.46,
-      "frn": "815220",
-      "latest_year": 2024,
-      "metric": "CET1 Ratio",
-      "regulatory_floor": 7.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/-/media/boe/files/stress-testing/2024/boes-approach-to-stress-testing-the-uk-banking-system.pdf",
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -1.129999999999999,
-      "trend_direction": "declining",
-      "trend_magnitude": 1.129999999999999
     },
     {
       "applicable_buffer": 2.5,
@@ -1214,29 +1237,6 @@
       "trend_change": -9.989999999999998,
       "trend_direction": "declining",
       "trend_magnitude": 9.989999999999998
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "RCI Bank UK Limited",
-      "comparable_pair_count": 5,
-      "comparable_year_count": 6,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 7.42,
-      "current_value": 15.42,
-      "frn": "815220",
-      "latest_year": 2024,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -0.2900000000000009,
-      "trend_direction": "declining",
-      "trend_magnitude": 0.2900000000000009
     },
     {
       "applicable_buffer": 0,
@@ -1872,29 +1872,6 @@
       "trend_change": -8.2,
       "trend_direction": "declining",
       "trend_magnitude": 8.2
-    },
-    {
-      "applicable_buffer": 0,
-      "applicable_minimum": 8.0,
-      "bank": "Close Brothers Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
-      "context_ids": [
-        "totalcapital_pillar1_uk_2021"
-      ],
-      "current_headroom": 9.100000000000001,
-      "current_value": 17.1,
-      "frn": "124750",
-      "latest_year": 2025,
-      "metric": "Total Capital Ratio",
-      "regulatory_floor": 8.0,
-      "sources": [
-        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
-      ],
-      "status": "screened",
-      "trend_change": -0.1999999999999993,
-      "trend_direction": "declining",
-      "trend_magnitude": 0.1999999999999993
     },
     {
       "applicable_buffer": 2.5,
@@ -5915,15 +5892,15 @@
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "Close Brothers Limited",
-      "comparable_pair_count": 4,
-      "comparable_year_count": 5,
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
       "current_headroom": 9.0,
       "current_value": 15.0,
       "frn": "124750",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Tier 1 Ratio",
       "regulatory_floor": 6.0,
       "sources": [
@@ -5984,15 +5961,15 @@
       "applicable_buffer": 0,
       "applicable_minimum": 3.25,
       "bank": "Close Brothers Limited",
-      "comparable_pair_count": 3,
-      "comparable_year_count": 4,
+      "comparable_pair_count": 4,
+      "comparable_year_count": 5,
       "context_ids": [
         "leverage_uk_325_2024"
       ],
       "current_headroom": 9.35,
       "current_value": 12.6,
       "frn": "124750",
-      "latest_year": 2025,
+      "latest_year": 2026,
       "metric": "Leverage Ratio",
       "regulatory_floor": 3.25,
       "sources": [
@@ -6071,6 +6048,29 @@
       "trend_change": 0.019999999999999574,
       "trend_direction": "increasing",
       "trend_magnitude": 0.019999999999999574
+    },
+    {
+      "applicable_buffer": 0,
+      "applicable_minimum": 8.0,
+      "bank": "Close Brothers Limited",
+      "comparable_pair_count": 5,
+      "comparable_year_count": 6,
+      "context_ids": [
+        "totalcapital_pillar1_uk_2021"
+      ],
+      "current_headroom": 9.8,
+      "current_value": 17.8,
+      "frn": "124750",
+      "latest_year": 2026,
+      "metric": "Total Capital Ratio",
+      "regulatory_floor": 8.0,
+      "sources": [
+        "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
+      ],
+      "status": "screened",
+      "trend_change": 0.5,
+      "trend_direction": "increasing",
+      "trend_magnitude": 0.5
     },
     {
       "applicable_buffer": 0,
@@ -8119,8 +8119,8 @@
       "applicable_buffer": 0,
       "applicable_minimum": 8.0,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 10,
-      "comparable_year_count": 11,
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
       "context_ids": [
         "totalcapital_pillar1_uk_2021"
       ],
@@ -8134,16 +8134,16 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 57.58,
+      "trend_change": 63.27,
       "trend_direction": "increasing",
-      "trend_magnitude": 57.58
+      "trend_magnitude": 63.27
     },
     {
       "applicable_buffer": 2.5,
       "applicable_minimum": 4.5,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 10,
-      "comparable_year_count": 11,
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
       "context_ids": [
         "cet1_pillar1_uk_2021",
         "cocb_uk_2021"
@@ -8159,16 +8159,16 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 62.800000000000004,
+      "trend_change": 67.58,
       "trend_direction": "increasing",
-      "trend_magnitude": 62.800000000000004
+      "trend_magnitude": 67.58
     },
     {
       "applicable_buffer": 0,
       "applicable_minimum": 6.0,
       "bank": "ICBC (London) plc",
-      "comparable_pair_count": 10,
-      "comparable_year_count": 11,
+      "comparable_pair_count": 11,
+      "comparable_year_count": 12,
       "context_ids": [
         "tier1_pillar1_uk_2021"
       ],
@@ -8182,9 +8182,9 @@
         "https://www.bankofengland.co.uk/prudential-regulation/publication/2022/november/implementation-of-the-basel-3-1-standards/output-floor"
       ],
       "status": "screened",
-      "trend_change": 62.800000000000004,
+      "trend_change": 67.58,
       "trend_direction": "increasing",
-      "trend_magnitude": 62.800000000000004
+      "trend_magnitude": 67.58
     },
     {
       "applicable_buffer": 0,
@@ -8889,6 +8889,25 @@
       "applicable_buffer": null,
       "applicable_minimum": null,
       "bank": "DB UK Bank Limited",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 85.0,
+      "frn": "140848",
+      "latest_year": 2025,
+      "metric": "CET1 Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": 6.0,
+      "trend_direction": "increasing",
+      "trend_magnitude": 6.0
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "DB UK Bank Limited",
       "comparable_pair_count": 4,
       "comparable_year_count": 5,
       "context_ids": [],
@@ -8903,6 +8922,25 @@
       "trend_change": -13.0,
       "trend_direction": "declining",
       "trend_magnitude": 13.0
+    },
+    {
+      "applicable_buffer": null,
+      "applicable_minimum": null,
+      "bank": "DB UK Bank Limited",
+      "comparable_pair_count": 3,
+      "comparable_year_count": 4,
+      "context_ids": [],
+      "current_headroom": null,
+      "current_value": 85.0,
+      "frn": "140848",
+      "latest_year": 2025,
+      "metric": "Tier 1 Ratio",
+      "regulatory_floor": null,
+      "sources": [],
+      "status": "no_regulatory_context",
+      "trend_change": 6.0,
+      "trend_direction": "increasing",
+      "trend_magnitude": 6.0
     },
     {
       "applicable_buffer": null,

@@ -262,13 +262,37 @@ bw = BankWorkbook(bank_name="FirstBank UK Limited", years=YEARS, year_label=YEAR
 #    returns 464KB - the media route is disabled, so it can neither confirm nor
 #    deny an upload.
 # ---------------------------------------------------------------
-FY2025_P3_PENDING = ("Not published - FY2025 Pillar 3 pending; AR2025 says it "
+FY2025_P3_PENDING = ("Not published yet – FY2025 Pillar 3 pending; AR2025 says it "
                      "\"will be published ... after the approval of these Financial Statements\"")
-FY2025_NO_TIER1_RATIO = ("Not published - AR2025 labels only a CET1 ratio; FY2025 Pillar 3 pending")
-FY2025_NO_LCR = ("Not published - FY2025 Pillar 3 pending; AR2025's \"Liquidity Capital Ratio "
+FY2025_NO_TIER1_RATIO = ("Not published yet – AR2025 labels only a CET1 ratio; FY2025 Pillar 3 pending")
+FY2025_NO_LCR = ("Not published yet – FY2025 Pillar 3 pending; AR2025's \"Liquidity Capital Ratio "
                  "(Pillar 1)\" is a different measure, not the LCR")
 FY2025_GAPFILL_NOTE = (
-    "\n\nFY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (written into the column 2026-09-19). The "
+    "\n\nRE-WORDED 2026-10-08, AND THE REASON MATTERS MORE THAN THE WORDS. These cells said 'Not published "
+    "- ...', which the GA-020 census scores as `n`: a fact about the BANK, meaning it never published the "
+    "figure. That is not what the evidence supports. The Bank's own FY2025 Annual Report puts the Pillar 3 "
+    "in the FUTURE tense - it 'will be published ... after the approval of these Financial Statements' - so "
+    "the correct outcome is `p`, 'Not published yet': the period has ended and the document is not out. The "
+    "distinction is the whole point of the vocabulary, and the hyphen was wrong too (the opening phrase "
+    "takes an en dash). Five cells moved n -> p: KM1, RWA Breakdown, Leverage Ratio, LCR and NSFR. The MREL "
+    "cell already said 'Not published yet' and is unchanged.\n"
+    "RE-CHECKED 2026-10-08 AND STILL NOT OUT. Routes run that day: the six Pillar 3 URLs this script already "
+    "cites; direct tries at the FY2024 filename pattern under uploads/2026/09 and 2026/10 (all HTTP 404, "
+    "text/html); the fbnbank.co.uk WordPress media API (returns an empty array - restricted, so NOT evidence "
+    "either way); the site's own sitemap_index.xml, every page listed in page-sitemap.xml, and the "
+    "/annual-report/ and /important-information/ pages, whose only PDFs are an FSCS leaflet, a modern "
+    "slavery statement and the FY2024 annual report; and Wayback CDX on fbnbank.co.uk, matchType=domain, "
+    "from 2026 - zero 'pillar' captures.\n"
+    "A NEW HOST, FOUND BY THAT SWEEP AND RECORDED SO IT IS NOT RE-DISCOVERED. The /annual-report/ page now "
+    "serves the FY2025 Annual Report from the PARENT GROUP's site, not the Bank's: "
+    "https://firstbankgroup.com/wp-content/uploads/2026/09/FirstBank-UK-Annual-Report.pdf (media-API date "
+    "2026-09-24). That host's media API is NOT restricted: 912 items over 10 pages, enumerated in full on "
+    "2026-10-08, of which 63 are PDFs, and the only UK one is that annual report. No Pillar 3 on either "
+    "host. The positive control is the enumeration itself - the API answered every page and returned the "
+    "known annual report - so this zero is a real absence on these two hosts, not a reach limit. It is "
+    "still not proof the Bank has published nothing anywhere, which is exactly why the cells say 'not "
+    "published YET' rather than 'not published'.\n\n"
+    "FY2025 IS A RECORDED ABSENCE, NOT AN UNCHECKED CELL (written into the column 2026-09-19). The "
     "Bank itself puts the FY2025 Pillar 3 in the future tense, in its own audited FY2025 Annual Report's "
     "Directors' Report: the capital-adequacy detail is in 'the Pillar 3 disclosures WHICH WILL BE "
     "PUBLISHED on the Bank's website at https://www.fbnbank.co.uk/ AFTER THE APPROVAL OF THESE FINANCIAL "
@@ -282,7 +306,36 @@ FY2025_GAPFILL_NOTE = (
     "the WordPress media REST endpoint still returns an empty array even for an UNFILTERED control query "
     "while /wp-json/ itself returns 464KB - that route is disabled, so it is an instrument failure and "
     "cannot be cited as evidence of absence either way. The FY2024 Pillar 3 URL this script cites also "
-    "404s now, so a 404 on any guessed FY2025 path proves nothing and is not relied on.")
+    "404s now, so a 404 on any guessed FY2025 path proves nothing and is not relied on.\n\n"
+    "RE-CHECKED 7 OCTOBER 2026 - STILL NO FY2025 PILLAR 3, AND THE BANK'S OWN FUTURE-TENSE STATEMENT NOW "
+    "HAS A SECOND, INDEPENDENT PRINTING. (1) A SECOND COPY OF THE FY2025 ANNUAL REPORT HAS APPEARED, ON "
+    "THE PARENT GROUP'S SITE, AND UNLIKE EVERY COPY THIS SCRIPT HAS USED BEFORE IT IS TEXT-NATIVE: "
+    "https://firstbankgroup.com/wp-content/uploads/2026/09/FirstBank-UK-Annual-Report.pdf (HTTP 200, "
+    "Content-Type application/pdf, %PDF, 2.8MB, 132 pages, title page 'FirstBank UK Limited / Annual "
+    "Report and Accounts 2025'), linked from the nav of www.fbnbank.co.uk itself and from its "
+    "/annual-report/ page. It is searchable rather than a DocuSign-flattened scan, so the Bank's statement "
+    "can now be read directly instead of through OCR, and it says the same thing: capital-adequacy detail "
+    "is in 'the Pillar 3 disclosures which will be published on the Bank's website at "
+    "https://www.fbnbank.co.uk/ after the approval of these Financial Statements', with note 32 'Capital "
+    "management' adding that further detail sits in 'the Bank's Pillar 3 Disclosure document published on "
+    "its website'. The "
+    "future tense is therefore confirmed in a second rendering of the same report, not just in an OCR of "
+    "the scan. (2) NO PILLAR 3 ANYWHERE. www.fbnbank.co.uk/annual-report/ lists only the FY2024 accounts, "
+    "an FSCS leaflet and a modern-slavery statement beside the group-hosted FY2025 report - no Pillar 3 of "
+    "any year. The Yoast page sitemap for fbnbank.co.uk still contains exactly one content page, "
+    "/annual-report/, and no disclosures page. firstbankgroup.com's own page sitemap was read too (it is "
+    "where the FY2025 report is hosted): its only financials page, /home1/our-financials/, carries "
+    "FirstBank GHANA statements and no UK Pillar 3. (3) REACH PROVEN BY POSITIVE CONTROL, which matters "
+    "because this site's own FY2024 URL is dead: the Wayback id_ capture this script cites for the FY2024 "
+    "Pillar 3 was re-fetched today and returned HTTP 200, Content-Type application/pdf, %PDF, 764,866 "
+    "bytes. So the route by which a FirstBank Pillar 3 would be found is working, and today's negative is "
+    "a fact about the document rather than about the instrument. (4) Companies House filing history for "
+    "04459383, read UNFILTERED on page 1: newest accounts entry is 'AA - Full accounts made up to 31 "
+    "December 2025', filed 3 July 2026 - the filing this workbook's FY2025 column already uses - and "
+    "nothing newer. (5) The WordPress media REST endpoint still returns an empty array for every query "
+    "including an unfiltered control, so it remains disabled and is cited as neither presence nor absence. "
+    "NO EMPTY COLUMN ADDED AND NO CELL CHANGED. Look again monthly; the Bank has now been promising this "
+    "document in print since its FY2025 accounts were approved.")
 
 STATEMENTS_SOURCES = (
     "Sources - FirstBank UK Limited's own Statement of Comprehensive Income / Statement of Financial "
@@ -916,7 +969,7 @@ KM1_NOTE = (
 
 km1_rows = [
     ("DATA", "[Edition status for this year - not a KM1 template row]",
-     {"FY2025": "Not published - FY2025 Pillar 3 pending; the Bank's own AR2025 puts it in the future tense"}),
+     {"FY2025": "Not published yet – FY2025 Pillar 3 pending; the Bank's own AR2025 puts it in the future tense"}),
     ("SECTION", "US DOLLAR BLOCK — FY2024 and FY2023, as published by the Bank in US dollars", {}),
     ("SECTION", "Available own funds (amounts)", {}),
     ("DATA", "1  Common Equity Tier 1 (CET1) capital: Instruments and reserves ($'000)",
@@ -1207,7 +1260,7 @@ bw.add_rwa_breakdown_sheet(
         # Strategic Report's single 'Risk Weighted Assets $1,879mn' line is a
         # TOTAL, and is not split into categories by any means.
         ("DATA", "[No category RWA breakdown published for this year - see note below]",
-         {"FY2025": "Not published - FY2025 Pillar 3 pending; AR2025 gives a total RWA only, no OV1 split"}),
+         {"FY2025": "Not published yet – FY2025 Pillar 3 pending; AR2025 gives a total RWA only, no OV1 split"}),
         ("SECTION", "UK OV1 template (FY2024-FY2021)", {}),
         ("DATA", "Credit risk (excluding CCR)", {
             "FY2024": 1196695, "FY2023": 1060740, "FY2022": 967989, "FY2021": 1293719,

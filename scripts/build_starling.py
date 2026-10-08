@@ -114,7 +114,46 @@ CASH_FLOW_SOURCES = (
     "exactly year to year (except the documented FY2021/FY2022 break above): confirmed by hand against each "
     "year's own primary source, including FY2026 (2026-08-27), where the operating-activities TOTAL was "
     "originally mistranscribed as 185,354 - the SGHL FY2026 Annual Report's own Consolidated Cash Flow Statement "
-    "(p.165) states 183,334, which is what the full profit+adjustments+tax chain sums to exactly; corrected."
+    "(p.165) states 183,334, which is what the full profit+adjustments+tax chain sums to exactly; corrected.\n\n"
+
+    f"FY2017-FY2019 ADDED 2026-10-08. These three years were previously absent from this sheet altogether - "
+    f"not marked as gaps, but TRIMMED AWAY by _trim_trailing_empty_years, which drops an oldest-end year "
+    f"column no row fills. The Balance Sheet carried them throughout, and the documents already cited for it "
+    f"print a full Group cash flow statement for each. A trimmed column is invisible to audit_gaps.py too "
+    f"(the census reports the years a sheet HAS), so no check in this repo could see this. Sources, each year "
+    f"from its OWN edition, read off 300 dpi page renders: FY2019 - AR 2018-19 printed p.48 - {AR19_URL}; "
+    f"FY2018 - AR 2017-18 printed p.48 - {AR18_URL}; FY2017 - AR 2016-17 printed p.44 - {AR17_URL}. Group "
+    f"columns. The chain is continuous with the existing series: FY2019's closing cash 764,705 is already this "
+    f"sheet's FY2021 opening balance, and FY2018's closing 187,008 is FY2019's opening. FY2020 carries a "
+    f"recorded absence rather than a blank, because adding these years makes it an INTERIOR column and an "
+    f"empty interior column is indistinguishable from one nobody examined - there is no 30 November 2020 "
+    f"reporting date at all, the accounting reference date having moved from 30 November to 31 March.\n\n"
+
+    f"DEFECT IN STARLING'S OWN FY2017 STATEMENT - REPRODUCED AS PRINTED, NOT CORRECTED. AR 2016-17 printed "
+    f"p.44 lists nine operating movement rows which do not foot to its own printed total: "
+    f"-10,196 + 557 - 804 - 3,014 - 1,858 - 86 + 18,081 - 97 - 978 = 1,605, against a printed 'Net Cash Flows "
+    f"from Operating Activities' of 2,837 - short by 1,232. The FY2018 edition's FY2017 comparative prints the "
+    f"same rows PLUS 'Net (decrease)/increase in Accruals and Deferred Income 1,232', and 1,605 + 1,232 = 2,837 "
+    f"exactly. The printed TOTAL is right and a ROW is missing from the bank's own FY2017 statement; the next "
+    f"edition restored it. Its 30 Nov 2016 comparative column shows the same shape of defect (rows sum to "
+    f"-3,131 against a printed (2,878), a gap of 253) and cannot be cross-checked, the FY2018 edition showing "
+    f"only 2018 and 2017. Both the nine printed rows and the printed 2,837 are reproduced here exactly as "
+    f"published: the missing 1,232 is NOT imported from the later edition, which would mix two editions inside "
+    f"one column, and the total is NOT adjusted to match the rows. verify_workbook.py reports a block mismatch "
+    f"on FY2017 as a result; that report is correct and this paragraph is its explanation. FY2018 (135,153) "
+    f"and FY2019 (703,391) both foot exactly to their own printed rows.\n\n"
+
+    f"EDITION-vs-EDITION DIFFERENCE ON FY2018 (own edition used, later edition recorded). AR 2017-18 classifies "
+    f"investment securities (15,025) in OPERATING and reports operating 135,153 / investing (6,040) / financing "
+    f"20,351. AR 2018-19's comparative moves those securities to INVESTING and moves the £330 fair value of "
+    f"shares from financing to operating, giving 150,508 / (21,065) / 20,021. Both reach the same net increase "
+    f"of 149,464 and the same opening and closing cash; only the split differs. Similarly on FY2017, its own "
+    f"edition prints Purchases of Tangible Assets (242) with no disposals line where the FY2018 edition splits "
+    f"the same net figure into purchases (263) and sales 21. Because the row sets genuinely differ - a 30 "
+    f"November year-end, a CIF grant, securities in operating rather than investing - FY2017-FY2019 are kept "
+    f"in their own labelled block rather than merged into the FY2021+ rows, the same treatment this sheet "
+    f"already gives the FY2024-FY2026 presentation. One Group line is omitted rather than shown as a zero: "
+    f"'Net Increase in the Inter-Company Account' is a printed dash in all three Group columns (Company-only)."
 )
 
 def p3_sources(url, doc_label, page1="6", page2="7"):
@@ -262,7 +301,72 @@ STATEMENTS_SOURCES = (
     "- these were only disclosed as separate sub-columns from AR26 (FY2026 report) onward; combining them keeps "
     "the ladder's column set consistent across all 6 years. Every year's closing Total equity ties exactly to "
     "that year's own Balance Sheet Total equity and to the next year's opening balance - zero undocumented plug "
-    "rows across all 6 years."
+    "rows across all 6 years.\n\n"
+
+    f"FY2017-FY2019 ADDED TO THE PROFIT & LOSS, CASH FLOW STATEMENT AND STATEMENT OF CHANGES IN EQUITY "
+    f"(2026-10-08). WHY THEY WERE MISSING, which matters more than the figures: the Balance Sheet has carried "
+    f"FY2017, FY2018 and FY2019 since this workbook was built, but the other three statements stopped at "
+    f"FY2021 - even though the very documents already cited for the Balance Sheet print a full Group income "
+    f"statement, cash flow statement and equity reconciliation for those same years. The columns were not "
+    f"marked as gaps; they were TRIMMED AWAY by _trim_trailing_empty_years, which drops an oldest-end year "
+    f"column that no row fills. That rule assumes an absent old column means the disclosure did not exist that "
+    f"far back. Here it did. A trimmed column is invisible to audit_gaps.py as well, because the census reports "
+    f"the years a sheet HAS - so no check in this repo could see this, and it was found by a reader comparing "
+    f"two sheets by eye. A corpus-wide sweep for the same shape (Balance Sheet spanning years its Profit & Loss "
+    f"does not) returns only Afin Bank FY2021 and Kingdom Bank FY2004 besides Starling.\n"
+    f"SOURCES, each year from its OWN edition, all figures read off 300 dpi page renders (text layer used for "
+    f"navigation only): FY2019 - AR 2018-19, printed p.45 (Consolidated Statement of Comprehensive Income), "
+    f"printed p.48 (Consolidated Cash Flow Statement), printed p.49 (Consolidated Statement of Changes in "
+    f"Equity) - {AR19_URL}. FY2018 - AR 2017-18, printed p.47, p.48 and p.49 respectively - {AR18_URL}. "
+    f"FY2017 - AR 2016-17, printed p.43, p.44 and p.45 respectively - {AR17_URL}. Group columns throughout.\n"
+    f"CORROBORATION: the FY2019 closing cash of 764,705 is already this sheet's FY2021 opening balance, and "
+    f"FY2018's closing 187,008 is FY2019's opening - the three added years chain into the existing series with "
+    f"no seam. Every added column's operating/investing/financing totals and its net-increase line were "
+    f"recomputed from the printed line items, and the equity ladder's four balance rows each foot across their "
+    f"own components.\n\n"
+
+    f"DEFECT IN STARLING'S OWN FY2017 CASH FLOW STATEMENT - REPRODUCED AS PRINTED, NOT CORRECTED. AR 2016-17's "
+    f"Consolidated Cash Flow Statement (printed p.44) lists nine operating movement rows, and they do not foot "
+    f"to its own printed total: -10,196 + 557 - 804 - 3,014 - 1,858 - 86 + 18,081 - 97 - 978 = 1,605, against a "
+    f"printed 'Net Cash Flows from Operating Activities' of 2,837 - a shortfall of 1,232. The FY2018 edition's "
+    f"FY2017 comparative prints the same rows PLUS 'Net (decrease)/increase in Accruals and Deferred Income "
+    f"1,232', and 1,605 + 1,232 = 2,837 exactly. So the printed TOTAL is right and a ROW is missing from the "
+    f"bank's own FY2017 statement; the next edition restored it. The 30 Nov 2016 comparative column in that "
+    f"same statement has the same shape of defect (its rows sum to -3,131 against a printed (2,878), a gap of "
+    f"253) and cannot be cross-checked, because the FY2018 edition shows only 2018 and 2017. BOTH the nine "
+    f"printed rows and the printed 2,837 are reproduced here exactly as published. The missing 1,232 is NOT "
+    f"imported from the later edition - that would mix two editions inside one column - and the total is NOT "
+    f"adjusted to match the rows. verify_workbook.py therefore reports a cash-flow block mismatch on FY2017; "
+    f"that report is correct and this paragraph is its explanation. FY2018 (135,153) and FY2019 (703,391) both "
+    f"foot exactly.\n\n"
+
+    f"£1k INCONSISTENCY INSIDE THE FY2019 EDITION. AR 2018-19 prints 'Loss after Taxation (52,064)' in its "
+    f"Consolidated Statement of Comprehensive Income (printed p.45) and 'Loss for the Period (52,065)' in its "
+    f"Consolidated Statement of Changes in Equity (printed p.49). The SOCE's 52,065 is what makes its own "
+    f"column foot ((40,109) + (52,065) = (92,174), the printed closing retained earnings), so each statement is "
+    f"internally consistent and they disagree with each other. Both are reproduced as printed - the Profit & "
+    f"Loss sheet carries 52,064 and the equity ladder carries 52,065. Neither is adjusted to the other.\n\n"
+
+    f"EDITION-vs-EDITION DIFFERENCES ON THE ADDED YEARS (own edition used in every case, later edition recorded "
+    f"here). FY2018 income statement: its own edition prints Administrative Expenses (26,854), Impairment on "
+    f"Loans and Advances to Customers (346) and Provisions for Liabilities and Charges (406); the FY2019 "
+    f"edition's comparative prints Administrative Expenses (27,054) and a single Impairment and Write Offs "
+    f"(552). Both foot to Loss before Taxation (26,856) - £200k moved from provisions into administrative "
+    f"expenses on re-presentation. FY2018 cash flow: its own edition puts investment securities (15,025) in "
+    f"OPERATING and reports operating 135,153 / investing (6,040) / financing 20,351; the FY2019 edition's "
+    f"comparative moves those securities to INVESTING and moves the £330 fair value of shares from financing to "
+    f"operating, giving 150,508 / (21,065) / 20,021. Both reach the same net increase of 149,464 and the same "
+    f"opening and closing cash. FY2017 cash flow: its own edition prints Purchases of Tangible Assets (242) "
+    f"with no disposals line, where the FY2018 edition's comparative splits the same net figure into purchases "
+    f"(263) and sales 21. FY2017 income statement: its own edition splits operating costs into Other Operating "
+    f"Costs (16,688) and Capitalisation of Intangible Asset 4,710 to reach Total Operating Costs (11,978), "
+    f"where the FY2018 edition's comparative prints only the (11,978) net.\n"
+    f"PRESENTATION: the FY2017-FY2019 figures are kept in their own clearly-labelled blocks on the Profit & "
+    f"Loss and Cash Flow sheets rather than merged into the FY2021+ rows, because the row sets are genuinely "
+    f"different (a 30 November year-end, a CIF grant, securities classified in operating rather than investing) "
+    f"- the same treatment this workbook already gives the FY2026 SGHL presentation. One line the Group reports "
+    f"as nil is omitted rather than shown as a zero: 'Net Increase in the Inter-Company Account' is a printed "
+    f"dash in all three Group columns (it is a Company-only item)."
 )
 
 # ---------------------------------------------------------------
@@ -392,6 +496,25 @@ bw.add_balance_sheet_sheet(
 # FY2021-2023 vs FY2024-2026 convention (see PRESENTATION NOTE above).
 # ---------------------------------------------------------------
 income_statement_rows = [
+    # FY2017-FY2019: the 30 November year-end era, each year from its OWN edition
+    # (ADDED 2026-10-08 - these three years were previously absent from this sheet
+    # entirely, trimmed away by _trim_trailing_empty_years, while the Balance Sheet
+    # carried them. See the FY2017-FY2019 block in the source note.)
+    ("SECTION", "Income statement (FY2017-FY2019 presentation - 30 November year-end)", {}),
+    ("DATA", "Net interest income (FY2017-FY2019 presentation)", {"FY2019": 5967, "FY2018": 929, "FY2017": 76}),
+    ("DATA", "Net fee and commission (FY2019) / Fees and commissions expense (FY2017-FY2018)", {"FY2019": 7483, "FY2018": -386, "FY2017": -38}),
+    ("DATA", "Other income (FY2017-FY2019 presentation)", {"FY2019": 751, "FY2018": 207, "FY2017": -57}),
+    ("TOTAL", "Total income/(expense) (FY2017-FY2019 presentation)", {"FY2019": 14201, "FY2018": 750, "FY2017": -19}),
+    ("DATA", "Administrative expenses (FY2018-FY2019) / Other operating costs (FY2017)", {"FY2019": -83241, "FY2018": -26854, "FY2017": -16688}),
+    ("DATA", "Capitalisation of intangible asset (FY2017 presentation)", {"FY2017": 4710}),
+    ("TOTAL", "Total operating costs (FY2017 presentation)", {"FY2017": -11978}),
+    ("DATA", "Credit for CIF eligible spend (FY2019 presentation)", {"FY2019": 19738}),
+    ("DATA", "Impairment and write offs (FY2019) / Impairment on loans and advances to customers (FY2018)", {"FY2019": -4300, "FY2018": -346}),
+    ("DATA", "Provisions for liabilities and charges (FY2017-FY2018 presentation)", {"FY2018": -406, "FY2017": 387}),
+    ("TOTAL", "Loss before taxation (FY2017-FY2019 presentation)", {"FY2019": -53602, "FY2018": -26856, "FY2017": -11610}),
+    ("DATA", "Taxation credit (FY2017-FY2019 presentation)", {"FY2019": 1538, "FY2018": 1786, "FY2017": 1414}),
+    ("TOTAL", "Loss after taxation (FY2017-FY2019 presentation)", {"FY2019": -52064, "FY2018": -25070, "FY2017": -10196}),
+    ("TOTAL", "Total comprehensive loss for the year (FY2017-FY2019 presentation)", {"FY2019": -52064, "FY2018": -25070, "FY2017": -10196}),
     ("SECTION", "Income (FY2021-FY2025 presentation)", {}),
     ("DATA", "Interest income", {"FY2025": 811695, "FY2024": 754808, "FY2023": 403103, "FY2022": 126614}),
     ("DATA", "Interest expense", {"FY2025": -221533, "FY2024": -161937, "FY2023": -54258, "FY2022": -4902}),
@@ -433,11 +556,19 @@ income_statement_rows = [
     ("TOTAL", "Total comprehensive income for the year, net of tax (FY2026 presentation)", {"FY2026": 146625}),
 ]
 
+# FY2020 CARRIES A RECORDED ABSENCE ON THIS SHEET TOO (see the Balance Sheet
+# block above for the reasoning). Adding FY2017-FY2019 makes FY2020 interior.
+for _kind, _label, _values in income_statement_rows:
+    if _label == "Total comprehensive loss for the year (FY2017-FY2019 presentation)":
+        _values["FY2020"] = (
+            "Not applicable - no FY2020 reporting period; ARD moved 30 Nov to 31 Mar")
+
 bw.add_income_statement_sheet(
     title="Starling Bank Limited — Profit & Loss",
     subtitle="Group/consolidated basis, £'000. 'Total comprehensive income/(loss) for the year' ties exactly to "
-              "Profit/(loss) after taxation + Other comprehensive income for every year. FY2026 uses a different "
-              "Revenue/Cost-of-revenue/Gross-profit presentation than FY2021-FY2025 - see source note.",
+              "Profit/(loss) after taxation + Other comprehensive income for every year. Three presentations are "
+              "shown as separate blocks: FY2017-FY2019 (30 November year-end), FY2021-FY2025, and FY2026 "
+              "(Revenue/Cost-of-revenue/Gross-profit) - see source note. FY2020 is a recorded absence, not a gap.",
     rows=income_statement_rows,
     sources_text=STATEMENTS_SOURCES,
     first_col_width=76,
@@ -458,6 +589,27 @@ EQUITY_HEADERS = [
 ]
 
 equity_rows = [
+    # FY2017-FY2019 extension (ADDED 2026-10-08). Each year's movements from its
+    # OWN edition. AR17 and AR18 BOTH close 30 Nov 2017 at 32,718, so the two
+    # editions agree at the seam and the ladder is continuous. (AR19's own SOCE
+    # restates that opening to 32,719 / Other reserves (93) and absorbs the £1k
+    # into a single FY2018 movement of 412 where AR18 prints 175 + 238 = 413;
+    # both reach Other reserves 319. The own-edition figures are used, which is
+    # also what the Balance Sheet FY2017 column already prints.)
+    ("TOTAL", "Balance at 30 November 2016", (3, 17889, None, None, None, -4843, 13049)),
+    ("DATA", "Proceeds from issue of shares, less expenses", (2, 29957, None, None, None, None, 29959)),
+    ("DATA", "Shares held by Employee Benefit Trust", (None, None, None, None, -185, None, -185)),
+    ("DATA", "Fair value of shares allocated to employees", (None, None, None, None, 91, None, 91)),
+    ("DATA", "Loss for the period", (None, None, None, None, None, -10196, -10196)),
+    ("TOTAL", "Balance at 30 November 2017", (5, 47846, None, None, -94, -15039, 32718)),
+    ("DATA", "Proceeds from issue of shares, less expenses", (None, 19938, None, None, None, None, 19938)),
+    ("DATA", "Shares held by Employee Benefit Trust", (None, None, None, None, 175, None, 175)),
+    ("DATA", "Fair value of shares allocated to employees", (None, None, None, None, 238, None, 238)),
+    ("DATA", "Loss for the period", (None, None, None, None, None, -25070, -25070)),
+    ("TOTAL", "Balance at 30 November 2018", (5, 67784, None, None, 319, -40109, 27999)),
+    ("DATA", "Proceeds from issue of shares, less expenses", (2, 91548, None, None, None, None, 91550)),
+    ("DATA", "Loss for the period (this statement prints 52,065; the same edition's Profit & Loss prints 52,064 - see note)", (None, None, None, None, None, -52065, -52065)),
+    ("DATA", "Fair value of shares allocated to employees", (None, None, None, None, 442, None, 442)),
     ("TOTAL", "Balance at 30 November 2019", (7, 159332, None, None, 761, -92174, 67926)),
     ("DATA", "Proceeds from issue of shares, less expenses", (2, 94003, None, None, None, None, 94005)),
     ("DATA", "Loss for the period", (None, None, None, None, None, -23319, -23319)),
@@ -513,6 +665,22 @@ bw.add_equity_changes_sheet(
 # ---------------------------------------------------------------
 rows = [
     ("SECTION", "Cash flows from operating activities", {}),
+    # FY2017-FY2019: the 30 November year-end era, each year from its OWN edition
+    # (ADDED 2026-10-08 - previously absent from this sheet entirely.)
+    ("SECTION", "Adjustments and net changes (FY2017-FY2019 presentation, 30 November year-end)", {}),
+    ("DATA", "Loss for the period after taxation (FY2017-FY2019 presentation)", {"FY2019": -52064, "FY2018": -25070, "FY2017": -10196}),
+    ("DATA", "Depreciation and amortisation (FY2017-FY2019 presentation)", {"FY2019": 3074, "FY2018": 1786, "FY2017": 557}),
+    ("DATA", "FV of shares allocated/options granted to employees (FY2019 presentation)", {"FY2019": 643}),
+    ("DATA", "Net increase in loans and advances to customers (FY2017-FY2019 presentation)", {"FY2019": -45592, "FY2018": -7895, "FY2017": -804}),
+    ("DATA", "Net increase in debt/investment securities (FY2017-FY2018: classified in OPERATING)", {"FY2018": -15025, "FY2017": -3014}),
+    ("DATA", "Net increase in other assets (FY2017-FY2019 presentation)", {"FY2019": -24555, "FY2018": -3229, "FY2017": -1858}),
+    ("DATA", "Net increase in accrued interest and prepayments (FY2017-FY2018 presentation)", {"FY2018": -1526, "FY2017": -86}),
+    ("DATA", "Net increase in customer deposits (FY2017-FY2019 presentation)", {"FY2019": 804959, "FY2018": 184240, "FY2017": 18081}),
+    ("DATA", "Net increase/(decrease) in other liabilities (FY2017-FY2019 presentation)", {"FY2019": 32557, "FY2018": 2807, "FY2017": -97}),
+    ("DATA", "Net (decrease)/increase in accruals and deferred income (FY2018 presentation)", {"FY2018": -954}),
+    ("DATA", "Net increase/(decrease) in deferred income (FY2019 presentation)", {"FY2019": -17004}),
+    ("DATA", "Net increase/(decrease) in provisions (FY2017-FY2019 presentation)", {"FY2019": 1373, "FY2018": 19, "FY2017": -978}),
+    ("TOTAL", "Net cash flows from operating activities (FY2017-FY2019 presentation)", {"FY2019": 703391, "FY2018": 135153, "FY2017": 2837}),
     ("DATA", "Profit/(loss) for the period after taxation (FY2021-FY2023 presentation)", {"FY2023": 142856, "FY2022": 44938, "FY2021": -23319}),
     ("SECTION", "Adjustments for non-cash items (FY2021-FY2023 presentation)", {}),
     ("DATA", "Depreciation and Amortisation", {"FY2023": 10953, "FY2022": 6384, "FY2021": 7045}),
@@ -548,6 +716,12 @@ rows = [
     ("DATA", "Taxation paid (FY2024-FY2026 presentation)", {"FY2026": -46085, "FY2025": -61999, "FY2024": -94266}),
     ("TOTAL", "Net cash flows from operating activities (FY2024-FY2026 presentation)", {"FY2026": 183334, "FY2025": 1016373, "FY2024": 1290259}),
     ("SECTION", "Cash flows from investing activities", {}),
+    ("DATA", "Purchases of property, plant and equipment (FY2017-FY2019 presentation)", {"FY2019": -2249, "FY2018": -568, "FY2017": -242}),
+    ("DATA", "Disposal of property, plant and equipment (FY2018-FY2019 presentation)", {"FY2019": 5, "FY2018": 5}),
+    ("DATA", "Net increase in debt securities (FY2019: classified in INVESTING)", {"FY2019": -309558}),
+    ("DATA", "Capitalisation of intangible assets (FY2017-FY2019 presentation)", {"FY2019": -5442, "FY2018": -5477, "FY2017": -4710}),
+    ("DATA", "Purchases of intangible assets (FY2017 presentation)", {"FY2017": -3}),
+    ("DATA", "Receipt of CIF grant (FY2019 presentation)", {"FY2019": 100000}),
     ("DATA", "Purchase of Property, Plant and Equipment", {"FY2023": -2824, "FY2022": -1279, "FY2021": -1131}),
     ("DATA", "Purchase of property, plant and equipment (FY2024-FY2026 presentation)", {"FY2026": -6034, "FY2025": -3167, "FY2024": -4728}),
     ("DATA", "Net Purchases of Debt Securities (FY2022-FY2023 presentation)", {"FY2023": -161608, "FY2022": -814284}),
@@ -560,23 +734,34 @@ rows = [
     ("DATA", "Purchase and Development of Intangible Assets", {"FY2023": -27643, "FY2022": -19170}),
     ("DATA", "Capitalisation of Intangible Assets (FY2021 presentation)", {"FY2021": -5623}),
     ("DATA", "Purchase and development of intangible assets (FY2024-FY2026 presentation)", {"FY2026": -75792, "FY2025": -56997, "FY2024": -43278}),
-    ("TOTAL", "Net Cash Flows from Investing Activities", {"FY2026": -2971053, "FY2025": -703480, "FY2024": -876839, "FY2023": -192075, "FY2022": -879270, "FY2021": -1191134}),
+    ("TOTAL", "Net Cash Flows from Investing Activities", {"FY2026": -2971053, "FY2025": -703480, "FY2024": -876839, "FY2023": -192075, "FY2022": -879270, "FY2021": -1191134, "FY2019": -217244, "FY2018": -6040, "FY2017": -4955}),
     ("SECTION", "Cash flows from financing activities", {}),
-    ("DATA", "Issuance of Ordinary Shares Less Cost of Issuance", {"FY2023": 130500, "FY2022": 240000, "FY2021": 94012}),
+    ("DATA", "Issuance of Ordinary Shares Less Cost of Issuance", {"FY2023": 130500, "FY2022": 240000, "FY2021": 94012, "FY2019": 91550, "FY2018": 19938, "FY2017": 29959}),
+    ("DATA", "Acquisition of shares by Employee Benefit Trust (FY2017-FY2018 presentation)", {"FY2018": 413, "FY2017": -94}),
     ("DATA", "Purchase of own shares", {"FY2024": -56362}),
     ("DATA", "Drawdown of funding from central banks", {"FY2026": 900000}),
     ("DATA", "Repayment of funding from central banks", {"FY2026": -600000, "FY2025": -50000}),
     ("DATA", "Repayment of Lease Liabilities", {"FY2023": -68, "FY2022": -1780, "FY2021": -2174}),
     ("DATA", "Repayment of lease liabilities (FY2024-FY2026 presentation)", {"FY2026": -4120, "FY2025": -2710, "FY2024": -2154}),
-    ("TOTAL", "Net Cash Flows from Financing Activities", {"FY2026": 295880, "FY2025": -52710, "FY2024": -58516, "FY2023": 130432, "FY2022": 238220, "FY2021": 91838}),
-    ("TOTAL", "Net Increase/(Decrease) in Cash and Cash Equivalents", {"FY2026": -2491839, "FY2025": 260183, "FY2024": 354904, "FY2023": 18859, "FY2022": 2894409, "FY2021": 2431644}),
-    ("DATA", "Cash and Cash Equivalents at Beginning of Period/Year", {"FY2026": 6717177, "FY2025": 6456994, "FY2024": 6102090, "FY2023": 6083131, "FY2022": 3188722, "FY2021": 764705}),
-    ("TOTAL", "Cash and Cash Equivalents at End of Period/Year", {"FY2026": 4225338, "FY2025": 6717177, "FY2024": 6456994, "FY2023": 6102090, "FY2022": 6083131, "FY2021": 3196349}),
+    ("TOTAL", "Net Cash Flows from Financing Activities", {"FY2026": 295880, "FY2025": -52710, "FY2024": -58516, "FY2023": 130432, "FY2022": 238220, "FY2021": 91838, "FY2019": 91550, "FY2018": 20351, "FY2017": 29865}),
+    ("TOTAL", "Net Increase/(Decrease) in Cash and Cash Equivalents", {"FY2026": -2491839, "FY2025": 260183, "FY2024": 354904, "FY2023": 18859, "FY2022": 2894409, "FY2021": 2431644, "FY2019": 577697, "FY2018": 149464, "FY2017": 27747}),
+    ("DATA", "Cash and Cash Equivalents at Beginning of Period/Year", {"FY2026": 6717177, "FY2025": 6456994, "FY2024": 6102090, "FY2023": 6083131, "FY2022": 3188722, "FY2021": 764705, "FY2019": 187008, "FY2018": 37544, "FY2017": 9797}),
+    ("TOTAL", "Cash and Cash Equivalents at End of Period/Year", {"FY2026": 4225338, "FY2025": 6717177, "FY2024": 6456994, "FY2023": 6102090, "FY2022": 6083131, "FY2021": 3196349, "FY2019": 764705, "FY2018": 187008, "FY2017": 37544}),
 ]
+
+# FY2020 CARRIES A RECORDED ABSENCE ON THIS SHEET TOO, for the same reason as on
+# the Balance Sheet: adding FY2017-FY2019 makes FY2020 an INTERIOR column here,
+# and an empty interior column is indistinguishable from one nobody examined.
+for _kind, _label, _values in rows:
+    if _label == "Cash and Cash Equivalents at End of Period/Year":
+        _values["FY2020"] = (
+            "Not applicable - no FY2020 reporting period; ARD moved 30 Nov to 31 Mar")
 
 bw.add_cash_flow_sheet(
     title="Starling Bank Limited — Consolidated Cash Flow Statement",
-    subtitle="Group/consolidated basis, £'000. FY2021: 16-month period (†). FY2026: Starling Group Holdings Limited (‡). See source note at bottom.",
+    subtitle="Group/consolidated basis, £'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and "
+             "FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. "
+             "FY2021: 16-month period (†). FY2026: Starling Group Holdings Limited (‡). See source note at bottom.",
     rows=rows,
     sources_text=CASH_FLOW_SOURCES,
     first_col_width=70,
@@ -933,10 +1118,10 @@ metric(
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834, "FY2018": 234669, "FY2017": 53277}),
-        ("Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846, "FY2018": 8698, "FY2017": 804}),
-        ("Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581, "FY2018": 202323, "FY2017": 18083}),
-        ("Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831, "FY2018": 27999, "FY2017": 32718}),
+        ("Total assets", {"FY2026": 16639934, "FY2025": 15697672, "FY2024": 14767892, "FY2023": 13711495, "FY2022": 11905521, "FY2021": 7048834, "FY2018": 234669, "FY2017": 53277, "FY2019": 1200682}),
+        ("Loans and advances to customers", {"FY2026": 5161359, "FY2025": 4670567, "FY2024": 4537663, "FY2023": 4731997, "FY2022": 3234673, "FY2021": 2232846, "FY2018": 8698, "FY2017": 804, "FY2019": 54290}),
+        ("Customer deposits", {"FY2026": 12691991, "FY2025": 12066650, "FY2024": 10970237, "FY2023": 10551820, "FY2022": 9027413, "FY2021": 5827581, "FY2018": 202323, "FY2017": 18083, "FY2019": 1007282}),
+        ("Total equity", {"FY2026": 1204945, "FY2025": 1046052, "FY2024": 889770, "FY2023": 695277, "FY2022": 430424, "FY2021": 140831, "FY2018": 27999, "FY2017": 32718, "FY2019": 67926}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
@@ -957,9 +1142,9 @@ bw.add_overview_sheet(
             "FY2023": 80602, "FY2022": 3535459, "FY2021": 3530940,  # FY2021-FY2023 presentation
             "FY2026": 183334, "FY2025": 1016373, "FY2024": 1290259,  # FY2024-FY2026 presentation
         }),
-        ("Net cash flows from investing activities", {"FY2026": -2971053, "FY2025": -703480, "FY2024": -876839, "FY2023": -192075, "FY2022": -879270, "FY2021": -1191134}),
-        ("Net cash flows from financing activities", {"FY2026": 295880, "FY2025": -52710, "FY2024": -58516, "FY2023": 130432, "FY2022": 238220, "FY2021": 91838}),
-        ("Cash and cash equivalents at end of period/year", {"FY2026": 4225338, "FY2025": 6717177, "FY2024": 6456994, "FY2023": 6102090, "FY2022": 6083131, "FY2021": 3196349}),
+        ("Net cash flows from investing activities", {"FY2026": -2971053, "FY2025": -703480, "FY2024": -876839, "FY2023": -192075, "FY2022": -879270, "FY2021": -1191134, "FY2019": -217244, "FY2018": -6040, "FY2017": -4955}),
+        ("Net cash flows from financing activities", {"FY2026": 295880, "FY2025": -52710, "FY2024": -58516, "FY2023": 130432, "FY2022": 238220, "FY2021": 91838, "FY2019": 91550, "FY2018": 20351, "FY2017": 29865}),
+        ("Cash and cash equivalents at end of period/year", {"FY2026": 4225338, "FY2025": 6717177, "FY2024": 6456994, "FY2023": 6102090, "FY2022": 6083131, "FY2021": 3196349, "FY2019": 764705, "FY2018": 187008, "FY2017": 37544}),
     ],
     cash_flow_unit="£'000",
     ratios=[

@@ -1058,7 +1058,15 @@ bw.add_overview_sheet(
     balance_sheet_totals=[
         ("Total assets", {"FY2025": 604228751, "FY2024": 586007552, "FY2023": 524250678, "FY2022": 521204305, "FY2021": 386490055}),
         ("Loans and advances to customers", {"FY2025": 272874882, "FY2024": 255692188, "FY2023": 221939171, "FY2022": 219863026, "FY2021": 162324430}),
-        ("Borrowings from credit institutions", {"FY2025": 490903342, "FY2024": 475810294, "FY2023": 418559481, "FY2022": 406105536, "FY2021": 285675937}),
+        # SIGN ALIGNED TO THE BALANCE SHEET 2026-10-08 (user decision). This
+        # Overview block previously carried these five figures POSITIVE while
+        # the Balance Sheet sheet (line 274) prints them NEGATIVE, as the Bank
+        # itself does - its statement is cast so that assets plus (negative)
+        # liabilities equals shareholders' funds exactly. Neither sign was a
+        # wrong figure, but the Overview chart plotted this bar opposite to the
+        # sheet it summarises. The sheet's own convention wins; the figures are
+        # otherwise untouched and still exactly as printed.
+        ("Borrowings from credit institutions", {"FY2025": -490903342, "FY2024": -475810294, "FY2023": -418559481, "FY2022": -406105536, "FY2021": -285675937}),
         ("Total shareholders' funds", {"FY2025": 108444112, "FY2024": 104741303, "FY2023": 100629950, "FY2022": 94988669, "FY2021": 96728571}),
     ],
     balance_sheet_unit="£",

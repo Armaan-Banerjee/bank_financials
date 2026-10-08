@@ -770,16 +770,16 @@ metric("MREL Ratio", "£m / %", [("MREL ratio", MREL_ST)], note="No numeric MREL
 add_interim_pillar3_sheet()
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 53258000, "FY2024": 52030428, "FY2023": 54013806, "FY2022": 53313467, "FY2021": 49173176}),
-        ("Loans and advances", {"FY2025": 8781847, "FY2024": 7810517, "FY2023": 7905674, "FY2022": 8022378, "FY2021": 7034028}),
-        ("Deposits by customers", {"FY2025": 12589815, "FY2024": 12134787, "FY2023": 11557114, "FY2022": 11060215, "FY2021": 5600093}),
-        ("Total equity", {"FY2025": 3156622, "FY2024": 1781844, "FY2023": 1763502, "FY2022": 1707383, "FY2021": 1647297}),
+        ("Total assets", {"FY2025": 53258000, "FY2024": 52030428, "FY2023": 54013806, "FY2022": 53313467, "FY2021": 49173176, "FY2020": 47763332, "FY2019": 44888976, "FY2018": 48518274, "FY2017": 40034945, "FY2016": 34426634, "FY2015": 27789316, "FY2014": 27963580}),
+        ("Loans and advances", {"FY2025": 8781847, "FY2024": 7810517, "FY2023": 7905674, "FY2022": 8022378, "FY2021": 7034028, "FY2020": 6835562, "FY2019": 6031374, "FY2018": 4779895, "FY2017": 4890103, "FY2016": 3488542, "FY2015": 2948501, "FY2014": 2803899}),
+        ("Deposits by customers", {"FY2025": 12589815, "FY2024": 12134787, "FY2023": 11557114, "FY2022": 11060215, "FY2021": 5600093, "FY2020": 4586747, "FY2019": 4089777, "FY2018": 4228034, "FY2017": 4853591, "FY2016": 5148013, "FY2015": 4862234, "FY2014": 5841020}),
+        ("Total equity", {"FY2025": 3156622, "FY2024": 1781844, "FY2023": 1763502, "FY2022": 1707383, "FY2021": 1647297, "FY2020": 1585396, "FY2019": 1506192, "FY2018": 1307306, "FY2017": 1056969, "FY2016": 962929, "FY2015": 918178, "FY2014": 911046}),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Total operating income", {"FY2025": 929014, "FY2024": 483073, "FY2023": 498417, "FY2022": 466107, "FY2021": 449810}),
-        ("Total operating expenses", {"FY2025": -911921, "FY2024": -425314, "FY2023": -397200, "FY2022": -380318, "FY2021": -347136}),
-        ("Net (loss)/profit", {"FY2025": -44323, "FY2024": 46612, "FY2023": 85863, "FY2022": 80878, "FY2021": 89930}),
+        ("Total operating income", {"FY2025": 929014, "FY2024": 483073, "FY2023": 498417, "FY2022": 466107, "FY2021": 449810, "FY2020": 531695, "FY2019": 409061, "FY2018": 466893, "FY2017": 431277, "FY2016": 373234, "FY2015": 308577, "FY2014": 258072}),
+        ("Total operating expenses", {"FY2025": -911921, "FY2024": -425314, "FY2023": -397200, "FY2022": -380318, "FY2021": -347136, "FY2020": -352422, "FY2019": -337540, "FY2018": -333613, "FY2017": -321876, "FY2016": -303243, "FY2015": -299003, "FY2014": -268435}),
+        ("Net (loss)/profit", {"FY2025": -44323, "FY2024": 46612, "FY2023": 85863, "FY2022": 80878, "FY2021": 89930, "FY2020": 125737, "FY2019": 50650, "FY2018": 98684, "FY2017": 80072, "FY2016": 52551, "FY2015": 7014, "FY2014": -7149}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
@@ -789,5 +789,5 @@ bw.add_overview_sheet(
         ("Closing equity", {"FY2025": 3156622, "FY2024": 1781844, "FY2023": 1763502, "FY2022": 1707383, "FY2021": 1647297}),
     ],
     equity_changes_unit="£'000",
-    cash_flow_totals=[("Net cash (outflow)/inflow from operating activities", {"FY2025": -2827725, "FY2024": -4638153, "FY2023": -1165304, "FY2022": 5441607, "FY2021": 3898171}), ("Net cash from investing activities", {"FY2025": -1153173, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0}), ("Net cash inflow/(outflow) from financing activities", {"FY2025": 1715050, "FY2024": -36915, "FY2023": -35017, "FY2022": -19285, "FY2021": -14281}), ("Cash and cash equivalents at end of year", {"FY2025": 2534127, "FY2024": 4455652, "FY2023": 9347772, "FY2022": 10594230, "FY2021": 5171908})], cash_flow_unit="£'000", ratios=[("CET1 Ratio", CET1R), ("Tier 1 Ratio", T1R), ("Total Capital Ratio", TCR), ("Leverage Ratio", {"FY2025": "4.51%", "FY2024": "4.09%", "FY2023": "4.27%", "FY2022": "4.12%", "FY2021": "3.51%"}), ("LCR", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%", "FY2021": "127%"}), ("NSFR", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%", "FY2021": "97%"})], note="Figures are duplicated from the detail sheets; see those sheets for source pages, basis notes, and disclosure gaps.")
+    cash_flow_totals=[("Net cash (outflow)/inflow from operating activities", {"FY2025": -2827725, "FY2024": -4638153, "FY2023": -1165304, "FY2022": 5441607, "FY2021": 3898171, "FY2020": -1894560, "FY2019": -1263852, "FY2018": -822129, "FY2017": 2372282, "FY2016": 868235, "FY2015": -825558, "FY2014": -656223}), ("Net cash from investing activities", {"FY2025": -1153173, "FY2024": 0, "FY2023": 0, "FY2022": 0, "FY2021": 0, "FY2020": -42000, "FY2019": 0, "FY2018": 0, "FY2017": 0, "FY2016": 0, "FY2015": 0, "FY2014": 0}), ("Net cash inflow/(outflow) from financing activities", {"FY2025": 1715050, "FY2024": -36915, "FY2023": -35017, "FY2022": -19285, "FY2021": -14281, "FY2020": -17050, "FY2019": -10823, "FY2018": 71542, "FY2017": -26057, "FY2016": 68617, "FY2015": 8771, "FY2014": -67560}), ("Cash and cash equivalents at end of year", {"FY2025": 2534127, "FY2024": 4455652, "FY2023": 9347772, "FY2022": 10594230, "FY2021": 5171908, "FY2020": 1288018, "FY2019": 3241628, "FY2018": 4516303, "FY2017": 5266890, "FY2016": 2920665, "FY2015": 1983813, "FY2014": 2800600})], cash_flow_unit="£'000", ratios=[("CET1 Ratio", CET1R), ("Tier 1 Ratio", T1R), ("Total Capital Ratio", TCR), ("Leverage Ratio", {"FY2025": "4.51%", "FY2024": "4.09%", "FY2023": "4.27%", "FY2022": "4.12%", "FY2021": "3.51%"}), ("LCR", {"FY2025": "132%", "FY2024": "134%", "FY2023": "127%", "FY2022": "125%", "FY2021": "127%"}), ("NSFR", {"FY2025": "112%", "FY2024": "112%", "FY2023": "124%", "FY2022": "111%", "FY2021": "97%"})], note="Figures are duplicated from the detail sheets; see those sheets for source pages, basis notes, and disclosure gaps.")
 bw.save("/Users/armaan/code/katalysis/banks/RBC EUROPE FINANCIALS.xlsx")

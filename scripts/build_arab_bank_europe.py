@@ -934,9 +934,11 @@ PILLAR3_SOURCES = (
 # ---------------------------------------------------------------
 def _p3_unreached(y):
     # Second pass 2026-09-19 (GA-020 unreached): wording extended with the new routes; see GA020_NOTE (B).
+    # Third pass 2026-10-07: dedicated Common Crawl sweep, 7 domains, every crawl
+    # 2022-2026. See GA020_NOTE item (C) for what was reached and what was not.
     return (f"Unreached today – {y} Pillar 3 not obtained: bank's download slot empty; WP media (.com/.eu), "
-            "Wayback + Common Crawl (eabplc.com, arabbankeurope.com/.eu, eabsa.eu), archive.today hold none; "
-            "Annual Report prints no such figure, 2026-09-19")
+            "archive.today hold none; Wayback + Common Crawl (every crawl 2022-2026, 7 domains) hold none; "
+            "Annual Report prints no such figure, 2026-10-07")
 
 
 P3_UNREACHED = {y: _p3_unreached(y) for y in ("FY2025", "FY2024", "FY2023")}
@@ -949,8 +951,8 @@ MREL_STATEMENTS = {
     "FY2022": ("Not published – EAB Pillar 3 Disclosures at 31 Dec 2022 (35pp, text-searched 2026-09-19) "
                "and Annual Report 2022 contain no MREL figure or mention"),
     "FY2021": ("Unreached today – no FY2021 Pillar 3 in Wayback (full eabplc.com CDX), Common Crawl or "
-               "archive.today; Wayback AR 2021 copy is 1 MiB-truncated; FY2022 edition and AR 2022 carry no "
-               "MREL, 2026-09-19"),
+               "archive.today; both Wayback AND Common Crawl copies of AR 2021 are 1 MiB-truncated and will "
+               "not open; FY2022 edition and AR 2022 carry no MREL, 2026-10-07"),
 }
 
 GA020_NOTE = (
@@ -1018,7 +1020,51 @@ GA020_NOTE = (
     "(files/PDFs/annual_reports/2021_EAB_Annual_Report.pdf, both captures share one digest) and the 2020 "
     "Pillar 3 capture are each exactly 1,048,576 bytes, the Wayback 1 MiB truncation, and neither opens. "
     "WHAT WOULD CLOSE THESE CELLS: the FY2023-FY2025 Pillar 3 PDFs, obtained from the bank on request (see "
-    "the SDDT note: the duty stood)."
+    "the SDDT note: the duty stood).\n"
+    "(C) DEDICATED COMMON CRAWL PASS, 2026-10-07 (GA-020). Queried through the ZipNum index files on "
+    "data.commoncrawl.org (index.commoncrawl.org was down), control-validated against known-good captures. "
+    "The two hosts fail for OPPOSITE reasons and the distinction decides how these cells read. "
+    "(1) eabplc.com WAS reached well: 11-23 records per 2022 crawl, and the whole document tree "
+    "www.eabplc.com/files/PDFs/* was swept across ALL 42 crawls CC-MAIN-2022-05 to 2026-39 (36 records in "
+    "CC-MAIN-2023-50 alone). That tree holds annual reports 2014-2021, the CBCR series, the Wolfsberg "
+    "questionnaire and pension governance statements - and exactly ONE EAB plc Pillar 3: "
+    "'files/PDFs/Pillar 3/EAB 2016 Pillar 3 - CRDIV_FINAL.pdf' (CC-MAIN-2022-27, 494,989 bytes, untruncated), "
+    "the FY2016 edition, a year this workbook does not reach back to. NO FY2021, FY2023, FY2024 or FY2025 "
+    "EAB plc Pillar 3 exists in any crawl. For that tree this is a CONTROLLED NEGATIVE, not a reach limit. "
+    "(2) arabbankeurope.com, the live successor domain where any current Pillar 3 would now sit, IS crawled, "
+    "and the crawl settles the question directly. It enters the archive only in the 2026 crawls (5 records in "
+    "CC-MAIN-2026-30, 257 in 2026-34, 29 in 2026-39; 0 in every earlier crawl back to 2022), giving 291 "
+    "records, 248 distinct URLs, 53 /downloads/ pages and 52 distinct PDFs. Those PDFs are the entity's own "
+    "'_PLC_'-tagged retail and policy set - scales of charges, account terms, Visa applications, the "
+    "conflicts-of-interest and modern-slavery statements, the DB/DC pension statements, the Wolfsberg AML "
+    "certification, the USA Patriot Act form and the FY2025 Annual Report (202602_EABAnnualReport_v9.pdf) - "
+    "and NOT ONE of them is a Pillar 3. Better still, the bank's own Pillar 3 page was itself captured and "
+    "shows why: https://arabbankeurope.com/downloads/pillar-iii-disclosures/ (CC-MAIN-2026-34, WARC-Date "
+    "2026-08-10T23:30:45Z) is an 'HTTP/1.1 302' with 'location: https://arabbankeurope.com', "
+    "'x-redirect-by: WordPress' and the empty-string payload digest "
+    "sha1:3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ. The disclosure slot was a WordPress redirect to the homepage, "
+    "serving nothing - the archive now evidences and DATES that emptiness rather than merely reporting it "
+    "from a live fetch. (3) The other domains: arabbankeurope.eu is also crawled (195 records, 193 of them in "
+    "CC-MAIN-2026-39, 27 distinct PDFs) and carries exactly one Pillar 3, "
+    "wp-content/uploads/CPLPY10.0426-Rapport-de-Pilier-3_SA_FR_DIGITAL_v1.pdf (280,388 bytes, complete) - "
+    "read and REJECTED: it is 'Rapport Pilier 3 / 31 Decembre 2023' for Arab Bank Europe SA, which its own "
+    "section 1 calls 'une filiale a 100 % d'Arab Bank Europe Plc ... reglementee par l'ACPR'. eabsa.eu has "
+    "139 records and no Pillar 3 PDF; eabplc.net 11 records; europearabbank.com just 3, all HTTP 302 "
+    "redirects (its homepage and robots.txt, CC-MAIN-2025-18/-21), i.e. a parked domain serving no content; "
+    "abemigration.wpenginepowered.com 0 across all 42 crawls. The site's filenames tag entity as _PLC_, "
+    "_SA_ or _PLC-SA_, and NO _PLC_ Pillar 3 exists anywhere in the archive. "
+    "(4) FY2021 Annual Report: Common Crawl's capture "
+    "(files/PDFs/annual_reports/2021_EAB_Annual_Report.pdf, CC-MAIN-2022-33, WARC offset 678796486) is "
+    "TRUNCATED EXACTLY AS WAYBACK'S ARE - WARC-Truncated: length, body exactly 1,048,576 bytes, no %%EOF. "
+    "Independently confirmed unusable: qpdf reports 'root of pages tree has no /Kids array', pdftotext "
+    "yields 0 words and nothing renders. Common Crawl adds nothing over Wayback here. "
+    "(5) FOUND BUT REJECTED ON THE ENTITY RULE: 'downloads/EABSARapportdePilier32024.pdf' (CC-MAIN-2026-30, "
+    "426,294 bytes, COMPLETE - %PDF, %%EOF, no truncation, md5 0cf3a2fed0e2159721b282f925e9be53, 14pp) is a "
+    "full Pillar 3 for 31 December 2024, and its section 3 'Indicateurs cles' is a KM1-style table in EURm "
+    "for Dec-24 and Dec-23. It is NOT this entity's: the rendered cover reads 'EAB SA - Rapport Pilier 3' "
+    "and page 3 states 'EAB SA est une filiale a 100 % d'Europe Arab Bank Plc, creee le 31 Mars 2020'. It is "
+    "the French SUBSIDIARY reporting solo, with no EAB plc column anywhere. A future session must not use it "
+    "to fill EAB plc's FY2024 cells - the same trap as the NBK France document rejected elsewhere in GA-020."
 )
 
 

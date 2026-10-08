@@ -363,6 +363,16 @@ BALANCE_SHEET_SOURCES = (
     "is left blank rather than estimated. FY2018's column is therefore an 18-month, not 12-month, snapshot; as a "
     "balance-sheet (point-in-time) statement this affects comparability less than the flow statements, but the "
     "period length difference should still be borne in mind when reading growth between FY2016 and FY2018.\n"
+    "FY2025 TOTAL LIABILITIES CORRECTED 2026-10-08. This cell previously read 17,050.8, which was a "
+    "transcription error, not a disclosed figure: the Bank's own Statement of financial position (FY2025 full "
+    "accounts, p.54 of the filed PDF) prints Total liabilities of 19,103.6 (2024: 18,823.7). The error was "
+    "surfaced by the column failing to balance three ways at once - the eight liability component rows above "
+    "sum to 19,103.6, Total assets 20,618.2 less Total equity 1,514.6 is 19,103.6, and 17,050.8 + 1,514.6 "
+    "came to 18,565.4 against a printed Total liabilities and equity of 20,618.2, an out-of-balance of "
+    "2,052.8. The source page was re-rendered at 300 dpi and read directly (the filed PDF is a scan with no "
+    "text layer, so OCR was used for navigation only); every other figure in the FY2025 column was confirmed "
+    "against that render and is unchanged. The likely mechanism is an eye-skip to the adjacent "
+    "Customers' accounts line, which prints 17,047.6. The printed figure is reproduced; nothing is derived.\n"
     "Note: minor (£0.1m) rounding differences appear between the Total equity figure on the face of the "
     "Statement of financial position and the Statement of Changes in Equity's closing balance in some years "
     "(e.g. FY2021: £987.1m here vs £987.2m per the FY2021 accounts' own Statement of Changes in Equity) — "
@@ -437,7 +447,7 @@ balance_sheet_rows = [
     ("DATA", "Provisions", {"FY2025": 3.0, "FY2024": 0.6, "FY2023": 2.5, "FY2022": 3.8, "FY2021": 2.7, "FY2020": 2.5, "FY2019": 2.4, "FY2018": 1.0, "FY2016": 0.8, "FY2015": 1.1, "FY2014": 2.0, "FY2013": 1.2, "FY2012": 0.6}),
     ("DATA", "Debt securities in issue", {"FY2023": -0.2, "FY2022": -0.5}),
     ("DATA", "Subordinated notes", {"FY2025": 100.9, "FY2024": 100.9, "FY2023": 100.5, "FY2022": 100.5, "FY2021": 161.4, "FY2020": 161.2, "FY2019": 161.1, "FY2018": 60.5, "FY2016": 100.0, "FY2015": 38.1, "FY2014": 36.8, "FY2013": 35.1, "FY2012": 34.1}),
-    ("TOTAL", "Total liabilities", {"FY2025": 17050.8, "FY2024": 18823.7, "FY2023": 17832.7, "FY2022": 16192.2, "FY2021": 14595.9, "FY2020": 14104.5, "FY2019": 11618.7, "FY2018": 9700.7, "FY2016": 7777.1, "FY2015": 6494.1, "FY2014": 5208.4, "FY2013": 3936.9, "FY2012": 2347.3, "FY2011": 1388.0, "FY2010": 660.7, "FY2009": 241.6}),
+    ("TOTAL", "Total liabilities", {"FY2025": 19103.6, "FY2024": 18823.7, "FY2023": 17832.7, "FY2022": 16192.2, "FY2021": 14595.9, "FY2020": 14104.5, "FY2019": 11618.7, "FY2018": 9700.7, "FY2016": 7777.1, "FY2015": 6494.1, "FY2014": 5208.4, "FY2013": 3936.9, "FY2012": 2347.3, "FY2011": 1388.0, "FY2010": 660.7, "FY2009": 241.6}),
     ("SECTION", "Equity", {}),
     ("DATA", "Share capital", {"FY2025": 3.3, "FY2024": 3.3, "FY2023": 3.3, "FY2022": 3.3, "FY2021": 3.3, "FY2020": 3.3, "FY2019": 3.3, "FY2018": 3.3, "FY2016": 3.3, "FY2015": 3.3, "FY2014": 3.3, "FY2013": 3.3, "FY2012": 3.3, "FY2011": 3.3, "FY2010": 3.3, "FY2009": 3.3}),
     ("DATA", "Share premium account", {"FY2025": 307.5, "FY2024": 307.5, "FY2023": 307.5, "FY2022": 307.5, "FY2021": 307.5, "FY2020": 307.5, "FY2019": 307.6, "FY2018": 307.6, "FY2016": 307.6, "FY2015": 307.6, "FY2014": 233.4, "FY2013": 233.4, "FY2012": 171.8, "FY2011": 170.1, "FY2010": 94.7, "FY2009": 47.4}),
@@ -1532,16 +1542,16 @@ for row_number in range(source_register_row + 2, interim_ws.max_row + 1):
 # ---------------------------------------------------------------
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0, "FY2020": 15000.7, "FY2019": 12471.9, "FY2018": 10467.4, "FY2016": 8396.5, "FY2015": 7021.4, "FY2014": 5583.2}),
-        ("Loans and advances to customers", {"FY2025": 12523.4, "FY2024": 11416.3, "FY2023": 10998.9, "FY2022": 10777.3, "FY2021": 10393.6, "FY2020": 10602.2, "FY2019": 10230.3, "FY2018": 8990.5, "FY2016": 7477.3, "FY2015": 6144.8, "FY2014": 4801.1}),
-        ("Customers' accounts", {"FY2025": 17047.6, "FY2024": 16306.7, "FY2023": 15033.3, "FY2022": 14105.4, "FY2021": 12427.3, "FY2020": 10886.4, "FY2019": 8971.8, "FY2018": 7776.3, "FY2016": 6673.7, "FY2015": 5742.0, "FY2014": 4459.0}),
-        ("Total equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1, "FY2020": 896.2, "FY2019": 853.2, "FY2018": 766.7, "FY2016": 619.4, "FY2015": 527.3, "FY2014": 374.8}),
+        ("Total assets", {"FY2025": 20618.2, "FY2024": 20195.5, "FY2023": 19051.7, "FY2022": 17290.8, "FY2021": 15583.0, "FY2020": 15000.7, "FY2019": 12471.9, "FY2018": 10467.4, "FY2016": 8396.5, "FY2015": 7021.4, "FY2014": 5583.2, "FY2013": 4194.3, "FY2012": 2519.6, "FY2011": 1554.1, "FY2010": 752.3, "FY2009": 294.7}),
+        ("Loans and advances to customers", {"FY2025": 12523.4, "FY2024": 11416.3, "FY2023": 10998.9, "FY2022": 10777.3, "FY2021": 10393.6, "FY2020": 10602.2, "FY2019": 10230.3, "FY2018": 8990.5, "FY2016": 7477.3, "FY2015": 6144.8, "FY2014": 4801.1, "FY2013": 3370.8, "FY2012": 2059.6, "FY2011": 1160.4, "FY2010": 475, "FY2009": 160.6}),
+        ("Customers' accounts", {"FY2025": 17047.6, "FY2024": 16306.7, "FY2023": 15033.3, "FY2022": 14105.4, "FY2021": 12427.3, "FY2020": 10886.4, "FY2019": 8971.8, "FY2018": 7776.3, "FY2016": 6673.7, "FY2015": 5742.0, "FY2014": 4459.0, "FY2013": 3444.4, "FY2012": 2141.2, "FY2011": 1347.5, "FY2010": 634.7, "FY2009": 229.6}),
+        ("Total equity", {"FY2025": 1514.6, "FY2024": 1371.8, "FY2023": 1219.0, "FY2022": 1098.6, "FY2021": 987.1, "FY2020": 896.2, "FY2019": 853.2, "FY2018": 766.7, "FY2016": 619.4, "FY2015": 527.3, "FY2014": 374.8, "FY2013": 257.4, "FY2012": 172.3, "FY2011": 166.1, "FY2010": 91.6, "FY2009": 53.1}),
     ],
     balance_sheet_unit="£m",
     income_statement_totals=[
-        ("Total operating income", {"FY2025": 473.4, "FY2024": 462.9, "FY2023": 476.2, "FY2022": 389.8, "FY2021": 323.4, "FY2020": 313.1, "FY2019": 331.8, "FY2018": 468.5, "FY2016": 265.9, "FY2015": 221.6, "FY2014": 166.1}),
-        ("Administrative expenses", {"FY2025": -266.8, "FY2024": -263.8, "FY2023": -253.5, "FY2022": -224.0, "FY2021": -173.7, "FY2020": -148.7, "FY2019": -169.4, "FY2018": -227.8, "FY2016": -117.8, "FY2015": -110.1, "FY2014": -100.8}),
-        ("Profit after taxation", {"FY2025": 163.2, "FY2024": 162.1, "FY2023": 129.2, "FY2022": 118.0, "FY2021": 89.3, "FY2020": 64.2, "FY2019": 102.2, "FY2018": 155.9, "FY2016": 92.3, "FY2015": 80.1, "FY2014": 39.7}),
+        ("Total operating income", {"FY2025": 473.4, "FY2024": 462.9, "FY2023": 476.2, "FY2022": 389.8, "FY2021": 323.4, "FY2020": 313.1, "FY2019": 331.8, "FY2018": 468.5, "FY2016": 265.9, "FY2015": 221.6, "FY2014": 166.1, "FY2013": 103.8, "FY2012": 58.8, "FY2011": 42.6, "FY2010": 28.2, "FY2009": 4.1}),
+        ("Administrative expenses", {"FY2025": -266.8, "FY2024": -263.8, "FY2023": -253.5, "FY2022": -224.0, "FY2021": -173.7, "FY2020": -148.7, "FY2019": -169.4, "FY2018": -227.8, "FY2016": -117.8, "FY2015": -110.1, "FY2014": -100.8, "FY2013": -69.5, "FY2012": -52.2, "FY2011": -42.6, "FY2010": -35.6, "FY2009": -12.4}),
+        ("Profit after taxation", {"FY2025": 163.2, "FY2024": 162.1, "FY2023": 129.2, "FY2022": 118.0, "FY2021": 89.3, "FY2020": 64.2, "FY2019": 102.2, "FY2018": 155.9, "FY2016": 92.3, "FY2015": 80.1, "FY2014": 39.7, "FY2013": 23.4, "FY2012": 1.5, "FY2011": -0.9, "FY2010": -8.8, "FY2009": -13.0}),
     ],
     income_statement_unit="£m",
     equity_changes_totals=[

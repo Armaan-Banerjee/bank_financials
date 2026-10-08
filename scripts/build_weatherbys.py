@@ -832,7 +832,16 @@ _GA020_MREL = {
     "FY2025": "Not published – no FY2025 Pillar 3 (PRA SDDT Rule 3.1 modification from 2 Apr 2025, PRA waivers register); FY2025 Annual Report has no MREL figure",
     "FY2015": "Not published – FY2015 Pillar 3 (Wayback 20170503164039, WBL_Pillar3_2015.pdf) and FY2015 accounts print no MREL figure",
     "FY2019": "Not published – FY2019 Pillar 3 (Wayback 20200921164839, pp.1-13 of 16 recovered): contents p.2 lists no MREL section or table; pp.1-13 print none",
-    **{y: f"Unreached today – {y} Pillar 3 named on archived index (Weatherbys-Bank-Limited-Pillar-3-Disclosures-{y[2:]}.pdf) but never captured; live 404; archive.ph none (2026-09-19)" for y in ["FY2018", "FY2017", "FY2016"]},
+    # COMMON CRAWL PASS 2026-10-07: the FY2018 edition WAS captured, by Common Crawl rather than Wayback.
+    # index.commoncrawl.org, domains weatherbys.bank / weatherbys.co.uk / weatherbysbank.com, every crawl
+    # CC-MAIN-2017-04..CC-MAIN-2021-49 (107 queries). Record: CC-MAIN-2020-16, warc
+    # .../CC-MAIN-20200404200523-20200404230523-00207.warc.gz offset 1216049748 length 492989; retrieved
+    # complete (559,740 bytes = HTTP Content-Length, %PDF, %%EOF, no WARC-Truncated, md5
+    # cce37a1f5b82e6190e692615e42a4e18), 16pp, text-native, PDF CreationDate 1 May 2019. Cover and contents
+    # read as page images. FY2016 and FY2017 remain uncaptured in every crawl.
+    "FY2018": ("Not published – FY2018 Pillar 3 (16pp, recovered from Common Crawl 2026-10-07): contents p.2 "
+               "lists sections 1-4 and Tables 1-11, none MREL; no MREL or eligible-liabilities text"),
+    **{y: f"Unreached today – {y} Pillar 3 named on archived index (Weatherbys-Bank-Limited-Pillar-3-Disclosures-{y[2:]}.pdf) but never captured; live 404; archive.ph none; Common Crawl 2017-2021 all crawls (FY2018 found there, {y[2:]} absent) – 2026-10-07" for y in ["FY2017", "FY2016"]},
 }
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"], P3_SOURCES,
@@ -841,7 +850,24 @@ bw.add_not_disclosed_metric_sheets(
               "FY2025: no Pillar 3 exists (PRA waivers register, SDDT Rule 3.1 modification effective 2 Apr 2025). "
               "FY2015: the FY2015 Pillar 3 (Wayback 20170503164039 of weatherbys.co.uk/Weatherbys/media/PDFs/WBL_Pillar3_2015.pdf) prints no MREL (its only 'resolution' hit is the Recovery and Resolution Plan). "
               "FY2019: the FY2019 Pillar 3 (weatherbys.bank/WeatherbysBank/media/About-Us/WBL-Pillar3-Disclosures.pdf, Wayback 20200921164839) was captured truncated at 1 MiB of 1,264,248 bytes; it is a scanned document whose pages are self-contained images, and pages 1-13 of 16 were rebuilt and read on 2026-09-19 (GA-020 second pass). Its contents page (p.2) lists every section and all 11 tables and none concerns MREL or eligible liabilities; pp.1-13 print no MREL figure. The three lost pages hold liquidity (Table 10), the remaining risk sections and remuneration (Table 11) per that contents page. Recorded as Not published on that evidence. "
-              "FY2016-18: each edition is named on an archived corporate-information page (Wayback 20171108012716: .../media/Test-images/Weatherbys-Bank-Limited-Pillar-3-Disclosures-2016.pdf; 20181009054641: .../media/About-Us/...-2017.pdf; 20190820203909: .../About-Us/...-2018.pdf) but none of the three PDFs was ever captured (CDX exact and prefix query of weatherbys.bank/WeatherbysBank/media/, and domain-wide CDX of weatherbys.bank, weatherbys.co.uk, weatherbysbank.com and weatherbys.com without the mimetype filter, 2026-09-19); live URLs 404; archive.ph has no copy of the Pillar 3 URL (its domain listings answered HTTP 429, a block, not a negative); web search for the titles returns only the 2021-2024 editions; the FY2015-20 accounts (Companies House scans) print no MREL. Left as Unreached today, not Not published."},
+              "FY2018 IS NOW SETTLED FROM THE EDITION ITSELF (Common Crawl, 2026-10-07). Wayback never captured "
+              "Weatherbys-Bank-Limited-Pillar-3-Disclosures-2018.pdf, but Common Crawl did, in CC-MAIN-2020-16 "
+              "(warc CC-MAIN-20200404200523-20200404230523-00207.warc.gz, offset 1216049748, length 492989). It "
+              "was retrieved complete - 559,740 bytes matching the HTTP Content-Length, %PDF with %%EOF and no "
+              "WARC truncation flag - and is a 16-page text-native document dated April 2019. Its cover page "
+              "reads 'WEATHERBYS BANK - Pillar 3 Disclosures - For Year Ended 31st December 2018' and its "
+              "contents page lists sections 1-4 (Introduction, Key Measures & Ratios, Governance & Risk "
+              "Management, Remuneration) and Tables 1-11 (Capital Resources & Ratios, Leverage Ratio, Capital "
+              "Requirements for Credit Risk, Minimum Capital Resource Requirements, Provisions, Credit Risk "
+              "Exposures, Maturity, Geographical Exposure, Interest Rate Gap, Liquidity Coverage Ratio, "
+              "Remuneration) - no MREL section and no MREL table, exactly like the FY2019 edition. Text probes "
+              "return 0 for MREL, 'eligible liabilities' and 'loss absorbing' against 71 'capital', 17 "
+              "'liquidity' and 7 'leverage' hits as the richness control. FY2016 and FY2017 stay 'Unreached "
+              "today': neither is in any Common Crawl crawl 2017-2021 although FY2018 is. (That FY2018 edition "
+              "also prints Table 1 capital resources/ratios, Table 2 leverage and Table 10 LCR, which could "
+              "extend the single-metric sheets back a year; those sheets currently start at FY2019 and "
+              "extending them was out of scope for this pass.) "
+              "FY2016-18 (first-pass record): each edition is named on an archived corporate-information page (Wayback 20171108012716: .../media/Test-images/Weatherbys-Bank-Limited-Pillar-3-Disclosures-2016.pdf; 20181009054641: .../media/About-Us/...-2017.pdf; 20190820203909: .../About-Us/...-2018.pdf) but none of the three PDFs was ever captured (CDX exact and prefix query of weatherbys.bank/WeatherbysBank/media/, and domain-wide CDX of weatherbys.bank, weatherbys.co.uk, weatherbysbank.com and weatherbys.com without the mimetype filter, 2026-09-19); live URLs 404; archive.ph has no copy of the Pillar 3 URL (its domain listings answered HTTP 429, a block, not a negative); web search for the titles returns only the 2021-2024 editions; the FY2015-20 accounts (Companies House scans) print no MREL. Left as Unreached today, not Not published."},
     statements={"MREL Ratio": _GA020_MREL},
 )
 

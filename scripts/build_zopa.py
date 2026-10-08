@@ -160,11 +160,25 @@ def p3_sources(page="14-15"):
         f"Financial Statements 2020, p.61 - {AR2020_URL}. That note prints a CET1 build-up ending 'Total Common "
         f"equity Tier 1 capital (CET1) 115,439' and, on the line below, 'Total capital resources 115,439'. The "
         f"two being equal is the Bank's own statement that it held no AT1 and no Tier 2 at 31 December 2020.\n"
-        f"  (b) RWA AND RATIOS, ADDED 2026-09-18 (interior-gap sweep): the Annual Report and Accounts 2021's "
-        f"Financial review, 'Capital position remains very strong' table, printed p.22, carries a full BANK-level "
-        f"2020 COMPARATIVE COLUMN - RWAs £390.5m, CET1 ratio 29%, leverage ratio 38% - alongside its 2021 column, "
-        f"and a companion 'Liquidity' table on the same page gives NSFR 152% and LCR 13,597% for 2020 - "
-        f"{AR2021_URL}. These are comparatives and are labelled as such on every row that uses them.\n"
+        f"  (b) RWA AND RATIOS: FY2020's OWN Pillar 3 edition, 'Zopa Bank Limited - Pillar 3 Disclosures 31 "
+        f"December 2020' (46pp) - {P3_2020_URL}. Section 2 'Key ratios', printed p.4, and the 'Capital "
+        f"composition' table, printed p.15, both print, for 2020: CET1 ratio 29.5%, Tier 1 capital ratio 29.5%, "
+        f"Total capital ratio 29.5%, Total risk weighted assets £390.9m (credit 180.9 + operational 210.0 + BCRR "
+        f"'-'), CET1 / Total Tier 1 / Total capital resources all £115.4m. Printed p.4 additionally gives leverage "
+        f"38.1% and LCR 13,597%, and the 'Leverage ratio common disclosure' on printed p.18 gives Tier 1 capital "
+        f"115.4, total leverage ratio exposures 303.3 and leverage ratio 38.1%. Read off 300 dpi page images on "
+        f"2026-10-07; the printed folio equals the PDF sheet index throughout this document (checked on pp.4, 15, "
+        f"18 and 30).\n"
+        f"  (b2) A SECOND PRINTING OF THE SAME 2020 YEAR EXISTS AND DOES NOT AGREE. The Annual Report and Accounts "
+        f"2021's Financial review, 'Capital position remains very strong' table, printed p.22, carries a BANK-level "
+        f"2020 COMPARATIVE COLUMN giving RWAs £390.5m, CET1 ratio 29% and leverage ratio 38%, and a companion "
+        f"'Liquidity' table on the same page gives NSFR 152% and LCR 13,597% for 2020 - {AR2021_URL}. BOTH "
+        f"printings are recorded and NEITHER is adjusted toward the other. The cells carry the Pillar 3 figures "
+        f"because that document is FY2020's own-year edition while the Annual Report column is a later edition's "
+        f"comparative, which is the same ordering this sheet already applies to every other year. The gap is not "
+        f"rounding: 29.5% does not round to 29%, and £390.9m does not round to £390.5m. LCR 13,597% is identical "
+        f"in both documents. NSFR 152% for 2020 and every 2021 figure have only the Annual Report as a source "
+        f"(the FY2021 Pillar 3 is Group-only) and are unaffected.\n"
         f"  WHAT THIS CORRECTS: this note used to read 'no standalone Pillar 3 document existed at this scale' and "
         f"'No RWA or capital ratio of any kind was disclosed that year'. The first clause is still unproven either "
         f"way (zopa.com returned HTTP 503 to every rung of the fetching ladder on 2026-09-18 and the Internet "
@@ -215,6 +229,16 @@ def p3_sources(page="14-15"):
         f"Annual Report comparative values and documents the Pillar 3 values here rather than silently choosing "
         f"between them. The FY2020 Pillar 3's 2019 comparative values (including leverage 54.3% and LCR 10,059%) "
         f"are independently legible on printed p.4. No FY2018 or FY2019 Pillar 3 edition was found.\n"
+        f"  RE-READ AND RESOLVED 2026-10-07. The whole FY2020 Pillar 3 was re-fetched (HTTP 200, Content-Type "
+        f"application/pdf, %PDF-1.7 magic bytes) and pp.4, 15, 18 and 30 re-rendered at 300 dpi and read by eye. "
+        f"The 2019 comparative column is confirmed on all four: CET1/Tier 1/Total capital ratio 25.1%, Total risk "
+        f"weighted assets £52.9m (credit 17.6 + operational 21.4 + BCRR 13.9), CET1 / Tier 1 / Total capital "
+        f"resources £13.3m, leverage ratio 54.3% (p.18 row 22, on Tier 1 capital 13.3 over total leverage ratio "
+        f"exposures 24.5) and LCR 10,059% (p.30, on HQLA £0.2m over a total net cash outflow printed as a DASH). "
+        f"The 2019 leverage and LCR figures ARE now transcribed, on the year-end rows of the Leverage Ratio and "
+        f"LCR sheets - the sentence above saying they were 'not transcribed here' is superseded. Two page "
+        f"citations given by the earlier pass were off by one and are corrected here and on those two sheets: the "
+        f"leverage table is printed p.18 (not 'PDF p.17') and the liquidity table printed p.30 (not 'PDF p.29').\n"
         f"FY2018: within the Strategic Report's KPI table and note (unaudited Pillar 1 figures, explicitly marked "
         f"as such and 'not covered by the external auditor's opinion') of the Annual Report and Financial "
         f"Statements 2018, p.4 and p.35 - {AR2018_URL}. This is the first year any RWA/capital ratio was disclosed "
@@ -635,15 +659,21 @@ metric(
 
 metric(
     "CET1 Ratio", "% of RWA",
-    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "14.54%", "FY2024": "16.76%", "FY2023": "16.50%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29%", "FY2019": "25.1%", "FY2018": "19%"})],
+    [("Common Equity Tier 1 (CET1) ratio", {"FY2025": "14.54%", "FY2024": "16.76%", "FY2023": "16.50%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29.5%", "FY2019": "25.1%", "FY2018": "19%"})],
     p3_sources(),
-    note="FY2020 ADDED 2026-09-18: 29%, printed as the 2020 comparative in the Annual Report and Accounts 2021's "
-         "Financial review capital table (p.22), a Bank-level table headed 'Bank | 2021 | 2020 | Change'. It is a "
-         "comparative, not an own-year disclosure, and is whole-percent as the Bank prints it - note that the "
-         "same table's 2021 column reads 23% where this row's FY2021 figure, taken from the KM1 template, is "
-         "22.92%, so the two sources agree to the Bank's own rounding. FY2019 remains genuinely blank: its "
-         "Annual Report (an image-only scan, OCR'd in full) discloses CET1 capital only, no RWA and no ratio, "
-         "and no later report carries a 2019 comparative for either. "
+    note="FY2020 RE-SOURCED 2026-10-07, AND THE TWO SOURCES DISAGREE. The cell now carries 29.5%, printed in "
+         "FY2020's own Pillar 3 edition twice over - Section 2 'Key ratios', printed p.4, and the 'Capital "
+         "composition' table, printed p.15 - read off 300 dpi page images. It previously carried 29%, which is "
+         "the figure printed in the 2020 comparative column of the Annual Report and Accounts 2021's Financial "
+         "review capital table (printed p.22, a Bank-level table headed 'Bank | 2021 | 2020 | Change'). That "
+         "second printing stands and is NOT adjusted: it is recorded in full in the source note below, and the "
+         "difference is not rounding, since 29.5% does not round to 29%. The Pillar 3 figure is carried here "
+         "because it is FY2020's own-year edition where the Annual Report column is a later edition's "
+         "comparative. The Annual Report's 2021 column reads 23% against this row's 22.92% from the KM1 "
+         "template, so that document does appear to round its capital ratios to whole percent. "
+         "FY2019's 25.1% is the 2019 comparative column of the same FY2020 Pillar 3 (printed pp.4 and 15); "
+         "FY2019's own Annual Report discloses CET1 capital only and no ratio, which is why the figure comes "
+         "from the Pillar 3 and not from it. "
          "FY2018's 19% is an unaudited Pillar 1 figure the Bank itself flags as 'not covered by the external "
          "auditor's opinion'. FY2017: not applicable (no banking licence that year).",
 )
@@ -659,17 +689,19 @@ metric(
 
 metric(
     "Tier 1 Ratio", "% of RWA",
-    [("Tier 1 ratio", {"FY2025": "16.87%", "FY2024": "16.76%", "FY2023": "16.50%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29%", "FY2019": "25.1%", "FY2018": "19%"})],
+    [("Tier 1 ratio", {"FY2025": "16.87%", "FY2024": "16.76%", "FY2023": "16.50%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29.5%", "FY2019": "25.1%", "FY2018": "19%"})],
     p3_sources(),
-    note="FY2020 ADDED 2026-09-18: 29%. Zopa published ONE capital ratio for 2020 - the CET1 ratio, as the 2020 "
-         "comparative in the Annual Report and Accounts 2021 (p.22, see CET1 Ratio sheet). It is repeated here "
-         "because the Bank's own FY2020 capital note states that CET1 WAS its entire capital base: note 24(d) of "
-         "the Annual Report and Financial Statements 2020, p.61, prints 'Total Common equity Tier 1 capital "
-         "(CET1) 115,439' and 'Total capital resources 115,439' - no AT1, no Tier 2. Tier 1 therefore equals CET1 "
-         "that year as a matter of the Bank's disclosure, which is the same reasoning this workbook already "
-         "applies to the FY2020 cell of the Tier 1 Capital and Total Capital sheets (all three carry £115.4m). "
-         "Nothing here is computed from RWA. FY2019 remains blank: no ratio of any kind was published for it "
-         "(see CET1 Ratio sheet note). FY2017: not applicable (no banking licence that year).",
+    note="FY2020 AND FY2019 ARE NOW PRINTED FIGURES, NOT REASONED ONES - CHANGED 2026-10-07. This note used to "
+         "say Zopa published only a CET1 ratio for 2020 and that Tier 1 equalled it as a matter of the Bank's "
+         "own capital composition. That reasoning was sound but is no longer needed: FY2020's own Pillar 3 "
+         "edition prints a row captioned 'Tier 1 capital ratio' in its own right, 29.5% for 2020 and 25.1% for "
+         "2019, in Section 2 'Key ratios' on printed p.4 and again in the 'Capital composition' table on printed "
+         "p.15. Both cells are read off those pages. The Annual Report and Accounts 2021's 2020 comparative "
+         "column prints 29% and is recorded in the source note below; neither figure is adjusted toward the "
+         "other (see the CET1 Ratio sheet note for the full disagreement). The Bank's composition table "
+         "corroborates the equality independently - printed p.15 shows Additional Tier 1 as a dash and Total "
+         "Tier 1 capital equal to CET1 at £115.4m (2020) and £13.3m (2019). Nothing here is computed from RWA. "
+         "FY2017: not applicable (no banking licence that year).",
 )
 
 metric(
@@ -684,30 +716,43 @@ metric(
 
 metric(
     "Total Capital Ratio", "% of RWA",
-    [("Total capital ratio", {"FY2025": "19.10%", "FY2024": "19.57%", "FY2023": "19.90%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29%", "FY2019": "25.1%", "FY2018": "19%"})],
+    [("Total capital ratio", {"FY2025": "19.10%", "FY2024": "19.57%", "FY2023": "19.90%", "FY2022": "17.44%", "FY2021": "22.92%", "FY2020": "29.5%", "FY2019": "25.1%", "FY2018": "19%"})],
     p3_sources(),
-    note="FY2020 ADDED 2026-09-18: 29%, on exactly the same footing as the Tier 1 Ratio sheet's FY2020 cell - "
-         "the only 2020 ratio Zopa published is the CET1 ratio (Annual Report and Accounts 2021, p.22, 2020 "
-         "comparative column), and the FY2020 capital note (Annual Report 2020, p.61) prints total capital "
-         "resources equal to CET1 to the pound, so Total capital ratio and CET1 ratio are the same published "
-         "number that year. Not derived from RWA. FY2019 remains blank. FY2017: not "
+    note="FY2020 AND FY2019 ARE NOW PRINTED FIGURES, NOT REASONED ONES - CHANGED 2026-10-07, on exactly the same "
+         "footing as the Tier 1 Ratio sheet's cells. FY2020's own Pillar 3 edition prints a row captioned "
+         "'Total capital ratio' in its own right, 29.5% for 2020 and 25.1% for 2019, in Section 2 'Key ratios' "
+         "on printed p.4 and again in the 'Capital composition' table on printed p.15; both cells are read off "
+         "those pages. The earlier reasoning - that Zopa published only a CET1 ratio for 2020 and that total "
+         "capital resources equalled CET1 to the pound - remains true and is corroborated by that same p.15 "
+         "table (Total capital resources £115.4m for 2020 and £13.3m for 2019, equal to CET1, with Additional "
+         "Tier 1 printed as a dash and no Tier 2 line), but it is no longer what these cells rest on. The "
+         "Annual Report and Accounts 2021's 2020 comparative column prints 29% and is recorded in the source "
+         "note below; neither figure is adjusted toward the other. Not derived from RWA. FY2017: not "
          "applicable (no banking licence that year).",
 )
 
 metric(
     "Total RWAs", "£m",
-    [("Total risk-weighted exposure amount", {"FY2025": 3364, "FY2024": 2670, "FY2023": 2205, "FY2022": 1663, "FY2021": 1060, "FY2020": 390.5, "FY2019": 52.9, "FY2018": 82.5})],
+    [("Total risk-weighted exposure amount", {"FY2025": 3364, "FY2024": 2670, "FY2023": 2205, "FY2022": 1663, "FY2021": 1060, "FY2020": 390.9, "FY2019": 52.9, "FY2018": 82.5})],
     p3_sources(),
-    note="FY2020 ADDED 2026-09-18: £390.5m, printed as the 2020 comparative in the Annual Report and Accounts "
-         "2021's Financial review capital table (p.22). The note this replaces said no RWA figure appeared "
-         "'anywhere in the document' - true of the FY2020 Annual Report, which was the document searched, and "
-         "false of the Bank, which published the figure in the following year's report. The two columns of that "
-         "table are internally consistent: it states RWA growth of '+171%' between them, and 390.5 x 2.71 = "
-         "1,058, against the FY2021 figure of £1,059.3m already on this row. "
-         "FY2019 is NOT disclosed: its own Annual Report is an image-only scan whose 58 pages were rendered and "
-         "OCR'd in full on 2026-09-18 with no RWA figure anywhere, and no later report carries a 2019 "
-         "comparative. FY2018's £82.5m is an unaudited "
-         "Pillar 1 figure. FY2017: not applicable (no banking licence that year).",
+    note="FY2020 RE-SOURCED 2026-10-07, AND THE TWO SOURCES DISAGREE. The cell now carries £390.9m, printed in "
+         "FY2020's own Pillar 3 edition twice over - Section 2 'Key ratios' on printed p.4 ('Risk weighted "
+         "assets (£ million) 390.9') and the 'Capital composition' table on printed p.15, where Total risk "
+         "weighted assets 390.9 = credit risk 180.9 + operational risk 210.0 + BCRR printed as a DASH. Read off "
+         "300 dpi page images. It previously carried £390.5m, which is the figure printed in the 2020 "
+         "comparative column of the Annual Report and Accounts 2021's Financial review capital table (printed "
+         "p.22). That second printing stands and is NOT adjusted toward this one; £390.9m does not round to "
+         "£390.5m, so this is a genuine disagreement between two of the Bank's own documents and not an "
+         "artefact. The Pillar 3 figure is carried because it is FY2020's own-year edition where the Annual "
+         "Report column is a later edition's comparative. Note that the Annual Report's two columns remain "
+         "internally consistent on their own terms (that table states RWA growth of '+171%', and 390.5 x 2.71 = "
+         "1,058 against the FY2021 figure of £1,059.3m on this row) - the +171% works equally on 390.9. "
+         "FY2019's £52.9m is the 2019 comparative column of the same FY2020 Pillar 3 (printed pp.4 and 15, where "
+         "52.9 = credit 17.6 + operational 21.4 + BCRR 13.9). FY2019's OWN Annual Report discloses no RWA at "
+         "all - it is an image-only scan whose 58 pages were rendered and OCR'd in full on 2026-09-18 with no "
+         "RWA figure anywhere - which is why the figure comes from the Pillar 3; a sentence here previously said "
+         "no document carried a 2019 comparative, and that was overtaken when the FY2020 Pillar 3 was found. "
+         "FY2018's £82.5m is an unaudited Pillar 1 figure. FY2017: not applicable (no banking licence that year).",
 )
 
 RWA_BREAKDOWN_SOURCES = (
@@ -754,24 +799,31 @@ metric(
     [
         ("Total exposure measure excluding claims on central banks", {"FY2025": 4998, "FY2024": 3445, "FY2023": 2699, "FY2022": 2024}),
         ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "11.36%", "FY2024": "12.99%", "FY2023": "13.48%", "FY2022": "14.34%", "FY2021": "n/a (as printed)"}),
-        ("Leverage ratio (%) - Annual Report basis, year-end (see note)", {"FY2021": "20%", "FY2020": "38%", "FY2019": "54.3%"}),
+        ("Leverage ratio (%) - year-end, full exposure measure (see note)", {"FY2021": "20%", "FY2020": "38.1%", "FY2019": "54.3%"}),
     ],
     p3_sources(),
-    note="TWO ROWS, TWO DOCUMENTS. The Pillar 3 row is the KM1 template's 'excluding claims on central banks' "
-         "measure, and its Dec-21 comparative column really does print 'n/a' for both the exposure measure and "
-         "the ratio, with no explanation given.\n"
-         "THE THIRD ROW WAS ADDED 2026-09-18 AND CORRECTS THIS NOTE'S OWN PREVIOUS CLAIM, which read 'no "
-         "leverage ratio of any kind appears in any FY2017-FY2020 Annual Report either'. It does. The Annual "
-         "Report and Accounts 2021, Financial review, 'Capital position remains very strong' table on printed "
-         "p.22, publishes a Bank-level leverage ratio of 20% for 2021 and 38% for 2020, next to the RWA and "
-         "CET1-ratio figures this workbook now uses on other sheets. The claim was a statement about the "
-         "documents that had been searched - the FY2017-FY2020 reports - presented as a statement about the "
-         "Bank, and the answer was in the FY2021 report all along.\n"
-         "The two rows are NOT merged and neither is adjusted toward the other: the Annual Report figures are "
-         "year-end and whole-percent, and the Bank never says whether its own KPI leverage ratio uses the "
-         "central-bank-claims exclusion, so they are not known to be the same measure. FY2020 is a comparative "
-         "column of the FY2021 report. FY2019 is the year-end comparative printed in Zopa Bank Limited's FY2020 "
-         "Pillar 3 'Key ratios' / leverage disclosure (PDF p.17); it stays on this basis-specific row.",
+    note="TWO ROWS, TWO MEASURES. The Pillar 3 rows above are the UK KM1 template's 'excluding claims on central "
+         "banks' measure, and that template's Dec-21 comparative column really does print 'n/a' for both the "
+         "exposure measure and the ratio, with no explanation given.\n"
+         "THE YEAR-END ROW holds the Bank's leverage ratio on the full (pre-2022) CRR exposure measure, which "
+         "is a different measure and is never merged with the row above nor adjusted toward it. It was added "
+         "2026-09-18, correcting this note's own earlier claim that 'no leverage ratio of any kind appears in "
+         "any FY2017-FY2020 Annual Report either' - a statement about the documents that had been searched, "
+         "presented as a statement about the Bank.\n"
+         "ITS LABEL WAS CORRECTED 2026-10-07: it used to read 'Annual Report basis', which was false of two of "
+         "its three cells. Source per cell - FY2021 20% is the Annual Report and Accounts 2021, Financial "
+         "review, 'Capital position remains very strong' table, printed p.22 (the only document that publishes "
+         "a 2021 year-end leverage ratio, the FY2021 Pillar 3 being Group-only). FY2020 38.1% and FY2019 54.3% "
+         "are both from Zopa Bank Limited's own Pillar 3 Disclosures 31 December 2020, printed p.4 (Section 2 "
+         "'Key ratios') and again on printed p.18 ('Leverage ratio common disclosure', row 22, struck on row 20 "
+         "Tier 1 capital 115.4 / 13.3 over row 21 total leverage ratio exposures 303.3 / 24.5); read off 300 dpi "
+         "page images 2026-10-07. The earlier citation 'PDF p.17' for that table was off by one - the printed "
+         "folio is 18, and in this document the printed folio equals the PDF sheet index throughout.\n"
+         "FY2020 IS PRINTED TWICE AND THE TWO DO NOT AGREE TO THE DECIMAL: the Annual Report and Accounts 2021's "
+         "2020 comparative column on printed p.22 gives 38% where the Pillar 3 gives 38.1%. Both are recorded "
+         "and neither is adjusted; the cell carries the Pillar 3 figure because that is FY2020's own-year "
+         "edition, the same ordering applied on the Total RWAs and capital ratio sheets, where the same two "
+         "documents disagree by more than rounding.",
 )
 
 metric(
@@ -780,7 +832,7 @@ metric(
         ("Total high-quality liquid assets (HQLA), weighted value (average)", {"FY2025": 2970, "FY2024": 2347, "FY2023": 1701, "FY2022": 626}),
         ("Total net cash outflows, adjusted value", {"FY2025": 614, "FY2024": 430, "FY2023": 233, "FY2022": 61}),
         ("Liquidity Coverage Ratio (%)", {"FY2025": "484%", "FY2024": "546%", "FY2023": "730%", "FY2022": "1,033%", "FY2021": "n/a (as printed)"}),
-        ("Liquidity Coverage Ratio (%) - Annual Report basis, year-end position (see note)", {"FY2021": "9,360%", "FY2020": "13,597%", "FY2019": "10,059%"}),
+        ("Liquidity Coverage Ratio (%) - year-end position (see note)", {"FY2021": "9,360%", "FY2020": "13,597%", "FY2019": "10,059%"}),
     ],
     p3_sources(),
     note="TWO BASES, AND THE BANK NAMES THE DIFFERENCE ITSELF. The Pillar 3 LCR row is a 12-month simple average "
@@ -795,8 +847,19 @@ metric(
          "and false of the Annual Reports. The two rows are kept separate because averaged and year-end LCR are "
          "different measures - the year-end figures are enormous because Zopa Bank was holding very large "
          "central-bank balances against a small deposit book at those dates, not because either number is "
-         "wrong. FY2019 is the year-end comparative printed in Zopa Bank Limited's FY2020 Pillar 3 liquidity "
-         "disclosure (PDF p.29); it stays on this basis-specific row.",
+         "wrong.\n"
+         "THE YEAR-END ROW'S LABEL WAS CORRECTED 2026-10-07: it used to read 'Annual Report basis', which was "
+         "false of its FY2019 cell. Source per cell - FY2021 9,360% and FY2020 13,597% are the Annual Report "
+         "and Accounts 2021's 'Liquidity' table, printed p.22 (FY2020 being that table's comparative column). "
+         "FY2019 10,059% is Zopa Bank Limited's own Pillar 3 Disclosures 31 December 2020, printed p.4 (Section "
+         "2 'Key ratios') and again in the Section 8 liquidity-ratios table on printed p.30, where it is struck "
+         "on HQLA of £0.2m over a total net cash outflow the Bank prints as a DASH. Read off 300 dpi page "
+         "images 2026-10-07. The earlier citation 'PDF p.29' for that table was off by one - the printed folio "
+         "is 30, and in this document the printed folio equals the PDF sheet index throughout.\n"
+         "UNLIKE THE CAPITAL SHEETS, THE TWO DOCUMENTS AGREE HERE: the FY2020 Pillar 3's own-year column prints "
+         "LCR 13,597% for 2020, exactly the figure the Annual Report's comparative gives, so this row has no "
+         "source disagreement to record (checked 2026-10-07; recorded because a negative is only worth "
+         "something written down).",
 )
 
 ZOPA_NSFR_NA = ("Not applicable – Pillar 3 2022 (Bank KM1, p.14) states NSFR rows 18-20 'are not applicable until "
@@ -825,7 +888,8 @@ metric(
     [("MREL ratio", {**{y: ("Not published – no MREL figure or mention in this year's Pillar 3 Disclosures or "
                             "Annual Report (text-searched 2026-09-19)") for y in ("FY2025", "FY2024", "FY2023", "FY2022", "FY2021", "FY2020")},
                      **{y: ("Unreached today – no Pillar 3 for this year found (zopa.com 503; CDX of Zopa's DatoCMS "
-                            "folder and cdn.zopa.com: Pillar 3 from FY2020 only; 2026-09-19); its AR (OCR) has no MREL") for y in ("FY2019", "FY2018")}})],
+                            "folder and cdn.zopa.com: Pillar 3 from FY2020 only; Common Crawl 2019-2022, 3,000+ URLs "
+                            "incl. PDFs: none; 2026-10-07); its AR (OCR) has no MREL") for y in ("FY2019", "FY2018")}})],
     p3_sources(),
     note="No MREL disclosure of any kind (numeric or qualitative) was found in Zopa Bank Limited's Annual Reports "
          "or Pillar 3 reports for any year reviewed (FY2018-FY2025) - unlike some smaller banks in this workbook "
@@ -838,7 +902,24 @@ metric(
          "Wayback CDX matchType=prefix on datocms-assets.com/23873/ (Zopa's own asset folder, 5,122 rows, 60 PDFs) "
          "holds Pillar 3 files for FY2020-FY2025 and the 2025 mid-year only, the earliest asset id being "
          "1608116542 (December 2020); CDX of cdn.zopa.com (the pre-2021 S3 host, 85 rows) holds no Pillar 3; "
-         "archived zopa.com /about pages of March 2019 link no PDF; the S3 bucket refuses listing.",
+         "archived zopa.com /about pages of March 2019 link no PDF; the S3 bucket refuses listing. "
+         "COMMON CRAWL PASS 2026-10-07 (GA-020): queried through the ZipNum index files on "
+         "data.commoncrawl.org (index.commoncrawl.org was down), domain-wide and UNFILTERED so the search "
+         "terms could be applied to a full listing rather than trusted to a server-side filter. "
+         "domain:zopa.com was queried across all 36 crawls 2019-2022; the 22 of them swept unfiltered return "
+         "9,212 records and 3,108 distinct URLs - 144 to 736 per crawl - so the archive's reach over this "
+         "site is deep and the zero that "
+         "follows is a CONTROLLED NEGATIVE, not a reach limit. Among those 3,108 URLs there is NO Pillar 3 "
+         "document of any year: the only matches for 'pillar', 'p3', 'disclos', 'capital' or 'regulat' are "
+         "blog posts about P2P regulation. PDFs ARE captured from this estate - cdn.zopa.com press releases "
+         "2014-2016, documents/rate-roulette-...-june-2019.pdf, www.zopa.com/files/"
+         "Zopa-Fixed-Term-Savings-Terms-and-Conditions.pdf - which is the positive control that the crawler "
+         "does fetch Zopa's PDFs when it finds them (12 distinct PDFs in all, none a Pillar 3). "
+         "domain:zopa.co.uk holds only 6 records in total, and domain:zopabank.co.uk returns 0 records "
+         "across all 36 crawls swept. The 14 zopa.com crawls not listed in full were queried with the "
+         "search terms applied to their full record sets (4,523 records) and matched nothing either. "
+         "FY2018 and FY2019 therefore stay UNREACHED "
+         "on this route too: Common Crawl holds no Pillar 3 for either year.",
 )
 
 # ---------------------------------------------------------------

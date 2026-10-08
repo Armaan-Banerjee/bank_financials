@@ -993,6 +993,13 @@ RWA_GBP = {"FY2021": round(318824 * YEAR_END_RATE["FY2021"], 1)}  # GBP = EUR * 
 NOT_DISCLOSED = (
     "Not publicly disclosed for this entity/year. The Bank says later Pillar 3 disclosures are available on request; "
     "no public 2022-2025 Pillar 3 document was found, and the statutory accounts do not state this metric.\n\n"
+    "COMMON CRAWL PASS (2026-10-07), for the two years that read 'Unreached today' - FY2019 and FY2022. "
+    "persiabank.co.uk and persiabank.com were queried in EVERY Common Crawl crawl from CC-MAIN-2019-04 to "
+    "CC-MAIN-2023-50 (82 queries, matchType=domain, so every host spelling and every path). Common Crawl has "
+    "captured four of this Bank's Pillar 3 editions - 'Pillar 3 Disclosure as at 31_03_2017', '... as at "
+    "31_03_2018 (final)', 'Pillar 3 2020 v6 040221' and 'Pillar 3 2020 v7' - which is the positive control "
+    "that the lookup reaches this host's Pillar 3 files. Neither a FY2019 nor a FY2022 edition appears in any "
+    "crawl, so both years stay UNREACHED rather than becoming 'Not published'.\n\n"
     "RE-VERIFIED 2026-09-12 (independent disclosure re-audit). The FY2023 and FY2025 Annual Reports were "
     "re-downloaded from Companies House and fully OCR'd page-by-page (both are scanned filings with no text "
     "layer). Findings:\n"
@@ -1458,14 +1465,21 @@ def _persia_st(metric):
     # GA-020 unreached pass, 2026-09-19: archived home-page link lists read for every
     # capture Jul 2019 - Sep 2022; live host re-probed over HTTP/1.1; archive.ph 429.
     st["FY2022"] = ("Unreached today – FY2022 AR p.8 says Pillar 3 is on the web site; CDX domain sweep, home-page link "
-                    "lists Jul-Sep 2022 (2021 edition only), live guesses 404, archive.ph 429 (2026-09-19)")
+                    "lists Jul-Sep 2022 (2021 edition only), live guesses 404, archive.ph 429 (2026-09-19); Common "
+                    "Crawl 2019-2023, every crawl: no such edition")
     for y in ["FY2021", "FY2020", "FY2018", "FY2016", "FY2015"]:
         st[y] = (f"Not published – Persia {y} Pillar 3 (full text searched 2026-09-19) contains no {metric} "
                  "figure or reference")
     st["FY2017"] = (f"Not published – FY2017 Pillar 3 (31 Mar 2017, 23pp, found live 2026-09-19): contents p.4 and "
                     f"full text have no {metric}; only leverage (p.22)")
+    # Common Crawl pass 2026-10-07 (index.commoncrawl.org, sequential; 82 queries): persiabank.co.uk and
+    # persiabank.com, matchType=domain, every crawl CC-MAIN-2019-04..2023-50. The Pillar 3 editions Common
+    # Crawl holds are "as at 31_03_2017", "as at 31_03_2018 (final)", "Pillar 3 2020 v6 040221" and
+    # "Pillar 3 2020 v7" - so the lookup reaches this host's Pillar 3 files (positive control) - and there is
+    # no FY2019 and no FY2022 edition in any crawl.
     st["FY2019"] = ("Unreached today – FY2019 AR says Pillar 3 is on the web site, but home-page captures Jul 2019-Sep "
-                    "2020 link only the 2018 edition; CDX, live guesses 404, archive.ph 429 (2026-09-19)")
+                    "2020 link only the 2018 edition; CDX, live guesses 404, archive.ph 429 (2026-09-19); Common "
+                    "Crawl 2019-2023, every crawl: no such edition")
     return st
 bw.add_not_disclosed_metric_sheets(["NSFR", "MREL Ratio"], p3_sources(), per_note={m: NOT_DISCLOSED for m in ["NSFR", "MREL Ratio"]},
                                    statements={"NSFR": _persia_st("NSFR"), "MREL Ratio": _persia_st("MREL")})

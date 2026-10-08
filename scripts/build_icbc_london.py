@@ -40,7 +40,53 @@ P3_21_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/do
 P3_17_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2018/2017_Pillar_3_Disclosures.pdf"
 P3_16_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2017/2016_Pillar_3_Disclosures.pdf"
 P3_15_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2015/2015_Pillar_3_Disclosures.pdf"
-P3_EARLY_FOUND = "FOUND 19 SEPTEMBER 2026 (GA-020 unreached pass): the FY2015, FY2016 and FY2017 editions DO exist on the same CDN, in a THIRD filename style ('<year>_Pillar_3_Disclosures.pdf', capitalised, with underscores): download/2015/2015_Pillar_3_Disclosures.pdf (31 December 2015, 36pp), download/2017/2016_Pillar_3_Disclosures.pdf (31 December 2016, 37pp), download/2018/2017_Pillar_3_Disclosures.pdf (31 December 2017, 45pp), each HTTP 200 application/pdf %PDF. So the sentence this replaces ('no Pillar 3 edition earlier than FY2018 was located') is superseded. So far these editions have been used ONLY for the MREL sheet; their capital/RWA/leverage figures have not yet been transcribed onto the other sheets, and FY2017 there still comes from the FY2018 edition's comparative. No FY2014 edition was found (5 name variants x 3 folders, 404)."
+P3_EARLY_FOUND = (
+    "FOUND 19 SEPTEMBER 2026 (GA-020 unreached pass), TRANSCRIBED AND VERIFIED 8 OCTOBER 2026: the FY2015, FY2016 "
+    "and FY2017 editions DO exist on the same CDN, in a THIRD filename style ('<year>_Pillar_3_Disclosures.pdf', "
+    "capitalised, with underscores): download/2015/2015_Pillar_3_Disclosures.pdf (31 December 2015, 36pp), "
+    "download/2017/2016_Pillar_3_Disclosures.pdf (31 December 2016, 37pp), download/2018/2017_Pillar_3_Disclosures"
+    ".pdf (31 December 2017, 45pp), each HTTP 200, Content-Type application/pdf and %PDF magic bytes, each cover "
+    "read for entity and period. Note that the folder and the filename year disagree for two of the three; that is "
+    "the Bank's own misfiling, not a typo, and each was checked against its cover. So the sentence this replaces "
+    "('no Pillar 3 edition earlier than FY2018 was located') is superseded. "
+    "WHAT THIS CONSTANT USED TO SAY, AND WHY IT NO LONGER DOES. From 19 September 2026 it ended: 'So far these "
+    "editions have been used ONLY for the MREL sheet; their capital/RWA/leverage figures have not yet been "
+    "transcribed onto the other sheets, and FY2017 there still comes from the FY2018 edition's comparative.' That "
+    "was true when written and became false the next day, when the figures were transcribed - but the sentence was "
+    "left standing in this shared constant, which is reused verbatim by the Pillar 3, KM1 and Overview notes, so "
+    "one stale claim was being rendered into three delivered sheets while the surrounding prose in two of them "
+    "already said the opposite. Corrected 2026-10-08 after re-reading all three editions page by page. The CURRENT "
+    "position: the CET1/Tier 1/Total Capital Ratio, Total RWAs, Leverage Ratio, LCR and RWA Breakdown sheets carry "
+    "these editions' own figures for every year and metric the editions print; the CET1/Tier 1/Total Capital "
+    "sheets carry their Table 1 'Own Funds' amounts on a second, separately labelled row beside the Annual Report "
+    "row; FY2017 comes from the FY2017 edition's OWN column and no longer from the FY2018 comparative; and FY2016 "
+    "LCR (188%) was recovered from the FY2016 edition's narrative. The only things these editions print that this "
+    "workbook does not carry are the capital-BUFFER disclosures, for which this workbook's standard shape has no "
+    "sheet, so they are recorded here rather than dropped. The account of them that stood in this constant until "
+    "8 October 2026 was wrong in two ways and both are corrected below, because a note that misdescribes a "
+    "document is the one defect no checker in this repo can see. "
+    "(i) WHICH EDITIONS PRINT BUFFERS AT ALL. The constant said 'the FY2015/FY2016 countercyclical-buffer "
+    "geography tables'. THE FY2015 EDITION PRINTS NO BUFFER DISCLOSURE OF ANY KIND. Its contents page has no "
+    "capital-buffers section; the word 'countercyclical' does not occur anywhere in it; its Table 4 carries the "
+    "heading 'Capital Ratios and Buffers' with the three capital ratios and NO buffer rows beneath it. That is "
+    "affirmative structural evidence, not a failed search - the same extraction returns 14 'buffer' hits in the "
+    "FY2016 edition against 2 in the FY2015 one, neither of the two a capital buffer. Capital buffers arrive with "
+    "the FY2016 edition, as its section 5 (folio 12), and it is the FY2016 AND FY2017 editions - not FY2015 - "
+    "that print the geographical distribution of credit exposures relevant to the countercyclical buffer "
+    "('Table 6') and the institution-specific countercyclical buffer amount ('Table 7'). "
+    "(ii) THE FY2016 FIGURES WERE QUOTED FROM THE WRONG EDITION. The constant gave FY2016's buffer block as "
+    "'5.15% / 0.625% / 0.027% / 21.24%'. Those are the FY2017 edition's 2016 COMPARATIVE printing (Table 1, folio "
+    "8). The FY2016 edition's OWN printing is its Table 4 'Transitional own funds disclosure template' (PDF p.13 / "
+    "folio 10), which gives institution-specific buffer requirement 5.15%, of which capital conservation 0.625% "
+    "and countercyclical 0.0267% - not 0.027% - with CET 1 available to meet buffers 21.24%, and adds a "
+    "transitional-adjustment column (1.88% / 1.88% / - / -) and an end-point CRD IV column (7.03% / 2.50% / "
+    "0.0267% / 21.24%) that the quartet omitted entirely. Rule 1 - each year from its own edition - binds prose as "
+    "much as it binds a cell. The FY2017 figures quoted are correct and are its own: institution-specific buffer "
+    "requirement 5.79%, of which capital conservation 1.250% and countercyclical 0.0394%, CET 1 available to meet "
+    "buffers 22.18% (Table 1, folio 8), reprinted in its own Table 4 (folio 11) with a 1.25% transitional "
+    "adjustment and a 7.04% end point. "
+    "No FY2014 edition was found (5 name variants x 3 folders, 404)."
+)
 P3_20_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2021/2020Pillar3Disclosure.pdf"
 P3_19_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2020/2019Pillar3Disclosure.pdf"
 P3_18_URL = "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/download/2019/2018Pillar3Disclosure.pdf"
@@ -141,11 +187,47 @@ def p3_sources(note_disclosure_start=True):
             "DO disclose total risk-weighted exposures, the three capital ratios and (FY2018-FY2020) the "
             "leverage ratio and its exposure measure, in their own 'Table 1 - Own Funds' and 'The Leverage "
             "Ratio' section - so the Total RWAs, CET1/Tier 1/Total Capital Ratio and Leverage Ratio sheets "
-            "now carry FY2018-FY2020 (and FY2017 from the FY2018 edition's comparative column). The FY2015, "
+            "now carry FY2018-FY2020. The FY2015, "
             "FY2016 and FY2017 editions were subsequently found under a third filename style [" + P3_EARLY_FOUND + "]. "
-            "The ratio and Total RWA sheets now also carry FY2015-FY2016, and FY2016 leverage is transcribed; "
-            "FY2014 remains blank because no FY2014 Pillar 3 was reached and no RWA figure appears in its Annual Report.\n"
-            "NSFR remains blank before FY2021 because the early editions state no NSFR ratio. The FY2015-FY2016 "
+            "The ratio, Total RWA, Leverage Ratio, LCR and RWA Breakdown sheets now carry FY2015-FY2017 from those "
+            "editions' own columns, and FY2017 is no longer taken from the FY2018 edition's comparative.\n"
+            "FY2014 IS NOW FILLED ON THE RATIO, TOTAL RWA AND RWA BREAKDOWN SHEETS, and the provenance needs "
+            "stating precisely because it is not the same as every other year on those sheets. No FY2014 Pillar 3 "
+            "edition has ever been reached and no risk-weighted-assets figure appears in the FY2014 Annual Report. "
+            "The source is the FY2015 edition's own 2014 COMPARATIVE column - Table 1 (folio 7) printing Total Risk "
+            "Weighted Assets 2,387,347 with capital ratios 13.51% / 13.51% / 17.82%, and Table 5 (folio 11) splitting "
+            "that into Total Credit Risk 2,265,039, Operational Risk 93,946, Market risk (Position Risk) 72 and "
+            "Credit Valuation Adjustment 28,290. Read at 300 dpi off both page images on 2026-10-08 (md5 "
+            "654f227b02589a28d6ce8aa22e71ec19).\n"
+            "THE DECISION AND ITS LIMIT (user, 2026-10-08): where a year has NO own edition and a document in hand "
+            "prints its figures, the figures are carried rather than left blank. This is deliberately NOT a reversal "
+            "of the own-edition principle: that principle governs a year that HAS its own edition, where taking a "
+            "later edition's comparative imports the source edition's errors invisibly - which is exactly what the "
+            "FY2017 column demonstrates, the FY2018 edition printing 1,793,374 against FY2017's own 1,794,374 and "
+            "then printing a 22.17% beside its own figure that recomputes to 22.19%. KM1 locked rule 1 is UNCHANGED "
+            "and the KM1 sheet is untouched by this; so is every year FY2015 and later, which stays on its own "
+            "edition. FY2014 is the one year here with no own edition at all.\n"
+            "WHY THIS PARTICULAR COMPARATIVE IS TRUSTWORTHY, which is a separate question from whether comparatives "
+            "may be used, and the reason this fill is not merely permitted but corroborated. Three independent "
+            "checks on the same column: (1) the 2014 CET1, Tier 1 and Total Capital it prints (322,451 / 322,451 / "
+            "425,451) agree EXACTLY with the FY2014 Annual Report amounts this workbook already carried from a "
+            "wholly different document; (2) Table 5's 2014 exposure classes sum exactly to its own printed Total "
+            "Credit Risk (145,132 + 1,463,504 + 71,650 + 7,500 + 577,253 = 2,265,039) and the four risk types sum "
+            "exactly to the printed Grand Total (2,265,039 + 93,946 + 72 + 28,290 = 2,387,347) - the FY2016 edition "
+            "does NOT have this property, so it is a real test and not an arithmetic tautology; (3) the printed "
+            "ratios recompute from the printed capital and RWA (322,451 / 2,387,347 = 13.51%, 425,451 / 2,387,347 = "
+            "17.82%). Nothing here was derived or back-solved: every figure placed is printed in the table, and the "
+            "recomputation is a CHECK on figures already printed, never a substitute for one.\n"
+            "WHAT FY2014 STILL DOES NOT HAVE, so the remaining blanks are not an oversight: the FY2015 edition "
+            "contains no leverage section at all (its contents page runs section 4 straight to section 5; a leverage "
+            "section first appears in the FY2016 edition), prints no LCR and does not mention NSFR, so the Leverage "
+            "Ratio, LCR and NSFR sheets have no FY2014 column to fill from it. The capital sheets' second row stays "
+            "FY2015-FY2017 deliberately: it exists to show where regulatory own funds DIVERGE from the Annual "
+            "Report amount (FY2016 377,484 against 378,047), and for 2014 the two agree exactly, so a second row "
+            "would repeat 322,451 and dilute what that row is for.\n"
+            "NSFR remains blank before FY2021 because the early editions state no NSFR ratio - the FY2016 and "
+            "FY2017 editions name NSFR only as one of the COREP returns submitted to the regulator, and the FY2015 "
+            "edition does not mention it at all. The FY2015-FY2017 "
             "RWA analysis is reproduced in its own pre-OV1 section rather than mapped onto the later UK OV1 rows; "
             "the two source templates are visibly separated on the RWA Breakdown sheet.\n"
             "CET1/Tier 1/Total Capital $ amounts are disclosed every year back to FY2014 via each year's "
@@ -179,7 +261,46 @@ def p3_capital_sources_1420():
         "capital narrative) - only the $ capital amounts themselves. That is a statement about the Annual Reports "
         "only: the Bank's own standalone Pillar 3 Disclosures for FY2018, FY2019 and FY2020 DO disclose total risk "
         "weighted exposures, and were located on 2026-09-16; the Total RWAs and ratio sheets carry them, and their "
-        "Table 1 own-funds figures agree exactly with the Annual Report amounts cited above for FY2017-FY2020. "
+        "Table 1 own-funds figures agree exactly with the Annual Report amounts cited above for FY2017-FY2020.\n"
+        "THE SECOND ROW ON THIS SHEET, AND WHY IT EXISTS (added 2026-10-08, GA-020 lead A1). The row above is the "
+        "Annual Report's 'Regulatory capital' note. The row below it is the Bank's own standalone Pillar 3 "
+        "Disclosures, 'Table 1 - Own Funds', for the three editions re-read from the page image on 2026-10-08:\n"
+        f"    FY2017: Pillar 3 Disclosures 2017, Table 1, PDF p.11 / printed folio 8 — {P3_17_URL}\n"
+        f"    FY2016: Pillar 3 Disclosures 2016, Table 1, PDF p.11 / printed folio 8 — {P3_16_URL}\n"
+        f"    FY2015: Pillar 3 Disclosures 2015, Table 1, PDF p.10 / printed folio 7 — {P3_15_URL}\n"
+        "FY2015 and FY2017 AGREE EXACTLY between the two sources (357,275 / 357,275 / 459,354 and 397,848 / "
+        "397,848 / 500,128) - recorded here because a negative that nobody writes down is indistinguishable from a "
+        "check nobody ran. **FY2016 DOES NOT AGREE, and the Bank itself prints both figures and says which is "
+        "which.** The FY2016 edition's Table 1 deducts a (563) 'regulatory adjustment' - an Article 105 CRR prudent "
+        "valuation deduction applied to all assets measured at fair value - giving CET1 377,484, Tier 1 377,484 and "
+        "Total Capital 479,504 against the Annual Report's 378,047 / 378,047 / 480,067. The SAME PAGE's Table 2 "
+        "('Reconciliation between Regulatory Own Funds and Audited Financial Statements as of 31 December 2016') "
+        "sets the two side by side in its own columns: audited financial statements 378,047, regulatory own fund "
+        "377,484, regulatory adjustment 563. So this is not a transcription disagreement to be resolved - it is two "
+        "different published quantities on two different bases, and BOTH are carried, neither reconciled to the "
+        "other. The FY2016 edition's own capital RATIOS are struck on the regulatory figure (377,484 / 1,777,358 = "
+        "21.24% as printed; the audited figure would give 21.27%), which is also the Tier 1 capital its leverage "
+        "table uses. The FY2017 edition shows the same shape a year on - a (552) regulatory adjustment taking "
+        "398,400 to 397,848 - but there the Annual Report note already carries the post-deduction figure, which is "
+        "why FY2017 ties and FY2016 does not.\n"
+        "THE SECOND ROW'S LABEL, PRECISELY (qualified 2026-10-08). It names the Article 105 prudent-valuation "
+        "adjustment because that is what makes the row worth printing, but the adjustment exists in only two of "
+        "the three years and the label must not be read as asserting it in all three. The FY2015 edition's Table 1 "
+        "prints its 'Regulatory Adjustment' row as a DASH in both its 2015 and its 2014 columns - the Bank stating "
+        "a nil, not omitting the concept - so for FY2015 the regulatory and audited figures are the same number "
+        "arrived at two ways, and the row records an agreement rather than a difference. FY2017's adjustment is "
+        "(552) but the Annual Report note already carries it, so that year agrees too. FY2016 is the only year in "
+        "which the two rows differ.\n"
+        "EACH OF THESE THREE EDITIONS CORROBORATES ITSELF, which is worth recording because a figure resting on "
+        "one table rests on one transcription (map rule 23). Every edition reprints its own-funds build-up a "
+        "second time in a 'Table 4 - Transitional Own Fund Disclosure', the Annex VI format of Commission "
+        "Implementing Regulation 1423/2013, which the FY2015 edition names outright as such: FY2015 at PDF p.12 / "
+        "folio 9 (357,275 / 357,275 / 102,079 / 459,354 / RWA 1,953,629 / 18.29% / 18.29% / 23.51%), FY2016 at "
+        "PDF p.13 / folio 10 (377,484 / 377,484 / 102,020 / 479,504 / RWA 1,777,358 / 21.24% / 21.24% / 26.98%) "
+        "and FY2017 at PDF p.14 / folio 11 (397,848 / 397,848 / 102,280 / 500,128 / RWA 1,794,374 / 22.17% / "
+        "22.17% / 27.87%). Every one agrees digit-for-digit with that edition's Table 1. Note that the FY2016 "
+        "Table 4 carries the REGULATORY 377,484, not the audited 378,047, which is a second place the Bank states "
+        "which of the two figures is its own-funds figure.\n"
         "CET1 Capital = Tier 1 Capital every year shown here "
         "(no Additional Tier 1 instrument has ever existed for this Bank), matching the convention already used for "
         "FY2023-2025 on this workbook. FY2014's own note separately labels a '$200,000k Common Equity Tier 1 "
@@ -187,9 +308,14 @@ def p3_capital_sources_1420():
         "reserve) - read in context this is the share-capital component of the build-up, not a distinct, lower CET1 "
         "figure with $122,451k of unexplained Additional Tier 1 capital; no such AT1 instrument is disclosed "
         "anywhere in the FY2014 accounts, so CET1 Capital is shown here as $322,451k (= Tier 1 Capital), consistent "
-        "with every other year. 'Tier 1 Capital' before FY2017 is simply total audited equity (share capital + "
-        "retained earnings + AFS reserve/other reserves, with no regulatory deduction); from FY2017 a 'Less: "
-        "Regulatory adjustments' line first appears, reducing Tier 1 Capital slightly below total equity."
+        "with every other year. In the ANNUAL REPORT note, 'Tier 1 Capital' before FY2017 is simply total audited "
+        "equity (share capital + retained earnings + AFS reserve/other reserves, with no regulatory deduction), and "
+        "from FY2017 a 'Less: Regulatory adjustments' line first appears, reducing Tier 1 Capital slightly below "
+        "total equity. QUALIFIED 2026-10-08: that sentence is about the Annual Report note and stays true of it, but "
+        "it must not be read as a statement about the Bank. The Bank's own PILLAR 3 Table 1 already carries a "
+        "regulatory adjustment a year EARLIER, in the FY2016 edition ((563), Article 105 prudent valuation) - see "
+        "the second row on this sheet. The FY2015 and FY2014 Pillar 3 columns do print a 'Regulatory Adjustment' "
+        "row and it is a DASH in both, i.e. the Bank stated a nil rather than omitting the concept."
     )
 
 def p3_prekm1_sources():
@@ -202,9 +328,20 @@ def p3_prekm1_sources():
         f"FY2020: Pillar 3 Disclosures 2020, Table 1 p.13 and section 5 p.18 (own 2020 column) — {P3_20_URL}\n"
         f"FY2019: Pillar 3 Disclosures 2019, Table 1 p.12 and section 5 p.17 (own 2019 column) — {P3_19_URL}\n"
         f"FY2018: Pillar 3 Disclosures 2018, Table 1 p.9 and section 5 p.15 (own 2018 column) — {P3_18_URL}\n"
-        f"FY2017: Pillar 3 Disclosures 2017, Table 1 PDF p.15 / printed p.12 and leverage Tables 8-9 PDF pp.20-21 / printed pp.17-18 — {P3_17_URL}\n"
-        f"FY2016: Pillar 3 Disclosures 2016, Table 1 PDF p.11 / printed p.8 and leverage Tables 8-9 PDF p.16 / printed p.13 — {P3_16_URL}\n"
-        f"FY2015: Pillar 3 Disclosures 2015, Table 1 PDF p.10 / printed p.7 — {P3_15_URL}. The FY2015 edition does not print a leverage ratio.\n"
+        f"FY2017: Pillar 3 Disclosures 2017, Table 1 PDF p.11 / printed folio 8 and leverage Tables 8-9 PDF p.18 / printed folio 15 — {P3_17_URL}\n"
+        f"FY2016: Pillar 3 Disclosures 2016, Table 1 PDF p.11 / printed folio 8 and leverage Tables 8-9 PDF p.16 / printed folio 13 — {P3_16_URL}\n"
+        f"FY2015: Pillar 3 Disclosures 2015, Table 1 PDF p.10 / printed folio 7 — {P3_15_URL}. The FY2015 edition "
+        "prints no leverage ratio, and that is affirmative evidence from the document's own structure rather than a "
+        "failed search: its contents page runs '4. Capital requirements ... 10' straight on to '5. Unencumbered "
+        "assets ... 11', with no leverage section anywhere in the document. A leverage section first appears in the "
+        "FY2016 edition, as its section 6 (folio 13).\n"
+        "FOLIO CORRECTION, 2026-10-08 (GA-020 lead A1): the three FY2017 citations above previously read 'Table 1 "
+        "PDF p.15 / printed p.12' and 'leverage Tables 8-9 PDF pp.20-21 / printed pp.17-18', and the RWA Breakdown "
+        "sheet's FY2017 Table 5 citation read 'PDF p.17 / printed p.14'. All three were wrong, in both the PDF "
+        "index and the printed folio. Re-established by reading each page's own running footer off a 300 dpi "
+        "render: in all three of these editions the PDF sheet index runs exactly three ahead of the printed folio, "
+        "so Table 1 is PDF p.11 / folio 8, Table 5 is PDF p.16 / folio 13 and the leverage tables are PDF p.18 / "
+        "folio 15. No FIGURE changed; only the promise about where a reader should look (map rule 26).\n"
         "The FY2018-FY2020 editions were located on 2026-09-16 and the FY2015-FY2017 editions on 2026-09-19; each was verified "
         "by HTTP 200, Content-Type application/pdf and %PDF magic bytes. They do NOT use the UK KM1 "
         "template (it post-dates them - see the KM1 Key Metrics sheet's own note), so these figures come "
@@ -215,6 +352,33 @@ def p3_prekm1_sources():
         "recomputing from the two components would round differently (FY2017 397,848/1,793,374 recomputes "
         "to 22.18% against a printed 22.17%; FY2020 leverage 456,128/2,058,837 recomputes to 22.15% "
         "against a printed 22.17%) - the disclosure is reproduced, not recalculated.\n"
+        "FY2017 RE-SOURCED TO ITS OWN EDITION, AND ONE FIGURE MOVED THE OTHER WAY (2026-10-08, GA-020 lead A1). "
+        "FY2017 on these sheets was originally taken from the FY2018 edition's 2017 comparative column, because the "
+        "FY2017 edition had not yet been found. It has been since, and every FY2017 cell here is now the FY2017 "
+        "edition's OWN 31 December 2017 printing (map rule 1). All sixteen rows of Table 1 were compared between "
+        "the two editions off 300 dpi renders. **FIFTEEN AGREE EXACTLY**: paid up capital 200,000; retained "
+        "earnings 199,057; available-for-sale reserve (657); CET1 before adjustment 398,400; regulatory adjustment "
+        "(552); CET1 397,848; additional Tier 1 a printed dash; Tier 1 397,848; subordinated loan 100,000; general "
+        "credit risk adjustments 2,280; Tier 2 102,280; Total Capital 500,128; CET1 ratio 22.17%; Tier 1 ratio "
+        "22.17%; Total Capital ratio 27.87%. **ONE DIFFERS, and it is the risk-weighted exposure total**: the "
+        f"FY2017 edition's own column prints 1,794,374 (Table 1, folio 8 — {P3_17_URL}), while the FY2018 "
+        f"edition's 2017 comparative prints 1,793,374 (Table 1, PDF p.10 / printed folio 10 — {P3_18_URL}). A "
+        "$1,000k difference. The cell carries 1,794,374, the own-edition figure, and the comparative is recorded "
+        "here rather than reconciled against it. Two further facts a reader should have, offered as evidence and "
+        "not as a correction: the FY2017 edition is internally consistent on 1,794,374 and prints it THREE separate "
+        "times - Table 1 'Own Funds' (folio 8), Table 4 'Transitional Own Fund Disclosure' (folio 11, in both its "
+        "Amount-at-Disclosure-Date and its End-Point CRD IV columns) and Table 5 'Pillar 1 "
+        "capital requirement' as its Grand total (folio 13) - and 397,848/1,794,374 gives "
+        "the 22.17% it prints, where 1,793,374 would give 22.19% - while the FY2018 edition prints 22.17% beside "
+        "1,793,374 in the same column, so that edition disagrees with itself. Neither figure has been adjusted. "
+        "The FY2018 edition prints no 2017 leverage comparative at all, so FY2017 leverage (2,717,039 / 14.64%) "
+        "could only ever have come from the FY2017 edition and is unaffected.\n"
+        "A SECOND CROSS-EDITION DIVERGENCE, ON FY2016's RWA TOTAL, AND IT IS A THREE-WAY ONE. The FY2016 edition "
+        "prints 1,777,358 in its Table 1 (folio 8) and 1,777,359 as its Table 5 Grand Total (folio 11), the "
+        "Table 5 components themselves summing to 1,777,358. The FY2017 edition's 2016 comparative Table 5 then "
+        "prints 1,777,358 (folio 13). This workbook follows each year's own edition: the Total RWAs sheet carries "
+        "1,777,358 from Table 1 and the RWA Breakdown sheet carries 1,777,359 as Table 5's printed Grand Total, "
+        "which is why the RWA Breakdown's FY2016 column does not foot by exactly 1. The Bank printed it that way.\n"
         "BASIS BREAK AT FY2021: these pre-KM1 figures are NOT on the same basis as the KM1 figures for "
         "FY2021 onward, and the overlap proves it. The FY2020 edition's own 31 December 2020 column gives "
         "CET1 456,128 and all three ratios 44.60%; the FY2021 edition's KM1 31/12/2020 comparative gives "
@@ -712,9 +876,13 @@ bw.add_asset_quality_sheet(
 #
 # FY2020 AND EARLIER ARE BLANK because the template is not used, not because no
 # Pillar 3 exists - see the source note. The FY2018, FY2019 and FY2020 editions
-# were located for this ticket and read; they carry bespoke "Table 1 - Own
-# Funds" and leverage tables instead, whose figures are on the single-metric
-# sheets in this workbook, not re-labelled onto template row numbers here.
+# were located for this ticket and read, and the FY2015, FY2016 and FY2017
+# editions were located on 2026-09-19 and read page by page on 2026-10-08; all
+# six carry bespoke "Table 1 - Own Funds" and (from FY2016) leverage tables
+# instead, whose figures are on the single-metric sheets in this workbook, not
+# re-labelled onto template row numbers here. The rule-8 row-set test, the
+# rule-15 richness control and the rule-13 embedded-image check have all been
+# run on the three early editions - see the source note for the evidence.
 # ---------------------------------------------------------------
 km1_rows = [
     ("SECTION", "Available own funds (amounts) (USD $'000)", {}),
@@ -827,8 +995,38 @@ KM1_SOURCES = (
     "credit-quality-step mapping table, neither of them a key-metrics table. Page selection was anchored "
     "on each document's own table of contents rather than on any digit-density heuristic (rule 16).\n"
     "No Pillar 3 edition earlier than FY2018 was located under any filename pattern tried. That is 'not "
-    "located', not 'does not exist' (rule 9). " + P3_EARLY_FOUND + " None of the three is a UK KM1 template "
-    "(it did not yet exist); a rule-8 check of them is still to do.\n\n"
+    "located', not 'does not exist' (rule 9). " + P3_EARLY_FOUND + "\n"
+    "THE RULE-8 CHECK ON THOSE THREE EDITIONS IS NOW DONE (2026-10-08), and it was outstanding until then - this "
+    "note previously ended 'a rule-8 check of them is still to do'. None of the FY2015, FY2016 or FY2017 editions "
+    "uses the UK KM1 template, so the FY2017 and earlier columns of this sheet stay blank, and that is the correct "
+    "outcome rather than a gap: the template arrived with CRR II, which these editions pre-date. The finding is "
+    "controlled three ways rather than rested on a failed search. (i) Row set, which is the actual test: what the "
+    "three editions print is 'Table 1 - Own Funds', which ADDS 'Paid up capital' and 'Retained earnings' rows the "
+    "template does not have, and has no SREP row, no UK-numbered buffer rows, no LCR build-up rows and no NSFR "
+    "rows - the same verdict already recorded above for FY2018-FY2020, and the same shape that fails the row-set "
+    "test for ABC International Bank's 'Table 3'. Its figures are carried on this workbook's capital, ratio, Total "
+    "RWAs and Leverage Ratio sheets and are NOT re-labelled onto template row numbers here. "
+    "AND THE ROW-SET TEST WAS RUN AGAINST THE WRONG TABLE FIRST, which is worth recording because the stronger "
+    "candidate is not the one that is easiest to find (extended 2026-10-08). All three editions ALSO print a "
+    "'Table 4 - Transitional Own Fund Disclosure' - FY2015 at PDF p.12 / folio 9, FY2016 at PDF p.13 / folio 10, "
+    "FY2017 at PDF p.14 / folio 11 - and it is the closer thing to a key-metrics table than Table 1 is, because it "
+    "carries the capital amounts, all three capital ratios and (from the FY2016 edition) the four buffer rows "
+    "together in one place. It fails the row-set test too, and for a reason the document states rather than one we "
+    "inferred: the FY2015 edition introduces it as 'Annex VI of the Commission Implementing Regulation 1423/2013 "
+    "... the relevant format during the transitional period', i.e. a DIFFERENT prescribed template with its own "
+    "purpose. Its columns are Amount at Disclosure Date / Transitional Adjustment / End Point CRD IV, which the "
+    "UK KM1 does not have; it has no SREP row, no leverage rows, no LCR build-up, no NSFR rows and no UK row "
+    "numbers. So the verdict is unchanged and is now based on the best candidate rather than the first one. "
+    "(ii) The token count "
+    "is a real zero, not a silent tool: 'KM1' returns 0 in all three editions while 'own funds' returns 7-10 and "
+    "'liquidity' 8-15, so the extraction is rich where it should be. The single 'key metric' hit, in the FY2017 "
+    "edition, was LOOKED AT rather than counted: it is narrative in section 1.2 - 'In 2017 the EBA published "
+    "templates for non-significant firms to disclose key metrics relating to the Liquidity Coverage Ratio' - and "
+    "not a table. (iii) Image check (rule 13): `pdfimages -list` reports 141 objects in the FY2015 edition, all "
+    "1-bit CCITT stencils making up the governance organisation chart on PDF p.6 plus the cover logo, 3 in the "
+    "FY2016 edition (cover logo, an 874x584 governance chart on PDF p.7, back-page logo) and 2 in the FY2017 "
+    "edition (logos only). There is no embedded image on any capital, leverage or Table 5 page in any of the "
+    "three, so no key-metrics table is hiding as a bitmap.\n\n"
     "PRECISION AND GLYPHS, reproduced not normalised: ICBC prints amounts to two decimal places of "
     "USD '000 and ratios to two decimal places with a per cent sign, in every edition, and this sheet "
     "keeps both. No cell in any of the five editions' 31 December columns is a dash or a blank, so no "
@@ -869,47 +1067,53 @@ def metric(name, unit, rows_data, sources_text, note=None):
 
 metric(
     "CET1 Capital", "$'000",
-    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
+    [("Common Equity Tier 1 (CET1) capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451}),
+     ("CET1 capital as published in the Bank's own Pillar 3 'Table 1 - Own Funds' (regulatory own funds; FY2016 and FY2017 are after an Article 105 prudent-valuation adjustment, FY2015 prints that row as a dash)",
+      {"FY2017": 397848, "FY2016": 377484, "FY2015": 357275})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "CET1 Ratio", "% of RWA",
     [("Common Equity Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                                     "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"})],
+                                     "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%", "FY2014": "13.51%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
     "Tier 1 Capital", "$'000",
-    [("Tier 1 capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451})],
+    [("Tier 1 capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 422168, "FY2017": 397848, "FY2016": 378047, "FY2015": 357275, "FY2014": 322451}),
+     ("Tier 1 capital as published in the Bank's own Pillar 3 'Table 1 - Own Funds' (regulatory own funds; FY2016 and FY2017 are after an Article 105 prudent-valuation adjustment, FY2015 prints that row as a dash)",
+      {"FY2017": 397848, "FY2016": 377484, "FY2015": 357275})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "Tier 1 Ratio", "% of RWA",
     [("Tier 1 ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                       "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"})],
+                       "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%", "FY2014": "13.51%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
     "Total Capital", "$'000",
-    [("Total capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 518606, "FY2017": 500128, "FY2016": 480067, "FY2015": 459354, "FY2014": 425451})],
+    [("Total capital", {"FY2025": 547878, "FY2024": 504454, "FY2023": 474459, "FY2022": 456300, "FY2021": 451197, "FY2020": 456128, "FY2019": 443521, "FY2018": 518606, "FY2017": 500128, "FY2016": 480067, "FY2015": 459354, "FY2014": 425451}),
+     ("Total capital as published in the Bank's own Pillar 3 'Table 1 - Own Funds' (regulatory own funds; FY2016 and FY2017 are after an Article 105 prudent-valuation adjustment, FY2015 prints that row as a dash)",
+      {"FY2017": 500128, "FY2016": 479504, "FY2015": 459354})],
     p3_sources() + "\n\n" + p3_capital_sources_1420(),
 )
 
 metric(
     "Total Capital Ratio", "% of RWA",
     [("Total capital ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                              "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%", "FY2016": "26.98%", "FY2015": "23.51%"})],
+                              "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%", "FY2016": "26.98%", "FY2015": "23.51%", "FY2014": "17.82%"})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
 metric(
     "Total RWAs", "$'000",
     [("Total risk-weighted exposure amount", {"FY2025": 675668, "FY2024": 719040, "FY2023": 842738, "FY2022": 902857, "FY2021": 739776,
-                                              "FY2020": 1022681, "FY2019": 1145387, "FY2018": 1572886, "FY2017": 1794374, "FY2016": 1777358, "FY2015": 1953629})],
+                                              "FY2020": 1022681, "FY2019": 1145387, "FY2018": 1572886, "FY2017": 1794374, "FY2016": 1777358, "FY2015": 1953629, "FY2014": 2387347})],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
 )
 
@@ -923,13 +1127,13 @@ rwa_breakdown_rows = [
      {"FY2025": 84197.30, "FY2024": 57831.90, "FY2023": 47249.90, "FY2022": 54534.06, "FY2021": 67983.12}),
     ("TOTAL", "Total risk weighted exposure amount",
      {"FY2025": 675423.74, "FY2024": 719040.48, "FY2023": 842738.48, "FY2022": 902856.95, "FY2021": 739776.26}),
-    ("SECTION", "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017)", {}),
+    ("SECTION", "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017)", {}),
     ("DATA", "Total Credit and Counterparty Credit Risk / Total Credit Risk",
-     {"FY2017": 1666837, "FY2016": 1640881, "FY2015": 1811655}),
-    ("DATA", "Operational risk (Table 5)", {"FY2017": 125483, "FY2016": 127677, "FY2015": 107701}),
-    ("DATA", "Market risk - Position risk (Table 5)", {"FY2017": 135, "FY2016": 243, "FY2015": 90}),
-    ("DATA", "Credit valuation adjustment (Table 5)", {"FY2017": 1919, "FY2016": 8557, "FY2015": 34183}),
-    ("TOTAL", "Grand Total, as printed in Table 5", {"FY2017": 1794374, "FY2016": 1777359, "FY2015": 1953629}),
+     {"FY2017": 1666837, "FY2016": 1640881, "FY2015": 1811655, "FY2014": 2265039}),
+    ("DATA", "Operational risk (Table 5)", {"FY2017": 125483, "FY2016": 127677, "FY2015": 107701, "FY2014": 93946}),
+    ("DATA", "Market risk - Position risk (Table 5)", {"FY2017": 135, "FY2016": 243, "FY2015": 90, "FY2014": 72}),
+    ("DATA", "Credit valuation adjustment (Table 5)", {"FY2017": 1919, "FY2016": 8557, "FY2015": 34183, "FY2014": 28290}),
+    ("TOTAL", "Grand Total, as printed in Table 5", {"FY2017": 1794374, "FY2016": 1777359, "FY2015": 1953629, "FY2014": 2387347}),
     ("DATA", "FY2018-FY2020 edition status (not a risk category)", {
         "FY2020": "Published - pre-OV1 exposure-class table requires its own section; not mapped to UK OV1 rows",
         "FY2019": "Published - pre-OV1 exposure-class table requires its own section; not mapped to UK OV1 rows",
@@ -942,9 +1146,21 @@ bw.add_rwa_breakdown_sheet(
     subtitle="Solo basis, UK OV1 template, $'000",
     rows=rwa_breakdown_rows,
     sources_text=rwa_sources() + "\n\n" + p3_prekm1_sources()
-                 + "\nFY2015/FY2016 RWA categories: each edition's Table 5, PDF p.14. FY2017: Table 5, PDF p.17 / printed p.14. "
+                 + "\nFY2015/FY2016/FY2017 RWA categories, re-verified on 300 dpi page renders 2026-10-08 and "
+                   "cited by PRINTED FOLIO as well as PDF index (the index runs three ahead of the folio in all "
+                   "three editions): FY2015 Table 5 'Minimum Capital Requirements (Pillar 1)', PDF p.14 / folio 11; "
+                   "FY2016 Table 5, same title, PDF p.14 / folio 11; FY2017 Table 5 'Pillar 1 capital requirement', "
+                   "PDF p.16 / folio 13 (previously cited as PDF p.17 / printed p.14 - wrong on both counts; no "
+                   "figure changed). FY2015's components sum exactly to its printed Grand Total of 1,953,629. "
                    "FY2016's printed components sum to 1,777,358 while its printed Grand Total is 1,777,359; "
-                   "both are reproduced as printed rather than force-reconciled.",
+                   "both are reproduced as printed rather than force-reconciled, and the FY2017 edition's own 2016 "
+                   "comparative prints the Grand Total as 1,777,358, a third printing of the same quantity - see "
+                   "the cross-edition paragraph in the FY2015-FY2020 source note below. FY2017's components sum "
+                   "exactly to 1,794,374. Row-set drift between editions, reproduced not normalised: the FY2015 "
+                   "and FY2016 Table 5s carry an 'Institutions and corporates with a short-term credit assessment' "
+                   "exposure class which the FY2017 edition drops entirely, and FY2017 prints a dash where FY2016 "
+                   "printed 15,000 of 'Exposure in default'. This sheet's pre-OV1 section aggregates to the four "
+                   "risk types the three editions have in common, so no exposure class is lost or invented.",
     first_col_width=60,
     source_height=170,
     unit_suffix=" ($'000)",
@@ -966,7 +1182,7 @@ metric(
     [
         ("Total high-quality liquid assets (HQLA), weighted value ($'000)", {"FY2025": 1374779, "FY2024": 328482, "FY2023": 384069, "FY2022": 288785, "FY2021": 351222}),
         ("Total net cash outflows, adjusted value ($'000)", {"FY2025": 956680, "FY2024": 187564, "FY2023": 136060, "FY2022": 168073, "FY2021": 71254}),
-        ("Liquidity Coverage Ratio (%)", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
+        ("Liquidity Coverage Ratio (%)", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%", "FY2016": "188%"}),
     ],
     p3_sources(),
     note="LCR figures are single month-end (31 December) spot observations as disclosed in the KM1 template, not a "
@@ -978,9 +1194,29 @@ metric(
          f"figures - 'At 31 December 2018, the LCR closed at 250%' ({P3_18_URL}), 255% for 2019 ({P3_19_URL}) and "
          f"372% for 2020 ({P3_20_URL}). Those editions also print a 'Table 25 - LCR Disclosure (12-month average)' "
          "with four quarterly columns, which is a DIFFERENT measure from the year-end spot figure shown here and has "
-         "deliberately not been substituted for it. No LCR percentage of any kind is disclosed in the FY2014-2016 Annual Reports (those "
-         "years' own narrative only describes the LCR/NSFR regime being newly implemented, without stating a ratio) "
-         "- blank cells for FY2014-2016 are a genuine disclosure gap, not a missing transcription.",
+         "deliberately not been substituted for it.\n"
+         "FY2016 ADDED 2026-10-08, AND THE NOTE IT REPLACES WAS A CLAIM ABOUT THE WRONG DOCUMENT (GA-020 lead A1). "
+         "This note previously ended: 'No LCR percentage of any kind is disclosed in the FY2014-2016 Annual Reports "
+         "(those years' own narrative only describes the LCR/NSFR regime being newly implemented, without stating a "
+         "ratio) - blank cells for FY2014-2016 are a genuine disclosure gap, not a missing transcription.' The "
+         "first half of that is about the ANNUAL REPORTS and is left standing; the conclusion drawn from it was "
+         "wrong, because the Bank's own FY2016 PILLAR 3 Disclosures state a figure. Section 16 'Other Risks', PDF "
+         f"p.33 / printed folio 30 — {P3_16_URL} — reads: 'The Bank met the LCR regulatory requirement and internal "
+         "limits at all times during 2016. The LCR is monitored and reported daily. At the end of 2016, the LCR was "
+         "188%.' Read off a 300 dpi render of that page. FY2016 is therefore 188%, on the same year-end spot basis "
+         "as FY2017-FY2020, and is NOT a disclosure gap. The FY2017 edition independently confirms the FY2017 "
+         f"figure already on this sheet - 'At 31 December 2017, the LCR closed at 418%, with a liquidity surplus of "
+         f"$248m', PDF p.40 / printed folio 37 — {P3_17_URL} - which had previously rested on the Annual Report "
+         "alone; that same page prints a 'Table 29 - LCR Disclosure (12-month average)' in USDm giving 205% / 206% "
+         "/ 217% / 236% at the four 2017 quarter-ends, the same twelve-month-average measure as the FY2018-FY2020 "
+         "Table 25 and likewise not substituted for the spot figure.\n"
+         "FY2015 AND FY2014 STAY BLANK, on positive evidence rather than on a failed search. The FY2015 Pillar 3 "
+         f"was read in full on 2026-10-08 ({P3_15_URL}) and states no LCR ratio of any kind: its liquidity "
+         "narrative describes only the preparatory work for 'the Liquidity Coverage Ratio (LCR) requirements that "
+         "came into effect on 1/10/2015' - data collection, daily monitoring, staff training, revised COREP "
+         "templates - which is consistent with the regime having begun three months before that year end. No "
+         "FY2014 Pillar 3 edition has ever been reached (see the MREL sheet for the search record), and the "
+         "FY2014-FY2016 Annual Reports state none either.",
 )
 
 metric(
@@ -1016,14 +1252,30 @@ bw.add_not_disclosed_metric_sheets(
     "years was located under any filename tried, and a Wayback CDX listing of the whole ICBCLondon/download/ CDN "
     "path (173 URLs) holds no Pillar 3 for them - but that same listing also lacks the FY2018-FY2020 editions "
     "that are live on the CDN, so it cannot prove absence. The 2016 Report and Accounts (ICBCreport2016.pdf, "
-    "native text) has no MREL mention.",
+    "native text) has no MREL mention.\n"
+    "Common Crawl pass, 2026-10-07 (GA-020 unreached): the archive CANNOT settle FY2014 either way, and the two "
+    "hosts fail for OPPOSITE reasons. (a) icbclondon.com WAS reached thoroughly - every crawl CC-MAIN-2013 to "
+    "2018 was queried at domain level, 53 crawls answered and 49 of them return records (up to 115 in one "
+    "crawl, 1,088 in total); listing every one of those records unfiltered gives just 48 distinct URLs and NOT "
+    "ONE PDF of any kind. The captured "
+    "sitemap/sitemap.htm (CC-MAIN-2015-18, offset 563590559) is a complete site map and lists no Pillar 3 or "
+    "disclosure page at all: its entire regulatory section is london_annualreport.htm, london_antimoney.htm, "
+    "london_briefintro.htm, london_otherinfo.htm, london_register.htm and london_regulator.htm, and a sweep of "
+    "www.icbclondon.com/aboutus/* across 2013-2018 shows Common Crawl only ever fetched aboutus/aboutus.htm "
+    "(27 captures), never london_annualreport.htm. So the brochureware site genuinely never linked a Pillar 3. "
+    "(b) v.icbc.com.cn - the CDN that actually HOSTS the documents - was never crawled: the only records Common "
+    "Crawl holds for it are http://v.icbc.com.cn/robots.txt returning HTTP 404 (CC-MAIN-2016-36/-40/-44/-50 and "
+    "2017-04). The crawler probed robots.txt and fetched no content URL, so the 0 records for "
+    "v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/ICBCLondon/* across 43 crawls is a REACH LIMIT OF THE "
+    "ARCHIVE, NOT evidence the FY2014 document is absent. FY2014 therefore stays 'Unreached today'.",
     statements={"MREL Ratio": {
         **{f"FY{y}": ("Not published – no MREL figure or mention in this year's Pillar 3 disclosure "
                       "(text-searched 2026-09-19)") for y in range(2018, 2026)},
         **{f"FY{y}": (f"Not published – ICBC (London) plc Pillar 3 Disclosures 31 Dec {y} (CDN, found 2026-09-19): "
                       "no MREL in text or contents pp.2-3") for y in range(2015, 2018)},
-        "FY2014": ("Unreached today – no FY2014 Pillar 3 found: CDN name tries (incl. the FY2015-17 style, 2026-09-19), "
-                   "CDX of v.icbc.com.cn, icbclondon.com, icbc.com.cn London pages; FY2015 edition has no MREL"),
+        "FY2014": ("Unreached today – no FY2014 Pillar 3 found: CDN name tries (FY2015-17 style, 2026-09-19), "
+                   "CDX of v.icbc.com.cn, icbclondon.com, icbc.com.cn London pages; FY2015 edition has no MREL; "
+                   "Common Crawl 2013-2018: site reached, no PDF; doc CDN uncrawled"),
     }},
 )
 
@@ -1059,35 +1311,49 @@ bw.add_overview_sheet(
     cash_flow_unit="$'000",
     ratios=[
         ("CET1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                        "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"}),
+                        "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"}),
         ("Tier 1 Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                          "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%"}),
+                          "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "26.84%", "FY2017": "22.17%", "FY2016": "21.24%", "FY2015": "18.29%"}),
         ("Total Capital Ratio", {"FY2025": "81.09%", "FY2024": "70.16%", "FY2023": "56.30%", "FY2022": "50.54%", "FY2021": "60.99%",
-                                 "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%"}),
+                                 "FY2020": "44.60%", "FY2019": "38.72%", "FY2018": "32.97%", "FY2017": "27.87%", "FY2016": "26.98%", "FY2015": "23.51%"}),
         ("Leverage Ratio", {"FY2025": "47.48%", "FY2024": "33.77%", "FY2023": "35.41%", "FY2022": "31.75%", "FY2021": "30.75%",
-                            "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%"}),
-        ("LCR", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%"}),
+                            "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%", "FY2017": "14.64%", "FY2016": "12.79%"}),
+        ("LCR", {"FY2025": "143.70%", "FY2024": "175.13%", "FY2023": "282.28%", "FY2022": "171.82%", "FY2021": "492.91%", "FY2020": "372%", "FY2019": "255%", "FY2018": "250%", "FY2017": "418%", "FY2016": "188%"}),
         ("NSFR", {"FY2025": "173.34%", "FY2024": "149.33%", "FY2023": "167.09%", "FY2022": "135.79%", "FY2021": "150.16%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own source "
          "citation for the underlying document/page. RWA-denominated Pillar 3 ratios (CET1/Tier1/Total Capital "
-         "Ratio, Leverage Ratio) are publicly disclosed from FY2017 onward. Getting to that has taken two "
-         "corrections, both from finding documents rather than from re-reading the ones we had: the 2026-09-12 "
+         "Ratio) are publicly disclosed from FY2015 onward and the Leverage Ratio from FY2016 onward. Getting to "
+         "that has taken three "
+         "corrections, all from finding documents rather than from re-reading the ones we had: the 2026-09-12 "
          "disclosure audit located the FY2021 and FY2022 standalone Pillar 3 documents (superseding a claim that "
          "nothing before FY2023 was disclosed), and KM1-016 on 2026-09-16 located the FY2018, FY2019 and FY2020 "
-         "editions (superseding a claim that no Pillar 3 document existed before FY2021 at all). All five sit on "
-         "the Bank's own CDN, each misfiled one year forward - see the Pillar 3 source note. The FY2018-FY2020 "
+         "editions (superseding a claim that no Pillar 3 document existed before FY2021 at all); and GA-020 on "
+         "2026-09-19 located the FY2015, FY2016 and FY2017 editions under a third filename style again, which were "
+         "transcribed and verified page by page on 2026-10-08. All eight sit on "
+         "the Bank's own CDN, most of them misfiled one year forward - see the Pillar 3 source note. The "
+         "FY2015-FY2020 "
          "editions do not use the UK KM1 template, which post-dates them, but they do disclose total risk "
-         "weighted exposures, the three capital ratios and the leverage ratio in the Bank's own bespoke tables, "
-         "and FY2017 comes from the FY2018 edition's comparative column. NSFR still begins at FY2021: none of the "
+         "weighted exposures and the three capital ratios (and, from FY2016, the leverage ratio) in the Bank's own "
+         "bespoke 'Table 1 - Own Funds' and leverage tables. "
+         "FY2017 now comes from the FY2017 edition's OWN column, not from the FY2018 edition's comparative as it "
+         "did until 2026-09-20; the two agree on fifteen of Table 1's sixteen rows and differ on the "
+         "risk-weighted-exposure total (1,794,374 own, 1,793,374 comparative), both of which are recorded on the "
+         "Total RWAs sheet and neither reconciled to the other. NSFR still begins at FY2021: none of the "
          "pre-KM1 editions states one. No risk-weighted-assets figure appears in the Bank's own FY2014-FY2020 "
          "ANNUAL REPORTS, which is why the CET1/Tier1/Total Capital $ amounts run back to FY2014 while the ratios "
-         "stop at FY2017; blank cells for FY2014-FY2016 are intentional, not zeros, and mean no Pillar 3 edition "
-         "for those years has been located [" + P3_EARLY_FOUND + "]. BASIS: the pre-KM1 (FY2017-FY2020) and KM1 (FY2021 onward) figures "
+         "stop at FY2015. THE FY2014 BLANK, PRECISELY: it is intentional and is not a zero, but the sentence that "
+         "stood here until 2026-10-08 - that blank cells for FY2014-FY2016 'mean no Pillar 3 edition for those "
+         "years has been located' - was false for FY2015 and FY2016 from the moment those editions were found, and "
+         "is incomplete for FY2014. No FY2014 edition has been reached, but the FY2015 edition's own 2014 "
+         "comparative column does publish a FY2014 RWA of 2,387,347 and ratios of 13.51% / 13.51% / 17.82%; see the "
+         "Pillar 3 source note for why those cells are nonetheless left blank and for the corroboration that same "
+         "column gives the FY2014 capital amounts. [" + P3_EARLY_FOUND + "] BASIS: the pre-KM1 (FY2015-FY2020) and KM1 (FY2021 onward) figures "
          "are not on the same capital basis - at 31 December 2020 the FY2020 edition reports 44.60% where the "
-         "FY2021 edition's comparative reports 43.57% - and are deliberately not reconciled. LCR is the one ratio "
-         "disclosed earlier still, as a narrative percentage from FY2017 (see the LCR sheet's own source note for "
-         "FY2014-2016's absence).",
+         "FY2021 edition's comparative reports 43.57% - and are deliberately not reconciled. LCR runs back to "
+         "FY2016, as a narrative percentage: 418% at 31 December 2017 (stated in both that year's Annual Report "
+         "and its Pillar 3) and 188% at the end of 2016 (the FY2016 Pillar 3, recovered 2026-10-08). The FY2015 "
+         "edition states no LCR, the regime having come into effect only on 1 October 2015.",
 )
 
 bw.save("/Users/armaan/code/katalysis/banks/ICBC (LONDON) PLC FINANCIALS.xlsx")

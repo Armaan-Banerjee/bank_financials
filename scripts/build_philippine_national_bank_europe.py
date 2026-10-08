@@ -1028,11 +1028,11 @@ _GA020_UNREACHED = {
     # Second pass 2026-09-19 (GA-020 unreached), extended by the cdn-sweep pass the same day:
     # wording lists the routes tried; the long list is in _UB_NOTE below. Still UNREACHED.
     "FY2022": ("Unreached today – FY2022 Pillar 3 never linked under its own filename (only via the "
-               "overwritten rolling S3 URL); no Wayback, archive.ph or Common Crawl copy; FY2022 "
-               "accounts (CH) re-read 2026-09-19: no such figure"),
+               "overwritten rolling S3 URL); no Wayback, archive.ph or Common Crawl copy (CC: every "
+               "crawl 2015-2026); FY2022 accounts (CH) re-read 2026-09-19: no such figure"),
     "FY2018": ("Unreached today – FY2018 Pillar 3 (linked on /europe/ page Aug 2019) is 403 live; no "
-               "Wayback, archive.ph or Common Crawl copy; S3 AccessDenied; FY2018 accounts (CH) re-read "
-               "2026-09-19: no such figure"),
+               "Wayback, archive.ph or Common Crawl copy (CC: every crawl 2015-2026); S3 AccessDenied; "
+               "FY2018 accounts (CH) re-read 2026-09-19: no such figure"),
     "FY2016": ("Not published – PNBE Pillar 3 FY2016 (April 2017), pp.6-11, reports capital/RWAs "
                "and qualitative liquidity risk but contains no leverage ratio, LCR, NSFR or MREL figure; "
                "checked 2026-09-20"),
@@ -1085,7 +1085,17 @@ _UB_NOTE = (
     "forms and login pages only; (xii) Common Crawl's URL index, every crawl 2016-2024 for "
     "www.pnb.com.ph/europe/images/stories/docs/* and pnb.com.ph/europe/*, and 2021-2025 for the S3 "
     "uploads/docs/* prefix: the only Pillar 3 files ever captured are the FY2017 and FY2019 editions "
-    "(the same two Wayback holds), and the rolling S3 URL was never crawled; (xiii) the live /europe/ "
+    "(the same two Wayback holds), and the rolling S3 URL was never crawled. THAT SWEEP WAS COMPLETED ON "
+    "2026-10-07, once index.commoncrawl.org came back from the outage that had cut it short: the WHOLE "
+    "pnb.com.ph domain (matchType=domain - every host and every path, including /europe/, "
+    "/global-filipino-hub/, /wp-content/ and /storage/) is now answered in EVERY crawl from CC-MAIN-2015-06 "
+    "to CC-MAIN-2026-39, with pnbeurope.com and pnbeurope.co.uk across 2015-2019, the pnb-website S3 bucket "
+    "in the 2026 crawls and the path-style S3 hostname (not previously tried) across 2023-2026. Nothing new: "
+    "the FY2017 and FY2019 editions are still the only Pillar 3 files Common Crawl has ever captured, the "
+    "PDFs on the hub path are the Japan branch's own disclosure statements, and pnbeurope.* holds only a "
+    "homepage and robots.txt. A positive control in the same run (Zenith's 2018-17 uploads prefix) returned "
+    "its known records, so these zeroes are the archive's and not the lookup's. FY2018 and FY2022 therefore "
+    "stay UNREACHED; (xiii) the live /europe/ "
     "FY2016 and FY2018 URLs over HTTP/1.1 with a full Chrome user agent, and a fetch from a different "
     "network (the WebFetch tool): HTTP 403 in both, so the Akamai block is not specific to this "
     "environment; (xiv) S3 ListObjects on the bucket: AccessDenied; (xv) the UK Web Archive CDX endpoint "

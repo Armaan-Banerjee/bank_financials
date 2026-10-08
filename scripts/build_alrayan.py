@@ -33,6 +33,13 @@ AR2021_URL = "https://find-and-update.company-information.service.gov.uk/company
 AR2020_URL = "https://find-and-update.company-information.service.gov.uk/company/04483430/filing-history/MzMwMzI3NTQ0NmFkaXF6a2N4/document?format=pdf&download=0"
 P3_2020_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2021-07/2020_pillar_3_disclosures_-_final.pdf"
 P3_2021_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2022-10/inv-rep-2021-pillar-3.pdf"
+# GA-020 (2026-09-19). The FY2022 Pillar 3 edition EXISTS and is live on the Bank's own host, under a filename
+# that does not say "2022" (found via Wayback CDX of alrayanbank.co.uk, filter mimetype:application/pdf, then
+# fetched live: HTTP 200, application/pdf, %PDF, 32 pages, cover 'Pillar 3 Disclosures 31 December 2022').
+# MOVED UP HERE 2026-10-08, from below the sheet calls, because the FY2022 KM1 and OV1 columns are now cited
+# to it: p3_sources() resolves the name at call time and several callers run before the old position.
+P3_2022_URL = ("https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2023-08/"
+               "al_rayan_pillar_three_32pp_brochure_-_final.pdf")
 P3_2023_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2024-08/pb7703_al_rayan_pillar_3_disclosures_2023_v2.pdf"
 P3_2024_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2025-09/alrayan_pillar_3_disclosures_2024_web_-_010925.pdf"
 P3_2025_URL = "https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2026-09/pb8084_alrayan_pillar_3_disclosures_2025.pdf"
@@ -96,8 +103,26 @@ def p3_sources(extra=""):
         f"FY2025: Pillar 3 Disclosures - 31 December 2025, Annex I KM1 table, p.39 - {P3_2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures - 31 December 2024, Annex I KM1 table, p.38 - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures - 31 December 2023, Annex I KM1 table, p.33 - {P3_2023_URL}\n"
-        f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own FY2022 comparative column, Annex I KM1 table, "
-        f"p.33 - {P3_2023_URL}\n"
+        f"FY2022: Pillar 3 Disclosures - 31 December 2022, Annex I KM1 table, p.29, column a '31/12/2022' - "
+        f"{P3_2022_URL}\n"
+        "  FY2022 RE-SOURCED 2026-10-08 TO ITS OWN EDITION (KM1 locked rule 1), AND WHAT THE CHECK FOUND IS "
+        "RECORDED BECAUSE IT IS EVIDENCE. This citation used to read 'sourced from the FY2023 Pillar 3 "
+        "Disclosures' own FY2022 comparative column, Annex I KM1 table, p.33'. Rule 1 says use each year's "
+        "OWN edition, never a later edition's comparative, because a comparative imports the later "
+        "edition's restatements and errors invisibly. The FY2022 edition was fetched (32pp, cover 'Pillar 3 "
+        "Disclosures 31 December 2022') and its Annex I KM1 on p.29 read at 200 dpi off the page image: "
+        "every one of the 24 figures this workbook carries for FY2022 - 152.7 / 155.7 / 178.4 / 1,022.3, "
+        "14.93% / 15.23% / 17.45%, 2.82% / 10.82%, 2.50% / 0.65% / 3.15% / 13.97% / 28%, 2,306.6 / 6.7%, "
+        "173.6 / 159.4 / 255.1 / 39.8 / 442%, 1,982.3 / 1,280.8 / 155% - matches digit for digit. So NO "
+        "FIGURE CHANGED: the FY2023 edition did not restate FY2022, and that agreement is now established "
+        "rather than assumed. The citation points at the own edition so the next reader does not have to "
+        "re-do this.\n"
+        "  Two things that stay as they are, both deliberate: the FY2022 edition also prints a 31/12/2021 "
+        "KM1 comparative column (142.4 / 145.4 / 170.4 / 943.9, 15.08% / 15.40% / 18.05%, 6.8%, 357%), and "
+        "rule 1 forbids using it - FY2021's own edition pre-dates the template, so the KM1 sheet's FY2021 "
+        "column stays blank. Its footnote on NSFR ('only been reported for 2022 ... however, the amount "
+        "calculated by the Bank and reported within the 2021 disclosures was 146%') is the Bank quoting its "
+        "own earlier document, not a KM1 row, so it does not fill a KM1 cell either.\n"
         f"FY2021: Pillar 3 Disclosures - 31 December 2021, Table 1/2/3 (this edition pre-dates the bank's adoption "
         f"of the standardised KM1 Annex template, so FY2021 figures come from the Executive Summary tables "
         f"instead), p.5 - {P3_2021_URL}\n"
@@ -788,8 +813,13 @@ bw.add_rwa_breakdown_sheet(
         f"FY2025: Pillar 3 Disclosures - 31 December 2025, Annex I OV1 table, p.40 - {P3_2025_URL}\n"
         f"FY2024: Pillar 3 Disclosures - 31 December 2024, Annex I OV1 table, p.39 - {P3_2024_URL}\n"
         f"FY2023: Pillar 3 Disclosures - 31 December 2023, Annex I OV1 table, p.34 - {P3_2023_URL}\n"
-        f"FY2022: sourced from the FY2023 Pillar 3 Disclosures' own FY2022 comparative column, Annex I OV1 "
-        f"table, p.34 - {P3_2023_URL}\n"
+        f"FY2022: Pillar 3 Disclosures - 31 December 2022, Annex I OV1 table, p.30, column a '31/12/2022' "
+        f"(Credit risk excluding CCR 936.3, CCR 0.1, Operational risk 85.9, Total 1,022.3 - read at 300 dpi "
+        f"off the page image 2026-10-08; identical to the FY2023 edition's FY2022 comparative, which this "
+        f"line used to cite, so no figure changed when it was re-sourced to its own edition under KM1 "
+        f"locked rule 1) - {P3_2022_URL}\n"
+        f"  [SUPERSEDED] FY2022 was previously sourced from the FY2023 Pillar 3 Disclosures' own FY2022 "
+        f"comparative column, Annex I OV1 table, p.34 - {P3_2023_URL}\n"
         f"FY2021: Pillar 3 Disclosures - 31 December 2021, Table 7 'Pillar 1 capital requirements: credit "
         f"risk' + Table 29 'Operational risk RWAs flow statement', pp.18, 31 - {P3_2021_URL}\n"
         f"FY2020: Pillar 3 Disclosures - 31 December 2020, Table 34 'Overview of RWA & Pillar I' + Table 29 "
@@ -830,13 +860,6 @@ metric(
     p3_sources(),
 )
 
-# GA-020 (2026-09-19). The FY2022 Pillar 3 edition EXISTS and is live on the Bank's own host, under a filename
-# that does not say "2022" (found via Wayback CDX of alrayanbank.co.uk, filter mimetype:application/pdf, then
-# fetched live: HTTP 200, application/pdf, %PDF, 32 pages, cover 'Pillar 3 Disclosures 31 December 2022').
-# It is recorded here for the MREL search only; the KM1/OV1 FY2022 columns elsewhere in this script still come
-# from the FY2023 edition's comparative and have NOT been re-sourced in this pass (flagged to the coordinator).
-P3_2022_URL = ("https://www.alrayanbank.co.uk/sites/default/files/media/file-uploads/2023-08/"
-               "al_rayan_pillar_three_32pp_brochure_-_final.pdf")
 bw.add_not_disclosed_metric_sheets(
     ["MREL Ratio"],
     p3_sources(),

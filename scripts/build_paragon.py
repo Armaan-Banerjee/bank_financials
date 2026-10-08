@@ -894,15 +894,15 @@ bw.add_wide_interim_sheet(
 )
 bw.add_overview_sheet(
  balance_sheet_totals=[
-  ("Total assets",{"FY2025":19812.7,"FY2024":19200.3,"FY2023":18124.9,"FY2022":15389.0,"FY2021":13505.6}),
-  ("Loans to customers",{"FY2025":12446.0,"FY2024":11671.6,"FY2023":11161.2,"FY2022":8952.8,"FY2021":8144.6}),
-  ("Retail deposits",{"FY2025":16270.8,"FY2024":16314.7,"FY2023":13234.4,"FY2022":10569.5,"FY2021":9297.4}),
-  ("Total equity",{"FY2025":1046.0,"FY2024":1050.1,"FY2023":1001.5,"FY2022":1063.4,"FY2021":819.3}),
+  ("Total assets",{"FY2025":19812.7,"FY2024":19200.3,"FY2023":18124.9,"FY2022":15389.0,"FY2021":13505.6, "FY2020": 11061.83, "FY2019": 8640.96, "FY2018": 7488.86, "FY2017": 4914.21}),
+  ("Loans to customers",{"FY2025":12446.0,"FY2024":11671.6,"FY2023":11161.2,"FY2022":8952.8,"FY2021":8144.6, "FY2020": 7146.78, "FY2019": 5848.32, "FY2018": 4655.43, "FY2017": 3086.7}),
+  ("Retail deposits",{"FY2025":16270.8,"FY2024":16314.7,"FY2023":13234.4,"FY2022":10569.5,"FY2021":9297.4, "FY2020": 7866.59, "FY2019": 6395.87, "FY2018": 5296.57, "FY2017": 3615.41}),
+  ("Total equity",{"FY2025":1046.0,"FY2024":1050.1,"FY2023":1001.5,"FY2022":1063.4,"FY2021":819.3, "FY2020": 770.44, "FY2019": 786.07, "FY2018": 709.33, "FY2017": 559.81}),
  ], balance_sheet_unit="£m",
  income_statement_totals=[
-  ("Total operating income",{"FY2025":442.7,"FY2024":424.7,"FY2023":424.3,"FY2022":395.4,"FY2021":238.1}),
+  ("Total operating income",{"FY2025":442.7,"FY2024":424.7,"FY2023":424.3,"FY2022":395.4,"FY2021":238.1, "FY2020": 184.17, "FY2019": 183.91, "FY2018": 219.09, "FY2017": 57.25}),
   ("Operating expenses (incl. provisions)",{"FY2025":-164.5,"FY2024":-143.0,"FY2023":-127.9,"FY2022":-106.4,"FY2021":-70.6}),
-  ("Profit for the financial year",{"FY2025":181.0,"FY2024":207.5,"FY2023":196.2,"FY2022":394.4,"FY2021":143.7}),
+  ("Profit for the financial year",{"FY2025":181.0,"FY2024":207.5,"FY2023":196.2,"FY2022":394.4,"FY2021":143.7, "FY2020": 94.55, "FY2019": 97.22, "FY2018": 156.43, "FY2017": 17.67}),
  ], income_statement_unit="£m",
  equity_changes_totals=[
   ("Opening equity",{"FY2025":1020.8,"FY2024":1001.5,"FY2023":1063.4,"FY2022":819.3,"FY2021":770.4}),
@@ -911,10 +911,10 @@ bw.add_overview_sheet(
   ("Closing equity",{"FY2025":1046.0,"FY2024":1050.1,"FY2023":1001.5,"FY2022":1063.4,"FY2021":819.3}),
  ], equity_changes_unit="£m",
  cash_flow_totals=[
-  ("Net cash generated/(utilised) by operating activities",{"FY2025":-370.4,"FY2024":2084.9,"FY2023":1215.6,"FY2022":883.4,"FY2021":-934.8}),
-  ("Net cash generated/(utilised) by investing activities",{"FY2025":-314.1,"FY2024":-462.5,"FY2023":206.3,"FY2022":-212.1,"FY2021":-414.4}),
-  ("Net cash generated/(utilised) by financing activities",{"FY2025":538.0,"FY2024":-2104.0,"FY2023":-208.0,"FY2022":-219.3,"FY2021":869.7}),
-  ("Closing cash and cash equivalents",{"FY2025":2231.9,"FY2024":2378.4,"FY2023":2860.0,"FY2022":1646.1,"FY2021":1194.1}),
+  ("Net cash generated/(utilised) by operating activities",{"FY2025":-370.4,"FY2024":2084.9,"FY2023":1215.6,"FY2022":883.4,"FY2021":-934.8, "FY2018": -29.83, "FY2017": -480.02}),
+  ("Net cash generated/(utilised) by investing activities",{"FY2025":-314.1,"FY2024":-462.5,"FY2023":206.3,"FY2022":-212.1,"FY2021":-414.4, "FY2018": 0, "FY2017": -218.54}),
+  ("Net cash generated/(utilised) by financing activities",{"FY2025":538.0,"FY2024":-2104.0,"FY2023":-208.0,"FY2022":-219.3,"FY2021":869.7, "FY2018": 317.49, "FY2017": 1003.76}),
+  ("Closing cash and cash equivalents",{"FY2025":2231.9,"FY2024":2378.4,"FY2023":2860.0,"FY2022":1646.1,"FY2021":1194.1, "FY2018": 917.55, "FY2017": 629.89}),
  ], cash_flow_unit="£m",
  ratios=[("CET1 Ratio",cetr),("Tier 1 Ratio",cetr),("Total Capital Ratio",tcr),("Leverage Ratio",lev),("LCR",lcr),("NSFR",nsfr)],
  note="Cash-flow figures are Bank statutory; regulatory metrics are on the Paragon Bank regulatory-group basis. See each detail sheet."

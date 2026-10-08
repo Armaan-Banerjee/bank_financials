@@ -1161,10 +1161,10 @@ bw.add_overview_sheet(
         ("Closing equity", {"FY2025": 22685, "FY2024": 21609, "FY2023": 19701, "FY2022": 18243, "FY2021": 19166}),
     ], equity_changes_unit="£m",
     cash_flow_totals=[
-        ("Net cash from/(used in) operating activities", {"FY2025": 13528, "FY2024": -1896, "FY2023": -4382, "FY2022": -40929, "FY2021": 36574}),
-        ("Net cash from/(used in) investing activities", {"FY2025": -11262, "FY2024": -9382, "FY2023": -17008, "FY2022": 12745, "FY2021": 4216}),
-        ("Net cash from/(used in) financing activities", {"FY2025": -1918, "FY2024": -2267, "FY2023": -1203, "FY2022": -2991, "FY2021": -1454}),
-        ("Cash and cash equivalents at end of year", {"FY2025": 39167, "FY2024": 38678, "FY2023": 52482, "FY2022": 75472, "FY2021": 105546}),
+        ("Net cash from/(used in) operating activities", {"FY2025": 13528, "FY2024": -1896, "FY2023": -4382, "FY2022": -40929, "FY2021": 36574, "FY2020": 27500, "FY2019": -16503, "FY2018": -6199, "FY2017": 26282, "FY2016": -6821, "FY2015": -11, "FY2014": -5836}),
+        ("Net cash from/(used in) investing activities", {"FY2025": -11262, "FY2024": -9382, "FY2023": -17008, "FY2022": 12745, "FY2021": 4216, "FY2020": 4610, "FY2019": 1345, "FY2018": -30346, "FY2017": -4667, "FY2016": -351, "FY2015": -83, "FY2014": 471}),
+        ("Net cash from/(used in) financing activities", {"FY2025": -1918, "FY2024": -2267, "FY2023": -1203, "FY2022": -2991, "FY2021": -1454, "FY2020": 823, "FY2019": -76, "FY2018": 3244, "FY2017": -184, "FY2016": 1063, "FY2015": 158, "FY2014": 1075}),
+        ("Cash and cash equivalents at end of year", {"FY2025": 39167, "FY2024": 38678, "FY2023": 52482, "FY2022": 75472, "FY2021": 105546, "FY2020": 67194, "FY2019": 33620, "FY2018": 49492, "FY2017": 82444, "FY2016": 61151, "FY2015": 66187, "FY2014": 66178}),
     ], cash_flow_unit="£m",
     ratios=[
         ("CET1 Ratio", {"FY2025": "11.2%", "FY2024": "11.4%", "FY2023": "11.6%", "FY2022": "11.3%", "FY2021": "16.1%", "FY2020": "17.8%", "FY2019": "15.9%", "FY2018": "17.4%", "FY2017": "23.5%", "FY2016": "16.1%", "FY2015": "11.6%", "FY2014": "13.9%"}),

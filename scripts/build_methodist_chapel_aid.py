@@ -986,9 +986,28 @@ for _y in ("FY2023", "FY2022", "FY2021", "FY2020", "FY2019"):
 # before 2020 (no document at all); archive.ph/newest for each (404, control OK);
 # CDX of candidate former domains (methodistchapelaid.org/.org.uk/.co.uk: none;
 # mca-ltd.co.uk and mcafundingforchurches.com: unrelated/empty).
-for _y in ("FY2018", "FY2017", "FY2016"):
-    GA020_MREL[_y] = ("Unreached today – no " + _y + " Pillar 3 reached: live paths 404, no Wayback/archive.ph "
-                      "capture (exact URLs + domain pre-2020), web search (2026-09-19); CH accounts OCR'd: no MREL")
+# COMMON CRAWL PASS 2026-10-07 - THE FY2017 AND FY2018 EDITIONS WERE RECOVERED HERE.
+# index.commoncrawl.org, mcafundingforchurches.co.uk matchType=domain, every crawl
+# CC-MAIN-2017-04..CC-MAIN-2021-49 (54 queries). Common Crawl holds the FY2017, FY2018,
+# FY2019 and FY2020 editions; no FY2016 file in any crawl. Both recovered records are
+# complete (body = HTTP Content-Length, %PDF, %%EOF, no WARC-Truncated), 20pp each:
+#   FY2017: .../sitefiles/resources/pdf/31-12-2017pillar3disclosures.pdf - CC-MAIN-2018-51,
+#     warc .../CC-MAIN-20181213054204-20181213075704-00488.warc.gz offset 962636955 len 432726,
+#     452,224 bytes, md5 51eaa49176d297fa4e7c423a3488378a
+#   FY2018: .../sitefiles/resources/pdf/pillar3disclosures2018.pdf - CC-MAIN-2020-16,
+#     warc .../CC-MAIN-20200330023050-20200330053050-00134.warc.gz offset 85301934 len 433594,
+#     453,219 bytes, md5 bcd7ae8afc77c0377f5de4fe524787b0
+# Cover page images read: "Methodist Chapel Aid Limited / Pillar 3 Disclosures / for the year
+# ended 31 December 2017" and "... 31 December 2018" - the entity's own editions, so the
+# filename-to-year mapping is confirmed from the document, not inferred from its name.
+for _y in ("FY2018", "FY2017"):
+    GA020_MREL[_y] = ("Not published – " + _y + " Pillar 3 (own edition, 20pp, recovered from Common Crawl "
+                      "2026-10-07): contents p.1 lists 9 sections, none on MREL; no MREL or eligible-liabilities "
+                      "figure in the text")
+GA020_MREL["FY2016"] = ("Unreached today – no FY2016 Pillar 3 reached: live paths 404, no Wayback/archive.ph "
+                        "capture (exact URLs + domain pre-2020), web search (2026-09-19); Common Crawl "
+                        "2017-2021 every crawl (FY2017-FY2020 editions captured, FY2016 absent); CH accounts "
+                        "OCR'd: no MREL")
 
 metric_rows(
     "LCR", "%",
@@ -1073,8 +1092,20 @@ bw.add_not_disclosed_metric_sheets(
               "'resolution' in the FY2019-FY2023 Pillar 3 editions and the text-native Annual Reports 2022, 2024 "
               "and 2025, against 57-84 hits for 'capital' in each; the image-only Companies House accounts for "
               "FY2016 and FY2018 (the latter carrying FY2017 comparatives) were OCR'd and also return zero. "
-              "FY2016-FY2018 nonetheless read 'Unreached today', because no Pillar 3 edition for those years has "
-              "been reached (see PRE2019_STATUS) and an MREL statement, if any, would live there."},
+              "FY2017 AND FY2018 ARE NOW SETTLED FROM THE EDITIONS THEMSELVES (Common Crawl, 2026-10-07): both "
+              "were recovered complete (20pp each; body length = HTTP Content-Length, %PDF, %%EOF, no WARC "
+              "truncation) from CC-MAIN-2018-51 and CC-MAIN-2020-16, and their cover pages read 'Methodist "
+              "Chapel Aid Limited - Pillar 3 Disclosures for the year ended 31 December 2017' and '... 2018'. "
+              "Neither prints MREL: the contents page (read as a page image) lists Overview, Governance, Risk "
+              "Management Policies and Objectives, Capital Resources and Business Strategy, Capital Adequacy, "
+              "Principal Risks (incl. 6.6 Capital Risk), Remuneration, Asset Encumbrance and Conclusion, with no "
+              "MREL or eligible-liabilities section, and each text layer (6,361 and 6,327 words, 90 'capital' "
+              "hits apiece as the richness control) returns zero for 'MREL' and 'eligible liabilities'; the one "
+              "'loss absorbing' hit is the countercyclical-buffer boilerplate at 5.1.2. FY2016 alone stays "
+              "'Unreached today': no FY2016 edition exists in any Common Crawl crawl 2017-2021, although the "
+              "FY2017-FY2020 editions all do, so that zero is the archive's and not the lookup's. NOTE FOR A "
+              "FUTURE PASS: these two editions also carry capital-adequacy tables for years where the "
+              "single-metric sheets currently stop at FY2019; transcribing them was out of scope for this pass."},
     statements={"MREL Ratio": GA020_MREL},
 )
 

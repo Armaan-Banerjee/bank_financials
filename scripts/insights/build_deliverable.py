@@ -2365,7 +2365,7 @@ def curate_comparison_bubbles(data, parent_groups):
         covered = [y for y in years if points_by_year[y]]
         return {"years": covered, "points_by_year": {y: points_by_year[y] for y in covered}}
 
-    return {
+    out = {
         "risk_vs_capital": build(("top", "rwa_to_assets_pct"), ("pillar3", "CET1 Ratio")),
         "efficiency_vs_capital": build(("cost_base", "cost_to_income_pct"), ("pillar3", "CET1 Ratio")),
         "leverage_vs_liquidity": build(("pillar3", "Leverage Ratio"), ("pillar3", "LCR")),
@@ -2405,6 +2405,68 @@ def curate_comparison_bubbles(data, parent_groups):
             ("capital_deployment", "cash_pct_of_assets"), ("capital_deployment", "loans_pct_of_assets"),
         ),
     }
+
+    # "Build your own comparison" (user request, 2026-10-08): one bubble chart
+    # with SELECTABLE axes, sitting above the seven fixed pairings, which stay.
+    # Rather than add an eighth precomputed pairing, this ships the raw
+    # per-metric series once and lets the page compose any X/Y pair from them
+    # client-side - the same reduction `build` does above, moved into the
+    # browser. Only the series are shipped, not every pairing: 16 metrics would
+    # be 120 pairings precomputed, nearly all of which nobody will open.
+    #
+    # Each metric carries its own axis cap, reusing the caps already chosen for
+    # the fixed charts above (see BUBBLE_SPECS in deliverable_shared.js) so an
+    # axis behaves identically whichever chart it appears on. The caps exist
+    # because a handful of banks carry atypically extreme ratios; those banks
+    # sit off-chart rather than compressing everyone else into a corner.
+    axis_metrics = [
+        ("rwa_density", "RWA density (% of total assets)", "RWA density", ("top", "rwa_to_assets_pct"), 110, 0),
+        ("cet1_ratio", "CET1 Ratio (%)", "CET1", ("pillar3", "CET1 Ratio"), 90, 0),
+        ("tier1_ratio", "Tier 1 Ratio (%)", "Tier 1", ("pillar3", "Tier 1 Ratio"), 90, 0),
+        ("total_capital_ratio", "Total Capital Ratio (%)", "Total Capital", ("pillar3", "Total Capital Ratio"), 90, 0),
+        ("leverage_ratio", "Leverage Ratio (%)", "Leverage Ratio", ("pillar3", "Leverage Ratio"), 50, 0),
+        ("lcr", "LCR (%)", "LCR", ("pillar3", "LCR"), 1000, 0),
+        ("nsfr", "NSFR (%)", "NSFR", ("pillar3", "NSFR"), 400, 0),
+        ("mrel_ratio", "MREL Ratio (%)", "MREL", ("pillar3", "MREL Ratio"), 100, 0),
+        ("cost_to_income", "Cost-to-income ratio (%)", "cost-to-income", ("cost_base", "cost_to_income_pct"), 200, 0),
+        ("personnel_pct_revenue", "Personnel expense (% of revenue)", "personnel/revenue",
+         ("cost_base", "personnel_expense_pct_of_revenue"), 150, 0),
+        ("other_opex_pct_revenue", "Other operating expense (% of revenue)", "other opex/revenue",
+         ("cost_base", "other_operating_expense_pct_of_revenue"), 100, 0),
+        ("cash_pct_assets", "Cash (% of total assets)", "cash/assets",
+         ("capital_deployment", "cash_pct_of_assets"), 100, 0),
+        ("loans_pct_assets", "Customer loans (% of total assets)", "loans/assets",
+         ("capital_deployment", "loans_pct_of_assets"), 100, 0),
+        ("treasury_pct_assets", "Treasury investments (% of total assets)", "treasury/assets",
+         ("capital_deployment", "treasury_investments_pct_of_assets"), 100, 0),
+        ("equity_pct_assets", "Equity (% of total assets)", "equity/assets",
+         ("leverage", "equity_to_assets_pct"), 100, 0),
+        ("income_growth", "Income growth, year-on-year (%)", "income growth",
+         ("income_volatility", "yoy_change_pct"), 300, -150),
+    ]
+    axis_series = {}
+    for key, _label, _short, source, _mx, _mn in axis_metrics:
+        per_bank = {}
+        for bank, entry in data.items():
+            vals = {y: v for y, v in series(entry, source).items() if y in years and v is not None}
+            if vals:
+                per_bank[bank] = vals
+        axis_series[key] = per_bank
+    out["axes"] = {
+        "years": years,
+        "metrics": [
+            {"key": k, "label": lbl, "short": sh, "max": mx, "min": mn}
+            for k, lbl, sh, _src, mx, mn in axis_metrics
+            # A metric no bank discloses would be an option that draws an
+            # empty chart, so it is dropped from the selector rather than
+            # offered and then failing.
+            if axis_series[k]
+        ],
+        "series": {k: v for k, v in axis_series.items() if v},
+        "assets": assets_by_bank,
+        "groups": bank_to_group,
+    }
+    return out
 
 
 # Per-bank radar/spider chart (user request, 2026-09-08): "strengths, one

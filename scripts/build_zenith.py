@@ -556,8 +556,13 @@ def p3_sources():
         f"- {P3_2015_URL}\n"
         f"FY2014: Pillar 3 Disclosures 31 December 2014, p.8-9 (Section 4, Capital Adequacy Overview & Resources) "
         f"- {P3_2014_URL}\n"
-        "FY2016-FY2019 PILLAR 3 DOCUMENTS: unobtainable, and the full fetch ladder was re-run on 2026-09-18 "
-        "with every rung failing, so this is a statement about ACCESS and is recorded as such. The two file "
+        "FY2017-FY2019 PILLAR 3 DOCUMENTS: unobtainable, and the full fetch ladder was re-run on 2026-09-18 "
+        "with every rung failing, so this is a statement about ACCESS and is recorded as such. NARROWED FROM "
+        "FY2016-FY2019 ON 2026-09-19 AND RE-CONFIRMED 2026-10-07: the FY2016 edition WAS recovered, from "
+        "Common Crawl at the pre-2018 /uploads/ address, and its capital figure is now on the capital sheets "
+        "(see the Z16 notes below). Everything in this paragraph about media/1013 remains true of that URL - "
+        "the file really was deleted from the Bank's media store - and is kept because it is what sent the "
+        "search to the older path. The two file "
         "names are known from archived captures of the Bank's own Pillar 3 index page - "
         "https://zenith-bank.co.uk/media/1013/zbl_pillar_3_disclosure_document_2016.pdf (named on the 2018-04-01 "
         "and 2019-02-15 captures, the older capture pointing at the pre-2018 path "
@@ -1439,6 +1444,8 @@ def metric(name, unit, rows_data, sources_text, note=None):
 # split from this document and never opened section 10 or 11.1.
 CET1_TIER1_TOTAL_USD = {"FY2025": 431376, "FY2024": 378325, "FY2023": 338086, "FY2022": 290721, "FY2021": 281088,
                          "FY2020": 280619,
+                         # FY2016 ADDED 2026-10-07 from the recovered FY2016 edition itself (see Z16_CAPITAL_NOTE).
+                         "FY2016": 192990,
                          "FY2015": 188483, "FY2014": 170802}
 RWA_USD = {"FY2025": 1843312, "FY2024": 1475750, "FY2023": 1167888, "FY2022": 1125146, "FY2021": 1352803,
            "FY2020": 991779,
@@ -1458,7 +1465,8 @@ FY2020_COMPARATIVE_NOTE = (
     "sections 10 or 11.1 of the same PDF - so the capital amounts, all three capital ratios, the leverage "
     "ratio and the LCR sat unread in a document already cited in this script. The sheets' prior claim that "
     "FY2016-FY2020 are blank because \"no Pillar 3 document is recoverable\" was true about DOCUMENTS and "
-    "wrong about DATA; it is now narrowed to FY2016-FY2019.\n"
+    "wrong about DATA; it was narrowed to FY2016-FY2019 then, and to FY2017-FY2019 on 2026-09-19, when the "
+    "FY2016 edition was recovered from Common Crawl.\n"
     "INTERNAL CONSISTENCY CHECKS, all passing: the section 10 CET1/Tier 1/Total capital figure of "
     "US$280,619k reconciles exactly to section 11.1's own build-up (CET1 before regulatory adjustments "
     "275,574 + total regulatory adjustments 5,045 = 280,619); the section 10 RWA of US$991,779k equals the "
@@ -1509,11 +1517,15 @@ FY2011_REG_AVAILABLE = {"FY2011": 40002}
 
 
 PRE_CRDIV_NOTE = (
-    "PRE-CRD IV NOTE (FY2014/FY2015): see the PRE-CRD IV METHODOLOGY NOTE in the Pillar 3 sources above for full "
-    "detail - these two figures are the Bank's own 'Regulatory Available Capital' (not its larger undeducted "
-    "'Total tier 1 capital per audited accounts' memo figure) divided by a derived Total RWA (each Pillar 1 "
-    "capital requirement component divided by 8%, summed). FY2016-FY2020 are blank - no Pillar 3 disclosure "
-    "document recoverable for those years (see Pillar 3 sources note)."
+    "PRE-CRD IV NOTE (FY2014/FY2015/FY2016): see the PRE-CRD IV METHODOLOGY NOTE in the Pillar 3 sources above "
+    "for full detail - the FY2014 and FY2015 RATIOS are the Bank's own 'Regulatory Available Capital' (not its "
+    "larger undeducted 'Total tier 1 capital per audited accounts' memo figure) divided by a derived Total RWA "
+    "(each Pillar 1 capital requirement component divided by 8%, summed). FY2016's edition is the same "
+    "pre-CRD IV format and its CAPITAL AMOUNT is now carried (2026-10-07, see the FY2016 capital note on the "
+    "CET1/Tier 1/Total Capital sheets), but NO FY2016 RATIO is shown, because the derivation that produced the "
+    "FY2014/FY2015 ratios was not extended - see the Total RWAs sheet. FY2017-FY2019 are blank: no Pillar 3 "
+    "disclosure document is recoverable for those three years (see Pillar 3 sources note). FY2020 is NOT blank; "
+    "it comes from the FY2021 edition's comparative column."
 )
 
 # ---------------------------------------------------------------
@@ -1526,9 +1538,10 @@ AR_CAPITAL_NOTE = (
     "*** ANNUAL-REPORT CAPITAL RECOVERY, 2026-09-18 - READ THIS BEFORE RE-CHASING FY2012/FY2013 OR "
     "FY2016-FY2019 ***\n"
     "Every prior pass treated FY2016-FY2019 as a closed gap on the reasoning that no Pillar 3 disclosure "
-    "document is recoverable for those years. That reasoning was about DOCUMENTS OF ONE KIND. It is still "
-    "true (see the archive-status note below - the ladder was re-run in full on 2026-09-18 and every rung "
-    "failed again), but it was never a statement about the Bank's CAPITAL DISCLOSURE, because Zenith Bank "
+    "document is recoverable for those years. That reasoning was about DOCUMENTS OF ONE KIND. It remained "
+    "true of FY2017-FY2019 (see the archive-status note below - the ladder was re-run in full on 2026-09-18 "
+    "and every rung failed again) and is now FALSE of FY2016, whose edition was recovered from Common Crawl "
+    "on 2026-09-19; but it was never a statement about the Bank's CAPITAL DISCLOSURE, because Zenith Bank "
     "(UK) Limited also prints a 'Capital Management' note inside note 25 'Financial risk management' of "
     "EVERY Annual Report, and that note carries a Capital Resources table. Those tables were read on "
     "2026-09-18 and are the source of the FY2012, FY2013, FY2016, FY2017, FY2018 and FY2019 capital rows on "
@@ -1673,6 +1686,49 @@ Z16_LEV = "Not published – " + Z16_DOC + " prints no leverage ratio (capital s
 Z16_LCR = ("Not published – " + Z16_DOC + " names LCR only as a PRA standard it maintains (p.8, "
            "s.3.3.1); no LCR figure")
 Z16_MREL = "Not published – " + Z16_DOC + " has no MREL or eligible-liabilities figure"
+Z16_CAPITAL_NOTE = (
+    "*** FY2016 CAPITAL AMOUNT ADDED 2026-10-07, FROM THE RECOVERED FY2016 PILLAR 3 ITSELF ***\n"
+    "This row's FY2016 cell stood BLANK until today, and the reason it stood blank is no longer true. The "
+    "FY2016 Pillar 3 edition was recovered from Common Crawl on 2026-09-19 (see the Z16 note in the source "
+    "cell below for the WARC coordinates), but that pass deliberately left the capital amount unwritten as "
+    "outside its scope, and several notes in this script went on saying no FY2016 Pillar 3 document was "
+    "recoverable. Those sentences have been narrowed to FY2017-FY2019 throughout.\n"
+    "WHAT THE DOCUMENT PRINTS. 'Zenith Bank (UK) Limited - Pillar 3 Disclosures for the year ended 31 December "
+    "2016', 17pp, printed p.9 (the printed folio equals the PDF sheet index in this document), section 4.2 "
+    "'Capital Resources', US$000's, two columns headed 2016 and 2015: Share capital at 31 December 136,702 / "
+    "136,702; Profit and loss reserve 56,457 / 53,819; Regulatory deductions (169) / a printed DASH; Total "
+    "CET-1 capital 192,990 / 190,521. The same page's section 4.3.1 Pillar 1 Allocation table prints "
+    "'Regulatory Available Capital' 192,990 / 190,521 - the same label this row's FY2014 and FY2015 cells are "
+    "struck on. Read off a 300 dpi page image on 2026-10-07. US$192,990k converts to this row's £'000 at the "
+    "FY2016 period-end spot rate, exactly as every other FY2014+ cell on it.\n"
+    "THE EDITION ALSO SETTLES THE BASIS IN ITS OWN WORDS: 'The Bank's entire capital base qualifies as Common "
+    "Equity Tier 1 capital (CET-1) which consists of fully issued ordinary shares and audited reserves.' So "
+    "CET1 = Tier 1 = Total capital for FY2016 is the Bank's statement, not an inference, and the same figure "
+    "appears on all three capital sheets for that reason.\n"
+    "AND IT RESTATES FY2015, WHICH IS RECORDED HERE AND NOT RECONCILED. This row's FY2015 cell carries "
+    "US$188,483k, the 'Regulatory Available Capital' printed in FY2015's OWN edition (printed p.9, section "
+    "4.3.1, beside a Pillar 1 requirement total of 73,972 and a 'Solvency Ratio against Pillar 1' of 255%). "
+    "That edition's section 4.2 separately prints 'Total tier 1 capital 190,521' with NO regulatory-deduction "
+    "line, so the FY2015 document itself carries two different figures 2,038 apart and explains neither. The "
+    "FY2016 edition's 2015 comparative then prints 190,521 in BOTH places and a solvency ratio of 258% "
+    "(190,521/73,972 = 257.6%, against the FY2015 edition's own 188,483/73,972 = 254.8%), i.e. it restated the "
+    "2015 regulatory capital upward by the 2,038 and recomputed the cover multiple to match. Both printings "
+    "were read off page images on 2026-10-07 and BOTH STAND: the FY2015 cell keeps that year's own edition's "
+    "188,483, because a later edition's comparative does not displace what the bank originally published, and "
+    "nothing here is averaged, adjusted or reconciled. The practical consequence for FY2016 is small but worth "
+    "stating - FY2016's own 192,990 is net of a 169 deduction its own edition prints, so it is on the "
+    "post-deduction basis this row declares; it is the 2015 column, not the 2016 one, that the two editions "
+    "disagree about.\n"
+    "NO FY2016 RATIO AND NO FY2016 RWA WERE ADDED, and that is deliberate. The edition prints no capital ratio "
+    "and no risk-weighted exposure amount anywhere in its 17 pages. Its 'Solvency Ratio against Pillar 1' of "
+    "365% (2015: 258%) is available capital divided by the capital REQUIREMENT - a cover multiple, roughly "
+    "12.5x a true capital ratio - and is not a capital ratio; see the Tier 1 Ratio sheet. The Pillar 1 "
+    "requirement total of US$52,940k was NOT grossed up by 8% to manufacture an RWA, following the FY2011 "
+    "treatment. Text-layer control on the recovered file, 2026-10-07: 238 hits for 'risk' and 73 for 'capital' "
+    "against 0 for 'capital ratio', 0 for 'leverage', 0 for 'Liquidity Coverage' and 0 for 'MREL', so those "
+    "zeros are facts about the document rather than about the probe.\n\n"
+)
+
 Z16_SOURCE_NOTE = (
     "FY2016 PILLAR 3 RECOVERED (GA-020 cdn-sweep, 2026-09-19) - this supersedes the FY2016 half of the "
     "'unobtainable' paragraph above. The Bank's pre-2018 site served files from /uploads/, and Common Crawl "
@@ -1693,8 +1749,10 @@ Z16_SOURCE_NOTE = (
     "cells read 'Not published' from the edition itself. The RWA is NOT derived from the requirements by "
     "dividing by 8%, following the FY2011 treatment (the FY2014/FY2015 derivation stays flagged, not "
     "extended). The 365% cover multiple is NOT a capital ratio (see the Tier 1 Ratio note). The capital "
-    "AMOUNT (US$192,990k) is not written anywhere by this pass: the capital sheets' FY2016 cells come from "
-    "the Annual Report and were not in this pass's scope - a later pass may cross-check them against it. "
+    "AMOUNT (US$192,990k) WAS LEFT UNWRITTEN BY THAT PASS as outside its scope, which left the CRR-basis "
+    "FY2016 cell blank while the Annual-Report rows beneath it carried figures. It was placed on 2026-10-07, "
+    "after being re-read off a 300 dpi image of printed p.9 - see the FY2016 capital note on the CET1 Capital, "
+    "Tier 1 Capital and Total Capital sheets, which also records the FY2015 restatement the same page exposes. "
     "FY2019 remains unreached: its media/2177 file was never captured by Wayback or by any of 74 Common Crawl "
     "crawls (2016-2023) of zenith-bank.co.uk/media/*, and the Azure origin zenithbank-uk.azurewebsites.net "
     "301s to the same 404."
@@ -1764,7 +1822,7 @@ AR_RATIO_LABEL = ("Common Equity Tier 1 (CET1) ratio as stated in that year's ow
 metric("CET1 Capital", "£'000 (conv. from USD)",
        [("Common Equity Tier 1 (CET1) capital", dict(stock_k(CET1_TIER1_TOTAL_USD), **hist_na()))] + AR_CAPITAL_ROWS[:4],
        p3_sources(),
-       note="FY2009-FY2013 'Not applicable (Basel II)': the CET1 concept is a CRD IV construct and does not exist in the recovered FY2011 Basel II edition, which discloses a single undifferentiated Tier 1 capital figure (carried on the Tier 1 Capital and Total Capital sheets). The FY2012/FY2013 Basel II Annual Report capital rows are for the same reason carried on the Tier 1 Capital and Total Capital sheets only, not here.\n\n"
+       note=Z16_CAPITAL_NOTE + "FY2009-FY2013 'Not applicable (Basel II)': the CET1 concept is a CRD IV construct and does not exist in the recovered FY2011 Basel II edition, which discloses a single undifferentiated Tier 1 capital figure (carried on the Tier 1 Capital and Total Capital sheets). The FY2012/FY2013 Basel II Annual Report capital rows are for the same reason carried on the Tier 1 Capital and Total Capital sheets only, not here.\n\n"
             + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("CET1 Ratio", "% of RWA",
        [("Common Equity Tier 1 (CET1) ratio", dict(CAPITAL_RATIO, **hist_na())),
@@ -1773,7 +1831,7 @@ metric("CET1 Ratio", "% of RWA",
        note="FY2009-FY2013 'Not applicable (Basel II)' - no CET1 concept existed (see CET1 Capital sheet).\n\n"
             + AR_RATIO_ROW_NOTE + "\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Tier 1 Capital", "£'000 (conv. from USD)", [("Tier 1 capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS + AR_CAPITAL_ROWS, p3_sources(),
-       note=HIST_CAPITAL_NOTE + "Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
+       note=Z16_CAPITAL_NOTE + HIST_CAPITAL_NOTE + "Equal to CET1 capital in every year - the Bank holds no Additional Tier 1 (AT1) instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Tier 1 Ratio", "% of RWA",
        [("Tier 1 ratio", dict(CAPITAL_RATIO, **hist_nd(FY2011_NO_RATIO))),
         (AR_RATIO_LABEL.replace("Common Equity Tier 1 (CET1) ratio", "Tier 1 ratio (= the CET1 ratio; no AT1 in issue)"),
@@ -1782,7 +1840,7 @@ metric("Tier 1 Ratio", "% of RWA",
        note="FY2011 'Not publicly disclosed': the recovered FY2011 edition states no capital/RWA ratio at all. It DOES print a 'Solvency Ratio against Pillar 1' of 203%, but that is capital divided by the capital REQUIREMENT - a capital-cover multiple, roughly 12.5x a true capital ratio - and putting it here would overstate the Bank's capitalisation by an order of magnitude. See the source note. Nothing is back-solved from the capital and capital-requirement figures either.\n\n"
             + AR_RATIO_ROW_NOTE + "\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Total Capital", "£'000 (conv. from USD)", [("Total capital (CRR/CRD IV basis)", stock_k(CET1_TIER1_TOTAL_USD))] + BASEL2_CAPITAL_ROWS + AR_CAPITAL_ROWS, p3_sources(),
-       note=HIST_CAPITAL_NOTE + "Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
+       note=Z16_CAPITAL_NOTE + HIST_CAPITAL_NOTE + "Equal to CET1/Tier 1 capital in every year - the Bank holds no AT1 or Tier 2 instruments.\n\n" + AR_CAPITAL_NOTE + "\n\n" + PRE_CRDIV_NOTE)
 metric("Total Capital Ratio", "% of RWA",
        [("Total capital ratio", dict(CAPITAL_RATIO, **hist_nd(FY2011_NO_RATIO))),
         (AR_RATIO_LABEL.replace("Common Equity Tier 1 (CET1) ratio", "Total capital ratio (= the CET1 ratio; no AT1 or Tier 2 in issue)"),
@@ -1881,10 +1939,13 @@ bw.add_rwa_breakdown_sheet(
           "therefore folded into the Credit Risk line. Note this means FY2020's Credit Risk row, like FY2021's, "
           "includes an immaterial unseparated CCR component. Converted to GBP at the FY2020 period-end spot rate "
           "per the FX methodology above.\n\n"
-          "FY2016-FY2019 remain blank - no Pillar 3 disclosure document is recoverable for those years, and no "
-          "surviving document's comparative column reaches them (the FY2021 report is the earliest modern "
-          "edition, and its comparative reaches only FY2020; see Pillar 3 sources note above for the search "
-          "performed).\n\n"
+          "FY2016-FY2019 remain blank OF RWA FIGURES, but for two different reasons. FY2017-FY2019: no Pillar 3 "
+          "disclosure document is recoverable for those three years, and no surviving document's comparative "
+          "column reaches them (the FY2021 report is the earliest modern edition, and its comparative reaches "
+          "only FY2020; see Pillar 3 sources note above for the search performed). FY2016: its edition WAS "
+          "recovered (Common Crawl, 2026-09-19) and PRINTS NO RWA - it is the pre-CRD IV format, giving Pillar 1 "
+          "capital REQUIREMENTS (US$52,940k total) and not risk-weighted amounts, and nothing was grossed up "
+          "from them. That is a fact about the document, not an access limit.\n\n"
           "FY2009-FY2013 COLUMNS (added 2026-09-15) ARE BLANK ON PURPOSE, AND NO RWA WAS DERIVED FOR THEM. The "
           "recovered FY2011 Pillar 3 edition discloses Pillar 1 CAPITAL REQUIREMENTS, not risk-weighted amounts: "
           "Credit Risk 18,156 / Market Risk 27 / Operational Risk 1,503 / Total 19,686 (GBP'000, native, not "
@@ -1923,9 +1984,13 @@ metric(
          "FY2014-FY2019 CARRY EXPLICIT STATED-ABSENCE MARKERS AS OF 2026-09-18, replacing blanks. FY2014 and "
          "FY2015: both surviving Pillar 3 editions were re-downloaded and searched on that date, and neither "
          "contains the string 'leverage' anywhere - the CRD IV/UK leverage ratio framework did not apply to a "
-         "firm this size then. FY2016-FY2019: no Pillar 3 document is recoverable (the fetch ladder was re-run "
-         "in full on 2026-09-18 and every rung failed - see the archive-status note), and each of those four "
-         "years' Annual Reports was read that day and mentions no leverage ratio at all. NOTE the prior "
+         "firm this size then. FY2017-FY2019: no Pillar 3 document is recoverable (the fetch ladder was re-run "
+         "in full on 2026-09-18 and every rung failed - see the archive-status note), and each of those three "
+         "years' Annual Reports was read that day and mentions no leverage ratio at all. FY2016 IS NOW A "
+         "DOCUMENT-BACKED ABSENCE RATHER THAN AN ACCESS LIMIT: its edition was recovered from Common Crawl on "
+         "2026-09-19 and contains no occurrence of 'leverage' in its 17 pages (text-layer control re-run "
+         "2026-10-07: 238 hits for 'risk', 73 for 'capital', 0 for 'leverage'), and its Annual Report "
+         "mentions none either. NOTE the prior "
          "version of this note said FY2016-FY2020 - that was corrected once the FY2021 document's comparative "
          "column was read.\n\n"
          + FY2020_COMPARATIVE_NOTE + "\n\n" + AR_CAPITAL_NOTE,
@@ -1965,8 +2030,11 @@ metric(
          "amount row would sit in a £'000 column). LCR minimum requirements were phased in for UK firms from "
          "October 2015; FY2014's and FY2015's own surviving Pillar 3 editions were re-downloaded and searched "
          "on 2026-09-18 and contain no occurrence of 'LCR', 'liquidity coverage' or 'stable funding' at all. "
-         "For FY2016-FY2019 no Pillar 3 document is recoverable (ladder re-run in full that day, every rung "
-         "failed) and each year's own Annual Report was read: all four describe managing liquidity 'as per the "
+         "For FY2017-FY2019 no Pillar 3 document is recoverable (ladder re-run in full that day, every rung "
+         "failed); FY2016's WAS recovered from Common Crawl on 2026-09-19 and names LCR only as a PRA standard "
+         "the Bank maintains (printed p.8, s.3.3.1) with no figure anywhere in its 17 pages (text-layer control "
+         "re-run 2026-10-07: 0 hits for 'Liquidity Coverage' against 238 for 'risk'). Each of the four "
+         "years' own Annual Reports was read: all four describe managing liquidity 'as per the "
          "PRA's liquidity guidelines, primarily the Liquidity Coverage Ratio' in narrative form and print NO "
          "LCR figure. NOTE the prior version of this note said FY2014-FY2020 - corrected once the FY2021 "
          "document's comparative column was read.\n\n"
@@ -2005,7 +2073,10 @@ metric(
          "for the other Pillar 3 metrics on this workbook (see the CET1/leverage/LCR sheets) because the "
          "FY2021 report carries a full FY2020 comparative - but that comparative contains no NSFR either, "
          "which is exactly what the adoption date predicts. The prior version of this note said no Pillar 3 "
-         "document could be recovered for FY2016-FY2020; that is now narrowed to FY2016-FY2019.",
+         "document could be recovered for FY2016-FY2020; that was narrowed to FY2016-FY2019, and to "
+         "FY2017-FY2019 on 2026-09-19 when the FY2016 edition was recovered from Common Crawl. The FY2016 "
+         "edition contains no NSFR figure - it names NSFR only as a PRA standard the Bank maintains "
+         "(printed p.8, s.3.3.1) - which does not change this row, since there was no NSFR to disclose then.",
 )
 
 # Written out explicitly rather than via add_not_disclosed_metric_sheets so that
@@ -2036,46 +2107,46 @@ metric("MREL Ratio", None,
 cf_totals_usd = {
     "Net cash generated from/(used in) operating activities": {"FY2025": -55774052, "FY2024": 207362455, "FY2023": -344220013, "FY2022": -243759796, "FY2021": 116041165,
         "FY2020": 265724803, "FY2019": -97605772, "FY2018": -68158324, "FY2017": 95665715, "FY2016": 304455671,
-        "FY2015": -114418701, "FY2014": 132272330},
+        "FY2015": -114418701, "FY2014": 132272330, "FY2013": 11924654, "FY2012": 11157882},
     "Net cash generated from/(used in) investing activities": {"FY2025": -10835501, "FY2024": 549131, "FY2023": 9155192, "FY2022": -2664646, "FY2021": -11026946,
         "FY2020": -50742728, "FY2019": -39665033, "FY2018": 15003986, "FY2017": 27971228, "FY2016": 43778533,
-        "FY2015": -13095456, "FY2014": 38611720},
+        "FY2015": -13095456, "FY2014": 38611720, "FY2013": -17994151, "FY2012": -9415266},
     "Net cash generated from/(used in) financing activities": {"FY2025": -1267314, "FY2024": -672177, "FY2023": -18526335, "FY2022": -6524165, "FY2021": -9993273,
-        "FY2020": 351718, "FY2019": -605349, "FY2014": 50000000},
+        "FY2020": 351718, "FY2019": -605349, "FY2014": 50000000, "FY2013": 0, "FY2012": 18458131},
 }
 cf_close_usd = {"FY2025": 428080578, "FY2024": 480233340, "FY2023": 276069567, "FY2022": 629660723, "FY2021": 882609330,
     "FY2020": 787588384, "FY2019": 572254591, "FY2018": 710130745, "FY2017": 763285083, "FY2016": 639648140,
-    "FY2015": 291413936, "FY2014": 418928093}
+    "FY2015": 291413936, "FY2014": 418928093, "FY2013": 119758144, "FY2012": 125827641}
 
 bw.add_overview_sheet(
-    cash_flow_totals=[(label, flow(vals)) for label, vals in cf_totals_usd.items()]
-                      + [("Cash and cash equivalents at end of year", stock(cf_close_usd))],
+    cash_flow_totals=[(label, flow2(vals)) for label, vals in cf_totals_usd.items()]
+                      + [("Cash and cash equivalents at end of year", stock2(cf_close_usd))],
     cash_flow_unit="£'000",
     balance_sheet_totals=[
-        ("Total assets", stock({"FY2025": 2994786108, "FY2024": 2649053981, "FY2023": 2660084803, "FY2022": 3134962834, "FY2021": 2880458633,
+        ("Total assets", stock2({"FY2025": 2994786108, "FY2024": 2649053981, "FY2023": 2660084803, "FY2022": 3134962834, "FY2021": 2880458633,
             "FY2020": 2307254753, "FY2019": 1691573038, "FY2018": 1904335006, "FY2017": 1675762119, "FY2016": 1319429898,
-            "FY2015": 1154131121, "FY2014": 1601019239})),
-        ("Total liabilities", stock({"FY2025": 2558955031, "FY2024": 2266900685, "FY2023": 2324063422, "FY2022": 2847557820, "FY2021": 2606125105,
+            "FY2015": 1154131121, "FY2014": 1601019239, "FY2013": 849996476, "FY2012": 611063730, "FY2011": 497041885, "FY2010": 409845524, "FY2009": 430644884})),
+        ("Total liabilities", stock2({"FY2025": 2558955031, "FY2024": 2266900685, "FY2023": 2324063422, "FY2022": 2847557820, "FY2021": 2606125105,
             "FY2020": 2031681535, "FY2019": 1437402457, "FY2018": 1678935447, "FY2017": 1468974823, "FY2016": 1126271499,
-            "FY2015": 963610459, "FY2014": 1415822691})),
-        ("Total equity", stock({"FY2025": 435831077, "FY2024": 382153296, "FY2023": 336021381, "FY2022": 287405014, "FY2021": 274333528,
+            "FY2015": 963610459, "FY2014": 1415822691, "FY2013": 775487473, "FY2012": 544227646, "FY2011": 453417090, "FY2010": 369843186, "FY2009": 393259725})),
+        ("Total equity", stock2({"FY2025": 435831077, "FY2024": 382153296, "FY2023": 336021381, "FY2022": 287405014, "FY2021": 274333528,
             "FY2020": 275573218, "FY2019": 254170581, "FY2018": 225399559, "FY2017": 206787296, "FY2016": 193158399,
-            "FY2015": 190520662, "FY2014": 185196548})),
+            "FY2015": 190520662, "FY2014": 185196548, "FY2013": 74509003, "FY2012": 66836084, "FY2011": 43624795, "FY2010": 40002338, "FY2009": 37385159})),
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
-        ("Net interest income", flow({"FY2025": 84894358, "FY2024": 80341223, "FY2023": 96228685, "FY2022": 63992210, "FY2021": 38240687,
+        ("Net interest income", flow2({"FY2025": 84894358, "FY2024": 80341223, "FY2023": 96228685, "FY2022": 63992210, "FY2021": 38240687,
             "FY2020": 36009138, "FY2019": 44175428, "FY2018": 38621276, "FY2017": 28303594, "FY2016": 28699041,
-            "FY2015": 22298188, "FY2014": 23395435})),
-        ("Operating income", flow({"FY2025": 104326559, "FY2024": 85282089, "FY2023": 106201578, "FY2022": 77253368, "FY2021": 43933658,
+            "FY2015": 22298188, "FY2014": 23395435, "FY2013": 13338985, "FY2012": 7827073, "FY2011": 8363215, "FY2010": 6973960, "FY2009": 5915081})),
+        ("Operating income", flow2({"FY2025": 104326559, "FY2024": 85282089, "FY2023": 106201578, "FY2022": 77253368, "FY2021": 43933658,
             "FY2020": 49440372, "FY2019": 58068399, "FY2018": 49662610, "FY2017": 39958009, "FY2016": 37184422,
-            "FY2015": 32314295, "FY2014": 33946758})),
-        ("Profit before tax", flow({"FY2025": 64655414, "FY2024": 56254867, "FY2023": 72793651, "FY2022": 45263491, "FY2021": 13636206,
+            "FY2015": 32314295, "FY2014": 33946758, "FY2013": 18433055, "FY2012": 14444997, "FY2011": 12050576, "FY2010": 9368585, "FY2009": 8647125})),
+        ("Profit before tax", flow2({"FY2025": 64655414, "FY2024": 56254867, "FY2023": 72793651, "FY2022": 45263491, "FY2021": 13636206,
             "FY2020": 21882846, "FY2019": 34721708, "FY2018": 33838999, "FY2017": 16009499, "FY2016": 3425633,
-            "FY2015": 7098818, "FY2014": 19002159})),
-        ("Profit for the year", flow({"FY2025": 48487744, "FY2024": 42223349, "FY2023": 54837411, "FY2022": 35200687, "FY2021": 11404135,
+            "FY2015": 7098818, "FY2014": 19002159, "FY2013": 10059745, "FY2012": 6928088, "FY2011": 5104963, "FY2010": 3678247, "FY2009": 3252345})),
+        ("Profit for the year", flow2({"FY2025": 48487744, "FY2024": 42223349, "FY2023": 54837411, "FY2022": 35200687, "FY2021": 11404135,
             "FY2020": 17911347, "FY2019": 27930688, "FY2018": 27509757, "FY2017": 13628897, "FY2016": 2637737,
-            "FY2015": 5324114, "FY2014": 14394135})),
+            "FY2015": 5324114, "FY2014": 14394135, "FY2013": 7672919, "FY2012": 5231952, "FY2011": 3622457, "FY2010": 2617179, "FY2009": 2341689})),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[
@@ -2103,8 +2174,11 @@ bw.add_overview_sheet(
          "transition figures printed beside it. They appear on all three capital-ratio rows because the Bank's "
          "entire capital base is CET1 by its own statement (no AT1, no Tier 2). The corresponding RWA is NOT "
          "shown anywhere in this workbook for those years and was not derived from capital and ratio - see the "
-         "Total RWAs sheet. FY2016 and FY2019 still have no ratio: their editions print a capital table but no "
-         "ratio, and their Pillar 3 documents are lost.\n"
+         "Total RWAs sheet. FY2016 and FY2019 still have no ratio, but not for the same reason: FY2019's "
+         "Annual Report prints a capital table and no ratio and its Pillar 3 document is still lost, while "
+         "FY2016's Pillar 3 was recovered on 2026-09-19 and itself prints no capital ratio - only a 365% "
+         "capital-cover multiple, which is not one. FY2016's capital AMOUNT does come from that edition "
+         "(added 2026-10-07; see the CET1 Capital sheet).\n"
          "FY2020 LCR (435%) and FY2021 LCR (276%) are deliberately omitted from this at-a-glance row: both are "
          "point-in-time year-end figures, whereas FY2022 onward are 12-month simple averages, and the two bases "
          "are not comparable on a single trend line. Both bases are shown, on separate rows, on the LCR sheet "

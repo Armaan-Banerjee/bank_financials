@@ -371,7 +371,7 @@
         "start_year": 2012
       },
       {
-        "end_n": 23,
+        "end_n": 24,
         "end_year": 2014,
         "entered": [
           "119256",
@@ -386,6 +386,7 @@
           "204564",
           "204574",
           "221156",
+          "222030",
           "223268",
           "223304",
           "451720",
@@ -410,14 +411,13 @@
           "124823",
           "146702",
           "195430",
-          "222030",
           "400972",
           "579415",
           "629564"
         ],
         "exited": [],
-        "retained_n": 23,
-        "start_n": 23,
+        "retained_n": 24,
+        "start_n": 24,
         "start_year": 2014
       },
       {
@@ -594,9 +594,10 @@
         "start_year": 2020
       },
       {
-        "end_n": 128,
+        "end_n": 129,
         "end_year": 2022,
         "entered": [
+          "140848",
           "178737",
           "204520",
           "543146",
@@ -613,7 +614,7 @@
         "start_year": 2021
       },
       {
-        "end_n": 134,
+        "end_n": 135,
         "end_year": 2023,
         "entered": [
           "204532",
@@ -624,12 +625,12 @@
           "993767"
         ],
         "exited": [],
-        "retained_n": 128,
-        "start_n": 128,
+        "retained_n": 129,
+        "start_n": 129,
         "start_year": 2022
       },
       {
-        "end_n": 133,
+        "end_n": 134,
         "end_year": 2024,
         "entered": [
           "1004742",
@@ -640,12 +641,12 @@
           "204508",
           "606934"
         ],
-        "retained_n": 131,
-        "start_n": 134,
+        "retained_n": 132,
+        "start_n": 135,
         "start_year": 2023
       },
       {
-        "end_n": 121,
+        "end_n": 123,
         "end_year": 2025,
         "entered": [
           "121873"
@@ -661,16 +662,15 @@
           "400712",
           "575105",
           "695048",
-          "815220",
           "849724",
           "953772"
         ],
-        "retained_n": 120,
-        "start_n": 133,
+        "retained_n": 122,
+        "start_n": 134,
         "start_year": 2024
       },
       {
-        "end_n": 17,
+        "end_n": 18,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -690,10 +690,10 @@
           "124548",
           "124579",
           "124659",
-          "124750",
           "124772",
           "124823",
           "131818",
+          "140848",
           "143336",
           "144036",
           "146702",
@@ -768,6 +768,7 @@
           "800542",
           "805574",
           "806852",
+          "815220",
           "817008",
           "821851",
           "832786",
@@ -779,8 +780,8 @@
           "970920",
           "993767"
         ],
-        "retained_n": 17,
-        "start_n": 121,
+        "retained_n": 18,
+        "start_n": 123,
         "start_year": 2025
       }
     ],
@@ -1460,7 +1461,7 @@
         "start_year": 2024
       },
       {
-        "end_n": 15,
+        "end_n": 16,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -1479,7 +1480,6 @@
           "124543",
           "124579",
           "124659",
-          "124750",
           "124823",
           "131818",
           "135327",
@@ -1557,7 +1557,7 @@
           "956138",
           "993767"
         ],
-        "retained_n": 15,
+        "retained_n": 16,
         "start_n": 107,
         "start_year": 2025
       }
@@ -1933,7 +1933,7 @@
         "start_year": 2012
       },
       {
-        "end_n": 22,
+        "end_n": 23,
         "end_year": 2014,
         "entered": [
           "119256",
@@ -1948,6 +1948,7 @@
           "204564",
           "204574",
           "221156",
+          "222030",
           "223268",
           "223304",
           "451720",
@@ -1972,14 +1973,13 @@
           "146702",
           "195430",
           "208020",
-          "222030",
           "400972",
           "579415",
           "629564"
         ],
         "exited": [],
-        "retained_n": 22,
-        "start_n": 22,
+        "retained_n": 23,
+        "start_n": 23,
         "start_year": 2014
       },
       {
@@ -2155,9 +2155,10 @@
         "start_year": 2020
       },
       {
-        "end_n": 125,
+        "end_n": 126,
         "end_year": 2022,
         "entered": [
+          "140848",
           "178737",
           "204520",
           "543146",
@@ -2174,7 +2175,7 @@
         "start_year": 2021
       },
       {
-        "end_n": 130,
+        "end_n": 131,
         "end_year": 2023,
         "entered": [
           "204532",
@@ -2187,12 +2188,12 @@
         "exited": [
           "446951"
         ],
-        "retained_n": 124,
-        "start_n": 125,
+        "retained_n": 125,
+        "start_n": 126,
         "start_year": 2022
       },
       {
-        "end_n": 126,
+        "end_n": 127,
         "end_year": 2024,
         "entered": [
           "1004742",
@@ -2206,12 +2207,12 @@
           "849724",
           "970920"
         ],
-        "retained_n": 124,
-        "start_n": 130,
+        "retained_n": 125,
+        "start_n": 131,
         "start_year": 2023
       },
       {
-        "end_n": 114,
+        "end_n": 115,
         "end_year": 2025,
         "entered": [
           "121873"
@@ -2231,12 +2232,12 @@
           "815220",
           "953772"
         ],
-        "retained_n": 113,
-        "start_n": 126,
+        "retained_n": 114,
+        "start_n": 127,
         "start_year": 2024
       },
       {
-        "end_n": 17,
+        "end_n": 18,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -2256,10 +2257,10 @@
           "124548",
           "124579",
           "124659",
-          "124750",
           "124772",
           "124823",
           "131818",
+          "140848",
           "143336",
           "144036",
           "146702",
@@ -2338,8 +2339,8 @@
           "850286",
           "993767"
         ],
-        "retained_n": 17,
-        "start_n": 114,
+        "retained_n": 18,
+        "start_n": 115,
         "start_year": 2025
       }
     ],
@@ -2720,7 +2721,7 @@
         "start_year": 2012
       },
       {
-        "end_n": 24,
+        "end_n": 25,
         "end_year": 2014,
         "entered": [
           "119256",
@@ -2735,6 +2736,7 @@
           "204564",
           "204574",
           "221156",
+          "222030",
           "223268",
           "223304",
           "451720",
@@ -2759,13 +2761,12 @@
           "124823",
           "146702",
           "208020",
-          "222030",
           "579415",
           "629564"
         ],
         "exited": [],
-        "retained_n": 24,
-        "start_n": 24,
+        "retained_n": 25,
+        "start_n": 25,
         "start_year": 2014
       },
       {
@@ -2998,7 +2999,7 @@
         "start_year": 2023
       },
       {
-        "end_n": 123,
+        "end_n": 124,
         "end_year": 2025,
         "entered": [
           "121873"
@@ -3011,15 +3012,14 @@
           "204566",
           "475346",
           "695048",
-          "815220",
           "953772"
         ],
-        "retained_n": 122,
+        "retained_n": 123,
         "start_n": 131,
         "start_year": 2024
       },
       {
-        "end_n": 16,
+        "end_n": 17,
         "end_year": 2026,
         "entered": [],
         "exited": [
@@ -3039,7 +3039,6 @@
           "124548",
           "124579",
           "124659",
-          "124750",
           "124772",
           "124823",
           "131818",
@@ -3123,6 +3122,7 @@
           "800542",
           "805574",
           "806852",
+          "815220",
           "817008",
           "821851",
           "832786",
@@ -3131,8 +3131,8 @@
           "850286",
           "993767"
         ],
-        "retained_n": 16,
-        "start_n": 123,
+        "retained_n": 17,
+        "start_n": 124,
         "start_year": 2025
       }
     ]
@@ -3485,21 +3485,21 @@
       },
       {
         "end_year": 2015,
-        "n": 12,
+        "n": 13,
         "records": [
           {
             "bank": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 11,
+            "end_rank": 12,
             "frn": "121878",
-            "rank_change": 4,
+            "rank_change": 5,
             "start_rank": 7
           },
           {
             "bank": "THE CO-OPERATIVE BANK P.L.C.",
-            "end_rank": 4,
+            "end_rank": 5,
             "frn": "121885",
             "rank_change": -5,
-            "start_rank": 9
+            "start_rank": 10
           },
           {
             "bank": "RBC Europe Limited",
@@ -3510,44 +3510,51 @@
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 10,
+            "end_rank": 11,
             "frn": "204503",
             "rank_change": -1,
-            "start_rank": 11
+            "start_rank": 12
           },
           {
             "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 6,
+            "end_rank": 7,
             "frn": "204564",
-            "rank_change": 3,
+            "rank_change": 4,
             "start_rank": 3
           },
           {
             "bank": "Shawbrook Bank Limited",
-            "end_rank": 7,
+            "end_rank": 8,
             "frn": "204574",
             "rank_change": -3,
-            "start_rank": 10
+            "start_rank": 11
           },
           {
-            "bank": "Bank of Africa United Kingdom Plc",
-            "end_rank": 9,
-            "frn": "454750",
-            "rank_change": 1,
+            "bank": "ICBC (London) plc",
+            "end_rank": 3,
+            "frn": "222030",
+            "rank_change": -5,
             "start_rank": 8
           },
           {
+            "bank": "Bank of Africa United Kingdom Plc",
+            "end_rank": 10,
+            "frn": "454750",
+            "rank_change": 1,
+            "start_rank": 9
+          },
+          {
             "bank": "Punjab National Bank (International) Limited",
-            "end_rank": 12,
+            "end_rank": 13,
             "frn": "459701",
             "rank_change": 0,
-            "start_rank": 12
+            "start_rank": 13
           },
           {
             "bank": "Bank of London and The Middle East plc",
-            "end_rank": 5,
+            "end_rank": 6,
             "frn": "464292",
-            "rank_change": -1,
+            "rank_change": 0,
             "start_rank": 6
           },
           {
@@ -3559,16 +3566,16 @@
           },
           {
             "bank": "Metro Bank PLC",
-            "end_rank": 8,
+            "end_rank": 9,
             "frn": "488982",
-            "rank_change": 6,
+            "rank_change": 7,
             "start_rank": 2
           },
           {
             "bank": "Itau BBA International PLC",
-            "end_rank": 3,
+            "end_rank": 4,
             "frn": "575225",
-            "rank_change": -1,
+            "rank_change": 0,
             "start_rank": 4
           }
         ],
@@ -9501,21 +9508,21 @@
       },
       {
         "end_year": 2015,
-        "n": 11,
+        "n": 12,
         "records": [
           {
             "bank": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 10,
+            "end_rank": 11,
             "frn": "121878",
-            "rank_change": 4,
+            "rank_change": 5,
             "start_rank": 6
           },
           {
             "bank": "THE CO-OPERATIVE BANK P.L.C.",
-            "end_rank": 3,
+            "end_rank": 4,
             "frn": "121885",
             "rank_change": -6,
-            "start_rank": 9
+            "start_rank": 10
           },
           {
             "bank": "RBC Europe Limited",
@@ -9526,44 +9533,51 @@
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 7,
+            "end_rank": 8,
             "frn": "204503",
             "rank_change": -1,
-            "start_rank": 8
+            "start_rank": 9
           },
           {
             "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 5,
+            "end_rank": 6,
             "frn": "204564",
-            "rank_change": 2,
+            "rank_change": 3,
             "start_rank": 3
           },
           {
             "bank": "Shawbrook Bank Limited",
-            "end_rank": 6,
+            "end_rank": 7,
             "frn": "204574",
             "rank_change": -4,
-            "start_rank": 10
-          },
-          {
-            "bank": "Bank of Africa United Kingdom Plc",
-            "end_rank": 9,
-            "frn": "454750",
-            "rank_change": 2,
-            "start_rank": 7
-          },
-          {
-            "bank": "Punjab National Bank (International) Limited",
-            "end_rank": 11,
-            "frn": "459701",
-            "rank_change": 0,
             "start_rank": 11
           },
           {
+            "bank": "ICBC (London) plc",
+            "end_rank": 3,
+            "frn": "222030",
+            "rank_change": -4,
+            "start_rank": 7
+          },
+          {
+            "bank": "Bank of Africa United Kingdom Plc",
+            "end_rank": 10,
+            "frn": "454750",
+            "rank_change": 2,
+            "start_rank": 8
+          },
+          {
+            "bank": "Punjab National Bank (International) Limited",
+            "end_rank": 12,
+            "frn": "459701",
+            "rank_change": 0,
+            "start_rank": 12
+          },
+          {
             "bank": "Bank of London and The Middle East plc",
-            "end_rank": 4,
+            "end_rank": 5,
             "frn": "464292",
-            "rank_change": -1,
+            "rank_change": 0,
             "start_rank": 5
           },
           {
@@ -9575,9 +9589,9 @@
           },
           {
             "bank": "Metro Bank PLC",
-            "end_rank": 8,
+            "end_rank": 9,
             "frn": "488982",
-            "rank_change": 6,
+            "rank_change": 7,
             "start_rank": 2
           }
         ],
@@ -12554,21 +12568,21 @@
       },
       {
         "end_year": 2015,
-        "n": 13,
+        "n": 14,
         "records": [
           {
             "bank": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 6,
+            "end_rank": 7,
             "frn": "121878",
-            "rank_change": 0,
+            "rank_change": 1,
             "start_rank": 6
           },
           {
             "bank": "THE CO-OPERATIVE BANK P.L.C.",
-            "end_rank": 4,
+            "end_rank": 5,
             "frn": "121885",
             "rank_change": -7,
-            "start_rank": 11
+            "start_rank": 12
           },
           {
             "bank": "RBC Europe Limited",
@@ -12579,10 +12593,10 @@
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 12,
+            "end_rank": 13,
             "frn": "204503",
             "rank_change": 0,
-            "start_rank": 12
+            "start_rank": 13
           },
           {
             "bank": "National Bank of Egypt (UK) Limited",
@@ -12593,38 +12607,45 @@
           },
           {
             "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 5,
+            "end_rank": 6,
             "frn": "204564",
-            "rank_change": 1,
+            "rank_change": 2,
             "start_rank": 4
           },
           {
             "bank": "Shawbrook Bank Limited",
-            "end_rank": 8,
+            "end_rank": 9,
             "frn": "204574",
             "rank_change": -5,
-            "start_rank": 13
+            "start_rank": 14
+          },
+          {
+            "bank": "ICBC (London) plc",
+            "end_rank": 4,
+            "frn": "222030",
+            "rank_change": -5,
+            "start_rank": 9
           },
           {
             "bank": "Bank of Africa United Kingdom Plc",
-            "end_rank": 9,
+            "end_rank": 10,
             "frn": "454750",
-            "rank_change": 1,
+            "rank_change": 2,
             "start_rank": 8
           },
           {
             "bank": "Punjab National Bank (International) Limited",
-            "end_rank": 11,
+            "end_rank": 12,
             "frn": "459701",
             "rank_change": 2,
-            "start_rank": 9
+            "start_rank": 10
           },
           {
             "bank": "Bank of London and The Middle East plc",
-            "end_rank": 10,
+            "end_rank": 11,
             "frn": "464292",
             "rank_change": 0,
-            "start_rank": 10
+            "start_rank": 11
           },
           {
             "bank": "BANK OF CHINA (UK) LIMITED",
@@ -12635,16 +12656,16 @@
           },
           {
             "bank": "Metro Bank PLC",
-            "end_rank": 13,
+            "end_rank": 14,
             "frn": "488982",
-            "rank_change": 10,
+            "rank_change": 11,
             "start_rank": 3
           },
           {
             "bank": "Itau BBA International PLC",
-            "end_rank": 7,
+            "end_rank": 8,
             "frn": "575225",
-            "rank_change": 0,
+            "rank_change": 1,
             "start_rank": 7
           }
         ],
@@ -15250,52 +15271,59 @@
       },
       {
         "end_year": 2026,
-        "n": 6,
+        "n": 7,
         "records": [
           {
-            "bank": "Aldermore Bank Plc",
+            "bank": "Mizuho International plc",
             "end_rank": 3,
-            "frn": "204503",
-            "rank_change": -2,
+            "frn": "119256",
+            "rank_change": -1,
+            "start_rank": 4
+          },
+          {
+            "bank": "Clydesdale Bank Plc",
+            "end_rank": 5,
+            "frn": "121873",
+            "rank_change": 0,
             "start_rank": 5
           },
           {
-            "bank": "Bank Sepah International Plc",
-            "end_rank": 1,
-            "frn": "208019",
-            "rank_change": 0,
-            "start_rank": 1
+            "bank": "C. HOARE & CO.",
+            "end_rank": 4,
+            "frn": "122093",
+            "rank_change": 1,
+            "start_rank": 3
           },
           {
-            "bank": "Punjab National Bank (International) Limited",
-            "end_rank": 2,
-            "frn": "459701",
+            "bank": "Close Brothers Limited",
+            "end_rank": 7,
+            "frn": "124750",
             "rank_change": 0,
-            "start_rank": 2
+            "start_rank": 7
           },
           {
-            "bank": "Atom Bank PLC",
+            "bank": "Investec Bank PLC",
             "end_rank": 6,
-            "frn": "661960",
+            "frn": "172330",
             "rank_change": 0,
             "start_rank": 6
           },
           {
-            "bank": "RECOGNISE BANK LIMITED",
-            "end_rank": 5,
-            "frn": "849404",
-            "rank_change": 2,
-            "start_rank": 3
+            "bank": "Starling Bank Limited",
+            "end_rank": 2,
+            "frn": "730166",
+            "rank_change": 0,
+            "start_rank": 2
           },
           {
-            "bank": "StreamBank PLC",
-            "end_rank": 4,
-            "frn": "954876",
+            "bank": "MONZO BANK LIMITED",
+            "end_rank": 1,
+            "frn": "730427",
             "rank_change": 0,
-            "start_rank": 4
+            "start_rank": 1
           }
         ],
-        "reporting_basis": "entity",
+        "reporting_basis": "consolidated_group",
         "start_year": 2025,
         "status": "insufficient_panel"
       }
@@ -16016,7 +16044,7 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note).",
+            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note). FY2025 is the first year operations generated rather than absorbed cash; it adds 'Disposal of investments' and 'Share based payment movements' and prints no 'Finance income'/'Finance cost' rows. FY2024's cash flow comparatives were re-presented in the FY2025 edition - this sheet keeps FY2024 as FY2024 reported it and records both in the source note.",
             "status": "numeric",
             "value": 418.5,
             "year": 2024
@@ -20399,28 +20427,28 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.6,
             "year": 2021
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.3,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 24.6,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 21.2,
             "year": 2024
@@ -22984,7 +23012,7 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 0.6363636363636364,
-          "robust_total_change": -4.000000000000002,
+          "robust_total_change": -4.0,
           "status": "eligible",
           "total_change": -2.700000000000001,
           "up_changes": 4
@@ -32507,8 +32535,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -0.09999999999999964,
+            "direction": "down",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -32517,18 +32545,18 @@
         "metric": "CET1 Ratio",
         "score": {
           "bank": "Close Brothers Limited",
-          "changes": 4,
-          "down_changes": 3,
+          "changes": 5,
+          "down_changes": 4,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "124750",
           "label": "persistent_down",
-          "last_year": 2025,
+          "last_year": 2026,
           "metric": "CET1 Ratio",
-          "persistence_score": 0.75,
-          "robust_total_change": -1.9999999999999964,
+          "persistence_score": 0.8,
+          "robust_total_change": -1.799999999999999,
           "status": "eligible",
-          "total_change": -1.6999999999999993,
+          "total_change": -1.799999999999999,
           "up_changes": 1
         },
         "years": [
@@ -32911,10 +32939,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Consolidated basis (Close Brothers Limited + subsidiaries), \u00a3m. See source note at bottom.",
+            "status": "numeric",
+            "value": 12.8,
             "year": 2026
           }
         ]
@@ -36159,20 +36187,20 @@
             "start_year": 2021
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 30.0,
+            "direction": "up",
             "end_year": 2023,
             "start_year": 2022
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -13.0,
+            "direction": "down",
             "end_year": 2024,
             "start_year": 2023
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -11.0,
+            "direction": "down",
             "end_year": 2025,
             "start_year": 2024
           },
@@ -36187,19 +36215,19 @@
         "metric": "CET1 Ratio",
         "score": {
           "bank": "DB UK Bank Limited",
-          "changes": 0,
-          "down_changes": 0,
-          "first_year": null,
+          "changes": 3,
+          "down_changes": 2,
+          "first_year": 2022,
           "flat_changes": 0,
           "frn": "140848",
-          "label": null,
-          "last_year": null,
+          "label": "mixed",
+          "last_year": 2025,
           "metric": "CET1 Ratio",
-          "persistence_score": null,
-          "robust_total_change": null,
-          "status": "insufficient_series",
-          "total_change": null,
-          "up_changes": 0
+          "persistence_score": 0.6666666666666666,
+          "robust_total_change": -29.0,
+          "status": "eligible",
+          "total_change": 6.0,
+          "up_changes": 1
         },
         "years": [
           {
@@ -36554,30 +36582,30 @@
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 79.0,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 109.0,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 96.0,
             "year": 2024
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 85.0,
             "year": 2025
           },
           {
@@ -39866,7 +39894,7 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 0.9,
-          "robust_total_change": 55.0,
+          "robust_total_change": 55.00000000000001,
           "status": "eligible",
           "total_change": 133.9,
           "up_changes": 9
@@ -45740,7 +45768,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.3,
+          "total_change": -168.29999999999998,
           "up_changes": 0
         },
         "years": [
@@ -74279,8 +74307,8 @@
             "start_year": 2013
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 4.779999999999999,
+            "direction": "up",
             "end_year": 2015,
             "start_year": 2014
           },
@@ -74355,19 +74383,19 @@
         "metric": "CET1 Ratio",
         "score": {
           "bank": "ICBC (London) plc",
-          "changes": 10,
+          "changes": 11,
           "down_changes": 1,
-          "first_year": 2015,
+          "first_year": 2014,
           "flat_changes": 0,
           "frn": "222030",
           "label": "persistent_up",
           "last_year": 2025,
           "metric": "CET1 Ratio",
-          "persistence_score": 0.9,
-          "robust_total_change": 64.07000000000001,
+          "persistence_score": 0.9090909090909091,
+          "robust_total_change": 69.30000000000003,
           "status": "eligible",
-          "total_change": 62.800000000000004,
-          "up_changes": 9
+          "total_change": 67.58000000000001,
+          "up_changes": 10
         },
         "years": [
           {
@@ -74665,10 +74693,10 @@
             "year": 2013
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "entity",
+            "source_note": "Solo basis, $'000 unless stated",
+            "status": "numeric",
+            "value": 13.51,
             "year": 2014
           },
           {
@@ -89778,7 +89806,7 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 0.7142857142857143,
-          "robust_total_change": -26.799999999999997,
+          "robust_total_change": -26.79999999999999,
           "status": "eligible",
           "total_change": -26.799999999999997,
           "up_changes": 2
@@ -100054,9 +100082,9 @@
           "last_year": 2024,
           "metric": "CET1 Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -30.785,
+          "robust_total_change": -30.785000000000004,
           "status": "eligible",
-          "total_change": -18.509999999999998,
+          "total_change": -18.51,
           "up_changes": 2
         },
         "years": [
@@ -101873,42 +101901,42 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 47.9,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 39.96,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 37.5,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 32.55,
             "year": 2024
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 31.55,
             "year": 2025
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 28.58,
             "year": 2026
@@ -105194,7 +105222,7 @@
           "persistence_score": 0.625,
           "robust_total_change": -14.179999999999996,
           "status": "eligible",
-          "total_change": -43.18,
+          "total_change": -43.17999999999999,
           "up_changes": 3
         },
         "years": [
@@ -108807,13 +108835,13 @@
             "start_year": 2018
           },
           {
-            "change": 3.8999999999999986,
+            "change": 4.399999999999999,
             "direction": "up",
             "end_year": 2020,
             "start_year": 2019
           },
           {
-            "change": -6.079999999999998,
+            "change": -6.579999999999998,
             "direction": "down",
             "end_year": 2021,
             "start_year": 2020
@@ -109208,7 +109236,7 @@
             "reporting_basis": "entity",
             "source_note": "Zopa Bank Limited (entity-level), \u00a3'000. See source note at bottom.",
             "status": "numeric",
-            "value": 29.0,
+            "value": 29.5,
             "year": 2020
           },
           {
@@ -109598,7 +109626,7 @@
           "persistence_score": 0.6666666666666666,
           "robust_total_change": 57.800000000000004,
           "status": "eligible",
-          "total_change": 48.6,
+          "total_change": 48.599999999999994,
           "up_changes": 4
         },
         "years": [
@@ -111039,8 +111067,8 @@
             "start_year": 2023
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -1.620000000000001,
+            "direction": "down",
             "end_year": 2025,
             "start_year": 2024
           },
@@ -111055,18 +111083,18 @@
         "metric": "CET1 Ratio",
         "score": {
           "bank": "RCI Bank UK Limited",
-          "changes": 5,
-          "down_changes": 4,
+          "changes": 6,
+          "down_changes": 5,
           "first_year": 2019,
           "flat_changes": 0,
           "frn": "815220",
           "label": "persistent_down",
-          "last_year": 2024,
+          "last_year": 2025,
           "metric": "CET1 Ratio",
-          "persistence_score": 0.8,
-          "robust_total_change": -1.5399999999999991,
+          "persistence_score": 0.8333333333333334,
+          "robust_total_change": -3.1499999999999995,
           "status": "eligible",
-          "total_change": -1.129999999999999,
+          "total_change": -2.75,
           "up_changes": 1
         },
         "years": [
@@ -111401,51 +111429,51 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 14.59,
             "year": 2019
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.94,
             "year": 2020
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.16,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.98,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.81,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.46,
             "year": 2024
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "status": "numeric",
+            "value": 11.84,
             "year": 2025
           },
           {
@@ -112534,7 +112562,7 @@
           "persistence_score": 0.8,
           "robust_total_change": -6.1,
           "status": "eligible",
-          "total_change": -55.599999999999994,
+          "total_change": -55.6,
           "up_changes": 1
         },
         "years": [
@@ -113268,7 +113296,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.06,
+          "total_change": -50.059999999999995,
           "up_changes": 2
         },
         "years": [
@@ -114734,7 +114762,7 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 0.8,
-          "robust_total_change": -32.1,
+          "robust_total_change": -32.099999999999994,
           "status": "eligible",
           "total_change": -32.1,
           "up_changes": 1
@@ -115468,7 +115496,7 @@
           "last_year": 2026,
           "metric": "CET1 Ratio",
           "persistence_score": 0.6,
-          "robust_total_change": -58.02000000000001,
+          "robust_total_change": -58.02,
           "status": "eligible",
           "total_change": -58.02000000000001,
           "up_changes": 2
@@ -116936,9 +116964,9 @@
           "last_year": 2025,
           "metric": "CET1 Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.23,
+          "robust_total_change": -384.22999999999996,
           "status": "eligible",
-          "total_change": -384.23,
+          "total_change": -384.22999999999996,
           "up_changes": 0
         },
         "years": [
@@ -122448,7 +122476,7 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note).",
+            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note). FY2025 is the first year operations generated rather than absorbed cash; it adds 'Disposal of investments' and 'Share based payment movements' and prints no 'Finance income'/'Finance cost' rows. FY2024's cash flow comparatives were re-presented in the FY2025 edition - this sheet keeps FY2024 as FY2024 reported it and records both in the source note.",
             "status": "numeric",
             "value": 87.4,
             "year": 2024
@@ -126831,28 +126859,28 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 8.9,
             "year": 2021
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 9.1,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 8.6,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 6.6,
             "year": 2024
@@ -135288,7 +135316,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.8888888888888888,
-          "robust_total_change": 13.569999999999997,
+          "robust_total_change": 13.569999999999995,
           "status": "eligible",
           "total_change": 80.8,
           "up_changes": 8
@@ -138939,8 +138967,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 0.0,
+            "direction": "flat",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -138949,16 +138977,16 @@
         "metric": "Leverage Ratio",
         "score": {
           "bank": "Close Brothers Limited",
-          "changes": 3,
+          "changes": 4,
           "down_changes": 2,
           "first_year": 2022,
-          "flat_changes": 0,
+          "flat_changes": 1,
           "frn": "124750",
           "label": "mixed",
-          "last_year": 2025,
+          "last_year": 2026,
           "metric": "Leverage Ratio",
-          "persistence_score": 0.6666666666666666,
-          "robust_total_change": -0.8999999999999986,
+          "persistence_score": 0.5,
+          "robust_total_change": -0.34999999999999964,
           "status": "eligible",
           "total_change": 1.299999999999999,
           "up_changes": 1
@@ -139343,10 +139371,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Consolidated basis (Close Brothers Limited + subsidiaries), \u00a3m. See source note at bottom.",
+            "status": "numeric",
+            "value": 12.6,
             "year": 2026
           }
         ]
@@ -170520,7 +170548,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": 0.94,
+          "robust_total_change": 0.9400000000000004,
           "status": "eligible",
           "total_change": 0.6500000000000004,
           "up_changes": 4
@@ -180062,7 +180090,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.5454545454545454,
-          "robust_total_change": -6.299999999999999,
+          "robust_total_change": -6.299999999999997,
           "status": "eligible",
           "total_change": -3.4000000000000004,
           "up_changes": 5
@@ -200616,7 +200644,7 @@
           "persistence_score": 0.7777777777777778,
           "robust_total_change": 5.980000000000002,
           "status": "eligible",
-          "total_change": 8.41,
+          "total_change": 8.410000000000002,
           "up_changes": 7
         },
         "years": [
@@ -208305,42 +208333,42 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 5.4,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 7.85,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 9.3,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 10.39,
             "year": 2024
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 11.14,
             "year": 2025
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 8.91,
             "year": 2026
@@ -208688,9 +208716,9 @@
           "last_year": 2026,
           "metric": "Leverage Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -35.17,
+          "robust_total_change": -35.169999999999995,
           "status": "eligible",
-          "total_change": -29.669999999999998,
+          "total_change": -29.66999999999999,
           "up_changes": 2
         },
         "years": [
@@ -210156,7 +210184,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.6,
-          "robust_total_change": -13.809999999999999,
+          "robust_total_change": -13.810000000000002,
           "status": "eligible",
           "total_change": -13.809999999999999,
           "up_changes": 2
@@ -210892,7 +210920,7 @@
           "persistence_score": 0.625,
           "robust_total_change": -63.95,
           "status": "eligible",
-          "total_change": -63.95,
+          "total_change": -63.94999999999999,
           "up_changes": 3
         },
         "years": [
@@ -211624,7 +211652,7 @@
           "last_year": 2023,
           "metric": "Leverage Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -5.744999999999999,
+          "robust_total_change": -5.744999999999998,
           "status": "eligible",
           "total_change": -16.89,
           "up_changes": 3
@@ -215239,13 +215267,13 @@
             "start_year": 2018
           },
           {
-            "change": -16.299999999999997,
+            "change": -16.199999999999996,
             "direction": "down",
             "end_year": 2020,
             "start_year": 2019
           },
           {
-            "change": -18.0,
+            "change": -18.1,
             "direction": "down",
             "end_year": 2021,
             "start_year": 2020
@@ -215640,7 +215668,7 @@
             "reporting_basis": "entity",
             "source_note": "Zopa Bank Limited (entity-level), \u00a3'000. See source note at bottom.",
             "status": "numeric",
-            "value": 38.0,
+            "value": 38.1,
             "year": 2020
           },
           {
@@ -217854,21 +217882,21 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 11.1,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 10.9,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 10.6,
             "year": 2024
@@ -218964,9 +218992,9 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.8,
-          "robust_total_change": -9.600000000000001,
+          "robust_total_change": -9.600000000000003,
           "status": "eligible",
-          "total_change": -24.7,
+          "total_change": -24.700000000000003,
           "up_changes": 1
         },
         "years": [
@@ -222636,7 +222664,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -39.1,
           "status": "eligible",
-          "total_change": -86.58,
+          "total_change": -86.58000000000001,
           "up_changes": 0
         },
         "years": [
@@ -223368,7 +223396,7 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -89.24,
+          "robust_total_change": -89.24000000000001,
           "status": "eligible",
           "total_change": -89.24,
           "up_changes": 1
@@ -224836,7 +224864,7 @@
           "last_year": 2024,
           "metric": "Leverage Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -83.26000000000003,
+          "robust_total_change": -83.26000000000005,
           "status": "eligible",
           "total_change": -70.62,
           "up_changes": 1
@@ -228880,7 +228908,7 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note).",
+            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note). FY2025 is the first year operations generated rather than absorbed cash; it adds 'Disposal of investments' and 'Share based payment movements' and prints no 'Finance income'/'Finance cost' rows. FY2024's cash flow comparatives were re-presented in the FY2025 edition - this sheet keeps FY2024 as FY2024 reported it and records both in the source note.",
             "status": "numeric",
             "value": 418.5,
             "year": 2024
@@ -233263,28 +233291,28 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.6,
             "year": 2021
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.3,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 24.6,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 21.2,
             "year": 2024
@@ -233646,7 +233674,7 @@
           "last_year": 2026,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.75,
-          "robust_total_change": -30.21999999999999,
+          "robust_total_change": -30.22,
           "status": "eligible",
           "total_change": -24.109999999999996,
           "up_changes": 3
@@ -245371,8 +245399,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 0.0,
+            "direction": "flat",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -245381,16 +245409,16 @@
         "metric": "Tier 1 Ratio",
         "score": {
           "bank": "Close Brothers Limited",
-          "changes": 4,
+          "changes": 5,
           "down_changes": 3,
           "first_year": 2021,
-          "flat_changes": 0,
+          "flat_changes": 1,
           "frn": "124750",
-          "label": "persistent_down",
-          "last_year": 2025,
+          "label": "mixed",
+          "last_year": 2026,
           "metric": "Tier 1 Ratio",
-          "persistence_score": 0.75,
-          "robust_total_change": -1.6999999999999975,
+          "persistence_score": 0.6,
+          "robust_total_change": 0.1000000000000032,
           "status": "eligible",
           "total_change": 0.40000000000000036,
           "up_changes": 1
@@ -245775,10 +245803,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Consolidated basis (Close Brothers Limited + subsidiaries), \u00a3m. See source note at bottom.",
+            "status": "numeric",
+            "value": 15.0,
             "year": 2026
           }
         ]
@@ -249023,20 +249051,20 @@
             "start_year": 2021
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 30.0,
+            "direction": "up",
             "end_year": 2023,
             "start_year": 2022
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -13.0,
+            "direction": "down",
             "end_year": 2024,
             "start_year": 2023
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -11.0,
+            "direction": "down",
             "end_year": 2025,
             "start_year": 2024
           },
@@ -249051,19 +249079,19 @@
         "metric": "Tier 1 Ratio",
         "score": {
           "bank": "DB UK Bank Limited",
-          "changes": 0,
-          "down_changes": 0,
-          "first_year": null,
+          "changes": 3,
+          "down_changes": 2,
+          "first_year": 2022,
           "flat_changes": 0,
           "frn": "140848",
-          "label": null,
-          "last_year": null,
+          "label": "mixed",
+          "last_year": 2025,
           "metric": "Tier 1 Ratio",
-          "persistence_score": null,
-          "robust_total_change": null,
-          "status": "insufficient_series",
-          "total_change": null,
-          "up_changes": 0
+          "persistence_score": 0.6666666666666666,
+          "robust_total_change": -29.0,
+          "status": "eligible",
+          "total_change": 6.0,
+          "up_changes": 1
         },
         "years": [
           {
@@ -249418,30 +249446,30 @@
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 79.0,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 109.0,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 96.0,
             "year": 2024
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
+            "status": "numeric",
+            "value": 85.0,
             "year": 2025
           },
           {
@@ -258604,7 +258632,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.3,
+          "total_change": -168.29999999999998,
           "up_changes": 0
         },
         "years": [
@@ -287143,8 +287171,8 @@
             "start_year": 2013
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 4.779999999999999,
+            "direction": "up",
             "end_year": 2015,
             "start_year": 2014
           },
@@ -287219,19 +287247,19 @@
         "metric": "Tier 1 Ratio",
         "score": {
           "bank": "ICBC (London) plc",
-          "changes": 10,
+          "changes": 11,
           "down_changes": 1,
-          "first_year": 2015,
+          "first_year": 2014,
           "flat_changes": 0,
           "frn": "222030",
           "label": "persistent_up",
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
-          "persistence_score": 0.9,
-          "robust_total_change": 64.07000000000001,
+          "persistence_score": 0.9090909090909091,
+          "robust_total_change": 69.30000000000003,
           "status": "eligible",
-          "total_change": 62.800000000000004,
-          "up_changes": 9
+          "total_change": 67.58000000000001,
+          "up_changes": 10
         },
         "years": [
           {
@@ -287529,10 +287557,10 @@
             "year": 2013
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "entity",
+            "source_note": "Solo basis, $'000 unless stated",
+            "status": "numeric",
+            "value": 13.51,
             "year": 2014
           },
           {
@@ -294570,7 +294598,7 @@
           "persistence_score": 0.6666666666666666,
           "robust_total_change": 11.95,
           "status": "eligible",
-          "total_change": 10.28,
+          "total_change": 10.280000000000001,
           "up_changes": 8
         },
         "years": [
@@ -299706,7 +299734,7 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.6363636363636364,
-          "robust_total_change": -4.43,
+          "robust_total_change": -4.4300000000000015,
           "status": "eligible",
           "total_change": -11.899999999999999,
           "up_changes": 4
@@ -302642,7 +302670,7 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.6,
-          "robust_total_change": -14.5,
+          "robust_total_change": -14.499999999999993,
           "status": "eligible",
           "total_change": -14.5,
           "up_changes": 2
@@ -312918,9 +312946,9 @@
           "last_year": 2024,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -30.785,
+          "robust_total_change": -30.785000000000004,
           "status": "eligible",
-          "total_change": -18.509999999999998,
+          "total_change": -18.51,
           "up_changes": 2
         },
         "years": [
@@ -314737,42 +314765,42 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 47.9,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 39.96,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 37.5,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 32.55,
             "year": 2024
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 31.55,
             "year": 2025
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 28.58,
             "year": 2026
@@ -318056,9 +318084,9 @@
           "last_year": 2023,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -19.964999999999996,
+          "robust_total_change": -19.964999999999993,
           "status": "eligible",
-          "total_change": -43.78,
+          "total_change": -43.779999999999994,
           "up_changes": 2
         },
         "years": [
@@ -321671,13 +321699,13 @@
             "start_year": 2018
           },
           {
-            "change": 3.8999999999999986,
+            "change": 4.399999999999999,
             "direction": "up",
             "end_year": 2020,
             "start_year": 2019
           },
           {
-            "change": -6.079999999999998,
+            "change": -6.579999999999998,
             "direction": "down",
             "end_year": 2021,
             "start_year": 2020
@@ -322072,7 +322100,7 @@
             "reporting_basis": "entity",
             "source_note": "Zopa Bank Limited (entity-level), \u00a3'000. See source note at bottom.",
             "status": "numeric",
-            "value": 29.0,
+            "value": 29.5,
             "year": 2020
           },
           {
@@ -322462,7 +322490,7 @@
           "persistence_score": 0.6666666666666666,
           "robust_total_change": 63.699999999999996,
           "status": "eligible",
-          "total_change": 42.6,
+          "total_change": 42.599999999999994,
           "up_changes": 4
         },
         "years": [
@@ -324265,42 +324293,42 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 14.59,
             "year": 2019
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.94,
             "year": 2020
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.16,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.98,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.81,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 13.46,
             "year": 2024
@@ -325398,7 +325426,7 @@
           "persistence_score": 0.6,
           "robust_total_change": -9.999999999999996,
           "status": "eligible",
-          "total_change": -53.699999999999996,
+          "total_change": -53.69999999999999,
           "up_changes": 2
         },
         "years": [
@@ -326132,7 +326160,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.06,
+          "total_change": -50.059999999999995,
           "up_changes": 2
         },
         "years": [
@@ -327598,7 +327626,7 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.8,
-          "robust_total_change": -32.1,
+          "robust_total_change": -32.099999999999994,
           "status": "eligible",
           "total_change": -32.1,
           "up_changes": 1
@@ -328332,7 +328360,7 @@
           "last_year": 2026,
           "metric": "Tier 1 Ratio",
           "persistence_score": 0.6,
-          "robust_total_change": -58.02000000000001,
+          "robust_total_change": -58.02,
           "status": "eligible",
           "total_change": -58.02000000000001,
           "up_changes": 2
@@ -329800,9 +329828,9 @@
           "last_year": 2025,
           "metric": "Tier 1 Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.23,
+          "robust_total_change": -384.22999999999996,
           "status": "eligible",
-          "total_change": -384.23,
+          "total_change": -384.22999999999996,
           "up_changes": 0
         },
         "years": [
@@ -335312,7 +335340,7 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note).",
+            "source_note": "Afin Bank Limited (All Africa Capital Limited pre-October 2024) audited/unaudited statement of cash flows; amounts in \u00a3. FY2021 NOT DISCLOSED (small-companies exemption - see source note). FY2025 is the first year operations generated rather than absorbed cash; it adds 'Disposal of investments' and 'Share based payment movements' and prints no 'Finance income'/'Finance cost' rows. FY2024's cash flow comparatives were re-presented in the FY2025 edition - this sheet keeps FY2024 as FY2024 reported it and records both in the source note.",
             "status": "numeric",
             "value": 418.5,
             "year": 2024
@@ -339695,28 +339723,28 @@
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.6,
             "year": 2021
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 23.3,
             "year": 2022
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 24.6,
             "year": 2023
           },
           {
             "reporting_basis": null,
-            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2024, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
+            "source_note": "No cash-flow (or earlier funds) statement is published in any accounts filing reached: FRS 101 exemption FY2015-FY2025, FRS 1 subsidiary exemption FY1992-FY2014, SSAP 10 funds statement omitted FY1977-FY1991, none FY1973-FY1976; FY1978-FY1979 unreached. Each cell cites its own filing and page.",
             "status": "numeric",
             "value": 21.2,
             "year": 2024
@@ -340078,7 +340106,7 @@
           "last_year": 2026,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.8333333333333334,
-          "robust_total_change": -34.27999999999999,
+          "robust_total_change": -34.28,
           "status": "eligible",
           "total_change": -24.109999999999996,
           "up_changes": 2
@@ -351803,8 +351831,8 @@
             "start_year": 2024
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 0.6999999999999993,
+            "direction": "up",
             "end_year": 2026,
             "start_year": 2025
           }
@@ -351813,19 +351841,19 @@
         "metric": "Total Capital Ratio",
         "score": {
           "bank": "Close Brothers Limited",
-          "changes": 4,
+          "changes": 5,
           "down_changes": 3,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "124750",
-          "label": "persistent_down",
-          "last_year": 2025,
+          "label": "mixed",
+          "last_year": 2026,
           "metric": "Total Capital Ratio",
-          "persistence_score": 0.75,
-          "robust_total_change": -1.3499999999999952,
+          "persistence_score": 0.6,
+          "robust_total_change": 0.5,
           "status": "eligible",
-          "total_change": -0.1999999999999993,
-          "up_changes": 1
+          "total_change": 0.5,
+          "up_changes": 2
         },
         "years": [
           {
@@ -352207,10 +352235,10 @@
             "year": 2025
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Consolidated basis (Close Brothers Limited + subsidiaries), \u00a3m. See source note at bottom.",
+            "status": "numeric",
+            "value": 17.8,
             "year": 2026
           }
         ]
@@ -359164,7 +359192,7 @@
           "persistence_score": 0.8,
           "robust_total_change": 53.790000000000006,
           "status": "eligible",
-          "total_change": 129.20000000000002,
+          "total_change": 129.2,
           "up_changes": 8
         },
         "years": [
@@ -365036,7 +365064,7 @@
           "persistence_score": 1.0,
           "robust_total_change": -79.22000000000003,
           "status": "eligible",
-          "total_change": -168.3,
+          "total_change": -168.29999999999998,
           "up_changes": 0
         },
         "years": [
@@ -393575,8 +393603,8 @@
             "start_year": 2013
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": 5.690000000000001,
+            "direction": "up",
             "end_year": 2015,
             "start_year": 2014
           },
@@ -393651,19 +393679,19 @@
         "metric": "Total Capital Ratio",
         "score": {
           "bank": "ICBC (London) plc",
-          "changes": 10,
+          "changes": 11,
           "down_changes": 1,
-          "first_year": 2015,
+          "first_year": 2014,
           "flat_changes": 0,
           "frn": "222030",
           "label": "persistent_up",
           "last_year": 2025,
           "metric": "Total Capital Ratio",
-          "persistence_score": 0.9,
-          "robust_total_change": 63.06,
+          "persistence_score": 0.9090909090909091,
+          "robust_total_change": 67.56,
           "status": "eligible",
-          "total_change": 57.58,
-          "up_changes": 9
+          "total_change": 63.27,
+          "up_changes": 10
         },
         "years": [
           {
@@ -393961,10 +393989,10 @@
             "year": 2013
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "entity",
+            "source_note": "Solo basis, $'000 unless stated",
+            "status": "numeric",
+            "value": 17.82,
             "year": 2014
           },
           {
@@ -396596,7 +396624,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": -18.01,
+          "robust_total_change": -18.010000000000005,
           "status": "eligible",
           "total_change": -18.01,
           "up_changes": 2
@@ -409074,7 +409102,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.7142857142857143,
-          "robust_total_change": -25.2,
+          "robust_total_change": -25.200000000000003,
           "status": "eligible",
           "total_change": -25.2,
           "up_changes": 2
@@ -419350,9 +419378,9 @@
           "last_year": 2024,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.6666666666666666,
-          "robust_total_change": -30.785,
+          "robust_total_change": -30.785000000000004,
           "status": "eligible",
-          "total_change": -18.509999999999998,
+          "total_change": -18.51,
           "up_changes": 2
         },
         "years": [
@@ -421169,42 +421197,42 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 47.9,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 39.96,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 37.5,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 32.55,
             "year": 2024
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 31.55,
             "year": 2025
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
+            "source_note": "Group/consolidated basis, \u00a3'000. FY2017-FY2019 (30 November year-end), FY2021-FY2023 and FY2024-FY2026 are shown as separate presentation blocks. FY2020 is a recorded absence, not a gap. FY2021: 16-month period (\u2020). FY2026: Starling Group Holdings Limited (\u2021). See source note at bottom.",
             "status": "numeric",
             "value": 28.58,
             "year": 2026
@@ -428103,13 +428131,13 @@
             "start_year": 2018
           },
           {
-            "change": 3.8999999999999986,
+            "change": 4.399999999999999,
             "direction": "up",
             "end_year": 2020,
             "start_year": 2019
           },
           {
-            "change": -6.079999999999998,
+            "change": -6.579999999999998,
             "direction": "down",
             "end_year": 2021,
             "start_year": 2020
@@ -428504,7 +428532,7 @@
             "reporting_basis": "entity",
             "source_note": "Zopa Bank Limited (entity-level), \u00a3'000. See source note at bottom.",
             "status": "numeric",
-            "value": 29.0,
+            "value": 29.5,
             "year": 2020
           },
           {
@@ -430335,8 +430363,8 @@
             "start_year": 2023
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -1.1999999999999993,
+            "direction": "down",
             "end_year": 2025,
             "start_year": 2024
           },
@@ -430351,18 +430379,18 @@
         "metric": "Total Capital Ratio",
         "score": {
           "bank": "RCI Bank UK Limited",
-          "changes": 5,
-          "down_changes": 3,
+          "changes": 6,
+          "down_changes": 4,
           "first_year": 2019,
           "flat_changes": 0,
           "frn": "815220",
           "label": "mixed",
-          "last_year": 2024,
+          "last_year": 2025,
           "metric": "Total Capital Ratio",
-          "persistence_score": 0.6,
-          "robust_total_change": -0.9499999999999975,
+          "persistence_score": 0.6666666666666666,
+          "robust_total_change": -2.0799999999999956,
           "status": "eligible",
-          "total_change": -0.2900000000000009,
+          "total_change": -1.4900000000000002,
           "up_changes": 2
         },
         "years": [
@@ -430697,51 +430725,51 @@
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.71,
             "year": 2019
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 17.16,
             "year": 2020
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 16.31,
             "year": 2021
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 16.34,
             "year": 2022
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.99,
             "year": 2023
           },
           {
             "reporting_basis": "consolidated_group",
-            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2024 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
             "status": "numeric",
             "value": 15.42,
             "year": 2024
           },
           {
-            "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "reporting_basis": "consolidated_group",
+            "source_note": "Group/consolidated basis, \u00a3'000; FY2019-FY2025 (FY2019 is a 10-month Group period - see source note). See source note.",
+            "status": "numeric",
+            "value": 14.22,
             "year": 2025
           },
           {
@@ -432564,7 +432592,7 @@
           "persistence_score": 0.5,
           "robust_total_change": -9.169999999999993,
           "status": "eligible",
-          "total_change": -50.06,
+          "total_change": -50.059999999999995,
           "up_changes": 2
         },
         "years": [
@@ -434030,7 +434058,7 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.8,
-          "robust_total_change": -29.6,
+          "robust_total_change": -29.599999999999998,
           "status": "eligible",
           "total_change": -29.6,
           "up_changes": 1
@@ -434764,7 +434792,7 @@
           "last_year": 2026,
           "metric": "Total Capital Ratio",
           "persistence_score": 0.6,
-          "robust_total_change": -58.02000000000001,
+          "robust_total_change": -58.02,
           "status": "eligible",
           "total_change": -58.02000000000001,
           "up_changes": 2
@@ -436232,9 +436260,9 @@
           "last_year": 2025,
           "metric": "Total Capital Ratio",
           "persistence_score": 1.0,
-          "robust_total_change": -384.23,
+          "robust_total_change": -384.22999999999996,
           "status": "eligible",
-          "total_change": -384.23,
+          "total_change": -384.22999999999996,
           "up_changes": 0
         },
         "years": [

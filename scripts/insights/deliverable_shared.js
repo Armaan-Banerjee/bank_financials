@@ -289,13 +289,15 @@ function rwaTrendLineChart(canvas, banks, data){
   });
 }
 
-// A picker of checkboxes above the RWA-density trend chart, capped at 5
+// A picker of checkboxes above the RWA-density trend chart, capped at 6
 // banks selected at once - with all 20+ banks plotted together the line
 // chart becomes an unreadable tangle, so this keeps it comparable while
 // still letting the reader choose which banks. The per-bank RWA-composition
 // mini-cards below aren't affected - one card per bank scales fine as a
 // grid, it's only the overlaid multi-line chart that gets crowded.
-const RWA_PICKER_MAX = 5;
+// Raised 5 -> 6 (user request, 2026-10-08): 5 meant having to un-tick a bank
+// before adding one mid-demonstration. 6 still reads cleanly as a line chart.
+const RWA_PICKER_MAX = 6;
 // The 5-year window every bank COULD have (FY2021-FY2025) - banks with real
 // data across exactly these five years make the most informative default
 // trend line (no gaps, and no stray extra year like Starling Bank's 2026
@@ -386,11 +388,12 @@ function trajectoryLineChart(canvas, metric, banks, trends, frnName){
 }
 
 // Same style as RWA density's default picker (see defaultRwaBanks/
-// RWA_PICKER_MAX above): a 5-bank cap, and an exact match to the full
-// FY2021-FY2025 window preferred over "most complete" so the default line
-// never has a gap or a stray extra year (server-side curate_comparison_
-// trends() already trims trends.years to just this window).
-const TRAJECTORY_PICKER_MAX = 5;
+// RWA_PICKER_MAX above): a 6-bank cap (raised from 5 with it, same user
+// request and same reason), and an exact match to the full FY2021-FY2025
+// window preferred over "most complete" so the default line never has a gap
+// or a stray extra year (server-side curate_comparison_trends() already
+// trims trends.years to just this window).
+const TRAJECTORY_PICKER_MAX = 6;
 function defaultTrajectoryBanks(metric, banks, trends, frnName){
   const byBank = {};
   trends.metrics[metric].forEach(r => { byBank[frnName[r.frn] || r.bank] = r; });
@@ -1125,30 +1128,85 @@ function boxplotByYear(canvas, existingChart, years, boxes, opts){
       ? `Chart is capped at ${Math.round(yMax)}${unit} to keep the typical spread readable — ${clipped} bank-year value${clipped === 1 ? '' : 's'} above that are real disclosures, not errors, and sit off-chart.`
       : '';
   }
+  // WHICH BANK IS THAT DOT? (user request, 2026-10-08). The plugin draws each
+  // bank's value as an anonymous item, so a reader could see an outlier but
+  // not name it. When the caller supplies `namesByYear` (parallel to `boxes`),
+  // the plugin's own items are switched off and the same points are redrawn as
+  // a scatter dataset that carries the bank name, making them hoverable. The
+  // chart looks the same; the points now identify themselves.
+  const names = opts.namesByYear;
+  const r1 = (v) => Math.round(v * 10) / 10;
+  const datasets = [{
+    label: opts.label || '',
+    data: boxes,
+    backgroundColor: color + '2e', borderColor: color, borderWidth: 1.5,
+    outlierColor: '#9c3b2e', itemRadius: names ? 0 : 2, itemStyle: 'circle', medianColor: color,
+    order: 1,
+  }];
+  if (names) {
+    const pts = [];
+    boxes.forEach((vals, i) => vals.forEach((v, j) => {
+      pts.push({ x: i, y: v, bank: (names[i] || [])[j] || 'Unknown' });
+    }));
+    datasets.push({
+      type: 'scatter', label: '__points', data: pts,
+      backgroundColor: color + 'cc', borderColor: color, borderWidth: 0,
+      radius: 2.5, hoverRadius: 6, hitRadius: 5,
+      hoverBorderWidth: 2, hoverBorderColor: '#1a1a1a',
+      order: 0,
+    });
+  }
   return new Chart(canvas, {
     type: 'boxplot',
-    data: { labels: years, datasets: [{
-      label: opts.label || '',
-      data: boxes,
-      backgroundColor: color + '2e', borderColor: color, borderWidth: 1.5,
-      outlierColor: '#9c3b2e', itemRadius: 2, itemStyle: 'circle', medianColor: color,
-    }] },
+    data: { labels: years, datasets },
     options: {
       responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'nearest', intersect: true },
       scales: {
         y: { max: yMax, ticks: { callback: v => v + unit }, grid: { color: '#edece7' } },
         x: { grid: { display: false } },
       },
-      plugins: { legend: { display: false } },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          // A scatter point's year is its x (the category index); a box's is
+          // its dataIndex. Without this the scatter points all title as FY of
+          // whatever index Chart.js hands back for a point dataset.
+          title: (items) => {
+            if (!items.length) return '';
+            const it = items[0];
+            const yi = it.dataset && it.dataset.type === 'scatter' ? it.raw.x : it.dataIndex;
+            return years[yi] != null ? `FY${years[yi]}` : '';
+          },
+          label: (ctx) => {
+            if (ctx.dataset && ctx.dataset.type === 'scatter') {
+              return `${ctx.raw.bank}: ${r1(ctx.raw.y)}${unit}`;
+            }
+            // Composed from `boxes` rather than read off the plugin's own
+            // computed stats, so the summary cannot drift if the plugin
+            // changes the shape it exposes on ctx.raw.
+            const vals = boxes[ctx.dataIndex] || [];
+            if (!vals.length) return '';
+            const s = [...vals].sort((a, b) => a - b);
+            return `${s.length} bank${s.length === 1 ? '' : 's'} · median ${r1(percentile(s, 0.5))}${unit} · Q1 ${r1(percentile(s, 0.25))}${unit} · Q3 ${r1(percentile(s, 0.75))}${unit}`;
+          },
+        } },
+      },
     },
   });
 }
 
 function pillar3BoxplotChart(canvas, existingChart, data, banks, metric, noteEl){
   const years = [...new Set(banks.flatMap(b => Object.keys(data[b].pillar3?.[metric] || {})))].sort();
-  const boxes = years.map(y => banks.map(b => data[b].pillar3?.[metric]?.[y]).filter(v => v != null));
-  return boxplotByYear(canvas, existingChart, years, boxes, {
+  // Values and bank names are collected in one pass so the two arrays stay
+  // index-aligned - filtering values separately from names is how a dot ends
+  // up labelled with the wrong bank.
+  const pairs = years.map(y => banks
+    .map(b => [b, data[b].pillar3?.[metric]?.[y]])
+    .filter(([, v]) => v != null));
+  return boxplotByYear(canvas, existingChart, years, pairs.map(p => p.map(([, v]) => v)), {
     color: (PILLAR3_STYLE[metric] || {}).color, label: PILLAR3_LABEL[metric] || metric, noteEl,
+    namesByYear: pairs.map(p => p.map(([b]) => b)),
   });
 }
 
@@ -1164,10 +1222,20 @@ function yearMetricBoxplotChart(canvas, existingChart, seriesByBank, metric, opt
   // 2007 on, blank axis space 1997-2006) whenever the metric switched to
   // one with a shorter history.
   const allYears = [...new Set(Object.values(seriesByBank).flatMap(s => Object.keys(s)))].sort();
+  // Entries, not values: the bank name has to travel with its figure so the
+  // scatter overlay in boxplotByYear can name each dot (user request,
+  // 2026-10-08). Collected in one pass to keep names index-aligned with values.
   const withData = allYears
-    .map(y => [y, Object.values(seriesByBank).map(s => s[y]?.[metric]).filter(v => v != null)])
-    .filter(([, vals]) => vals.length);
-  return boxplotByYear(canvas, existingChart, withData.map(([y]) => y), withData.map(([, vals]) => vals), opts);
+    .map(y => [y, Object.entries(seriesByBank)
+      .map(([bank, s]) => [bank, s[y]?.[metric]])
+      .filter(([, v]) => v != null)])
+    .filter(([, pairs]) => pairs.length);
+  return boxplotByYear(
+    canvas, existingChart,
+    withData.map(([y]) => y),
+    withData.map(([, pairs]) => pairs.map(([, v]) => v)),
+    { ...opts, namesByYear: withData.map(([, pairs]) => pairs.map(([b]) => b)) },
+  );
 }
 
 // A denser, Yahoo/Google-Finance-style read on the parent's share price
@@ -1470,6 +1538,86 @@ function initBubbleChart(spec, payload){
 
   return chart;
 }
+// "Build your own comparison" (user request, 2026-10-08) - the axis-selectable
+// twin of the seven fixed bubble charts above. build_deliverable.py's
+// curate_comparison_bubbles() ships `axes` (raw per-metric series + assets +
+// parent groups) instead of a precomputed pairing, and this composes whichever
+// X/Y the reader picks into exactly the payload shape initBubbleChart already
+// consumes - so the chart, the year scrubber, the Play animation, the bubble
+// sizing and the group colours are the same code, not a second implementation.
+function buildAxisBubblePayload(axes, xKey, yKey){
+  const xs = axes.series[xKey] || {};
+  const ys = axes.series[yKey] || {};
+  const pointsByYear = {};
+  axes.years.forEach(y => { pointsByYear[y] = []; });
+  Object.keys(xs).forEach(bank => {
+    const bx = xs[bank] || {};
+    const by = ys[bank] || {};
+    axes.years.forEach(y => {
+      const xv = bx[y], yv = by[y];
+      if (xv == null || yv == null) return;
+      pointsByYear[y].push({
+        bank, x: xv, y: yv,
+        assets: (axes.assets[bank] || {})[y] ?? null,
+        group: axes.groups[bank] || null,
+      });
+    });
+  });
+  const covered = axes.years.filter(y => pointsByYear[y].length);
+  const out = {};
+  covered.forEach(y => { out[y] = pointsByYear[y]; });
+  return { years: covered, points_by_year: out };
+}
+
+function initCustomBubbleChart(axes){
+  if (!axes || !axes.metrics || axes.metrics.length < 2) return;
+  const host = document.getElementById('custom-bubble-host');
+  const xSel = document.getElementById('custom-bubble-x');
+  const ySel = document.getElementById('custom-bubble-y');
+  const note = document.getElementById('custom-bubble-note');
+  if (!host || !xSel || !ySel) return;
+  const byKey = {};
+  axes.metrics.forEach(m => { byKey[m.key] = m; });
+  let chart = null;
+
+  function draw(){
+    const mx = byKey[xSel.value], my = byKey[ySel.value];
+    const payload = buildAxisBubblePayload(axes, mx.key, my.key);
+    if (chart) { chart.destroy(); chart = null; }
+    if (!payload.years.length){
+      host.innerHTML = '';
+      if (note) note.textContent = `No bank discloses both ${mx.short} and ${my.short} in the same year, so there is nothing to plot for this pairing. Try one of the capital or liquidity ratios, which have the widest coverage.`;
+      return;
+    }
+    // The controls are rebuilt with the chart rather than reused, so the
+    // slider/Play listeners initBubbleChart attaches go with the elements
+    // they were bound to - re-initialising against surviving nodes would
+    // stack a fresh set of listeners on every axis change.
+    const latest = payload.years.length - 1;
+    host.innerHTML = `
+      <div class="bubble-controls" style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <button type="button" class="btn-play" id="custom-bubble-play">▶ Play</button>
+        <input type="range" id="custom-bubble-year-slider" min="0" max="${latest}" value="${latest}" step="1" style="flex:1;">
+        <span id="custom-bubble-year-label" style="font-weight:600;min-width:56px;text-align:right;">FY${payload.years[latest]}</span>
+      </div>
+      <div class="mini-chart-wrap tall" id="custom-bubble-chart" style="height:420px;"><canvas></canvas></div>`;
+    chart = initBubbleChart({
+      idPrefix: 'custom-bubble',
+      xLabel: mx.label, yLabel: my.label,
+      xShort: mx.short, yShort: my.short,
+      xMax: mx.max, xMin: mx.min, yMax: my.max, yMin: my.min,
+    }, payload);
+    const n = payload.points_by_year[payload.years[latest]].length;
+    if (note) {
+      note.textContent = `Bubble size = total assets (balance-sheet scale). Colour = parent group — grouped banks share a colour, standalone banks are gray. Axes are fixed across every year so movement between frames is real, not rescaling. ${n} bank${n === 1 ? '' : 's'} disclose both ${mx.short} and ${my.short} in FY${payload.years[latest]}; a bank missing either one in a given year is absent from that frame rather than plotted at zero.`;
+    }
+  }
+
+  xSel.addEventListener('change', draw);
+  ySel.addEventListener('change', draw);
+  draw();
+}
+
 // Statistical peer-cluster PCA projection (user request, 2026-09-05,
 // following wayfinder/insights/prototype/cluster_bubble_prototype.html -
 // the user reacted to a 2-variant prototype (raw 2 dimensions vs. a PCA
@@ -2296,17 +2444,13 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
       ${PILLAR3_LIQUIDITY_SHEETS.map(s => `<span><span class="sw" style="background:${PILLAR3_STYLE[s].color}"></span>${PILLAR3_LABEL[s]}</span>`).join('')}
     </div>` + subClose();
 
-  html += subOpen('RWA breakdown', `${rwaBanks.length} of ${banks.length} banks`);
-  html += `<div class="card chart-card">
-    <div class="bank-picker-panel">
-      ${bankPickerSidebarHtml('rwa-bank-picker', rwaDensityBanks)}
-      <div class="bank-picker-chart-area">
-        <div class="bank-picker-note">Trend line above compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards below.</div>
-        <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
-      </div>
-    </div>
-  </div>`;
-  html += `<div class="grid cols" style="margin-top:14px;" id="rwa-grid">`;
+  // RWA breakdown is now COMPOSITION ONLY. The multi-bank RWA-density trend
+  // chart that used to open this subsection moved down into "Bank comparison"
+  // (user request, 2026-10-08): it is a cross-bank comparison with a bank
+  // picker, exactly like the ratio trajectories there, so it belongs with
+  // them rather than sitting above a grid of per-bank composition cards.
+  html += subOpen('RWA breakdown', `${rwaBanks.length} of ${banks.length} banks — composition by category`);
+  html += `<div class="grid cols" id="rwa-grid">`;
   rwaBanks.forEach(bank => {
     const year = latestYear(data[bank].rwa_category_composition);
     const isDerived = bank === 'Weatherbys';
@@ -2318,7 +2462,21 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   });
   html += `</div>` + subClose();
 
-  html += subOpen('Bank comparison', `ratio trajectories, FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}`);
+  html += subOpen('Bank comparison', `RWA density and ratio trajectories, FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}`);
+  // Moved here from the "RWA breakdown" subsection above (user request,
+  // 2026-10-08). Kept first in this subsection because RWA density is the
+  // project's own headline risk lens, and it reads as the same kind of chart
+  // as the trajectories that follow it: one picker, one multi-bank line.
+  html += `<div class="book-label" style="margin:0 0 6px;">RWA density <span style="color:var(--ink-faint);">(${rwaDensityBanks.length} of ${banks.length} banks)</span></div>
+  <div class="card chart-card">
+    <div class="bank-picker-panel">
+      ${bankPickerSidebarHtml('rwa-bank-picker', rwaDensityBanks)}
+      <div class="bank-picker-chart-area">
+        <div class="bank-picker-note">Trend line compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards in RWA breakdown above.</div>
+        <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
+      </div>
+    </div>
+  </div>`;
   trajectoryMetrics.forEach(metric => {
     const metricSlug = slugify(metric);
     const metricBanks = trends.trajectories.metrics[metric].map(r => frnName[r.frn] || r.bank).filter(b => banks.includes(b));
@@ -2420,6 +2578,35 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
       note: 'The two ends of the same asset-mix decision — a bank sitting high on both isn\'t possible for long, since both draw from the same pool of total assets.',
     },
   ];
+  // "Build your own comparison" (user request, 2026-10-08): one bubble chart
+  // with selectable axes, placed BEFORE the seven fixed pairings below, which
+  // are unchanged. Same visual language and the same initBubbleChart renderer
+  // - only the axis sources are chosen by the reader instead of baked in.
+  const axesPayload = (bubbles && bubbles.axes) || null;
+  if (axesPayload && axesPayload.metrics.length >= 2) {
+    const ms = axesPayload.metrics;
+    const pick = (want, fallbackIdx) =>
+      (ms.some(m => m.key === want) ? want : ms[fallbackIdx].key);
+    // Defaults deliberately pair asset mix against capital strength - a
+    // combination none of the seven fixed charts below already shows, so the
+    // chart isn't a duplicate of the one immediately under it on first load.
+    const defX = pick('loans_pct_assets', 0);
+    const defY = pick('cet1_ratio', 1);
+    const opts = (sel) => ms.map(m =>
+      `<option value="${m.key}"${m.key === sel ? ' selected' : ''}>${m.label}</option>`).join('');
+    html += subOpen('Build your own comparison', 'pick any two metrics — same bubble chart, your axes');
+    html += `<div class="card chart-card">
+      <div class="chart-controls">
+        <label for="custom-bubble-x">X axis</label>
+        <select id="custom-bubble-x">${opts(defX)}</select>
+        <label for="custom-bubble-y">Y axis</label>
+        <select id="custom-bubble-y">${opts(defY)}</select>
+      </div>
+      <div id="custom-bubble-host"></div>
+      <p class="sub" id="custom-bubble-note" style="margin:8px 0 0;"></p>
+    </div>` + subClose();
+  }
+
   BUBBLE_SPECS.forEach(spec => {
     const payload = (bubbles && bubbles[spec.key]) || { years: [] };
     if (!payload.years.length) return;
@@ -2505,6 +2692,7 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const payload = (bubbles && bubbles[spec.key]) || { years: [] };
     if (payload.years.length) initBubbleChart(spec, payload);
   });
+  initCustomBubbleChart(bubbles && bubbles.axes);
   if (clusters) initClusterPcaChart(document.querySelector('#cluster-pca-chart canvas'), clusters);
 
   document.querySelectorAll('[data-chart="capital"]').forEach(el => {

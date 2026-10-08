@@ -1053,7 +1053,7 @@ metric(
 metric(
     "LCR", "%",
     [("Liquidity Coverage Ratio",
-      {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%",
+      {"FY2025": "152%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%",
        "FY2020": "179% (average through the year, not point-in-time - see basis note)",
        "FY2019": "Not disclosed in the FY2019 Annual Report (qualitative statement only)",
        "FY2018": "Not disclosed in the FY2018 Annual Report (qualitative statement only)",
@@ -1062,12 +1062,25 @@ metric(
         "\n\nBASIS NOTE: FY2021-FY2024 are point-in-time (31 December) LCR from each year's "
         "own Pillar 3 KM1 disclosure (FY2024's 207% independently verified by reconstructing "
         "the LCR composition table: HQLA GBP54,641k / net cash outflows GBP26,427k = 206.75% "
-        "≈ 207%). FY2025 (212%) is instead the *average LCR throughout the year* as stated "
-        "in the FY2025 Annual Report's 'Liquidity and funding' section (no Pillar 3 edition "
-        "exists yet for FY2025) - the FY2025 Annual Report separately states FY2024's average "
-        "LCR as 228%, a different basis to the 207% point-in-time figure used for FY2024 "
-        "above, kept for consistency with every other year in this row. Same "
-        "spot-vs-average distinction documented across this project (e.g. ALRAYAN Bank). "
+        "≈ 207%).\n"
+        "FY2025 CORRECTED 2026-10-08, FROM 212% TO 152%, AND THE REASON IS RECORDED RATHER "
+        "THAN THE OLD CELL BEING QUIETLY REPLACED. This cell used to hold 212%, the *average "
+        "LCR throughout the year* from the FY2025 Annual Report's 'Liquidity and funding' "
+        "section, on the stated ground that 'no Pillar 3 edition exists yet for FY2025'. A "
+        "FY2025 Pillar 3 does exist - it was found on 2026-09-19 on the Bank's CMS file store "
+        "(see the entity note) and every other FY2025 figure in this workbook already comes "
+        "from it - and its p.6 'LCR RATIO' chart prints 152% for 2025. That chart's other two "
+        "bars print 351% for 2023 and 207% for 2024, which are exactly the point-in-time "
+        "figures this row already carries for those years, so the chart IS the point-in-time "
+        "series and 152% is its FY2025 member. Read off the page image at 150 dpi; the same "
+        "page's Own Funds (56.5), Credit RWA (235,076) and Leverage Ratio (14.25%) bars agree "
+        "with the Total Capital, Total RWAs and Leverage Ratio sheets. Document MD5 "
+        "261e9d209bf68811b42d56cc747ca514, 35pp. The 212% is NOT discarded: the FY2025 Annual "
+        "Report states an average LCR of 212% for 2025 and 228% for 2024, both on the average "
+        "basis, against the 152% and 207% point-in-time figures on this row. The Bank "
+        "publishes both and this project records both; the row keeps one basis throughout and "
+        "the other is written here. Same spot-vs-average distinction documented across this "
+        "project (e.g. ALRAYAN Bank). "
         "FY2017/FY2016/FY2015 come from the FY2017 Pillar 3 document's own 3-year bar chart "
         "(basis not separately stated in that document - not confirmed spot vs. average). "
         "FY2014: not disclosed - plausible, since the EU LCR requirement only phased in from "
@@ -1090,9 +1103,11 @@ metric(
         "acronym appears, the figure does not. Each page was read in full; no LCR percentage is "
         "printed anywhere in either report."
     ),
-    note="MIXED BASIS ROW - read the cell labels. FY2025 and FY2020 are average-throughout-year "
-         "figures taken from the Annual Report; FY2021-FY2024 are point-in-time at 31 December "
-         "(Pillar 3 KM1); FY2015-FY2017's own basis is not stated in their source document. "
+    note="MIXED BASIS ROW - read the cell labels. FY2020 is an average-throughout-year figure "
+         "taken from the Annual Report; FY2021-FY2025 are point-in-time at 31 December (Pillar 3 "
+         "- KM1 for FY2021-FY2024, the p.6 Key Metrics chart for FY2025, which prints the same "
+         "series); FY2015-FY2017's own basis is not stated in their source document. The FY2025 "
+         "Annual Report's own average figures (2025: 212%, 2024: 228%) are in the source note. "
          "FY2019 and FY2018 are stated non-disclosures, evidenced from those years' own Annual "
          "Reports (see source note), not blanks left by an unfinished search.",
 )
@@ -1187,7 +1202,14 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "17.46%", "FY2024": "19.65%", "FY2023": "17.75%", "FY2022": "12.24%", "FY2021": "12.36%", "FY2020": "13.76%", "FY2019": "14.04%", "FY2018": "13.5%", "FY2017": "15.1%", "FY2016": "13.0%", "FY2015": "12.6%", "FY2014": "13.3%"}),
         ("Total Capital Ratio", {"FY2025": "24.03%", "FY2024": "25.95%", "FY2023": "23.83%", "FY2022": "15.70%", "FY2021": "15.49%", "FY2020": "16.89%", "FY2019": "17.36%", "FY2018": "17.0%", "FY2017": "19.0%", "FY2016": "16.9%", "FY2015": "16.2%", "FY2014": "17.9%"}),
         ("Leverage Ratio", {"FY2025": "14.25%", "FY2024": "17.67%", "FY2023": "20.66%", "FY2022": "13.98%", "FY2021": "11.51%", "FY2017": "12.08%", "FY2016": "9.62%"}),
-        ("LCR", {"FY2025": "212%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%", "FY2020": "179%", "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"}),
+        # OVERVIEW RE-SYNCED TO THE LCR SHEET 2026-10-08. FY2025 was a STALE
+        # DUPLICATE: the correction recorded on the LCR sheet above, made earlier
+        # the same day, changed that cell from 212% to 152% and was never applied
+        # to this list, which is a separate hand-written copy. 212% is the Annual
+        # Report's AVERAGE LCR for 2025; 152% is the point-in-time figure the sheet
+        # now carries, and the 212% remains recorded in the sheet's source note.
+        # Found by scripts/check_overview_ties.py.
+        ("LCR", {"FY2025": "152%", "FY2024": "207%", "FY2023": "351%", "FY2022": "207%", "FY2021": "203%", "FY2020": "179%", "FY2017": "158%", "FY2016": "143%", "FY2015": "160%"}),
     ],
     note="Figures are duplicated from the detail sheets for at-a-glance trend viewing; see each sheet's own "
          "source citation for the underlying document/page, and the Cash Flow Statement / Statement of "

@@ -822,7 +822,17 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£'000 (conv. from USD)",
     ratios=[
-        ("Total Capital Ratio", CAPITAL_RATIO),
+        # LABEL MADE EXPLICIT 2026-10-08 (user decision: keep the proxy). The
+        # Overview deliberately headlines FidBank's OWN published "Capital
+        # Ratio" (Shareholders' Funds / RWA) rather than the Pillar 3 KM1
+        # ratio carried on the Total Capital Ratio sheet, because the proxy is
+        # the only basis disclosed for all five years - the KM1 basis has no
+        # FY2025 figure at all, so headlining it would blank the newest year.
+        # The two bases demonstrably differ (FY2024: 43% proxy vs 41.28% KM1),
+        # so the label now names the basis instead of leaving the difference
+        # to look like a transcription break. Both rows remain on the detail
+        # sheet, each as printed; neither is reconciled to the other.
+        ("Total Capital Ratio (AR proxy: Shareholders' Funds ÷ RWA)", CAPITAL_RATIO),
         ("LCR", LCR),
     ],
     note="FY2021 cash flow/balance sheet/P&L not available (see Cash Flow Statement sheet's source note) - "

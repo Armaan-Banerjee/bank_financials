@@ -840,7 +840,7 @@ bw.add_not_disclosed_metric_sheets(["MREL Ratio"], sources("p3"), statements={"M
 
 bw.add_overview_sheet(
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 1795507271, "FY2024": 1378954291, "FY2023": 1351097994, "FY2022": 1326047320, "FY2021": 1212752908}),
+        ("Total assets", {"FY2025": 1795507271, "FY2024": 1378954291, "FY2023": 1351097994, "FY2022": 1326047320, "FY2021": 1212752908, "FY2017": 1438234}),
         ("Loans and advances to customers", {"FY2025": 487762621, "FY2024": 181521123, "FY2023": 61860769, "FY2022": 46503635, "FY2021": 37151779}),
         ("Customer accounts", {"FY2025": 1388254579, "FY2024": 1032921877, "FY2023": 956051029, "FY2022": 608680668, "FY2021": 248279581}),
         ("Total capital and reserves", {"FY2025": 176586699, "FY2024": 172646981, "FY2023": 166857249, "FY2022": 160206249, "FY2021": 154504970}),

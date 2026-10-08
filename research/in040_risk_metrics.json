@@ -8,7 +8,8 @@
       "1004742": {
         "2022": "Operating income and expenses - Loss for the year",
         "2023": "Operating income and expenses - Loss for the year",
-        "2024": "Operating income and expenses - Loss for the year"
+        "2024": "Operating income and expenses - Loss for the year",
+        "2025": "Operating income and expenses - Loss for the year"
       },
       "114216": {
         "2018": "Operating expenses - (Loss)/profit for the year",
@@ -21,6 +22,9 @@
         "2025": "Operating expenses - (Loss)/profit for the year"
       },
       "114276": {
+        "2018": "Operating expenses - Profit for the year",
+        "2019": "Operating expenses - Profit for the year",
+        "2020": "Operating expenses - Profit for the year",
         "2021": "Operating expenses - Profit for the year",
         "2022": "Operating expenses - Profit for the year",
         "2023": "Operating expenses - Profit for the year",
@@ -92,7 +96,8 @@
         "2021": "Operating expenses - Profit for the year",
         "2022": "Operating expenses - Profit for the year",
         "2023": "Operating expenses - Profit for the year",
-        "2024": "Operating expenses - Profit for the year"
+        "2024": "Operating expenses - Profit for the year",
+        "2025": "Operating expenses - Profit for the year"
       },
       "119256": {
         "2008": "Income - Profit/(loss) for the year",
@@ -921,7 +926,8 @@
       "1004742": {
         "2022": -406520.0,
         "2023": -1769188.0,
-        "2024": -6193551.0
+        "2024": -6193551.0,
+        "2025": -10238793.0
       },
       "114216": {
         "2018": 1532.0,
@@ -934,6 +940,9 @@
         "2025": -581.0
       },
       "114276": {
+        "2018": 1411.0,
+        "2019": -3650.0,
+        "2020": 22.0,
         "2021": 1638.0,
         "2022": 2352.0,
         "2023": 3237.0,
@@ -1005,7 +1014,8 @@
         "2021": 30451.0,
         "2022": 17764.0,
         "2023": 35239.0,
-        "2024": 8654.0
+        "2024": 8654.0,
+        "2025": 15956.0
       },
       "119256": {
         "2008": -2040.7,
@@ -1831,12 +1841,12 @@
       }
     },
     "volatility_stdev_of_yoy_pct": {
-      "1004742": 42.56,
+      "1004742": 112.66,
       "114216": 232.8,
-      "114276": 20.38,
+      "114276": 2584.11,
       "114724": 24.32,
       "116316": 184.98,
-      "119250": 1322.63,
+      "119250": 1309.64,
       "119256": 289.81,
       "119278": 91.71,
       "121873": 717.37,
@@ -1915,7 +1925,8 @@
     "yoy_change_pct": {
       "1004742": {
         "2023": -335.2,
-        "2024": -250.08
+        "2024": -250.08,
+        "2025": -65.31
       },
       "114216": {
         "2019": -164.69,
@@ -1927,6 +1938,9 @@
         "2025": -145.28
       },
       "114276": {
+        "2019": -358.68,
+        "2020": 100.6,
+        "2021": 7345.45,
         "2022": 43.59,
         "2023": 37.63,
         "2024": -7.88,
@@ -1993,7 +2007,8 @@
         "2021": 77.49,
         "2022": -41.66,
         "2023": 98.37,
-        "2024": -75.44
+        "2024": -75.44,
+        "2025": 84.38
       },
       "119256": {
         "2009": 86.89,
@@ -2749,7 +2764,8 @@
         "2021": 44.03,
         "2022": -245.92,
         "2023": 71.13,
-        "2024": 88.13
+        "2024": 88.13,
+        "2025": 52.92
       },
       "106054": {
         "2020": 5.45,
@@ -2770,6 +2786,9 @@
         "2025": 3.67
       },
       "114276": {
+        "2018": 8.84,
+        "2019": 7.76,
+        "2020": 6.98,
         "2021": 7.43,
         "2022": 7.11,
         "2023": 7.33,
@@ -3812,7 +3831,8 @@
         "2021": 12.84,
         "2022": 10.27,
         "2023": 10.04,
-        "2024": 9.91
+        "2024": 9.91,
+        "2025": 9.64
       },
       "817008": {
         "2019": 12.75,
@@ -4109,7 +4129,8 @@
         "2022": 11.3,
         "2023": 10.8,
         "2024": 13.4,
-        "2025": 12.6
+        "2025": 12.6,
+        "2026": 12.6
       },
       "124772": {
         "2020": 4.61,
@@ -4980,7 +5001,7 @@
       },
       "800542": {
         "2019": 54.3,
-        "2020": 38.0,
+        "2020": 38.1,
         "2021": 20.0,
         "2022": 14.34,
         "2023": 13.48,
@@ -5094,7 +5115,7 @@
   "loan_concentration_quality": {
     "coverage": {
       "banks_with_coverage_or_npl_disclosure": 122,
-      "banks_with_stage_data": 107
+      "banks_with_stage_data": 108
     },
     "coverage_and_npl_ratios": {
       "106054": [
@@ -5253,6 +5274,24 @@
           "year": 2021
         },
         {
+          "label": "Derived ratios - NPL ratio (Stage 3 gross / Total gross)",
+          "value": 7.77,
+          "value_raw": "7.77%",
+          "year": 2020
+        },
+        {
+          "label": "Derived ratios - NPL ratio (Stage 3 gross / Total gross)",
+          "value": 6.45,
+          "value_raw": "6.45%",
+          "year": 2019
+        },
+        {
+          "label": "Derived ratios - NPL ratio (Stage 3 gross / Total gross)",
+          "value": 6.19,
+          "value_raw": "6.19%",
+          "year": 2018
+        },
+        {
           "label": "Derived ratios - Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)",
           "value": 53.47,
           "value_raw": "53.47%",
@@ -5281,6 +5320,24 @@
           "value": 60.31,
           "value_raw": "60.31%",
           "year": 2021
+        },
+        {
+          "label": "Derived ratios - Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)",
+          "value": 59.94,
+          "value_raw": "59.94%",
+          "year": 2020
+        },
+        {
+          "label": "Derived ratios - Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)",
+          "value": 71.12,
+          "value_raw": "71.12%",
+          "year": 2019
+        },
+        {
+          "label": "Derived ratios - Stage 3 coverage ratio (Stage 3 ECL / Stage 3 gross)",
+          "value": 62.63,
+          "value_raw": "62.63%",
+          "year": 2018
         }
       ],
       "114724": [
@@ -5348,6 +5405,12 @@
       "119250": [
         {
           "label": "Derived ratios (as reported) - Non-performing loan ratio (Stage 3 gross / total gross)",
+          "value": 5.21,
+          "value_raw": "5.21%",
+          "year": 2025
+        },
+        {
+          "label": "Derived ratios (as reported) - Non-performing loan ratio (Stage 3 gross / total gross)",
           "value": 5.8,
           "value_raw": "5.80%",
           "year": 2024
@@ -5372,6 +5435,12 @@
         },
         {
           "label": "Derived ratios (as reported) - Total coverage ratio (total ECL / total gross)",
+          "value": 0.97,
+          "value_raw": "0.97%",
+          "year": 2025
+        },
+        {
+          "label": "Derived ratios (as reported) - Total coverage ratio (total ECL / total gross)",
           "value": 0.78,
           "value_raw": "0.78%",
           "year": 2024
@@ -5393,6 +5462,12 @@
           "value": 0.76,
           "value_raw": "0.76%",
           "year": 2021
+        },
+        {
+          "label": "Derived ratios (as reported) - Stage 3 coverage ratio",
+          "value": 17.61,
+          "value_raw": "17.61%",
+          "year": 2025
         },
         {
           "label": "Derived ratios (as reported) - Stage 3 coverage ratio",
@@ -14894,6 +14969,12 @@
       "815220": [
         {
           "label": "Derived asset-quality ratios - ECL coverage ratio (Total ECL allowance / Gross loans)",
+          "value": 0.73,
+          "value_raw": "0.73%",
+          "year": 2025
+        },
+        {
+          "label": "Derived asset-quality ratios - ECL coverage ratio (Total ECL allowance / Gross loans)",
           "value": 0.67,
           "value_raw": "0.67%",
           "year": 2024
@@ -15471,6 +15552,34 @@
       ]
     },
     "stage_balances": {
+      "1004742": {
+        "2025": {
+          "Expected credit loss by risk grade,  (note 24, printed p. 64) - Good - Stage 1 ECL": {
+            "stage_1": 689.0
+          },
+          "Expected credit loss by risk grade,  (note 24, printed p. 64) - Satisfactory - Stage 1 ECL": {
+            "stage_1": 487.0
+          },
+          "Expected credit loss by risk grade,  (note 24, printed p. 64) - Strong - Stage 1 ECL": {
+            "stage_1": 1154.0
+          },
+          "Expected credit loss by risk grade,  (note 24, printed p. 64) - Total expected credit loss - Stage 1": {
+            "stage_1": 2330.0
+          },
+          "Net carrying amount of exposure by risk grade,  (note 24, printed p. 64) - Good - Stage 1": {
+            "stage_1": 3545767.0
+          },
+          "Net carrying amount of exposure by risk grade,  (note 24, printed p. 64) - Satisfactory - Stage 1": {
+            "stage_1": 1715135.0
+          },
+          "Net carrying amount of exposure by risk grade,  (note 24, printed p. 64) - Strong - Stage 1": {
+            "stage_1": 37547838.0
+          },
+          "Net carrying amount of exposure by risk grade,  (note 24, printed p. 64) - Total net carrying amount - Stage 1": {
+            "stage_1": 42808740.0
+          }
+        }
+      },
       "106054": {
         "2020": {
           "Expected credit loss (ECL) allowance - ECL allowance": {
@@ -15560,6 +15669,48 @@
         }
       },
       "114276": {
+        "2018": {
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - expected credit loss": {
+            "stage_1": 151.0,
+            "stage_2": 204.0,
+            "stage_3": 3133.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount": {
+            "stage_1": 68277.0,
+            "stage_2": 7491.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount ()": {
+            "stage_3": 5002.0
+          }
+        },
+        "2019": {
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - expected credit loss": {
+            "stage_1": 119.0,
+            "stage_2": 147.0,
+            "stage_3": 3706.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount": {
+            "stage_1": 66728.0,
+            "stage_2": 8878.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount ()": {
+            "stage_3": 5211.0
+          }
+        },
+        "2020": {
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - expected credit loss": {
+            "stage_1": 188.0,
+            "stage_2": 387.0,
+            "stage_3": 3592.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount": {
+            "stage_1": 60252.0,
+            "stage_2": 10891.0
+          },
+          "Loans and advances to customers (amortised cost) by IFRS 9 stage - gross carrying amount ()": {
+            "stage_3": 5993.0
+          }
+        },
         "2021": {
           "Loans and advances to customers (amortised cost) by IFRS 9 stage - expected credit loss": {
             "stage_1": 151.0,
@@ -15799,6 +15950,18 @@
             "stage_1": 1526322.0,
             "stage_2": 57078.0,
             "stage_3": 97542.0
+          }
+        },
+        "2025": {
+          "Credit quality by IFRS 9 stage, net of ECL (IFRS 9 adopted 1 January 2018 - see IFRS 9 TRANSITION NOTE; not applicable pre-2018) - ()": {
+            "stage_1": 1343780.0,
+            "stage_2": 18847.0,
+            "stage_3": 61784.0
+          },
+          "Gross carrying amount by IFRS 9 stage - (), gross": {
+            "stage_1": 1344484.0,
+            "stage_2": 18856.0,
+            "stage_3": 74992.0
           }
         }
       },
@@ -23104,6 +23267,13 @@
             "stage_2": 4547.0,
             "stage_3": 19576.0
           }
+        },
+        "2025": {
+          "Expected credit loss (ECL) allowance, by IFRS 9 stage": {
+            "stage_1": 12397.0,
+            "stage_2": 8501.0,
+            "stage_3": 19731.0
+          }
         }
       },
       "817008": {
@@ -23814,9 +23984,9 @@
   },
   "rwa_density": {
     "coverage": {
-      "bank_years_with_category_breakdown": 887,
-      "bank_years_with_rwa_to_assets": 923,
-      "bank_years_with_total_rwa": 944,
+      "bank_years_with_category_breakdown": 893,
+      "bank_years_with_rwa_to_assets": 928,
+      "bank_years_with_total_rwa": 950,
       "implausible_rwa_category_sum_skipped": 6,
       "implausible_rwa_to_assets_skipped": 7
     },
@@ -28193,6 +28363,13 @@
           "value": 18.8
         }
       ],
+      "124750:2026": [
+        {
+          "label": "Total risk weighted assets",
+          "pct_of_total_rwa": 100.0,
+          "value": 9049.8
+        }
+      ],
       "124772:2020": [
         {
           "label": "Credit risk - Credit risk (excluding CCR) - standardised approach",
@@ -28680,6 +28857,94 @@
           "label": "Risk-weighted exposure amounts by category - Amounts below thresholds for deduction (subject to 250% risk weight, for information)",
           "pct_of_total_rwa": 0.03,
           "value": 4.9
+        }
+      ],
+      "140848:2022": [
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 89.98,
+          "value": 612901.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Counterparty credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 1.99,
+          "value": 13533.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Market risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Operational risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 8.03,
+          "value": 54694.0
+        }
+      ],
+      "140848:2023": [
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 86.4,
+          "value": 440893.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Counterparty credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 1.19,
+          "value": 6053.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Market risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Operational risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 12.41,
+          "value": 63318.0
+        }
+      ],
+      "140848:2024": [
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 80.68,
+          "value": 480687.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Counterparty credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 4.95,
+          "value": 29497.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Market risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Operational risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 14.37,
+          "value": 85593.0
+        }
+      ],
+      "140848:2025": [
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 81.33,
+          "value": 577952.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Counterparty credit risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 1.01,
+          "value": 7208.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Market risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 0.0,
+          "value": 0.0
+        },
+        {
+          "label": "DBIGB UK Regulated Group basis (consolidated; not DBUKB solo) - Operational risk RWA \u2014 DBIGB Group",
+          "pct_of_total_rwa": 17.65,
+          "value": 125423.0
         }
       ],
       "143336:2021": [
@@ -36528,68 +36793,90 @@
           "value": 40.2
         }
       ],
+      "222030:2014": [
+        {
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Operational risk (Table 5)",
+          "pct_of_total_rwa": 3.94,
+          "value": 93946.0
+        },
+        {
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Market risk - Position risk (Table 5)",
+          "pct_of_total_rwa": 0.0,
+          "value": 72.0
+        },
+        {
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Credit valuation adjustment (Table 5)",
+          "pct_of_total_rwa": 1.18,
+          "value": 28290.0
+        },
+        {
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
+          "pct_of_total_rwa": 94.88,
+          "value": 2265039.0
+        }
+      ],
       "222030:2015": [
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Operational risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Operational risk (Table 5)",
           "pct_of_total_rwa": 5.51,
           "value": 107701.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Market risk - Position risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Market risk - Position risk (Table 5)",
           "pct_of_total_rwa": 0.0,
           "value": 90.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Credit valuation adjustment (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Credit valuation adjustment (Table 5)",
           "pct_of_total_rwa": 1.75,
           "value": 34183.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
           "pct_of_total_rwa": 92.73,
           "value": 1811655.0
         }
       ],
       "222030:2016": [
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Operational risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Operational risk (Table 5)",
           "pct_of_total_rwa": 7.18,
           "value": 127677.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Market risk - Position risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Market risk - Position risk (Table 5)",
           "pct_of_total_rwa": 0.01,
           "value": 243.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Credit valuation adjustment (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Credit valuation adjustment (Table 5)",
           "pct_of_total_rwa": 0.48,
           "value": 8557.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
           "pct_of_total_rwa": 92.32,
           "value": 1640881.0
         }
       ],
       "222030:2017": [
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Operational risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Operational risk (Table 5)",
           "pct_of_total_rwa": 6.99,
           "value": 125483.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Market risk - Position risk (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Market risk - Position risk (Table 5)",
           "pct_of_total_rwa": 0.01,
           "value": 135.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Credit valuation adjustment (Table 5)",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Credit valuation adjustment (Table 5)",
           "pct_of_total_rwa": 0.11,
           "value": 1919.0
         },
         {
-          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2015-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
+          "label": "Pre-OV1 Table 5 capital-requirement categories (FY2014-FY2017) - Total Credit and Counterparty Credit Risk / Total Credit Risk",
           "pct_of_total_rwa": 92.89,
           "value": 1666837.0
         }
@@ -37380,11 +37667,6 @@
           "label": "Template UK OV1 - Overview of risk weighted exposure amounts - Operational risk",
           "pct_of_total_rwa": 10.46,
           "value": 4145.0
-        },
-        {
-          "label": "Credit risk by CRR Article 112 exposure category (FY2016-FY2020 editions' own, differently-structured analysis - see source note) - Exposures to central governments or central banks (Bank of England Reserve Account)",
-          "pct_of_total_rwa": 0.0,
-          "value": 0.0
         },
         {
           "label": "Credit risk by CRR Article 112 exposure category (FY2016-FY2020 editions' own, differently-structured analysis - see source note) - Retail exposures (unsecured loans)",
@@ -45698,6 +45980,12 @@
         "2024": 43.23,
         "2025": 39.42
       },
+      "140848": {
+        "2022": 28.52,
+        "2023": 24.17,
+        "2024": 18.98,
+        "2025": 29.24
+      },
       "143336": {
         "2021": 42.32,
         "2022": 41.78,
@@ -46108,6 +46396,7 @@
         "2025": 58.01
       },
       "222030": {
+        "2014": 62.41,
         "2015": 60.81,
         "2016": 65.29,
         "2017": 73.8,
@@ -46557,7 +46846,7 @@
       "800542": {
         "2018": 288.44,
         "2019": 171.47,
-        "2020": 124.14,
+        "2020": 124.27,
         "2021": 74.08,
         "2022": 48.58,
         "2023": 54.46,

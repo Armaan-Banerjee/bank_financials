@@ -2,7 +2,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from bank_workbook import BankWorkbook
 
-YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first, y/e 31 July
+YEARS = ["FY2026", "FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]  # most recent first, y/e 31 July
 YEAR_LABEL = {y: y for y in YEARS}
 
 AR2025_URL = ("https://find-and-update.company-information.service.gov.uk/company/00195626/"
@@ -34,6 +34,10 @@ AR2021_URL = ("https://find-and-update.company-information.service.gov.uk/compan
 # application/pdf + %PDF magic bytes.
 CBG_REPORTS_INDEX = ("https://www.closebrothers.com/s/investor-relations/investor-information/"
                      "results-reports-and-presentations")
+CBG_P3_2026_URL = ("https://storage.pardot.com/186742/1790843950ym8jHPZa/"
+                   "Pillar_3_FY26___30.09.26.pdf")
+CBG_AR_2026_URL = ("https://storage.pardot.com/186742/1790948011I3M0UmZ0/"
+                   "Close_Brothers_Annual_Report_2026_261002___Final_for_website.pdf")
 CBG_P3_2025_URL = "https://storage.pardot.com/186742/1779102089T5UqOZ2F/Pillar3Disclosures2025.pdf"
 CBG_P3_2024_URL = "https://storage.pardot.com/186742/177910260307OnlFA4/Pillar_3_Disclosures_2024.pdf"
 CBG_P3_2023_URL = "https://storage.pardot.com/186742/17791028104aOkhZu0/Pillar_3_Disclosures_2023.pdf"
@@ -72,7 +76,54 @@ LATEST_EDITION_NOTE = (
     "Preliminary Results comes from the financial calendar read on 2026-09-16 and was NOT re-read on "
     "2026-09-19 (the calendar page is behind the same script shell). Expect the Group Annual Report and "
     "Pillar 3 Disclosures 2026 around then (the 2025 editions are dated 3 October 2025), and Close Brothers "
-    "Limited's own statutory accounts at Companies House around December 2026."
+    "Limited's own statutory accounts at Companies House around December 2026.\n\n"
+    "FY2026 RE-CHECK, 2026-10-07 - THE PILLAR 3 IS OUT AND AN FY2026 COLUMN HAS BEEN ADDED TO THE "
+    "REGULATORY SHEETS ONLY. Close Brothers Group plc published its Pillar 3 disclosures for the year "
+    f"ended 31 July 2026 on 2 October 2026 ({CBG_P3_2026_URL}, 80pp, verified HTTP 200 + Content-Type "
+    "application/pdf + %PDF), and its Annual Report 2026 on the same day "
+    f"({CBG_AR_2026_URL}, 222pp); the preliminary results were released 29 September 2026. Routes: "
+    "closebrothers.com's 'Results, reports and presentations' page is STILL a script-rendered shell to a "
+    "command-line fetch (HTTP 200, ~128kB, no document links) and the direct "
+    "/system/files/rrp/reports/ path returns HTTP 401 to a redirect-to-login even for the KNOWN-GOOD "
+    "FY2025 file, so that route remains blocked rather than negative; the page was read instead through a "
+    "rendering fetch, which yielded files.closebrothers.com Pardot redirectors that serve an HTML <embed> "
+    "wrapper whose src is the storage.pardot.com PDF - the same two-step this script already documents. "
+    "Investegate's RNS list for CBG independently dates both documents (Pillar 3 disclosures 01-02 Oct "
+    "2026; Annual Financial Report 02 Oct 2026).\n"
+    "WHAT FY2026 DOES AND DOES NOT SUPPORT. The Pillar 3's UK KM1 carries the 'Individual' block - CBL on "
+    "the CRR article 9 individual-consolidation basis - for 31 July 2026, so the KM1 sheet and the capital, "
+    "RWA, leverage, LCR and NSFR metric sheets all gain a real FY2026 column. NOTHING ELSE DOES. Close "
+    "Brothers Limited's own statutory accounts for the year to 31 July 2026 are NOT yet filed: Companies "
+    "House filing history for 00195626, read UNFILTERED on page 1 on 2026-10-07 and re-read UNFILTERED "
+    "on pages 1 AND 2 on 2026-10-08, still shows the newest "
+    "accounts entry as \"Group of companies' accounts made up to 31 July 2025\" (filed 20 Dec 2025), with "
+    "later entries MR01 (03 Jul 2026), RESOLUTIONS (21 Mar 2026) and MA (19 Mar 2026). The same two pages "
+    "return the FY2024 and FY2021 accounts entries this script already cites, which is the positive "
+    "control that the index was actually read rather than merely requested. So the Balance "
+    "Sheet, Profit & Loss, Statement of Changes in Equity, Cash Flow Statement and Asset Quality sheets - "
+    "all of which are built from CBL's OWN filings, never from the listed group's accounts - keep an EMPTY "
+    "FY2026 column. That column is a real, visible gap at the newest end, which is the intended treatment. "
+    "Close Brothers Limited's FY2026 accounts are expected at Companies House around December 2026 (the "
+    "FY2025 filing landed 20 December 2025); the statutory deadline for a 31 July 2026 year-end is 30 "
+    "April 2027.\n"
+    "ENTITY TRAP, FOUND 2026-10-07 AND WORTH RECORDING. In earlier years the LCR and NSFR metric sheets "
+    "took their figures from the Annual Report's Strategic Report liquidity/funding narrative, because "
+    "that narrative printed CBL's own ratios (FY2025: LCR 943.2%, NSFR 163.0%, both equal to the Pillar 3 "
+    "KM1 'Individual' column). THE ANNUAL REPORT 2026 NARRATIVE PRINTS THE GROUP'S INSTEAD - 'The group's "
+    "12-month average LCR to 31 July 2026 was 1,113.5% (31 July 2025: 1,011.6%)' (printed p.91) and "
+    "'The four-quarter average NSFR to 31 July 2026 was 144.0% (31 July 2025: 145.9%)' (printed p.54, "
+    "repeated p.144) - which are the KM1 'Group' column (row 17 = 1,113.5 and row 20 = 144.0 under "
+    "'Group', column a), a different entity. FY2026's LCR and NSFR are therefore taken from the Pillar 3 "
+    "UK KM1 'Individual' column (857.6% and 157.9%) and the Annual Report's group figures are NOT "
+    "substituted. A source that carried the right entity for four years is not guaranteed to carry it in "
+    "the fifth.\n"
+    "BASIS, AS THE FY2026 EDITION STATES IT (printed p.2, and footnote 5 to UK KM1 on printed p.4): 'For "
+    "liquidity and funding, the PRA supervises CBL on an individual basis, excluding all subsidiary "
+    "undertakings. For capital and leverage, the PRA supervises CBL on an individual consolidation basis "
+    "as permitted under CRR Article 9.' So the 'Individual' column is NOT one basis throughout: rows 1-14 "
+    "(capital, RWAs, SREP, buffers, leverage) are the article 9 individual-consolidation group, while "
+    "rows 15-20 (LCR, NSFR) are CBL alone excluding its subsidiaries. The edition prints both under one "
+    "column heading; the distinction is the bank's own and is reproduced rather than reconciled."
 )
 
 ENTITY_NOTE = (
@@ -126,7 +177,32 @@ STATEMENTS_ENTITY_NOTE = (
     "filings at Companies House - NOT the wider Close Brothers Group plc's own consolidated accounts (a "
     "separate filing). All 3 filings used (FY2025, FY2023, FY2021) are fully scanned/image-only; figures "
     "were transcribed via page-image review. FY2024/FY2022 figures are each sourced from the following "
-    "year's own filing's comparative column (no separate FY2024/FY2022 filing was sourced)."
+    "year's own filing's comparative column (no separate FY2024/FY2022 filing was sourced).\n\n"
+    "THE FY2026 COLUMN ON THIS SHEET IS EMPTY, AND THAT IS A REAL GAP RATHER THAN AN OVERSIGHT. Close "
+    "Brothers Limited's financial year to 31 July 2026 has ended, but CBL'S OWN STATUTORY ACCOUNTS FOR IT "
+    "ARE NOT YET FILED. Checked 2026-10-07 on the Companies House filing history for company 00195626, "
+    "read UNFILTERED on page 1: the newest accounts entry is still \"Group of companies' accounts made up "
+    "to 31 July 2025\", filed 20 December 2025. Its listed PARENT, Close Brothers Group plc, HAS published "
+    "both its Annual Report 2026 and its Pillar 3 disclosures for the year ended 31 July 2026 (both 2 "
+    "October 2026), and the Pillar 3's UK KM1 'Individual' block is why this workbook's regulatory sheets "
+    "DO carry an FY2026 column - but the group's accounts are a different reporting entity and are never "
+    "substituted for CBL's own on these statement sheets. Expect CBL's FY2026 filing at Companies House "
+    "around December 2026 (FY2025's landed 20 December 2025); the statutory deadline for a 31 July 2026 "
+    "year-end is 30 April 2027."
+)
+
+# GA-020 outcome vocabulary. The FY2026 column on the four statement sheets is
+# EMPTY and that is correct (CBL's own accounts for y/e 31 July 2026 are not
+# filed), but an empty column cannot say WHY it is empty - the gap census reads
+# it as unexplained. So each statement sheet carries one trailing status row,
+# placed AFTER that sheet's last TOTAL: a run of DATA rows not terminated by a
+# TOTAL is never reconciled, so it cannot disturb any block's arithmetic. Same
+# shape Guaranty Trust and Monument already use. The column itself stays empty
+# and visible, which is the intended treatment for a gap at the NEWEST end.
+FY2026_STATEMENTS_PENDING = (
+    "Not published yet – CBL's own FY2026 statutory accounts are not filed: Companies House 00195626, "
+    "read unfiltered pp.1-2 on 2026-10-08, still shows y/e 31 Jul 2025 (filed 20 Dec 2025) as newest. "
+    "Expected ~Dec 2026; statutory deadline 30 Apr 2027."
 )
 
 STATEMENTS_SOURCES = (
@@ -252,6 +328,9 @@ bw.add_balance_sheet_sheet(
          {"FY2025": 1576.8, "FY2024": 1695.1, "FY2023": 1336.4, "FY2022": 1326.0, "FY2021": 1272.4}),
         ("TOTAL", "Total liabilities and equity",
          {"FY2025": 13132.8, "FY2024": 13053.2, "FY2023": 12488.1, "FY2022": 11508.3, "FY2021": 10950.9}),
+
+        ("SECTION", "FY2026 status", {}),
+        ("DATA", "FY2026 column", {"FY2026": FY2026_STATEMENTS_PENDING}),
     ],
     sources_text=BALANCE_SHEET_SOURCES,
     first_col_width=68,
@@ -321,6 +400,9 @@ bw.add_income_statement_sheet(
          {"FY2025": -12.0, "FY2024": -24.2, "FY2023": 10.2, "FY2022": 21.0, "FY2021": 6.0}),
         ("TOTAL", "Total comprehensive (loss)/income for the year",
          {"FY2025": -97.3, "FY2024": 106.2, "FY2023": 99.3, "FY2022": 184.1, "FY2021": 165.4}),
+
+        ("SECTION", "FY2026 status", {}),
+        ("DATA", "FY2026 column", {"FY2026": FY2026_STATEMENTS_PENDING}),
     ],
     sources_text=STATEMENTS_SOURCES,
     first_col_width=78,
@@ -499,6 +581,9 @@ rows = [
      {"FY2025": 1728.1, "FY2024": 2140.5, "FY2023": 1303.2, "FY2022": 1367.1, "FY2021": 1413.3}),
     ("TOTAL", "Cash and cash equivalents at end of year",
      {"FY2025": 2042.2, "FY2024": 1728.1, "FY2023": 2140.5, "FY2022": 1303.2, "FY2021": 1367.1}),
+
+    ("SECTION", "FY2026 status", {}),
+    ("DATA", "FY2026 column", {"FY2026": FY2026_STATEMENTS_PENDING}),
 ]
 
 bw.add_cash_flow_sheet(
@@ -545,6 +630,9 @@ bw.add_asset_quality_sheet(
          {"FY2025": "33.64%", "FY2024": "49.94%", "FY2023": "49.76%", "FY2022": "43.78%", "FY2021": "35.17%"}),
         ("DATA", "Total ECL coverage (total provision / total gross)",
          {"FY2025": "2.57%", "FY2024": "4.34%", "FY2023": "3.95%", "FY2022": "3.12%", "FY2021": "3.21%"}),
+
+        ("SECTION", "FY2026 status", {}),
+        ("DATA", "FY2026 column", {"FY2026": FY2026_STATEMENTS_PENDING}),
     ],
     sources_text=(
         "Sources - Close Brothers Limited's own Notes to the Consolidated Accounts, Note 10 'Loans and "
@@ -661,6 +749,10 @@ KM1_SOURCES = (
     "Sources - Close Brothers Limited ('CBL') on the CRR article 9 individual-consolidation basis, read "
     "from the 'Individual' columns of Close Brothers Group plc's own annual Pillar 3 UK KM1. Each year "
     "comes from the edition in which it is the REPORTING year, except FY2022 - see below. Amounts £m.\n"
+    f"FY2026: Pillar 3 Disclosures 2026 (year ended 31 July 2026), 'Annex I: Key metrics and overview of "
+    f"risk-weighted exposure amounts / UK KM1 - Key metrics', printed pp.3-4 (the table breaks across two "
+    f"pages: capital/SREP/buffers/leverage on p.3, the LCR and NSFR blocks on p.4), column a under "
+    f"'Individual' (31 Jul 2026) - {CBG_P3_2026_URL}\n"
     f"FY2025: Pillar 3 Disclosures 2025 (year ended 31 July 2025), 'Annex I: Key metrics and overview of "
     f"risk-weighted exposure amounts / UK KM1 - Key metrics', printed pp.3-4, column a under 'Individual' "
     f"(31 Jul 2025) - {CBG_P3_2025_URL}\n"
@@ -712,70 +804,96 @@ KM1_SOURCES = (
     "the correction recorded on the Leverage Ratio sheet.\n\n"
     "PRECISION IS AS PRINTED: one decimal place throughout, including '0.0' for the FY2022 "
     "countercyclical buffer, which is a printed zero and is kept as a zero rather than blanked.\n\n"
+    "FY2025's LEVERAGE ROWS WERE RESTATED BY THE FY2026 EDITION, AND THIS SHEET KEEPS THE ORIGINAL. "
+    "Footnote 6 to the Pillar 3 Disclosures 2026 UK KM1 (printed p.4) reads: 'The comparative leverage "
+    "ratio and leverage exposure disclosed for Close Brothers Limited (\"CBL\") as at 31 July 2025 have "
+    "been restated. The leverage ratio previously reported as 12.6% has been revised to 12.9% and "
+    "leverage exposure previously reported as £11.3 billion has been revised to £11.1 billion.' Rows 13 "
+    "and 14 therefore read 11,323.0 / 12.6% for FY2026's 31 Jul 2025 comparative in THIS workbook - the "
+    "figures the Pillar 3 Disclosures 2025 itself printed for its own reporting year - while the FY2026 "
+    "edition's comparative column prints 11,104.0 / 12.9%. Each year is kept on its own edition's "
+    "printing and nothing has been restated; the disagreement is the finding. Note the collision this "
+    "creates for a reader: FY2026's OWN leverage ratio is also 12.6%, which is coincidence, not a "
+    "carried-forward figure.\n\n"
+    "FY2026 AT1 AND TIER 2 ARE NOT SPLIT OUT FOR CBL AND ARE LEFT BLANK RATHER THAN DERIVED. The Tier 1 "
+    "Capital and Total Capital sheets carry an 'of which' row that earlier years fill. The Pillar 3 "
+    "Disclosures 2026 states (printed p.2) that 'The only quantitative disclosures presented on an "
+    "individual consolidation basis are UK KM1', and UK KM1 has no AT1 or Tier 2 row - it prints rows 1, "
+    "2 and 3 only. Subtracting row 1 from row 2 would give 200.0, which is almost certainly right and is "
+    "still a back-solved figure the bank did not publish at this entity level, so the cells stay blank.\n"
+    "CHECKED AND DELIBERATELY NOT USED, 2026-10-08: the Annual Report 2026's note 25 'Investments in "
+    "subsidiaries' (printed p.210) does name CBL and does print £200.0 million at 31 July 2026 (31 July "
+    "2025: £200.0 million) - but as the carrying amount of CLOSE BROTHERS GROUP PLC'S OWN investment in "
+    "the AT1 securities of CBL in the COMPANY balance sheet, an accounting figure for a different "
+    "reporting entity, not a statement of CBL's regulatory additional tier 1 own funds. In FY2025 and "
+    "FY2024 the 'of which' rows come from CBL's own statutory capital note, which for FY2026 is not yet "
+    "filed. Using note 25 would substitute an accounting balance of the parent for a regulatory figure of "
+    "the subsidiary and would land on the same 200.0 the back-solve gives, which is exactly why it is "
+    "recorded here as rejected rather than left unmentioned.\n\n"
     + LATEST_EDITION_NOTE
 )
 
 km1_rows = [
     ("SECTION", "Available own funds (amounts) — £m", {}),
     ("DATA", "1    Common equity tier 1 (\"CET1\") capital",
-     {"FY2025": 1229.2, "FY2024": 1326.4, "FY2023": 1139.6, "FY2022": 1194.4}),
+     {"FY2026": 1156.7, "FY2025": 1229.2, "FY2024": 1326.4, "FY2023": 1139.6, "FY2022": 1194.4}),
     ("DATA", "2    Tier 1 capital",
-     {"FY2025": 1429.2, "FY2024": 1526.4, "FY2023": 1139.6, "FY2022": 1194.4}),
+     {"FY2026": 1356.7, "FY2025": 1429.2, "FY2024": 1526.4, "FY2023": 1139.6, "FY2022": 1194.4}),
     ("DATA", "3    Total capital",
-     {"FY2025": 1629.2, "FY2024": 1726.4, "FY2023": 1339.6, "FY2022": 1394.4}),
+     {"FY2026": 1606.7, "FY2025": 1629.2, "FY2024": 1726.4, "FY2023": 1339.6, "FY2022": 1394.4}),
     ("SECTION", "Risk-weighted exposure amounts — £m", {}),
     ("DATA", "4    Total risk-weighted exposure amount",
-     {"FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6}),
+     {"FY2026": 9049.8, "FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6}),
     ("SECTION", "Capital ratios (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "5    Common equity tier 1 ratio (%)",
-     {"FY2025": "12.9%", "FY2024": "13.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
+     {"FY2026": "12.8%", "FY2025": "12.9%", "FY2024": "13.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
     ("DATA", "6    Tier 1 ratio (%)",
-     {"FY2025": "15.0%", "FY2024": "15.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
+     {"FY2026": "15.0%", "FY2025": "15.0%", "FY2024": "15.2%", "FY2023": "12.4%", "FY2022": "13.5%"}),
     ("DATA", "7    Total capital ratio (%)",
-     {"FY2025": "17.1%", "FY2024": "17.2%", "FY2023": "14.6%", "FY2022": "15.8%"}),
+     {"FY2026": "17.8%", "FY2025": "17.1%", "FY2024": "17.2%", "FY2023": "14.6%", "FY2022": "15.8%"}),
     ("SECTION", "Additional own funds requirements based on SREP (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "UK 7a    Additional CET1 SREP requirements (%)",
-     {"FY2025": "1.0%", "FY2024": "1.0%", "FY2023": "0.8%", "FY2022": "0.8%"}),
+     {"FY2026": "1.4%", "FY2025": "1.0%", "FY2024": "1.0%", "FY2023": "0.8%", "FY2022": "0.8%"}),
     ("DATA", "UK 7b    Additional AT1 SREP requirements (%)",
-     {"FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.3%"}),
+     {"FY2026": "0.4%", "FY2025": "0.3%", "FY2024": "0.3%", "FY2023": "0.3%", "FY2022": "0.3%"}),
     ("DATA", "UK 7c    Additional T2 SREP requirements (%)",
-     {"FY2025": "0.4%", "FY2024": "0.4%", "FY2023": "0.3%", "FY2022": "0.3%"}),
+     {"FY2026": "0.6%", "FY2025": "0.4%", "FY2024": "0.4%", "FY2023": "0.3%", "FY2022": "0.3%"}),
     ("DATA", "UK 7d    Total SREP own funds requirements (%)",
-     {"FY2025": "9.8%", "FY2024": "9.8%", "FY2023": "9.4%", "FY2022": "9.4%"}),
+     {"FY2026": "10.4%", "FY2025": "9.8%", "FY2024": "9.8%", "FY2023": "9.4%", "FY2022": "9.4%"}),
     ("SECTION", "Combined buffer requirement (as a percentage of risk-weighted exposure amount)", {}),
     ("DATA", "8    Capital conservation buffer (%)",
-     {"FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
+     {"FY2026": "2.5%", "FY2025": "2.5%", "FY2024": "2.5%", "FY2023": "2.5%", "FY2022": "2.5%"}),
     ("DATA", "9    Institution specific countercyclical capital buffer (%)",
-     {"FY2025": "1.9%", "FY2024": "1.9%", "FY2023": "1.9%", "FY2022": "0.0%"}),
+     {"FY2026": "1.9%", "FY2025": "1.9%", "FY2024": "1.9%", "FY2023": "1.9%", "FY2022": "0.0%"}),
     ("DATA", "11    Combined buffer requirement (%)",
-     {"FY2025": "4.4%", "FY2024": "4.4%", "FY2023": "4.4%", "FY2022": "2.5%"}),
+     {"FY2026": "4.4%", "FY2025": "4.4%", "FY2024": "4.4%", "FY2023": "4.4%", "FY2022": "2.5%"}),
     ("DATA", "UK 11a    Overall capital requirements (%)",
-     {"FY2025": "14.2%", "FY2024": "14.2%", "FY2023": "13.8%", "FY2022": "11.9%"}),
+     {"FY2026": "14.8%", "FY2025": "14.2%", "FY2024": "14.2%", "FY2023": "13.8%", "FY2022": "11.9%"}),
     ("DATA", "12    CET1 available after meeting total SREP own funds requirements (%)",
-     {"FY2025": "7.3%", "FY2024": "7.4%", "FY2023": "5.3%", "FY2022": "6.4%"}),
+     {"FY2026": "6.9%", "FY2025": "7.3%", "FY2024": "7.4%", "FY2023": "5.3%", "FY2022": "6.4%"}),
     ("SECTION", "Leverage ratio — amounts £m (rows 14a-14e removed by the bank: LREQ firms only)", {}),
     ("DATA", "13    Total exposure measure excluding claims on central banks",
-     {"FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9}),
+     {"FY2026": 10780.5, "FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9}),
     ("DATA", "14    Leverage ratio excluding claims on central banks (%)",
-     {"FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%"}),
+     {"FY2026": "12.6%", "FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%"}),
     ("SECTION", "Liquidity coverage ratio — amounts £m, 12-month average to the period end", {}),
     ("DATA", "15    Total high-quality liquid assets (\"HQLA\") (Weighted value - average)",
-     {"FY2025": 2477.8, "FY2024": 2197.8, "FY2023": 1931.8, "FY2022": 1259.9}),
+     {"FY2026": 2254.1, "FY2025": 2477.8, "FY2024": 2197.8, "FY2023": 1931.8, "FY2022": 1259.9}),
     ("DATA", "UK 16a    Cash outflows - Total weighted value",
-     {"FY2025": 1050.8, "FY2024": 945.2, "FY2023": 698.4, "FY2022": 569.7}),
+     {"FY2026": 1051.3, "FY2025": 1050.8, "FY2024": 945.2, "FY2023": 698.4, "FY2022": 569.7}),
     ("DATA", "UK 16b    Cash inflows - Total weighted value",
-     {"FY2025": 2145.8, "FY2024": 2206.1, "FY2023": 2036.1, "FY2022": 1778.9}),
+     {"FY2026": 2155.0, "FY2025": 2145.8, "FY2024": 2206.1, "FY2023": 2036.1, "FY2022": 1778.9}),
     ("DATA", "16    Total net cash outflows (adjusted value)",
-     {"FY2025": 262.7, "FY2024": 236.3, "FY2023": 174.6, "FY2022": 142.4}),
+     {"FY2026": 262.8, "FY2025": 262.7, "FY2024": 236.3, "FY2023": 174.6, "FY2022": 142.4}),
     ("DATA", "17    Liquidity coverage ratio (%)",
-     {"FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106.4%", "FY2022": "884.7%"}),
+     {"FY2026": "857.6%", "FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106.4%", "FY2022": "884.7%"}),
     ("SECTION", "Net stable funding ratio — amounts £m, four-quarter average to the period end", {}),
     ("DATA", "18    Total available stable funding",
-     {"FY2025": 10563.6, "FY2024": 10139.2, "FY2023": 9139.8}),
+     {"FY2026": 9815.0, "FY2025": 10563.6, "FY2024": 10139.2, "FY2023": 9139.8}),
     ("DATA", "19    Total required stable funding",
-     {"FY2025": 6479.7, "FY2024": 6839.1, "FY2023": 6505.1}),
+     {"FY2026": 6215.6, "FY2025": 6479.7, "FY2024": 6839.1, "FY2023": 6505.1}),
     ("DATA", "20    Net stable funding ratio (%)",
-     {"FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%"}),
+     {"FY2026": "157.9%", "FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%"}),
 ]
 
 bw.add_km1_sheet(
@@ -793,7 +911,7 @@ bw.add_km1_sheet(
 metric(
     "CET1 Capital", "£m",
     [("Common Equity Tier 1 (CET1) capital",
-      {"FY2025": 1229.2, "FY2024": 1326.4, "FY2023": 1139.6, "FY2022": 1194.4, "FY2021": 1224.9})],
+      {"FY2026": 1156.7, "FY2025": 1229.2, "FY2024": 1326.4, "FY2023": 1139.6, "FY2022": 1194.4, "FY2021": 1224.9})],
     P3_SOURCES,
     note="Shown after applying IFRS 9 transitional arrangements and the CRR transitional/qualifying own "
          "funds arrangements in force at the time, as each source table states.",
@@ -802,7 +920,7 @@ metric(
 metric(
     "CET1 Ratio", "%",
     [("CET1 capital ratio",
-      {"FY2025": "12.9%", "FY2024": "13.2%", "FY2023": "12.4%", "FY2022": "13.5%", "FY2021": "14.6%"})],
+      {"FY2026": "12.8%", "FY2025": "12.9%", "FY2024": "13.2%", "FY2023": "12.4%", "FY2022": "13.5%", "FY2021": "14.6%"})],
     P3_SOURCES,
     note="Transitional basis, as disclosed. On a fully-loaded basis (without IFRS 9 transitional and CRR "
          "qualifying own funds arrangements) the source reports state 12.8% for FY2025, 13.1% for FY2024, "
@@ -812,7 +930,7 @@ metric(
 metric(
     "Tier 1 Capital", "£m",
     [("Total Tier 1 capital",
-      {"FY2025": 1429.2, "FY2024": 1526.4, "FY2023": 1139.6, "FY2022": 1194.4, "FY2021": 1224.9}),
+      {"FY2026": 1356.7, "FY2025": 1429.2, "FY2024": 1526.4, "FY2023": 1139.6, "FY2022": 1194.4, "FY2021": 1224.9}),
      ("of which: Additional Tier 1 capital",
       {"FY2025": 200.0, "FY2024": 200.0})],
     P3_SOURCES,
@@ -822,7 +940,7 @@ metric(
 metric(
     "Tier 1 Ratio", "%",
     [("Tier 1 capital ratio",
-      {"FY2025": "15.0%", "FY2024": "15.2%", "FY2023": "12.4%", "FY2022": "13.5%", "FY2021": "14.6%"})],
+      {"FY2026": "15.0%", "FY2025": "15.0%", "FY2024": "15.2%", "FY2023": "12.4%", "FY2022": "13.5%", "FY2021": "14.6%"})],
     P3_SOURCES,
     note="FY2025/FY2024 directly disclosed. FY2023-FY2021 equal the disclosed CET1 capital ratio because "
          "no AT1 was in issue in those years - see the Tier 1 Capital sheet's note. Fully-loaded FY2025 "
@@ -832,7 +950,7 @@ metric(
 metric(
     "Total Capital", "£m",
     [("Total regulatory capital",
-      {"FY2025": 1629.2, "FY2024": 1726.4, "FY2023": 1339.6, "FY2022": 1394.4, "FY2021": 1448.3}),
+      {"FY2026": 1606.7, "FY2025": 1629.2, "FY2024": 1726.4, "FY2023": 1339.6, "FY2022": 1394.4, "FY2021": 1448.3}),
      ("of which: Tier 2 capital - subordinated debt",
       {"FY2025": 200.0, "FY2024": 200.0, "FY2023": 200.0, "FY2022": 200.0, "FY2021": 223.4})],
     P3_SOURCES,
@@ -841,7 +959,7 @@ metric(
 metric(
     "Total Capital Ratio", "%",
     [("Total capital ratio",
-      {"FY2025": "17.1%", "FY2024": "17.2%", "FY2023": "14.6%", "FY2022": "15.8%", "FY2021": "17.3%"})],
+      {"FY2026": "17.8%", "FY2025": "17.1%", "FY2024": "17.2%", "FY2023": "14.6%", "FY2022": "15.8%", "FY2021": "17.3%"})],
     P3_SOURCES,
     note="Transitional basis, as disclosed. Fully-loaded equivalents stated in the source reports: FY2025 "
          "17.0%, FY2024 17.1%, FY2023 14.3%, FY2022 14.9%, FY2021 15.6%.",
@@ -850,7 +968,7 @@ metric(
 metric(
     "Total RWAs", "£m",
     [("Total Pillar 1 risk weighted assets",
-      {"FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6, "FY2021": 8387.4})],
+      {"FY2026": 9049.8, "FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6, "FY2021": 8387.4})],
     P3_SOURCES,
     note="FY2021's table labels these 'risk weighted assets (notional)'. In every year the disclosed "
          "credit/operational/market components foot exactly to this total - see the RWA Breakdown sheet.",
@@ -867,7 +985,7 @@ bw.add_rwa_breakdown_sheet(
         ("DATA", "Market risk",
          {"FY2025": 18.8, "FY2024": 20.1, "FY2023": 12.1, "FY2022": 23.5, "FY2021": 13.5}),
         ("TOTAL", "Total risk weighted assets",
-         {"FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6, "FY2021": 8387.4}),
+         {"FY2026": 9049.8, "FY2025": 9534.2, "FY2024": 10033.9, "FY2023": 9159.2, "FY2022": 8847.6, "FY2021": 8387.4}),
     ],
     sources_text=P3_SOURCES + (
         "\n\nEach year's three components foot exactly to that year's own disclosed total (FY2025 "
@@ -883,7 +1001,18 @@ bw.add_rwa_breakdown_sheet(
         "transitional template are the ONLY quantitative disclosures it gives on the individual "
         "consolidation basis, other templates being withheld under CRR article 432 (quoted in full in "
         "the source note above). UK OV1 is printed in those documents on the GROUP basis only, and group "
-        "RWAs are not substituted here."
+        "RWAs are not substituted here.\n\n"
+        "FY2026 CARRIES THE TOTAL ONLY AND THE THREE COMPONENT CELLS ARE DELIBERATELY BLANK. The total "
+        "(9,049.8) is published - UK KM1 row 4, 'Individual' column a at 31 July 2026, in the Pillar 3 "
+        f"Disclosures 2026, printed p.3 - {CBG_P3_2026_URL}. The SPLIT is not, and for FY2026 it has no "
+        "second source either: in every earlier year the credit / operational / market split came from "
+        "CBL's OWN statutory accounts (its Annual Report's capital note), and CBL's accounts for the year "
+        "to 31 July 2026 were not yet filed at Companies House when this was built (2026-10-07; newest "
+        "accounts entry still y/e 31 July 2025, filed 20 Dec 2025). The FY2026 Pillar 3 does print a UK "
+        "OV1 with a full risk-type split (printed p.7), but it is GROUP basis - its rows foot to 8,971.8, "
+        "the Group total, not to CBL's 9,049.8 - and group RWAs are not substituted here, consistent with "
+        "every other year on this sheet. The split should become available when CBL files its own FY2026 "
+        "accounts, expected around December 2026."
     ),
     first_col_width=54,
     source_height=380,
@@ -900,6 +1029,7 @@ CB_NSFR_FY21 = ("Not applicable – PRA implemented the NSFR on 1 Jan 2022 (as C
 _CB_MREL_NA = ("Not applicable – CBG Pillar 3 {yr}: 'does not have any additional MREL requirements', so UK KM2 "
                "is not presented")
 CB_MREL = {
+    "FY2026": _CB_MREL_NA.format(yr="2026 (printed p.6, the document's own contents index; PDF p.10)"),
     "FY2025": _CB_MREL_NA.format(yr="2025 (PDF p.10)"),
     "FY2024": _CB_MREL_NA.format(yr="2024 (PDF p.9)"),
     "FY2023": _CB_MREL_NA.format(yr="2023 (PDF p.8)"),
@@ -911,10 +1041,10 @@ CB_MREL = {
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio excluding claims on central banks",
-      {"FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%",
+      {"FY2026": "12.6%", "FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%",
        "FY2021": CB_LEV_FY21}),
      ("Leverage ratio total exposure measure excluding claims on central banks (£m)",
-      {"FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9})],
+      {"FY2026": 10780.5, "FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9})],
     KM1_SOURCES,
     note="RETRACTION, 2026-09-16. Until today this sheet read 'Not publicly disclosed' for all five "
          "years, on the stated basis that the leverage ratio is 'genuinely not disclosed at this entity "
@@ -933,19 +1063,39 @@ metric(
          "FY2021 remains 'Not publicly disclosed' for CBL specifically: that year's Pillar 3 pre-dates "
          "the UK KM1 template, its section 3 'Key Regulatory Metrics' table is group-basis only (11.8% "
          "at 31 July 2021), and the FY2021 Annual Report's Note 21 'Capital' has no leverage row.\n"
-         "BASIS: 'excluding claims on central banks' in every year printed. All four dates fall after "
+         "BASIS: 'excluding claims on central banks' in every year printed. All five dates fall after "
          "the 1 January 2022 change that introduced that basis, so no basis break sits inside this "
-         "series and no series has been merged across one.",
+         "series and no series has been merged across one.\n"
+         "FY2026 (12.6%, exposure 10,780.5) comes from the Pillar 3 Disclosures 2026 UK KM1 rows 14 and "
+         "13, 'Individual' column a at 31 July 2026, printed p.3.\n"
+         "FY2025 WAS RESTATED BY THAT SAME EDITION AND THIS SHEET KEEPS THE ORIGINAL PRINTING. Its "
+         "footnote 6 says the CBL comparative at 31 July 2025 'has been restated', the ratio from 12.6% "
+         "to 12.9% and the exposure from £11.3 billion to £11.1 billion. The 12.6% / 11,323.0 shown here "
+         "for FY2025 is what the Pillar 3 Disclosures 2025 printed for its own reporting year; the "
+         "restated 12.9% / 11,104.0 is not substituted, because each year is carried on its own "
+         "edition's printing. A reader should note that FY2026's own ratio is ALSO 12.6% - the two are "
+         "unrelated, and the coincidence is exactly the kind that makes a restatement easy to miss.",
 )
 
 metric(
     "LCR", "%",
     [("Liquidity coverage ratio (12-month average)",
-      {"FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106%", "FY2022": "885%",
+      {"FY2026": "857.6%", "FY2025": "943.2%", "FY2024": "930.1%", "FY2023": "1,106%", "FY2022": "885%",
        "FY2021": CB_LCR_FY21})],
     P3_SOURCES + (
         "\n\nLCR is disclosed as a 12-MONTH AVERAGE in the Strategic Report's liquidity/funding risk "
         "section, not as a point-in-time year-end figure:\n"
+        "FY2026: Pillar 3 Disclosures 2026, UK KM1 row 17, 'Individual' column a (31 Jul 2026), printed "
+        "p.4 - " + CBG_P3_2026_URL + ". NOTE THE CHANGE OF SOURCE, AND WHY IT WAS FORCED. FY2025 and "
+        "earlier take this row from the Annual Report's Strategic Report narrative, which in those years "
+        "printed CBL's own ratio. The Annual Report 2026's narrative prints the GROUP's instead - 'The "
+        "group's 12-month average LCR to 31 July 2026 was 1,113.5% (31 July 2025: 1,011.6%)', printed "
+        "p.91 - and 1,113.5 is exactly the KM1 'Group' column a, a different entity from the one this "
+        "workbook carries (the Pillar 3's own narrative rounds the same figure to 1,113% on printed "
+        "p.2). Using the "
+        "Annual Report for FY2026 would therefore have silently swapped the reporting entity mid-row, so "
+        "FY2026 is taken from the Pillar 3's Individual column (857.6%) and the group figure is not "
+        "substituted.\n"
         "FY2025 & FY2024: Annual Report 2025, Strategic Report liquidity section - " + AR2025_URL + "\n"
         "FY2023 & FY2022: Annual Report 2023, Strategic Report liquidity section - " + AR2023_URL + "\n"
         "FY2021: no LCR figure appears anywhere in the FY2021 filing - confirmed by OCR'ing all 147 "
@@ -972,10 +1122,17 @@ metric(
 metric(
     "NSFR", "%",
     [("Net stable funding ratio (four-quarter average, except FY2022 - see note)",
-      {"FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%", "FY2022": "133.6%",
+      {"FY2026": "157.9%", "FY2025": "163.0%", "FY2024": "148.3%", "FY2023": "140.5%", "FY2022": "133.6%",
        "FY2021": CB_NSFR_FY21})],
     P3_SOURCES + (
         "\n\nNSFR is disclosed as a FOUR-QUARTER AVERAGE in the Strategic Report's funding risk section:\n"
+        "FY2026: Pillar 3 Disclosures 2026, UK KM1 row 20, 'Individual' column a (31 Jul 2026), printed "
+        "p.4 - " + CBG_P3_2026_URL + ". Same forced change of source as the LCR sheet: the Annual Report "
+        "2026's funding narrative prints the GROUP's ratio ('The four-quarter average NSFR to 31 July "
+        "2026 was 144.0% (31 July 2025: 145.9%)', printed p.54 and repeated p.144), which is the KM1 "
+        "'Group' column a. FY2026 is "
+        "therefore taken from the Pillar 3's Individual column (157.9%); the group figure is not "
+        "substituted.\n"
         "FY2025 & FY2024: Annual Report 2025, Strategic Report funding section - " + AR2025_URL + "\n"
         "FY2023 & FY2022: Annual Report 2023, Strategic Report funding section - " + AR2023_URL + "\n"
         "FY2021: shown as 'Not applicable' rather than 'Not publicly disclosed' - the NSFR was only "

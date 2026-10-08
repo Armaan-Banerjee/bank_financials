@@ -145,11 +145,21 @@ class FullInsightsPipeline(unittest.TestCase):
         self.assertNotIn("in016", payload["in011"]["in023"])
         self.assertNotIn("in017", payload["in011"]["in023"])
         self.assertNotIn("trace", payload["in011"]["in025"])
-        # Historical-depth work now contains 123,345 annual-metric rows,
+        # Historical-depth work now contains 124,739 annual-metric rows,
         # including UBP's FY1973--FY2025 run. This raw per-row payload grows
         # proportionally; the explicit non-embedding checks above distinguish
         # that legitimate growth from the prior duplication regression.
-        self.assertLess(len(html_text), 80_000_000,
+        # CEILING RAISED 80MB -> 100MB 2026-10-08 (user decision). The 80MB
+        # guard was crossed by legitimate corpus growth, not a regression:
+        # Starling's FY2017-FY2019 backfill added 1,394 rows, and at the
+        # measured 643 bytes/row that took this file from 79,342,360 bytes
+        # (0.82% of headroom left) to 80,239,058 (0.30% over). The duplication
+        # this guard exists to catch is tested directly by the three
+        # assertNotIn checks above, which is why the ceiling can move while
+        # the protection does not. At the current rate 100MB is roughly
+        # 30,000 further rows of room; if it is ever crossed again, confirm
+        # the row count moved proportionally before raising it a second time.
+        self.assertLess(len(html_text), 100_000_000,
                          "deliverable HTML grew unexpectedly large - check for a "
                          "reintroduced duplicate/unused payload the way in023/in025 once had")
         self.assertIn("Regulatory headroom trajectory", html_text)

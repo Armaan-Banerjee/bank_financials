@@ -1141,13 +1141,13 @@ MREL_STATEMENTS = {
     "FY2019": _mrel_np("2019", 51, "pp.26-44", 574),
     "FY2018": _mrel_np("2018", 52, "pp.26-45", 574),
     "FY2017": _mrel_np("2017", 48, "pp.24-41", 509),
-    "FY2016": ("Unreached today – 2016 Pillar 3 is linked on the live index but its URL 301s to itau.com.br/404 "
-               "over HTTP/2 (2013/2017 on the same path serve); Wayback holds only 301s; CDX on 5 domains, "
-               "archive.ph, web search: none, 2026-09-19"),
+    "FY2016": ("Unreached today – 2016 Pillar 3 linked on the live index but its URL 301s to itau.com.br/404 "
+               "(2013/2017 on the same path serve); Wayback and Common Crawl (CC-MAIN-2024-10) hold only "
+               "301s; CDX on 5 domains, archive.ph, web search: none, 2026-10-07"),
     "FY2015": _mrel_np("2015", 37, "pp.17-30", 460),
-    "FY2014": ("Unreached today – 2014 Pillar 3 is linked on the live index but its URL 301s to itau.com.br/404 "
-               "over HTTP/2 (2013/2017 on the same path serve); Wayback holds only 301s; CDX on 5 domains, "
-               "archive.ph, web search: none, 2026-09-19"),
+    "FY2014": ("Unreached today – 2014 Pillar 3 linked on the live index but its URL 301s to itau.com.br/404 "
+               "(2013/2017 on the same path serve); Wayback and Common Crawl (CC-MAIN-2024-10) hold only "
+               "301s; CDX on 5 domains, archive.ph, web search: none, 2026-10-07"),
 }
 
 MREL_SOURCES_EXTRA = (
@@ -1188,6 +1188,27 @@ MREL_SOURCES_EXTRA = (
     "Europe, a different entity, and the itau.com.br RI Pillar 3 files are Itau Unibanco's, which the entity "
     "rule excludes); archive.ph/newest for both paths, which returned 404 (no capture); and a web search for the "
     "exact filenames, which found nothing."
+    "\n\nGA-020 COMMON CRAWL PASS (2026-10-07). Queried through the ZipNum index files on data.commoncrawl.org "
+    "(index.commoncrawl.org was down). Common Crawl DOES hold both URLs, and holds them only as redirects, which "
+    "corroborates the live and Wayback findings above and dates them: "
+    "content/dam/ibba/en/IBBAInt_Cons_Pillar3_2014_FINAL.PDF (CC-MAIN-2024-10, WARC-Date 2024-02-21T07:11:24Z) "
+    "and the 2016 file (same crawl, 2024-02-21T09:29:05Z) are each an 'HTTP/1.1 301 Moved Permanently' from "
+    "AkamaiGHost with 'Location: https://www.itau.com.br/404' and Content-Length 0 - the WARC payload digest on "
+    "both is sha1:3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ, the digest of the empty string, so no bytes of either "
+    "document were ever archived. The editions were therefore already delinked by 21 February 2024. "
+    "WHY THIS IS STILL 'UNREACHED' AND NOT AN ABSENCE: the archive's reach gives out before the question does. "
+    "www.itaubba.co.uk - the domain this bank's own Annual Report names as the home of its Pillar 3 disclosures - "
+    "yields only 4 records across 81 crawls, and all four are HTTP 301 redirects of the homepage and "
+    "robots.txt (CC-MAIN-2021-04 and CC-MAIN-2021-31). The crawler was redirected away and never fetched a "
+    "single content page from that site, so it cannot have discovered the editions published there; "
+    "itaubba.com was swept over the same window and yields no content page either. The itau.com.br DAM tree is reached only "
+    "incidentally: www.itau.com.br/content/dam/ibba/* was swept across every crawl 2014-2026 and the only "
+    "payloads it ever yielded were two economics PDFs in CC-MAIN-2022-05 "
+    "(analises-economicas/.../Dezembro2021.pdf, 1,038,534 bytes, and CenarioMacro_BRASIL_Dez21.pdf, 161,956 "
+    "bytes) - a positive control proving the crawler CAN fetch PDFs from that tree, but one that also shows how "
+    "sparse its coverage is; /content/dam/* returned 1 record in CC-MAIN-2021-31 and 0 in 2016-30 and 2019-30. "
+    "Consistent with itau.com.br serving over HTTP/2 and 403ing HTTP/1.1 clients. No copy of either edition "
+    "exists in Common Crawl, and none could be expected to."
 )
 
 metric(

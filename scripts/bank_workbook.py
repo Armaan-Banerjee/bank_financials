@@ -58,6 +58,7 @@ Row tuple formats:
 """
 
 import re
+import sys
 
 import openpyxl
 from openpyxl.chart import BarChart, LineChart, Reference
@@ -108,6 +109,10 @@ SECTION_FONT = Font(bold=True)
 TOTAL_FONT = Font(bold=True)
 TITLE_FONT = Font(bold=True, size=13)
 SUBTITLE_FONT = Font(italic=True, size=9, color="666666")
+# openpyxl's hard cell cap is 32,767 characters; 32,000 leaves headroom
+# for the "(continued)" marker a split adds. See _write_source_cell.
+SOURCE_CELL_LIMIT = 32000
+
 SOURCE_FONT = Font(italic=True, size=9, color="444444")
 
 
@@ -146,23 +151,70 @@ class BankWorkbook:
         for i, w in enumerate(widths, start=1):
             ws.column_dimensions[get_column_letter(i)].width = w
 
+    @staticmethod
+    def _split_source_text(text, limit=SOURCE_CELL_LIMIT):
+        """Split citation text into cell-sized chunks, longest-first.
+
+        Prefers a paragraph break, then a sentence end, then a space, so a
+        chunk never ends mid-word and a citation is never cut mid-figure.
+        Returns [text] unchanged when it already fits, which is the case for
+        all but two of the 145 workbooks - the one-cell form stays the
+        default and its output stays byte-identical.
+        """
+        if not text or len(text) <= limit:
+            return [text]
+        chunks = []
+        rest = text
+        while len(rest) > limit:
+            window = rest[:limit]
+            cut = window.rfind("\n")
+            if cut < limit // 2:
+                cut = max(window.rfind(". "), window.rfind("; "))
+                cut = cut + 1 if cut >= limit // 2 else -1
+            if cut < limit // 2:
+                cut = window.rfind(" ")
+            if cut < limit // 2:  # no breakable point - hard cut rather than lose text
+                cut = limit
+            chunks.append(rest[:cut].rstrip())
+            rest = rest[cut:].lstrip()
+        chunks.append(rest)
+        return chunks
+
     def _write_source_cell(self, ws, row, ncols, text, height=150):
-        # openpyxl silently truncates any cell string past 32,767 chars
-        # (its own hard limit) rather than raising - caught the hard way in
-        # HD-078 (Co-operative Bank), where citation text had grown past it
-        # unnoticed. Fail loudly instead.
-        if text and len(text) > 32000:
-            raise ValueError(
-                f"Source citation text for sheet {ws.title!r} is {len(text)} "
-                "chars, over openpyxl's 32,767-char cell limit (32,000 "
-                "warning threshold) - it would be silently truncated. Trim "
-                "it before saving."
+        # openpyxl silently truncates any cell string past 32,767 chars (its
+        # own hard limit) rather than raising - caught the hard way in HD-078
+        # (Co-operative Bank), where citation text had grown past it unnoticed.
+        #
+        # Raising was the right call while that was the only option, but by
+        # 2026-10-08 it had become a blocker rather than a guard (GA-025): UBP
+        # UK sat at 99.9% of the cap and Co-operative Bank at 99.3%, so the
+        # next substantive note on either would fail the build, and the way
+        # through a failing build is to compact prose - which is invisible
+        # afterwards, because NOTHING in this repo reads a source cell. A
+        # trim that drops a folio citation passes all four checks.
+        #
+        # So the text now CONTINUES into further cells instead (user decision,
+        # 2026-10-08). Nothing is lost and nothing is silent: the split is
+        # announced on stderr, because a note crossing the cap is worth
+        # knowing about even though it is no longer fatal.
+        chunks = self._split_source_text(text)
+        if len(chunks) > 1:
+            print(
+                f"note: source citation for sheet {ws.title!r} is "
+                f"{len(text)} chars, over the {SOURCE_CELL_LIMIT}-char cell "
+                f"limit - continued across {len(chunks)} cells.",
+                file=sys.stderr,
             )
-        cell = ws.cell(row=row, column=1, value=text)
-        ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=ncols)
-        cell.font = SOURCE_FONT
-        cell.alignment = Alignment(wrap_text=True, vertical="top", horizontal="left")
-        ws.row_dimensions[row].height = height
+        for i, chunk in enumerate(chunks):
+            r = row + 2 * i
+            value = chunk if i == 0 else "(continued)\n" + chunk
+            cell = ws.cell(row=r, column=1, value=value)
+            ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ncols)
+            cell.font = SOURCE_FONT
+            cell.alignment = Alignment(
+                wrap_text=True, vertical="top", horizontal="left"
+            )
+            ws.row_dimensions[r].height = height
 
     def append_source_cell(self, ws, text, ncols=None, height=150):
         """Add a FURTHER merged source-citation cell below the one a sheet

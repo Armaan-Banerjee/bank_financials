@@ -885,8 +885,18 @@ bw.add_overview_sheet(
     ],
     cash_flow_unit="£",
     ratios=[
-        ("CET1 Ratio", {"FY2025": "16.6%", "FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.3%", "FY2018": "23.18%", "FY2017": "59.78%"}),
-        ("Total Capital Ratio", {"FY2025": "19.8%", "FY2024": "18.3%", "FY2023": "19.4%", "FY2022": "19.0%", "FY2021": "21.4%", "FY2020": "17.8%", "FY2019": "20.3%", "FY2018": "23.18%", "FY2017": "59.78%"}),
+        # OVERVIEW RE-SYNCED TO THE METRIC SHEETS 2026-10-08. These four cells were
+        # STALE DUPLICATES: the 2026-09-15 correction recorded on the CET1 Ratio and
+        # Total Capital Ratio sheets above was applied to those sheets and never to
+        # this list, which is a separate hand-written copy. They read
+        # CET1 FY2019 20.3% / FY2018 23.18% and Total Capital FY2019 20.3% /
+        # FY2018 23.18%; the sheets print 20.08% / 22.83% and 20.38% / 22.99%.
+        # No figure is being decided here - see the metric sheets' own notes for why
+        # the Pillar 3 values supersede the Annual Report ones. Found by
+        # scripts/check_overview_ties.py, which exists because nothing previously
+        # compared the Overview against the sheets it duplicates.
+        ("CET1 Ratio", {"FY2025": "16.6%", "FY2024": "15.1%", "FY2023": "16.0%", "FY2022": "15.4%", "FY2021": "16.9%", "FY2020": "13.34%", "FY2019": "20.08%", "FY2018": "22.83%", "FY2017": "59.78%"}),
+        ("Total Capital Ratio", {"FY2025": "19.8%", "FY2024": "18.3%", "FY2023": "19.4%", "FY2022": "19.0%", "FY2021": "21.4%", "FY2020": "17.8%", "FY2019": "20.38%", "FY2018": "22.99%", "FY2017": "59.78%"}),
         ("LCR", {"FY2025": "362%", "FY2024": "284%", "FY2023": "481%", "FY2022": "352%", "FY2021": "970%", "FY2020": "485%", "FY2019": "557%", "FY2018": "391%", "FY2017": "339%"}),
     ],
     note="CET1 capital is rounded to the nearest £m as stated in Redwood's KPI narrative. Undisclosed regulatory metrics remain blank/not publicly disclosed on their detail sheets.",
