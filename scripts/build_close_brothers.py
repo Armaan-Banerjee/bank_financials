@@ -1043,7 +1043,7 @@ metric(
     [("Leverage ratio excluding claims on central banks",
       {"FY2026": "12.6%", "FY2025": "12.6%", "FY2024": "13.4%", "FY2023": "10.8%", "FY2022": "11.3%",
        "FY2021": CB_LEV_FY21}),
-     ("Leverage ratio total exposure measure excluding claims on central banks (£m)",
+     ("Total exposure measure excluding claims on central banks (£m)",
       {"FY2026": 10780.5, "FY2025": 11323.0, "FY2024": 11399.2, "FY2023": 10540.3, "FY2022": 10546.9})],
     KM1_SOURCES,
     note="RETRACTION, 2026-09-16. Until today this sheet read 'Not publicly disclosed' for all five "

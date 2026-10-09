@@ -245,8 +245,10 @@ class FullInsightsPipeline(unittest.TestCase):
         self.assertEqual(len(list(deliverable_dir.glob("workbook-*.html"))), 145)
         monzo_html = (deliverable_dir / "bank-monzo.html").read_text()
         self.assertIn("Monzo", monzo_html)
-        self.assertIn('href="deliverable_shared.css"', monzo_html)
-        self.assertIn('src="deliverable_shared.js"', monzo_html)
+        # Asset URLs carry a ?v=<content hash> cache-buster (see write_page
+        # in build_deliverable.py), so match the prefix, not the bare name.
+        self.assertRegex(monzo_html, r'href="deliverable_shared\.css\?v=[0-9a-f]{10}"')
+        self.assertRegex(monzo_html, r'src="deliverable_shared\.js\?v=[0-9a-f]{10}"')
         self.assertIn('src="chart.umd.min.js"', monzo_html)
         self.assertNotIn("cdn.jsdelivr.net", monzo_html)
         self.assertTrue((deliverable_dir / "assets" / "logos" / "monzo.svg").exists())
@@ -296,7 +298,7 @@ class FullInsightsPipeline(unittest.TestCase):
         lloyds_html = (deliverable_dir / "group-lloyds-banking-group.html").read_text()
         self.assertIn('id="group-data"', lloyds_html)
         self.assertIn("renderGroupPage(GROUP_DATA, BANKS_INDEX)", lloyds_html)
-        self.assertIn('href="deliverable_shared.css"', lloyds_html)
+        self.assertRegex(lloyds_html, r'href="deliverable_shared\.css\?v=[0-9a-f]{10}"')
         self.assertIn('src="chart.umd.min.js"', lloyds_html)
         self.assertIn("total_pnl_by_year", lloyds_html)
         self.assertIn("group-${slugify(row.group)}.html", deliverable_js)

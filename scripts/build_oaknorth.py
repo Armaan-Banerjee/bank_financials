@@ -726,9 +726,9 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "£'000 / %", [
-    ("Leverage ratio exposure measure excluding central banks", {"FY2025": 6177019, "FY2024": 5262074, "FY2023": 4463419, "FY2022": 4954910, "FY2021": 3855405}),
+    ("Exposure measure excluding central banks", {"FY2025": 6177019, "FY2024": 5262074, "FY2023": 4463419, "FY2022": 4954910, "FY2021": 3855405}),
     ("Leverage ratio excluding central banks", {"FY2025": "16.0%", "FY2024": "18.1%", "FY2023": "19.1%", "FY2022": "14.5%", "FY2021": "21.4%", "FY2020": "21.0%", "FY2019": "22.2%", "FY2018": "25.2%", "FY2017": "41.0%"}),
-    ("Leverage ratio exposure measure including central banks", {"FY2025": 8361483, "FY2024": 7951087, "FY2023": 6100733, "FY2020": 3287032, "FY2019": 2885104, "FY2018": 1942695, "FY2017": 843406, "FY2016": 317493, "FY2015": 94822}),
+    ("Exposure measure including central banks", {"FY2025": 8361483, "FY2024": 7951087, "FY2023": 6100733, "FY2020": 3287032, "FY2019": 2885104, "FY2018": 1942695, "FY2017": 843406, "FY2016": 317493, "FY2015": 94822}),
     ("Leverage ratio including central banks", {"FY2025": "11.8%", "FY2024": "12.0%", "FY2023": "14.0%", "FY2020": "16.1%", "FY2019": "16.1%", "FY2018": "17.0%", "FY2017": "30.1%", "FY2016": "25.5%", "FY2015": "87.1%"}),
 ], note="The FY2021 disclosure labels its 21.4% figure as the UK leverage-ratio-framework calculation excluding claims on central banks; FY2022–FY2025 use the corresponding KM1 excluding-central-bank measure. FY2022–FY2025 do not disclose the including-central-bank variant in the same way until FY2023. FY2015–FY2020: OakNorth's own Pillar 3 reports disclose a single leverage exposure measure each year (the 'EBA calculation', shown here as the including-central-banks row) plus, from FY2017 onward, a second UK-framework ratio excluding claims on central banks computed off that same exposure measure (no separately restated excluding-central-banks exposure figure is given for those years, so that exposure row is left blank for FY2015–FY2020 rather than estimated). No excluding-central-banks variant is disclosed at all for FY2015–FY2016.")
 # GA-020 (2026-09-19): former bare "Not disclosed" / "Not publicly disclosed" cells

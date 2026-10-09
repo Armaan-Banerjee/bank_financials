@@ -1097,6 +1097,32 @@ class BankWorkbook:
         ncols = 1 + len(years)
         headers = ["Line item"] + [self.year_label[y] for y in years]
 
+        def _block_years(totals):
+            """This block's own year axis, trimmed at the OLDEST end only.
+
+            Added 2026-10-09 on the user's instruction: "if the data is not
+            there but still has a year header, then please delete that".
+            Until now every Overview block printed the FULL workbook year
+            list, so a block routinely carried headers over columns it could
+            never fill - the Overview was the one sheet that never got the
+            trim `_trim_trailing_empty_years` has applied to detail sheets
+            since 2026-09-18. Blocks are trimmed INDEPENDENTLY because they
+            genuinely stop at different places (Paragon's equity block ends at
+            FY2021 while its balance sheet runs to FY2017).
+
+            TRAILING ONLY, for exactly the reason the detail-sheet rule gives:
+            an empty column that is not at the oldest end is a REAL GAP and
+            must stay visible. Paragon's Cash Flow Summary is the case that
+            proves it - FY2020 and FY2019 are empty but FY2018 and FY2017
+            carry figures, so those two are an interior gap in the bank's own
+            disclosure, not a heading over nothing. Deleting them would hide
+            it and would also make the chart's category axis misrepresent the
+            spacing between years.
+            """
+            return self._trim_trailing_empty_years(
+                years, [vals for _, vals in totals]
+            )
+
         ws["A1"] = f"{self.bank_name} — Overview"
         ws["A1"].font = TITLE_FONT
         ws["A2"] = (
@@ -1135,27 +1161,31 @@ class BankWorkbook:
         }
 
         row = 4
-        block_table_info = {}  # key -> (header_row, data_end) or None
+        block_table_info = {}  # key -> (header_row, data_end, block_years) or None
         for key, title, totals, unit in money_blocks:
             if totals:
+                years_b = _block_years(totals)
+                ncols_b = 1 + len(years_b)
                 ws.cell(
                     row=row, column=1, value=f"{title} ({unit})"
                 ).font = SECTION_FONT
                 row += 1
                 header_row = row
-                for c, h in enumerate(headers, start=1):
+                for c, h in enumerate(
+                    ["Line item"] + [self.year_label[y] for y in years_b], start=1
+                ):
                     ws.cell(row=row, column=c, value=h)
-                self._style_header(ws, row, ncols)
+                self._style_header(ws, row, ncols_b)
                 row += 1
                 for label, values in totals:
                     ws.cell(row=row, column=1, value=label)
-                    for ci, y in enumerate(years, start=2):
+                    for ci, y in enumerate(years_b, start=2):
                         ws.cell(row=row, column=ci, value=values.get(y))
-                    for c in range(1, ncols + 1):
+                    for c in range(1, ncols_b + 1):
                         ws.cell(row=row, column=c).font = TOTAL_FONT
                         ws.cell(row=row, column=c).border = BORDER
                     row += 1
-                block_table_info[key] = (header_row, row - 1)
+                block_table_info[key] = (header_row, row - 1, years_b)
             else:
                 ws.cell(
                     row=row, column=1, value=not_applicable_text[key]
@@ -1168,15 +1198,19 @@ class BankWorkbook:
             ws.cell(row=row, column=1, value="Pillar 3 Key Metrics").font = SECTION_FONT
             row += 1
             ratio_header_row = row
-            for c, h in enumerate(headers, start=1):
+            ratio_years = _block_years(ratios)
+            ratio_ncols = 1 + len(ratio_years)
+            for c, h in enumerate(
+                ["Line item"] + [self.year_label[y] for y in ratio_years], start=1
+            ):
                 ws.cell(row=row, column=c, value=h)
-            self._style_header(ws, row, ncols)
+            self._style_header(ws, row, ratio_ncols)
             row += 1
             for label, values in ratios:
                 ws.cell(row=row, column=1, value=label)
-                for ci, y in enumerate(years, start=2):
+                for ci, y in enumerate(ratio_years, start=2):
                     ws.cell(row=row, column=ci, value=values.get(y))
-                for c in range(1, ncols + 1):
+                for c in range(1, ratio_ncols + 1):
                     ws.cell(row=row, column=c).border = BORDER
                 row += 1
             ratio_data_end = row - 1
@@ -1205,27 +1239,31 @@ class BankWorkbook:
         # -- hidden numeric staging areas, oldest-year-first, for the charts --
         # (built as separate chronological blocks rather than via a reversed
         # category axis, which flips the value axis to the wrong side in Excel)
-        chrono_years = list(reversed(years))
-        n_years = len(years)
-
+        # No sheet-wide chrono_years/n_years any more: each block stages its
+        # own trimmed axis (see _block_years), so a width taken from the full
+        # year list would overrun a trimmed block's staging area and feed the
+        # chart blank trailing categories.
         stage_col = ncols + 3
-        block_stage_info = {}  # key -> (stage_header_row, stage_end) or None
+        # key -> (stage_header_row, stage_end, stage_col, n_years_for_this_block)
+        block_stage_info = {}
         for key, title, totals, unit in money_blocks:
             info = block_table_info[key]
             if totals and info:
-                header_row, _ = info
-                for ci, y in enumerate(chrono_years, start=1):
+                header_row, _, years_b = info
+                chrono_b = list(reversed(years_b))
+                n_b = len(years_b)
+                for ci, y in enumerate(chrono_b, start=1):
                     ws.cell(
                         row=header_row, column=stage_col + ci, value=self.year_label[y]
                     )
                 r = header_row + 1
                 for label, values in totals:
                     ws.cell(row=r, column=stage_col, value=label)
-                    for ci, y in enumerate(chrono_years, start=1):
+                    for ci, y in enumerate(chrono_b, start=1):
                         ws.cell(row=r, column=stage_col + ci, value=values.get(y))
                     r += 1
-                block_stage_info[key] = (header_row, r - 1, stage_col)
-                stage_col += ncols + 2
+                block_stage_info[key] = (header_row, r - 1, stage_col, n_b)
+                stage_col += n_b + 3
             else:
                 block_stage_info[key] = None
 
@@ -1236,7 +1274,9 @@ class BankWorkbook:
                 if block_stage_info[prev_key]:
                     ratio_stage_header_row = block_stage_info[prev_key][0]
                     break
-            for ci, y in enumerate(chrono_years, start=1):
+            chrono_ratio = list(reversed(ratio_years))
+            n_ratio = len(ratio_years)
+            for ci, y in enumerate(chrono_ratio, start=1):
                 ws.cell(
                     row=ratio_stage_header_row,
                     column=ratio_stage_col + ci,
@@ -1245,7 +1285,7 @@ class BankWorkbook:
             r = ratio_stage_header_row + 1
             for label, values in ratios:
                 ws.cell(row=r, column=ratio_stage_col, value=label)
-                for ci, y in enumerate(chrono_years, start=1):
+                for ci, y in enumerate(chrono_ratio, start=1):
                     ws.cell(
                         row=r,
                         column=ratio_stage_col + ci,
@@ -1253,7 +1293,7 @@ class BankWorkbook:
                     )
                 r += 1
             ratio_stage_end = r - 1
-            last_col = ratio_stage_col + ncols
+            last_col = ratio_stage_col + n_ratio + 1
         else:
             last_col = stage_col
 
@@ -1272,7 +1312,7 @@ class BankWorkbook:
             stage_info = block_stage_info[key]
             if not stage_info:
                 continue
-            stage_header_row, stage_end, block_stage_col = stage_info
+            stage_header_row, stage_end, block_stage_col, n_b = stage_info
             bar = BarChart()
             bar.type = "col"
             bar.grouping = "clustered"
@@ -1283,7 +1323,7 @@ class BankWorkbook:
             data = Reference(
                 ws,
                 min_col=block_stage_col,
-                max_col=block_stage_col + n_years,
+                max_col=block_stage_col + n_b,
                 min_row=stage_header_row + 1,
                 max_row=stage_end,
             )
@@ -1291,7 +1331,7 @@ class BankWorkbook:
             cats = Reference(
                 ws,
                 min_col=block_stage_col + 1,
-                max_col=block_stage_col + n_years,
+                max_col=block_stage_col + n_b,
                 min_row=stage_header_row,
                 max_row=stage_header_row,
             )
@@ -1316,7 +1356,7 @@ class BankWorkbook:
         ldata = Reference(
             ws,
             min_col=ratio_stage_col,
-            max_col=ratio_stage_col + n_years,
+            max_col=ratio_stage_col + n_ratio,
             min_row=ratio_stage_header_row + 1,
             max_row=ratio_stage_end,
         )
@@ -1324,7 +1364,7 @@ class BankWorkbook:
         lcats = Reference(
             ws,
             min_col=ratio_stage_col + 1,
-            max_col=ratio_stage_col + n_years,
+            max_col=ratio_stage_col + n_ratio,
             min_row=ratio_stage_header_row,
             max_row=ratio_stage_header_row,
         )

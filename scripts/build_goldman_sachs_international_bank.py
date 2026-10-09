@@ -739,7 +739,7 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "£m (conv. from USD) / %", [
-    ("Leverage ratio total exposure measure", leverage_exposure_gbp),
+    ("Total exposure measure", leverage_exposure_gbp),
     ("Leverage ratio", LEVERAGE_RATIO),
 ])
 metric("LCR", "£m (conv. from USD) / %", [

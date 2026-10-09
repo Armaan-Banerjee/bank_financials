@@ -2348,63 +2348,16 @@ def curate_comparison_bubbles(data, parent_groups):
 
     years = [str(y) for y in range(2021, 2026)]
 
-    def build(x_source, y_source):
-        points_by_year = {y: [] for y in years}
-        for bank, entry in data.items():
-            xs = series(entry, x_source)
-            ys = series(entry, y_source)
-            assets = assets_by_bank[bank]
-            for y in years:
-                x, yv = xs.get(y), ys.get(y)
-                if x is None or yv is None:
-                    continue
-                points_by_year[y].append({
-                    "bank": bank, "x": x, "y": yv,
-                    "assets": assets.get(y), "group": bank_to_group.get(bank),
-                })
-        covered = [y for y in years if points_by_year[y]]
-        return {"years": covered, "points_by_year": {y: points_by_year[y] for y in covered}}
-
-    out = {
-        "risk_vs_capital": build(("top", "rwa_to_assets_pct"), ("pillar3", "CET1 Ratio")),
-        "efficiency_vs_capital": build(("cost_base", "cost_to_income_pct"), ("pillar3", "CET1 Ratio")),
-        "leverage_vs_liquidity": build(("pillar3", "Leverage Ratio"), ("pillar3", "LCR")),
-        # Added 2026-09-08 (user request to bring Balance Sheet / P&L
-        # dimensions into the Gapminder-style bubble charts alongside the
-        # three Pillar-3-only pairings above): customer loans as a share of
-        # total assets (Balance Sheet asset mix, from capital_deployment)
-        # against the cost-to-income ratio (P&L cost structure) - does a
-        # loan-heavy balance sheet run leaner or costlier than a
-        # treasury/cash-heavy one.
-        "balance_sheet_vs_pnl": build(
-            ("capital_deployment", "loans_pct_of_assets"), ("cost_base", "cost_to_income_pct"),
-        ),
-        # Three more added 2026-09-08 (user asked to bring in a few more
-        # Balance Sheet / P&L pairings and see how they look):
-        # - capital_cushion_vs_growth: equity as a share of total assets
-        #   (Balance Sheet capital structure, from leverage()'s own
-        #   equity_to_assets_pct - not a Pillar 3 ratio, so it's disclosed
-        #   for banks that don't report CET1/leverage under Pillar 3 at
-        #   all) against the bank's own income YoY growth (P&L, from
-        #   income_volatility()) - does a thinly-capitalised bank grow
-        #   income faster.
-        # - cost_structure: personnel expense vs. other operating expense,
-        #   both as a % of revenue (both P&L, both from cost_base) - staff-
-        #   heavy vs. overhead-heavy cost bases, independent of overall
-        #   cost-to-income level.
-        # - liquidity_vs_loans: cash vs. customer loans, both as a % of
-        #   total assets (both Balance Sheet, both from capital_deployment)
-        #   - the two ends of the same asset-mix decision.
-        "capital_cushion_vs_growth": build(
-            ("leverage", "equity_to_assets_pct"), ("income_volatility", "yoy_change_pct"),
-        ),
-        "cost_structure": build(
-            ("cost_base", "personnel_expense_pct_of_revenue"), ("cost_base", "other_operating_expense_pct_of_revenue"),
-        ),
-        "liquidity_vs_loans": build(
-            ("capital_deployment", "cash_pct_of_assets"), ("capital_deployment", "loans_pct_of_assets"),
-        ),
-    }
+    # The seven precomputed pairings that used to ship here were REMOVED
+    # 2026-10-09 (user: "we can do those ourselves now"). "Build your own
+    # comparison" below composes any pair of 18 metrics client-side,
+    # including all seven of them, so the precomputed versions were a
+    # second way to draw charts the reader can already draw - 275KB of
+    # payload on every comparison page for pairings now reachable from
+    # the selector. The `build()` helper that produced them went with
+    # them rather than being left uncalled; `series()` above stays, since
+    # the axis series are built from it.
+    out = {}
 
     # "Build your own comparison" (user request, 2026-10-08): one bubble chart
     # with SELECTABLE axes, sitting above the seven fixed pairings, which stay.
@@ -2419,33 +2372,74 @@ def curate_comparison_bubbles(data, parent_groups):
     # axis behaves identically whichever chart it appears on. The caps exist
     # because a handful of banks carry atypically extreme ratios; those banks
     # sit off-chart rather than compressing everyone else into a corner.
+    #
+    # Each entry is (key, label, short, source, max, min, unit, scale). The
+    # last two were added 2026-10-09 when total assets and profit joined the
+    # list (user request): every metric before them is a percentage, so the
+    # page could hardcode "%" and a linear 0-based axis. An absolute £ figure
+    # breaks both assumptions, so the unit and the scale type now travel with
+    # the metric instead of being assumed by the renderer.
     axis_metrics = [
-        ("rwa_density", "RWA density (% of total assets)", "RWA density", ("top", "rwa_to_assets_pct"), 110, 0),
-        ("cet1_ratio", "CET1 Ratio (%)", "CET1", ("pillar3", "CET1 Ratio"), 90, 0),
-        ("tier1_ratio", "Tier 1 Ratio (%)", "Tier 1", ("pillar3", "Tier 1 Ratio"), 90, 0),
-        ("total_capital_ratio", "Total Capital Ratio (%)", "Total Capital", ("pillar3", "Total Capital Ratio"), 90, 0),
-        ("leverage_ratio", "Leverage Ratio (%)", "Leverage Ratio", ("pillar3", "Leverage Ratio"), 50, 0),
-        ("lcr", "LCR (%)", "LCR", ("pillar3", "LCR"), 1000, 0),
-        ("nsfr", "NSFR (%)", "NSFR", ("pillar3", "NSFR"), 400, 0),
-        ("mrel_ratio", "MREL Ratio (%)", "MREL", ("pillar3", "MREL Ratio"), 100, 0),
-        ("cost_to_income", "Cost-to-income ratio (%)", "cost-to-income", ("cost_base", "cost_to_income_pct"), 200, 0),
+        ("rwa_density", "RWA density (% of total assets)", "RWA density",
+         ("top", "rwa_to_assets_pct"), 110, 0, "pct", "linear"),
+        ("cet1_ratio", "CET1 Ratio (%)", "CET1", ("pillar3", "CET1 Ratio"), 90, 0, "pct", "linear"),
+        ("tier1_ratio", "Tier 1 Ratio (%)", "Tier 1", ("pillar3", "Tier 1 Ratio"), 90, 0, "pct", "linear"),
+        ("total_capital_ratio", "Total Capital Ratio (%)", "Total Capital",
+         ("pillar3", "Total Capital Ratio"), 90, 0, "pct", "linear"),
+        ("leverage_ratio", "Leverage Ratio (%)", "Leverage Ratio", ("pillar3", "Leverage Ratio"), 50, 0, "pct", "linear"),
+        ("lcr", "LCR (%)", "LCR", ("pillar3", "LCR"), 1000, 0, "pct", "linear"),
+        ("nsfr", "NSFR (%)", "NSFR", ("pillar3", "NSFR"), 400, 0, "pct", "linear"),
+        ("mrel_ratio", "MREL Ratio (%)", "MREL", ("pillar3", "MREL Ratio"), 100, 0, "pct", "linear"),
+        ("cost_to_income", "Cost-to-income ratio (%)", "cost-to-income",
+         ("cost_base", "cost_to_income_pct"), 200, 0, "pct", "linear"),
         ("personnel_pct_revenue", "Personnel expense (% of revenue)", "personnel/revenue",
-         ("cost_base", "personnel_expense_pct_of_revenue"), 150, 0),
+         ("cost_base", "personnel_expense_pct_of_revenue"), 150, 0, "pct", "linear"),
         ("other_opex_pct_revenue", "Other operating expense (% of revenue)", "other opex/revenue",
-         ("cost_base", "other_operating_expense_pct_of_revenue"), 100, 0),
+         ("cost_base", "other_operating_expense_pct_of_revenue"), 100, 0, "pct", "linear"),
         ("cash_pct_assets", "Cash (% of total assets)", "cash/assets",
-         ("capital_deployment", "cash_pct_of_assets"), 100, 0),
+         ("capital_deployment", "cash_pct_of_assets"), 100, 0, "pct", "linear"),
         ("loans_pct_assets", "Customer loans (% of total assets)", "loans/assets",
-         ("capital_deployment", "loans_pct_of_assets"), 100, 0),
+         ("capital_deployment", "loans_pct_of_assets"), 100, 0, "pct", "linear"),
         ("treasury_pct_assets", "Treasury investments (% of total assets)", "treasury/assets",
-         ("capital_deployment", "treasury_investments_pct_of_assets"), 100, 0),
+         ("capital_deployment", "treasury_investments_pct_of_assets"), 100, 0, "pct", "linear"),
         ("equity_pct_assets", "Equity (% of total assets)", "equity/assets",
-         ("leverage", "equity_to_assets_pct"), 100, 0),
+         ("leverage", "equity_to_assets_pct"), 100, 0, "pct", "linear"),
         ("income_growth", "Income growth, year-on-year (%)", "income growth",
-         ("income_volatility", "yoy_change_pct"), 300, -150),
+         ("income_volatility", "yoy_change_pct"), 300, -150, "pct", "linear"),
+        # Total assets and profit (user request, 2026-10-09) - the first two
+        # absolute-£ axes. Both come straight from the curated top-level
+        # series, which already EXCLUDE non-GBP reporters rather than
+        # mislabelling their figures as sterling (Nomura, TD Bank Europe and
+        # the other foreign-currency filers carry neither series), so no
+        # currency handling is needed here - see in041_spend_metrics.py.
+        #
+        # Total assets runs from a pre-launch bank's £14.5k (Afin FY2022,
+        # genuine, not a unit error) to Barclays Bank's £1.25tn - eight
+        # decades. A linear axis puts 140 of 145 banks in one corner, and
+        # capping it would hide precisely the large banks the axis exists to
+        # show, so this one is LOGARITHMIC. Bounds are fixed across years for
+        # the same reason the linear axes are: so movement between frames is
+        # real and not the axis rescaling under the reader.
+        #
+        # The floor is £10m rather than the true minimum. Only 5 bank-years
+        # of 652 sit below it - Afin, Perenna and StreamBank in their
+        # pre-launch years - and carrying the axis down to £10k to hold them
+        # left four decades of the chart permanently empty, squashing the 647
+        # real ones into the right-hand half. Those 5 sit off-chart in those
+        # years, the same treatment the ratio axes give their extremes.
+        ("total_assets", "Total assets (£, log scale)", "total assets",
+         ("top", "total_assets"), 2e12, 1e7, "gbp", "logarithmic"),
+        # Profit can't take a log axis - 21 banks were loss-making in FY2025
+        # alone - so it stays linear and takes the established treatment
+        # instead: cap short of the extremes and let them sit off-chart. The
+        # band covers p5-p90 of the real FY2021-25 distribution (median
+        # £10.6m, p90 £294m); the four or five banks earning billions, and
+        # HSBC Bank's -£3.9bn year, are the deliberate off-chart cases.
+        ("profit_for_year", "Profit/(loss) for the year (£)", "profit",
+         ("top", "profit_for_year"), 5e8, -2.5e8, "gbp", "linear"),
     ]
     axis_series = {}
-    for key, _label, _short, source, _mx, _mn in axis_metrics:
+    for key, _label, _short, source, _mx, _mn, _unit, _scale in axis_metrics:
         per_bank = {}
         for bank, entry in data.items():
             vals = {y: v for y, v in series(entry, source).items() if y in years and v is not None}
@@ -2455,8 +2449,8 @@ def curate_comparison_bubbles(data, parent_groups):
     out["axes"] = {
         "years": years,
         "metrics": [
-            {"key": k, "label": lbl, "short": sh, "max": mx, "min": mn}
-            for k, lbl, sh, _src, mx, mn in axis_metrics
+            {"key": k, "label": lbl, "short": sh, "max": mx, "min": mn, "unit": un, "scale": sc}
+            for k, lbl, sh, _src, mx, mn, un, sc in axis_metrics
             # A metric no bank discloses would be an option that draws an
             # empty chart, so it is dropped from the selector rather than
             # offered and then failing.
@@ -3386,6 +3380,28 @@ HEAD = """<!doctype html>
 TODO_NOTE = ''
 
 
+# Every page links the two shared assets by bare relative filename, so a
+# browser that has already loaded a page keeps serving the OLD
+# deliverable_shared.js/.css from cache after a rebuild - the HTML changes
+# (its own bytes differ) but the asset URL does not, so the new chart code
+# never arrives without a manual hard-refresh. That bit us on 2026-10-09:
+# the boxplot fix was correct on disk and in a headless render, while the
+# user's browser was still drawing the previous build. Fingerprinting the
+# URL with the file's own content hash makes the URL change whenever the
+# file does, so a plain reload picks the new asset up.
+def _asset_url(name):
+    import hashlib
+    src = ROOT / "scripts" / "insights" / name
+    return f"{name}?v={hashlib.md5(src.read_bytes()).hexdigest()[:10]}"
+
+
+def write_page(path, html):
+    """Write a built page, fingerprinting its shared-asset URLs."""
+    for name in ("deliverable_shared.js", "deliverable_shared.css"):
+        html = html.replace(f'"{name}"', f'"{_asset_url(name)}"')
+    path.write_text(html)
+
+
 def write_comparison(data, banks_index, parent_groups):
     html = HEAD.format(
         title="Credit risk — comparison",
@@ -3425,7 +3441,7 @@ renderComparisonPage(DATA, Object.keys(DATA), TRENDS, OUTLIERS, PARENT_GROUPS, E
 </body>
 </html>
 """
-    (OUT_DIR / "comparison.html").write_text(html)
+    write_page(OUT_DIR / "comparison.html", html)
 
 
 def write_banks_directory(data, banks_index):
@@ -3488,7 +3504,7 @@ renderSidebar('banks', BANKS_INDEX);
 </body>
 </html>
 """
-    (OUT_DIR / "banks.html").write_text(html)
+    write_page(OUT_DIR / "banks.html", html)
 
 
 def write_business_model_page(records, banks_index):
@@ -3517,7 +3533,7 @@ renderBusinessModelPage(BUSINESS_MODEL_DATA);
 </body>
 </html>
 """
-    (OUT_DIR / "business-model.html").write_text(html)
+    write_page(OUT_DIR / "business-model.html", html)
 
 
 def write_investments_page(records, banks_index):
@@ -3550,7 +3566,7 @@ renderInvestmentsPage(INVESTMENTS_DATA);
 </body>
 </html>
 """
-    (OUT_DIR / "investments.html").write_text(html)
+    write_page(OUT_DIR / "investments.html", html)
 
 
 def write_balance_sheet_page(records, deployment, banks_index):
@@ -3583,7 +3599,7 @@ renderBalanceSheetPage(BALANCE_SHEET_DATA, BALANCE_SHEET_DEPLOYMENT);
 </body>
 </html>
 """
-    (OUT_DIR / "balance-sheet.html").write_text(html)
+    write_page(OUT_DIR / "balance-sheet.html", html)
 
 
 def write_pnl_page(records, deployment, banks_index):
@@ -3616,7 +3632,7 @@ renderPnlPage(PNL_DATA, PNL_DEPLOYMENT);
 </body>
 </html>
 """
-    (OUT_DIR / "profit-loss.html").write_text(html)
+    write_page(OUT_DIR / "profit-loss.html", html)
 
 
 def write_bank_page(bank_name, bank_data, banks_index):
@@ -3642,7 +3658,7 @@ renderDrilldownPage({bank_name!r}, BANK_DATA);
 </body>
 </html>
 """
-    (OUT_DIR / f"bank-{slug}.html").write_text(html)
+    write_page(OUT_DIR / f"bank-{slug}.html", html)
 
 
 def write_group_page(group, group_meta, group_metrics, group_level_metrics, banks_index):
@@ -3675,7 +3691,7 @@ renderGroupPage(GROUP_DATA, BANKS_INDEX);
 </body>
 </html>
 """
-    (OUT_DIR / f"group-{slug}.html").write_text(html)
+    write_page(OUT_DIR / f"group-{slug}.html", html)
 
 
 def write_workbook_viewer(bank_name, bank_data):
@@ -3686,7 +3702,7 @@ def write_workbook_viewer(bank_name, bank_data):
     if not xlsx_path.exists():
         return
     html = render_workbook_viewer(xlsx_path, title=f"{bank_name} — workbook")
-    (OUT_DIR / f"workbook-{slugify(bank_name)}.html").write_text(html)
+    write_page(OUT_DIR / f"workbook-{slugify(bank_name)}.html", html)
 
 
 def main():

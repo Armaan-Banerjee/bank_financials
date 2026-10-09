@@ -65,6 +65,56 @@ function fmtBn(v){
   if (abs >= 1e6) return sign + (abs / 1e6).toFixed(abs >= 1e8 ? 0 : 1) + 'm';
   return fmtK(v);
 }
+// Least-squares fit for a bubble chart's trend line (user request,
+// 2026-10-09). Three things make this more than a textbook regression:
+//
+//  - A LOG axis is fitted in log space. Total assets spans eight decades
+//    and is drawn on a log scale, so a line fitted to the raw £ values
+//    would be straight on paper and badly wrong on screen. Fitting y
+//    against log10(x) makes the drawn line both straight AND the actual
+//    least-squares fit of what the reader is looking at.
+//  - Points OUTSIDE the axis bounds are excluded. Every axis here is
+//    capped short of its extremes so a handful of banks sit off-chart;
+//    including them would let invisible points swing a visible line, which
+//    the reader has no way to account for. The caller reports how many
+//    were dropped.
+//  - It is UNWEIGHTED, so a £50m bank counts the same as a £1tn one even
+//    though the bubbles are sized by assets. That is the honest default
+//    for "is there a relationship across these banks", but it is not what
+//    the bubble sizes imply, so the caption says so.
+//
+// Returns null when fewer than 3 points survive - two points always fit a
+// line perfectly and would draw a confident-looking artefact.
+function fitTrend(points, xLog, yLog){
+  const tx = xLog ? (v => Math.log10(v)) : (v => v);
+  const ty = yLog ? (v => Math.log10(v)) : (v => v);
+  const pts = points
+    .filter(p => p.x != null && p.y != null && (!xLog || p.x > 0) && (!yLog || p.y > 0))
+    .map(p => ({ x: tx(p.x), y: ty(p.y) }))
+    .filter(p => Number.isFinite(p.x) && Number.isFinite(p.y));
+  const n = pts.length;
+  if (n < 3) return null;
+  const mx = pts.reduce((a, p) => a + p.x, 0) / n;
+  const my = pts.reduce((a, p) => a + p.y, 0) / n;
+  let sxy = 0, sxx = 0, syy = 0;
+  pts.forEach(p => { const dx = p.x - mx, dy = p.y - my; sxy += dx * dy; sxx += dx * dx; syy += dy * dy; });
+  if (sxx === 0) return null;          // every bank on the same x - no slope to draw
+  const slope = sxy / sxx;
+  return { slope, intercept: my - slope * mx, r2: syy === 0 ? 0 : (sxy * sxy) / (sxx * syy), n };
+}
+
+// Axis tick text for a bubble axis. `unit` is absent for every ratio axis
+// (the long-standing case), so the percentage form stays the default.
+// On a log axis Chart.js emits minor ticks between the decades, which at
+// £'000-to-£tn range overprint each other ("£60,000£80,000£100,000"), so
+// only the decades themselves are labelled; the minor gridlines stay.
+function axisFmt(v, unit, scale){
+  if (scale === 'logarithmic'){
+    const e = Math.log10(v);
+    if (Math.abs(e - Math.round(e)) > 1e-9) return '';
+  }
+  return unit === 'gbp' ? fmtBn(v) : v + '%';
+}
 const CATEGORICAL_PALETTE = ["#1e3a5f","#1f6e52","#a6741f","#9c3b2e","#5b3a5c","#45566b","#2b5f63","#8c4a2f","#5c6b73","#8a7f64","#3f4b3a"];
 function rwaCatColor(label){
   const l = label.toLowerCase();
@@ -1128,85 +1178,30 @@ function boxplotByYear(canvas, existingChart, years, boxes, opts){
       ? `Chart is capped at ${Math.round(yMax)}${unit} to keep the typical spread readable — ${clipped} bank-year value${clipped === 1 ? '' : 's'} above that are real disclosures, not errors, and sit off-chart.`
       : '';
   }
-  // WHICH BANK IS THAT DOT? (user request, 2026-10-08). The plugin draws each
-  // bank's value as an anonymous item, so a reader could see an outlier but
-  // not name it. When the caller supplies `namesByYear` (parallel to `boxes`),
-  // the plugin's own items are switched off and the same points are redrawn as
-  // a scatter dataset that carries the bank name, making them hoverable. The
-  // chart looks the same; the points now identify themselves.
-  const names = opts.namesByYear;
-  const r1 = (v) => Math.round(v * 10) / 10;
-  const datasets = [{
-    label: opts.label || '',
-    data: boxes,
-    backgroundColor: color + '2e', borderColor: color, borderWidth: 1.5,
-    outlierColor: '#9c3b2e', itemRadius: names ? 0 : 2, itemStyle: 'circle', medianColor: color,
-    order: 1,
-  }];
-  if (names) {
-    const pts = [];
-    boxes.forEach((vals, i) => vals.forEach((v, j) => {
-      pts.push({ x: i, y: v, bank: (names[i] || [])[j] || 'Unknown' });
-    }));
-    datasets.push({
-      type: 'scatter', label: '__points', data: pts,
-      backgroundColor: color + 'cc', borderColor: color, borderWidth: 0,
-      radius: 2.5, hoverRadius: 6, hitRadius: 5,
-      hoverBorderWidth: 2, hoverBorderColor: '#1a1a1a',
-      order: 0,
-    });
-  }
   return new Chart(canvas, {
     type: 'boxplot',
-    data: { labels: years, datasets },
+    data: { labels: years, datasets: [{
+      label: opts.label || '',
+      data: boxes,
+      backgroundColor: color + '2e', borderColor: color, borderWidth: 1.5,
+      outlierColor: '#9c3b2e', itemRadius: 2, itemStyle: 'circle', medianColor: color,
+    }] },
     options: {
       responsive: true, maintainAspectRatio: false,
-      interaction: { mode: 'nearest', intersect: true },
       scales: {
         y: { max: yMax, ticks: { callback: v => v + unit }, grid: { color: '#edece7' } },
         x: { grid: { display: false } },
       },
-      plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: {
-          // A scatter point's year is its x (the category index); a box's is
-          // its dataIndex. Without this the scatter points all title as FY of
-          // whatever index Chart.js hands back for a point dataset.
-          title: (items) => {
-            if (!items.length) return '';
-            const it = items[0];
-            const yi = it.dataset && it.dataset.type === 'scatter' ? it.raw.x : it.dataIndex;
-            return years[yi] != null ? `FY${years[yi]}` : '';
-          },
-          label: (ctx) => {
-            if (ctx.dataset && ctx.dataset.type === 'scatter') {
-              return `${ctx.raw.bank}: ${r1(ctx.raw.y)}${unit}`;
-            }
-            // Composed from `boxes` rather than read off the plugin's own
-            // computed stats, so the summary cannot drift if the plugin
-            // changes the shape it exposes on ctx.raw.
-            const vals = boxes[ctx.dataIndex] || [];
-            if (!vals.length) return '';
-            const s = [...vals].sort((a, b) => a - b);
-            return `${s.length} bank${s.length === 1 ? '' : 's'} · median ${r1(percentile(s, 0.5))}${unit} · Q1 ${r1(percentile(s, 0.25))}${unit} · Q3 ${r1(percentile(s, 0.75))}${unit}`;
-          },
-        } },
-      },
+      plugins: { legend: { display: false } },
     },
   });
 }
 
 function pillar3BoxplotChart(canvas, existingChart, data, banks, metric, noteEl){
   const years = [...new Set(banks.flatMap(b => Object.keys(data[b].pillar3?.[metric] || {})))].sort();
-  // Values and bank names are collected in one pass so the two arrays stay
-  // index-aligned - filtering values separately from names is how a dot ends
-  // up labelled with the wrong bank.
-  const pairs = years.map(y => banks
-    .map(b => [b, data[b].pillar3?.[metric]?.[y]])
-    .filter(([, v]) => v != null));
-  return boxplotByYear(canvas, existingChart, years, pairs.map(p => p.map(([, v]) => v)), {
+  const boxes = years.map(y => banks.map(b => data[b].pillar3?.[metric]?.[y]).filter(v => v != null));
+  return boxplotByYear(canvas, existingChart, years, boxes, {
     color: (PILLAR3_STYLE[metric] || {}).color, label: PILLAR3_LABEL[metric] || metric, noteEl,
-    namesByYear: pairs.map(p => p.map(([b]) => b)),
   });
 }
 
@@ -1222,20 +1217,10 @@ function yearMetricBoxplotChart(canvas, existingChart, seriesByBank, metric, opt
   // 2007 on, blank axis space 1997-2006) whenever the metric switched to
   // one with a shorter history.
   const allYears = [...new Set(Object.values(seriesByBank).flatMap(s => Object.keys(s)))].sort();
-  // Entries, not values: the bank name has to travel with its figure so the
-  // scatter overlay in boxplotByYear can name each dot (user request,
-  // 2026-10-08). Collected in one pass to keep names index-aligned with values.
   const withData = allYears
-    .map(y => [y, Object.entries(seriesByBank)
-      .map(([bank, s]) => [bank, s[y]?.[metric]])
-      .filter(([, v]) => v != null)])
-    .filter(([, pairs]) => pairs.length);
-  return boxplotByYear(
-    canvas, existingChart,
-    withData.map(([y]) => y),
-    withData.map(([, pairs]) => pairs.map(([, v]) => v)),
-    { ...opts, namesByYear: withData.map(([, pairs]) => pairs.map(([b]) => b)) },
-  );
+    .map(y => [y, Object.values(seriesByBank).map(s => s[y]?.[metric]).filter(v => v != null)])
+    .filter(([, vals]) => vals.length);
+  return boxplotByYear(canvas, existingChart, withData.map(([y]) => y), withData.map(([, vals]) => vals), opts);
 }
 
 // A denser, Yahoo/Google-Finance-style read on the parent's share price
@@ -1471,6 +1456,37 @@ function initBubbleChart(spec, payload){
     { label: 'Standalone', data: initial.standalone, backgroundColor: '#c7c2b499', borderColor: '#a39a86', borderWidth: 1, clip: false },
   ];
 
+  // Trend line. `order: -1` puts it behind every bubble dataset (Chart.js
+  // draws low `order` first), so it reads as a background reference rather
+  // than something sitting on top of the data.
+  const xLog = spec.xScale === 'logarithmic', yLog = spec.yScale === 'logarithmic';
+  const xLo = spec.xMin ?? 0, xHi = spec.xMax;
+  const inBounds = (p) => p.x >= xLo && (xHi == null || p.x <= xHi)
+    && p.y >= (spec.yMin ?? 0) && (spec.yMax == null || p.y <= spec.yMax);
+  function trendFor(y){
+    const pts = (payload.points_by_year[y] || []).filter(inBounds);
+    const fit = fitTrend(pts, xLog, yLog);
+    if (!fit || xHi == null) return { data: [], fit: null, dropped: 0 };
+    const at = (x) => {
+      const v = fit.intercept + fit.slope * (xLog ? Math.log10(x) : x);
+      return yLog ? Math.pow(10, v) : v;
+    };
+    return {
+      data: [{ x: xLo, y: at(xLo) }, { x: xHi, y: at(xHi) }],
+      fit,
+      dropped: (payload.points_by_year[y] || []).length - pts.length,
+    };
+  }
+  const trend0 = trendFor(years[idx]);
+  datasets.push({
+    type: 'line', label: 'Trend', data: trend0.data, order: -1,
+    borderColor: '#9c3b2e', borderWidth: 2, borderDash: [6, 4],
+    pointRadius: 0, pointHitRadius: 0, fill: false, tension: 0,
+    // The legend runs with usePointStyle, which would draw this line
+    // dataset's key as a circle alongside the bank-group bubbles.
+    pointStyle: 'line',
+  });
+
   const chart = new Chart(canvas, {
     type: 'bubble',
     data: { datasets },
@@ -1495,14 +1511,36 @@ function initBubbleChart(spec, payload){
         // "Flagged as noise, not signal" in Cross-Bank Trends Analysis.md.
         // Those banks simply sit off-chart in the years they're this
         // extreme, rather than compressing everyone else into one corner.
-        x: { title: { display: true, text: spec.xLabel }, min: spec.xMin ?? 0, max: spec.xMax, grid: { color: '#edece7' } },
-        y: { title: { display: true, text: spec.yLabel }, min: spec.yMin ?? 0, max: spec.yMax, grid: { color: '#edece7' } },
+        // `unit`/`scale` default to a percentage on a linear axis, which is
+        // what every ratio metric wants; the absolute-£ metrics (total
+        // assets, profit) pass them explicitly, and total assets needs a
+        // log axis - eight decades of balance-sheet size.
+        x: {
+          type: spec.xScale || 'linear',
+          title: { display: true, text: spec.xLabel },
+          min: spec.xMin ?? 0, max: spec.xMax,
+          ticks: { callback: v => axisFmt(v, spec.xUnit, spec.xScale) },
+          grid: { color: '#edece7' },
+        },
+        y: {
+          type: spec.yScale || 'linear',
+          title: { display: true, text: spec.yLabel },
+          min: spec.yMin ?? 0, max: spec.yMax,
+          ticks: { callback: v => axisFmt(v, spec.yUnit, spec.yScale) },
+          grid: { color: '#edece7' },
+        },
       },
       plugins: {
         legend: { display: true, position: 'bottom', labels: { boxWidth: 10, font: { size: 10 }, usePointStyle: true } },
         tooltip: { callbacks: { label: (ctx) => {
           const p = ctx.raw;
-          return `${p.bank}: ${spec.xShort} ${p.x}%, ${spec.yShort} ${p.y}%${p.assets != null ? `, total assets ${fmtK(p.assets)}` : ''}`;
+          // The "%" used to be hardcoded here, which was correct while every
+          // axis was a ratio and would have printed "total assets
+          // 1245473000000%" the moment one wasn't.
+          const v = (val, unit) => unit === 'gbp' ? fmtBn(val) : `${val}%`;
+          const assets = p.assets != null && spec.xUnit !== 'gbp' && spec.yUnit !== 'gbp'
+            ? `, total assets ${fmtK(p.assets)}` : '';
+          return `${p.bank}: ${spec.xShort} ${v(p.x, spec.xUnit)}, ${spec.yShort} ${v(p.y, spec.yUnit)}${assets}`;
         } } },
       },
     },
@@ -1516,10 +1554,15 @@ function initBubbleChart(spec, payload){
   function setYear(i){
     idx = i;
     const b = bucketize(years[idx]);
-    chart.data.datasets.forEach(ds => { ds.data = ds.label === 'Standalone' ? b.standalone : (b.byGroup[ds.label] || []); });
+    const tr = trendFor(years[idx]);
+    chart.data.datasets.forEach(ds => {
+      if (ds.label === 'Trend') ds.data = tr.data;
+      else ds.data = ds.label === 'Standalone' ? b.standalone : (b.byGroup[ds.label] || []);
+    });
     chart.update();
     slider.value = idx;
     label.textContent = `FY${years[idx]}`;
+    if (spec.onYear) spec.onYear(years[idx], tr);
   }
   slider.addEventListener('input', () => setYear(Number(slider.value)));
 
@@ -1535,6 +1578,10 @@ function initBubbleChart(spec, payload){
       if (next === years.length - 1) stopPlay();
     }, 900);
   });
+
+  // Fire once for the opening frame, so a caption driven by `onYear` is
+  // correct before the reader touches the slider.
+  if (spec.onYear) spec.onYear(years[idx], trend0);
 
   return chart;
 }
@@ -1606,10 +1653,33 @@ function initCustomBubbleChart(axes){
       xLabel: mx.label, yLabel: my.label,
       xShort: mx.short, yShort: my.short,
       xMax: mx.max, xMin: mx.min, yMax: my.max, yMin: my.min,
+      xUnit: mx.unit, yUnit: my.unit, xScale: mx.scale, yScale: my.scale,
+      onYear: (year, tr) => setNote(year, tr),
     }, payload);
-    const n = payload.points_by_year[payload.years[latest]].length;
-    if (note) {
-      note.textContent = `Bubble size = total assets (balance-sheet scale). Colour = parent group — grouped banks share a colour, standalone banks are gray. Axes are fixed across every year so movement between frames is real, not rescaling. ${n} bank${n === 1 ? '' : 's'} disclose both ${mx.short} and ${my.short} in FY${payload.years[latest]}; a bank missing either one in a given year is absent from that frame rather than plotted at zero.`;
+    // A trend line with no strength attached invites reading a relationship
+    // into a flat scatter, so the caption always carries R-squared, the
+    // sample it was fitted on, and anything it had to leave out.
+    function setNote(year, tr){
+      if (!note) return;
+      const n = (payload.points_by_year[year] || []).length;
+      let trendTxt;
+      if (!tr || !tr.fit) {
+        trendTxt = ' Too few banks disclose both in this year to fit a trend line.';
+      } else {
+        const r2 = tr.fit.r2;
+        // Below R² 0.1 the slope's SIGN is not worth reporting - naming a
+        // direction there ("CET1 rises with RWA density, R² 0.00") reads as
+        // a finding when the honest reading is that there isn't one.
+        const verdict = r2 >= 0.1
+          ? `${r2 >= 0.5 ? 'a strong' : r2 >= 0.25 ? 'a moderate' : 'a weak'} relationship, `
+            + (tr.fit.slope >= 0 ? `${my.short} rises with ${mx.short}` : `${my.short} falls as ${mx.short} rises`)
+          : 'almost no relationship, so the line is near-flat and its direction should not be read as a finding';
+        trendTxt = ` The dashed line is an unweighted least-squares fit on the ${tr.fit.n} bank${tr.fit.n === 1 ? '' : 's'} visible this year — R² ${r2.toFixed(2)}, ${verdict}.`
+          + (mx.scale === 'logarithmic' || my.scale === 'logarithmic' ? ' Fitted in log space, to match the axis.' : '')
+          + (tr.dropped ? ` ${tr.dropped} bank${tr.dropped === 1 ? '' : 's'} sat off-chart this year and ${tr.dropped === 1 ? 'was' : 'were'} excluded from the fit.` : '')
+          + ' Bubbles are sized by total assets but the fit is not weighted by them, so a small bank counts as much as a large one.';
+      }
+      note.textContent = `Bubble size = total assets (balance-sheet scale). Colour = parent group — grouped banks share a colour, standalone banks are gray. Axes are fixed across every year so movement between frames is real, not rescaling. ${n} bank${n === 1 ? '' : 's'} disclose both ${mx.short} and ${my.short} in FY${year}; a bank missing either one in a given year is absent from that frame rather than plotted at zero.${trendTxt}`;
     }
   }
 
@@ -2515,69 +2585,6 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     </div>` + subClose();
   }
 
-  // Three Gapminder-style bubble charts (user request, 2026-09-05: the
-  // user picked risk_vs_capital first, then asked for the other two axis
-  // pairings offered alongside it to be added too). bubbleSectionHtml
-  // below is shared markup; each spec supplies its own DOM id prefix,
-  // axis labels/units, fixed axis bounds, and explanatory note.
-  const BUBBLE_SPECS = [
-    {
-      key: 'risk_vs_capital', idPrefix: 'risk-bubble',
-      title: 'Risk-taking vs. capital strength',
-      hint: 'RWA density vs. CET1 Ratio, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'RWA density (% of total assets)', yLabel: 'CET1 Ratio (%)',
-      xShort: 'RWA density', yShort: 'CET1', xMax: 110, yMax: 90,
-      note: 'Bottom-right (high RWA density, low CET1) is the quadrant worth watching.',
-    },
-    {
-      key: 'efficiency_vs_capital', idPrefix: 'efficiency-bubble',
-      title: 'Cost efficiency vs. capital strength',
-      hint: 'Cost-to-income ratio vs. CET1 Ratio, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Cost-to-income ratio (%)', yLabel: 'CET1 Ratio (%)',
-      xShort: 'cost-to-income', yShort: 'CET1', xMax: 200, yMax: 90,
-      note: 'Bottom-right (costly to run, thin capital) is the quadrant worth watching. Fewer banks disclose a clean cost-to-income figure than the other two bubble charts — see the coverage note on finding 5 in Cross-Bank Trends Analysis.md.',
-    },
-    {
-      key: 'leverage_vs_liquidity', idPrefix: 'leverage-bubble',
-      title: 'Leverage vs. liquidity',
-      hint: 'Leverage Ratio vs. LCR, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Leverage Ratio (%)', yLabel: 'LCR (%)',
-      xShort: 'Leverage Ratio', yShort: 'LCR', xMax: 50, yMax: 1000,
-      note: 'Bottom-left (thin on both fronts) is the quadrant worth watching. A few small banks\' LCR denominators produce five- to six-figure percentages (real disclosures, not comparable moves) and sit off-chart here.',
-    },
-    {
-      key: 'balance_sheet_vs_pnl', idPrefix: 'bs-pnl-bubble',
-      title: 'Balance sheet mix vs. cost efficiency',
-      hint: 'Customer loans as % of total assets vs. cost-to-income ratio, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Customer loans (% of total assets)', yLabel: 'Cost-to-income ratio (%)',
-      xShort: 'loans/assets', yShort: 'cost-to-income', xMax: 100, yMax: 200,
-      note: 'Top-right (loan-heavy and costly to run) is the quadrant worth watching. Coverage is limited to banks disclosing both a clean asset-mix split and a cost-to-income figure.',
-    },
-    {
-      key: 'capital_cushion_vs_growth', idPrefix: 'capital-growth-bubble',
-      title: 'Capital cushion vs. income growth',
-      hint: 'Equity as % of total assets vs. year-on-year income growth, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Equity (% of total assets)', yLabel: 'Income growth, year-on-year (%)',
-      xShort: 'equity/assets', yShort: 'income growth', xMax: 100, yMin: -150, yMax: 300,
-      note: 'Does a thinly-capitalised bank grow income faster? A handful of small/young banks swing 1,000%+ in a single year off a near-zero prior-year income base (real, not a data error) and sit off-chart.',
-    },
-    {
-      key: 'cost_structure', idPrefix: 'cost-structure-bubble',
-      title: 'Cost structure: staff vs. overhead',
-      hint: 'Personnel expense vs. other operating expense, both as % of revenue, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Personnel expense (% of revenue)', yLabel: 'Other operating expense (% of revenue)',
-      xShort: 'personnel/revenue', yShort: 'other opex/revenue', xMax: 150, yMax: 100,
-      note: 'Top-left is overhead-heavy, bottom-right is staff-heavy. Needs both cost lines cleanly disclosed against revenue, so coverage is the smallest of these charts — read it as illustrative, not comprehensive. A few very small-revenue banks push either ratio well past 100% and sit off-chart.',
-    },
-    {
-      key: 'liquidity_vs_loans', idPrefix: 'liquidity-loans-bubble',
-      title: 'Cash buffer vs. loan book',
-      hint: 'Cash vs. customer loans, both as % of total assets, bubble size = total assets — drag the year slider to watch banks move',
-      xLabel: 'Cash (% of total assets)', yLabel: 'Customer loans (% of total assets)',
-      xShort: 'cash/assets', yShort: 'loans/assets', xMax: 100, yMax: 100,
-      note: 'The two ends of the same asset-mix decision — a bank sitting high on both isn\'t possible for long, since both draw from the same pool of total assets.',
-    },
-  ];
   // "Build your own comparison" (user request, 2026-10-08): one bubble chart
   // with selectable axes, placed BEFORE the seven fixed pairings below, which
   // are unchanged. Same visual language and the same initBubbleChart renderer
@@ -2607,21 +2614,6 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     </div>` + subClose();
   }
 
-  BUBBLE_SPECS.forEach(spec => {
-    const payload = (bubbles && bubbles[spec.key]) || { years: [] };
-    if (!payload.years.length) return;
-    const latestIdx = payload.years.length - 1;
-    html += subOpen(spec.title, spec.hint);
-    html += `<div class="card chart-card">
-      <div class="bubble-controls" style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-        <button type="button" class="btn-play" id="${spec.idPrefix}-play">▶ Play</button>
-        <input type="range" id="${spec.idPrefix}-year-slider" min="0" max="${latestIdx}" value="${latestIdx}" step="1" style="flex:1;">
-        <span id="${spec.idPrefix}-year-label" style="font-weight:600;min-width:56px;text-align:right;">FY${payload.years[latestIdx]}</span>
-      </div>
-      <div class="mini-chart-wrap tall" id="${spec.idPrefix}-chart" style="height:420px;"><canvas></canvas></div>
-      <p class="sub" style="margin:8px 0 0;">Bubble size = total assets (balance-sheet scale). Color = parent group — grouped banks share a color, standalone banks are gray. Axes are fixed across every year so movement between frames is real, not rescaling. ${spec.note}</p>
-    </div>` + subClose();
-  });
 
   // Statistical peer clusters: projects scripts/insights/cluster_banks.py's
   // existing k-means fit (previously computed but never visualized
@@ -2688,10 +2680,6 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   document.getElementById('app').innerHTML = html;
   initCollapsibleBlocks();
   efficiencyChart(document.querySelector('#comparison-efficiency-chart canvas'), efficiency);
-  BUBBLE_SPECS.forEach(spec => {
-    const payload = (bubbles && bubbles[spec.key]) || { years: [] };
-    if (payload.years.length) initBubbleChart(spec, payload);
-  });
   initCustomBubbleChart(bubbles && bubbles.axes);
   if (clusters) initClusterPcaChart(document.querySelector('#cluster-pca-chart canvas'), clusters);
 

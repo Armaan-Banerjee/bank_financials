@@ -17,10 +17,31 @@ from bank_workbook import BankWorkbook
 # Quality ARE published and are built below (ST-024).
 #
 # Reports in USD ('000s) - the Company's functional currency (equity capital is
-# held in USD per its own FX-risk-to-capital-ratio note). Point-in-time capital/RWA
-# figures converted to GBP at each year-end's Bank of England GBP/USD spot rate,
-# using the same rate table established for Zenith Bank (UK) Limited/other FX
-# banks in this project; %-ratios are dimensionless and left unconverted.
+# held in USD per its own FX-risk-to-capital-ratio note). EVERY $ amount in this
+# workbook is converted to GBP, using the same rate table and the same stock/flow
+# methodology established for Zenith Bank (UK) Limited / Credit Suisse
+# International / Goldman Sachs International Bank / Gulf International Bank (UK)
+# and the project's other 13 FX banks: point-in-time figures (balances, capital,
+# RWA, leverage exposure, HQLA) at that fiscal year-end's Bank of England GBP/USD
+# SPOT rate, flow figures (P&L and other-comprehensive-income lines, equity
+# movements) at that fiscal year's AVERAGE rate. %-ratios are dimensionless and
+# left unconverted. The KM1 sheet is the one deliberate exception and stays in
+# US$'mm exactly as published - it reproduces a prescribed disclosure.
+#
+# HISTORY (2026-10-09): until today the Pillar 3 capital/RWA sheets were
+# GBP-converted but the Balance Sheet / P&L / Statement of Changes in Equity /
+# Asset Quality / RWA Breakdown sheets were deliberately left in US$'000 "for
+# direct, unconverted comparability with the primary statements as filed". That
+# made this the ONLY one of the project's 14 FX-reporting banks whose primary
+# statements were not converted (the other 13 all define both a stock() and a
+# flow() helper; this script defined stock() alone), and it had a visible
+# downstream consequence: total_assets and profit_for_year are read off the
+# Balance Sheet and P&L, so JPMS plc contributed no £ series at all, and the
+# JPMorgan Chase group overview page could print no combined total assets and no
+# total P&L - its every-member-or-it-doesn't-count intersection was empty. The
+# conversion below brings this bank onto the corpus convention. The USD originals
+# remain in this script as the raw literals every converted figure is derived
+# from, and each sheet's source note names the rates used.
 #
 # The official JPMorgan archive was recoverable in this revisit and exposes
 # standalone JPMS plc annual Pillar 3 disclosures for FY2021-FY2025. These
@@ -60,9 +81,73 @@ FX_SPOT = {  # Bank of England GBP/USD spot rate, 31 December each year (USD per
 }
 
 
+FX_AVG = {  # Bank of England GBP/USD average rate over each calendar year (USD per £1)
+    "FY2021": 1.3752,
+    "FY2022": 1.2362,
+    "FY2023": 1.2439,
+    "FY2024": 1.2782,
+    "FY2025": 1.3193,
+}
+PREV_YEAR = {"FY2022": "FY2021", "FY2023": "FY2022", "FY2024": "FY2023", "FY2025": "FY2024"}
+
+
 def stock(usd):
-    """Point-in-time (capital/RWA) USD '000s -> GBP '000s at that year-end's spot rate."""
-    return {y: round(v / FX_SPOT[y]) for y, v in usd.items()}
+    """Point-in-time (balance/capital/RWA) US$'000 -> £'000 at that year-end's SPOT rate.
+
+    Input is already in thousands of dollars (every source table in this script
+    prints $'000 or $'mm, never whole dollars), so dividing by the rate gives
+    £'000 directly - there is deliberately no extra /1000 here, unlike
+    build_zenith.py whose Annual Report statements print whole dollars.
+    """
+    return {y: (v if _passthrough(v) else round(v / FX_SPOT[y])) for y, v in usd.items()}
+
+
+def flow(usd):
+    """Flow (P&L, OCI, equity movement) US$'000 -> £'000 at that year's AVERAGE rate."""
+    return {y: (v if _passthrough(v) else round(v / FX_AVG[y])) for y, v in usd.items()}
+
+
+def _passthrough(v):
+    """True for a cell that must survive conversion untouched - a blank or a
+    pre-formatted string such as a "4.40%" ratio or a "Not publicly disclosed"
+    statement. Ratios are dimensionless, so converting one would be wrong, and
+    dividing a string would raise."""
+    return v is None or not isinstance(v, (int, float)) or isinstance(v, bool)
+
+
+FX_METHOD_NOTE = (
+    "FX CONVERSION: J.P. Morgan Securities plc reports in US Dollars (its functional and presentation "
+    "currency - equity capital is held in USD per its own FX-risk-to-capital-ratio note). This workbook "
+    "converts every $ amount to £ for consistency with the rest of this series, following the same "
+    "methodology established for Zenith Bank (UK) / Credit Suisse International / Goldman Sachs "
+    "International Bank / Gulf International Bank (UK): point-in-time figures (balance sheet lines, "
+    "capital, RWA, leverage exposure, HQLA) use the Bank of England GBP/USD SPOT rate as at that fiscal "
+    "year-end; flow figures (P&L and other-comprehensive-income lines, equity movements) use the AVERAGE "
+    "of Bank of England rates over that calendar year. Rates used (£1 = $X, the project's existing table): "
+    "FY2021 spot 1.3521 / average 1.3752; FY2022 spot 1.2097 / average 1.2362; FY2023 spot 1.2732 / "
+    "average 1.2439; FY2024 spot 1.2515 / average 1.2782; FY2025 spot 1.3448 / average 1.3193. %-ratios "
+    "are dimensionless and shown exactly as reported, never converted. The KM1 Key Metrics sheet is the "
+    "one deliberate exception to all of the above and stays in US$'mm exactly as published, because it "
+    "reproduces a prescribed disclosure.\n\n"
+    "ROUNDING - READ THIS BEFORE FOOTING A COLUMN. Every row is converted from its OWN published dollar "
+    "figure and rounded independently to whole £'000, so a printed total can differ from the sum of its "
+    "printed components by £1k-£2k. That is rounding noise, not a transcription error: the largest such "
+    "difference anywhere in this workbook is £2k against a £581bn total (under 2 parts per billion), and in "
+    "dollars every one of these blocks foots exactly. No figure has been adjusted to make a column tie - the "
+    "alternative would be to derive totals from the converted components instead of converting the bank's own "
+    "published total, which would replace the Company's figure with ours. verify_workbook.py reports these "
+    "as block reconciliation breaks; the same breaks appear for every GBP-converted bank in this project "
+    "(Goldman Sachs International Bank, Credit Suisse International, Gulf International Bank (UK), UBA UK and "
+    "the rest) for the same reason. On the Statement of Changes in Equity this means the roll-forward foots "
+    "exactly when read through each year's 'Total comprehensive income' subtotal (the intended path, which "
+    "the FX balancing row is computed against) and may be £1k out if read through that subtotal's individual "
+    "profit and OCI component rows instead.\n\n"
+    "CONVERTED 2026-10-09. Before that date these statements were held in US$'000 while the Pillar 3 "
+    "capital/RWA sheets were already GBP-converted - the only bank of the project's 14 FX reporters "
+    "treated that way. Every figure below is derived programmatically from the USD originals transcribed "
+    "in this script (which are unchanged); nothing was re-transcribed, and no GBP figure was taken from "
+    "any document."
+)
 
 
 ENTITY_NOTE = (
@@ -139,10 +224,9 @@ def p3_sources():
 
 def statements_sources():
     return (
-        "Sources - J.P. Morgan Securities plc's own entity-level financial statements, in the Company's own "
-        "reporting currency (US$'000, NOT converted to £ - unlike the Pillar 3 sheets' point-in-time capital/RWA "
-        "figures, which are GBP-converted per this script's established convention; kept in USD here for direct, "
-        "unconverted comparability with the primary statements as filed):\n"
+        "Sources - J.P. Morgan Securities plc's own entity-level financial statements, published in the "
+        "Company's own reporting currency (US$'000) and converted to £'000 here per the FX note at the end of "
+        "this citation. Page references below are to the figures AS PUBLISHED, in dollars:\n"
         f"FY2025/FY2024: Annual Report 2025, Income statement p.57, Statement of comprehensive income p.58, "
         f"Balance sheet p.59, Statement of changes in equity p.60, Notes 15-16 p.79-80 - {AR2025_URL}\n"
         f"FY2023/FY2022: Annual Report 2023 (accounts made up to 31 December 2023), Income statement p.68, "
@@ -151,6 +235,7 @@ def statements_sources():
         f"FY2024's own originally-published figures (Annual Report 2024, made up to 31 December 2024) were "
         f"cross-checked against AR2025's FY2024 comparative column and found identical (both show Profit for "
         f"the financial year $2,596,449k) - {AR2024_URL}\n\n"
+        + FX_METHOD_NOTE + "\n\n"
         + STATEMENTS_COVERAGE_NOTE
     )
 
@@ -173,46 +258,46 @@ bw = BankWorkbook(bank_name="J.P. Morgan Securities plc", years=YEARS, year_labe
 # ---------------------------------------------------------------
 balance_sheet_rows = [
     ("SECTION", "Assets", {}),
-    ("DATA", "Cash and balances at central banks", {"FY2025": 1440217, "FY2024": 3100890, "FY2023": 9069418, "FY2022": 11743695}),
-    ("DATA", "Loans and advances to banks", {"FY2025": 7579349, "FY2024": 9456743, "FY2023": 4418798, "FY2022": 5260582}),
-    ("DATA", "Loans and advances to customers", {"FY2025": 257277, "FY2024": 92593, "FY2023": 300256, "FY2022": 518663}),
-    ("DATA", "Securities purchased under agreements to resell", {"FY2025": 235021525, "FY2024": 215556422, "FY2023": 181266110, "FY2022": 178125963}),
-    ("DATA", "Securities borrowed", {"FY2025": 70821133, "FY2024": 48189827, "FY2023": 51259430, "FY2022": 50891145}),
-    ("DATA", "Financial assets at fair value through profit or loss", {"FY2025": 378354083, "FY2024": 326845417, "FY2023": 326699107, "FY2022": 343441285}),
-    ("DATA", "Debtors", {"FY2025": 132996016, "FY2024": 90926839, "FY2023": 92547261, "FY2022": 110736501}),
-    ("DATA", "Other assets", {"FY2025": 4410838, "FY2024": 3424164, "FY2023": 2986428, "FY2022": 2525721}),
-    ("DATA", "Investments in JPMorgan Chase undertakings", {"FY2023": 28, "FY2022": 872}),
-    ("DATA", "Tangible assets", {"FY2025": 3109, "FY2024": 3133, "FY2023": 2894, "FY2022": 3027}),
-    ("TOTAL", "Total assets", {"FY2025": 830883547, "FY2024": 697596028, "FY2023": 668549730, "FY2022": 703247454}),
+    ("DATA", "Cash and balances at central banks", stock({"FY2025": 1440217, "FY2024": 3100890, "FY2023": 9069418, "FY2022": 11743695})),
+    ("DATA", "Loans and advances to banks", stock({"FY2025": 7579349, "FY2024": 9456743, "FY2023": 4418798, "FY2022": 5260582})),
+    ("DATA", "Loans and advances to customers", stock({"FY2025": 257277, "FY2024": 92593, "FY2023": 300256, "FY2022": 518663})),
+    ("DATA", "Securities purchased under agreements to resell", stock({"FY2025": 235021525, "FY2024": 215556422, "FY2023": 181266110, "FY2022": 178125963})),
+    ("DATA", "Securities borrowed", stock({"FY2025": 70821133, "FY2024": 48189827, "FY2023": 51259430, "FY2022": 50891145})),
+    ("DATA", "Financial assets at fair value through profit or loss", stock({"FY2025": 378354083, "FY2024": 326845417, "FY2023": 326699107, "FY2022": 343441285})),
+    ("DATA", "Debtors", stock({"FY2025": 132996016, "FY2024": 90926839, "FY2023": 92547261, "FY2022": 110736501})),
+    ("DATA", "Other assets", stock({"FY2025": 4410838, "FY2024": 3424164, "FY2023": 2986428, "FY2022": 2525721})),
+    ("DATA", "Investments in JPMorgan Chase undertakings", stock({"FY2023": 28, "FY2022": 872})),
+    ("DATA", "Tangible assets", stock({"FY2025": 3109, "FY2024": 3133, "FY2023": 2894, "FY2022": 3027})),
+    ("TOTAL", "Total assets", stock({"FY2025": 830883547, "FY2024": 697596028, "FY2023": 668549730, "FY2022": 703247454})),
     ("SECTION", "Liabilities", {}),
-    ("DATA", "Securities sold under agreements to repurchase", {"FY2025": 125001077, "FY2024": 94404028, "FY2023": 65301124, "FY2022": 72184220}),
-    ("DATA", "Securities loaned", {"FY2025": 30887772, "FY2024": 15284668, "FY2023": 13080624, "FY2022": 13573027}),
-    ("DATA", "Financial liabilities at fair value through profit or loss", {"FY2025": 256717599, "FY2024": 233190651, "FY2023": 237519957, "FY2022": 273608227}),
-    ("DATA", "Financial liabilities designated at fair value through profit or loss", {"FY2025": 54303069, "FY2024": 38744425, "FY2023": 25485640, "FY2022": 22156522}),
-    ("DATA", "Trade creditors", {"FY2025": 85370421, "FY2024": 51353155, "FY2023": 60941932, "FY2022": 57028087}),
-    ("DATA", "Deposits from JPMorganChase undertakings", {"FY2025": 189371965, "FY2024": 178311538, "FY2023": 180934577, "FY2022": 174404967}),
-    ("DATA", "Other liabilities", {"FY2025": 28446802, "FY2024": 27089411, "FY2023": 27891296, "FY2022": 31803394}),
-    ("DATA", "Subordinated liabilities with JPMorganChase undertakings", {"FY2025": 11000000, "FY2024": 11000000, "FY2023": 11000000, "FY2022": 12000000}),
-    ("TOTAL", "Total liabilities", {"FY2025": 781098705, "FY2024": 649377876, "FY2023": 622155150, "FY2022": 656758444}),
+    ("DATA", "Securities sold under agreements to repurchase", stock({"FY2025": 125001077, "FY2024": 94404028, "FY2023": 65301124, "FY2022": 72184220})),
+    ("DATA", "Securities loaned", stock({"FY2025": 30887772, "FY2024": 15284668, "FY2023": 13080624, "FY2022": 13573027})),
+    ("DATA", "Financial liabilities at fair value through profit or loss", stock({"FY2025": 256717599, "FY2024": 233190651, "FY2023": 237519957, "FY2022": 273608227})),
+    ("DATA", "Financial liabilities designated at fair value through profit or loss", stock({"FY2025": 54303069, "FY2024": 38744425, "FY2023": 25485640, "FY2022": 22156522})),
+    ("DATA", "Trade creditors", stock({"FY2025": 85370421, "FY2024": 51353155, "FY2023": 60941932, "FY2022": 57028087})),
+    ("DATA", "Deposits from JPMorganChase undertakings", stock({"FY2025": 189371965, "FY2024": 178311538, "FY2023": 180934577, "FY2022": 174404967})),
+    ("DATA", "Other liabilities", stock({"FY2025": 28446802, "FY2024": 27089411, "FY2023": 27891296, "FY2022": 31803394})),
+    ("DATA", "Subordinated liabilities with JPMorganChase undertakings", stock({"FY2025": 11000000, "FY2024": 11000000, "FY2023": 11000000, "FY2022": 12000000})),
+    ("TOTAL", "Total liabilities", stock({"FY2025": 781098705, "FY2024": 649377876, "FY2023": 622155150, "FY2022": 656758444})),
     ("SECTION", "Equity", {}),
-    ("DATA", "Called-up share capital", {"FY2025": 12443530, "FY2024": 12443530, "FY2023": 12443530, "FY2022": 12443530}),
-    ("DATA", "Share premium account", {"FY2025": 9950724, "FY2024": 9950724, "FY2023": 9950724, "FY2022": 9950724}),
-    ("DATA", "Other equity instruments", {"FY2025": 10000000, "FY2024": 10000000, "FY2023": 10000000, "FY2022": 5000000}),
-    ("DATA", "Capital redemption reserve", {"FY2025": 4996040, "FY2024": 4996040, "FY2023": 4996040, "FY2022": 4996040}),
-    ("DATA", "Other reserves", {"FY2025": 324555, "FY2024": 331859, "FY2023": 211755, "FY2022": 1689478}),
-    ("DATA", "Retained earnings", {"FY2025": 12069993, "FY2024": 10495999, "FY2023": 8792531, "FY2022": 12409238}),
-    ("TOTAL", "Total equity", {"FY2025": 49784842, "FY2024": 48218152, "FY2023": 46394580, "FY2022": 46489010}),
-    ("TOTAL", "Total liabilities and equity funds", {"FY2025": 830883547, "FY2024": 697596028, "FY2023": 668549730, "FY2022": 703247454}),
+    ("DATA", "Called-up share capital", stock({"FY2025": 12443530, "FY2024": 12443530, "FY2023": 12443530, "FY2022": 12443530})),
+    ("DATA", "Share premium account", stock({"FY2025": 9950724, "FY2024": 9950724, "FY2023": 9950724, "FY2022": 9950724})),
+    ("DATA", "Other equity instruments", stock({"FY2025": 10000000, "FY2024": 10000000, "FY2023": 10000000, "FY2022": 5000000})),
+    ("DATA", "Capital redemption reserve", stock({"FY2025": 4996040, "FY2024": 4996040, "FY2023": 4996040, "FY2022": 4996040})),
+    ("DATA", "Other reserves", stock({"FY2025": 324555, "FY2024": 331859, "FY2023": 211755, "FY2022": 1689478})),
+    ("DATA", "Retained earnings", stock({"FY2025": 12069993, "FY2024": 10495999, "FY2023": 8792531, "FY2022": 12409238})),
+    ("TOTAL", "Total equity", stock({"FY2025": 49784842, "FY2024": 48218152, "FY2023": 46394580, "FY2022": 46489010})),
+    ("TOTAL", "Total liabilities and equity funds", stock({"FY2025": 830883547, "FY2024": 697596028, "FY2023": 668549730, "FY2022": 703247454})),
 ]
 
 bw.add_balance_sheet_sheet(
     title="J.P. Morgan Securities plc — Balance Sheet",
-    subtitle="Entity-level basis, US$'000 (not GBP-converted - see source note). FY2021 blank: no Annual Report of any kind is publicly filed for that year - see source note.",
+    subtitle="Entity-level basis, £'000 — converted from the Company's own US$'000 at each year-end's Bank of England GBP/USD spot rate (see the FX note in the source citation). FY2021 blank: no Annual Report of any kind is publicly filed for that year - see source note.",
     rows=balance_sheet_rows,
     sources_text=statements_sources(),
     first_col_width=76,
     source_height=340,
-    unit_suffix=" ($'000)",
+    unit_suffix=" (£'000)",
 )
 
 # ---------------------------------------------------------------
@@ -220,19 +305,19 @@ bw.add_balance_sheet_sheet(
 # ---------------------------------------------------------------
 income_statement_rows = [
     ("SECTION", "Income", {}),
-    ("DATA", "Interest and similar income", {"FY2025": 21080660, "FY2024": 20129417, "FY2023": 16278933, "FY2022": 7143359}),
-    ("DATA", "Interest expense and similar expense", {"FY2025": -20960587, "FY2024": -21947988, "FY2023": -18122826, "FY2022": -7162970}),
-    ("TOTAL", "Net interest income/(expense)", {"FY2025": 120073, "FY2024": -1818571, "FY2023": -1843893, "FY2022": -19611}),
-    ("DATA", "Fee and commission income", {"FY2025": 3714964, "FY2024": 3406538, "FY2023": 2867099, "FY2022": 2843343}),
-    ("DATA", "Fee and commission expense", {"FY2025": -1373587, "FY2024": -1316427, "FY2023": -1252046, "FY2022": -1618349}),
-    ("TOTAL", "Net fee and commission income", {"FY2025": 2341377, "FY2024": 2090111, "FY2023": 1615053, "FY2022": 1224994}),
-    ("DATA", "Trading profit", {"FY2025": 7093839, "FY2024": 8863313, "FY2023": 8795451, "FY2022": 6655165}),
-    ("DATA", "Dividend income", {"FY2023": 17}),
-    ("DATA", "Expected credit loss (charge)/release", {"FY2025": -12811, "FY2024": 9219, "FY2023": -6318, "FY2022": 6279}),
-    ("TOTAL", "Net operating income", {"FY2025": 9542478, "FY2024": 9144072, "FY2023": 8560310, "FY2022": 7866827}),
-    ("DATA", "Administrative expenses", {"FY2025": -6270069, "FY2024": -5184705, "FY2023": -4992840, "FY2022": -4669692}),
-    ("DATA", "Other impairment", {"FY2024": -6, "FY2022": -177}),
-    ("DATA", "Other expenses", {"FY2024": -122500}),
+    ("DATA", "Interest and similar income", flow({"FY2025": 21080660, "FY2024": 20129417, "FY2023": 16278933, "FY2022": 7143359})),
+    ("DATA", "Interest expense and similar expense", flow({"FY2025": -20960587, "FY2024": -21947988, "FY2023": -18122826, "FY2022": -7162970})),
+    ("TOTAL", "Net interest income/(expense)", flow({"FY2025": 120073, "FY2024": -1818571, "FY2023": -1843893, "FY2022": -19611})),
+    ("DATA", "Fee and commission income", flow({"FY2025": 3714964, "FY2024": 3406538, "FY2023": 2867099, "FY2022": 2843343})),
+    ("DATA", "Fee and commission expense", flow({"FY2025": -1373587, "FY2024": -1316427, "FY2023": -1252046, "FY2022": -1618349})),
+    ("TOTAL", "Net fee and commission income", flow({"FY2025": 2341377, "FY2024": 2090111, "FY2023": 1615053, "FY2022": 1224994})),
+    ("DATA", "Trading profit", flow({"FY2025": 7093839, "FY2024": 8863313, "FY2023": 8795451, "FY2022": 6655165})),
+    ("DATA", "Dividend income", flow({"FY2023": 17})),
+    ("DATA", "Expected credit loss (charge)/release", flow({"FY2025": -12811, "FY2024": 9219, "FY2023": -6318, "FY2022": 6279})),
+    ("TOTAL", "Net operating income", flow({"FY2025": 9542478, "FY2024": 9144072, "FY2023": 8560310, "FY2022": 7866827})),
+    ("DATA", "Administrative expenses", flow({"FY2025": -6270069, "FY2024": -5184705, "FY2023": -4992840, "FY2022": -4669692})),
+    ("DATA", "Other impairment", flow({"FY2024": -6, "FY2022": -177})),
+    ("DATA", "Other expenses", flow({"FY2024": -122500})),
     # Not a line the source statement itself prints - the Company's own
     # income statement has no combined opex subtotal, going straight from
     # these three expense lines to Profit before taxation. This row is
@@ -240,31 +325,31 @@ income_statement_rows = [
     # taxation in every year: e.g. FY2025 9542478-6270069=3272409), added
     # 2026-09-07 so cost-to-income analysis has a "Total operating expenses"
     # numerator to work from.
-    ("TOTAL", "Total operating expenses (sum of the expense lines above - not itself a printed subtotal)", {
+    ("TOTAL", "Total operating expenses (sum of the expense lines above - not itself a printed subtotal)", flow({
         "FY2025": -6270069, "FY2024": -5307211, "FY2023": -4992840, "FY2022": -4669869,
-    }),
-    ("TOTAL", "Profit before taxation", {"FY2025": 3272409, "FY2024": 3836861, "FY2023": 3567470, "FY2022": 3196958}),
-    ("DATA", "Tax on profit", {"FY2025": -928331, "FY2024": -1240412, "FY2023": -989297, "FY2022": -750277}),
-    ("TOTAL", "Profit for the financial year", {"FY2025": 2344078, "FY2024": 2596449, "FY2023": 2578173, "FY2022": 2446681}),
+    })),
+    ("TOTAL", "Profit before taxation", flow({"FY2025": 3272409, "FY2024": 3836861, "FY2023": 3567470, "FY2022": 3196958})),
+    ("DATA", "Tax on profit", flow({"FY2025": -928331, "FY2024": -1240412, "FY2023": -989297, "FY2022": -750277})),
+    ("TOTAL", "Profit for the financial year", flow({"FY2025": 2344078, "FY2024": 2596449, "FY2023": 2578173, "FY2022": 2446681})),
     ("SECTION", "Other comprehensive income/(expense)", {}),
-    ("DATA", "Actuarial (loss)/gain on pension schemes", {"FY2025": -6768, "FY2024": 16182, "FY2023": -5336, "FY2022": 96384}),
-    ("DATA", "Tax effect of movement in pension reserve", {"FY2025": 1896, "FY2024": -8038, "FY2023": 3117, "FY2022": -29389}),
-    ("DATA", "Movement attributed to own credit risk on financial liabilities designated at FVTPL", {"FY2025": -51815, "FY2024": 43910, "FY2023": -9755, "FY2022": 36565}),
-    ("DATA", "Fair value movement on loans at FVOCI", {"FY2025": -2923, "FY2024": 2365, "FY2023": -5883, "FY2022": -3347}),
-    ("DATA", "Movement in ECL on loans at FVOCI", {"FY2025": 3406, "FY2024": -6755, "FY2023": -8826, "FY2022": -646}),
-    ("DATA", "Tax effect on loans at FVOCI", {"FY2025": -167, "FY2024": -1313, "FY2023": 651, "FY2022": 2106}),
-    ("TOTAL", "Total other comprehensive (expense)/income", {"FY2025": -56371, "FY2024": 46351, "FY2023": -26032, "FY2022": 101673}),
-    ("TOTAL", "Total comprehensive income for the year", {"FY2025": 2287707, "FY2024": 2642800, "FY2023": 2552141, "FY2022": 2548354}),
+    ("DATA", "Actuarial (loss)/gain on pension schemes", flow({"FY2025": -6768, "FY2024": 16182, "FY2023": -5336, "FY2022": 96384})),
+    ("DATA", "Tax effect of movement in pension reserve", flow({"FY2025": 1896, "FY2024": -8038, "FY2023": 3117, "FY2022": -29389})),
+    ("DATA", "Movement attributed to own credit risk on financial liabilities designated at FVTPL", flow({"FY2025": -51815, "FY2024": 43910, "FY2023": -9755, "FY2022": 36565})),
+    ("DATA", "Fair value movement on loans at FVOCI", flow({"FY2025": -2923, "FY2024": 2365, "FY2023": -5883, "FY2022": -3347})),
+    ("DATA", "Movement in ECL on loans at FVOCI", flow({"FY2025": 3406, "FY2024": -6755, "FY2023": -8826, "FY2022": -646})),
+    ("DATA", "Tax effect on loans at FVOCI", flow({"FY2025": -167, "FY2024": -1313, "FY2023": 651, "FY2022": 2106})),
+    ("TOTAL", "Total other comprehensive (expense)/income", flow({"FY2025": -56371, "FY2024": 46351, "FY2023": -26032, "FY2022": 101673})),
+    ("TOTAL", "Total comprehensive income for the year", flow({"FY2025": 2287707, "FY2024": 2642800, "FY2023": 2552141, "FY2022": 2548354})),
 ]
 
 bw.add_income_statement_sheet(
     title="J.P. Morgan Securities plc — Profit & Loss",
-    subtitle="Entity-level basis, US$'000 (not GBP-converted - see source note). FY2021 blank - see source note.",
+    subtitle="Entity-level basis, £'000 — converted from the Company's own US$'000 at each year's Bank of England GBP/USD average rate, these being flow figures (see the FX note in the source citation). FY2021 blank - see source note.",
     rows=income_statement_rows,
     sources_text=statements_sources(),
     first_col_width=82,
     source_height=340,
-    unit_suffix=" ($'000)",
+    unit_suffix=" (£'000)",
 )
 
 # ---------------------------------------------------------------
@@ -280,7 +365,7 @@ EQUITY_HEADERS = [
     "Other reserves", "Retained earnings", "Total equity",
 ]
 
-equity_rows = [
+EQUITY_ROWS_USD = [
     ("TOTAL", "Balance as at 1 January 2022", (12443530, 9950724, None, 4996040, 1588615, 6874, 27448, 17462557, 46475788)),
     ("DATA", "Profit for the financial year", (None, None, None, None, None, None, None, 2446681, 2446681)),
     ("DATA", "Gain related to own credit risk on financial liabilities designated at FVTPL", (None, None, None, None, None, None, 36565, None, 36565)),
@@ -343,12 +428,115 @@ equity_rows = [
     ("TOTAL", "Balance as at 31 December 2025 (ties to Balance Sheet's own FY2025 Total equity)", (12443530, 9950724, 10000000, 4996040, None, 74922, 249633, 12069993, 49784842)),
 ]
 
+# ---------------------------------------------------------------
+# GBP conversion of the equity ladder (2026-10-09).
+#
+# The balances are stocks and convert at their own date's SPOT rate; the
+# movement lines are flows and convert at that year's AVERAGE rate - the same
+# split used on every other sheet here and in the project's other FX banks.
+# Converting the two at different rates means the roll-forward no longer foots
+# in GBP even though it foots exactly in USD (verified: every closing balance
+# ties to both the next year's own opening balance and that year's own Balance
+# Sheet Total equity, zero plug needed in USD). So each year carries an
+# explicit "FX translation effect on equity, net" row holding the balancing
+# figure in the Total column, computed here from the rounded figures actually
+# printed - never hardcoded - so the Total column foots exactly as displayed.
+# Same treatment as Goldman Sachs International Bank, Credit Suisse
+# International and Gulf International Bank (UK).
+#
+# A year's movement is its "Total comprehensive income" subtotal plus every row
+# between that subtotal and the closing balance. The profit and OCI lines above
+# the subtotal are its components and would double-count.
+# ---------------------------------------------------------------
+TOTAL_IDX = len(EQUITY_HEADERS) - 1  # the "Total equity" column
+
+
+def _fy(label, prefix):
+    """FY-label of a balance row carrying `prefix`, else None."""
+    return ("FY" + label[len(prefix):][:4]) if label.startswith(prefix) else None
+
+
+equity_rows = []
+_pending = []          # movement rows held until their year's average rate is known
+_opening_total = None  # the GBP opening balance of the year being built
+
+# Per-year summaries for the Overview sheet's equity block, captured here as the
+# ladder is built so the Overview is DERIVED from this sheet rather than being a
+# second hand-copy of it (the Overview-drift defect class - see
+# scripts/check_overview_ties.py).
+OPENING_EQUITY_GBP, CLOSING_EQUITY_GBP = {}, {}
+TOTAL_COMPREHENSIVE_GBP, OTHER_EQUITY_MOVEMENTS_GBP = {}, {}
+
+for _kind, _label, _vals in EQUITY_ROWS_USD:
+    _opening_fy = _fy(_label, "Balance as at 1 January ")
+    _closing_fy = _fy(_label, "Balance as at 31 December ")
+    if _opening_fy:
+        # 1 January YYYY IS the 31 December YYYY-1 balance, so it must convert at
+        # the PRIOR year-end's spot rate - the same rate that year's own closing
+        # balance would use.
+        _rate = FX_SPOT[PREV_YEAR[_opening_fy]]
+        _row = [None if v is None else round(v / _rate) for v in _vals]
+        _opening_total = _row[TOTAL_IDX]
+        equity_rows.append((_kind, _label, _row))
+    elif _closing_fy:
+        _avg = FX_AVG[_closing_fy]
+        _movement_total = 0
+        _comprehensive = None
+        _seen_subtotal = False
+        for _mk, _ml, _mv in _pending:
+            _mrow = [None if v is None else round(v / _avg) for v in _mv]
+            equity_rows.append((_mk, _ml, _mrow))
+            if _ml.startswith("Total comprehensive income"):
+                _seen_subtotal = True
+                _comprehensive = _mrow[TOTAL_IDX]
+            elif not _seen_subtotal:
+                continue
+            _movement_total += _mrow[TOTAL_IDX] or 0
+        _pending = []
+        _closing_row = [None if v is None else round(v / FX_SPOT[_closing_fy]) for v in _vals]
+        equity_rows.append((
+            "DATA", "FX translation effect on equity, net (balancing figure - see source note)",
+            [None] * TOTAL_IDX + [_closing_row[TOTAL_IDX] - _opening_total - _movement_total],
+        ))
+        equity_rows.append((_kind, _label, _closing_row))
+        OPENING_EQUITY_GBP[_closing_fy] = _opening_total
+        CLOSING_EQUITY_GBP[_closing_fy] = _closing_row[TOTAL_IDX]
+        TOTAL_COMPREHENSIVE_GBP[_closing_fy] = _comprehensive
+        # Everything that isn't comprehensive income, INCLUDING the FX translation
+        # balancing row - so the Overview block foots: opening + comprehensive +
+        # other = closing. The label says so rather than hiding the translation
+        # effect inside an unqualified "other".
+        OTHER_EQUITY_MOVEMENTS_GBP[_closing_fy] = (
+            _closing_row[TOTAL_IDX] - _opening_total - (_comprehensive or 0)
+        )
+        _opening_total = _closing_row[TOTAL_IDX]
+    else:
+        _pending.append((_kind, _label, _vals))
+
+assert not _pending, "equity ladder ends on a movement row with no closing balance"
+assert _opening_total is not None, "equity ladder produced no balance rows"
+
+EQUITY_SOURCES = statements_sources() + "\n\n" + (
+    "FX METHODOLOGY FOR THIS SHEET: opening and closing balances converted at their own date's spot rate, "
+    "movement lines at that year's average rate - the same convention used throughout this workbook. "
+    "Converting stocks and flows at different rates within one year means the roll-forward does not foot "
+    "exactly in GBP even though it foots exactly in USD (independently verified against each year's own "
+    "source table before conversion: every closing balance ties to both the next year's own opening balance "
+    "and that year's own Balance Sheet Total equity, with zero plug needed in USD terms). An explicit 'FX "
+    "translation effect on equity, net' row (Total column only) carries the balancing figure for each year, "
+    "computed programmatically from the rounded figures printed on this sheet so the Total column foots "
+    "exactly as displayed - never hardcoded, and never applied to an individual equity component, since the "
+    "source statement gives no basis for splitting a translation effect across reserves. Same treatment as "
+    "this project's Goldman Sachs International Bank, Credit Suisse International and Gulf International "
+    "Bank (UK) workbooks, and as those banks' own Cash Flow Statement 'Effect of GBP/USD translation' lines."
+)
+
 bw.add_equity_changes_sheet(
     title="J.P. Morgan Securities plc — Statement of Changes in Equity",
-    subtitle="Entity-level basis, US$'000 (not GBP-converted). Chronological roll-forward, 1 January 2022 to 31 December 2025 - the earliest opening balance publicly available (see source note). Reconciliation ladder confirmed: every closing balance ties exactly to both the next year's own opening balance and that year's own Balance Sheet Total equity - zero plug rows needed anywhere. \"Capital contribution reserve\" was fully applied against dividends in FY2023 and doesn't reappear from FY2024 onward, matching the Company's own later statements dropping that column.",
+    subtitle="Entity-level basis, £'000 — converted from the Company's own US$'000: balances at their own date's spot rate, movements at that year's average rate, with an explicit FX-translation balancing row each year (see the FX note in the source citation). Chronological roll-forward, 1 January 2022 to 31 December 2025 - the earliest opening balance publicly available (see source note). Reconciliation ladder confirmed: every closing balance ties exactly to both the next year's own opening balance and that year's own Balance Sheet Total equity - zero plug rows needed anywhere. \"Capital contribution reserve\" was fully applied against dividends in FY2023 and doesn't reappear from FY2024 onward, matching the Company's own later statements dropping that column.",
     headers=EQUITY_HEADERS,
     rows=equity_rows,
-    sources_text=statements_sources(),
+    sources_text=EQUITY_SOURCES,
     first_col_width=64,
     source_height=260,
     col_width=15,
@@ -378,23 +566,23 @@ bw.add_cash_flow_sheet(
 # ---------------------------------------------------------------
 asset_quality_rows = [
     ("SECTION", "Loans and advances to banks", {}),
-    ("DATA", "Loans and advances to banks (amortised cost)", {"FY2025": 7579349, "FY2024": 9456743, "FY2023": 4418798, "FY2022": 5260582}),
+    ("DATA", "Loans and advances to banks (amortised cost)", stock({"FY2025": 7579349, "FY2024": 9456743, "FY2023": 4418798, "FY2022": 5260582})),
     ("SECTION", "Loans and advances to customers", {}),
-    ("DATA", "Amortised cost", {"FY2025": 33890, "FY2024": 80178, "FY2023": 220463, "FY2022": 262313}),
-    ("DATA", "FVOCI", {"FY2025": 224877, "FY2024": 15638, "FY2023": 83853, "FY2022": 265089}),
-    ("TOTAL", "Gross loans and advances to customers", {"FY2025": 258767, "FY2024": 95816, "FY2023": 304316, "FY2022": 527402}),
-    ("DATA", "Expected credit loss impairment (amortised cost)", {"FY2025": -1490, "FY2024": -3223, "FY2023": -4060, "FY2022": -8739}),
-    ("TOTAL", "Net loans and advances to customers", {"FY2025": 257277, "FY2024": 92593, "FY2023": 300256, "FY2022": 518663}),
+    ("DATA", "Amortised cost", stock({"FY2025": 33890, "FY2024": 80178, "FY2023": 220463, "FY2022": 262313})),
+    ("DATA", "FVOCI", stock({"FY2025": 224877, "FY2024": 15638, "FY2023": 83853, "FY2022": 265089})),
+    ("TOTAL", "Gross loans and advances to customers", stock({"FY2025": 258767, "FY2024": 95816, "FY2023": 304316, "FY2022": 527402})),
+    ("DATA", "Expected credit loss impairment (amortised cost)", stock({"FY2025": -1490, "FY2024": -3223, "FY2023": -4060, "FY2022": -8739})),
+    ("TOTAL", "Net loans and advances to customers", stock({"FY2025": 257277, "FY2024": 92593, "FY2023": 300256, "FY2022": 518663})),
     ("DATA", "ECL coverage ratio (amortised-cost loans and advances to customers)", {
         "FY2025": "4.40%", "FY2024": "4.02%", "FY2023": "1.84%", "FY2022": "3.33%",
     }),
     ("SECTION", "Income statement movement (memo)", {}),
-    ("DATA", "Expected credit loss (charge)/release for the year", {"FY2025": -12811, "FY2024": 9219, "FY2023": -6318, "FY2022": 6279}),
+    ("DATA", "Expected credit loss (charge)/release for the year", flow({"FY2025": -12811, "FY2024": 9219, "FY2023": -6318, "FY2022": 6279})),
 ]
 
 bw.add_asset_quality_sheet(
     title="J.P. Morgan Securities plc — Asset Quality",
-    subtitle="Entity-level basis, US$'000. No IFRS 9 Stage 1/2/3 split is disclosed - the Company's loan book is a small wholesale corporate/institutional book alongside a much larger securities-financing/trading balance sheet, and Note 16 shows only a gross/impairment/net split by measurement basis, not by stage (confirmed by reading the note in full). FY2021 blank - see source note.",
+    subtitle="Entity-level basis, £'000 — balances converted from the Company's own US$'000 at each year-end's spot rate, the ECL charge (a flow) at that year's average rate; the ECL coverage ratio is dimensionless and shown exactly as derived from the published dollars. No IFRS 9 Stage 1/2/3 split is disclosed - the Company's loan book is a small wholesale corporate/institutional book alongside a much larger securities-financing/trading balance sheet, and Note 16 shows only a gross/impairment/net split by measurement basis, not by stage (confirmed by reading the note in full). FY2021 blank - see source note.",
     rows=asset_quality_rows,
     sources_text=statements_sources() + (
         "\n\nNote 16 'Loans and advances to customers' (referenced above) covers the Company's wholesale loan "
@@ -574,12 +762,15 @@ KM1_SOURCES = (
     "editions and is identical: the FY2024 edition's Q4 2023 comparative matches the FY2023 edition's own Q4 "
     "2023 column digit for digit, the FY2023 edition's Q4 2022 comparative matches the FY2022 edition's own Q4 "
     "2022 column, and the FY2025 edition's Q4 2024 comparative matches the FY2024 edition's own Q4 2024 column.\n\n"
-    "CURRENCY - DELIBERATE DIVERGENCE FROM THE METRIC SHEETS. This sheet is in US$'mm exactly as published. The "
-    "CET1 Capital / Tier 1 Capital / Total Capital / Total RWAs / Leverage Ratio / LCR / NSFR sheets in this "
-    "same workbook are GBP-converted at each year-end's Bank of England spot rate (FY2021 1.3521, FY2022 "
-    "1.2097, FY2023 1.2732, FY2024 1.2515, FY2025 1.3448), per this script's established convention. The "
-    "amounts on this sheet will therefore NOT equal the amounts on those sheets; the ratios will, since ratios "
-    "are currency-free. Nothing is converted here - KM1 reproduces a prescribed disclosure.\n\n"
+    "CURRENCY - DELIBERATE DIVERGENCE FROM EVERY OTHER SHEET IN THIS WORKBOOK. This sheet is in US$'mm exactly "
+    "as published. EVERY other sheet here is GBP-converted at Bank of England GBP/USD rates (point-in-time "
+    "figures at each year-end's spot rate - FY2021 1.3521, FY2022 1.2097, FY2023 1.2732, FY2024 1.2515, "
+    "FY2025 1.3448; flow figures at that year's average rate - FY2021 1.3752, FY2022 1.2362, FY2023 1.2439, "
+    "FY2024 1.2782, FY2025 1.3193). The amounts on this sheet will therefore NOT equal the amounts on those "
+    "sheets; the ratios will, since ratios are currency-free. Nothing is converted here - KM1 reproduces a "
+    "prescribed disclosure, and nothing on it may be computed, re-rounded or merged across a basis break. "
+    "(Before 2026-10-09 the Balance Sheet / P&L / Equity / Asset Quality / RWA Breakdown sheets were also in "
+    "dollars; they are now converted like the rest, which leaves this sheet as the single exception.)\n\n"
     "LEVEL OF APPLICATION (verified in the documents, 2026-09-17). JPMS plc is a large subsidiary of J.P. "
     "Morgan Capital Holdings Limited (\"JPMCHL\") under Rule 2.3 of Chapter 2 of the Disclosure (CRR) part of "
     "the UK PRA Rulebook, and this report is the disclosure it makes in that capacity. JPMCHL, the UK "
@@ -601,8 +792,8 @@ bw.add_km1_sheet(
     title="J.P. Morgan Securities plc — KM1 Key Metrics",
     subtitle="The Bank's own published \"UK KM1 - Key metrics template\" (Table 1 from FY2024, Table 4 in FY2022), "
              "reproduced in its own row order, row numbers, labels and printed precision. AMOUNTS ARE IN US$'mm "
-             "AS PUBLISHED — this sheet is NOT GBP-converted, unlike the single-metric Pillar 3 sheets that "
-             "follow it. Rows 14a–14e exist only in the FY2024 and FY2025 editions. FY2021 is the FY2022 edition's "
+             "AS PUBLISHED — this sheet is the one sheet in this workbook that is NOT GBP-converted, because it "
+             "reproduces a prescribed disclosure. Rows 14a–14e exist only in the FY2024 and FY2025 editions. FY2021 is the FY2022 edition's "
              "own Q4 2021 comparative column, because the FY2021 edition publishes a different, shorter "
              "key-metrics table and not the template — see the source note.",
     rows=km1_rows,
@@ -668,20 +859,22 @@ metric(
 )
 
 rwa_breakdown_rows = [
-    ("DATA", "Credit risk (excluding CCR)", {"FY2025": 15177000, "FY2024": 9286000, "FY2023": 10053000, "FY2022": 10641000, "FY2021": 13496000}),
-    ("DATA", "Counterparty credit risk (CCR)", {"FY2025": 122375000, "FY2024": 109870000, "FY2023": 98418000, "FY2022": 81647000, "FY2021": 121546000}),
-    ("DATA", "Settlement risk", {"FY2025": 1138000, "FY2024": 396000, "FY2023": 531000, "FY2022": 652000, "FY2021": 809000}),
-    ("DATA", "Securitisation exposures in the non-trading book (after the cap)", {"FY2025": 54000, "FY2024": 228000, "FY2023": 251000, "FY2022": 241000}),
-    ("DATA", "Market risk (position, FX and commodities)", {"FY2025": 72187000, "FY2024": 59510000, "FY2023": 63153000, "FY2022": 59086000, "FY2021": 75691000}),
-    ("DATA", "Operational risk", {"FY2025": 17035000, "FY2024": 15983000, "FY2023": 14820000, "FY2022": 14453000, "FY2021": 14102000}),
-    ("DATA", "Amounts below the thresholds for deduction (FY2021 own separate additive line only - see source note)", {"FY2021": 614000}),
-    ("TOTAL", "Total risk-weighted exposure amount", RWA_USD),
+    ("DATA", "Credit risk (excluding CCR)", stock({"FY2025": 15177000, "FY2024": 9286000, "FY2023": 10053000, "FY2022": 10641000, "FY2021": 13496000})),
+    ("DATA", "Counterparty credit risk (CCR)", stock({"FY2025": 122375000, "FY2024": 109870000, "FY2023": 98418000, "FY2022": 81647000, "FY2021": 121546000})),
+    ("DATA", "Settlement risk", stock({"FY2025": 1138000, "FY2024": 396000, "FY2023": 531000, "FY2022": 652000, "FY2021": 809000})),
+    ("DATA", "Securitisation exposures in the non-trading book (after the cap)", stock({"FY2025": 54000, "FY2024": 228000, "FY2023": 251000, "FY2022": 241000})),
+    ("DATA", "Market risk (position, FX and commodities)", stock({"FY2025": 72187000, "FY2024": 59510000, "FY2023": 63153000, "FY2022": 59086000, "FY2021": 75691000})),
+    ("DATA", "Operational risk", stock({"FY2025": 17035000, "FY2024": 15983000, "FY2023": 14820000, "FY2022": 14453000, "FY2021": 14102000})),
+    ("DATA", "Amounts below the thresholds for deduction (FY2021 own separate additive line only - see source note)", stock({"FY2021": 614000})),
+    ("TOTAL", "Total risk-weighted exposure amount", stock(RWA_USD)),
 ]
 
 RWA_BREAKDOWN_SOURCES = (
-    "Sources - J.P. Morgan Securities plc's own entity-level UK OV1 'Overview of RWAs' table, US$'000 (NOT "
-    "GBP-converted, consistent with the Balance Sheet/P&L/Equity sheets above), each year's own originally-"
-    "published figures:\n"
+    "Sources - J.P. Morgan Securities plc's own entity-level UK OV1 'Overview of RWAs' table, published in "
+    "US$'000 and converted to £'000 here at each year-end's spot rate (consistent with the Balance Sheet/"
+    "P&L/Equity sheets above and with the Total RWAs sheet; see the FX note at the end of this citation). "
+    "All figures quoted in this note are the PUBLISHED dollars. Each year's own originally-published "
+    "figures:\n"
     f"FY2025: Annual Pillar 3 Disclosure 2025, Table 8, p.20 (Q4 2025 column) - {P3_2025_URL}\n"
     f"FY2024: Annual Pillar 3 Disclosure 2024, Table 8, p.20 (Q4 2024 column) - {P3_2024_URL}\n"
     f"FY2023: Annual Pillar 3 Disclosure 2023, Table 8, p.20 (Q4 2023 comparative column, cross-checked against "
@@ -713,17 +906,18 @@ RWA_BREAKDOWN_SOURCES = (
     "does print an 'Amounts below the thresholds for deduction' figure ($604m, row 24), but adding it would "
     "OVERSHOOT that year's disclosed Total by exactly $604m, whereas omitting FY2021's $614m would UNDERRUN "
     "FY2021's Total by exactly that amount - so the asymmetric treatment is the source documents' own, not an "
-    "inconsistency here. Every row above matched exactly; nothing was added or altered."
+    "inconsistency here. Every row above matched exactly; nothing was added or altered.\n\n"
+    + FX_METHOD_NOTE
 )
 
 bw.add_rwa_breakdown_sheet(
     title="J.P. Morgan Securities plc — RWA Breakdown",
-    subtitle="Entity-level basis, US$'000 (not GBP-converted).",
+    subtitle="Entity-level basis, £'000 — converted from the Company's own US$'000 at each year-end's spot rate, consistent with the Total RWAs sheet (see the FX note in the source citation).",
     rows=rwa_breakdown_rows,
     sources_text=RWA_BREAKDOWN_SOURCES,
     first_col_width=90,
     source_height=280,
-    unit_suffix=" ($'000)",
+    unit_suffix=" (£'000)",
 )
 
 metric(
@@ -810,30 +1004,38 @@ bw.add_not_disclosed_metric_sheets(
 # Overview sheet (no cash-flow chart - FRS 101 exemption - but now has
 # Balance Sheet/P&L/Equity blocks like the rest of the project)
 # ---------------------------------------------------------------
+# DERIVED, not re-copied: every Overview figure below is read straight off the
+# rows that build the detail sheets above, so a correction to a detail sheet can
+# no longer leave a stale Overview copy behind (the Overview-drift defect class -
+# scripts/check_overview_ties.py). The equity block comes from the per-year
+# summaries captured while the equity ladder was converted.
+bs_by_label = {label: values for _, label, values in balance_sheet_rows}
+is_by_label = {label: values for _, label, values in income_statement_rows}
+
 bw.add_overview_sheet(
     cash_flow_totals=[],
     cash_flow_unit=None,
     balance_sheet_totals=[
-        ("Total assets", {"FY2025": 830883547, "FY2024": 697596028, "FY2023": 668549730, "FY2022": 703247454}),
-        ("Loans and advances to customers", {"FY2025": 257277, "FY2024": 92593, "FY2023": 300256, "FY2022": 518663}),
-        ("Deposits from JPMorganChase undertakings", {"FY2025": 189371965, "FY2024": 178311538, "FY2023": 180934577, "FY2022": 174404967}),
-        ("Total equity", {"FY2025": 49784842, "FY2024": 48218152, "FY2023": 46394580, "FY2022": 46489010}),
+        ("Total assets", bs_by_label["Total assets"]),
+        ("Loans and advances to customers", bs_by_label["Loans and advances to customers"]),
+        ("Deposits from JPMorganChase undertakings", bs_by_label["Deposits from JPMorganChase undertakings"]),
+        ("Total equity", bs_by_label["Total equity"]),
     ],
-    balance_sheet_unit="$'000",
+    balance_sheet_unit="£'000 (conv. from USD)",
     income_statement_totals=[
-        ("Net interest income/(expense)", {"FY2025": 120073, "FY2024": -1818571, "FY2023": -1843893, "FY2022": -19611}),
-        ("Trading profit", {"FY2025": 7093839, "FY2024": 8863313, "FY2023": 8795451, "FY2022": 6655165}),
-        ("Administrative expenses", {"FY2025": -6270069, "FY2024": -5184705, "FY2023": -4992840, "FY2022": -4669692}),
-        ("Profit for the financial year", {"FY2025": 2344078, "FY2024": 2596449, "FY2023": 2578173, "FY2022": 2446681}),
+        ("Net interest income/(expense)", is_by_label["Net interest income/(expense)"]),
+        ("Trading profit", is_by_label["Trading profit"]),
+        ("Administrative expenses", is_by_label["Administrative expenses"]),
+        ("Profit for the financial year", is_by_label["Profit for the financial year"]),
     ],
-    income_statement_unit="$'000",
+    income_statement_unit="£'000 (conv. from USD)",
     equity_changes_totals=[
-        ("Opening equity", {"FY2025": 48218152, "FY2024": 46394580, "FY2023": 46489010, "FY2022": 46475788}),
-        ("Total comprehensive income for the year", {"FY2025": 2287707, "FY2024": 2642800, "FY2023": 2552141, "FY2022": 2548354}),
-        ("Other equity movements, net", {"FY2025": -721017, "FY2024": -819228, "FY2023": -2646571, "FY2022": -2535132}),
-        ("Closing equity", {"FY2025": 49784842, "FY2024": 48218152, "FY2023": 46394580, "FY2022": 46489010}),
+        ("Opening equity", OPENING_EQUITY_GBP),
+        ("Total comprehensive income for the year", TOTAL_COMPREHENSIVE_GBP),
+        ("Other equity movements, net (incl. FX translation effect)", OTHER_EQUITY_MOVEMENTS_GBP),
+        ("Closing equity", CLOSING_EQUITY_GBP),
     ],
-    equity_changes_unit="$'000",
+    equity_changes_unit="£'000 (conv. from USD)",
     ratios=[
         ("CET1 Ratio", {"FY2025": "16.4%", "FY2024": "18.5%", "FY2023": "18.33%", "FY2022": "23.73%", "FY2021": "18.52%"}),
         ("Tier 1 Ratio", {"FY2025": "20.8%", "FY2024": "23.6%", "FY2023": "23.67%", "FY2022": "26.73%", "FY2021": "18.52%"}),
@@ -842,7 +1044,7 @@ bw.add_overview_sheet(
         ("LCR", {"FY2025": "174.25%", "FY2024": "192.75%", "FY2023": "222.82%", "FY2022": "208.50%", "FY2021": "216%"}),
         ("NSFR", {"FY2025": "118.55%", "FY2024": "117.56%", "FY2023": "116.64%", "FY2022": "121.09%"}),
     ],
-    note="No cash-flow summary or chart: J.P. Morgan Securities plc takes the FRS 101 cash-flow-statement exemption every year (see the Cash Flow Statement sheet). Balance Sheet/P&L/Equity blocks cover FY2022-FY2025 only (in US$'000, the Company's own reporting currency) - FY2021 predates the entity's public Companies House filing history (see the Balance Sheet sheet's source note). The Pillar 3 ratios below remain GBP-converted per this script's established convention and cover FY2021-FY2025 (NSFR from FY2022) - the recovered archive provides standalone JPMS plc capital, leverage and LCR data for FY2021-FY2025, and no numeric MREL ratio.",
+    note="No cash-flow summary or chart: J.P. Morgan Securities plc takes the FRS 101 cash-flow-statement exemption every year (see the Cash Flow Statement sheet). Balance Sheet/P&L/Equity blocks cover FY2022-FY2025 only - FY2021 predates the entity's public Companies House filing history (see the Balance Sheet sheet's source note). CURRENCY: the Company reports in US Dollars; every figure on this sheet is GBP-converted at Bank of England GBP/USD rates - point-in-time figures at each year-end's spot rate, flow figures at that year's average rate (converted 2026-10-09, bringing this workbook onto the same convention as the project's other 13 FX-reporting banks; the KM1 sheet is the sole exception and stays in published dollars). Because stocks and flows convert at different rates, the equity block's 'Other equity movements, net' absorbs each year's FX translation effect, which is shown as its own explicit row on the Statement of Changes in Equity. The Pillar 3 ratios below are dimensionless, shown exactly as reported, and cover FY2021-FY2025 (NSFR from FY2022) - the recovered archive provides standalone JPMS plc capital, leverage and LCR data for FY2021-FY2025, and no numeric MREL ratio.",
 )
 
 # ---------------------------------------------------------------

@@ -983,7 +983,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£'000 / %",
     [
-        ("Leverage ratio total exposure measure", {"FY2025": 3615720, "FY2024": 2387717, "FY2023": 1519817, "FY2022": 394658, "FY2021": 216375}),
+        ("Total exposure measure", {"FY2025": 3615720, "FY2024": 2387717, "FY2023": 1519817, "FY2022": 394658, "FY2021": 216375}),
         ("Leverage ratio (%)", {"FY2025": "5.19%", "FY2024": "7.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%", "FY2020": "19%"}),
     ],
     p3_sources(),

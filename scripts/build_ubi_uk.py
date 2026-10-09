@@ -1250,7 +1250,7 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
-        ("Leverage ratio total exposure measure", stock({"FY2025": 496976, "FY2024": 511751, "FY2023": 475110, "FY2022": 411084, "FY2021": 402973, "FY2020": 410130, "FY2019": 460623, "FY2018": 445036})),
+        ("Total exposure measure", stock({"FY2025": 496976, "FY2024": 511751, "FY2023": 475110, "FY2022": 411084, "FY2021": 402973, "FY2020": 410130, "FY2019": 460623, "FY2018": 445036})),
         ("Leverage ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "22.43%", "FY2024": "22.81%", "FY2023": "23.92%", "FY2022": "27.49%", "FY2021": "27.57%", "FY2020": "29.43%", "FY2019": "20.19%", "FY2018": "21.23%"}),
     ],
     p3_sources(),

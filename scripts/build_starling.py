@@ -1125,9 +1125,25 @@ bw.add_overview_sheet(
     ],
     balance_sheet_unit="£'000",
     income_statement_totals=[
+        # FY2019-FY2017 DELIBERATELY NOT CARRIED on these two rows (user
+        # decision, 2026-10-09). Those years are on a different presentation:
+        # the P&L sheet holds them as separate, explicitly-labelled blocks
+        # ("... (FY2017-FY2019 presentation)") taken from each year's OWN
+        # annual report. Filling these rows would splice two definitions under
+        # one label with no visible seam. Specifically: FY2019's total income
+        # of 14,201 sits ABOVE a separate "credit for CIF eligible spend" of
+        # 19,738, so it does not compose like the FY2020-onward "Total income";
+        # and FY2017 has TWO defensible expense figures - "other operating
+        # costs" -16,688 and "total operating costs" -11,978, differing by the
+        # +4,710 capitalisation of an intangible asset. Both are on the P&L
+        # sheet, each as printed. Only the bottom line is carried below.
         ("Total income / Revenue", {"FY2026": 887355, "FY2025": 680383, "FY2024": 647118, "FY2023": 414814, "FY2022": 188066, "FY2021": 97589}),
         ("Operating expenses", {"FY2026": -441955, "FY2025": -460213, "FY2024": -332130, "FY2023": -220674, "FY2022": -178336, "FY2021": -158981}),
-        ("Profit/(loss) after taxation", {"FY2026": 156043, "FY2025": 150722, "FY2024": 220001, "FY2023": 142856, "FY2022": 44938, "FY2021": -23319}),
+        # FY2019-FY2017 ADDED 2026-10-09 (user decision). "Loss after taxation
+        # (FY2017-FY2019 presentation)" is the same concept under a different
+        # name - unlike the two rows above, the bottom line composes the same
+        # way on both presentations, so the series is continuous here.
+        ("Profit/(loss) after taxation", {"FY2026": 156043, "FY2025": 150722, "FY2024": 220001, "FY2023": 142856, "FY2022": 44938, "FY2021": -23319, "FY2019": -52064, "FY2018": -25070, "FY2017": -10196}),
     ],
     income_statement_unit="£'000",
     equity_changes_totals=[

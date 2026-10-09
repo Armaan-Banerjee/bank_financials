@@ -712,7 +712,7 @@ bw.add_overview_sheet(
         ("Net cash (used in)/generated from operating activities", {"FY2025": -529, "FY2024": 121755, "FY2023": 22662, "FY2022": -25122, "FY2021": 15041}),
         ("Net cash (used in)/generated from investing activities", {"FY2025": -19394, "FY2024": -19841, "FY2023": -5459, "FY2022": -7171, "FY2021": 318}),
         ("Net cash (used in)/generated from financing activities", {"FY2025": -4991, "FY2024": -4586, "FY2023": -19544, "FY2022": -944, "FY2021": -148}),
-        ("Cash and cash equivalents at end of year", {"FY2025": 254772, "FY2024": 139857, "FY2023": 97313, "FY2022": 97866, "FY2021": 134557}),
+        ("Cash and cash equivalents at end of year", {"FY2025": 254772, "FY2024": 139857, "FY2023": 97313, "FY2022": 97866, "FY2021": 134557, "FY2017": 105686}),
     ],
     cash_flow_unit="£'000s",
     ratios=[

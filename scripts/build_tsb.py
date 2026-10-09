@@ -1338,7 +1338,7 @@ metric(
     "£'000 / %",
     [
         (
-            "Leverage ratio total exposure measure excluding claims on central banks",
+            "Total exposure measure excluding claims on central banks",
             {
                 "FY2025": 40220383,
                 "FY2024": 40126116,
@@ -1358,7 +1358,7 @@ metric(
             },
         ),
         (
-            "Leverage ratio total exposure measure including claims on central banks (FY2021 as originally reported, pre-2022 PRA methodology)",
+            "Total exposure measure including claims on central banks (FY2021 as originally reported, pre-2022 PRA methodology)",
             {"FY2021": 47412008},
         ),
         (
@@ -1366,7 +1366,7 @@ metric(
             {"FY2021": "3.6%"},
         ),
         (
-            "Leverage ratio total exposure measure (FY2014-FY2020 as originally reported, pre-2022 PRA methodology, including claims on central banks)",
+            "Total exposure measure (FY2014-FY2020 as originally reported, pre-2022 PRA methodology, including claims on central banks)",
             {
                 "FY2020": 42933969,
                 "FY2019": 39889242,

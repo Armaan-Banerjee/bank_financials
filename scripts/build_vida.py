@@ -831,10 +831,10 @@ bw.add_overview_sheet(
     ],
     equity_changes_unit="£'000",
     cash_flow_totals=[
-        ("Net cash from/(used in) operating activities", {"FY2025": 1766849, "FY2024": 70662, "FY2023": 65493, "FY2021": -179449, "FY2020": -47723, "FY2019": -423882, "FY2018": -763195}),
-        ("Net cash from/(used in) investing activities", {"FY2025": -104, "FY2024": -408, "FY2023": -698, "FY2021": -1757, "FY2020": -1113, "FY2019": -4848, "FY2018": -1319}),
-        ("Net cash from/(used in) financing activities", {"FY2025": -1655356, "FY2024": 56070, "FY2023": -62554, "FY2021": 176598, "FY2020": 62865, "FY2019": 427129, "FY2018": 762126}),
-        ("Cash and cash equivalents at end of year", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2021": 13500, "FY2020": 18108, "FY2019": 4079, "FY2018": 5680}),
+        ("Net cash from/(used in) operating activities", {"FY2025": 1766849, "FY2024": 70662, "FY2023": 65493, "FY2021": -179449, "FY2020": -47723, "FY2019": -423882, "FY2018": -763195, "FY2022": 35347}),
+        ("Net cash from/(used in) investing activities", {"FY2025": -104, "FY2024": -408, "FY2023": -698, "FY2021": -1757, "FY2020": -1113, "FY2019": -4848, "FY2018": -1319, "FY2022": -1171}),
+        ("Net cash from/(used in) financing activities", {"FY2025": -1655356, "FY2024": 56070, "FY2023": -62554, "FY2021": 176598, "FY2020": 62865, "FY2019": 427129, "FY2018": 762126, "FY2022": -32755}),
+        ("Cash and cash equivalents at end of year", {"FY2025": 254874, "FY2024": 143485, "FY2023": 17161, "FY2021": 13500, "FY2020": 18108, "FY2019": 4079, "FY2018": 5680, "FY2022": 14919}),
     ],
     cash_flow_unit="£'000",
     ratios=[

@@ -29825,161 +29825,161 @@
       "155240:2021": [
         {
           "label": "Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 8.07,
-          "value": 13496000.0
+          "pct_of_total_rwa": 5.96,
+          "value": 9981510.0
         },
         {
           "label": "Counterparty credit risk (CCR)",
-          "pct_of_total_rwa": 72.63,
-          "value": 121546000.0
+          "pct_of_total_rwa": 53.72,
+          "value": 89894239.0
         },
         {
           "label": "Settlement risk",
-          "pct_of_total_rwa": 0.48,
-          "value": 809000.0
+          "pct_of_total_rwa": 0.36,
+          "value": 598329.0
         },
         {
           "label": "Market risk (position, FX and commodities)",
-          "pct_of_total_rwa": 45.23,
-          "value": 75691000.0
+          "pct_of_total_rwa": 33.45,
+          "value": 55980327.0
         },
         {
           "label": "Operational risk",
-          "pct_of_total_rwa": 8.43,
-          "value": 14102000.0
+          "pct_of_total_rwa": 6.23,
+          "value": 10429702.0
         },
         {
           "label": "Amounts below the thresholds for deduction (FY2021 own separate additive line only - see source note)",
-          "pct_of_total_rwa": 0.37,
-          "value": 614000.0
+          "pct_of_total_rwa": 0.27,
+          "value": 454108.0
         }
       ],
       "155240:2022": [
         {
           "label": "Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 7.72,
-          "value": 10641000.0
+          "pct_of_total_rwa": 6.38,
+          "value": 8796396.0
         },
         {
           "label": "Counterparty credit risk (CCR)",
-          "pct_of_total_rwa": 59.24,
-          "value": 81647000.0
+          "pct_of_total_rwa": 48.97,
+          "value": 67493593.0
         },
         {
           "label": "Settlement risk",
-          "pct_of_total_rwa": 0.47,
-          "value": 652000.0
+          "pct_of_total_rwa": 0.39,
+          "value": 538977.0
         },
         {
           "label": "Securitisation exposures in the non-trading book (after the cap)",
-          "pct_of_total_rwa": 0.17,
-          "value": 241000.0
+          "pct_of_total_rwa": 0.14,
+          "value": 199223.0
         },
         {
           "label": "Market risk (position, FX and commodities)",
-          "pct_of_total_rwa": 42.87,
-          "value": 59086000.0
+          "pct_of_total_rwa": 35.44,
+          "value": 48843515.0
         },
         {
           "label": "Operational risk",
-          "pct_of_total_rwa": 10.49,
-          "value": 14453000.0
+          "pct_of_total_rwa": 8.67,
+          "value": 11947590.0
         }
       ],
       "155240:2023": [
         {
           "label": "Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 6.84,
-          "value": 10053000.0
+          "pct_of_total_rwa": 5.37,
+          "value": 7895853.0
         },
         {
           "label": "Counterparty credit risk (CCR)",
-          "pct_of_total_rwa": 66.93,
-          "value": 98418000.0
+          "pct_of_total_rwa": 52.57,
+          "value": 77299717.0
         },
         {
           "label": "Settlement risk",
-          "pct_of_total_rwa": 0.36,
-          "value": 531000.0
+          "pct_of_total_rwa": 0.28,
+          "value": 417059.0
         },
         {
           "label": "Securitisation exposures in the non-trading book (after the cap)",
-          "pct_of_total_rwa": 0.17,
-          "value": 251000.0
+          "pct_of_total_rwa": 0.13,
+          "value": 197141.0
         },
         {
           "label": "Market risk (position, FX and commodities)",
-          "pct_of_total_rwa": 42.95,
-          "value": 63153000.0
+          "pct_of_total_rwa": 33.73,
+          "value": 49601791.0
         },
         {
           "label": "Operational risk",
-          "pct_of_total_rwa": 10.08,
-          "value": 14820000.0
+          "pct_of_total_rwa": 7.92,
+          "value": 11639962.0
         }
       ],
       "155240:2024": [
         {
           "label": "Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 5.95,
-          "value": 9286000.0
+          "pct_of_total_rwa": 4.76,
+          "value": 7419896.0
         },
         {
           "label": "Counterparty credit risk (CCR)",
-          "pct_of_total_rwa": 70.42,
-          "value": 109870000.0
+          "pct_of_total_rwa": 56.26,
+          "value": 87790651.0
         },
         {
           "label": "Settlement risk",
-          "pct_of_total_rwa": 0.25,
-          "value": 396000.0
+          "pct_of_total_rwa": 0.2,
+          "value": 316420.0
         },
         {
           "label": "Securitisation exposures in the non-trading book (after the cap)",
-          "pct_of_total_rwa": 0.15,
-          "value": 228000.0
+          "pct_of_total_rwa": 0.12,
+          "value": 182181.0
         },
         {
           "label": "Market risk (position, FX and commodities)",
-          "pct_of_total_rwa": 38.14,
-          "value": 59510000.0
+          "pct_of_total_rwa": 30.48,
+          "value": 47550939.0
         },
         {
           "label": "Operational risk",
-          "pct_of_total_rwa": 10.24,
-          "value": 15983000.0
+          "pct_of_total_rwa": 8.18,
+          "value": 12771075.0
         }
       ],
       "155240:2025": [
         {
           "label": "Credit risk (excluding CCR)",
-          "pct_of_total_rwa": 8.95,
-          "value": 15177000.0
+          "pct_of_total_rwa": 6.66,
+          "value": 11285693.0
         },
         {
           "label": "Counterparty credit risk (CCR)",
-          "pct_of_total_rwa": 72.19,
-          "value": 122375000.0
+          "pct_of_total_rwa": 53.68,
+          "value": 90998662.0
         },
         {
           "label": "Settlement risk",
-          "pct_of_total_rwa": 0.67,
-          "value": 1138000.0
+          "pct_of_total_rwa": 0.5,
+          "value": 846222.0
         },
         {
           "label": "Securitisation exposures in the non-trading book (after the cap)",
-          "pct_of_total_rwa": 0.03,
-          "value": 54000.0
+          "pct_of_total_rwa": 0.02,
+          "value": 40155.0
         },
         {
           "label": "Market risk (position, FX and commodities)",
-          "pct_of_total_rwa": 42.58,
-          "value": 72187000.0
+          "pct_of_total_rwa": 31.67,
+          "value": 53678614.0
         },
         {
           "label": "Operational risk",
-          "pct_of_total_rwa": 10.05,
-          "value": 17035000.0
+          "pct_of_total_rwa": 7.47,
+          "value": 12667311.0
         }
       ],
       "165556:2021": [
@@ -46035,10 +46035,10 @@
         "2025": 61.21
       },
       "155240": {
-        "2022": 19.6,
-        "2023": 22.0,
-        "2024": 22.37,
-        "2025": 20.4
+        "2022": 23.71,
+        "2023": 28.0,
+        "2024": 27.99,
+        "2025": 27.44
       },
       "165556": {
         "2021": 5.73,
