@@ -320,178 +320,13 @@ function rwaCatPieChart(canvas, rows){
   });
   return true;
 }
-function rwaTrendLineChart(canvas, banks, data){
-  const years = [...new Set(banks.flatMap(b => Object.keys(data[b].rwa_to_assets_pct)))].sort();
-  return new Chart(canvas, {
-    type: 'line',
-    data: { labels: years, datasets: banks.map(b => ({
-      label: b, data: years.map(y => data[b].rwa_to_assets_pct[y] ?? null),
-      borderColor: BANK_COLOR[b], backgroundColor: BANK_COLOR[b], tension: 0.15, spanGaps: true, pointRadius: 3,
-    })) },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      scales: { y: { ticks: { callback: v => v+'%' }, grid:{color:'#edece7'} }, x: { grid:{display:false} } },
-      plugins: {
-        legend: { display:true, position:'bottom', labels:{boxWidth:10, font:{size:10}, usePointStyle:true} },
-        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}%` } },
-      },
-    },
-  });
-}
-
-// A picker of checkboxes above the RWA-density trend chart, capped at 6
-// banks selected at once - with all 20+ banks plotted together the line
-// chart becomes an unreadable tangle, so this keeps it comparable while
-// still letting the reader choose which banks. The per-bank RWA-composition
-// mini-cards below aren't affected - one card per bank scales fine as a
-// grid, it's only the overlaid multi-line chart that gets crowded.
-// Raised 5 -> 6 (user request, 2026-10-08): 5 meant having to un-tick a bank
-// before adding one mid-demonstration. 6 still reads cleanly as a line chart.
-const RWA_PICKER_MAX = 6;
-// The 5-year window every bank COULD have (FY2021-FY2025) - banks with real
-// data across exactly these five years make the most informative default
-// trend line (no gaps, and no stray extra year like Starling Bank's 2026
-// data point sticking out past every other bank's line) rather than
-// whichever 5 banks happen to sort first.
-const RWA_FULL_COVERAGE_YEARS = ['2021', '2022', '2023', '2024', '2025'];
-function defaultRwaBanks(banks, data){
-  const hasFullCoverage = b => {
-    const years = Object.keys(data[b].rwa_to_assets_pct).filter(y => data[b].rwa_to_assets_pct[y] != null);
-    return RWA_FULL_COVERAGE_YEARS.every(y => years.includes(y))
-      && years.every(y => RWA_FULL_COVERAGE_YEARS.includes(y));
-  };
-  const full = banks.filter(hasFullCoverage);
-  if (full.length >= RWA_PICKER_MAX) return full.slice(0, RWA_PICKER_MAX);
-  const rest = banks.filter(b => !hasFullCoverage(b));
-  return [...full, ...rest].slice(0, RWA_PICKER_MAX);
-}
-function initRwaBankPicker(container, canvas, banks, data){
-  let selected = new Set(defaultRwaBanks(banks, data));
-  function redraw(){
-    if (container._chart) container._chart.destroy();
-    const chosen = banks.filter(b => selected.has(b));
-    container._chart = chosen.length ? rwaTrendLineChart(canvas, chosen, data) : null;
-    container.querySelectorAll('input[type=checkbox]').forEach(cb => {
-      const isChecked = selected.has(cb.value);
-      cb.checked = isChecked;
-      cb.closest('label').classList.toggle('disabled', !isChecked && selected.size >= RWA_PICKER_MAX);
-    });
-  }
-  container.querySelectorAll('input[type=checkbox]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      if (cb.checked){
-        if (selected.size >= RWA_PICKER_MAX) { cb.checked = false; return; }
-        selected.add(cb.value);
-      } else {
-        selected.delete(cb.value);
-      }
-      redraw();
-    });
-  });
-  redraw();
-}
-
-// ---- comparison.html: ratio trajectories (IN-052) ----
-// Migrated from the old dashboard's in024 section - the only place in
-// deliverable/ with a time dimension at all (every other chart here is
-// "latest year with data"). Restyled onto this page's own bank-picker +
-// Chart.js line-chart pattern (see rwaTrendLineChart/initRwaBankPicker
-// above) rather than porting the old dashboard's bespoke hand-rolled
-// SVG drag-to-zoom interaction - Chart.js's built-in hover tooltips cover
-// the same "what's this point" need without that extra machinery.
-//
-// in024/in021's payloads key banks by their own `frn`/`bank` fields (the
-// full legal entity name from canonical_bank, e.g. "MONUMENT BANK
-// LIMITED"), not this page's curated short display names (e.g. "Monument
-// Bank") - frnToBankName() bridges the two via the frn every bank record
-// in `data` already carries, so BANK_COLOR lookups and bank-page links
-// stay consistent with the rest of the site.
-function frnToBankName(data){
-  const map = {};
-  Object.entries(data).forEach(([name, bd]) => { map[String(bd.frn)] = name; });
-  return map;
-}
-
-function trajectoryLineChart(canvas, metric, banks, trends, frnName){
-  const byBank = {};
-  trends.metrics[metric].forEach(r => { byBank[frnName[r.frn] || r.bank] = r; });
-  const years = trends.years;
-  return new Chart(canvas, {
-    type: 'line',
-    data: { labels: years.map(y => 'FY'+y), datasets: banks.filter(b => byBank[b]).map(b => {
-      const byYear = {};
-      byBank[b].points.forEach(p => { byYear[p.year] = p.value; });
-      return {
-        label: b, data: years.map(y => byYear[y] ?? null),
-        borderColor: BANK_COLOR[b], backgroundColor: BANK_COLOR[b], tension: 0.15, spanGaps: false, pointRadius: 2.5,
-      };
-    }) },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      scales: { y: { ticks: { callback: v => v+'%' }, grid:{color:'#edece7'} }, x: { grid:{display:false} } },
-      plugins: {
-        legend: { display:true, position:'bottom', labels:{boxWidth:10, font:{size:10}, usePointStyle:true} },
-        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw==null?'—':ctx.raw+'%'}` } },
-      },
-    },
-  });
-}
-
-// Same style as RWA density's default picker (see defaultRwaBanks/
-// RWA_PICKER_MAX above): a 6-bank cap (raised from 5 with it, same user
-// request and same reason), and an exact match to the full FY2021-FY2025
-// window preferred over "most complete" so the default line never has a gap
-// or a stray extra year (server-side curate_comparison_trends() already
-// trims trends.years to just this window).
-const TRAJECTORY_PICKER_MAX = 6;
-function defaultTrajectoryBanks(metric, banks, trends, frnName){
-  const byBank = {};
-  trends.metrics[metric].forEach(r => { byBank[frnName[r.frn] || r.bank] = r; });
-  const hasFullCoverage = b => {
-    const rec = byBank[b];
-    if (!rec) return false;
-    const covered = new Set(rec.points.filter(p => p.value != null).map(p => p.year));
-    return trends.years.every(y => covered.has(y)) && covered.size === trends.years.length;
-  };
-  const full = banks.filter(b => byBank[b] && hasFullCoverage(b));
-  if (full.length >= TRAJECTORY_PICKER_MAX) return full.slice(0, TRAJECTORY_PICKER_MAX);
-  const rest = banks.filter(b => byBank[b] && !hasFullCoverage(b));
-  return [...full, ...rest].slice(0, TRAJECTORY_PICKER_MAX);
-}
-
-function initTrajectoryBankPicker(container, canvas, metric, banks, trends, frnName){
-  let selected = new Set(defaultTrajectoryBanks(metric, banks, trends, frnName));
-  function redraw(){
-    if (container._chart) container._chart.destroy();
-    const chosen = banks.filter(b => selected.has(b));
-    container._chart = chosen.length ? trajectoryLineChart(canvas, metric, chosen, trends, frnName) : null;
-    container.querySelectorAll('input[type=checkbox]').forEach(cb => {
-      const isChecked = selected.has(cb.value);
-      cb.checked = isChecked;
-      cb.closest('label').classList.toggle('disabled', !isChecked && selected.size >= TRAJECTORY_PICKER_MAX);
-    });
-  }
-  container.querySelectorAll('input[type=checkbox]').forEach(cb => {
-    cb.addEventListener('change', () => {
-      if (cb.checked){
-        if (selected.size >= TRAJECTORY_PICKER_MAX) { cb.checked = false; return; }
-        selected.add(cb.value);
-      } else {
-        selected.delete(cb.value);
-      }
-      redraw();
-    });
-  });
-  redraw();
-}
-
 // A searchable, scrollable sidebar version of the plain .bank-picker
-// checkbox grid (see initRwaBankPicker above) - same checkbox-driven
+// checkbox grid - same checkbox-driven
 // overlay-chart behavior, just findable in a list of ~145 banks instead of
 // scanning a flat wall of checkboxes. The returned root keeps idPrefix as
 // its own id, so it's a drop-in replacement anywhere a plain .bank-picker
-// checkbox container was expected (initTrajectoryBankPicker etc. just
-// query `input[type=checkbox]` inside it).
+// checkbox container was expected (initMetricTrendComparison just queries
+// `input[type=checkbox]` inside it).
 function bankPickerSidebarHtml(idPrefix, banks){
   return `<div class="bank-picker-sidebar" id="${idPrefix}">
     <div class="bank-picker-search"><input type="text" placeholder="Search banks…" autocomplete="off"></div>
@@ -515,6 +350,243 @@ function wireBankPickerSearch(container){
     });
     none.hidden = anyVisible;
   });
+}
+
+
+// ---- comparison.html: one metric, many banks (user request, 2026-10-26) ----
+// This REPLACES five separate fixed-metric charts in the "Bank comparison"
+// subsection - RWA density, CET1 Ratio, Tier 1 Ratio, Total Capital Ratio and
+// Leverage Ratio - each of which had its own heading, its own bank picker and
+// its own copy of the same multi-line chart. The user's point was simple: those
+// five were the only metrics comparable across banks here, so NSFR, LCR and
+// everything else was unreachable. One chart with a metric selector reaches all
+// 18, and removes four duplicated pickers from the page.
+//
+// WHERE THE DATA COMES FROM, AND WHY IT CHANGED. The five old charts read two
+// different payloads: RWA density came from `data[bank].rwa_to_assets_pct` and
+// the four ratio trajectories from `trends.trajectories`, which is built by
+// in024 -> in009's `_select_metric_observations`. This chart reads
+// `bubbles.axes.series`, built by `curate_pillar3`. Those are two INDEPENDENT
+// row selectors over the same `annual_metrics` rows, and they do not agree:
+// measured on 2026-10-26, 34 of ~2,470 bank-years differ (CET1 8, Tier 1 1,
+// Total Capital 5, Leverage 20). RWA density is identical in both (593 cells,
+// 0 differences), so only the four ratio metrics are affected.
+//
+// The disagreement is a row-SELECTION one, not rounding. DB UK Bank's "Total
+// Capital Ratio" sheet carries three different rows per year, and for FY2022:
+// "Regulatory capital ratio - DBUKB entity (capital / PRA requirement; not RWA
+// ratio)" = 145%, "Regulatory capital ratio - DBIGB Group" = 125%, and "Total
+// capital ratio - DBIGB Group (consolidated, capital / RWA)" = 79%. The old
+// trajectory chart drew 145, this one draws 125, and neither draws the 79% row
+// that is the only actual capital/RWA total capital ratio on the sheet.
+// `curate_pillar3` is used here because it is the deliverable's dominant
+// source - it already backs every per-bank page and every bubble chart, and it
+// is the only one of the two carrying all 18 metrics. That is a reason to be
+// CONSISTENT, not evidence it picks better rows. The `trends.trajectories`
+// payload is deliberately still shipped even though no chart now reads it: it
+// is the evidence for this open question, and deleting it would delete the
+// ability to see the disagreement at all. One trap for whoever settles it:
+// that payload keys banks by in024's own `frn`/`bank` fields - the full legal
+// entity name from canonical_bank, e.g. "MONUMENT BANK LIMITED" - while
+// `axes.series` and everything else on this page use the curated short
+// display name ("Monument Bank"). Comparing the two by name silently matches
+// almost nothing; join on `frn`. (A first pass at measuring the disagreement
+// did exactly that and read 10 agreements where there are 2,470.)
+const METRIC_TREND_PICKER_MAX = 6;
+const CORPUS_AVERAGE_COLOR = '#1f1d1a';
+
+// The corpus average (user request, 2026-10-26: "include the average for the
+// entire corpus as a default extra option too"). Two deliberate choices:
+//
+// It is UNWEIGHTED - a mean of each bank's ratio, so a £14.5k pre-launch bank
+// counts as much as Barclays' £1.25tn. That is the same convention, and the
+// same caveat, the custom bubble chart's trend line already carries. It is NOT
+// a ratio of corpus totals, which would be a different and much more
+// large-bank-dominated number; the caption says which one this is.
+//
+// Values outside the metric's own declared axis bounds are EXCLUDED, reusing
+// the per-metric caps already shipped with each metric for the bubble charts -
+// where the stated reason is that "a handful of banks carry atypically extreme
+// ratios; those banks sit off-chart rather than compressing everyone else into
+// a corner". The same handful would otherwise drag the mean: DB UK Bank alone
+// reports a "Total Capital Ratio" between 85% and 539%. Reusing the existing
+// cap rather than inventing a second outlier rule keeps one definition of
+// "atypically extreme" on the page, and the caption reports how many banks the
+// cap dropped so the exclusion is never silent.
+function corpusAverageSeries(series, years, spec){
+  const out = {};
+  years.forEach(y => {
+    let sum = 0, n = 0, capped = 0;
+    Object.keys(series).forEach(bank => {
+      const v = series[bank] ? series[bank][y] : null;
+      if (v == null) return;
+      if ((spec.max != null && v > spec.max) || (spec.min != null && v < spec.min)) { capped++; return; }
+      sum += v; n++;
+    });
+    out[y] = n ? { mean: sum / n, n, capped } : { mean: null, n: 0, capped };
+  });
+  return out;
+}
+
+// Banks whose series covers EVERY year shown, preferred for the default
+// selection - the same rule (and reason) as the pickers this replaces: a
+// default line with a gap in it, or one stray bank reaching a year past
+// everyone else, reads as a data problem rather than a comparison.
+function defaultMetricTrendBanks(series, years, eligible){
+  const covers = b => years.every(y => series[b] && series[b][y] != null);
+  const full = eligible.filter(covers);
+  if (full.length >= METRIC_TREND_PICKER_MAX) return full.slice(0, METRIC_TREND_PICKER_MAX);
+  return [...full, ...eligible.filter(b => !covers(b))].slice(0, METRIC_TREND_PICKER_MAX);
+}
+
+function metricTrendChart(canvas, spec, chosen, series, years, average){
+  // axisFmt is the formatter the bubble charts' axes already use for these
+  // same metrics, so a £ or % reads identically whichever chart it is on.
+  const fmt = v => v == null ? '—' : (spec.unit === 'gbp' ? fmtBn(v) : v.toFixed(1) + '%');
+  const datasets = chosen.map(b => ({
+    label: b,
+    data: years.map(y => (series[b] && series[b][y] != null) ? series[b][y] : null),
+    borderColor: BANK_COLOR[b], backgroundColor: BANK_COLOR[b],
+    tension: 0.15, spanGaps: false, pointRadius: 2.5, borderWidth: 2,
+  }));
+  if (average){
+    // Drawn dashed, thicker, in near-black and listed first so it never reads
+    // as just another bank. order:-1 keeps it painted behind the bank lines.
+    datasets.unshift({
+      label: 'Corpus average (unweighted)',
+      data: years.map(y => average[y] ? average[y].mean : null),
+      borderColor: CORPUS_AVERAGE_COLOR, backgroundColor: CORPUS_AVERAGE_COLOR,
+      borderDash: [6, 4], borderWidth: 2.5, tension: 0.15, spanGaps: false,
+      pointRadius: 0, order: -1,
+    });
+  }
+  return new Chart(canvas, {
+    type: 'line',
+    data: { labels: years.map(y => 'FY' + y), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        y: {
+          ticks: { callback: v => axisFmt(v, spec.unit, spec.scale) },
+          grid: { color: '#edece7' },
+          type: spec.scale === 'logarithmic' ? 'logarithmic' : 'linear',
+        },
+        x: { grid: { display: false } },
+      },
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 10, font: { size: 10 }, usePointStyle: true } },
+        tooltip: { callbacks: { label: (ctx) => {
+          const base = `${ctx.dataset.label}: ${fmt(ctx.raw)}`;
+          if (ctx.dataset.order !== -1 || !average) return base;
+          const a = average[years[ctx.dataIndex]];
+          return a && a.n ? `${base} (${a.n} banks)` : base;
+        } } },
+      },
+    },
+  });
+}
+
+function initMetricTrendComparison(axes, banks){
+  const sel = document.getElementById('metric-trend-metric');
+  const avgBox = document.getElementById('metric-trend-average');
+  const picker = document.getElementById('metric-trend-picker');
+  const wrap = document.querySelector('[data-chart="metric-trend"]');
+  const note = document.getElementById('metric-trend-note');
+  if (!sel || !picker || !wrap || !axes || !axes.metrics) return;
+  const byKey = {};
+  axes.metrics.forEach(m => { byKey[m.key] = m; });
+  const years = axes.years;
+  let chart = null;
+  let selected = null;
+
+  function eligibleBanks(series){
+    return banks.filter(b => series[b] && years.some(y => series[b][y] != null));
+  }
+
+  function redraw(){
+    const spec = byKey[sel.value];
+    const series = axes.series[spec.key] || {};
+    const eligible = eligibleBanks(series);
+
+    // The bank list is rendered once with every bank and re-filtered here,
+    // rather than re-rendered per metric: re-rendering would drop the search
+    // box's text and the checkbox listeners with it.
+    picker.querySelectorAll('.bank-picker-list label').forEach(el => {
+      const bank = el.querySelector('input').value;
+      el.classList.toggle('unavailable', !eligible.includes(bank));
+    });
+
+    // A bank picked under one metric may disclose nothing under the next. It
+    // stays TICKED rather than being silently dropped, so switching metric and
+    // back does not quietly lose the reader's selection - comparing one peer
+    // set across several metrics is the main thing this chart is for. It
+    // simply contributes no line while it has no data.
+    //
+    // The exception is a selection that would draw NOTHING: a reader who picks
+    // six banks on one metric and switches to a sparsely disclosed one
+    // (MREL Ratio, 10 banks) would otherwise get an empty chart and no obvious
+    // way out. There, and only there, the default set for the new metric is
+    // substituted.
+    const firstDraw = selected === null;
+    if (firstDraw) selected = new Set(defaultMetricTrendBanks(series, years, eligible));
+    let chosen = eligible.filter(b => selected.has(b));
+    let substituted = false;
+    if (!chosen.length && !firstDraw && eligible.length){
+      selected = new Set(defaultMetricTrendBanks(series, years, eligible));
+      chosen = eligible.filter(b => selected.has(b));
+      substituted = true;
+    }
+    const average = avgBox && avgBox.checked ? corpusAverageSeries(series, years, spec) : null;
+
+    if (chart) { chart.destroy(); chart = null; }
+    const canvas = wrap.querySelector('canvas');
+    if (!chosen.length && !average){
+      if (note) note.textContent = `Pick at least one bank, or switch the corpus average on, to draw ${spec.short}.`;
+      return;
+    }
+    chart = metricTrendChart(canvas, spec, chosen, series, years, average);
+
+    picker.querySelectorAll('input[type=checkbox]').forEach(cb => {
+      const isChecked = selected.has(cb.value);
+      cb.checked = isChecked;
+      cb.closest('label').classList.toggle('disabled', !isChecked && selected.size >= METRIC_TREND_PICKER_MAX);
+    });
+
+    if (note){
+      const dropped = selected.size - chosen.length;
+      let txt = `${spec.label}. ${eligible.length} of ${banks.length} banks disclose it in at least one year`
+        + ` — up to ${METRIC_TREND_PICKER_MAX} can be charted at once, and banks with no figure for this`
+        + ` metric are greyed in the list. A year a bank did not disclose is a BREAK in its line, never a zero.`;
+      if (substituted) txt += ` None of the previously selected banks disclose ${spec.short}, so the selection was replaced with banks that do.`;
+      else if (dropped > 0) txt += ` ${dropped} selected bank${dropped === 1 ? '' : 's'} disclose${dropped === 1 ? 's' : ''} nothing for ${spec.short} and so draw${dropped === 1 ? 's' : ''} no line; the selection is kept for when you switch back.`;
+      if (average){
+        const counts = years.map(y => average[y] ? average[y].n : 0).filter(Boolean);
+        const capped = years.reduce((t, y) => t + (average[y] ? average[y].capped : 0), 0);
+        txt += ` The dashed black line is the UNWEIGHTED mean of every disclosing bank's own ratio`
+          + (counts.length ? ` (${Math.min(...counts)}–${Math.max(...counts)} banks per year)` : '')
+          + ` — each bank counts once regardless of size, so it is not the same figure as a ratio struck on corpus totals, which large banks would dominate.`;
+        if (capped) txt += ` ${capped} bank-year${capped === 1 ? '' : 's'} sat outside this metric's charted range and ${capped === 1 ? 'was' : 'were'} left out of the mean, the same bound that puts them off-chart.`;
+      }
+      note.textContent = txt;
+    }
+  }
+
+  picker.querySelectorAll('input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked){
+        if (selected.size >= METRIC_TREND_PICKER_MAX) { cb.checked = false; return; }
+        selected.add(cb.value);
+      } else {
+        selected.delete(cb.value);
+      }
+      redraw();
+    });
+  });
+  // Changing metric keeps the reader's bank selection; only the first draw
+  // picks a default set.
+  sel.addEventListener('change', redraw);
+  if (avgBox) avgBox.addEventListener('change', redraw);
+  redraw();
 }
 
 // ---- comparison.html: regulatory headroom trajectory (IN-052) ----
@@ -2450,7 +2522,6 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   // shows on that bank's own per-bank page (see renderDrilldownPage).
   const loanBanks = banks.filter(b => data[b].loan_composition.kind === 'stage' && hasLoanData(data[b]));
   const rwaBanks = banks.filter(b => hasRwaData(data[b]));
-  const rwaDensityBanks = banks.filter(b => hasRwaDensityData(data[b]));
   const capitalBanks = banks.filter(b => hasPillar3Sheets(data[b], PILLAR3_CAPITAL_SHEETS));
   const liquidityBanks = banks.filter(b => hasPillar3Sheets(data[b], PILLAR3_LIQUIDITY_SHEETS));
   const deploymentBanks = banks.filter(b => hasCapitalDeployment(data[b]));
@@ -2458,6 +2529,100 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
 
   document.getElementById('page-sub').textContent = `Comparing up to ${banks.length} banks (each section only shows banks with real data for it — see each section's own count) — sourced from research/in040_risk_metrics.json and research/in041_spend_metrics.json (+ a direct DB pull for a few per-bank pages, see each bank's own page).`;
   let html = '';
+
+  // ---- "Compare banks": the reader-driven views, at the very TOP of the
+  // page (user request, 2026-10-26). These three were subsections buried
+  // inside "Capital, liquidity & RWA (Pillar 3)", below three grids of
+  // per-bank cards. They are the only blocks on this page where the reader
+  // chooses what is compared - every other block answers a question this
+  // project picked - so they are the ones worth reaching first, and they are
+  // no longer Pillar-3-specific: the metric selector reaches cost, asset mix,
+  // income growth, total assets and profit too.
+  let cmp = '';
+  // ONE chart over any of the 18 metrics, replacing five fixed ones (user
+  // request, 2026-10-26) - see initMetricTrendComparison for which payload it
+  // reads and the 34-cell disagreement that choice exposes. The bank list is
+  // rendered with EVERY bank rather than one metric's eligible set, because
+  // the eligible set changes with the metric and the list is filtered
+  // client-side on each redraw.
+  const axisMetrics = (bubbles && bubbles.axes && bubbles.axes.metrics) || [];
+  if (axisMetrics.length) {
+    cmp += subOpen('Bank comparison', `any metric, FY${bubbles.axes.years[0]}–FY${bubbles.axes.years[bubbles.axes.years.length-1]}`);
+    cmp += `<div class="card chart-card">
+      <div class="chart-controls">
+        <label for="metric-trend-metric">Metric</label>
+        <select id="metric-trend-metric">${axisMetrics.map(m => `<option value="${m.key}">${m.label}</option>`).join('')}</select>
+        <label class="inline-check" for="metric-trend-average"><input type="checkbox" id="metric-trend-average" checked> Corpus average</label>
+      </div>
+      <div class="bank-picker-panel">
+        ${bankPickerSidebarHtml('metric-trend-picker', banks)}
+        <div class="bank-picker-chart-area">
+          <div class="mini-chart-wrap tall" data-chart="metric-trend"><canvas></canvas></div>
+          <p class="sub bank-picker-note" id="metric-trend-note" style="margin:8px 0 0;"></p>
+        </div>
+      </div>
+    </div>`;
+    cmp += subClose();
+  }
+
+  // Box-and-whisker distribution of one Pillar 3 ratio across every bank,
+  // by year (user request, 2026-09-09) - a genuinely different lens from
+  // the per-bank trend lines and trajectory picker above: instead of
+  // following individual banks, this shows the whole peer group's spread
+  // (median, quartiles, outliers) per year for whichever metric is picked.
+  // Computed client-side from `data` (already embedded in full on this
+  // page) rather than a new Python curation step - no new server-side
+  // shape needed, just a reduction over pillar3[metric][year] across banks.
+  const boxplotMetrics = [...PILLAR3_CAPITAL_SHEETS, ...PILLAR3_LIQUIDITY_SHEETS]
+    .filter(m => banks.some(b => Object.keys(data[b].pillar3?.[m] || {}).length));
+  if (boxplotMetrics.length) {
+    cmp += subOpen('Distribution across banks', 'spread of one ratio across all banks, by year');
+    cmp += `<div class="card chart-card">
+      <div class="chart-controls">
+        <label for="pillar3-boxplot-metric">Metric</label>
+        <select id="pillar3-boxplot-metric">${boxplotMetrics.map(m => `<option value="${m}">${PILLAR3_LABEL[m]}</option>`).join('')}</select>
+      </div>
+      <div class="mini-chart-wrap tall" id="pillar3-boxplot-chart" style="height:340px;"><canvas></canvas></div>
+      <p class="sub" id="pillar3-boxplot-note" style="margin:8px 0 0;"></p>
+    </div>` + subClose();
+  }
+
+  // "Build your own comparison" (user request, 2026-10-08): one bubble chart
+  // with selectable axes, using the same initBubbleChart renderer as the rest
+  // of the site - only the axis sources are chosen by the reader instead of
+  // baked in. (It used to sit above seven precomputed pairings; those were
+  // removed on 2026-10-09 once this could compose all of them.)
+  const axesPayload = (bubbles && bubbles.axes) || null;
+  if (axesPayload && axesPayload.metrics.length >= 2) {
+    const ms = axesPayload.metrics;
+    const pick = (want, fallbackIdx) =>
+      (ms.some(m => m.key === want) ? want : ms[fallbackIdx].key);
+    // Defaults deliberately pair asset mix against capital strength, so the
+    // chart opens on something the metric-comparison chart above it cannot
+    // show at all rather than on a near-duplicate of it.
+    const defX = pick('loans_pct_assets', 0);
+    const defY = pick('cet1_ratio', 1);
+    const opts = (sel) => ms.map(m =>
+      `<option value="${m.key}"${m.key === sel ? ' selected' : ''}>${m.label}</option>`).join('');
+    cmp += subOpen('Build your own comparison', 'pick any two metrics — same bubble chart, your axes');
+    cmp += `<div class="card chart-card">
+      <div class="chart-controls">
+        <label for="custom-bubble-x">X axis</label>
+        <select id="custom-bubble-x">${opts(defX)}</select>
+        <label for="custom-bubble-y">Y axis</label>
+        <select id="custom-bubble-y">${opts(defY)}</select>
+      </div>
+      <div id="custom-bubble-host"></div>
+      <p class="sub" id="custom-bubble-note" style="margin:8px 0 0;"></p>
+    </div>` + subClose();
+  }
+
+
+  if (cmp) {
+    html += blockOpen('Compare banks', 'pick the metric, the banks and the axes — the whole corpus, your question');
+    html += cmp;
+    html += blockClose();
+  }
 
   html += blockOpen('Loan concentration &amp; quality', `${loanBanks.length} of ${banks.length} banks disclose an IFRS 9 stage split — latest disclosed year`);
   html += `<div class="grid cols" id="loan-grid">`;
@@ -2484,9 +2649,7 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   // are all comparisons of the same 4 core Pillar 3 metrics (+ RWA) - IN-052
   // follow-up merged them into one section (2026-09-05, user request) rather
   // than RWA density and Ratio trajectories staying separate blocks.
-  const frnName = frnToBankName(data);
-  const trajectoryMetrics = Object.keys(trends.trajectories.metrics);
-  html += blockOpen('Capital, liquidity &amp; RWA (Pillar 3)', 'core ratios, RWA composition, and multi-year trend');
+  html += blockOpen('Capital, liquidity &amp; RWA (Pillar 3)', 'core ratios, RWA composition, and statistical peer clusters');
 
   html += subOpen('Capital ratios', `${capitalBanks.length} of ${banks.length} banks`);
   html += `<div class="grid cols" id="pillar3-capital-grid">`;
@@ -2532,95 +2695,12 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
   });
   html += `</div>` + subClose();
 
-  html += subOpen('Bank comparison', `RWA density and ratio trajectories, FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}`);
-  // Moved here from the "RWA breakdown" subsection above (user request,
-  // 2026-10-08). Kept first in this subsection because RWA density is the
-  // project's own headline risk lens, and it reads as the same kind of chart
-  // as the trajectories that follow it: one picker, one multi-bank line.
-  html += `<div class="book-label" style="margin:0 0 6px;">RWA density <span style="color:var(--ink-faint);">(${rwaDensityBanks.length} of ${banks.length} banks)</span></div>
-  <div class="card chart-card">
-    <div class="bank-picker-panel">
-      ${bankPickerSidebarHtml('rwa-bank-picker', rwaDensityBanks)}
-      <div class="bank-picker-chart-area">
-        <div class="bank-picker-note">Trend line compares up to ${RWA_PICKER_MAX} banks at once (${rwaDensityBanks.length} banks disclose an RWA/total-assets density series) — pick which ones. All ${rwaBanks.length} banks with an RWA breakdown still appear in the composition cards in RWA breakdown above.</div>
-        <div class="mini-chart-wrap tall" data-chart="rwa-trend"><canvas></canvas></div>
-      </div>
-    </div>
-  </div>`;
-  trajectoryMetrics.forEach(metric => {
-    const metricSlug = slugify(metric);
-    const metricBanks = trends.trajectories.metrics[metric].map(r => frnName[r.frn] || r.bank).filter(b => banks.includes(b));
-    html += `<div class="book-label" style="margin:14px 0 6px;">${metric} <span style="color:var(--ink-faint);">(${metricBanks.length} of ${banks.length} banks)</span></div>
-    <div class="card chart-card">
-      <div class="bank-picker-panel">
-        ${bankPickerSidebarHtml(`trend-picker-${metricSlug}`, metricBanks)}
-        <div class="bank-picker-chart-area">
-          <div class="bank-picker-note">Trend line compares up to ${TRAJECTORY_PICKER_MAX} banks at once — default picks banks with data across every year shown (FY${trends.trajectories.years[0]}–FY${trends.trajectories.years[trends.trajectories.years.length-1]}).</div>
-          <div class="mini-chart-wrap tall" data-chart="trend" data-metric="${metric}"><canvas></canvas></div>
-        </div>
-      </div>
-    </div>`;
-  });
-  html += subClose();
-
-  // Box-and-whisker distribution of one Pillar 3 ratio across every bank,
-  // by year (user request, 2026-09-09) - a genuinely different lens from
-  // the per-bank trend lines and trajectory picker above: instead of
-  // following individual banks, this shows the whole peer group's spread
-  // (median, quartiles, outliers) per year for whichever metric is picked.
-  // Computed client-side from `data` (already embedded in full on this
-  // page) rather than a new Python curation step - no new server-side
-  // shape needed, just a reduction over pillar3[metric][year] across banks.
-  const boxplotMetrics = [...PILLAR3_CAPITAL_SHEETS, ...PILLAR3_LIQUIDITY_SHEETS]
-    .filter(m => banks.some(b => Object.keys(data[b].pillar3?.[m] || {}).length));
-  if (boxplotMetrics.length) {
-    html += subOpen('Distribution across banks', 'spread of one ratio across all banks, by year');
-    html += `<div class="card chart-card">
-      <div class="chart-controls">
-        <label for="pillar3-boxplot-metric">Metric</label>
-        <select id="pillar3-boxplot-metric">${boxplotMetrics.map(m => `<option value="${m}">${PILLAR3_LABEL[m]}</option>`).join('')}</select>
-      </div>
-      <div class="mini-chart-wrap tall" id="pillar3-boxplot-chart" style="height:340px;"><canvas></canvas></div>
-      <p class="sub" id="pillar3-boxplot-note" style="margin:8px 0 0;"></p>
-    </div>` + subClose();
-  }
-
-  // "Build your own comparison" (user request, 2026-10-08): one bubble chart
-  // with selectable axes, placed BEFORE the seven fixed pairings below, which
-  // are unchanged. Same visual language and the same initBubbleChart renderer
-  // - only the axis sources are chosen by the reader instead of baked in.
-  const axesPayload = (bubbles && bubbles.axes) || null;
-  if (axesPayload && axesPayload.metrics.length >= 2) {
-    const ms = axesPayload.metrics;
-    const pick = (want, fallbackIdx) =>
-      (ms.some(m => m.key === want) ? want : ms[fallbackIdx].key);
-    // Defaults deliberately pair asset mix against capital strength - a
-    // combination none of the seven fixed charts below already shows, so the
-    // chart isn't a duplicate of the one immediately under it on first load.
-    const defX = pick('loans_pct_assets', 0);
-    const defY = pick('cet1_ratio', 1);
-    const opts = (sel) => ms.map(m =>
-      `<option value="${m.key}"${m.key === sel ? ' selected' : ''}>${m.label}</option>`).join('');
-    html += subOpen('Build your own comparison', 'pick any two metrics — same bubble chart, your axes');
-    html += `<div class="card chart-card">
-      <div class="chart-controls">
-        <label for="custom-bubble-x">X axis</label>
-        <select id="custom-bubble-x">${opts(defX)}</select>
-        <label for="custom-bubble-y">Y axis</label>
-        <select id="custom-bubble-y">${opts(defY)}</select>
-      </div>
-      <div id="custom-bubble-host"></div>
-      <p class="sub" id="custom-bubble-note" style="margin:8px 0 0;"></p>
-    </div>` + subClose();
-  }
-
-
   // Statistical peer clusters: projects scripts/insights/cluster_banks.py's
   // existing k-means fit (previously computed but never visualized
   // anywhere in the deliverable, despite being one of the two things
   // wayfinder/insights/map.md's Destination names as a client goal) onto
-  // its own top-2 principal components. Placed in this same block since
-  // it clusters on the same 7 Pillar 3 ratios shown above.
+  // its own top-2 principal components. Kept in this block because it
+  // clusters on the same 7 Pillar 3 ratios the card grids above show.
   if (clusters) {
     html += subOpen('Peer clusters (statistical)', `k=${clusters.best_k}, silhouette ${clusters.silhouette.toFixed(2)}, ${clusters.n_included} of ${clusters.n_included + clusters.n_excluded} banks clustered`);
     html += `<div class="card chart-card">
@@ -2704,8 +2784,6 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const ok = year && rwaCatMiniChart(canvas, data[bank].rwa_category_composition[year]);
     if (!ok) el.outerHTML = '<div class="empty-note">No RWA category breakdown this year.</div>';
   });
-  initRwaBankPicker(document.getElementById('rwa-bank-picker'), document.querySelector('[data-chart="rwa-trend"] canvas'), rwaDensityBanks, data);
-  wireBankPickerSearch(document.getElementById('rwa-bank-picker'));
   document.querySelectorAll('[data-chart="pillar3-capital"]').forEach(el => {
     const bank = el.dataset.bank;
     const canvas = el.querySelector('canvas');
@@ -2718,14 +2796,10 @@ function renderComparisonPage(data, banks, trends, outliers, parentGroups, effic
     const ok = pillar3TrendChart(canvas, data[bank].pillar3||{}, PILLAR3_LIQUIDITY_SHEETS, {showLegend:false, pointRadius:2});
     if (!ok) el.outerHTML = '<div class="empty-note">No LCR/NSFR disclosed for this bank.</div>';
   });
-  document.querySelectorAll('[data-chart="trend"]').forEach(el => {
-    const metric = el.dataset.metric;
-    const metricSlug = slugify(metric);
-    const metricBanks = trends.trajectories.metrics[metric].map(r => frnName[r.frn] || r.bank).filter(b => banks.includes(b));
-    const container = document.getElementById(`trend-picker-${metricSlug}`);
-    initTrajectoryBankPicker(container, el.querySelector('canvas'), metric, metricBanks, trends.trajectories, frnName);
-    wireBankPickerSearch(container);
-  });
+  if (document.getElementById('metric-trend-metric')) {
+    initMetricTrendComparison(bubbles.axes, banks);
+    wireBankPickerSearch(document.getElementById('metric-trend-picker'));
+  }
   if (boxplotMetrics.length) {
     const boxplotCanvas = document.querySelector('#pillar3-boxplot-chart canvas');
     const boxplotNote = document.getElementById('pillar3-boxplot-note');
