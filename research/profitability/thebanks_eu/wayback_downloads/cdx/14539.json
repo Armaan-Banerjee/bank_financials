@@ -1,0 +1,10 @@
+[["timestamp","original","statuscode","mimetype","digest","length"],
+["20211129111355","https://thebanks.eu/banks/14539","200","text/html","XMVIUWJN4HSBPHTPQ4VJ46CPVZG2JF3U","10535"],
+["20240908215844","https://thebanks.eu/banks/14539","200","text/html","IAO7CDA6XIXZTGISOPCUUHMHPCDI6SYY","11908"],
+["20241016004512","https://thebanks.eu/banks/14539/bank_identifiers","200","text/html","BHRDZIY2FABXNQI65W74VL6GJXPPHQE5","8442"],
+["20220128083409","https://thebanks.eu/banks/14539/deposit_guarantee","200","text/html","36DBYYH36QCHIQNNEBLI7GTYQHUL3E47","9001"],
+["20220125151338","https://thebanks.eu/banks/14539/financials","200","text/html","RNX3RVDC6VZ6OB2Q45WVYO2OKX7MEMJP","8282"],
+["20220125151812","https://thebanks.eu/banks/14539/financials","200","text/html","DB5J5UXSI3GE5RHS6U6PTHITIDKRWWT6","8280"],
+["20241016004021","https://thebanks.eu/banks/14539/financials","200","text/html","I5KD3ER62OADG4AJDKXQDBWHMBCXA3M2","8422"],
+["20220131205635","https://thebanks.eu/banks/14539/market_share","200","text/html","OUA4D7YQGLAYR7NT6TGFQKOM5WSOE75X","8433"],
+["20220128083408","https://thebanks.eu/banks/14539/products_and_services","200","text/html","PNEZ5CU6SLHFVL2V5KRRZAFA5LVZDUSM","9463"]]

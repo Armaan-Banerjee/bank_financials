@@ -1497,7 +1497,19 @@ metric(
          + SDDT_NOTE
          + " No leverage ratio figure appears anywhere in the FY2024 or FY2025 Annual Reports (full-text "
            "searched 2026-09-15 - the only hits for 'leverage' are unrelated lending/business usages), and "
-           "there is no Pillar 3 edition for either year, so those two years stay blank.",
+           "there is no Pillar 3 edition for either year, so those two years stay blank.\n\n"
+         + "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+           "2026-10-10). From 1 January 2022 template UK LR2 / LRCom prints the exposure measure on BOTH "
+           "bases - row 24 including claims on central banks, row UK-24b excluding them, reconciling at "
+           "UK-24a, with ratios at row 25 and UK-25c. Cynergy prints no UK LR2 table in the FY2023 "
+           "edition, its last. Its leverage disclosure is two plainly captioned rows in the UK KM1 table "
+           "- 'Leverage ratio total exposure measure' 4,398,669 / 3,886,759 and 'Leverage ratio' 6.96% / "
+           "7.40% - with no central-bank qualifier on either. No reconciliation of accounting assets to "
+           "leverage exposure appears in that edition, and a full-text search of it returns no instance "
+           "of 'central bank' in any form, so nothing in the document fixes a basis and none is "
+           "attributed here.\n"
+           "Because the Bank opted into the SDDT regime there will be no later edition, so this question "
+           "cannot be reopened by a future document: FY2023 is the last word on Cynergy's leverage basis.",
 )
 
 metric(

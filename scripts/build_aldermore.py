@@ -1335,9 +1335,34 @@ metric(
     [
         ("Total exposure measure excluding claims on central banks (£m)", {"FY2026": 16715.1, "FY2025": 15674.3, "FY2024": 14337.2, "FY2023": 13609.6, "FY2022": 13850.3, "FY2021": 13424.8, "FY2020": 15132.5, "FY2019": 12671.6, "FY2018": 10585.1, "FY2017": NO_FY2017, "FY2016": 8562.9, "FY2015": 7095.9, "FY2014": 5630.4, "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)"}),
         ("Leverage ratio excluding claims on central banks (%)", {"FY2026": "9.0%", "FY2025": "8.9%", "FY2024": "9.6%", "FY2023": "9.3%", "FY2022": "8.1%", "FY2021": "7.5%", "FY2020": "6.1%", "FY2019": "6.8%", "FY2018": "7.1%", "FY2017": NO_FY2017, "FY2016": "7.0%", "FY2015": "7.2%", "FY2014": "6.3%", "FY2013": "Not published – FY2013 Pillar 3 (Basel II, 22pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2012": "Not published – FY2012 Pillar 3 (Basel II, 20pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)", "FY2011": "Not published – FY2011 Pillar 3 (Basel II, 23pp) contains no leverage ratio or exposure measure (text searched 2026-09-19)"}),
+        ("Total exposure measure including claims on central banks (£m)", {"FY2026": 18866.2}),
+        ("Claims on central banks excluded", {"FY2026": -2151.0}),
+        ("Leverage ratio including claims on central banks (%)", {"FY2026": "8.0%"}),
     ],
     p3_sources(),
-    note="FY2020 (exposure 15,132.5, ratio 6.1%) and FY2016 (exposure 8,562.9, ratio 7.0%) ADDED 2026-09-18 from "
+    note="BOTH LEVERAGE BASES, FY2026 ONLY, ADDED 2026-10-09 (GA-026). The FY2026 Pillar 3 (p.37, template "
+         "UK LR2 - LRCom) is the FIRST Aldermore edition to print the including-claims-on-central-banks side: "
+         "rows 24, UK-24a and UK-25c. Figures are the BANK columns (30-Jun-26), never the Group columns beside "
+         "them, which this workbook does not use - the same table prints Group 23,521.3 / (2,151.0) / 21,370.3 "
+         "/ 8.3% / 7.6% against the Bank's 18,866.2 / (2,151.0) / 16,715.1 / 9.0% / 8.0%, and the Bank's "
+         "16,715.1 reproduces this sheet's own FY2026 excluding-basis figure, which is the check that the right "
+         "block was read.\n"
+         "FY2025 IS DELIBERATELY BLANK ON THE NEW ROWS, THOUGH A FIGURE EXISTS. The FY2026 edition's Bank "
+         "comparative column for 30-Jun-25 prints 16,708.3 / (1,182.3) / 15,526.0 / 8.9% / 8.3%. Its "
+         "excluding-basis 15,526.0 does NOT agree with the 15,674.3 this sheet carries for FY2025, which comes "
+         "from the FY2025 edition's own Key metrics table (p.4, Bank column) - a 148.3 difference between two "
+         "of the Bank's own editions for the same date. Dropping 16,708.3 into the FY2025 column would build a "
+         "column that does not reconcile against its own neighbour (16,708.3 - 1,182.3 = 15,526.0, not "
+         "15,674.3). Both figures are recorded here; neither is adjusted to the other, and FY2025 keeps its own "
+         "edition's figure on the excluding row per the standing own-edition rule.\n"
+         "ARITHMETIC: FY2026 is 0.1 out - 18,866.2 - 2,151.0 = 16,715.2 against a printed 16,715.1. Reproduced "
+         "as printed. Both ratios tie to the template's own row 23 Bank Tier 1 capital of 1,500.9 at the "
+         "printed precision (1,500.9/16,715.1 = 9.0%; 1,500.9/18,866.2 = 8.0%).\n"
+         "NO EARLIER YEAR CAN GAIN THESE ROWS. All eight cited Aldermore editions were fetched and searched "
+         "2026-10-09; only the FY2026 one contains an LR2 with the basis split. FY2025 and earlier editions "
+         "print the Key metrics table's excluding-basis measure alone, and FY2021 and earlier pre-date the "
+         "split entirely (see the basis paragraph below).\n"
+         "FY2020 (exposure 15,132.5, ratio 6.1%) and FY2016 (exposure 8,562.9, ratio 7.0%) ADDED 2026-09-18 from "
          "row 21/row 22 of the 'Leverage ratio common disclosure (Bank only)' table of each year's own recovered "
          "Pillar 3 edition (FY2020 p.65, FY2016 p.62). Both are on the same pre-2022 all-exposures basis as the "
          "FY2019/FY2018/FY2015/FY2014 figures beside them, not the 'excluding claims on central banks' variant "

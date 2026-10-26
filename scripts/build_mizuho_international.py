@@ -724,6 +724,52 @@ bw.add_km1_sheet(
 )
 
 
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES, FY2022-FY2026 (GA-026, 2026-10-09). For periods from 1 January 2022 "
+    "the UK template UK LR2 (LRCom) prints the exposure measure and the leverage ratio on TWO "
+    "bases - INCLUDING and EXCLUDING claims on central banks - reconciling at the deduction row "
+    "24a. Mizuho International publishes both, and this sheet now carries both, read at 300 dpi "
+    "from each edition's own 'Table 15: Leverage ratio common disclosure (LRCom)' (2026 edition "
+    "p.26, 2025 p.28, 2024 p.28, 2023 p.27, 2022 p.26).\n\n"
+    "ROW NUMBERING - WHY THIS BANK WAS NEARLY MISSED. MHI prints the dual-basis rows as bare "
+    "'24', '24a', '24b', '25', '25c', WITHOUT the 'UK-' prefix the template specifies, and wraps "
+    "the labels across lines. The label WORDING is the UK template's verbatim. A search for the "
+    "discriminating row 'UK-24a' - the row that exists only in the dual-basis template - "
+    "therefore returns nothing here, and this bank was initially mis-classified as an old "
+    "single-basis CRR filer on that zero.\n\n"
+    "TOP ROW DELIBERATELY UNCHANGED AND DELIBERATELY NOT RELABELLED. The 'Leverage Ratio' row is "
+    "exactly as before. It must stay FIRST, because check_overview_ties.py takes the first cell "
+    "PRINTED AS A PERCENTAGE on a ratio sheet as that sheet's headline. It is not relabelled as "
+    "an excluding-basis row because its FY2021 and earlier figures come from the pre-2022 CRR "
+    "template, which has no basis split at all.\n\n"
+    "FY2024 ROW 25c - THE BANK'S OWN TWO EDITIONS DISAGREE. BOTH ARE RECORDED; NEITHER IS "
+    "RECONCILED. The 2024 edition's own column prints row 25c (including claims on central "
+    "banks) as 4.07%, the same figure as its own row 25 (excluding). The 2025 edition's FY2024 "
+    "comparative prints 3.98% for that same row and date, while agreeing with the 2024 edition "
+    "on every amount in the column (15,997.4 / -328.9 / 15,668.5) and on row 25 (4.07%). Under "
+    "this project's own-edition rule the 2024 edition's own 4.07% stands in the FY2024 cell and "
+    "the later 3.98% is recorded here rather than substituted for it. Stated as an observation "
+    "only, and NOT as the source of any figure on this sheet: Tier 1 capital 637.4 over the "
+    "including measure 15,997.4 is 3.98%, and over the excluding measure 15,668.5 is 4.07%.\n\n"
+    "EVERY OTHER COMPARATIVE AGREES EXACTLY. The 2026 edition's FY2025 column, the 2024 "
+    "edition's FY2023 column and the 2023 edition's FY2022 column each reproduce the next "
+    "edition's own figures on all five rows, checked at 300 dpi.\n\n"
+    "FY2021 LEFT BLANK ON THE FOUR NEW ROWS, DELIBERATELY. The dual basis is effective only for "
+    "periods from 1 January 2022, and MHI's FY2021 (year ended 31 March 2021) pre-dates it: the "
+    "2021 edition's own Table 15 is the old CRR template, with a single 'Leverage ratio total "
+    "exposure measure' of 14,224.7 and one ratio, 4.75%. The 2022 edition RESTATES that "
+    "comparative onto the dual basis - including 14,452.2, row 24a -227.5, excluding 14,224.7, "
+    "row 25 4.75%, row 25c 4.67% - and under the own-edition rule that restatement is recorded "
+    "here, not written into the FY2021 cells. Note that the old template's single measure, "
+    "14,224.7, is identical to the restated EXCLUDING measure, which is why the FY2021 ratio is "
+    "unchanged at 4.75%.\n\n"
+    "TRANSCRIBED AS PRINTED: the 2022 edition sets row 24b as '15,727.10', to two decimals where "
+    "every other figure in that table carries one. The 2022 edition also captions row 25 as just "
+    "'Leverage ratio', where the later editions caption it 'Leverage ratio excluding claims on "
+    "central banks (%)'; the row number and the reconciliation to row 24b are the same."
+)
+
+
 def metric(name, unit, values, note=None):
     bw.add_metric_sheet(name, unit, [(name, values)], p3_sources(), note=note, first_col_width=48, source_height=220)
 
@@ -770,7 +816,31 @@ bw.add_rwa_breakdown_sheet(
     source_height=260,
     unit_suffix=" (£m)",
 )
-metric("Leverage Ratio", "%", {"FY2026": "4.43%", "FY2025": "4.2%", "FY2024": "4.07%", "FY2023": "4.24%", "FY2022": "4.07%", "FY2021": "4.75%", "FY2020": "3.74%", "FY2019": "3.74%", "FY2018": "4.50%", "FY2017": "4.36%", "FY2016": "3.28%", "FY2015": "1.87%"}, "FY2014 leverage ratio was discussed qualitatively (implementation of PRA bank-level reporting was noted as having 'commenced') but no computed ratio was numerically disclosed in the FY2014 Pillar 3 document.")
+# GA-026 (2026-10-09): both leverage bases added. See GA026_BOTH_BASES_NOTE for the
+# FY2024 row-25c cross-edition disagreement and why FY2021 is blank on the new rows.
+bw.add_metric_sheet(
+    "Leverage Ratio",
+    "£m / %",
+    [
+        # Keep this ratio row FIRST: check_overview_ties.py takes the first cell PRINTED
+        # AS A PERCENTAGE on a ratio sheet as that sheet's headline figure.
+        ("Leverage Ratio", {"FY2026": "4.43%", "FY2025": "4.2%", "FY2024": "4.07%", "FY2023": "4.24%", "FY2022": "4.07%", "FY2021": "4.75%", "FY2020": "3.74%", "FY2019": "3.74%", "FY2018": "4.50%", "FY2017": "4.36%", "FY2016": "3.28%", "FY2015": "1.87%"}),
+        ("Total exposure measure including claims on central banks (£m) - LR2 row 24", {"FY2026": 15552.0, "FY2025": 16115.3, "FY2024": 15997.4, "FY2023": 15184.7, "FY2022": 16210.5}),
+        ("(-) Claims on central banks excluded (£m) - LR2 row 24a", {"FY2026": -217.2, "FY2025": -115.7, "FY2024": -328.9, "FY2023": -371.9, "FY2022": -483.4}),
+        ("Total exposure measure excluding claims on central banks (£m) - LR2 row 24b", {"FY2026": 15334.8, "FY2025": 15999.6, "FY2024": 15668.5, "FY2023": 14812.8, "FY2022": 15727.1}),
+        ("Leverage ratio including claims on central banks (%) - LR2 row 25c", {"FY2026": "4.37%", "FY2025": "4.16%", "FY2024": "4.07%", "FY2023": "4.13%", "FY2022": "3.95%"}),
+    ],
+    p3_sources(),
+    note=(
+        "FY2014 leverage ratio was discussed qualitatively (implementation of PRA bank-level "
+        "reporting was noted as having 'commenced') but no computed ratio was numerically "
+        "disclosed in the FY2014 Pillar 3 document.\n\n"
+        + GA026_BOTH_BASES_NOTE
+    ),
+    first_col_width=62,
+    source_height=220,
+    note_height=320,
+)
 metric("LCR", "%", {"FY2026": "272.4%", "FY2025": "268.7%", "FY2024": "250.39%", "FY2023": "302.67%", "FY2022": "364.04%", "FY2021": "303.00%", "FY2020": "340%", "FY2019": "416%", "FY2018": "396%"}, "LCR was first disclosed in the FY2018 Pillar 3 document (the document itself states this); not disclosed FY2014-FY2017.")
 metric("NSFR", "%", {"FY2026": "147.4%", "FY2025": "122.5%", "FY2024": "128.67%", "FY2023": "140.66%", "FY2022": "177.71%"}, "NSFR was not disclosed in the 2021 report or any FY2014-FY2020 report; 2025 is from the Annual Report KPI section.")
 # GA-006 (2026-09-18): this sheet was WHOLLY empty - 13 year columns, not one

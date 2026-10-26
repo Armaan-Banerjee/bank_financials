@@ -958,12 +958,39 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Basel III leverage ratio", {
+    [("Basel III leverage ratio - including claims on central banks; the Bank's own "
+      "reconciliation deducts none (see note)", {
         "FY2025": "Not published - FY2025 Pillar 3 Report not issued as at 18 Sep 2026",
         "FY2024": "19.3%", "FY2023": "19.7%", "FY2022": "19.3%", "FY2021": "23.4%",
         "FY2020": "24.2%", "FY2019": "22.85%", "FY2018": "21.53%", "FY2017": "20.93%", "FY2016": "19.32%",
     })],
     p3_sources(),
+    note=(
+        "LEVERAGE BASIS: ONE RATIO IS PUBLISHED, AND IT IS THE INCLUDING-CENTRAL-BANK-CLAIMS BASIS - "
+        "THE BANK'S OWN RECONCILIATION SHOWS NO DEDUCTION (GA-026, 2026-10-10). From 1 January 2022 "
+        "template UK LR2 / LRCom prints the exposure measure on BOTH bases - row 24 including claims "
+        "on central banks, row UK-24b excluding them, reconciling at UK-24a, with ratios at row 25 and "
+        "UK-25c. JIB prints no UK LR2 table in any edition and still uses the older Basel III "
+        "captions, which is why the row above is headed 'Basel III leverage ratio' rather than a "
+        "UK-template name.\n"
+        "Unlike a bank that simply states a ratio, JIB prints the workings, and they settle the "
+        "question. Section 3.4 of the FY2024 Pillar 3 Report carries a 'Summary reconciliation of "
+        "accounting assets and leverage exposures' running from 'Total consolidated assets as per "
+        "balance sheet' 484,970 through adjustments for derivative financial instruments 1,646, "
+        "off-balance sheet items 2,067, a PVA adjustment (69) and an other adjustment (775), to a "
+        "'Leverage ratio total exposure measure' of 487,839 (GBP000s, 31 December 2024). There is NO "
+        "line deducting claims on, or reserves placed with, central banks - the exposure measure "
+        "starts from total consolidated assets and is only ever added to. The measure therefore "
+        "INCLUDES claims on central banks, which is the row 24 basis, and the 19.3% above is the "
+        "including-basis ratio.\n"
+        "The narrative agrees: 'Leverage ratio is measured as the ratio of the Bank's Tier 1 capital "
+        "to its total assets including off balance sheet exposures.' No exclusion is mentioned "
+        "anywhere in the document.\n"
+        "This is the mirror image of Bank of Ceylon UK, recorded under the same ticket, where an "
+        "explicit 'Deduction: funds placed with the Bank of England' line fixes that bank on the "
+        "EXCLUDING basis. The presence or absence of that one line is what makes a basis readable "
+        "when no UK LR2 table is printed."
+    ),
 )
 metric(
     "LCR", "%",

@@ -936,13 +936,22 @@ KM1_NOTE = (
     "mislabelling is the Bank's own and is reproduced rather than corrected; the values are amounts in the "
     "block's currency.\n"
     "\n"
-    "FY2023 LEVERAGE RATIO DIVERGES BETWEEN EDITIONS AND BOTH FIGURES ARE CORRECT AS PUBLISHED. The FY2023 "
-    "edition prints a 19.75% leverage ratio on a total exposure measure of 1,567,144. The FY2024 edition "
-    "restates the same year to 19.64% on an exposure measure of 1,575,739. This sheet carries the FY2023 "
-    "edition's own 19.75%, because each year comes from its own edition; the Leverage Ratio metric sheet "
-    "carries the later restated 19.64%. The cross-check will flag this. It is a genuine cross-edition "
-    "restatement - corroborated by the exposure measure moving in the same edition - and is documented here "
-    "rather than silenced by editing either figure.\n"
+    "FY2023 LEVERAGE RATIO IS PRINTED TWICE, DIFFERENTLY, WITHIN THE FY2023 EDITION ITSELF - NOT ONLY "
+    "ACROSS EDITIONS. (Corrected 2026-10-09, GA-026. The earlier wording here called 19.64% a restatement "
+    "made by the FY2024 edition; that was wrong on provenance, though both figures were and remain correct "
+    "as published.) The FY2023 edition's KM1 (Table 1, p.10) prints row 13 total exposure measure 1,567,144 "
+    "and row 14 leverage ratio 19.75%. The SAME edition's IFRS 9 transitional template (Table 2, p.11) "
+    "prints row 15 total exposure measure 1,575,739 and row 16 leverage ratio 19.64% - same entity, same "
+    "date (31/12/2023), same currency ($'000). Every other line common to the two tables agrees exactly "
+    "(CET1 309,460; total capital 353,999; RWAs 1,235,478; CET1 and Tier 1 25.05%; total capital 28.65%); "
+    "the leverage pair is the only disagreement. The gap is NOT a transitional-arrangements effect: Table "
+    "2's row 17, 'leverage ratio as if IFRS 9 or analogous ECLs transitional arrangements had not been "
+    "applied', also prints 19.64%, so the FY2023 transitional adjustment is nil. The FY2024 edition's "
+    "comparative column then carries 1,575,739 / 19.64%, adopting Table 2's figure rather than the prior "
+    "edition's KM1 figure. This sheet carries 19.75% because this sheet reproduces KM1; the Leverage Ratio "
+    "metric sheet carries 19.64%, which is printed in the FY2023 edition itself and so satisfies the "
+    "own-edition rule. The cross-check will flag the pair. Neither figure is edited. Both tables read at "
+    "300 dpi, 2026-10-09.\n"
     "\n"
     "ROW-SET DRIFT. Rows UK 14a-UK 14f (additional own funds requirements to address the risk of excessive "
     "leverage) appear only in the FY2021 edition, where they are printed as 0.00% for every year that "
@@ -1307,6 +1316,29 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" ($'000)",
 )
 
+# GA-026 (2026-10-09). The UK leverage framework prints TWO exposure bases in template
+# UK LR2 (LRCom) - row 24 INCLUDING claims on central banks, UK-24b EXCLUDING them,
+# reconciling at UK-24a, with ratios at row 25 (excluding) and UK-25c (including). It is
+# effective only for periods from 1 January 2022, so only this Bank's FY2022, FY2023 and
+# FY2024 editions could carry the split. None of them does; this records which basis the
+# single published ratio is on, so far as the Bank states it.
+GA026_ONE_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+    "2026-10-09). In every edition from FY2019 to FY2024 the Leverage block of the key-metrics table is "
+    "exactly two rows, captioned plainly '13 Leverage ratio total exposure measure' and '14 Leverage "
+    "ratio', running straight into the Liquidity Coverage Ratio block. The Bank never adopts the "
+    "'excluding claims on central banks' wording that other UK banks took up on 1 January 2022, and "
+    "prints no UK LR2 / LRCom table and no rows 24, UK-24a, UK-24b or UK-25c in any edition. The FY2022 "
+    "edition's glossary defines the measure without a carve-out: 'Leverage Ratio - Tier 1 capital divided "
+    "by the exposure measure.' The FY2024 edition adds that the Bank 'is not in scope for the leverage "
+    "ratio minimum capital requirement' but has 'elected to meet the PRA expectation' of 3.25%. The "
+    "single ratio is therefore recorded here exactly as published, unqualified: NO BASIS IS ASSERTED "
+    "THAT THE BANK DID NOT PRINT, and in particular it is not labelled as the excluding basis merely "
+    "because that is what most UK banks now publish. The leverage blocks of the FY2022 (p.27), FY2023 "
+    "(p.10 and p.11) and FY2024 (p.9) editions were rendered and read at 300 dpi to establish that the "
+    "qualifier rows are absent from the TABLES, not merely absent from a text search."
+)
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage ratio", {
@@ -1315,7 +1347,7 @@ metric(
         "FY2020": "6.75%", "FY2019": "4.98%",
     })],
     p3_sources(page2024=3, page2023=3, page2022=19, table="Table 1 / Table 6"),
-    note=FY2025_GAPFILL_NOTE.lstrip() +
+    note=GA026_ONE_BASIS_NOTE + "\n\n" + FY2025_GAPFILL_NOTE.lstrip() +
     "\n\nThe FY2025 Annual Report names the leverage ratio only as a metric the Bank monitors ('Leverage "
     "Ratio: Measures the Bank's core capital ...' in the risk-management section); it prints no value for "
     "it in any year column, and none is derived here from the capital and exposure figures elsewhere in "

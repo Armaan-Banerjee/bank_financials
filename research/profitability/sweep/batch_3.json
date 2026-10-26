@@ -1,0 +1,383 @@
+[
+ {
+  "bank": "AIB GROUP UK",
+  "script": "build_aib_uk.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2022/AIB-Group-UK-p.l.c-Annual-Financial-Report-2022.pdf",
+   "https://aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2023/aib-group-uk-plc-annual-financial-report-2023.pdf",
+   "https://www.aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2024/aib-group-uk-plc-annual-financial-report-2024.pdf",
+   "https://www.aib.ie/content/dam/frontdoor/investorrelations/docs/resultscentre/annualreport/2025/aib-group-uk-plc-annual-financial-report-2025.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/NI018800/filing-history",
+   "https://find-and-update.company-information.service.gov.uk/company/NI018800/filing-history/MzMzMjQ0MDUyOWFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2021/october/ps2121.pdf"
+  ]
+ },
+ {
+  "bank": "BANK MANDIRI EUROPE",
+  "script": "build_bank_mandiri_europe.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.bkmandiri.co.uk/media/2024/12/BMEL-Annual-Report-2021.pdf",
+   "https://www.bkmandiri.co.uk/media/2024/12/BMEL-Annual-Report-2022.pdf",
+   "https://www.bkmandiri.co.uk/media/2024/12/BMEL-Annual-Report-2023.pdf",
+   "https://www.bkmandiri.co.uk/media/2025/04/BMEL-Annual-Report-2024.pdf",
+   "https://www.bkmandiri.co.uk/media/2026/04/BMEL-Annual-Report-2025.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzE0ODg4NjI3NWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzE3NzM1OTQ5OWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzExOTM5OTY1MmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzI0MzE1NDIyNmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzI4MzQzODYxOWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03793679/filing-history/MzIwMTI4MzM0M2FkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://web.archive.org/web/20240301085228/https://bkmandiri.co.uk/BMEL%20-%20Pillar%203%20%20Disclosures%2031st%20December%202016.pdf",
+   "https://web.archive.org/web/20240301085228/https://bkmandiri.co.uk/BMEL%20-%20Pillar%203%20%20Disclosures%2031st%20December%202016.pdf)"
+  ]
+ },
+ {
+  "bank": "BANK OF THE PHILIPPINE ISLANDS EUROPE",
+  "script": "build_bpi_europe.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzM3NzAxNzg2OGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzMzNzI1NDc5M2FkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzQyNjQ2OTQ5OGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/05888535/filing-history/MzUyMDczNTAwM2FkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": []
+ },
+ {
+  "bank": "BNY MELLON INTERNATIONAL",
+  "script": "build_bny_mellon.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/Signed-2025-BNYMIL-Financial-Statements.pdf",
+   "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/bnymil-financial-statement-2023.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzE3NTQ0NTUzNGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzI2Mzk0NzI2OWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzI5OTc0NjM1MGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzIwMzQ1MjI5OWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzIzNzIyMzk4NmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/03236121/filing-history/MzMzNzcwMzgzM2FkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/the-bank-of-new-york-mellon-international-limited-2016-pillar-3-disclosure.pdf",
+   "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/the-bank-of-new-york-mellon-international-limited-2017-pillar-3-disclosure.pdf",
+   "https://www.bnymellon.com/content/dam/bnymellon/documents/pdf/investor-relations/the-bank-of-new-york-mellon-international-limited-2018-pillar-3-disclosure.pdf"
+  ]
+ },
+ {
+  "bank": "CATER ALLEN",
+  "script": "build_cater_allen.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.santander.co.uk/assets/s3fs-public/documents/2022_cater_allen_limited_annual_report.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzMzODQ2NDUzMWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQ2NDYzNjU4OGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzQyMDI4MDMwNWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00383032/filing-history/MzUxODk5NjMzM2FkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.santander.co.uk/assets/s3fs-public/documents/Cater%20Allen%20Limited%202024%20-%20Signed.pdf",
+   "https://www.santander.co.uk/assets/s3fs-public/documents/cater_allen_limited.pdf"
+  ]
+ },
+ {
+  "bank": "CLYDESDALE",
+  "script": "build_clydesdale.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/SC001111/filing-history/MzA0NzM2MDEyOWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC001111/filing-history/MzA4OTI2NzU1N2FkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC001111/filing-history/MzAyNzcxMTEzMGFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.virginmoneyukplc.com/downloads/pdf/cb-2026-pillar-3-report.pdf",
+   "https://www.virginmoneyukplc.com/downloads/pdf/cb-ara-2014.pdf",
+   "https://www.virginmoneyukplc.com/downloads/pdf/cb-ara-2015.pdf"
+  ]
+ },
+ {
+  "bank": "DF CAPITAL BANK",
+  "script": "build_df_capital.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2021/04/21070044/Annual-report-and-accounts-Year-end-2020-Final-compressed.pdf",
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2022/05/Annual-report-and-accounts-year-end-2021.pdf",
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2024/04/DF-Capital-Annual-Report-and-Accounts-year-ending-2023-1.pdf",
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2026/03/DF-Capital-Annual-Report-and-Accounts-year-ending-2025.pdf"
+  ],
+  "companies_house_urls": [],
+  "other_urls": [
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2021/04/21065603/Distribution-Finance-Capital-Holdings-plc-Pillar-3-31-December-2020.pdf",
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2022/04/DF-Capital-Pillar-III_Dec-2021-Final.pdf",
+   "https://wp-dfcapital-investors-2020.s3.eu-west-2.amazonaws.com/media/2023/04/Pillar-3-Disclosures-31-December-2022.pdf"
+  ]
+ },
+ {
+  "bank": "GB BANK",
+  "script": "build_gb_bank.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/10702260",
+   "https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history",
+   "https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history/MzM1Mzg0NjcwMWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history/MzM5NTYwNDEwOWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history/MzQ2MDE5MzkwMWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/10702260/filing-history/MzQ5Njg4NzE4MGFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.gbbank.co.uk/download/4416/?tmstv=1760374739",
+   "https://www.gbbank.co.uk/download/4420/?tmstv=1760374863",
+   "https://www.gbbank.co.uk/download/4423/?tmstv=1760374514"
+  ]
+ },
+ {
+  "bank": "HAMPDEN & CO",
+  "script": "build_hampden_co.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Bank-Annual-Report-and-Financial-Statements-2024.pdf",
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Co-2022-Annual-Report-and-Financial-Statements.pdf",
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Co-Annual-Report-2021.pdf",
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Co-Annual-Report-and-Financial-Statements-2023.pdf",
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden_Bank_Annual_Report_2025_2026-06-09-100801_cggc.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzE3OTE1MzI3NmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzI2NzQzODEwNWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzIwNjc3MTg4N2FkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzIzNjE3NTE0NmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/SC386922/filing-history/MzMwNTYzNTA1MmFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://cdn.craft.cloud/019db931-b985-7148-ac09-8f1d1e20d1a6/assets/content/hampden/content/Hampden-Co-plc-2023-Pillar-3-Disclosures.pdf",
+   "https://web.archive.org/web/20220518033330id_/https://hampdenandco.com/content/hampden/content/Hampden-Co-Pillar-3-disclosures-2020-for-Web.pdf",
+   "https://www.hampdenbank.com/about-us/shareholder-information"
+  ]
+ },
+ {
+  "bank": "HSBC UK BANK PLC",
+  "script": "build_hsbc_uk_bank_plc.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2019/annual/pdfs/hsbc-uk-bank-plc/200218-annual-report-and-accounts-2019.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2020/annual/pdfs/hsbc-uk-bank-plc/210223-annual-report-and-accounts-2020.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2021/annual/pdfs/hsbc-uk-bank-plc/220222-annual-report-and-accounts-2021.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2022/annual/pdfs/hsbc-uk-bank-plc/230221-annual-report-and-accounts-2022.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/annual/pdfs/hsbc-uk-bank-plc/240221-annual-report-and-accounts-2023.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-uk-bank-plc/250219-annual-report-and-accounts-2024.pdf"
+  ],
+  "companies_house_urls": [],
+  "other_urls": [
+   "https://web.archive.org/web/20221014171921id_/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2019/annual/pdfs/hsbc-uk-bank-plc/200218-pillar-3-disclosures-31-december-2019.pdf",
+   "https://web.archive.org/web/20240527084156id_/https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2020/annual/pdfs/hsbc-uk-bank-plc/210223-pillar-3-disclosures-at-31-december-2020.pdf",
+   "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2021/annual/pdfs/hsbc-uk-bank-plc/220222-pillar-3-disclosures-at-31-december-2021.pdf"
+  ]
+ },
+ {
+  "bank": "JORDAN INTERNATIONAL BANK",
+  "script": "build_jordan_international_bank.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.jordanbank.co.uk/annual-report-and-accounts/",
+   "https://www.jordanbank.co.uk/media/tlihy44n/company_accounts_2025.pdf)"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history",
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history/MzE3NTk2MTg3NWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history/MzI3MjMxMDgyMmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history/MzIwMzMyNzI2NWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history/MzIzNjcxMTg2MGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01814093/filing-history/MzM3OTQ2NzM2OWFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.jordanbank.co.uk/media/1018/pillar-3.pdf",
+   "https://www.jordanbank.co.uk/media/1127/pw3751-jib-pillar-3-2017-f-final.pdf",
+   "https://www.jordanbank.co.uk/media/1133/pillar-3-2018.pdf"
+  ]
+ },
+ {
+  "bank": "KUWAIT FINANCE HOUSE",
+  "script": "build_kuwait_finance_house.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history",
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history/MzM0MTg2NjEyNWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history/MzM3MTE2OTUwOGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history/MzQ2OTUzMTA5NGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history/MzQxNzM5MjkxNGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/00877859/filing-history/MzUyMTMwODAyMGFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": []
+ },
+ {
+  "bank": "MIZUHO INTERNATIONAL",
+  "script": "build_mizuho_international.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686301edbbd3ea24c5c8059f_mizuho_annual_report_2024_final_v02.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6863021624e9468651ae2fbd_mizuho_annual_report_2023_final_02.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686302389cf6e01446043fd2_2022-mizuho-international-plc-annual-report.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686302637f7fc2c72f2e2f59_2021-mizuho-international-plc-annual-report.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6863028d4802cdc23dd6552c_2020-mizuho-international-plc-annual-report.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686302ac32d1c7376f1f1877_2019-mizuho-international-plc-annual-report.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MjA0MjM3OTU5NmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MjAxMDQ0NzA1NmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MzA0NDQ4MDc5N2FkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MzA2NTI2MzY4MGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MzA4MDE5NTMxMmFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/01203696/filing-history/MzAyMzM2MTY3OWFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/6864747a2fb833ca68387b1e_mhi-consolidated-pillar-3-disclosure-2024-final.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/68647496be5f9b72fe43c3f9_mhi-consolidated-pillar-3-disclosure-2023-final.pdf",
+   "https://cdn.prod.website-files.com/67cb23eaf0c6c4d4080e059a/686474abd90349ac917e208a_2022-mhi-consolidated-pillar-3-disclosure.pdf"
+  ]
+ },
+ {
+  "bank": "NATWEST MARKETS",
+  "script": "build_natwest_markets.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwm-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/nwm-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/16022024/nwmp-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/nwmp-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/18022022/nwm-plc-annual-report-2021.pdf"
+  ],
+  "companies_house_urls": [],
+  "other_urls": [
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/11-08-2025/nwm-pillar3-h1-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/11112022/natwest-markets-plc-q3-pillar-3-supplement.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/11112025/11112025-nwm-pillar-3-report.pdf"
+  ]
+ },
+ {
+  "bank": "PERENNA",
+  "script": "build_perenna.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/13084174/filing-history/MzM1MTg2MDczOWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/13084174/filing-history/MzM4MjAzMDY1OWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/13084174/filing-history/MzQ3MjEwNTk2M2FkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/13084174/filing-history/MzQyNTQzMzk4MGFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/13084174/filing-history/MzUyNTM5NTkxM2FkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv"
+  ]
+ },
+ {
+  "bank": "RBS",
+  "script": "build_rbs.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwh-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/rbs-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/nwh-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/rbs-plc-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/16022024/rbs-plc-annual-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/17022023/rbs-plc-annual-report.pdf"
+  ],
+  "companies_house_urls": [],
+  "other_urls": [
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/nwh-pillar-3-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/13022026/rbs-pillar-3-report.pdf",
+   "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/results-center/14022025/rbs-plc-pillar-3-report.pdf"
+  ]
+ },
+ {
+  "bank": "SCHRODER",
+  "script": "build_schroder.py",
+  "status": "todo",
+  "annual_report_urls": [],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/02280926",
+   "https://find-and-update.company-information.service.gov.uk/company/02280926/filing-history/MzM3NDc5MjQzOGFkaXF6a2N4/document?download=0&format=pdf",
+   "https://find-and-update.company-information.service.gov.uk/company/02280926/filing-history/MzMzNTY5MDAyOGFkaXF6a2N4/document?download=0&format=pdf",
+   "https://find-and-update.company-information.service.gov.uk/company/02280926/filing-history/MzQ2MjI2NjAwNmFkaXF6a2N4/document?download=0&format=pdf",
+   "https://find-and-update.company-information.service.gov.uk/company/02280926/filing-history/MzQxNzc4NDk4OGFkaXF6a2N4/document?download=0&format=pdf",
+   "https://find-and-update.company-information.service.gov.uk/company/02280926/filing-history/MzUxODQzNTIxOWFkaXF6a2N4/document?download=0&format=pdf"
+  ],
+  "other_urls": [
+   "https://www.bankofengland.co.uk/prudential-regulation/authorisations/which-firms-does-the-pra-regulate"
+  ]
+ },
+ {
+  "bank": "STREAMBANK",
+  "script": "build_streambank.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://streambank.co.uk/pdf/March-2025-Annual-Report-2025.pdf",
+   "https://streambank.co.uk/pdf/StreamBank-PLC-Annual-Report-and-Financial-Statements.pdf",
+   "https://streambank.co.uk/pdf/StreamBank-Plc-Financial-Statements-31-March-2023-Signed.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/11995458/filing-history/MzM0MzQ4NDk4M2FkaXF6a2N4/document?download=0&format=pdf",
+   "https://find-and-update.company-information.service.gov.uk/company/11995458/filing-history/MzUzNDg0MTU0OWFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://streambank.co.uk/js/app.js",
+   "https://streambank.co.uk/pdf/FY24-Pillar-3-StreamBank-PLC.pdf",
+   "https://streambank.co.uk/pdf/March-2025-Pillar-3-Disclosures.pdf"
+  ]
+ },
+ {
+  "bank": "TURKISH BANK UK",
+  "script": "build_turkish_bank.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.turkishbank.co.uk/reports/",
+   "https://www.turkishbank.co.uk/wp-content/uploads/2022/07/21TBUK-Financial-Statements-reported-to-AGM-signed.pdf",
+   "https://www.turkishbank.co.uk/wp-content/uploads/2023/05/FY22TBUK-Financial-Statements-Signed-for-AGM-signed.pdf",
+   "https://www.turkishbank.co.uk/wp-content/uploads/2024/07/FY23TBUK-Financial-Statements-Signed.pdf",
+   "https://www.turkishbank.co.uk/wp-content/uploads/2025/04/FINANCIAL-STATEMENTS-31122024-FINAL_SIGNED.pdf",
+   "https://www.turkishbank.co.uk/wp-content/uploads/2026/04/Financial-Statements-TBUK-signed.pdf"
+  ],
+  "companies_house_urls": [],
+  "other_urls": [
+   "https://www.turkishbank.co.uk/wp-content/uploads/2026/02/PILLAR-3-DISCLOSURE.pdf"
+  ]
+ },
+ {
+  "bank": "VIDA",
+  "script": "build_vida.py",
+  "status": "todo",
+  "annual_report_urls": [
+   "https://www.vidabank.co.uk/media/emghy4z2/annual-report-and-accounts-2024-company.pdf",
+   "https://www.vidabank.co.uk/media/p3wau0ms/annual-report-and-accounts-2021.pdf",
+   "https://www.vidabank.co.uk/media/pkmnxlqg/annual-report-and-accounts-2025-company.pdf",
+   "https://www.vidabank.co.uk/media/zhoj0swe/annual-report-and-accounts-2023.pdf"
+  ],
+  "companies_house_urls": [
+   "https://find-and-update.company-information.service.gov.uk/company/09837692/filing-history/MzI4NjAzOTYwNWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/09837692/filing-history/MzIzMzYzMjc1OWFkaXF6a2N4/document?format=pdf&download=0",
+   "https://find-and-update.company-information.service.gov.uk/company/09837692/filing-history/MzIzMzYzMjc1OWFkaXF6a2N4/document?format=pdf&download=0)",
+   "https://find-and-update.company-information.service.gov.uk/company/09837692/filing-history/MzMwNjUyMjA5MmFkaXF6a2N4/document?format=pdf&download=0"
+  ],
+  "other_urls": [
+   "https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/authorisations/waivers-and-modifications-of-rules/consolidated-waivers-pra-firms.csv",
+   "https://www.vidabank.co.uk/media/mucbqgwi/vghl-pillar-3-report-2024-final.pdf",
+   "https://www.vidabank.co.uk/media/od2lpxc0/vghl-pillar-3-report-2025-final.pdf"
+  ]
+ }
+]

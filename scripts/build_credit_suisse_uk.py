@@ -1197,7 +1197,7 @@ LEVERAGE_INTERIOR_NOTE = (
     f"FY2016 FILLED 2026-09-19: the entity's own 2016 Pillar 3 'Leverage Ratio Common Disclosure' table "
     f"prints a 6.2% leverage ratio and £2,996.370m total exposure (PDF p.20) - {P3_2016_URL}."
 )
-metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(LEVERAGE_INTERIOR_NOTE))
+metric("Leverage Ratio", "%", [("Leverage Ratio - FY2022 onward excluding claims on central banks (UK framework); FY2019-FY2021 CRR / Commission Delegated Act basis; see note", LEVERAGE_RATIO)], p3_sources(LEVERAGE_INTERIOR_NOTE))
 
 LCR_INTERIOR_NOTE = (
     "\nTWO ROWS, TWO DIFFERENT MEASURES - read the labels. The Bank publishes an LCR on two bases and says "

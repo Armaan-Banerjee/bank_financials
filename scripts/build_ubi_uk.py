@@ -929,6 +929,54 @@ def metric(name, unit, rows_data, sources_text, note=None):
     bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=130)
 
 
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES, FY2023-FY2025 (GA-026, 2026-10-09). THIS CORRECTS AN EARLIER CLAIM ON "
+    "THIS SHEET. The note here used to say the Bank's own reports 'do not draw an "
+    "excluding/including-central-banks distinction in any year'. That is WRONG. It is true only "
+    "of template UK KM1, whose rows 13 and 14 UBI captions plainly 'Leverage ratio total "
+    "exposure measure' and 'Leverage ratio'. UBI's 'UK LR2 - LRCom: Leverage ratio common "
+    "disclosure' draws the distinction in full, in both directions, in every edition from "
+    "FY2023 on. Read at 300 dpi: FY2025 edition p.22, FY2024 edition p.22, FY2023 edition "
+    "pp.22-23. All figures below are USD thousands as printed, converted to GBP on this sheet by "
+    "the same spot-rate helper as every other stock figure in this workbook.\n\n"
+    "WHAT THE LR2 PRINTS, PER EDITION'S OWN COLUMN:\n"
+    "  FY2025 - row 23 Tier 1 (leverage) 111,478; row 24 (including) 508,069; row UK-24a "
+    "(claims on central banks excluded) -11,093; row UK-24b (excluding) 496,976; row 25 "
+    "(excluding %) 22.43%; row UK-25c (including %) 21.94%.\n"
+    "  FY2024 - 116,706; 516,285; -4,535; 511,751; 22.81%; 22.60%.\n"
+    "  FY2023 - 113,622; 487,428; -12,303; 475,125; 23.91%; 23.31%.\n\n"
+    "THE FY2023 EDITION DISAGREES WITH ITSELF, THREE WAYS, AND ALL THREE ARE RECORDED. Within "
+    "that one document: its UK KM1 (p.9) rows 13/14 print 475,110 and 23.92%; its UK LR1 "
+    "(summary reconciliation, p.21) row 13 'Total exposure measure' prints 487,412; and its UK "
+    "LR2 (p.22) prints 475,125 excluding, 487,428 including and 23.91%. So the excluding measure "
+    "differs by 15 between KM1 and LR2, the including measure differs by 16 between LR1 and LR2, "
+    "and the ratio differs by 0.01pp. Nothing has been adjusted to make them agree. The sheet's "
+    "'Total exposure measure' and 'Leverage ratio (%)' rows keep the KM1 figures (475,110 and "
+    "23.92%), because KM1 is this workbook's source for those rows in every year; the LR2 "
+    "figures are recorded here. The FY2024 and FY2025 editions have no such split - their KM1 "
+    "rows 13/14 reproduce the LR2's excluding measure and excluding ratio exactly.\n\n"
+    "WHICH BASIS THE EXISTING ROWS WERE ALREADY ON. The 'Total exposure measure' and 'Leverage "
+    "ratio (%)' rows turn out to have been the EXCLUDING basis all along for FY2023-FY2025, "
+    "because that is what UBI's KM1 rows 13/14 carry. Note that UBI's LR1 row 13, also captioned "
+    "'Total exposure measure', is the INCLUDING measure instead (508,069 at FY2025 against KM1's "
+    "496,976) - the same caption on two templates meaning two different things in one document.\n\n"
+    "CROSS-EDITION COMPARATIVES, CHECKED AT 300 dpi. The FY2024 edition's FY2023 column "
+    "reproduces the FY2023 edition's own LR2 figures exactly on all six rows. The FY2025 "
+    "edition's FY2024 column agrees on every amount and on row 25, but prints Tier 1 (leverage) "
+    "as 116,707 where the FY2024 edition's own column prints 116,706, and row UK-25c as 22.61% "
+    "where the FY2024 edition prints 22.60%. Each year keeps its own edition's figure; the "
+    "divergence is recorded, not reconciled. (Separately, this workbook's CET1/Tier 1 rows carry "
+    "111,479 for FY2025 against the LR2's Tier 1 (leverage) of 111,478 - a one-unit difference "
+    "between two of the bank's own templates, also left alone.)\n\n"
+    "FY2022 AND EARLIER LEFT BLANK ON THE THREE NEW ROWS, DELIBERATELY. The FY2023 edition's "
+    "FY2022 comparative column does print the dual basis - including 411,101, row UK-24a -17, "
+    "excluding 411,084, and 27.49% on BOTH ratio rows, the deduction being too small to move the "
+    "rounded figure - but that is a later edition's comparative, not FY2022's own edition, and "
+    "under this project's own-edition rule it is recorded here rather than written into the "
+    "FY2022 cells."
+)
+
+
 CET1_TIER1_USD = {"FY2025": 111479, "FY2024": 116706, "FY2023": 113622, "FY2022": 113013, "FY2021": 111081, "FY2020": 120703, "FY2019": 92980, "FY2018": 94472}
 TOTAL_CAP_USD = {"FY2025": 111479, "FY2024": 116706, "FY2023": 113622, "FY2022": 113013, "FY2021": 115017, "FY2020": 120703, "FY2019": 92980, "FY2018": 94472}
 RWA_USD = {"FY2025": 409920, "FY2024": 421729, "FY2023": 385186, "FY2022": 352650, "FY2021": 343147, "FY2020": 354835, "FY2019": 443828, "FY2018": 459690}
@@ -1113,11 +1161,16 @@ KM1_SOURCES = (
     "own wording, used here); the FY2025 edition re-captions the same row 'Countercyclical Capital Buffer "
     "(CCyB) (%)'. This is a wording change, not a basis break, so the series is kept on one row and the "
     "change recorded here rather than splitting it.\n"
-    "• NO LEVERAGE BASIS BREAK IS DRAWN BY THIS BANK. Rows 13/14 are captioned plainly 'Leverage ratio "
-    "total exposure measure' and 'Leverage ratio' in every edition from FY2022 onward - no edition ever "
-    "adds the post-1-January-2022 'excluding claims on central banks' qualifier that map rule 5 concerns, "
-    "in either direction. Reproduced as captioned; the same point is already noted on the Leverage Ratio "
-    "sheet.\n"
+    "• NO LEVERAGE BASIS BREAK IS DRAWN IN KM1 - BUT THE BANK DOES DRAW ONE ELSEWHERE (corrected "
+    "2026-10-09, GA-026; this bullet previously said the bank drew no such distinction anywhere, which "
+    "was wrong). Rows 13/14 here are captioned plainly 'Leverage ratio total exposure measure' and "
+    "'Leverage ratio' in every edition from FY2022 onward, with no 'excluding claims on central banks' "
+    "qualifier in either direction, and they are reproduced as captioned. What the qualifier-free caption "
+    "hides is that these two rows carry the EXCLUDING-basis figures: in the FY2025 edition KM1 row 13 is "
+    "496,976, which is that edition's UK LR2 row UK-24b, while its LR2 row 24 (including) is 508,069 and "
+    "its LR1 row 13, captioned 'Total exposure measure' with no qualifier either, is 508,069 as well. The "
+    "Bank's full dual-basis UK LR2 and the FY2023 edition's three-way disagreement with itself are set "
+    "out on the Leverage Ratio sheet; nothing on this KM1 sheet has been changed.\n"
     "• INTER-EDITION DIVERGENCES, RECORDED AND NOT ADOPTED (each year stays as its own edition published "
     "it):\n"
     "   - FY2022 row 9. The FY2022 edition prints a DASH. The FY2023 edition's 31-Mar-22 comparative "
@@ -1247,17 +1300,25 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000, conv. from USD)",
 )
 
-metric(
+bw.add_metric_sheet(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
         ("Total exposure measure", stock({"FY2025": 496976, "FY2024": 511751, "FY2023": 475110, "FY2022": 411084, "FY2021": 402973, "FY2020": 410130, "FY2019": 460623, "FY2018": 445036})),
+        # Keep this ratio row above the including-basis one: check_overview_ties.py takes the
+        # first cell PRINTED AS A PERCENTAGE on a ratio sheet as that sheet's headline figure.
         ("Leverage ratio (%)", {"FY2026": UBI_FY2026_NP, "FY2025": "22.43%", "FY2024": "22.81%", "FY2023": "23.92%", "FY2022": "27.49%", "FY2021": "27.57%", "FY2020": "29.43%", "FY2019": "20.19%", "FY2018": "21.23%"}),
+        ("Total exposure measure including claims on central banks - UK LR2 row 24", stock({"FY2025": 508069, "FY2024": 516285, "FY2023": 487428})),
+        ("(-) Claims on central banks excluded - UK LR2 row UK-24a", stock({"FY2025": -11093, "FY2024": -4535, "FY2023": -12303})),
+        ("Leverage ratio including claims on central banks (%) - UK LR2 row UK-25c", {"FY2025": "21.94%", "FY2024": "22.60%", "FY2023": "23.31%"}),
     ],
     p3_sources(),
     note="FY2021/FY2022 disclosed on the 'Basel III leverage ratio' basis (per that era's Pillar 3 template); "
-         "FY2023 onward uses the 'UK KM1' leverage ratio template. Both are shown on the same row for continuity "
-         "since the Bank's own reports do not draw an excluding/including-central-banks distinction in any year. "
-         "FY2018-FY2020 also use the 'Basel III leverage ratio' basis.",
+         "FY2023 onward uses the 'UK KM1' leverage ratio template. FY2018-FY2020 also use the 'Basel III "
+         "leverage ratio' basis.\n\n"
+         + GA026_BOTH_BASES_NOTE,
+    first_col_width=66,
+    source_height=130,
+    note_height=300,
 )
 
 metric(

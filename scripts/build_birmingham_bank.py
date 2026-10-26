@@ -789,8 +789,36 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 
+# GA-026 (2026-10-09). Template UK LR2 prints both the including- and excluding-central-bank-
+# claims bases from 1 January 2022. This bank prints no leverage table at all, in any edition.
+GA026_ONE_BASIS_NOTE = (
+    "LEVERAGE BASIS: NO BASIS IS STATED, AND NO LEVERAGE TABLE IS PUBLISHED IN ANY EDITION (GA-026, "
+    "2026-10-09). The ratio above is a single line in the Bank's 'Summary Analysis' key-ratios table "
+    "('Leverage ratio   24%   63%'), with NO exposure measure printed anywhere alongside it, so there is "
+    "nothing in the document from which a basis could be read. No UK LR2 / LRCom table and no rows 24, "
+    "UK-24a, UK-24b or UK-25c appear in any edition. The Bank's narrative section defines the measure "
+    "with no carve-out - 'This ratio shows Tier 1 capital as a proportion of on and off-balance sheet "
+    "assets' - and states the exemption: 'The current regulations do not apply the minimum requirement "
+    "to smaller banks and so the Bank is exempt, however the Bank's leverage ratio as 31 December 2024 "
+    "of 24% is well above the minimum requirement of 3%.' Note that the Bank cites 3%, the pre-2022 "
+    "figure, rather than the 3.25% that applies inside the leverage regime - consistent with its being "
+    "outside that regime. The ratio is recorded exactly as published, unqualified; NO BASIS IS ASSERTED "
+    "THAT THE BANK DID NOT PRINT.\n"
+    "\n"
+    "THIS BANK'S TEXT LAYER IS DAMAGED AND THE FIGURES WERE TAKEN FROM THE RENDERED PAGE. The FY2024 "
+    "edition's embedded text drops the 'ti' ligature throughout, so 'ratio' extracts as 'ra o', 'tier 1' "
+    "as 'er 1' and 'regulations' as 'regula ons'. Any search of that text layer for 'Leverage ratio' "
+    "returns nothing, which would read exactly like a bank that publishes no leverage ratio. The "
+    "key-ratios table on p.5 was rendered and read at 300 dpi instead.\n"
+    "\n"
+    "FILENAME WARNING, RECORDED BECAUSE IT HAS ALREADY MISLED ONCE: the file published as "
+    "'Birmingham-Bank-Pillar-3-Disclosures-2022-final.pdf' is the FY2023 edition - its own text says it "
+    "is 'based upon the Bank's Annual Report and Accounts for the year ended 31 December 2023' and its "
+    "columns are 31 December 2023 and 31 December 2022. The filename year is wrong, not the content."
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE)],
-       note=CAPITAL_2022_NOTE)
+       note=GA026_ONE_BASIS_NOTE + "\n\n" + CAPITAL_2022_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)],
        note="FY2022/FY2023 figures (2,983% / 11,351%) are genuinely this large - a small, low-loan-volume "
             "bank holding a large liquidity buffer relative to its (paused) lending book during its 2023 "

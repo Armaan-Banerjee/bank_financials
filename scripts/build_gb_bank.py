@@ -595,10 +595,29 @@ bw.add_rwa_breakdown_sheet(
     source_height=220,
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 5 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (4 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. No edition contained either. The bank files UK KM1, whose leverage block (rows 13 and 14) "
+    "asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric("Leverage Ratio", "£'000 / %", [
     ("Total exposure measure excluding claims on central banks", LEVERAGE_EXPOSURE),
     ("Leverage ratio excluding claims on central banks (%)", LEVERAGE_RATIO),
-])
+], note=GA026_ONE_LEVERAGE_BASIS_NOTE)
 metric("LCR", "£'000 / %", [
     ("Total high-quality liquid assets (HQLA), weighted value - average", HQLA),
     ("Total net cash outflows, adjusted value", NET_OUTFLOWS),

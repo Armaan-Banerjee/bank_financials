@@ -1103,7 +1103,7 @@ metric(
     "Leverage Ratio", "£'000 / % (conv. from USD)",
     [
         ("Total exposure measure", p3_stock(LEVERAGE_EXPOSURE_USD)),
-        ("Leverage ratio (%)", {**LEVERAGE_RATIO, **{y: AB_NO_LEV for y in AB_2Y}}),
+        ("Leverage ratio (%) - FY2022 onward excluding claims on central banks (UK KM1); FY2020-FY2021 including claims on central banks (UK LR2); see note", {**LEVERAGE_RATIO, **{y: AB_NO_LEV for y in AB_2Y}}),
     ],
     p3_sources(),
     note="FY2020/FY2021 source tables (UK LR2, in the FY2021 Pillar 3 report) label this 'including claims on "

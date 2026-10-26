@@ -1034,7 +1034,50 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 424554, "FY2024": 390032, "FY2023": 359897, "FY2022": 341308, "FY2021": 426681, "FY2020": 376527, "FY2019": 300438, "FY2018": 295483, "FY2017": 213474, "FY2016": 169586, "FY2015": 153100}), ("Leverage ratio", {"FY2025": "4.2%", "FY2024": "4.4%", "FY2023": "4.5%", "FY2022": "4.4%", "FY2021": "3.8%", "FY2020": "4.7%", "FY2019": "5.0%", "FY2018": "5.2%", "FY2017": "6.2%", "FY2016": "6.1%", "FY2015": "4.7%"})], note="FY2021 is shown on the prior CRR methodology as reported in NWB Plc Annual Report 2022, p.64; the report also gives 4.8% on the later UK methodology. FY2022 onward uses the current PRA basis and is not directly comparable with the FY2021 headline. FY2015-FY2020 sourced from each year's own Annual Report entity-level capital table (NWB Plc/NatWest Plc Annual Report and Accounts 2015-2020, Companies House filings). FY2014 is intentionally left blank - a binding minimum leverage ratio requirement, and NatWest's own entity-level leverage exposure/ratio disclosure, only began appearing from the FY2015 Annual Report onward; FY2014's own Annual Report discusses only the wider RBS Group leverage ratio (4.2%, out of scope for this NWB Plc-only workbook), not an NWB Plc/NatWest entity figure.")
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_BOTH_BASES_NOTE = (
+    "\nBOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 "
+    "(LRCom) prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, "
+    "UK-24b and 25 on the EXCLUDING basis, with the reconciling deduction at UK-24a. Until today this "
+    "sheet carried only one side and did not say which, so a reader could not tell the two apart. The "
+    "first two rows above are the EXCLUDING measure for FY2022 onward (confirmed below) and the three "
+    "new rows are the including side. Row order is deliberate and must not be rearranged: "
+    "check_overview_ties.py reads the FIRST cell printed as a percentage on a ratio sheet, so the "
+    "excluding ratio has to keep its place ahead of the including one.\n"
+    "EACH YEAR FROM ITS OWN EDITION, template UK LR2 - LRCom 'continued', entity column headed 'NWB Plc' "
+    "(the entity this workbook is about, not NatWest Group):\n"
+    "  FY2025 - NWB Plc Pillar 3 Report 2025, p.22, 31 December 2025 column: row 24 453,271; UK-24a "
+    "(28,717); UK-24b 424,554; row 25 4.2%; UK-25c 4.0%.\n"
+    "  FY2024 - NWB Plc Pillar 3 Report 2024, p.24, 31 December 2024 column: row 24 424,010; UK-24a "
+    "(33,978); UK-24b 390,032; row 25 4.4%; UK-25c 4.1%.\n"
+    "  FY2023 - NWB Plc Pillar 3 Report 2023, p.24, 31 December 2023 column: row 24 407,194; UK-24a "
+    "(47,297); UK-24b 359,897; row 25 4.5%; UK-25c 4.0%.\n"
+    "  FY2022 - NWB Plc Pillar 3 Report 2022, p.21, 31 December 2022 column: row 24 403,536; UK-24a "
+    "(62,228); UK-24b 341,308; row 25 4.4%; UK-25c 3.7%.\n"
+    "THE FY2022 EDITION'S SECOND COLUMN IS 30 JUNE 2022, NOT A YEAR-END, and is deliberately not used. "
+    "Its own footnote says so: 'The prior period values are as at 30 June 2022 to provide a comparable "
+    "view of the leverage metrics based on the current requirements in the Leverage Ratio (CRR) part of "
+    "the PRA rulebook.' Read at 300 dpi to be certain of the column heading before anything was taken "
+    "from that page (30 June 2022: row 24 430,222; UK-24a (90,136); UK-24b 340,086; UK-25c 3.4%).\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY: the excluding measure printed at UK-24b reproduces the "
+    "figure this sheet already carried in every one of the four years (424,554 / 390,032 / 359,897 / "
+    "341,308), so the table is the same entity as the rest of the workbook - the check that caught two "
+    "other banks in this batch whose LR2 turned out to be group-level. (2) CROSS-EDITION: each edition's "
+    "comparative column equals the next edition's own-year column to the last digit in all five rows "
+    "(FY2024, FY2023 and FY2022 each checked twice). No self-disagreement. (3) ARITHMETIC: row 24 minus "
+    "UK-24a equals UK-24b in all four years. (4) RATIO TIE: row 23 Tier 1 capital (leverage) divided by "
+    "each exposure measure reproduces both printed ratios in all four years (e.g. FY2025 17,910/453,271 "
+    "= 3.95% -> 4.0%, 17,910/424,554 = 4.22% -> 4.2%). Nothing here is computed on the bank's behalf; "
+    "every figure is printed in the cited table.\n"
+    "FY2021 AND EARLIER GET NO INCLUDING-BASIS FIGURE, and that is correct rather than a gap: the UK "
+    "dual basis took effect only for periods from 1 January 2022. The FY2021 source is in any case the "
+    "NatWest Holdings Pillar 3 supplement, which prints the OLD CRR 'LRCom: Leverage ratio common "
+    "disclosure template' - a single total exposure measure with no basis split and none of the UK-24a/"
+    "UK-24b/UK-25c rows. See the 1 January 2022 basis-break note already recorded above and on the KM1 "
+    "sheet; the two bases are never merged into one row."
+)
+
+metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 424554, "FY2024": 390032, "FY2023": 359897, "FY2022": 341308, "FY2021": 426681, "FY2020": 376527, "FY2019": 300438, "FY2018": 295483, "FY2017": 213474, "FY2016": 169586, "FY2015": 153100}), ("Leverage ratio", {"FY2025": "4.2%", "FY2024": "4.4%", "FY2023": "4.5%", "FY2022": "4.4%", "FY2021": "3.8%", "FY2020": "4.7%", "FY2019": "5.0%", "FY2018": "5.2%", "FY2017": "6.2%", "FY2016": "6.1%", "FY2015": "4.7%"}), ("Total exposure measure including claims on central banks", {"FY2025": 453271, "FY2024": 424010, "FY2023": 407194, "FY2022": 403536}), ("Claims on central banks excluded", {"FY2025": -28717, "FY2024": -33978, "FY2023": -47297, "FY2022": -62228}), ("Leverage ratio including claims on central banks (%)", {"FY2025": "4.0%", "FY2024": "4.1%", "FY2023": "4.0%", "FY2022": "3.7%"})], note="FY2021 is shown on the prior CRR methodology as reported in NWB Plc Annual Report 2022, p.64; the report also gives 4.8% on the later UK methodology. FY2022 onward uses the current PRA basis and is not directly comparable with the FY2021 headline. FY2015-FY2020 sourced from each year's own Annual Report entity-level capital table (NWB Plc/NatWest Plc Annual Report and Accounts 2015-2020, Companies House filings). FY2014 is intentionally left blank - a binding minimum leverage ratio requirement, and NatWest's own entity-level leverage exposure/ratio disclosure, only began appearing from the FY2015 Annual Report onward; FY2014's own Annual Report discusses only the wider RBS Group leverage ratio (4.2%, out of scope for this NWB Plc-only workbook), not an NWB Plc/NatWest entity figure." + "\n\n" + GA026_BOTH_BASES_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio - UK DoLSub", {"FY2025": "151%", "FY2024": "147%", "FY2023": "138%", "FY2022": "131%", "FY2021": "169%", "FY2020": "152%", "FY2019": "145%", "FY2018": "153%"})], note="UK DoLSub basis: NWB Plc, RBS plc and Coutts & Company. The 2025 figure is the December value from the NWB Pillar 3 report; the 2024 and 2023 figures are the December values in the corresponding KM1 disclosures. NWB Plc reports liquidity under a PRA waiver at UK DoLSub level rather than solo. FY2014-FY2017 are intentionally left blank: those years' own Annual Reports state liquidity and funding disclosures are presented for the wider NatWest/RBS Group rather than for the NWB Plc/UK DoLSub entity specifically, so no entity-level LCR figure is available to transcribe for those years without conflating it with Group-level data.")
 metric("NSFR", "%", [("Net Stable Funding Ratio - UK DoLSub", {"FY2025": "137%", "FY2024": "136%", "FY2023": "126%", "FY2022": "137%", "FY2021": "151%", "FY2020": "144%", "FY2019": "137%", "FY2018": "144%"})], note="UK DoLSub basis; see LCR note. NSFR is a four-quarter average under the regulatory disclosure framework. FY2014-FY2017 intentionally left blank for the same reason as the LCR sheet - see that sheet's note.")
 # GA-020 (2026-09-19): outcome wording. Evidence: full text of the NWB Plc

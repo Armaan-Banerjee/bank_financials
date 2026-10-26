@@ -1337,6 +1337,33 @@ metric(
     "Leverage Ratio",
     "£'000 / %",
     [
+        # GA-026, 2026-10-09: the INCLUDING-central-banks basis is published by
+        # TSB alongside the exclusion basis in every edition's own "Table 21:
+        # LRCom - Leverage ratio common disclosure (UK LR2)", and used to be
+        # carried here for FY2021 only. FY2022-FY2025 added, each from that
+        # year's OWN edition and read off a 300 dpi page render. The three rows
+        # below are in TSB's own Table 21 order, and foot exactly every year:
+        # including - excluded = excluding.
+        (
+            "Total exposure measure including claims on central banks",
+            {
+                "FY2025": 44410648,
+                "FY2024": 44941926,
+                "FY2023": 46230149,
+                "FY2022": 47773487,
+                "FY2021": 47412008,
+            },
+        ),
+        (
+            "Claims on central banks excluded",
+            {
+                "FY2025": -4190265,
+                "FY2024": -4815810,
+                "FY2023": -5891423,
+                "FY2022": -5229036,
+                "FY2021": -4842254,
+            },
+        ),
         (
             "Total exposure measure excluding claims on central banks",
             {
@@ -1358,12 +1385,14 @@ metric(
             },
         ),
         (
-            "Total exposure measure including claims on central banks (FY2021 as originally reported, pre-2022 PRA methodology)",
-            {"FY2021": 47412008},
-        ),
-        (
-            "Leverage ratio including claims on central banks (%) (FY2021 as originally reported, pre-2022 PRA methodology)",
-            {"FY2021": "3.6%"},
+            "Leverage ratio including claims on central banks (%)",
+            {
+                "FY2025": "4.95%",
+                "FY2024": "4.42%",
+                "FY2023": "4.0%",
+                "FY2022": "3.8%",
+                "FY2021": "3.6%",
+            },
         ),
         (
             "Total exposure measure (FY2014-FY2020 as originally reported, pre-2022 PRA methodology, including claims on central banks)",
@@ -1390,10 +1419,44 @@ metric(
         ),
     ],
     p3_sources("6"),
-    note="From the PRA Rulebook change effective January 2022, TSB's leverage ratio is calculated excluding "
-    "central bank claims; FY2021 figures on that basis (42,569,754 / 4.0%) are a restatement published "
-    "as the FY2021 comparator in the FY2022 disclosure, not TSB's own FY2021 report - which itself reported "
-    "on the pre-2022 basis including central bank claims (47,412,008 / 3.6%, kept on its own row). FY2014-FY2020 "
+    note="BOTH BASES ARE CARRIED FOR FY2021-FY2025 (GA-026, added 2026-10-09). TSB publishes the "
+    "including- and excluding-central-banks exposure measures and ratios side by side in every edition's own "
+    "'Table 21: LRCom - Leverage ratio common disclosure (UK LR2)'; until 2026-10-09 only the exclusion basis "
+    "was carried here for FY2022-FY2025. Each year's figures are now taken from THAT YEAR'S OWN edition "
+    "(FY2025 p.37, FY2024 p.43, FY2023 p.43, FY2022 p.48) and were read off 300 dpi page renders, not the "
+    "text layer. NO RESTATEMENT EXISTS on the including basis: every edition's prior-year comparative column "
+    "reproduces the preceding edition's own figure exactly (31 Dec 2024 44,941,926 in both the FY2025 and "
+    "FY2024 editions; 31 Dec 2023 46,230,149 in both the FY2024 and FY2023 editions; 31 Dec 2022 47,773,487 "
+    "in both the FY2023 and FY2022 editions), and all five years foot exactly - including minus 'Claims on "
+    "central banks excluded' equals excluding.\n\n"
+    "WHY THE TWO BASES MUST NOT BE READ AS ONE SERIES: they diverge by roughly half a percentage point and "
+    "the gap moves. FY2025 is 5.47% excluding against 4.95% including; FY2024 is 4.95% against 4.42%. Note "
+    "that FY2024's EXCLUDING ratio and FY2025's INCLUDING ratio are both 4.95% - identical numbers on "
+    "different bases one year apart, which is exactly how a wrong year-on-year comparison gets made.\n\n"
+    "TWO DISAGREEMENTS INSIDE TSB'S OWN FY2022 DOCUMENT, RECORDED NOT RECONCILED. (1) For 31 December 2021 "
+    "on the exclusion basis, that edition's Table 1a (KM1, p.6) and Table 1b (IFRS 9-FL, p.7) both print a "
+    "leverage ratio of 4.0%, while its Table 21 (LRCom, p.48) prints 4.1% on the transitional row and 4.0% "
+    "on the fully-loaded row directly beneath it. The 4.0% used here is the one that reproduces "
+    "arithmetically (Tier 1 1,724,002 / 42,569,754 = 4.05%) and the one two of the three tables print; the "
+    "4.1% is TSB's own and is recorded here rather than discarded. (2) The same document prints the 31 "
+    "December 2021 exclusion-basis exposure measure as 42,569,754 in Table 1a and Table 21 but as "
+    "42,569,755 in Table 1b - a £1k difference between three printings of one figure in one document. The "
+    "...754 majority figure is used.\n\n"
+    "FY2023's EXCLUSION RATIO IS CARRIED AT 2dp FROM A LATER EDITION. FY2023's own edition prints 4.6% (1dp); "
+    "the 4.57% shown here is the FY2024 edition's own 31 Dec 2023 comparative. This is a precision difference, "
+    "not a restatement - 4.57% rounds to 4.6% - but it is a deviation from the own-edition rule and is "
+    "recorded so it is not mistaken for a correction. The same applies to FY2023's including ratio, printed "
+    "4.0% in its own edition and 3.99% in the FY2024 edition's comparative; the own-edition 4.0% is used.\n\n"
+    "THE 30 JUNE INTERIM COLUMNS ARE DELIBERATELY NOT USED HERE. Every Table 21 carries a half-year column "
+    "between the two year-ends (e.g. 30 June 2025: 40,251,519 / 5.22%). An interim reporting date belongs on "
+    "the Interim Pillar 3 sheet with its date stated, never in an annual FY column.\n\n"
+    "FY2021 sits on both bases because the FY2022 edition represented it: its exclusion-basis figures "
+    "(42,569,754 / 4.0%) are that restatement, published as the FY2021 comparator and not in TSB's own FY2021 "
+    "report, while its including-basis figures (47,412,008 / 3.6%) are what TSB's own FY2021 report printed "
+    "under the pre-2022 methodology AND what the FY2022 edition's represented comparative prints - the two "
+    "agree digit for digit, which is why the including row runs continuously from FY2021. The FY2022 "
+    "edition's own footnote reads: '31 December 2021 reporting has been represented following new PRA "
+    "reporting requirements including adjustment for exemption of exposures to central banks.' FY2014-FY2020 "
     "are shown on the pre-2022 'including claims on central banks' basis throughout, as originally reported "
     "each year (not restated) - FY2020's leverage ratio also had a temporary COVID-related alternative "
     "measure of 4.3% disclosed alongside the standard 3.8% figure used here; FY2014's leverage-ratio capital "

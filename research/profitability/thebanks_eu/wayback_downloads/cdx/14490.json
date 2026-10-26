@@ -1,0 +1,6 @@
+[["timestamp","original","statuscode","mimetype","digest","length"],
+["20230124103723","https://thebanks.eu/banks/14490","200","text/html","3XQWOQGCNKPV6ATSQSSZFN3TFKEMYIIK","12831"],
+["20241005060242","https://thebanks.eu/banks/14490","200","text/html","TBLUIHEZ7WITKUFPOENRGA3RCHQYB4AM","12375"],
+["20241105222005","https://thebanks.eu/banks/14490/bank_identifiers","200","text/html","GV7HR2YBE5UAIKBX7QXARAPDNUXBDQG5","10292"],
+["20241105221621","https://thebanks.eu/banks/14490/financials","200","text/html","Q7JZJHWK4EQX6OWRNMUQ2POU3DOIFP32","10754"],
+["20241105212941","https://thebanks.eu/banks/14490/market_share","200","text/html","VWA57M3ZQZ54PJYBCESFO5WHN45RZTI3","10465"]]

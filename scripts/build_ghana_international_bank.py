@@ -1074,6 +1074,25 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix="",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 8 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (7 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. No edition contained either. The bank files UK KM1, whose leverage block (rows 13 and 14) "
+    "asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)],
        note="FY2025 FILLED 2026-09-18 with 14.17%, from row 14 of the FY2025 Pillar 3's KM1, which its own "
             "section 1.6 narrative repeats verbatim (\"The leverage ratio as at 31 December 2025 was "
@@ -1109,7 +1128,7 @@ metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central bank
             "capital'. The row title is therefore a TRANSITIONAL-basis leverage ratio, which is most "
             "likely why it sits slightly above the FY2022 KM1's comparative row 14 in each of FY2021, "
             "FY2020 and FY2019 - see the KM1 Key Metrics sheet's note for the arithmetic behind that "
-            "reading, and note that it is an inference rather than something the Bank states.")
+            "reading, and note that it is an inference rather than something the Bank states." + GA026_ONE_LEVERAGE_BASIS_NOTE)
 metric("LCR", "%", [("Liquidity coverage ratio", LCR)],
        note=FY2025_AR_BASIS_NOTE + " FY2025 UPGRADED 2026-09-18 from the Annual Report's \"213%\" to "
             "213.49%, printed in the FY2025 Pillar 3's Table 13 (p.37 printed) and repeated in its "

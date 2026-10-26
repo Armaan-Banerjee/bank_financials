@@ -999,6 +999,29 @@ bw.add_rwa_breakdown_sheet(
     first_col_width=54,
 )
 
+# GA-026 (2026-10-09). Template UK LR2 (LRCom) prints TWO exposure bases - row 24 INCLUDING
+# claims on central banks, UK-24b EXCLUDING them, reconciling at UK-24a, ratios at row 25
+# (excluding) and UK-25c (including) - effective for periods from 1 January 2022. This bank's
+# FY2022, FY2023 and FY2024 editions fall in that window and none of them uses that template.
+GA026_ONE_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO ON THE OLD BASEL III TEMPLATE AND DRAWS NO "
+    "CENTRAL-BANK-CLAIMS DISTINCTION (GA-026, 2026-10-09). Every edition from FY2022 to FY2024 - the "
+    "only editions that could carry the UK split, which took effect on 1 January 2022 - prints the "
+    "pre-UK Basel III leverage table, whose rows are '21 Total exposures' and '22 Basel III leverage "
+    "ratio'. It does not print UK LR2 / LRCom, and rows 24, UK-24a, UK-24b and UK-25c appear nowhere in "
+    "any edition. No 'excluding claims on central banks' or 'including claims on central banks' wording "
+    "is used at any point. The single ratio is therefore recorded exactly as published, unqualified: NO "
+    "BASIS IS ASSERTED THAT THE BANK DID NOT PRINT, and in particular it is not labelled as the "
+    "excluding basis merely because that is what most UK banks now publish.\n"
+    "\n"
+    "A READING TRAP IN THESE TABLES, RECORDED SO IT IS NOT RE-INTRODUCED: the Bank's leverage columns "
+    "run OLDEST-FIRST (2022, 2023, 2024 left to right), the opposite of this workbook's convention and "
+    "the opposite of most of the other banks in it. The figures above were taken under that reading and "
+    "the leverage tables of the FY2022, FY2023 and FY2024 editions were rendered and read at 300 dpi to "
+    "confirm both the column order and the absence of the qualifier rows from the TABLES, not merely "
+    "from a text search."
+)
+
 metric(
     "Leverage Ratio", "%",
     [("Leverage Ratio",
@@ -1045,7 +1068,8 @@ metric(
         "blanks - and note that FY2021 onward and FY2016/FY2017 DO carry the ratio, which is what "
         "made this an interior gap worth chasing."
     ),
-    note="FY2025 added 19 September 2026 from the FY2025 Pillar 3's p.6 Key Metrics chart (14.25%). The earlier "
+    note=GA026_ONE_BASIS_NOTE + "\n\n"
+         "FY2025 added 19 September 2026 from the FY2025 Pillar 3's p.6 Key Metrics chart (14.25%). The earlier "
          "'confirmed disclosure gap' for FY2025 was wrong: the edition existed on the Bank's CMS file store, "
          "outside the static index that was checked - see the source note.",
 )

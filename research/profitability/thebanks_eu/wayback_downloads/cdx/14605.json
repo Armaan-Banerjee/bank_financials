@@ -1,0 +1,6 @@
+[["timestamp","original","statuscode","mimetype","digest","length"],
+["20241106132301","https://thebanks.eu/banks/14605","200","text/html","YQYYAZ6YKJPJLIV5JTOZSJFA7ZBTYTOO","13401"],
+["20241202191324","https://thebanks.eu/banks/14605/bank_identifiers","200","text/html","RTDDA2QQE3UX5NQMKZISPSXOJCMLB33G","10359"],
+["20241202195241","https://thebanks.eu/banks/14605/credit_ratings","200","text/html","SPR4LRNYLCMADEOJ54I3BS6HA4A4RBLZ","10060"],
+["20241202190554","https://thebanks.eu/banks/14605/financials","200","text/html","TCCN36ANPNYBJMVXHKR43QCOG4WGETQ3","10723"],
+["20241202195600","https://thebanks.eu/banks/14605/similar_banks","200","text/html","5W2KZUOHFWL5A6MD3HLQWB6J2CGBQSQE","10668"]]

@@ -962,7 +962,38 @@ bw.add_rwa_breakdown_sheet(
     source_height=230,
 )
 
-metric("Leverage Ratio", "%", "Leverage ratio", {"FY2023": "35.4%", "FY2022": "33.49%", "FY2021": "33.05%", "FY2020": "~30%", "FY2019": "~30%"}, "The Company states that the smaller-bank leverage requirement does not apply; reported ratios are included as disclosed. FY2024 and FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): SDDT Rule 3.1 modification effective 11/04/2024, no end date, preceding both reporting dates. FY2020/FY2019 are transcribed as disclosed - the narrative Pillar 3 documents for these years state only 'approximately 30%', not an exact figure (the FY2021 standalone Pillar 3 document uses the same approximate wording, but a more precise 33.05% is used for FY2021 above, sourced from the newer FY2022 Pillar 3 document's comparative column). FY2016-FY2018: no Pillar 3 document has been reached - UNPROVEN, not established as unpublished (see Sources).")
+# GA-026 (2026-10-09). Template UK LR2 (LRCom) prints TWO exposure bases - row 24 INCLUDING
+# claims on central banks, UK-24b EXCLUDING them, reconciling at UK-24a, with ratios at row 25
+# (excluding) and UK-25c (including) - and is effective only for periods from 1 January 2022.
+# Only the FY2022 and FY2023 editions fall in that window; neither draws the split.
+GA026_ONE_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE COMPANY PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+    "2026-10-09). Its key-metrics table is a bespoke, unnumbered variant of UK KM1, and its 'Leverage "
+    "ratio' section is exactly two rows, captioned plainly 'Leverage ratio total exposure measure' and "
+    "'Leverage ratio', running straight into the Liquidity Coverage Ratio section. No UK LR2 / LRCom "
+    "table is printed in any edition, and no rows 24, UK-24a, UK-24b or UK-25c appear anywhere. The "
+    "FY2022 edition's narrative defines the measure with no central-bank carve-out - 'This ratio shows "
+    "Tier 1 capital as a proportion of on and off balance sheet assets' - and states the exemption: 'The "
+    "current regulations do not apply the minimum requirement of 3.25% (plus countercyclical leverage "
+    "buffer) to smaller banks and so the Company is exempt.' The ratio is therefore recorded exactly as "
+    "published, unqualified; NO BASIS IS ASSERTED THAT THE COMPANY DID NOT PRINT, and in particular it "
+    "is not labelled as the excluding basis merely because that is what most UK banks now publish. The "
+    "SDDT Rule 3.1 modification effective 11/04/2024 removes the Pillar 3 duty from FY2024 onwards, so "
+    "no later edition can carry the split either. FY2022 edition p.4 rendered and read at 300 dpi, so "
+    "the qualifier rows are established absent from the TABLE, not merely absent from a text search.\n"
+    "\n"
+    "THE FY2022 EDITION'S NARRATIVE AND ITS OWN TABLE DISAGREE ON THE EXPOSURE MEASURE, AND BOTH ARE "
+    "RECORDED. The table prints a total exposure measure of 38,672 (£'000) and a ratio of 33.49%; the "
+    "narrative on the same document's leverage page says 'The Company's total on and off-balance sheet "
+    "exposures at 31 December 2022 were £38.9m. Based on Tier 1 capital resources of £13.0, the "
+    "Company's Leverage Ratio is calculated at 33.5%.' £38.9m does not round from 38,672 (which is "
+    "£38.7m), and 13.0/38.9 gives 33.42%, not the 33.5% the narrative states, whereas the table's own "
+    "12,952/38,672 gives 33.49% exactly. The table is the figure carried above. The narrative's £38.9m "
+    "is not reconciled or back-solved - the Company printed it and it is recorded here as printed. This "
+    "is the same narrative-versus-table precision gap already noted for FY2023 on the KM1 sheet."
+)
+
+metric("Leverage Ratio", "%", "Leverage ratio", {"FY2023": "35.4%", "FY2022": "33.49%", "FY2021": "33.05%", "FY2020": "~30%", "FY2019": "~30%"}, GA026_ONE_BASIS_NOTE + "\n\n" + "The Company states that the smaller-bank leverage requirement does not apply; reported ratios are included as disclosed. FY2024 and FY2025 now STATE the non-publication in the cell rather than sitting empty (2026-09-18): SDDT Rule 3.1 modification effective 11/04/2024, no end date, preceding both reporting dates. FY2020/FY2019 are transcribed as disclosed - the narrative Pillar 3 documents for these years state only 'approximately 30%', not an exact figure (the FY2021 standalone Pillar 3 document uses the same approximate wording, but a more precise 33.05% is used for FY2021 above, sourced from the newer FY2022 Pillar 3 document's comparative column). FY2016-FY2018: no Pillar 3 document has been reached - UNPROVEN, not established as unpublished (see Sources).")
 # GA-020 (2026-09-19): outcome wording for the statement cells below.
 GA020_LCR = {y: ("Not published – the " + y + " Pillar 3 (re-read 2026-09-18) states only a policy of LCR "
                  ">= 200%, no measured LCR") for y in ("FY2020", "FY2019")}

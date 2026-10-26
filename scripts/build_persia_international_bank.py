@@ -1439,7 +1439,19 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000, conv. from EUR)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT, **LEVERAGE_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021 and FY2017 added 2026-09-19 (GA-020 unreached pass, from the FY2017 edition's own p.22): directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
+# GA-026 (2026-10-09). The UK dual-basis leverage split takes effect for periods from
+# 1 January 2022, and this Bank's last Pillar 3 edition covers the year to 31 March 2021.
+GA026_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE QUESTION DOES NOT ARISE FOR THIS BANK (GA-026, 2026-10-09). The UK dual-basis "
+    "leverage split - template UK LR2's row 24 INCLUDING claims on central banks against UK-24b EXCLUDING "
+    "them, reconciling at UK-24a, with ratios at row 25 and UK-25c - is effective only for periods from "
+    "1 January 2022. The Bank's last Pillar 3 edition covers the year ended 31 March 2021 and every "
+    "disclosed leverage figure above (FY2016 to FY2021) predates that date, so none of them could carry "
+    "the split and no basis distinction is available to record. The post-2022 years are blank because the "
+    "Bank ceased publishing Pillar 3 altogether, not because a basis could not be determined."
+)
+
+metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2021": "53.32%", **LEVERAGE_RATIO_EXT, **LEVERAGE_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2016/FY2018/FY2020 added under HD-021 and FY2017 added 2026-09-19 (GA-020 unreached pass, from the FY2017 edition's own p.22): directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE + "\n\n" + GA026_BASIS_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio (simple average of 12 monthly reports)", {"FY2021": "221.13%", **LCR_EXT, **LCR_MIDDLE_GAPS, **P3_GONE})], note="FY2021, plus FY2018/FY2020 added under HD-021: directly disclosed in the Bank's own Pillar 3 disclosures. FY2022-FY2025 are blank because the Bank stopped publishing Pillar 3 after its 31 March 2021 edition - see below; the statutory accounts state no LCR in any of those years.\n\n" + P3_CESSATION_NOTE + "\n\n" + EXT_LEVERAGE_LCR_NOTE)
 # GA-020 (2026-09-19): each former bare cell now states its outcome. Evidence
 # gathered that day: the FY2015/16/18/20/21 Pillar 3 editions (cited URLs; FY2015

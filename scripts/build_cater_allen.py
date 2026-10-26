@@ -556,7 +556,20 @@ bw.add_rwa_breakdown_sheet(
 bw.add_not_disclosed_metric_sheets(
     ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"],
     CAPITAL_SOURCES,
-    per_note={m: NOT_DISCLOSED_NOTE for m in ["Leverage Ratio", "LCR", "NSFR", "MREL Ratio"]},
+    per_note=dict(
+        {m: NOT_DISCLOSED_NOTE for m in ["LCR", "NSFR", "MREL Ratio"]},
+        # GA-026 (2026-10-09). The UK dual-basis leverage split applies from 1 January 2022 to
+        # firms inside the PRA leverage regime; Cater Allen is not one, and publishes no ratio.
+        **{"Leverage Ratio": NOT_DISCLOSED_NOTE + (
+            "\n\nLEVERAGE BASIS: THE QUESTION DOES NOT ARISE FOR THIS BANK (GA-026, 2026-10-09). The UK "
+            "dual-basis split - template UK LR2's row 24 INCLUDING claims on central banks against UK-24b "
+            "EXCLUDING them - is a disclosure made by firms that report a leverage ratio. Cater Allen "
+            "reports none: the leverage rules bite at Santander UK ring-fenced-bank sub-group level, not at "
+            "this entity, and the Annual Reports FY2021-FY2025 say only that leverage is 'in excess of ... "
+            "minimum leverage requirements' without printing a figure or an exposure measure. With no ratio "
+            "and no exposure measure published in any year, there is no basis to record and nothing a "
+            "two-basis reading could be applied to.")},
+    ),
     statements=GA020_ST,
 )
 

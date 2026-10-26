@@ -844,7 +844,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2025": "5.6%", "FY2024": "5.8%", "FY2023": "6.1%", "FY2022": "5.9%", "FY2021": "4.2%", "FY2020": "4.8%", "FY2019": "5.0%"})],
+    [("Leverage ratio - FY2022 onward excluding claims on central banks (CRR II end-point basis); FY2019-FY2021 a single pre-template ratio; see note", {"FY2025": "5.6%", "FY2024": "5.8%", "FY2023": "6.1%", "FY2022": "5.9%", "FY2021": "4.2%", "FY2020": "4.8%", "FY2019": "5.0%"})],
     note="A genuine basis change: FY2022-FY2025 are disclosed 'excluding claims on central banks' under the "
          "CRR II end-point basis (the new PRA disclosure template effective 1 January 2022), while FY2021's, "
          "FY2020's and FY2019's own reports pre-date that template and disclose a single leverage ratio "

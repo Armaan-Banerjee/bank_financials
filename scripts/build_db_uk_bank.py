@@ -638,7 +638,26 @@ metric(
     [("Leverage ratio — DBUKB entity (own KPI measure)", LEVERAGE_RATIO),
      ("Leverage ratio — DBIGB Group (consolidated KM1)", {"FY2025": "25%", "FY2024": "18%", "FY2023": "25%", "FY2022": "23%"})],
     KPI_TABLE_SOURCES + "\n\nDBIGB Group figure: Pillar 3 KM1 row 14; see KM1 sheet for sources and basis.",
-    note="Disclosed as the \"Leverage Ratio\" row of the Company's own Strategic Report KPI/KRI table, defined "
+    note=(
+         # GA-026 (2026-10-09). Template UK LR2 prints both bases from 1 January 2022, but only for
+         # firms inside the PRA's leverage regime. Neither entity on this sheet is inside it.
+         "LEVERAGE BASIS: NEITHER ROW CARRIES A CENTRAL-BANK-CLAIMS QUALIFIER, AND NEITHER ENTITY IS "
+         "INSIDE THE PRA'S LEVERAGE REGIME (GA-026, 2026-10-09). The Group row comes from a table the "
+         "Bank heads 'Template UK KM1 - Key Prudential Metrics - Capital', but its Leverage Ratio block "
+         "is just two plainly-captioned rows, '13 Total Exposure Measure' and '14 Leverage Ratio', and "
+         "the Bank prints no UK LR2 / LRCom table and no rows 24, UK-24a, UK-24b or UK-25c in any "
+         "edition. Row 13's heading carries footnote 16, which reads: 'DBIGB Group is not subject to the "
+         "PRA's Leverage Regime but is expected to monitor leverage and maintain a Leverage Ratio of at "
+         "least 3.25%.' A firm outside the leverage regime is not required to publish the dual basis, so "
+         "the absence of the split here is explained by the Bank's own footnote rather than being an "
+         "unexplained omission. The accompanying commentary defines the measure without a carve-out - "
+         "'Leverage Ratio is a measure of Tier 1 Capital relative to on-balance sheet assets and certain "
+         "off-balance sheet' exposures. Both rows are recorded exactly as published, unqualified; NO "
+         "BASIS IS ASSERTED THAT THE BANK DID NOT PRINT. FY2025 edition p.14 rendered and read at 300 "
+         "dpi, so the qualifier rows are established absent from the TABLE, not merely from a text "
+         "search.\n"
+         "\n"
+         "Disclosed as the \"Leverage Ratio\" row of the Company's own Strategic Report KPI/KRI table, defined "
          "there as \"a measure of Tier 1 Capital relative to on Balance Sheet assets and certain Off Balance "
          "Sheet exposures\" and monitored against a Board risk appetite of >6%. SCOPE CAVEAT, stated by the "
          "Company itself in the same table's footnotes: \"The Company is out of scope of the PRA's formal "
@@ -647,7 +666,7 @@ metric(
          "leverage ratio, and is not strictly like-for-like with banks in this workbook that are inside the "
          "PRA leverage regime. FOUND IN 2026-09-12 RE-AUDIT: previously recorded as not disclosed in any year; "
          "all 5 years are in fact published in this table (each cross-confirmed against the following year's "
-         "own prior-year comparative column).",
+         "own prior-year comparative column)."),
 )
 
 metric(

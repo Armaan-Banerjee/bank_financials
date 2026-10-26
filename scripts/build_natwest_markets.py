@@ -639,7 +639,45 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 97880, "FY2024": 92859, "FY2023": 89929, "FY2022": 81083, "FY2021": 110603}), ("Leverage ratio", {"FY2025": "5.0%", "FY2024": "5.5%", "FY2023": "5.0%", "FY2022": "5.4%", "FY2021": "4.3%"})], note="FY2021 uses the CRR leverage ratio; FY2022 onward uses the PRA UK leverage-ratio presentation. These bases are not directly comparable.")
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_BOTH_BASES_NOTE = (
+    "\nBOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 "
+    "(LRCom) prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, "
+    "UK-24b and 25 on the EXCLUDING basis, with the reconciling deduction at UK-24a. Until today this "
+    "sheet carried only one side and did not say which. The first two rows above are the EXCLUDING "
+    "measure for FY2022 onward; the three new rows are the including side. Row order is deliberate: "
+    "check_overview_ties.py reads the FIRST cell printed as a percentage on a ratio sheet, so the "
+    "excluding ratio must keep its place ahead of the including one.\n"
+    "EACH YEAR FROM ITS OWN EDITION, template UK LR2: LRCom 'continued', column headed 'NWM Plc', read "
+    "at 300 dpi:\n"
+    "  FY2025 - NWM Plc Pillar 3 Report 2025, p.25, 31 December 2025 column: row 23 4,926; row 24 "
+    "107,224; UK-24a (9,344); UK-24b 97,880; row 25 5.0%; UK-25c 4.6%.\n"
+    "  FY2024 - NWM Plc Pillar 3 Report 2024, p.26, 31 December 2024 column: row 23 5,067; row 24 "
+    "103,914; UK-24a (11,055); UK-24b 92,859; row 25 5.5%; UK-25c 4.9%.\n"
+    "  FY2023 - NWM Plc Pillar 3 Report 2023, p.26, 31 December 2023 column: row 23 4,455; row 24 "
+    "98,533; UK-24a (8,604); UK-24b 89,929; row 25 5.0%; UK-25c 4.5%.\n"
+    "  FY2022 - NWM Plc Pillar 3 Report 2022, p.24, 31 December 2022 column: row 23 4,361; row 24 "
+    "94,550; UK-24a (13,467); UK-24b 81,083; row 25 5.4%; UK-25c 4.6%.\n"
+    "THE FY2022 EDITION'S SECOND COLUMN IS 30 JUNE 2022, NOT A YEAR-END, and is deliberately not used "
+    "(30 June 2022: row 24 116,164; UK-24a (13,926); UK-24b 102,238; row 25 4.4%; UK-25c 3.9%). The "
+    "column heading was read at 300 dpi before anything was taken from that page - the same half-year "
+    "comparative appears in the parent company's FY2022 edition for the same reason.\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY: UK-24b reproduces the figure this sheet already "
+    "carried in every one of the four years (97,880 / 92,859 / 89,929 / 81,083) and row 25 reproduces "
+    "its ratio (5.0% / 5.5% / 5.0% / 5.4%), so the table is the same entity as the rest of the "
+    "workbook - the check that caught two other banks in this batch whose LR2 turned out to be "
+    "group-level. (2) CROSS-EDITION: each edition's comparative column equals the next edition's "
+    "own-year column to the last digit in all five rows. No self-disagreement. (3) ARITHMETIC: row 24 "
+    "minus UK-24a equals UK-24b in all four years. (4) RATIO TIE: row 23 divided by each exposure "
+    "measure reproduces both printed ratios in all four years (e.g. FY2025 4,926/107,224 = 4.59% -> "
+    "4.6%, 4,926/97,880 = 5.03% -> 5.0%). Nothing is computed on the bank's behalf.\n"
+    "FY2021 CORRECTLY GETS NO INCLUDING-BASIS FIGURE: the UK dual basis took effect only for periods "
+    "from 1 January 2022, and the FY2021 source is the NatWest GROUP Pillar 3 supplement, whose "
+    "leverage tables print NWM Plc as one column among Group/NWH Group/RBSI rather than as a UK LR2. "
+    "The two bases are never merged into one row - see the basis note below."
+)
+
+metric("Leverage Ratio", "£m / %", [("Leverage exposure measure", {"FY2025": 97880, "FY2024": 92859, "FY2023": 89929, "FY2022": 81083, "FY2021": 110603}), ("Leverage ratio", {"FY2025": "5.0%", "FY2024": "5.5%", "FY2023": "5.0%", "FY2022": "5.4%", "FY2021": "4.3%"}), ("Total exposure measure including claims on central banks", {"FY2025": 107224, "FY2024": 103914, "FY2023": 98533, "FY2022": 94550}), ("Claims on central banks excluded", {"FY2025": -9344, "FY2024": -11055, "FY2023": -8604, "FY2022": -13467}), ("Leverage ratio including claims on central banks (%)", {"FY2025": "4.6%", "FY2024": "4.9%", "FY2023": "4.5%", "FY2022": "4.6%"})], note="FY2021 uses the CRR leverage ratio; FY2022 onward uses the PRA UK leverage-ratio presentation. These bases are not directly comparable." + "\n\n" + GA026_BOTH_BASES_NOTE)
 metric("LCR", "%", [("Liquidity coverage ratio", {"FY2025": "198%", "FY2024": "192%", "FY2023": "240%", "FY2022": "226%", "FY2021": "205%"})], note="FY2021 is NWM Plc's own headline LCR (2021 Annual Report and Accounts, p.37), not a NatWest Group figure. The 2021 large-subsidiary supplement does not repeat the standalone LCR, but the annual report's Financial review explicitly reports it.")
 metric("NSFR", "%", [("Net stable funding ratio", {"FY2025": "121%", "FY2024": "120%", "FY2023": "127%", "FY2022": "133%"})], note="NWM Plc's standalone NSFR is not included in the 2021 large-subsidiary supplement; FY2021 is left blank rather than substituted with a NatWest Group figure.")
 bw.add_metric_sheet(

@@ -920,19 +920,116 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 
-metric(
+# GA-026 (2026-10-10). Template UK LR2 (LRCom) prints BOTH exposure bases for periods from
+# 1 January 2022 - row 24 INCLUDING claims on central banks, UK-24a the reconciling deduction,
+# UK-24b EXCLUDING them, with ratios at row 25 (excluding) and UK-25c (including). JPMS plc
+# prints the template in full and the two bases genuinely DIFFER, so both are recorded.
+GA026_BOTH_BASES_NOTE = (
+    "LEVERAGE BASIS: BOTH BASES ARE PUBLISHED AND THEY DIFFER (GA-026, 2026-10-10). JPMS plc prints "
+    "template UK LR2 in full, as 'Table 32: UK LR2 Leverage Ratio Common Disclosure for JPMS plc', "
+    "with a real reconciling deduction at row UK-24a - unlike its sister entity JPMEL in the same "
+    "document, whose table omits UK-24a because its two measures are equal. Figures as printed "
+    "($'mm), each taken from the edition for which it is the reporting year:\n"
+    "  FY2025 edition p.40 - row 23 Tier 1 47,435; row 24 (including) 758,590; row UK-24a (1,440); "
+    "row UK-24b (excluding) 757,150; row 25 (excluding) 6.26%; row UK-25c (including) 6.25%.\n"
+    "  FY2024 edition p.38 - row 23 46,054; row 24 610,690; row UK-24a (3,101); row UK-24b 607,589; "
+    "row 25 7.58%; row UK-25c 7.54%.\n"
+    "  FY2023 edition p.32, 'Table 23: UK LR2 Leverage Ratio Common Disclosure', unit printed "
+    "\"LR Com: Leverage Ratio Common Disclosure ($' mm)\", columns December 2023 / December 2022 - "
+    "row 23 Tier 1 44,321; row 24 581,389; row UK-24a (9,069); row UK-24b 572,319; row 25 7.74%; "
+    "row UK-25c 7.62%.\n"
+    "FY2023 NOW COMES FROM ITS OWN EDITION (2026-10-10). An earlier version of this note recorded "
+    "the FY2023 figures from the FY2024 edition's comparative column and deliberately did NOT write "
+    "them into cells, because under this project's own-edition rule a later edition's comparative "
+    "belongs in the note, not the cell - and the FY2023 edition had not then been read. It has now "
+    "been retrieved (see the 403 paragraph below) and read at 300 dpi, and its own FY2023 column "
+    "prints 581,389; (9,069); 572,319; 7.74%; 7.62% - identical to the FY2024 edition's "
+    "comparative, digit for digit. The own-edition requirement is therefore satisfied and FY2023 "
+    "is now populated on the two exposure rows and on UK-25c. The 7.74% continues to agree with the "
+    "excluding-basis figure this sheet already carried.\n"
+    "FY2022 REMAINS NOTE-ONLY, AND DELIBERATELY SO. The FY2023 edition's FY2022 comparative column "
+    "prints 592,736; (11,744); 580,992; 7.67%; 7.52%. The 7.67% already matches this sheet. The "
+    "including-basis 7.52% is NOT written into an FY2022 cell: the FY2022 edition is the own "
+    "edition for that year and it could not be retrieved (direct fetch 403, and the Internet "
+    "Archive holds no capture of that static-file URL, unlike the FY2023 one). Recorded here so "
+    "the figure is not lost, and so the reason for the empty cell is the rule rather than an "
+    "oversight.\n"
+    "FY2021 IS OUT OF SCOPE FOR THIS SPLIT, not missing: template UK LR2's two-basis presentation "
+    "is effective only for periods from 1 January 2022, so no FY2021 edition can carry it.\n"
+    "TWO FURTHER DETAILS FROM THE FY2023 TABLE, RECORDED AS PRINTED. (1) The table also carries row "
+    "UK-25b, the ratio excluding central bank reserves as if the temporary treatment of unrealised "
+    "fair-value gains and losses had not been applied, at 7.74% / 7.67% - equal to row 25 in both "
+    "columns, so the temporary treatment makes no difference here and the row adds no third basis. "
+    "(2) Row 24 less row UK-24a is 572,320 against the 572,319 printed at UK-24b, a one-unit "
+    "rounding difference in the bank's own table. All three are transcribed exactly as printed; "
+    "nothing is back-solved to make the subtraction close. That one unit survives the currency "
+    "conversion as a £785 residual on this sheet (the three FY2023 rows all convert at the same "
+    "FY2023 spot rate, 0.7854226, so 456,636,035 - 7,122,997 = 449,513,038 against the 449,512,253 "
+    "shown, and 1,000 x 0.7854 = 785). It is the source's rounding seen in sterling, not a "
+    "conversion error.\n"
+    "The excluding-basis ratio is deliberately kept ABOVE the including-basis one, because an "
+    "automated check takes the first cell PRINTED AS A PERCENTAGE in each column as that sheet's "
+    "headline figure.\n"
+    "\n"
+    "HOW THE FY2023 EDITION WAS OBTAINED, AND WHY FY2022 COULD NOT BE. jpmorganchaseco.gcs-web.com "
+    "returns an Akamai edge denial (HTTP 403) to automated requests. That access control was NOT "
+    "circumvented: the document was taken from a different public source, the Internet Archive, "
+    "which holds a 200/application/pdf capture of the FY2023 static-file URL (timestamp "
+    "20260916203543, replayed with the 'id_' modifier to get the original bytes rather than the "
+    "archive's rewritten page). A CDX query for the FY2022 static-file URL returns no capture at "
+    "all, so the same route does not exist for that year. Nothing else was tried against the live "
+    "host.\n"
+    "\n"
+    "TWO RATIO CELLS WERE CORRECTED TO MATCH THEIR OWN CITED SOURCE (2026-10-10). This sheet "
+    "previously carried 6.3% for FY2025 and 7.6% for FY2024. Its citation names the Annual Pillar 3 "
+    "Disclosure's UK KM1 Table 1, and that table prints 6.26% and 7.58% - as does the LR2 table in "
+    "the same documents, and as does this workbook's own KM1 sheet, which has carried 6.26%/7.58% "
+    "all along. The strings '6.3%' and '7.6%' do not appear anywhere in either edition. They were a "
+    "transcription rounding, not a second published figure, and the cells now read what the cited "
+    "document prints. FY2023, FY2022 and FY2021 already matched exactly and are untouched. Both "
+    "editions' KM1 and LR2 tables were rendered and read at 300 dpi.\n"
+    "  Why no check caught it: verify_workbook.py compares KM1 against this sheet with a tolerance "
+    "of half a unit of the COARSER printing, so 6.26% against 6.3% (one decimal place, tolerance "
+    "0.05) passed as an ordinary rounding difference. That tolerance is correct and is not being "
+    "argued with - banks really do print one figure at two precisions across editions. It simply "
+    "cannot distinguish that case from this one, where both figures come from the same table.\n"
+    "\n"
+    "AN UNRESOLVED PRECISION ANOMALY ON THE EXPOSURE ROW, LEFT EXACTLY AS IT IS. The 'Leverage "
+    "exposure' row carries FY2025 757,149,645 and FY2024 607,589,034 (in $'000 before conversion), "
+    "but every table in both editions prints these as round $'mm figures - 757,150 and 607,589 - so "
+    "the extra three significant digits are precision the cited source does not contain. FY2023, "
+    "FY2022 and FY2021 are round ($'000) and agree with the documents. The values are immaterially "
+    "different (757,149,645 against 757,150,000 is 355 on 757 billion) and no figure here depends "
+    "on the difference. They are NOT adjusted to match, because a figure is not corrected towards "
+    "what a document ought to say: either they came from a more precise source this note has not "
+    "identified, or they are an old transcription artefact, and the two cannot be told apart from "
+    "the documents in hand. Flagged as an open question rather than quietly rounded."
+)
+
+bw.add_metric_sheet(
     "Leverage Ratio", "£'000 / %",
     [
         ("Leverage exposure", stock({
             "FY2025": 757149645, "FY2024": 607589034, "FY2023": 572319000,
             "FY2022": 580992000, "FY2021": 729749000,
         })),
+        ("Total exposure measure including claims on central banks - UK LR2 row 24", stock({
+            "FY2025": 758590000, "FY2024": 610690000, "FY2023": 581389000,
+        })),
+        ("(-) Claims on central banks excluded - UK LR2 row UK-24a", stock({
+            "FY2025": -1440000, "FY2024": -3101000, "FY2023": -9069000,
+        })),
         ("Leverage ratio (%)", {
-            "FY2025": "6.3%", "FY2024": "7.6%", "FY2023": "7.74%",
+            "FY2025": "6.26%", "FY2024": "7.58%", "FY2023": "7.74%",
             "FY2022": "7.67%", "FY2021": "5.74%",
+        }),
+        ("Leverage ratio including claims on central banks (%) - UK LR2 row UK-25c", {
+            "FY2025": "6.25%", "FY2024": "7.54%", "FY2023": "7.62%",
         }),
     ],
     p3_sources(),
+    note=GA026_BOTH_BASES_NOTE,
+    first_col_width=52, source_height=140, note_height=1180,
 )
 
 metric(
@@ -1040,7 +1137,7 @@ bw.add_overview_sheet(
         ("CET1 Ratio", {"FY2025": "16.4%", "FY2024": "18.5%", "FY2023": "18.33%", "FY2022": "23.73%", "FY2021": "18.52%"}),
         ("Tier 1 Ratio", {"FY2025": "20.8%", "FY2024": "23.6%", "FY2023": "23.67%", "FY2022": "26.73%", "FY2021": "18.52%"}),
         ("Total Capital Ratio", {"FY2025": "24.6%", "FY2024": "28.6%", "FY2023": "29.50%", "FY2022": "33.93%", "FY2021": "23.83%"}),
-        ("Leverage Ratio", {"FY2025": "6.3%", "FY2024": "7.6%", "FY2023": "7.74%", "FY2022": "7.67%", "FY2021": "5.74%"}),
+        ("Leverage Ratio", {"FY2025": "6.26%", "FY2024": "7.58%", "FY2023": "7.74%", "FY2022": "7.67%", "FY2021": "5.74%"}),
         ("LCR", {"FY2025": "174.25%", "FY2024": "192.75%", "FY2023": "222.82%", "FY2022": "208.50%", "FY2021": "216%"}),
         ("NSFR", {"FY2025": "118.55%", "FY2024": "117.56%", "FY2023": "116.64%", "FY2022": "121.09%"}),
     ],

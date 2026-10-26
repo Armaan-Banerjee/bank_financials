@@ -404,8 +404,9 @@ KM1_NA = ("Not applicable – CCFSL publishes no Pillar 3; parent OSB Group's UK
           "CCFSL holds no Art. 9 individual-consolidation permission (BoE waivers register)")
 
 
-def metric(name, unit, rows_data, note=None, extra_source=""):
-    bw.add_metric_sheet(name, unit, rows_data, p3_sources(extra_source), note=note, first_col_width=44, source_height=150)
+def metric(name, unit, rows_data, note=None, extra_source="", note_height=60):
+    bw.add_metric_sheet(name, unit, rows_data, p3_sources(extra_source), note=note, first_col_width=44,
+                        source_height=740, note_height=note_height)
 
 
 KM1_SOURCES = (
@@ -542,7 +543,33 @@ metric(
          "than averaged, reconciled or silently switched. FY2023's 6.9% and FY2022's 7.9% show no such "
          "problem - each appears identically in its own edition and in the following edition's comparative.\n"
          "FY2021 remains blank: not located within this build's research budget, and not established absent. "
-         + NOT_DISCLOSED_NOTE,
+         + NOT_DISCLOSED_NOTE + "\n\n"
+         "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED, for the CCFSL solo figures on this "
+         "sheet. Every figure here comes from the Solvency Risk paragraph of that year's own CCFSL "
+         "statutory accounts, in the bare form \"The Company's leverage ratio was X% as at 31 December Y\" "
+         "- no qualifier, no exposure measure, no reconciliation, and no UK LR2 or KM1 anywhere in the "
+         "filing. With no printed denominator there is no deduction line to inspect, so the test that "
+         "settled Bank Sepah International, Jordan International Bank and United National Bank cannot be "
+         "run, and no basis is asserted. The row label's \"under CRD IV\" is the Company's own framing, "
+         "carried over from the CET1 and total-capital rows where the accounts use that phrase; it is not "
+         "a basis statement.\n\n"
+         "THE PARENT'S PILLAR 3 DOES DECLARE A BASIS - AND IS NOT USED, DELIBERATELY. OSB Group plc's "
+         "Pillar 3 is rich in exactly the language this sheet lacks (a normalised phrase scan of the 2022 "
+         "edition returns 11 'excluding claims on central banks', 3 'excludes', 2 'including'), and its "
+         "footnote 3 states \"In line with the latest UK Leverage Ratio Framework which came into effect "
+         "on 1 January 2022, the leverage ratio now excludes claims on central banks\". But every leverage "
+         "figure in it is struck on the GROUP: KM1 rows 13/14 read 'Total exposure measure excluding "
+         "claims on central banks (£m) 24,725.4' and 'Leverage ratio excluding claims on central banks (%) "
+         "8.4%', and the Annex XI LR1/LR2 templates are Group-only. A search of the whole document finds "
+         "NO line that names CCFSL and a leverage figure together - the Group reports a CCFSL solo LCR "
+         "(148% at FY2022) but never a CCFSL solo leverage ratio. Adopting the Group's declared basis for "
+         "this sheet would attribute to CCFSL a statement CCFSL never made; that is the same wrong-entity "
+         "trap recorded for Schroder & Co. Limited and Morgan Stanley Bank International.\n\n"
+         "A COINCIDENCE THAT INVITES EXACTLY THAT ERROR, FLAGGED SO IT IS NOT MADE: CCFSL's own FY2022 "
+         "leverage ratio of 7.9% is numerically identical to OSB Group's FY2021 comparative of 7.9% in the "
+         "KM1 above. They are different entities at different dates and the match is chance. Neither "
+         "figure corroborates the other and neither is evidence of a shared basis.",
+    note_height=480,
 )
 
 metric(

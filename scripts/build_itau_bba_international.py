@@ -987,7 +987,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2025": "19.1%", "FY2024": "16.4%", "FY2023": "16.7%", "FY2022": "11.9%", "FY2021": "14.6%", "FY2020": "14.4%", "FY2019": "13.5%", "FY2018": "11.9%", "FY2017": "12.4%", "FY2016": "11.3%", "FY2015": "10.3%", "FY2014": "10.5%"})],
+    [("Leverage ratio - excluding and including claims on central banks are identical in the disclosed years (UK KM1 rows 14 and 14b print the same figure); see note", {"FY2025": "19.1%", "FY2024": "16.4%", "FY2023": "16.7%", "FY2022": "11.9%", "FY2021": "14.6%", "FY2020": "14.4%", "FY2019": "13.5%", "FY2018": "11.9%", "FY2017": "12.4%", "FY2016": "11.3%", "FY2015": "10.3%", "FY2014": "10.5%"})],
     p3_sources(21, "2025", AR25_URL, "The Leverage Ratio is quoted in the Capital section's narrative text (not the composition table) each year.")
         + "\n\nHD-052 (2026-09-05) FY2014-FY2020: same Annual Reports' own Key Performance Indicators tables.",
     note="FY2024 = 16.4% IS AS PRINTED, AND THE BANK'S OWN PILLAR 3 PRINTS A DIFFERENT FIGURE FOR THE SAME DATE. "

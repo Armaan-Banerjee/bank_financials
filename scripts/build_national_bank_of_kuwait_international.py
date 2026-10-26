@@ -766,6 +766,25 @@ ARCHIVED_P3_NOTE = (
     "ratio, and no category-level RWA split."
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 10 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (10 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. No edition contained either. The bank files UK KM1, whose leverage block (rows 13 and 14) "
+    "asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric(
     "Leverage Ratio",
     "£000 / $000 / %",
@@ -774,7 +793,7 @@ metric(
         ("Leverage ratio excluding claims on central banks", {"FY2025": "13.21%", "FY2024": "12.13%", "FY2023": "Not available - FY2023 Pillar 3 unretrievable; none in the FY2023 accounts", "FY2022": "13.09%", "FY2021": "12.74%"}),
     ],
     "FY2023: not available - no FY2023 Pillar 3 edition is retrievable; see note below. FY2024-FY2025 are £000, from the official Pillar 3 Table 3, "
-    "p.16. FY2021-FY2022 are US$000, from archived Pillar 3 disclosures - see note below.\n\n" + ARCHIVED_P3_NOTE,
+    "p.16. FY2021-FY2022 are US$000, from archived Pillar 3 disclosures - see note below.\n\n" + ARCHIVED_P3_NOTE + GA026_ONE_LEVERAGE_BASIS_NOTE,
 )
 
 metric(

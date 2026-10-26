@@ -12,8 +12,8 @@ Source database: `/Users/armaan/code/katalysis/scripts/insights/../../research/i
 | Tier 1 Ratio | strict | 435 | 60 | 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 250, missing: 59, non_numeric_disclosure: 122, unknown_basis: 302 |
 | Total Capital Ratio | broad | 1027 | 139 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 48, non_numeric_disclosure: 87 |
 | Total Capital Ratio | strict | 448 | 68 | 2009, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 249, missing: 48, non_numeric_disclosure: 87, unknown_basis: 330 |
-| Leverage Ratio | broad | 1473 | 133 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 613, non_numeric_disclosure: 202 |
-| Leverage Ratio | strict | 630 | 65 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 395, missing: 613, non_numeric_disclosure: 202, unknown_basis: 448 |
+| Leverage Ratio | broad | 1693 | 133 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | missing: 812, non_numeric_disclosure: 202 |
+| Leverage Ratio | strict | 708 | 65 | 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 | basis_mismatch: 478, missing: 812, non_numeric_disclosure: 202, unknown_basis: 507 |
 
 Strict mode includes numeric annual observations with an explicitly classified reporting basis.
 Broad mode includes numeric annual observations with a 12-month annual period; unknown basis is retained.

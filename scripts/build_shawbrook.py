@@ -172,7 +172,7 @@ BANK_ARA_CAPITAL_NOTE=(
 def d(vals): return dict(zip(Y,vals))
 note=("Shawbrook Bank Limited (Companies House 00388466; FRN 204574; LEI 213800XSHRKUIZK86B68) is the matched legal entity. "
 "Cash flows use the Company column, £m, from the Bank's consolidated-and-company accounts. Bank-specific Pillar 3 metrics are used for FY2015-FY2024 (all years with a Bank-specific figure disclosed). "
-"The FY2025 Pillar 3 publication is Group-only after the listing and is not substituted for Bank data - independently re-confirmed 15 September 2026: shawbrook-pillar-3-disclosures-2025.pdf is headed 'Shawbrook Group plc Company No: 07240248', states that the PRA supervises Shawbrook Group plc on a consolidated basis, and contains a single reporting section with no Shawbrook Bank Limited solo or sub-consolidated disclosure. FY2025 Bank-level capital, RWA, leverage and NSFR figures are therefore taken from Shawbrook Bank Limited's own Annual Report and Accounts 2025 instead: Key Performance Indicators table p.9 (CET1 ratio 12.4%, Total Tier 1 capital ratio 13.5%, Total capital ratio 14.9%, Leverage ratio 7.8%, Risk-weighted assets 12,000.4), Risk Report - Regulatory capital (audited) p.90 (Common Equity Tier 1 capital 1,495.7; Additional Tier 1 125.0; Total Tier 1 capital 1,620.7; Tier 2 163.8; Total regulatory capital 1,784.5) and Risk Report - Net stable funding ratio p.89 (NSFR 124.9% at 31 December 2025, 2024: 134.5%). The FY2025 LCR is the one metric on a different basis: the Annual Report's 147.2% is a point-in-time year-end ratio, not the 12-month-average UK KM1 measure used for FY2022-FY2024 here (the same Annual Report reports FY2024 as 176.0% against the 265.0% recorded here from that year's Bank Pillar 3, an 89-point gap for the same date and entity). UPDATED 2026-09-18: it was previously left wholly blank; it is now carried on its own separate, labelled point-in-time row of the LCR sheet, alongside the liquidity buffer and net-cash-outflow amounts it is struck from, so the figure is visible without ever being spliced into the KM1-average series - see the LCR sheet. Every other FY2024 comparative in the Annual Report reproduces this workbook's Bank-level Pillar 3 figures exactly. FY2022 RWA/capital comparatives use the restatement in the 2023 Pillar 3 disclosure; FY2021 and FY2022 leverage bases differ. "
+"The FY2025 Pillar 3 publication is Group-only after the listing and is not substituted for Bank data - independently re-confirmed 15 September 2026: shawbrook-pillar-3-disclosures-2025.pdf is headed 'Shawbrook Group plc Company No: 07240248', states that the PRA supervises Shawbrook Group plc on a consolidated basis, and contains a single reporting section with no Shawbrook Bank Limited solo or sub-consolidated disclosure. FY2025 Bank-level capital, RWA, leverage and NSFR figures are therefore taken from Shawbrook Bank Limited's own Annual Report and Accounts 2025 instead: Key Performance Indicators table p.10 (CET1 ratio 12.4%, Total Tier 1 capital ratio 13.5%, Total capital ratio 14.9%, Leverage ratio 7.8%, Risk-weighted assets 12,000.4), Risk Report - Regulatory capital (audited) p.90 (Common Equity Tier 1 capital 1,495.7; Additional Tier 1 125.0; Total Tier 1 capital 1,620.7; Tier 2 163.8; Total regulatory capital 1,784.5) and Risk Report - Net stable funding ratio p.87 (NSFR 124.9% at 31 December 2025, 2024: 134.5%). The FY2025 LCR is the one metric on a different basis: the Annual Report's 147.2% is a point-in-time year-end ratio, not the 12-month-average UK KM1 measure used for FY2022-FY2024 here (the same Annual Report reports FY2024 as 176.0% against the 265.0% recorded here from that year's Bank Pillar 3, an 89-point gap for the same date and entity). UPDATED 2026-09-18: it was previously left wholly blank; it is now carried on its own separate, labelled point-in-time row of the LCR sheet, alongside the liquidity buffer and net-cash-outflow amounts it is struck from, so the figure is visible without ever being spliced into the KM1-average series - see the LCR sheet. Every other FY2024 comparative in the Annual Report reproduces this workbook's Bank-level Pillar 3 figures exactly. FY2022 RWA/capital comparatives use the restatement in the 2023 Pillar 3 disclosure; FY2021 and FY2022 leverage bases differ. "
 "FY2014-FY2018 statements were sourced from Companies House filing-history (scanned filings, OCR'd) because shawbrook.co.uk's own hosted 'Annual Report' links for those years are Shawbrook Group plc (holdco) documents, not Bank-entity accounts; FY2019-FY2020 statements use the Bank-entity reports hosted on shawbrook.co.uk directly. "
 "FY2018-FY2016 Bank-level Total RWAs and CET1/Tier1/Total Capital ratios were POPULATED on 2026-09-18 and are no longer blank. This note previously read that they were blank because those years' Pillar 3 disclosures give a Bank-level credit-risk RWA figure but never an operational-risk RWA component at Bank level. That was true of the Pillar 3 documents and remains true - it was simply not the whole world: for these three years Shawbrook published the Bank's total RWAs and capital ratios in Shawbrook Bank Limited's OWN Annual Report and Accounts, in tables that print Group and Company columns side by side, and the Company column is used here. No Group figure has been substituted anywhere. See the Total RWAs / RWA Breakdown sheet notes for the exact pages and the one comparative-sourced figure (FY2016's Tier 1 ratio). FY2019 Bank Total RWA/ratios use the comparative column in the FY2020 Pillar 3 disclosure (the first year Shawbrook disclosed a full Bank-level RWA-by-category table); FY2019's own Pillar 3 document did not itself disclose this breakdown. "
 "FY2015's Bank Total RWA (£2,175.9m) is the 'Total risk exposure amount' of £2,175,860k stated directly in the Bank's own countercyclical-capital-buffer table, Pillar 3 Disclosures 2015 Appendix 1 p.34 - a disclosed figure, not a derived one. FY2014's Bank Total RWA (£1,460.0m) has no such directly stated equivalent (the 2014 disclosure predates the countercyclical-buffer template) and is the one derived figure on this sheet: the Bank's own disclosed Pillar 1 capital requirement (Credit risk £112.4m + Operational risk £4.4m) grossed up at 8%. CORRECTION (15 September 2026): this paragraph previously stated that FY2015 used a derived £2,173.8m total 'in preference to' the disclosed £2,175.9m; that was the wrong way round - the workbook has always carried the disclosed £2,175.9m, and the prose has been corrected to match rather than the figure changed. CONSEQUENCE, stated rather than smoothed: on the RWA Breakdown sheet FY2015's two category rows (Credit risk £2,051.3m and Operational risk £122.5m, each grossed up at 8% from the disclosed £164.1m and £9.8m Pillar 1 requirements, since no Bank-level RWA-by-category template existed in 2015) sum to £2,173.8m, £2.1m short of the disclosed £2,175.9m total - a rounding artefact of grossing up capital requirements stated to £0.1m. FY2015 is therefore the one populated year on that sheet whose categories do not foot exactly to the total. "
@@ -697,7 +697,9 @@ ps="Sources - Bank-specific Pillar 3: FY2021 Appendix 4 pp.54-58; FY2022 Bank ta
 "the text layer of that document. The FY2024 point-in-time column is the Annual Report's own comparative, "
 "labelled as such, and is carried only to make the basis gap against the KM1 row visible.\n"
 "Blank cells mean not publicly disclosed/not applicable; FY2025 Group-only data is not used as a Bank proxy. FY2013/FY2012 are out of scope for this workbook's Pillar 3 sheets (see wayfinder ticket HD-072) and are simply blank, same as any other undisclosed year.\n\n"+LINK_PROVENANCE
-def m(name,unit,data,n=None): b.add_metric_sheet(name,unit,[(name,data)],ps,note=n,first_col_width=54,source_height=280)
+def m(name,unit,data,n=None,row_label=None,note_height=60):
+    b.add_metric_sheet(name,unit,[(row_label or name,data)],ps,note=n,first_col_width=54,source_height=280,
+                       note_height=note_height)
 AR2025_BANK_BASIS = (
     " FY2025 is sourced from Shawbrook Bank Limited's OWN Annual Report and Accounts 2025 (Bank entity, "
     "Companies House 00388466), NOT from a Pillar 3 disclosure: the FY2025 Pillar 3 publication covers "
@@ -716,12 +718,12 @@ AR2025_BANK_BASIS = (
     "earnings 1,323.3 - intangibles 140.1 - deferred tax 23.5 - AOCI 0.5 - prudent valuation adjustment 4.4 - "
     "1,250%-risk-weight securitisation position 6.9 = 1,495.7, which foots exactly, as does the same table's "
     "FY2024 column to 1,297.0), and this is the figure used here. The 'IFRS 9 transitional arrangements impact "
-    "analysis' table on p.92 instead shows 1,493.1 (and correspondingly Total Tier 1 1,618.1, total regulatory "
+    "analysis' table on p.93 instead shows 1,493.1 (and correspondingly Total Tier 1 1,618.1, total regulatory "
     "capital 1,781.9); the two tables agree exactly for FY2024, so the gap is new in FY2025 and the report "
     "offers no reconciliation of it. The ratios recorded here (CET1 12.4%, Tier 1 13.5%, total capital 14.9%, "
     "leverage 7.8%) are the Bank's own headline figures, printed in the financial highlights, the Key "
-    "Performance Indicators table (p.9) and the p.92 table alike; the separate 'Capital ratios' and 'Leverage "
-    "ratio' tables on p.91 instead print CET1 12.5% and leverage 7.9%, which is what 1,495.7 / 12,000.4 and "
+    "Performance Indicators table (p.10) and the p.93 table alike; the separate 'Capital ratios' and 'Leverage "
+    "ratio' tables on p.92 instead print CET1 12.5% and leverage 7.9%, which is what 1,495.7 / 12,000.4 and "
     "1,620.7 / 20,628.1 actually compute to. CONSEQUENCE: the FY2025 CET1 Capital figure here (1,495.7) does "
     "not divide into the FY2025 Total RWAs figure (12,000.4) to give the FY2025 CET1 Ratio shown here (12.4%) "
     "- it gives 12.5%. That is a genuine, documented inconsistency inside the Bank's own report, not a "
@@ -1081,7 +1083,68 @@ b.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-m("Leverage Ratio","%",d(["7.8%","8.1%","8.2%","8.8%","8.0%","8.6%","8.6%","9.2%","9.5%","7.7%","6.9%","6.1%"]),AR2025_BANK_BASIS+" FY2022 uses the UK leverage framework effective 1 January 2022; FY2021 uses the prior basis and comparatives were not restated. FY2014-FY2020 each use that year's own Bank-specific leverage-ratio disclosure (methodology evolved gradually year to year under CRD IV/Basel III transitional rules).")
+GA027_RESOLUTION = (
+    "\n\nGA-027 RESOLVED (2026-10-10) - A BANK-BASIS FY2025 LEVERAGE FIGURE DOES EXIST, AND THIS SHEET "
+    "ALREADY USES IT. The ticket was opened on the reading that this sheet's FY2025 cell of 7.8% was the "
+    "GROUP KM1 figure sitting unlabelled in a row whose citation claims Bank basis, with the Bank-level "
+    "question left open ('whether Shawbrook publishes its Bank-level disclosures for FY2025 somewhere "
+    "else' - only the Group Pillar 3 had been read). It does, and it is the source already cited above: "
+    "Shawbrook Bank Limited's OWN Annual Report and Accounts 2025. That document carries a complete "
+    "Bank-basis leverage reconciliation on printed p.92, read at 300 dpi: Total Tier 1 capital 1,620.7 / "
+    "1,422.0; total statutory assets 22,463.8 / 19,723.0; less dormant-subsidiary adjustment (17.3) / "
+    "(14.3); regulatory adjustments (359.5) / (382.7); CENTRAL BANK CLAIMS (1,924.5) / (2,244.7); "
+    "off-balance sheet items 504.2 / 396.0; derivatives 115.6 / 126.7; SFTs 11.0 / 18.4; IFRS 9 "
+    "transitional nil / 10.4; regulatory deductions (165.2) / (126.8); TOTAL EXPOSURES 20,628.1 / "
+    "17,506.0; UK Leverage ratio 7.9% / 8.1% (£m, FY2025 / FY2024).\n"
+    "THE PROOF THAT THIS IS BANK BASIS AND NOT GROUP IS THE FY2024 COLUMN. Its total exposure of "
+    "17,506.0 is exactly the figure in the FY2024 Pillar 3's own Bank section (section 4, 'Disclosures "
+    "for Shawbrook Bank Limited', UK KM1 row 13 = 17,506.0), and is NOT the Group KM1's 17,480.0 for the "
+    "same date. The two differ by 26.0 and the Bank table lands on the Bank number. So the entity basis "
+    "of this series is continuous across FY2024/FY2025 after all; what the ticket correctly identified is "
+    "that nothing ON THE SHEET showed it, because this sheet carries no exposure-measure row - the one "
+    "column that would have made a swap visible.\n"
+    "WHY THE CELL STAYS AT 7.8% AND IS NOT CHANGED TO THE 7.9% ABOVE. The Bank's own FY2025 report prints "
+    "its leverage ratio twice and disagrees with itself: 7.9% in the p.92 reconciliation (Tier 1 1,620.7 "
+    "/ 20,628.1 = 7.857%) and 7.8% in both the Key Performance Indicators table (p.10) and the IFRS 9 "
+    "transitional analysis (p.93, Tier 1 1,618.1 / 20,628.1 = 7.844%). This is the same £2.6m capital "
+    "split already documented above for CET1, reappearing in the leverage numerator. Three of the four "
+    "available readings - the Bank's KPI table, the Bank's IFRS 9 table and the Group KM1 - all print "
+    "7.8%, and this workbook's CET1/Tier 1/total-capital ratios for FY2025 are taken from that same "
+    "headline presentation, so 7.8% keeps the sheet internally consistent. The 7.9% is recorded here "
+    "rather than discarded; neither figure is reconciled away, and no figure has been changed to make "
+    "anything tie.\n"
+    "THE SECOND DISAGREEMENT THE TICKET ASKED TO HAVE RECORDED, within the FY2025 Pillar 3 and on the "
+    "same (Group) basis: Group KM1 row 13 gives FY2025 20,610.1 and FY2024 17,480.0, while Group LR2 row "
+    "UK-24b gives FY2025 20,610.1 and FY2024 17,469.6 - agreeing exactly in FY2025 and 10.4 apart in "
+    "FY2024. That FY2024 column also does not foot: LR2 row 24 less UK-24a is 19,714.2 - 2,244.7 = "
+    "17,469.5 against a printed 17,469.6. OBSERVATION, NOT THE BANK'S EXPLANATION: 10.4 is numerically "
+    "identical to the FY2024 'Transitional adjustment for IFRS 9' line in the Bank's own reconciliation "
+    "above, which is suggestive of a transitional-versus-fully-loaded difference between the two "
+    "templates - but the Bank states no such reconciliation anywhere, so this is logged as a numerical "
+    "coincidence worth checking against a future edition, not as a resolution."
+)
+
+GA026_SHAWBROOK_BASIS = (
+    "\n\nGA-026 LEVERAGE BASIS: EXCLUDING CLAIMS ON CENTRAL BANKS, explicitly and on both sources. "
+    "Shawbrook is one of the banks that publishes BOTH measures, so nothing here is inferred. The FY2025 "
+    "Pillar 3's Group UK LR2 prints the full pair: row 24 'Total exposure measure including claims on "
+    "central banks' 22,534.6 / 19,714.2; UK-24a '(-) Claims on central banks excluded' (1,924.5) / "
+    "(2,244.7); UK-24b 'Total exposure measure excluding claims on central banks' 20,610.1 / 17,469.6; "
+    "row 25 'Leverage ratio excluding claims on central banks (%)' 7.8 / 8.1; and UK-25c 'Leverage ratio "
+    "INCLUDING claims on central banks (%)' 7.2 / 7.2. The KM1 row 14 caption is likewise explicit. The "
+    "figures on this sheet are the EXCLUDING measure - the 7.8% / 8.1% series, not the 7.2% including "
+    "measure. The Bank-basis reconciliation quoted above independently deducts the identical central bank "
+    "claims (1,924.5 / 2,244.7), so Bank and Group agree on what is being removed and only the entity "
+    "scope differs. NOTE THE SIZE OF THE CHOICE: at FY2025 the two bases are 7.8% against 7.2%, a 0.6pp "
+    "gap on the same date and entity, so a reader splicing this series against an including-basis figure "
+    "from elsewhere would see a fall that did not happen. The two-basis UK presentation is effective only "
+    "for periods from 1 January 2022, which is why FY2021 and earlier cannot carry this label - see the "
+    "basis caveats in the preceding paragraph."
+)
+
+m("Leverage Ratio","%",d(["7.8%","8.1%","8.2%","8.8%","8.0%","8.6%","8.6%","9.2%","9.5%","7.7%","6.9%","6.1%"]),AR2025_BANK_BASIS+" FY2022 uses the UK leverage framework effective 1 January 2022; FY2021 uses the prior basis and comparatives were not restated. FY2014-FY2020 each use that year's own Bank-specific leverage-ratio disclosure (methodology evolved gradually year to year under CRD IV/Basel III transitional rules)."+GA026_SHAWBROOK_BASIS+GA027_RESOLUTION,
+  row_label="Leverage Ratio - FY2022 onward EXCLUDING claims on central banks (the Bank also publishes an including-basis measure: 7.2% at FY2025); FY2021 and earlier pre-date the two-basis presentation; see note",
+  note_height=480)
 b.add_metric_sheet("LCR","%",[
     ("Liquidity coverage ratio - Pillar 3 UK KM1 basis (12-month average)",
      d([None,"265.0%","310.9%","290.3%",None,None,None,None,None,None,None,None])),

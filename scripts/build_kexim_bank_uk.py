@@ -475,8 +475,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=190)
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=190,
+                        note_height=note_height)
 
 
 CAPITAL_RATIO = {"FY2025": "20.5%", "FY2024": "20.9%", "FY2023": "22.8%", "FY2022": "22.5%", "FY2021": "30.0%"}
@@ -980,7 +981,33 @@ metric(
          "Assets\" table in its Capital risk management note, against a stated PRA minimum of 5% (the minimum "
          "column is blank in the FY2021 and FY2022 filings' own printing of the table, but the ratio itself is "
          "given in both). Each year's figure is cross-confirmed against the following year's own prior-year "
-         "comparative column.",
+         "comparative column.\n\n"
+         "GA-026 LEVERAGE BASIS (2026-10-10): KEXIM UK IS THE ONE BANK IN THIS GROUP THAT PUBLISHES BOTH "
+         "BASES - AND THEY ARE EQUAL. Its FY2025 Pillar 3 is the first edition to carry a UK KM1 template "
+         "(Appendix I, p.38), and that template prints row 14 'Leverage ratio excluding claims on central "
+         "banks (%)' = 17.29% AND row 14b 'Leverage ratio including claims on central banks (%)' = 17.29%. "
+         "Both rows are reproduced as published on this workbook's KM1 Key Metrics sheet. Row 13 gives the "
+         "excluding exposure measure, 627,033,389, and the Pillar 3's own capital of 108,444,112 divided "
+         "by it is 17.294%, so the template ties to itself. Because the two printed ratios are identical, "
+         "the central-bank deduction is zero or immaterial at the printed precision for this entity - the "
+         "distinction that separates the two bases simply does not bite here. No 'including' exposure "
+         "figure is recorded, because the Bank prints none and the project does not back-solve one.\n\n"
+         "THE FIGURES ON THIS SHEET ARE NOT THOSE KM1 FIGURES, AND THEIR OWN BASIS IS UNDECLARED. This "
+         "sheet carries the statutory accounts' Note 28 series (FY2025 16.9%, FY2024 16.1%), whose table "
+         "'Capital, leverage and Risk Weighted Assets (RWA)' labels the row simply 'leverage' with no "
+         "basis qualifier, no exposure measure and no reconciliation. The Pillar 3's own leverage figures "
+         "for the same year-ends are different - 17.29% (FY2025) and 16.56% (FY2024) - and that "
+         "divergence, which the Bank explains nowhere, is documented in full in the BASIS DIFFERENCE note "
+         "carried on the capital sheets; it is a source-to-source disagreement, NOT a central-bank-claims "
+         "basis difference, and the two are deliberately not blended. What the KM1 above does establish is "
+         "that for this bank the including/excluding choice cannot account for any part of that gap, "
+         "since on the Bank's own figures the two bases coincide. Both sides are recorded; neither is "
+         "reconciled.\n\n"
+         "SCOPE. FY2024 and earlier editions of the Pillar 3 carry no KM1 at all (their capital, RWA and "
+         "leverage figures sit in sections 4, 5.2 and 7 instead), so the two-basis reading above is "
+         "established for FY2025 only and is not projected onto the earlier years. The two-basis UK "
+         "presentation is effective only for periods from 1 January 2022 in any case.",
+    note_height=290,
 )
 
 metric(

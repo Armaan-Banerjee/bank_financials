@@ -1515,6 +1515,42 @@ KPI_NOT_YET_INTRODUCED_NOTE = (
     "genuine 'not yet introduced' gap, not a sourcing failure."
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_NO_REACHABLE_DUAL_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY, AND NO REACHABLE DOCUMENT COULD CARRY THE OTHER - CHECKED AND RECORDED "
+    "2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for BOTH leverage measures - row 24 and UK-25c on "
+    "the INCLUDING-claims-on-central-banks basis, UK-24b and 25 on the EXCLUDING basis, with the "
+    "reconciling deduction at UK-24a. This sheet carries only the excluding side (the UK KM1 rows 13/14 "
+    "above, FY2021 and FY2020), and for this bank that is not a sourcing failure in either direction: the "
+    "UK dual basis took effect only for periods from 1 January 2022, and NO Pillar 3 edition from FY2022 "
+    "onward is reachable or exists.\n"
+    "FY2022 AND FY2023: PUBLISHED, THEN WITHDRAWN, AND NEVER ARCHIVED. Re-checked in full on 2026-10-09. "
+    "(a) A Wayback CDX listing of the whole kingdom.bank domain filtered on the path containing 'pillar' "
+    "returns exactly four captures: the /about-us/pillar-3-disclosure/ index page (2 February 2017) and the "
+    "FY2019, FY2020 and FY2021 PDFs. The FY2022 URL's single capture (20240712045624) is still "
+    "mimetype text/html - the WAF bot-check interstitial already documented above, not the PDF - and the "
+    "FY2023 URL has NO capture of any kind. (b) Both URLs now return a genuine HTTP 404 from the live site, "
+    "and that 404 is trustworthy rather than a WAF artefact, because the same session fetched "
+    "www.kingdom.bank/oversight/ at HTTP 200: the bot-check was not interfering. (c) The live /oversight/ "
+    "page no longer contains the word 'Pillar' anywhere in its text, and the only PDF it links is "
+    "KBL-Statutory-Accounts-2025.pdf. (d) The site's own WordPress media API returns an EMPTY list for "
+    "search=pillar, and its newest 40 PDF entries hold no Pillar 3 document of any year. So every Pillar 3 "
+    "edition has been removed from the live media library; the FY2019-FY2021 editions survive only as the "
+    "Wayback snapshots cited above.\n"
+    "FY2024 AND FY2025: NEVER PUBLISHED AT ALL, for a documented reason rather than a missing file - the "
+    "bank took the SDDT Rule 3.1 modification by consent with effect from 20 February 2025, which removes "
+    "the Pillar 3 disclosure duty (see the PRA waivers register note at the head of this script, and the "
+    "KM1 sheet, which states this for those years).\n"
+    "THIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP, AND IT IS THE REASON NO INCLUDING-BASIS ROW IS ADDED "
+    "HERE. Nothing is back-solved: the including measure could be reached arithmetically from an excluding "
+    "measure plus the central-bank claims, but that sum would be OUR calculation, not this bank's "
+    "disclosure, and no edition of this bank's Pillar 3 ever printed it. Reopen only if an FY2022 or FY2023 "
+    "edition becomes reachable - a fresh Wayback capture of either URL, or a copy surfacing on another host. "
+    "The Internet Archive was flapping between served results and a 'Temporarily Offline' page during this "
+    "check, so the CDX listing in (a) is reported only because that particular query returned real rows; "
+    "the two queries that returned the offline page were not counted as evidence of absence."
+)
+
 EARLY_P3_NO_RATIO_NOTE = (
     "FY2016-FY2018 PILLAR 3 EDITIONS PRINT NO CAPITAL RATIO AND NO TOTAL RWA (checked 2026-09-19). Each "
     "edition's contents page (p.2) runs Introduction / Risk management / Board and committee structure / Own "
@@ -1931,7 +1967,8 @@ metric(
          "print; the KPI table's two-decimal figures are kept as the row's values and are not rounded to the "
          "Pillar 3 precision. The FY2016 edition's comparative also confirms the FY2015 KPI figure of 8.96% "
          "exactly (FY2015's own Pillar 3 edition is unreachable - see below). No FY2016-FY2018 edition prints "
-         "a leverage exposure measure. " + KPI_NOT_YET_INTRODUCED_NOTE + "\n\n" + EARLY_EDITIONS_NOTE,
+         "a leverage exposure measure. " + KPI_NOT_YET_INTRODUCED_NOTE + "\n\n" + EARLY_EDITIONS_NOTE
+         + "\n\n" + GA026_NO_REACHABLE_DUAL_BASIS_NOTE,
 )
 
 metric(

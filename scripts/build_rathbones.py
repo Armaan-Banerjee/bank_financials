@@ -451,7 +451,24 @@ bw.add_rwa_breakdown_sheet(
     source_height=430,
     unit_suffix="",
 )
-bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note={m: NOT_PUB_NOTE for m in _pillar3_after_rwa}, source_height=430,
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_GROUP_ONLY_NOTE = (
+    "\n\nGA-026 (2026-10-09) - CHECKED AGAINST THE GROUP'S OWN LEVERAGE TEMPLATE, AND STILL NOT AN ADD. "
+    "This sweep looked for banks publishing BOTH UK leverage bases (template UK LR2 prints the including-"
+    "claims-on-central-banks measure at row 24 / UK-25c and the excluding one at UK-24b / row 25). "
+    "Rathbones DOES publish a full UK LR2 with both: the 31 December 2023 Pillar 3 disclosures, p.45, "
+    "'Template UK LR2 - LRCom', gives row 23 431.4; row 24 3,345.8; UK-24a (1,038.8); UK-24b 2,307.0; row "
+    "25 18.70%; UK-25c 12.89% at 31 December 2023, with 298.7 / 3,104.6 / (1,410.1) / 1,694.3 / 17.63% / "
+    "9.62% at 31 December 2022.\n"
+    "NONE OF IT BELONGS ON THIS SHEET, because that template is RATHBONES GROUP PLC CONSOLIDATED and this "
+    "workbook is the entity. It is the same reason the sheet says 'not publicly disclosed' in the first "
+    "place, and the same trap that stopped two other banks in this batch whose LR2 turned out to be "
+    "group-level. The figures are recorded here so a later pass does not have to re-find them and does "
+    "not mistake their existence for a gap on this sheet. Nothing is carried across consolidation levels."
+)
+_after_rwa_notes = {m: NOT_PUB_NOTE for m in _pillar3_after_rwa}
+_after_rwa_notes["Leverage Ratio"] = NOT_PUB_NOTE + GA026_GROUP_ONLY_NOTE
+bw.add_not_disclosed_metric_sheets(_pillar3_after_rwa, CASH_SOURCES, per_note=_after_rwa_notes, source_height=430,
                                  statements={m: NOT_PUB for m in _pillar3_after_rwa})
 
 bw.add_overview_sheet(

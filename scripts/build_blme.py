@@ -995,6 +995,25 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 10 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (10 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. No edition contained either. The bank files UK KM1, whose leverage block (rows 13 and 14) "
+    "asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric("Leverage Ratio", "%",
        [("Leverage ratio (excluding claims on central banks)", {"FY2025": "14.95%", "FY2024": "14.98%", "FY2023": "14.88%", "FY2022": "14.00%", "FY2021": "14.92%",
          "FY2020": "13.60%", "FY2019": "13.40%", "FY2018": "15.83%", "FY2017": "19.28%", "FY2016": "19.94%", "FY2015": "15.63%",
@@ -1005,7 +1024,7 @@ metric("Leverage Ratio", "%",
             "PRA reporting requirement at that date (per the FY2014 Annual Report's own text: 'the ratio was "
             "reported to the PRA in 2014 and becomes effective in 2018'). No basis break across FY2015-2025 - all "
             "figures are on the 'excluding claims on central banks' basis, unlike several other banks in this "
-            "project where FY2021 sits on an older methodology.")
+            "project where FY2021 sits on an older methodology." + GA026_ONE_LEVERAGE_BASIS_NOTE)
 
 metric("LCR", "%",
        [("Liquidity Coverage Ratio", {"FY2025": "308%", "FY2024": "310%", "FY2023": "288%", "FY2022": "352%", "FY2021": "208%",

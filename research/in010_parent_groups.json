@@ -6021,14 +6021,14 @@
           "group": "JPMorgan Chase group",
           "latest_level": {
             "max": 94.12,
-            "median": 50.21,
-            "min": 6.3,
+            "median": 50.190000000000005,
+            "min": 6.26,
             "n": 2,
-            "range": 87.82000000000001,
+            "range": 87.86,
             "status": "comparable",
             "values": {
               "124579": 94.12,
-              "155240": 6.3
+              "155240": 6.26
             },
             "year": 2025
           },

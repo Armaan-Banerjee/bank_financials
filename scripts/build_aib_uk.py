@@ -915,7 +915,13 @@ metric(
          "LREQ basis only. Consistent with this, AIB UK publishes no Pillar 3 document at all: the string "
          "'Pillar 3' does not appear anywhere in the FY2025 Annual Financial Report, and every capital/liquidity "
          "figure in this workbook is taken from the Annual Report's own narrative capital section. "
-         "PS21/21 - https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2021/october/ps2121.pdf",
+         "PS21/21 - https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2021/october/ps2121.pdf\n"
+         "LEVERAGE BASIS: THE QUESTION DOES NOT ARISE FOR THIS SHEET (GA-026, 2026-10-10, no change made). "
+         "Template UK LR2 / LRCom prints the exposure measure on both the including and excluding bases, but "
+         "only for periods from 1 January 2022. This sheet has exactly one figure, FY2021, which pre-dates that "
+         "presentation; and FY2022 onward is an evidenced absence, not a gap, because AIB UK left LREQ scope on "
+         "the very date the two-basis presentation began. There is therefore no year on this sheet to which a "
+         "basis could attach. Recorded so a later basis sweep does not re-open this sheet looking for one.",
 )
 
 metric(

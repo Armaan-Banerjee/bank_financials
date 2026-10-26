@@ -693,7 +693,7 @@ bw.add_rwa_breakdown_sheet(
 )
 metric("Leverage Ratio", "£m / %", [
     ("Total exposure measure", {"FY2025": 343.4, "FY2024": 670.0, "FY2023": 2812.0, "FY2022": 4733.0, "FY2021": 6818.1, "FY2020": 5424.1, "FY2019": 4773.6}),
-    ("Leverage ratio (Pillar 3 KM1 row 14)", {"FY2025": "78.2%", "FY2024": "76.8%", "FY2023": "16.7%", "FY2022": "9.9%", "FY2021": "5.2%", "FY2020": "6.8%", "FY2019": "7.2%"}),
+    ("Leverage ratio (Pillar 3 KM1 row 14) - FY2022 onward excluding claims on central banks; FY2019-FY2021 pre-2022 Basel III basis, including them; see note", {"FY2025": "78.2%", "FY2024": "76.8%", "FY2023": "16.7%", "FY2022": "9.9%", "FY2021": "5.2%", "FY2020": "6.8%", "FY2019": "7.2%"}),
     ("Leverage Ratio per the audited accounts' own '4. Financial Highlights' table (more decimal places, same basis)", {"FY2025": "78.22%", "FY2024": "76.67%", "FY2023": "16.71%"}),
 ], note="FY2019-FY2021 are reported on the pre-2022 Basel III basis (leverage exposure INCLUDING claims on central banks); FY2022-FY2025 use the UK KM1 leverage measure EXCLUDING claims on central banks. The two are not one series - CUKL's own FY2022 report prints 'N/A' for the FY2021 comparative of these rows, footnoted as a first-time disclosure with no comparative provided.\nThe third row is the same ratio as CUKL's own audited accounts print it, to two decimal places, and is kept alongside because the FY2024 figure in earlier versions of this workbook came from there (76.67%) rather than from the Pillar 3 (76.8%) - see the FY2024 correction in the source note.")
 metric("LCR", "£m / %", [

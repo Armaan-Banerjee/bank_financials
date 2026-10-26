@@ -635,7 +635,60 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "%", "Leverage ratio", LEVERAGE, GAP_NOTE)
+# GA-026 (2026-10-10). Template UK LR2 (LRCom) prints BOTH exposure bases for periods from
+# 1 January 2022 - row 24 INCLUDING claims on central banks, UK-24b EXCLUDING them, reconciling
+# at UK-24a, with ratios at row 25 (excluding) and UK-25c (including). JPMEL prints the template
+# and both bases, and for this entity they coincide in every disclosed year.
+GA026_BOTH_BASES_NOTE = (
+    "LEVERAGE BASIS: BOTH BASES ARE PUBLISHED AND THEY COINCIDE EXACTLY IN EVERY YEAR (GA-026, "
+    "2026-10-10). JPMEL does print template UK LR2, as 'Table 33: UK LR2 Leverage Ratio Common "
+    "Disclosure for JPMEL', and it prints row 24 'Total exposure measure including claims on central "
+    "banks' and row UK-24b 'Total exposure measure excluding claims on central banks' as the same "
+    "number in every column: 2,756 for FY2025, 2,357 for FY2024 and 2,173 for FY2023 (£'mm). The two "
+    "ratios follow: row 25 (excluding) and row UK-25c (including) are 94.12%, 98.73% and 65.05% "
+    "respectively, identical on both bases. Tier 1 capital (leverage), row 23, is 2,594 / 2,327 / 1,413.\n"
+    "\n"
+    "NO ROW UK-24a IS PRINTED AT ALL. The table runs straight from row 24 to row UK-24b with no "
+    "reconciling '(-) Claims on central banks excluded' line between them - which is consistent with "
+    "the two measures being equal, i.e. JPMEL holds no central bank claims that qualify for exclusion. "
+    "The absence of that row is the Bank's own and is not treated as a missing figure. (The same "
+    "document's OTHER LR2 table, Table 32 for JPMS plc, DOES print UK-24a - (3,101) for FY2024 against "
+    "a 610,690 including measure - so the omission in JPMEL's table is specific to the entity, not a "
+    "property of the Bank's template.)\n"
+    "\n"
+    "The including-basis row is added here rather than left implied, so that the sheet states what the "
+    "source states. The excluding-basis ratio is deliberately kept FIRST, because an automated check "
+    "takes the first cell PRINTED AS A PERCENTAGE in each column as that sheet's headline figure.\n"
+    "\n"
+    "SOURCING. Previously recorded as UNREACHED: jpmorganchaseco.gcs-web.com answers HTTP 403 to direct "
+    "requests. That is still true, and it is NOT worked around - the 403 is an Akamai edge denial "
+    "(errors.edgesuite.net, with a reference number) that survives both a full browser User-Agent and a "
+    "retry over HTTP/1.1, so it is an access control and not a client-fingerprint quirk. The documents "
+    "were instead read from the Internet Archive, which is a different public source rather than a "
+    "circumvention: the FY2024 edition from capture 20250501130027 (51pp, 'P3 Annual Solo 2024', "
+    "%PDF, 1,206,576 bytes) and the FY2025 edition from capture 20260904134708 (53pp, 'P3 Annual Solo "
+    "2025', %PDF, 1,048,872 bytes). FY2025 edition p.41 was rendered and read at 300 dpi.\n"
+    "\n"
+    "CROSS-EDITION AGREEMENT. The FY2024 edition's own JPMEL table prints 2,327; 2,357; 2,357; 98.73%; "
+    "98.73% for FY2024, identical to the FY2025 edition's FY2024 comparative column. The later edition "
+    "did not restate the year."
+)
+
+bw.add_metric_sheet(
+    "Leverage Ratio", "% - see note",
+    [
+        # Keep this row FIRST: an automated check takes the first cell PRINTED AS A
+        # PERCENTAGE on a ratio sheet as that sheet's headline figure.
+        ("Leverage ratio", LEVERAGE),
+        ("Leverage ratio including claims on central banks (%) - UK LR2 row UK-25c",
+         {"FY2025": "94.12%", "FY2024": "98.73%", "FY2023": "65.05%"}),
+    ],
+    P3_SOURCES,
+    note=GA026_BOTH_BASES_NOTE + "\n\n" + GAP_NOTE,
+    first_col_width=66,
+    source_height=230,
+    note_height=420,
+)
 metric("LCR", "%", "Liquidity Coverage Ratio", LCR, GAP_NOTE)
 metric("NSFR", "%", "Net Stable Funding Ratio", NSFR, GAP_NOTE)
 

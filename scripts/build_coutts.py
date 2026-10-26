@@ -511,11 +511,65 @@ bw.add_rwa_breakdown_sheet(
     source_height=200,
     unit_suffix=" (£m)",
 )
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_BOTH_BASES_NOTE = (
+    "\n\nBOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 "
+    "(LRCom) prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, "
+    "UK-24b and 25 on the EXCLUDING basis, with the reconciling deduction at UK-24a. Until today this "
+    "sheet carried a single 'UK leverage ratio' row and did not say which basis it was; it is the "
+    "EXCLUDING one, and it keeps its place FIRST because check_overview_ties.py reads the first cell "
+    "printed as a percentage on a ratio sheet.\n"
+    "THE TWO RATIOS ARE EQUAL IN EVERY YEAR AT THE PRECISION COUTTS PRINTS, AND THAT IS THE FINDING, NOT "
+    "A COPYING ERROR. This bank holds almost no claims on central banks: UK-24a is £3m in all four years, "
+    "against a roughly £20bn exposure measure, so the deduction moves the ratio by about 0.001pp and both "
+    "rows round to the same one-decimal figure. The including rows are still added, because 'the bank "
+    "publishes both measures and they coincide' is a different fact from 'the bank publishes one measure', "
+    "and only the document can tell them apart.\n"
+    "EACH YEAR FROM ITS OWN EDITION, template UK LR2 - LRCom 'continued', column headed 'Coutts & Co', "
+    "read at 300 dpi:\n"
+    "  FY2025 - Coutts & Co Pillar 3 Report 2025, p.22, 31 December 2025 column: row 23 1,488; row 24 "
+    "19,652; UK-24a (3); UK-24b 19,649; row 25 7.6%; UK-25c 7.6%.\n"
+    "  FY2024 - Coutts & Co Pillar 3 Report 2024, p.22, 31 December 2024 column: row 23 1,432; row 24 "
+    "19,025; UK-24a (3); UK-24b 19,022; row 25 7.5%; UK-25c 7.5%.\n"
+    "  FY2023 - Coutts & Co Pillar 3 Report 2023, p.22, FIRST column: row 23 1,439; row 24 19,361; UK-24a "
+    "(3); UK-24b 19,358; row 25 7.4%; UK-25c 7.4%.\n"
+    "  FY2022 - Coutts & Co Pillar 3 Report 2022, p.20, 31 December 2022 column: row 23 1,535; row 24 "
+    "20,025; UK-24a (3); UK-24b 20,022; row 25 7.7%; UK-25c 7.7%.\n"
+    "THE FY2023 EDITION MISPRINTS ITS OWN COLUMN HEADINGS: page 22 heads BOTH columns '31 December 2022'. "
+    "Read at 300 dpi to be sure it is the document and not the text layer. The first column is in fact 31 "
+    "December 2023, and it is identified by figures rather than by its heading - its five values "
+    "(1,439 / 19,361 / (3) / 19,358 / 7.4%) equal the FY2024 edition's 31 December 2023 COMPARATIVE "
+    "exactly, while the second column's (1,535 / 20,025 / (3) / 20,022 / 7.7%) equal the FY2022 edition's "
+    "own 31 December 2022 column exactly. Two independent cross-edition matches, so the mislabelling is "
+    "certain and the assignment is not a guess. The bank's misprint is reproduced as a finding here and "
+    "nothing in this workbook is relabelled to hide it.\n"
+    "THE FY2022 EDITION'S SECOND COLUMN IS 30 JUNE 2022, not a year-end, and is deliberately not used "
+    "(row 24 19,435; UK-24a (3); UK-24b 19,432; row 25 7.2%; UK-25c 7.2%).\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY: row 25 reproduces the ratio this sheet already carried in "
+    "all four years (7.6% / 7.5% / 7.4% / 7.7%), so the LR2 is the same entity as the rest of the "
+    "workbook. (2) CROSS-EDITION: each edition's comparative equals the next edition's own-year column to "
+    "the last digit. (3) ARITHMETIC: row 24 minus UK-24a equals UK-24b in all four years. (4) RATIO TIE: "
+    "row 23 over each exposure measure reproduces both printed ratios (e.g. FY2025 1,488/19,652 = 7.57% "
+    "and 1,488/19,649 = 7.57%, both -> 7.6%).\n"
+    "FY2021 CORRECTLY GETS NOTHING on either basis - see the sentence above; and in any case the UK dual "
+    "basis took effect only for periods from 1 January 2022."
+)
+
 metric(
-    "Leverage Ratio", "%", [("UK leverage ratio", LEVERAGE_RATIO)],
+    "Leverage Ratio", "£m / %",
+    [
+        # The excluding-basis ratio stays FIRST: check_overview_ties.py takes the first
+        # cell PRINTED AS A PERCENTAGE on a ratio sheet as the Overview's headline.
+        ("UK leverage ratio", LEVERAGE_RATIO),
+        ("Total exposure measure including claims on central banks (£m)", {"FY2025": 19652, "FY2024": 19025, "FY2023": 19361, "FY2022": 20025}),
+        ("Claims on central banks excluded (£m)", {"FY2025": -3, "FY2024": -3, "FY2023": -3, "FY2022": -3}),
+        ("Total exposure measure excluding claims on central banks (£m)", {"FY2025": 19649, "FY2024": 19022, "FY2023": 19358, "FY2022": 20022}),
+        ("Leverage ratio including claims on central banks (%)", {"FY2025": "7.6%", "FY2024": "7.5%", "FY2023": "7.4%", "FY2022": "7.7%"}),
+    ],
     note="FY2021 not disclosed - the FY2022 Annual Report (the only source for FY2021) does not include a "
          "leverage ratio table at all; the leverage-ratio disclosure only begins from the FY2023 report "
-         "onward (shown there with a FY2022 comparative, used for the FY2022 column here).",
+         "onward (shown there with a FY2022 comparative, used for the FY2022 column here)."
+         + GA026_BOTH_BASES_NOTE,
 )
 
 # GA-020 (2026-09-19): re-checked against the four Coutts & Co Pillar 3 reports (P3_*_URL,

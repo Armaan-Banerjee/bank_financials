@@ -522,9 +522,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, note=None):
+def metric(name, unit, rows_data, note=None, note_height=60):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources("83"), note=note, first_col_width=48,
-                         source_height=280)
+                         source_height=280, note_height=note_height)
 
 
 # ---------------------------------------------------------------
@@ -742,7 +742,34 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (USD'000)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)])
+KFH_GA026_BASIS_NOTE = (
+    "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED - and on this bank's disclosure the "
+    "question is not answerable from the documents. KFH publishes no standalone Pillar 3 and no UK KM1 "
+    "template. What exists is an \"APPENDIX : PILLAR 3 DISCLOSURES (UNAUDITED)\" inside each year's own "
+    "Annual Report, whose 'Key Metrics' table prints a short list of ratios and nothing else. Read at 300 "
+    "dpi from the FY2025 Annual Report, PDF page 85 = printed folio 83: Total Capital ratio 20.1% / 19.2%; "
+    "CET1 Capital Ratio 20.1% / 19.2%; Leverage Ratio 14.2% / 13.7%; LCR 592.3% / 385.4%; NSFR 139.0% / "
+    "119.4%.\n\n"
+    "WHY IT IS NOT DETERMINABLE. The caption is the bare words 'Leverage Ratio' with no qualifier. There "
+    "is no row 24 / UK-24a / UK-24b / UK-25c, no LR2 or LRSum template, and - decisively - NO EXPOSURE "
+    "MEASURE IS PRINTED AT ALL, so there is no denominator to inspect for a central-bank deduction line. "
+    "That is the test that settled Bank Sepah International, Jordan International Bank and United National "
+    "Bank (a printed reconciliation deducting nothing) and its mirror at Bank of Ceylon UK (an explicit "
+    "Bank of England deduction); here the test cannot be run, because the bank publishes the ratio and "
+    "withholds both of its terms. The same appendix withholds the RWA figure for the same reason (see the "
+    "Total RWAs sheet, where a back-solved series was withdrawn on 2026-09-16), so this is a consistent "
+    "feature of KFH's disclosure, not an oversight on one row. NOTHING IS BACK-SOLVED HERE: no exposure "
+    "measure is inferred from the ratio and the capital figure, and no basis is asserted.\n\n"
+    "SCOPE. The two-basis UK presentation is effective only for periods from 1 January 2022; KFH never "
+    "adopted the UK KM1 template in any year covered. A normalised phrase scan (text joined across line "
+    "breaks before matching, so a wrapped phrase cannot hide) finds no 'excluding/including claims on "
+    "central banks' wording in the source. Note that these Annual Reports are IMAGE SCANS at Companies "
+    "House with no usable text layer, so that scan rests on OCR for navigation and on the 300 dpi render "
+    "for every figure quoted above - per project convention the render, not the OCR, is the reading. The "
+    "FY2025 document is Companies House filing MzUyMTMwODAyMGFkaXF6a2N4 (91 pages)."
+)
+
+metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], note=KFH_GA026_BASIS_NOTE, note_height=260)
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)])
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
 

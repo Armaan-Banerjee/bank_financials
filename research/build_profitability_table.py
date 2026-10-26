@@ -25,8 +25,10 @@ import sys
 import openpyxl
 
 YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
-# FY2020 is extracted but not reported: an average-equity denominator for
-# FY2021 needs the year before it.
+# FY2020 is extracted but not reported: an AVERAGE denominator for FY2021 needs
+# the year before it. The user's decision of 2026-10-10 is that the denominator
+# is the AVERAGE, for ROA as well as ROE - so assets now need the prior year
+# too, which the first version of this file did not capture.
 EXTRACT_YEARS = YEARS + ["FY2020"]
 
 FY_RE = re.compile(r"^(FY\d{4})")
@@ -239,6 +241,7 @@ def main():
                 "total_equity": equity.get(y) if equity else None,
                 "total_assets": assets.get(y) if assets else None,
                 "equity_prior_year": equity.get(prev) if equity else None,
+                "assets_prior_year": assets.get(prev) if assets else None,
                 "unit": pl_unit if same_unit else None,
                 "pl_unit": pl_unit, "bs_unit": bs_unit, "units_agree": same_unit,
                 "profit_row": p_lab, "equity_row": e_lab, "assets_row": a_lab,
@@ -246,8 +249,18 @@ def main():
                 "profit_before_tax": pbt.get(y) if pbt else None,
                 "total_comprehensive_income": tci.get(y) if tci else None,
                 "pbt_row": pbt_lab, "tci_row": tci_lab,
-                "roe_avg_equity": None, "roe_year_end": None, "roa": None,
+                "roe_avg_equity": None, "roe_year_end": None,
+                "roa_avg_assets": None, "roa_year_end": None,
             }
+            # AVERAGE is the headline denominator (user, 2026-10-10), for ROA
+            # as well as ROE. The year-end variant is kept in its own column
+            # rather than dropped, for two reasons: it is the only figure
+            # available for a bank's oldest reported year, where no prior-year
+            # balance sheet exists; and an outside figure that reproduces on
+            # one basis and not the other is how a divergence gets EXPLAINED
+            # rather than merely reported - thebanks.eu's United Trust ROA of
+            # 1.79% reproduces on average assets (1.789%) and not on year-end
+            # (1.681%), which is what identified their basis.
             if same_unit and rec["profit_after_tax"] is not None:
                 p = rec["profit_after_tax"]
                 if rec["total_equity"]:
@@ -257,7 +270,11 @@ def main():
                         if avg:
                             rec["roe_avg_equity"] = round(100.0 * p / avg, 2)
                 if rec["total_assets"]:
-                    rec["roa"] = round(100.0 * p / rec["total_assets"], 2)
+                    rec["roa_year_end"] = round(100.0 * p / rec["total_assets"], 2)
+                    if rec["assets_prior_year"]:
+                        avg_a = (rec["total_assets"] + rec["assets_prior_year"]) / 2.0
+                        if avg_a:
+                            rec["roa_avg_assets"] = round(100.0 * p / avg_a, 2)
             out.append(rec)
 
     json.dump({"rows": out, "unmatched": unmatched, "unit_mismatch": unit_mismatch},
@@ -266,7 +283,8 @@ def main():
     print(f"{len(banks)} banks x {len(YEARS)} years = {len(out)} bank-years")
     print(f"  ROE (avg equity): {sum(1 for r in out if r['roe_avg_equity'] is not None)}")
     print(f"  ROE (year-end):   {sum(1 for r in out if r['roe_year_end'] is not None)}")
-    print(f"  ROA:              {sum(1 for r in out if r['roa'] is not None)}")
+    print(f"  ROA (avg assets): {sum(1 for r in out if r['roa_avg_assets'] is not None)}")
+    print(f"  ROA (year-end):   {sum(1 for r in out if r['roa_year_end'] is not None)}")
     print(f"  banks with an unmatched input: {len(unmatched)}")
     print(f"  banks whose P&L and Balance Sheet units differ: {len(unit_mismatch)}")
 

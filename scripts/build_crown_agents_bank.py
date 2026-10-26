@@ -434,6 +434,17 @@ CET1_CAPITAL = {"FY2025": 141776, "FY2024": 126265, "FY2023": 115358, "FY2022": 
 RWA = {"FY2025": 619414, "FY2024": 627016, "FY2023": 436220, "FY2022": 269258, "FY2021": 186856}
 CET1_RATIO = {"FY2025": "22.9%", "FY2024": "20.1%", "FY2023": "26.4%", "FY2022": "33.4%", "FY2021": "30.5%"}
 LEVERAGE_RATIO = {"FY2025": "9.5%", "FY2024": "7.4%", "FY2023": "7.3%", "FY2022": "6.9%", "FY2021": "5.0%"}
+# Both leverage bases, added 2026-10-09 (GA-026). Template UK LR2 (LRCom) rows 24,
+# UK-24a, UK-24b and UK-25c. FY2025/FY2024/FY2023 from each year's OWN edition;
+# FY2022 from the FY2023 edition's comparative column, which is the only place the
+# Bank publishes an including-basis figure for that year. FY2021 stays blank - see
+# the sheet note: its own edition's bespoke LR Sum/LR Com tables print the exclusion
+# as a deduction line but never an including-basis total, and deriving one by adding
+# the deduction back would be our arithmetic, not the Bank's disclosure.
+LEVERAGE_EXPOSURE_INCL = {"FY2025": 1654723, "FY2024": 1817926, "FY2023": 1752191, "FY2022": 1487375}
+LEVERAGE_CB_CLAIMS_EXCLUDED = {"FY2025": -160752, "FY2024": -122052, "FY2023": -168087, "FY2022": -189334}
+LEVERAGE_EXPOSURE_EXCL = {"FY2025": 1493971, "FY2024": 1695874, "FY2023": 1584105, "FY2022": 1298042}
+LEVERAGE_RATIO_INCL = {"FY2025": "8.6%", "FY2024": "6.9%", "FY2023": "6.6%", "FY2022": "6.0%"}
 LCR = {"FY2025": "134.7%", "FY2024": "136.4%", "FY2023": "149.7%", "FY2022": "143.2%", "FY2021": "132%"}
 NSFR = {"FY2025": "130.0%", "FY2024": "130.9%", "FY2023": "159.4%", "FY2022": "206.6%", "FY2021": "211%"}
 
@@ -658,10 +669,38 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric(
-    "Leverage Ratio", "%, excluding claims on central banks",
-    [("Leverage ratio", LEVERAGE_RATIO)],
+    "Leverage Ratio", "£'000 / %",
+    [("Total exposure measure including claims on central banks", LEVERAGE_EXPOSURE_INCL),
+     ("Claims on central banks excluded", LEVERAGE_CB_CLAIMS_EXCLUDED),
+     ("Total exposure measure excluding claims on central banks", LEVERAGE_EXPOSURE_EXCL),
+     ("Leverage ratio", LEVERAGE_RATIO),
+     ("Leverage ratio including claims on central banks (%)", LEVERAGE_RATIO_INCL)],
     p3_sources(),
-    note="NO BASIS BREAK AT FY2021/FY2022 - CHECKED AND CLEARED 2026-09-16, recorded so this series is not "
+    note="BOTH LEVERAGE BASES AND THE EXPOSURE MEASURES THEMSELVES, ADDED 2026-10-09 (GA-026). The sheet "
+         "previously carried the excluding-claims-on-central-banks ratio alone. The Bank publishes both bases "
+         "and the reconciling deduction in template UK LR2 (LRCom) rows 24, UK-24a, UK-24b, 25 and UK-25c, and "
+         "all five are now reproduced in the template's own order. FY2025, FY2024 and FY2023 each come from "
+         "that year's OWN edition (p.9 in each). CROSS-EDITION CHECK: every comparative agrees with the year's "
+         "own edition to the last digit - the FY2025 edition's 2024 column prints 1,817,926 / -122,052 / "
+         "1,695,874 / 7.4% / 6.9%, identical to the FY2024 edition's own column, and the same holds for FY2023.\n"
+         "FY2022'S INCLUDING-BASIS FIGURES COME FROM THE FY2023 EDITION'S COMPARATIVE COLUMN, not its own "
+         "edition, because its own edition does not publish them - see the next paragraph. That column is "
+         "footnoted by the Bank 'Following the restatement of the Fy'22 financial statements, the Leverage "
+         "ratio has been restated'; the restatement does not move the ratio (6.9% on both) and moves the "
+         "excluding-basis measure by 1 (1,298,041 in the FY2022 edition, 1,298,042 here).\n"
+         "FY2021 IS DELIBERATELY BLANK ON THE NEW ROWS, AND FY2022's EXCLUDING MEASURE IS THE ONLY FIGURE ITS "
+         "OWN EDITION SUPPORTS. The FY2022 edition pre-dates the UK template and prints bespoke 'Table LR Sum' "
+         "and 'Table LR Com' tables in which the central-bank exclusion appears only as a deduction LINE "
+         "('Less: central bank exposures (189,334)' for 2022, '(160,863)' for 2021) inside a build-up whose "
+         "only total is the excluding-basis 'Leverage ratio total exposure measure' (1,298,041 / 1,144,181). "
+         "There is no including-basis total and no including-basis ratio anywhere in it. Adding the deduction "
+         "back would produce OUR arithmetic rather than the Bank's disclosure, so it is not done.\n"
+         "ARITHMETIC, RECORDED NOT RECONCILED. FY2025 and FY2024 foot exactly (1,654,723-160,752=1,493,971; "
+         "1,817,926-122,052=1,695,874). FY2023 and FY2022 are each 1 out: 1,752,191-168,087=1,584,10"
+         "4 against a printed 1,584,105, and 1,487,375-189,334=1,298,041 against a printed 1,298,042. Both "
+         "sides are reproduced as printed. Every ratio ties to the template's own row 23 Tier 1 capital "
+         "(141,776 / 126,265 / 115,358 / 89,871) on both bases at the printed one-decimal precision.\n"
+         "NO BASIS BREAK AT FY2021/FY2022 - CHECKED AND CLEARED 2026-09-16, recorded so this series is not "
          "'corrected' later on a false positive. Many UK banks' leverage series break across that boundary "
          "because the UK Leverage Ratio Framework excluded claims on central banks from the exposure measure from "
          "1 January 2022; this Bank's does not, because it was already excluding them well before then. Its own "

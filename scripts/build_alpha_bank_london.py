@@ -564,9 +564,10 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
     bw.add_metric_sheet(name, f"Entity-level basis, {unit}" if unit else "Entity-level basis",
-                         rows_data, sources_text, note=note, first_col_width=46, source_height=430)
+                         rows_data, sources_text, note=note, first_col_width=46,
+                         source_height=430, note_height=note_height)
 
 # ---------------------------------------------------------------
 # KM1 Key Metrics - NOT APPLICABLE for this bank, documented rather than
@@ -720,7 +721,25 @@ metric(
     p3_sources() + "\n" + FY22_KPI_SRC,
     note="Not disclosed for FY2019-FY2021 (same KPI-table introduction timing as the Total Capital Ratio sheet); "
          "FY2022 is the 2022 comparative printed in the FY2023 report's KPI table (added 2026-09-19). "
-         "No exposure-measure £ figure is disclosed alongside the ratio in any year.",
+         "No exposure-measure £ figure is disclosed alongside the ratio in any year.\n"
+         "\n"
+         "LEVERAGE BASIS: NO BASIS IS STATED, AND NOTHING IN THE DOCUMENT COULD STATE ONE (GA-026, "
+         "2026-10-10). Alpha Bank London publishes no Pillar 3 disclosure - it is below the threshold "
+         "requiring one - so template UK LR2 / LRCom, which from 1 January 2022 prints the exposure "
+         "measure on both the including and excluding bases at rows 24 / UK-24a / UK-24b / 25 / UK-25c, "
+         "appears nowhere. The ratio above is a single line in the Annual Report's Key Performance "
+         "Indicators table, quoted to a whole percent: the FY2025 report's KPI table (printed p.6) reads "
+         "'Leverage ratio   11%   13%' for 2025 and 2024, which are the two figures on this sheet.\n"
+         "There is no exposure measure, no Tier 1 numerator, no reconciliation and no definition "
+         "anywhere alongside it. The KPI narrative that follows the table explains the other ratios - it "
+         "defines the liquidity coverage ratio and the capital adequacy ratio in prose - and is the only "
+         "KPI in the list given no explanatory paragraph at all. So there is not merely an absence of a "
+         "central-bank qualifier; there is nothing in the document from which any basis could be "
+         "inferred, and none is attributed here.\n"
+         "Checked by rendering, not by text search: the Companies House filing is an image-only scan "
+         "yielding 72 characters of text from 72 pages, so every keyword search against it returns zero "
+         "regardless of content. The KPI table was read from a render of the page.",
+    note_height=460,
 )
 
 metric(

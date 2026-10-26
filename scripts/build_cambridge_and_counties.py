@@ -797,7 +797,28 @@ metric(
     ],
     p3_sources(LEVERAGE_NOTE),
     note="FY2025 not publicly disclosed (no standalone Pillar 3 document published, and none will be - the Bank is an SDDT and is exempt from the Pillar 3 disclosure obligation, see ENTITY NOTE; and the Annual "
-         "Report's own Strategic Report narrative does not state a leverage ratio figure).",
+         "Report's own Strategic Report narrative does not state a leverage ratio figure).\n"
+         "\n"
+         "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+         "2026-10-10). From 1 January 2022 template UK LR2 / LRCom prints the exposure measure on BOTH "
+         "bases - row 24 including claims on central banks, row UK-24b excluding them, reconciling at "
+         "UK-24a, with ratios at row 25 and UK-25c. CCB prints no such table in the FY2022 edition, the "
+         "last PDF edition it published. Its leverage disclosure is two plainly captioned rows inside "
+         "'Table 1: Key metrics' on p.18: '13 Leverage ratio total exposure measure' and '14 Leverage "
+         "ratio', reading 1,335,869 / 1,298,284 and 13.92% / 12.83% for 31-Dec-22 and 31-Dec-21. The "
+         "13.92% is the FY2022 figure on this sheet. No central-bank qualifier appears on either row and "
+         "no reconciliation of accounting assets to leverage exposure is printed, so no basis can be read "
+         "from the document and none is attributed here.\n"
+         "A caution about the FY2021 edition, which is NOT a counter-example: its contents include a table "
+         "captioned 'LRCom' at p.40, but FY2021 pre-dates the two-basis presentation, which is effective "
+         "only for periods from 1 January 2022. An LRCom table in a 2021 edition cannot carry rows UK-24a, "
+         "UK-24b or UK-25c, and finding one there says nothing about CCB's basis.\n"
+         "HOW THIS WAS CHECKED. CCB's tables are EMBEDDED IMAGES inside an otherwise text-rich document: "
+         "a text search of the FY2022 PDF finds 'leverage' exactly once, in the name of a PRA rulebook "
+         "instrument, and none of Table 1's figures extract at all, although 91,878 characters of "
+         "surrounding prose do. Table 1 was read from a 300 dpi render of p.18, not from extracted text. "
+         "Note also that the FY2023 and FY2024 editions are published as .docx, not PDF, so a PDF-only "
+         "sweep would miss them entirely.",
 )
 
 metric(

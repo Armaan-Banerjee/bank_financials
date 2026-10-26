@@ -1296,7 +1296,26 @@ metric(
     })],
     p3_sources(),
     note="FY2016-FY2020 are transcribed exactly as each year's own report discloses them - a whole percent, "
-         "no decimal precision given (unlike FY2021 onward's one-decimal figures).",
+         "no decimal precision given (unlike FY2021 onward's one-decimal figures).\n"
+         "\n"
+         "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+         "2026-10-10). From 1 January 2022 template UK LR2 / LRCom prints the exposure measure on BOTH "
+         "bases - row 24 including claims on central banks, row UK-24b excluding them, reconciling at "
+         "UK-24a, with ratios at row 25 and UK-25c. HTB prints no UK LR2 table in any edition. Its "
+         "leverage disclosure is two plainly captioned rows in the 'Key Metrics' (KM1) table: '13 "
+         "Leverage ratio total exposure measure' and '14 Leverage ratio'. Neither carries a central-bank "
+         "qualifier, and no reconciliation of accounting assets to leverage exposure is printed, so "
+         "nothing in the document fixes a basis and none is attributed here.\n"
+         "The FY2025 edition's own glossary is consistent with that and is the closest the Bank comes to "
+         "defining the measure: 'Leverage ratio - the ratio of Tier 1 capital divided by total exposure, "
+         "which includes on and off-balance sheet assets, after netting derivatives.' It describes no "
+         "exclusion of central bank claims.\n"
+         "COLUMN CHOICE, RE-CONFIRMED. The FY2025 KM1 prints FOUR leverage columns - Group 2025, Bank "
+         "2025, Group 2024, Bank 2024 - reading 7.6% / 7.5% / 8.9% / 8.1% on row 14. This sheet takes the "
+         "BANK (solo) column throughout, giving FY2025 7.5% and FY2024 8.1%, consistent with every other "
+         "sheet in this workbook; the Group figures are deliberately not shown. Recorded here because a "
+         "reader comparing this sheet against the published table would otherwise see 7.6% in the first "
+         "column and think the figure wrong.",
 )
 
 metric(

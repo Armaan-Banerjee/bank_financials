@@ -319,8 +319,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=190)
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=52, source_height=190,
+                        note_height=note_height)
 
 
 # Own Funds = Tier 1 Capital = CET1 Capital every year (no AT1/Tier 2 instruments)
@@ -449,7 +450,26 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE)], p3_sources(),
-       note="Not disclosed for FY2021/FY2022 in either Annual Report - left blank, not estimated.")
+       note="Not disclosed for FY2021/FY2022 in either Annual Report - left blank, not estimated.\n\n"
+            "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED, and not determinable. BPI Europe "
+            "publishes no Pillar 3 document at all - its Companies House filings are its complete public "
+            "record (see the KM1 sheet) - so there is no UK KM1, no UK LR2 and no LRSum in any year. The "
+            "ratio exists only as a clause inside a Strategic Report sentence. Read at 300 dpi (FY2025 "
+            "filing, PDF page 8): \"...with the capital adequacy ratio at 56.29% (2024: 61.59%) against the "
+            "regulatory requirement of 24.93% (2024: 24.95%). Leverage ratio for the year was at 51.22% "
+            "(2024: 58.71%). The decline in the capital indicators was driven primarily by the significant "
+            "expansion of the Bank's balance sheet during the year.\" Those are the FY2025 and FY2024 "
+            "figures carried on this sheet.\n\n"
+            "WHY IT IS NOT DETERMINABLE. The words 'Leverage ratio' carry no qualifier; the sentence gives "
+            "no definition, no exposure measure and no reconciliation, so there is no deduction line to "
+            "inspect and the test that settled Bank Sepah International, Jordan International Bank and "
+            "United National Bank cannot be run. An OCR sweep of the whole filing finds no occurrence of "
+            "'excluding/including claims on central banks' in any form, and none of 'exposure measure'. "
+            "Nothing is back-solved: no exposure measure is implied from the ratio and the capital figure. "
+            "The two-basis UK presentation is in any case effective only for periods from 1 January 2022, "
+            "and this series begins at FY2023. These filings have no usable text layer (FY2025: 62 pages, "
+            "62 characters), so OCR served only to locate the passage and the quotation above was read off "
+            "the 300 dpi render.", note_height=250)
 
 metric("LCR", "%", [("Liquidity Coverage Ratio (LCR)", LCR)], p3_sources(),
        note="No £/$ HQLA/outflow breakdown is disclosed anywhere - only the ratio itself.")

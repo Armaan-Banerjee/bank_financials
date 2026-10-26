@@ -1554,12 +1554,35 @@ bw.add_rwa_breakdown_sheet(
     years=PILLAR3_YEARS,
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 10 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (10 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. Every match was opened and read on 2026-10-09; none is an in-scope disclosure. The "
+    "remaining matches are NOT leverage at all: template UK CC1 (composition of regulatory own funds) has its "
+    "own rows UK-25a 'Losses for the current financial year' and UK-25b 'Foreseeable tax charges', which "
+    "collide with the leverage template's UK-25a/UK-25c row numbering. A row number alone never identifies a "
+    "template. The bank files UK KM1, whose leverage block (rows 13 and 14) asks only for the excluding "
+    "measure; a KM1 filer that publishes no LR2 therefore discloses one basis.\nTHIS IS A RECORDED FINDING, NOT "
+    "AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It should be reopened when a NEW edition "
+    "appears, since a bank can begin printing LR2 at any time - Aldermore's FY2026 report is the first of its "
+    "eight editions to do so. And note the method's own limit: the text search is defeated by a figure "
+    "wrapping into the middle of a label (UBP's KM1 renders as '...excluding claims  4,407,957  on central "
+    "banks'), so a hit was always read by hand and only a clean zero across every edition supports this "
+    "finding. "
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio excluding claims on central banks", LEVERAGE)],
        "FY2014-FY2020 show each year's own quarterly-average 'Leverage Ratio using a fully phased-in definition "
        "of Tier 1' (a full CRR leverage ratio including central bank claims, predating the UK's post-2016 "
        "central-bank-claims-excluded leverage framework used from FY2022 on) - a genuine methodology change "
        "across the two eras, not a like-for-like series; see the metric values for each report's own comparative "
-       "column, which sometimes differs from the prior year's own headline figure for this same reason.")
+       "column, which sometimes differs from the prior year's own headline figure for this same reason." + GA026_ONE_LEVERAGE_BASIS_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio", LCR)], LCR_NOTE)
 metric("NSFR", "%", [("Net Stable Funding Ratio", NSFR)])
 # GA-020 (2026-09-19): all 13 Pillar 3 editions re-downloaded from pnbint.com (%PDF, text-native)

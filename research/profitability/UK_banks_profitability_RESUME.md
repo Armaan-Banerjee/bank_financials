@@ -187,9 +187,14 @@ liability line items sum to 19,103.6, and total assets minus total equity
 (20,618.2 - 1,514.6) is also 19,103.6. FY2024 (18,823.7) and FY2023 (17,832.7)
 both tie exactly, so it is the FY2025 cell alone — a 2,052.8 transcription slip.
 The "Total liabilities and equity" row is correct at 20,618.2.
-**Not fixed**: fixing means editing the build script, rebuilding and running all
-four checks, and the user commits. Nothing in the ROE work depends on it (ROE
-and ROA use profit, equity and assets, none of which is affected).
+**FIXED 2026-10-08** — this section's original "Not fixed" wording is STALE and
+was corrected on 2026-10-10. `scripts/build_aldermore.py` now carries FY2025
+Total liabilities = **19,103.6**, and the correction is documented in the
+sheet's own source note. Verified by reading the cell, not by re-deriving it.
+Everything below is kept because the *reasoning* is still the record of how the
+slip was identified — but do not act on it as an open defect.
+Nothing in the ROE work ever depended on it (ROE and ROA use profit, equity and
+assets, none of which is affected).
 Hint as to origin, NOT a conclusion: the FY2025 "Customers' accounts" line is
 17,047.6 — only 3.2 away from the 17,050.8 in the total cell, which suggests the
 transcription landed on or near the wrong row. The document settles it, not this.

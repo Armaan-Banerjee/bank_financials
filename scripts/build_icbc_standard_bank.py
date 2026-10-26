@@ -697,6 +697,33 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" ($m)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 10 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (10 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. Every match was opened and read on 2026-10-09; none is an in-scope disclosure. In "
+    "PRE-2022 editions the hit is the OLD CRR 'Leverage ratio common disclosure', not the UK dual-basis "
+    "template: it prints a single 'Leverage ratio total exposure measure' with no excluding/including split, "
+    "which is why those same documents carry no 'excluding claims on central banks' wording either. The UK "
+    "split took effect only for periods from 1 January 2022, so those editions confirm the dual basis did not "
+    "yet exist rather than offering a figure to carry. The remaining matches are NOT leverage at all: template "
+    "UK CC1 (composition of regulatory own funds) has its own rows UK-25a 'Losses for the current financial "
+    "year' and UK-25b 'Foreseeable tax charges', which collide with the leverage template's UK-25a/UK-25c row "
+    "numbering. A row number alone never identifies a template. The bank files UK KM1, whose leverage block "
+    "(rows 13 and 14) asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore "
+    "discloses one basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's "
+    "shape alone. It should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any "
+    "time - Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own "
+    "limit: the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric(
     "Leverage Ratio", "$m / %",
     [
@@ -707,7 +734,7 @@ metric(
                table_name="Annex D: Leverage Ratio Common Disclosure Template"),
     note="FY2021-FY2015 all use the CRR Leverage Ratio Common Disclosure Template's 'Total leverage ratio "
          "exposures' and 'Leverage ratio' rows (Annex D) — the pre-'excluding central banks' presentation format "
-         "used before the later UK KM1 template split the exposure measure basis.",
+         "used before the later UK KM1 template split the exposure measure basis." + GA026_ONE_LEVERAGE_BASIS_NOTE,
 )
 
 metric(

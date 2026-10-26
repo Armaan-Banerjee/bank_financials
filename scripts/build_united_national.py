@@ -752,9 +752,10 @@ bw.add_km1_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
     bw.add_metric_sheet(name, f"Company basis, {unit}" if unit else "Company basis",
-                         rows_data, sources_text, note=note, first_col_width=48, source_height=150)
+                         rows_data, sources_text, note=note, first_col_width=48,
+                         source_height=150, note_height=note_height)
 
 
 metric(
@@ -928,7 +929,8 @@ metric(
             "FY2021": 76227000, "FY2020": 75844000, "FY2019": 77766000, "FY2018": 70122000,
             "FY2017": 81564000, "FY2016": 76866000,
         }),
-        ("Leverage ratio (%)", {
+        ("Leverage ratio (%) - including claims on central banks; the Bank's own Table LRSum "
+         "deducts none (see note)", {
             "FY2023": "8.52%", "FY2022": "8.43%", "FY2024": "7.17%", "FY2025": UNB_P3_PENDING,
             "FY2021": "10.97%", "FY2020": "12.55%", "FY2019": "15.51%", "FY2018": "13.95%",
             "FY2017": "15.8%", "FY2016": "14.4%",
@@ -947,7 +949,29 @@ metric(
          "FY2021) - each year's Table LRCom is its own distinct disclosure from the Own Funds Disclosure table and "
          "both are reproduced exactly as stated, not reconciled. FY2018's total exposure measure is given to the "
          "exact £ in that year's own Table LRSum (£502,571,597), unlike other years which state it only to the "
-         "nearest £'000 (multiplied by 1,000 here).",
+         "nearest £'000 (multiplied by 1,000 here).\n"
+         "\n"
+         "LEVERAGE BASIS: ONE RATIO IS PUBLISHED, AND IT IS THE INCLUDING-CENTRAL-BANK-CLAIMS BASIS - THE "
+         "BANK'S OWN LRSum SHOWS NO DEDUCTION (GA-026, 2026-10-10). UBL UK does not print the UK version of "
+         "the leverage templates at all. Its FY2024 Pillar 3 states in terms that 'the tables below follow "
+         "the Commission Implementing Regulations (EU) 2017/200 format for Leverage Ratio disclosure', and "
+         "its Table LRCom is numbered in the old EU style - rows 1, 2, 3, 4, 5, 11, 12, 16, 17, 18, 19, 20, "
+         "21 - with no row 24, UK-24a, UK-24b, 25 or UK-25c anywhere. The two-basis presentation those UK "
+         "rows carry therefore does not arise, and this is worth recording in itself: a PRA-authorised bank "
+         "still disclosing on the EU 2017/200 format in a 31 December 2024 document.\n"
+         "The basis is nonetheless readable, because the Bank prints its workings. Table LRSum, 'Summary "
+         "reconciliation of accounting assets and leverage ratio exposures', runs from 'Total assets as per "
+         "published financial statements' £1,283,627k through adjustments for derivative financial "
+         "instruments 0, securities financing transactions 0, off-balance sheet items 25,608 and other "
+         "adjustments 1,762, to a 'Leverage ratio total exposure measure' of £1,310,997k. There is NO line "
+         "deducting claims on, or reserves placed with, central banks: the measure starts at total assets "
+         "and is only added to. The exposure measure therefore INCLUDES claims on central banks, which is "
+         "the row 24 basis, and the 7.17% above is an including-basis ratio.\n"
+         "This is the same test that places Jordan International Bank (no deduction line, including basis) "
+         "and Bank of Ceylon UK (an explicit 'Deduction: funds placed with the Bank of England', excluding "
+         "basis). Where no UK LR2 is printed, the presence or absence of that one line in the reconciliation "
+         "is what makes a basis readable; where no reconciliation is printed either, no basis can be read.",
+    note_height=640,
 )
 
 metric(

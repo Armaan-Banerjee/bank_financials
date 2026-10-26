@@ -993,7 +993,31 @@ metric(
         ("Total leverage ratio exposure measure (£'000)", {"FY2025": 99213, "FY2024": 75247, "FY2023": 47579, "FY2021": 29072, "FY2020": 37808, "FY2019": 39619, "FY2018": 28733}),
         ("Leverage ratio (%)", {"FY2025": "14.3%", "FY2024": "18.5%", "FY2023": "28.8%", "FY2022": "Not published - no FY2022 Pillar 3; none in the FY2022/FY2023 accounts", "FY2021": "46.2%", "FY2020": "35.3%", "FY2019": "34.2%", "FY2018": "46.6%"}),
     ],
-    note="FY2024 uses the FY2024 Pillar 3 document's own originally-published figures; see the source note above "
+    note=(
+         # GA-026 (2026-10-09). Template UK LR2 prints both bases from 1 January 2022; this bank
+         # never uses that template, but its own reconciliation makes the basis unambiguous.
+         "LEVERAGE BASIS: ONE RATIO IS PUBLISHED AND IT IS THE EXCLUDING-CENTRAL-BANK-CLAIMS BASIS - THE "
+         "BANK SHOWS THE DEDUCTION ITSELF (GA-026, 2026-10-09). The Bank does not print template UK LR2 / "
+         "LRCom, so there is no row 24, UK-24a, UK-24b or UK-25c in any edition. What it prints instead is "
+         "its own 'Reconciliation of Accounting Assets to Leverage Ratio Exposure', and that reconciliation "
+         "carries an explicit line 'Deduction: funds placed with the Bank of England' - (101,410) for FY2025 "
+         "and (97,613) for FY2024 - between total assets per the financial statements and the Total Leverage "
+         "Ratio Exposure Measure. The exposure measure above is therefore the EXCLUDING basis as a matter of "
+         "the Bank's own arithmetic, not an inference from market practice. The FY2024 edition states the "
+         "rule in prose as well. This is a stronger position than most of the one-ratio banks in this "
+         "workbook, where the basis simply is not stated.\n"
+         "\n"
+         "THE INCLUDING-BASIS RATIO IS NOT PUBLISHED AND IS NOT DERIVED HERE. Adding the deducted Bank of "
+         "England funds back would give an including-basis exposure measure and ratio, and the arithmetic is "
+         "available on the face of the Bank's own table - but computing it would be a derivation, not a "
+         "transcription, and no edition prints it. It is left absent.\n"
+         "\n"
+         "The general definition sentence above the table ('the leverage ratio is calculated as Tier 1 "
+         "Capital divided by total on and off-balance sheet exposures') carries no carve-out, so the "
+         "narrative and the table differ in what they make explicit; the table governs, because it is the "
+         "table that produces the figure. FY2025 edition p.16 rendered and read at 300 dpi.\n"
+         "\n"
+         "FY2024 uses the FY2024 Pillar 3 document's own originally-published figures; see the source note above "
          "for the slightly different restated FY2024 comparative (£76,247k / 18.3%) published a year later in "
          "the FY2025 document, and for the FY2025 document's separate self-contradictory narrative text. "
          "FY2019 likewise uses the FY2019 document's own originally-published figures (£39,619k / 34.2%); the "
@@ -1003,7 +1027,7 @@ metric(
          "FY2013 carries the Tier 1 capital row only (13,436, the recovered edition's own Core Tier 1 line). The "
          "exposure-measure and ratio rows are blank for a structural reason, not a sourcing one: the leverage ratio "
          "did not exist as a UK regulatory measure or disclosure at 31 December 2013 - it arrived with CRD IV/CRR - "
-         "and the recovered edition contains no leverage exposure measure and no leverage ratio in any form.",
+         "and the recovered edition contains no leverage exposure measure and no leverage ratio in any form."),
 )
 
 metric(

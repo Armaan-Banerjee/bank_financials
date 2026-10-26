@@ -777,10 +777,60 @@ bw.add_km1_sheet(
     source_height=560,
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_LEVERAGE_INCL = {
+    "Total exposure measure including claims on central banks": {"FY2025": 650028, "FY2024": 624430, "FY2023": 619583, "FY2022": 631332},
+    "Claims on central banks excluded": {"FY2025": -37298, "FY2024": -42098, "FY2023": -57430, "FY2022": -71747},
+    "Leverage ratio including claims on central banks (%)": {"FY2025": "4.9%", "FY2024": "5.0%", "FY2023": "5.0%", "FY2022": "4.8%"},
+}
+GA026_LEVERAGE_NOTE = (
+    "BOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) "
+    "prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, UK-24b and 25 "
+    "on the EXCLUDING basis, with the reconciling deduction at UK-24a. Until today this sheet carried one "
+    "ratio and did not say which basis it was. The first row is the EXCLUDING ratio for FY2022 onward; the "
+    "three rows below it are the including side. Row order is deliberate - check_overview_ties.py reads the "
+    "FIRST cell printed as a percentage on a ratio sheet, so the excluding ratio must stay ahead of the "
+    "including one.\n"
+    "EACH YEAR FROM ITS OWN EDITION, template UK LR2 - LRCom, Lloyds Bank plc year-end Pillar 3, read at "
+    "300 dpi:\n"
+    "  FY2025 - 2025 LB FY Pillar 3, p.27, 31 December 2025 column: row 23 31,835; row 24 650,028; UK-24a "
+    "(37,298); UK-24b 612,730; row 25 5.2%; UK-25c 4.9%.\n"
+    "  FY2024 - 2024 LB FY Pillar 3, p.38, 31 December 2024 column: row 23 31,305; row 24 624,430; UK-24a "
+    "(42,098); UK-24b 582,332; row 25 5.4%; UK-25c 5.0%.\n"
+    "  FY2023 - 2023 LB FY Pillar 3, p.37, 31 December 2023 column: row 23 31,238; row 24 619,583; UK-24a "
+    "(57,430); UK-24b 562,153; row 25 5.6%; UK-25c 5.0%.\n"
+    "  FY2022 - 2022 LB FY Pillar 3, p.41, 31 Dec 2022 column: row 23 30,194; row 24 631,332; UK-24a "
+    "(71,747); UK-24b 559,585; row 25 5.4%; UK-25c 4.8%.\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY/BASIS: row 25 reproduces the ratio this sheet already "
+    "carried in all four years (5.2% / 5.4% / 5.6% / 5.4%), so the LR2 is the same entity and basis as the "
+    "rest of the workbook. (2) CROSS-EDITION: each edition's comparative column equals the next edition's "
+    "own-year column to the last digit in every row. No self-disagreement. (3) ARITHMETIC: row 24 minus "
+    "UK-24a equals UK-24b in all four years. (4) RATIO TIE: row 23 over each exposure measure reproduces "
+    "both printed ratios in all four years (e.g. FY2025 31,835/650,028 = 4.90% -> 4.9%, 31,835/612,730 = "
+    "5.20% -> 5.2%).\n"
+    "FY2021 IS LEFT BLANK ON THE INCLUDING ROWS, DELIBERATELY, AND THIS IS THE ONE PLACE A FIGURE COULD "
+    "HAVE BEEN TAKEN AND WAS NOT. The FY2022 edition's LR2 second column is headed '31 Dec 2021' - not the "
+    "30 June comparative that the NatWest-family editions use - and it does carry UK-24a (50,824) and "
+    "UK-25c 4.9% for that date, because Lloyds re-presented FY2021 onto the UK dual basis for comparability. "
+    "But FY2021's OWN edition (2021 LB FY Pillar 3) prints the pre-2022 CRR leverage template with a single "
+    "total exposure measure and none of the UK-24a/UK-24b/UK-25c rows, and the FY2021 cell on the excluding "
+    "row above is that CRR figure. Putting a later edition's restated figure beside it would mix two bases "
+    "in one column and would break the own-edition rule, so the restated comparative is recorded here as a "
+    "finding rather than carried as data.\n"
+    "FY2020 AND FY2019 likewise get nothing: the UK dual basis took effect only for periods from 1 January "
+    "2022."
+)
+
 for name, values in ANNUAL.items():
     unit = "%" if "Ratio" in name or name in {"LCR", "NSFR"} else "£m"
     row = [(name, dict(values))]
     note = "Figures are Group consolidated. NSFR was not separately disclosed in the reviewed FY2019-FY2022 year-end KM1 extracts (the UK NSFR framework took effect from 2022; comparative disclosure was limited)." if name == "NSFR" else None
+    if name == "Leverage Ratio":
+        # GA-026: the excluding-basis ratio above stays FIRST (check_overview_ties.py
+        # takes the first cell printed as a percentage); the including side follows.
+        row = row + [(lbl, dict(vals)) for lbl, vals in GA026_LEVERAGE_INCL.items()]
+        note = GA026_LEVERAGE_NOTE
+        unit = "£m / %"
     bw.add_metric_sheet(name, unit, row, annual_sources("p3"), note=note, first_col_width=58)
     if name == "Total RWAs":
         # RWA Breakdown - Pillar 3 OV1 template, placed right after Total RWAs

@@ -10,11 +10,23 @@ Consumes:
 Writes research/UK_banks_profitability_<date>.{csv,xlsx}. It writes NOTHING to
 banks/ - the delivered workbooks are untouched by design.
 
-The organising rule: THREE SOURCES, THREE COLUMNS, NEVER MERGED. A figure we
-computed from a bank's own transcribed statements, a figure a desk-research
-file recorded, and a figure an aggregator publishes are different claims about
-the world. Averaging them, or letting one silently fill in for another, would
-destroy the only thing that makes a disagreement visible.
+  - research/profitability/published_returns.jsonl  (what the BANKS publish)
+
+The organising rule: FOUR SOURCES, FOUR COLUMNS, NEVER MERGED. A figure we
+computed from a bank's own transcribed statements, a figure the BANK ITSELF
+publishes, a figure a desk-research file recorded, and a figure an aggregator
+publishes are different claims about the world. Averaging them, or letting one
+silently fill in for another, would destroy the only thing that makes a
+disagreement visible.
+
+The fourth source is the bank's own report, added 2026-10-10 on the user's
+instruction. It is the most authoritative of the four and the LEAST
+comparable: a bank's published return is struck on that bank's own
+definition, so the figures cannot be ranked against each other or against
+ours without reading each definition. It therefore gets its own sheet rather
+than a column in the computed grid, and every figure carries its definition,
+its entity, and whether it has been verified at 300 dpi or is still an OCR
+lead.
 """
 import csv
 import datetime
@@ -62,8 +74,24 @@ def load_published(path):
     return out
 
 
-def load_aggregator(path):
-    """{(bank, FY, metric): (value, url)} from the thebanks.eu collection."""
+def load_own_published(path):
+    """{(bank, FY): [record]} - returns the BANK ITSELF publishes.
+
+    A fourth source, and the one the user asked for on 2026-10-10: "we should
+    try and use the report from the banks themselves where possible". It is
+    kept strictly apart from `load_published` above, which despite its name
+    reads the prior DESK RESEARCH file - third-party figures of unknown
+    derivation, and demonstrably not always right (its United Trust Bank
+    years are transposed against UTB's own published series).
+
+    These records are NOT comparable with our computed column and are never
+    merged into it. A bank's own return is struck on the bank's own
+    definition, and those differ: Al Rayan's "Return on equity" is profit
+    BEFORE tax over average equity, United Trust's is net of the coupon on
+    contingent convertible securities. The definition travels with the figure
+    for exactly that reason, and a record whose `verification` is "ocr_lead"
+    is a lead, not a finding.
+    """
     out = {}
     if not os.path.exists(path):
         return out
@@ -71,22 +99,139 @@ def load_aggregator(path):
         line = line.strip()
         if not line:
             continue
-        try:
-            r = json.loads(line)
-        except ValueError:
+        rec = json.loads(line)
+        if "_schema" in rec or rec.get("excluded") or rec.get("publishes_none"):
             continue
-        if r.get("done") or not r.get("bank") or r.get("value") in (None, ""):
+        if rec.get("bank") and rec.get("year"):
+            out.setdefault((rec["bank"], rec["year"]), []).append(rec)
+    return out
+
+
+def load_own_published_all(path):
+    """Every record including exclusions and publishes-none, for its own sheet."""
+    out = []
+    if not os.path.exists(path):
+        return out
+    for line in open(path):
+        line = line.strip()
+        if line:
+            rec = json.loads(line)
+            if "_schema" not in rec:
+                out.append(rec)
+    return out
+
+
+# Aggregator names that match no project bank. Each alias is settled by the
+# ENTITY the aggregator file itself states, not by name similarity - which
+# matters most for the two that look ambiguous and are not: the file records
+# "NOT NatWest Group plc" and "NOT Santander UK Group Holdings", so NATWEST is
+# the ring-fenced National Westminster Bank Plc and SANTANDER UK is Santander
+# UK plc (company 02294747), distinct from Santander Financial Services plc.
+# Without these five, those banks' values were silently dropped: the loader
+# found no matching bank and said nothing.
+AGG_ALIASES = {
+    "HAMPSHIRE TRUST": "HAMPSHIRE TRUST BANK",
+    "HSBC UK BANK": "HSBC UK BANK PLC",
+    "NATWEST": "NATIONAL WESTMINSTER BANK PLC",
+    "OAKNORTH": "OAKNORTH BANK",
+    "SANTANDER UK": "SANTANDER",
+}
+
+# Verification states in descending strength. All of these are thebanks.eu, so
+# they belong in ONE column - but they are not equally evidenced, and the
+# state has to travel with the value or the column asserts a uniformity it
+# does not have. A `wayback_snapshot` has a replay URL and a 14-digit
+# timestamp; an `archive_search_indexed` record has neither and must never be
+# described as a verified capture.
+AGG_PRECEDENCE = ["wayback_snapshot", "thebanks_profile", "search_indexed",
+                  "archive_search_indexed", "search_snippet"]
+
+
+def _agg_rank(verification):
+    try:
+        return AGG_PRECEDENCE.index(verification)
+    except ValueError:
+        return len(AGG_PRECEDENCE)
+
+
+def _agg_year(raw):
+    y = str(raw or "").strip()
+    if y.startswith("FY"):
+        return y
+    return "FY" + y if re.fullmatch(r"\d{4}", y) else ""
+
+
+def _agg_value(raw):
+    try:
+        return float(str(raw).replace("%", "").replace(",", "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def load_aggregator(paths):
+    """{(bank, FY, metric): {...}} merged from every thebanks.eu file.
+
+    Three files carry the same source in two different record shapes: the
+    original collection is one record per metric (`metric` + `value`), while
+    the full collection and the Wayback extraction are one record per
+    bank-year carrying `roe_pct` and `roa_pct`. Both shapes are normalised
+    here rather than in two places.
+
+    Where two files give a value for the same (bank, year, metric), the
+    STRONGER verification wins and a numeric disagreement is recorded on the
+    surviving row - never silently dropped. thebanks.eu restates, so two
+    snapshots of one bank-year can legitimately differ, and which one you are
+    looking at is exactly what a reader needs to know.
+    """
+    out = {}
+    if isinstance(paths, str):
+        paths = [paths]
+    for path in paths:
+        if not path or not os.path.exists(path):
             continue
-        try:
-            v = float(str(r["value"]).replace("%", "").strip())
-        except ValueError:
-            continue
-        y = str(r.get("year", "")).strip()
-        y = y if y.startswith("FY") else ("FY" + y if re.fullmatch(r"\d{4}", y) else "")
-        if not y:
-            continue
-        out[(r["bank"].strip().upper(), y, str(r.get("metric", "ROE")).upper())] = (
-            v, r.get("url", ""))
+        label = os.path.basename(path)
+        for line in open(path, encoding="utf-8"):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+            except ValueError:
+                continue
+            if r.get("done") or not r.get("bank"):
+                continue
+            bank = AGG_ALIASES.get(r["bank"].strip().upper(), r["bank"].strip().upper())
+            year = _agg_year(r.get("year"))
+            if not year:
+                continue
+            url = r.get("archive_url") or r.get("source_url") or r.get("url") or ""
+            verification = r.get("verification") or "search_snippet"
+            # shape A: one record per metric; shape B: roe_pct / roa_pct
+            found = []
+            if r.get("value") not in (None, ""):
+                found.append((str(r.get("metric", "ROE")).upper(), r["value"]))
+            for key, metric in (("roe_pct", "ROE"), ("roa_pct", "ROA")):
+                if r.get(key) not in (None, ""):
+                    found.append((metric, r[key]))
+            for metric, raw in found:
+                v = _agg_value(raw)
+                if v is None:
+                    continue
+                key = (bank, year, metric)
+                new = {"value": v, "url": url, "verification": verification,
+                       "source": label, "disagreement": None}
+                old = out.get(key)
+                if old is None:
+                    out[key] = new
+                    continue
+                clash = (None if abs(old["value"] - v) < 1e-9 else
+                         "%s says %s%%, %s says %s%%"
+                         % (old["source"], old["value"], label, v))
+                if _agg_rank(verification) < _agg_rank(old["verification"]):
+                    new["disagreement"] = clash or old["disagreement"]
+                    out[key] = new
+                elif clash:
+                    old["disagreement"] = old["disagreement"] or clash
     return out
 
 
@@ -111,29 +256,67 @@ def sheet(wb, name, headers, rows, widths, note=None):
     return ws
 
 
-def main(extract_json, agg_path, outbase):
+def main(extract_json, agg_path, outbase, *extra_agg):
     d = json.load(open(extract_json))
     rows = d["rows"]
     pub = load_published("research/UK_banks_ROE_research.xlsx")
-    agg = load_aggregator(agg_path)
+    own = load_own_published("research/profitability/published_returns.jsonl")
+    own_all = load_own_published_all("research/profitability/published_returns.jsonl")
+    # Every thebanks.eu file we hold, not just the one named on the command
+    # line. Until 2026-10-22 only `agg_path` was read, so the column carried
+    # 20 bank-years while 179 sat on disk: the full exact-entity collection
+    # and the Wayback extraction reached no column at all, and FY2022/FY2023
+    # showed as having no aggregator coverage when in fact we had 36
+    # bank-years of it. Extra paths may still be passed on the command line
+    # and are read in addition to these.
+    agg_paths = [agg_path]
+    agg_paths += [os.path.join("research", "profitability", "thebanks_eu", n)
+                  for n in ("thebanks_eu_returns_with_archives.jsonl",
+                            "wayback_returns.jsonl")]
+    agg_paths += list(extra_agg)
+    for p in agg_paths:
+        print("  aggregator source: %s%s"
+              % (p, "" if os.path.exists(p) else "   [ABSENT, skipped]"))
+    agg = load_aggregator(agg_paths)
     banks = sorted({r["bank"] for r in rows})
     idx = {(r["bank"], r["year"]): r for r in rows}
 
     # ---- long-format CSV: one row per bank-year, every source side by side
-    cols = ["bank", "year", "roe_pct_avg_equity", "roe_pct_year_end", "roa_pct",
+    # Column 4 is the HEADLINE ROA and is now struck on AVERAGE assets (user,
+    # 2026-10-10: the denominator is the average, for ROA as well as ROE). The
+    # year-end variant is appended rather than inserted, because the rows
+    # below are built and read positionally and an insert would silently
+    # reassign every column after it.
+    # `desk_research_*` was called `published_*` until 2026-10-10. The rename
+    # is the point of the user's decision, not cosmetic: that column holds
+    # THIRD-PARTY desk research, and calling it "published" invited exactly
+    # the confusion that let its transposed United Trust Bank years stand.
+    # What the BANK itself publishes is `own_published_*`, at the end.
+    cols = ["bank", "year", "roe_pct_avg_equity", "roe_pct_year_end",
+            "roa_pct_avg_assets",
             "profit_after_tax", "total_equity", "total_assets", "equity_prior_year",
             "unit", "profit_row_label", "equity_row_label", "assets_row_label",
-            "published_roe_pct", "published_roe_measure",
+            "desk_research_roe_pct", "desk_research_roe_measure",
             "aggregator_roe_pct", "aggregator_roa_pct", "aggregator_url",
-            "delta_computed_minus_published_pp", "gap_reason", "roe_caveat",
-            "period_or_entity_flag", "pl_year_label"]
+            "delta_computed_minus_desk_research_pp", "gap_reason", "roe_caveat",
+            "period_or_entity_flag", "pl_year_label",
+            "roa_pct_year_end", "assets_prior_year",
+            "own_published_value", "own_published_measure",
+            "own_published_definition", "own_published_verification",
+            "own_published_source",
+            # Appended 2026-10-22. New columns go at the END: the sheet builders
+            # below address out_rows POSITIONALLY (r[4], r[15], r[16], r[17],
+            # r[20] among others), so inserting a column anywhere earlier
+            # silently rewires every one of them.
+            "aggregator_verification", "aggregator_source",
+            "aggregator_disagreement"]
     out_rows = []
     for b in banks:
         for y in YEARS:
             r = idx[(b, y)]
             p = pub.get((b, y), (None, ""))
-            ar = agg.get((b, y, "ROE"), (None, ""))
-            aa = agg.get((b, y, "ROA"), (None, ""))
+            ar = agg.get((b, y, "ROE")) or {}
+            aa = agg.get((b, y, "ROA")) or {}
             delta = (round(r["roe_avg_equity"] - p[0], 2)
                      if r["roe_avg_equity"] is not None and p[0] is not None else None)
             # A missing year next to a longer-than-12-month column is not a gap
@@ -150,7 +333,10 @@ def main(extract_json, agg_path, outbase):
             absorbed = (r.get("pl_year_label") is None and bool(nlab)
                         and re.search(r"\(\s*\d+\s*m", nlab, re.I) is not None)
             reason = ""
-            if r["roa"] is None:
+            # The year-end variant is the right test for "is an INPUT missing":
+            # the average additionally needs a prior-year balance sheet, and its
+            # absence in a bank's oldest reported year is not a gap to chase.
+            if r["roa_year_end"] is None:
                 if absorbed:
                     reason = ("no such reporting period - an adjacent column covers more than "
                               "12 months, so this year was never reported separately. NOT a gap "
@@ -200,12 +386,29 @@ def main(extract_json, agg_path, outbase):
                     cav = "average equity is small relative to profit - ratio is unstable"
                 elif abs(r["roe_avg_equity"]) > 100:
                     cav = "magnitude over 100% - check the equity base before quoting"
-            out_rows.append([b, y, r["roe_avg_equity"], r["roe_year_end"], r["roa"],
+            o = own.get((b, y), [])
+            # Several measures can coexist for one bank-year (a ROE and a
+            # RoTE). They are joined rather than one being chosen, because
+            # picking one would hide that the bank published both.
+            ov = " | ".join(str(x.get("value")) for x in o) or None
+            om = " | ".join(str(x.get("measure")) for x in o) or None
+            od = " | ".join(str(x.get("definition") or "(none stated)") for x in o) or None
+            oves = " | ".join(str(x.get("verification")) for x in o) or None
+            osrc = " | ".join(str(x.get("source")) for x in o) or None
+            out_rows.append([b, y, r["roe_avg_equity"], r["roe_year_end"],
+                             r["roa_avg_assets"],
                              r["profit_after_tax"], r["total_equity"], r["total_assets"],
                              r["equity_prior_year"], r["unit"], r["profit_row"],
                              r["equity_row"], r["assets_row"], p[0], p[1],
-                             ar[0], aa[0], ar[1] or aa[1], delta, reason, cav,
-                             pflag, lab])
+                             ar.get("value"), aa.get("value"),
+                             ar.get("url") or aa.get("url") or "",
+                             delta, reason, cav,
+                             pflag, lab,
+                             r["roa_year_end"], r["assets_prior_year"],
+                             ov, om, od, oves, osrc,
+                             ar.get("verification") or aa.get("verification"),
+                             ar.get("source") or aa.get("source"),
+                             ar.get("disagreement") or aa.get("disagreement")])
     with open(outbase + ".csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(cols)
@@ -216,7 +419,7 @@ def main(extract_json, agg_path, outbase):
     wb.remove(wb.active)
 
     cov = {y: (sum(1 for b in banks if idx[(b, y)]["roe_avg_equity"] is not None),
-               sum(1 for b in banks if idx[(b, y)]["roa"] is not None)) for y in YEARS}
+               sum(1 for b in banks if idx[(b, y)]["roa_avg_assets"] is not None)) for y in YEARS}
     readme = [
         ["UK bank profitability - ROE and ROA", ""],
         ["Built", TODAY],
@@ -256,9 +459,10 @@ def main(extract_json, agg_path, outbase):
     # stay on the ROE caveats sheet and in the Detail sheet, so the file still
     # says what was found and why it is not shown here.
     excluded = {(r[0], r[1]) for r in out_rows if r[20]}
-    for metric, key, label in [("ROE", "roe_avg_equity", "Return on equity, % (profit after tax / average equity)"),
+    for metric, key, label in [("ROE", "roe_avg_equity", "Return on equity, % (profit after tax / AVERAGE equity)"),
                                ("ROE year-end", "roe_year_end", "Return on equity, % (profit after tax / closing equity)"),
-                               ("ROA", "roa", "Return on assets, % (profit after tax / total assets)")]:
+                               ("ROA", "roa_avg_assets", "Return on assets, % (profit after tax / AVERAGE total assets)"),
+                               ("ROA year-end", "roa_year_end", "Return on assets, % (profit after tax / closing total assets)")]:
         drop = excluded if key.startswith("roe") else set()
         body = [[b] + [None if (b, y) in drop else idx[(b, y)][key] for y in YEARS]
                 for b in banks]
@@ -267,8 +471,13 @@ def main(extract_json, agg_path, outbase):
               "Balance Sheet. An empty cell means an input was missing - see the Gaps sheet "
               "for which one and why; it never means zero.")
 
+    # `sheet()` zips widths against columns, so a short list simply leaves the
+    # remaining columns at Excel's default. Widths for the three aggregator
+    # provenance columns are given explicitly because `aggregator_disagreement`
+    # holds a sentence.
     sheet(wb, "Detail", cols, out_rows,
-          [30, 9] + [13] * 3 + [15] * 4 + [16] + [34] * 3 + [13, 18, 13, 13, 30, 14, 42, 50, 60, 24])
+          [30, 9] + [13] * 3 + [15] * 4 + [16] + [34] * 3 + [13, 18, 13, 13, 30, 14, 42, 50, 60, 24]
+          + [22, 40, 24, 26, 60, 22, 34, 54])
 
     # ---- Definition resolver.
     # A divergence is far more useful explained than merely reported. Most
@@ -289,8 +498,8 @@ def main(extract_json, agg_path, outbase):
                     ("total comprehensive income", r.get("total_comprehensive_income"))]
             dens = [("average equity", avg), ("closing equity", eq)]
             for src, val, metric in [("prior desk research", pub.get((b, y), (None, ""))[0], "ROE"),
-                                     ("thebanks.eu", agg.get((b, y, "ROE"), (None, ""))[0], "ROE"),
-                                     ("thebanks.eu", agg.get((b, y, "ROA"), (None, ""))[0], "ROA")]:
+                                     ("thebanks.eu", (agg.get((b, y, "ROE")) or {}).get("value"), "ROE"),
+                                     ("thebanks.eu", (agg.get((b, y, "ROA")) or {}).get("value"), "ROA")]:
                 if val is None:
                     continue
                 hits = []
@@ -307,7 +516,7 @@ def main(extract_json, agg_path, outbase):
                             got = 100.0 * nv / r["total_assets"]
                             if abs(got - val) <= 0.05:
                                 hits.append("%s / total assets = %.2f" % (nn, got))
-                ours = r["roe_avg_equity"] if metric == "ROE" else r["roa"]
+                ours = r["roe_avg_equity"] if metric == "ROE" else r["roa_avg_assets"]
                 if ours is None or abs(ours - val) < (0.1 if metric == "ROE" else 0.05):
                     continue  # already agrees on our own definition
                 delta = round(val - ours, 2) if ours is not None else None
@@ -367,22 +576,37 @@ def main(extract_json, agg_path, outbase):
                         "denominator.")
             else:
                 diag = "no ROA to compare, so the side of the ratio that differs is unknown."
-        tb_rows.append([r[0], r[1], r[2], r[15], d_roe, r[4], r[16], d_roa, diag, r[17]])
+        tb_rows.append([r[0], r[1], r[2], r[15], d_roe, r[4], r[16], d_roa, diag,
+                        r[30], r[32] or "", r[17]])
     tb_rows.sort(key=lambda x: -abs(x[4]))
     sheet(wb, "Vs thebanks.eu",
           ["Bank", "Year", "Computed ROE (avg equity)", "thebanks.eu ROE", "Delta (pp)",
-           "Computed ROA", "thebanks.eu ROA", "Delta (pp)", "Where the difference is", "URL"],
-          tb_rows, [28, 8, 16, 13, 10, 12, 13, 10, 62, 34],
+           "Computed ROA", "thebanks.eu ROA", "Delta (pp)", "Where the difference is",
+           "How that figure is evidenced", "Snapshots disagree", "URL"],
+          tb_rows, [28, 8, 16, 13, 10, 12, 13, 10, 62, 22, 44, 34],
           note="thebanks.eu is an AGGREGATOR: every figure here is what that site says, never "
-               "a bank-published figure, and it was read from search-result snippets because "
-               "the site itself is behind a Cloudflare challenge we did not attempt to bypass. "
-               "Every figure it carries is FY2024 - it cannot fill an earlier year. Its value "
-               "is as an INDEPENDENT check, and on that it is reassuring: most of this sample "
-               "agrees with our computed figure to 0.00pp, which also tells us the site "
-               "computes profit / AVERAGE equity, the same basis. Nothing here was copied into "
-               "our own columns. Two period caveats from the collection: Starling and Monzo "
-               "have non-December year ends, so the site's bare '2024' may not be our FY2024; "
-               "and NBK International's figures are USD.")
+               "a bank-published figure. The site itself sits behind a Cloudflare challenge "
+               "that was NOT bypassed; these figures come from its public search index, its "
+               "exact-entity profiles, and Wayback captures of those profiles. "
+               "THIS SHEET WAS REBUILT 2026-10-22 and an earlier version of this note said "
+               "'every figure it carries is FY2024 - it cannot fill an earlier year'. That is "
+               "no longer true and was only ever true of the first 20-bank file: the column now "
+               "also covers FY2022 and FY2023, chiefly from Wayback captures, and FY2024 runs "
+               "to 141 banks rather than 20. "
+               "'How that figure is evidenced' is load-bearing and the four states are NOT "
+               "equally strong: a wayback_snapshot has a replay URL and a 14-digit timestamp; "
+               "a thebanks_profile or search_indexed record was read from the live site or its "
+               "index; an archive_search_indexed record has NEITHER a snapshot URL nor a "
+               "timestamp and must never be described as a verified capture. Where two sources "
+               "cover one bank-year the stronger evidence is shown and any numeric "
+               "disagreement is named in its own column rather than hidden. "
+               "Its value is as an INDEPENDENT check, and on that it is reassuring: most of "
+               "this sample agrees with our computed figure to 0.00pp, which also tells us the "
+               "site computes profit / AVERAGE equity, the same basis. Nothing here was copied "
+               "into our own columns. Period caveats: Starling and Monzo have non-December year "
+               "ends, so a bare '2024' may not be our FY2024; NBK International's figures are "
+               "USD; and thebanks.eu LAGS, so a capture's own date is not its reporting period "
+               "- the year stated on the page is used, never the capture date.")
 
     pf = [r for r in out_rows if r[21]]
     sheet(wb, "Period and entity flags",
@@ -431,6 +655,59 @@ def main(extract_json, agg_path, outbase):
 
     comp = [r for r in out_rows if r[13] is not None and r[2] is not None]
     comp.sort(key=lambda r: -abs(r[18]))
+    # ---- what the BANKS THEMSELVES publish (user decision, 2026-10-10)
+    # Deliberately NOT a bank x year grid like the computed sheets. A grid
+    # would line these up under one column heading and so assert they are one
+    # measure, which is the one thing that is not true of them: each is struck
+    # on its own bank's definition. One row per published figure, with the
+    # definition and the verification state beside it.
+    own_rows = []
+    for rec in sorted(own_all, key=lambda x: (x.get("bank") or "", x.get("year") or "")):
+        def flags(r):
+            if r.get("excluded") or r.get("publishes_none"):
+                return ("", "")
+            oe = "own edition" if r.get("own_edition") else "LATER EDITION'S COMPARATIVE"
+            cw = ("YES - same definition as ours"
+                  if r.get("comparable_with_computed")
+                  else "no - different definition")
+            return (oe, cw)
+
+        oe, cw = flags(rec)
+        if rec.get("publishes_none"):
+            own_rows.append([rec.get("bank"), rec.get("year"), "(publishes none)",
+                             None, None, rec.get("verification"), oe, cw,
+                             rec.get("finding"), rec.get("entity"),
+                             rec.get("source") or ""])
+            continue
+        own_rows.append([
+            rec.get("bank"), rec.get("year"),
+            ("EXCLUDED - " + (rec.get("measure") or "")) if rec.get("excluded")
+            else rec.get("measure"),
+            rec.get("value"),
+            rec.get("definition") or "(no definition stated in the document)",
+            rec.get("verification"), oe, cw,
+            rec.get("finding") or rec.get("differs_from_computed") or rec.get("note") or "",
+            rec.get("entity"), rec.get("source") or ""])
+    sheet(wb, "Own published returns",
+          ["Bank", "Year", "Measure as the bank labels it", "Value as printed",
+           "The bank's own stated definition", "Verification", "Own edition?",
+           "Comparable with our computed ROE?",
+           "What it tells us / how it differs from ours", "Entity", "Source"],
+          own_rows, [26, 9, 26, 13, 44, 13, 26, 30, 60, 34, 52],
+          note="THE BANK'S OWN FIGURE, and not comparable with the computed ROE/ROA sheets. "
+               "Each is struck on its own bank's definition and those genuinely differ - Al "
+               "Rayan's 'Return on equity' is profit BEFORE tax over average equity, United "
+               "Trust's is net of the coupon on contingent convertible securities. That is why "
+               "the definition travels with the figure and why these are never merged into the "
+               "computed columns. READ THE VERIFICATION COLUMN: 'ocr_lead' means the figure was "
+               "read off a text layer or a low-resolution contact sheet and has NOT been "
+               "confirmed on a 300 dpi render, which is this project's standard - it is a lead, "
+               "not a finding. 'EXCLUDED' rows are outside figures identified as belonging to a "
+               "DIFFERENT entity (usually a group rather than the bank in this workbook's "
+               "perimeter) and are recorded so nobody re-derives them. A '(publishes none)' row "
+               "is a positive finding: that bank publishes no return at all, so the computed "
+               "figure is the only one there is.")
+
     sheet(wb, "Vs prior research",
           ["Bank", "Year", "Computed ROE (avg equity)", "Prior research value",
            "Measure as labelled there", "Delta (pp)"],
@@ -470,4 +747,4 @@ def main(extract_json, agg_path, outbase):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2], sys.argv[3])
+    main(sys.argv[1], sys.argv[2], sys.argv[3], *sys.argv[4:])

@@ -984,7 +984,7 @@ metric(
     "Leverage Ratio", "£'000 / %",
     [
         ("Total exposure measure", {"FY2025": 3615720, "FY2024": 2387717, "FY2023": 1519817, "FY2022": 394658, "FY2021": 216375}),
-        ("Leverage ratio (%)", {"FY2025": "5.19%", "FY2024": "7.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%", "FY2020": "19%"}),
+        ("Leverage ratio (%) - one consistent basis throughout (Tier 1 capital / total exposure measure); Chetwood's disclosures draw no excluding/including claims-on-central-banks distinction in any year; see note", {"FY2025": "5.19%", "FY2024": "7.19%", "FY2023": "6.01%", "FY2022": "14.58%", "FY2021": "23.4%", "FY2020": "19%"}),
     ],
     p3_sources(),
     note=FY2024_GAP_NOTE + " Unlike Barclays/Monzo, Chetwood's disclosures do not distinguish an 'excluding/including "

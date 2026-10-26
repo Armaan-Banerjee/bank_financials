@@ -1019,8 +1019,27 @@ bw.add_rwa_breakdown_sheet(
     source_height=280,
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 6 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (6 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. No edition contained either. The bank files UK KM1, whose leverage block (rows 13 and 14) "
+    "asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric("Leverage Ratio", "%",
-       [("Leverage Ratio (as first published in each year's own Pillar 3 report)",
+       [("Leverage Ratio (as first published in each year's own Pillar 3 report) - the Bank's Key Metrics row is LABELLED 'excluding claims on central banks' but prints the same value as its own narrative ratio in every edition, i.e. no exclusion is actually made; see note",
          {"FY2025": "9.11%", "FY2024": "8.02%", "FY2023": "8.29%", "FY2022": "4.38%", "FY2021": "5.04%"}),
         ("FY2023 as restated in the FY2024 and FY2025 Pillar 3 editions", {"FY2023": "8.30%"}),
         ("FY2023 as printed in the FY2023 report's own Key Metrics table (contradicted - see note)",
@@ -1046,7 +1065,7 @@ metric("Leverage Ratio", "%",
             "recorded rather than discarded.\n"
             "FY2025 (9.11%) is taken from the FY2025 report's Key Metrics table, NOT from its section 7.6 "
             "narrative, which was left unrevised from the prior edition and still quotes the 31 December 2024 "
-            "position (8.02%). See note (3) in the source citation below.")
+            "position (8.02%). See note (3) in the source citation below." + GA026_ONE_LEVERAGE_BASIS_NOTE)
 metric("LCR", "%", [("Liquidity Coverage Ratio", {"FY2025": "197%", "FY2024": "309%", "FY2023": "250%", "FY2022": "274%", "FY2021": "356%"})], p3_sources(),
        note="Every year is the Bank's own disclosed headline LCR, taken as printed from the Key Metrics table. "
             "Basis is consistent across editions: the FY2024 value printed in the FY2025 report's comparative "

@@ -483,7 +483,7 @@ metric(
     "Leverage Ratio", "£'000 / %",
     [
         ("Total exposure measure", {"FY2026": 383737, "FY2025": 310657, "FY2024": 238194, "FY2023": 181803, "FY2022": 177724}),
-        ("Leverage ratio (%)", {"FY2026": "7.99%", "FY2025": "7.96%", "FY2024": "8.34%", "FY2023": "9.72%", "FY2022": "9.07%"}),
+        ("Leverage ratio (%) - one consistent basis throughout; Zempler's Pillar 3 reports draw no excluding/including claims-on-central-banks distinction; see note", {"FY2026": "7.99%", "FY2025": "7.96%", "FY2024": "8.34%", "FY2023": "9.72%", "FY2022": "9.07%"}),
     ],
     note="Zempler's Pillar 3 reports do not distinguish an 'excluding/including claims on central banks' basis - a "
          "single leverage ratio definition is used throughout.",

@@ -799,9 +799,10 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
-                         rows_data, sources_text, note=note, first_col_width=46, source_height=170)
+                         rows_data, sources_text, note=note, first_col_width=46,
+                         source_height=170, note_height=note_height)
 
 
 # ---------------------------------------------------------------
@@ -1097,13 +1098,36 @@ metric(
         ("Basel III leverage ratio (%)", {"FY2025": "24.4%", "FY2024": "22.9%", "FY2023": "22.7%", "FY2022": "18.5%", "FY2021": "11.3%", "FY2020": "14.3%", "FY2019": "14.5%", "FY2018": "14.8%", "FY2017": "15%", "FY2016": "15%", "FY2015": "17%", "FY2014": "17%"}),
     ],
     p3_sources(),
-    note="FY2021's 11.3% is on an older/broader exposure-measure basis (pre-dates the KM1 'excluding claims on "
-         "central banks' framework used from FY2022 onward) - not directly comparable to later years, kept on "
-         "its own row per project convention. FY2014-FY2020 use the pre-KM1 CRD IV leverage framework (Table 2 "
-         "in each year's own document) - broadly the same 'Tier 1 capital / total exposure measure' concept "
-         "throughout, but methodology details (e.g. treatment of off-balance-sheet items, central bank claims) "
-         "evolved gradually across this whole span, so a smooth-looking multi-year trend should be read with "
-         "that caveat rather than as a single unbroken methodology.",
+    note="FY2021's 11.3% is on an older/broader exposure-measure basis - not directly comparable to later "
+         "years, kept on its own row per project convention. FY2014-FY2020 use the pre-KM1 CRD IV leverage "
+         "framework (Table 2 in each year's own document) - broadly the same 'Tier 1 capital / total exposure "
+         "measure' concept throughout, but methodology details (e.g. treatment of off-balance-sheet items, "
+         "central bank claims) evolved gradually across this whole span, so a smooth-looking multi-year trend "
+         "should be read with that caveat rather than as a single unbroken methodology.\n"
+         "\n"
+         "LEVERAGE BASIS: THE BANK ATTACHES NO BASIS QUALIFIER, AND AN EARLIER CLAIM HERE THAT IT DID IS "
+         "WITHDRAWN (GA-026, 2026-10-10). This note previously described FY2021 as pre-dating \"the KM1 "
+         "'excluding claims on central banks' framework used from FY2022 onward\". THAT ATTRIBUTION WAS NOT "
+         "SUPPORTED BY THE BANK'S OWN DOCUMENTS and has been removed; the surrounding statement that FY2021 "
+         "sits on an older, broader measure is kept, because the series itself shows it.\n"
+         "What the documents actually print: Bank of China (UK) publishes no template UK LR2 in any edition - "
+         "no row 24, UK-24a, UK-24b or UK-25c - and its key-metrics table carries two rows captioned simply "
+         "'13 Total Basel III leverage ratio exposure measure' and '14 Basel III leverage ratio (%)', with no "
+         "central-bank qualifier on either. Section 4.3 'Leverage Ratio' discusses only the PRA's 3.25% "
+         "expectation under SS45/15 and states no basis. No reconciliation of accounting assets to leverage "
+         "exposure is printed, so there is no deduction line - and no absence of one - to read a basis from. "
+         "A full-text search finds 'central bank' only in balance-sheet and credit-risk exposure tables ('Cash "
+         "and balances at central banks', 'Government & Central Banks'), never in the leverage computation.\n"
+         "WHY THE FY2021-TO-FY2022 STEP IS NOT EVIDENCE OF AN EXCLUSION. The FY2022 edition prints its FY2021 "
+         "comparative as £2,431,869k / 11.3% - IDENTICAL to FY2021's own report, under the same 'Basel III "
+         "leverage ratio' caption, with no restatement and no change-of-basis note. A move onto an excluding "
+         "basis would normally restate the comparative or be flagged; neither happened. The exposure measure "
+         "fell from £2,431,869k to £1,814,024k (-25%) while the ratio rose from 11.3% to 18.5%, which a "
+         "shrinking balance sheet and rising capital explain without invoking a basis change. No basis is "
+         "therefore attributed to any year of this series.\n"
+         "(Checked against the FY2022 and FY2024 editions, both read in full; the matcher used was first "
+         "shown to fire on documents that do carry the phrases.)",
+    note_height=700,
 )
 
 metric(

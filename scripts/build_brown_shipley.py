@@ -642,6 +642,15 @@ LEVERAGE_RATIO = {"FY2025": "Not published - SDDT Rule 3.1 from 28/10/2025; acco
 # effect 1 January 2022, so the 2021 figure in the 2023 report's summary table cannot be
 # assumed to be that measure, and the report does not say which basis it is on.
 LEVERAGE_RATIO_2021 = {"FY2021": "8.6%"}
+# Both leverage bases, added 2026-10-09 (GA-026). Template UK LR2 (LRCom) rows 24,
+# UK-24a, UK-24b and UK-25c, each year from its OWN edition where one exists; FY2022
+# from the 2023 edition's comparative column, which is the only place it is published.
+# FY2021 has no LR2 column in any edition and FY2025 has no edition at all, so both
+# stay blank on these rows rather than being carried over from a neighbouring year.
+LEVERAGE_EXPOSURE_INCL = {"FY2024": 1227465, "FY2023": 1534531, "FY2022": 1492516}
+LEVERAGE_CENTRAL_BANK_CLAIMS_EXCLUDED = {"FY2024": -293167, "FY2023": -528338, "FY2022": -455784}
+LEVERAGE_EXPOSURE_EXCL = {"FY2024": 934297, "FY2023": 1006193, "FY2022": 1036732}
+LEVERAGE_RATIO_INCL = {"FY2024": "8.55%", "FY2023": "6.53%", "FY2022": "6.34%"}
 NSFR_RATIO = {"FY2025": "Not published - SDDT Rule 3.1 from 28/10/2025; accounts disclose none",
               "FY2024": "162%", "FY2023": "181%", "FY2022": "165%", "FY2021": "121%"}
 
@@ -978,15 +987,42 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric(
-    "Leverage Ratio", "%",
-    [("UK leverage ratio (excluding claims on central banks)", LEVERAGE_RATIO),
+    "Leverage Ratio", "£'000 / %",
+    [("Total exposure measure including claims on central banks", LEVERAGE_EXPOSURE_INCL),
+     ("Claims on central banks excluded", LEVERAGE_CENTRAL_BANK_CLAIMS_EXCLUDED),
+     ("Total exposure measure excluding claims on central banks", LEVERAGE_EXPOSURE_EXCL),
+     ("UK leverage ratio (excluding claims on central banks)", LEVERAGE_RATIO),
+     ("Leverage ratio including claims on central banks (%)", LEVERAGE_RATIO_INCL),
      ("Leverage ratio as printed in the 2023 report's summary table, basis not stated (FY2021 only)", LEVERAGE_RATIO_2021)],
     pillar3_report_sources(
+        "BOTH LEVERAGE BASES AND THE EXPOSURE MEASURES THEMSELVES, ADDED 2026-10-09 (GA-026). The sheet "
+        "previously carried ratios only, on the excluding-claims-on-central-banks basis alone. The Bank "
+        "publishes both bases and the reconciling deduction in template UK LR2 (LRCom) rows 24, UK-24a, UK-24b, "
+        "25 and UK-25c, and all five are now reproduced in the template's own order. Each year is read from its "
+        "OWN edition where one exists: FY2024 from the 2024 report's p.14 LR2, FY2023 from the 2023 report's "
+        "p.12 LR2. FY2022 comes from the 2023 report's LR2 2022 COMPARATIVE column, which is the only place "
+        "Brown Shipley publishes it. CROSS-EDITION CHECK: the 2024 report's 2023 comparative column prints "
+        "1,534,531 / -528,338 / 1,006,193 / 9.96% / 6.53%, identical to the 2023 report's own column.\n"
+        "DISAGREEMENT 1 - THE FY2024 TEMPLATE DOES NOT FOOT. Row 24 less row UK-24a is 1,227,465 - 293,167 = "
+        "934,298, but row UK-24b prints 934,297. Both sides are reproduced exactly as printed; neither has been "
+        "adjusted to make the column tie. FY2023 (1,534,531 - 528,338 = 1,006,193) and FY2022 (1,492,516 - "
+        "455,784 = 1,036,732) both foot exactly, so this is confined to FY2024.\n"
+        "DISAGREEMENT 2 - THE FY2024 KM1 AND LR2 EXPOSURE MEASURES DIFFER. The 2024 report's Appendix 15.1 KM1 "
+        "row 13 prints 934,723,555 under a £000 header but in single pounds (see the KM1 sheet's own note), "
+        "i.e. 934,724 £'000, against this sheet's LR2 figure of 934,297 £'000 - a difference of about 427. "
+        "Scale alone does not explain it. Both are reproduced where they are printed; the KM1 sheet keeps its "
+        "figure and this sheet keeps the LR2 one. For FY2023 the two agree exactly (the 2023 KM1 row 13 prints "
+        "1,006,193), so this too is confined to FY2024.\n"
+        "RATIO TIES. Both ratios tie to the template's own row 23 Tier 1 capital (leverage) at the printed "
+        "precision in every year: FY2024 104,906/934,297 = 11.23% and 104,906/1,227,465 = 8.55%; FY2023 "
+        "100,200/1,006,193 = 9.96% and 100,200/1,534,531 = 6.53%; FY2022 94,594/1,036,732 = 9.12% and "
+        "94,594/1,492,516 = 6.34%.\n"
         "FY2024 11.23% is the 2024 report's template UK LR2 row 25 ('Leverage ratio excluding claims on central "
         "banks'), which agrees with its s.6.1 narrative ('Brown Shipley's leverage ratio stands at 11.23% as at "
         "31 December 2024') and with its front summary table's rounded 11.2%. That report also discloses row "
-        "UK-25c 'Leverage ratio including claims on central banks' at 8.55%; the excluding-central-banks measure "
-        "is the UK's binding definition and is the one used here.\n"
+        "UK-25c 'Leverage ratio including claims on central banks' at 8.55%, which now has its own row above; "
+        "the excluding-central-banks measure remains the UK's binding definition and is the one the Overview "
+        "and the KM1 cross-checks use.\n"
         "FY2023 RE-SOURCED and FY2022/FY2021 NEWLY ADDED, 2026-09-18, from the 2023 edition found that day (see "
         "the Pillar 3 document note). FY2023's 9.96% previously came from the 2024 report's comparative column; "
         "it now comes from the 2023 report's OWN template UK LR2 row 25, per the standing rule that a year is "
@@ -994,7 +1030,12 @@ metric(
         "comparative was being read correctly. FY2022's 9.1% is the 2023 report's s.1.1 'Key Prudential Risk "
         "Ratios' 2022 COMPARATIVE column, and is corroborated by that report's own template UK LR2 row 25 "
         "comparative of 9.12% on the same excluding-central-banks basis - so FY2022 sits in the same row as the "
-        "other years, at the summary table's one-decimal precision. Its row UK-25c 2022 comparative is 6.34%.\n"
+        "other years, at the summary table's one-decimal precision. PRECISION DEVIATION, LEFT AS IT STANDS: "
+        "FY2024 and FY2023 are LR2 figures at two decimals (11.23%, 9.96%) while FY2022 is the summary table's "
+        "one-decimal 9.1%, even though the 2026-10-09 pass above now takes FY2022's exposure measures from that "
+        "same LR2 column. The two sources agree (9.1% vs 9.12%), so this is a precision difference and not a "
+        "disagreement, and the published figure is reproduced rather than re-rounded either way. Its row UK-25c "
+        "2022 comparative, 6.34%, is on the including-claims row above.\n"
         "FY2021 IS DELIBERATELY ON A SEPARATE ROW. The 2023 report's s.1.1 table prints 8.6% against 2021 under "
         "the bare heading 'Leverage Ratio', but the UK 'excluding claims on central banks' basis only took "
         "effect on 1 January 2022, its LR2 template carries no 2021 column to corroborate against, and the "

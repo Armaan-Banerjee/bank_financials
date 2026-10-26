@@ -686,9 +686,15 @@ NOTES = {
         "year's own-report figures — a genuine coincidence, not a transcription error."
     ),
 }
+# GA-026 (2026-10-10): the row label, not just the note, states the leverage basis -
+# the label is what check_overview_ties.py and the deliverable's chart curation read.
+ROW_LABELS = {
+    "Leverage Ratio": ("Leverage Ratio - FY2022 onward excluding claims on central banks; "
+                       "FY2019-FY2021 original CRR basis, inclusive of them; see note"),
+}
 for name, values in ANNUAL.items():
     unit = "%" if "Ratio" in name or name in {"LCR", "NSFR"} else "£m"
-    row = [(name, {y: v for y, v in zip(YEARS, values) if v is not None})]
+    row = [(ROW_LABELS.get(name, name), {y: v for y, v in zip(YEARS, values) if v is not None})]
     bw.add_metric_sheet(name, unit, row, annual_sources("p3"), note=NOTES.get(name), first_col_width=58)
     if name == "Total RWAs":
         # RWA Breakdown - Pillar 3 OV1 template, placed right after Total RWAs

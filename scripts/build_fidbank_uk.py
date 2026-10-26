@@ -484,8 +484,9 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
-    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=220)
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60):
+    bw.add_metric_sheet(name, unit, rows_data, sources_text, note=note, first_col_width=48, source_height=500,
+                        note_height=note_height)
 
 
 CAPITAL_RATIO = {"FY2025": "21.99%", "FY2024": "43%", "FY2023": "98%", "FY2022": "54%", "FY2021": "40%"}
@@ -767,9 +768,47 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000, conv. from USD)",
 )
 
+GA026_BASIS_NOTE = (
+    "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED. FidBank UK prints the UK KM1 leverage block "
+    "as two bare rows - \"13 Leverage ratio total exposure measure\" and \"14 Leverage ratio\" - with no "
+    "qualifier of any kind. There is no row 24 / UK-24a / UK-24b / UK-25c, no LR2 or LRSum template, and no "
+    "narrative stating what the exposure measure contains. A normalised phrase scan of every edition (text "
+    "joined across line breaks before matching, so a wrapped phrase cannot hide) returns ZERO hits for "
+    "'excluding/including claims on central banks' in any form. The two-basis UK presentation is effective "
+    "only for periods from 1 January 2022 and the Bank never adopted it, so no basis is determinable from "
+    "the Bank's own words and none is asserted here. Read at 300 dpi: FY2024 ed. p.9 rows 13/14 = 282,725 "
+    "and 19.45; FY2023 ed. p.9 rows 13/14 = 191,191 and 29.83 (FY2022 comparative 99,083 and 35.78).\n\n"
+    "FY2022 PROVENANCE CORRECTION (2026-10-10). This note previously said the figure was \"directly "
+    "disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables\". That was wrong for FY2022. The "
+    "FY2022 Pillar 3 at the URL this script cites is headed \"UNION BANK UK PLC / PILLAR 3 DISCLOSURES / "
+    "31 December 2022\" - the same legal entity under its former name (company number 4661188 appears on "
+    "both; see ENTITY_NOTE for the two renames) - and it contains NO leverage ratio and NO key-metrics "
+    "table at all: a full-text search of that edition returns zero hits for 'leverag' in any case, and zero "
+    "for 'key metric' and 'KM1'. FY2022's 35.78% therefore comes from the FY2023 edition's COMPARATIVE "
+    "column, not from the FY2022 edition's own disclosure. The figure is kept (it is the only published "
+    "value) but is recorded here as a later edition's comparative, per the own-edition rule, rather than "
+    "presented as the FY2022 document's own. The source block below was already correct on this point "
+    "(\"FY2021/FY2022's older disclosures give the capital base and RWA components\"); only this sheet note "
+    "overstated it.\n\n"
+    "CURRENCY-LABEL CONTRADICTION BETWEEN EDITIONS, RECORDED NOT RECONCILED (2026-10-10). The FY2023 "
+    "edition's KM1 heads both its columns \"£000's\"; the FY2024 edition heads both of its columns "
+    "\"$000's\" - and the FY2023 column is numerically IDENTICAL in the two (CET1 57,034; RWA 60,485; CET1 "
+    "ratio 94.29%). The same figures are thus labelled sterling in one of the Bank's documents and dollars "
+    "in the next. Both column headers were confirmed at 300 dpi, not by text layer alone. This is the "
+    "Bank's own inconsistency; NO figure in this workbook has been changed, re-scaled or FX-converted on "
+    "the strength of it, and it is flagged rather than resolved because resolving it would mean choosing "
+    "which of the Bank's two labels to believe. It bears on the capital sheets (which treat these amounts "
+    "as USD) as much as on this one.\n\n"
+    "LINK ROT ON THE CITED URLS (2026-10-10). All four fidbank.co.uk Pillar 3 URLs cited below now return "
+    "404; the site itself is live. The documents are not gone - they were re-retrieved from the Wayback "
+    "Machine at these captures: FY2024 20260208213431 (32pp, %PDF, 775,308 bytes), FY2023 20241203225150 "
+    "(31pp), FY2022 20250125031047 (23pp). The cited live URLs are left in place as the original "
+    "publication addresses; this paragraph is the standing record of where they can still be read."
+)
+
 metric("Leverage Ratio", "%", [("Leverage ratio", dict(LEVERAGE_RATIO, FY2025=FY2025_NO_LEVERAGE))], p3_sources(),
-       note="Directly disclosed in FidBank UK's FY2024, FY2023 and FY2022 UK KM1 tables. FY2021 remains blank: its older Pillar 3 disclosure does not provide a leverage ratio."
-       + FY2025_GAPFILL_NOTE)
+       note="Disclosed in FidBank UK's FY2024 and FY2023 UK KM1 tables; FY2022 is the FY2023 edition's comparative (see below). FY2021 remains blank: its older Pillar 3 disclosure does not provide a leverage ratio."
+       + FY2025_GAPFILL_NOTE + "\n\n" + GA026_BASIS_NOTE, note_height=660)
 
 metric("LCR", "%", [("Liquidity Coverage Ratio", {**LCR, **P3_LCR})], p3_sources(),
        note="FY2024-FY2022 values are directly disclosed in FidBank UK's UK KM1 tables; FY2025 remains sourced from its Annual Report. FY2021's older disclosure has no LCR value.")

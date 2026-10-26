@@ -919,7 +919,13 @@ bw.add_not_disclosed_metric_sheets(
         "are structurally outside the only Pillar 3 disclosure made for this entity: its parent's Pillar "
         "3 limits NBI to Article 437 (Own Funds) disclosures because NBI's RWAs are immaterial to the "
         "Group, which excludes leverage, liquidity and MREL templates. No values are inferred from "
-        "group-level Nomura Europe disclosures." + NEH_NOTE),
+        "group-level Nomura Europe disclosures. GA-026 (2026-10-09) re-checked this against the leverage "
+        "template specifically and it holds: the parent's 'Template UK LR2 - LRCom: Leverage Ratio Common "
+        "Disclosure' does print the post-1-January-2022 dual basis (row 24 'Total exposure measure "
+        "including claims on central banks'), but it is headed 'for the Group and NIP' and its four "
+        "columns are the Group and Nomura International plc at two dates each - there is no NBI column. "
+        "It is therefore another instance of the rule above, not an exception to it, and nothing from it "
+        "is carried here." + NEH_NOTE),
     statements={"Leverage Ratio": ga020_cells("leverage ratio"), "LCR": ga020_cells("LCR"),
                 "NSFR": ga020_cells("NSFR"), "MREL Ratio": ga020_cells("MREL figure")},
 )

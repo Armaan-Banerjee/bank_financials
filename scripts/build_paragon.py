@@ -710,6 +710,69 @@ bw.add_km1_sheet(
 
 def metric(name, unit, label, values, note=None):
     bw.add_metric_sheet(name, unit, [(label, values)], P3_SOURCES, note=note, first_col_width=52, source_height=180)
+
+
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES (GA-026, 2026-10-09). For periods from 1 January 2022 the UK template UK LR2 "
+    "(LRCom) prints the exposure measure and the leverage ratio on TWO bases, INCLUDING and EXCLUDING "
+    "claims on central banks, reconciling at row UK-24a. Paragon's KM1 does NOT show this - its rows 13 "
+    "and 14 carry only the excluding basis, and its rows 14a-14e, which would carry the including-basis "
+    "and average variants, print the literal 'N/A' in every edition (LREQ-firm-only lines; the Group says "
+    "in terms it is not large enough to be an LREQ firm). The LR2 shows it in full. The figures added here "
+    "are that LR2's, read at 300 dpi.\n\n"
+    "SAME ENTITY AS THE ROW ABOVE. These are Paragon Banking Group PLC Pillar III figures - the Group, not "
+    "Paragon Bank PLC - which is also what the 'Leverage ratio' row above carries for FY2023-FY2025 (UK "
+    "KM1 row 14, the Group regulatory-group basis; see the preceding paragraph). Nothing here mixes the two "
+    "entities.\n\n"
+    "WHAT EACH EDITION'S OWN COLUMN PRINTS (£m):\n"
+    "  FY2025 edition p.49 - row 23 Tier 1 (leverage) 1,172.4; row 24 (including) 19,829.7; UK-24a "
+    "-2,178.7; UK-24b (excluding) 17,651.0; row 25 6.6%; UK-25c 5.9%.\n"
+    "  FY2023 edition p.46 - 1,188.9; 18,404.9; -2,825.6; 15,579.3; 7.6%; 6.5%.\n"
+    "  FY2022 edition p.42 - 1,221.8; 17,031.2; -1,643.7; 15,287.5; 7.9%; 7.2%.\n\n"
+    "  FY2024 edition p.50 - 1,177.9; 19,127.2; -2,319.3; 16,807.9; 7.0%; 6.2%.\n\n"
+    "FY2024 WAS FILLED ON 2026-10-09, FROM ITS OWN EDITION. This note previously said FY2024 was left "
+    "blank as UNREACHED because the live site answered HTTP 403, and that the only Internet Archive "
+    "capture of the slug was in fact the HALF-YEAR report for the six months ended 31 March 2024. The "
+    "second half of that is still true and is why the Archive is no route here. The first half is not: "
+    "the 403 is triggered by the HTTP VERSION, not by Cloudflare refusing the client outright - the same "
+    "request sent over HTTP/1.1 returns the document, as this script's RWA source note already records "
+    "and as was re-confirmed on 2026-10-09 (HTTP 200, application/pdf, %PDF-, 1,591,886 bytes). The slug "
+    "also matters: the full-year edition carries a DOUBLE dash before 'iii'. The figures above are "
+    "therefore read from the FY2024 edition's own UK LR2 on its p.50, not from a later edition's "
+    "comparative, and the own-edition rule is satisfied.\n"
+    "THE LATER EDITION DID NOT RESTATE THE YEAR, WHICH IS ITSELF A CHECK. The FY2025 edition's FY2024 "
+    "comparative column prints 1,177.9; 19,127.2; -2,319.3; 16,807.9; 7.0%; 6.2% - identical in all six "
+    "figures to the FY2024 edition's own table. Likewise the FY2024 edition's own FY2023 comparative "
+    "column prints 18,404.9; -2,825.6; 15,579.3; 7.6%; 6.5%, matching the FY2023 figures already on this "
+    "sheet from the FY2023 edition. Two independent agreements across three editions.\n"
+    "FY2026 REMAINS ABSENT, BUT FOR A CALENDAR REASON, NOT AN ACCESS ONE. The Group's year-end is "
+    "30 September, so the FY2026 annual Pillar III covers the year ended 30 September 2026 and had not "
+    "been published when this was written; the newest disclosure of any kind is the half-year report for "
+    "the six months ended 31 March 2026, which belongs on the Interim Pillar 3 sheet. The earlier "
+    "'unreachable for the same Cloudflare reason' wording is withdrawn: it attributed to a block what is "
+    "simply a document that does not exist yet.\n\n"
+    "THE FY2022 EDITION MISPRINTS ITS OWN ROW UK-24b, AND IT IS LEFT AS PRINTED. That edition prints row 24 "
+    "as 17,031.2 and row UK-24a as -1,643.7, which subtract to 15,387.5, but prints row UK-24b as 15,287.5 "
+    "- a hundred lower. Two independent checks say 15,387.5 is the intended figure: the same edition's own "
+    "KM1 row 13 prints 15,387.5, and so does the FY2023 edition's FY2022 comparative column. The LR2 row is "
+    "nonetheless transcribed as 15,287.5, because that is what the FY2022 LR2 prints; nothing has been "
+    "back-solved or corrected into agreement. (For the same reason the ratio is left alone too: 1,221.8 "
+    "over 15,287.5 is 8.0%, while the printed row 25 is 7.9%, which is 1,221.8 over 15,387.5.)\n\n"
+    "WHY THE LR2's OWN ROW 25 IS CARRIED AS WELL as the KM1 ratio in the top row. For FY2022 the top row "
+    "is empty (see the preceding paragraph), so without row 25 the FY2022 column would print an "
+    "including-basis ratio with no excluding-basis ratio beside it - a column no reader could interpret, "
+    "and one the workbook's own KM1 cross-check correctly flagged as a disagreement when it compared KM1 "
+    "row 14's 7.9% against the only percentage in that column. Row 25 is the bank's own published "
+    "excluding-basis ratio and it agrees with KM1 row 14 in every year shown (6.6%, 7.6%, 7.9%).\n\n"
+    "A SMALLER SELF-DISAGREEMENT AT FY2025: the KM1 row 13 on this workbook's KM1 sheet carries 17,651.1 "
+    "where the LR2's row UK-24b prints 17,651.0. Both are the bank's own; neither is adjusted.\n\n"
+    "WHICH BASIS THE PRE-2022 YEARS WERE ON. The FY2021 edition's Table LRCom is the old CRR template - a "
+    "single 'Leverage ratio total exposure measure' of 15,285.9 and one ratio, 6.9%, with no basis split. "
+    "That single measure sits close to the FY2022 edition's restated FY2021 INCLUDING measure (15,288.9) "
+    "and its ratio equals the restated UK-25c exactly (6.9%, against 7.5% excluding), so for Paragon the "
+    "pre-2022 basis corresponds to the INCLUDING one. That is the opposite of what some other banks in this "
+    "corpus show, and it is why the pre-FY2022 years are not carried on the new rows."
+)
 metric("CET1 Capital","£m","Common Equity Tier 1 (CET1) capital",capital)
 metric("CET1 Ratio","%","Common Equity Tier 1 ratio",cetr)
 metric("Tier 1 Capital","£m","Tier 1 capital",capital,"No AT1 capital is reported; Tier 1 equals CET1 in each year.")
@@ -848,11 +911,33 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio","%","Leverage ratio",lev,"FY2022 and FY2021 are not shown in the selected modern leverage-ratio series; no comparable figure was "
-       "used - but both years ARE on the KM1 sheet (rows 13 and 14), read from the FY2022 edition. FY2025 was "
-       "6.2% here until 18 September 2026, which was Paragon Bank PLC's own fully loaded ratio from Annual "
-       "Report note 38; it is now 6.6%, the Group regulatory-group ratio from UK KM1 row 14, on the same basis "
-       "as FY2024 and FY2023. The two are different entities, not different measures of one.")
+bw.add_metric_sheet(
+    "Leverage Ratio", "£m / %",
+    [
+        # Keep this ratio row FIRST: check_overview_ties.py takes the first cell PRINTED AS A
+        # PERCENTAGE on a ratio sheet as that sheet's headline figure.
+        ("Leverage ratio", lev),
+        ("Total exposure measure including claims on central banks (£m) - UK LR2 row 24", {"FY2025": 19829.7, "FY2024": 19127.2, "FY2023": 18404.9, "FY2022": 17031.2}),
+        ("(-) Claims on central banks excluded (£m) - UK LR2 row UK-24a", {"FY2025": -2178.7, "FY2024": -2319.3, "FY2023": -2825.6, "FY2022": -1643.7}),
+        ("Total exposure measure excluding claims on central banks (£m) - UK LR2 row UK-24b", {"FY2025": 17651.0, "FY2024": 16807.9, "FY2023": 15579.3, "FY2022": 15287.5}),
+        # The excluding-basis ratio must precede the including-basis one in every column, not
+        # just on the sheet: for FY2022 the top row is empty, so this is the FIRST cell PRINTED
+        # AS A PERCENTAGE in that column and is what check_overview_ties.py and
+        # verify_workbook.py's KM1 cross-check will read there.
+        ("Leverage ratio excluding claims on central banks (%) - UK LR2 row 25", {"FY2025": "6.6%", "FY2024": "7.0%", "FY2023": "7.6%", "FY2022": "7.9%"}),
+        ("Leverage ratio including claims on central banks (%) - UK LR2 row UK-25c", {"FY2025": "5.9%", "FY2024": "6.2%", "FY2023": "6.5%", "FY2022": "7.2%"}),
+    ],
+    P3_SOURCES,
+    note=("FY2022 and FY2021 are not shown in the selected modern leverage-ratio series; no comparable figure "
+          "was used - but both years ARE on the KM1 sheet (rows 13 and 14), read from the FY2022 edition. "
+          "FY2025 was 6.2% here until 18 September 2026, which was Paragon Bank PLC's own fully loaded ratio "
+          "from Annual Report note 38; it is now 6.6%, the Group regulatory-group ratio from UK KM1 row 14, on "
+          "the same basis as FY2024 and FY2023. The two are different entities, not different measures of "
+          "one.\n\n" + GA026_BOTH_BASES_NOTE),
+    first_col_width=68,
+    source_height=180,
+    note_height=320,
+)
 metric("LCR","%","Liquidity Coverage Ratio",lcr,"All five years are the Pillar 3 UK KM1 row 17 figure, which the editions footnote as 'based on a "
        "12 month rolling average of month end positions' and note 'cannot be derived from the values given "
        "above it'. FY2025 previously cited the Annual Report instead; the figure was the same 154.0%, but the "

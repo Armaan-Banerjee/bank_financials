@@ -714,6 +714,75 @@ def metric(name, unit, rows_data, note=None):
     bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=56, source_height=190)
 
 
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES - FY2022 ONLY, AND THEY COINCIDE (GA-026, 2026-10-09). For periods from "
+    "1 January 2022 the UK template UK LR2 (LRCom) prints the leverage ratio on TWO bases, "
+    "including and excluding claims on central banks. CSi's FY2022 edition prints both, read at "
+    "300 dpi from 'LR2 - LRCom: Leverage ratio common disclosure', p.62 of csi-pillar-3-"
+    "disclosures-2022.pdf, and THE TWO ARE THE SAME FIGURE: row 25 (excluding) 12.51% and row "
+    "UK-25c (including) 12.51%, struck on row 24 (including) 126,360 and row UK-24b (excluding) "
+    "126,360 USD million, over Tier 1 capital (leverage) of 15,809. The table prints NO row "
+    "UK-24a at all - there is no reconciling 'claims on central banks excluded' line, consistent "
+    "with the two measures being equal. The FY2021 comparative column behaves the same way: "
+    "201,010 on both measures and 7.47% on both ratios. Nothing here has been computed or "
+    "back-solved; the including-basis row is added to this sheet because the bank published it, "
+    "and its equality with the excluding basis is itself the finding.\n\n"
+    "PRINTED ZEROS, RECORDED NOT CORRECTED. In the same table CSi prints row UK-25a (fully "
+    "loaded ECL leverage ratio excluding claims on central banks) as 0.00% in the FY2021 column "
+    "while row 25 for that same column is 7.47%; row UK-25b as 0.00% in both columns; and row 26 "
+    "(regulatory minimum leverage ratio requirement) as 0.00% in both columns. These read as the "
+    "bank's own template-filling defects rather than real quantities, but they are what the "
+    "document prints and they are left alone.\n\n"
+    "FY2021 AND EARLIER HAVE NO SECOND BASIS TO ADD. The dual basis is effective only for "
+    "periods from 1 January 2022, and CSi's FY2021 edition confirms it: its own 'Table LRCom: "
+    "Leverage ratio common disclosure' (p.74) is the old CRR template, a single 'Total leverage "
+    "ratio exposures' of 201,010 and one ratio, 7.47%, with no basis split and no central-bank "
+    "wording anywhere.\n\n"
+    "FY2023 AND FY2024 ARE NOW ANSWERED; ONLY FY2025 REMAINS OPEN (corrected 2026-10-10). This "
+    "note previously said 'FY2023-FY2025 NOT CHECKED - UNREACHED, NOT ABSENT', on the ground that "
+    "ubs.com returns HTTP 403. The 403 is real and is NOT worked around - it is an Akamai edge "
+    "denial (errors.edgesuite.net) that survives both a full browser User-Agent and a retry over "
+    "HTTP/1.1, so it is an access control rather than a client-fingerprint quirk. But the "
+    "conclusion drawn from it was wrong, and this script already contained the refutation: the "
+    "Balance Sheet source note records that the FY2023 and FY2024 editions were retrieved through "
+    "the Wayback Machine's id_ replay of those same UBS URLs. Re-run on 2026-10-10, that route "
+    "returns both documents again (FY2023: 68pp, %PDF, 837,364 bytes; FY2024: 59pp, %PDF, "
+    "2,647,235 bytes). A host-level 403 says nothing about whether a different public source holds "
+    "the same document, and TWO NOTES IN ONE SCRIPT DISAGREED ABOUT THIS FOR WEEKS.\n"
+    "WHAT THEY SHOW: both editions print LR2 - LRCom in full and the two bases COINCIDE EXACTLY, "
+    "exactly as in FY2022. FY2024 edition p.53 - row 23 Tier 1 6,883; row 24 (including) 32,522; "
+    "row UK-24b (excluding) 32,522; row 25 (excluding) 21.16%; row UK-25c (including) 21.16%. "
+    "FY2023 edition p.62 - 13,889; 78,135; 78,135; 17.78%; 17.78%. NO ROW UK-24a IS PRINTED in "
+    "either, the same omission already recorded for FY2022, and consistent with the two measures "
+    "being equal. UK-25b prints 0.00% in both, which is the source's own and is left alone. The "
+    "including-basis row above is extended to FY2024 and FY2023 accordingly. Each year is taken "
+    "from its OWN edition; the FY2024 edition's FY2023 comparative (17.78%) and the FY2023 "
+    "edition's FY2022 comparative (126,360 / 12.51%) both agree with the figures already held, so "
+    "no edition restated another. FY2024 edition p.53 rendered and read at 300 dpi.\n"
+    "FY2025 IS ALSO ANSWERED NOW, AND THE ANSWER IS THAT CSi STOPPED PUBLISHING THE SPLIT. The "
+    "FY2025 edition was retrieved directly from ubs.com on 2026-10-10 (HTTP 200, application/pdf, "
+    "%PDF, 411,677 bytes, 27pp) - see the fetching note below for why that worked. It is a much "
+    "shorter document than its predecessors (27pp against 59pp and 68pp) and IT CONTAINS NO LR2 / "
+    "LRCom TABLE AT ALL. Its only leverage disclosure is two plainly-captioned rows in the KM1 "
+    "table on p.6 - 'Leverage ratio total exposure measure' 5,679 (2024: 32,521) and 'Leverage "
+    "ratio' 53.08% (2024: 21.16%) - with no central-bank qualifier on either, and no rows 24, "
+    "UK-24a, UK-24b or UK-25c anywhere in the document. So the dual basis is ABSENT from FY2025, "
+    "not unreached: the Bank dropped the template between editions. The FY2025 cell above is "
+    "therefore left with no including-basis counterpart, which is a fact about the disclosure "
+    "rather than a gap in this workbook. Read at 300 dpi, p.6.\n"
+    "A ONE-UNIT DISAGREEMENT, RECORDED NOT RECONCILED: the FY2025 edition's FY2024 comparative "
+    "exposure measure is 32,521, while the FY2024 edition's own LR2 prints 32,522 on both row 24 "
+    "and row UK-24b. Each figure stays with the edition that printed it.\n"
+    "WHY THE FETCH WORKED, AND WHY EARLIER ONES DID NOT - THE USER-AGENT WAS CAUSING THE 403. "
+    "ubs.com answers PLAIN curl with no added headers at HTTP 200, and answers the same request "
+    "dressed in a full browser User-Agent with HTTP 403. The block is triggered BY the browser "
+    "UA, not cured by it - the lowest rung of the fetching ladder passes an edge rule that the "
+    "highest rung trips. build_credit_suisse_uk.py had already found and written down exactly "
+    "this about the same host; it was not applied here until 2026-10-10. Nothing was bypassed: "
+    "the document is served to an ordinary unauthenticated request.\n\n"
+)
+
+
 TIER1_USD = {"FY2025": 3014, "FY2024": 6883, "FY2023": 13889, "FY2022": 15809, "FY2021": 15022,
              "FY2020": 20520, "FY2019": 20359, "FY2018": 21270, "FY2017": 21080, "FY2016": 21023, "FY2015": 21236}
 TIER1_RATIO = {"FY2025": "146.9%", "FY2024": "62.9%", "FY2023": "40.0%", "FY2022": "26.0%", "FY2021": "24.0%",
@@ -1093,8 +1162,15 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "% - see note",
-    [("Leverage Ratio", LEVERAGE_RATIO)],
-    note="FY2021-FY2024 added 2026-09-12 from the 'Leverage ratio' line of CSi's own Pillar 3 KM1 template - "
+    [
+        # Keep this row FIRST: check_overview_ties.py takes the first cell PRINTED AS A
+        # PERCENTAGE on a ratio sheet as that sheet's headline figure.
+        ("Leverage Ratio", LEVERAGE_RATIO),
+        ("Leverage ratio including claims on central banks (%) - LR2 row UK-25c",
+         {"FY2024": "21.16%", "FY2023": "17.78%", "FY2022": "12.51%"}),
+    ],
+    note=GA026_BOTH_BASES_NOTE +
+         "FY2021-FY2024 added 2026-09-12 from the 'Leverage ratio' line of CSi's own Pillar 3 KM1 template - "
          "the prior 'not locatable' claim was wrong (see Total Capital sheet note). The Annual Report itself "
          "still doesn't carry a leverage ratio; these come from the Pillar 3 documents. FY2025 added "
          "2026-09-15 from that same KM1 line (p.6). FY2015-FY2020 (HD-020) sourced from each year's own "

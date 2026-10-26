@@ -690,12 +690,34 @@ bw.add_rwa_breakdown_sheet(
 metric(
     "Leverage Ratio", "£m / %",
     [
+        ("Total exposure measure including claims on central banks", {"FY2025": 30754, "FY2024": 31558, "FY2023": 33235, "FY2022": 33625}),
+        ("Claims on central banks excluded", {"FY2025": -7743, "FY2024": -9085, "FY2023": -8879, "FY2022": -7945}),
         ("Total exposure measure excluding claims on central banks", {"FY2025": 23011, "FY2024": 22473, "FY2023": 24356, "FY2022": 25680}),
         ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "9.4%", "FY2024": "9.3%", "FY2023": "9.1%", "FY2022": "9.4%"}),
+        ("Leverage ratio including claims on central banks (%)", {"FY2025": "7.0%", "FY2024": "6.6%", "FY2023": "6.7%", "FY2022": "7.2%"}),
         ("Leverage ratio - CRR2 total exposure basis, £m (FY2018-FY2021, pre-KM1 methodology)", {"FY2021": 33635, "FY2020": 35325, "FY2019": 33323, "FY2018": 33290}),
         ("Leverage ratio - CRR2 basis (%) (FY2018-FY2021, pre-KM1 methodology)", {"FY2021": "7.3%", "FY2020": "6.7%", "FY2019": "6.8%", "FY2018": "6.2%"}),
     ],
-    p3_sources(),
+    p3_sources()
+    + "\nBOTH LEVERAGE BASES, ADDED 2026-10-09 (GA-026). The sheet previously carried only the "
+      "excluding-claims-on-central-banks measure, which is the UK's binding definition and the only one the UK "
+      "KM1 template asks for (rows 13 and 14). The UK Group also publishes the INCLUDING-central-banks measure "
+      "in template UK LR2 (LRCom) rows 24 and UK-25c, and the reconciling deduction in row UK-24a; all three are "
+      "now reproduced so the sheet shows the whole disclosed picture rather than one side of it.\n"
+      "EACH YEAR IS READ FROM ITS OWN EDITION, per the standing own-edition rule:\n"
+      f"FY2025: Risk and Capital Information according to Pillar 3 - 2025, p.18, template UK LR2 - {P3_2025_URL}\n"
+      f"FY2024: Risk and Capital Information according to Pillar 3 2024, p.16, template UK LR2 - {P3_2024_URL}\n"
+      f"FY2023: Pillar 3 Disclosure 2023, p.15, template UK LR2 - {P3_2023_URL}\n"
+      f"FY2022: Pillar 3 Report 2022, p.17, template UK LR2 - {P3_2022_URL}\n"
+      "CROSS-EDITION CHECK: every comparative column agrees with the year's own edition to the last digit "
+      "(the 2025 edition's 2024 column prints 31,558 / -9,085 / 22,473 / 9.3% / 6.6%, matching the 2024 edition's "
+      "own column; the 2024 edition's 2023 column matches the 2023 edition's; the 2023 edition's 2022 column "
+      "matches the 2022 edition's). No restatement in any year.\n"
+      "ARITHMETIC: the template foots exactly in all four years - 30,754-7,743=23,011; 31,558-9,085=22,473; "
+      "33,235-8,879=24,356; 33,625-7,945=25,680. The ratios tie to the template's own row 23 Tier 1 capital "
+      "(leverage) of 2,155 / 2,089 / 2,214 / 2,426 £m on both bases at the printed one-decimal precision. No "
+      "disagreement was found between any two of this bank's leverage disclosures.\n"
+      "FY2018-FY2021 are NOT on either of these bases and keep their own separate rows - see below.",
     note=FY2021_BASIS_NOTE + " " + HISTORICAL_P3_NOTE + " The UK Group is not in scope of the binding UK leverage "
          "ratio minimum requirement (below the size threshold) but the PRA expects a ratio above 3.25%, which it "
          "has maintained throughout. FY2018-FY2021's figures use a different, larger exposure measure (Tier 1 "

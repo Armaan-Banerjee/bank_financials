@@ -459,10 +459,11 @@ bw.add_km1_sheet(
 )
 
 
-def metric(name, unit, rows_data, note=None):
+def metric(name, unit, rows_data, note=None, note_height=60):
     rows_data = [(label, {**{y: PRE_LICENCE_TEXT for y in PRE_LICENCE_YEARS}, **values})
                  for label, values in rows_data]
-    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=170)
+    bw.add_metric_sheet(name, unit, rows_data, p3_sources(), note=note, first_col_width=48, source_height=1000,
+                        note_height=note_height)
 
 
 metric("CET1 Capital", None, [("CET1 capital", dict(ND_BY_YEAR))])
@@ -490,13 +491,39 @@ bw.add_rwa_breakdown_sheet(
         "non-disclosure, not an access gap.\n" + ENTITY_NOTE
     ),
     first_col_width=48,
-    source_height=170,
+    source_height=290,
 )
 
 metric("Leverage Ratio", "%", [("Leverage ratio", {"FY2025": "21.47%", "FY2024": "46.38%", "FY2023": "91.97%", "FY2022": "91.05%"})],
        note="The Annual Reports disclose this ratio as a Key Performance Indicator. FY2021 is blank for the "
             "same STRUCTURAL reason as the CET1 Ratio sheet - the entity held no banking licence during the "
-            "period ended 31 December 2021. Re-verified 2026-09-12.")
+            "period ended 31 December 2021. Re-verified 2026-09-12.\n\n"
+            "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED - and not determinable from anything "
+            "Perenna publishes. The entity has no Pillar 3 document of any kind (established at length in "
+            "the source citation below: Wayback CDX, the WordPress REST media library and the live site all "
+            "return nothing), so there is no UK KM1, no UK LR2 and no LRSum anywhere. The ratio's ONLY "
+            "appearance is a two-line Key Performance Indicators table in the Strategic Report. Read at 300 "
+            "dpi (PDF page 4 of the FY2025 filing = printed Page 1): under the heading 'Key Performance "
+            "Indicators', the text 'As a new bank, the Company has developed a range of metrics to cover all "
+            "aspects of the bank's operations. These continue to evolve. The relevant key metrics are as "
+            "follows:' is followed by columns 2025 / 2024 and exactly two rows - 'Leverage ratio 21.47% "
+            "46.38%' and 'CET1 ratio 48% 133%'. The caption is the bare words 'Leverage ratio'; there is no "
+            "qualifier, no row numbering, and NO EXPOSURE MEASURE PRINTED ANYWHERE.\n\n"
+            "NOT BACK-SOLVED, DELIBERATELY. With no printed denominator there is no deduction line to "
+            "inspect, so the test that settled Bank Sepah International, Jordan International Bank and "
+            "United National Bank cannot be run here. An exposure measure COULD be implied by dividing a "
+            "capital figure by the printed ratio and compared against total assets, and the gap would look "
+            "like evidence of a deduction - that inference is NOT made and no such figure is recorded, "
+            "because the capital numerator is not stated on the same basis, the ratio is rounded, and the "
+            "project does not back-solve a figure the bank did not print. The question matters here rather "
+            "than being academic: the same page states that 'Excess cash was instead at the Bank of England "
+            "or in short-dated UK treasury bills', £17,715k nominal at FY2025 year end (2024: £6,500k), "
+            "against total assets of £110.5m - so central-bank claims are a material share of the balance "
+            "sheet and the two bases would differ visibly. Perenna simply does not say which it uses. The "
+            "two-basis UK presentation is in any case effective only for periods from 1 January 2022, and "
+            "this series begins at FY2022. These filings are SCANNED, image-only (FY2025: 76 pages, 76 "
+            "characters of text layer), so OCR was used for navigation only and every figure quoted here "
+            "was read off the 300 dpi render.", note_height=290)
 metric("LCR", None, [("Liquidity coverage ratio", dict(ND_BY_YEAR))])
 metric("NSFR", None, [("Net stable funding ratio", dict(ND_BY_YEAR))])
 metric("MREL Ratio", None, [("MREL ratio", dict(ND_BY_YEAR))])

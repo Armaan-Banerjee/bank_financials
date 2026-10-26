@@ -660,7 +660,37 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
-metric("Leverage Ratio", "£m / %", [("Total exposure measure excluding claims on central banks", {"FY2025": 28956.3, "FY2024": 27322.9, "FY2023": 27438.8, "FY2022": 24725.4}), ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "7.4%", "FY2024": "7.7%", "FY2023": "7.5%", "FY2022": "8.4%", "FY2021": "7.9%"})], "FY2021 uses the pre-UK-KM1 disclosure's Group leverage ratio and does not provide a comparable exposure-measure amount; the 2022 report notes a like-for-like FY2021 exposure measure of £21,742.2m and ratio of 8.9%, but the workbook preserves the FY2021 as-reported 7.9% ratio rather than mixing bases.")
+metric(
+    "Leverage Ratio", "£m / %",
+    [("Total exposure measure including claims on central banks", {"FY2025": 31382.6, "FY2024": 30372.2, "FY2023": 29688.8, "FY2022": 27532.0}),
+     ("Claims on central banks excluded", {"FY2025": -2426.3, "FY2024": -3048.9, "FY2023": -2250.0, "FY2022": -2806.5}),
+     ("Total exposure measure excluding claims on central banks", {"FY2025": 28956.3, "FY2024": 27322.9, "FY2023": 27438.8, "FY2022": 24725.4}),
+     ("Leverage ratio excluding claims on central banks (%)", {"FY2025": "7.4%", "FY2024": "7.7%", "FY2023": "7.5%", "FY2022": "8.4%", "FY2021": "7.9%"}),
+     ("Leverage ratio including claims on central banks (%)", {"FY2025": "6.8%", "FY2024": "6.9%", "FY2023": "7.0%", "FY2022": "7.5%"})],
+    "BOTH LEVERAGE BASES ADDED 2026-10-09 (GA-026). OSB Group publishes both in template UK LR2 (LRCom) rows "
+    "24, UK-24a, UK-24b, 25 and UK-25c; the sheet previously carried only the excluding side. Each year is "
+    "read from its OWN edition's LR2: FY2025 from the 2025 edition, FY2024 from the 2024, FY2023 from the "
+    "2023, FY2022 from the 2022.\n"
+    "THE COLUMN TRAP THAT MAKES THIS NECESSARY - DO NOT TAKE AN LR2 SECOND COLUMN AS THE PRIOR YEAR. OSB's "
+    "UK KM1 runs FIVE QUARTERLY columns (T, T-1 ... T-4), not five years, and its LR2 carries two of those "
+    "quarters rather than two year-ends. In the 2025 edition the second LR2 column (30,315.8 / -2,752.5 / "
+    "27,563.4) is 30 JUNE 2025, not FY2024: 31 December 2024 is the KM1's LAST column, 27,322.9, which is "
+    "what this sheet carries. Reading the second column as FY2024 would have put an interim date into a "
+    "year-end cell. Each year's figures above are therefore taken from the column of its own edition whose "
+    "excluding-basis measure matches the figure already carried here.\n"
+    "ARITHMETIC, RECORDED NOT RECONCILED. FY2025 and FY2023 foot exactly (31,382.6-2,426.3=28,956.3; "
+    "29,688.8-2,250.0=27,438.8). FY2024 is 0.4 out (30,372.2-3,048.9=27,323.3 against a printed 27,322.9) "
+    "and FY2022 is 0.1 out (27,532.0-2,806.5=24,725.5 against a printed 24,725.4). Both sides reproduced as "
+    "printed; nothing adjusted to make a column tie.\n"
+    "ONE RATIO DOES NOT TIE, AND IS REPRODUCED ANYWAY. FY2023's including-basis ratio is printed as 7.0%, but "
+    "that edition's own row 23 Tier 1 capital of 2,055.7 over its own row 24 of 29,688.8 is 6.92%, which "
+    "rounds to 6.9%. The Bank's printed 7.0% is kept; the arithmetic is recorded here rather than the figure "
+    "being corrected to match it. Every other ratio on both bases ties at the printed precision (FY2025 "
+    "2,142.9; FY2024 2,096.4; FY2022 2,070.8).\n"
+    "FY2021 uses the pre-UK-KM1 disclosure's Group leverage ratio and does not provide a comparable "
+    "exposure-measure amount; the 2022 report notes a like-for-like FY2021 exposure measure of £21,742.2m "
+    "and ratio of 8.9%, but the workbook preserves the FY2021 as-reported 7.9% ratio rather than mixing "
+    "bases. It stays blank on the two new rows for the same reason.")
 # ---------------------------------------------------------------
 # LCR - the ONE Pillar 3 sheet that carries a genuine entity-level
 # (OneSavings Bank plc solo) figure alongside the OSB Group rows, so it gets

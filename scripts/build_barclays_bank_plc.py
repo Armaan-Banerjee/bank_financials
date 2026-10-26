@@ -701,15 +701,62 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) "
+    "prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, UK-24b and 25 "
+    "on the EXCLUDING basis, with the reconciling deduction at UK-24a. The first three rows above are the "
+    "EXCLUDING side; the three new rows are the including side.\n"
+    "THE INCLUDING ROWS FOLLOW THE SAME ENTITY BASIS AS THE EXCLUDING ONES, YEAR BY YEAR - they have to, "
+    "or the sheet would compare two different entities down one column. Each edition prints the LR2 TWICE, "
+    "once for 'Barclays Bank PLC sub-consolidated' and once for 'Barclays Bank PLC solo-consolidated', and "
+    "the two differ substantially. FY2023-FY2025 are taken from the SUB-CONSOLIDATED block and FY2022 from "
+    "the solo-consolidated one, exactly as the existing rows are, because the disclosed UK leverage ratio "
+    "moved to a sub-consolidated basis on 1 January 2023 (PRA approval 20 December 2022). See the "
+    "basis-change note below, which already governs the excluding rows.\n"
+    "EACH YEAR FROM ITS OWN EDITION, read at 300 dpi:\n"
+    "  FY2025 - FY25 BBPLC Pillar 3, p.16, sub-consolidated, 31.12.25: row 24 1,191,554; UK-24a (210,619); "
+    "UK-24b 980,935; row 25 5.8%; UK-25c 4.7%.\n"
+    "  FY2024 - FY24 BBPLC Pillar 3, p.17, sub-consolidated, 31 December 2024: row 24 1,136,468; UK-24a "
+    "(189,659); UK-24b 946,809; row 25 5.8%; UK-25c 4.8%.\n"
+    "  FY2023 - BB PLC Pillar 3 2023, p.17, sub-consolidated, 31 December 2023: row 24 1,123,447; UK-24a "
+    "(198,621); UK-24b 924,826; row 25 6.0%; UK-25c 4.9%. That block carries NO comparative - its own note "
+    "b says 'No comparatives are provided for Barclays Bank PLC sub-consolidated group given this is the "
+    "first reporting year.'\n"
+    "  FY2022 - BB PLC Pillar 3 2022, p.16, the single unlabelled block, 31 December 2022: row 24 923,576; "
+    "UK-24a (180,846); UK-24b 742,730; row 25 4.6%; UK-25c 3.7%. It likewise carries no comparative (its "
+    "note b: 'No comparatives are provided as this reflects disclosure requirements under the UKLRF from "
+    "1 January 2022'). That block is solo-consolidated: its figures equal the FY2023 edition's "
+    "solo-consolidated 31.12.22 comparative column in every row, which is how it was identified.\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY/BASIS: UK-24b reproduces the figure the 'UK leverage "
+    "exposure' row already carried in all four years (980,935 / 946,809 / 924,826 / 742,730), so each "
+    "including figure sits beside an excluding figure struck on the same entity. (2) CROSS-EDITION: every "
+    "comparative equals the next edition's own-year column to the last digit, on the matching basis. "
+    "(3) ARITHMETIC: row 24 minus UK-24a equals UK-24b in all four years. (4) RATIO TIE: row 23 over each "
+    "exposure measure reproduces both printed ratios in all four years (e.g. FY2025 56,465/1,191,554 = "
+    "4.74% -> 4.7%, 56,465/980,935 = 5.76% -> 5.8%).\n"
+    "FY2021 CORRECTLY GETS NO INCLUDING-BASIS FIGURE: Barclays Bank PLC was not subject to the UK leverage "
+    "framework until 1 January 2022, so no LR2 exists for it and the dual basis did not yet apply. Nothing "
+    "is back-solved for that year.\n"
+    "AVERAGE ROWS DELIBERATELY NOT USED. Each LR2 also prints UK-31/UK-32/UK-33/UK-34, the AVERAGE exposure "
+    "measures and ratios (FY2025: 1,315,061 / 1,093,000 / 4.3% / 5.2%). Those are a different measure from "
+    "the period-end rows this sheet carries and are not mixed into the same row.\n\n"
+)
+
 metric(
     "Leverage Ratio", "£m / %",
     [
+        # Keep the excluding-basis ratio FIRST: check_overview_ties.py takes the first
+        # cell PRINTED AS A PERCENTAGE on a ratio sheet as the Overview's headline.
         ("UK leverage ratio (%)", {"FY2025": "5.8%", "FY2024": "5.8%", "FY2023": "6.0%", "FY2022": "4.6%", "FY2021": "3.7%"}),
         ("Tier 1 (T1) capital used in leverage calculation (£m)", {"FY2025": 56465, "FY2024": 54713, "FY2023": 55560, "FY2022": 34139, "FY2021": 32395}),
         ("UK leverage exposure (£m)", {"FY2025": 980935, "FY2024": 946809, "FY2023": 924826, "FY2022": 742730, "FY2021": 883371}),
+        ("Total exposure measure including claims on central banks (£m)", {"FY2025": 1191554, "FY2024": 1136468, "FY2023": 1123447, "FY2022": 923576}),
+        ("Claims on central banks excluded (£m)", {"FY2025": -210619, "FY2024": -189659, "FY2023": -198621, "FY2022": -180846}),
+        ("Leverage ratio including claims on central banks (%)", {"FY2025": "4.7%", "FY2024": "4.8%", "FY2023": "4.9%", "FY2022": "3.7%"}),
     ],
     p3_sources(),
-    note="Basis changes across the period: FY2021 is a CRR leverage ratio (Barclays Bank PLC was not subject to "
+    note=GA026_BOTH_BASES_NOTE + "Basis changes across the period: FY2021 is a CRR leverage ratio (Barclays Bank PLC was not subject to "
          "the UK leverage framework until 1 January 2022; the UK-framework equivalent was disclosed as 4.1%, "
          "£767.6bn exposure). FY2022 is a UK leverage ratio on a solo-consolidated basis. From FY2023 onward, "
          "leverage minimum requirements — and the disclosed ratio — moved to a Barclays Bank PLC sub-consolidated "

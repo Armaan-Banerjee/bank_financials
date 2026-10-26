@@ -1488,14 +1488,50 @@ bw.add_rwa_breakdown_sheet(
 )
 
 metric(
-    "Leverage Ratio", "%",
-    [("Leverage Ratio", {
-        "FY2021": "8.63%", "FY2022": "8.74%", "FY2023": "8.81%", "FY2024": "10.18%", "FY2025": "9.26%",
-        "FY2016": "9.6%",
-        "FY2020": "8.90%", "FY2019": "9.49%", "FY2018": "10.11%", "FY2017": "9.92%",
-    })],
+    "Leverage Ratio", "£'000 / %",
+    [
+        # GA-026, 2026-10-09. The exposure measures and the including-central-banks
+        # ratio ARE published - in the Pillar 3 editions' own "Leverage ratio common
+        # disclosure (LR2)" table, which prints Tier 1, both exposure measures and
+        # both ratios. Only FY2025 and FY2024 are filled here, each from THAT YEAR'S
+        # OWN edition (FY2025 p.41, FY2024 p.40), read off 300 dpi page renders.
+        # FY2023 and earlier need their own editions opened and are deliberately left
+        # blank rather than taken from a later edition's comparative column - the
+        # Bank restates (see the note).
+        ("Total exposure measure including claims on central banks",
+         {"FY2025": 1509189, "FY2024": 1307352}),
+        ("Total exposure measure excluding claims on central banks",
+         {"FY2025": 1272426, "FY2024": 1133461}),
+        ("Leverage Ratio", {
+            "FY2021": "8.63%", "FY2022": "8.74%", "FY2023": "8.81%", "FY2024": "10.18%", "FY2025": "9.26%",
+            "FY2016": "9.6%",
+            "FY2020": "8.90%", "FY2019": "9.49%", "FY2018": "10.11%", "FY2017": "9.92%",
+        }),
+        ("Leverage ratio including claims on central banks (%)",
+         {"FY2025": "7.80%", "FY2024": "8.83%"}),
+    ],
     p3_sources(),
-    note="No leverage exposure measure is disclosed in the FY2021-FY2025 statutory accounts, but the Bank's own "
+    note="EXPOSURE MEASURES AND THE INCLUDING-CENTRAL-BANKS RATIO ADDED FOR FY2025/FY2024 (GA-026, 2026-10-09). "
+         "Each comes from that year's OWN Pillar 3 edition's 'Leverage ratio common disclosure (LR2)' table "
+         "(FY2025 p.41, FY2024 p.40), read off a 300 dpi page render. Both years tie exactly against the Bank's "
+         "own Tier 1 capital: FY2025 117,764/1,509,189 = 7.80% and 117,764/1,272,426 = 9.26%; FY2024 "
+         "115,427/1,307,352 = 8.83% and 115,427/1,133,461 = 10.18%. The 'Leverage Ratio' row above is the "
+         "EXCLUDING-claims basis for FY2022-FY2025; FY2016-FY2021 predate that framework and are each on their "
+         "own year's basis - see the per-year detail further down this note, and do not read the row as one "
+         "continuous basis.\n\n"
+         "FY2023 AND EARLIER ARE DELIBERATELY BLANK ON THE TWO EXPOSURE ROWS, not unresearched: the Bank "
+         "restates, so those years must come from their own editions rather than a later comparative. The "
+         "FY2024 edition's own 2023 column prints exposure 1,166,461 including / 999,212 excluding and ratios "
+         "8.39% / 9.80%, while this sheet carries 8.81% for FY2023 from FY2023's own edition - three different "
+         "published values exist for some years and none is reconciled here.\n\n"
+         "A DISAGREEMENT INSIDE EACH EDITION, RECORDED NOT RECONCILED. In the FY2024 edition the LR1 table's "
+         "'Leverage ratio exposure measure' reads 1,133,563 while its own LR2 'Total exposure measure excluding "
+         "claims on central banks' reads 1,133,461 - £102k apart, same document, same date. The LR2 figure is "
+         "used here because it is the row the printed ratio divides into (115,427/1,133,461 = 10.18% exactly). "
+         "The FY2025 edition shows the same split a thousand apart (LR1 1,272,427 vs LR2 1,272,426), and it "
+         "RESTATES FY2024 to Tier 1 109,883 / exposure 1,133,563 / 8.41% / 9.69% - i.e. the restatement adopts "
+         "the earlier LR1 figure. The own-edition figures are the ones carried here.\n\n"
+         "No leverage exposure measure is disclosed in the FY2021-FY2025 statutory accounts, but the Bank's own "
          "Pillar 3 editions disclose the ratio directly for every year FY2016-FY2025. FY2025 FILLED 2026-09-15 "
          "from the FY2025 Pillar 3 KM1 and its LR2 table: 9.26% on the 'Leverage ratio excluding claims on "
          "central banks' basis, which is the Bank's own headline KM1 figure and the UK-CRR convention. BASIS "

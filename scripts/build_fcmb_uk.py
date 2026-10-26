@@ -866,7 +866,25 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£'000)",
 )
 
-metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources())
+# GA-026 (2026-10-09). Template UK LR2 prints TWO exposure bases - row 24 INCLUDING claims on
+# central banks, UK-24b EXCLUDING them, reconciling at UK-24a, ratios at row 25 (excluding) and
+# UK-25c (including) - effective for periods from 1 January 2022. This bank uses a bespoke
+# key-metrics table throughout and never adopts it.
+GA026_ONE_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+    "2026-10-09). Its key-metrics table is bespoke and unnumbered, and its 'Leverage Ratio' block is "
+    "exactly two rows, captioned plainly 'Total exposure measure' and 'Leverage Ratio %', running "
+    "straight into the Liquidity Coverage Ratio block. The Bank prints no UK LR2 / LRCom table, and no "
+    "rows 24, UK-24a, UK-24b or UK-25c appear in any edition. It never uses the 'excluding claims on "
+    "central banks' wording that other UK banks adopted on 1 January 2022. The single ratio is "
+    "therefore recorded exactly as published, unqualified: NO BASIS IS ASSERTED THAT THE BANK DID NOT "
+    "PRINT, and in particular it is not labelled as the excluding basis merely because that is what "
+    "most UK banks now publish. FY2025 edition p.4 rendered and read at 300 dpi, so the qualifier rows "
+    "are established absent from the TABLE, not merely from a text search."
+)
+
+metric("Leverage Ratio", "%", [("Leverage Ratio", LEVERAGE_RATIO)], p3_sources(),
+       note=GA026_ONE_BASIS_NOTE, note_height=200)
 metric("LCR", "% (12-month average - see methodology note)", [("Liquidity Coverage Ratio", LCR_RATIO)], p3_sources())
 metric("NSFR", "% (4-quarter average - see methodology note)", [("Net Stable Funding Ratio", NSFR_RATIO)], p3_sources())
 # GA-020 (2026-09-19): all seven editions (FY2019 via Wayback, FY2020-FY2025 live) re-fetched and text-searched.

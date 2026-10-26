@@ -820,7 +820,7 @@ metric(
     [
         ("Tier 1 capital after deductions", {"FY2024": 193258, "FY2023": 192544, "FY2022": 185772, "FY2021": 177905, "FY2020": 174426, "FY2019": 170452}),
         ("Leverage ratio exposure measure", {"FY2024": 1715067, "FY2023": 1664149, "FY2022": 1583516, "FY2021": 1910203, "FY2020": 1728069, "FY2019": 1460566}),
-        ("Leverage ratio (%)", {"FY2025": "10.5%", "FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
+        ("Leverage ratio (%) - FY2022 onward excluding claims on central banks; FY2019-FY2021 broader CRR2 full-exposure basis, including them; see note", {"FY2025": "10.5%", "FY2024": "11.27%", "FY2023": "11.57%", "FY2022": "11.73%", "FY2021": "9.3%", "FY2020": "10.1%", "FY2019": "11.7%"}),
     ],
     p3_sources() +
     f"\nFY2025 (ratio row only): Triodos Bank UK Limited Annual Report 2025, printed p.14, 'Key performance "

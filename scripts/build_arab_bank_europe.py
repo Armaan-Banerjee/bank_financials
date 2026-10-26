@@ -1358,11 +1358,30 @@ bw.add_rwa_breakdown_sheet(
     source_height=200,
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md. Handled by hand rather
+# than by the bulk annotator, because this bank has exactly ONE document carrying a
+# leverage figure at all and the generic "all cited editions were re-fetched" wording
+# would overstate what was checked.
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY, IN THE ONE YEAR THAT HAS A FIGURE - CHECKED 2026-10-09 (GA-026). Template "
+    "UK LR2 (LRCom) asks for both the including- and the excluding-claims-on-central-banks measure (rows 24, "
+    "UK-24a, UK-24b, 25, UK-25c) and 47 workbooks in this corpus carry both. Europe Arab Bank's standalone "
+    "Pillar 3 as at 31 December 2022 - the only document anywhere that gives this bank a leverage figure - "
+    "was re-fetched on 2026-10-09 from its Wayback capture (%PDF magic bytes checked, 35 pages) and searched "
+    "in full: it prints 'Total exposure measure excluding claims on central banks (EURm)' and 'Leverage ratio "
+    "excluding claims on central banks (%)' and nothing on the including basis, with no LR2/LRCom template "
+    "anywhere in it. So FY2022's single basis is the bank's own choice, not a gap.\n"
+    "THIS SAYS NOTHING ABOUT FY2023-FY2025, WHICH REMAIN UNREACHED, NOT ONE-BASIS. Those years have no "
+    "obtainable Pillar 3 at all (see the row values and the note above); the question of which bases they "
+    "would disclose cannot be answered until a document is found. Do not let this paragraph be read as "
+    "closing them."
+)
+
 metric("Leverage Ratio", None,
        [("Leverage ratio excluding claims on central banks", LEVERAGE_RATIO)],
        note="FY2022 only - Pillar3.pdf's own FY2021 comparative is flagged 'n/a': the PRA's leverage ratio "
             "disclosure template only took effect from 1 Jan 2022, so no FY2021 comparative was ever produced "
-            "(not a sourcing gap). FY2023/FY2024: " + NOT_DISCLOSED_NOTE,
+            "(not a sourcing gap). FY2023/FY2024: " + NOT_DISCLOSED_NOTE + GA026_ONE_LEVERAGE_BASIS_NOTE,
        extra_sources=PILLAR3_SOURCES)
 
 metric("LCR", None, [("Liquidity Coverage Ratio (12-month average basis)", LCR_RATIO)],

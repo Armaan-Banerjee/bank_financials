@@ -811,8 +811,53 @@ LIQ_LEV_NOTE = ("Sourced from the Bank's own Pillar 3 Disclosures documents (Tab
                 "not the Annual Report - see this sheet's own source citation below for the exact PDFs/pages and "
                 "the TLS-certificate workaround used to fetch them.")
 
-bw.add_metric_sheet("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], liquidity_leverage_sources(),
-                     note=LIQ_LEV_NOTE, first_col_width=52, source_height=500)
+GA026_BASIS_NOTE = (
+    "GA-026 LEVERAGE BASIS (2026-10-10): INCLUDING CLAIMS ON CENTRAL BANKS, determinable from the Bank's "
+    "own stated calculation. Bank Sepah International publishes no UK KM1 and no UK LR2 template, so there "
+    "is no row 24 / UK-24a / UK-24b / UK-25c to read. What it publishes instead is an explicit formula and "
+    "a reconciliation, and both settle the question. Section 13 'Leverage Ratio' of the March 2025 Pillar 3 "
+    "(p.28) states: \"The leverage ratio is calculated by dividing the Bank's CET 1 capital by the total of "
+    "on and off-balance sheet exposures.\" Table 20 on p.29 then sets out that total in full, and it "
+    "contains NO deduction line of any kind: Total on balance sheet exposures (net of provisions) 315,169; "
+    "Total off balance sheet exposures (post CCF) nil; Total exposures 315,169; CET1 Capital 172,779; less "
+    "Intangible Assets 434; Total Eligible CET1 Capital 172,345; Leverage ratio 55% (EUR'000). 172,345 / "
+    "315,169 = 54.68%, which rounds to the 55% printed. Read at 300 dpi (pdftoppm -r 300, PDF page 29), not "
+    "from the text layer alone.\n\n"
+    "WHY THE ABSENCE OF A DEDUCTION LINE IS DECISIVE HERE RATHER THAN MERELY SUGGESTIVE. The Bank's own "
+    "s.11 states that \"the majority of asset exposure is to central banks and credit institutions\", and "
+    "its HQLA \"consist mainly of deposits with central banks\". On an excluding basis the denominator "
+    "would therefore fall by a large fraction of 315,169 and the ratio would be far above 55% - it could "
+    "not round to the printed figure. The arithmetic ties on the including basis and could not tie on the "
+    "excluding one, so this is not an inference from silence: the published numerator, denominator and "
+    "ratio are mutually consistent on exactly one reading. This is the same shape as Jordan International "
+    "Bank and United National Bank, where a printed reconciliation that deducts nothing is what makes the "
+    "basis readable, and the mirror of Bank of Ceylon UK, whose reconciliation carries an explicit Bank of "
+    "England deduction and is therefore excluding.\n\n"
+    "SCOPE AND FRAMEWORK. The document cites CRD IV, not the UK CRR two-basis presentation, consistent "
+    "with a bank that never adopted the UK KM1 template; the two-basis presentation is in any case "
+    "effective only for periods from 1 January 2022. The normalised phrase scan (text joined across line "
+    "breaks before matching) returns ZERO hits for 'excluding/including claims on central banks' in the "
+    "March 2025 edition - the basis here is established by the arithmetic of the Bank's own table, not by "
+    "a form of words, and the row label records that distinction. The Bank's year-end is 31 MARCH, so this "
+    "edition (31 March 2025) is the FY2025 column; its Table 1 'Summary of Key Metrics' prints the "
+    "quarterly series Mar 25 / Dec 24 / Sep 24 / Jun 24 / Mar 24 as 55% / 54% / 55% / 55% / 55%, and only "
+    "the year-end March columns are carried onto this sheet. The basis finding above is read from the "
+    "March 2025 edition; the earlier editions (which this workbook also cites) were not re-read for it on "
+    "2026-10-10, so FY2024 and earlier are not independently confirmed here.\n\n"
+    "RETRIEVAL. The March 2025 PDF was re-fetched on 2026-10-10 following the practice already documented "
+    "in P3_FETCH_NOTE above: the server's TLS certificate is EXPIRED, not absent or mismatched. Inspected "
+    "the same day with openssl: subject CN=banksepah.co.uk (the correct host), issuer ZeroSSL RSA Domain "
+    "Secure Site CA (C=AT, O=ZeroSSL), notBefore 25 Jun 2025, notAfter 25 Jun 2026, SHA-256 fingerprint "
+    "8C:7B:F4:6D:C4:4E:D4:28:E9:EB:4F:1E:13:4D:BB:84:72:B5:F6:A1:97:8D:BE:3F:75:AF:FB:E2:8B:50:CC:AF. "
+    "Host identity was therefore verified before the date check was bypassed; the retrieved file is a "
+    "genuine 31-page Bank Sepah International plc Pillar 3 bearing the Bank's own branding."
+)
+
+bw.add_metric_sheet("Leverage Ratio", "%",
+                     [("Leverage ratio - including claims on central banks; the Bank's own Table 20 "
+                       "deducts none (see note)", LEVERAGE_RATIO)], liquidity_leverage_sources(),
+                     note=LIQ_LEV_NOTE + "\n\n" + GA026_BASIS_NOTE, first_col_width=52, source_height=500,
+                     note_height=390)
 bw.add_metric_sheet("LCR", "%", [("Liquidity Coverage Ratio", LCR_RATIO)], liquidity_leverage_sources(),
                      note=LIQ_LEV_NOTE, first_col_width=52, source_height=500)
 bw.add_metric_sheet("NSFR", "%", [("Net Stable Funding Ratio", NSFR_RATIO)], liquidity_leverage_sources(),

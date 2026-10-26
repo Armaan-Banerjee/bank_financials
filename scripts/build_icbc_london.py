@@ -1166,6 +1166,31 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" ($'000)",
 )
 
+GA026_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+    "2026-10-10). From 1 January 2022 template UK LR2 / LRCom prints the exposure measure on BOTH "
+    "bases - row 24 including claims on central banks, row UK-24b excluding them, reconciling at "
+    "UK-24a, with ratios at row 25 and UK-25c. ICBC (London) prints no UK LR2 table in any edition. "
+    "Its leverage disclosure is two plainly captioned rows in 'Annex 2 - UK KM1 - Key metric "
+    "template': '13 Leverage ratio total exposure measure' and '14 Leverage ratio'. Neither carries a "
+    "central-bank qualifier, and the Bank prints no reconciliation of accounting assets to leverage "
+    "exposure, so there is no line from which a deduction - or its absence - could be read. No basis "
+    "is attributed here.\n"
+    "THE FY2025 EDITION CONTRADICTS ITSELF ON THIS RATIO, AND BOTH FIGURES ARE RECORDED. Its "
+    "narrative at section 5 'Leverage Ratio' (p.15) states 'The Leverage ratio of the Bank at 31 "
+    "December 2025 was 47.49%'. Its UK KM1 table (p.34, Annex 2) prints 47.48% on row 14 for the same "
+    "date. The difference is one basis point and nothing in the document reconciles the two. This "
+    "sheet carries 47.48%, the TABLE figure, consistent with every other year here being taken from "
+    "KM1; the narrative's 47.49% is recorded in this note and NOT substituted, and neither figure is "
+    "adjusted towards the other.\n"
+    "COLUMN CHOICE. The KM1 is QUARTERLY - five columns headed 31/12/2025, 30/09/2025, 30/06/2025, "
+    "31/03/2025 and 31/12/2024 (T to T-4), in USD 000's. This sheet takes only the two year-end "
+    "columns: FY2025 from column T (47.48%, exposure 1,153,888.52) and FY2024 from column T-4 "
+    "(33.77%, exposure 1,493,766.54). The three intermediate quarters are deliberately not shown - "
+    "they are not financial year-ends and an FY column may not hold them. Both rows were read at "
+    "300 dpi from p.34."
+)
+
 metric(
     "Leverage Ratio", "$'000 / %",
     [
@@ -1175,6 +1200,7 @@ metric(
                                 "FY2020": "22.17%", "FY2019": "19.08%", "FY2018": "16.77%", "FY2017": "14.64%", "FY2016": "12.79%"}),
     ],
     p3_sources() + "\n\n" + p3_prekm1_sources(),
+    note=GA026_BASIS_NOTE,
 )
 
 metric(

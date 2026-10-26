@@ -649,9 +649,10 @@ bw.add_asset_quality_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None):
+def metric(name, unit, rows_data, sources_text, note=None, note_height=60, source_height=140):
     bw.add_metric_sheet(name, f"Consolidated basis, {unit}" if unit else "Consolidated basis",
-                         rows_data, sources_text, note=note, first_col_width=48, source_height=140)
+                         rows_data, sources_text, note=note, first_col_width=48,
+                         source_height=source_height, note_height=note_height)
 
 # ---------------------------------------------------------------
 # KM1 Key Metrics (IBP's own UK KM1 template, reproduced whole).
@@ -866,13 +867,91 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md and GA-028.md
+GA026_BASIS_UNRESOLVED_NOTE = (
+    "\n\nGA-026 (2026-10-09) - THIS BANK DOES PUBLISH BOTH LEVERAGE BASES, BUT NO INCLUDING-BASIS ROW IS "
+    "ADDED HERE, BECAUSE NEITHER PUBLISHED TABLE REPRODUCES THE FIGURES ON THIS SHEET. Recorded as a "
+    "finding rather than closed, and raised as GA-028.\n"
+    "WHAT THE PILLAR 3 PUBLISHES. The Investec plc Group and Investec Bank plc Pillar 3 annual disclosure "
+    "report 2026 prints template UK LR2 (LRCom) TWICE, at two different consolidation levels, and both "
+    "carry the full dual basis (row 24 including claims on central banks, UK-24a the deduction, UK-24b "
+    "excluding, row 25 and UK-25c the two ratios):\n"
+    "  Table 10, p.35 - INVESTEC PLC GROUP, 31 March 2026 / 31 March 2025: row 24 35,845 / 32,762; UK-24b "
+    "32,021 / 28,089; row 25 9.1% / 9.6%; UK-25c 8.1% / 8.3%. The group's own UK KM1 agrees (row 13 "
+    "32,021, row 14 9.1%).\n"
+    "  Table 50, p.94, Appendix A - INVESTEC BANK PLC on an individual (solo-consolidation) level, the "
+    "appendix the report itself titles 'Investec Bank plc individual disclosure tables': row 23 2,476 / "
+    "2,356; row 24 28,465 / 26,348; UK-24a (3,159) / (4,175); UK-24b 25,306 / 22,173; row 25 9.8% / "
+    "10.6%; UK-25c 8.7% / 8.9%. Its own commentary reads 'IBP's leverage ratio decreased to 9.8% from "
+    "10.6% at 31 March 2025.'\n"
+    "WHY NEITHER CAN BE USED HERE. This sheet carries 31,774 at 9.5% for FY2026 and 27,906 at 10.5% for "
+    "FY2025, taken from the Annual Financial Statements' 'A summary of capital adequacy and leverage "
+    "ratios'. Those figures match NEITHER table: the group prints 32,021 at 9.1% and IBP solo prints "
+    "25,306 at 9.8%. A full-text search of the FY2026 Pillar 3 report finds no '31 774' and no leverage "
+    "'9.5%' anywhere in it. So the Annual Report summary is a THIRD basis, and until it is identified, an "
+    "including-basis figure from either LR2 would sit in the same column as an excluding figure struck on "
+    "a different one - which is the specific error the entity check in this ticket exists to prevent, and "
+    "the one that stopped two other banks in this batch whose LR2 turned out to be group-level.\n"
+    "NOTHING IS BACK-SOLVED AND NOTHING IS RELABELLED. The existing rows are left exactly as they are, "
+    "still sourced to the Annual Report, and the two Pillar 3 tables are recorded above in full so a later "
+    "pass can resolve the basis question with the documents rather than re-derive it. Note the sheet's own "
+    "source block already flags a related basis subtlety - IBP's ratios deduct foreseeable charges and "
+    "dividends from CET1 while the Investec Group booklet does not - which may or may not be the same "
+    "cause; that is for GA-028 to establish, not to assume here."
+    "\n\nGA-028 RESOLVED (2026-10-10) - THE THIRD BASIS IS IBP'S OWN CONSOLIDATION, AND IT HAS NO "
+    "PUBLISHED INCLUDING-BASIS COUNTERPART. The source table was read at 300 dpi: Investec Bank plc "
+    "Annual Financial Statements 2026, note 63 'Capital management and allocation', 'A summary of capital "
+    "adequacy and leverage ratios', printed p.280 (PDF p.282 of the Companies House scan - the filing is "
+    "image-only, 361 pages yielding 361 characters of text layer, so OCR was used only to find the page). "
+    "It prints, for 31 March 2026 / 31 March 2025: CET1 ratio 13.3% / 13.6%; Tier 1 ratio 15.0% / 15.4%; "
+    "Total Capital ratio 18.6% / 19.2%; RWAs 20,177 / 18,908; leverage exposure measure 31,774 / 27,906; "
+    "leverage ratio 9.5% / 10.5% - the figures on this sheet, confirmed cell for cell.\n"
+    "WHAT THE TWO FOOTNOTES SAY, VERBATIM IN SUBSTANCE. (*) 'The capital adequacy and leverage "
+    "disclosures for IBP include the deduction of foreseeable charges and dividends when calculating CET1 "
+    "and Tier 1 capital. These disclosures differ from the disclosures included in the Investec Group's "
+    "year-end results booklet 2026, which follow our normal basis of presentation and do not include this "
+    "deduction. IBP's CET1 ratio would be 64bps (31 March 2025: 37bps) and leverage ratio 40bps (31 March "
+    "2025: 25bps) higher, on this basis.' (**) 'The March 2025 CET1, Tier 1, total capital and leverage "
+    "ratios, and risk weighted assets (RWAs) have been calculated applying the IFRS 9 transitional "
+    "arrangements. Effective from 1 April 2025, IFRS 9 transitional arrangements ceased to apply, with "
+    "all subsequent ratios presented on a fully loaded basis.'\n"
+    "WHICH OF THE TICKET'S THREE CANDIDATE EXPLANATIONS SURVIVES. The ticket asked whether the ~200 gap "
+    "against the group's exposure measure is the IFRS 9 transitional change, the foreseeable-charges "
+    "deduction, or a different entity. It is the ENTITY. The foreseeable-charges deduction is a NUMERATOR "
+    "adjustment - it reduces CET1 and Tier 1 capital - so it cannot move an exposure measure at all, and "
+    "is ruled out for the 247 (FY2026) and 183 (FY2025) exposure differences on that ground alone. What "
+    "it does explain is part of the RATIO difference, and the bank quantifies it exactly: 40bps at "
+    "FY2026, 25bps at FY2025. The scope is IBP's own regulatory consolidation as presented in IBP's own "
+    "statutory accounts - the note is headed IBP throughout, discusses 'Subsidiaries of IBP', and its "
+    "capital-movement commentary turns on IBP's own regulatory scope of consolidation, referring to "
+    "'gains attributable to non-financial entities outside the regulatory scope of consolidation' and to "
+    "'proportionally consolidated associates', naming the holding in Rathbones. That is neither the "
+    "Investec plc Group prudential consolidation of Table 10 nor the IBP solo-consolidation of Table 50: "
+    "it sits between them, which is exactly where its exposure measure sits (32,021 group > 31,774 here > "
+    "25,306 solo).\n"
+    "WHAT IS STILL NOT RECONCILED, AND IS NOT INVENTED HERE. The Annual Financial Statements do NOT "
+    "reconcile their exposure measure to either Pillar 3 table, and give no bridge for the 247 / 183 "
+    "differences. Those gaps are therefore recorded as unexplained in the source rather than attributed "
+    "to a cause. No Tier 1 figure has been implied by multiplying a ratio by an exposure measure, and no "
+    "exposure measure has been implied from anything.\n"
+    "CONSEQUENCE FOR THIS SHEET, WHICH IS THE POINT OF THE TICKET: because this basis is a third "
+    "consolidation, the including-basis rows published in the Pillar 3 belong to OTHER entities - row 24 "
+    "/ UK-25c in Table 10 are Investec plc Group, and in Table 50 are IBP solo-consolidation. There is NO "
+    "published including-claims-on-central-banks counterpart for the IBP consolidated basis this sheet "
+    "carries. No including-basis row is added, and none can be without changing the sheet's entity. The "
+    "rows stay exactly as they are; the basis is now identified rather than unknown, which is what GA-028 "
+    "was opened to settle."
+)
+
 metric(
     "Leverage Ratio", "£m / %",
     [
         ("Leverage exposure measure (£m)", {"FY2026": 31774, "FY2025": 27906, "FY2024": 26746, "FY2023": 24945, "FY2022": 23874, "FY2021": 26351, "FY2020": 25719, "FY2019": 23849, "FY2018": 21335}),
         ("Leverage ratio (%)", {"FY2026": "9.5%", "FY2025": "10.5%", "FY2024": "10.7%", "FY2023": "9.8%", "FY2022": "9.3%", "FY2021": "8.0%", "FY2020": "8.0%", "FY2019": "7.9%", "FY2018": "8.5%"}),
     ],
-    p3_sources(280, 287, 270, "A summary of capital adequacy and leverage ratios") + f"\nFY2021 & FY2020: Investec Bank plc Annual Financial Statements 2021, p.104 — {AR21_URL}\nFY2019 (own) & FY2018 (own-year comparative): Investec Bank plc Annual Financial Statements 2019, p.84 ('Leverage') — {AR19_URL}",
+    p3_sources(280, 287, 270, "A summary of capital adequacy and leverage ratios")
+    + GA026_BASIS_UNRESOLVED_NOTE + f"\nFY2021 & FY2020: Investec Bank plc Annual Financial Statements 2021, p.104 — {AR21_URL}\nFY2019 (own) & FY2018 (own-year comparative): Investec Bank plc Annual Financial Statements 2019, p.84 ('Leverage') — {AR19_URL}",
+    source_height=650,
 )
 
 LCR_NSFR_SOURCES = (

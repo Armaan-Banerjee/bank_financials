@@ -532,9 +532,9 @@ bw.add_asset_quality_sheet(
 )
 
 
-def metric(name, unit, rows, note=None):
+def metric(name, unit, rows, note=None, note_height=60):
     bw.add_metric_sheet(name, unit, rows, annual_sources(), note=note, first_col_width=54, source_height=220,
-                         years=PILLAR3_YEARS)
+                         years=PILLAR3_YEARS, note_height=note_height)
 
 
 # ---------------------------------------------------------------
@@ -691,7 +691,28 @@ metric("Leverage Ratio", "£'000 / %", [
                          "FY2020": "19.8%", "FY2019": "16.3%", "FY2018": "18.0%", "FY2017": "16.0%", "FY2016": "13.7%", "FY2015": "14.7%"}),
 ], note="FY2014-FY2018: Leverage exposure (the £'000 figure) was not disclosed, only the leverage ratio itself. "
         "FY2014 has no leverage ratio at all - public disclosure requirements for this ratio only became "
-        "effective for reporting periods from 1 January 2015, per the Company's own FY2016 Annual Report.")
+        "effective for reporting periods from 1 January 2015, per the Company's own FY2016 Annual Report.\n\n"
+        "GA-026 LEVERAGE BASIS (2026-10-10): ONE BASIS, UNDECLARED. MSBIL's figures come from its own "
+        "Companies House filing (98 pages), read at 300 dpi on p.5, which prints three plain rows and "
+        "nothing else: Leverage exposure 2,233,488 / 2,436,257; Tier 1 capital 676,229 / 709,078; Leverage "
+        "ratio 30.3% / 29.1% (FY2025 / FY2024) - the exposure and ratio figures carried on this sheet, "
+        "matching cell for cell. The captions carry no qualifier: there is no row 24 / UK-24a / UK-24b / "
+        "UK-25c, no UK LR2 or LRSum template, and no reconciliation from total assets to the exposure "
+        "measure. With no deduction line to inspect, the test that settled Bank Sepah International, "
+        "Jordan International Bank and United National Bank cannot be run here, and no basis is asserted. "
+        "The two-basis UK presentation is in any case effective only for periods from 1 January 2022, and "
+        "this series runs back to FY2015 on a single unchanging caption.\n\n"
+        "THE GROUP PILLAR 3 IS NOT THIS ENTITY'S DOCUMENT - checked, and deliberately not used. "
+        "morganstanley.com/about-us-ir/pillar-uk carries NO MSBIL-specific Pillar 3 in any year after "
+        "2016. The available document is the parent's: '2024 Pillar 3 Disclosures - Morgan Stanley "
+        "International Limited' (167 pages), which is rich in basis language (a normalised phrase scan "
+        "returns 22 'excluding claims on central banks' and 14 'including' hits) and would make a "
+        "tempting source. It is the WRONG ENTITY. MSBIL appears in it only in the governance section, the "
+        "remuneration tables and a director's biography; not one leverage figure in it is struck on "
+        "MSBIL. Importing the group's declared basis onto this sheet would attribute to MSBIL a statement "
+        "MSBIL never made. This is the same trap already recorded for Schroder & Co. Limited, whose "
+        "entity figures were nearly taken from Schroders plc consolidated, and the reason the bare "
+        "Companies House filing is preferred over the richer group document.", note_height=170)
 metric("LCR", "£'000 / %", [
     ("Liquidity buffer — HQLA", {"FY2025": 1110032, "FY2024": 1825386, "FY2023": 1190200, "FY2022": 1230539, "FY2021": 1240953,
                                   "FY2020": 1594671, "FY2019": 1220056}),

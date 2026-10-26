@@ -435,6 +435,11 @@ TIER1_USD = {"FY2025": 4945, "FY2024": 4336, "FY2023": 3934, "FY2022": 3409, "FY
 TOTAL_CAPITAL_USD = {"FY2025": 5771, "FY2024": 5162, "FY2023": 4760, "FY2022": 4237, "FY2021": 4238}
 TOTAL_RWA_USD = {"FY2025": 19936, "FY2024": 17767, "FY2023": 16546, "FY2022": 15674, "FY2021": 17262}
 LEVERAGE_EXPOSURE_USD = {"FY2025": 58928, "FY2024": 48965, "FY2023": 53470, "FY2022": 49383, "FY2021": 53247}
+# GA-026 (2026-10-09): the INCLUDING-claims-on-central-banks side of template UK LR2,
+# GSIB column, each year from its own Q4 edition. See wayfinder/gaps/tickets/GA-026.md.
+LEVERAGE_EXPOSURE_INCL_USD = {"FY2025": 66857, "FY2024": 56559, "FY2023": 61107, "FY2022": 54027}
+LEVERAGE_CB_CLAIMS_EXCLUDED_USD = {"FY2025": -7929, "FY2024": -7594, "FY2023": -7637, "FY2022": -4644}
+LEVERAGE_RATIO_INCL = {"FY2025": "7.40%", "FY2024": "7.67%", "FY2023": "6.44%", "FY2022": "6.31%"}
 
 CET1_RATIO = {"FY2025": "24.81%", "FY2024": "24.41%", "FY2023": "23.77%", "FY2022": "21.75%", "FY2021": "19.8%"}
 TIER1_RATIO = {"FY2025": "24.81%", "FY2024": "24.41%", "FY2023": "23.77%", "FY2022": "21.75%", "FY2021": "19.8%"}
@@ -738,10 +743,58 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m, conv. from USD)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_BOTH_BASES_NOTE = (
+    "BOTH LEVERAGE BASES NOW CARRIED, FY2022-FY2025 - ADDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) "
+    "prints BOTH measures: row 24 and UK-25c on the INCLUDING-claims-on-central-banks basis, UK-24b and 25 "
+    "on the EXCLUDING basis, with the reconciling deduction at UK-24a. The first two rows above are the "
+    "excluding side; the three new rows are the including side. The amounts are converted USD->GBP by the "
+    "same stock() spot-rate helper as every other balance-sheet figure in this workbook; the RATIOS are "
+    "carried exactly as printed and are never converted or recomputed.\n"
+    "THE RIGHT COLUMN OUT OF SIX. Table 'Leverage ratio common disclosure' in the Goldman Sachs Group UK "
+    "Limited Pillar 3 prints SIX columns - GSGUK, GSI and GSIB at each of two dates. Only the GSIB column "
+    "belongs in this workbook, and it is the smallest of the three. Each year is taken from its own Q4 "
+    "edition's December column:\n"
+    "  FY2025 - GSGUK Q4 2025 Pillar 3, Table 42, GSIB as of December 2025: row 23 $4,945m; row 24 "
+    "$66,857m; UK-24a $(7,929)m; UK-24b $58,928m; row 25 8.39%; UK-25c 7.40%.\n"
+    "  FY2024 - GSGUK Q4 2024 Pillar 3, GSIB as of December 2024: row 23 $4,336m; row 24 $56,559m; UK-24a "
+    "$(7,594)m; UK-24b $48,965m; row 25 8.86%; UK-25c 7.67%.\n"
+    "  FY2023 - GSGUK Q4 2023 Pillar 3, GSIB as of December 2023: row 23 $3,934m; row 24 $61,107m; UK-24a "
+    "$(7,637)m; UK-24b $53,470m; row 25 7.36%; UK-25c 6.44%.\n"
+    "  FY2022 - GSGUK Q4 2022 Pillar 3, GSIB as of December 2022: row 23 $3,409m; row 24 $54,027m; UK-24a "
+    "$(4,644)m; UK-24b $49,383m; row 25 6.90%; UK-25c 6.31%.\n"
+    "THE SECOND DATE IN EVERY EDITION IS THAT YEAR'S JUNE, NOT THE PRIOR DECEMBER ('As of December 2025' / "
+    "'As of June 2025'), so these reports carry NO prior-year comparative at all. That has a consequence "
+    "worth stating plainly: the cross-edition check used elsewhere in GA-026 - each edition's comparative "
+    "must equal the next edition's own-year column - CANNOT BE RUN for this bank. The four years rest on "
+    "four separate documents with no overlap between them, so the arithmetic and ratio ties below are "
+    "doing more of the work here than they do for other banks in this batch.\n"
+    "A SELF-DISAGREEMENT IN THE FY2022 EDITION, RECORDED AND NOT RECONCILED. For GSIB at December 2022 the "
+    "SAME document prints two different leverage ratios: its KM1 row 14 'Leverage ratio' says 6.87% (and "
+    "the narrative repeats 6.87%), while its UK LR2 row 25 'Leverage ratio excluding claims on central "
+    "banks' says 6.90%. Both are the excluding measure and they differ by 0.03pp. The 'Leverage ratio' row "
+    "above keeps the KM1 figure of 6.87% that this workbook already carried; row 25's 6.90% is recorded "
+    "here. Neither is adjusted to match the other, and the including-basis ratio of 6.31% comes from the "
+    "same LR2 table as the 6.90%. FY2023-FY2025 show no such split - KM1 and LR2 agree at 7.36%, 8.86% and "
+    "8.39%.\n"
+    "CHECKS RUN BEFORE TRANSCRIBING. (1) ENTITY/BASIS: UK-24b reproduces this sheet's existing exposure "
+    "measure in all four years ($58,928 / $48,965 / $53,470 / $49,383 against the stored USD series), so "
+    "the GSIB column is the same entity and basis as the rest of the sheet. (2) ARITHMETIC: row 24 minus "
+    "UK-24a equals UK-24b in all four years. (3) RATIO TIE: row 23 over each exposure measure reproduces "
+    "both printed ratios in all four years (e.g. FY2025 4,945/66,857 = 7.40% and 4,945/58,928 = 8.39%).\n"
+    "FY2021 CORRECTLY GETS NO INCLUDING-BASIS FIGURE: the UK dual basis took effect only for periods from "
+    "1 January 2022, and the Q4 2021 edition prints no UK LR2 with the UK-24a/UK-24b/UK-25c rows."
+)
+
 metric("Leverage Ratio", "£m (conv. from USD) / %", [
+    # The excluding-basis ratio stays ahead of the including one: check_overview_ties.py
+    # takes the first cell PRINTED AS A PERCENTAGE on a ratio sheet as the Overview's headline.
     ("Total exposure measure", leverage_exposure_gbp),
     ("Leverage ratio", LEVERAGE_RATIO),
-])
+    ("Total exposure measure including claims on central banks", {y: stock(v, y) for y, v in LEVERAGE_EXPOSURE_INCL_USD.items()}),
+    ("Claims on central banks excluded", {y: stock(v, y) for y, v in LEVERAGE_CB_CLAIMS_EXCLUDED_USD.items()}),
+    ("Leverage ratio including claims on central banks (%)", LEVERAGE_RATIO_INCL),
+], note=GA026_BOTH_BASES_NOTE)
 metric("LCR", "£m (conv. from USD) / %", [
     ("Total high-quality liquid assets (HQLA) (weighted value - average)", {y: stock(v, y) for y, v in LCR_HQLA_USD.items()}),
     ("Cash outflows - total weighted value", {**{y: stock(v, y) for y, v in LCR_OUTFLOWS_USD.items()}, "FY2021": NP21_LCR}),

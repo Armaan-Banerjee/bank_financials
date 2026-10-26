@@ -715,9 +715,10 @@ bw.add_km1_sheet(
 # ---------------------------------------------------------------
 # Pillar 3 metric sheets
 # ---------------------------------------------------------------
-def metric(name, unit, rows_data, sources_text, note=None, source_height=560):
+def metric(name, unit, rows_data, sources_text, note=None, source_height=560, note_height=60):
     bw.add_metric_sheet(name, f"{unit}" if unit else None,
-                         rows_data, sources_text, note=note, first_col_width=44, source_height=source_height)
+                         rows_data, sources_text, note=note, first_col_width=44,
+                         source_height=source_height, note_height=note_height)
 
 
 metric(
@@ -892,7 +893,8 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage Ratio", {
+    [("Leverage Ratio - FY2023 onward EXCLUDING claims on central banks; FY2021-FY2022 "
+      "INCLUDING them, per each edition's own stated definition; see note", {
         "FY2025": "13.11%", "FY2024": "11.85%", "FY2023": "13.42%", "FY2022": "13.01%", "FY2021": "9.41%",
     })],
     p3_sources(),
@@ -918,8 +920,49 @@ metric(
          "denominator in the FY2023 edition rather than a rounding difference; the FY2023 document "
          "gives no reconciliation of it. Note that the FY2023 edition's own FY2023 figures "
          "(£409,798k / 13.42%) agree exactly with the FY2024 edition's FY2023 comparative, so the "
-         "divergence is confined to the FY2022 column.",
-    source_height=700,
+         "divergence is confined to the FY2022 column.\n"
+         "\n"
+         "LEVERAGE BASIS: THE BANK STATES ITS BASIS IN PROSE, AND THE STATEMENT CHANGES AT FY2023 - "
+         "THIS SERIES SPANS A BASIS BREAK (GA-026, 2026-10-10). HBL prints no template UK LR2, so "
+         "there is no row 24 / UK-24a / UK-24b / UK-25c set anywhere. What it does print, in every "
+         "edition, is a one-sentence definition under 'Leverage ratio', and the sentence is not the "
+         "same sentence in every edition:\n"
+         "  FY2021 and FY2022 editions: exposure 'consists of the sum of balance sheet assets, plus "
+         "off-balance sheet items.' - full stop, NO exclusion. That is the INCLUDING basis.\n"
+         "  FY2023, FY2024 and FY2025 editions: exposure 'consists of balance sheet assets plus "
+         "off-balance sheet items EXCLUDING CLAIMS ON CENTRAL BANKS' (FY2025 writes 'on the Central "
+         "Banks'). That is the EXCLUDING basis.\n"
+         "So FY2021 and FY2022 above are on the including basis and FY2023-FY2025 are on the "
+         "excluding basis. Each year keeps its own edition's figure under this project's "
+         "own-edition rule, which means THE SERIES MIXES THE TWO BASES and a FY2022-to-FY2023 "
+         "comparison is not like-for-like. The row label now says so.\n"
+         "THIS EXPLAINS THE £124m RE-BASING RECORDED IN THE PARAGRAPH ABOVE, which had been noted "
+         "as unreconciled. The FY2023 edition restates FY2022 from £543,633k / 13.01% down to "
+         "£419,520k / 12.82% - a fall of £124m in the denominator - at exactly the edition where "
+         "the definition gains the words 'excluding claims on central banks'. Removing central bank "
+         "claims reduces the exposure measure, and the direction and the timing both match. The "
+         "document still offers no reconciliation; this is the cause the figures and the wording "
+         "together point to, and it is recorded as that rather than as the bank's own explanation.\n"
+         "THE EARLIER 'NO FY2021/FY2022 BASIS BREAK' FINDING STANDS AND IS NOT WITHDRAWN. It "
+         "checked the boundary the UK Leverage Ratio Framework created - 1 January 2022 - and "
+         "correctly found HBL did not move then; both editions' wording is identical and the FY2022 "
+         "edition repeats FY2021's £546,542k / 9.41% unchanged. HBL moved a year later, on its own "
+         "initiative. The lesson is that a basis break need not sit on the regulatory boundary, so "
+         "clearing that boundary does not clear the series.\n"
+         "ONE RESTATEMENT STILL UNEXPLAINED, AND NOT THEORISED. The FY2025 edition restates FY2024 "
+         "the OTHER way - from £532,088k / 11.85% up to £599,922k / 11.56%, an INCREASE of £68m in "
+         "the denominator. A central-bank exclusion cannot raise an exposure measure, and both "
+         "editions carry the excluding wording, so whatever this is, it is not the basis change. "
+         "Recorded as an open question; no cell is altered and no cause is asserted.\n"
+         "WHY NO KEYWORD SEARCH FOUND THIS UNTIL NOW. In the FY2023 edition the phrase is split "
+         "across a LINE BREAK - 'off-balance sheet items excluding' ends one line and 'claims on "
+         "central banks.' begins the next - so a line-based text search for the phrase cannot match "
+         "it, and returns zero on a document that states the basis in plain English. The FY2025 "
+         "edition defeats a search differently, by writing 'claims on the Central Banks' with an "
+         "extra word inside the phrase. Both editions were found only by normalising whitespace "
+         "and allowing a word inside the phrase. The FY2022 and FY2023 leverage tables were then "
+         "read at 300 dpi to confirm the figures.",
+    source_height=700, note_height=1080,
 )
 
 metric(

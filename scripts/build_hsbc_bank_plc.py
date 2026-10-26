@@ -935,7 +935,7 @@ bw.add_rwa_breakdown_sheet(
 
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2025": "4.5%", "FY2024": "5.5%", "FY2023": "5.1%", "FY2022": "5.5%", "FY2021": "4.1%", "FY2020": "3.8%", "FY2019": "3.8%", "FY2018": "3.9%"})],
+    [("Leverage ratio - FY2022 onward excluding claims on central banks (CRR II end-point basis); earlier years on the wider pre-2022 measure; see note", {"FY2025": "4.5%", "FY2024": "5.5%", "FY2023": "5.1%", "FY2022": "5.5%", "FY2021": "4.1%", "FY2020": "3.8%", "FY2019": "3.8%", "FY2018": "3.9%"})],
     note="Two genuine basis changes bite across this range. First: FY2021 is disclosed on the Capital "
          "Requirements Regulation basis (total leverage ratio exposure £535,562m, ratio 4.1%). From FY2022 "
          "onward, HSBC Bank plc switched to the CRR II end-point basis 'excluding claims on central banks' (a "

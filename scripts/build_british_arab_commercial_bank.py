@@ -1215,9 +1215,39 @@ bw.add_rwa_breakdown_sheet(
     source_height=420,
     unit_suffix=" (£'000)",
 )
-metric("Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)], p3_sources(
-    extra="Leverage ratio not disclosed for FY2014 - the leverage ratio disclosure first appears in BACB's own "
-          "Pillar 3 Disclosures from FY2015 onwards."))
+GA026_BASIS_NOTE = (
+    "LEVERAGE BASIS: THE BANK PUBLISHES ONE RATIO AND ATTACHES NO BASIS QUALIFIER TO IT (GA-026, "
+    "2026-10-10). Template UK LR2 / LRCom - which from 1 January 2022 prints the exposure measure on "
+    "BOTH bases, row 24 including claims on central banks and row UK-24b excluding them, reconciling "
+    "at UK-24a with ratios at row 25 and UK-25c - does not appear in any BACB edition. What the Bank "
+    "publishes is the UK KM1 key metrics template, whose leverage block is exactly two plainly "
+    "captioned rows: '13 Leverage ratio total exposure measure' and '14 Leverage ratio'. Neither "
+    "carries a central-bank qualifier, and no reconciliation of accounting assets to leverage "
+    "exposure is printed anywhere, so there is no line from which a deduction - or its absence - "
+    "could be read. The figure above is therefore recorded as the Bank states it, with no basis "
+    "attributed to it. FY2025 edition p.6, 'UK KM1 - Key metrics template', columns 31/12/2025 and "
+    "31/12/2024 in GBP000s: row 13 reads 3,721,160 / 3,704,792 and row 14 reads 7.2% / 6.6%, which "
+    "are the FY2025 and FY2024 figures on this sheet.\n"
+    "ENTITY SCOPE IS NOT IN DOUBT HERE. The same edition states at section 1.4 that 'BACB trades as "
+    "a single entity; it has no subsidiaries or associates' and that 'no prudential consolidation is "
+    "performed', so there is no group-versus-solo column to choose between and no risk that a "
+    "parent's figure has been read in place of the entity's.\n"
+    "HOW THIS WAS CHECKED, AND A TRAP WORTH RECORDING. An automated scan of this document's text "
+    "layer finds the word 'leverage' exactly once - in a risk-appetite indicator list - and finds no "
+    "KM1 table at all, which would wrongly suggest BACB discloses no leverage ratio. It does: the "
+    "table is an EMBEDDED IMAGE inside an otherwise text-rich 27-page document (80,881 characters "
+    "extract cleanly from the prose around it). The table above was read from a 300 dpi render of "
+    "p.6, not from extracted text. A readable document does not imply readable tables."
+)
+
+bw.add_metric_sheet(
+    "Leverage Ratio", "%", [("Leverage ratio", LEVERAGE_RATIO)],
+    p3_sources(
+        extra="Leverage ratio not disclosed for FY2014 - the leverage ratio disclosure first appears in BACB's own "
+              "Pillar 3 Disclosures from FY2015 onwards."),
+    note=GA026_BASIS_NOTE,
+    first_col_width=52, source_height=170, note_height=440,
+)
 metric("LCR", "%", [("Liquidity coverage ratio (12-month average)", LCR)], p3_sources(
     extra="LCR % not disclosed for FY2014-FY2018 - each of those years' own Pillar 3 Disclosures shows an LCR "
           "chart but no extractable numeric table; the first extractable LCR % is FY2019's own report."))

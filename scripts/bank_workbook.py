@@ -115,6 +115,74 @@ SOURCE_CELL_LIMIT = 32000
 
 SOURCE_FONT = Font(italic=True, size=9, color="444444")
 
+# Measured in Microsoft Excel (macOS) on 2026-10-10 by auto-fitting a grid of
+# text lengths against column widths in the 9pt italic face both the note and
+# the source cell use, then reading the heights back. See _fit_height.
+WRAPPED_LINE_POINTS = 13.0
+# 1.43 chars per width unit measured; held at 1.40 so the estimate errs tall.
+# Real citation text wraps worse than the test's prose: it carries URLs that
+# cannot break and explicit newlines that end a line early.
+CHARS_PER_WIDTH_UNIT = 1.40
+MIN_FITTED_HEIGHT = 30.0
+# Excel will RENDER a row of any height a file gives it (a stored 1700 lays
+# out at 1700 - verified by reading back row positions, which accumulate
+# exactly). But ~409.5 is the tallest row Excel lets a PERSON set, and its own
+# auto-fit saturates at 410, so a taller row is one the reader can never
+# restore by hand once they touch it. Long text therefore SPILLS across
+# several rows at this cap rather than living in one enormous one (user
+# decision, 2026-10-10).
+MAX_DISPLAY_HEIGHT = 409.0
+
+
+def _norm_label(label):
+    """Compare row labels the way check_overview_ties.py does."""
+    return re.sub(r"\s+", " ", str(label)).strip().lower()
+
+
+# -- Overview derivation spec (standing objective (b)) -------------------------
+# The Overview's money blocks are DERIVED from the detail sheets, resolved by
+# the row's own label. This table covers the rows where that is not enough,
+# and it is deliberately explicit rather than inferred at build time:
+#
+#   (bank_name, detail sheet, normalised Overview label) -> either
+#       "detail row label"            - the Overview renames the row, or
+#       ("row a", "row b", ...)       - the Overview AGGREGATES several rows
+#                                       the detail sheet never totals itself.
+#
+# Discovered once by value-matching each unresolved Overview row against its
+# detail sheet (see scripts/derive_overview_spec.py), then reviewed by hand.
+# Inferring the mapping at every build would defeat the point: the match is
+# made against the very literals being replaced, so it would silently fall
+# back to the stale value the moment a detail sheet was corrected.
+#   OVERVIEW_KEEP_LITERAL         - not derivable; the Overview figure
+#                                   matches no detail row by label or by
+#                                   value, and inventing a derivation would
+#                                   be worse than leaving the disagreement
+#                                   visible. Recorded, never silent.
+OVERVIEW_KEEP_LITERAL = "<keep literal - see ticket>"
+
+OVERVIEW_SPEC = {}
+
+try:  # kept in its own module so this file stays the library, not the data
+    from overview_spec import OVERVIEW_SPEC as _SPEC
+
+    OVERVIEW_SPEC = _SPEC
+except ImportError:  # pragma: no cover - spec not generated yet
+    pass
+
+# Populated in discovery runs only; see scripts/derive_overview_spec.py.
+_unresolved = []
+
+# Every Overview cell where the DERIVED value differs from the literal the
+# build script passed. Each one is either a drift the derivation has just
+# corrected, or a sign the mapping is wrong - so they are recorded and
+# reviewed, never assumed to be improvements. See check_overview_derivation.py.
+_derived_diffs = []
+
+# Overview cells kept as literals because the DETAIL sheet has no value for
+# that year - the detail sheet is the gap. See _keep_what_detail_lacks.
+_detail_gaps = []
+
 
 class BankWorkbook:
     def __init__(self, bank_name, years, year_label=None, header_color="0A2540"):
@@ -136,6 +204,13 @@ class BankWorkbook:
         self.header_font = Font(color="FFFFFF", bold=True)
         self.wb = openpyxl.Workbook()
         self._first_sheet_used = False
+        # Objective (b): the Overview's money blocks and ratio block are
+        # DERIVED from the detail sheets rather than hand-copied alongside
+        # them. Every detail sheet records its rows here as it is built, and
+        # add_overview_sheet - which all 145 build scripts call LAST, after
+        # every detail sheet exists - reads values back out of it.
+        self._detail_rows = {}   # sheet name -> {normalised label: {year: value}}
+        self._metric_rows = {}   # metric sheet name -> [(label, {year: value})]
 
     # -- internal styling helpers -------------------------------------------------
     def _style_header(self, ws, row, ncols):
@@ -150,6 +225,147 @@ class BankWorkbook:
     def _autosize(self, ws, widths):
         for i, w in enumerate(widths, start=1):
             ws.column_dimensions[get_column_letter(i)].width = w
+
+    @staticmethod
+    def _fit_height(text, width_units):
+        """Points of row height needed to DISPLAY `text` wrapped across a
+        merged cell `width_units` wide. Returns None when it cannot tell.
+
+        An explicit row height disables Excel's auto-fit, so whatever does not
+        fit is simply not shown - the text stays in the cell and in the
+        formula bar, but never reaches the page a reader opens. That is
+        GA-030: 1,743 such cells across 140 of 145 workbooks, because call
+        sites hardcoded a height and the notes then grew underneath it.
+
+        Auto-fit cannot be the answer here. Measured in Excel 2026-10-10:
+        `autofit` on a MERGED cell collapses the row to a single line (15pt),
+        which is the documented merged-cell limitation - so these rows must
+        carry an explicit height, and that height has to be computed.
+
+        The two constants below were MEASURED, not modelled: a grid of text
+        lengths against column widths was auto-fitted by Excel itself and the
+        resulting heights read back. The earlier estimate in the GA-030
+        detector (12pt per line, 1.22 chars per width unit) was wrong in both
+        terms and understated capacity by about 8%.
+
+        Excel refuses heights above ~409.5 through its UI and its scripting
+        API, but it RENDERS whatever a file gives it: a workbook storing 1700
+        lays out at 1700 (verified by reading back row positions, which
+        accumulate exactly). So a long note needs no splitting across rows -
+        one tall row displays it.
+        """
+        if not text or not width_units:
+            return None
+        chars_per_line = max(10, int(width_units * CHARS_PER_WIDTH_UNIT))
+        lines = 0
+        for para in str(text).split("\n"):
+            if not para.strip():
+                lines += 1
+                continue
+            used = 0
+            for token in para.split(" "):
+                need = len(token) + (1 if used else 0)
+                if used and used + need > chars_per_line:
+                    lines += 1
+                    used = len(token)
+                else:
+                    used += need
+                # an unbreakable token - a URL - takes whole lines of its own
+                # rather than being averaged away across the paragraph
+                while used > chars_per_line:
+                    lines += 1
+                    used -= chars_per_line
+            lines += 1
+        return max(MIN_FITTED_HEIGHT, round(lines * WRAPPED_LINE_POINTS, 1))
+
+    @classmethod
+    def _split_to_height(cls, text, width_units, max_height=MAX_DISPLAY_HEIGHT):
+        """Partition `text` so each piece displays within `max_height`.
+
+        A PARTITION, never a reflow: each piece is a substring cut at a
+        paragraph break, then a sentence end, then a space - the same
+        preference order `_split_source_text` uses for the storage cap. No
+        character is added, removed or re-wrapped, so the citation text is
+        the text, just distributed over several rows.
+        """
+        if not text or not width_units:
+            return [text]
+        chunks = []
+        rest = text
+        while cls._fit_height(rest, width_units) > max_height:
+            # largest prefix that still fits, then back off to a boundary
+            lo, hi = 1, len(rest)
+            while lo < hi:
+                mid = (lo + hi + 1) // 2
+                if cls._fit_height(rest[:mid], width_units) <= max_height:
+                    lo = mid
+                else:
+                    hi = mid - 1
+            cut = lo
+            window = rest[:cut]
+            para = window.rfind("\n")
+            sentence = max(window.rfind(". "), window.rfind("; "))
+            space = window.rfind(" ")
+            if para > cut // 2:
+                cut = para + 1
+            elif sentence > cut // 2:
+                cut = sentence + 1
+            elif space > cut // 2:
+                cut = space + 1
+            # else: no breakable point - hard cut rather than lose text
+            chunks.append(rest[:cut].rstrip())
+            rest = rest[cut:].lstrip()
+            if not rest:
+                return chunks
+        chunks.append(rest)
+        return chunks
+
+    @classmethod
+    def _write_merged_text_block(
+        cls, ws, row, ncols, text, font, width_units, step=2
+    ):
+        """Write `text` across as many merged, wrapped rows as it needs.
+
+        Returns the first row AFTER the block. `step` is the row stride
+        between pieces - the source cell has always left a blank row between
+        continuations, and that is preserved.
+        """
+        chunks = cls._split_to_height(text, width_units)
+        written = []
+        for i, chunk in enumerate(chunks):
+            r = row + step * i
+            value = chunk if i == 0 else "(continued)\n" + chunk
+            cell = ws.cell(row=r, column=1, value=value)
+            ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ncols)
+            cell.font = font
+            cell.alignment = Alignment(
+                wrap_text=True, vertical="top", horizontal="left"
+            )
+            ws.row_dimensions[r].height = cls._fitted(
+                MIN_FITTED_HEIGHT, value, width_units
+            )
+            written.append(r)
+        return (written[-1] if written else row) + 1
+
+    @classmethod
+    def _fitted(cls, requested, text, width_units):
+        """The taller of what the call site asked for and what the text needs.
+
+        Deliberately a floor, not an override: a call site may still ask for a
+        roomier row, but it can no longer ask for one that hides its own
+        content. This is what makes the ~1,200 hardcoded heights already in
+        the build scripts safe to leave exactly as they are.
+        """
+        fit = cls._fit_height(text, width_units)
+        if fit is None:
+            return requested
+        # Capped at the display limit, because text that needs more than one
+        # row's worth now SPILLS into further rows instead of growing the
+        # row. That makes the oversized hand-set heights from before the
+        # spill (1700, 1580, ...) obsolete rather than wrong: they are
+        # honoured only up to the cap, and the text they were protecting is
+        # now carried by the extra rows.
+        return min(max(requested or 0, fit), MAX_DISPLAY_HEIGHT)
 
     @staticmethod
     def _split_source_text(text, limit=SOURCE_CELL_LIMIT):
@@ -180,7 +396,7 @@ class BankWorkbook:
         chunks.append(rest)
         return chunks
 
-    def _write_source_cell(self, ws, row, ncols, text, height=150):
+    def _write_source_cell(self, ws, row, ncols, text, height=150, width_units=None):
         # openpyxl silently truncates any cell string past 32,767 chars (its
         # own hard limit) rather than raising - caught the hard way in HD-078
         # (Co-operative Bank), where citation text had grown past it unnoticed.
@@ -197,12 +413,19 @@ class BankWorkbook:
         # 2026-10-08). Nothing is lost and nothing is silent: the split is
         # announced on stderr, because a note crossing the cap is worth
         # knowing about even though it is no longer fatal.
-        chunks = self._split_source_text(text)
+        # Two separate caps apply, and only the first is about storage.
+        # SOURCE_CELL_LIMIT is openpyxl's; MAX_DISPLAY_HEIGHT is how much one
+        # row can show a reader who can still resize it by hand. Splitting on
+        # the display cap subsumes the storage one at every width this repo
+        # uses, so the storage split only runs when the width is unknown.
+        if width_units:
+            chunks = self._split_to_height(text, width_units)
+        else:
+            chunks = self._split_source_text(text)
         if len(chunks) > 1:
             print(
                 f"note: source citation for sheet {ws.title!r} is "
-                f"{len(text)} chars, over the {SOURCE_CELL_LIMIT}-char cell "
-                f"limit - continued across {len(chunks)} cells.",
+                f"{len(text)} chars - continued across {len(chunks)} cells.",
                 file=sys.stderr,
             )
         for i, chunk in enumerate(chunks):
@@ -214,7 +437,7 @@ class BankWorkbook:
             cell.alignment = Alignment(
                 wrap_text=True, vertical="top", horizontal="left"
             )
-            ws.row_dimensions[r].height = height
+            ws.row_dimensions[r].height = self._fitted(height, value, width_units)
 
     def append_source_cell(self, ws, text, ncols=None, height=150):
         """Add a FURTHER merged source-citation cell below the one a sheet
@@ -233,8 +456,25 @@ class BankWorkbook:
         """
         if ncols is None:
             ncols = ws.max_column
-        self._write_source_cell(ws, ws.max_row + 2, ncols, text, height=height)
+        self._write_source_cell(
+            ws, ws.max_row + 2, ncols, text, height=height,
+            width_units=self._width_units(ws, ncols),
+        )
         return ws
+
+    @staticmethod
+    def _width_units(ws, ncols):
+        """Total width of columns 1..ncols, read back off the sheet.
+
+        Only usable AFTER _autosize has run; the sheet builders pass their
+        widths list directly instead, because they set the source cell before
+        sizing their columns.
+        """
+        total = 0.0
+        for i in range(1, ncols + 1):
+            dim = ws.column_dimensions.get(get_column_letter(i))
+            total += (dim.width if dim is not None and dim.width else 8.43)
+        return total
 
     def _style_chart_axes(self, chart):
         # openpyxl's TextAxis/NumericAxis both default axPos to "l", which
@@ -278,6 +518,181 @@ class BankWorkbook:
                 h=plot_h,
             )
         )
+
+    # -- Overview derivation (standing objective (b)) --------------------------
+    def _record_detail_rows(self, sheet_name, rows):
+        """Remember a statement sheet's rows so the Overview can derive from
+        them. First occurrence of a label wins: a few sheets print the same
+        label twice (a section subtotal equal to the sheet total), and the
+        Overview means the first one."""
+        table = self._detail_rows.setdefault(sheet_name, {})
+        for kind, label, values in rows:
+            if kind == "SECTION":
+                continue
+            table.setdefault(_norm_label(label), dict(values))
+
+    def _derive_block(self, sheet_name, rows, block, years=None):
+        """Replace each Overview row's hand-passed values with the detail
+        sheet's own, so the two cannot drift apart.
+
+        The passed values are used ONLY to discover the mapping the first
+        time (see OVERVIEW_SPEC); thereafter the detail sheet is the single
+        authority. Resolution order: the row's own label, then an explicit
+        alias, then an explicit SUM of detail rows. A row that resolves to
+        none of those raises - it is never silently left as a literal,
+        because a silent fallback is exactly the drift this removes.
+        """
+        table = self._detail_rows.get(sheet_name)
+        if table is None:
+            return rows  # workbook has no such detail sheet; nothing to derive
+        out = []
+        for label, values in rows:
+            key = _norm_label(label)
+            spec = OVERVIEW_SPEC.get((self.bank_name, sheet_name, key))
+            if key in table and spec is None:
+                out.append((label, dict(table[key])))
+            elif spec is None:
+                out.append((label, dict(values)))
+                _unresolved.append(
+                    (self.bank_name, sheet_name, block, label, dict(values),
+                     {k: dict(v) for k, v in table.items()},
+                     list(years) if years else None)
+                )
+            elif spec == OVERVIEW_KEEP_LITERAL:
+                # Deliberately NOT derived, and never silently: the Overview
+                # figure matches no row on the detail sheet by label or by
+                # value, so there is nothing honest to derive it from. The
+                # literal stands until the disagreement is settled against
+                # the bank's own document.
+                out.append((label, dict(values)))
+            elif isinstance(spec, str):
+                if _norm_label(spec) not in table:
+                    raise ValueError(
+                        f"{self.bank_name}: Overview row {label!r} is aliased "
+                        f"to {spec!r} on {sheet_name}, which has no such row"
+                    )
+                out.append((label, dict(table[_norm_label(spec)])))
+            else:
+                out.append((label, self._sum_rows(sheet_name, table, spec, label)))
+            label_out, derived = out[-1]
+            if spec != OVERVIEW_KEEP_LITERAL:
+                derived = self._keep_what_detail_lacks(
+                    sheet_name, label, values, derived, years
+                )
+                out[-1] = (label_out, derived)
+            self._record_derived_diff(
+                sheet_name, label, values, derived, years
+            )
+        return out
+
+    def _keep_what_detail_lacks(self, sheet_name, label, passed, derived,
+                                years):
+        """Derive every year the detail sheet HAS; keep the literal for any
+        year it does not.
+
+        Blanking a figure the Overview already shows would be a worse
+        outcome than the drift this removes - and the cases are real: Bank
+        of Beirut's Overview carries an FY2017 cash balance its Cash Flow
+        Statement has no FY2017 column for. The detail sheet is the gap
+        there, not the Overview, so the figure stays and the gap is
+        RECORDED rather than quietly closed by deletion.
+
+        check_overview_ties.py reports none of these (its section B is
+        empty) because it only compares rows whose labels match exactly,
+        and every one of these reaches its detail row through an alias.
+        """
+        merged = dict(derived)
+        scope = set(years) if years else set(passed)
+        for year, value in passed.items():
+            if value is None or year not in scope:
+                continue
+            if merged.get(year) is None:
+                merged[year] = value
+                _detail_gaps.append(
+                    (self.bank_name, sheet_name, label, year, value)
+                )
+        return merged
+
+    def _record_derived_diff(self, sheet_name, label, passed, derived,
+                             years=None):
+        # only years the Overview actually PRINTS matter; a column the
+        # per-block year trim drops is not a change a reader can see
+        scope = set(years) if years else set(passed) | set(derived)
+        for year in sorted((set(passed) | set(derived)) & scope):
+            was, now = passed.get(year), derived.get(year)
+            if isinstance(was, (int, float)) and isinstance(now, (int, float)):
+                if abs(was - now) <= max(abs(was), abs(now), 1) * 1e-9:
+                    continue
+            elif was == now:
+                continue
+            _derived_diffs.append(
+                (self.bank_name, sheet_name, label, year, was, now)
+            )
+
+    def _sum_rows(self, sheet_name, table, parts, label):
+        """An Overview row that is an AGGREGATE the detail sheet never prints
+        as a single line - e.g. 'total operating expense' summed from staff
+        costs, other operating expenses and depreciation.
+
+        A part may be a bare label, or a (label, coefficient) pair. The
+        coefficient exists because one bank states the quantity as a
+        RESIDUAL rather than a sum: Jordan International Bank's total
+        operating expense is its total operating income less its profit
+        before taxation, which no addition of printed rows reproduces.
+        """
+        pairs = [(p, 1) if isinstance(p, str) else (p[0], p[1]) for p in parts]
+        missing = [p for p, _ in pairs if _norm_label(p) not in table]
+        if missing:
+            raise ValueError(
+                f"{self.bank_name}: Overview row {label!r} sums rows that do "
+                f"not exist on {sheet_name}: {missing}"
+            )
+        totals = {}
+        for part, coeff in pairs:
+            for year, value in table[_norm_label(part)].items():
+                if isinstance(value, (int, float)):
+                    totals[year] = totals.get(year, 0) + coeff * value
+        # a float sum of printed figures carries binary noise; the detail
+        # sheets print at most one decimal place
+        return {y: round(v, 4) for y, v in totals.items()}
+
+    def _derive_ratios(self, ratios, years=None):
+        """The ratio block names the single-metric SHEETS, so each row takes
+        that sheet's first value PRINTED AS A PERCENTAGE.
+
+        "Printed as a percentage" means the cell carries a per-cent sign, and
+        nothing weaker. `_parse_percent` is the wrong test here and using it
+        was a real defect: it returns a float for ANY number, so it accepted
+        the HQLA/exposure/funding amount these sheets lead with, and the
+        Overview's LCR row took ABC International's 748.628 (HQLA, in
+        millions) in place of its 250.1%. That is the trap CLAUDE.md names
+        for exactly these three sheets, and check_overview_ties.py avoids it
+        with the `"%" in str(v)` rule this now mirrors - deliberately the
+        same rule, not a second guess at it.
+
+        A year the metric sheet cannot supply keeps its literal, for the same
+        reason `_keep_what_detail_lacks` exists: blanking a figure a reader
+        can see today is worse than the drift derivation removes.
+        """
+        out = []
+        for label, values in ratios:
+            rows = self._metric_rows.get(label)
+            if not rows:
+                out.append((label, dict(values)))
+                continue
+            derived = {}
+            for year in set().union(*(r[1].keys() for r in rows)):
+                for _rl, rv in rows:
+                    cell = rv.get(year)
+                    if cell is not None and "%" in str(cell):
+                        derived[year] = cell
+                        break
+            derived = self._keep_what_detail_lacks(
+                label, label, values, derived, years
+            )
+            self._record_derived_diff(label, label, values, derived, years)
+            out.append((label, derived))
+        return out
 
     def _next_sheet(self, name):
         if not self._first_sheet_used:
@@ -468,6 +883,7 @@ class BankWorkbook:
         years = self._trim_trailing_empty_years(
             years, (values for _kind, _label, values in rows)
         )
+        self._record_detail_rows(sheet_name, rows)
         ws = self._next_sheet(sheet_name)
         ws.freeze_panes = "B4"
         ws["A1"] = title
@@ -499,8 +915,12 @@ class BankWorkbook:
                 ws.cell(row=r, column=c).border = BORDER
             r += 1
 
-        self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
-        self._autosize(ws, [first_col_width] + [15] * len(years))
+        widths = [first_col_width] + [15] * len(years)
+        self._write_source_cell(
+            ws, r + 1, ncols, sources_text, height=source_height,
+            width_units=sum(widths),
+        )
+        self._autosize(ws, widths)
         return ws
 
     def add_cash_flow_sheet(
@@ -642,8 +1062,12 @@ class BankWorkbook:
                 ws.cell(row=r, column=c).border = BORDER
             r += 1
 
-        self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
-        self._autosize(ws, [first_col_width] + [col_width] * len(headers))
+        widths = [first_col_width] + [col_width] * len(headers)
+        self._write_source_cell(
+            ws, r + 1, ncols, sources_text, height=source_height,
+            width_units=sum(widths),
+        )
+        self._autosize(ws, widths)
         return ws
 
     def add_asset_quality_sheet(
@@ -787,6 +1211,9 @@ class BankWorkbook:
         years = self._trim_trailing_empty_years(
             years, (values for _label, values in rows_data)
         )
+        self._metric_rows[name] = [
+            (label, dict(values)) for label, values in rows_data
+        ]
         ws = self.wb.create_sheet(title=name[:31])
         ncols = 1 + len(years)
         ws["A1"] = f"{self.bank_name} — {name}"
@@ -809,17 +1236,19 @@ class BankWorkbook:
                 ws.cell(row=r, column=c).border = BORDER
             r += 1
 
+        widths = [first_col_width] + [15] * len(years)
         if note:
-            ws.cell(row=r, column=1, value=f"Note: {note}").font = SUBTITLE_FONT
-            ws.merge_cells(start_row=r, start_column=1, end_row=r, end_column=ncols)
-            ws.cell(row=r, column=1).alignment = Alignment(
-                wrap_text=True, vertical="top"
+            # spills across further rows when one row cannot show it
+            r = self._write_merged_text_block(
+                ws, r, ncols, f"Note: {note}", SUBTITLE_FONT,
+                sum(widths), step=1,
             )
-            ws.row_dimensions[r].height = note_height
-            r += 1
 
-        self._write_source_cell(ws, r + 1, ncols, sources_text, height=source_height)
-        self._autosize(ws, [first_col_width] + [15] * len(years))
+        self._write_source_cell(
+            ws, r + 1, ncols, sources_text, height=source_height,
+            width_units=sum(widths),
+        )
+        self._autosize(ws, widths)
         return ws
 
     def add_long_form_sheet(
@@ -879,18 +1308,10 @@ class BankWorkbook:
 
         if note:
             note_row = header_row + 1 + len(rows) + 1
-            ws.cell(row=note_row, column=1, value=note)
-            ws.merge_cells(
-                start_row=note_row,
-                start_column=1,
-                end_row=note_row,
-                end_column=ncols,
+            self._write_merged_text_block(
+                ws, note_row, ncols, note, SOURCE_FONT,
+                sum(widths or [18] * ncols), step=1,
             )
-            ws.cell(row=note_row, column=1).font = SOURCE_FONT
-            ws.cell(row=note_row, column=1).alignment = Alignment(
-                wrap_text=True, vertical="top", horizontal="left"
-            )
-            ws.row_dimensions[note_row].height = 60
 
         ws.freeze_panes = freeze_panes
         self._autosize(ws, widths or [18] * ncols)
@@ -1015,18 +1436,10 @@ class BankWorkbook:
 
         note_row = source_header_row + 2 + len(source_rows) + 1
         if note:
-            ws.cell(row=note_row, column=1, value=f"Note: {note}")
-            ws.merge_cells(
-                start_row=note_row,
-                start_column=1,
-                end_row=note_row,
-                end_column=len(headers),
+            self._write_merged_text_block(
+                ws, note_row, len(headers), f"Note: {note}", SOURCE_FONT,
+                sum([32, 18, 34] + [15] * len(periods)), step=1,
             )
-            ws.cell(row=note_row, column=1).font = SOURCE_FONT
-            ws.cell(row=note_row, column=1).alignment = Alignment(
-                wrap_text=True, vertical="top"
-            )
-            ws.row_dimensions[note_row].height = 60
 
         ws.freeze_panes = freeze_panes
         self._autosize(ws, [32, 18, 34] + [15] * len(periods))
@@ -1093,6 +1506,32 @@ class BankWorkbook:
             that workaround still works too, no need to change them).
         """
         years = years if years is not None else self.years
+
+        # Standing objective (b): these blocks are no longer hand-copied
+        # duplicates of the detail sheets - they are derived FROM them, so
+        # a correction applied to a detail sheet can no longer be missed
+        # here. The arguments still choose WHICH rows the Overview features
+        # and what each is called; only the values are taken over.
+        #
+        # The Statement of Changes in Equity block is deliberately NOT
+        # derived: that sheet is a chronological roll-forward with no year
+        # columns to read, which is the same reason check_overview_ties.py
+        # leaves it out of BLOCK_TO_SHEET.
+        if balance_sheet_totals:
+            balance_sheet_totals = self._derive_block(
+                "Balance Sheet", balance_sheet_totals, "balance sheet", years
+            )
+        if income_statement_totals:
+            income_statement_totals = self._derive_block(
+                "Profit & Loss", income_statement_totals, "profit & loss", years
+            )
+        if cash_flow_totals:
+            cash_flow_totals = self._derive_block(
+                "Cash Flow Statement", cash_flow_totals, "cash flow", years
+            )
+        if ratios:
+            ratios = self._derive_ratios(ratios, years)
+
         ws = self.wb.create_sheet(title="Overview", index=0)
         ncols = 1 + len(years)
         headers = ["Line item"] + [self.year_label[y] for y in years]
@@ -1224,17 +1663,17 @@ class BankWorkbook:
             row += 1
             ratio_header_row = None
 
+        widths = [42] + [15] * len(years)
         if note:
             row += 1
-            ws.cell(row=row, column=1, value=f"Note: {note}").font = SUBTITLE_FONT
-            ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=ncols)
-            ws.cell(row=row, column=1).alignment = Alignment(
-                wrap_text=True, vertical="top"
+            text = f"Note: {note}"
+            # Safe to grow or spill: the charts anchor at `chart_row = row + 2`
+            # below, so extra rows push them down rather than overlapping.
+            row = self._write_merged_text_block(
+                ws, row, ncols, text, SUBTITLE_FONT, sum(widths), step=1
             )
-            ws.row_dimensions[row].height = 45
-            row += 1
 
-        self._autosize(ws, [42] + [15] * len(years))
+        self._autosize(ws, widths)
 
         # -- hidden numeric staging areas, oldest-year-first, for the charts --
         # (built as separate chronological blocks rather than via a reversed

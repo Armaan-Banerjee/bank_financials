@@ -1364,7 +1364,7 @@
         "start_year": 2020
       },
       {
-        "end_n": 119,
+        "end_n": 120,
         "end_year": 2022,
         "entered": [
           "122287",
@@ -1375,6 +1375,7 @@
           "446951",
           "494549",
           "543146",
+          "604551",
           "671140",
           "815220",
           "849404",
@@ -1398,7 +1399,6 @@
           "204566",
           "455378",
           "514744",
-          "604551",
           "954876",
           "970920",
           "993767"
@@ -1407,8 +1407,8 @@
           "171532",
           "446951"
         ],
-        "retained_n": 117,
-        "start_n": 119,
+        "retained_n": 118,
+        "start_n": 120,
         "start_year": 2022
       },
       {
@@ -7687,9 +7687,9 @@
           },
           {
             "bank": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
-            "end_rank": 40,
+            "end_rank": 39,
             "frn": "114724",
-            "rank_change": -1,
+            "rank_change": -2,
             "start_rank": 41
           },
           {
@@ -7708,9 +7708,9 @@
           },
           {
             "bank": "Northern Bank Limited",
-            "end_rank": 37,
+            "end_rank": 36,
             "frn": "122261",
-            "rank_change": -3,
+            "rank_change": -4,
             "start_rank": 40
           },
           {
@@ -7729,9 +7729,9 @@
           },
           {
             "bank": "BROWN SHIPLEY & CO. LIMITED",
-            "end_rank": 25,
+            "end_rank": 40,
             "frn": "124548",
-            "rank_change": -1,
+            "rank_change": 14,
             "start_rank": 26
           },
           {
@@ -7750,9 +7750,9 @@
           },
           {
             "bank": "Crown Agents Bank Limited",
-            "end_rank": 36,
+            "end_rank": 35,
             "frn": "204456",
-            "rank_change": -1,
+            "rank_change": -2,
             "start_rank": 37
           },
           {
@@ -7764,16 +7764,16 @@
           },
           {
             "bank": "Tandem Bank Limited",
-            "end_rank": 26,
+            "end_rank": 25,
             "frn": "204479",
-            "rank_change": -12,
+            "rank_change": -13,
             "start_rank": 38
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 33,
+            "end_rank": 32,
             "frn": "204503",
-            "rank_change": 3,
+            "rank_change": 2,
             "start_rank": 30
           },
           {
@@ -7792,9 +7792,9 @@
           },
           {
             "bank": "RELIANCE BANK LIMITED",
-            "end_rank": 34,
+            "end_rank": 33,
             "frn": "204537",
-            "rank_change": -5,
+            "rank_change": -6,
             "start_rank": 39
           },
           {
@@ -7806,23 +7806,23 @@
           },
           {
             "bank": "Unity Trust Bank Plc",
-            "end_rank": 35,
+            "end_rank": 34,
             "frn": "204570",
-            "rank_change": 0,
+            "rank_change": -1,
             "start_rank": 35
           },
           {
             "bank": "Shawbrook Bank Limited",
-            "end_rank": 26,
+            "end_rank": 25,
             "frn": "204574",
-            "rank_change": -1,
+            "rank_change": -2,
             "start_rank": 27
           },
           {
             "bank": "The Charity Bank Limited",
-            "end_rank": 32,
+            "end_rank": 31,
             "frn": "207701",
-            "rank_change": 3,
+            "rank_change": 2,
             "start_rank": 29
           },
           {
@@ -7841,9 +7841,9 @@
           },
           {
             "bank": "ALRAYAN BANK LIMITED",
-            "end_rank": 37,
+            "end_rank": 36,
             "frn": "229148",
-            "rank_change": 3,
+            "rank_change": 2,
             "start_rank": 34
           },
           {
@@ -7876,9 +7876,9 @@
           },
           {
             "bank": "QIB (UK) Plc",
-            "end_rank": 30,
+            "end_rank": 29,
             "frn": "466577",
-            "rank_change": 5,
+            "rank_change": 4,
             "start_rank": 25
           },
           {
@@ -7904,9 +7904,9 @@
           },
           {
             "bank": "OneSavings Bank Plc",
-            "end_rank": 31,
+            "end_rank": 30,
             "frn": "530504",
-            "rank_change": 3,
+            "rank_change": 2,
             "start_rank": 28
           },
           {
@@ -7925,9 +7925,9 @@
           },
           {
             "bank": "HAMPDEN & CO PLC",
-            "end_rank": 29,
+            "end_rank": 28,
             "frn": "606934",
-            "rank_change": -3,
+            "rank_change": -4,
             "start_rank": 32
           },
           {
@@ -7939,9 +7939,9 @@
           },
           {
             "bank": "Atom Bank PLC",
-            "end_rank": 39,
+            "end_rank": 38,
             "frn": "661960",
-            "rank_change": -5,
+            "rank_change": -6,
             "start_rank": 44
           },
           {
@@ -7960,9 +7960,9 @@
           },
           {
             "bank": "REDWOOD BANK LIMITED",
-            "end_rank": 26,
+            "end_rank": 25,
             "frn": "755924",
-            "rank_change": -5,
+            "rank_change": -6,
             "start_rank": 31
           },
           {
@@ -8034,8 +8034,8 @@
             "bank": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
             "end_rank": 45,
             "frn": "114724",
-            "rank_change": 0,
-            "start_rank": 45
+            "rank_change": 1,
+            "start_rank": 44
           },
           {
             "bank": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
@@ -8053,17 +8053,17 @@
           },
           {
             "bank": "Northern Bank Limited",
-            "end_rank": 39,
+            "end_rank": 38,
             "frn": "122261",
             "rank_change": -3,
-            "start_rank": 42
+            "start_rank": 41
           },
           {
             "bank": "Coutts & Company",
-            "end_rank": 39,
+            "end_rank": 38,
             "frn": "122287",
             "rank_change": 1,
-            "start_rank": 38
+            "start_rank": 37
           },
           {
             "bank": "Credit Suisse (UK) Limited",
@@ -8081,10 +8081,10 @@
           },
           {
             "bank": "BROWN SHIPLEY & CO. LIMITED",
-            "end_rank": 26,
+            "end_rank": 42,
             "frn": "124548",
             "rank_change": -3,
-            "start_rank": 29
+            "start_rank": 45
           },
           {
             "bank": "KUWAIT FINANCE HOUSE PLC",
@@ -8109,10 +8109,10 @@
           },
           {
             "bank": "Crown Agents Bank Limited",
-            "end_rank": 41,
+            "end_rank": 40,
             "frn": "204456",
             "rank_change": 0,
-            "start_rank": 41
+            "start_rank": 40
           },
           {
             "bank": "BIRMINGHAM BANK LIMITED",
@@ -8123,17 +8123,17 @@
           },
           {
             "bank": "Tandem Bank Limited",
-            "end_rank": 27,
+            "end_rank": 26,
             "frn": "204479",
             "rank_change": -3,
-            "start_rank": 30
+            "start_rank": 29
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 31,
+            "end_rank": 30,
             "frn": "204503",
             "rank_change": -6,
-            "start_rank": 37
+            "start_rank": 36
           },
           {
             "bank": "Methodist Chapel Aid Limited",
@@ -8153,36 +8153,36 @@
             "bank": "RELIANCE BANK LIMITED",
             "end_rank": 24,
             "frn": "204537",
-            "rank_change": -15,
-            "start_rank": 39
+            "rank_change": -14,
+            "start_rank": 38
           },
           {
             "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
-            "end_rank": 42,
+            "end_rank": 41,
             "frn": "204564",
-            "rank_change": -4,
+            "rank_change": -5,
             "start_rank": 46
           },
           {
             "bank": "Unity Trust Bank Plc",
-            "end_rank": 29,
+            "end_rank": 28,
             "frn": "204570",
             "rank_change": -11,
-            "start_rank": 40
+            "start_rank": 39
           },
           {
             "bank": "Shawbrook Bank Limited",
-            "end_rank": 35,
+            "end_rank": 34,
             "frn": "204574",
             "rank_change": 5,
-            "start_rank": 30
+            "start_rank": 29
           },
           {
             "bank": "The Charity Bank Limited",
-            "end_rank": 28,
+            "end_rank": 27,
             "frn": "207701",
             "rank_change": -8,
-            "start_rank": 36
+            "start_rank": 35
           },
           {
             "bank": "Bank Sepah International Plc",
@@ -8207,16 +8207,16 @@
           },
           {
             "bank": "ALRAYAN BANK LIMITED",
-            "end_rank": 37,
+            "end_rank": 36,
             "frn": "229148",
             "rank_change": -5,
-            "start_rank": 42
+            "start_rank": 41
           },
           {
             "bank": "KINGDOM BANK LIMITED",
-            "end_rank": 36,
+            "end_rank": 35,
             "frn": "400972",
-            "rank_change": 9,
+            "rank_change": 8,
             "start_rank": 27
           },
           {
@@ -8242,10 +8242,10 @@
           },
           {
             "bank": "QIB (UK) Plc",
-            "end_rank": 30,
+            "end_rank": 29,
             "frn": "466577",
             "rank_change": -4,
-            "start_rank": 34
+            "start_rank": 33
           },
           {
             "bank": "BANK OF CHINA (UK) LIMITED",
@@ -8270,16 +8270,16 @@
           },
           {
             "bank": "OneSavings Bank Plc",
-            "end_rank": 38,
+            "end_rank": 37,
             "frn": "530504",
             "rank_change": 3,
-            "start_rank": 35
+            "start_rank": 34
           },
           {
             "bank": "Castle Trust Capital PLC",
-            "end_rank": 33,
+            "end_rank": 32,
             "frn": "541910",
-            "rank_change": 5,
+            "rank_change": 4,
             "start_rank": 28
           },
           {
@@ -8291,10 +8291,10 @@
           },
           {
             "bank": "HAMPDEN & CO PLC",
-            "end_rank": 34,
+            "end_rank": 33,
             "frn": "606934",
             "rank_change": 1,
-            "start_rank": 33
+            "start_rank": 32
           },
           {
             "bank": "OakNorth Bank plc",
@@ -8307,8 +8307,8 @@
             "bank": "Atom Bank PLC",
             "end_rank": 43,
             "frn": "661960",
-            "rank_change": -1,
-            "start_rank": 44
+            "rank_change": 0,
+            "start_rank": 43
           },
           {
             "bank": "IFAST GLOBAL BANK LIMITED",
@@ -8326,10 +8326,10 @@
           },
           {
             "bank": "REDWOOD BANK LIMITED",
-            "end_rank": 31,
+            "end_rank": 30,
             "frn": "755924",
             "rank_change": 1,
-            "start_rank": 30
+            "start_rank": 29
           },
           {
             "bank": "Lloyds Bank Corporate Markets Plc",
@@ -8435,15 +8435,15 @@
             "bank": "Northern Bank Limited",
             "end_rank": 41,
             "frn": "122261",
-            "rank_change": 2,
-            "start_rank": 39
+            "rank_change": 3,
+            "start_rank": 38
           },
           {
             "bank": "Coutts & Company",
             "end_rank": 39,
             "frn": "122287",
-            "rank_change": 0,
-            "start_rank": 39
+            "rank_change": 1,
+            "start_rank": 38
           },
           {
             "bank": "Credit Suisse (UK) Limited",
@@ -8461,10 +8461,10 @@
           },
           {
             "bank": "BROWN SHIPLEY & CO. LIMITED",
-            "end_rank": 26,
+            "end_rank": 35,
             "frn": "124548",
-            "rank_change": -2,
-            "start_rank": 28
+            "rank_change": -7,
+            "start_rank": 42
           },
           {
             "bank": "KUWAIT FINANCE HOUSE PLC",
@@ -8491,8 +8491,8 @@
             "bank": "Crown Agents Bank Limited",
             "end_rank": 40,
             "frn": "204456",
-            "rank_change": -1,
-            "start_rank": 41
+            "rank_change": 0,
+            "start_rank": 40
           },
           {
             "bank": "BIRMINGHAM BANK LIMITED",
@@ -8503,17 +8503,17 @@
           },
           {
             "bank": "Tandem Bank Limited",
-            "end_rank": 32,
+            "end_rank": 31,
             "frn": "204479",
             "rank_change": 3,
-            "start_rank": 29
+            "start_rank": 28
           },
           {
             "bank": "Aldermore Bank Plc",
-            "end_rank": 34,
+            "end_rank": 33,
             "frn": "204503",
             "rank_change": 1,
-            "start_rank": 33
+            "start_rank": 32
           },
           {
             "bank": "National Bank of Egypt (UK) Limited",
@@ -8524,17 +8524,17 @@
           },
           {
             "bank": "RELIANCE BANK LIMITED",
-            "end_rank": 28,
+            "end_rank": 27,
             "frn": "204537",
-            "rank_change": 2,
+            "rank_change": 1,
             "start_rank": 26
           },
           {
             "bank": "BRITISH ARAB COMMERCIAL BANK PUBLIC LIMITED COMPANY",
             "end_rank": 44,
             "frn": "204564",
-            "rank_change": 2,
-            "start_rank": 42
+            "rank_change": 3,
+            "start_rank": 41
           },
           {
             "bank": "TURKISH BANK (UK) LIMITED",
@@ -8545,24 +8545,24 @@
           },
           {
             "bank": "Unity Trust Bank Plc",
-            "end_rank": 27,
+            "end_rank": 26,
             "frn": "204570",
             "rank_change": -4,
-            "start_rank": 31
+            "start_rank": 30
           },
           {
             "bank": "Shawbrook Bank Limited",
             "end_rank": 36,
             "frn": "204574",
-            "rank_change": 1,
-            "start_rank": 35
+            "rank_change": 2,
+            "start_rank": 34
           },
           {
             "bank": "The Charity Bank Limited",
-            "end_rank": 31,
+            "end_rank": 30,
             "frn": "207701",
             "rank_change": 1,
-            "start_rank": 30
+            "start_rank": 29
           },
           {
             "bank": "Bank Sepah International Plc",
@@ -8589,15 +8589,15 @@
             "bank": "ALRAYAN BANK LIMITED",
             "end_rank": 37,
             "frn": "229148",
-            "rank_change": 0,
-            "start_rank": 37
+            "rank_change": 1,
+            "start_rank": 36
           },
           {
             "bank": "KINGDOM BANK LIMITED",
-            "end_rank": 28,
+            "end_rank": 27,
             "frn": "400972",
             "rank_change": -8,
-            "start_rank": 36
+            "start_rank": 35
           },
           {
             "bank": "Bank of Africa United Kingdom Plc",
@@ -8622,10 +8622,10 @@
           },
           {
             "bank": "QIB (UK) Plc",
-            "end_rank": 30,
+            "end_rank": 29,
             "frn": "466577",
             "rank_change": -2,
-            "start_rank": 32
+            "start_rank": 31
           },
           {
             "bank": "BANK OF CHINA (UK) LIMITED",
@@ -8652,15 +8652,15 @@
             "bank": "OneSavings Bank Plc",
             "end_rank": 37,
             "frn": "530504",
-            "rank_change": -1,
-            "start_rank": 38
+            "rank_change": 0,
+            "start_rank": 37
           },
           {
             "bank": "Castle Trust Capital PLC",
-            "end_rank": 33,
+            "end_rank": 32,
             "frn": "541910",
             "rank_change": -1,
-            "start_rank": 34
+            "start_rank": 33
           },
           {
             "bank": "Itau BBA International PLC",
@@ -8741,9 +8741,9 @@
           },
           {
             "bank": "GB Bank Limited",
-            "end_rank": 35,
+            "end_rank": 34,
             "frn": "850286",
-            "rank_change": 28,
+            "rank_change": 27,
             "start_rank": 7
           },
           {
@@ -136741,19 +136741,19 @@
             "start_year": 2020
           },
           {
-            "change": 0.5,
-            "direction": "up",
+            "change": -2.26,
+            "direction": "down",
             "end_year": 2022,
             "start_year": 2021
           },
           {
-            "change": 0.8600000000000012,
+            "change": 0.1900000000000004,
             "direction": "up",
             "end_year": 2023,
             "start_year": 2022
           },
           {
-            "change": 1.2699999999999996,
+            "change": 2.0200000000000005,
             "direction": "up",
             "end_year": 2024,
             "start_year": 2023
@@ -136776,18 +136776,18 @@
         "score": {
           "bank": "BROWN SHIPLEY & CO. LIMITED",
           "changes": 3,
-          "down_changes": 0,
+          "down_changes": 1,
           "first_year": 2021,
           "flat_changes": 0,
           "frn": "124548",
-          "label": "persistent_up",
+          "label": "mixed",
           "last_year": 2024,
           "metric": "Leverage Ratio",
-          "persistence_score": 1.0,
-          "robust_total_change": 2.630000000000001,
+          "persistence_score": 0.6666666666666666,
+          "robust_total_change": -0.049999999999998934,
           "status": "eligible",
-          "total_change": 2.630000000000001,
-          "up_changes": 3
+          "total_change": -0.049999999999998934,
+          "up_changes": 2
         },
         "years": [
           {
@@ -137144,21 +137144,21 @@
             "reporting_basis": "entity",
             "source_note": "\u00a3'000. Company (entity-level) basis. Each year as that year's own report originally published it; the FY2025 report restates FY2024's opening and closing cash - see source note.",
             "status": "numeric",
-            "value": 9.1,
+            "value": 6.34,
             "year": 2022
           },
           {
             "reporting_basis": "entity",
             "source_note": "\u00a3'000. Company (entity-level) basis. Each year as that year's own report originally published it; the FY2025 report restates FY2024's opening and closing cash - see source note.",
             "status": "numeric",
-            "value": 9.96,
+            "value": 6.53,
             "year": 2023
           },
           {
             "reporting_basis": "entity",
             "source_note": "\u00a3'000. Company (entity-level) basis. Each year as that year's own report originally published it; the FY2025 report restates FY2024's opening and closing cash - see source note.",
             "status": "numeric",
-            "value": 11.23,
+            "value": 8.55,
             "year": 2024
           },
           {
@@ -148497,13 +148497,13 @@
             "start_year": 2022
           },
           {
-            "change": -0.14000000000000057,
+            "change": -0.16000000000000014,
             "direction": "down",
             "end_year": 2024,
             "start_year": 2023
           },
           {
-            "change": -1.2999999999999998,
+            "change": -1.3200000000000003,
             "direction": "down",
             "end_year": 2025,
             "start_year": 2024
@@ -148528,9 +148528,9 @@
           "last_year": 2025,
           "metric": "Leverage Ratio",
           "persistence_score": 0.5,
-          "robust_total_change": 0.5599999999999996,
+          "robust_total_change": 0.5199999999999996,
           "status": "eligible",
-          "total_change": 0.5599999999999996,
+          "total_change": 0.5199999999999996,
           "up_changes": 2
         },
         "years": [
@@ -148902,14 +148902,14 @@
             "reporting_basis": null,
             "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
             "status": "numeric",
-            "value": 7.6,
+            "value": 7.58,
             "year": 2024
           },
           {
             "reporting_basis": null,
             "source_note": "Not applicable \u2014 this entity takes the FRS 101 cash-flow-statement disclosure exemption every year. See source note below.",
             "status": "numeric",
-            "value": 6.3,
+            "value": 6.26,
             "year": 2025
           },
           {
@@ -202073,8 +202073,8 @@
             "start_year": 2021
           },
           {
-            "change": null,
-            "direction": "missing",
+            "change": -0.3000000000000007,
+            "direction": "down",
             "end_year": 2023,
             "start_year": 2022
           },
@@ -202101,18 +202101,18 @@
         "metric": "Leverage Ratio",
         "score": {
           "bank": "Paragon Bank Plc",
-          "changes": 2,
-          "down_changes": 2,
-          "first_year": 2023,
+          "changes": 3,
+          "down_changes": 3,
+          "first_year": 2022,
           "flat_changes": 0,
           "frn": "604551",
-          "label": null,
+          "label": "persistent_down",
           "last_year": 2025,
           "metric": "Leverage Ratio",
-          "persistence_score": null,
-          "robust_total_change": -1.0,
-          "status": "insufficient_series",
-          "total_change": -1.0,
+          "persistence_score": 1.0,
+          "robust_total_change": -1.3000000000000007,
+          "status": "eligible",
+          "total_change": -1.3000000000000007,
           "up_changes": 0
         },
         "years": [
@@ -202468,9 +202468,9 @@
           },
           {
             "reporting_basis": null,
-            "source_note": null,
-            "status": "missing",
-            "value": null,
+            "source_note": "Bank statutory basis, \u00a3m; see source and basis note",
+            "status": "numeric",
+            "value": 7.9,
             "year": 2022
           },
           {

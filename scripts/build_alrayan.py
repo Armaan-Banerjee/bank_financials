@@ -831,14 +831,38 @@ bw.add_rwa_breakdown_sheet(
     unit_suffix=" (£m)",
 )
 
+# GA-026 (2026-10-09): see wayfinder/gaps/tickets/GA-026.md
+GA026_ONE_LEVERAGE_BASIS_NOTE = (
+    "\nONE LEVERAGE BASIS ONLY - CHECKED AND RECORDED 2026-10-09 (GA-026). Template UK LR2 (LRCom) asks for "
+    "BOTH leverage measures - rows 24 and UK-25c on the including-claims-on-central-banks basis, UK-24b and 25 "
+    "on the excluding basis, with the reconciling deduction at UK-24a - and 47 workbooks in this corpus carry "
+    "both. This sheet carries the excluding side alone because that is all this bank publishes, not because "
+    "the including side was missed.\nHOW THAT WAS ESTABLISHED: all 6 source URLs cited on this sheet and its "
+    "KM1 sheet were re-fetched on 2026-10-09 (6 returned a real PDF, %PDF magic bytes checked), and each "
+    "document's full text was searched for an LR2/LRCom template and for the 'including claims on central "
+    "banks' wording. Every match was opened and read on 2026-10-09; none is an in-scope disclosure. In "
+    "PRE-2022 editions the hit is the OLD CRR 'Leverage ratio common disclosure', not the UK dual-basis "
+    "template: it prints a single 'Leverage ratio total exposure measure' with no excluding/including split, "
+    "which is why those same documents carry no 'excluding claims on central banks' wording either. The UK "
+    "split took effect only for periods from 1 January 2022, so those editions confirm the dual basis did not "
+    "yet exist rather than offering a figure to carry. The bank files UK KM1, whose leverage block (rows 13 "
+    "and 14) asks only for the excluding measure; a KM1 filer that publishes no LR2 therefore discloses one "
+    "basis.\nTHIS IS A RECORDED FINDING, NOT AN UNCHECKED GAP. Do not reopen it on the sheet's shape alone. It "
+    "should be reopened when a NEW edition appears, since a bank can begin printing LR2 at any time - "
+    "Aldermore's FY2026 report is the first of its eight editions to do so. And note the method's own limit: "
+    "the text search is defeated by a figure wrapping into the middle of a label (UBP's KM1 renders as "
+    "'...excluding claims  4,407,957  on central banks'), so a hit was always read by hand and only a clean "
+    "zero across every edition supports this finding. "
+)
+
 metric(
     "Leverage Ratio", "%",
-    [("Leverage ratio", {"FY2025": "7.6%", "FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"})],
+    [("Leverage ratio - FY2022 onward excluding claims on central banks (UK KM1); FY2020-FY2021 old CRR single exposure measure, no split; see note", {"FY2025": "7.6%", "FY2024": "7.7%", "FY2023": "7.8%", "FY2022": "6.7%", "FY2021": "6.4%", "FY2020": "5.9%"})],
     p3_sources(),
     note="FY2022-FY2024 are on the 'excluding claims on central banks' KM1 basis; FY2020-FY2021 (5.9%/6.4%) are "
          "on the older CRR/LRSum basis, from before the PRA's leverage-framework methodology change (PRA "
          "PS21/21) - not directly comparable, same industry-wide basis break documented for several other banks "
-         "in this project.",
+         "in this project." + GA026_ONE_LEVERAGE_BASIS_NOTE,
 )
 
 metric(

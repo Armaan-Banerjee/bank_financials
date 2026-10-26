@@ -824,7 +824,70 @@ bw.add_rwa_breakdown_sheet(
     source_height=340,
     unit_suffix=" (GBP'000)",
 )
-metric("Leverage Ratio", "%", "Leverage ratio", "lev")
+# GA-026 (2026-10-09). This bank is the batch's one positive case: it states its leverage
+# basis in PROSE, without ever using template UK LR2, and the statement CHANGES between the
+# FY2021 and FY2022 editions - exactly the 1 January 2022 effective date of the UK dual-basis
+# split. The series on this sheet therefore spans a basis break that no figure announces.
+GA026_BASIS_NOTE = (
+    "LEVERAGE BASIS CHANGES BETWEEN FY2021 AND FY2022, AND THE BANK SAYS SO ONLY IN PROSE (GA-026, "
+    "2026-10-09). Weatherbys never prints template UK LR2 / LRCom, so there is no row 24, UK-24a, "
+    "UK-24b or UK-25c anywhere, and no edition publishes both bases side by side. What it prints "
+    "instead is a bespoke 'Table 2 : Leverage Ratio Requirements' build-up and, above it, a one-bullet "
+    "definition - and that definition is not the same in every edition.\n"
+    "\n"
+    "FY2020 and FY2021 editions define it as 'the level of Tier 1 capital against balance sheet and "
+    "off-balance sheet exposures.' - full stop, no carve-out - against a stated minimum of 3%.\n"
+    "\n"
+    "FY2022, FY2023 and FY2024 editions define it as 'the level of Tier 1 capital against balance sheet "
+    "and off-balance sheet exposures, EXCLUDING assets constituting claims on central banks, where they "
+    "are matched by liabilities, denominated in the same currency and of identical or longer maturity. "
+    "Assets constituting claims on central banks relates to WBLs cash deposit held at the Bank of "
+    "England.' - against a stated minimum of 3.25%.\n"
+    "\n"
+    "So FY2022 onwards is the EXCLUDING basis and FY2021 and FY2020 are not, and the break falls exactly "
+    "on 1 January 2022, when the UK dual-basis split took effect. The tables corroborate the switch "
+    "rather than merely accompanying it: on-balance sheet exposures fall from 1,479,180 (FY2021) to "
+    "1,067,192 (FY2022) while Tier 1 capital RISES from 50,247 to 57,524, and the ratio jumps from 3.37% "
+    "to 5.30%. A fall of roughly 412m in the denominator of a growing bank is the Bank of England "
+    "deposit leaving the measure. The FY2020 and FY2021 tables also carry an 'Adjustments for conversion "
+    "to credit equivalent amounts' line (-39,124 and -75,944) that the FY2022 table drops.\n"
+    "\n"
+    "THE FIGURES ARE LEFT EXACTLY AS PUBLISHED AND NOTHING IS RESTATED ONTO A COMMON BASIS. Weatherbys "
+    "publishes only one measure per edition and never restates a comparative, so there is no "
+    "excluding-basis FY2021 figure in existence to record; deriving one here would be a computation, not "
+    "a transcription. The consequence for any reader is that FY2021 to FY2022 on this sheet is NOT a "
+    "like-for-like movement, and the step from 3.37% to 5.30% is mostly a change of denominator rather "
+    "than a change in leverage.\n"
+    "\n"
+    "FY2025 IS SOURCED FROM A DOCUMENT THAT STATES NO BASIS. No FY2025 Pillar 3 exists (SDDT Rule 3.1 "
+    "modification, 2 April 2025), so FY2025's 6.05% comes from the Weatherbys Banking Group Annual "
+    "Report and Financial Accounts 2025, whose glossary (p.93) defines the measure only as 'Tier 1 "
+    "capital divided by total exposures', with no central-bank carve-out, and whose narrative gives 'The "
+    "consolidated leverage ratio was 6.05% (2024: 7.08%) against a minimum requirement of 3.25%'. That "
+    "FY2024 comparative reproduces the FY2024 Pillar 3 figure exactly, which is why FY2025 is carried in "
+    "the same series - but the Annual Report does not itself state the carve-out, so FY2025 IS RECORDED "
+    "AS CONTINUOUS WITH FY2024 WITHOUT ASSERTING A BASIS THE DOCUMENT DOES NOT PRINT.\n"
+    "\n"
+    "A WORDING MISMATCH IN THE SOURCE, REPRODUCED NOT RESOLVED. Every edition from FY2020 to FY2024 "
+    "introduces the definition as 'The GROUP's leverage ratio is defined as' and then says 'The table "
+    "below summarises the leverage ratio for the BANK'. The single figure is the same in both sentences, "
+    "so the two readings coincide in the source and no choice between them has been made here.\n"
+    "\n"
+    "VERIFICATION. The leverage pages of the FY2020 (p.6), FY2021 (p.6), FY2022 (p.7) and FY2023 (p.6) "
+    "editions were rendered and read at 300 dpi, so the definition wording and the absence of any "
+    "second-basis row are established from the PAGE, not from a text search. (A text search would in "
+    "fact have missed this: the probe pattern used earlier in GA-026 required only non-letters between "
+    "'excluding' and 'claims', and Weatherbys writes 'excluding ASSETS CONSTITUTING claims on central "
+    "banks', so it scored a false zero for the very bank that states the basis most explicitly.)"
+)
+
+bw.add_metric_sheet(
+    "Leverage Ratio", "%",
+    [("Leverage ratio", series("lev"))],
+    P3_SOURCES,
+    note=GA026_BASIS_NOTE,
+    first_col_width=58, source_height=320, note_height=560,
+)
 metric("LCR", "%", "Liquidity coverage ratio", "lcr")
 metric("NSFR", "%", "Net stable funding ratio", "nsfr")
 _GA020_MREL = {
