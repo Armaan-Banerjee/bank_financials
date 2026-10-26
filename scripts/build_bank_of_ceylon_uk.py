@@ -655,6 +655,16 @@ for _y in ("FY2022", "FY2023"):
 KM1_CELLS["FY2013"] = ("Not published – the recovered 31 Dec 2013 Pillar 3 (Wayback) pre-dates the KM1 template "
                        "and prints no such table")
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("BANK OF CEYLON UK")
+
 bw.add_km1_sheet(
     title="Bank of Ceylon (UK) Limited - KM1 Key Metrics",
     subtitle="Not applicable: this bank publishes Pillar 3 disclosures but does not use the UK KM1 template in "

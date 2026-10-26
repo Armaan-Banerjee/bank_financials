@@ -690,6 +690,16 @@ km1_rows = [
     ("DATA", "20 NSFR ratio (%)", {"FY2025": "150", "FY2024": "194", "FY2023": "176", "FY2022": "135"}),
 ]
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("NATIONAL BANK OF EGYPT UK")
+
 bw.add_km1_sheet(
     title="National Bank of Egypt (UK) Limited — KM1 Key Metrics",
     subtitle="The Bank's own 'Template UK KM1 - Key metrics', reproduced whole in its own row order, row "

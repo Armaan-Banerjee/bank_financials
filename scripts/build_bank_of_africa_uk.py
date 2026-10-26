@@ -849,6 +849,16 @@ KM1_STATEMENTS.update({y: _KM1_NOT_USED for y in ("FY2024", "FY2023", "FY2022")}
 KM1_STATEMENTS["FY2025"] = ("Not applicable – FY2025 Pillar 3 (found 2026-09-19 on the bank's CMS file store) does not "
                             "use the UK KM1 template (key metrics as four bar charts, p.6; 0 'KM1' hits)")
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("BANK OF AFRICA UK")
+
 bw.add_km1_sheet(
     title="Bank of Africa United Kingdom Plc - KM1 Key Metrics",
     subtitle="Not applicable: this bank publishes a Pillar 3 every year but does not use the UK KM1 template "

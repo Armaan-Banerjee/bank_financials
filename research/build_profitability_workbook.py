@@ -333,10 +333,23 @@ def main(extract_json, agg_path, outbase, *extra_agg):
             absorbed = (r.get("pl_year_label") is None and bool(nlab)
                         and re.search(r"\(\s*\d+\s*m", nlab, re.I) is not None)
             reason = ""
+            # A REFUSAL comes first, and is not a missing input. Where the
+            # balance sheet and the profit and loss do not rest on the same
+            # basis, the ratio was never computed - it is not that an input
+            # could not be found, and labelling it "not matched" would send a
+            # reader chasing a document that would not help. This branch leads
+            # because the 2026-10-22 edition printed numbers in these cells.
+            if r.get("basis_refused"):
+                reason = ("NOT COMPUTED - " + r["basis_refused"]
+                          + ". The underlying profit, equity and asset figures "
+                          "in this row are sound and are printed as published; "
+                          "it is the RATIO of them that does not cancel. The "
+                          "2026-10-22 edition of this table printed a number "
+                          "here; that number was wrong and is withdrawn.")
             # The year-end variant is the right test for "is an INPUT missing":
             # the average additionally needs a prior-year balance sheet, and its
             # absence in a bank's oldest reported year is not a gap to chase.
-            if r["roa_year_end"] is None:
+            elif r["roa_year_end"] is None:
                 if absorbed:
                     reason = ("no such reporting period - an adjacent column covers more than "
                               "12 months, so this year was never reported separately. NOT a gap "
@@ -464,12 +477,34 @@ def main(extract_json, agg_path, outbase, *extra_agg):
                                ("ROA", "roa_avg_assets", "Return on assets, % (profit after tax / AVERAGE total assets)"),
                                ("ROA year-end", "roa_year_end", "Return on assets, % (profit after tax / closing total assets)")]:
         drop = excluded if key.startswith("roe") else set()
-        body = [[b] + [None if (b, y) in drop else idx[(b, y)][key] for y in YEARS]
-                for b in banks]
-        sheet(wb, metric, ["Bank"] + list(YEARS), body, [34] + [12] * len(YEARS),
+
+        def cell(b, y):
+            """A REFUSAL is not an empty cell, and these sheets are where the
+            difference gets lost. An input that could not be found and a ratio
+            that cannot be struck look identical as a blank, and a reader
+            seeing a blank goes looking for a document that will not help. So
+            a refused cell carries the word, with the reason on the Gaps and
+            Ratio caveats sheets - the GA-020 rule, applied to a research
+            table rather than a bank workbook."""
+            if (b, y) in drop:
+                return None
+            r = idx[(b, y)]
+            if r.get("basis_refused") and r[key] is None:
+                return "Not computed"
+            return r[key]
+
+        body = [[b] + [cell(b, y) for y in YEARS] for b in banks]
+        sheet(wb, metric, ["Bank"] + list(YEARS), body, [34] + [13] * len(YEARS),
               note=label + ". Computed from each bank's own transcribed Profit & Loss and "
-              "Balance Sheet. An empty cell means an input was missing - see the Gaps sheet "
-              "for which one and why; it never means zero.")
+              "Balance Sheet. An EMPTY cell means an input was missing - see the Gaps sheet "
+              "for which one and why; it never means zero. A cell reading \u2018Not "
+              "computed\u2019 is a different outcome: every input is present and sound, and "
+              "the RATIO of them does not cancel, because the two statements do not rest on "
+              "the same basis - the balance sheet converted at the year-end spot rate and "
+              "the profit and loss at the year\u2019s average rate, or, for two banks, the "
+              "two statements describing different entities. The Gaps sheet names the reason "
+              "for each. The 2026-10-22 edition of this table printed numbers in those "
+              "cells; those numbers were wrong and are withdrawn.")
 
     # `sheet()` zips widths against columns, so a short list simply leaves the
     # remaining columns at Excel's default. Widths for the three aggregator

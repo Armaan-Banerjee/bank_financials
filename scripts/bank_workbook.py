@@ -57,6 +57,9 @@ Row tuple formats:
         cells are written as-is.
 """
 
+import collections
+import json
+import os
 import re
 import sys
 
@@ -139,6 +142,340 @@ def _norm_label(label):
     return re.sub(r"\s+", " ", str(label)).strip().lower()
 
 
+# -- Profitability (derived sheet) ---------------------------------------------
+# The sheet name is a constant for the same reason KM1_SHEET_NAME is: a verifier
+# and two checkers look for it, and a string typed in four places is a string
+# that eventually differs in one of them.
+PROFITABILITY_SHEET_NAME = "Profitability"
+
+# What a contaminated cell says. GA-020: a statement cell must say WHICH
+# outcome it is, and it must be SHORT - a data column is 15 width units, about
+# 21 characters, and Excel clips the overflow against the next cell rather than
+# widening it. "Not computed" is that word; WHY it was not computed is a
+# paragraph, and a paragraph goes in the note, which auto-fits. (check_cell_fit
+# audits merged note and source cells, not data cells, so this length is a
+# judgement the library has to get right, not one a check will catch.)
+REFUSED_MIXED_BASIS = "Not computed"
+
+# Two sentinels, because None is a real answer here ("one native currency, the
+# ratio cancels") and must not double as "nobody said". _FX_FROM_TABLE is the
+# default: consult the audited table. _FX_UNAUDITED is what the table returns
+# for a bank it has never been asked about, which is NOT the same as a bank it
+# cleared.
+_FX_FROM_TABLE = object()
+_FX_UNAUDITED = object()
+
+PUBLISHED_RETURNS_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "research", "profitability", "published_returns.jsonl",
+)
+
+_BankReturns = collections.namedtuple(
+    "_BankReturns",
+    "published definitions deferred excluded examined none_finding",
+)
+
+_published_returns_cache = {}
+
+
+def _read_published_returns(path=None):
+    """-> {bank key: _BankReturns}, read once per process.
+
+    `published` is {measure: {year: verbatim value}} for the records struck in
+    the bank's OWN edition for that year. `deferred` holds the records that are
+    a LATER edition's comparative: the own-edition rule keeps those out of the
+    year's cell and puts them in the note, because a comparative restated in a
+    later edition is a different claim from the figure the bank printed at the
+    time. `excluded` holds records ruled out on entity or unit grounds, carried
+    so nobody re-derives them. `examined` is every year the store holds any
+    record for, which is the only thing that distinguishes "the bank did not
+    print this that year" from "that year's report was never read" - and a
+    blank cell cannot say which without it. `none_finding` is the verbatim
+    positive finding that the bank publishes no return at all.
+    """
+    path = path or PUBLISHED_RETURNS_PATH
+    if path in _published_returns_cache:
+        return _published_returns_cache[path]
+    banks = {}
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            if "_schema" in rec or not rec.get("bank"):
+                continue
+            # Built as mutable parts and frozen into the namedtuple at the
+            # end, so a caller cannot accidentally mutate the process cache.
+            cur = banks.setdefault(rec["bank"], ({}, {}, [], [], set(), [None]))
+            published, definitions, deferred, excluded, examined, none_f = cur
+            year = rec.get("year")
+            if year:
+                examined.add(year)
+            if rec.get("excluded"):
+                excluded.append(rec)
+            elif rec.get("publishes_none"):
+                none_f[0] = rec.get("finding") or none_f[0]
+            elif rec.get("measure"):
+                measure = rec["measure"]
+                definitions.setdefault(
+                    measure,
+                    rec.get("definition") or rec.get("definition_verbatim"))
+                if rec.get("own_edition") is False:
+                    deferred.append(rec)
+                else:
+                    published.setdefault(measure, {})[year] = rec.get("value")
+    out = {k: _BankReturns(v[0], v[1], v[2], v[3], v[4], v[5][0])
+           for k, v in banks.items()}
+    _published_returns_cache[path] = out
+    return out
+
+
+def _widest_spread(rows, years):
+    """This bank's own widest average-vs-year-end divergence, named.
+
+    Computed, not asserted: the two bases diverge most where the balance sheet
+    moved fastest, and which year that is differs from bank to bank. Returns
+    "" where the gap is under half a point, because then there is nothing to
+    warn a reader about."""
+    def pct(values, y):
+        v = values.get(y)
+        if isinstance(v, str) and v.endswith("%"):
+            try:
+                return float(v[:-1])
+            except ValueError:
+                return None
+        return None
+    by = dict(rows)
+    avg = by.get("Return on equity - average equity basis", {})
+    end = by.get("Return on equity - year-end equity basis", {})
+    best = None
+    for y in years:
+        a, e = pct(avg, y), pct(end, y)
+        if a is None or e is None:
+            continue
+        if best is None or abs(a - e) > best[0]:
+            best = (abs(a - e), y, a, e)
+    if best is None or best[0] < 0.5:
+        return ""
+    _gap, y, a, e = best
+    return (f" The two diverge most in {y}, where return on equity is "
+            f"{a:.2f}% on an average basis and {e:.2f}% on a year-end basis.")
+
+
+def _profitability_note(bw, published_key, own, refused, entity_note,
+                        short_years, fx_basis, unit, rows, years, extra_note):
+    """The sheet's note, assembled from what the store and the arithmetic
+    actually establish. Generated rather than hand-written per bank on
+    purpose: 145 hand-written notes drift from the figures beside them, and
+    every claim here is one the build can still prove on its next run."""
+    paras = []
+
+    if own.published:
+        paras.append(
+            "TWO KINDS OF FIGURE, NEVER MERGED. The rows above are not one "
+            "series. The 'Return on equity/assets' rows are THIS PROJECT'S "
+            "OWN ARITHMETIC on the figures printed on this workbook's "
+            "statement sheets. The rows marked '(as published)' are the bank's "
+            "own published ratios, quoted verbatim, each struck on the bank's "
+            "own definition - which differs from bank to bank and usually from "
+            "ours, most often in whether the numerator is before or after tax "
+            "and whether the denominator is average, opening or year-end "
+            "equity, tangible equity or required equity. They are not "
+            "averaged, reconciled, or substituted for one another, and where "
+            "they disagree both stand: the disagreement is the finding."
+        )
+        defs = [
+            f"{m}: " + (f"“{own.definitions[m]}”"
+                        if own.definitions.get(m)
+                        else "the document states no definition, and none is "
+                             "supplied here.")
+            for m in sorted(own.published)
+        ]
+        paras.append("THE BANK'S OWN DEFINITIONS, VERBATIM. " + " ".join(defs))
+    else:
+        paras.append(
+            "COMPUTED, NOT PUBLISHED. " + (own.none_finding or (
+                f"{bw.bank_name} publishes no return on equity, return on "
+                f"tangible equity or return on assets in any edition held."))
+            + " Every percentage above is therefore this project's own "
+            "arithmetic on the figures printed on this workbook's statement "
+            "sheets, and is labelled as such. That the bank publishes none is "
+            "a POSITIVE FINDING, recorded in "
+            "research/profitability/published_returns.jsonl, and not a failed "
+            "search: for this bank the computed figure is the only figure "
+            "there is."
+        )
+
+    paras.append(
+        "WHY TWO BASES ARE PRINTED FOR EACH RATIO, AND NEITHER IS PREFERRED. "
+        "The average basis divides by the mean of the opening and closing "
+        "balance and is the fairer measure of a year in which the balance "
+        "sheet moved a long way; the year-end basis divides by the closing "
+        "balance alone and is what most outside sources quote. Both are shown "
+        "so the reader can see which question a figure answers. They are not "
+        "averaged and neither is 'the' return." + _widest_spread(rows, years)
+    )
+
+    if short_years:
+        order = [y for y in years if y in short_years]
+        paras.append(
+            ("%s DOES NOT COVER TWELVE MONTHS, SO IT IS NOT AN ANNUAL RETURN."
+             % order[0] if len(order) == 1 else
+             "SOME COLUMNS DO NOT COVER TWELVE MONTHS, SO THEIR RATIOS ARE "
+             "NOT ANNUAL RETURNS.")
+            + " " + " ".join(f"{y} is {short_years[y]}." for y in order)
+            + " A return divides a profit-and-loss FLOW by a balance-sheet "
+            "STOCK, so where the flow covers more or less than a year the "
+            "quotient is scaled by that period and cannot be read against the "
+            "columns either side of it. The figures above are printed anyway, "
+            "and deliberately: both inputs are figures the bank itself "
+            "published, and the ratio of them is exact. What is wrong is only "
+            "the interpretation, which this paragraph supplies. They are NOT "
+            "annualised - a pro-rata adjustment would be this project's "
+            "arithmetic on a period the bank never annualised, and would "
+            "invent a figure with no published counterpart."
+        )
+
+    oldest = years[-1] if years else None
+    if oldest:
+        paras.append(
+            f"{oldest} HAS NO AVERAGE-BASIS RATIO, AND THAT IS CORRECT. An "
+            f"average denominator needs an opening balance, and {oldest} is "
+            f"the oldest column this workbook carries, so there is no prior "
+            f"year to open from. The blank is structural, not a missing "
+            f"figure. The year-end basis is shown for {oldest} because it "
+            f"needs only the closing balance."
+        )
+
+    if entity_note:
+        paras.append(
+            "WHY EVERY COMPUTED CELL SAYS 'NOT COMPUTED', AND IT IS NOT A "
+            "CURRENCY PROBLEM. " + entity_note + " The two statement sheets "
+            "print the same unit, so a ratio across them cancels its unit "
+            "perfectly and would pass every check this project runs - and it "
+            "would still be one entity's profit over another entity's balance "
+            "sheet, which is not a return on anything. A group figure is a "
+            "different claim from a solo figure, so the ratio is refused "
+            "rather than printed with a caveat. The underlying figures are "
+            "all on this workbook's statement sheets, each labelled with the "
+            "entity it belongs to, for a reader who wants to strike a ratio "
+            "on a single perimeter."
+        )
+
+    if refused:
+        order = [y for y in years if y in refused]
+        paras.append(
+            "WHY SOME CELLS SAY 'NOT COMPUTED'. "
+            + ("Every year above" if len(order) == len(years)
+               else "The years " + ", ".join(order))
+            + " is marked 'Not computed' rather than given a number, and the "
+            "reason is a unit problem, not a missing figure. This workbook's "
+            f"statement sheets print {unit.strip() or 'a converted unit'}: the "
+            "figures were converted from the bank's reporting currency on this "
+            "project's standing convention, which converts BALANCE SHEET "
+            "stocks at the financial year-end SPOT rate and PROFIT AND LOSS "
+            "flows at that year's AVERAGE rate - the right treatment for each "
+            "statement taken on its own. A ratio struck ACROSS the two "
+            "therefore divides a figure converted at one rate by a figure "
+            "converted at another. Both sides are labelled in the same "
+            "currency, so such a ratio looks sound and is self-consistent on "
+            "every check this project runs, but it carries the whole "
+            "spot-versus-average spread - on recent years a bias of roughly "
+            "two per cent of the ratio, changing sign from year to year, so it "
+            "distorts the trend as well as the level. The house rule is that a "
+            "ratio cancels its unit only if both sides share it; where they do "
+            "not, the honest output is a refusal rather than a number with a "
+            "caveat attached. A reader who wants these ratios should strike "
+            "them on the bank's own figures in its own reporting currency, "
+            "where both sides do share a basis. "
+            "(scripts/profitability_fx_basis.py records the basis verdict for "
+            "every converted workbook in this corpus, and why that verdict "
+            "cannot be read off the page or detected in the code.)"
+        )
+        if isinstance(fx_basis, (set, frozenset, list, tuple)):
+            clean = [y for y in years if y not in refused]
+            if clean:
+                paras.append(
+                    "THE REST OF THE SERIES IS COMPUTED, AND THAT IS NOT AN "
+                    "INCONSISTENCY. " + ", ".join(clean) + " are shown as "
+                    "percentages because in those years both statements rest "
+                    "on a single basis, so the ratio does cancel. The split is "
+                    "a property of this bank's own reporting history, not of "
+                    "the method."
+                )
+
+    if own.deferred:
+        bits = "; ".join(
+            f"{r.get('year')} {r.get('measure')} {r.get('value')}"
+            for r in own.deferred)
+        paras.append(
+            "FIGURES THE BANK PUBLISHED ONLY AS A LATER EDITION'S "
+            "COMPARATIVE, AND WHY THEY ARE NOT IN THE CELLS ABOVE. " + bits +
+            ". Each year's cell carries what that year's OWN annual report "
+            "printed. A comparative restated in a later edition is a different "
+            "claim - it may rest on a revised definition, a restated perimeter "
+            "or a corrected prior figure - so it is recorded here rather than "
+            "substituted into the year it refers to."
+        )
+
+    if own.excluded:
+        bits = " ".join(
+            f"{r.get('year')} {r.get('measure')}"
+            + (f" = {r['value']}" if r.get("value") else "") + ": "
+            + str(r.get("note") or r.get("finding")
+                  or "excluded, no reason recorded")
+            for r in own.excluded)
+        paras.append("RULED OUT, AND RECORDED SO IT IS NOT RE-DERIVED. " + bits)
+
+    if extra_note:
+        paras.append(extra_note)
+    return "\n\n".join(paras)
+
+
+def _profitability_sources(bw, published_key, pat_label, eq_label, as_label,
+                           balance_sheet, income_sheet, has_published,
+                           extra_sources, equity_series_source=""):
+    parts = [
+        f"Computed by this workbook's own build script from the {income_sheet} "
+        f"and {balance_sheet} sheets of this same workbook - the "
+        f"{income_sheet} row “{pat_label}” and the {balance_sheet} "
+        f"rows “{eq_label}” and “{as_label}”, resolved BY "
+        f"LABEL at build time through the shared resolver "
+        f"scripts/profitability_rows.py, so this sheet cannot drift from the "
+        f"statements it summarises. Those rows are themselves transcribed from "
+        f"{bw.bank_name}'s Annual Report and Accounts for each year; see the "
+        f"source cells on the {balance_sheet} and {income_sheet} sheets for "
+        f"the exact document, page and table behind every input to every "
+        f"percentage above."
+    ]
+    if has_published:
+        parts.append(
+            f"The '(as published)' rows are quoted verbatim from "
+            f"{bw.bank_name}'s own disclosures and are recorded, with the "
+            f"exact document, page and verification state for each, in "
+            f"research/profitability/published_returns.jsonl under "
+            f"‘{published_key}’."
+        )
+    else:
+        parts.append(
+            f"The finding that {bw.bank_name} publishes no return of its own "
+            f"is recorded in research/profitability/published_returns.jsonl "
+            f"under ‘{published_key}’, verified against the bank's "
+            f"own annual report rendered at 300 dpi."
+        )
+    if equity_series_source:
+        parts.append(
+            "WHERE THE EQUITY DENOMINATOR COMES FROM. This bank's own "
+            "Statement of Financial Position prints no total-equity line, so "
+            "the equity figures behind the ratios above were not resolved off "
+            "the Balance Sheet sheet like every other bank's. " +
+            equity_series_source)
+    if extra_sources:
+        parts.append(extra_sources)
+    return "\n\n".join(parts)
+
+
 # -- Overview derivation spec (standing objective (b)) -------------------------
 # The Overview's money blocks are DERIVED from the detail sheets, resolved by
 # the row's own label. This table covers the rows where that is not enough,
@@ -210,6 +547,8 @@ class BankWorkbook:
         # add_overview_sheet - which all 145 build scripts call LAST, after
         # every detail sheet exists - reads values back out of it.
         self._detail_rows = {}   # sheet name -> {normalised label: {year: value}}
+        self._sheet_units = {}   # sheet name -> the unit_suffix it printed
+
         self._metric_rows = {}   # metric sheet name -> [(label, {year: value})]
 
     # -- internal styling helpers -------------------------------------------------
@@ -884,6 +1223,10 @@ class BankWorkbook:
             years, (values for _kind, _label, values in rows)
         )
         self._record_detail_rows(sheet_name, rows)
+        # Remember the unit this sheet printed. A ratio struck across two
+        # sheets cancels its unit only if both sides share one, and this is
+        # the only place that fact is known.
+        self._sheet_units[sheet_name] = unit_suffix
         ws = self._next_sheet(sheet_name)
         ws.freeze_panes = "B4"
         ws["A1"] = title
@@ -1130,6 +1473,308 @@ class BankWorkbook:
             source_height,
             unit_suffix,
             years=years,
+        )
+
+    # -- Profitability (derived) ----------------------------------------------
+    def add_profitability_sheet(
+        self,
+        published_key,
+        fx_basis=_FX_FROM_TABLE,
+        *,
+        balance_sheet="Balance Sheet",
+        income_sheet="Profit & Loss",
+        sheet_name=PROFITABILITY_SHEET_NAME,
+        extra_note="",
+        extra_sources="",
+        equity_series=None,
+        equity_series_source="",
+        store_path=None,
+    ):
+        """Return on equity and return on assets, DERIVED from this workbook.
+
+        Nothing on this sheet is transcribed. Every percentage is computed
+        from the 'profit for the year', 'total equity' and 'total assets'
+        rows this workbook already prints, resolved out of `_detail_rows` at
+        build time, so the sheet cannot drift from the statements it
+        summarises - the Overview duplication defect (GA-031) in a new place.
+        The inputs are deliberately NOT reprinted: they are already in full on
+        the Balance Sheet and Profit & Loss sheets.
+
+        Rows are resolved by `profitability_rows.pick`, the SAME code the
+        research table uses, rather than by a label restated here. That is the
+        rule the Overview ratio defect bought: when two pieces of code must
+        apply the same rule, call the same code.
+
+        `published_key` is the bank's key in published_returns.jsonl (the
+        workbook filename without " FINANCIALS.xlsx"). It is required and not
+        guessed: the store records, per bank, either the returns the bank
+        publishes ITSELF or the positive finding that it publishes none, and
+        both belong on this sheet. A key with no record raises, because a
+        silent blank there would read as "publishes nothing" - which is a
+        FINDING, and must come from the store, not from a lookup miss.
+
+        Whether a ratio struck across the two sheets cancels its units is
+        LOOKED UP in scripts/profitability_fx_basis.py by `published_key`,
+        not inferred - read that file's header for why no code scan and no
+        printed unit can establish it. A converted workbook missing from that
+        table RAISES rather than computing. `fx_basis` exists only to settle a
+        bank the table does not yet cover, and passing one that CONTRADICTS
+        the table also raises:
+            None            - the sheets are in one native currency
+            "cancels"       - converted, but both sides on the same basis
+            "mixed"         - every year's ratio is contaminated
+            {"FY20xx", ...} - only these years are contaminated
+        Where a year is contaminated the cell says "Not computed" and the note
+        says why. It is NOT computed-and-caveated: the house rule is that a
+        ratio cancels its unit only if both sides share it, so the honest
+        output is a refusal. ENTITY_MISMATCH in the same file refuses on the
+        separate ground that the two sheets describe different entities, which
+        no unit test can see.
+        """
+        # Imported here, not at module scope, so that the 145 build scripts
+        # which never call this keep working if the research tree moves.
+        import profitability_rows as _pr
+        from profitability_fx_basis import (
+            ENTITY_MISMATCH, FX_RATIO_BASIS, NON_ANNUAL_PERIODS)
+
+        bs = self._detail_rows.get(balance_sheet)
+        pl = self._detail_rows.get(income_sheet)
+        missing = [n for n, t in ((balance_sheet, bs), (income_sheet, pl))
+                   if not t]
+        if missing:
+            raise ValueError(
+                f"{self.bank_name}: Profitability derives from "
+                f"{', '.join(missing)}, which this workbook has not built "
+                f"yet - call add_profitability_sheet AFTER those sheets"
+            )
+
+        def _numeric(table):
+            """{label: {year: float}} - a printed dash or statement is not a
+            number and must not become one."""
+            out = {}
+            for label, values in table.items():
+                vals = {}
+                for y, v in values.items():
+                    n = _pr.to_num(v)
+                    if n is not None:
+                        vals[y] = n
+                if vals:
+                    out[label] = vals
+            return out
+
+        years = list(self.years)
+        pat_label, pat = _pr.pick(
+            _numeric(pl), _pr.PROFIT_PATTERNS, _pr.PROFIT_EXCLUDE, years)
+        eq_label, equity = _pr.pick(
+            _numeric(bs), _pr.EQUITY_PATTERNS, _pr.EQUITY_EXCLUDE, years)
+        as_label, assets = _pr.pick(
+            _numeric(bs), _pr.ASSET_PATTERNS, _pr.ASSET_EXCLUDE, years)
+        # A handful of banks present equity INSIDE total liabilities and so
+        # print no total-equity line on the balance sheet at all - Citibank UK
+        # Limited is one, and its own Statement of Changes in Equity still
+        # closes to a published total every year. That figure is the bank's,
+        # not ours, so it is allowed in; but it bypasses the shared resolver,
+        # which is exactly the kind of exception that rots into an unexplained
+        # literal, so the provenance is MANDATORY and this raises without it.
+        if equity_series is not None:
+            if not equity_series_source:
+                raise ValueError(
+                    f"{self.bank_name}: equity_series bypasses the shared "
+                    f"resolver, so equity_series_source must say which "
+                    f"statement, row and column the figures come from. An "
+                    f"override with no provenance is an unexplained literal"
+                )
+            eq_label, equity = "(see note)", {
+                y: v for y, v in equity_series.items() if v is not None}
+
+        unresolved = [n for n, got in (("profit for the year", pat),
+                                       ("total equity", equity),
+                                       ("total assets", assets)) if got is None]
+        if unresolved:
+            raise ValueError(
+                f"{self.bank_name}: no row on {income_sheet}/{balance_sheet} "
+                f"matches {', '.join(unresolved)} - the Profitability sheet "
+                f"would print blanks that read as 'the bank has no such "
+                f"figure'. Resolve the label in scripts/profitability_rows.py "
+                f"rather than hardcoding it here"
+            )
+
+        # -- does a ratio across these two sheets cancel its unit? ------------
+        bs_unit = self._sheet_units.get(balance_sheet, "")
+        pl_unit = self._sheet_units.get(income_sheet, "")
+        if bs_unit != pl_unit:
+            raise ValueError(
+                f"{self.bank_name}: {balance_sheet} prints {bs_unit!r} and "
+                f"{income_sheet} prints {pl_unit!r}. A ratio across them "
+                f"divides one unit by another; it does not cancel. Settle the "
+                f"two sheets' units before adding a Profitability sheet"
+            )
+        # The verdict is LOOKED UP, not inferred, and that is the whole point
+        # of profitability_fx_basis.py. The tempting shortcut - treat a unit
+        # that says "conv. from" as contaminated and a plain unit as clean -
+        # was measured against the audited table and catches only 13 of the 18
+        # contaminated banks: BANK MANDIRI EUROPE, CREDIT SUISSE INTERNATIONAL,
+        # FCMB UK, GOLDMAN SACHS INTERNATIONAL BANK and JP MORGAN SECURITIES
+        # all print a plain unit and would have computed, silently, on two
+        # different rates. So the table decides, and a converted workbook the
+        # table has never been asked about raises rather than guessing.
+        verdict = FX_RATIO_BASIS.get(published_key, _FX_UNAUDITED)
+        if fx_basis is _FX_FROM_TABLE:
+            if verdict is not _FX_UNAUDITED:
+                fx_basis = verdict
+            elif "conv" in bs_unit.lower():
+                raise ValueError(
+                    f"{self.bank_name}: both statement sheets print "
+                    f"{bs_unit!r}, so these figures were converted, and the "
+                    f"house convention converts balance-sheet stocks at the "
+                    f"year-end SPOT rate and profit-and-loss flows at that "
+                    f"year's AVERAGE rate. Whether a ratio across them "
+                    f"cancels therefore cannot be read off the page, and "
+                    f"{published_key!r} is not in "
+                    f"scripts/profitability_fx_basis.py. Read the build "
+                    f"script, add the verdict to that table, and re-run - "
+                    f"silence is not an answer here, which is why this raises"
+                )
+            else:
+                fx_basis = None     # one native currency on both sides
+        elif verdict is not _FX_UNAUDITED and fx_basis != verdict:
+            raise ValueError(
+                f"{self.bank_name}: this call passes fx_basis={fx_basis!r}, "
+                f"but scripts/profitability_fx_basis.py records "
+                f"{verdict!r} for {published_key!r} after reading the build "
+                f"script. One of the two is wrong and it is not for this call "
+                f"to decide quietly: settle it in the table, which is the "
+                f"audited record, and then either drop the argument or make "
+                f"it agree"
+            )
+
+        if fx_basis in (None, "cancels"):
+            refused = set()
+        elif fx_basis == "mixed":
+            refused = set(years)
+        elif isinstance(fx_basis, (set, frozenset, list, tuple)):
+            refused = set(fx_basis)
+            stray = refused - set(years)
+            if stray:
+                raise ValueError(
+                    f"{self.bank_name}: fx_basis names {sorted(stray)}, which "
+                    f"this workbook has no column for - a typo here silently "
+                    f"leaves a contaminated year computed"
+                )
+        else:
+            raise ValueError(
+                f"{self.bank_name}: fx_basis={fx_basis!r} is not one of None, "
+                f"'cancels', 'mixed' or a set of year keys"
+            )
+
+        # A unit test cannot see this one. KUWAIT FINANCE HOUSE and STANDARD
+        # CHARTERED BANK print the same unit on both sheets, so the ratio
+        # cancels perfectly - and still divides a GROUP profit by a SOLO
+        # balance sheet, because neither entity publishes a standalone
+        # company income statement. A group figure is a different claim
+        # (entity discipline), so the ratio is refused on the same grounds as
+        # a mixed rate, and the note says which of the two it is.
+        fx_refused = set(refused)
+        entity_note = ENTITY_MISMATCH.get(published_key)
+        if entity_note:
+            refused = set(years)
+
+        # -- the arithmetic ---------------------------------------------------
+        def prior(year):
+            """self.years is most-recent-first, so the prior year is NEXT."""
+            i = years.index(year)
+            return years[i + 1] if i + 1 < len(years) else None
+
+        def average(series, year):
+            """Mean of opening and closing; None without an opening balance.
+
+            The oldest column of any workbook has no prior year, so an
+            average-basis ratio cannot exist for it. That blank is structural,
+            not a gap to chase."""
+            p = prior(year)
+            closing, opening = series.get(year), series.get(p) if p else None
+            if closing is None or opening is None:
+                return None
+            return (closing + opening) / 2.0
+
+        def ratio(year, numerator, denominator):
+            if year in refused:
+                return REFUSED_MIXED_BASIS
+            if numerator is None or not denominator:
+                return None
+            return f"{100.0 * numerator / denominator:.2f}%"
+
+        rows = [
+            ("Return on equity - average equity basis",
+             {y: ratio(y, pat.get(y), average(equity, y)) for y in years}),
+            ("Return on equity - year-end equity basis",
+             {y: ratio(y, pat.get(y), equity.get(y)) for y in years}),
+            ("Return on assets - average assets basis",
+             {y: ratio(y, pat.get(y), average(assets, y)) for y in years}),
+            ("Return on assets - year-end assets basis",
+             {y: ratio(y, pat.get(y), assets.get(y)) for y in years}),
+        ]
+
+        # -- what the bank publishes itself -----------------------------------
+        own = _read_published_returns(store_path).get(published_key)
+        if own is None:
+            raise ValueError(
+                f"{self.bank_name}: published_key={published_key!r} is not in "
+                f"published_returns.jsonl. That store holds, for every bank, "
+                f"either its own published returns or the positive finding "
+                f"that it publishes none - and 'publishes none' is a FINDING, "
+                f"so it must be read from the store and never inferred from a "
+                f"lookup miss"
+            )
+        if own.published:
+            for measure in sorted(own.published):
+                values = dict(own.published[measure])
+                # A blank on a published row is ambiguous between "the bank
+                # did not print this measure that year" and "that year's
+                # report was never read for it", and GA-020 does not allow a
+                # cell to leave the reader to guess. So a year the store
+                # examined and found nothing for says so; a year the store
+                # never covered stays blank, and the note names the window.
+                for y in years:
+                    if y not in values and y in own.examined:
+                        values[y] = "Not published"
+                rows.append((f"{measure} (as published)", values))
+        else:
+            rows.append((f"{self.bank_name}'s own published return",
+                         {y: "Not published" for y in years}))
+
+        # Only years that actually printed a ratio are worth a period
+        # paragraph: a year trimmed off the oldest end, or refused, has no
+        # figure for the reader to misread.
+        printed = {y for _label, values in rows for y in years
+                   if isinstance(values.get(y), str)
+                   and values[y].endswith("%")}
+        short_years = {
+            y: desc
+            for y, desc in NON_ANNUAL_PERIODS.get(published_key, {}).items()
+            if y in printed
+        }
+
+        note = _profitability_note(
+            self, published_key, own, fx_refused, entity_note, short_years,
+            fx_basis, bs_unit, rows, years, extra_note,
+        )
+        sources = _profitability_sources(
+            self, published_key, pat_label, eq_label, as_label,
+            balance_sheet, income_sheet, bool(own.published), extra_sources,
+            equity_series_source,
+        )
+        width = max(46, min(64, max(len(lab) for lab, _ in rows) + 2))
+        return self.add_metric_sheet(
+            sheet_name,
+            "Return on equity and return on assets in per cent, computed from "
+            "this workbook's own " + balance_sheet + " and " + income_sheet
+            + " sheets.",
+            rows,
+            sources,
+            note=note,
+            first_col_width=width,
+            source_height=170,
         )
 
     def add_km1_sheet(

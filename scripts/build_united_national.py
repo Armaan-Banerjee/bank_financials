@@ -732,6 +732,16 @@ KM1_SOURCES = (
     "Index: https://www.ubluk.com/footer-pages/annual-reports/"
 )
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("UNITED NATIONAL")
+
 bw.add_km1_sheet(
     title="United National Bank Limited (UBL UK) - KM1 Key Metrics",
     subtitle="Not applicable - this bank publishes a Pillar 3 disclosure every year FY2016-FY2024 but does "

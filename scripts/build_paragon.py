@@ -691,6 +691,16 @@ km1_rows = [
      {"FY2025": "138.7%", "FY2024": "138.2%", "FY2023": "128.0%", "FY2022": "121.5%", "FY2021": "118.9%"}),
 ]
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("PARAGON")
+
 bw.add_km1_sheet(
     title="Paragon Bank Plc — KM1 Key Metrics",
     subtitle="Paragon Banking Group PLC's own published 'UK KM1 - Key metrics template', reproduced in its own "

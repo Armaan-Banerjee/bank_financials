@@ -640,6 +640,33 @@ KM1_SOURCES = (
     "470.0 / 522.0) and is held that way here.\n"
 )
 
+# equity_series: Citibank UK Limited's own Statement of Financial Position
+# prints NO total-equity line - it presents Reserves and the Profit and loss
+# account inside Total liabilities, which the Balance Sheet sheet's ENTITY NOTE
+# records. So the denominator cannot be resolved off that sheet like every
+# other bank's. The Bank's own Statement of Changes in Equity does close to a
+# published total every year, and those are the figures used - the Bank's,
+# not ours. The provenance below is mandatory; the library raises without it.
+CITI_EQUITY = {
+    "FY2025": 272566, "FY2024": 517960, "FY2023": 573219,
+    "FY2022": 489004, "FY2021": 378126, "FY2020": 404330,
+    "FY2019": 362624,
+}
+
+bw.add_profitability_sheet(
+    "CITIBANK UK",
+    equity_series=CITI_EQUITY,
+    equity_series_source=(
+        "The equity denominator is the 'Total' column of this workbook's "
+        "Statement of Changes in Equity sheet, at each year's 'At 31 December' "
+        "closing row - the Bank's own published closing total equity, "
+        "transcribed from the Statement of Changes in Equity in each year's "
+        "own Annual Report and Financial Statements (FY2025 272,566; FY2024 "
+        "517,960; FY2023 573,219; FY2022 489,004; FY2021 378,126; FY2020 "
+        "404,330; FY2019 362,624, all GBP'000). It is not a sum of balance "
+        "sheet components computed by this project."),
+)
+
 bw.add_km1_sheet(
     title="Citibank UK Limited — KM1 Key Metrics",
     subtitle="CUKL's own published key-metrics template, reproduced in its row order with its own row numbers, "

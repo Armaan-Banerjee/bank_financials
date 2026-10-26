@@ -1421,6 +1421,16 @@ km1_rows = [
     ("DATA", "Net Stable Funding Ratio (%)", {"FY2025": "138.85%", "FY2024": "147.98%", "FY2023": "143%", "FY2022": "124%"}),
 ]
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("ZENITH")
+
 bw.add_km1_sheet(
     title="Zenith Bank (UK) Limited — KM1 Key Metrics",
     subtitle="The Bank's published Key Metrics / UK KM1 table in its own row order and precision. Amounts are native US$ thousands as printed; LCR/NSFR figures are averages where the source says so.",

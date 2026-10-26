@@ -609,6 +609,16 @@ KM1_SOURCES = (
     + ENTITY_NOTE
 )
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("TRIODOS")
+
 bw.add_km1_sheet(
     title="Triodos Bank UK Limited — KM1 Key Metrics",
     subtitle="Not applicable - TBUK publishes a Pillar 3 report for FY2020-FY2024 but does NOT use the UK KM1 "

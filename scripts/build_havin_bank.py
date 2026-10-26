@@ -536,6 +536,16 @@ CAPITAL_NOTE = ("FY2021 is Total Tier One Capital (Share Capital + Reserves) as 
                  "Regulatory Capital (Total Tier One Capital less Deductions from Capital). No "
                  "AT1/T2 capital is disclosed in any year, so CET1 = Tier 1 = Total Capital.")
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("HAVIN BANK")
+
 bw.add_km1_sheet(
     title="Havin Bank Limited — KM1 Key Metrics",
     subtitle="Not applicable — the Bank publishes no Pillar 3 disclosure at all for any year in this workbook "

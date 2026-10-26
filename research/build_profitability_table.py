@@ -31,180 +31,46 @@ YEARS = ["FY2025", "FY2024", "FY2023", "FY2022", "FY2021"]
 # too, which the first version of this file did not capture.
 EXTRACT_YEARS = YEARS + ["FY2020"]
 
-FY_RE = re.compile(r"^(FY\d{4})")
-UNIT_RE = re.compile(r"\(([^)]*)\)\s*$")
-NUM_RE = re.compile(r"^-?[\d,]+\.?\d*$")
-
-# Banks write the same line a dozen ways: "(Loss)/Profit after tax", "Profit/
-# (loss) for the year", "Total equity (Shareholders' funds)". canon() strips the
-# alternation parentheses and any trailing parenthetical gloss so one pattern
-# covers the family, instead of one pattern per spelling.
-_ALT_PAREN = re.compile(r"\((loss|losses|deficit|profit|surplus|charge|credit)e?s?\)", re.I)
-_TRAIL_PAREN = re.compile(r"\s*\([^)]*\)\s*$")
-
-
-def canon(label):
-    lab = re.sub(r"\s+", " ", str(label or "")).strip().lower().rstrip(":")
-    lab = _TRAIL_PAREN.sub("", lab)        # "total equity (shareholders' funds)"
-    lab = _ALT_PAREN.sub("", lab)          # "(loss)/profit after tax"
-    lab = lab.replace("\u2019", "'").replace("`", "'")
-    lab = lab.replace("'", "")             # shareholders' -> shareholders
-    lab = re.sub(r"[/,]", " ", lab)
-    return re.sub(r"\s+", " ", lab).strip()
-
-
-# Ranked: lower number wins. Ranking rather than first-match matters because a
-# sheet may carry several admissible rows, and "profit for the year" must beat
-# "profit and total comprehensive income for the year" where both are present.
-PROFIT_PATTERNS = [
-    # "loss" and "deficit" are first-class here, not an afterthought: a loss is
-    # a valid numerator and a negative return is a real figure. Matching only
-    # "profit" silently dropped every loss-making bank in the corpus - Afin,
-    # Chetwood, Kroo, Monument, Oxbury, Griffin, The Bank of London, This Bank -
-    # which is exactly the population a profitability table most needs to show.
-    (1, r"^(net |total )?(profit|loss|surplus|deficit) (after|net of) tax"),
-    # The words between the noun and "after tax" vary by bank: "on ordinary
-    # activities after tax", "from ordinary activities after tax", "on
-    # activities after tax". Allow a gap rather than one pattern per spelling.
-    (1, r"^(net |total )?(profit|loss|surplus|deficit)\b.{0,45}(after|net of) tax"),
-    (1, r"^(net |total )?(profit|loss|surplus|deficit)( attributable to [\w ]+)? for the (financial )?(year|period)$"),
-    (2, r"^(net |total )?(profit|loss|surplus|deficit).{0,60}for the (financial )?(year|period)"),
-    (2, r"^(profit|loss|surplus|deficit) attributable to"),
-    (3, r"^(net |total )?(profit|loss|surplus|deficit)$"),
-    (3, r"^retained (profit|earnings|loss) for the (financial )?year"),
-]
-# "before tax" is excluded outright - a pre-tax numerator in a return series is
-# the mixed-basis trap this project documents elsewhere. Note "comprehensive
-# income" is NOT excluded: for most small banks profit IS total comprehensive
-# income and the sheet prints them as one line, so excluding it loses the bank.
-PROFIT_EXCLUDE = re.compile(
-    r"before tax|before income tax|before taxation|pre-tax|operating|"
-    r"company-only|bank company|parent|discontinued|per share|margin|"
-    r"underlying|adjusted|impairment|interest|fee|commission|trading|"
-    r"foreign exchange|dealing|investment|disposal|fair value|hedge",
-    re.I,
+# Row resolution lives in scripts/profitability_rows.py and is IMPORTED, not
+# restated, because BankWorkbook.add_profitability_sheet must resolve the same
+# rows the same way. Two copies of this logic would drift the moment one was
+# corrected, which is the defect class CLAUDE.md documents for the Overview
+# ratio derivation. The tables and their reasoning moved verbatim.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                os.pardir, 'scripts'))
+from profitability_rows import (  # noqa: E402
+    NUM_RE, FY_RE, UNIT_RE, canon, norm, to_num, rank_row, read_sheet, pick,
+    PROFIT_PATTERNS, PROFIT_EXCLUDE, PBT_PATTERNS, PBT_EXCLUDE,
+    TCI_PATTERNS, TCI_EXCLUDE, EQUITY_PATTERNS, EQUITY_EXCLUDE,
+    ASSET_PATTERNS, ASSET_EXCLUDE,
 )
-# Alternative numerators, captured so a divergence can be EXPLAINED rather than
-# just reported. A published "ROE" is often struck on one of these instead of
-# profit after tax, and saying which one is far more useful than saying the
-# figures disagree: Al Rayan's three published values all reproduce exactly on
-# profit BEFORE tax, and Lloyds' on total comprehensive income.
-PBT_PATTERNS = [
-    (1, r"^(net |total )?(profit|loss|surplus|deficit)\b.{0,45}before (tax|taxation|income tax)"),
-    (2, r"^operating (profit|loss)\b.{0,30}before tax"),
-]
-PBT_EXCLUDE = re.compile(r"after tax|impairment|per share|underlying|adjusted|company-only|parent", re.I)
-TCI_PATTERNS = [(1, r"^total comprehensive (income|loss|expense)")]
-TCI_EXCLUDE = re.compile(r"company-only|parent|attributable to non-controlling", re.I)
-EQUITY_PATTERNS = [
-    (1, r"^total equity$"),
-    (1, r"^total (shareholders|shareholder|owners|owner|member) (equity|funds)$"),
-    (1, r"^(equity )?(shareholders|shareholder|owners|owner|member) (equity|funds)$"),
-    (2, r"^total equity attributable to"),
-    (2, r"^equity attributable to"),
-    (2, r"^total (share capital and reserves|capital and reserves)$"),
-    # "Total shareholders funds - equity interests" (Bank Mandiri Europe)
-    (2, r"^total (shareholders|shareholder|owners|owner|member) (equity|funds)\b"),
-    (3, r"^total (equity|reserves) "),
-]
-EQUITY_EXCLUDE = re.compile(r"liabilit|non-controlling|minority|excluding", re.I)
-ASSET_PATTERNS = [(1, r"^total assets$")]
-ASSET_EXCLUDE = re.compile(r"liabilit|weighted|risk|excluding", re.I)
+# Likewise imported, not restated: whether a ratio across a bank's two
+# statement sheets cancels its units. The first edition of this table gated
+# only on `units_agree`, which is TRUE for all 725 bank-years - the two sheets
+# are both labelled GBP - and so never fired on the case that matters, where
+# the balance sheet was converted at year-end SPOT and the profit and loss at
+# the year's AVERAGE. That shipped 360 contaminated ratio cells across 20
+# banks into the 2026-10-22 edition. See scripts/profitability_fx_basis.py.
+from profitability_fx_basis import (  # noqa: E402
+    ENTITY_MISMATCH, FX_RATIO_BASIS,
+)
 
 
-def norm(s):
-    return re.sub(r"\s+", " ", str(s or "")).strip()
-
-
-def to_num(v):
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = norm(v).replace("£", "").replace("$", "").replace("€", "")
-    if s.startswith("(") and s.endswith(")"):
-        s = "-" + s[1:-1]
-    s = s.replace(",", "")
-    return float(s) if NUM_RE.match(s) else None
-
-
-def rank_row(label, patterns, exclude):
-    """Best (lowest) matching rank for a label, or None if it matches nothing."""
-    lab = canon(label)
-    if exclude.search(lab):
+def basis_refusal(bank, year):
+    """-> a reason string if this bank-year's ratio does not cancel, else None."""
+    if bank in ENTITY_MISMATCH:
+        return ("the Balance Sheet and the Profit & Loss describe different "
+                "entities - " + ENTITY_MISMATCH[bank])
+    verdict = FX_RATIO_BASIS.get(bank)
+    if verdict in (None, "cancels"):
         return None
-    ranks = [r for r, p in patterns if re.search(p, lab)]
-    return min(ranks) if ranks else None
-
-
-def read_sheet(ws):
-    """-> (unit, {label: {year: number}}) for one statement sheet."""
-    rows = list(ws.iter_rows(values_only=True))
-    # Find the header row by SCORE, not by first match. A sheet's subtitle
-    # routinely opens with a year - Recognise Bank's reads "FY2025-FY2026
-    # Company/standalone basis..." - so a first-match scan locks onto the
-    # subtitle and then treats column 0, the label column, as a data column.
-    # That lost three banks outright here; in a sheet whose subtitle mentioned
-    # a year further along the row it would instead have assigned figures to
-    # the WRONG YEAR, silently. Hence: year columns never include column 0,
-    # and the row with the most of them wins.
-    hdr_i, col_year, unit, best = None, {}, None, 0
-    for i, row in enumerate(rows[:8]):
-        cells = [norm(c) for c in row]
-        years = {j: FY_RE.match(c).group(1)
-                 for j, c in enumerate(cells) if j > 0 and FY_RE.match(c)}
-        if len(years) > best:
-            hdr_i, col_year, best = i, years, len(years)
-    if hdr_i is not None:
-        cells = [norm(c) for c in rows[hdr_i]]
-        for j in col_year:
-            m = UNIT_RE.search(cells[j])
-            if m and not unit:
-                unit = m.group(1)
-    if hdr_i is None:
-        return None, {}, {}
-    # Keep each year column's RAW header. The year key alone hides that a
-    # column may not be a 12-month year or even the same entity: Clydesdale's
-    # FY2025 is an 18-month transition period, Griffin's and StreamBank's
-    # FY2023 are 15 months, and Monzo's FY2024 switches from MBL to MBHG.
-    # Dividing an 18-month profit by a year-end balance sheet overstates the
-    # return, and nothing downstream can detect that from "FY2025".
-    year_label = {y: norm(rows[hdr_i][j]) for j, y in col_year.items()}
-    out = {}
-    for row in rows[hdr_i + 1:]:
-        label = norm(row[0] if row else "")
-        if not label:
-            continue
-        vals = {}
-        for j, y in col_year.items():
-            if j < len(row):
-                n = to_num(row[j])
-                if n is not None:
-                    vals[y] = n
-        if vals:
-            out.setdefault(label, vals)
-    return unit, out, year_label
-
-
-def pick(rows, patterns, exclude):
-    """Best row, scored (rank, -years covered, sheet order).
-
-    Coverage breaks a rank tie because a sheet may carry two equally
-    well-named rows where only one spans the reporting years: Bank Sepah
-    International prints both "Total assets" and "Total assets (FY2026
-    presentation)", and the latter - which canonicalises identically once the
-    trailing gloss is stripped - holds a single FY2026 figure. Taking it cost
-    all five of that bank's ROA years. Sheet order is the last tiebreak, since
-    statements run top-to-bottom and the earlier row is the primary
-    presentation.
-    """
-    best = None
-    for i, (label, vals) in enumerate(rows.items()):
-        r = rank_row(label, patterns, exclude)
-        if r is None:
-            continue
-        key = (r, -sum(1 for y in YEARS if y in vals), i)
-        if best is None or key < best[0]:
-            best = (key, label, vals)
-    return (best[1], best[2]) if best else (None, None)
+    if verdict == "mixed" or (isinstance(verdict, (set, frozenset))
+                              and year in verdict):
+        return ("the numerator and the denominator are converted on different "
+                "bases - balance-sheet stocks at the year-end SPOT rate, "
+                "profit-and-loss flows at that year's AVERAGE rate - so the "
+                "ratio does not cancel its unit")
+    return None
 
 
 def main():
@@ -220,11 +86,11 @@ def main():
             bs_unit, bs, bs_lab = read_sheet(wb["Balance Sheet"])
         wb.close()
 
-        p_lab, profit = pick(pl, PROFIT_PATTERNS, PROFIT_EXCLUDE)
-        pbt_lab, pbt = pick(pl, PBT_PATTERNS, PBT_EXCLUDE)
-        tci_lab, tci = pick(pl, TCI_PATTERNS, TCI_EXCLUDE)
-        e_lab, equity = pick(bs, EQUITY_PATTERNS, EQUITY_EXCLUDE)
-        a_lab, assets = pick(bs, ASSET_PATTERNS, ASSET_EXCLUDE)
+        p_lab, profit = pick(pl, PROFIT_PATTERNS, PROFIT_EXCLUDE, YEARS)
+        pbt_lab, pbt = pick(pl, PBT_PATTERNS, PBT_EXCLUDE, YEARS)
+        tci_lab, tci = pick(pl, TCI_PATTERNS, TCI_EXCLUDE, YEARS)
+        e_lab, equity = pick(bs, EQUITY_PATTERNS, EQUITY_EXCLUDE, YEARS)
+        a_lab, assets = pick(bs, ASSET_PATTERNS, ASSET_EXCLUDE, YEARS)
         missing = [n for n, v in (("profit", profit), ("equity", equity), ("assets", assets)) if not v]
         if missing:
             unmatched.append({"bank": bank, "missing": missing})
@@ -249,6 +115,7 @@ def main():
                 "profit_before_tax": pbt.get(y) if pbt else None,
                 "total_comprehensive_income": tci.get(y) if tci else None,
                 "pbt_row": pbt_lab, "tci_row": tci_lab,
+                "basis_refused": None,
                 "roe_avg_equity": None, "roe_year_end": None,
                 "roa_avg_assets": None, "roa_year_end": None,
             }
@@ -261,7 +128,9 @@ def main():
             # rather than merely reported - thebanks.eu's United Trust ROA of
             # 1.79% reproduces on average assets (1.789%) and not on year-end
             # (1.681%), which is what identified their basis.
-            if same_unit and rec["profit_after_tax"] is not None:
+            rec["basis_refused"] = basis_refusal(rec["bank"], rec["year"])
+            if (same_unit and rec["basis_refused"] is None
+                    and rec["profit_after_tax"] is not None):
                 p = rec["profit_after_tax"]
                 if rec["total_equity"]:
                     rec["roe_year_end"] = round(100.0 * p / rec["total_equity"], 2)

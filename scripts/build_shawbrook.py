@@ -928,6 +928,16 @@ KM1_SOURCES = (
     "figures those tables do disclose are on the individual metric sheets in this workbook."
 )
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+b.add_profitability_sheet("SHAWBROOK")
+
 b.add_km1_sheet(
     title="Shawbrook Bank Limited — KM1 Key Metrics",
     subtitle="The Bank's own published UK KM1 template, reproduced whole in Shawbrook's row order with its own "

@@ -125,14 +125,25 @@ def main():
     # count stays DERIVED rather than asserted, so this checker keeps working
     # on a workbook built before the rollout or rebuilt from an older script.
     has_km1 = "KM1 Key Metrics" in wb.sheetnames
+    # "Profitability" (pilot, Monzo only as of 2026-10-26) is a DERIVED sheet -
+    # ROE/ROA computed from the workbook's own Balance Sheet and Profit & Loss
+    # rows - and is optional, so it is counted the same way the interim and KM1
+    # sheets are: derived from the sheet list, never asserted. A workbook
+    # without one is not a failure, and the 144 that have none still verify.
+    has_profitability = "Profitability" in wb.sheetnames
     expected_sheets = (
-        13 + len(st_sheets_present) + (1 if has_interim else 0) + (1 if has_km1 else 0)
+        13
+        + len(st_sheets_present)
+        + (1 if has_interim else 0)
+        + (1 if has_km1 else 0)
+        + (1 if has_profitability else 0)
     )
     if len(wb.sheetnames) != expected_sheets:
         print(
             f"  !! expected {expected_sheets} sheets "
             f"(13 base + {len(st_sheets_present)} ST- sheets {st_sheets_present} "
-            f"+ {1 if has_interim else 0} interim + {1 if has_km1 else 0} KM1), "
+            f"+ {1 if has_interim else 0} interim + {1 if has_km1 else 0} KM1 "
+            f"+ {1 if has_profitability else 0} profitability), "
             f"got {len(wb.sheetnames)}"
         )
     if has_km1:

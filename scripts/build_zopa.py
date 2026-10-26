@@ -632,6 +632,16 @@ km1_rows = [
     ("DATA", "20 NSFR ratio (%)", {"FY2025": "225%", "FY2024": "227%", "FY2023": "207%"}),
 ]
 
+# Profitability - return on equity and return on assets, DERIVED by the shared
+# library from this workbook's own Balance Sheet and Profit & Loss sheets (see
+# BankWorkbook.add_profitability_sheet). Nothing is transcribed here: the rows
+# are resolved by label through scripts/profitability_rows.py, and whether a
+# ratio across the two sheets cancels its units is looked up in
+# scripts/profitability_fx_basis.py, not decided by this call. Placed after
+# Asset Quality and BEFORE the KM1 template, because the KM1 -> CET1 Capital
+# adjacency is locked (wayfinder/km1/map.md).
+bw.add_profitability_sheet("ZOPA")
+
 bw.add_km1_sheet(
     title="Zopa Bank Limited — KM1 Key Metrics",
     subtitle="The Bank-only Table 5 UK KM1, reproduced in its own row order, row numbering and precision. Amounts are £m; LCR/NSFR figures are trailing-period averages as described by Zopa.",

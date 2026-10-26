@@ -20,8 +20,28 @@ on disk. Extra aggregator files can still be passed as additional arguments.
 `build_profitability_table.py` reads `banks/*.xlsx` and **writes no workbook**.
 Nothing in this directory ever modifies a delivered bank workbook.
 
-Current deliverable: `research/UK_banks_profitability_2026-10-22.{csv,xlsx}`,
+Current deliverable: `research/UK_banks_profitability_2026-10-26.{csv,xlsx}`,
 14 sheets, 145 banks x FY2021-FY2025 = 725 bank-years.
+
+**The 2026-10-22 edition is SUPERSEDED and 360 of its ratio cells were wrong.**
+It gated the ratio on `units_agree`, which is true for all 725 bank-years
+because both statement sheets are labelled in sterling - and so never fired on
+the case that matters. Under the corpus FX convention a balance sheet is
+converted at the year-end SPOT rate and a profit and loss at that year's
+AVERAGE rate, so on a converted bank the numerator and the denominator rest on
+different rates and the ratio does not cancel its unit; it carries the whole
+spot/average spread, which is roughly two per cent of the ratio and changes
+sign from year to year. Two further banks' ratios cancel on units and still
+divide a GROUP profit by a SOLO balance sheet.
+
+Measured, not estimated: **20 banks, 96 bank-years, 384 ratio cells** now read
+`Not computed`, of which **360 printed a number in the 2026-10-22 edition**.
+The verdict is looked up in `scripts/profitability_fx_basis.py`, which both
+this table and `BankWorkbook.add_profitability_sheet` import rather than
+restate. Read that file's header before trusting any shortcut: three ways of
+detecting the condition from the code or the page were tried and all three
+fail, and the most plausible one - treating a unit that says "conv. from" as
+contaminated - catches only 13 of the 18 affected banks.
 
 **What changed on 2026-10-22, and what deliberately did not.** Every collected
 aggregator source is now wired in: the column went **20 → 178 bank-years**,

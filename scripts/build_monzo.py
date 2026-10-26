@@ -895,6 +895,57 @@ PRE2021_PILLAR3_NOTE = (
     + FY2018_P3_NOTE
 )
 
+# ---------------------------------------------------------------------------
+# Profitability
+# ---------------------------------------------------------------------------
+# A DERIVED view, not a transcription, and it is built by the shared library
+# rather than here: add_profitability_sheet resolves the profit, equity and
+# asset rows out of the Balance Sheet and Profit & Loss sheets this script has
+# already passed in, using the same resolver the research table uses
+# (scripts/profitability_rows.py). Nothing about the arithmetic is restated in
+# this file, which is the rule the Overview ratio defect bought - when two
+# pieces of code must apply the same rule, call the same code.
+#
+# Placement: after Asset Quality, BEFORE the KM1 template and the 11 Pillar 3
+# sheets. It does NOT go between KM1 and CET1 Capital - that adjacency is
+# locked (wayfinder/km1/map.md, enforced by verify_workbook.py), and KM1 is a
+# reproduced regulatory template, so "before the Pillar 3" means before that
+# whole block.
+#
+# fx_basis is None because Monzo reports in sterling and neither statement
+# sheet is converted, so a ratio across them cancels its unit outright.
+MONZO_PROFITABILITY_NOTE = (
+    "THE SERIES CROSSES A REPORTING-ENTITY BREAK. FY2026, FY2025 and FY2024 "
+    "are Monzo Bank Holding Group Limited and subsidiaries; FY2023 and "
+    "earlier are Monzo Bank Ltd. These are different reporting entities, and "
+    "the Balance Sheet and Profit & Loss sheets label every column "
+    "accordingly. A ratio read straight across that break compares two "
+    "perimeters, so the step between FY2023 and FY2024 is partly a change of "
+    "entity and not only a change of performance. The figures are printed as "
+    "each entity reported them and are deliberately not restated onto a "
+    "single perimeter.\n\n"
+    "OUTSIDE SOURCES DISAGREE FOR FY2024, AND THE DISAGREEMENT IS RECORDED "
+    "RATHER THAN RESOLVED. thebanks.eu publishes a Monzo FY2024 return on "
+    "equity of 1.74% against the 1.30% computed here on an average basis and "
+    "1.01% on a year-end basis; its return on assets of 0.09% matches. The "
+    "aggregator does not state its denominator, so the gap cannot be "
+    "attributed, and its figure is not substituted into this sheet. Both are "
+    "carried in research/UK_banks_profitability_2026-10-22.xlsx, in separate "
+    "columns, for exactly this reason."
+)
+
+MONZO_PROFITABILITY_SOURCES = (
+    "The FY2024 aggregator comparison discussed in the note is from "
+    "research/profitability/thebanks_eu/thebanks_eu_returns_with_archives.jsonl."
+)
+
+bw.add_profitability_sheet(
+    "MONZO",
+    fx_basis=None,
+    extra_note=MONZO_PROFITABILITY_NOTE,
+    extra_sources=MONZO_PROFITABILITY_SOURCES,
+)
+
 bw.add_km1_sheet(
     title="Monzo - KM1 Key Metrics",
     subtitle="The bank's own published UK KM1 template, reproduced in Monzo's row order with its own "
